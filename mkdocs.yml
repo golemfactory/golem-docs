@@ -1,7 +1,29 @@
 site_name: Golem Network Docs
 nav:
     - Home: 'index.md'
-    - 'Create on Golem': 'creators/index.md'
+    - 'Create on Golem':
+      - 'creators/index.md'
+      - JavaScript:
+          - 'creators/javascript/index.md'
+          - Quickstart: 'creators/javascript/quickstart.md'
+          - 'High Level API':
+            - 'creators/javascript/high-level/index.md'
+            - 'Task Model': 'creators/javascript/high-level/task-model.md'
+            - Examples:
+                - '#0 - Hello World': 'creators/javascript/high-level/examples/hello.md'
+                - '#1 - Simple Usage': 'creators/javascript/high-level/examples/simple.md'
+                - '#2 - Hashcat on Golem': 'creators/javascript/high-level/examples/hashcat.md'
+                - '#3 - Requestor in browser': 'creators/javascript/high-level/examples/web.md'
+          - 'Mid Level API':
+            - 'creators/javascript/mid-level/index.md'
+            - Examples:
+                - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
+                - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
+          - 'API Reference': 'creators/javascript/docs/index.md'
+      - Python:
+          - 'creators/python/index.md'
+      - 'No-code':
+          - 'creators/dapps/index.md'
     - 'Earn on Golem': 'providers/index.md'
     - 'What is Golem': 'architecture/index.md'
 markdown_extensions:
@@ -11,10 +33,11 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 theme:
   icon:
     repo: fontawesome/brands/github
@@ -24,8 +47,8 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.indexes
     - navigation.tabs
-#    - navigation.sections # no visible change yet
     - navigation.top
     - navigation.footer
     - content.code.copy
