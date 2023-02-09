@@ -1,3 +1,72 @@
 site_name: Golem Network Docs
+nav:
+    - Home: 'index.md'
+    - 'Create on Golem': 'creators/index.md'
+    - 'Earn on Golem': 'providers/index.md'
+    - 'What is Golem': 'architecture/index.md'
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 theme:
+  icon:
+    repo: fontawesome/brands/github
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+#    - navigation.sections # no visible change yet
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+repo_url: https://github.com/golemfactory/golem-docs
+copyright: >
+  Copyright &copy; 2023 Golem Network –
+  <a href="#__consent">Change cookie settings</a>
+plugins:
+  - search
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/golemfactory
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/golem-network
+    - icon: fontawesome/brands/discord
+      link: https://chat.golem.network/
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  analytics:
+    provider: google
+    property: UA-XXXXXXXX-X
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            submitting an issue on our <a href="https://github.com/golemfactory/golem-docs/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">GitHub repository</a>.

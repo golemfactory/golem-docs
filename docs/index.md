@@ -1,30 +1,19 @@
-# Welcome to the Golem Network Documentation
+---
+title: Home
+description: Documentation site for Golem Network
+hide:
+  - navigation
+  - toc
+---
+
+## Welcome to the Golem Network Documentation
 
 Golem Network is a decentralized, open-source platform for sharing computation resources and creating applications that use them.
 
-This documentation is designed to help you get started with building applications on the Golem Network.
+## Choose what you'd like to do with Golem
 
-## Choose Your Path
 
-### Build on the Golem Network
+[Create on Golem](creators/index.md){ .md-button .md-button--primary }
+[Earn on Golem](providers/index.md){ .md-button .md-button--primary }
+[What is Golem](architecture/index.md){ .md-button .md-button--primary }
 
-**Choose your preferred environment:**
-
-#### JavaScript
-- Quickstart Guide
-- Getting Started Guide
-- API Reference
-#### Python
-- Quickstart Guide
-- Getting Started Guide
-- API Reference
-#### No-code (with golem-compose)
-- Quickstart Guide
-- Getting Started Guide
-- API Reference
-
-### Learn about the Golem Network
-
-#### Overview of the Golem Network
-#### Key Features
-#### How it Works
