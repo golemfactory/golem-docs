@@ -78,7 +78,7 @@ extra:
       make our documentation better.
   analytics:
     provider: google
-    property: UA-243971812-1
+    property: G-DCDK1DXDSN
     feedback:
       title: Was this page helpful?
       ratings:
