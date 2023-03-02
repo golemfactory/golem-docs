@@ -1,10 +1,13 @@
 ---
 title: Home
 description: Documentation site for Golem Network
+template: overrides/home.html
 hide:
   - navigation
   - toc
 ---
+
+![banner](/assets/banner.gif)
 
 ## Welcome to the Golem Network Documentation
 

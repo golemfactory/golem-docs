@@ -42,6 +42,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   name: material
+  custom_dir: material
   logo: assets/logo.svg
   favicon: assets/favicon.png
   features:
