@@ -20,12 +20,8 @@ nav:
                 - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
                 - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
           - 'API Reference': 'creators/javascript/docs/index.md'
-      - Python:
-          - 'creators/python/index.md'
-      - 'No-code':
+      - 'dApps':
           - 'creators/dapps/index.md'
-    - 'Earn on Golem': 'providers/index.md'
-    - 'What is Golem': 'architecture/index.md'
 markdown_extensions:
   - admonition
   - attr_list

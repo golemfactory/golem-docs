@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<style>
+    .hero img {
+    width: 100%;
+}
+    .try-out {
+        display: flex;
+        gap: 20px;
+    }
+
+    .try-out-col .logo-wrapper {
+        text-align: center;
+    }
+
+    .try-out-col .logo {
+        max-height: 120px;
+        width: auto;
+    }
+
+    .content-wrapper {
+        position: relative;
+        height: 320px;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<div class="hero">
+    <img
+        src="/assets/banner.gif"
+        alt=""
+        draggable="false"
+    >
+        <div class="try-out">
+            <div class="try-out-col">
+                <div class="logo-wrapper">
+                    <img src="/assets/js_logo.png" class="logo" alt="" draggable="false">
+                </div>
+                <div class="content-wrapper">
+                    <p>
+                        ✅ Have a problem that can split into <strong>multiple computational tasks</strong> that will run <strong>in parallel</strong> on Golem
+                    </p>
+                    <p>
+                        ✅ Want to use either <strong>Node.js or web browser</strong> to schedule the tasks
+                    </p>
+                    <p>
+                        ✅ Need <strong>more control</strong> over the deployment process on Golem Network (like <strong>adjust market strategy</strong>)
+                    </p>
+                    <a
+                            href="/creators/javascript/quickstart/"
+                            title="{{ page.next_page.title | e }}"
+                            class="md-button cta-button"
+                    >
+                        Getting started with JS API
+                    </a>
+                </div>
+            </div>
+
+            <div class="try-out-col">
+                <div class="logo-wrapper">
+                    <img src="/assets/docker_logo.png" class="logo" alt="" draggable="false">
+                </div>
+                <div class="content-wrapper">
+                    <p>
+                        ✅ Want to deploy an application on Golem that consists of <strong>service(s) that run constantly</strong>
+                    </p>
+                    <p>
+                        ✅ Already use <strong>Docker or Docker Compose</strong> to deploy your application
+                    </p>
+                    <p>
+                        ✅ Want to use a <strong>YAML-based approach</strong> to configure the deployment
+                    </p>
+                    <a
+                            href="/creators/dapps/"
+                            title="{{ page.next_page.title | e }}"
+                            class="md-button cta-button"
+                    >
+                        Getting started with dApps
+                    </a>
+                </div>
+            </div>
+        </div>
+    <div class="admonition info">
+        <p class="admonition-title">Looking for Python API?</p>
+        <p>See our official documentation <a href="https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development">here</a></p>
+    </div>
+</div>
+
+{{ super() }}
+
+{% endblock %}
