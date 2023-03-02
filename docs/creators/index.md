@@ -24,10 +24,16 @@ We have created different tools and APIs that are suited for different needs:
 
 - [dApps](dapps/index.md) allow for a YAML-based deployment, that aims to ease the process for Docker-based dApps
 
-[Try dApps!](dapps/index.md){ .md-button .md-button--primary }
+<div class="centered">
+<a href="/creators/dapps/" class="md-button md-button--primary">Try dApps!</a>
+</div>
 
 - [JS API](javascript/index.md) allows for scheduling distributed tasks on Golem network, usable from the browser, that aims to provide a good control and easy interfaces to interact with the Golem Network
 
-[Try JS API!](javascript/index.md){ .md-button .md-button--primary }
+<div class="centered">
+<a href="/creators/javascript/" class="md-button md-button--primary">Try JS API!</a>
+</div>
 
-If you'd like to see Python API features, please visit the [official docs](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
+!!! info
+
+    If you'd like to see Python API features, please visit the [official docs](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
