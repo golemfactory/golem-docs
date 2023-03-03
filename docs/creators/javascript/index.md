@@ -1,29 +1,33 @@
 ---
-title: JS API Levels
-description: JS API introduction
+description: Create your own task application on Golem
 ---
 
-!!! tip
-
-    Looking for a quick dive into the JS API? Visit our [Quickstart Guide](quickstart.md)!
+# Create your own task application using High-Level API
 
 ## Introduction
 
-The golem JavaScript library provides developers with two levels of abstraction for interacting with the golem:
+This tutorial is designed for developers who want to create their own application on the Golem network. 
+It will guide you through the process of creating a task-based requestor application using the high-level API, and provide you with examples to help you understand the concepts better.
 
-- **High Level** - This level allows developers to interact with the golem with minimal knowledge of the golem's internal components. It is designed to be simple and easy to use.
+!!! info
 
-- **Mid Level** - This level allows developers to use the library for more complex cases, and it requires knowledge of the golem's component architecture. It provides more fine-grained control over the golem's functionality.
+    If you have any questions or run into any issues while following this tutorial, please don't hesitate to reach out to us on our [Discord channel](https://chat.golem.network/) for help.
 
-The following diagram illustrates the division of the individual parts of the golem:
 
-![Golem Component Architecture](/assets/js-architecture.png)
+To make the tutorial easier to follow, it has been divided into several sections. In the first section, we will provide a general introduction to developing applications on the Golem network, and explain the task model that is used in Golem applications.
 
-The High Level API provides an easy-to-use interface to the core functionality of the golem, such as creating and managing tasks with only a few lines of code.
+[Introduction to the task model](task-model.md){ .md-button .md-button--primary }
 
-The Mid Level API gives developers access to the Golem-specific components, such as the Demand that is published on the market or Offer that is received from the provider, for more advanced use cases.
+In the next section, we will walk you through the process of creating a simple example application that runs on the VM runtime. We will provide code examples and explain the mechanics of task-based requestor development.
 
-Choose the level of abstraction that best suits your needs and follow the links provided to learn more about each level and its capabilities.
+[Task Example 0: Hello World!](examples/hello.md){ .md-button .md-button--primary }
 
-[High Level API](mid-level/index.md){ .md-button .md-button--primary }
-[Mid Level API](high-level/index.md){ .md-button .md-button--primary }
+[Task Example 1: Simple Usage of Task API](examples/simple.md){ .md-button .md-button--primary }
+
+We will then show you how to use Golem to run a `hashcat` application in parallel. This section will provide an example of a more complex use case and explain how to use Golem's capabilities to run it efficiently.
+
+[Task Example 2: Hashcat on Golem](examples/hashcat.md){ .md-button .md-button--primary }
+
+Lastly, we will describe how to use the API directly from the browser context. This section will provide information on how to use the API in web applications and explain the benefits and limitations of this approach.
+
+[Task Example 3: Requestor in browser](examples/web.md){ .md-button .md-button--primary }

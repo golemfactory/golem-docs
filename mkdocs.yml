@@ -7,11 +7,11 @@ nav:
           - 'creators/javascript/index.md'
           - Quickstart: 'creators/javascript/quickstart.md'
           - Examples:
-              - '#0 - Hello World': 'creators/javascript/high-level/examples/hello.md'
-              - '#1 - Simple Usage': 'creators/javascript/high-level/examples/simple.md'
-              - '#2 - Hashcat on Golem': 'creators/javascript/high-level/examples/hashcat.md'
-              - '#3 - Requestor in browser': 'creators/javascript/high-level/examples/web.md'
-          - 'High Level API':
+              - '#0 - Hello World': 'creators/javascript/examples/hello.md'
+              - '#1 - Simple Usage': 'creators/javascript/examples/simple.md'
+              - '#2 - Hashcat on Golem': 'creators/javascript/examples/hashcat.md'
+              - '#3 - Requestor in browser': 'creators/javascript/examples/web.md'
+          - 'Architecture':
             - 'creators/javascript/high-level/index.md'
             - 'Task Model': 'creators/javascript/high-level/task-model.md'
           - 'Mid Level API':
