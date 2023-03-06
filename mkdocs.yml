@@ -3,23 +3,23 @@ nav:
     - Home: 'index.md'
     - 'Create on Golem':
       - 'creators/index.md'
-      - JavaScript:
-          - 'creators/javascript/index.md'
-          - Quickstart: 'creators/javascript/quickstart.md'
-          - Examples:
-              - '#0 - Hello World': 'creators/javascript/examples/hello.md'
-              - '#1 - Simple Usage': 'creators/javascript/examples/simple.md'
-              - '#2 - Hashcat on Golem': 'creators/javascript/examples/hashcat.md'
-              - '#3 - Requestor in browser': 'creators/javascript/examples/web.md'
-          - 'Architecture':
-            - 'creators/javascript/high-level/index.md'
-            - 'Task Model': 'creators/javascript/high-level/task-model.md'
-          - 'Mid Level API':
-            - 'creators/javascript/mid-level/index.md'
-            - Examples:
-                - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
-                - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
-          - 'API Reference': 'creators/javascript/docs/index.md'
+#      - JavaScript:
+#          - 'creators/javascript/index.md'
+#          - Quickstart: 'creators/javascript/quickstart.md'
+#          - Examples:
+#              - '#0 - Hello World': 'creators/javascript/examples/hello.md'
+#              - '#1 - Simple Usage': 'creators/javascript/examples/simple.md'
+#              - '#2 - Hashcat on Golem': 'creators/javascript/examples/hashcat.md'
+#              - '#3 - Requestor in browser': 'creators/javascript/examples/web.md'
+#          - 'Architecture':
+#            - 'creators/javascript/high-level/index.md'
+#            - 'Task Model': 'creators/javascript/high-level/task-model.md'
+#          - 'Mid Level API':
+#            - 'creators/javascript/mid-level/index.md'
+#            - Examples:
+#                - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
+#                - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
+#          - 'API Reference': 'creators/javascript/docs/index.md'
       - 'Decentralized applications on Golem':
           - 'creators/dapps/index.md'
           - Quickstart: 'creators/dapps/run-a-dapp.md'

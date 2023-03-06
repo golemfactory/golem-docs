@@ -8,6 +8,7 @@
     width: 100%;
 }
     .try-out {
+        position: relative;
         display: flex;
         gap: 20px;
     }
@@ -36,14 +37,40 @@
         display: block;
         text-align: center;
     }
+
+    .content-disabled {
+        opacity: 0.2;
+    }
+
+    .content-disabled .cta-button {
+        cursor: not-allowed;
+    }
+
+    .disabled-text {
+        z-index: 1;
+        position: absolute;
+        bottom: 40%;
+        display: block;
+        width: 200px;
+        left: calc(25% - 100px);
+        margin: 0 auto;
+        padding: 2px 5px;
+        border: 2px solid #8f1b1b;
+        background-color: #8f4b1b;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
 </style>
 <div class="hero">
         <div class="try-out">
             <div class="try-out-col">
+                <span class="disabled-text">🚧 Under construction 🚧</span>
                 <div class="logo-wrapper">
                     <img src="/assets/js_logo.png" class="logo" alt="" draggable="false">
                 </div>
-                <div class="content-wrapper">
+                <div class="content-wrapper content-disabled">
                     <p>
                         ✅ Have a problem that can split into <strong>multiple computational tasks</strong> that will run <strong>in parallel</strong> on Golem
                     </p>
@@ -54,7 +81,7 @@
                         ✅ Need <strong>more control</strong> over the deployment process on Golem Network (like <strong>adjust market strategy</strong>)
                     </p>
                     <a
-                            href="/creators/javascript/quickstart/"
+                            href="#"
                             title="{{ page.next_page.title | e }}"
                             class="md-button cta-button"
                     >
