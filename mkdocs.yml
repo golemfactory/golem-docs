@@ -20,8 +20,14 @@ nav:
                 - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
                 - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
           - 'API Reference': 'creators/javascript/docs/index.md'
-      - 'dApps':
+      - 'Decentralized applications on Golem':
           - 'creators/dapps/index.md'
+          - Quickstart: 'creators/dapps/run-a-dapp.md'
+          - 'Hello World dApp': 'creators/dapps/hello-world-dapp.md'
+          - 'Managing multiple dApps': 'creators/dapps/dapp-manager.md'
+          - 'Creating Golem dApps': 'creators/dapps/creating-golem-dapps.md'
+          - 'Differences between Docker containers and Golem VM runtime': 'creators/dapps/docker-containers-vs-golem-vms.md'
+          - Troubleshooting: 'creators/dapps/troubleshooting.md'
 markdown_extensions:
   - admonition
   - attr_list
@@ -34,6 +40,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 theme:
   icon:
     repo: fontawesome/brands/github
