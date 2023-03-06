@@ -73,6 +73,7 @@
     .tx-hero {
         color: var(--md-primary-bg-color);
         justify-content: right;
+        text-align: center;
     }
 
     .tx-hero h1 {
@@ -224,6 +225,38 @@
         color: black;
         display: block;
         font-family: inherit;
+    }
+
+    .hero-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 30px auto 150px;
+        gap: 20px;
+        max-width: 75%;
+    }
+
+    .hero-card {
+        height: 300px;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        background-color: #13188d;
+        border-radius: 15px;
+    }
+
+    .hero-card-features {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        text-align: left;
+        padding: 20px 15px;
+    }
+
+    .hero-card-cta {
+        flex-grow: 0;
     }
 </style>
 {% endblock %}

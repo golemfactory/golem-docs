@@ -20,7 +20,7 @@ nav:
 #                - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
 #                - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
 #          - 'API Reference': 'creators/javascript/docs/index.md'
-      - 'Decentralized applications on Golem':
+      - 'Decentralized apps on Golem':
           - 'creators/dapps/index.md'
           - Quickstart: 'creators/dapps/run-a-dapp.md'
           - 'Hello World dApp': 'creators/dapps/hello-world-dapp.md'
@@ -43,6 +43,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+extra_css:
+  - css/custom-global.css
 theme:
   icon:
     repo: fontawesome/brands/github
