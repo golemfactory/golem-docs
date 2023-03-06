@@ -15,7 +15,7 @@ The first two sections are duplicated with the more elaborate ones described els
 
 If you have a development environment already configured, you can go ahead and skip the first section and move on to the next one.
 
-If you have already installed the yaggna daemon and configured the requestor correctly, go straight to the third section.
+If you have already installed the yagna daemon and configured the requestor correctly, go straight to the third section.
 
 ## Preparing the environment
 
@@ -48,7 +48,7 @@ Make sure you have a Git installed:
 git --version
 ```
 
-### Installing yagna requestor
+## Installing yagna requestor
 
 To start working with Golem network we need to install `yagna` daemon locally. In the simplest terms, the daemon allows you to communicate with Golem Network and perform operations on it.
 
@@ -397,6 +397,6 @@ Result in the command line will look like:
 
 ![](/assets/js-tutorial-06.gif)
 
-#### Summary
+## Summary
 
 We tried to familiarize you with how to work with Golem Network. We hope that now you understand the basics of application development.
