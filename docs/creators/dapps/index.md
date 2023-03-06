@@ -83,14 +83,3 @@ Dapp-manager is a simple CLI tool used to manage and run several separate instan
     <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223082283-56b1a350-2168-4dd6-8767-ebdd36756b98.png" alt="gh-icon">
     <span>See dapp-manager on GitHub</span>
 </a>
-
-### The Requestor Portal
-
-The Requestor Portal ([portal.golem.network](http://portal.golem.network)) is Golem’s showcase website, allowing external users to run demo applications on Golem through a simple web interface without having to run Golem nodes themselves.
-
-It utilizes `dapp-runner` and `dapp-manager` under the hood to orchestrate and interact with those deployments.
-
-<a href="https://portal.golem.network/" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>See Golem Portal</span>
-</a>

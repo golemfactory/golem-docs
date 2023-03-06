@@ -300,7 +300,7 @@ You should be able to access your service using that published URL.
 
 The chief difference between the HTTP proxy and the generic TCP socket proxy is that the first one is protocol-aware and limited to HTTP only. The second one is more versatile and connections to any TCP services (e.g. databases, SSH daemons, etc) running on the provider nodes.
 
-The tradeoff is that only the HTTP proxy can be used with external platforms like our Requestor Portal exactly because in order to correctly map the addresses, the platform must be able to interpret the incoming requests.
+The tradeoff is that only the HTTP proxy can be used with external platforms exactly because in order to correctly map the addresses, the platform must be able to interpret the incoming requests.
 
 Again, please note that both types of connections are only able to be connected-to through ports on the same machine that `dapp-runner` is running on. In the future we’re planning to support remote relays that will enable connections to services to be made without requiring requestor’s active participation.
 
@@ -332,19 +332,6 @@ Again, for details on installation and running of `dapp-manager`, have a look at
 
 As an additional perk, using `dapp-manager` enables you to more conveniently interact with running services using `dapp-manager exec` command in case you wish to debug or tweak the service after it has been deployed.
 
-### The Requestor Portal
-
-Finally, dApps can be easily deployed to the Golem using our Requestor Portal located at:
-
-<a href="https://portal.golem.network/" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>See Golem Portal</span>
-</a>
-
-For now, it’s mostly a showcase tool used to present apps developed in-house by the Golem team to explore what can and what cannot be achieved with Golem Deploy framework at present.
-
-In the future, we’re planning to enable community creators to publish their apps to the Requestor Portal’s store.
-
 ## Additional tools
 
 ### Connecting to services running on the providers
@@ -372,7 +359,7 @@ This enables an automatically-chosen local port to be mapped to remote port. Onc
 {"backend": {"local_proxy_address": "http://localhost:8081"}}
 ```
 
-You can then use your browser or any other HTTP-based tool to access the service. Choosing the HTTP proxy has two benefits as compared with the generic TCP proxy. First, it causes requests and responses to be logged by the `dapp-runner` and allows for easier debugging in case of issues. Secondly, and possibly more importantly, it allows the service exposed in this way to be available when the application is deployed using our [Requestor Portal](https://portal.golem.network).
+You can then use your browser or any other HTTP-based tool to access the service. Choosing the HTTP proxy has two benefits as compared with the generic TCP proxy. First, it causes requests and responses to be logged by the `dapp-runner` and allows for easier debugging in case of issues. Secondly, and possibly more importantly, it allows the service exposed in this way to be available when the application is deployed.
 
 #### TCP proxy
 
