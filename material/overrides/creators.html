@@ -11,6 +11,7 @@
         position: relative;
         display: flex;
         gap: 20px;
+        justify-content: center;
     }
 
     .try-out-col .logo-wrapper {
@@ -62,33 +63,13 @@
         color: white;
         font-weight: bold;
     }
+
+    .try-out-col {
+        max-width: 50%;
+    }
 </style>
 <div class="hero">
         <div class="try-out">
-            <div class="try-out-col">
-                <span class="disabled-text">🚧 Under construction 🚧</span>
-                <div class="logo-wrapper">
-                    <img src="/assets/js_logo.png" class="logo" alt="" draggable="false">
-                </div>
-                <div class="content-wrapper content-disabled">
-                    <p>
-                        ☑️ Have a problem that can split into <strong>multiple computational tasks</strong> that will run <strong>in parallel</strong> on Golem
-                    </p>
-                    <p>
-                        ☑️ Want to use either <strong>Node.js or web browser</strong> to schedule the tasks
-                    </p>
-                    <p>
-                        ☑️ Need <strong>more control</strong> over the deployment process on Golem Network (like <strong>adjust market strategy</strong>)
-                    </p>
-                    <a
-                            href="#"
-                            title="{{ page.next_page.title | e }}"
-                            class="md-button cta-button"
-                    >
-                        Create app with JS API
-                    </a>
-                </div>
-            </div>
 
             <div class="try-out-col">
                 <div class="logo-wrapper">
