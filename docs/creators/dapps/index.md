@@ -32,7 +32,7 @@ While working with dApps, we created a few applications on top of it, which serv
 
 ### ToDo List Application [\[GitHub\]](https://github.com/golemfactory/dapp-experiments/tree/main/01\_todo\_app)
 
-![ToDo List App](https://user-images.githubusercontent.com/5244214/201047967-f42dea7d-3e19-488b-9900-375f19badd96.png)
+![ToDo List App](https://user-images.githubusercontent.com/33448819/223681578-03193431-ed28-46e7-9faf-00bc0ea00613.png)
 
 This application showcases utilizing the Golem Network to host a 3-layer application (**React** + **Flask** + **RQLite**)
 
