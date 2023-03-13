@@ -16,7 +16,7 @@ It will guide you through the process of creating a task-based requestor applica
 
 To make the tutorial easier to follow, it has been divided into several sections. In the first section, we will provide a general introduction to developing applications on the Golem network, and explain the task model that is used in Golem applications.
 
-[Introduction to the task model](task-model.md){ .md-button .md-button--primary }
+[Introduction to the task model](high-level/task-model.md){ .md-button .md-button--primary }
 
 In the next section, we will walk you through the process of creating a simple example application that runs on the VM runtime. We will provide code examples and explain the mechanics of task-based requestor development.
 
