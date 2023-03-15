@@ -9,13 +9,16 @@ In this article, we'll show you how to launch your first JavaScript app on Golem
 * [Preparing the environment](quickstart.md#preparing-the-environment)
 * [Installing yagna requestor](quickstart.md#installing-yagna-requestor)
 * [Building your first JavaScript application on Golem Network](quickstart.md#building-your-first-javascript-app-on-golem-network)
-* [Run node script on provider](quickstart.md#building-your-first-javascript-app-on-golem-network)
+* [Run Node.js script on provider](quickstart.md#run-nodejs-script-on-provider)
 
-The first two sections are duplicated with the more elaborate ones described elsewhere in the handbook. However, the purpose of this article is not to get into the details, but to show you **how to start working with Golem step by step in minutes**.
+The purpose of this article is not to get into the details, but to show you **how to start working with Golem step by step in minutes**.
 
-If you have a development environment already configured, you can go ahead and skip the first section and move on to the next one.
-
-If you have already installed the yagna daemon and configured the requestor correctly, go straight to the third section.
+!!! info
+    **Skipping ahead**
+    
+    * If you have a development environment already configured with the prerequisite requirements, you can go ahead and [skip the first section](quickstart.md#installing-yagna-requestor) and move on from the next one.
+    
+    * If you have already installed the yagna daemon and configured the requestor correctly, [go straight to the third section](quickstart.md#building-your-first-javascript-app-on-golem-network).
 
 ## Preparing the environment
 
@@ -24,25 +27,25 @@ If you have already installed the yagna daemon and configured the requestor corr
     
     * OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
     * Familiarity with the command line
-    * Install [Node.js](https://nodejs.org/) version 16.x
-    * Install [Yarn](https://classic.yarnpkg.com/en/docs/install) version 1.22.3+
+    * Install [Node.js](https://nodejs.org/) version newer than or equal to 16.0.0
+    * Install [Yarn](https://classic.yarnpkg.com/en/docs/install) version 1.22.3 or newer
     * Install [Git](https://git-scm.com/downloads)
 
-In this section we will introduce how to run a Simple Node Application on Golem Network. The created project will be using a build setup based on pre-built [Golem Image](../requestor-tutorials/vm-runtime/) and allow us to run Node.js script on [Provider](../introduction/provider/).
+In this section we will introduce how to run a Simple Node Application on Golem Network. The created project will be using a build setup based on pre-built [Golem Image](https://handbook.golem.network/requestor-tutorials/vm-runtime) and allow us to run our Node.js script on a [Provider](https://handbook.golem.network/introduction/provider).
 
-Make sure you have a 16.x version of Node.js installed:
+Make sure you have a version of Node.js installed newer than or equal to 16.0.0:
 
 ```bash
 node --version
 ```
 
-Make sure you have a 1.22.3+ version of Yarn installed:
+Make sure you have a version of Yarn newer than or equal to 1.22.3 installed:
 
 ```bash
 yarn --version
 ```
 
-Make sure you have a Git installed:
+Make sure you have any version of Git installed:
 
 ```bash
 git --version
@@ -70,17 +73,17 @@ To start working with Golem network we need to install `yagna` daemon locally. I
 
     Alternatively, if you can't install in easy way, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0)
+    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
     2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
-    3. Copy those files to `C:\Windows\System32`
+    3. Copy those files to `C:\Windows\System32`.
 
 
 === "Unix Manual installation"
 
     Alternatively, if you can't install in easy way, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0)
-    2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries in to your PATH
+    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
+    2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries in to your PATH.
 
 
 Verify if `yagna` available in command line:
@@ -99,7 +102,7 @@ gftp --version
 
 It should output: `gftp 0.12.0 (37060503 2022-12-02 build #251)`
 
-If the above commands executed correctly, congratulations you have just installed the `yagna` daemon in your environment.
+If the above commands executed correctly, congratulations you have just installed the `yagna` daemon in your environment. If not, a common fix is to simply close and re-open your terminal since the PATH may not be updated in that session.
 
 !!! info
 
@@ -125,15 +128,22 @@ yagna service run
 
     If you have encountered problems please take look on [Run the daemon](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/#run-the-daemon) section
 
-#### Generate the app key (wallet)
+#### Generate the app key
 
-To use the network you must have your own unique key(wallet) for which is used for billing. To generate the key, make sure you have running `yagna` daemon from the [previous step](quickstart.md#firstly-start-the-daemon), leave it running in the background and in a separate command line window type in:
+To use the network you must have your own unique key for which is used for billing. To generate the key, make sure you have running `yagna` daemon from the [previous step](quickstart.md#start-the-daemon), leave it running in the background and in a separate command line window type in:
 
 ```bash
 yagna app-key create requestor
 ```
 
 **Please, note the key down**
+
+!!! info
+    **Saving and using the key**
+    
+    The key created should ideally be noted down and be easily accessible as you will need it later.
+    
+    However, don't worry if you forgot to do it as the key can be retrieved again by running `yagna app-key list`.
 
 #### Get some funds
 
@@ -155,7 +165,7 @@ yagna payment status
 
 #### Init yagna daemon as a sender
 
-When you have already configured the yagna demon and it is time to initialize as a sender.
+When you have already configured the yagna daemon and it is time to initialize as a sender.
 
 ```bash
 yagna payment init --sender
@@ -165,9 +175,9 @@ yagna payment init --sender
 
 Congratulations you are now ready to start building your first JavaScript app on the Golem Network.
 
-### Create a new Node project
+### Create a new Node.js project
 
-Create a new node project by typing in the command line:
+Create a new Node.js project by typing in the command line:
 
 ```bash
 mkdir golem-tutorial-js
@@ -175,7 +185,7 @@ cd golem-tutorial-js
 yarn init golem-tutorial-js
 ```
 
-### Create a node script that will execute task on provider
+### Create a Node.js script that will execute task on provider
 
 Add `yajsapi` to your project:
 
@@ -185,7 +195,7 @@ yarn add yajsapi
 
 #### Import TaskExecutor
 
-Create `index.js` file in the main folder and import `TaskExecutor` from `yajsapi`
+Create an `index.js` file in the main folder and import `TaskExecutor` from `yajsapi`:
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -201,7 +211,7 @@ After importing `TaskExecutor` we have to create IIAFE (Immediately Invoked Asyn
 
 #### Create TaskExecutor instance
 
-In our body function first we have to create executor using factory method [Executor.create()](docs/classes/executor\_executor.TaskExecutor.md#create). As a parameter we will provide image hash with Node.js.
+In our body function first we have to create executor using factory method [Executor.create()](../docs/classes/executor_executor.TaskExecutor/#create). As a parameter we will provide image hash, where Node.js is already installed.
 
 ```js
 const executor = await TaskExecutor.create("529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4");
@@ -209,13 +219,13 @@ const executor = await TaskExecutor.create("529f7fdaf1cf46ce3126eb6bbcd3b213c314
 
 !!! info
 
-    For the testing purposes we are providing pre-built image with Node: `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4`
+    For the testing purposes we are providing pre-built image with Node.js already installed: `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4`
 
 #### Define task to run on provider instance
 
 As the first task we would like to see the node version that is running on the given image. For this purpose we would like to call the `node -v` command on the provider.
 
-Let's first create task function that we would like to run on provider. The function named as Worker and implements [Worker](docs/modules/task\_work.md#worker) interface.
+Let's first create task function that we would like to run on provider. The function named as Worker and implements [Worker](../docs/modules/task_work/#worker) interface.
 
 ```js
 const taskToRunOnProvider = async (workerContext) => {
@@ -225,7 +235,7 @@ const taskToRunOnProvider = async (workerContext) => {
 
 #### Define commands to run in the task scope
 
-This function gets first parameter `workContext` that is a [WorkContext](docs/classes/task\_work.WorkContext.md) object. This object allow you set the commands that you want to run in the scope of one task on one provider. So the command we would like torun on the provider is `node -v`
+This function gets first parameter `workContext` that is a [WorkContext](../docs/classes/task_work.WorkContext) object. This object allow you set the commands that you want to run in the scope of one task on one provider. So the command we would like to run on the provider is `node -v`:
 
 ```js
 const commandToRunInProviderShell = "node -v";
@@ -279,7 +289,7 @@ If you have the executor ready, it's time to run the script on the Golem Network
 
 #### Setup YAGNA\_APPKEY
 
-In order for the requestor agent to connect with the `yagna` daemon, you need to provide it with the previously-generated app key (wallet) from step [Generate the app key](quickstart.md#secondly-generate-the-app-key-wallet)
+In order for the requestor agent to connect with the `yagna` daemon, you need to provide it with the previously-generated app key from step [Generate the app key](quickstart.md#secondly-generate-the-app-key-wallet):
 
 === "MacOS / Linux"
 
@@ -299,11 +309,11 @@ In order for the requestor agent to connect with the `yagna` daemon, you need to
 
 !!! info
 
-    If you don't remember your key(wallet) you can always check it by typing in the command line: `yagna app-key list`
+    If you don't remember your key you can always check it by typing in the command line: `yagna app-key list`
 
 #### Run your first app on Golem Network
 
-To run your scrypt on the Golem Network simply run the command:
+To run your script on the Golem Network simply run the command:
 
 ```bash
 node index.js
@@ -331,7 +341,7 @@ import { TaskExecutor } from "yajsapi";
 
 It looks cleaner and more simple. Isn't it?
 
-## Run node JS script on provider
+## Run Node.js script on provider
 
 Now that you know how to run a simple command in the provider's shell, it's time to go one step further. In this section, we will create a simple script which we will then send to the provider and execute it using Node.
 
@@ -354,7 +364,7 @@ const num2 = getRandomInt(1000, 10000);
 console.log(`Sum of ${num1} and ${num2} equal to ${num1 + num2}`);
 ```
 
-You can test your code yours machine by running:
+You can test your code on your local machine by running:
 
 ```bash
 node task.js
@@ -364,15 +374,15 @@ node task.js
 
 When we have a file with the task ready, we should modify our executor code to send it to the provider, and then execute it on the provider's machine.
 
-#### Uploading file to provider machine
+#### Uploading the script to provider machine
 
-When you look at the interface of the [WorkContext](docs/classes/task\_work.WorkContext.md) object, you will notice that there is an [uploadFile()](docs/classes/task\_work.WorkContext.md#uploadfile) method, among others. This method is used to upload file to provider instance in a scope of single task. So in order to upload our task.js file to the provider we need to add the command:
+When you look at the interface of the [WorkContext](../docs/classes/task_work.WorkContext) object, you will notice that there is an [uploadFile()](../docs/classes/task_work.WorkContext/#uploadfile) method, among others. This method is used to upload file to provider instance in a scope of single task. So in order to upload our task.js file to the provider we need to add the command:
 
 ```js
     await ctx.uploadFile("./task.js", "/golem/resource/task.js");
 ```
 
-#### Modify code to execute uploaded JS file
+#### Modify code to execute uploaded Node.js file
 
 The last step will be to modify the command executed on the provider `node -v` to a command that will execute our `task.js` file - `node /golem/work/task.js`.
 
