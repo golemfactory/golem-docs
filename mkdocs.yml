@@ -1,4 +1,4 @@
-site_name: Golem Network Docs
+site_name: ""
 nav:
     - Home: 'index.md'
     - 'Create on Golem':
@@ -51,7 +51,7 @@ theme:
   name: material
   custom_dir: material
   logo: assets/logo.svg
-  favicon: assets/favicon.png
+  favicon: assets/favicon.svg
   features:
     - navigation.instant
     - navigation.tracking
