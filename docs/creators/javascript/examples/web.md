@@ -73,7 +73,7 @@ In this layout, there are three elements:
 ## Using the Yajsapi bundle library
 
 ```html
-    <script crossorigin src="https://unpkg.com/yajsapi/yajspai.min.js"></script>
+    <script crossorigin src="https://unpkg.com/yajsapi"></script>
 ```
 
 ### Task Executor
