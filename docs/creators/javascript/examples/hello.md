@@ -90,7 +90,7 @@ In the code snippets above, the `package` parameter is set to a specific hash, w
 
 !!! info
 
-    If you want to learn more about creating and uploading your own Golem images, check out this article: [Converting a Docker Image into a Golem Image](../../../requestor-tutorials/vm-runtime)
+    If you want to learn more about creating and uploading your own Golem images, check out this article: [Converting a Docker Image into a Golem Image](https://handbook.golem.network/requestor-tutorials/vm-runtime)
 
 ### Worker Function
 
@@ -124,7 +124,7 @@ await executor.end();
 
 ## Conclusion
 
-That's it for the example! To run it on your local machine, make sure you have a `yagna` node running and set up as a requestor (refer to [Requestor development: a quick primer](../../../requestor-tutorials/flash-tutorial-of-requestor-development/) for more information). 
+That's it for the example! To run it on your local machine, make sure you have a `yagna` node running and set up as a requestor (refer to [Requestor development: a quick primer](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development) for more information). 
 Then, run the following command in the directory containing the `hello.js` file:
 
 ```

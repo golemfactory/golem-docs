@@ -90,9 +90,9 @@ The above command will process the `3009..6016` fragment, and any results in tha
 Before diving into the example, make sure you have the necessary environment set up. Here's what you need:
 
 * Install `yagna` daemon on your machine
-* Familiarize yourself with the setup of the environment required to run Python high-level API examples by going through the [Flash Tutorial of Requestor Development](../../../requestor-tutorials/flash-tutorial-of-requestor-development/)
+* Familiarize yourself with the setup of the environment required to run Python high-level API examples by going through the [Flash Tutorial of Requestor Development](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
 * Set the `YAGNA_APPKEY` environment variable to the value of the generated app key
-* Initialize payment with `yagna payment init -sender` (Note: payment needs to be initialized after each launch of `yagna service run`)
+* Initialize payment with `yagna payment init --sender` (Note: payment needs to be initialized after each launch of `yagna service run`)
 * Activate the virtual python environment for the tutorial
 * Install dependencies and clone the `yajsapi` repository (which contains the tutorial examples)
 
@@ -118,7 +118,7 @@ In the `examples/yacat` directory, you'll find two files that will be used in th
 
 ## Let's get to work - the Dockerfile
 
-Golem is designed to use existing Docker images, so you can use any existing docker image that meets your needs. However, if a suitable image is not available on the [docker hub](https://hub.docker.com/), you will have to create a custom one.
+Golem is designed to use existing Docker images, so you can use any existing docker image that meets your needs. However, if a suitable image is not available on the [Docker Hub](https://hub.docker.com/), you will have to create a custom one.
 
 ### Adjusting the Dockerfile
 
