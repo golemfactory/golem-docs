@@ -5,7 +5,7 @@ description: JS API introduction
 
 !!! tip
 
-    Looking for a quick dive into the JS API? Visit our [Quickstart Guide](quickstart.md)!
+    Looking for a quick dive into the JS API? Visit our [Quickstart Guide](../quickstart.md)!
 
 ## Introduction
 
@@ -25,5 +25,5 @@ The Mid Level API gives developers access to the Golem-specific components, such
 
 Choose the level of abstraction that best suits your needs and follow the links provided to learn more about each level and its capabilities.
 
-[High Level API](mid-level/index.md){ .md-button .md-button--primary }
-[Mid Level API](high-level/index.md){ .md-button .md-button--primary }
+[High Level API](../mid-level/index.md){ .md-button .md-button--primary }
+[Mid Level API](../high-level/index.md){ .md-button .md-button--primary }
