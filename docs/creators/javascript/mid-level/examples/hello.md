@@ -249,7 +249,7 @@ await demand.unsubscribe();
 
 That's all there is to the example!
 
-To run it on your local machine make sure you have a `yagna` node running and set up as a requestor (take a look here in case of any doubts: [Requestor development: a quick primer](../../../requestor-tutorials/flash-tutorial-of-requestor-development/README.md)). You can then issue the following command:
+To run it on your local machine make sure you have a `yagna` node running and set up as a requestor (take a look here in case of any doubts: [Requestor development: a quick primer](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)). You can then issue the following command:
 
 ```
 YAGNA_APPKEY={your_appkey_here} ts-node ./hello.ts
