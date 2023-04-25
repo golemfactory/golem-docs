@@ -31,7 +31,7 @@ The purpose of this article is not to get into the details, but to show you **ho
     * Install [Yarn](https://classic.yarnpkg.com/en/docs/install) version 1.22.3 or newer
     * Install [Git](https://git-scm.com/downloads)
 
-In this section we will introduce how to run a Simple Node Application on Golem Network. The created project will be using a build setup based on pre-built [Golem Image](https://handbook.golem.network/requestor-tutorials/vm-runtime) and allow us to run our Node.js script on a [Provider](https://handbook.golem.network/introduction/provider).
+In this section we will introduce how to run a Simple Node Application on Golem Network. The created project will be using a build setup based on pre-built image ([Golem Image](https://handbook.golem.network/requestor-tutorials/vm-runtime)) and allow us to run our Node.js script on a rented computer on Golem ([Provider](https://handbook.golem.network/introduction/provider)).
 
 Make sure you have a version of Node.js installed newer than or equal to 16.0.0:
 
@@ -53,7 +53,7 @@ git --version
 
 ## Installing yagna requestor
 
-To start working with Golem network we need to install `yagna` daemon locally. In the simplest terms, the daemon allows you to communicate with Golem Network and perform operations on it.
+To start working with Golem network we need to install the `yagna` daemon on our local machine. In the simplest terms, the `yagna` daemon allows you to communicate with Golem Network and perform operations on it. A "Requestor" is what you are right now, someone who is renting computing resources on Golem Network.
 
 === "Easy installation"
     
@@ -147,13 +147,13 @@ yagna app-key create requestor
 
 #### Get some funds
 
-In order to be able to request tasks on Golem Network, you'll need some GLM tokens. To get some funds on testnet, type in:
+In order to be able to request tasks on Golem Network, you'll need some credits on the network (GLM tokens). To get some on test credits to be used on the testnet, type in the command seen below. The testnet is a limited testing playground where no real money is transacted and features can be tested.
 
 ```bash
 yagna payment fund
 ```
 
-Once you run the command, give some time to transfer funds to your wallet. You can verify whether you already got the funds with:
+Once you run the command, give some time to transfer credits to your wallet. You can verify whether you already got the credits with:
 
 ```bash
 yagna payment status
@@ -410,3 +410,10 @@ Result in the command line will look like:
 ## Summary
 
 We tried to familiarize you with how to work with Golem Network. We hope that now you understand the basics of application development.
+
+!!! golem-icon "Next steps:"
+
+    ??? question "Continue"
+
+        [Introduction to Task API](high-level/task-model.md){ .md-button .md-button--primary }
+

@@ -2,12 +2,12 @@
 description: Create your own task application on Golem
 ---
 
-# Create your own task application using High-Level API
+# Create your own task application using Task API
 
 ## Introduction
 
 This tutorial is designed for developers who want to create their own application on the Golem network. 
-It will guide you through the process of creating a task-based requestor application using the high-level API, and provide you with examples to help you understand the concepts better.
+It will guide you through the process of creating a task-based requestor application using the Task API, and provide you with examples to help you understand the concepts better.
 
 !!! info
 

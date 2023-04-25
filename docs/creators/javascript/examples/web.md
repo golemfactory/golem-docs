@@ -176,3 +176,21 @@ Now if we have a running yagna deamon and passed Yagna APP key correctly, after 
 [ Open localhost ](http://localhost:3000){ .md-button .md-button--primary }
 
 And if we click the run button, after a while in the result container, we should get the result of the script: `Hello World`, and in the log container we should see the logs of executed commands.
+
+!!! golem-icon "Next steps:"
+
+    ??? quote "Return"
+
+        [Introduction to Task API](../high-level/index.md){ .md-button .md-button--primary }
+    
+    ??? abstract "Examples"
+        
+        [Task Example 0: Hello World!](hello.md){ .md-button .md-button--primary }
+
+        [Task Example 1: Simple Usage of Task API](simple.md){ .md-button .md-button--primary }
+
+        [Task Example 2: Hashcat on Golem](hashcat.md){ .md-button .md-button--primary }
+
+    ??? question "Continue"
+
+        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }

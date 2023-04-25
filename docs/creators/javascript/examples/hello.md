@@ -24,7 +24,7 @@ This article assumes that you have some basic understanding of Golem application
 To follow along and/or experiment with the code in this article, you'll need to have the following set up:
 
 - A local `yagna` node (instructions can be found here: [Requestor development: a quick primer](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
-- The JS Golem high-level API on your machine (instructions here: [Run first task on Golem](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/run-first-task-on-golem))
+- The Golem JS API on your machine (instructions here: [Run first task on Golem](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/run-first-task-on-golem))
 
 ## Requestor Agent Code
 
@@ -146,6 +146,20 @@ Hello World
 
 The output "Hello World" is the result received from executing the `echo "Hello World"` command inside the provider's exe unit.
 
-!!! example
+!!! golem-icon "Next steps:"
 
-    Ready for a more complex scenario? Take a look at the next article which implements a slightly more complicated case.
+    ??? quote "Return"
+
+        [Introduction to Task API](../high-level/index.md){ .md-button .md-button--primary }
+    
+    ??? abstract "Examples"
+
+        [Task Example 1: Simple Usage of Task API](simple.md){ .md-button .md-button--primary }
+
+        [Task Example 2: Hashcat on Golem](hashcat.md){ .md-button .md-button--primary }
+
+        [Task Example 3: Requestor in browser](web.md){ .md-button .md-button--primary }
+
+    ??? question "Continue"
+
+        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }
