@@ -6,15 +6,15 @@ nav:
       - JavaScript:
           - 'creators/javascript/index.md'
           - Quickstart: 'creators/javascript/quickstart.md'
-          - Examples:
-              - '#0 - Hello World': 'creators/javascript/examples/hello.md'
-              - '#1 - Simple Usage': 'creators/javascript/examples/simple.md'
-              - '#2 - Hashcat on Golem': 'creators/javascript/examples/hashcat.md'
-              - '#3 - Requestor in browser': 'creators/javascript/examples/web.md'
-          - 'Architecture':
+          - 'Introduction to Task API':
             - 'creators/javascript/high-level/index.md'
             - 'Task Model': 'creators/javascript/high-level/task-model.md'
-          - 'Mid Level API':
+            - Examples:
+                - '#0 - Hello World': 'creators/javascript/examples/hello.md'
+                - '#1 - Simple Usage': 'creators/javascript/examples/simple.md'
+                - '#2 - Hashcat on Golem': 'creators/javascript/examples/hashcat.md'
+                - '#3 - Requestor in browser': 'creators/javascript/examples/web.md'
+          - 'Diving deeper with Core API':
             - 'creators/javascript/mid-level/index.md'
             - Examples:
                 - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
@@ -47,7 +47,11 @@ extra_css:
   - css/custom-global.css
 theme:
   icon:
-    repo: fontawesome/brands/github
+    # repo: fontawesome/brands/github
+    admonition: # this one and below are hard-coded admonition types, changed to other icons:
+      abstract: fontawesome/solid/book # this one is default
+      quote: fontawesome/solid/arrow-left
+      question: fontawesome/solid/arrow-right
   name: material
   custom_dir: material
   logo: assets/logo.svg
@@ -58,7 +62,6 @@ theme:
     - navigation.indexes
     - navigation.tabs
     - navigation.top
-    - navigation.footer
     - content.code.copy
     - content.code.annotate
     - search.suggest

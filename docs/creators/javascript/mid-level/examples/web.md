@@ -1,14 +1,14 @@
 ---
-description: Example of usage mid-level API from browser
+description: Example of usage of JS Core API from browser
 ---
 
-# Task Example 1: Mid-level component in browser
+# Task Example 1: Core API in browser
 
 !!! info
 
     This example illustrates following Golem features & aspects:
     
-    * Simple usage mid-level component in browser context
+    * Simple usage of Core API in browser context
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => console.log(`Server listen at http://localhost:3000`));
 ```
 
-Then wen need to create main `index.html` file with minimal layout:
+Then we need to create main `index.html` file with minimal layout:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -277,3 +277,17 @@ Now if we have a running yagna deamon with the cors parameter, after launching o
 [ Open localhost ](http://localhost:3000){ .md-button .md-button--primary }
 
 and if we click the buttons one by one depending on the messages displayed in the logs after the correct creation of the `Activity`, we will be able to execute any commands on the provider.
+
+!!! golem-icon "Next steps:"
+
+    ??? quote "Return"
+
+        [Diving deeper with Core API](../index.md){ .md-button .md-button--primary }
+    
+    ??? abstract "Examples"
+        
+        [Task Example 0: Hello World!](hello.md){ .md-button .md-button--primary }
+
+    ??? question "Continue"
+
+        [API Reference](../../docs/index.md){ .md-button .md-button--primary }

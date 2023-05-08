@@ -387,3 +387,21 @@ ts-node yacat.ts --help
 ```
 
 This will display the help message with information on all the optional parameters supported by `yacat.ts`.
+
+!!! golem-icon "Next steps:"
+
+    ??? quote "Return"
+
+        [Introduction to Task API](../high-level/index.md){ .md-button .md-button--primary }
+    
+    ??? abstract "Examples"
+        
+        [Task Example 0: Hello World!](hello.md){ .md-button .md-button--primary }
+
+        [Task Example 1: Simple Usage of Task API](simple.md){ .md-button .md-button--primary }
+
+        [Task Example 3: Requestor in browser](web.md){ .md-button .md-button--primary }
+
+    ??? question "Continue"
+
+        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }

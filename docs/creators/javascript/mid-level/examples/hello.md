@@ -19,7 +19,7 @@ The only assumption made in this article is that you have some familiarity with 
 Here are the prerequisites in case you'd like to follow along and/or experiment with the code presented in this article:
 
 * you have a local `yagna` node set up (instructions can be found here: [Requestor development: a quick primer](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
-* you have the JS Golem high-level API set up on your machine (instructions here: [Run first task on Golem](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/run-first-task-on-golem))
+* you have the Golem JS API set up on your machine (instructions here: [Run first task on Golem](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/run-first-task-on-golem))
 
 ## Requestor agent code
 
@@ -275,3 +275,17 @@ Hello World
 !!! warning
 
     In the current version, the payment acceptance mechanism has not yet been implemented.
+
+!!! golem-icon "Next steps:"
+
+    ??? quote "Return"
+
+        [Diving deeper with Core API](../index.md){ .md-button .md-button--primary }
+    
+    ??? abstract "Examples"
+
+        [Task Example 1: Requestor in browser](web.md){ .md-button .md-button--primary }
+
+    ??? question "Continue"
+
+        [API Reference](../../docs/index.md){ .md-button .md-button--primary }

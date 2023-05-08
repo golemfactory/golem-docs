@@ -134,3 +134,21 @@ Here's an example demonstrating its usage:
 ```
 
 Note that the `beforeEach` method only runs once per provider activity, and it's used to perform any setup tasks that need to be performed before executing other tasks on the provider.
+
+!!! golem-icon "Next steps:"
+
+    ??? quote "Return"
+
+        [Introduction to Task API](../high-level/index.md){ .md-button .md-button--primary }
+    
+    ??? abstract "Examples"
+        
+        [Task Example 0: Hello World!](hello.md){ .md-button .md-button--primary }
+
+        [Task Example 2: Hashcat on Golem](hashcat.md){ .md-button .md-button--primary }
+
+        [Task Example 3: Requestor in browser](web.md){ .md-button .md-button--primary }
+
+    ??? question "Continue"
+
+        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }

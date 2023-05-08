@@ -20,7 +20,7 @@ Once you have a clear understanding of how your problem can be divided, you'll n
 
 ![problem division](/assets/js-tutorial-02.jpeg)
 
-It's worth noting that the number of fragments doesn't need to match the number of provider nodes commissioned to perform the tasks. The high-level API will spawn activities on multiple providers as long as there are providers available and up to the number of fragments or the limit specified by the `maxParallelTasks` parameter.
+It's worth noting that the number of fragments doesn't need to match the number of provider nodes commissioned to perform the tasks. The Task API will spawn activities on multiple providers as long as there are providers available and up to the number of fragments or the limit specified by the `maxParallelTasks` parameter.
 
 ## Designing the Application
 
@@ -42,3 +42,22 @@ With these pieces in place, you should be able to create a functional task appli
 
     Now you know what a Golem VM application is and how it works.
 
+!!! golem-icon "Next steps:"
+
+    ??? quote "Return"
+
+        [Introduction to Task API](index.md){ .md-button .md-button--primary }
+    
+    ??? abstract "Examples"
+        
+        [Task Example 0: Hello World!](../examples/hello.md){ .md-button .md-button--primary }
+
+        [Task Example 1: Simple Usage of Task API](../examples/simple.md){ .md-button .md-button--primary }
+
+        [Task Example 2: Hashcat on Golem](../examples/hashcat.md){ .md-button .md-button--primary }
+
+        [Task Example 3: Requestor in browser](../examples/web.md){ .md-button .md-button--primary }
+
+    ??? question "Continue"
+
+        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }

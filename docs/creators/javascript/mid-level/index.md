@@ -1,18 +1,17 @@
 ---
-description: Create your own task application on Golem using Mid-level API
+description: Create your own task application on Golem using JS Core API
 ---
 
-# Create your own task application using Mid-level API
+# Create your own task application using JS Core API
 
 ## Introduction
 
-Mid-level API allows for the development of intricate applications which satisfy the needs of each user and developer. 
-Compared to High-level, it provides a greater range of options but users are expected to have an understanding of the 
-fundamental principles and structure behind the Golem ecosystem.
+JS Core API allows for the development of intricate applications which satisfy the needs of each user and developer. 
+Compared to the basic Task API, it provides a greater range of options but users are expected to have an understanding of the fundamental principles and structure behind the Golem ecosystem.
 
 ## Building blocks
 
-The basic components included in the Mid-level API are:
+The basic components included in the JS Core API are:
 
  - Package - [package/package](../docs/modules/package_package.md)
  - Allocation - [payment/allocation](../docs/modules/payment_allocation.md)
@@ -30,4 +29,4 @@ In order for us better understand the functions of these various modules and how
 
 [Task Example 0: Hello World!](examples/hello.md){ .md-button .md-button--primary }
 
-[Task Example 1: Mid-level component in browser](examples/web.md){ .md-button .md-button--primary }
+[Task Example 1: Core API in browser](examples/web.md){ .md-button .md-button--primary }
