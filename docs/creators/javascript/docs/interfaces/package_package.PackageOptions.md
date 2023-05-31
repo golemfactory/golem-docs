@@ -26,7 +26,7 @@ Type of engine required: vm, emscripten, sgx, sgx-js, sgx-wasm, sgx-wasi
 
 #### Defined in
 
-[yajsapi/package/package.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L12)
+[yajsapi/package/package.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L12)
 
 ___
 
@@ -38,7 +38,7 @@ Minimum required memory to execute application GB
 
 #### Defined in
 
-[yajsapi/package/package.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L14)
+[yajsapi/package/package.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L14)
 
 ___
 
@@ -50,7 +50,7 @@ Minimum required disk storage to execute tasks in GB
 
 #### Defined in
 
-[yajsapi/package/package.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L16)
+[yajsapi/package/package.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L16)
 
 ___
 
@@ -62,7 +62,7 @@ Minimum required CPU threads
 
 #### Defined in
 
-[yajsapi/package/package.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L18)
+[yajsapi/package/package.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L18)
 
 ___
 
@@ -74,7 +74,7 @@ Minimum required CPU cores
 
 #### Defined in
 
-[yajsapi/package/package.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L20)
+[yajsapi/package/package.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L20)
 
 ___
 
@@ -86,7 +86,7 @@ Required providers capabilities to run application
 
 #### Defined in
 
-[yajsapi/package/package.ts:22](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L22)
+[yajsapi/package/package.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L22)
 
 ___
 
@@ -98,7 +98,7 @@ finds package by its contents hash
 
 #### Defined in
 
-[yajsapi/package/package.ts:24](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L24)
+[yajsapi/package/package.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L24)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:25](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L25)
+[yajsapi/package/package.ts:25](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L25)
 
 ___
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:26](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L26)
+[yajsapi/package/package.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L26)

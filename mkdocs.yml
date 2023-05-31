@@ -19,7 +19,13 @@ nav:
             - Examples:
                 - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
                 - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
-          - 'API Reference': 'creators/javascript/docs/index.md'
+          - 'API Reference':
+            - 'creators/javascript/docs/index.md'
+            - 'Repository README': 'creators/javascript/docs/readme.md'
+            - 'Classes': 'creators/javascript/docs/classes'
+            - 'Enums': 'creators/javascript/docs/enums'
+            - 'Interfaces': 'creators/javascript/docs/interfaces'
+            - 'Modules': 'creators/javascript/docs/modules'
       - 'Decentralized apps on Golem':
           - 'creators/dapps/index.md'
           - Quickstart: 'creators/dapps/run-a-dapp.md'
@@ -72,6 +78,7 @@ copyright: >
   <a href="#__consent">Change cookie settings</a>
 plugins:
   - search
+  - include_dir_to_nav
 extra:
   social:
     - icon: fontawesome/brands/github

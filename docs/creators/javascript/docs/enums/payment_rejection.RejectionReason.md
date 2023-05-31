@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[yajsapi/payment/rejection.ts:5](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/rejection.ts#L5)
+[yajsapi/payment/rejection.ts:5](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/rejection.ts#L5)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/rejection.ts:6](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/rejection.ts#L6)
+[yajsapi/payment/rejection.ts:6](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/rejection.ts#L6)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/rejection.ts:7](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/rejection.ts#L7)
+[yajsapi/payment/rejection.ts:7](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/rejection.ts#L7)

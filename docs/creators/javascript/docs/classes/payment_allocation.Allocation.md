@@ -43,7 +43,7 @@ Create allocation
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:39](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L39)
+[yajsapi/payment/allocation.ts:39](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L39)
 
 ___
 
@@ -61,7 +61,7 @@ amount remaining
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:93](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L93)
+[yajsapi/payment/allocation.ts:93](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L93)
 
 ___
 
@@ -79,7 +79,7 @@ spent amount
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:103](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L103)
+[yajsapi/payment/allocation.ts:103](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L103)
 
 ___
 
@@ -95,7 +95,7 @@ Release allocation
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:111](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L111)
+[yajsapi/payment/allocation.ts:111](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L111)
 
 ___
 
@@ -113,7 +113,7 @@ MarketDecoration
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:123](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L123)
+[yajsapi/payment/allocation.ts:123](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L123)
 
 ## Properties
 
@@ -125,7 +125,7 @@ Allocation ID
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L20)
+[yajsapi/payment/allocation.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L20)
 
 ___
 
@@ -137,7 +137,7 @@ Timestamp of creation
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:22](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L22)
+[yajsapi/payment/allocation.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L22)
 
 ___
 
@@ -149,7 +149,7 @@ Timeout
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:24](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L24)
+[yajsapi/payment/allocation.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L24)
 
 ___
 
@@ -161,7 +161,7 @@ Address of requestor
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:26](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L26)
+[yajsapi/payment/allocation.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L26)
 
 ___
 
@@ -173,7 +173,7 @@ Payment platform
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:28](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L28)
+[yajsapi/payment/allocation.ts:28](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L28)
 
 ___
 
@@ -185,4 +185,4 @@ Total allocation Amount
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:30](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/allocation.ts#L30)
+[yajsapi/payment/allocation.ts:30](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L30)

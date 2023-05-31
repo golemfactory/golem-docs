@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:132](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/strategy.ts#L132)
+[yajsapi/market/strategy.ts:132](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L132)
 
 ## Methods
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:139](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/strategy.ts#L139)
+[yajsapi/market/strategy.ts:139](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L139)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:146](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/strategy.ts#L146)
+[yajsapi/market/strategy.ts:146](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L146)

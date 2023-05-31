@@ -1,7 +1,7 @@
-# network/node
+# Module: network/node
 
 ## Table of contents
 
 ### Classes
 
-* [NetworkNode](../../../new\_yajsapi/classes/network\_node.NetworkNode.md)
+- [NetworkNode](../classes/network_node.NetworkNode.md)

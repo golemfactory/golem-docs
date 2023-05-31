@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L84)
+[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L84)
 
 ## Properties
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L84)
+[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L84)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L84)
+[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L84)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L8)
+[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L8)
 
 ## Methods
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L12)
+[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L12)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L17)
+[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L17)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L20)
+[yajsapi/script/command.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L20)
 
 ___
 
@@ -157,4 +157,4 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:23](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L23)
+[yajsapi/script/command.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L23)

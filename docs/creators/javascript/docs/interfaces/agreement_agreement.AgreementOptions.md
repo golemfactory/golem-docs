@@ -28,7 +28,7 @@ yagnaOptions
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:34](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L34)
+[yajsapi/agreement/agreement.ts:34](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L34)
 
 ___
 
@@ -40,7 +40,7 @@ timeout for create agreement and refresh details in ms
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:36](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L36)
+[yajsapi/agreement/agreement.ts:36](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L36)
 
 ___
 
@@ -52,7 +52,7 @@ timeout for wait for provider approval after requestor confirmation in ms
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:38](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L38)
+[yajsapi/agreement/agreement.ts:38](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L38)
 
 ___
 
@@ -64,7 +64,7 @@ Logger module
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:40](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L40)
+[yajsapi/agreement/agreement.ts:40](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L40)
 
 ___
 
@@ -76,4 +76,4 @@ Event Bus implements EventTarget
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:42](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L42)
+[yajsapi/agreement/agreement.ts:42](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L42)

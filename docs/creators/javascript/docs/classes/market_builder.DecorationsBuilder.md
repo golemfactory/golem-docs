@@ -44,7 +44,7 @@ A helper class for creating market decorations for `Demand` published on the mar
 
 #### Defined in
 
-[yajsapi/market/builder.ts:38](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L38)
+[yajsapi/market/builder.ts:38](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L38)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:47](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L47)
+[yajsapi/market/builder.ts:47](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L47)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:51](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L51)
+[yajsapi/market/builder.ts:51](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L51)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:57](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L57)
+[yajsapi/market/builder.ts:57](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L57)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:81](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L81)
+[yajsapi/market/builder.ts:81](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L81)
 
 ___
 
@@ -134,4 +134,4 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:95](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L95)
+[yajsapi/market/builder.ts:95](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L95)

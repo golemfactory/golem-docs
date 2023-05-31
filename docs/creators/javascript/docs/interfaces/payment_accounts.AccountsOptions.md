@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[yajsapi/payment/accounts.ts:8](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/accounts.ts#L8)
+[yajsapi/payment/accounts.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/accounts.ts#L8)
 
 ___
 
@@ -49,7 +49,7 @@ Omit.logger
 
 #### Defined in
 
-[yajsapi/payment/config.ts:31](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/config.ts#L31)
+[yajsapi/payment/config.ts:31](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L31)
 
 ___
 
@@ -63,7 +63,7 @@ Omit.budget
 
 #### Defined in
 
-[yajsapi/payment/config.ts:27](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/config.ts#L27)
+[yajsapi/payment/config.ts:27](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L27)
 
 ___
 
@@ -84,7 +84,7 @@ Omit.payment
 
 #### Defined in
 
-[yajsapi/payment/config.ts:28](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/config.ts#L28)
+[yajsapi/payment/config.ts:28](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L28)
 
 ___
 
@@ -98,7 +98,7 @@ Omit.paymentTimeout
 
 #### Defined in
 
-[yajsapi/payment/config.ts:29](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/config.ts#L29)
+[yajsapi/payment/config.ts:29](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L29)
 
 ___
 
@@ -112,7 +112,7 @@ Omit.paymentRequestTimeout
 
 #### Defined in
 
-[yajsapi/payment/config.ts:30](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/config.ts#L30)
+[yajsapi/payment/config.ts:30](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L30)
 
 ___
 
@@ -126,4 +126,4 @@ Omit.eventTarget
 
 #### Defined in
 
-[yajsapi/payment/config.ts:32](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/config.ts#L32)
+[yajsapi/payment/config.ts:32](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L32)

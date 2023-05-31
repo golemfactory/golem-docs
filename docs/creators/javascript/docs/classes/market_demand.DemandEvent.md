@@ -39,7 +39,7 @@ Event.constructor
 
 #### Defined in
 
-[yajsapi/market/demand.ts:126](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L126)
+[yajsapi/market/demand.ts:126](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L126)
 
 ## Properties
 
@@ -49,4 +49,4 @@ Event.constructor
 
 #### Defined in
 
-[yajsapi/market/demand.ts:119](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L119)
+[yajsapi/market/demand.ts:119](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L119)

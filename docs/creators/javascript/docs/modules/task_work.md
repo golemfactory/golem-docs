@@ -44,4 +44,4 @@
 
 #### Defined in
 
-[yajsapi/task/work.ts:9](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L9)
+[yajsapi/task/work.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L9)

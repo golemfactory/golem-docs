@@ -24,7 +24,7 @@ Index of script command
 
 #### Defined in
 
-[yajsapi/activity/results.ts:6](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/results.ts#L6)
+[yajsapi/activity/results.ts:6](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/results.ts#L6)
 
 ___
 
@@ -36,7 +36,7 @@ The datetime of the event on which the result was received
 
 #### Defined in
 
-[yajsapi/activity/results.ts:8](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/results.ts#L8)
+[yajsapi/activity/results.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/results.ts#L8)
 
 ___
 
@@ -48,7 +48,7 @@ If is success
 
 #### Defined in
 
-[yajsapi/activity/results.ts:10](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/results.ts#L10)
+[yajsapi/activity/results.ts:10](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/results.ts#L10)
 
 ___
 
@@ -60,7 +60,7 @@ stdout of script command
 
 #### Defined in
 
-[yajsapi/activity/results.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/results.ts#L12)
+[yajsapi/activity/results.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/results.ts#L12)
 
 ___
 
@@ -72,7 +72,7 @@ stderr of script command
 
 #### Defined in
 
-[yajsapi/activity/results.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/results.ts#L14)
+[yajsapi/activity/results.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/results.ts#L14)
 
 ___
 
@@ -84,7 +84,7 @@ an error message if the result is not successful
 
 #### Defined in
 
-[yajsapi/activity/results.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/results.ts#L16)
+[yajsapi/activity/results.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/results.ts#L16)
 
 ___
 
@@ -96,4 +96,4 @@ Is batch of already finished
 
 #### Defined in
 
-[yajsapi/activity/results.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/results.ts#L18)
+[yajsapi/activity/results.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/results.ts#L18)

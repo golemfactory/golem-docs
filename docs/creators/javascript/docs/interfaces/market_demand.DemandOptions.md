@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[yajsapi/market/demand.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L16)
+[yajsapi/market/demand.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L16)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L17)
+[yajsapi/market/demand.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L17)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L18)
+[yajsapi/market/demand.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L18)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:19](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L19)
+[yajsapi/market/demand.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L19)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L20)
+[yajsapi/market/demand.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L20)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:21](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L21)
+[yajsapi/market/demand.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L21)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:22](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L22)
+[yajsapi/market/demand.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L22)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:23](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L23)
+[yajsapi/market/demand.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L23)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[yajsapi/market/demand.ts:24](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L24)
+[yajsapi/market/demand.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L24)

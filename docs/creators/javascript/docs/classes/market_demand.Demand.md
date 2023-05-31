@@ -47,7 +47,7 @@ Demand
 
 #### Defined in
 
-[yajsapi/market/demand.ts:50](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L50)
+[yajsapi/market/demand.ts:50](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L50)
 
 ___
 
@@ -63,7 +63,7 @@ Unsubscribe demand from the market
 
 #### Defined in
 
-[yajsapi/market/demand.ts:70](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L70)
+[yajsapi/market/demand.ts:70](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L70)
 
 ## Properties
 
@@ -75,4 +75,4 @@ demand ID
 
 #### Defined in
 
-[yajsapi/market/demand.ts:61](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L61)
+[yajsapi/market/demand.ts:61](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L61)

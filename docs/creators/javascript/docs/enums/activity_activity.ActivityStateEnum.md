@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L14)
+[yajsapi/activity/activity.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L14)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:15](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L15)
+[yajsapi/activity/activity.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L15)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L16)
+[yajsapi/activity/activity.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L16)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L17)
+[yajsapi/activity/activity.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L17)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L18)
+[yajsapi/activity/activity.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L18)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:19](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L19)
+[yajsapi/activity/activity.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L19)

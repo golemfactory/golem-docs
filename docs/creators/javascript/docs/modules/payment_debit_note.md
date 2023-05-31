@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:7](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L7)
+[yajsapi/payment/debit_note.ts:7](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L7)

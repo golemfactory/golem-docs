@@ -1,7 +1,7 @@
-# storage/gftp
+# Module: storage/gftp
 
 ## Table of contents
 
 ### Classes
 
-* [GftpStorageProvider](../../../new\_yajsapi/classes/storage\_gftp.GftpStorageProvider.md)
+- [GftpStorageProvider](../classes/storage_gftp.GftpStorageProvider.md)

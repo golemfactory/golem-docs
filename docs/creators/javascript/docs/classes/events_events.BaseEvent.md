@@ -102,7 +102,7 @@ CustomEvent&lt;DataType\&gt;.constructor
 
 #### Defined in
 
-[yajsapi/events/events.ts:19](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/events/events.ts#L19)
+[yajsapi/events/events.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L19)
 
 ## Properties
 
@@ -116,4 +116,4 @@ CustomEvent.detail
 
 #### Defined in
 
-[yajsapi/events/events.ts:11](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/events/events.ts#L11)
+[yajsapi/events/events.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L11)

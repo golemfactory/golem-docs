@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L20)
+[yajsapi/agreement/agreement.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L20)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:21](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L21)
+[yajsapi/agreement/agreement.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L21)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:22](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L22)
+[yajsapi/agreement/agreement.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L22)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:23](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L23)
+[yajsapi/agreement/agreement.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L23)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:24](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L24)
+[yajsapi/agreement/agreement.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L24)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:25](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L25)
+[yajsapi/agreement/agreement.ts:25](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L25)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:26](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L26)
+[yajsapi/agreement/agreement.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L26)

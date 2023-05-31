@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:33](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L33)
+[yajsapi/activity/activity.ts:33](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L33)
 
 ___
 
@@ -46,7 +46,7 @@ timeout for sending and creating batch
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:40](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L40)
+[yajsapi/activity/activity.ts:40](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L40)
 
 ___
 
@@ -58,7 +58,7 @@ timeout for executing batch
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:42](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L42)
+[yajsapi/activity/activity.ts:42](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L42)
 
 ___
 
@@ -70,7 +70,7 @@ interval for fetching batch results while polling
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:44](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L44)
+[yajsapi/activity/activity.ts:44](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L44)
 
 ___
 
@@ -82,7 +82,7 @@ Logger module
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:46](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L46)
+[yajsapi/activity/activity.ts:46](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L46)
 
 ___
 
@@ -94,4 +94,4 @@ Event Bus implements EventTarget
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:48](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L48)
+[yajsapi/activity/activity.ts:48](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L48)

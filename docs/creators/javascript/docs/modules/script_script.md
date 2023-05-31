@@ -1,7 +1,7 @@
-# script/script
+# Module: script/script
 
 ## Table of contents
 
 ### Classes
 
-* [Script](../../../new\_yajsapi/classes/script\_script.Script.md)
+- [Script](../classes/script_script.Script.md)

@@ -23,4 +23,4 @@
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:6](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L6)
+[yajsapi/payment/invoice.ts:6](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L6)

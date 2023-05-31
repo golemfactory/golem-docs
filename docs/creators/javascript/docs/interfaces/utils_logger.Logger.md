@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:9](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L9)
+[yajsapi/utils/logger.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L9)
 
 ## Methods
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:10](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L10)
+[yajsapi/utils/logger.ts:10](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L10)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:11](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L11)
+[yajsapi/utils/logger.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L11)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L12)
+[yajsapi/utils/logger.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L12)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:13](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L13)
+[yajsapi/utils/logger.ts:13](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L13)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L14)
+[yajsapi/utils/logger.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L14)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:15](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L15)
+[yajsapi/utils/logger.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L15)
 
 ___
 
@@ -170,4 +170,4 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/logger.ts#L16)
+[yajsapi/utils/logger.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/logger.ts#L16)

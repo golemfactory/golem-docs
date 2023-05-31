@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:22](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/strategy.ts#L22)
+[yajsapi/market/strategy.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L22)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:23](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/strategy.ts#L23)
+[yajsapi/market/strategy.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L23)

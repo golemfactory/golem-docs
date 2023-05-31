@@ -1,7 +1,7 @@
-# market/proposal
+# Module: market/proposal
 
 ## Table of contents
 
 ### Classes
 
-* [Proposal](../../../new\_yajsapi/classes/market\_proposal.Proposal.md)
+- [Proposal](../classes/market_proposal.Proposal.md)

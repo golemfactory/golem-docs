@@ -1,11 +1,11 @@
-# utils/logger
+# Module: utils/logger
 
 ## Table of contents
 
 ### Enumerations
 
-* [LogLevel](../../../new\_yajsapi/enums/utils\_logger.LogLevel.md)
+- [LogLevel](../enums/utils_logger.LogLevel.md)
 
 ### Interfaces
 
-* [Logger](../../../new\_yajsapi/interfaces/utils\_logger.Logger.md)
+- [Logger](../interfaces/utils_logger.Logger.md)

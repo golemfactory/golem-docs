@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[yajsapi/agreement/service.ts:15](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/service.ts#L15)
+[yajsapi/agreement/service.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/service.ts#L15)

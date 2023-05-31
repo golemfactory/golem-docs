@@ -43,7 +43,7 @@ Agreement
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:68](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L68)
+[yajsapi/agreement/agreement.ts:68](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L68)
 
 ___
 
@@ -59,7 +59,7 @@ Refresh agreement details
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:76](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L76)
+[yajsapi/agreement/agreement.ts:76](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L76)
 
 ___
 
@@ -77,7 +77,7 @@ state
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:85](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L85)
+[yajsapi/agreement/agreement.ts:85](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L85)
 
 ___
 
@@ -101,7 +101,7 @@ Error if the agreement will be rejected by provider or failed to confirm
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:95](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L95)
+[yajsapi/agreement/agreement.ts:95](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L95)
 
 ___
 
@@ -123,7 +123,7 @@ boolean
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:114](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L114)
+[yajsapi/agreement/agreement.ts:114](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L114)
 
 ___
 
@@ -153,7 +153,7 @@ Error if the agreement will be unable to terminate
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:124](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L124)
+[yajsapi/agreement/agreement.ts:124](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L124)
 
 ## Properties
 
@@ -165,7 +165,7 @@ agreement ID
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:58](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L58)
+[yajsapi/agreement/agreement.ts:58](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L58)
 
 ___
 
@@ -177,4 +177,4 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:58](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/agreement/agreement.ts#L58)
+[yajsapi/agreement/agreement.ts:58](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L58)

@@ -29,7 +29,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[yajsapi/package/package.ts:40](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L40)
+[yajsapi/package/package.ts:40](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L40)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:45](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/package/package.ts#L45)
+[yajsapi/package/package.ts:45](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/package/package.ts#L45)

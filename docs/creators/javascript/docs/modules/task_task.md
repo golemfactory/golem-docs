@@ -1,11 +1,11 @@
-# task/task
+# Module: task/task
 
 ## Table of contents
 
 ### Enumerations
 
-* [TaskState](../../../new\_yajsapi/enums/task\_task.TaskState.md)
+- [TaskState](../enums/task_task.TaskState.md)
 
 ### Classes
 
-* [Task](../../../new\_yajsapi/classes/task\_task.Task.md)
+- [Task](../classes/task_task.Task.md)

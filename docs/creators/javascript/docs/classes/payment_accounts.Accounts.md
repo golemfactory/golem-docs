@@ -29,7 +29,7 @@ Accounts module - an object that provides information about the requestor's acco
 
 #### Defined in
 
-[yajsapi/payment/accounts.ts:19](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/accounts.ts#L19)
+[yajsapi/payment/accounts.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/accounts.ts#L19)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/accounts.ts:23](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/accounts.ts#L23)
+[yajsapi/payment/accounts.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/accounts.ts#L23)

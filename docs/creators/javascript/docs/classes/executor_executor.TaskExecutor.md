@@ -66,7 +66,7 @@ TaskExecutor
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:108](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L108)
+[yajsapi/executor/executor.ts:110](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L110)
 
 ## Other
 
@@ -86,7 +86,7 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:147](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L147)
+[yajsapi/executor/executor.ts:149](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L149)
 
 ___
 
@@ -102,7 +102,7 @@ Stop all executor services and shut down executor instance
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:170](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L170)
+[yajsapi/executor/executor.ts:171](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L171)
 
 ___
 
@@ -120,7 +120,7 @@ array
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:190](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L190)
+[yajsapi/executor/executor.ts:191](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L191)
 
 ___
 
@@ -158,7 +158,7 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:213](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L213)
+[yajsapi/executor/executor.ts:214](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L214)
 
 ___
 
@@ -194,7 +194,7 @@ result of task computation
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:227](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L227)
+[yajsapi/executor/executor.ts:228](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L228)
 
 ___
 
@@ -234,7 +234,7 @@ AsyncIterable with results of computed tasks
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:244](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L244)
+[yajsapi/executor/executor.ts:248](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L248)
 
 ___
 
@@ -273,4 +273,4 @@ await executor.forEach(data, async (ctx, item) => {
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:290](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/executor/executor.ts#L290)
+[yajsapi/executor/executor.ts:296](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L296)

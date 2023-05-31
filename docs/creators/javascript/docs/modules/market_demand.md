@@ -25,6 +25,6 @@ Event type with which all offers and proposals coming from the market will be em
 
 #### Defined in
 
-[yajsapi/market/demand.ts:31](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/demand.ts#L31)
+[yajsapi/market/demand.ts:31](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/demand.ts#L31)
 
 ___

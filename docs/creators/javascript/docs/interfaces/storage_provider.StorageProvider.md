@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[yajsapi/storage/provider.ts:2](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/storage/provider.ts#L2)
+[yajsapi/storage/provider.ts:2](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/provider.ts#L2)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/provider.ts:3](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/storage/provider.ts#L3)
+[yajsapi/storage/provider.ts:3](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/provider.ts#L3)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/provider.ts:4](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/storage/provider.ts#L4)
+[yajsapi/storage/provider.ts:4](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/provider.ts#L4)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/provider.ts:5](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/storage/provider.ts#L5)
+[yajsapi/storage/provider.ts:5](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/provider.ts#L5)
 
 ___
 
@@ -102,4 +102,4 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/provider.ts:6](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/storage/provider.ts#L6)
+[yajsapi/storage/provider.ts:6](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/provider.ts#L6)

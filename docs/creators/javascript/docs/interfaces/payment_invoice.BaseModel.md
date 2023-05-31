@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L12)
+[yajsapi/payment/invoice.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L12)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:13](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L13)
+[yajsapi/payment/invoice.ts:13](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L13)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L14)
+[yajsapi/payment/invoice.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L14)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:15](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L15)
+[yajsapi/payment/invoice.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L15)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L16)
+[yajsapi/payment/invoice.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L16)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L17)
+[yajsapi/payment/invoice.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L17)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L18)
+[yajsapi/payment/invoice.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L18)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:19](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L19)
+[yajsapi/payment/invoice.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L19)

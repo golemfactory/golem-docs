@@ -17,9 +17,9 @@
 ### Methods
 
 - [before](script_command.UploadFile.md#before)
-- [after](script_command.UploadFile.md#after)
 - [toJson](script_command.UploadFile.md#tojson)
 - [toExeScriptRequest](script_command.UploadFile.md#toexescriptrequest)
+- [after](script_command.UploadFile.md#after)
 
 ### Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[yajsapi/script/command.ts:93](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L93)
+[yajsapi/script/command.ts:93](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L93)
 
 ## Methods
 
@@ -65,25 +65,7 @@
 
 #### Defined in
 
-[yajsapi/script/command.ts:97](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L97)
-
-___
-
-### after
-
-▸ **after**(): `Promise`<`void`\>
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Overrides
-
-[Transfer](script_command.Transfer.md).[after](script_command.Transfer.md#after)
-
-#### Defined in
-
-[yajsapi/script/command.ts:100](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L100)
+[yajsapi/script/command.ts:97](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L97)
 
 ___
 
@@ -101,7 +83,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L12)
+[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L12)
 
 ___
 
@@ -119,7 +101,25 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L17)
+[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L17)
+
+___
+
+### after
+
+▸ **after**(): `Promise`<`void`\>
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Inherited from
+
+[Transfer](script_command.Transfer.md).[after](script_command.Transfer.md#after)
+
+#### Defined in
+
+[yajsapi/script/command.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L23)
 
 ## Properties
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L84)
+[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L84)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L84)
+[yajsapi/script/command.ts:84](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L84)
 
 ___
 
@@ -161,4 +161,4 @@ ___
 
 #### Defined in
 
-[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L8)
+[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L8)

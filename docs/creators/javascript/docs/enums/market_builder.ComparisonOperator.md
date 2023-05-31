@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[yajsapi/market/builder.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L17)
+[yajsapi/market/builder.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L17)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L18)
+[yajsapi/market/builder.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L18)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:19](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L19)
+[yajsapi/market/builder.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L19)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L20)
+[yajsapi/market/builder.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L20)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[yajsapi/market/builder.ts:21](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L21)
+[yajsapi/market/builder.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L21)

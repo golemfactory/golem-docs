@@ -35,6 +35,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 - [stop](task_task.Task.md#stop)
 - [isQueueable](task_task.Task.md#isqueueable)
 - [isRetry](task_task.Task.md#isretry)
+- [isDone](task_task.Task.md#isdone)
 - [isFinished](task_task.Task.md#isfinished)
 - [isRejected](task_task.Task.md#isrejected)
 - [isPending](task_task.Task.md#ispending)
@@ -44,12 +45,13 @@ Represents one computation unit that will be run on the one provider machine (e.
 - [getWorker](task_task.Task.md#getworker)
 - [getInitWorker](task_task.Task.md#getinitworker)
 - [getRetriesCount](task_task.Task.md#getretriescount)
+- [getError](task_task.Task.md#geterror)
 
 ## Constructors
 
 ### constructor
 
-• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`)
+• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `maxTaskRetries?`)
 
 #### Type parameters
 
@@ -60,16 +62,17 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `worker` | [`Worker`](../modules/task_work.md#worker)<`InputType`, `OutputType`\> |
-| `data?` | `InputType` |
-| `initWorker?` | [`Worker`](../modules/task_work.md#worker)<`undefined`, `unknown`\> |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `id` | `string` | `undefined` |
+| `worker` | [`Worker`](../modules/task_work.md#worker)<`InputType`, `OutputType`\> | `undefined` |
+| `data?` | `InputType` | `undefined` |
+| `initWorker?` | [`Worker`](../modules/task_work.md#worker)<`undefined`, `unknown`\> | `undefined` |
+| `maxTaskRetries` | `number` | `MAX_RETRIES` |
 
 #### Defined in
 
-[yajsapi/task/task.ts:23](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L23)
+[yajsapi/task/task.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L24)
 
 ## Properties
 
@@ -79,7 +82,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Defined in
 
-[yajsapi/task/task.ts:24](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L24)
+[yajsapi/task/task.ts:25](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L25)
 
 ## Methods
 
@@ -93,7 +96,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Defined in
 
-[yajsapi/task/task.ts:30](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L30)
+[yajsapi/task/task.ts:32](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L32)
 
 ___
 
@@ -115,7 +118,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:33](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L33)
+[yajsapi/task/task.ts:35](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L35)
 
 ___
 
@@ -133,7 +136,7 @@ QueueableTask.isQueueable
 
 #### Defined in
 
-[yajsapi/task/task.ts:42](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L42)
+[yajsapi/task/task.ts:45](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L45)
 
 ___
 
@@ -147,7 +150,21 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:45](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L45)
+[yajsapi/task/task.ts:48](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L48)
+
+___
+
+### isDone
+
+▸ **isDone**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[yajsapi/task/task.ts:52](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L52)
 
 ___
 
@@ -161,7 +178,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:48](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L48)
+[yajsapi/task/task.ts:55](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L55)
 
 ___
 
@@ -175,7 +192,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:51](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L51)
+[yajsapi/task/task.ts:58](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L58)
 
 ___
 
@@ -189,7 +206,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:54](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L54)
+[yajsapi/task/task.ts:61](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L61)
 
 ___
 
@@ -203,7 +220,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:57](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L57)
+[yajsapi/task/task.ts:64](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L64)
 
 ___
 
@@ -217,7 +234,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:60](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L60)
+[yajsapi/task/task.ts:67](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L67)
 
 ___
 
@@ -231,7 +248,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:63](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L63)
+[yajsapi/task/task.ts:70](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L70)
 
 ___
 
@@ -245,7 +262,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:66](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L66)
+[yajsapi/task/task.ts:73](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L73)
 
 ___
 
@@ -259,7 +276,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:69](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L69)
+[yajsapi/task/task.ts:76](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L76)
 
 ___
 
@@ -273,4 +290,18 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:72](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/task.ts#L72)
+[yajsapi/task/task.ts:79](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L79)
+
+___
+
+### getError
+
+▸ **getError**(): `undefined` \| `Error`
+
+#### Returns
+
+`undefined` \| `Error`
+
+#### Defined in
+
+[yajsapi/task/task.ts:82](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L82)

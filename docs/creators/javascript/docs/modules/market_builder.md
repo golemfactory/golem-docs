@@ -31,6 +31,6 @@ Properties and constraints to be added to a market object (i.e. a demand or an o
 
 #### Defined in
 
-[yajsapi/market/builder.ts:8](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/builder.ts#L8)
+[yajsapi/market/builder.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/builder.ts#L8)
 
 ___

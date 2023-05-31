@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[yajsapi/script/script.ts:8](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/script.ts#L8)
+[yajsapi/script/script.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/script.ts#L8)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/script.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/script.ts#L12)
+[yajsapi/script/script.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/script.ts#L12)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/script.ts:15](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/script.ts#L15)
+[yajsapi/script/script.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/script.ts#L15)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/script.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/script.ts#L18)
+[yajsapi/script/script.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/script.ts#L18)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[yajsapi/script/script.ts:21](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/script.ts#L21)
+[yajsapi/script/script.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/script.ts#L21)
 
 ## Constructors
 
@@ -112,4 +112,4 @@ ___
 
 #### Defined in
 
-[yajsapi/script/script.ts:11](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/script.ts#L11)
+[yajsapi/script/script.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/script.ts#L11)

@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/strategy.ts#L18)
+[yajsapi/market/strategy.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L18)

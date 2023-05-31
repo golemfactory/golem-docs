@@ -45,7 +45,7 @@ Activity
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:78](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L78)
+[yajsapi/activity/activity.ts:78](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L78)
 
 ___
 
@@ -69,7 +69,7 @@ Execute script
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:90](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L90)
+[yajsapi/activity/activity.ts:90](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L90)
 
 ___
 
@@ -87,7 +87,7 @@ boolean
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:115](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L115)
+[yajsapi/activity/activity.ts:115](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L115)
 
 ___
 
@@ -109,7 +109,7 @@ state
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:127](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L127)
+[yajsapi/activity/activity.ts:127](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L127)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:138](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L138)
+[yajsapi/activity/activity.ts:138](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L138)
 
 ## Properties
 
@@ -141,7 +141,7 @@ activity ID
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:66](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L66)
+[yajsapi/activity/activity.ts:66](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L66)
 
 ___
 
@@ -153,7 +153,7 @@ agreement ID
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:66](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L66)
+[yajsapi/activity/activity.ts:66](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L66)
 
 ___
 
@@ -165,4 +165,4 @@ ___
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:66](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L66)
+[yajsapi/activity/activity.ts:66](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L66)

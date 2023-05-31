@@ -38,7 +38,7 @@ Create a new VPN.
 
 #### Defined in
 
-[yajsapi/network/network.ts:56](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L56)
+[yajsapi/network/network.ts:56](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L56)
 
 ___
 
@@ -56,7 +56,7 @@ NetworkInfo
 
 #### Defined in
 
-[yajsapi/network/network.ts:100](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L100)
+[yajsapi/network/network.ts:100](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L100)
 
 ___
 
@@ -79,7 +79,7 @@ Add a new node to the network.
 
 #### Defined in
 
-[yajsapi/network/network.ts:115](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L115)
+[yajsapi/network/network.ts:115](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L115)
 
 ___
 
@@ -95,7 +95,7 @@ Remove this network, terminating any connections it provides
 
 #### Defined in
 
-[yajsapi/network/network.ts:138](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L138)
+[yajsapi/network/network.ts:138](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L138)
 
 ## Properties
 
@@ -105,7 +105,7 @@ Remove this network, terminating any connections it provides
 
 #### Defined in
 
-[yajsapi/network/network.ts:85](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L85)
+[yajsapi/network/network.ts:85](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L85)
 
 ___
 
@@ -115,4 +115,4 @@ ___
 
 #### Defined in
 
-[yajsapi/network/network.ts:85](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L85)
+[yajsapi/network/network.ts:85](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L85)

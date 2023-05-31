@@ -24,7 +24,7 @@ the node ID of the owner of this VPN (the requestor)
 
 #### Defined in
 
-[yajsapi/network/network.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L12)
+[yajsapi/network/network.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L12)
 
 ___
 
@@ -36,7 +36,7 @@ YagnaOptions
 
 #### Defined in
 
-[yajsapi/network/network.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L14)
+[yajsapi/network/network.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L14)
 
 ___
 
@@ -48,7 +48,7 @@ the IP address of the network. May contain netmask, e.g. "192.168.0.0/24"
 
 #### Defined in
 
-[yajsapi/network/network.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L16)
+[yajsapi/network/network.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L16)
 
 ___
 
@@ -60,7 +60,7 @@ the desired IP address of the requestor node within the newly-created network
 
 #### Defined in
 
-[yajsapi/network/network.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L18)
+[yajsapi/network/network.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L18)
 
 ___
 
@@ -72,7 +72,7 @@ optional netmask (only if not provided within the `ip` argument)
 
 #### Defined in
 
-[yajsapi/network/network.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L20)
+[yajsapi/network/network.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L20)
 
 ___
 
@@ -84,7 +84,7 @@ optional gateway address for the network
 
 #### Defined in
 
-[yajsapi/network/network.ts:22](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L22)
+[yajsapi/network/network.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L22)
 
 ___
 
@@ -96,4 +96,4 @@ optional custom logger module
 
 #### Defined in
 
-[yajsapi/network/network.ts:24](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/network/network.ts#L24)
+[yajsapi/network/network.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/network.ts#L24)

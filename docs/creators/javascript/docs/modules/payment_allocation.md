@@ -1,11 +1,11 @@
-# payment/allocation
+# Module: payment/allocation
 
 ## Table of contents
 
 ### Interfaces
 
-* [AllocationOptions](../../../new\_yajsapi/interfaces/payment\_allocation.AllocationOptions.md)
+- [AllocationOptions](../interfaces/payment_allocation.AllocationOptions.md)
 
 ### Classes
 
-* [Allocation](../../../new\_yajsapi/classes/payment\_allocation.Allocation.md)
+- [Allocation](../classes/payment_allocation.Allocation.md)

@@ -1,16 +1,16 @@
-# activity/activity
+# Module: activity/activity
 
 ## Table of contents
 
 ### Enumerations
 
-* [ActivityStateEnum](../../../new\_yajsapi/enums/activity\_activity.ActivityStateEnum.md)
+- [ActivityStateEnum](../enums/activity_activity.ActivityStateEnum.md)
 
 ### Interfaces
 
-* [ExeScriptRequest](../../../new\_yajsapi/interfaces/activity\_activity.ExeScriptRequest.md)
-* [ActivityOptions](../../../new\_yajsapi/interfaces/activity\_activity.ActivityOptions.md)
+- [ExeScriptRequest](../interfaces/activity_activity.ExeScriptRequest.md)
+- [ActivityOptions](../interfaces/activity_activity.ActivityOptions.md)
 
 ### Classes
 
-* [Activity](../../../new\_yajsapi/classes/activity\_activity.Activity.md)
+- [Activity](../classes/activity_activity.Activity.md)

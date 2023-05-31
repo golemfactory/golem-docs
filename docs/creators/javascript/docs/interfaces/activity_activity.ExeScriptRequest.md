@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:26](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/activity/activity.ts#L26)
+[yajsapi/activity/activity.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L26)

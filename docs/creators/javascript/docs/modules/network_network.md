@@ -1,13 +1,13 @@
-# network/network
+# Module: network/network
 
 ## Table of contents
 
 ### Interfaces
 
-* [NetworkOptions](../../../new\_yajsapi/interfaces/network\_network.NetworkOptions.md)
-* [NetworkInfo](../../../new\_yajsapi/interfaces/network\_network.NetworkInfo.md)
+- [NetworkOptions](../interfaces/network_network.NetworkOptions.md)
+- [NetworkInfo](../interfaces/network_network.NetworkInfo.md)
 
 ### Classes
 
-* [NetworkError](../../../new\_yajsapi/classes/network\_network.NetworkError.md)
-* [Network](../../../new\_yajsapi/classes/network\_network.Network.md)
+- [NetworkError](../classes/network_network.NetworkError.md)
+- [Network](../classes/network_network.Network.md)

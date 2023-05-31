@@ -32,6 +32,6 @@
 
 #### Defined in
 
-[yajsapi/script/command.ts:46](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/script/command.ts#L46)
+[yajsapi/script/command.ts:46](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L46)
 
 ___

@@ -59,7 +59,7 @@ Create Debit Note Model
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:27](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L27)
+[yajsapi/payment/debit_note.ts:27](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L27)
 
 ___
 
@@ -86,7 +86,7 @@ Accept Debit Note
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:55](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L55)
+[yajsapi/payment/debit_note.ts:55](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L55)
 
 ___
 
@@ -112,7 +112,7 @@ Reject Debit Note
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:72](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L72)
+[yajsapi/payment/debit_note.ts:72](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L72)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:84](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L84)
+[yajsapi/payment/debit_note.ts:84](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L84)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:46](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L46)
+[yajsapi/payment/invoice.ts:46](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L46)
 
 ## Properties
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L14)
+[yajsapi/payment/debit_note.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L14)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:15](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L15)
+[yajsapi/payment/debit_note.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L15)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:16](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L16)
+[yajsapi/payment/debit_note.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L16)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L17)
+[yajsapi/payment/debit_note.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L17)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:18](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L18)
+[yajsapi/payment/debit_note.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L18)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:19](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L19)
+[yajsapi/payment/debit_note.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L19)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:40](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/debit_note.ts#L40)
+[yajsapi/payment/debit_note.ts:40](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L40)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:27](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L27)
+[yajsapi/payment/invoice.ts:27](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L27)
 
 ___
 
@@ -254,7 +254,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:28](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L28)
+[yajsapi/payment/invoice.ts:28](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L28)
 
 ___
 
@@ -268,7 +268,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:29](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L29)
+[yajsapi/payment/invoice.ts:29](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L29)
 
 ___
 
@@ -282,7 +282,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:30](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L30)
+[yajsapi/payment/invoice.ts:30](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L30)
 
 ___
 
@@ -296,7 +296,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:31](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L31)
+[yajsapi/payment/invoice.ts:31](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L31)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:32](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L32)
+[yajsapi/payment/invoice.ts:32](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L32)
 
 ___
 
@@ -324,7 +324,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:33](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L33)
+[yajsapi/payment/invoice.ts:33](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L33)
 
 ___
 
@@ -338,4 +338,4 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/invoice.ts:34](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/payment/invoice.ts#L34)
+[yajsapi/payment/invoice.ts:34](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/invoice.ts#L34)

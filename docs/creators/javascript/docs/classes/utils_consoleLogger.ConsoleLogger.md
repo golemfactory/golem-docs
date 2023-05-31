@@ -46,7 +46,7 @@ Helper class implements simple logger prints all messages to console
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:7](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L7)
+[yajsapi/utils/consoleLogger.ts:7](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L7)
 
 ## Methods
 
@@ -70,7 +70,7 @@ Helper class implements simple logger prints all messages to console
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:9](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L9)
+[yajsapi/utils/consoleLogger.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L9)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:13](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L13)
+[yajsapi/utils/consoleLogger.ts:13](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L13)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:17](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L17)
+[yajsapi/utils/consoleLogger.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L17)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:21](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L21)
+[yajsapi/utils/consoleLogger.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L21)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:25](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L25)
+[yajsapi/utils/consoleLogger.ts:25](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L25)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:29](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L29)
+[yajsapi/utils/consoleLogger.ts:29](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L29)
 
 ___
 
@@ -214,4 +214,4 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/consoleLogger.ts:33](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/utils/consoleLogger.ts#L33)
+[yajsapi/utils/consoleLogger.ts:33](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/utils/consoleLogger.ts#L33)

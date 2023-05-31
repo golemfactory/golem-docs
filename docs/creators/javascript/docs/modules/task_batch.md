@@ -1,7 +1,7 @@
-# task/batch
+# Module: task/batch
 
 ## Table of contents
 
 ### Classes
 
-* [Batch](../../../new\_yajsapi/classes/task\_batch.Batch.md)
+- [Batch](../classes/task_batch.Batch.md)

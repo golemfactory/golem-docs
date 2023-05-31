@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[yajsapi/task/work.ts:20](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L20)
+[yajsapi/task/work.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L20)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:21](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L21)
+[yajsapi/task/work.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L21)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:22](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L22)
+[yajsapi/task/work.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L22)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:23](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L23)
+[yajsapi/task/work.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L23)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:24](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L24)
+[yajsapi/task/work.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L24)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:25](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L25)
+[yajsapi/task/work.ts:25](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L25)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:26](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L26)
+[yajsapi/task/work.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L26)
 
 ___
 
@@ -109,4 +109,4 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:27](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/task/work.ts#L27)
+[yajsapi/task/work.ts:27](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L27)

@@ -1,53 +1,79 @@
-# Interface: AllocationOptions
+# Interface: PaymentOptions
 
-[payment/allocation](../modules/payment_allocation.md).AllocationOptions
+[payment/payments](../modules/payment_payments.md).PaymentOptions
 
 ## Hierarchy
 
 - [`BasePaymentOptions`](payment_config.BasePaymentOptions.md)
 
-  ↳ **`AllocationOptions`**
+  ↳ **`PaymentOptions`**
 
 ## Table of contents
 
 ### Properties
 
-- [account](payment_allocation.AllocationOptions.md#account)
-- [expires](payment_allocation.AllocationOptions.md#expires)
-- [yagnaOptions](payment_allocation.AllocationOptions.md#yagnaoptions)
-- [budget](payment_allocation.AllocationOptions.md#budget)
-- [payment](payment_allocation.AllocationOptions.md#payment)
-- [paymentTimeout](payment_allocation.AllocationOptions.md#paymenttimeout)
-- [paymentRequestTimeout](payment_allocation.AllocationOptions.md#paymentrequesttimeout)
-- [logger](payment_allocation.AllocationOptions.md#logger)
-- [eventTarget](payment_allocation.AllocationOptions.md#eventtarget)
+- [invoiceFetchingInterval](payment_payments.PaymentOptions.md#invoicefetchinginterval)
+- [debitNotesFetchingInterval](payment_payments.PaymentOptions.md#debitnotesfetchinginterval)
+- [payingInterval](payment_payments.PaymentOptions.md#payinginterval)
+- [maxInvoiceEvents](payment_payments.PaymentOptions.md#maxinvoiceevents)
+- [maxDebitNotesEvents](payment_payments.PaymentOptions.md#maxdebitnotesevents)
+- [yagnaOptions](payment_payments.PaymentOptions.md#yagnaoptions)
+- [budget](payment_payments.PaymentOptions.md#budget)
+- [payment](payment_payments.PaymentOptions.md#payment)
+- [paymentTimeout](payment_payments.PaymentOptions.md#paymenttimeout)
+- [paymentRequestTimeout](payment_payments.PaymentOptions.md#paymentrequesttimeout)
+- [logger](payment_payments.PaymentOptions.md#logger)
+- [eventTarget](payment_payments.PaymentOptions.md#eventtarget)
 
 ## Properties
 
-### account
+### invoiceFetchingInterval
 
-• **account**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `platform` | `string` |
+• `Optional` **invoiceFetchingInterval**: `number`
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:10](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L10)
+[yajsapi/payment/payments.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/payments.ts#L8)
 
 ___
 
-### expires
+### debitNotesFetchingInterval
 
-• `Optional` **expires**: `number`
+• `Optional` **debitNotesFetchingInterval**: `number`
 
 #### Defined in
 
-[yajsapi/payment/allocation.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/allocation.ts#L11)
+[yajsapi/payment/payments.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/payments.ts#L9)
+
+___
+
+### payingInterval
+
+• `Optional` **payingInterval**: `number`
+
+#### Defined in
+
+[yajsapi/payment/payments.ts:10](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/payments.ts#L10)
+
+___
+
+### maxInvoiceEvents
+
+• `Optional` **maxInvoiceEvents**: `number`
+
+#### Defined in
+
+[yajsapi/payment/payments.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/payments.ts#L11)
+
+___
+
+### maxDebitNotesEvents
+
+• `Optional` **maxDebitNotesEvents**: `number`
+
+#### Defined in
+
+[yajsapi/payment/payments.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/payments.ts#L12)
 
 ___
 

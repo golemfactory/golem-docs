@@ -51,7 +51,7 @@ Create proposal for given subscription ID
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:29](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L29)
+[yajsapi/market/proposal.ts:29](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L29)
 
 ## Properties
 
@@ -61,7 +61,7 @@ Create proposal for given subscription ID
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:11](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L11)
+[yajsapi/market/proposal.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L11)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:12](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L12)
+[yajsapi/market/proposal.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L12)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:13](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L13)
+[yajsapi/market/proposal.ts:13](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L13)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:14](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L14)
+[yajsapi/market/proposal.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L14)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:15](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L15)
+[yajsapi/market/proposal.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L15)
 
 ## Accessors
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:49](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L49)
+[yajsapi/market/proposal.ts:49](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L49)
 
 • `set` **score**(`score`): `void`
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:45](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L45)
+[yajsapi/market/proposal.ts:45](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L45)
 
 ## Methods
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:53](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L53)
+[yajsapi/market/proposal.ts:53](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L53)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:57](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L57)
+[yajsapi/market/proposal.ts:57](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L57)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:61](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L61)
+[yajsapi/market/proposal.ts:61](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L61)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:65](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L65)
+[yajsapi/market/proposal.ts:65](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L65)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:69](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L69)
+[yajsapi/market/proposal.ts:69](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L69)
 
 ___
 
@@ -227,4 +227,4 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:77](https://github.com/golemfactory/yajsapi/blob/e4105b2/yajsapi/market/proposal.ts#L77)
+[yajsapi/market/proposal.ts:77](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/proposal.ts#L77)
