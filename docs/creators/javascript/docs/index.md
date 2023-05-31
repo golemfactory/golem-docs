@@ -1,8 +1,6 @@
-# JavaScript API reference
+# Table of contents
 
-## Table of contents
-
-### Classes
+## Classes
   * [Activity](classes/activity_activity.Activity.md)
   * [Agreement](classes/agreement_agreement.Agreement.md)
   * [ActivityCreated](classes/events_events.ActivityCreated.md)
@@ -69,7 +67,7 @@
   * [WorkContext](classes/task_work.WorkContext.md)
   * [ConsoleLogger](classes/utils_consoleLogger.ConsoleLogger.md)
 
-### Enums
+## Enums
   * [ActivityStateEnum](enums/activity_activity.ActivityStateEnum.md)
   * [AgreementStateEnum](enums/agreement_agreement.AgreementStateEnum.md)
   * [ComparisonOperator](enums/market_builder.ComparisonOperator.md)
@@ -77,7 +75,7 @@
   * [TaskState](enums/task_task.TaskState.md)
   * [LogLevel](enums/utils_logger.LogLevel.md)
 
-### Interfaces
+## Interfaces
   * [ActivityOptions](interfaces/activity_activity.ActivityOptions.md)
   * [ExeScriptRequest](interfaces/activity_activity.ExeScriptRequest.md)
   * [Result](interfaces/activity_results.Result.md)
@@ -103,7 +101,7 @@
   * [WorkOptions](interfaces/task_work.WorkOptions.md)
   * [Logger](interfaces/utils_logger.Logger.md)
 
-### Modules
+## Modules
   * [activity/activity](modules/activity_activity.md)
   * [activity/results](modules/activity_results.md)
   * [agreement/agreement](modules/agreement_agreement.md)

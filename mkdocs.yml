@@ -20,8 +20,8 @@ nav:
                 - '#0 - Hello World': 'creators/javascript/mid-level/examples/hello.md'
                 - '#1 - Requestor in browser': 'creators/javascript/mid-level/examples/web.md'
           - 'API Reference':
-            - 'creators/javascript/docs/index.md'
-            - 'Repository README': 'creators/javascript/docs/readme.md'
+            - 'creators/javascript/docs/readme.md'
+            - 'Table of Contents': 'creators/javascript/docs/index.md'
             - 'Classes': 'creators/javascript/docs/classes'
             - 'Enums': 'creators/javascript/docs/enums'
             - 'Interfaces': 'creators/javascript/docs/interfaces'
