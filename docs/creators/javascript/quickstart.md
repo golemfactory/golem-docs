@@ -6,9 +6,9 @@ description: Create your own JavaScript application on Golem
 
 In this article, we'll show you how to run a simple task on Golem Network. 
 
-The task is just a single shell command (checking node version) run on a rented computer. You will create and run a script that will requst that task to be executed in the network and finally print out the result in the console. 
+The task is just a single shell command (checking node version) run on a rented computer. 
+In will take just a few minutes to create and run a script that will request that task to be executed in the network and finally print out the result in the console. 
 
-In a few minutes you can see how it works works!
 
 !!! info
 	**Note: This example is designed for environment:**
