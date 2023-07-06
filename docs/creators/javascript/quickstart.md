@@ -14,7 +14,7 @@ In a few minutes you can see how it works works!
 	**Note: This example is designed for environment:**
 
 	    * OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
-	    * Node.js version abouve 16.0.0
+	    * Node.js version above 16.0.0
 	    * Familiarity with the command line
     
 
