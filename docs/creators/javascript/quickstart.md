@@ -116,15 +116,15 @@ npm init try_golem
 npm install yajsapi
 ```
 
-Create a requestor.js file and copy the following content there. This script defines the task ('node -v'), requests it to be run on the Network and prints the result on the console.
+Create a requestor.mjs file and copy the following content there. This script defines the task ('node -v'), requests it to be run on the Network and prints the result on the console.
 
 ```js
 import { TaskExecutor } from "yajsapi";
 
 (async () => {
   const executor = await TaskExecutor.create({
-	package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4"},	
-	yagnaOptions: { appKey: 'try_golem' });
+	package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",	
+	yagnaOptions: { appKey: 'try_golem' }});
   const result = await executor.run(
 	async (ctx) => (await ctx.run("node -v")).stdout);
   await executor.end();
@@ -143,7 +143,7 @@ import { TaskExecutor } from "yajsapi";
 Simply run the command:
 
 ```bash
-node requestor.js
+node requestor.mjs
 ```
 
 Result in the command line will look like:
@@ -156,8 +156,8 @@ At the end of the script's logs you can see information about node version used 
 
 ## Summary
 
-You have installed yagna deamon and run a simple task on Golem Network.
-You can to much more. There are some of the next steps to explore Golem Network world:
+You have installed yagna daemon and run a simple task on Golem Network.
+You can do much more. There are some of the next steps to explore Golem Network world:
 
 * [Quickstart Explained](high-level/task-model.md)
 * [Simple introduction to Golem Network and Task Model](link)
