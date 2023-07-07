@@ -73,7 +73,7 @@ To start working with Golem network we need to install the `yagna` daemon on our
 
     Alternatively, if you can't install in easy way, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
+    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
     2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
     3. Copy those files to `C:\Windows\System32`.
 
@@ -82,7 +82,7 @@ To start working with Golem network we need to install the `yagna` daemon on our
 
     Alternatively, if you can't install in easy way, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
+    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
     2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries in to your PATH.
 
 
@@ -92,7 +92,6 @@ Verify if `yagna` available in command line:
 yagna --version
 ```
 
-It should output: `yagna 0.12.0 (37060503 2022-12-02 build #251)`
 
 Verify if `gftp` available in command line:
 
@@ -100,7 +99,6 @@ Verify if `gftp` available in command line:
 gftp --version
 ```
 
-It should output: `gftp 0.12.0 (37060503 2022-12-02 build #251)`
 
 If the above commands executed correctly, congratulations you have just installed the `yagna` daemon in your environment. If not, a common fix is to simply close and re-open your terminal since the PATH may not be updated in that session.
 
