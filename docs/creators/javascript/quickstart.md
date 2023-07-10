@@ -159,7 +159,9 @@ At the end of the script's logs you can see information about node version used 
 You have installed yagna daemon and run a simple task on Golem Network.
 You can do much more. There are some of the next steps to explore Golem Network world:
 
-* [Quickstart Explained](high-level/task-model.md)
+test
+
+* [Quickstart Explained](tutorials\quickstart_explained.md)
 * [Simple introduction to Golem Network and Task Model](link)
 * [Other examples](link)
 * [Tutorials](link)
