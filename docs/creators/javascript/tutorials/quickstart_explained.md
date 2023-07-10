@@ -4,7 +4,7 @@ description: Create your own JavaScript application on Golem
 
 # JS QuickStart Explained
 
-Lets look closer at our requestor.js script that is used to run a QuickStart task in Golem Network.
+Let's look closer at our requestor.js script that is used to run a QuickStart task in Golem Network.
 
 ## JS script structure
 The basic structure of the script is like this:
@@ -144,7 +144,8 @@ import { TaskExecutor } from "yajsapi";
     		package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
 		yagnaOptions: { appKey: 'try_golem' }});
 	
-	const result = await executor.run(async (ctx) => (await ctx.run("node -v")).stdout);
+	const result = await executor.run(
+		async (ctx) => (await ctx.run("node -v")).stdout);
 	
 	await executor.end();
 	
@@ -159,9 +160,9 @@ To create a requestor.js script we:
 
 * imported yajsapi lib
 * utilized Immediately Invoked Async Function Expression
-* created Task Executor function
+* created Task Executor
 * created a worker function with our command
-* finally read the command result from the result object and provided to the user
+* finally read the command result from the result object and provided it to the user
 
 
 In this example, we had run a simple command (node -v) in a shall on the remote computer. You can run other executable programs in more interesting scenarios. See other examples for more advanced use cases.
