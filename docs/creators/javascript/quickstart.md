@@ -161,7 +161,7 @@ You can do much more. There are some of the next steps to explore Golem Network 
 
 test
 
-* [Quickstart Explained](tutorials\quickstart_explained.md)
+* [Quickstart Explained](tutorials/quickstart_explained.md)
 * [Simple introduction to Golem Network and Task Model](link)
 * [Other examples](link)
 * [Tutorials](link)
