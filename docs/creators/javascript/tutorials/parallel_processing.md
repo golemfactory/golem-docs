@@ -10,8 +10,7 @@ This tutorial will lead you through steps required to execute on Golem Network t
 !!! info
 
 Prerequisites:
-Install yagna daemon on your machine (see quickstart)
-Set the YAGNA_AUTOCONF_APPKEY environment variable to the value of `parallel-processing`
+Install and run yagna daemon on your machine (see quickstart)
 Have docker installed
 Initialize payment with yagna payment init --sender (Note: payment needs to be initialized after each launch of yagna service run)
 
@@ -77,6 +76,10 @@ For more information on hashcat arguments, see the complete reference: https://h
 
 ## Preparing Image
 
+!!! Info
+
+You can skip this section if you do not have Docker installed and use the image hash provided in the example.
+
 The tasks that we send to remote computer are executer in the context of the specified software package - the image. When we create Task Executor we provide the hashID of the image that will be used during processing. In the quick start example we used an image that contained node.js.
 
 In our case we need to prepare a custom image containing a `hashcat` software that we will use on provider’s machines. 
@@ -104,7 +107,6 @@ To build the Docker image, use the following commands:
 docker build . -f .Dockerfile -t hashcat
 ```
 
-
 ### Conversion to golem image
 
 If you do not have installed yet: install Golem image conversion tool (gvmkit_build)
@@ -120,7 +122,9 @@ and upload image anonymously to the repository.
 ```bash
 gvmkit-build --direct-file-upload hashcat.gvmi --push --nologin
 ```
-This command will produce the hash of the image that you can use in the example. ?? You can also use the 
+This command will produce the hash of the image that you can use in the example. ?? You can also use the our hash ?? 
+
+ -- image link (for use in SDK): f0a369604d416869654f24e8707a23f31a64af35a32ea6c28bac0480
 
 Note that lifetime of images uploaded anonymously to the repository is limited, and they can be removed from registry portal after some time without notice.
 
@@ -129,32 +133,32 @@ Note that lifetime of images uploaded anonymously to the repository is limited, 
 The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](link)
 
 
-
 ## The requestor script code
 
 ### Our algorithm 
 
-Based on usage of hashcat tool, our algorithm will be stright forward.
-First we will calculate the keyspace, then split it into 3 segments and run 3 tasks in parallel.
-Then we will collect the results and provide user with the output.
+Based on usage of hashcat tool our algorithm will be stright forward:
 
-Note we could calculate the spacekey locally, but in this example we will also do it on remote computer, avoiding hashcat installation on your computer. 
+* First we will calculate the keyspace, then 
+* split it into 3 segments and run 3 tasks in parallel.
+* Then we will collect the results and provide user with the output.
 
+Note we could calculate the spacekey locally, but in this example we will also do it on remote computer, avoiding insatlling hashcat on our computer. 
 
+### JS project setup
 
+Now create a project folder and initialise the project. Install yajsapi library.
 
-
-Create a project folder and initialise the project.
-Install yajsapi library
-
-Mkdir yacat
-Cd yacat
+```bash
+Mkdir parallel-example
+Cd parallel-example
 Npm init
 Npm install yajsapi
+```
 
-Copy requestor agent skeleton into index.js:
+Copy requestor script skeleton into index.js:
 
-
+```bash
 import { TaskExecutor } from "yajsapi";
 import { program } from "commander";
 
@@ -162,17 +166,12 @@ async function main(args) {
 
 
 console.log(args); 
+
 // create Executor - todo
-
 // calculate keyspece - todo
-
-// If (keysppece) - todo
-
 // calculate boundaries for each chunk - todo
 // run many providers in parallel - todo
-
 // process and print results  - todo
-
 // end executor  - todo
 
 }
@@ -182,64 +181,73 @@ program
  .option("--mask <mask>")
 .option”--input <filename>
  .requiredOption("--hash <hash>");
+
 program.parse();
+
 const options = program.opts();
+
 main(options).catch((e) => console.error(e));
+```
 
+We use the `commander` library to pass arguments such as --mask and --max-workers. This library will print a nice argument description and an example invocation when we run the requestor script with --help. Note you need to install it with `npm install commander`.
 
-The argument parser
-We use the commander library to pass arguments such as --mask and --max-workers. This library will print a nice argument description and an example invocation when we run the requestor script with --help.
-The main function
-The main function contains the main body of the requestor app. Its sole argument, args, contains information on the command-line arguments read by the argument parser.
-async function main(args)
+The main function contains the main body of the requestor application. Its sole argument, `args`, contains information on the command-line arguments read by the argument parser.
 
-
-We can run 
 We do not run anything on golme yet.
 
 
-Now lets create Taskexecutor 
+### TaskExecutor and package definition
 
-Task Executor and package definition
 To execute our tasks on the Golem network, we need to create a TaskExecutor instance.
+
+```bash
 const executor = await TaskExecutor.create({
    package: "055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db",
    maxParallelTasks: args.numberOfProviders,
-   budget: 10,
+   yagnaOptions: { appKey: 'try_golem' }
  });
+```
 
 
-The package parameter is required and points to the image that we want the containers to run. In this example, the hash received from gvmkit-build is used.
+The package parameter is required and points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
+.
 The other parameters are:
-maxParallelTasks: the maximum number of parallel tasks
+maxParallelTasks: the maximum number of tasks we want to run in parallel
+yagnaOptions: { appKey: 'try_golem' } - the app key that links your script to identity on the network.
 
 
-Note: once we had created taskexecutor, we need to end it!
-first call to executor.run: Computing keyspace size
-Compute keyspace size
+### Running a single task on the network to calculate the kayspace
+
+
 The first step in the computation is to check the keyspace size. For this, we only need to execute hashcat with --keyspace and read the command's output.
-With the TaskExecutor instance running, we can now send tasks to the providers using the run method:
- const keyspace = await executor.run(async (ctx) => {
- const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`);
- return parseInt(result.stdout || "");
+With the TaskExecutor instance running, we can now send such task to one of the providers using the run method:
+
+```bash
+const keyspace = await executor.run(async (ctx) => {
+ 	const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`);
+	return parseInt(result.stdout || "");
 });
+```
 
-
-This call tells the TaskExecutor to execute a single task defined by the worker function async (ctx) =>. The ctx object allows us to run single or batch commands on the provider side.
+This call tells the `executor` to execute a single task defined by the task function `async (ctx) => {}`. The ctx object allows us to run single or batch of commands on the provider side.
 The keyspace size can be obtained from the result attribute of the executed command.
 
 
-Prepare boundaries for parallel execution:
+### Calculate boundaries for chunks
+
+Knowing the keyspace size, we define the list of tasks to execute on providers. We will run hashcat on a fragment of the whole keyspace, using the --skip and --limit parameters.
+For each such fragment, we define a separate task for task executor.
+
+```bash
+
+calculation code
+```
+
+Note that the number of chunks does not determine the number of engaged providers. In this examples we decided to split the job into 3 tasks, but the number of provider we want to engage is determined by the `maxParallelTasks` parameter. Executor will try to engage that number of providers and them pass the tasks to them. Once a provider is ready to execute a task, it takes up the next task from a common pool of tasks, so a fast provider may end up executing more tasks than a slow one. 
 
 
-Define the tasks
-Knowing the keyspace size, we define the list of tasks to execute on providers. We can run hashcat on a fragment of the whole keyspace, using the --skip and --limit parameters, as described in a previous section. In this step, for each such fragment, we define a separate task.
-We also determine the number of providers required to execute the tasks in parallel. In this example, we decided that the number of providers contracted for the work will be equal to the number of tasks divided by two. This does not mean that every provider will get exactly two tasks, even if the overall number of tasks is even, because:
-Info
-When a provider is ready to execute a task, it takes up the next task from a common pool of tasks, so a fast provider may end up executing more tasks than a slow one.
+### Running many providers in parallel
 
-
-Perform mask attack
 Next, we can start looking for the password using multiple workers, executing the tasks on multiple providers simultaneously.
 For each worker, we perform the following steps:
 Execute hashcat with proper --skip and --limit values on the provider.
@@ -249,8 +257,7 @@ Parse the result from the .potfile.
 
 Second call to executor.map: Performing the attack
 Next, we can split the whole keyspace into chunks based on the maximum number of providers and prepare a range of computations for each task:
- const step = Math.floor(keyspace / args.numberOfProviders + 1);
- const range = [...Array(Math.floor(keyspace / step)).keys()].map((i) => i + step);
+
 With the range, we use the executor.map method to run the split tasks simultaneously on the Golem Network:
 const results = executor.map(range, async (ctx, skip = 0) => {
    const results = await ctx
