@@ -35,12 +35,16 @@ import { TaskExecutor } from "yajsapi";
     		package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
 		yagnaOptions: { appKey: 'try_golem' }});
 	
+	const taskToRunOnProvider = async (workerContext) => {
+   		// ... body of task that will be run on same provider
+	}
+
 	// 2. run the task
-	const taskResult = await executor.run( /*taskToRunOnProvider to be provideed here */);
+	const taskResult = await executor.run(taskToRunOnProvider);
 
 	
 	// 3. finish Task Executor
-	await executor.end();
+	await **executor.end()**;
 
 	console.log("Task result:", taskResult);
 
@@ -71,7 +75,7 @@ Finally (3) we gracefully finish task executor:
 ```
 
 
-## Defining task function
+## Defining worker function
 
 Let’s see how the task is defined and fill the placeholder we created in the previous step.
 

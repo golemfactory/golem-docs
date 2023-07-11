@@ -13,9 +13,9 @@ It will take just a few minutes to create and run a script that will request tha
 !!! info
 	**Note: This example is designed for environment:**
 
-	    * OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
-	    * Node.js version above 16.0.0
-	    * Familiarity with the command line
+* OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
+* Node.js version above 16.0.0
+* Familiarity with the command line
     
 
 ## Installing and running yagna 
@@ -162,7 +162,8 @@ You can do much more. There are some of the next steps to explore Golem Network 
 test
 
 * [Quickstart Explained](tutorials/quickstart_explained.md)
-* [Simple introduction to Golem Network and Task Model](link)
+* [Simple introduction to Golem Network and Task Model](../javascript/high-level/task-model.md)
+* [Parallel processing tutorial](tutorials/parallel_processing.md)
 * [Other examples](link)
 * [Tutorials](link)
 * [Guides](link)

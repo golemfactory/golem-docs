@@ -1,46 +1,95 @@
 ---
-description: Overview of a typical Golem task application
+description: Introduction to Golem Network and Task model
 ---
 
-# Introduction to the task model
 
-Creating a task application for Golem requires a bit of planning and understanding of how the system works. In this guide, we'll go over the basics of designing and implementing a task application for Golem.
+# Introduction to Golem Network and Task model
 
-## Understanding the Problem Space
+## Golem Network
 
-First, you'll need to think about your computational problem in terms of parallel execution. It's important to visualize your problem and determine how it can be divided into smaller, independent fragments that can be processed by multiple providers.
+Golem Network is a p2p network that consists of many nodes. Each node is a system with a __yagna__ demon running on it. The nodes that offer their resources for others are called __providers__. The nodes that hire resources are called __requestors__.
+	
+In order to get things done (the Job) in the Network, you need to define it and split into your task(s) and send it to the network using the yagna demon. This is done using requestor script that will utilize Golem JS SDK. You also need to define the environment used to run your activity on a provider, it is done by software package in the form of an __image__. 
 
-For example, let's say you have a large dataset that needs to be processed. Instead of having a single machine process the entire dataset, you can break it up into smaller chunks and have multiple providers work on each chunk simultaneously.
+So, to run your tasks on Golem Network you need:
 
-![problem space](/assets/js-tutorial-01.jpeg)
+* A yagna demon that will let you connect to the Golem Network. (Yagna)
+* Image, that constitute an environment in with you will run your commands (Working with Images)
+* A script, in which you will define tasks and execute them. (Simple script)
 
-## Dividing the Problem into Fragments
+Script will use Task API provided by yajsapi lib, so let’s get familiar with the Task model.
 
-Once you have a clear understanding of how your problem can be divided, you'll need to find a way to divide the whole problem into fragments. Each fragment should be a distinct part of the whole and may be processed by a different provider, independently from other fragments.
 
-![problem division](/assets/js-tutorial-02.jpeg)
+## Task model
 
-It's worth noting that the number of fragments doesn't need to match the number of provider nodes commissioned to perform the tasks. The Task API will spawn activities on multiple providers as long as there are providers available and up to the number of fragments or the limit specified by the `maxParallelTasks` parameter.
+When you run your Job - you execute a Task. In fact to take full advantage of the network you should split your Job into many Tasks.
+	
+A single task will be run on a single provider. If you can divide your Job into many smaller independent fragemnts - they will be processed in parallel on multiple providers. The Task API will spawn them on available providers for you.
 
-## Designing the Application
+Tasks are defined as functions that implement Worker Interface. Each worker function may be a single command (like: echo “Hello World”), but may consist of multiple separate steps including sending files to and from the provider to your local machine. We provide examples showing the usage of API in different scenarios.
 
-In order to proceed further, you'll need to design your application in such a way that it can:
+Tasks are run in the context that is defined by the image. In our examples we use Golem standard images, but we also provide tutorials on how to prepare your own images.
 
-1. Translate the problem fragments into input and output files that can be processed independently on each of the provider nodes.
-2. Combine the individual outputs into the final solution of the problem at hand.
+## Main Tasks API features:
 
-## Creating a VM Application for Golem
+!!! info
 
-When it comes to the implementation itself, any VM-based application for Golem is made up of two components:
+    Click on the links to go the the usage examples.
 
-1. A Docker image that will run as a container on providers.
-2. A requestor agent - a piece of JavaScript / TypeScript code that will execute the problem-dividing logic, orchestrate the execution on providers, and finally combine the output files to get the result for the whole problem.
+### Orchestrating tasks execution
 
-With these pieces in place, you should be able to create a functional task application for Golem.
+Task executor may run:
 
-!!! success
+* a single task on a single provider (`.run()` method). 
+* multiple tasks on available providers (`.map()` and `.forEach()` methods). The number of providers is defined by the user, providers may be used more than once until all tasks are executed.
+* a specific command run once per engaged provider (`.beforeEach()`). This allows to run some initialisation before processing main batch of tasks.
 
-    Now you know what a Golem VM application is and how it works.
+	
+### Defining Tasks
+
+Tasks are defined as worker functions. The function receives worker context that can be used to:
+
+* run a single command on remote computer (`.run()` method). Commands can be run in sequence.
+* organise a set of commands into a batch: (`.beginBatch()` method) with 2 different output forms:
+	* Promise (`.end()` method)
+	* stream (`.endStream()` method)
+
+These commands may be combined with other methods designed to trasfer files to and from a provider.
+
+### Sending Data to and from Providers
+
+User can send:
+
+* files to remote computer (`.uploadFile()` method)
+* files from remote computer (`.downloadFile()` method)
+* json to remote computer (`.uploadJson()` method)
+
+Note: user must define a VOLUME to indicate a folder designed to contain files on remote computer.
+
+###  Processing results
+
+Each command (run, uploadFile) will produce a result object that contains stdout, stderr of the commmand run. 
+In case of Tasks executor map method user will receive iterative object.
+In case of batch provessed commands user will erceive an array of result objects or a stream of events/results ??
+ 
+
+### Defining minimal requirements for provider system
+
+User can define minimal requirements for the provider's system (like memory, storage, CPU Threds, CPU cores) via initial parameters provided to the `TaskExecutor.create()` method.
+
+### Selecting providers
+
+User can filter and select providers based on price, internal scoring table. 
+
+### Other configuration parameters
+
+User can define how the Job is realised by defining numer of providers engaged to execute tasks	(`maxParallelTasks` parameter).
+
+
+You can explore our tutorials to see how to effectively use these functionalities.
+
+
+
 
 !!! golem-icon "Next steps:"
 
