@@ -390,10 +390,15 @@ Our `index.js` file after modifications will look as follows:
 import { TaskExecutor } from "yajsapi";
 
 (async () => {
-  const executor = await TaskExecutor.create("529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4");
+
+  const executor = await TaskExecutor.create("dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3");
+
   const result = await executor.run(async (ctx) => {
       await ctx.uploadFile("./task.js", "/golem/work/task.js");
-      const result = await ctx.run("node", ["/golem/work/task.js"]);
+      const result = await ctx.run("node /golem/work/task.js");  
+      
+      return result.stdout;
+
   });
   await executor.end();
 
