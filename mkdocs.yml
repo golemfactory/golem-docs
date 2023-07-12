@@ -37,6 +37,13 @@ nav:
               - 'Creating our Docker image': 'creators/gvmi/tutorial/creating-our-docker-image.md'
               - 'Converting Docker to Golem': 'creators/gvmi/tutorial/converting-docker-to-golem.md'
               - 'Using the image in an app': 'creators/gvmi/tutorial/using-the-golem-image.md'
+      - 'Golem images 2':
+          - 'creators/gvmi2/golem-images-explained.md'
+          - Examples:
+              - 'Installing gvmkit-build': 'creators/gvmi2/examples/installing-gvmkit-build.md'
+              - 'Converting an image to Golem format': 'creators/gvmi2/examples/converting-an-image.md'
+              - 'Publishing to registry': 'creators/gvmi2/examples/pushing-to-registry.md'
+              - 'Referring to images': 'creators/gvmi2/examples/using-golem-image.md'
       - 'Decentralized apps on Golem':
           - 'creators/dapps/index.md'
           - Quickstart: 'creators/dapps/run-a-dapp.md'
