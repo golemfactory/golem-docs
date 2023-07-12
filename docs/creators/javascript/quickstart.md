@@ -10,7 +10,7 @@ The task is just a single shell command (checking node version) run on a rented 
 It will take just a few minutes to create and run a script that will request that task to be executed in the network and finally print out the result in the console. 
 
 
-!!! info
+!!! Info
 	**Note: This example is designed for environment:**
 
 * OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
@@ -95,6 +95,7 @@ Open another terminal and run the following command to complete configuration:
 
 ```bash
 yagna payment fund
+yagna payment init
 ```
 
 
@@ -112,7 +113,7 @@ Create a new Node.js project and install Golem SDK by typing in the command line
 ```bash
 mkdir try_golem
 cd try_golem
-npm init try_golem
+npm init
 npm install yajsapi
 ```
 
@@ -124,7 +125,7 @@ import { TaskExecutor } from "yajsapi";
 (async () => {
   const executor = await TaskExecutor.create({
 	package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",	
-	yagnaOptions: { appKey: 'try_golem' }});
+	yagnaOptions: { apiKey: 'try_golem' }});
   const result = await executor.run(
 	async (ctx) => (await ctx.run("node -v")).stdout);
   await executor.end();
