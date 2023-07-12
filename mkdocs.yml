@@ -26,6 +26,17 @@ nav:
             - 'Enums': 'creators/javascript/docs/enums'
             - 'Interfaces': 'creators/javascript/docs/interfaces'
             - 'Modules': 'creators/javascript/docs/modules'
+      - 'Golem images':
+          - 'creators/gvmi/golem-images-explained.md'
+          - Examples:
+              - 'Converting an image': 'creators/gvmi/examples/converting-an-image.md'
+              - 'Installing gvmkit-build': 'creators/gvmi/examples/installing-gvmkit-build.md'
+              - 'Pushing to registry': 'creators/gvmi/examples/pushing-to-registry.md'
+              - 'Using an image': 'creators/gvmi/examples/using-golem-image.md'
+          - Tutorial:
+              - 'Creating our Docker image': 'creators/gvmi/tutorial/creating-our-docker-image.md'
+              - 'Converting Docker to Golem': 'creators/gvmi/tutorial/converting-docker-to-golem.md'
+              - 'Using the image in an app': 'creators/gvmi/tutorial/using-the-golem-image.md'
       - 'Decentralized apps on Golem':
           - 'creators/dapps/index.md'
           - Quickstart: 'creators/dapps/run-a-dapp.md'
