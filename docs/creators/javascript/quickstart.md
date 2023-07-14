@@ -136,7 +136,7 @@ import { TaskExecutor } from "yajsapi";
 
 !!! info
 
-    You can find detailed explanation of the above code here: [here](link.md)
+    You can find detailed explanation of the above code here: [here](tutorials/quickstart_explained.md)
 
 
 ## Runing the script on Golem Network
