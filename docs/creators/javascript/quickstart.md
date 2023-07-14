@@ -15,7 +15,7 @@ It will take just a few minutes to create and run a script that will request tha
 
 * OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
 * Node.js version above 16.0.0
-* Familiarity with the command line
+* Familiarity which the command line
     
 
 ## Installing and running yagna 
