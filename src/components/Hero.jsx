@@ -34,7 +34,7 @@ export function Hero() {
                     className="absolute left-1/2 m-4 mx-auto flex -translate-x-1/2 translate-y-full items-center whitespace-nowrap rounded-md 
     bg-gray-800 px-4 py-2 text-xs text-gray-100 opacity-0 transition-opacity group-hover:opacity-100"
                   >
-                    Coming soon!
+                    Coming soon! 
                   </div>
                 </div>
               </div>
