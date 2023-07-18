@@ -11,7 +11,7 @@ export function Hero() {
               <span className="text-primary">Golem</span> developer resources
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-              A creators manual for Golem. By developers, for developers.
+              A creators manual for Golem. <br /> By developers, for developers.
             </p>
             <div className="mt-8 grid gap-y-2 md:flex md:gap-x-2">
               <div className="grid grid-cols-2 justify-items-center">
@@ -27,7 +27,7 @@ export function Hero() {
                 <div className="group relative flex">
                   <span className="flex items-center bg-gray-200 px-2 py-1 text-white">
                     {' '}
-                    <PythonIcon className="mr-1 mt-1 h-5 w-5 fill-white" />
+                    <PythonIcon className="mr-1 mt-1 h-5 w-5 " />
                     Python docs
                   </span>
                   <div

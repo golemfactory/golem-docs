@@ -352,9 +352,13 @@ export function Search() {
           Search
         </span>
         {modifierKey && (
-          <kbd className="ml-auto hidden font-medium text-slate-400 dark:text-slate-500 md:block">
-            <kbd className="font-sans">{modifierKey}</kbd>
-            <kbd className="font-sans">K</kbd>
+          <kbd className="ml-auto hidden gap-x-2  font-medium text-slate-400  dark:text-slate-500 md:flex">
+            <kbd className="rounded-md border border-slate-400 px-2 py-1 font-sans dark:border-slate-500">
+              {modifierKey}
+            </kbd>
+            <kbd className="rounded-md border border-slate-400 px-2 py-1 font-sans dark:border-slate-500">
+              K
+            </kbd>
           </kbd>
         )}
       </button>

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
 
 import { Layout } from '@/components/Layout'
 
@@ -61,7 +63,7 @@ export default function App({ Component, pageProps }) {
     : []
 
   return (
-    <>
+    <div className={inter.className}>
       <Head>
         <title>{pageTitle}</title>
         {description && <meta name="description" content={description} />}
@@ -73,6 +75,6 @@ export default function App({ Component, pageProps }) {
       <Layout title={title} tableOfContents={tableOfContents}>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </div>
   )
 }
