@@ -213,7 +213,7 @@ Map iterable data to worker function and return computed Task result as AsyncIte
 
 ```typescript
 const data = [1, 2, 3, 4, 5];
-const results = executor.map(data, (ctx, item) => providerCtx.ctx(`echo "${item}"`));
+const results = executor.map(data, (ctx, item) => ctx.run(`echo "${item}"`));
 for await (const result of results) console.log(result.stdout);
 ```
 
