@@ -29,4 +29,4 @@ requestorId
 
 #### Defined in
 
-[yajsapi/network/identity.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/identity.ts#L11)
+[yajsapi/network/identity.ts:12](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/identity.ts#L12)

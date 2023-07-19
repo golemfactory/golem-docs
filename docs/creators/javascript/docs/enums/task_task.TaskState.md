@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[yajsapi/task/task.ts:4](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L4)
+[yajsapi/task/task.ts:4](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/task.ts#L4)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:5](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L5)
+[yajsapi/task/task.ts:5](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/task.ts#L5)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:6](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L6)
+[yajsapi/task/task.ts:6](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/task.ts#L6)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:7](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L7)
+[yajsapi/task/task.ts:7](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/task.ts#L7)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[yajsapi/task/task.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/task.ts#L8)
+[yajsapi/task/task.ts:8](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/task.ts#L8)

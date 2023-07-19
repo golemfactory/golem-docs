@@ -16,8 +16,9 @@ A high-level module for defining and executing tasks in the golem network
 - [run](executor_executor.TaskExecutor.md#run)
 - [map](executor_executor.TaskExecutor.md#map)
 - [forEach](executor_executor.TaskExecutor.md#foreach)
+- [cancel](executor_executor.TaskExecutor.md#cancel)
 
-## High-level
+## Methods
 
 ### create
 
@@ -34,9 +35,13 @@ Factory Method that create and initialize an instance of the TaskExecutor
 **Simple usage of Task Executor**
 
 The executor can be created by passing appropriate initial parameters such as package, budget, subnet tag, payment driver, payment network etc.
-One required parameter is a package. This can be done in two ways. First by passing only package image hash, e.g.
+One required parameter is a package. This can be done in two ways. First by passing only package image hash or image tag, e.g.
 ```js
 const executor = await TaskExecutor.create("9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae");
+```
+or
+```js
+const executor = await TaskExecutor.create("golem/alpine:3.18.2");
 ```
 
 **`Example`**
@@ -48,7 +53,7 @@ Or by passing some optional parameters, e.g.
 const executor = await TaskExecutor.create({
   subnetTag: "public",
   payment: { driver: "erc-20", network: "rinkeby" },
-  package: "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae",
+  package: "golem/alpine:3.18.2",
 });
 ```
 
@@ -66,9 +71,9 @@ TaskExecutor
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:110](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L110)
+[yajsapi/executor/executor.ts:117](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L117)
 
-## Other
+___
 
 ### init
 
@@ -86,7 +91,7 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:149](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L149)
+[yajsapi/executor/executor.ts:156](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L156)
 
 ___
 
@@ -102,7 +107,7 @@ Stop all executor services and shut down executor instance
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:171](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L171)
+[yajsapi/executor/executor.ts:196](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L196)
 
 ___
 
@@ -120,7 +125,7 @@ array
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:191](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L191)
+[yajsapi/executor/executor.ts:216](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L216)
 
 ___
 
@@ -150,7 +155,7 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work.md#worker)<`unknown`, `unknown`\> | worker function - task |
+| `worker` | [`Worker`](../modules/task_work.md#worker) | worker function - task |
 
 #### Returns
 
@@ -158,7 +163,7 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:214](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L214)
+[yajsapi/executor/executor.ts:239](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L239)
 
 ___
 
@@ -178,7 +183,7 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 | Name | Type |
 | :------ | :------ |
-| `OutputType` | [`Result`](../interfaces/activity_results.Result.md) |
+| `OutputType` | `Result` |
 
 #### Parameters
 
@@ -194,7 +199,7 @@ result of task computation
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:228](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L228)
+[yajsapi/executor/executor.ts:253](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L253)
 
 ___
 
@@ -234,7 +239,7 @@ AsyncIterable with results of computed tasks
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:248](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L248)
+[yajsapi/executor/executor.ts:273](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L273)
 
 ___
 
@@ -273,4 +278,24 @@ await executor.forEach(data, async (ctx, item) => {
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:296](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/executor/executor.ts#L296)
+[yajsapi/executor/executor.ts:321](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L321)
+
+___
+
+### cancel
+
+▸ **cancel**(`reason?`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `reason?` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[yajsapi/executor/executor.ts:393](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L393)

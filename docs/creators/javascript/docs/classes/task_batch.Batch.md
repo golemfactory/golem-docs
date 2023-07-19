@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Constructors
+
+- [constructor](task_batch.Batch.md#constructor)
+
 ### Methods
 
 - [create](task_batch.Batch.md#create)
@@ -14,9 +18,23 @@
 - [end](task_batch.Batch.md#end)
 - [endStream](task_batch.Batch.md#endstream)
 
-### Constructors
+## Constructors
 
-- [constructor](task_batch.Batch.md#constructor)
+### constructor
+
+• **new Batch**(`activity`, `storageProvider?`, `logger?`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `activity` | `Activity` |
+| `storageProvider?` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger.md) |
+
+#### Defined in
+
+[yajsapi/task/batch.ts:12](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L12)
 
 ## Methods
 
@@ -28,9 +46,9 @@
 
 | Name | Type |
 | :------ | :------ |
-| `activity` | [`Activity`](activity_activity.Activity.md) |
+| `activity` | `Activity` |
 | `storageProvider?` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) |
-| `logger?` | [`Logger`](../interfaces/utils_logger.Logger.md) |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger.md) |
 
 #### Returns
 
@@ -38,7 +56,7 @@
 
 #### Defined in
 
-[yajsapi/task/batch.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L9)
+[yajsapi/task/batch.ts:9](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L9)
 
 ___
 
@@ -58,7 +76,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L15)
+[yajsapi/task/batch.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L15)
 
 ___
 
@@ -79,7 +97,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L21)
+[yajsapi/task/batch.ts:21](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L21)
 
 ___
 
@@ -100,7 +118,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L26)
+[yajsapi/task/batch.ts:26](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L26)
 
 ___
 
@@ -121,21 +139,21 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:32](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L32)
+[yajsapi/task/batch.ts:32](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L32)
 
 ___
 
 ### end
 
-▸ **end**(): `Promise`<[`Result`](../interfaces/activity_results.Result.md)[]\>
+▸ **end**(): `Promise`<`Result`[]\>
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/activity_results.Result.md)[]\>
+`Promise`<`Result`[]\>
 
 #### Defined in
 
-[yajsapi/task/batch.ts:37](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L37)
+[yajsapi/task/batch.ts:37](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L37)
 
 ___
 
@@ -149,22 +167,4 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:60](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L60)
-
-## Constructors
-
-### constructor
-
-• **new Batch**(`activity`, `storageProvider?`, `logger?`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `activity` | [`Activity`](activity_activity.Activity.md) |
-| `storageProvider?` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) |
-| `logger?` | [`Logger`](../interfaces/utils_logger.Logger.md) |
-
-#### Defined in
-
-[yajsapi/task/batch.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/batch.ts#L12)
+[yajsapi/task/batch.ts:60](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L60)

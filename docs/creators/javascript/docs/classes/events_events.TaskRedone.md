@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `retriesCount`: `number`  }\>
+- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `retriesCount`: `number` ; `reason?`: `string`  }\>
 
   ↳ **`TaskRedone`**
 
@@ -17,6 +17,8 @@
 ### Properties
 
 - [detail](events_events.TaskRedone.md#detail)
+- [name](events_events.TaskRedone.md#name)
+- [timestamp](events_events.TaskRedone.md#timestamp)
 
 ## Constructors
 
@@ -30,7 +32,12 @@
 | :------ | :------ |
 | `data?` | `Object` |
 | `data.id` | `string` |
+| `data.agreementId` | `string` |
+| `data.activityId` | `string` |
+| `data.providerId` | `string` |
+| `data.providerName` | `string` |
 | `data.retriesCount` | `number` |
+| `data.reason?` | `string` |
 
 #### Inherited from
 
@@ -38,7 +45,7 @@
 
 #### Defined in
 
-[yajsapi/events/events.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L19)
+[yajsapi/events/events.ts:28](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L28)
 
 ## Properties
 
@@ -51,7 +58,12 @@
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
+| `agreementId` | `string` |
+| `activityId` | `string` |
+| `providerId` | `string` |
+| `providerName` | `string` |
 | `retriesCount` | `number` |
+| `reason?` | `string` |
 
 #### Inherited from
 
@@ -59,4 +71,32 @@
 
 #### Defined in
 
-[yajsapi/events/events.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L11)
+[yajsapi/events/events.ts:16](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L16)
+
+___
+
+### name
+
+• `Readonly` **name**: `string`
+
+#### Inherited from
+
+[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+
+#### Defined in
+
+[yajsapi/events/events.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L17)
+
+___
+
+### timestamp
+
+• `Readonly` **timestamp**: `number`
+
+#### Inherited from
+
+[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+
+#### Defined in
+
+[yajsapi/events/events.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L18)

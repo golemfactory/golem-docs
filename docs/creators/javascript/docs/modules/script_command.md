@@ -4,20 +4,13 @@
 
 ### Classes
 
-- [Command](../classes/script_command.Command.md)
-- [Deploy](../classes/script_command.Deploy.md)
-- [Start](../classes/script_command.Start.md)
-- [Run](../classes/script_command.Run.md)
 - [Terminate](../classes/script_command.Terminate.md)
-- [Transfer](../classes/script_command.Transfer.md)
-- [UploadFile](../classes/script_command.UploadFile.md)
-- [DownloadFile](../classes/script_command.DownloadFile.md)
 
 ### Type Aliases
 
 - [Capture](script_command.md#capture)
 
-## Other
+## Type Aliases
 
 ### Capture
 
@@ -32,6 +25,4 @@
 
 #### Defined in
 
-[yajsapi/script/command.ts:46](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L46)
-
-___
+[yajsapi/script/command.ts:46](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L46)

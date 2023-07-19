@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `proposalId`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `proposalId`: `string` ; `validTo?`: `string`  }\>
 
   ↳ **`AgreementCreated`**
 
@@ -17,6 +17,8 @@
 ### Properties
 
 - [detail](events_events.AgreementCreated.md#detail)
+- [name](events_events.AgreementCreated.md#name)
+- [timestamp](events_events.AgreementCreated.md#timestamp)
 
 ## Constructors
 
@@ -33,6 +35,7 @@
 | `data.providerId` | `string` |
 | `data.providerName` | `string` |
 | `data.proposalId` | `string` |
+| `data.validTo?` | `string` |
 
 #### Inherited from
 
@@ -40,7 +43,7 @@
 
 #### Defined in
 
-[yajsapi/events/events.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L19)
+[yajsapi/events/events.ts:28](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L28)
 
 ## Properties
 
@@ -56,6 +59,7 @@
 | `providerId` | `string` |
 | `providerName` | `string` |
 | `proposalId` | `string` |
+| `validTo?` | `string` |
 
 #### Inherited from
 
@@ -63,4 +67,32 @@
 
 #### Defined in
 
-[yajsapi/events/events.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L11)
+[yajsapi/events/events.ts:16](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L16)
+
+___
+
+### name
+
+• `Readonly` **name**: `string`
+
+#### Inherited from
+
+[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+
+#### Defined in
+
+[yajsapi/events/events.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L17)
+
+___
+
+### timestamp
+
+• `Readonly` **timestamp**: `number`
+
+#### Inherited from
+
+[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+
+#### Defined in
+
+[yajsapi/events/events.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L18)

@@ -2,6 +2,10 @@
 
 ## Table of contents
 
+### Classes
+
+- [Payments](../classes/payment_payments.Payments.md)
+
 ### Interfaces
 
 - [PaymentOptions](../interfaces/payment_payments.PaymentOptions.md)
@@ -10,13 +14,7 @@
 
 - [PaymentEventType](payment_payments.md#paymenteventtype)
 
-### Classes
-
-- [Payments](../classes/payment_payments.Payments.md)
-- [InvoiceEvent](../classes/payment_payments.InvoiceEvent.md)
-- [DebitNoteEvent](../classes/payment_payments.DebitNoteEvent.md)
-
-## Other
+## Variables
 
 ### PaymentEventType
 
@@ -24,6 +22,4 @@
 
 #### Defined in
 
-[yajsapi/payment/payments.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/payments.ts#L15)
-
-___
+[yajsapi/payment/payments.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/payments.ts#L15)

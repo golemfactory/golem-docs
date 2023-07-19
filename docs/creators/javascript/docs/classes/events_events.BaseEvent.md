@@ -30,9 +30,11 @@
 
   ↳↳ [`AllocationCreated`](events_events.AllocationCreated.md)
 
-  ↳↳ [`SubscriptionCreated`](events_events.SubscriptionCreated.md)
+  ↳↳ [`DemandSubscribed`](events_events.DemandSubscribed.md)
 
-  ↳↳ [`SubscriptionFailed`](events_events.SubscriptionFailed.md)
+  ↳↳ [`DemandFailed`](events_events.DemandFailed.md)
+
+  ↳↳ [`DemandUnsubscribed`](events_events.DemandUnsubscribed.md)
 
   ↳↳ [`CollectFailed`](events_events.CollectFailed.md)
 
@@ -42,7 +44,11 @@
 
   ↳↳ [`ProposalResponded`](events_events.ProposalResponded.md)
 
+  ↳↳ [`ProposalFailed`](events_events.ProposalFailed.md)
+
   ↳↳ [`ProposalConfirmed`](events_events.ProposalConfirmed.md)
+
+  ↳↳ [`PackageCreated`](events_events.PackageCreated.md)
 
   ↳↳ [`AgreementCreated`](events_events.AgreementCreated.md)
 
@@ -58,11 +64,15 @@
 
   ↳↳ [`PaymentAccepted`](events_events.PaymentAccepted.md)
 
+  ↳↳ [`DebitNoteAccepted`](events_events.DebitNoteAccepted.md)
+
   ↳↳ [`PaymentFailed`](events_events.PaymentFailed.md)
 
   ↳↳ [`ActivityCreated`](events_events.ActivityCreated.md)
 
   ↳↳ [`ActivityDestroyed`](events_events.ActivityDestroyed.md)
+
+  ↳↳ [`ActivityStateChanged`](events_events.ActivityStateChanged.md)
 
   ↳↳ [`ScriptSent`](events_events.ScriptSent.md)
 
@@ -77,6 +87,8 @@
 ### Properties
 
 - [detail](events_events.BaseEvent.md#detail)
+- [name](events_events.BaseEvent.md#name)
+- [timestamp](events_events.BaseEvent.md#timestamp)
 
 ## Constructors
 
@@ -102,7 +114,7 @@ CustomEvent&lt;DataType\&gt;.constructor
 
 #### Defined in
 
-[yajsapi/events/events.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L19)
+[yajsapi/events/events.ts:28](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L28)
 
 ## Properties
 
@@ -116,4 +128,32 @@ CustomEvent.detail
 
 #### Defined in
 
-[yajsapi/events/events.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L11)
+[yajsapi/events/events.ts:16](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L16)
+
+___
+
+### name
+
+• `Readonly` **name**: `string`
+
+#### Inherited from
+
+CustomEvent.name
+
+#### Defined in
+
+[yajsapi/events/events.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L17)
+
+___
+
+### timestamp
+
+• `Readonly` **timestamp**: `number`
+
+#### Inherited from
+
+CustomEvent.timestamp
+
+#### Defined in
+
+[yajsapi/events/events.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L18)

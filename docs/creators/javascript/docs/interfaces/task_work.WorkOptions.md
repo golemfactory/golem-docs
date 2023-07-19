@@ -6,7 +6,7 @@
 
 ### Properties
 
-- [workTimeout](task_work.WorkOptions.md#worktimeout)
+- [activityPreparingTimeout](task_work.WorkOptions.md#activitypreparingtimeout)
 - [activityStateCheckingInterval](task_work.WorkOptions.md#activitystatecheckinginterval)
 - [provider](task_work.WorkOptions.md#provider)
 - [storageProvider](task_work.WorkOptions.md#storageprovider)
@@ -17,13 +17,13 @@
 
 ## Properties
 
-### workTimeout
+### activityPreparingTimeout
 
-• `Optional` **workTimeout**: `number`
+• `Optional` **activityPreparingTimeout**: `number`
 
 #### Defined in
 
-[yajsapi/task/work.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L20)
+[yajsapi/task/work.ts:20](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L20)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:21](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L21)
+[yajsapi/task/work.ts:21](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L21)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:22](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L22)
+[yajsapi/task/work.ts:22](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L22)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L23)
+[yajsapi/task/work.ts:23](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L23)
 
 ___
 
@@ -71,17 +71,17 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:24](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L24)
+[yajsapi/task/work.ts:24](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L24)
 
 ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
 
 #### Defined in
 
-[yajsapi/task/work.ts:25](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L25)
+[yajsapi/task/work.ts:25](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L25)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L26)
+[yajsapi/task/work.ts:26](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L26)
 
 ___
 
@@ -109,4 +109,4 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:27](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L27)
+[yajsapi/task/work.ts:27](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L27)

@@ -2,17 +2,17 @@
 
 ## Table of contents
 
-### Type Aliases
+### Classes
 
-- [Worker](task_work.md#worker)
+- [WorkContext](../classes/task_work.WorkContext.md)
 
 ### Interfaces
 
 - [WorkOptions](../interfaces/task_work.WorkOptions.md)
 
-### Classes
+### Type Aliases
 
-- [WorkContext](../classes/task_work.WorkContext.md)
+- [Worker](task_work.md#worker)
 
 ## Type Aliases
 
@@ -44,4 +44,4 @@
 
 #### Defined in
 
-[yajsapi/task/work.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L9)
+[yajsapi/task/work.ts:9](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L9)

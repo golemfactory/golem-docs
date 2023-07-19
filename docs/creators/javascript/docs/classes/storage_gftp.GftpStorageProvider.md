@@ -32,11 +32,11 @@
 
 | Name | Type |
 | :------ | :------ |
-| `logger?` | [`Logger`](../interfaces/utils_logger.Logger.md) |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger.md) |
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:13](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L13)
+[yajsapi/storage/gftp.ts:14](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L14)
 
 ## Methods
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L19)
+[yajsapi/storage/gftp.ts:20](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L20)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:26](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L26)
+[yajsapi/storage/gftp.ts:31](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L31)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:42](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L42)
+[yajsapi/storage/gftp.ts:47](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L47)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:47](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L47)
+[yajsapi/storage/gftp.ts:52](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L52)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:54](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L54)
+[yajsapi/storage/gftp.ts:59](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L59)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:58](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L58)
+[yajsapi/storage/gftp.ts:63](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L63)
 
 ___
 
@@ -178,4 +178,4 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:84](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/storage/gftp.ts#L84)
+[yajsapi/storage/gftp.ts:89](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L89)

@@ -15,6 +15,8 @@ Work Context
 ### Properties
 
 - [provider](task_work.WorkContext.md#provider)
+- [agreementId](task_work.WorkContext.md#agreementid)
+- [activityId](task_work.WorkContext.md#activityid)
 
 ### Methods
 
@@ -26,6 +28,7 @@ Work Context
 - [beginBatch](task_work.WorkContext.md#beginbatch)
 - [rejectResult](task_work.WorkContext.md#rejectresult)
 - [getWebsocketUri](task_work.WorkContext.md#getwebsocketuri)
+- [getState](task_work.WorkContext.md#getstate)
 
 ## Constructors
 
@@ -37,12 +40,12 @@ Work Context
 
 | Name | Type |
 | :------ | :------ |
-| `activity` | [`Activity`](activity_activity.Activity.md) |
+| `activity` | `Activity` |
 | `options?` | [`WorkOptions`](../interfaces/task_work.WorkOptions.md) |
 
 #### Defined in
 
-[yajsapi/task/work.ts:43](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L43)
+[yajsapi/task/work.ts:51](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L51)
 
 ## Properties
 
@@ -60,47 +63,67 @@ Work Context
 
 #### Defined in
 
-[yajsapi/task/work.ts:36](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L36)
+[yajsapi/task/work.ts:42](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L42)
+
+___
+
+### agreementId
+
+• `Readonly` **agreementId**: `string`
+
+#### Defined in
+
+[yajsapi/task/work.ts:43](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L43)
+
+___
+
+### activityId
+
+• `Readonly` **activityId**: `string`
+
+#### Defined in
+
+[yajsapi/task/work.ts:44](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L44)
 
 ## Methods
 
 ### before
 
-▸ **before**(): `Promise`<`void` \| [`Result`](../interfaces/activity_results.Result.md)[]\>
+▸ **before**(): `Promise`<`void` \| `Result`[]\>
 
 #### Returns
 
-`Promise`<`void` \| [`Result`](../interfaces/activity_results.Result.md)[]\>
+`Promise`<`void` \| `Result`[]\>
 
 #### Defined in
 
-[yajsapi/task/work.ts:51](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L51)
+[yajsapi/task/work.ts:61](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L61)
 
 ___
 
 ### run
 
-▸ **run**(`...args`): `Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+▸ **run**(`...args`): `Promise`<`Result`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...args` | (`string` \| `string`[])[] |
+| `...args` | (`string` \| `string`[] \| `CommandOptions`)[] |
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+`Promise`<`Result`\>
 
 #### Defined in
 
-[yajsapi/task/work.ts:74](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L74)
+[yajsapi/task/work.ts:96](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L96)
 
 ___
 
 ### uploadFile
 
-▸ **uploadFile**(`src`, `dst`): `Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+▸ **uploadFile**(`src`, `dst`, `options?`): `Promise`<`Result`\>
 
 #### Parameters
 
@@ -108,20 +131,21 @@ ___
 | :------ | :------ |
 | `src` | `string` |
 | `dst` | `string` |
+| `options?` | `CommandOptions` |
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+`Promise`<`Result`\>
 
 #### Defined in
 
-[yajsapi/task/work.ts:79](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L79)
+[yajsapi/task/work.ts:106](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L106)
 
 ___
 
 ### uploadJson
 
-▸ **uploadJson**(`json`, `dst`): `Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+▸ **uploadJson**(`json`, `dst`, `options?`): `Promise`<`Result`\>
 
 #### Parameters
 
@@ -129,20 +153,21 @@ ___
 | :------ | :------ |
 | `json` | `object` |
 | `dst` | `string` |
+| `options?` | `CommandOptions` |
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+`Promise`<`Result`\>
 
 #### Defined in
 
-[yajsapi/task/work.ts:83](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L83)
+[yajsapi/task/work.ts:110](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L110)
 
 ___
 
 ### downloadFile
 
-▸ **downloadFile**(`src`, `dst`): `Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+▸ **downloadFile**(`src`, `dst`, `options?`): `Promise`<`Result`\>
 
 #### Parameters
 
@@ -150,14 +175,15 @@ ___
 | :------ | :------ |
 | `src` | `string` |
 | `dst` | `string` |
+| `options?` | `CommandOptions` |
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/activity_results.Result.md)\>
+`Promise`<`Result`\>
 
 #### Defined in
 
-[yajsapi/task/work.ts:88](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L88)
+[yajsapi/task/work.ts:115](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L115)
 
 ___
 
@@ -171,7 +197,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:92](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L92)
+[yajsapi/task/work.ts:119](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L119)
 
 ___
 
@@ -191,7 +217,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:95](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L95)
+[yajsapi/task/work.ts:122](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L122)
 
 ___
 
@@ -211,4 +237,18 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:98](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/work.ts#L98)
+[yajsapi/task/work.ts:125](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L125)
+
+___
+
+### getState
+
+▸ **getState**(): `Promise`<`ActivityStateEnum`\>
+
+#### Returns
+
+`Promise`<`ActivityStateEnum`\>
+
+#### Defined in
+
+[yajsapi/task/work.ts:130](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L130)
