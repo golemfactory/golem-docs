@@ -35,15 +35,15 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [`AccountsOptions`](../interfaces/payment_accounts.AccountsOptions.md) |
+| `options?` | [`BasePaymentOptions`](../interfaces/payment_config.BasePaymentOptions.md) |
 
-#### Overrides
+#### Inherited from
 
 BaseConfig.constructor
 
 #### Defined in
 
-[yajsapi/payment/config.ts:113](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L113)
+[yajsapi/payment/config.ts:48](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L48)
 
 ## Properties
 
@@ -57,7 +57,7 @@ BaseConfig.yagnaOptions
 
 #### Defined in
 
-[yajsapi/payment/config.ts:38](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L38)
+[yajsapi/payment/config.ts:40](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L40)
 
 ___
 
@@ -71,7 +71,7 @@ BaseConfig.paymentTimeout
 
 #### Defined in
 
-[yajsapi/payment/config.ts:39](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L39)
+[yajsapi/payment/config.ts:41](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L41)
 
 ___
 
@@ -85,13 +85,13 @@ BaseConfig.api
 
 #### Defined in
 
-[yajsapi/payment/config.ts:40](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L40)
+[yajsapi/payment/config.ts:42](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L42)
 
 ___
 
 ### logger
 
-• `Optional` `Readonly` **logger**: [`Logger`](../interfaces/utils_logger.Logger.md)
+• `Optional` `Readonly` **logger**: [`Logger`](../interfaces/utils_logger_logger.Logger.md)
 
 #### Inherited from
 
@@ -99,7 +99,7 @@ BaseConfig.logger
 
 #### Defined in
 
-[yajsapi/payment/config.ts:41](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L41)
+[yajsapi/payment/config.ts:43](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L43)
 
 ___
 
@@ -113,7 +113,7 @@ BaseConfig.eventTarget
 
 #### Defined in
 
-[yajsapi/payment/config.ts:42](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L42)
+[yajsapi/payment/config.ts:44](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L44)
 
 ___
 
@@ -134,7 +134,7 @@ BaseConfig.payment
 
 #### Defined in
 
-[yajsapi/payment/config.ts:43](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L43)
+[yajsapi/payment/config.ts:45](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L45)
 
 ___
 
@@ -148,7 +148,7 @@ BaseConfig.paymentRequestTimeout
 
 #### Defined in
 
-[yajsapi/payment/config.ts:44](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L44)
+[yajsapi/payment/config.ts:46](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L46)
 
 ___
 
@@ -162,4 +162,4 @@ BaseConfig.options
 
 #### Defined in
 
-[yajsapi/payment/config.ts:46](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/config.ts#L46)
+[yajsapi/payment/config.ts:48](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L48)

@@ -2,15 +2,15 @@
 
 ## Table of contents
 
+### Interfaces
+
+- [DebitNoteDTO](../interfaces/payment_debit_note.DebitNoteDTO.md)
+
 ### Type Aliases
 
 - [InvoiceOptions](payment_debit_note.md#invoiceoptions)
 
-### Classes
-
-- [DebitNote](../classes/payment_debit_note.DebitNote.md)
-
-## Other
+## Type Aliases
 
 ### InvoiceOptions
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[yajsapi/payment/debit_note.ts:7](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/payment/debit_note.ts#L7)
+[yajsapi/payment/debit_note.ts:7](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/debit_note.ts#L7)

@@ -32,7 +32,7 @@ Error.constructor
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1059
+node_modules/typescript/lib/lib.es5.d.ts:1073
 
 • **new NetworkError**(`message?`, `options?`)
 
@@ -49,4 +49,4 @@ Error.constructor
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2022.error.d.ts:30
+node_modules/typescript/lib/lib.es2022.error.d.ts:28

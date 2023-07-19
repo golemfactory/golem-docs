@@ -2,49 +2,238 @@
 
 ## Table of contents
 
-### Variables
+### Functions
 
-- [SCORE\_NEUTRAL](market_strategy.md#score_neutral)
-- [SCORE\_REJECTED](market_strategy.md#score_rejected)
-- [SCORE\_TRUSTED](market_strategy.md#score_trusted)
+- [acceptAllProposalFilter](market_strategy.md#acceptallproposalfilter)
+- [blackListProposalIdsFilter](market_strategy.md#blacklistproposalidsfilter)
+- [blackListProposalNamesFilter](market_strategy.md#blacklistproposalnamesfilter)
+- [blackListProposalRegexpFilter](market_strategy.md#blacklistproposalregexpfilter)
+- [whiteListProposalIdsFilter](market_strategy.md#whitelistproposalidsfilter)
+- [whiteListProposalNamesFilter](market_strategy.md#whitelistproposalnamesfilter)
+- [whiteListProposalRegexpFilter](market_strategy.md#whitelistproposalregexpfilter)
 
-### Interfaces
+## Functions
 
-- [ComputationHistory](../interfaces/market_strategy.ComputationHistory.md)
-- [MarketStrategy](../interfaces/market_strategy.MarketStrategy.md)
+### acceptAllProposalFilter
 
-### Classes
+▸ **acceptAllProposalFilter**(): () => `Promise`<`boolean`\>
 
-- [DefaultMarketStrategy](../classes/market_strategy.DefaultMarketStrategy.md)
-- [LeastExpensiveLinearPayuMarketStrategy](../classes/market_strategy.LeastExpensiveLinearPayuMarketStrategy.md)
-- [DecreaseScoreForUnconfirmedAgreementMarketStrategy](../classes/market_strategy.DecreaseScoreForUnconfirmedAgreementMarketStrategy.md)
+Default Proposal filter that accept all proposal coming from the market
 
-## Variables
+#### Returns
 
-### SCORE\_NEUTRAL
+`fn`
 
-• `Const` **SCORE\_NEUTRAL**: ``0``
+▸ (): `Promise`<`boolean`\>
+
+##### Returns
+
+`Promise`<`boolean`\>
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:5](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L5)
+[yajsapi/market/strategy.ts:4](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L4)
 
 ___
 
-### SCORE\_REJECTED
+### blackListProposalIdsFilter
 
-• `Const` **SCORE\_REJECTED**: ``-1``
+▸ **blackListProposalIdsFilter**(`blackListIds`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)) => `Promise`<`boolean`\>
+
+Proposal filter blocking every offer coming from a provider whose id is in the array
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `blackListIds` | `string`[] |
+
+#### Returns
+
+`fn`
+
+▸ (`proposal`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+
+##### Returns
+
+`Promise`<`boolean`\>
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:6](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L6)
+[yajsapi/market/strategy.ts:7](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L7)
 
 ___
 
-### SCORE\_TRUSTED
+### blackListProposalNamesFilter
 
-• `Const` **SCORE\_TRUSTED**: ``100``
+▸ **blackListProposalNamesFilter**(`blackListNames`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)) => `Promise`<`boolean`\>
+
+Proposal filter blocking every offer coming from a provider whose name is in the array
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `blackListNames` | `string`[] |
+
+#### Returns
+
+`fn`
+
+▸ (`proposal`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+
+##### Returns
+
+`Promise`<`boolean`\>
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:7](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/market/strategy.ts#L7)
+[yajsapi/market/strategy.ts:11](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L11)
+
+___
+
+### blackListProposalRegexpFilter
+
+▸ **blackListProposalRegexpFilter**(`regexp`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)) => `Promise`<`boolean`\>
+
+Proposal filter blocking every offer coming from a provider whose name match to the regexp
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `regexp` | `RegExp` |
+
+#### Returns
+
+`fn`
+
+▸ (`proposal`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+
+##### Returns
+
+`Promise`<`boolean`\>
+
+#### Defined in
+
+[yajsapi/market/strategy.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L15)
+
+___
+
+### whiteListProposalIdsFilter
+
+▸ **whiteListProposalIdsFilter**(`whiteListIds`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)) => `Promise`<`boolean`\>
+
+Proposal filter that only allows offers from a provider whose id is in the array
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `whiteListIds` | `string`[] |
+
+#### Returns
+
+`fn`
+
+▸ (`proposal`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+
+##### Returns
+
+`Promise`<`boolean`\>
+
+#### Defined in
+
+[yajsapi/market/strategy.ts:19](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L19)
+
+___
+
+### whiteListProposalNamesFilter
+
+▸ **whiteListProposalNamesFilter**(`whiteListNames`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)) => `Promise`<`boolean`\>
+
+Proposal filter that only allows offers from a provider whose name is in the array
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `whiteListNames` | `string`[] |
+
+#### Returns
+
+`fn`
+
+▸ (`proposal`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+
+##### Returns
+
+`Promise`<`boolean`\>
+
+#### Defined in
+
+[yajsapi/market/strategy.ts:23](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L23)
+
+___
+
+### whiteListProposalRegexpFilter
+
+▸ **whiteListProposalRegexpFilter**(`regexp`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)) => `Promise`<`boolean`\>
+
+Proposal filter that only allows offers from a provider whose name match to the regexp
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `regexp` | `RegExp` |
+
+#### Returns
+
+`fn`
+
+▸ (`proposal`): `Promise`<`boolean`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+
+##### Returns
+
+`Promise`<`boolean`\>
+
+#### Defined in
+
+[yajsapi/market/strategy.ts:27](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L27)

@@ -37,7 +37,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[yajsapi/network/node.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/node.ts#L8)
+[yajsapi/network/node.ts:8](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/node.ts#L8)
 
 ## Properties
 
@@ -47,7 +47,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[yajsapi/network/node.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/node.ts#L9)
+[yajsapi/network/node.ts:9](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/node.ts#L9)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[yajsapi/network/node.ts:10](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/node.ts#L10)
+[yajsapi/network/node.ts:10](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/node.ts#L10)
 
 ## Methods
 
@@ -79,7 +79,7 @@ on the provider's end.
 
 #### Defined in
 
-[yajsapi/network/node.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/node.ts#L20)
+[yajsapi/network/node.ts:20](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/node.ts#L20)
 
 ___
 
@@ -103,4 +103,4 @@ the url
 
 #### Defined in
 
-[yajsapi/network/node.ts:36](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/network/node.ts#L36)
+[yajsapi/network/node.ts:36](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/node.ts#L36)

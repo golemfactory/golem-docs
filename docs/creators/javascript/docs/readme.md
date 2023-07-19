@@ -1,7 +1,7 @@
 # Golem JavaScript API
 
 ![GitHub](https://img.shields.io/github/license/golemfactory/yajsapi)
-![npm](https://img.shields.io/npm/v/yajsapi) 
+![npm](https://img.shields.io/npm/v/yajsapi)
 ![node-current](https://img.shields.io/node/v/yajsapi)
 ![npm type definitions](https://img.shields.io/npm/types/yajsapi)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/golemfactory/yajsapi/goth.yml)
@@ -44,6 +44,7 @@ yarn build
 ```
 
 This will generate production code in the `dist/` directory ready to be used in your nodejs or browser applications.
+
 
 ### Usage
 
@@ -115,10 +116,8 @@ yarn format
 
 * [Golem](https://golem.network), a global, open-source, decentralized supercomputer that anyone can access.
 * Learn what you need to know to set-up your Golem requestor node:
-    * [Requestor development: a quick primer](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
-    * [Quick start](https://docs.golem.network/creators/javascript/quickstart/)
+  * [Requestor development: a quick primer](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
+  * [Quick start](https://docs.golem.network/creators/javascript/quickstart/)
 * Have a look at the most important concepts behind any Golem application: [Golem application fundamentals](https://handbook.golem.network/requestor-tutorials/golem-application-fundamentals)
 * Learn about preparing your own Docker-like images for the [VM runtime](https://handbook.golem.network/requestor-tutorials/vm-runtime)
-* Write your own app with JavaScript API:
-    * [High-level API](https://docs.golem.network/creators/javascript/high-level/task-model/)
-    * [Mid-level API](https://docs.golem.network/creators/javascript/mid-level/)
+* Write your own app with [JavaScript API](https://docs.golem.network/creators/javascript/high-level/task-model/)

@@ -2,6 +2,7 @@
 
 ## Table of contents
 
-### Classes
+### Interfaces
 
-- [Proposal](../classes/market_proposal.Proposal.md)
+- [ProposalDetails](../interfaces/market_proposal.ProposalDetails.md)
+- [ProposalDTO](../interfaces/market_proposal.ProposalDTO.md)

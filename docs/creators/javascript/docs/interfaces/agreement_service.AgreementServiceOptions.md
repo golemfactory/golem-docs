@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`AgreementOptions`](agreement_agreement.AgreementOptions.md)
+- `AgreementOptions`
 
   ↳ **`AgreementServiceOptions`**
 
@@ -12,9 +12,7 @@
 
 ### Properties
 
-- [agreementEventPoolingInterval](agreement_service.AgreementServiceOptions.md#agreementeventpoolinginterval)
-- [agreementEventPoolingMaxEventsPerRequest](agreement_service.AgreementServiceOptions.md#agreementeventpoolingmaxeventsperrequest)
-- [agreementWaitingForProposalTimout](agreement_service.AgreementServiceOptions.md#agreementwaitingforproposaltimout)
+- [agreementSelector](agreement_service.AgreementServiceOptions.md#agreementselector)
 - [yagnaOptions](agreement_service.AgreementServiceOptions.md#yagnaoptions)
 - [agreementRequestTimeout](agreement_service.AgreementServiceOptions.md#agreementrequesttimeout)
 - [agreementWaitingForApprovalTimeout](agreement_service.AgreementServiceOptions.md#agreementwaitingforapprovaltimeout)
@@ -23,33 +21,15 @@
 
 ## Properties
 
-### agreementEventPoolingInterval
+### agreementSelector
 
-• `Optional` **agreementEventPoolingInterval**: `number`
+• `Optional` **agreementSelector**: [`AgreementSelector`](../modules/agreement_service.md#agreementselector)
 
-#### Defined in
-
-[yajsapi/agreement/service.ts:9](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/service.ts#L9)
-
-___
-
-### agreementEventPoolingMaxEventsPerRequest
-
-• `Optional` **agreementEventPoolingMaxEventsPerRequest**: `number`
+The selector used when choosing a provider from a pool of existing offers (from the market or already used before)
 
 #### Defined in
 
-[yajsapi/agreement/service.ts:10](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/service.ts#L10)
-
-___
-
-### agreementWaitingForProposalTimout
-
-• `Optional` **agreementWaitingForProposalTimout**: `number`
-
-#### Defined in
-
-[yajsapi/agreement/service.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/service.ts#L11)
+[yajsapi/agreement/service.ts:22](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/service.ts#L22)
 
 ___
 
@@ -61,11 +41,11 @@ yagnaOptions
 
 #### Inherited from
 
-[AgreementOptions](agreement_agreement.AgreementOptions.md).[yagnaOptions](agreement_agreement.AgreementOptions.md#yagnaoptions)
+AgreementOptions.yagnaOptions
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:34](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L34)
+[yajsapi/agreement/agreement.ts:34](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L34)
 
 ___
 
@@ -77,11 +57,11 @@ timeout for create agreement and refresh details in ms
 
 #### Inherited from
 
-[AgreementOptions](agreement_agreement.AgreementOptions.md).[agreementRequestTimeout](agreement_agreement.AgreementOptions.md#agreementrequesttimeout)
+AgreementOptions.agreementRequestTimeout
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:36](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L36)
+[yajsapi/agreement/agreement.ts:36](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L36)
 
 ___
 
@@ -93,27 +73,27 @@ timeout for wait for provider approval after requestor confirmation in ms
 
 #### Inherited from
 
-[AgreementOptions](agreement_agreement.AgreementOptions.md).[agreementWaitingForApprovalTimeout](agreement_agreement.AgreementOptions.md#agreementwaitingforapprovaltimeout)
+AgreementOptions.agreementWaitingForApprovalTimeout
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:38](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L38)
+[yajsapi/agreement/agreement.ts:38](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L38)
 
 ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
 
 Logger module
 
 #### Inherited from
 
-[AgreementOptions](agreement_agreement.AgreementOptions.md).[logger](agreement_agreement.AgreementOptions.md#logger)
+AgreementOptions.logger
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:40](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L40)
+[yajsapi/agreement/agreement.ts:40](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L40)
 
 ___
 
@@ -125,8 +105,8 @@ Event Bus implements EventTarget
 
 #### Inherited from
 
-[AgreementOptions](agreement_agreement.AgreementOptions.md).[eventTarget](agreement_agreement.AgreementOptions.md#eventtarget)
+AgreementOptions.eventTarget
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:42](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/agreement/agreement.ts#L42)
+[yajsapi/agreement/agreement.ts:42](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L42)

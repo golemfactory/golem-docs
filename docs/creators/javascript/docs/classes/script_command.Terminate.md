@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`Command`](script_command.Command.md)
+- `Command`
 
   ↳ **`Terminate`**
 
@@ -39,11 +39,11 @@
 
 #### Overrides
 
-[Command](script_command.Command.md).[constructor](script_command.Command.md#constructor)
+Command.constructor
 
 #### Defined in
 
-[yajsapi/script/command.ts:75](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L75)
+[yajsapi/script/command.ts:75](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L75)
 
 ## Properties
 
@@ -53,11 +53,11 @@
 
 #### Inherited from
 
-[Command](script_command.Command.md).[args](script_command.Command.md#args)
+Command.args
 
 #### Defined in
 
-[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L8)
+[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L8)
 
 ## Methods
 
@@ -71,11 +71,11 @@
 
 #### Inherited from
 
-[Command](script_command.Command.md).[toJson](script_command.Command.md#tojson)
+Command.toJson
 
 #### Defined in
 
-[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L12)
+[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L12)
 
 ___
 
@@ -89,11 +89,11 @@ ___
 
 #### Inherited from
 
-[Command](script_command.Command.md).[toExeScriptRequest](script_command.Command.md#toexescriptrequest)
+Command.toExeScriptRequest
 
 #### Defined in
 
-[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L17)
+[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L17)
 
 ___
 
@@ -107,11 +107,11 @@ ___
 
 #### Inherited from
 
-[Command](script_command.Command.md).[before](script_command.Command.md#before)
+Command.before
 
 #### Defined in
 
-[yajsapi/script/command.ts:20](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L20)
+[yajsapi/script/command.ts:20](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L20)
 
 ___
 
@@ -125,8 +125,8 @@ ___
 
 #### Inherited from
 
-[Command](script_command.Command.md).[after](script_command.Command.md#after)
+Command.after
 
 #### Defined in
 
-[yajsapi/script/command.ts:23](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/script/command.ts#L23)
+[yajsapi/script/command.ts:23](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L23)

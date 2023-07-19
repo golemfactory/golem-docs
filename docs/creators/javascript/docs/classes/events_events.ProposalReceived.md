@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `providerId`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `providerId`: `string` ; `parentId`: `string` \| ``null`` ; `details`: [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails.md)  }\>
 
   ↳ **`ProposalReceived`**
 
@@ -17,6 +17,8 @@
 ### Properties
 
 - [detail](events_events.ProposalReceived.md#detail)
+- [name](events_events.ProposalReceived.md#name)
+- [timestamp](events_events.ProposalReceived.md#timestamp)
 
 ## Constructors
 
@@ -31,6 +33,8 @@
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.providerId` | `string` |
+| `data.parentId` | ``null`` \| `string` |
+| `data.details` | [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails.md) |
 
 #### Inherited from
 
@@ -38,7 +42,7 @@
 
 #### Defined in
 
-[yajsapi/events/events.ts:19](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L19)
+[yajsapi/events/events.ts:28](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L28)
 
 ## Properties
 
@@ -52,6 +56,8 @@
 | :------ | :------ |
 | `id` | `string` |
 | `providerId` | `string` |
+| `parentId` | ``null`` \| `string` |
+| `details` | [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails.md) |
 
 #### Inherited from
 
@@ -59,4 +65,32 @@
 
 #### Defined in
 
-[yajsapi/events/events.ts:11](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/events/events.ts#L11)
+[yajsapi/events/events.ts:16](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L16)
+
+___
+
+### name
+
+• `Readonly` **name**: `string`
+
+#### Inherited from
+
+[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+
+#### Defined in
+
+[yajsapi/events/events.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L17)
+
+___
+
+### timestamp
+
+• `Readonly` **timestamp**: `number`
+
+#### Inherited from
+
+[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+
+#### Defined in
+
+[yajsapi/events/events.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L18)

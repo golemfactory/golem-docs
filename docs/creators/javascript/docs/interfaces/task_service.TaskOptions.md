@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`ActivityOptions`](activity_activity.ActivityOptions.md)
+- `ActivityOptions`
 
   ↳ **`TaskOptions`**
 
@@ -15,6 +15,7 @@
 - [maxParallelTasks](task_service.TaskOptions.md#maxparalleltasks)
 - [taskRunningInterval](task_service.TaskOptions.md#taskrunninginterval)
 - [activityStateCheckingInterval](task_service.TaskOptions.md#activitystatecheckinginterval)
+- [activityPreparingTimeout](task_service.TaskOptions.md#activitypreparingtimeout)
 - [taskTimeout](task_service.TaskOptions.md#tasktimeout)
 - [logger](task_service.TaskOptions.md#logger)
 - [storageProvider](task_service.TaskOptions.md#storageprovider)
@@ -34,7 +35,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 #### Defined in
 
-[yajsapi/task/service.ts:13](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/service.ts#L13)
+[yajsapi/task/service.ts:13](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/service.ts#L13)
 
 ___
 
@@ -44,7 +45,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/service.ts:14](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/service.ts#L14)
+[yajsapi/task/service.ts:14](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/service.ts#L14)
 
 ___
 
@@ -54,7 +55,17 @@ ___
 
 #### Defined in
 
-[yajsapi/task/service.ts:15](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/service.ts#L15)
+[yajsapi/task/service.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/service.ts#L15)
+
+___
+
+### activityPreparingTimeout
+
+• `Optional` **activityPreparingTimeout**: `number`
+
+#### Defined in
+
+[yajsapi/task/service.ts:16](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/service.ts#L16)
 
 ___
 
@@ -64,23 +75,21 @@ ___
 
 #### Defined in
 
-[yajsapi/task/service.ts:16](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/service.ts#L16)
+[yajsapi/task/service.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/service.ts#L17)
 
 ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger.Logger.md)
-
-Logger module
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
 
 #### Overrides
 
-[ActivityOptions](activity_activity.ActivityOptions.md).[logger](activity_activity.ActivityOptions.md#logger)
+ActivityOptions.logger
 
 #### Defined in
 
-[yajsapi/task/service.ts:17](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/service.ts#L17)
+[yajsapi/task/service.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/service.ts#L18)
 
 ___
 
@@ -90,7 +99,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/service.ts:18](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/task/service.ts#L18)
+[yajsapi/task/service.ts:19](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/service.ts#L19)
 
 ___
 
@@ -107,11 +116,11 @@ ___
 
 #### Inherited from
 
-[ActivityOptions](activity_activity.ActivityOptions.md).[yagnaOptions](activity_activity.ActivityOptions.md#yagnaoptions)
+ActivityOptions.yagnaOptions
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:33](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L33)
+[yajsapi/activity/activity.ts:33](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/activity/activity.ts#L33)
 
 ___
 
@@ -123,11 +132,11 @@ timeout for sending and creating batch
 
 #### Inherited from
 
-[ActivityOptions](activity_activity.ActivityOptions.md).[activityRequestTimeout](activity_activity.ActivityOptions.md#activityrequesttimeout)
+ActivityOptions.activityRequestTimeout
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:40](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L40)
+[yajsapi/activity/activity.ts:40](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/activity/activity.ts#L40)
 
 ___
 
@@ -139,11 +148,11 @@ timeout for executing batch
 
 #### Inherited from
 
-[ActivityOptions](activity_activity.ActivityOptions.md).[activityExecuteTimeout](activity_activity.ActivityOptions.md#activityexecutetimeout)
+ActivityOptions.activityExecuteTimeout
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:42](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L42)
+[yajsapi/activity/activity.ts:42](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/activity/activity.ts#L42)
 
 ___
 
@@ -155,11 +164,11 @@ interval for fetching batch results while polling
 
 #### Inherited from
 
-[ActivityOptions](activity_activity.ActivityOptions.md).[activityExeBatchResultsFetchInterval](activity_activity.ActivityOptions.md#activityexebatchresultsfetchinterval)
+ActivityOptions.activityExeBatchResultsFetchInterval
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:44](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L44)
+[yajsapi/activity/activity.ts:44](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/activity/activity.ts#L44)
 
 ___
 
@@ -171,8 +180,8 @@ Event Bus implements EventTarget
 
 #### Inherited from
 
-[ActivityOptions](activity_activity.ActivityOptions.md).[eventTarget](activity_activity.ActivityOptions.md#eventtarget)
+ActivityOptions.eventTarget
 
 #### Defined in
 
-[yajsapi/activity/activity.ts:48](https://github.com/golemfactory/yajsapi/blob/5793bb7/yajsapi/activity/activity.ts#L48)
+[yajsapi/activity/activity.ts:48](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/activity/activity.ts#L48)
