@@ -1,842 +1,551 @@
 export const navigation = [
-  {
-    title: 'b0.1',
+{
+    title: "b0.7",
     links: [
-      {
-        title: 'classes',
+{
+        title: "classes",
         children: [
-          {
-            title: 'Accounts',
-            href: '/docs/yajsapi/reference/b0.1/classes/Accounts',
+{
+            title: "Agreement_service.AgreementCandidate",
+            href: "/docs/yajsapi/reference/b0.7/classes/agreement_service.AgreementCandidate"
           },
-          {
-            title: 'Activity',
-            href: '/docs/yajsapi/reference/b0.1/classes/Activity',
+{
+            title: "Events_events.ActivityCreated",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ActivityCreated"
           },
-          {
-            title: 'Agreement',
-            href: '/docs/yajsapi/reference/b0.1/classes/Agreement',
+{
+            title: "Events_events.ActivityDestroyed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ActivityDestroyed"
           },
-          {
-            title: 'Allocation',
-            href: '/docs/yajsapi/reference/b0.1/classes/Allocation',
+{
+            title: "Events_events.ActivityStateChanged",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ActivityStateChanged"
           },
-          {
-            title: 'ConsoleLogger',
-            href: '/docs/yajsapi/reference/b0.1/classes/ConsoleLogger',
+{
+            title: "Events_events.AgreementConfirmed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.AgreementConfirmed"
           },
-          {
-            title: 'DebitNote',
-            href: '/docs/yajsapi/reference/b0.1/classes/DebitNote',
+{
+            title: "Events_events.AgreementCreated",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.AgreementCreated"
           },
-          {
-            title: 'DebitNoteEvent',
-            href: '/docs/yajsapi/reference/b0.1/classes/DebitNoteEvent',
+{
+            title: "Events_events.AgreementRejected",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.AgreementRejected"
           },
-          {
-            title: 'Demand',
-            href: '/docs/yajsapi/reference/b0.1/classes/Demand',
+{
+            title: "Events_events.AgreementTerminated",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.AgreementTerminated"
           },
-          {
-            title: 'DemandEvent',
-            href: '/docs/yajsapi/reference/b0.1/classes/DemandEvent',
+{
+            title: "Events_events.AllocationCreated",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.AllocationCreated"
           },
-          {
-            title: 'Deploy',
-            href: '/docs/yajsapi/reference/b0.1/classes/Deploy',
+{
+            title: "Events_events.BaseEvent",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.BaseEvent"
           },
-          {
-            title: 'DownloadFile',
-            href: '/docs/yajsapi/reference/b0.1/classes/DownloadFile',
+{
+            title: "Events_events.CollectFailed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.CollectFailed"
           },
-          {
-            title: 'Invoice',
-            href: '/docs/yajsapi/reference/b0.1/classes/Invoice',
+{
+            title: "Events_events.ComputationFailed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ComputationFailed"
           },
-          {
-            title: 'InvoiceEvent',
-            href: '/docs/yajsapi/reference/b0.1/classes/InvoiceEvent',
+{
+            title: "Events_events.ComputationFinished",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ComputationFinished"
           },
-          {
-            title: 'Package',
-            href: '/docs/yajsapi/reference/b0.1/classes/Package',
+{
+            title: "Events_events.ComputationStarted",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ComputationStarted"
           },
-          {
-            title: 'Payments',
-            href: '/docs/yajsapi/reference/b0.1/classes/Payments',
+{
+            title: "Events_events.DebitNoteAccepted",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.DebitNoteAccepted"
           },
-          {
-            title: 'Proposal',
-            href: '/docs/yajsapi/reference/b0.1/classes/Proposal',
+{
+            title: "Events_events.DebitNoteReceived",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.DebitNoteReceived"
           },
-          {
-            title: 'Run',
-            href: '/docs/yajsapi/reference/b0.1/classes/Run',
+{
+            title: "Events_events.DemandFailed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.DemandFailed"
           },
-          {
-            title: 'Script',
-            href: '/docs/yajsapi/reference/b0.1/classes/Script',
+{
+            title: "Events_events.DemandSubscribed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.DemandSubscribed"
           },
-          {
-            title: 'Start',
-            href: '/docs/yajsapi/reference/b0.1/classes/Start',
+{
+            title: "Events_events.DemandUnsubscribed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.DemandUnsubscribed"
           },
-          {
-            title: 'TaskExecutor',
-            href: '/docs/yajsapi/reference/b0.1/classes/TaskExecutor',
+{
+            title: "Events_events.InvoiceReceived",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.InvoiceReceived"
           },
-          {
-            title: 'Transfer',
-            href: '/docs/yajsapi/reference/b0.1/classes/Transfer',
+{
+            title: "Events_events.PackageCreated",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.PackageCreated"
           },
-          {
-            title: 'UploadFile',
-            href: '/docs/yajsapi/reference/b0.1/classes/UploadFile',
+{
+            title: "Events_events.PaymentAccepted",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.PaymentAccepted"
           },
-        ],
+{
+            title: "Events_events.PaymentFailed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.PaymentFailed"
+          },
+{
+            title: "Events_events.ProposalConfirmed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ProposalConfirmed"
+          },
+{
+            title: "Events_events.ProposalFailed",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ProposalFailed"
+          },
+{
+            title: "Events_events.ProposalReceived",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ProposalReceived"
+          },
+{
+            title: "Events_events.ProposalRejected",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ProposalRejected"
+          },
+{
+            title: "Events_events.ProposalResponded",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ProposalResponded"
+          },
+{
+            title: "Events_events.ScriptExecuted",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ScriptExecuted"
+          },
+{
+            title: "Events_events.ScriptSent",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.ScriptSent"
+          },
+{
+            title: "Events_events.TaskFinished",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.TaskFinished"
+          },
+{
+            title: "Events_events.TaskRedone",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.TaskRedone"
+          },
+{
+            title: "Events_events.TaskRejected",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.TaskRejected"
+          },
+{
+            title: "Events_events.TaskStarted",
+            href: "/docs/yajsapi/reference/b0.7/classes/events_events.TaskStarted"
+          },
+{
+            title: "Executor_executor.TaskExecutor",
+            href: "/docs/yajsapi/reference/b0.7/classes/executor_executor.TaskExecutor"
+          },
+{
+            title: "Network_network.NetworkError",
+            href: "/docs/yajsapi/reference/b0.7/classes/network_network.NetworkError"
+          },
+{
+            title: "Network_node.NetworkNode",
+            href: "/docs/yajsapi/reference/b0.7/classes/network_node.NetworkNode"
+          },
+{
+            title: "Payment_config.AccountConfig",
+            href: "/docs/yajsapi/reference/b0.7/classes/payment_config.AccountConfig"
+          },
+{
+            title: "Payment_payments.Payments",
+            href: "/docs/yajsapi/reference/b0.7/classes/payment_payments.Payments"
+          },
+{
+            title: "Script_command.Terminate",
+            href: "/docs/yajsapi/reference/b0.7/classes/script_command.Terminate"
+          },
+{
+            title: "Storage_gftp.GftpStorageProvider",
+            href: "/docs/yajsapi/reference/b0.7/classes/storage_gftp.GftpStorageProvider"
+          },
+{
+            title: "Task_batch.Batch",
+            href: "/docs/yajsapi/reference/b0.7/classes/task_batch.Batch"
+          },
+{
+            title: "Task_task.Task",
+            href: "/docs/yajsapi/reference/b0.7/classes/task_task.Task"
+          },
+{
+            title: "Task_work.WorkContext",
+            href: "/docs/yajsapi/reference/b0.7/classes/task_work.WorkContext"
+          }
+        ]
       },
-      {
-        title: 'enums',
+{
+        title: "enums",
         children: [
-          {
-            title: 'ActivityStateEnum',
-            href: '/docs/yajsapi/reference/b0.1/enums/ActivityStateEnum',
+{
+            title: "Task_task.TaskState",
+            href: "/docs/yajsapi/reference/b0.7/enums/task_task.TaskState"
           },
-          {
-            title: 'AgreementStateEnum',
-            href: '/docs/yajsapi/reference/b0.1/enums/AgreementStateEnum',
-          },
-        ],
+{
+            title: "Utils_logger_logger.LogLevel",
+            href: "/docs/yajsapi/reference/b0.7/enums/utils_logger_logger.LogLevel"
+          }
+        ]
       },
-      {
-        title: 'interfaces',
+{
+        title: "interfaces",
         children: [
-          {
-            title: 'ActivityOptions',
-            href: '/docs/yajsapi/reference/b0.1/interfaces/ActivityOptions',
+{
+            title: "Activity_results.StreamingBatchEvent",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/activity_results.StreamingBatchEvent"
           },
-          {
-            title: 'AgreementOptions',
-            href: '/docs/yajsapi/reference/b0.1/interfaces/AgreementOptions',
+{
+            title: "Agreement_service.AgreementDTO",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/agreement_service.AgreementDTO"
           },
-          {
-            title: 'DemandOptions',
-            href: '/docs/yajsapi/reference/b0.1/interfaces/DemandOptions',
+{
+            title: "Agreement_service.AgreementServiceOptions",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/agreement_service.AgreementServiceOptions"
           },
-          {
-            title: 'Logger',
-            href: '/docs/yajsapi/reference/b0.1/interfaces/Logger',
+{
+            title: "Market_demand.DemandDetails",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/market_demand.DemandDetails"
           },
-          {
-            title: 'PackageOptions',
-            href: '/docs/yajsapi/reference/b0.1/interfaces/PackageOptions',
+{
+            title: "Market_proposal.ProposalDTO",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/market_proposal.ProposalDTO"
           },
-          {
-            title: 'Result',
-            href: '/docs/yajsapi/reference/b0.1/interfaces/Result',
+{
+            title: "Market_proposal.ProposalDetails",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/market_proposal.ProposalDetails"
           },
-        ],
+{
+            title: "Network_network.NetworkInfo",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/network_network.NetworkInfo"
+          },
+{
+            title: "Package_package.PackageDetails",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/package_package.PackageDetails"
+          },
+{
+            title: "Payment_config.BasePaymentOptions",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/payment_config.BasePaymentOptions"
+          },
+{
+            title: "Payment_debit_note.DebitNoteDTO",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/payment_debit_note.DebitNoteDTO"
+          },
+{
+            title: "Payment_invoice.InvoiceDTO",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/payment_invoice.InvoiceDTO"
+          },
+{
+            title: "Payment_payments.PaymentOptions",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/payment_payments.PaymentOptions"
+          },
+{
+            title: "Storage_provider.StorageProvider",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/storage_provider.StorageProvider"
+          },
+{
+            title: "Task_service.TaskOptions",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/task_service.TaskOptions"
+          },
+{
+            title: "Task_work.WorkOptions",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/task_work.WorkOptions"
+          },
+{
+            title: "Utils_logger_logger.Logger",
+            href: "/docs/yajsapi/reference/b0.7/interfaces/utils_logger_logger.Logger"
+          }
+        ]
       },
-    ],
-  },
-  {
-    title: 'b0.2',
-    links: [
-      {
-        title: 'classes',
+{
+        title: "modules",
         children: [
-          {
-            title: 'Accounts',
-            href: '/docs/yajsapi/reference/b0.2/classes/Accounts',
-          },
-          {
-            title: 'Activity',
-            href: '/docs/yajsapi/reference/b0.2/classes/Activity',
-          },
-          {
-            title: 'Agreement',
-            href: '/docs/yajsapi/reference/b0.2/classes/Agreement',
-          },
-          {
-            title: 'Allocation',
-            href: '/docs/yajsapi/reference/b0.2/classes/Allocation',
-          },
-          {
-            title: 'ConsoleLogger',
-            href: '/docs/yajsapi/reference/b0.2/classes/ConsoleLogger',
-          },
-          {
-            title: 'DebitNote',
-            href: '/docs/yajsapi/reference/b0.2/classes/DebitNote',
-          },
-          {
-            title: 'DebitNoteEvent',
-            href: '/docs/yajsapi/reference/b0.2/classes/DebitNoteEvent',
-          },
-          {
-            title: 'Demand',
-            href: '/docs/yajsapi/reference/b0.2/classes/Demand',
-          },
-          {
-            title: 'DemandEvent',
-            href: '/docs/yajsapi/reference/b0.2/classes/DemandEvent',
-          },
-          {
-            title: 'Deploy',
-            href: '/docs/yajsapi/reference/b0.2/classes/Deploy',
-          },
-          {
-            title: 'DownloadFile',
-            href: '/docs/yajsapi/reference/b0.2/classes/DownloadFile',
-          },
-          {
-            title: 'Invoice',
-            href: '/docs/yajsapi/reference/b0.2/classes/Invoice',
-          },
-          {
-            title: 'InvoiceEvent',
-            href: '/docs/yajsapi/reference/b0.2/classes/InvoiceEvent',
-          },
-          {
-            title: 'Package',
-            href: '/docs/yajsapi/reference/b0.2/classes/Package',
-          },
-          {
-            title: 'Payments',
-            href: '/docs/yajsapi/reference/b0.2/classes/Payments',
-          },
-          {
-            title: 'Proposal',
-            href: '/docs/yajsapi/reference/b0.2/classes/Proposal',
-          },
-          {
-            title: 'Run',
-            href: '/docs/yajsapi/reference/b0.2/classes/Run',
-          },
-          {
-            title: 'Script',
-            href: '/docs/yajsapi/reference/b0.2/classes/Script',
-          },
-          {
-            title: 'Start',
-            href: '/docs/yajsapi/reference/b0.2/classes/Start',
-          },
-          {
-            title: 'TaskExecutor',
-            href: '/docs/yajsapi/reference/b0.2/classes/TaskExecutor',
-          },
-          {
-            title: 'Transfer',
-            href: '/docs/yajsapi/reference/b0.2/classes/Transfer',
-          },
-          {
-            title: 'UploadFile',
-            href: '/docs/yajsapi/reference/b0.2/classes/UploadFile',
-          },
-        ],
-      },
-      {
-        title: 'enums',
-        children: [
-          {
-            title: 'ActivityStateEnum',
-            href: '/docs/yajsapi/reference/b0.2/enums/ActivityStateEnum',
-          },
-          {
-            title: 'AgreementStateEnum',
-            href: '/docs/yajsapi/reference/b0.2/enums/AgreementStateEnum',
-          },
-        ],
-      },
-      {
-        title: 'interfaces',
-        children: [
-          {
-            title: 'ActivityOptions',
-            href: '/docs/yajsapi/reference/b0.2/interfaces/ActivityOptions',
-          },
-          {
-            title: 'AgreementOptions',
-            href: '/docs/yajsapi/reference/b0.2/interfaces/AgreementOptions',
-          },
-          {
-            title: 'DemandOptions',
-            href: '/docs/yajsapi/reference/b0.2/interfaces/DemandOptions',
-          },
-          {
-            title: 'Logger',
-            href: '/docs/yajsapi/reference/b0.2/interfaces/Logger',
-          },
-          {
-            title: 'PackageOptions',
-            href: '/docs/yajsapi/reference/b0.2/interfaces/PackageOptions',
-          },
-          {
-            title: 'Result',
-            href: '/docs/yajsapi/reference/b0.2/interfaces/Result',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'b0.3',
-    links: [
-      {
-        title: 'classes',
-        children: [
-          {
-            title: 'Accounts',
-            href: '/docs/yajsapi/reference/b0.3/classes/Accounts',
-          },
-          {
-            title: 'Activity',
-            href: '/docs/yajsapi/reference/b0.3/classes/Activity',
-          },
-          {
-            title: 'Agreement',
-            href: '/docs/yajsapi/reference/b0.3/classes/Agreement',
-          },
-          {
-            title: 'Allocation',
-            href: '/docs/yajsapi/reference/b0.3/classes/Allocation',
-          },
-          {
-            title: 'ConsoleLogger',
-            href: '/docs/yajsapi/reference/b0.3/classes/ConsoleLogger',
-          },
-          {
-            title: 'DebitNote',
-            href: '/docs/yajsapi/reference/b0.3/classes/DebitNote',
-          },
-          {
-            title: 'DebitNoteEvent',
-            href: '/docs/yajsapi/reference/b0.3/classes/DebitNoteEvent',
-          },
-          {
-            title: 'Demand',
-            href: '/docs/yajsapi/reference/b0.3/classes/Demand',
-          },
-          {
-            title: 'DemandEvent',
-            href: '/docs/yajsapi/reference/b0.3/classes/DemandEvent',
-          },
-          {
-            title: 'Deploy',
-            href: '/docs/yajsapi/reference/b0.3/classes/Deploy',
-          },
-          {
-            title: 'DownloadFile',
-            href: '/docs/yajsapi/reference/b0.3/classes/DownloadFile',
-          },
-          {
-            title: 'Invoice',
-            href: '/docs/yajsapi/reference/b0.3/classes/Invoice',
-          },
-          {
-            title: 'InvoiceEvent',
-            href: '/docs/yajsapi/reference/b0.3/classes/InvoiceEvent',
-          },
-          {
-            title: 'Package',
-            href: '/docs/yajsapi/reference/b0.3/classes/Package',
-          },
-          {
-            title: 'Payments',
-            href: '/docs/yajsapi/reference/b0.3/classes/Payments',
-          },
-          {
-            title: 'Proposal',
-            href: '/docs/yajsapi/reference/b0.3/classes/Proposal',
-          },
-          {
-            title: 'Run',
-            href: '/docs/yajsapi/reference/b0.3/classes/Run',
-          },
-          {
-            title: 'Script',
-            href: '/docs/yajsapi/reference/b0.3/classes/Script',
-          },
-          {
-            title: 'Start',
-            href: '/docs/yajsapi/reference/b0.3/classes/Start',
-          },
-          {
-            title: 'TaskExecutor',
-            href: '/docs/yajsapi/reference/b0.3/classes/TaskExecutor',
-          },
-          {
-            title: 'Transfer',
-            href: '/docs/yajsapi/reference/b0.3/classes/Transfer',
-          },
-          {
-            title: 'UploadFile',
-            href: '/docs/yajsapi/reference/b0.3/classes/UploadFile',
-          },
-        ],
-      },
-      {
-        title: 'enums',
-        children: [
-          {
-            title: 'ActivityStateEnum',
-            href: '/docs/yajsapi/reference/b0.3/enums/ActivityStateEnum',
-          },
-          {
-            title: 'AgreementStateEnum',
-            href: '/docs/yajsapi/reference/b0.3/enums/AgreementStateEnum',
-          },
-        ],
-      },
-      {
-        title: 'interfaces',
-        children: [
-          {
-            title: 'ActivityOptions',
-            href: '/docs/yajsapi/reference/b0.3/interfaces/ActivityOptions',
-          },
-          {
-            title: 'AgreementOptions',
-            href: '/docs/yajsapi/reference/b0.3/interfaces/AgreementOptions',
-          },
-          {
-            title: 'DemandOptions',
-            href: '/docs/yajsapi/reference/b0.3/interfaces/DemandOptions',
-          },
-          {
-            title: 'Logger',
-            href: '/docs/yajsapi/reference/b0.3/interfaces/Logger',
-          },
-          {
-            title: 'PackageOptions',
-            href: '/docs/yajsapi/reference/b0.3/interfaces/PackageOptions',
-          },
-          {
-            title: 'Result',
-            href: '/docs/yajsapi/reference/b0.3/interfaces/Result',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'b0.4',
-    links: [
-      {
-        title: 'classes',
-        children: [
-          {
-            title: 'Accounts',
-            href: '/docs/yajsapi/reference/b0.4/classes/Accounts',
-          },
-          {
-            title: 'Activity',
-            href: '/docs/yajsapi/reference/b0.4/classes/Activity',
-          },
-          {
-            title: 'Agreement',
-            href: '/docs/yajsapi/reference/b0.4/classes/Agreement',
-          },
-          {
-            title: 'Allocation',
-            href: '/docs/yajsapi/reference/b0.4/classes/Allocation',
-          },
-          {
-            title: 'ConsoleLogger',
-            href: '/docs/yajsapi/reference/b0.4/classes/ConsoleLogger',
-          },
-          {
-            title: 'DebitNote',
-            href: '/docs/yajsapi/reference/b0.4/classes/DebitNote',
-          },
-          {
-            title: 'DebitNoteEvent',
-            href: '/docs/yajsapi/reference/b0.4/classes/DebitNoteEvent',
-          },
-          {
-            title: 'Demand',
-            href: '/docs/yajsapi/reference/b0.4/classes/Demand',
-          },
-          {
-            title: 'DemandEvent',
-            href: '/docs/yajsapi/reference/b0.4/classes/DemandEvent',
-          },
-          {
-            title: 'Deploy',
-            href: '/docs/yajsapi/reference/b0.4/classes/Deploy',
-          },
-          {
-            title: 'DownloadFile',
-            href: '/docs/yajsapi/reference/b0.4/classes/DownloadFile',
-          },
-          {
-            title: 'Invoice',
-            href: '/docs/yajsapi/reference/b0.4/classes/Invoice',
-          },
-          {
-            title: 'InvoiceEvent',
-            href: '/docs/yajsapi/reference/b0.4/classes/InvoiceEvent',
-          },
-          {
-            title: 'Package',
-            href: '/docs/yajsapi/reference/b0.4/classes/Package',
-          },
-          {
-            title: 'Payments',
-            href: '/docs/yajsapi/reference/b0.4/classes/Payments',
-          },
-          {
-            title: 'Proposal',
-            href: '/docs/yajsapi/reference/b0.4/classes/Proposal',
-          },
-          {
-            title: 'Run',
-            href: '/docs/yajsapi/reference/b0.4/classes/Run',
-          },
-          {
-            title: 'Script',
-            href: '/docs/yajsapi/reference/b0.4/classes/Script',
-          },
-          {
-            title: 'Start',
-            href: '/docs/yajsapi/reference/b0.4/classes/Start',
-          },
-          {
-            title: 'TaskExecutor',
-            href: '/docs/yajsapi/reference/b0.4/classes/TaskExecutor',
-          },
-          {
-            title: 'Transfer',
-            href: '/docs/yajsapi/reference/b0.4/classes/Transfer',
-          },
-          {
-            title: 'UploadFile',
-            href: '/docs/yajsapi/reference/b0.4/classes/UploadFile',
-          },
-        ],
-      },
-      {
-        title: 'enums',
-        children: [
-          {
-            title: 'ActivityStateEnum',
-            href: '/docs/yajsapi/reference/b0.4/enums/ActivityStateEnum',
-          },
-          {
-            title: 'AgreementStateEnum',
-            href: '/docs/yajsapi/reference/b0.4/enums/AgreementStateEnum',
-          },
-        ],
-      },
-      {
-        title: 'interfaces',
-        children: [
-          {
-            title: 'ActivityOptions',
-            href: '/docs/yajsapi/reference/b0.4/interfaces/ActivityOptions',
-          },
-          {
-            title: 'AgreementOptions',
-            href: '/docs/yajsapi/reference/b0.4/interfaces/AgreementOptions',
-          },
-          {
-            title: 'DemandOptions',
-            href: '/docs/yajsapi/reference/b0.4/interfaces/DemandOptions',
-          },
-          {
-            title: 'Logger',
-            href: '/docs/yajsapi/reference/b0.4/interfaces/Logger',
-          },
-          {
-            title: 'PackageOptions',
-            href: '/docs/yajsapi/reference/b0.4/interfaces/PackageOptions',
-          },
-          {
-            title: 'Result',
-            href: '/docs/yajsapi/reference/b0.4/interfaces/Result',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'b0.5',
-    links: [
-      {
-        title: 'classes',
-        children: [
-          {
-            title: 'Accounts',
-            href: '/docs/yajsapi/reference/b0.5/classes/Accounts',
-          },
-          {
-            title: 'Activity',
-            href: '/docs/yajsapi/reference/b0.5/classes/Activity',
-          },
-          {
-            title: 'Agreement',
-            href: '/docs/yajsapi/reference/b0.5/classes/Agreement',
-          },
-          {
-            title: 'Allocation',
-            href: '/docs/yajsapi/reference/b0.5/classes/Allocation',
-          },
-          {
-            title: 'ConsoleLogger',
-            href: '/docs/yajsapi/reference/b0.5/classes/ConsoleLogger',
-          },
-          {
-            title: 'DebitNote',
-            href: '/docs/yajsapi/reference/b0.5/classes/DebitNote',
-          },
-          {
-            title: 'DebitNoteEvent',
-            href: '/docs/yajsapi/reference/b0.5/classes/DebitNoteEvent',
-          },
-          {
-            title: 'Demand',
-            href: '/docs/yajsapi/reference/b0.5/classes/Demand',
-          },
-          {
-            title: 'DemandEvent',
-            href: '/docs/yajsapi/reference/b0.5/classes/DemandEvent',
-          },
-          {
-            title: 'Deploy',
-            href: '/docs/yajsapi/reference/b0.5/classes/Deploy',
-          },
-          {
-            title: 'DownloadFile',
-            href: '/docs/yajsapi/reference/b0.5/classes/DownloadFile',
-          },
-          {
-            title: 'Invoice',
-            href: '/docs/yajsapi/reference/b0.5/classes/Invoice',
-          },
-          {
-            title: 'InvoiceEvent',
-            href: '/docs/yajsapi/reference/b0.5/classes/InvoiceEvent',
-          },
-          {
-            title: 'Package',
-            href: '/docs/yajsapi/reference/b0.5/classes/Package',
-          },
-          {
-            title: 'Payments',
-            href: '/docs/yajsapi/reference/b0.5/classes/Payments',
-          },
-          {
-            title: 'Proposal',
-            href: '/docs/yajsapi/reference/b0.5/classes/Proposal',
-          },
-          {
-            title: 'Run',
-            href: '/docs/yajsapi/reference/b0.5/classes/Run',
-          },
-          {
-            title: 'Script',
-            href: '/docs/yajsapi/reference/b0.5/classes/Script',
-          },
-          {
-            title: 'Start',
-            href: '/docs/yajsapi/reference/b0.5/classes/Start',
-          },
-          {
-            title: 'TaskExecutor',
-            href: '/docs/yajsapi/reference/b0.5/classes/TaskExecutor',
-          },
-          {
-            title: 'Transfer',
-            href: '/docs/yajsapi/reference/b0.5/classes/Transfer',
-          },
-          {
-            title: 'UploadFile',
-            href: '/docs/yajsapi/reference/b0.5/classes/UploadFile',
-          },
-        ],
-      },
-      {
-        title: 'enums',
-        children: [
-          {
-            title: 'ActivityStateEnum',
-            href: '/docs/yajsapi/reference/b0.5/enums/ActivityStateEnum',
-          },
-          {
-            title: 'AgreementStateEnum',
-            href: '/docs/yajsapi/reference/b0.5/enums/AgreementStateEnum',
-          },
-        ],
-      },
-      {
-        title: 'interfaces',
-        children: [
-          {
-            title: 'ActivityOptions',
-            href: '/docs/yajsapi/reference/b0.5/interfaces/ActivityOptions',
-          },
-          {
-            title: 'AgreementOptions',
-            href: '/docs/yajsapi/reference/b0.5/interfaces/AgreementOptions',
-          },
-          {
-            title: 'DemandOptions',
-            href: '/docs/yajsapi/reference/b0.5/interfaces/DemandOptions',
-          },
-          {
-            title: 'Logger',
-            href: '/docs/yajsapi/reference/b0.5/interfaces/Logger',
-          },
-          {
-            title: 'PackageOptions',
-            href: '/docs/yajsapi/reference/b0.5/interfaces/PackageOptions',
-          },
-          {
-            title: 'Result',
-            href: '/docs/yajsapi/reference/b0.5/interfaces/Result',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'b0.6',
-    links: [
-      {
-        title: 'classes',
-        children: [
-          {
-            title: 'Accounts',
-            href: '/docs/yajsapi/reference/b0.6/classes/Accounts',
-          },
-          {
-            title: 'Activity',
-            href: '/docs/yajsapi/reference/b0.6/classes/Activity',
-          },
-          {
-            title: 'Agreement',
-            href: '/docs/yajsapi/reference/b0.6/classes/Agreement',
-          },
-          {
-            title: 'Allocation',
-            href: '/docs/yajsapi/reference/b0.6/classes/Allocation',
-          },
-          {
-            title: 'ConsoleLogger',
-            href: '/docs/yajsapi/reference/b0.6/classes/ConsoleLogger',
-          },
-          {
-            title: 'DebitNote',
-            href: '/docs/yajsapi/reference/b0.6/classes/DebitNote',
-          },
-          {
-            title: 'DebitNoteEvent',
-            href: '/docs/yajsapi/reference/b0.6/classes/DebitNoteEvent',
-          },
-          {
-            title: 'Demand',
-            href: '/docs/yajsapi/reference/b0.6/classes/Demand',
-          },
-          {
-            title: 'DemandEvent',
-            href: '/docs/yajsapi/reference/b0.6/classes/DemandEvent',
-          },
-          {
-            title: 'Deploy',
-            href: '/docs/yajsapi/reference/b0.6/classes/Deploy',
-          },
-          {
-            title: 'DownloadFile',
-            href: '/docs/yajsapi/reference/b0.6/classes/DownloadFile',
-          },
-          {
-            title: 'Invoice',
-            href: '/docs/yajsapi/reference/b0.6/classes/Invoice',
-          },
-          {
-            title: 'InvoiceEvent',
-            href: '/docs/yajsapi/reference/b0.6/classes/InvoiceEvent',
-          },
-          {
-            title: 'Package',
-            href: '/docs/yajsapi/reference/b0.6/classes/Package',
-          },
-          {
-            title: 'Payments',
-            href: '/docs/yajsapi/reference/b0.6/classes/Payments',
-          },
-          {
-            title: 'Proposal',
-            href: '/docs/yajsapi/reference/b0.6/classes/Proposal',
-          },
-          {
-            title: 'Run',
-            href: '/docs/yajsapi/reference/b0.6/classes/Run',
-          },
-          {
-            title: 'Script',
-            href: '/docs/yajsapi/reference/b0.6/classes/Script',
-          },
-          {
-            title: 'Start',
-            href: '/docs/yajsapi/reference/b0.6/classes/Start',
-          },
-          {
-            title: 'TaskExecutor',
-            href: '/docs/yajsapi/reference/b0.6/classes/TaskExecutor',
-          },
-          {
-            title: 'Transfer',
-            href: '/docs/yajsapi/reference/b0.6/classes/Transfer',
-          },
-          {
-            title: 'UploadFile',
-            href: '/docs/yajsapi/reference/b0.6/classes/UploadFile',
-          },
-        ],
-      },
-      {
-        title: 'enums',
-        children: [
-          {
-            title: 'ActivityStateEnum',
-            href: '/docs/yajsapi/reference/b0.6/enums/ActivityStateEnum',
-          },
-          {
-            title: 'AgreementStateEnum',
-            href: '/docs/yajsapi/reference/b0.6/enums/AgreementStateEnum',
-          },
-        ],
-      },
-      {
-        title: 'interfaces',
-        children: [
-          {
-            title: 'ActivityOptions',
-            href: '/docs/yajsapi/reference/b0.6/interfaces/ActivityOptions',
-          },
-          {
-            title: 'AgreementOptions',
-            href: '/docs/yajsapi/reference/b0.6/interfaces/AgreementOptions',
-          },
-          {
-            title: 'DemandOptions',
-            href: '/docs/yajsapi/reference/b0.6/interfaces/DemandOptions',
-          },
-          {
-            title: 'Logger',
-            href: '/docs/yajsapi/reference/b0.6/interfaces/Logger',
-          },
-          {
-            title: 'PackageOptions',
-            href: '/docs/yajsapi/reference/b0.6/interfaces/PackageOptions',
-          },
-          {
-            title: 'Result',
-            href: '/docs/yajsapi/reference/b0.6/interfaces/Result',
-          },
-        ],
-      },
-    ],
-  },
+{
+            title: "Activity",
+            href: "/docs/yajsapi/reference/b0.7/modules/activity"
+          },
+{
+            title: "Activity_activity",
+            href: "/docs/yajsapi/reference/b0.7/modules/activity_activity"
+          },
+{
+            title: "Activity_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/activity_config"
+          },
+{
+            title: "Activity_factory",
+            href: "/docs/yajsapi/reference/b0.7/modules/activity_factory"
+          },
+{
+            title: "Activity_results",
+            href: "/docs/yajsapi/reference/b0.7/modules/activity_results"
+          },
+{
+            title: "Agreement",
+            href: "/docs/yajsapi/reference/b0.7/modules/agreement"
+          },
+{
+            title: "Agreement_agreement",
+            href: "/docs/yajsapi/reference/b0.7/modules/agreement_agreement"
+          },
+{
+            title: "Agreement_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/agreement_config"
+          },
+{
+            title: "Agreement_factory",
+            href: "/docs/yajsapi/reference/b0.7/modules/agreement_factory"
+          },
+{
+            title: "Agreement_service",
+            href: "/docs/yajsapi/reference/b0.7/modules/agreement_service"
+          },
+{
+            title: "Agreement_strategy",
+            href: "/docs/yajsapi/reference/b0.7/modules/agreement_strategy"
+          },
+{
+            title: "Events",
+            href: "/docs/yajsapi/reference/b0.7/modules/events"
+          },
+{
+            title: "Events_events",
+            href: "/docs/yajsapi/reference/b0.7/modules/events_events"
+          },
+{
+            title: "Executor",
+            href: "/docs/yajsapi/reference/b0.7/modules/executor"
+          },
+{
+            title: "Executor_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/executor_config"
+          },
+{
+            title: "Executor_executor",
+            href: "/docs/yajsapi/reference/b0.7/modules/executor_executor"
+          },
+{
+            title: "Index",
+            href: "/docs/yajsapi/reference/b0.7/modules/index"
+          },
+{
+            title: "Market",
+            href: "/docs/yajsapi/reference/b0.7/modules/market"
+          },
+{
+            title: "Market_builder",
+            href: "/docs/yajsapi/reference/b0.7/modules/market_builder"
+          },
+{
+            title: "Market_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/market_config"
+          },
+{
+            title: "Market_demand",
+            href: "/docs/yajsapi/reference/b0.7/modules/market_demand"
+          },
+{
+            title: "Market_factory",
+            href: "/docs/yajsapi/reference/b0.7/modules/market_factory"
+          },
+{
+            title: "Market_proposal",
+            href: "/docs/yajsapi/reference/b0.7/modules/market_proposal"
+          },
+{
+            title: "Market_service",
+            href: "/docs/yajsapi/reference/b0.7/modules/market_service"
+          },
+{
+            title: "Market_strategy",
+            href: "/docs/yajsapi/reference/b0.7/modules/market_strategy"
+          },
+{
+            title: "Network",
+            href: "/docs/yajsapi/reference/b0.7/modules/network"
+          },
+{
+            title: "Network_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/network_config"
+          },
+{
+            title: "Network_identity",
+            href: "/docs/yajsapi/reference/b0.7/modules/network_identity"
+          },
+{
+            title: "Network_network",
+            href: "/docs/yajsapi/reference/b0.7/modules/network_network"
+          },
+{
+            title: "Network_node",
+            href: "/docs/yajsapi/reference/b0.7/modules/network_node"
+          },
+{
+            title: "Network_service",
+            href: "/docs/yajsapi/reference/b0.7/modules/network_service"
+          },
+{
+            title: "Package",
+            href: "/docs/yajsapi/reference/b0.7/modules/package"
+          },
+{
+            title: "Package_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/package_config"
+          },
+{
+            title: "Package_package",
+            href: "/docs/yajsapi/reference/b0.7/modules/package_package"
+          },
+{
+            title: "Package_repo_resolver",
+            href: "/docs/yajsapi/reference/b0.7/modules/package_repo_resolver"
+          },
+{
+            title: "Payment",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment"
+          },
+{
+            title: "Payment_accounts",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_accounts"
+          },
+{
+            title: "Payment_allocation",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_allocation"
+          },
+{
+            title: "Payment_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_config"
+          },
+{
+            title: "Payment_debit_note",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_debit_note"
+          },
+{
+            title: "Payment_invoice",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_invoice"
+          },
+{
+            title: "Payment_payments",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_payments"
+          },
+{
+            title: "Payment_rejection",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_rejection"
+          },
+{
+            title: "Payment_service",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_service"
+          },
+{
+            title: "Payment_strategy",
+            href: "/docs/yajsapi/reference/b0.7/modules/payment_strategy"
+          },
+{
+            title: "Script",
+            href: "/docs/yajsapi/reference/b0.7/modules/script"
+          },
+{
+            title: "Script_command",
+            href: "/docs/yajsapi/reference/b0.7/modules/script_command"
+          },
+{
+            title: "Script_script",
+            href: "/docs/yajsapi/reference/b0.7/modules/script_script"
+          },
+{
+            title: "Storage",
+            href: "/docs/yajsapi/reference/b0.7/modules/storage"
+          },
+{
+            title: "Storage_gftp",
+            href: "/docs/yajsapi/reference/b0.7/modules/storage_gftp"
+          },
+{
+            title: "Storage_provider",
+            href: "/docs/yajsapi/reference/b0.7/modules/storage_provider"
+          },
+{
+            title: "Task",
+            href: "/docs/yajsapi/reference/b0.7/modules/task"
+          },
+{
+            title: "Task_batch",
+            href: "/docs/yajsapi/reference/b0.7/modules/task_batch"
+          },
+{
+            title: "Task_config",
+            href: "/docs/yajsapi/reference/b0.7/modules/task_config"
+          },
+{
+            title: "Task_queue",
+            href: "/docs/yajsapi/reference/b0.7/modules/task_queue"
+          },
+{
+            title: "Task_service",
+            href: "/docs/yajsapi/reference/b0.7/modules/task_service"
+          },
+{
+            title: "Task_task",
+            href: "/docs/yajsapi/reference/b0.7/modules/task_task"
+          },
+{
+            title: "Task_work",
+            href: "/docs/yajsapi/reference/b0.7/modules/task_work"
+          },
+{
+            title: "Utils",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils"
+          },
+{
+            title: "Utils_env",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_env"
+          },
+{
+            title: "Utils_logger_consoleLogger",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_logger_consoleLogger"
+          },
+{
+            title: "Utils_logger_defaultLogger",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_logger_defaultLogger"
+          },
+{
+            title: "Utils_logger_jsonLogger",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_logger_jsonLogger"
+          },
+{
+            title: "Utils_logger_logger",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_logger_logger"
+          },
+{
+            title: "Utils_logger_nullLogger",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_logger_nullLogger"
+          },
+{
+            title: "Utils_logger_pinoLogger",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_logger_pinoLogger"
+          },
+{
+            title: "Utils_runtimeContextChecker",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_runtimeContextChecker"
+          },
+{
+            title: "Utils_sleep",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_sleep"
+          },
+{
+            title: "Utils_types",
+            href: "/docs/yajsapi/reference/b0.7/modules/utils_types"
+          }
+        ]
+      }
+    ]
+  }
 ]

@@ -160,7 +160,7 @@ import { GitIcon } from './icons/GitIcon'
 import { Footer } from './Footer'
 
 export function Layout({ children, title, tableOfContents }) {
-  const [currentVersion, setCurrentVersion] = useState('b0.6')
+  const [currentVersion, setCurrentVersion] = useState('b0.7')
   let router = useRouter()
   let isHomePage = router.pathname === '/'
   let allLinks = JSReference.flatMap((section) => section.links)

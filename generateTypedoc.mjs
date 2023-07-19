@@ -5,89 +5,37 @@ import * as path from 'path'
 import { createRequire } from 'module' // built-in module
 const require = createRequire(import.meta.url) // construct the require function for this ES module
 
-const git = require('isomorphic-git')
-const http = require('isomorphic-git/http/node')
+const docsPath = path.resolve('./src/pages/docs/yajsapi/reference')
 
-const repoURL = 'https://github.com/golemfactory/yajsapi.git'
-const tempPath = path.resolve('./temp')
+const branchPrefix = process.argv[2]
 
-const fsPromises = fs.promises
+if (!branchPrefix) {
+  console.error('Please provide branch name as argument.')
+  process.exit(1)
+}
 
 async function main() {
-  if (fs.existsSync(tempPath)) {
-    rimraf.sync(tempPath)
+  console.log(`Switching to branch ${branchPrefix} ...`)
+
+  try {
+    console.log('Generating typedoc ...')
+    await generateTypedoc(branchPrefix)
+
+    const navigation = await generateNavigation([branchPrefix])
+    await fs.promises.writeFile(
+      './src/navigation/jsreference.js',
+      'export const navigation = ' + navigation
+    )
+  } catch (error) {
+    console.error(`Error with branch ${branchPrefix}:`, error.message)
   }
-
-  console.log('Cloning repo...')
-
-  await git.clone({
-    url: repoURL,
-    dir: tempPath,
-    ref: 'master',
-    corsProxy: '',
-    fs: fsPromises,
-    http,
-    depth: null,
-  })
-
-  let remoteBranches = await git.listBranches({
-    fs,
-    dir: tempPath,
-    remote: 'origin',
-  })
-
-  const branchPrefix = 'b0'
-
-  const branchFormat = new RegExp(`^${branchPrefix}\\.\\d+$`)
-
-  const filteredBranches = remoteBranches.filter((branch) =>
-    branchFormat.test(branch)
-  )
-
-  let errors = 0
-
-  console.log(`\nFound ${filteredBranches.length} branches.`)
-
-  for (const branch of filteredBranches) {
-    try {
-      console.log(`\nSwitching to branch ${branch} ...`)
-      await git.checkout({ dir: tempPath, ref: branch, fs })
-      console.log('Generating typedoc...')
-      await generateTypedoc(branch)
-    } catch (error) {
-      console.error(`Error with branch ${branch}:`, error.message)
-      errors++
-    }
-  }
-
-  console.log(`\nFinished with ${errors} errors.`)
-  rimraf.sync(tempPath)
-  console.log('SCANNING FOR NAMES!!!!')
-  const navigation = await generateNavigation(filteredBranches)
-  await fs.promises.writeFile(
-    './src/navigation/jsreference.js',
-    'export const navigation = ' + navigation
-  )
 }
 
 const util = require('util')
-const rimraf = util.promisify(require('rimraf'))
-const exec = util.promisify(require('child_process').exec)
 const glob = util.promisify(require('glob'))
 
 async function generateTypedoc(branchPrefix) {
   const outputPath = './src/pages/docs/yajsapi/reference'
-
-  if (fs.existsSync(outputPath + '/' + branchPrefix)) {
-    await rimraf(outputPath + '/' + branchPrefix)
-  }
-  console.log(
-    `Generating typedoc for branch ${branchPrefix}... at ${outputPath}/${branchPrefix}`
-  )
-  const command = `typedoc --entryPoints ./yajsapi/yajsapi/index.ts --exclude ./yajsapi/yajsapi/**/*.spec.ts --tsconfig ./yajsapi/tsconfig.json --plugin typedoc-plugin-markdown  --excludePrivate --excludeProtected --excludeExternals --readme none --out ${outputPath}/${branchPrefix}`
-
-  const { stdout } = await exec(command)
-  console.log(`TypeDoc STDOUT: ${stdout}`)
 
   // Once typedoc is done, start looking for .md files and remove ".md" mentions.
   const files = await glob(outputPath + '/' + branchPrefix + '/**/*.md')
@@ -102,8 +50,6 @@ async function generateTypedoc(branchPrefix) {
     })
   )
 }
-
-const docsPath = path.resolve('./src/pages/docs/yajsapi/reference')
 
 async function generateNavigation(versions) {
   try {
