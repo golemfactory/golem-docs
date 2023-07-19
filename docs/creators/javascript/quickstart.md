@@ -165,7 +165,7 @@ test
 * [Quickstart Explained](tutorials/quickstart_explained.md)
 * [Simple introduction to Golem Network and Task Model](../javascript/high-level/task-model.md)
 * [Parallel processing tutorial](tutorials/parallel_processing.md)
-* [Other examples](link)
+* [Other examples](Nexamples/toc.md)
 * [Tutorials](link)
 * [Guides](link)
 
