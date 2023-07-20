@@ -14,25 +14,24 @@ export function Hero() {
               A creators manual for Golem. <br /> By developers, for developers.
             </p>
             <div className="mt-8 grid gap-y-2 md:flex md:gap-x-2">
-              <div className="grid grid-cols-2 justify-items-center">
+              <div className="flex gap-x-2">
                 <div className="text-center">
                   <a
                     href="/docs"
-                    className=" flex items-center rounded   bg-primary px-3 py-2 text-white hover:bg-blue-600"
+                    className="flex items-center rounded bg-primary px-2 py-2 text-white hover:bg-blue-600"
                   >
                     <JSIcon className="mr-1 mt-1 h-5 w-5 " />
                     JS docs
                   </a>
                 </div>
-                <div className="group relative flex">
-                  <span className="flex items-center bg-gray-200 px-2 py-1 text-white">
-                    {' '}
+                <div className="group relative inline-flex">
+                  <span className="inline-flex items-center bg-gray-200 px-2 py-1 text-white">
                     <PythonIcon className="mr-1 mt-1 h-5 w-5 " />
                     Python docs
                   </span>
                   <div
-                    className="absolute left-1/2 m-4 mx-auto flex -translate-x-1/2 translate-y-full items-center whitespace-nowrap rounded-md 
-    bg-gray-800 px-4 py-2 text-xs text-gray-100 opacity-0 transition-opacity group-hover:opacity-100"
+                    className="absolute left-1/2 m-4 mx-auto inline-flex -translate-x-1/2 translate-y-full items-center whitespace-nowrap rounded-md 
+      bg-gray-800 px-4 py-2 text-xs text-gray-100 opacity-0 transition-opacity group-hover:opacity-100"
                   >
                     Coming soon!
                   </div>
