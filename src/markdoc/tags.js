@@ -1,6 +1,7 @@
 import { Callout } from '@/components/Callout'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 import { CTA } from '@/components/CTA'
+import { Information } from '../components/Information'
 
 const tags = {
   callout: {
@@ -54,6 +55,13 @@ const tags = {
       imageUrl: { type: String },
       buttonText: { type: String },
       href: { type: String },
+    },
+  },
+  information: {
+    render: Information,
+    selfClosing: true,
+    attributes: {
+      level: { type: String },
     },
   },
 }

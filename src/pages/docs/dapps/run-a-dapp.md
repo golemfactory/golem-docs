@@ -48,14 +48,16 @@ python3 -m venv --clear ~/.envs/dapps
 source ~/.envs/dapps/bin/activate
 ```
 
-!!! warning
+{% information level="warning" %}
 
-    On Windows in the regular `cmd` shell, you need to replace the above with:
+On Windows in the regular `cmd` shell, you need to replace the above with:
 
-    ```
-    python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapps
-    %HOMEDRIVE%%HOMEPATH%\.envs\dapps\Scripts\activate.bat
-    ```
+```
+python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapps
+%HOMEDRIVE%%HOMEPATH%\.envs\dapps\Scripts\activate.bat
+```
+
+{% /information %}
 
 ### Install `dapp-runner`
 
@@ -85,13 +87,15 @@ curl https://raw.githubusercontent.com/golemfactory/dapp-runner/main/configs/def
 export YAGNA_APPKEY=<your key>
 ```
 
-!!! warning
+{% information level="warning" %}
 
-    On Windows, you'll need to use:
+On Windows, you'll need to use:
 
-    ```
-    set YAGNA_APPKEY=<your key>
-    ```
+```
+set YAGNA_APPKEY=<your key>
+```
+
+{% /information %}
 
 ### Run the app
 

@@ -10,8 +10,19 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-  
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.prose :where(code):not(:where([class~='not-prose'] *))::before {
+  content: '';
+}
+
+.prose :where(code):not(:where([class~='not-prose'] *))::after {
+  content: '';
+}

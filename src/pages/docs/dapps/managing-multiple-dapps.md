@@ -49,9 +49,11 @@ First, ensure you have Python 3.8 or later:
 python3 --version
 ```
 
-!!! info
+{% information level="info" %}
 
-    Depending on the platform, it may be just `python` instead of `python3`.
+Depending on the platform, it may be just `python` instead of `python3`.
+
+{% /information %}
 
 If your Python version is older, consider using [pyenv](https://github.com/pyenv/pyenv-installer).
 
@@ -112,9 +114,11 @@ waiting for the following line
 {"web": {"local_proxy_address": "http://localhost:8080"}}
 ```
 
-!!! info
+{% information level="info" %}
 
-    Your port number (`8080` above) may be different.
+Your port number (`8080` above) may be different.
+
+{% /information %}
 
 Once you get it, you can access the launched app by following that link.
 
@@ -242,9 +246,11 @@ The completion functions are defined in `dapp_manager/autocomplete/scripts`.
 
 Should the entrypoint name ever change, those files will need to be updated as well.
 
-!!! warning
+{% information level="warning" %}
 
-    Completion will **NOT WORK** when the program is invoked with `python -m dapp_manager`.
+Completion will **NOT WORK** when the program is invoked with `python -m dapp_manager`.
 
-    Only the installed entrypoint (i.e. `dapp-manager`) is supported.
-    To have it available, run `poetry install` when using the source version of `dapp-manager`.
+Only the installed entrypoint (i.e. `dapp-manager`) is supported.
+To have it available, run `poetry install` when using the source version of `dapp-manager`.
+
+{% /information %}
