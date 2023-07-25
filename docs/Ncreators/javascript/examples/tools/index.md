@@ -2,6 +2,16 @@
 description: List of examples
 ---
 
+Instructions how to use Golem tools
+
+| Topic     |    Content    |
+|:----------:|:---------------------------------------------|
+|[Yagna installation for requestors](missinglink.md) | Simple instruction how to install yagna daemon and become part of the the Golem Network |
+|[Converting Docker image to Golem format](converting-an-image.md) | Instructions how to convert Docer image into Golem format   |
+|[Gvmkit_build installation (image conversion tool)](installing-gvmkit-build.md) | How to install the tool that can convert Docker image into Golem format (+ instructions how to run it without installation ;-)) |
+|[Publishing custom images](pushing-to-registry.md)| Information how to make your image available for providers: both "hash" and "tag" naming convention covered.   |
+
+
 JS code examples:
 
 | Topic     |    Content    |
@@ -15,14 +25,8 @@ JS code examples:
 |Switching to mainnet            | Instructtion that will help you run your app on a main net |
 
 
-Instructions how to use Golem tools
 
-| Topic     |    Content    |
-|:----------:|:---------------------------------------------|
-|[Yagna installation for requestors](missinglink.md) | Simple instruction how to install yagna daemon and become part of the the Golem Network |
-|[Converting Docker image to Golem format](converting-an-image.md) | Instructions how to convert Docer image into Golem format   |
-|[Gvmkit_build installation (image conversion tool)](installing-gvmkit-build.md) | How to install the tool that can convert Docker image into Golem format (+ instructions how to run it without installation ;-)) |
-|[Publishing custom images](pushing-to-registry.md)| Information how to make your image available for providers: both "hash" and "tag" naming convention covered.   |
+
 
 
 

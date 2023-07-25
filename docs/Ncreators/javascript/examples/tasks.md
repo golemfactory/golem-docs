@@ -1,6 +1,5 @@
 ---
-description: Running a single task
-Title: Running a single task
+description: Executing task
 ---
 
 !!! Prerequisities	
@@ -16,50 +15,33 @@ npm init
 npm i yajsapi
 ```
 
-Define number of providers to run work in parallel
-Initialising workers
-Running tasks in parallel (map)
-Running tasks in parallel (foreach)
-Runnign single tasks (for web example)
-- run multiple tasks in parallel (prosaic way)
 
-There are a few options to run your job:
+Note: Article to be rebuilt: new sequence
 
+Defining number or providers working in parallel
 
-### Single run
+Running tasks in parallel (for loop)
+Running tasks in parallel (prosaic way) 
+Initializating providers
+sRunnign a single task (to be used in browser)
 
 
-The requestor script run once a single tasks defined buy task function:
-`ctx.run("node -v")`. The tasks consist of a single command `node -v` and will be run on remote computer in the environemnt based on the content of the image indicated by `529... 6d4` hash.
 
-Result of the command is available as stdout of the result object returned from the `cx.run()`: 
+### Defining number of providers used 
 
+You can decide the maximum number of providers to be engaged at the same time. Task executor will scan available offers and will engage additional providers if number of actually engaged providers would be lower then `maxParallelTasks` and there would be still some tasks to be executed. Note that actual number of engaged providers might be lower (if there is not enough providers available in the network). For the whole job the number of providers could be also higher - providers might get disconnected or fail and then executor will engage another one in order to have numer of active workers at the level defined by `maxParallelTasks`.
+
+Here you can see how to define maximum number of providers to be engaged. See [Running tasks in parallel]() to see full example.
 
 ```js
-import { TaskExecutor } from "yajsapi";
-
 (async () => {
   const executor = await TaskExecutor.create({
     package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }});
-  
-  const result = await executor.run(
-    async (ctx) => (await ctx.run("node -v")).stdout);
-  
-  await executor.end();
-
-  console.log("Task result:", result);
-})();
+    yagnaOptions: { apiKey: 'try_golem' }, 
+    taskOptions: {maxParallelTasks: 10} // default is 5
+  });
 ```
 
-Here you can see the script output:
-
-![Single run](/assets/run_log.png "Requestor script output logs")
-
-In the logs you can see requestor works in goerli network (this is a test network). 
-The task was ececuted once on a single provider. 
-
-In the table we see summary and the costs (we paid here in test GLM) and the the result of the command: version of the node in the image.
 
 
 
@@ -105,41 +87,8 @@ Look at another log from the same script run another time. Here the first provid
 
 ![Multiple run](/assets/run2_log_21.png)
 
-!!!Warning
 
-You could run both tasks sequentially:
-
-```js
-import { TaskExecutor } from "yajsapi";
-
-(async () => {
-  const executor = await TaskExecutor.create({
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }, 
-    taskOptions: {maxParallelTasks: 5}
-  });
-  
-  const result_1 = await executor.run(
-      async (ctx) => (await ctx.run("echo 1")).stdout);
-
-  const result_2 = await executor.run(
-      async (ctx) => (await ctx.run("echo 2")).stdout);  
-
-  await executor.end();
-
-  console.log("Task 1 result:", result_1);
-  console.log("Task 2 result:", result_2);
-
-  
-})();
-```
-
-![Multiple run sequentially](/assets/run2_log_1a1.png)
-
-As you could expect the second task is started only the first is finished and unless the provider would disengage he will also receive consecutive tasks to execute. Note this is not the best scenario, as you do not utilise the power of the network capable to run your tasks in parallel.
-
-
-
+!!! error to be replaced 
 ### Running multiple tasks in parallel using map() method
 
 Actually if your tasks could be parametrised or commands available as elements in an array you should use `map()` menthod.
@@ -201,6 +150,7 @@ import { TaskExecutor } from "yajsapi";
   
 })();
 ```
+
 
 ### Initialization tasks
 
@@ -268,3 +218,78 @@ processing item: 4
 processing item: 5
 ```
 These logs illustrate again that providers offer different performance levels. Even if `fractal_01_1.h` and `fractal_01_3.h` signed agreement before Task 1 was computed on `imapp1019_2.h` it manage to complete Tasks 4 and Task 5 before they downloaded action_log file and completed their first task. 
+
+### Single run
+
+
+The requestor script run once a single tasks defined buy task function:
+`ctx.run("node -v")`. The tasks consist of a single command `node -v` and will be run on remote computer in the environemnt based on the content of the image indicated by `529... 6d4` hash.
+
+Result of the command is available as stdout of the result object returned from the `cx.run()`: 
+
+
+```js
+import { TaskExecutor } from "yajsapi";
+
+(async () => {
+  const executor = await TaskExecutor.create({
+    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    yagnaOptions: { apiKey: 'try_golem' }});
+  
+  const result = await executor.run(
+    async (ctx) => (await ctx.run("node -v")).stdout);
+  
+  await executor.end();
+
+  console.log("Task result:", result);
+})();
+```
+
+Here you can see the script output:
+
+![Single run](/assets/run_log.png "Requestor script output logs")
+
+In the logs you can see requestor works in goerli network (this is a test network). 
+The task was ececuted once on a single provider. 
+
+In the table we see summary and the costs (we paid here in test GLM) and the the result of the command: version of the node in the image.
+
+
+
+HIDE:
+
+!!!Warning
+
+You could run both tasks sequentially:
+
+```js
+import { TaskExecutor } from "yajsapi";
+
+(async () => {
+  const executor = await TaskExecutor.create({
+    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    yagnaOptions: { apiKey: 'try_golem' }, 
+    taskOptions: {maxParallelTasks: 5}
+  });
+  
+  const result_1 = await executor.run(
+      async (ctx) => (await ctx.run("echo 1")).stdout);
+
+  const result_2 = await executor.run(
+      async (ctx) => (await ctx.run("echo 2")).stdout);  
+
+  await executor.end();
+
+  console.log("Task 1 result:", result_1);
+  console.log("Task 2 result:", result_2);
+
+  
+})();
+```
+
+![Multiple run sequentially](/assets/run2_log_1a1.png)
+
+As you could expect the second task is started only the first is finished and unless the provider would disengage he will also receive consecutive tasks to execute. Note this is not the best scenario, as you do not utilise the power of the network capable to run your tasks in parallel.
+
+
+

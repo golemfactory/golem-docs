@@ -2,6 +2,7 @@ site_name: ""
 nav:
     - Home: 'index.md'
     - 'Quickstart': 
+      - 'quickstarts/index.md'
       - 'JS QuickStart (node.js)': 'quickstarts/js_quickstart.md'
       - 'Other quickstarts ToC': 
         - 'quickstarts/index.md'
@@ -13,14 +14,16 @@ nav:
       - JavaScript:
           - 'Ncreators/javascript/index.md'
           - 'QuickStart': 
+            - 'Ncreators/javascript/quickstart/index.md'
             - 'Golem JS Quickstart': 'Ncreators/javascript/quickstart/quickstart.md'
             - 'Golem in browser Quickstart': 'Ncreators/javascript/quickstart/web_browser_qs.md'
           - 'Tutorials': 
-            - 'QuickStart Explained': 'tbc2_1.md'
-            - 'Running parallel tasks': 'tbc2_2.md'
-            - 'Running Golem from browser': 'tbc2_2.md'
-            - 'Building custom image': 'tbc2_3.md'
-          - 'Examples': 
+            - 'Ncreators/javascript/tutorials/index.md'
+            - 'QuickStart Explained': 'Ncreators/javascript/tutorials/quickstart_explained.md'
+            - 'Running parallel tasks': 'Ncreators/javascript/tutorials/parallel_processing.md'
+            - 'Running Golem from browser': 'Ncreators/javascript/tutorials/web.md'
+            - 'Building custom image': 'Ncreators/javascript/tutorials/image.md'
+          - 'JS Examples': 
             - 'Ncreators/javascript/examples/index.md'
             - 'Executing tasks': 'Ncreators/javascript/examples/tasks.md'
             - 'Defining tasks': 'Ncreators/javascript/examples/commands.md'
@@ -30,9 +33,15 @@ nav:
             - 'Working with images': 'Ncreators/javascript/examples/images.md'
             - 'Switching to mainnet': 'Ncreators/javascript/examples/mainnet.md'
           - 'Guides': 
-            - 'tbc4.md'
-            - 'Task Model ': 'tbc3_1.md'
-            - 'Golme images': 'tbc3_2.md'
+            - 'Ncreators/javascript/guides/index.md'
+            - 'Task Model ': 'Ncreators/javascript/guides/task-model.md'
+            - 'Golem images': 'Ncreators/javascript/guides/images.md'
+          - 'Golem tools examples':
+            - 'Ncreators/javascript/examples/tools/index.md'
+            - 'Yagna installation for requestors': 'missinglink.md'
+            - 'Converting Docker image to Golem format': converting-an-image.md'
+            - 'Gvmkit_build installation (image conversion tool)': 'installing-gvmkit-build.md'
+            - 'Publishing custom images': 'pushing-to-registry.md'
           - 'API Reference': 
             - 'tbc5.md'      
       - 'Decentralized apps on Golem':
