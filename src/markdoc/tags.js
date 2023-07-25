@@ -2,8 +2,32 @@ import { Callout } from '@/components/Callout'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 import { CTA } from '@/components/CTA'
 import { Information } from '../components/Information'
+import { Whitespace } from '@/components/Whitespace'
+import { Tabs } from '@/components/Tabs'
+import { Tab } from '@/components/Tab'
+import { Tag } from '@markdoc/markdoc'
 
 const tags = {
+  tabs: {
+    render: Tabs,
+    attributes: {},
+    transform(node, config) {
+      const labels = node
+        .transformChildren(config)
+        .filter((child) => child && child.name === 'Tab')
+        .map((tab) => (typeof tab === 'object' ? tab.attributes.label : null))
+
+      return new Tag(this.render, { labels }, node.transformChildren(config))
+    },
+  },
+  tab: {
+    render: Tab,
+    attributes: {
+      label: {
+        type: String,
+      },
+    },
+  },
   callout: {
     attributes: {
       title: { type: String },
@@ -63,6 +87,10 @@ const tags = {
     attributes: {
       level: { type: String },
     },
+  },
+  whitespace: {
+    selfClosing: true,
+    render: Whitespace,
   },
 }
 

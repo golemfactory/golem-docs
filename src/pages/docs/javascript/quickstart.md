@@ -58,34 +58,42 @@ git --version
 
 To start working with Golem network we need to install the `yagna` daemon on our local machine. In the simplest terms, the `yagna` daemon allows you to communicate with Golem Network and perform operations on it. A "Requestor" is what you are right now, someone who is renting computing resources on Golem Network.
 
-=== "Easy installation"
+{% tabs %}
 
-    You can install it using our helper script like this:
+{% tab label="Easy installation" %}
+You can install it using our helper script like this:
 
-    ```bash
-    curl -sSf https://join.golem.network/as-requestor | bash -
-    ```
+```bash
+curl -sSf https://join.golem.network/as-requestor | bash -
+```
 
-    You might be asked to modify your PATH afterwards.
+You might be asked to modify your PATH afterwards.
+{% /tab %}
+
+{% tab label="Windows Manual installation" %}
+
+Alternatively, if you can't install in easy way, you will do it manually in the following way:
+
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
+2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
+3. Copy those files to `C:\Windows\System32`.
+
+{% /tab %}
+
+{% tab label="Unix Manual installation" %}
+
+Alternatively, if you can't install in easy way, you will do it manually in the following way:
+
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
+2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries in to your PATH.
+
+{% /tab %}
+
+{% /tabs %}
 
 {% information level="warning" %}
 On Windows, only the manual installation is supported.
 {% /information %}
-
-=== "Windows Manual installation"
-
-    Alternatively, if you can't install in easy way, you will do it manually in the following way:
-
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
-    2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
-    3. Copy those files to `C:\Windows\System32`.
-
-=== "Unix Manual installation"
-
-    Alternatively, if you can't install in easy way, you will do it manually in the following way:
-
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
-    2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries in to your PATH.
 
 Verify if `yagna` available in command line:
 
@@ -127,6 +135,9 @@ yagna service run
 Important: After you launch the daemon, leave it running in the background while you proceed with the tutorial.
 
 {% /information %}
+
+    {% whitespace %}
+    {% /whitespace %}
 
 {% information level="info" %}
 
@@ -305,21 +316,27 @@ If you have the executor ready, it's time to run the script on the Golem Network
 
 In order for the requestor agent to connect with the `yagna` daemon, you need to provide it with the previously-generated app key from step [Generate the app key](quickstart.md#secondly-generate-the-app-key-wallet):
 
-=== "MacOS / Linux"
+{% tabs %}
 
-    **On MacOS / Linux type in command line**
+{% tab label="MacOS / Linux" %}
+**On MacOS / Linux type in command line**
 
-    ```bash
-    export YAGNA_APPKEY=insert-your-32-char-app-key-here
-    ```
+```bash
+export YAGNA_APPKEY=insert-your-32-char-app-key-here
+```
 
-=== "Windows"
+{% /tab %}
 
-    **On Windows type in command line**
+{% tab label="Windows" %}
+**On Windows type in command line**
 
-    ```bash
-    set YAGNA_APPKEY=your-32-char-app-key
-    ```
+```bash
+set YAGNA_APPKEY=your-32-char-app-key
+```
+
+{% /tab %}
+
+{% /tabs %}
 
 {% information level="info" %}
 
