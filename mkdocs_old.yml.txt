@@ -2,49 +2,14 @@ site_name: ""
 nav:
     - Home: 'index.md'
     - 'Quickstart': 
-      - 'JS QuickStart (node.js)': 'quickstarts/js_quickstart.md'
+      - 'quickstarts/js_quickstart.md'
       - 'Other quickstarts ToC': 
         - 'quickstarts/index.md'
         - 'py quickstart' : 'quickstarts/py_quickstart.md'
         - 'no code deployment quickstart' : 'quickstarts/no_code_quickstart.md'
-        - 'run your js script quickstart' : 'quickstarts/run_your_code.md'
-    - 'Create on Golem N':
-      - 'Ncreators/index.md' 
-      - JavaScript:
-          - 'Ncreators/javascript/index.md'
-          - 'QuickStart': 
-            - 'Golem JS Quickstart': 'Ncreators/javascript/quickstart/quickstart.md'
-            - 'Golem in browser Quickstart': 'Ncreators/javascript/quickstart/web_browser_qs.md'
-          - 'Tutorials': 
-            - 'QuickStart Explained': 'tbc2_1.md'
-            - 'Running parallel tasks': 'tbc2_2.md'
-            - 'Running Golem from browser': 'tbc2_2.md'
-            - 'Building custom image': 'tbc2_3.md'
-          - 'Examples': 
-            - 'Ncreators/javascript/examples/index.md'
-            - 'Executing tasks': 'Ncreators/javascript/examples/tasks.md'
-            - 'Defining tasks': 'Ncreators/javascript/examples/commands.md'
-            - 'Sending data': 'Ncreators/javascript/examples/data.md'
-            - 'Working with/evaluating results': 'Ncreators/javascript/examples/results.md'
-            - 'Selecting providers': 'Ncreators/javascript/examples/demands.md'
-            - 'Working with images': 'Ncreators/javascript/examples/images.md'
-            - 'Switching to mainnet': 'Ncreators/javascript/examples/mainnet.md'
-          - 'Guides': 
-            - 'tbc4.md'
-            - 'Task Model ': 'tbc3_1.md'
-            - 'Golme images': 'tbc3_2.md'
-          - 'API Reference': 
-            - 'tbc5.md'      
-      - 'Decentralized apps on Golem':
-          - 'Ncreators/dapps/index.md'
-          - Quickstart: 'Ncreators/dapps/run-a-dapp.md'
-          - 'Hello World dApp': 'Ncreators/dapps/hello-world-dapp.md'
-          - 'Managing multiple dApps': 'Ncreators/dapps/dapp-manager.md'
-          - 'Creating Golem dApps': 'Ncreators/dapps/creating-golem-dapps.md'
-          - 'Differences between Docker containers and Golem VM runtime': 'Ncreators/dapps/docker-containers-vs-golem-vms.md'
-          - Troubleshooting: 'Ncreators/dapps/troubleshooting.md'
+        - 'run your js script quickstart' : 'quickstarts/run_your_code_quickstart.md'
     - 'Create on Golem':
-      - 'creators/index.md'
+      - 'available resources': '/creators/'
       - JavaScript:
           - 'creators/javascript/index.md'
           - Quickstart: 'creators/javascript/quickstart.md'
@@ -78,10 +43,9 @@ nav:
           - Troubleshooting: 'creators/dapps/troubleshooting.md'
     - 'Share and Earn':
       - 'providers/index.md'
-      - 'Provider installation': 'providers/install.md'
-      - 'Provider configuration': 'providers/config.md'
-      - 'Provider troubleshooting': 'providers/trouble.md'
-      - 'yagna CLI reference': 'providers/reference.md'
+      - 'Provider configuration': 'providers/index.md'
+      - 'Provider troubleshooting': 'providers/index.md'
+      - 'yagna CLI reference': 'providers/index.md'
 markdown_extensions:
   - admonition
   - attr_list
