@@ -23,7 +23,7 @@ nav:
             - 'Running parallel tasks': 'Ncreators/javascript/tutorials/parallel_processing.md'
             - 'Running Golem from browser': 'Ncreators/javascript/tutorials/web.md'
             - 'Building custom image': 'Ncreators/javascript/tutorials/image.md'
-          - 'JS Examples': 
+          - 'JS TASK API Examples': 
             - 'Ncreators/javascript/examples/index.md'
             - 'Executing tasks': 'Ncreators/javascript/examples/tasks.md'
             - 'Defining tasks': 'Ncreators/javascript/examples/commands.md'
@@ -31,17 +31,16 @@ nav:
             - 'Working with/evaluating results': 'Ncreators/javascript/examples/results.md'
             - 'Selecting providers': 'Ncreators/javascript/examples/demands.md'
             - 'Working with images': 'Ncreators/javascript/examples/images.md'
-            - 'Switching to mainnet': 'Ncreators/javascript/examples/mainnet.md'
           - 'Guides': 
             - 'Ncreators/javascript/guides/index.md'
             - 'Task Model ': 'Ncreators/javascript/guides/task-model.md'
-            - 'Golem images': 'Ncreators/javascript/guides/images.md'
+            - 'Golem images': 'Ncreators/javascript/guides/golem-images-explained.md'
           - 'Golem tools examples':
             - 'Ncreators/javascript/examples/tools/index.md'
-            - 'Yagna installation for requestors': 'missinglink.md'
-            - 'Converting Docker image to Golem format': converting-an-image.md'
-            - 'Gvmkit_build installation (image conversion tool)': 'installing-gvmkit-build.md'
-            - 'Publishing custom images': 'pushing-to-registry.md'
+            - 'Yagna installation for requestors': 'Ncreators/javascript/examples/tools/install_yagna.md'
+            - 'Converting Docker image to Golem format': 'Ncreators/javascript/examples/tools/converting-an-image.md'
+            - 'Gvmkit_build installation (image conversion tool)': 'Ncreators/javascript/examples/tools/installing-gvmkit-build.md'
+            - 'Publishing custom images': 'Ncreators/javascript/examples/tools/publishing.md'
           - 'API Reference': 
             - 'tbc5.md'      
       - 'Decentralized apps on Golem':
