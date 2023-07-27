@@ -2,7 +2,8 @@
 description: Create your own JavaScript application on Golem
 ---
 
-# QuickStart
+
+# JS QuickStart (node.js)
 
 In this article, we'll show you how to run a simple task on Golem Network. 
 
@@ -39,8 +40,7 @@ Yagna is a deamon that will let you communicate with Golem Network and perform o
 
     Alternatively, if you can't install in easy way, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
-
+    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/latest).
     2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
     3. Copy those files to `C:\Windows\System32`.
 	?? shall we install yagna in local folder for a quickstart ??
@@ -50,8 +50,10 @@ Yagna is a deamon that will let you communicate with Golem Network and perform o
 
     Alternatively, if you can't install in easy way, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
     2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries in to your PATH.
+
+
 
 !!! Note
 
@@ -135,7 +137,7 @@ import { TaskExecutor } from "yajsapi";
 
 !!! info
 
-    You can find detailed explanation of the above code here: [here](tutorials/quickstart_explained.md)
+    You can find detailed explanation of the above code [here](../Ncreators/javascript/tutorials/quickstart_explained.md)
 
 
 ## Runing the script on Golem Network
@@ -159,7 +161,11 @@ At the end of the script's logs you can see information about node version used 
 You have installed yagna daemon and run a simple task on Golem Network.
 You can do much more. There are some of the next steps to explore Golem Network world:
 
-* [Quickstart Explained](tutorials/quickstart_explained.md)
-* [Simple introduction to Golem Network and Task Model](../javascript/high-level/task-model.md)
-* [Parallel processing tutorial](tutorials/parallel_processing.md)
+test
+
+* [Parallel processing tutorial](../Ncreators/javascript/tutorials/parallel_processing.md)
+* [Quickstart Explained](../Ncreators/javascript/tutorials/quickstart_explained.md)
+* [Simple introduction to Golem Network and Task Model](../Ncreators/javascript/guides/task-model.md)
+* [Parallel processing tutorial](../Ncreators/javascript/tutorials/parallel_processing.md)
+
 
