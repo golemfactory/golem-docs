@@ -5,48 +5,56 @@ description: Examples of how to use your own Golem image in a requestor script
 
 # Using Golem images
 
-## Prerequisites
-
 !!! info
 
-    * OS X 10.14+, Ubuntu 18.04 or 20.04, or Windows
-    * An installation of yagna
-    * An environment for Golem tasks or services
+    * Required: [gvmkit-build installation](installing-gvmkit-build.md), a Golem image hash or a Golem image tag, and an environment for requesting
 
-The example requestor script we are going to use is taken from the [QuickStart](../../javascript/quickstart.md). To use your own Golem image, simply change the hash (`529 [...] 1106d4`) in the script to your own hash or tag. More modification, how to run, and other notes are available in the [third part of the three-part tutorial](../tutorial/using-the-golem-image.md).
+Below you will find an example requestor script used in the [QuickStart](../../javascript/quickstart.md). 
 
 === "JavaScript/npm"
-    **index.mjs**
-    ```mjs
-    import { TaskExecutor } from "yajsapi";
+    **requestor.mjs**    
+```js
+import { TaskExecutor } from "yajsapi";
 
-    (async () => {
-    const executor = await TaskExecutor.create("529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4");
+(async () => {
 
-    const taskToRunOnProvider = async (workerContext) => {
-        const commandToRunInProviderShell = "node -v";
-        const result = await workerContext.run(commandToRunInProviderShell);
-        return result.stdout;
-    }
+	const executor = await TaskExecutor.create({
+    		package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+		yagnaOptions: { appKey: 'try_golem' }});
+	
+	const result = await executor.run(
+		async (ctx) => (await ctx.run("node -v")).stdout);
+	
+	await executor.end();
+	
+	console.log("Task result:", result);
 
-    const taskResult = await executor.run(taskToRunOnProvider);
-    await executor.end();
+})();
+```
 
-    console.log('Task result:', taskResult);
-    })();
-    ```
+Note the `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4` hash in the line where TaskExecutor is created:
+
+
+```js
+	const executor = await TaskExecutor.create({
+    		package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+		yagnaOptions: { appKey: 'try_golem' }});
+```
+
+If you had created your custom Golem image and published it to the repository, you can simply replace the hash (`529 [...] 1106d4`) in the script with the hash generated for your image by gvmkit-build tool or with your own defined tag.
+
+```js
+package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",
+```
+or
+
+```js
+package: "golem/my_example:latest",
+```
+
+
 !!! golem-icon "Next steps:"
 
-    ??? quote "Return"
-
-        [Golem images and usage explained](../golem-images-explained.md){ .md-button .md-button--primary }
-
-    ??? question "Continue"
-
-        [Installing gvmkit-build](installing-gvmkit-build.md){ .md-button .md-button--primary }
-
-        [Converting an image from Docker to Golem](converting-an-image.md){ .md-button .md-button--primary }
-
-        [Pushing an image to the registry](pushing-to-registry.md){ .md-button .md-button--primary }
-
-        Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+    [Custom Golem image creation step by step tutorial](../tutorial/using-the-golem-image.md){ .md-button .md-button--primary }
+ 
+	Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

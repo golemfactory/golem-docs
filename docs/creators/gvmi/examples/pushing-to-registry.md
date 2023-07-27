@@ -1,102 +1,60 @@
 ---
-title: Pushing an image to the registry
-description: Guide on how to push a Golem image to the registry using gvmkit-build
+title: Publishing an image
+description: Guide on how to publish a Golem image to the registry using gvmkit-build
 ---
 
-# Pushing an image to the registry
-
-## Prerequisites
+# Publishing an image in the registry (identified by tag)
 
 !!! info
 
-    * OS X 10.14+, Ubuntu 18.04 or 20.04, or Windows
-    * Having followed the [gvmkit-build installation](installing-gvmkit-build.md)
-    * Having [converted your Docker image to Golem](converting-an-image.md)
+    * The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+    * Required: [gvmkit-build installation](installing-gvmkit-build.md)
+    * Required: a Docker image 
+<!--
+    is gvmi required??? see the above point
+    * ??? Have you [Docker image converted to .gvmi format](converting-an-image.md) ???
+    * Have [gvmkit-build installed](installing-gvmkit-build.md) 
+-->
 
-??? info "Pushing your Golem image to the registry (hash-based)"
+Note: you can also use npx / pipx tools to run gvmkit-build, the former for not having to install the tool, and the latter for isolation.
+    
 
-    The examples below show how to quickly convert and push a Docker image tagged `golem-example`. If the image is already converted to `.gvmi`, it will only be pushed. The hash is found after the `image link` section of the console output.
 
-    === "Python/pip"
-        === "Ubuntu"
-            ```bash
-            python3 -m gvmkit_build golem-example --push --nologin
-            ```
-        === "macOS"
-            ```bash
-            python3 -m gvmkit_build golem-example --push --nologin
-            ```
-        === "Windows"
-            ```bash
-            python -m gvmkit_build golem-example --push --nologin
-            ```
+## Publishing custom Golem image to the registry (tag-based)
 
-    === "JavaScript/npm"
+Note: Golem image tags have a format of `username/repository_name:tag`, where `username` is your login to registry portal, `repository_name` is name of your repository and `tag` is a text that you chose to describe the content/version of the image. The `tag` can be `latest` to constantly keep a latest version, or you can use a versioning system and e.g. make it `v0.0.1` and so on.
 
+Let's assume for this example you username is `golem`, your Docker image is tagged `golem-example`, your repository name is `my_example` and the version is `latest`.
+
+
+1. Create an account on the [registry portal](https://registry.golem.network/).
+2. Create a repository on the registry portal.
+3. Crate and copy personal access token from the registry portal.
+4. Run the following command (you will be asked for login and personal access token)
+
+=== "JavaScript/npm"
+    ```bash
+        gvmkit-build golem-example --push-to golem/my_example:latest
+    ```
+=== "Python/pip"
+    === "Ubuntu"
         ```bash
-        npx gvmkit-build golem-example --push --nologin
+            python3 -m gvmkit_build golem-example --push-to golem/my_example:latest
+        ```
+    === "macOS"
+        ```bash
+            python3 -m gvmkit_build golem-example --push-to golem/my_example:latest
+        ```
+    === "Windows"
+        ```bash
+            python -m gvmkit_build golem-example --push-to golem/my_example:latest
         ```
 
-    === "Rust/cargo"
 
-        ```bash
-        gvmkit-build golem- --push --nologin
-        ```
-
-??? info "Pushing your Golem image to the registry (tag-based)"
-
-    1. Create an account on the [registry portal](https://registry.golem.network/).
-
-    2. Create a repository on the registry portal.
-
-    3. Note down your personal access token from the registry portal.
-
-    4. We will show you how to convert and push a local Docker image tagged `docker_image` to a repository in the following format: `username/repository_name:tag`.
-
-        !!! info
-
-            Note that `docker_image`, `username`, `repository_name`, and `tag` will depend on the names you choose to use. The `tag` can be `latest` to constantly keep a latest version, or you can use a versioning system and e.g. make it `v0.0.1` and so on.
-
-    5. Find the appropriate command below to convert and push your image and be ready to enter your details (login information and personal access token).
-
-    === "Python/pip"
-        === "Ubuntu"
-            ```bash
-            python3 -m gvmkit_build docker_image --push-to username/repository_name:tag
-            ```
-        === "macOS"
-            ```bash
-            python3 -m gvmkit_build docker_image --push-to username/repository_name:tag
-            ```
-        === "Windows"
-            ```bash
-            python -m gvmkit_build docker_image --push-to username/repository_name:tag
-            ```
-
-    === "JavaScript/npm"
-
-        ```bash
-        npx gvmkit-build docker_image --push-to username/repository_name:tag
-        ```
-
-    === "Rust/cargo"
-
-        ```bash
-        gvmkit-build docker_image --push-to username/repository_name:tag
-        ```
+Your tag `golem/my_example:latest` is ready to use in one of Golem Network APIs
 
 !!! golem-icon "Next steps:"
 
-    ??? quote "Return"
+    [Using an image in a requestor script](using-golem-image.md){ .md-button .md-button--primary }
 
-        [Golem images and usage explained](../golem-images-explained.md){ .md-button .md-button--primary }
-
-    ??? question "Continue"
-
-        [Installing gvmkit-build](installing-gvmkit-build.md){ .md-button .md-button--primary }
-
-        [Converting an image from Docker to Golem](converting-an-image.md){ .md-button .md-button--primary }
-
-        [Using an image in a requestor script](using-golem-image.md){ .md-button .md-button--primary }
-
-        Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+    Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

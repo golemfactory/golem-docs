@@ -5,110 +5,105 @@ description: Guide on how to convert an image from Docker to Golem using gvmkit-
 
 # Converting an image
 
-## Prerequisites
-
 !!! info
 
-    * OS X 10.14+, Ubuntu 18.04 or 20.04, or Windows
-    * Basic knowledge of Docker along with an installation
-    * Having followed the [gvmkit-build installation](installing-gvmkit-build.md)
+    * The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+    * Required: [gvmkit-build installation](installing-gvmkit-build.md)
+    * Basic knowledge of Docker along with docker service running
+    
+    (Note: you can use npx and pipx tools to run gvmkit-build without installation). 
 
-To convert an image from Docker to Golem using gvmkit-build, you need to:
+Golem images are based off Docker images, which means that it is required to have a Docker image to be able to create (convert) to a Golem image. We will include a simple Dockerfile just to show how the tool and its commands work for demonstration purposes, and you are free to create your own Dockerfile's.
 
-??? info "1. Build your Docker image"
+## Building your Docker image
 
-    Here are examples for each operating system that works with the `Dockerfile` provided in [the three-part tutorial](../tutorial/creating-our-docker-image.md). The examples below show how to build a Docker image with the tag `golem-example` in the current directory. For more advanced builds, refer to Docker documentation or unofficial sources to learn more.
+Create a `Dockerfile` file with following content:
 
+```bash
+FROM debian:latest
+VOLUME /golem/input /golem/output
+WORKDIR /golem/work
+``` 
+
+Now build a Docker image tagged `golem-example` using the above Dockerfile. 
+
+=== "Ubuntu"
+
+    ```bash
+    docker build . -t golem-example
+    ```
+
+=== "macOS"
+
+    ```bash
+    docker build . --platform linux/amd64 -t golem-example
+    ```
+
+=== "Windows"
+
+    ```bash
+    docker build . -t golem-example
+    ```
+
+!!! info
+	In the [tutorial](../tutorial/creating-our-docker-image.md) you will find more details about the Dockerfile content for this example. For more advanced builds, refer to Docker documentation or unofficial sources to learn more.
+
+
+## Converting Docker image to a Golem image
+
+The examples below show how to convert the Docker image tagged `golem-example` to a `.gmvi` file in the current directory.
+
+=== "JavaScript/npm"
+    ```bash
+    npx gvmkit-build golem-example
+    ```
+=== "Python/pip"
     === "Ubuntu"
-
         ```bash
-        docker build -t golem-example .
+        python3 -m gvmkit_build golem-example
         ```
-
     === "macOS"
-
         ```bash
-        docker build --platform linux/amd64 -t golem-example .
+        python3 -m gvmkit_build golem-example
         ```
-
     === "Windows"
-
         ```bash
-        docker build -t golem-example .
+        python -m gvmkit_build golem-example
         ```
 
-??? info "2a. Convert your Docker image to a Golem image"
 
-    The examples below show how to convert the Docker image tagged `golem-example` to a `.gmvi` file in the current directory of the terminal session.
+## Converting and publishing your image at once (hash-based)
 
-    === "Python/pip"
-        === "Ubuntu"
-            ```bash
-            python3 -m gvmkit_build golem-example
-            ```
-        === "macOS"
-            ```bash
-            python3 -m gvmkit_build golem-example
-            ```
-        === "Windows"
-            ```bash
-            python -m gvmkit_build golem-example
-            ```
+This example explains how to convert and publish image that will be identified by its hash. The examples assumes you have Docker image tagged `golem-example` already created. 
 
-    === "JavaScript/npm"
+The hash is found in the `image link` line of the console output:
 
+```bash
+ -- image link (for use in SDK): dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3
+``` 
+
+Note if the image was already converted to `.gvmi`, it will only be pushed. 
+
+=== "JavaScript/npm"
+    ```bash
+    gvmkit-build golem-example --push --nologin
+    ```
+=== "Python/pip"
+    === "Ubuntu"
         ```bash
-        npx gvmkit-build golem-example
-        ```
-
-    === "Rust/cargo"
-
-        ```bash
-        gvmkit-build golem-example
-        ```
-
-??? info "2b. Convert and push your image at once (hash-based)"
-
-    This example will only show the hash-based command, for more commands (e.g. tag-based ones), please refer to [this example](pushing-to-registry.md). The examples below show how to quickly convert and push a Docker image tagged `golem-example`. If the image is already converted to `.gvmi`, it will only be pushed. The hash is found after the `image link` section of the console output.
-
-    === "Python/pip"
-        === "Ubuntu"
-            ```bash
             python3 -m gvmkit_build golem-example --push --nologin
-            ```
-        === "macOS"
-            ```bash
+        ```
+    === "macOS"
+        ```bash
             python3 -m gvmkit_build golem-example --push --nologin
-            ```
-        === "Windows"
-            ```bash
+        ```
+    === "Windows"
+        ```bash
             python -m gvmkit_build golem-example --push --nologin
-            ```
-
-    === "JavaScript/npm"
-
-        ```bash
-        npx gvmkit-build golem-example --push --nologin
-        ```
-
-    === "Rust/cargo"
-
-        ```bash
-        gvmkit-build golem-example --push --nologin
         ```
 
 !!! golem-icon "Next steps:"
 
-    ??? quote "Return"
+	[Pushing an image to the registry](pushing-to-registry.md){ .md-button .md-button--primary }
 
-        [Golem images and usage explained](../golem-images-explained.md){ .md-button .md-button--primary }
-
-    ??? question "Continue"
-
-        [Installing gvmkit-build](installing-gvmkit-build.md){ .md-button .md-button--primary }
-
-        [Pushing an image to the registry](pushing-to-registry.md){ .md-button .md-button--primary }
-
-        [Using an image in a requestor script](using-golem-image.md){ .md-button .md-button--primary }
-
-        Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+    Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

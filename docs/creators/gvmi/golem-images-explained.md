@@ -3,43 +3,67 @@ title: Golem images and usage explained
 description: Learn what a Golem image is and how to create and use one
 ---
 
+
+
+
 # Golem images and usage explained
 
-A Golem image is an environment that is used for applications run on Golem. The Golem image will include everything that is required for your application to run in a new environment: copied files from your own machine, downloaded files from the internet, configurations and settings, dependencies, and more.
 
-Golem images are based off Docker images and are converted using the gvmkit-build tool to a `.gvmi` file. The reason for using specific Golem images is to save file space and speed up transfer speeds on the images.
+## Golem Image
+
+A Golem image is a software package that contains all tools, libraries, tools, configurations, dependencies and settings that are required to execute your tasks on a remote computer. The image is used to create the environment (VM) where your tasks are executed.
+
+## Golem image creation 
+
+Golem images are based on Docker images that are converted using the gvmkit-build tool to a `.gvmi` file format. The reason for using a specific Golem image format is to save file space and speed up transfer speeds of the images.
 
 The general process of creating a Golem image looks like this:
 
-- 1) Create/specify a Dockerfile
-- 2) Build a Docker Image from the Dockerfile
-- 3) Convert to Golem using gvmkit-build ([example](examples/converting-an-image.md))
+* Define the image content in Docker format (Dockerfile)
+* Build a Docker image from the Dockerfile
+* Convert to Golem image using gvmkit-build ([example](examples/converting-an-image.md))
 
-The process of publishing and using Golem images differ depending on how you want to use the images and in which way. Tags can be used to have readable names for letting providers download your image, but take time to set up, and hashes are easy to set up but needs to be switched out for every updated version.
+See our [Create Golem Image Tutorial](#custom-golem-image-step-by-step-tutorial) and [Examples](#installation-guide-and-other-examples) section to see how to create an image and examples on how to use the tool. 
 
-- 4) Publishing the image to the registry ([example](examples/pushing-to-registry.md))
-- 5) Using the tag or hash in a requestor script ([example](examples/using-golem-image.md))
+## Golem image use
 
-There are a few caveats that Golem images have, such as having both `ENTRYPOINT` and `CMD` instructions are done through the requestor script and not the Dockerfile. Besides this, the limitations and features from the exeUnits apply. <!-- For more information, go to [this section](). -->
+Image must be downloaded to a remote computer therefore we need to publish it. Golem provides a ‘repository’ to publish images. Images can be identified by their image hash or a tag name. The type of identifier depends on the way you publish your image and is driven by intended usage.
 
+If you intend using your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
-## Installation guide and other references
+* Publishing the image anonymously. <!-- example is missing -->
+* Publishing the image using tags. ([example](examples/pushing-to-registry.md))
+* Using the tag or hash in a requestor script. ([example](examples/using-golem-image.md))
 
-<insert buttons for installing, simple usage (converting, pushing, using in requestor script)>
+## Dockerfile command support 
+
+Basically all the Docker commands that are related to definition of the image content are supported. So if you are able to create a Docker image from your Dockerfile, you should be able to convert it to a Golem image.
+
+Please take into account the following points:
+
+### VOLUME
+
+If your application requires transferring files to and/or from the provider node, you'll need to specifically define a place (or places) in the container's file system that will be used for file transfers. These places are called volumes.
+
+Additionally, in case of large files, it is recommended to generate and store them in directories defined using the VOLUME clause. In such case they are stored on the host's disk drive and do not consume the storage available in RAM.
+
+### WORKDIR
+
+This will define the default directory to be used in shell commands sent to remote computer once the VM is running.
+
+### ENTRYPOINT, CMD
+
+Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` statements are effectively ignored. You need to pass the relevant initialization commands as part of the task sent to a remote computer as a part of your task function or use `beforeEach` method. See examples.
+
+## Next steps
+
+### Installation guide and other examples
 
 !!! golem-icon ""
 
     [Installing gvmkit-build](examples/installing-gvmkit-build.md){ .md-button .md-button--primary }
 
-    [Converting an image from Docker to Golem](examples/converting-an-image.md){ .md-button .md-button--primary }
-
-    [Pushing an image to the registry](examples/pushing-to-registry.md){ .md-button .md-button--primary }
-
-    [Using an image in a requestor script](examples/using-golem-image.md){ .md-button .md-button--primary }
-
-    Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
-
-## Tutorial on the process of creating and using a Golem image
+### Custom Golem image Step by step Tutorial
 
 !!! golem-icon ""
 
