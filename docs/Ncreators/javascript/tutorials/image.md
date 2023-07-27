@@ -174,7 +174,7 @@ We also run the uploadFile command to upload the text file you're reading right 
 
 ## Running the script
 
-Run the following command after ensuring the yagna service is running and configured correctly:
+Run the following command after ensuring the Yagna service is running and configured correctly:
 
 ```node index.mjs```
 

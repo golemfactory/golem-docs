@@ -7,7 +7,7 @@ In this article we will present methods that let you send files to and from prov
 !!! Note: at this moment sending files and JSON methods are available only in scripts that are run in node.js. 
 
 !!! Prerequisites	
-- yagna daemon installed and running
+- Yagna daemon installed and running
 
 
 ### Setting up project

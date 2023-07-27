@@ -3,7 +3,7 @@ description: Executing task
 ---
 
 !!! Info	
-yagna daemon installed and running with `try_golem` app-key configured.
+Yagna daemon installed and running with `try_golem` app-key configured.
 
 
 ### Setting up project

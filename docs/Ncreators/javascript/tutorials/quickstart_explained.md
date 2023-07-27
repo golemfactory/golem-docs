@@ -4,7 +4,7 @@ description: Create your own JavaScript application on Golem
 
 # JS QuickStart Explained
 
-Let's look closer at our requestor.js script that is used to run a JS QuickStart task on Golem Network.
+Let's look closer at our requestor.mjs script that is used to run a JS QuickStart task on Golem Network.
 
 ## JS script structure
 
@@ -49,8 +49,8 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-In (1) we create a TaskExcutor Instance using a factory method. In this example we use the minimal set of parameters: namely the hash indicating the image with node.js installed - the image we will deploy on the provider and api-key value - a key that will give us access to `yagna` REST API. `yagna` is a daemon that connects us to the network. 
-We use api-key that was generated in the process of [yagna installation](../examples/tools/install_yagna.md)
+In (1) we create a TaskExecutor Instance using a factory method. In this example we use the minimal set of parameters: namely the hash indicating the image with Node.js installed - the image we will deploy on the provider and api-key value - a key that will give us access to `yagna` REST API. `yagna` is a daemon that connects us to the network. 
+We use api-key that was generated in the process of [Yagna installation](../examples/tools/install_yagna.md)
 
 ```js
  const executor = await TaskExecutor.create({
@@ -78,7 +78,7 @@ Finally (3) we gracefully finish task executor:
 
 Let’s see how the task is defined and replace the `taskToRunOnProvider` placeholder we used in the previous step.
 
-The task is defined as a function that implements the Worker interface. This function will get its parameter workContext from the executor. It is an object that let you to run your commands in the scope of one task on one provider. 
+The task is defined as a function that implements the Worker interface. This function will get its parameter `workerContext`` from the executor. It is an object that let you to run your commands in the scope of one task on one provider. 
 
 ```js
 const taskToRunOnProvider = async (ctx) => // task is defined here;
@@ -115,7 +115,7 @@ import { TaskExecutor } from "yajsapi";
 ## Summary
 
 We had created a simplest requestor script, that run a single command on remote computer. 
-to achive it we had:
+to achieve it we had:
 
 * imported yajsapi lib
 * utilized Immediately Invoked Async Function Expression

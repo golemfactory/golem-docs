@@ -4,7 +4,7 @@ description: Working with results
 
 
 !!! Prerequisites	
-- yagna daemon installed and running
+- Yagna daemon installed and running
 
 
 ### Setting up project
