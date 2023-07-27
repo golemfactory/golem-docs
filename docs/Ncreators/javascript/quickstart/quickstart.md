@@ -18,11 +18,11 @@ It will take just a few minutes to create and run a script that will request tha
 * Familiarity which the command line
     
 
-## Installing and running yagna 
+## Installing and running Yagna 
 
 Yagna is a daemon that will let you communicate with Golem Network and perform operations on it. Let's install it.
 
-#### Install yagna
+#### Install Yagna
 
 === "Easy installation"
     
@@ -157,7 +157,7 @@ At the end of the script's logs you can see information about node version used 
 
 ## Summary
 
-You have installed yagna daemon and run a simple task on Golem Network.
+You have installed Yagna daemon and run a simple task on Golem Network.
 You can do much more. There are some of the next steps to explore Golem Network world:
 
 test
