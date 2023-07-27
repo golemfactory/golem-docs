@@ -3,7 +3,7 @@ description: Organising commands
 ---
 
 !!! Prerequisities	
-- yagna daemon installed and running
+yagna daemon installed and running with try_golem app-key configured.
 
 
 ### Setting up project
@@ -16,31 +16,60 @@ npm init
 npm i yajsapi
 ```
 
+### Introduction
+
 Task Executor methods take a task function as a parameter for each of its methods. 
-This function is asynchronous and provides access the WorkContext object that is provided as one of params. 
+This function is asynchronous and provides access the WorkContext object that is provided as one of its params.
 
-You can run a single command or a batch of commands on a provider. The following single commands are available:
+Task function may be very simple and consist of single command of may be consist of set of steps that include running commands or sending data to and from providers. 
 
-!!! error: replace ith table as in guide
+Commands can be run in sequence or can be chained in batches. Depending on the way you deine your batch you can obtain results of different type.
 
-- run()
-- uploadFile()
-- uploadJson()
-- downloadFile()
+Following commands are currently available:
 
-You can find more examples with them here.
+| Command     | Available in node.js| Available in wbe browser |
+| ----------- | :------------------:|:------------------------:| 
+| `run()` | yes | yes|
+| `uploadFile()` | yes | no |
+| `uploadJSON()` | yes | no |
+| `downloadFile()` | yes | no |
 
-In the following examples we will illustrate how you can organise a task that require:
+This article focuses on `run()` command and chaining commands using `beginBatch()` method, examples for `uploadFile()`, `uploadJSON()`, `downloadFile()` commands are in [sending data](data.md) article.
 
-* sending a worker.js script to provider (it will pring "Good morning Golem!" on the console), 
-* run it and save output to a file (output.txt) and finally
-* download that file to requestor,
-  
-all in a few different ways.
+We will start with simple example with single `run()` and then will focus on organising more complex task that requires a serie of steps:
+
+* send a `worker.js` script to provider (this is a simple script that prints "Good morning Golem!" on the console), 
+* run the `worker.js` on a provider and save output to a file (output.txt) and finally
+* download the `output.txt` file to back to your computer,
+
+
+### Running a single command
+
+Below is a copy of simple script that runs `node -v` remotely.
+
+```js
+import { TaskExecutor } from "yajsapi";
+
+(async () => {
+  const executor = await TaskExecutor.create({
+    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    yagnaOptions: { apiKey: 'try_golem' }});
+
+const result = await executor.run(
+    async (ctx) => (await ctx.run("node -v")).stdout);
+ await executor.end();
+
+ console.log("Task result:", result);
+})();
+
+```
+
+Note `ctx.run()` accepts a string as argument and the string is a command invocation exectly the same way one would do in on the console. The command will be run in the folder defined by `WORKDIR` entry in your image. 
+
 
 ### Runing multiple commands (prosaic way)
 
-One can simply run any of the methods listed above on the worker context provided for to task function.
+Yuor task function can consist of multiple steps, all run on `ctx` context.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -69,27 +98,23 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-Note: you can call different commands (both `run()` and related to file transfer) in a sequnce. To ensure proper sequence execution all calls must be awaited.
-If you use this approach each command is sent separately to provider and then executed.
+To ensure proper sequence execution all calls must be awaited. We handle only the result of the second `run()` and ignore the other.
 
-Note: we handle only the result of one command and ignore the rest.
-
-Note: we used `isSubprocess: true` excutor option to indicate that we do not want `executor.end()`
-to termniate whole requestor script.
+Note: if you use this approach each command is sent separately to provider and then executed.
 
 ![Commands prosaic](/assets/command_prosaic_log.png "Requestor script output logs")
 
 ### Organising commands into batches
 
-Now let's take a look how you can arrange multiple commands into batches to do more complex tasks.
-Depending on the way you conclude your batch you can obtain either:
+Now let's take a look how you can arrange multiple commands into batches.
+Depending on the way you finalize your batch you will obtain either:
 
-    - Promise of results object or 
-    - Readable stream
+    - array of result objects or 
+    - ReadableStream
 
-#### Organising commands into batch resulting in Promise of results
+#### Organising commands into batch resulting in array of Promises results
 
-Wse the beginBatch() method and chain the commands followed by end(). 
+Use the beginBatch() method and chain commands followed by `.end()`. 
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -110,7 +135,7 @@ import { TaskExecutor } from "yajsapi";
        .run('cat /golem/input/output.txt')
        .downloadFile("/golem/input/output.txt", "./output.txt")
        .end()
-       .catch((error) => console.error(error));
+       .catch((error) => console.error(error)); // to be removed and replaced with try & catch 
 
        return res[2]?.stdout
        
@@ -122,16 +147,16 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-Note: all commands are executed in a chain after `.beginBatch()`.
-The chain is terminated with `.end()`. The output is a Promise of results obejcts. They are stored at index according to their position in the chain (first command after `beginVatch()` has index 0).
+Note: all commands after `.beginBatch()` are run in a sequence.
+The chain is terminated with `.end()`. The output is a Promise of array of result obejcts. They are stored at index according to their position in the command chain (first command after `beginBatch()` has index 0).
 
 The output of the 3rd command `run('cat /golem/input/output.txt')` is undex index of 2.
 
 ![Commands batch end](/assets/batch_end_log.png "Requestor script output logs")
 
-#### Organising commands into batch produsing a Readable stream
+#### Organising commands into batch producing a Readable stream
 
-Use the beginBatch() method and chain the commands followed by endStream().
+Use the beginBatch() method and chain commands followed by `endStream()`.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -163,7 +188,7 @@ import { TaskExecutor } from "yajsapi";
 ```
 
 
-Note that now the chain is ended with ` .endStream()` and then we read data chanks from ReadableStream `res`. 
+Note that now the chain is ended with ` .endStream()` and then we read data chunks from ReadableStream `res`. 
 
 Once the stream is closed we can end our TaskExecutor instance.
 

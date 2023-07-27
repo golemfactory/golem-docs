@@ -19,7 +19,7 @@ The general process of creating a Golem image looks like this:
 
 * Define the image content in Docker format (Dockerfile)
 * Build a Docker Image from the Dockerfile
-* Convert to Golem image using gvmkit-build ([example](examples/converting-an-image.md))
+* Convert to Golem image using gvmkit-build ([example](../examples/tools/converting-an-image.md))
 
 See our Create Golem Image Tutorial and Examples section to see how to create the image and use the tool. 
 
@@ -29,9 +29,9 @@ Image must be downloaded to a remote computer therefore we need to publish it. G
 
 If you intend using your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images.  Both cases are illustrated in our examples.
 
-* Publishing the image anonymously ([example](examples/pushing-to-registry.md))
+* Publishing the image anonymously ([example](../examples/tools/publishing.md))
 * Publishing the image using tags.
-* Using the tag or hash in a requestor script ([example](examples/using-golem-image.md))
+* Using the tag or hash in a requestor script ([example](../examples/tools/using-golem-image.md))
 
 ## Dockerfile command support 
 
@@ -60,13 +60,13 @@ Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` 
 
 !!! golem-icon ""
 
-    [Installing gvmkit-build](examples/installing-gvmkit-build.md){ .md-button .md-button--primary }
+    [Installing gvmkit-build](../examples/tools/installing-gvmkit-build.md){ .md-button .md-button--primary }
 
-    [Converting an image from Docker to Golem](examples/converting-an-image.md){ .md-button .md-button--primary }
+    [Converting an image from Docker to Golem](../examples/tools/converting-an-image.md){ .md-button .md-button--primary }
 
-    [Pushing an image to the registry](examples/pushing-to-registry.md){ .md-button .md-button--primary }
+    [Pushing an image to the registry](../examples/tools/publishing.md){ .md-button .md-button--primary }
 
-    [Using an image in a requestor script](examples/using-golem-image.md){ .md-button .md-button--primary }
+    [Using an image in a requestor script](../examples/tools/using-golem-image.md){ .md-button .md-button--primary }
 
     Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
 
@@ -74,8 +74,4 @@ Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` 
 
 !!! golem-icon ""
 
-    [1. Creating and building our Docker image](tutorial/creating-our-docker-image.md){ .md-button .md-button--primary }
-
-    [2. Converting to Golem and publishing to registry](tutorial/converting-docker-to-golem.md){ .md-button .md-button--primary }
-
-    [3. Using the Golem image in a requestor script](tutorial/using-the-golem-image.md){ .md-button .md-button--primary }
+    [1. Creating and building our Docker image](../tutorials/image.md){ .md-button .md-button--primary }

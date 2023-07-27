@@ -42,7 +42,7 @@ nav:
             - 'Gvmkit_build installation (image conversion tool)': 'Ncreators/javascript/examples/tools/installing-gvmkit-build.md'
             - 'Publishing custom images': 'Ncreators/javascript/examples/tools/publishing.md'
           - 'API Reference': 
-            - 'tbc5.md'      
+            - 'Ncreators/javascript/docs/index.md'      
       - 'Decentralized apps on Golem':
           - 'Ncreators/dapps/index.md'
           - Quickstart: 'Ncreators/dapps/run-a-dapp.md'

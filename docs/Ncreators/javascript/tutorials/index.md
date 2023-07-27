@@ -1,37 +1,16 @@
 ---
-description: Tutorials LoC
+description: Tutorials
 ---
 
 # Tutorials LoC
 
+JS tutorials are designed for developers who want to learn Golem concepts by practical realisation of proposed projects. 
+Here is list of available tutorial and their content:
 
+| Tutorial | What will you achive | What will you learn |Level |
+|----------|----------------------|---------------------|------|
+| [Quickstart Explained](`quickstart_explained.md`)  | You will build the quickstart example step by step.  | You will learn the basic structure of requestor script necessary to run a simple task on Golem Network and how to modify the quickstart example to fit your needs. | easy |
+| [Parallel processing](`parallel_processing.md`)  | You will create a tool to recover password using `hashcat` tool that will be used in password recovery process run in parallel on computers in the network.   | You will learn how to run tasks in parallel and how to compose more complex tasks consising of several steps and process the results. You will also create your custom image.   | easy |
+| [Web example explained](`web.md`)  | Create a simple web page that will enable you to trigger tasks on Golem network in the browser context and display results and logs.  | How to use the API directly from the browser context. This is useful to incorporate Golem Network as a computation engine for your web app.  | easy |
+| [Creating custom Golem image](`image.md`)  | You will create your own custom image.   | How to create a Docker image, how to install Golem conversion tool, how to convert and publish your custom image. | easy, docer service requried |
 
-rebuild the content below
-
-## Introduction
-
-This tutorial is designed for developers who want to create their own application on the Golem network. 
-It will guide you through the process of creating a task-based requestor application using the Task API, and provide you with examples to help you understand the concepts better.
-
-!!! info
-
-    If you have any questions or run into any issues while following this tutorial, please don't hesitate to reach out to us on our [Discord channel](https://chat.golem.network/) for help.
-
-
-To make the tutorial easier to follow, it has been divided into several sections. In the first section, we will provide a general introduction to developing applications on the Golem network, and explain the task model that is used in Golem applications.
-
-[Introduction to the task model](../high-level/task-model.md){ .md-button .md-button--primary }
-
-In the next section, we will walk you through the process of creating a simple example application that runs on the VM runtime. We will provide code examples and explain the mechanics of task-based requestor development.
-
-[Task Example 0: Hello World!](../examples/hello.md){ .md-button .md-button--primary }
-
-[Task Example 1: Simple Usage of Task API](../examples/simple.md){ .md-button .md-button--primary }
-
-We will then show you how to use Golem to run a `hashcat` application in parallel. This section will provide an example of a more complex use case and explain how to use Golem's capabilities to run it efficiently.
-
-[Task Example 2: Hashcat on Golem](../examples/hashcat.md){ .md-button .md-button--primary }
-
-Lastly, we will describe how to use the API directly from the browser context. This section will provide information on how to use the API in web applications and explain the benefits and limitations of this approach.
-
-[Task Example 3: Requestor in browser](../examples/web.md){ .md-button .md-button--primary }

@@ -42,19 +42,21 @@ Task executor may run:
 
 * a single task on a single provider (`.run()` method). 
 * multiple tasks on available providers (`.map()` and `.forEach()` methods). The number of providers is defined by the user, providers may be used more than once until all tasks are executed.
-* a specific command run once per engaged provider (`.beforeEach()`). This allows to run some initialisation before processing main batch of tasks.
+* an initialising command run once per engaged provider (`.beforeEach()`). This allows to prepare workers before processing main batch of tasks.
+
+User can also define how the Job is realised by defining maximum numer of providers engaged to execute tasks (`maxParallelTasks` parameter).
 
 	
 ### Defining Tasks
 
-Tasks are defined as worker functions. The function receives worker context that can be used to:
+Tasks are defined as task functions. The simplest function contains just a single `run()` call on worker context `ctx`. You can run commands in sequence or chain them into batches. In this section you be provided with examples showing how to: 
 
-* run a single command on remote computer (`.run()` method). Commands can be run in sequence.
-* organise a set of commands into a batch: (`.beginBatch()` method) with 2 different output forms:
+* run a single command on remote computer (`.run()` method).
+* organise a set of commands into a batch: (`.beginBatch()` method) with 2 different output types:
 	* Promise (`.end()` method)
 	* stream (`.endStream()` method)
 
-These commands may be combined with other methods designed to trasfer files to and from a provider.
+`run` commands may be combined with other worker context methods.  
 
 ### Sending Data to and from Providers
 
@@ -68,45 +70,22 @@ Note: user must define a VOLUME to indicate a folder designed to contain files o
 
 ###  Processing results
 
-Each command (run, uploadFile) will produce a result object that contains stdout, stderr of the commmand run. 
-In case of Tasks executor map method user will receive iterative object.
-In case of batch provessed commands user will erceive an array of result objects or a stream of events/results ??
- 
+Each command (run, uploadFile) will produce a result object that contains stdout, stderr of the respective step run.
 
-### Defining minimal requirements for provider system
+The way you can process results depends on the way you manage tasks and also how are they defined. 
+It also defines how the potential failures on provider side will be handled by the yajsapi.
+  
+
+### Defining minimal requirements for provider system / selectin providers.
 
 User can define minimal requirements for the provider's system (like memory, storage, CPU Threds, CPU cores) via initial parameters provided to the `TaskExecutor.create()` method.
 
-### Selecting providers
-
-User can filter and select providers based on price, internal scoring table. 
-
-### Other configuration parameters
-
-User can define how the Job is realised by defining numer of providers engaged to execute tasks	(`maxParallelTasks` parameter).
+`yajsapi` provides the user with a number of build-in filters that can be used to selectt better providers. User can also define his own filter where he can i.e. select provider on the basis of user defined criteria.
 
 
-You can explore our tutorials to see how to effectively use these functionalities.
-
-
-
+You can explore our [tutorials] to see how to use these features effectively.
 
 !!! golem-icon "Next steps:"
 
-    ??? quote "Return"
-
-        [Introduction to Task API](index.md){ .md-button .md-button--primary }
-    
-    ??? abstract "Examples"
-        
-        [Task Example 0: Hello World!](../examples/hello.md){ .md-button .md-button--primary }
-
-        [Task Example 1: Simple Usage of Task API](../examples/simple.md){ .md-button .md-button--primary }
-
-        [Task Example 2: Hashcat on Golem](../examples/hashcat.md){ .md-button .md-button--primary }
-
-        [Task Example 3: Requestor in browser](../examples/web.md){ .md-button .md-button--primary }
-
-    ??? question "Continue"
-
-        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }
+[JS Examples](../examples/index.md)
+   

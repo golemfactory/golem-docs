@@ -56,12 +56,12 @@ Yagna is a deamon that will let you communicate with Golem Network and perform o
 
 !!! Note
 
-    If you have encountered problems, contact us on discord channel or take a look in here: [Yagna troublesooting](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
+    If you have encountered problems, contact us on [discord channel](https://chat.golem.network/): 
 
 
 #### Start the daemon
 
-Open a terminal (command line window) and  define the key to identify your application script:
+Open a terminal (commandline window) and  define the key to identify your application script:
 
 === "MacOS / Linux"
 
@@ -101,7 +101,7 @@ yagna payment init
 
 !!! info
 
-    You can learn more about Golem architecture, production and text network, GLM tokens here:
+    You can learn more about Golem architecture, production and test networks, GLM tokens [here](missinglink.md):
 
 
 
@@ -136,7 +136,7 @@ import { TaskExecutor } from "yajsapi";
 
 !!! info
 
-    You can find detailed explanation of the above code here: [here](tutorials/quickstart_explained.md)
+    You can find detailed explanation of the above code here: [here](../tutorials/quickstart_explained.md)
 
 
 ## Runing the script on Golem Network
@@ -162,10 +162,8 @@ You can do much more. There are some of the next steps to explore Golem Network 
 
 test
 
-* [Quickstart Explained](tutorials/quickstart_explained.md)
-* [Simple introduction to Golem Network and Task Model](../javascript/high-level/task-model.md)
-* [Parallel processing tutorial](tutorials/parallel_processing.md)
-* [Other examples](Nexamples/toc.md)
-* [Tutorials](link)
-* [Guides](link)
+* [Quickstart Explained](../tutorials/quickstart_explained.md)
+* [Simple introduction to Golem Network and Task Model](../guides/task-model.md)
+* [Parallel processing tutorial](../tutorials/parallel_processing.md)
+
 
