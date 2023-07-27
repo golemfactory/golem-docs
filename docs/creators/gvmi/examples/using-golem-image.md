@@ -55,6 +55,6 @@ package: "golem/my_example:latest",
 
 !!! golem-icon "Next steps:"
 
-    [Custom Golem image creation step by step tutorial](../tutorial/using-the-golem-image.md){ .md-button .md-button--primary }
+    [Custom Golem image creation step by step tutorial](../tutorial/tutorial.md){ .md-button .md-button--primary }
  
 	Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

@@ -135,7 +135,7 @@ import { TaskExecutor } from "yajsapi";
 
 !!! info
 
-    You can find detailed explanation of the above code here: [here](tutorials/quickstart_explained.md)
+    You can find detailed explanation of the above code here: [here](../../Ncreators/javascript/tutorials/quickstart_explained.md)
 
 
 ## Runing the script on Golem Network
@@ -159,7 +159,7 @@ At the end of the script's logs you can see information about node version used 
 You have installed yagna daemon and run a simple task on Golem Network.
 You can do much more. There are some of the next steps to explore Golem Network world:
 
-* [Quickstart Explained](tutorials/quickstart_explained.md)
+* [Quickstart Explained](../../Ncreators/javascript/tutorials/quickstart_explained.md)
 * [Simple introduction to Golem Network and Task Model](../javascript/high-level/task-model.md)
-* [Parallel processing tutorial](tutorials/parallel_processing.md)
+* [Parallel processing tutorial](../../Ncreators/javascript/tutorials/parallel_processing.md)
 

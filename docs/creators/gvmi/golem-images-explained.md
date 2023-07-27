@@ -67,8 +67,8 @@ Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` 
 
 !!! golem-icon ""
 
-    [1. Creating and building our Docker image](tutorial/creating-our-docker-image.md){ .md-button .md-button--primary }
+    [1. Creating and building our Docker image](tutorial/tutorial.md){ .md-button .md-button--primary }
 
-    [2. Converting to Golem and publishing to registry](tutorial/converting-docker-to-golem.md){ .md-button .md-button--primary }
+    [2. Converting to Golem and publishing to registry](tutorial/tutorial.md){ .md-button .md-button--primary }
 
-    [3. Using the Golem image in a requestor script](tutorial/using-the-golem-image.md){ .md-button .md-button--primary }
+    [3. Using the Golem image in a requestor script](tutorial/tutorial.md){ .md-button .md-button--primary }

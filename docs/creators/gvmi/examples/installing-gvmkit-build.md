@@ -40,6 +40,6 @@ Gvmkit-build is a tool that converts Docker images into .gvmi formats used by Go
 
     [Converting an image to Golem format](converting-an-image.md){ .md-button .md-button--primary }
 
-    [Custom Golem image Step by step Tutorial](../tutorial/creating-our-docker-image.md){ .md-button .md-button--primary }
+    [Custom Golem image Step by step Tutorial](../tutorial/tutorial.md){ .md-button .md-button--primary }
 
     Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

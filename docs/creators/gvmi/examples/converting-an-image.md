@@ -46,7 +46,7 @@ Now build a Docker image tagged `golem-example` using the above Dockerfile.
     ```
 
 !!! info
-	In the [tutorial](../tutorial/creating-our-docker-image.md) you will find more details about the Dockerfile content for this example. For more advanced builds, refer to Docker documentation or unofficial sources to learn more.
+	In the [tutorial](../tutorial/tutorial.md) you will find more details about the Dockerfile content for this example. For more advanced builds, refer to Docker documentation or unofficial sources to learn more.
 
 
 ## Converting Docker image to a Golem image
