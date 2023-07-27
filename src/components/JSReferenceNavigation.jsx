@@ -10,7 +10,7 @@ const NavigationItem = ({ title, href, isActive }) => (
   <Link
     href={href}
     className={clsx(
-      'block w-full pl-3.5  before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full',
+      'block w-full pl-3.5  ',
       isActive
         ? 'font-semibold text-primary before:bg-primary dark:text-white dark:before:bg-white'
         : 'text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300'
@@ -21,7 +21,7 @@ const NavigationItem = ({ title, href, isActive }) => (
   </Link>
 )
 
-const Dropdown = ({ title, children, isActive }) => {
+export const Dropdown = ({ title, children, isActive }) => {
   const [isOpen, setIsOpen] = useState(isActive)
   const router = useRouter()
 
@@ -33,7 +33,7 @@ const Dropdown = ({ title, children, isActive }) => {
         className={clsx(
           'pl-3.5 ',
           isActive
-            ? 'font-semibold text-primary before:bg-primary dark:text-white dark:before:bg-white'
+            ? 'font-semibold text-primary before:bg-primary dark:text-white dark:before:bg-white '
             : 'text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300'
         )}
         onClick={toggleDropdown}
@@ -77,7 +77,7 @@ export const ReferenceNavigation = ({ items, currentVersion }) => {
     <nav aria-label="Navigation" className={clsx('text-base lg:text-sm', null)}>
       <ul role="list" className="space-y-9">
         <li key={currentNavItem.title}>
-          <h2 className="font-display font-medium text-slate-900 dark:text-white">
+          <h2 className="font-display font-semibold text-slate-900 dark:text-white">
             Yajsapi API reference
           </h2>
           <ul

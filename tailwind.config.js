@@ -28,7 +28,7 @@ module.exports = {
         primary: '#1C00A9',
         darkprimary: '#2C80FF',
         primaryhover: '#190580',
-        lightbluedarker: '#F0F0F0',
+        lightbluedarker: '#EBECFF',
         disabledgray: '#7D7F8A',
         lightblue: '#F5F8FC',
         dark: '#242534',

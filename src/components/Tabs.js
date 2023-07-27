@@ -7,15 +7,15 @@ export function Tabs({ labels, children }) {
 
   return (
     <TabContext.Provider value={currentTab}>
-      <nav className="-mb-px flex" aria-label="Tabs">
+      <nav className="-mb-px flex gap-x-2" aria-label="Tabs">
         {labels.map((label) => (
           <button
             key={label}
             onClick={() => setCurrentTab(label)}
             className={
               currentTab === label
-                ? 'w-1/3 border-b-2 border-primary/80 px-1 py-4 text-center text-sm font-medium text-primary'
-                : 'w-1/3 border-b-2 border-transparent px-1 py-4 text-center text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                ? ' rounded-md border-lightbluedarker bg-lightbluedarker px-3 py-2 text-center text-sm font-medium text-primary'
+                : 'rounded-md border border-lightbluedarker px-3 py-2 text-center  text-sm'
             }
             aria-current={currentTab === label ? 'page' : undefined}
           >
@@ -23,7 +23,7 @@ export function Tabs({ labels, children }) {
           </button>
         ))}
       </nav>
-      {children}
+      <div className="mt-4 mb-12 border border-lightbluedarker px-3 rounded-md">{children}</div>
     </TabContext.Provider>
   )
 }

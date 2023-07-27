@@ -344,19 +344,19 @@ export function Search() {
     <>
       <button
         type="button"
-        className="group flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-80 md:flex-none md:rounded md:py-2.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-2 md:ring-lightgray md:hover:ring-primaryhover dark:md:bg-slate-800/75 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-slate-700/40 dark:md:hover:ring-slate-500 lg:w-64"
+        className="group flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-80 md:flex-none md:rounded md:py-1.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-lightgray md:hover:ring-primaryhover dark:md:bg-slate-800/75 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-slate-700/40 dark:md:hover:ring-slate-500 lg:w-64"
         {...buttonProps}
       >
-        <SearchIcon className="h-5 w-5 flex-none fill-slate-400 group-hover:fill-slate-500 dark:fill-slate-500 md:group-hover:fill-slate-400" />
-        <span className="sr-only md:not-sr-only md:ml-2 md:text-slate-500 md:dark:text-slate-400">
+        <SearchIcon className="h-5 w-5 flex-none fill-lightgray group-hover:fill-primary dark:fill-darkprimary md:group-hover:fill-primary" />
+        <span className="sr-only md:not-sr-only md:ml-2 md:text-lightgray md:dark:text-slate-400">
           Search
         </span>
         {modifierKey && (
-          <kbd className="ml-auto hidden gap-x-2  font-medium text-slate-400  dark:text-slate-500 md:flex">
-            <kbd className="rounded-md border border-lightgray px-2 py-1 font-sans dark:border-slate-500">
+          <kbd className="ml-auto hidden gap-x-2 text-xs  font-medium text-lightgray  dark:text-slate-500 md:flex">
+            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-500">
               {modifierKey}
             </kbd>
-            <kbd className="rounded-md border border-lightgray px-2 py-1 font-sans dark:border-slate-500">
+            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-500">
               K
             </kbd>
           </kbd>
