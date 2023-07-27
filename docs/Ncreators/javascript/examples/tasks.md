@@ -24,12 +24,12 @@ In this article following examples are presented:
 * Running tasks in parallel (map())
 * Running tasks in parallel (forEach())
 * Defining number of providers working in parallel
-* Initializating providers
+* Initializing providers
 * Running a single task
 
 ### Running tasks in parallel using map() method
 
-If you want to run your tasks in paralel, you can use `map()` method. 
+If you want to run your tasks in parallel, you can use `map()` method. 
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -61,14 +61,14 @@ Note that result of the executor `map()` is an asynchronous iterable object with
  
 In the output logs you can see some interesting features:
 
-First provider `sharkoon_379_6` was engaged first. When he finished his first task he was apparently still the only available provider and he recevied another tasks to execute. In the meantime other providers were succesfully engaged and the next tasks were dispatched to them.
+First provider `sharkoon_379_6` was engaged first. When he finished his first task he was apparently still the only available provider and he received another tasks to execute. In the meantime other providers were successfully engaged and the next tasks were dispatched to them.
 
 Note that even if provider `sharkoon_379_8` was engaged before provider `10hx4r2_2.h`, the latter completed its task before the former. In the network different nodes offer different performance. 
 
 
 ### Running multiple tasks in parallel using forEach() method
 
-If you do not need an object to facilitate proccessing results of all the tasks, you can use another method that can also execute tasks in prallel. Even if `forEach()` method does not return object to iterate through the result, you can still access the result object for each command within task function.  
+If you do not need an object to facilitate processing results of all the tasks, you can use another method that can also execute tasks in parallel. Even if `forEach()` method does not return object to iterate through the result, you can still access the result object for each command within task function.  
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -99,7 +99,7 @@ If you would not define this param a default value of 5 will be used.
 
 Note that actual number of engaged providers might be both:
 * lower then `maxParallelTasks` (if there is not enough providers available in the network).
-* higher (if you take into account the total number of engaged providers for all the tasks in your job) - providers might get disconnected or simply fail and then executor will engage another one in order to have the numer of active workers at the level defined by `maxParallelTasks`.
+* higher (if you take into account the total number of engaged providers for all the tasks in your job) - providers might get disconnected or simply fail and then executor will engage another one in order to have the number of active workers at the level defined by `maxParallelTasks`.
 
 Here you can see how to define maximum number of providers to be engaged.
 
@@ -169,15 +169,15 @@ import { TaskExecutor } from "yajsapi";
 
 In the code we limited `maxParallelTasks` value, to make sure that some of our 5 tasks will be run on the same provider.
 
-The `beforeEach()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The task function used in `beforeEach()` method contains additional `console.log` to prove that even if the whole job consist of 5 tasks, the taks function used in `beforeEach()` will be used only once per provider. (Unless provider would disengage and be engaged again - in such situation its virtual machive would be created as new and we would upload the file again there).
+The `beforeEach()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The task function used in `beforeEach()` method contains additional `console.log` to prove that even if the whole job consist of 5 tasks, the task function used in `beforeEach()` will be used only once per provider. (Unless provider would disengage and be engaged again - in such situation its virtual machine would be created as new and we would upload the file again there).
 
-Note how we utulized `ctx` worker context to get provider name using `provider.name` property.
+Note how we utilized `ctx` worker context to get provider name using `provider.name` property.
 
 In the task function utilized in the `forEach()` method we used `beginBatch()` to chain multiple commands - you can see more about this feature in the [defining tasks](commands.md) article.
 
 ![BeforeEach](/assets/before_log.png)
 
-Log from this example shows that even if the provider `imapp1019_2.h` eventually was used to execute 3 tasks, it uplaoded the log only once. It's output file downloaded after the lasts task was execute d contained:
+Log from this example shows that even if the provider `imapp1019_2.h` eventually was used to execute 3 tasks, it uploaded the log only once. It's output file downloaded after the lasts task was execute d contained:
 
 ```
 --------------------------- 

@@ -9,7 +9,7 @@ If you prefer learning by doing you can start with our tutorials:
 
 |Tutorial name |  Content |
 |----------------------:|:----------------------------------------------:|
-|Running your computations in parallel | In this tutorial you will create an app that will split the job into multiple tasks and will run them in parallel on the Network. The job is a password recovery using hashcat utility. By doing this project you will learn how to create a custom image with your software and how to create an app runing in distributed network| 
+|Running your computations in parallel | In this tutorial you will create an app that will split the job into multiple tasks and will run them in parallel on the Network. The job is a password recovery using hashcat utility. By doing this project you will learn how to create a custom image with your software and how to create an app running in distributed network| 
 
 If you prefer exploring docs to understand the broader context first start with our Guides.
 

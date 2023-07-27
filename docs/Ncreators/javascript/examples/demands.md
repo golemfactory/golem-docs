@@ -55,7 +55,7 @@ Note: whitelist can be used during tests to ensure the tasks will be run on a pr
 ### Selecting providers based on the proposed costs
 
 Need examples using custom filter, where we take proposal and costs and decide.
-We can explain meaning of 3 values of the costs (per CPU sec?/ per environemnt / for start) and how the costs are calcualted. Ideally it would be to run a tasks and compare the costs in offer with the details (time of execution, etc - but this would be probably not possible at this stage)
+We can explain meaning of 3 values of the costs (per CPU sec?/ per environment / for start) and how the costs are calculated. Ideally it would be to run a tasks and compare the costs in offer with the details (time of execution, etc - but this would be probably not possible at this stage)
 
 + code
 + comment

@@ -38,7 +38,7 @@ and:
 
 What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re listing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](docker-containers-vs-golem-vms.md)
 
-For a GVM image to be used by providers, it needs to be published somewhere where providers can download it. The easiest way is uploading it to the Golem image repository. For instructions on how to do it, refer to:
+For a GVMI image to be used by providers, it needs to be published somewhere where providers can download it. The easiest way is uploading it to the Golem image repository. For instructions on how to do it, refer to:
 
 <a href="https://handbook.golem.network/requestor-tutorials/vm-runtime/uploading-a-golem-image" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
     <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
@@ -243,7 +243,7 @@ If the payloads could be said to describe the “what” of your app, the nodes 
 
 Services need to specify any and all ExeScript commands that must be run in order for a given service to start. Those commands comprise the content of the `init` clause. Currently, only the `run` command is supported by the `dapp-runner`.
 
-Example initialization exescript:
+Example initialization ExeScript:
 
 ```yaml
 init:

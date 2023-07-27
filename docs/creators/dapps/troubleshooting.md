@@ -14,7 +14,7 @@ Receiving this error after the `gvmkit-build <image> --push` command, means the 
 
 #### Known caveats and work-arounds
 
-There are currently a few shortcomings of our decentralized application stack and behaviors that are either not completely obvious or just different from what one might expect. Some of them are easily resolved with simple work-arounds.
+There are currently a few shortcomings of our decentralized application stack and behaviours that are either not completely obvious or just different from what one might expect. Some of them are easily resolved with simple work-arounds.
 
 Most of them are outlined in the previous article, which describes the [differences between docker containers and Golem virtual machines](docker-containers-vs-golem-vms.md).
 

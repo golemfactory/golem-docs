@@ -178,7 +178,7 @@ Run the following command after ensuring the yagna service is running and config
 
 ```node index.mjs```
 
-You have now successsfully created and used your own Golem image in a requestor script!
+You have now successfully created and used your own Golem image in a requestor script!
 
 <!-- !!! info
 

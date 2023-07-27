@@ -3,7 +3,7 @@ description: Working with results
 ---
 
 
-!!! Prerequisities	
+!!! Prerequisites	
 - yagna daemon installed and running
 
 
@@ -46,7 +46,7 @@ import { TaskExecutor } from "yajsapi";
 Note: In this example our tasks consist of single command: `node -v`. `ctx.run()` returns object that is then passed to `result` variable and printed.
 
 Index is the sequential number of a command (we have just 1 and start counting from 0),
-status of the result is "ok" == comand was normally completed and the actual results of the command are under `stdout`.
+status of the result is "ok" == command was normally completed and the actual results of the command are under `stdout`.
 
 ![result](/assets/result_log.png "Requestor script output logs")
 
@@ -127,15 +127,15 @@ each `data` chunk will contain result object in the sequence the commands where 
 ![results](/assets/batch_result_endstream_1.png "Requestor script output logs") 
 ![results](/assets/batch_result_endstream_2.png "Requestor script output logs") 
 
-??? Questtion:
+??? Question:
 Do we need to comment the result in case of using for loop?
 
       
 ####  What if your commands would fail?
   
-When your command fails the exeunit (component that is responsible for running your image on remote computer and it runs your commands there) will terminate all processes and the whole task will be terminated.
+When your command fails the ExeUnit (component that is responsible for running your image on remote computer and it runs your commands there) will terminate all processes and the whole task will be terminated.
 
-What will happen in such case depands on the `retryStrategy`. The default behaviour is to repeat the task 3 times (usually on another providers) unless the exit code of the failing command does not indicate that the reason for the failure was on a user side.
+What will happen in such case depends on the `retryStrategy`. The default behaviour is to repeat the task 3 times (usually on another providers) unless the exit code of the failing command does not indicate that the reason for the failure was on a user side.
 So depending on the exit code, executor will try to execute the task again or if in case of suspected user error it will accept that the tasks failed and report the results.
 
 Note: if you run your tasks in a for loop you need to handle yourself if you want the loop to continue in case a single task failed accordingly to your needs.
@@ -175,7 +175,7 @@ import { TaskExecutor } from "yajsapi";
 ![batch_fail](/assets/bad_result_single_log.png "Requestor script output logs")
 
 !!! error
-we had not received result object. (but error hadling is better then in alfa2)
+we had not received result object. (but error handling is better then in alfa2)
 
 And an example where a single command failed:
 

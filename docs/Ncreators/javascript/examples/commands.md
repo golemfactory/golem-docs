@@ -2,7 +2,7 @@
 description: Organising commands
 ---
 
-!!! Prerequisities	
+!!! Prerequisites	
 yagna daemon installed and running with try_golem app-key configured.
 
 
@@ -23,11 +23,11 @@ This function is asynchronous and provides access the WorkContext object that is
 
 Task function may be very simple and consist of single command of may be consist of set of steps that include running commands or sending data to and from providers. 
 
-Commands can be run in sequence or can be chained in batches. Depending on the way you deine your batch you can obtain results of different type.
+Commands can be run in sequence or can be chained in batches. Depending on the way you define your batch you can obtain results of different type.
 
 Following commands are currently available:
 
-| Command     | Available in node.js| Available in wbe browser |
+| Command     | Available in node.js| Available in web browser |
 | ----------- | :------------------:|:------------------------:| 
 | `run()` | yes | yes|
 | `uploadFile()` | yes | no |
@@ -36,7 +36,7 @@ Following commands are currently available:
 
 This article focuses on `run()` command and chaining commands using `beginBatch()` method, examples for `uploadFile()`, `uploadJSON()`, `downloadFile()` commands are in [sending data](data.md) article.
 
-We will start with simple example with single `run()` and then will focus on organising more complex task that requires a serie of steps:
+We will start with simple example with single `run()` and then will focus on organising more complex task that requires a series of steps:
 
 * send a `worker.js` script to provider (this is a simple script that prints "Good morning Golem!" on the console), 
 * run the `worker.js` on a provider and save output to a file (output.txt) and finally
@@ -64,12 +64,12 @@ const result = await executor.run(
 
 ```
 
-Note `ctx.run()` accepts a string as argument and the string is a command invocation exectly the same way one would do in on the console. The command will be run in the folder defined by `WORKDIR` entry in your image. 
+Note `ctx.run()` accepts a string as argument and the string is a command invocation exactly the same way one would do in on the console. The command will be run in the folder defined by `WORKDIR` entry in your image. 
 
 
-### Runing multiple commands (prosaic way)
+### Running multiple commands (prosaic way)
 
-Yuor task function can consist of multiple steps, all run on `ctx` context.
+Your task function can consist of multiple steps, all run on `ctx` context.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -148,9 +148,9 @@ import { TaskExecutor } from "yajsapi";
 ```
 
 Note: all commands after `.beginBatch()` are run in a sequence.
-The chain is terminated with `.end()`. The output is a Promise of array of result obejcts. They are stored at index according to their position in the command chain (first command after `beginBatch()` has index 0).
+The chain is terminated with `.end()`. The output is a Promise of array of result objects. They are stored at index according to their position in the command chain (first command after `beginBatch()` has index 0).
 
-The output of the 3rd command `run('cat /golem/input/output.txt')` is undex index of 2.
+The output of the 3rd command `run('cat /golem/input/output.txt')` is under index of 2.
 
 ![Commands batch end](/assets/batch_end_log.png "Requestor script output logs")
 

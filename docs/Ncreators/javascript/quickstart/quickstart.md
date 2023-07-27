@@ -20,7 +20,7 @@ It will take just a few minutes to create and run a script that will request tha
 
 ## Installing and running yagna 
 
-Yagna is a deamon that will let you communicate with Golem Network and perform operations on it. Let's install it.
+Yagna is a daemon that will let you communicate with Golem Network and perform operations on it. Let's install it.
 
 #### Install yagna
 
@@ -61,7 +61,7 @@ Yagna is a deamon that will let you communicate with Golem Network and perform o
 
 #### Start the daemon
 
-Open a terminal (commandline window) and  define the key to identify your application script:
+Open a terminal (command line window) and  define the key to identify your application script:
 
 === "MacOS / Linux"
 
@@ -77,7 +77,7 @@ Open a terminal (commandline window) and  define the key to identify your applic
     set YAGNA_AUTOCONF_APPKEY=try_golem
     ```
 
-Then start the deamon:
+Then start the daemon:
 
 ```bash
 yagna service run
@@ -139,7 +139,7 @@ import { TaskExecutor } from "yajsapi";
     You can find detailed explanation of the above code here: [here](../tutorials/quickstart_explained.md)
 
 
-## Runing the script on Golem Network
+## Running the script on Golem Network
 
 Simply run the command:
 
@@ -162,7 +162,7 @@ You can do much more. There are some of the next steps to explore Golem Network 
 
 test
 
-* [Quickstart Explained](../tutorials/quickstart_explained.md)
+* [QuickStart Explained](../tutorials/quickstart_explained.md)
 * [Simple introduction to Golem Network and Task Model](../guides/task-model.md)
 * [Parallel processing tutorial](../tutorials/parallel_processing.md)
 

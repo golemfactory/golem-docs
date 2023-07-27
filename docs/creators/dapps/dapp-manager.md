@@ -70,7 +70,7 @@ python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapp-manager
 %HOMEDRIVE%%HOMEPATH%\.envs\dapp-manager\Scripts\activate.bat
 ```
 
-### DApp manager
+### dApp manager
 
 Install `dapp-manager` with a simple:
 

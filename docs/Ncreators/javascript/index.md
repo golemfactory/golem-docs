@@ -6,13 +6,13 @@ description: Create your own task application on Golem
 
 ## Introduction
 
-Welcom to the docs page for Golem JS SDK. 
+Welcome to the docs page for Golem JS SDK. 
 
 We provide you with yajsapi library that will enable you to interact with Golem Network. Your js scripts can be run in node.js and web browser.
 
-We also provide you with documentation package that will help you to quickly understand and use Golem Network as well as neccesary tools.
+We also provide you with documentation package that will help you to quickly understand and use Golem Network as well as necessary tools.
 
-If you would like to start with something quick and simple - select one of our [quickstarts](quickstart/index.md). They contain instructions that shows how to run our apps quickly. 
+If you would like to start with something quick and simple - select one of our [QuickStarts](quickstart/index.md). They contain instructions that shows how to run our apps quickly. 
 
 Next you can learn in the way that suits your style and preference: 
 

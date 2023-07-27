@@ -22,7 +22,7 @@ Script will use Task API provided by yajsapi lib, so let’s get familiar with t
 
 ## Task model
 
-You can use the Golem Network resoruce to do a Job. A simplest Job is just a single task that you want to execute on the remote computer. In fact to take full advantage of the network you should split your Job into many Tasks.
+You can use the Golem Network resource to do a Job. A simplest Job is just a single task that you want to execute on the remote computer. In fact to take full advantage of the network you should split your Job into many Tasks.
 	
 A single task will be run on a single provider. If you can divide your Job into many smaller independent fragments - they will be processed in parallel on multiple providers. The Task API will spawn them on available providers for you.
 
@@ -80,7 +80,7 @@ It also defines how the potential failures on provider side will be handled by t
 
 User can define minimal requirements for the provider's system (like memory, storage, CPU Threds, CPU cores) via initial parameters provided to the `TaskExecutor.create()` method.
 
-`yajsapi` provides the user with a number of build-in filters that can be used to selectt better providers. User can also define his own filter where he can i.e. select provider on the basis of user defined criteria.
+`yajsapi` provides the user with a number of build-in filters that can be used to select better providers. User can also define his own filter where he can i.e. select provider on the basis of user defined criteria.
 
 
 You can explore our [tutorials] to see how to use these features effectively.

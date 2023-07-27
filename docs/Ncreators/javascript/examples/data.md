@@ -6,7 +6,7 @@ In this article we will present methods that let you send files to and from prov
 
 !!! Note: at this moment sending files and JSON methods are available only in scripts that are run in node.js. 
 
-!!! Prerequisities	
+!!! Prerequisites	
 - yagna daemon installed and running
 
 
@@ -20,7 +20,7 @@ npm init
 npm i yajsapi
 ```
 
-### Uplaod file to provider
+### Upload file to provider
 
 In this example we calculate `md5` of the example script `worker.mjs`, send it to remote computer and
 calculate the `md5` of the file in remote location. At the end we print both values for comparison.
@@ -66,7 +66,7 @@ const hash = createHash('md5').update(buff).digest('hex');
 
 ### Download file from provider
 
-In this exampls we create a file on remote computer, list its content to result object and finally download it to compare its content with the result obtained remotely.
+In this example we create a file on remote computer, list its content to result object and finally download it to compare its content with the result obtained remotely.
 
 
 ```js
