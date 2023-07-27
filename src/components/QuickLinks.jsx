@@ -20,22 +20,22 @@ export function QuickLink({
 }) {
   return (
     <div
-      className={`not-prose group relative flex h-full flex-col justify-between rounded-xl border border-slate-200 dark:border-slate-800 ${
+      className={`not-prose group relative flex h-full flex-col justify-between rounded-xl border border-lightbluedarker dark:border-slate-800 ${
         disabled
           ? ' bg-gray-50 dark:bg-gray-800/30'
-          : 'bg-secondary dark:bg-gray-800'
+          : 'bg-lightblue dark:bg-darkcontent'
       }`}
     >
       <div className="relative grid gap-y-4 overflow-hidden p-6">
         <Icon icon={icon} className="h-full w-full" />
         <h2
           className={`font-display text-xl font-semibold 
-        ${disabled ? ' text-gray-500' : 'text-slate-900 dark:text-white'}
+        ${disabled ? ' text-gray-500' : 'text-dark dark:text-white'}
         `}
         >
           {title}
         </h2>
-        <p className="max-h-[12em] overflow-hidden  text-sm text-slate-700 dark:text-slate-400">
+        <p className="max-h-[12em] overflow-hidden  text-sm text-normalgray dark:text-slate-400">
           {description}
         </p>
       </div>
@@ -50,7 +50,7 @@ export function QuickLink({
         ) : (
           <Link
             href={href}
-            className="not-prose cursor-pointer rounded bg-primary px-4 py-2 text-sm text-white hover:bg-primary/80"
+            className="not-prose cursor-pointer rounded bg-primary px-4 py-2 text-sm text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
           >
             {buttonText}
           </Link>

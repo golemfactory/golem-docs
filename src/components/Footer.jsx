@@ -47,17 +47,20 @@ export const Footer = () => {
                 className="text-gray-400 hover:text-gray-500"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
+                <item.icon
+                  className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-50"
+                  aria-hidden="true"
+                />
               </a>
             ))}
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
-            <GolemIcon className="-ml-4 h-12 fill-primary text-primary" />
+            <GolemIcon className="-ml-4 h-12 fill-primary text-primary dark:fill-darkprimary dark:text-darkprimary" />
           </div>
         </div>
       </div>
       <div className=" mx-auto mb-2 max-w-7xl border-t text-center dark:border-t-gray-800">
-        <span className="my-4 block text-sm text-gray-500">
+        <span className="my-4 block text-sm text-normalgray dark:text-white dark:opacity-50">
           Copyright © 2023 Golem Factory GmbH
         </span>
       </div>

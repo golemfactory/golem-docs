@@ -51,9 +51,7 @@ function Header({ navigation }) {
     <header
       className={clsx(
         'sticky top-0 z-50   bg-secondary px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8',
-        isScrolled
-          ? 'dark:bg-slate-900/10 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/10'
-          : 'dark:bg-transparent'
+        isScrolled ? 'dark:bg-darkbg ' : 'dark:bg-transparent'
       )}
     >
       <div className="relative mx-auto  flex max-w-8xl sm:px-2 lg:px-8 xl:px-12">
@@ -67,15 +65,17 @@ function Header({ navigation }) {
           </Link>
 
           <div className="ml-4 hidden gap-x-6 lg:flex">
-            <a href="/" className="text-sm text-primary dark:text-white">
+            <a href="/" className="text-sm text-primary dark:text-lightergray">
               Home
             </a>
 
-            <span className="text-sm text-primary dark:text-white">
+            <span className="text-sm text-primary dark:text-lightergray">
               Quickstart
             </span>
-            <span className="text-sm text-primary dark:text-white">Create</span>
-            <span className="text-sm text-primary dark:text-white">
+            <span className="text-sm text-primary dark:text-lightergray">
+              Create
+            </span>
+            <span className="text-sm text-primary dark:text-lightergray">
               Share and earn
             </span>
           </div>
@@ -89,10 +89,12 @@ function Header({ navigation }) {
             className="group hidden items-center gap-x-4 lg:flex"
             aria-label="GitHub"
           >
-            <GitIcon className=" h-6 w-6 fill-black group-hover:fill-slate-500 dark:fill-white dark:group-hover:fill-slate-300" />
+            <GitIcon className=" h-6 w-6 fill-black group-hover:fill-slate-500 dark:fill-white dark:opacity-50 dark:group-hover:fill-slate-300" />
             <div className="">
-              <p className="text-sm font-medium dark:text-white">Github</p>
-              <div className="grid grid-cols-2 gap-x-4">
+              <p className="text-sm font-medium dark:text-white dark:opacity-50">
+                Github
+              </p>
+              <div className="grid grid-cols-2 gap-x-4 dark:opacity-50">
                 <span className="flex items-center text-sm  dark:text-white lg:text-xs">
                   <StarIcon className="mr-1 h-4 w-4 fill-black dark:fill-white dark:text-white" />{' '}
                   {githubInfo.stargazersCount}
