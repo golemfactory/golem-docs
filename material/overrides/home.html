@@ -4,124 +4,74 @@
 {% block tabs %}
 {{ super() }}
 
-<section class="tx-container-3">
-    <div class="md-grid md-typeset">
-        <div class="tx-hero try-out">
-
-            <div class="tx-hero__content_small">
-                <br>
-                <h1 id="try-out-dapps">Golem developer <br> resources</h1><br>
-
-                            <p> A creators manual for Golem</p>
-	                    <p> For Developers. By developers. </p>
-               
-		<div style="flex-direction: row">
-		 <a
-                        href="/creators/javascript/"
-                        title="{{ page.next_page.title | e }}"
-                        class="md-button md-button"
-                >
-                    JS docs
-                </a>
-		 <a
-                        href="/creators/python/"
-                        title="{{ page.next_page.title | e }}"
-                        class="md-button md-button"
-                >
-                    Py docs
-                </a>
-
-		</div>
-            </div>
-	    <div class="tx-hero__content_small">
-		
-	    </div>
-        </div>
-    </div>
-</section>
-
-
-
 <!-- 1st Section -->
 <section class="tx-container">
-   
+    <div class="tx-banner"><p>
+                    This documentation <strong>contains a documentation for new features available in the SDK</strong>, if you'd
+                    like <strong>to view the official documentation, please <a href="https://handbook.golem.network/">follow this link</a></strong></p></div>
     <div class="md-grid md-typeset">
         <div class="tx-hero">
 
             <!-- Hero content -->
             <div class="tx-hero__content">
-                <h1 style="text-align:left" id="sdk-preview-docs">How do you want to start?</h1>
-
+                <h1  id="sdk-preview-docs">Discover the new Golem Docs!</h1>
+                <p>
+                    The Golem Network is a flexible and open-source platform that harnesses the power of
+                    decentralization for accessing and sharing computational resources.
+                </p>
                 <div class="hero-cards">
                     <div class="hero-card">
-			 <h1 id="what-is-golem">Quick start</h1>
-
-			<div>
-				<p>
-				Follow this tutorial to build & run example app in the Golem Network in less than 10 minutes
-				</p>
-
-				<br>	
-				<br>	
-			</div>
-
+                        <div class="hero-card-features">
+                            <span>☑️ <strong>Schedule computations with JS/Python API</strong></span>
+                            <span>☑️ <strong>Offload your system</strong></span>
+                            <span>☑️ <strong>Run your Docker application on distributed infrastructure</strong></span>
+                        </div>
                         <div class="hero-card-cta">
                             <a
-                                href="/creators/javascript/quickstart/"
+                                href="{{ page.next_page.url | url }}"
+                                title="{{ page.next_page.title | e }}"
                                 class="md-button md-button--primary"
                                 style="width: 100%; text-align: center; margin: 0"
                             >
-                               Try Golem
+                                Create app on Golem
                             </a>
-                        </div>	
+                        </div>
                     </div>
- <div class="hero-card">
-			 <h1 id="what-is-golem">Create on Golem</h1>
-
-			<div>
-				<p>
-				Begin adventure with decentralized computations with comprehensive tutorials and guides. 
-				</p>
-
-				<br>	
-				<br>	
-			</div>
-
+                    <div class="hero-card">
+                        <div class="hero-card-features">
+                            <span>☑️ <strong>Sell your computer resources</strong></span>
+                            <span>☑️ <strong>Sandboxed with VMs</strong></span>
+                            <span>☑️ <strong>You set the price</strong></span>
+                        </div>
                         <div class="hero-card-cta">
                             <a
-                                href="/Ncreators/"
+                                href="https://handbook.golem.network/provider-tutorials/provider-tutorial"
+                                title="{{ lang.t('source.link.title') }}"
                                 class="md-button md-button--primary"
                                 style="width: 100%; text-align: center; margin: 0"
                             >
-                               Start building your apps
+                                Earn by sharing resources
                             </a>
-                        </div>	
+                        </div>
                     </div>
- <div class="hero-card">
-			 <h1 id="what-is-golem">Share and earn</h1>
-
-			<div>
-				<p>
-				Support the open-source movement and earn crypto by sharing your computer resources with the Golem Network.
-				</p>
-
-				<br>	
-
-			</div>
-
+                    <div class="hero-card">
+                        <div class="hero-card-features">
+                            <span>☑️ <strong>Community founded (ICO)</strong></span>
+                            <span>☑️ <strong>Open-source</strong></span>
+                            <span>☑️ <strong>Over 7000 active members</strong></span>
+                        </div>
                         <div class="hero-card-cta">
                             <a
-                                href="/providers/install"
+                                href="https://chat.golem.network"
                                 class="md-button md-button--primary"
                                 style="width: 100%; text-align: center; margin: 0"
                             >
-                               Join the golem network
+                                Join us on Golem Discord!
                             </a>
-                        </div>	
+                        </div>
                     </div>
-            
-
-		</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
