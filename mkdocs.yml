@@ -41,6 +41,7 @@ nav:
             - 'Converting Docker image to Golem format': 'Ncreators/javascript/examples/tools/converting-an-image.md'
             - 'Gvmkit_build installation (image conversion tool)': 'Ncreators/javascript/examples/tools/installing-gvmkit-build.md'
             - 'Publishing custom images': 'Ncreators/javascript/examples/tools/publishing.md'
+            - 'Using Golem images': 'Ncreators/javascript/examples/tools/using-golem-image.md' 
           - 'API Reference': 
             - 'Ncreators/javascript/docs/index.md'      
       - 'Decentralized apps on Golem':
