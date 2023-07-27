@@ -1,0 +1,49 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+Golem
+dApps
+runtimes
+WASM
+GVMI
+golemfactory
+requestor
+YAML
+DB
+startup
+dApp
+Yagna
+dapp-manager
+github
+ExeScripts
+yagna
+config
+dapp
+Dockerfile
+requestors
+GLM
+Errno
+Init
+localhost
+websocket
+CORS
+macOS
+npm
+gvmkit-build
+gvmi
+npx
+pipx
+QuickStart
+TaskExecutor
+WORKDIR
+debian
+ - docs/creators/dapps/index.md
+RQLite
+ - docs/creators/dapps/run-a-dapp.md
+PyPi
+ - docs/creators/gvmi/examples/converting-an-image.md
+golem-icon
+ - docs/creators/gvmi/tutorial/tutorial.md
+index.mjs
