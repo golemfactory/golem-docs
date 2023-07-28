@@ -45,7 +45,7 @@ Yagna is a daemon that will let you communicate with Golem Network and perform o
     Alternatively, if you can't install in easy way, you will do it manually in the following way:
     
     1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
-    2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries in to your PATH.
+    2. Unpack `yagna` and `gftp` binaries and put them somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries into your PATH.
 
     Note: the link will lead you to latest stable release, you can go to [https://github.com/golemfactory/yagna/releases](https://github.com/golemfactory/yagna/releases) and select other version if you want to explore preview features.
 

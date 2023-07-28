@@ -13,10 +13,10 @@ nav:
       - 'Ncreators/index.md' 
       - JavaScript:
           - 'Ncreators/javascript/index.md'
-          - 'QuickStart': 
+          - 'QuickStarts': 
             - 'Ncreators/javascript/quickstart/index.md'
-            - 'Golem JS Quickstart': 'Ncreators/javascript/quickstart/quickstart.md'
-            - 'Golem in browser Quickstart': 'Ncreators/javascript/quickstart/web_browser_qs.md'
+            - 'Golem in Node.js': 'Ncreators/javascript/quickstart/quickstart.md'
+            - 'Golem in browser': 'Ncreators/javascript/quickstart/web_browser_qs.md'
           - 'Tutorials': 
             - 'Ncreators/javascript/tutorials/index.md'
             - 'QuickStart Explained': 'Ncreators/javascript/tutorials/quickstart_explained.md'

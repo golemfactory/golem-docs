@@ -133,14 +133,12 @@ Do we need to comment the result in case of using for loop?
       
 ####  What if your commands would fail?
   
-When your command fails the ExeUnit (component that is responsible for running your image on remote computer and it runs your commands there) will terminate all processes and the whole task will be terminated.
+When your command fails the ExeUnit (component that is responsible for running your image on remote computer and it runs your commands there) will stop all remote processes and the whole task will be terminated.
 
-What will happen in such case depends on the `retryStrategy`. The default behaviour is to repeat the task 3 times (usually on another providers) unless the exit code of the failing command does not indicate that the reason for the failure was on a user side.
-So depending on the exit code, executor will try to execute the task again or if in case of suspected user error it will accept that the tasks failed and report the results.
+What will happen in such case depends on the way your task is composed. Let's see it in examples.
 
-Note: if you run your tasks in a for loop you need to handle yourself if you want the loop to continue in case a single task failed accordingly to your needs.
-
-Below you have example showing `retryStrategy` usage for a task that consists of several commands chained into a batch, (actual strategy code in example shows default behaviour, but you can modify it by providing your own implementation).
+In the below case, user's commands are chained in a batch. An error occures when user tries to download `output.txt` file from `/golem/output/` folder while the file was created in `golem/input` folder.
+This command with raise an error and the whole task will be stoped. Next command (listing the content of `/golem/` folder) will not be executed at all.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -149,7 +147,6 @@ import { TaskExecutor } from "yajsapi";
   const executor = await TaskExecutor.create({
     package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
     yagnaOptions: { apiKey: 'try_golem' }
-    retryStrategy: () => {/* to be implemented */}
   });
 
 
@@ -158,8 +155,8 @@ import { TaskExecutor } from "yajsapi";
      const res = await ctx
        .beginBatch()
        .run('cat /golem/input/output.txt > /golem/input/output.txt')
-       .downloadFile("/golem/output/output.txt", "./output.txt")
-       .run("ls -l /golem/")  // result for this command will not be returned
+       .downloadFile("/golem/output/output.txt", "./output.txt") // there is no such file in output folder
+       .run("ls -l /golem/") 
        .end()
        .catch((error) => console.error(error));
 
@@ -174,10 +171,13 @@ import { TaskExecutor } from "yajsapi";
 ```
 ![batch_fail](/assets/bad_result_single_log.png "Requestor script output logs")
 
-!!! error
-we had not received result object. (but error handling is better then in alfa2)
+Note 1: while user will receive the error message, the output is only for the failing command not for all commands in the task. 
 
-And an example where a single command failed:
+The level detail of the message depends on the type of methods that cases the error.
+
+In case of data transfer method you will receive message describing the cause of the error.
+
+Let's see enother exemple:
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -201,9 +201,18 @@ import { TaskExecutor } from "yajsapi";
 
 ```
 
-Note: if your command would fail
 ![single_fail](/assets/bad_result_log_1.png "Requestor script output logs")
 ![single_fail](/assets/bad_result_log_2.png "Requestor script output logs")
 
-!!! error
-Note that now in case of result in single run, we have error after 3 retrials. This is to be corrected.
+Note we have no `catch()` inside task function this time, therefore TaskExecutor retries the task on 3 other providers before terminating the whole Job. 
+
+In case of the failure in `run()` method we receive the exit code of the command that failed.
+So in case of `node -w` as the node command runs but returns the error user received exit code 9, that is node exit code that means:
+
+"Exit Code 9, Invalid Argument: This is employed when an unspecified option was given or when a value-required option was given without one.."
+
+In case the shell could not run the command, user would recevie the exit code 127 from linux shell. 
+
+Final note: if you run your tasks using `map()` or `forEach` methods TaskExecutor will stop the whole Job and will not continue after failure of any Task.
+
+
