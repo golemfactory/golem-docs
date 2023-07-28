@@ -35,6 +35,7 @@ nav:
             - 'Ncreators/javascript/guides/index.md'
             - 'Task Model ': 'Ncreators/javascript/guides/task-model.md'
             - 'Golem images': 'Ncreators/javascript/guides/golem-images-explained.md'
+            - 'Troubleshooting' : 'Ncreators/javascript/guides/what-if-i-encounter-an-error.md'
           - 'Golem tools examples':
             - 'Ncreators/javascript/examples/tools/index.md'
             - 'Yagna installation for requestors': 'Ncreators/javascript/examples/tools/install_yagna.md'
