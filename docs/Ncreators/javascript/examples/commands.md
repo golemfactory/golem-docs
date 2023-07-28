@@ -187,7 +187,7 @@ import { TaskExecutor } from "yajsapi";
 ```
 
 
-Note that in this case, the chain is ended with ` .endStream()`, and then we read data chunks from ReadableStream, denoted as `res`. 
+Note that in this case, as the chain is ended with ` .endStream()`, we can read data chunks from ReadableStream, denoted as `res`. 
 
 Once the stream is closed, we can terminate our TaskExecutor instance.
 
