@@ -28,6 +28,8 @@ const tags = {
     attributes: {
       href: { type: String },
       title: { type: String },
+      icon: { type: String },
+      hideunion: { type: Boolean },
     },
   },
 

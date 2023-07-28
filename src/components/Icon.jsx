@@ -10,6 +10,8 @@ import { WarningIcon } from '@/components/icons/WarningIcon'
 import { FlashIcon } from '@/components/icons/FlashIcon'
 import { SoftwareResource } from './icons/SoftwareResource'
 import { KnowledgeCatalog } from './icons/KnowledgeCatalog'
+import { DiscordIconBlue } from './icons/DiscordIconBlue'
+import { GithubIcon } from './icons/GithubIcon'
 
 const icons = {
   installation: InstallationIcon,
@@ -21,53 +23,13 @@ const icons = {
   flash: FlashIcon,
   software: SoftwareResource,
   knowledge: KnowledgeCatalog,
+  discord: DiscordIconBlue,
+  github: GithubIcon,
 }
 
-const iconStyles = {
-  blue: '[--icon-foreground:theme(colors.slate.900)] [--icon-background:theme(colors.white)]',
-  amber:
-    '[--icon-foreground:theme(colors.amber.900)] [--icon-background:theme(colors.amber.100)]',
-}
-
-export function Icon({ color = 'blue', icon, className, ...props }) {
+export function Icon({ icon, ...props }) {
   let id = useId()
   let IconComponent = icons[icon]
 
-  return <IconComponent id={id} color={color} />
-}
-
-const gradients = {
-  blue: [
-    { stopColor: '#0EA5E9' },
-    { stopColor: '#22D3EE', offset: '.527' },
-    { stopColor: '#818CF8', offset: 1 },
-  ],
-  amber: [
-    { stopColor: '#FDE68A', offset: '.08' },
-    { stopColor: '#F59E0B', offset: '.837' },
-  ],
-}
-
-export function Gradient({ color = 'blue', ...props }) {
-  return (
-    <radialGradient
-      cx={0}
-      cy={0}
-      r={1}
-      gradientUnits="userSpaceOnUse"
-      {...props}
-    >
-      {gradients[color].map((stop, stopIndex) => (
-        <stop key={stopIndex} {...stop} />
-      ))}
-    </radialGradient>
-  )
-}
-
-export function LightMode({ className, ...props }) {
-  return <g className={clsx('dark:hidden', className)} {...props} />
-}
-
-export function DarkMode({ className, ...props }) {
-  return <g className={clsx('hidden dark:inline', className)} {...props} />
+  return <IconComponent id={id} {...props} />
 }
