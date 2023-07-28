@@ -1,12 +1,12 @@
 import { Callout } from '@/components/Callout'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 import { CTA } from '@/components/CTA'
-import { Information } from '../components/Information'
+import { Alert } from '../components/Alert'
 import { Whitespace } from '@/components/Whitespace'
 import { Tabs } from '@/components/Tabs'
 import { Tab } from '@/components/Tab'
 import { Tag } from '@markdoc/markdoc'
-
+import { Accordion } from '@/components/Accordion'
 import { Link } from '@/components/Link'
 
 const tags = {
@@ -20,6 +20,12 @@ const tags = {
         .map((tab) => (typeof tab === 'object' ? tab.attributes.label : null))
 
       return new Tag(this.render, { labels }, node.transformChildren(config))
+    },
+  },
+  accordion: {
+    render: Accordion,
+    attributes: {
+      title: { type: String },
     },
   },
   link: {
@@ -94,8 +100,8 @@ const tags = {
       href: { type: String },
     },
   },
-  information: {
-    render: Information,
+  alert: {
+    render: Alert,
     selfClosing: true,
     attributes: {
       level: { type: String },

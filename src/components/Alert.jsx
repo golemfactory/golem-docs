@@ -3,7 +3,7 @@ import { InfoIcon } from './icons/InfoIcon'
 import { SuccessIcon } from './icons/SuccessIcon'
 import { WarningIcon } from './icons/WarningIcon'
 
-export function Information({ children, level }) {
+export function Alert({ children, level }) {
   return (
     <div
       className={`rounded-md border  text-xs my-6 
@@ -19,7 +19,7 @@ export function Information({ children, level }) {
       ${level === 'warning' ? '  bg-warning' : ''}
       ${level === 'success' ? '  bg-success' : ''}
       ${level === 'danger' ? ' border-red-300 bg-red-100' : ''}
-       py-2`}
+       py-3`}
       >
         <span className="flex items-center px-4 font-semibold capitalize dark:text-white dark:opacity-50">
           {level === 'info' && (

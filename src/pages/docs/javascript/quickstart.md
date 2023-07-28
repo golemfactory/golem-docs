@@ -3,6 +3,12 @@ title: Javascript SDK Quickstart
 description: Create your own JavaScript application on Golem
 ---
 
+{% accordion title="Next steps" %}
+
+# test jeg ved ikkeee
+
+{% /accordion %}
+
 In this article, we'll show you how to launch your first JavaScript app on Golem Network from scratch in 15 minutes. We have divided the entire article into 4 sections:
 
 - [Preparing the environment](quickstart.md#preparing-the-environment)
@@ -12,19 +18,18 @@ In this article, we'll show you how to launch your first JavaScript app on Golem
 
 The purpose of this article is not to get into the details, but to show you **how to start working with Golem step by step in minutes**.
 
-
-{% information level="info" %}
+{% alert level="info" %}
 **Skipping ahead**
 
 - If you have a development environment already configured with the prerequisite requirements, you can go ahead and [skip the first section](quickstart.md#installing-yagna-requestor) and move on from the next one.
 
 - If you have already installed the yagna daemon and configured the requestor correctly, [go straight to the third section](quickstart.md#building-your-first-javascript-app-on-golem-network).
 
-{% /information %}
+{% /alert %}
 
 ## Preparing the environment
 
-{% information level="info" %}
+{% alert level="info" %}
 **Prerequisites**
 
 - OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
@@ -33,7 +38,7 @@ The purpose of this article is not to get into the details, but to show you **ho
 - Install [Yarn](https://classic.yarnpkg.com/en/docs/install) version 1.22.3 or newer
 - Install [Git](https://git-scm.com/downloads)
 
-{% /information %}
+{% /alert %}
 
 In this section we will introduce how to run a Simple Node Application on Golem Network. The created project will be using a build setup based on pre-built image ([Golem Image](https://handbook.golem.network/requestor-tutorials/vm-runtime)) and allow us to run our Node.js script on a rented computer on Golem ([Provider](https://handbook.golem.network/introduction/provider)).
 
@@ -92,9 +97,9 @@ Alternatively, if you can't install in easy way, you will do it manually in the 
 
 {% /tabs %}
 
-{% information level="warning" %}
+{% alert level="warning" %}
 On Windows, only the manual installation is supported.
-{% /information %}
+{% /alert %}
 
 Verify if `yagna` available in command line:
 
@@ -114,10 +119,10 @@ It should output: `gftp 0.12.0 (37060503 2022-12-02 build #251)`
 
 If the above commands executed correctly, congratulations you have just installed the `yagna` daemon in your environment. If not, a common fix is to simply close and re-open your terminal since the PATH may not be updated in that session.
 
-{% information level="info" %}
+{% alert level="info" %}
 
 If you have encountered problems, or would you like to learn more details about the requestor and `yagna` installation, please take a look in here: [How to install requestor tutorial](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
-{% /information %}
+{% /alert %}
 
 ### Configure requestor and fund your wallet
 
@@ -131,17 +136,17 @@ To perform any operations on the Golem Network the `yagna` daemon must be runnin
 yagna service run
 ```
 
-{% information level="warning" %}
+{% alert level="warning" %}
 
 Important: After you launch the daemon, leave it running in the background while you proceed with the tutorial.
 
-{% /information %}
+{% /alert %}
 
-{% information level="info" %}
+{% alert level="info" %}
 
 If you have encountered problems please take look on [Run the daemon](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/#run-the-daemon) section
 
-{% /information %}
+{% /alert %}
 
 #### Generate the app key
 
@@ -153,14 +158,14 @@ yagna app-key create requestor
 
 **Please, note the key down**
 
-{% information level="info" %}
+{% alert level="info" %}
 **Saving and using the key**
 
 The key created should ideally be noted down and be easily accessible as you will need it later.
 
 However, don't worry if you forgot to do it as the key can be retrieved again by running `yagna app-key list`.
 
-{% /information %}
+{% /alert %}
 
 #### Get some funds
 
@@ -176,10 +181,10 @@ Once you run the command, give some time to transfer credits to your wallet. You
 yagna payment status
 ```
 
-{% information level="info" %}
+{% alert level="info" %}
 
 If you have encountered problems, or would you like to learn more details about the funding process, please take a look in here: [How to get some GLM tokens](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/#get-some-test-glm-tokens)
-{% /information %}
+{% /alert %}
 
 #### Init yagna daemon as a sender
 
@@ -237,11 +242,11 @@ const executor = await TaskExecutor.create(
 )
 ```
 
-{% information level="info" %}
+{% alert level="info" %}
 
 For the testing purposes we are providing pre-built image with Node.js already installed: `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4`
 
-{% /information %}
+{% /alert %}
 
 #### Define task to run on provider instance
 
@@ -336,10 +341,10 @@ set YAGNA_APPKEY=your-32-char-app-key
 
 {% /tabs %}
 
-{% information level="info" %}
+{% alert level="info" %}
 
 If you don't remember your key you can always check it by typing in the command line: `yagna app-key list`
-{% /information %}
+{% /alert %}
 
 #### Run your first app on Golem Network
 

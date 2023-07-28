@@ -8,11 +8,11 @@ description: Create your own task application on Golem
 This tutorial is designed for developers who want to create their own application on the Golem network.
 It will guide you through the process of creating a task-based requestor application using the Task API, and provide you with examples to help you understand the concepts better.
 
-{% information level="info" %}
+{% alert level="info" %}
 
 If you have any questions or run into any issues while following this tutorial, please don't hesitate to reach out to us on our [Discord channel](https://chat.golem.network/) for help.
 
-{% /information %}
+{% /alert %}
 
 To make the tutorial easier to follow, it has been divided into several sections. In the first section, we will provide a general introduction to developing applications on the Golem network, and explain the task model that is used in Golem applications.
 

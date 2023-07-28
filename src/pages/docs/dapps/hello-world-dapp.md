@@ -16,9 +16,9 @@ This step-by-step tutorial will be easier for you to follow if you previously ha
 
 ## Prerequisites
 
-{% information level="info" %}
+{% alert level="info" %}
 To follow this tutorial in full, you need to have Docker installed on your machine. If you don't have it installed, please refer to [instructions on Docker's website](https://docs.docker.com/get-docker/).
-{% /information %}
+{% /alert %}
 
 ## Choice of tools
 
@@ -50,7 +50,7 @@ source ~/.envs/hello-dapps/bin/activate
 pip install -U pip poetry
 ```
 
-{% information level="warning" %}
+{% alert level="warning" %}
 
     On Windows, the above needs to be replaced with:
 
@@ -59,7 +59,7 @@ pip install -U pip poetry
     %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps\Scripts\activate.bat
     ```
 
-{% /information %}
+{% /alert %}
 
 ### Initialize the project
 
@@ -69,7 +69,7 @@ cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```
 
-{% information level="warning" %}
+{% alert level="warning" %}
 
 Again, on Windows:
 
@@ -79,7 +79,7 @@ cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```
 
-{% /information %}
+{% /alert %}
 
 ### Add the requirements
 
@@ -93,7 +93,7 @@ There, we're ready to start coding our app.
 
 ## Hello world app
 
-{% information level="info" %}
+{% alert level="info" %}
 
 If you're lost in any moment, feel free to consult our source of the "Hello World" application available at: [https://github.com/golemfactory/dapp-experiments/tree/main/05_hello_world](https://github.com/golemfactory/dapp-experiments/tree/main/05_hello_world)
 
@@ -104,7 +104,7 @@ git clone https://github.com/golemfactory/dapp-experiments.git
 cd dapp-experiments/05_hello_world
 ```
 
-{% /information %}
+{% /alert %}
 
 Fire up your favourite editor or IDE navigate to the `hello_golem/server_app` directory that we have set up above.
 
@@ -128,16 +128,16 @@ The above code achieves the following:
 3. set up the root route for the app
 4. launch the Flask server
 
-{% information level="info" %}
+{% alert level="info" %}
 
 You may wish to customize the "Hello..." message up there, so as to make your application (and, more importantly, its VM image) unique. Our repository is set up to reject repeated uploads of images with matching signatures so, if you encounter an issue while uploading your application later in this tutorial, just please use the hash that we'll provide you there.
 
-{% /information %}
+{% /alert %}
 
-{% information level="warning" %}
+{% alert level="warning" %}
 
 For local testing, we could have gotten away with just `app.run()`. That makes the server listen on the local host address (`127.0.0.1`) by default. We need it to bind to all addresses so that it can later work correctly in Golem.
-{% /information %}
+{% /alert %}
 
 ## Local test
 
@@ -349,11 +349,12 @@ First, let's make sure that you have your yagna daemon up and running and if not
 yagna service run
 ```
 
-{% information level="info" %}
+{% alert level="info" %}
 
 If you haven't set-up your yagna daemon before, please refer to our [quick start guide](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development).
 
-{% /information %}
+{% /alert %}
+
 ### Obtain the application key
 
 Please, run:
@@ -376,14 +377,16 @@ and copy the value output by this command.
 export YAGNA_APPKEY=<your key>
 ```
 
-{% information level="warning" %}
+{% alert level="warning" %}
 
 On Windows, you'll need to use:
 
 ```
 set YAGNA_APPKEY=<your key>
 ```
-{% /information %}
+
+{% /alert %}
+
 ### Install the `dapp-runner`
 
 ```shell
