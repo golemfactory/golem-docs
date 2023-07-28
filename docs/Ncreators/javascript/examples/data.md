@@ -2,17 +2,16 @@
 description: Sending data
 ---
 
-In this article we will present methods that let you send files to and from provider as well send JSON to remote computer.
+In this article we will present methods that let you send files to and from a provider as well as send JSON to a remote computer.
 
 !!! Note: at this moment sending files and JSON methods are available only in scripts that are run in node.js. 
 
 !!! Prerequisites	
 - Yagna daemon installed and running
 
-
 ### Setting up project
 
-Create a project folder, initialize node project and install yajsapi library.
+Create a project folder, initialize a Node.js project and install the `yajsapi` library.
 
 ```bash
 mkdir golem-example
@@ -20,12 +19,9 @@ npm init
 npm i yajsapi
 ```
 
-### Upload file to provider
+### Uploading a file to provider
 
-In this example we calculate `md5` of the example script `worker.mjs`, send it to remote computer and
-calculate the `md5` of the file in remote location. At the end we print both values for comparison.
-
-
+In this example, we calculate the `md5` hash of the example script `worker.mjs`, send it to a remote computer, and calculate the `md5` hash of the file in the remote location. Finally, we print both values for comparison.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -64,10 +60,9 @@ const hash = createHash('md5').update(buff).digest('hex');
 ![uploadfile](/assets/uplaodfile_log.png "Requestor script output logs")
 
 
-### Download file from provider
+### Downloading a file from provider
 
-In this example we create a file on remote computer, list its content to result object and finally download it to compare its content with the result obtained remotely.
-
+In this example, we create a file on a remote computer, list its content to a result object, and finally download it to compare its content with the result obtained remotely.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -104,7 +99,7 @@ import { TaskExecutor } from "yajsapi";
 
 ![Downloadfile](/assets/downloadfile_log.png "Requestor script output logs")
 
-### Upload JSON to provider
+### Uploading JSON to provider
 
 ```js
 import { TaskExecutor } from "yajsapi";

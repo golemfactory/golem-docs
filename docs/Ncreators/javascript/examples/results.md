@@ -7,9 +7,9 @@ description: Working with results
 - Yagna daemon installed and running
 
 
-### Setting up project
+### Setting up a project
 
-Create a project folder, initialize node project and install yajsapi library.
+Create a project folder, initialize a Node.js project and install the `yajsapi`` library.
 
 ```bash
 mkdir golem-example
@@ -21,7 +21,7 @@ npm i yajsapi
 
 #### Single command task
 
-For each of the command run you can obtain a result object. Lets look at the simple example: we will run a tasks that consist of single command and will print content of the result object:
+For each command that is run, you can obtain a result object. Let's look at the simple example: we will run a tasks that consists of single command and will print the content of the result object:
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -43,17 +43,18 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-Note: In this example our tasks consist of single command: `node -v`. `ctx.run()` returns object that is then passed to `result` variable and printed.
+Note: In this example, our task consists of a single command: `node -v`. `ctx.run()` returns an object that is then passed to the `result` variable and printed.
 
-Index is the sequential number of a command (we have just 1 and start counting from 0),
-status of the result is "ok" == command was normally completed and the actual results of the command are under `stdout`.
+Index refers to the sequential number of a command (we have just one, and counting starts from 0),
+`status` of the result is "ok" which indicates the command was completed successfully, and the actual results of the command are under `stdout`.
+
 
 ![result](/assets/result_log.png "Requestor script output logs")
 
 
 #### Multi-command task
 
-If you run your tasks in batch ended with `.end()`, 
+When you run your tasks in a batch that is concluded with `.end()`: 
   
 ```js
   import { TaskExecutor } from "yajsapi";
@@ -91,7 +92,7 @@ you will receive an array of result objects:
 ![results](/assets/result_batch_log.png "Requestor script output logs") 
 
 
-In case you end your batch with `endStream()` method:
+In case you end your batch with the `endStream()` method:
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -122,23 +123,20 @@ import { TaskExecutor } from "yajsapi";
 })();
 
 ```
-each `data` chunk will contain result object in the sequence the commands where within the batch:
+Each `data` chunk will contain a result object, in the sequence that the commands where in within the batch:
 
 ![results](/assets/batch_result_endstream_1.png "Requestor script output logs") 
 ![results](/assets/batch_result_endstream_2.png "Requestor script output logs") 
 
-??? Question:
-Do we need to comment the result in case of using for loop?
-
       
-####  What if your commands would fail?
+####  What to do if your commands fail?
   
-When your command fails the ExeUnit (component that is responsible for running your image on remote computer and it runs your commands there) will stop all remote processes and the whole task will be terminated.
+When your command fails, the ExeUnit (the component responsible for running your image on the remote computer) will terminate all remote processes. As a result, the entire task will be terminated.
 
-What will happen in such case depends on the way your task is composed. Let's see it in examples.
+What will happen in such a case depends on the way your task is composed. Let's see it in examples.
 
-In the below case, user's commands are chained in a batch. An error occures when user tries to download `output.txt` file from `/golem/output/` folder while the file was created in `golem/input` folder.
-This command with raise an error and the whole task will be stoped. Next command (listing the content of `/golem/` folder) will not be executed at all.
+In the below case, the user's commands are chained in a batch. An error occurs as the user tries to download the `output.txt` file from `/golem/output/` folder while the file was created in the `golem/input` folder.
+This command will raise an error and the whole task will be terminated. The next command, listing the content of `/golem/` folder, will not be executed at all.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -171,13 +169,13 @@ import { TaskExecutor } from "yajsapi";
 ```
 ![batch_fail](/assets/bad_result_single_log.png "Requestor script output logs")
 
-Note 1: while user will receive the error message, the output is only for the failing command not for all commands in the task. 
+Note 1: while the user will receive the error message, the output is only for the failing command not for all commands in the task. 
 
-The level detail of the message depends on the type of methods that cases the error.
+The level detail of the message depends on the type of method that causes the error.
 
-In case of data transfer method you will receive message describing the cause of the error.
+In the case of the data transfer method you will receive a message describing the cause of the error.
 
-Let's see enother exemple:
+Let's see another example:
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -204,14 +202,14 @@ import { TaskExecutor } from "yajsapi";
 ![single_fail](/assets/bad_result_log_1.png "Requestor script output logs")
 ![single_fail](/assets/bad_result_log_2.png "Requestor script output logs")
 
-Note we have no `catch()` inside task function this time, therefore TaskExecutor retries the task on 3 other providers before terminating the whole Job. 
+Note we have no `catch()` inside the task function this time, therefore TaskExecutor retries the task on 3 other providers before terminating the whole Job. 
 
-In case of the failure in `run()` method we receive the exit code of the command that failed.
+In case of the failure in the `run()` method we receive the exit code of the command that failed.
 So in case of `node -w` as the node command runs but returns the error user received exit code 9, that is node exit code that means:
 
 "Exit Code 9, Invalid Argument: This is employed when an unspecified option was given or when a value-required option was given without one.."
 
-In case the shell could not run the command, user would recevie the exit code 127 from linux shell. 
+In case the shell could not run the command, the user would receive the exit code 127 from linux shell. 
 
 Final note: if you run your tasks using `map()` or `forEach` methods TaskExecutor will stop the whole Job and will not continue after failure of any Task.
 

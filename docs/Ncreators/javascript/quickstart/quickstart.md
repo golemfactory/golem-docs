@@ -151,7 +151,7 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 Next steps:
 
 * [QuickStart Explained](../tutorials/quickstart_explained.md)
-* [Simple introduction to Golem Network and Task Model](../guides/task-model.md)
+* [Simple introduction to the Golem Network and Task Model](../guides/task-model.md)
 * [Parallel processing tutorial](../tutorials/parallel_processing.md)
 
 

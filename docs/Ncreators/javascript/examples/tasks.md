@@ -6,9 +6,9 @@ description: Executing task
 Yagna daemon installed and running with `try_golem` app-key configured.
 
 
-### Setting up project
+### Setting up the project
 
-Create a project folder, initialize node project and install yajsapi library.
+Create a project folder, initialize a Node.js project and install the yajsapi library.
 ```bash
 mkdir golem-example
 npm init
@@ -19,7 +19,7 @@ npm i yajsapi
 You can execute a single task on a single provider or execute multiple tasks in parallel.
 In the second scenario you can define how providers should be initialized and how many tasks you want to run at the same time.
 
-In this article following examples are presented:
+In this article , the following examples are presented:
 
 * Running tasks in parallel (map())
 * Running tasks in parallel (forEach())
@@ -27,9 +27,9 @@ In this article following examples are presented:
 * Initializing providers
 * Running a single task
 
-### Running tasks in parallel using map() method
+### Running tasks in parallel using the map() method
 
-If you want to run your tasks in parallel, you can use `map()` method. 
+If you want to run your tasks in parallel, you can use the `map()` method. 
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -52,23 +52,23 @@ import { TaskExecutor } from "yajsapi";
 })();
 
 ```
-The method `map()` accepts an array that defines the total number of tasks to be executed and may contain the data used to define a tasks.
-In the example we have an array of 5 elements `[1, 2, 3, 4, 5]` and we use these values within task function to define task details. For each task another element from data array is passed as `item` and then used to customise argument for the `echo` command.
+The method `map()` accepts an array that defines the total number of tasks to be executed and may contain the data used to define a task.
+In the example we have an array of 5 elements `[1, 2, 3, 4, 5]` and we use these values within the task function to define task steps. For each task another element from the `data` array is passed as an `item` and then used to customize argument for the `echo` command.
 
-Note that result of the executor `map()` is an asynchronous iterable object with each element accessible with the `for await` statement. 
+Note that the result of the executor `map()` is an asynchronous iterable object with each element accessible with the `for await` statement. 
 
 ![Multiple run map](/assets/map_log.png)
  
-In the output logs you can see some interesting features:
+In the output logs you can have some interesting observations:
 
-First provider `sharkoon_379_6` was engaged first. When he finished his first task he was apparently still the only available provider and he received another tasks to execute. In the meantime other providers were successfully engaged and the next tasks were dispatched to them.
+The provider `sharkoon_379_6` was engaged first. When he had finished his first task he was apparently still the only available provider and he received nother tasks to execute. In the meantime other providers were successfully engaged and the next tasks were dispatched to them.
 
-Note that even if provider `sharkoon_379_8` was engaged before provider `10hx4r2_2.h`, the latter completed its task before the former. In the network different nodes offer different performance. 
+Note that even though provider `sharkoon_379_8` was engaged before provider `10hx4r2_2.h`, the latter completed its task before the former. In the network different nodes offer varying performance. 
 
 
-### Running multiple tasks in parallel using forEach() method
+### Running multiple tasks in parallel using the forEach() method
 
-If you do not need an object to facilitate processing results of all the tasks, you can use another method that can also execute tasks in parallel. Even if `forEach()` method does not return object to iterate through the result, you can still access the result object for each command within task function.  
+If you do not need an object to facilitate processing results of all the tasks, you can use another method that can also execute tasks in parallel. Even if the `forEach()` method does not return an object to iterate through, you can still access the result object for each command within the task function.  
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -92,16 +92,16 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-### Defining number of providers used 
+### Defining the number of providers used 
 
-You can decide the maximum number of providers to be engaged at the same time. Task executor will scan available proposals and will engage additional providers if number of actually engaged providers would be lower then `maxParallelTasks` and there would be still some tasks to be executed. 
-If you would not define this param a default value of 5 will be used.
+You can set the maximum number of providers to be engaged at the same time. The TaskExecutor will scan available proposals and engage additional providers if the number of actually engaged providers is lower than 'maxParallelTasks` and there are still some tasks to be executed.
+If you do not define this parameter, a default value of 5 will be used.
 
-Note that actual number of engaged providers might be both:
-* lower then `maxParallelTasks` (if there is not enough providers available in the network).
-* higher (if you take into account the total number of engaged providers for all the tasks in your job) - providers might get disconnected or simply fail and then executor will engage another one in order to have the number of active workers at the level defined by `maxParallelTasks`.
+Note that the actual number of engaged providers might be:
+* lower than `maxParallelTasks`, if there are not enough providers available in the network.
+* higher, when considering the total number of engaged providers for all the tasks in your job. Providers might get disconnected or simply fail, in which case the TaskExecutor will engage another one to maintain number of active workers at the level defined by `maxParallelTasks`.
 
-Here you can see how to define maximum number of providers to be engaged.
+Below, you can see how to define the maximum number of providers to be engaged.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -129,10 +129,9 @@ import { TaskExecutor } from "yajsapi";
 
 ### Initialization tasks
 
+Normally, when a larger job is divided into smaller tasks to be run in parallel on a limited number of providers, these providers might be utilized for more than one task. In such cases, each task is executed in the same environment as the previous task run on that provider. To optimize performance, you might decide that some initialization tasks need only be run once per provider. This can be particularly useful if you have to send a large amount of data to the provider.
 
-Normally when a bigger job is split into smaller tasks that are run in parallel on limited number of providers they would be utilised for more then one tasks. In such cases the task is executed in the same environment as the previous task (run on that provider). One might seek an option to optimise performance and decide that some initialisation tasks could be run only once per provider. That would be specifically useful if you had to send some big data to provider.
-
-You can address such a need using `beforeEach()` method of the TaskExecutor. See this example:
+You can address such a need using the `beforeEach()` method of the TaskExecutor. Here os an example:
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -145,7 +144,7 @@ import { TaskExecutor } from "yajsapi";
   });
 
   executor.beforeEach(async (ctx) => {
-    console.log(ctx.provider.name + ' is dowloading action_log file');
+    console.log(ctx.provider.name + ' is downloading action_log file');
     await ctx.uploadFile("./action_log.txt", "/golem/input/action_log.txt");
     
   });
@@ -167,17 +166,18 @@ import { TaskExecutor } from "yajsapi";
 
 ```
 
-In the code we limited `maxParallelTasks` value, to make sure that some of our 5 tasks will be run on the same provider.
+In the code we decreased the `maxParallelTasks` value from default value of 5, to make sure that some of our five tasks will be run on the same provider.
 
-The `beforeEach()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The task function used in `beforeEach()` method contains additional `console.log` to prove that even if the whole job consist of 5 tasks, the task function used in `beforeEach()` will be used only once per provider. (Unless provider would disengage and be engaged again - in such situation its virtual machine would be created as new and we would upload the file again there).
+The `beforeEach()` method is used to upload a file to a remote computer, that will be used to log all future activity run on this provider. The task function used in the `beforeEach()` method contains additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `beforeEach()` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
 
-Note how we utilized `ctx` worker context to get provider name using `provider.name` property.
+Note how we utilized the `ctx` worker context to get provider name using the `provider.name` property.
 
-In the task function utilized in the `forEach()` method we used `beginBatch()` to chain multiple commands - you can see more about this feature in the [defining tasks](commands.md) article.
+In the task function used in the `forEach()` method, we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](commands.md) article.
 
 ![BeforeEach](/assets/before_log.png)
 
-Log from this example shows that even if the provider `imapp1019_2.h` eventually was used to execute 3 tasks, it uploaded the log only once. It's output file downloaded after the lasts task was execute d contained:
+Log from this example shows that even if the provider `imapp1019_2.h` eventually was used to execute 3 tasks, it uploaded the log only once. It's output file downloaded after the last task was executed contained the following:
+
 
 ```
 --------------------------- 
@@ -186,12 +186,13 @@ processing item: 4
 processing item: 5
 ```
 
-These log illustrate again that providers offer different performance levels. Even if `fractal_01_1.h` and `fractal_01_3.h` signed agreement before Task 1 was computed on `imapp1019_2.h`, that provider managed to complete Tasks 4 and Task 5 before they downloaded `action_log`` file and completed their first task. 
+These log once again illustrates that providers offer different performance levels. Even though `fractal_01_1.h` and `fractal_01_3.h` signed agreements before Task 1 was computed on `imapp1019_2.h`, this provider managed to complete Tasks 4 and Task 5 before they downloaded the `action_log` file and completed their first task. 
 
 
 ### Single run
 
-Sometimes you do not need to run the tasks in parallel and single run is enough. You can use `run()` method as in the example below. 
+Sometimes you don't need to run tasks in parallel and a single run is sufficient. In such cases, you can use the `run()` method as demonstrated in the example below. 
+
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -210,14 +211,18 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-The requestor script runs once a single task defined by a task function:
-`ctx.run("node -v")`. Result of the command is available as stdout of the result object returned from the `ctx.run()`: 
+The requestor script runs a single task defined by a task function: `ctx.run("node -v")`. The output of the command is available through stdout of the result object returned from the `ctx.run()` function:
 
-Here you can see the script logs:
+Below, you can see the script logs:"
 
 ![Single run](/assets/run_log.png "Requestor script output logs")
 
-In the logs you can see requestor works in goerli network (this is a test network). 
-The task was executed once on a single provider. 
+In the logs, we can see that the requestor uses the Goerli network for payments (a test network). The task was executed once on a single provider.
 
-In the table we see summary and the costs (we paid here in test GLM) and the the result of the command: version of the node in the image.
+In the table, we see a summary of the costs (paid here in test GLM), along with the result of the command which output the version of the node in the image deployed on the provider."
+
+
+
+
+
+
