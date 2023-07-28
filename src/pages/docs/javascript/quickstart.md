@@ -137,9 +137,6 @@ Important: After you launch the daemon, leave it running in the background while
 
 {% /information %}
 
-    {% whitespace %}
-    {% /whitespace %}
-
 {% information level="info" %}
 
 If you have encountered problems please take look on [Run the daemon](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/#run-the-daemon) section

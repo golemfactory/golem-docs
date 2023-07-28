@@ -50,7 +50,7 @@ function Header({ navigation }) {
   return (
     <header
       className={clsx(
-        'sticky top-0 z-50   bg-lightblue px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8',
+        'sticky top-0 z-50   bg-lightblue px-4 py-5 border-b-lightbluedarker border-b transition duration-500 dark:shadow-none sm:px-6 lg:px-8',
         isScrolled ? 'dark:bg-darkbg ' : 'dark:bg-transparent'
       )}
     >
@@ -82,8 +82,9 @@ function Header({ navigation }) {
         </div>
 
         <div className="relative flex flex-grow basis-0 items-center justify-end gap-6 sm:gap-8">
+        <ThemeSelector className="relative z-10" />
           <Search />
-          <ThemeSelector className="relative z-10" />
+          
           <Link
             href="https://github.com"
             className="group hidden items-center gap-x-4 lg:flex"
@@ -198,7 +199,7 @@ export function Layout({ children, title, tableOfContents }) {
       <div className="relative mx-auto flex max-w-8xl justify-center ">
         {!isHomePage && (
           <div className="hidden lg:relative lg:block lg:flex-none">
-            <div className="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden" />
+            <div className="absolute inset-y-0 right-0 w-[50vw] bg-lightblue dark:hidden" />
             <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
             <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
             <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-72 ">
