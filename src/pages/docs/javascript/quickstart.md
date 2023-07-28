@@ -12,6 +12,7 @@ In this article, we'll show you how to launch your first JavaScript app on Golem
 
 The purpose of this article is not to get into the details, but to show you **how to start working with Golem step by step in minutes**.
 
+
 {% information level="info" %}
 **Skipping ahead**
 

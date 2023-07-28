@@ -7,6 +7,8 @@ import { Tabs } from '@/components/Tabs'
 import { Tab } from '@/components/Tab'
 import { Tag } from '@markdoc/markdoc'
 
+import { Link } from '@/components/Link'
+
 const tags = {
   tabs: {
     render: Tabs,
@@ -20,6 +22,15 @@ const tags = {
       return new Tag(this.render, { labels }, node.transformChildren(config))
     },
   },
+  link: {
+    selfClosing: true,
+    render: Link,
+    attributes: {
+      href: { type: String },
+      title: { type: String },
+    },
+  },
+
   tab: {
     render: Tab,
     attributes: {
