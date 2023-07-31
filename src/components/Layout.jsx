@@ -10,7 +10,7 @@ import { ReferenceNavigation } from '@/components/JSReferenceNavigation'
 
 import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'
-import { ThemeSelector } from '@/components/ThemeSelector'
+import { ThemeSelector, ThemeToggler } from '@/components/ThemeSelector'
 import VersionSwitcher from '@/components/VersionSwitcher'
 
 function GitHubIcon(props) {
@@ -82,7 +82,7 @@ function Header({ navigation }) {
         </div>
 
         <div className="relative flex flex-grow basis-0 items-center justify-end gap-6 sm:gap-8">
-          <ThemeSelector className="relative z-10" />
+          <ThemeToggler className="relative z-10" />
           <Search />
 
           <Link
@@ -224,7 +224,7 @@ export function Layout({
         )}
         <div className="min-w-0 max-w-5xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
           <article>
-            <div className="flex items-center gap-x-4 mb-1">
+            <div className="mb-1 flex items-center gap-x-4">
               {type === 'guide' && (
                 <div className="inline-flex items-center gap-x-1 rounded-2xl bg-lightbluedarker px-2 py-1 font-medium">
                   <GuideIcon className="h-6 w-6 text-white" />
@@ -234,7 +234,10 @@ export function Layout({
               {tags && (
                 <div className="flex gap-x-4 ">
                   {tags.split(',').map((tag, index, array) => (
-                    <span className='text-normalgray dark:text-white/50 text-sm' key={tag}>
+                    <span
+                      className="text-sm text-normalgray dark:text-white/50"
+                      key={tag}
+                    >
                       {tag}
                     </span>
                   ))}
@@ -311,7 +314,7 @@ export function Layout({
                   >
                     On this page
                   </h2>
-                  <ol role="list" className="mt-4 space-y-3 text-sm">
+                  <ol role="list" className="mt-4 space-y-3 border-l text-sm">
                     {tableOfContents.map((section) => (
                       <li key={section.id}>
                         <h3>
@@ -319,7 +322,7 @@ export function Layout({
                             href={`#${section.id}`}
                             className={clsx(
                               isActive(section)
-                                ? 'text-primary dark:text-white'
+                                ? 'border-l border-l-red-400 text-primary dark:text-white'
                                 : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
                             )}
                           >
