@@ -60,7 +60,6 @@ function Header({ navigation }) {
         </div>
         <div className="relative flex flex-grow  items-center">
           <Link href="/" aria-label="Home page">
-            <Logomark className="h-9 w-9 lg:hidden" />
             <Logo className="hidden h-full  fill-slate-700 dark:fill-sky-100 lg:block" />
           </Link>
 
