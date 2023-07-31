@@ -234,7 +234,7 @@ export function Layout({
               {tags && (
                 <div className="flex gap-x-4 ">
                   {tags.split(',').map((tag, index, array) => (
-                    <span className='text-normalgray text-sm' key={tag}>
+                    <span className='text-normalgray dark:text-white/50 text-sm' key={tag}>
                       {tag}
                     </span>
                   ))}

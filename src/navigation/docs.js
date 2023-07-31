@@ -9,6 +9,7 @@ export const navigation = [
   {
     title: 'Javascript SDK',
     links: [
+      { title: 'Designer Demo', href: '/docs/javascript/demo' },
       { title: 'Intro', href: '/docs/javascript/intro' },
       {
         title: 'Quickstart',

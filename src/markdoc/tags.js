@@ -8,7 +8,7 @@ import { Tab } from '@/components/Tab'
 import { Tag } from '@markdoc/markdoc'
 import { DocNavigation } from '@/components/DocNavigation'
 import { Link } from '@/components/Link'
-
+import { Highlight } from '@/components/Highlight'
 const tags = {
   tabs: {
     render: Tabs,
@@ -21,6 +21,13 @@ const tags = {
 
       return new Tag(this.render, { labels }, node.transformChildren(config))
     },
+  },
+  highlight: {
+    render: Highlight,
+    attributes: {
+      text: { type: String },
+    },
+    selfClosing: true,
   },
   docnavigation: {
     render: DocNavigation,

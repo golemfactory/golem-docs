@@ -26,3 +26,8 @@ html {
 .prose :where(code):not(:where([class~='not-prose'] *))::after {
   content: '';
 }
+
+::marker {
+  @apply text-primary !important;
+  @apply font-medium !important;
+}

@@ -7,7 +7,7 @@ export function Tabs({ labels, children }) {
 
   return (
     <TabContext.Provider value={currentTab}>
-      <nav className="-mb-px flex gap-x-2" aria-label="Tabs">
+      <nav className="-mb-px flex gap-x-2 my-6" aria-label="Tabs">
         {labels.map((label) => (
           <button
             key={label}
