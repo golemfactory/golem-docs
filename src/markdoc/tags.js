@@ -6,7 +6,7 @@ import { Whitespace } from '@/components/Whitespace'
 import { Tabs } from '@/components/Tabs'
 import { Tab } from '@/components/Tab'
 import { Tag } from '@markdoc/markdoc'
-import { Accordion } from '@/components/Accordion'
+import { DocNavigation } from '@/components/DocNavigation'
 import { Link } from '@/components/Link'
 
 const tags = {
@@ -22,8 +22,8 @@ const tags = {
       return new Tag(this.render, { labels }, node.transformChildren(config))
     },
   },
-  accordion: {
-    render: Accordion,
+  docnavigation: {
+    render: DocNavigation,
     attributes: {
       title: { type: String },
     },

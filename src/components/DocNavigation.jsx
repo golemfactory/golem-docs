@@ -1,5 +1,5 @@
 import { EyeIcon } from '@/components/icons/EyeIcon'
-export function Accordion({ title, children }) {
+export function DocNavigation({ title, children }) {
   return (
     <div className={`my-6 rounded-md  border border-lightbluedarker  text-xs `}>
       <div
