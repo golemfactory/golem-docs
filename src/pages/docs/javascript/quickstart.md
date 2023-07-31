@@ -1,6 +1,7 @@
 ---
 title: Javascript SDK Quickstart
 description: Create your own JavaScript application on Golem
+type: guide
 ---
 
 In this article, we'll show you how to launch your first JavaScript app on Golem Network from scratch in 15 minutes. We have divided the entire article into 4 sections:

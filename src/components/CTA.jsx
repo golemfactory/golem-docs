@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { DiscordIcon } from './icons/DiscordIcon'
 export function CTA({ title, description, imageUrl, buttonText, href }) {
   return (
-    <div className="not-prose w-full rounded-lg bg-lightblue p-4 dark:bg-darkcontent ">
+    <div className="not-prose w-full rounded-lg bg-lightblue px-4 pt-16 pb-20 dark:bg-darkcontent ">
       <div className="relative grid gap-y-4 md:grid-cols-2 md:gap-y-4">
         <img
           className="hidden md:absolute md:block md:h-full md:w-full md:rounded-xl md:object-contain lg:-left-48"
@@ -15,7 +15,7 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
           src={imageUrl}
           alt=""
         />
-        <div className="first-letter: z-50 grid items-center gap-y-4 px-12 py-8">
+        <div className="first-letter: z-50 grid items-center gap-y-4 px-12 ">
           <p className="text-3xl font-semibold text-dark dark:text-white ">
             {title}
           </p>

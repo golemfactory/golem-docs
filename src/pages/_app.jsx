@@ -51,6 +51,8 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
 
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
+  let type = pageProps.markdoc?.frontmatter.type
+  let tags = pageProps.markdoc?.frontmatter.tags
 
   let pageTitle =
     pageProps.markdoc?.frontmatter.pageTitle ||
@@ -72,7 +74,7 @@ export default function App({ Component, pageProps }) {
           content="_AoJ-bZkWRFuikUYy_DE51TeMgqwPurevNapFTxcLbE"
         />
       </Head>
-      <Layout title={title} tableOfContents={tableOfContents}>
+      <Layout title={title} tableOfContents={tableOfContents} type={type} tags={tags}>
         <Component {...pageProps} />
       </Layout>
     </div>

@@ -50,7 +50,7 @@ function Header({ navigation }) {
   return (
     <header
       className={clsx(
-        'sticky top-0 z-50   border-b border-b-lightbluedarker bg-lightblue px-4 py-5 transition duration-500 dark:border-b-[#161721] dark:shadow-none sm:px-6 lg:px-8',
+        'sticky top-0 z-50   border-b border-b-lightbluedarker bg-lightblue px-4 py-5 transition duration-500 dark:border-b-[#161721] sm:px-6 lg:px-8',
         isScrolled ? 'dark:bg-darkbg ' : 'dark:bg-transparent'
       )}
     >
@@ -92,7 +92,7 @@ function Header({ navigation }) {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <GitIcon className=" h-6 w-6 fill-black group-hover:fill-slate-500 dark:fill-[#BFC0C5]  dark:group-hover:fill-slate-300" />
+            <GitIcon className=" h-6 w-6 fill-black group-hover:fill-primary dark:fill-[#BFC0C5]  dark:group-hover:fill-slate-300" />
             <div className="">
               <p className="text-sm font-medium dark:text-[#BFC0C5]">GitHub</p>
               <div className="grid grid-cols-2 gap-x-2 ">
@@ -163,8 +163,15 @@ import { GitIcon } from './icons/GitIcon'
 import { Footer } from './Footer'
 import { Feedback } from './Feedback'
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid'
+import { GuideIcon } from './icons/GuideIcon'
 
-export function Layout({ children, title, tableOfContents }) {
+export function Layout({
+  children,
+  title,
+  tableOfContents,
+  tags,
+  type = 'guide',
+}) {
   const [currentVersion, setCurrentVersion] = useState('b0.7')
   let router = useRouter()
   let isHomePage = router.pathname === '/'
@@ -217,6 +224,24 @@ export function Layout({ children, title, tableOfContents }) {
         )}
         <div className="min-w-0 max-w-5xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
           <article>
+            <div className="flex items-center gap-x-4 mb-1">
+              {type === 'guide' && (
+                <div className="inline-flex items-center gap-x-1 rounded-2xl bg-lightbluedarker px-2 py-1 font-medium">
+                  <GuideIcon className="h-6 w-6 text-white" />
+                  <span className="text-sm text-dark ">Guide</span>
+                </div>
+              )}
+              {tags && (
+                <div className="flex gap-x-4 ">
+                  {tags.split(',').map((tag, index, array) => (
+                    <span className='text-normalgray text-sm' key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {(title || section) && (
               <header className="mb-9 space-y-1">
                 {section && (
@@ -231,6 +256,7 @@ export function Layout({ children, title, tableOfContents }) {
                 )}
               </header>
             )}
+
             <Prose>{children}</Prose>
           </article>
           {!isHomePage && (
@@ -240,8 +266,8 @@ export function Layout({ children, title, tableOfContents }) {
                 {previousPage && (
                   <div>
                     <dt className="font-display text-sm font-medium text-slate-900 dark:text-white/50">
-                    <ArrowLeftIcon className="inline-block w-4 h-4" />
-                      Previous
+                      <ArrowLeftIcon className="inline-block h-4 w-4" />
+                      Return
                     </dt>
                     <dd className="mt-1">
                       <Link
@@ -257,7 +283,8 @@ export function Layout({ children, title, tableOfContents }) {
                 {nextPage && (
                   <div className="ml-auto text-right">
                     <dt className="font-display text-sm font-medium text-primary dark:text-white/50">
-                      Continue <ArrowRightIcon className="inline-block w-4 h-4" />
+                      Continue{' '}
+                      <ArrowRightIcon className="inline-block h-4 w-4" />
                     </dt>
                     <dd className="mt-1">
                       {/* <Link
