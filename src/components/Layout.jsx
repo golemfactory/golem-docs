@@ -309,48 +309,59 @@ export function Layout({
                 <>
                   <h2
                     id="on-this-page-title"
-                    className="font-display text-sm font-medium text-slate-900 dark:text-white"
+                    className="font-display pl-4 text-sm font-medium text-slate-900 dark:text-white"
                   >
                     On this page
                   </h2>
-                  <ol role="list" className="mt-4 space-y-3 border-l text-sm">
-                    {tableOfContents.map((section) => (
-                      <li key={section.id}>
-                        <h3>
-                          <a
-                            href={`#${section.id}`}
-                            className={clsx(
-                              isActive(section)
-                                ? 'border-l border-l-red-400 text-primary dark:text-white'
-                                : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
-                            )}
-                          >
-                            {section.title}
-                          </a>
-                        </h3>
-                        {section.children.length > 0 && (
-                          <ol
-                            role="list"
-                            className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400"
-                          >
-                            {section.children.map((subSection) => (
-                              <li key={subSection.id}>
-                                <a
-                                  href={`#${subSection.id}`}
-                                  className={
-                                    isActive(subSection)
-                                      ? 'text-primary dark:text-white'
-                                      : 'hover:text-slate-600 dark:hover:text-slate-300'
-                                  }
-                                >
-                                  {subSection.title}
-                                </a>
-                              </li>
-                            ))}
-                          </ol>
-                        )}
-                      </li>
-                    ))}
+                  <ol role="list" className="mt-4 space-y-3 pl-4 text-sm">
+                    {tableOfContents.map((section) => {
+                      const isChildActive = section.children.some((child) =>
+                        isActive(child)
+                      )
+                      return (
+                        <li className="border-l pl-4" key={section.id}>
+                          <h3>
+                            <a
+                              href={`#${section.id}`}
+                              className={clsx(
+                                isActive(section) && !isChildActive
+                                  ? ' relative text-primary dark:text-white'
+                                  : ' font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+                              )}
+                            >
+                              {isActive(section) && !isChildActive && (
+                                <div className="absolute -left-[1.35rem] mt-1.5 h-2.5  w-2.5 overflow-visible rounded-full bg-primary"></div>
+                              )}
+                              {section.title}
+                            </a>
+                          </h3>
+                          {section.children.length > 0 && (
+                            <ol
+                              role="list"
+                              className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400"
+                            >
+                              {section.children.map((subSection) => (
+                                <li key={subSection.id}>
+                                  <a
+                                    href={`#${subSection.id}`}
+                                    className={
+                                      isActive(subSection)
+                                        ? 'relative text-primary dark:text-white'
+                                        : ' hover:text-slate-600 dark:hover:text-slate-300'
+                                    }
+                                  >
+                                    {isActive(subSection) && (
+                                      <div className="absolute -left-[2.6rem] mt-1.5 h-2.5  w-2.5 overflow-visible rounded-full bg-primary"></div>
+                                    )}
+                                    {subSection.title}
+                                  </a>
+                                </li>
+                              ))}
+                            </ol>
+                          )}
+                        </li>
+                      )
+                    })}
                   </ol>
                 </>
               )}
