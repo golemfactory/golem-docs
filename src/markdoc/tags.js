@@ -9,6 +9,9 @@ import { Tag } from '@markdoc/markdoc'
 import { DocNavigation } from '@/components/DocNavigation'
 import { Link } from '@/components/Link'
 import { Highlight } from '@/components/Highlight'
+import { SelectionCard } from '@/components/SelectionCard'
+import { SelectionContent } from '@/components/SelectionContent'
+import { Grid } from '@/components/Grid'
 const tags = {
   tabs: {
     render: Tabs,
@@ -21,6 +24,10 @@ const tags = {
 
       return new Tag(this.render, { labels }, node.transformChildren(config))
     },
+  },
+  grid: {
+    render: Grid,
+    attributes: {},
   },
   highlight: {
     render: Highlight,
@@ -45,7 +52,21 @@ const tags = {
       hideunion: { type: Boolean },
     },
   },
-
+  selectioncard: {
+    render: SelectionCard,
+    attributes: {
+      icon: { type: String },
+      title: { type: String },
+      buttonText: { type: String },
+      href: { type: String },
+    },
+  },
+  selectioncontent: {
+    render: SelectionContent,
+    attributes: {
+      label: { type: String },
+    },
+  },
   tab: {
     render: Tab,
     attributes: {

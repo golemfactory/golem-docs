@@ -8,10 +8,12 @@ import { PresetsIcon } from '@/components/icons/PresetsIcon'
 import { ThemingIcon } from '@/components/icons/ThemingIcon'
 import { WarningIcon } from '@/components/icons/WarningIcon'
 import { FlashIcon } from '@/components/icons/FlashIcon'
-import { SoftwareResource } from './icons/SoftwareResource'
-import { KnowledgeCatalog } from './icons/KnowledgeCatalog'
-import { DiscordIconBlue } from './icons/DiscordIconBlue'
-import { GithubIcon } from './icons/GithubIcon'
+import { SoftwareResource } from '@/components/icons/SoftwareResource'
+import { KnowledgeCatalog } from '@/components/icons/KnowledgeCatalog'
+import { DiscordIconBlue } from '@/components/icons/DiscordIconBlue'
+import { GithubIcon } from '@/components/icons/GithubIcon'
+import { JSIcon } from '@/components/icons/JSIcon'
+import { PythonIcon } from '@/components/icons/PythonIcon'
 
 const icons = {
   installation: InstallationIcon,
@@ -25,6 +27,8 @@ const icons = {
   knowledge: KnowledgeCatalog,
   discord: DiscordIconBlue,
   github: GithubIcon,
+  javascript: JSIcon,
+  python: PythonIcon,
 }
 
 export function Icon({ icon, ...props }) {

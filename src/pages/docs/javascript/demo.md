@@ -97,9 +97,58 @@ echo $rainbowFrogs # 'rainbowFrogs' not defined or given any value
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
+
 - [Golem, a global, open-source, decentralized supercomputer that anyone can access.](https://github.com)
 - Learn what you need to know to set-up your Golem requestor node:
 - Requestor development: a quick primer
 - Quick start
 - Have a look at the most important concepts behind any Golem application: Golem application fundamentals
+
 {% /docnavigation %}
+
+{% grid %}
+
+{% selectioncard icon="javascript" title="JS Docs" buttonText="Read JS Docs" href="/" %}
+
+{% selectioncontent %}
+
+Have a problem that can be split into multiple computational tasks that will run in parallel on Golem
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Want to use either Node.js or web browser to schedule the tasks
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Need more control over the deployment process on Golem Network (like adjust market strategy)
+
+{% /selectioncontent %}
+
+{% /selectioncard %}
+
+{% selectioncard icon="python" title="Python Docs" buttonText="Read Python Docs" href="/" %}
+
+{% selectioncontent %}
+
+Want to deploy an application on Golem that consists of service(s) that run constantly
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Already use Docker or Docker Compose to deploy your application
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Want to use a YAML-based approach to configure the deployment
+
+{% /selectioncontent %}
+
+{% /selectioncard %}
+
+{% /grid %}
