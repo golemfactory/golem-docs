@@ -18,7 +18,7 @@ export function Hero() {
               <div className="flex gap-x-4">
                 <div className="text-center">
                   <a
-                    href="/docs"
+                    href="/docs/javascript/demo"
                     className="flex items-center rounded bg-primary px-4 py-2 text-white hover:bg-blue-600 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
                   >
                     <JSIcon className="mr-1 mt-1 h-5 w-5 " />
