@@ -154,6 +154,7 @@ function useTableOfContents(tableOfContents) {
 
   return currentSection
 }
+import { navigation as normalNavLinks } from '@/navigation/docs'
 import { navigation as JSReference } from '@/navigation/jsreference'
 import { Navigation } from './Navigation'
 import { ForkIcon } from './icons/ForkIcon'
@@ -174,11 +175,13 @@ export function Layout({
   const [currentVersion, setCurrentVersion] = useState('b0.7')
   let router = useRouter()
   let isHomePage = router.pathname === '/'
-  let allLinks = JSReference.flatMap((section) => section.links)
-  let linkIndex = allLinks.findIndex((link) => link.href === router.pathname)
-  let previousPage = allLinks[linkIndex - 1]
-  let nextPage = allLinks[linkIndex + 1]
-  let section = JSReference.find((section) =>
+  let allLinks = normalNavLinks.flatMap((section) => section.links)
+  let LinkIndex = allLinks.findIndex((link) => link.href === router.pathname)
+
+  let previousPage = allLinks[LinkIndex - 1]
+  let nextPage = allLinks[LinkIndex + 1]
+
+  let section = normalNavLinks.find((section) =>
     section.links.find((link) => link.href === router.pathname)
   )
   const currentSection = useTableOfContents(isHomePage ? [] : tableOfContents)
@@ -267,35 +270,24 @@ export function Layout({
               <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
                 {previousPage && (
                   <div>
-                    <dt className="font-display text-sm font-medium text-slate-900 dark:text-white/50">
-                      <ArrowLeftIcon className="inline-block h-4 w-4" />
+                    <Link
+                      href={previousPage.href}
+                      className="font-display text-sm font-medium text-primary dark:text-white/50"
+                    >
+                      <ArrowLeftIcon className="mr-1 inline-block h-4 w-4" />
                       Return
-                    </dt>
-                    <dd className="mt-1">
-                      <Link
-                        href={previousPage.href}
-                        className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-                      >
-                        <span aria-hidden="true">&larr;</span>{' '}
-                        {previousPage.title}
-                      </Link>
-                    </dd>
+                    </Link>
                   </div>
                 )}
                 {nextPage && (
                   <div className="ml-auto text-right">
-                    <dt className="font-display text-sm font-medium text-primary dark:text-white/50">
-                      Continue{' '}
-                      <ArrowRightIcon className="inline-block h-4 w-4" />
-                    </dt>
-                    <dd className="mt-1">
-                      {/* <Link
-                    href={nextPage.href}
-                    className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-                  >
-                    {nextPage.title} <span aria-hidden="true">&rarr;</span>
-                  </Link> */}
-                    </dd>
+                    <Link
+                      href={nextPage.href}
+                      className="font-display text-sm font-medium text-primary dark:text-white/50"
+                    >
+                      Continue
+                      <ArrowRightIcon className="ml-1 inline-block h-4 w-4" />
+                    </Link>
                   </div>
                 )}
               </dl>
