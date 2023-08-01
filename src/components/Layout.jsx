@@ -162,7 +162,8 @@ import { StarIcon } from './icons/StarIcon'
 import { GitIcon } from './icons/GitIcon'
 import { Footer } from './Footer'
 import { Feedback } from './Feedback'
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid'
+import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
+import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { GuideIcon } from './icons/GuideIcon'
 
 export function Layout({
@@ -249,11 +250,6 @@ export function Layout({
 
             {(title || section) && (
               <header className="mb-9 space-y-1">
-                {section && (
-                  <p className="font-display text-sm font-medium text-primary dark:text-white">
-                    {section.title}
-                  </p>
-                )}
                 {title && (
                   <h1 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
                     {title}
@@ -266,15 +262,15 @@ export function Layout({
           </article>
           {!isHomePage && (
             <>
-              <Feedback />
-              <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
+              {/* hidden for now until we have a CMS <Feedback /> */}
+              <dl className="mt-12 flex  dark:border-slate-800">
                 {previousPage && (
                   <div>
                     <Link
                       href={previousPage.href}
                       className="font-display text-sm font-medium text-primary dark:text-white/50"
                     >
-                      <ArrowLeftIcon className="mr-1 inline-block h-4 w-4" />
+                      <ArrowLeftIcon className="mr-1 inline-block h-3 w-3 fill-primary" />
                       Return
                     </Link>
                   </div>
@@ -286,7 +282,7 @@ export function Layout({
                       className="font-display text-sm font-medium text-primary dark:text-white/50"
                     >
                       Continue
-                      <ArrowRightIcon className="ml-1 inline-block h-4 w-4" />
+                      <ArrowRightIcon className="ml-1 inline-block h-3 w-3 fill-primary" />
                     </Link>
                   </div>
                 )}
