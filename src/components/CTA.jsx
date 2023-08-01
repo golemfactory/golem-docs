@@ -2,13 +2,14 @@ import Link from 'next/link'
 import { DiscordIcon } from './icons/DiscordIcon'
 export function CTA({ title, description, imageUrl, buttonText, href }) {
   return (
-    <div className="not-prose w-full rounded-lg bg-lightblue px-4 pt-16 pb-20 dark:bg-darkcontent ">
+    <div className="not-prose relative w-full rounded-lg bg-lightblue px-4 pb-20 pt-16 dark:bg-darkcontent">
+      <img
+        className="hidden md:absolute md:left-0 md:top-0 md:block md:h-full md:object-contain"
+        src={imageUrl}
+        alt=""
+      />
+
       <div className="relative grid gap-y-4 md:grid-cols-2 md:gap-y-4">
-        <img
-          className="hidden md:absolute md:block md:h-full md:w-full md:rounded-xl md:object-contain lg:-left-48"
-          src={imageUrl}
-          alt=""
-        />
         <div className="relative h-full w-full"></div>
         <img
           className="rounded-xl object-cover md:hidden"
@@ -22,10 +23,10 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
           <p className=" text-normalgray dark:text-white dark:opacity-50">
             {description}
           </p>
-          <div className=" mt-4 flex lg:mt-0">
+          <div className=" mt-4 flex">
             <Link
               href={href}
-              className="flex h-full items-center rounded bg-primary px-4 py-2 text-sm text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+              className="flex h-full items-center rounded bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
             >
               <DiscordIcon className="mr-2 h-5 w-5 fill-white" />
 

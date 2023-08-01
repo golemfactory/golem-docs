@@ -50,7 +50,7 @@ export function QuickLink({
         ) : (
           <Link
             href={href}
-            className="not-prose cursor-pointer rounded bg-primary px-4 py-2 text-sm text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+            className="not-prose font-medium	 cursor-pointer rounded bg-primary px-4 py-2 text-sm text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
           >
             {buttonText}
           </Link>

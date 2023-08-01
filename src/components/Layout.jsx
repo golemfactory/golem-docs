@@ -86,12 +86,12 @@ function Header({ navigation }) {
 
           <Link
             href="https://github.com/golemfactory/yagna"
-            className=" hidden items-center gap-x-2 lg:flex "
+            className=" group hidden items-center gap-x-2 lg:flex "
             aria-label="GitHub"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <GitIcon className=" h-6 w-6 fill-black group-hover:fill-primary dark:fill-[#BFC0C5]  dark:group-hover:fill-slate-300" />
+            <GitIcon className="group h-6 w-6 fill-black group-hover:fill-primary dark:fill-[#BFC0C5]  dark:group-hover:fill-primary" />
             <div className="">
               <p className="text-sm font-medium dark:text-[#BFC0C5]">GitHub</p>
               <div className="grid grid-cols-2 gap-x-2 ">
