@@ -17,7 +17,7 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
 
         <div className="mb-12 mt-4 flex flex-grow flex-col gap-3 rounded-md px-6">
           {children.map((child, index) => (
-            <div className="not-prose flex items-start gap-x-2">
+            <div key={index} className="not-prose flex items-start gap-x-2">
               <CheckIcon className="mt-1.5 h-4 w-4 flex-shrink-0 fill-dark" />
               <h1 className="text-dark">{child}</h1>
             </div>
