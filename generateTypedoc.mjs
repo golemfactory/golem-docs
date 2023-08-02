@@ -58,8 +58,12 @@ async function generateNavigation(versions) {
         const basePath = path.join(docsPath, version)
         const title = `${version}`
         const childrenDirs = getChildrenDirectories(basePath)
-        const links = await Promise.all(
-          childrenDirs.map(async (item) => {
+        const links = await Promise.all([
+          {
+            title: 'Content overview',
+            href: `/docs/yajsapi/reference/${version}/overview`,
+          },
+          ...childrenDirs.map(async (item) => {
             const hrefPrefix = `/docs/yajsapi/reference/${version}/${item}`
             return {
               title: item,
@@ -68,8 +72,8 @@ async function generateNavigation(versions) {
                 hrefPrefix
               ),
             }
-          })
-        )
+          }),
+        ])
 
         return {
           title,

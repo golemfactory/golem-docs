@@ -28,6 +28,16 @@ export const navigation = [
       {
         title: 'Managing multiple dapps',
         href: '/docs/dapps/managing-multiple-dapps',
+        children: [
+          {
+            title: 'Managing multiple dapps',
+            href: '/docs/dapps/managing-multiple-dapps',
+          },
+          {
+            title: 'Managing multiple dapps2',
+            href: '/docs/dapps/hello-world-dapp',
+          },
+        ],
       },
       {
         title: 'Creating Golem Dapps',

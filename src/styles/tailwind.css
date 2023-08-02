@@ -28,6 +28,6 @@ html {
 }
 
 ::marker {
-  @apply text-primary !important;
+  @apply text-primary dark:text-darkprimary !important;
   @apply font-medium !important;
 }
