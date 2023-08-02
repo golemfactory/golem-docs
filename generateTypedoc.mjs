@@ -65,6 +65,7 @@ async function generateNavigation(versions) {
           },
           ...childrenDirs.map(async (item) => {
             const hrefPrefix = `/docs/yajsapi/reference/${version}/${item}`
+
             return {
               title: item,
               children: await getMarkdownTitles(
@@ -108,7 +109,15 @@ async function getMarkdownTitles(dirPath, hrefPrefix) {
     )
 
     return directlyNestedMarkdownFiles.map((file) => {
-      const title = getTitleFromFile(file.name)
+      let title = getTitleFromFile(file.name)
+
+      // If title contains a ".", return the part after it.
+      // Otherwise, leave the title as it is.
+      const splitTitle = title.split('.')
+      if (splitTitle.length > 1) {
+        title = splitTitle.slice(1).join('.')
+      }
+
       const href = path.join(hrefPrefix, file.name.replace('.md', ''))
 
       return {

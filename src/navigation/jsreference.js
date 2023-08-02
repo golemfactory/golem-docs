@@ -10,179 +10,179 @@ export const navigation = [
         title: "classes",
         children: [
 {
-            title: "Agreement_service.AgreementCandidate",
+            title: "AgreementCandidate",
             href: "/docs/yajsapi/reference/support-new-docs/classes/agreement_service.AgreementCandidate"
           },
 {
-            title: "Events_events.ActivityCreated",
+            title: "ActivityCreated",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ActivityCreated"
           },
 {
-            title: "Events_events.ActivityDestroyed",
+            title: "ActivityDestroyed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ActivityDestroyed"
           },
 {
-            title: "Events_events.ActivityStateChanged",
+            title: "ActivityStateChanged",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ActivityStateChanged"
           },
 {
-            title: "Events_events.AgreementConfirmed",
+            title: "AgreementConfirmed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.AgreementConfirmed"
           },
 {
-            title: "Events_events.AgreementCreated",
+            title: "AgreementCreated",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.AgreementCreated"
           },
 {
-            title: "Events_events.AgreementRejected",
+            title: "AgreementRejected",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.AgreementRejected"
           },
 {
-            title: "Events_events.AgreementTerminated",
+            title: "AgreementTerminated",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.AgreementTerminated"
           },
 {
-            title: "Events_events.AllocationCreated",
+            title: "AllocationCreated",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.AllocationCreated"
           },
 {
-            title: "Events_events.BaseEvent",
+            title: "BaseEvent",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.BaseEvent"
           },
 {
-            title: "Events_events.CollectFailed",
+            title: "CollectFailed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.CollectFailed"
           },
 {
-            title: "Events_events.ComputationFailed",
+            title: "ComputationFailed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ComputationFailed"
           },
 {
-            title: "Events_events.ComputationFinished",
+            title: "ComputationFinished",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ComputationFinished"
           },
 {
-            title: "Events_events.ComputationStarted",
+            title: "ComputationStarted",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ComputationStarted"
           },
 {
-            title: "Events_events.DebitNoteAccepted",
+            title: "DebitNoteAccepted",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.DebitNoteAccepted"
           },
 {
-            title: "Events_events.DebitNoteReceived",
+            title: "DebitNoteReceived",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.DebitNoteReceived"
           },
 {
-            title: "Events_events.DemandFailed",
+            title: "DemandFailed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.DemandFailed"
           },
 {
-            title: "Events_events.DemandSubscribed",
+            title: "DemandSubscribed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.DemandSubscribed"
           },
 {
-            title: "Events_events.DemandUnsubscribed",
+            title: "DemandUnsubscribed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.DemandUnsubscribed"
           },
 {
-            title: "Events_events.InvoiceReceived",
+            title: "InvoiceReceived",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.InvoiceReceived"
           },
 {
-            title: "Events_events.PackageCreated",
+            title: "PackageCreated",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.PackageCreated"
           },
 {
-            title: "Events_events.PaymentAccepted",
+            title: "PaymentAccepted",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.PaymentAccepted"
           },
 {
-            title: "Events_events.PaymentFailed",
+            title: "PaymentFailed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.PaymentFailed"
           },
 {
-            title: "Events_events.ProposalConfirmed",
+            title: "ProposalConfirmed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ProposalConfirmed"
           },
 {
-            title: "Events_events.ProposalFailed",
+            title: "ProposalFailed",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ProposalFailed"
           },
 {
-            title: "Events_events.ProposalReceived",
+            title: "ProposalReceived",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ProposalReceived"
           },
 {
-            title: "Events_events.ProposalRejected",
+            title: "ProposalRejected",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ProposalRejected"
           },
 {
-            title: "Events_events.ProposalResponded",
+            title: "ProposalResponded",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ProposalResponded"
           },
 {
-            title: "Events_events.ScriptExecuted",
+            title: "ScriptExecuted",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ScriptExecuted"
           },
 {
-            title: "Events_events.ScriptSent",
+            title: "ScriptSent",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.ScriptSent"
           },
 {
-            title: "Events_events.TaskFinished",
+            title: "TaskFinished",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.TaskFinished"
           },
 {
-            title: "Events_events.TaskRedone",
+            title: "TaskRedone",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.TaskRedone"
           },
 {
-            title: "Events_events.TaskRejected",
+            title: "TaskRejected",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.TaskRejected"
           },
 {
-            title: "Events_events.TaskStarted",
+            title: "TaskStarted",
             href: "/docs/yajsapi/reference/support-new-docs/classes/events_events.TaskStarted"
           },
 {
-            title: "Executor_executor.TaskExecutor",
+            title: "TaskExecutor",
             href: "/docs/yajsapi/reference/support-new-docs/classes/executor_executor.TaskExecutor"
           },
 {
-            title: "Network_network.NetworkError",
+            title: "NetworkError",
             href: "/docs/yajsapi/reference/support-new-docs/classes/network_network.NetworkError"
           },
 {
-            title: "Network_node.NetworkNode",
+            title: "NetworkNode",
             href: "/docs/yajsapi/reference/support-new-docs/classes/network_node.NetworkNode"
           },
 {
-            title: "Payment_config.AccountConfig",
+            title: "AccountConfig",
             href: "/docs/yajsapi/reference/support-new-docs/classes/payment_config.AccountConfig"
           },
 {
-            title: "Payment_payments.Payments",
+            title: "Payments",
             href: "/docs/yajsapi/reference/support-new-docs/classes/payment_payments.Payments"
           },
 {
-            title: "Script_command.Terminate",
+            title: "Terminate",
             href: "/docs/yajsapi/reference/support-new-docs/classes/script_command.Terminate"
           },
 {
-            title: "Storage_gftp.GftpStorageProvider",
+            title: "GftpStorageProvider",
             href: "/docs/yajsapi/reference/support-new-docs/classes/storage_gftp.GftpStorageProvider"
           },
 {
-            title: "Task_batch.Batch",
+            title: "Batch",
             href: "/docs/yajsapi/reference/support-new-docs/classes/task_batch.Batch"
           },
 {
-            title: "Task_task.Task",
+            title: "Task",
             href: "/docs/yajsapi/reference/support-new-docs/classes/task_task.Task"
           },
 {
-            title: "Task_work.WorkContext",
+            title: "WorkContext",
             href: "/docs/yajsapi/reference/support-new-docs/classes/task_work.WorkContext"
           }
         ]
@@ -191,11 +191,11 @@ export const navigation = [
         title: "enums",
         children: [
 {
-            title: "Task_task.TaskState",
+            title: "TaskState",
             href: "/docs/yajsapi/reference/support-new-docs/enums/task_task.TaskState"
           },
 {
-            title: "Utils_logger_logger.LogLevel",
+            title: "LogLevel",
             href: "/docs/yajsapi/reference/support-new-docs/enums/utils_logger_logger.LogLevel"
           }
         ]
@@ -204,67 +204,67 @@ export const navigation = [
         title: "interfaces",
         children: [
 {
-            title: "Activity_results.StreamingBatchEvent",
+            title: "StreamingBatchEvent",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/activity_results.StreamingBatchEvent"
           },
 {
-            title: "Agreement_service.AgreementDTO",
+            title: "AgreementDTO",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/agreement_service.AgreementDTO"
           },
 {
-            title: "Agreement_service.AgreementServiceOptions",
+            title: "AgreementServiceOptions",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/agreement_service.AgreementServiceOptions"
           },
 {
-            title: "Market_demand.DemandDetails",
+            title: "DemandDetails",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/market_demand.DemandDetails"
           },
 {
-            title: "Market_proposal.ProposalDTO",
+            title: "ProposalDTO",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/market_proposal.ProposalDTO"
           },
 {
-            title: "Market_proposal.ProposalDetails",
+            title: "ProposalDetails",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/market_proposal.ProposalDetails"
           },
 {
-            title: "Network_network.NetworkInfo",
+            title: "NetworkInfo",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/network_network.NetworkInfo"
           },
 {
-            title: "Package_package.PackageDetails",
+            title: "PackageDetails",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/package_package.PackageDetails"
           },
 {
-            title: "Payment_config.BasePaymentOptions",
+            title: "BasePaymentOptions",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/payment_config.BasePaymentOptions"
           },
 {
-            title: "Payment_debit_note.DebitNoteDTO",
+            title: "DebitNoteDTO",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/payment_debit_note.DebitNoteDTO"
           },
 {
-            title: "Payment_invoice.InvoiceDTO",
+            title: "InvoiceDTO",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/payment_invoice.InvoiceDTO"
           },
 {
-            title: "Payment_payments.PaymentOptions",
+            title: "PaymentOptions",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/payment_payments.PaymentOptions"
           },
 {
-            title: "Storage_provider.StorageProvider",
+            title: "StorageProvider",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/storage_provider.StorageProvider"
           },
 {
-            title: "Task_service.TaskOptions",
+            title: "TaskOptions",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/task_service.TaskOptions"
           },
 {
-            title: "Task_work.WorkOptions",
+            title: "WorkOptions",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/task_work.WorkOptions"
           },
 {
-            title: "Utils_logger_logger.Logger",
+            title: "Logger",
             href: "/docs/yajsapi/reference/support-new-docs/interfaces/utils_logger_logger.Logger"
           }
         ]
