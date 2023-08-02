@@ -91,7 +91,7 @@ function Header({ navigation }) {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <GitIcon className="group h-6 w-6 fill-black group-hover:fill-primary dark:fill-[#BFC0C5]  dark:group-hover:fill-primary" />
+            <GitIcon className="group h-6 w-6 fill-black group-hover:fill-primary dark:fill-[#BFC0C5]  dark:group-hover:fill-darkprimary" />
             <div className="">
               <p className="text-sm font-medium dark:text-[#BFC0C5]">GitHub</p>
               <div className="grid grid-cols-2 gap-x-2 ">

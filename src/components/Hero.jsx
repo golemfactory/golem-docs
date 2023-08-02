@@ -17,14 +17,14 @@ export function Hero() {
             <div className="flex justify-center gap-4">
               <a
                 href="/docs/javascript/demo"
-                className="flex items-center gap-x-2 rounded bg-primary px-4 py-2 text-white hover:bg-blue-600 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+                className="flex items-center gap-x-2 rounded text-base bg-primary px-4 py-2 text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80"
               >
                 <JSIcon className=" h-5 w-5 fill-white " />
                 JS docs
               </a>
               <div className="group relative inline-flex">
-                <span className="inline-flex gap-x-2 items-center rounded bg-lightergray px-4 py-1 font-medium text-white dark:bg-disabledgray">
-                  <PythonIcon className="fill-white h-5 w-5  " />
+                <span className="inline-flex items-center gap-x-2 rounded bg-lightergray px-4 py-1 text-base font-medium text-white dark:bg-disabledgray">
+                  <PythonIcon className="h-5 w-5 fill-white  " />
                   Python docs
                 </span>
                 <div
