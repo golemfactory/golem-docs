@@ -11,13 +11,13 @@ export function Prose({ as: Component = 'div', className, ...props }) {
         // lead
         'prose-lead:text-primary dark:prose-lead:text-slate-400',
         // links
-        'prose-a:font-semibold dark:prose-a:text-darkprimary',
+        "after:mt-2 prose-a:mr-3.5  prose-a:font-semibold prose-a:after:content-['_↗'] dark:prose-a:text-darkprimary",
         // link underline
         'prose-a:text-primary prose-a:no-underline',
         // pre
         // 'prose-pre:rounded-xl prose-pre:bg-white prose-pre:border prose-pre:border-lightbluedarker dark:prose-pre:bg-slate-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10',
         // hr
-        'dark:prose-hr:border-slate-800',
+        'dark:prose-hr:border-slate-800'
       )}
       {...props}
     />

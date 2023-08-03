@@ -10,6 +10,13 @@
   }
 }
 
+.prose-a\:after\:content-\[\'_\2197\'\]
+  :is(:where(a):not(:where([class~='not-prose'] *)))::after {
+  font-size: 0.75rem;
+  position: absolute;
+  margin-left: 2px;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,7 +34,12 @@ html {
   content: '';
 }
 
-::marker {
-  @apply text-primary dark:text-darkprimary !important;
-  @apply font-medium !important;
+.prose :where(li):not(:where([class~='not-prose'] *)) {
+  margin-bottom: 6px;
+  margin-top: 0px;
+}
+
+ul {
+  @apply dark:marker:text-darkprimary !important;
+  @apply marker:text-primary !important;
 }

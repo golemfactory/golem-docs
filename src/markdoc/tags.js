@@ -12,6 +12,7 @@ import { Highlight } from '@/components/Highlight'
 import { SelectionCard } from '@/components/SelectionCard'
 import { SelectionContent } from '@/components/SelectionContent'
 import { Grid } from '@/components/Grid'
+import { Padding } from '@/components/Padding'
 const tags = {
   tabs: {
     render: Tabs,
@@ -24,6 +25,13 @@ const tags = {
 
       return new Tag(this.render, { labels }, node.transformChildren(config))
     },
+  },
+  padding: {
+    render: Padding,
+    attributes: {
+      padding: { type: Number },
+    },
+    selfClosing: true,
   },
   grid: {
     render: Grid,

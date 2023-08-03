@@ -5,6 +5,8 @@ description: Jump onboard the decentralized super computer and take your applica
 type: design
 ---
 
+{% padding padding="8" %}
+
 # How would you like to start?
 
 {% quick-links %}
@@ -20,3 +22,5 @@ type: design
 {% CTA
     title="We are building a new open source world that everyone has the right to enter" description="We encourage innovation through collaboration. Each of us creates this project from the need of the heart. Join our community and be a part of Golem." imageUrl="/hacker.png" buttonText="Join on Discord" href="https://chat.golem.network"
  /%}
+
+{% /padding %}

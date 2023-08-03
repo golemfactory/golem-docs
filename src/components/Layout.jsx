@@ -1,16 +1,16 @@
-import { useCallback, useEffect, useState, useRef } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
 import { Hero } from '@/components/Hero'
-import { Logo, Logomark } from '@/components/Logo'
+import { Logo } from '@/components/Logo'
 import { MobileNavigation } from '@/components/MobileNavigation'
 import { ReferenceNavigation } from '@/components/JSReferenceNavigation'
 
 import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'
-import { ThemeSelector, ThemeToggler } from '@/components/ThemeSelector'
+import { ThemeToggler } from '@/components/ThemeSelector'
 import VersionSwitcher from '@/components/VersionSwitcher'
 
 function Header({ navigation }) {
@@ -165,7 +165,6 @@ export function Layout({
   tags,
   type = 'guide',
 }) {
-  const [currentVersion, setCurrentVersion] = useState('support-new-docs')
   let router = useRouter()
   let isHomePage = router.pathname === '/'
   let allLinks = normalNavLinks.flatMap((section) => section.links)
@@ -191,11 +190,7 @@ export function Layout({
 
   return (
     <>
-      <VersionSwitcher
-        navigation={JSReference}
-        currentVersion={currentVersion}
-        onVersionChange={setCurrentVersion}
-      />
+      <VersionSwitcher />
       <Header navigation={JSReference} />
 
       {isHomePage && <Hero />}
@@ -209,10 +204,7 @@ export function Layout({
             <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64 ">
               <Navigation links={normalNavLinks} />
               <div className=" mt-9">
-                <ReferenceNavigation
-                  currentVersion={currentVersion}
-                  items={JSReference}
-                />
+                <ReferenceNavigation />
               </div>
             </div>
           </div>
@@ -221,8 +213,8 @@ export function Layout({
           <article>
             <div className="mb-1 flex items-center gap-x-4">
               {type === 'guide' && (
-                <div className="inline-flex items-center gap-x-1 rounded-2xl bg-lightbluedarker px-2 py-1 font-medium">
-                  <GuideIcon className="h-6 w-6 text-white" />
+                <div className="inline-flex items-center gap-x-2 rounded-2xl bg-lightbluedarker px-1.5 py-1 font-medium">
+                  <GuideIcon className="h-6 w-6  text-white" />
                   <span className="text-sm text-dark ">Guide</span>
                 </div>
               )}

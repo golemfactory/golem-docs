@@ -26,7 +26,7 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
           <div className=" mt-4 flex">
             <Link
               href={href}
-              className="flex h-full items-center rounded bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+              className="flex h-full items-center rounded bg-primary px-4 py-1 text-base font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
             >
               <DiscordIcon className="mr-2 h-5 w-5 fill-white" />
 

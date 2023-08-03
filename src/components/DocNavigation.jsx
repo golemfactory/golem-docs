@@ -1,7 +1,7 @@
 import { EyeIcon } from '@/components/icons/EyeIcon'
 export function DocNavigation({ title, children }) {
   return (
-    <div className={`my-6 rounded-md  border border-lightbluedarker  text-xs `}>
+    <div className={`my-6 rounded-md  border border-lightbluedarker text-sm `}>
       <div
         className={`rounded-t-md bg-lightblue py-3 text-dark dark:text-white `}
       >

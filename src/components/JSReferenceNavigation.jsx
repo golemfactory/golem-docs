@@ -1,26 +1,17 @@
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import clsx from 'clsx'
+import { Navigation } from './Navigation'
 
-import { Dropdown, Navigation, NavigationItem } from './Navigation'
+import { navigation, latestJSVersion } from '@/navigation/jsreference'
 
-import { navigation } from '@/navigation/jsreference'
-
-export const ReferenceNavigation = ({ items, currentVersion }) => {
-  const router = useRouter()
-
+export const ReferenceNavigation = ({}) => {
   const currentNavItem = useMemo(() => {
-    return navigation.find((item) => item.title === currentVersion)
-  }, [currentVersion, navigation])
+    return navigation.find((item) => item.title === latestJSVersion)
+  }, [latestJSVersion, navigation])
 
   if (!currentNavItem) {
     return null
   }
-
-  console.log(currentNavItem)
-  console.log(navigation)
 
   return <Navigation links={navigation} title="Yajsapi API reference" />
 }

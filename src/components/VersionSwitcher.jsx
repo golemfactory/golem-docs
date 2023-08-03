@@ -2,16 +2,20 @@ import { useMemo, useState, useEffect, Fragment } from 'react'
 import { useRouter } from 'next/router'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-
+import {
+  navigation as JSReference,
+  latestJSVersion,
+} from '@/navigation/jsreference'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const VersionSwitcher = ({ navigation, currentVersion, onVersionChange }) => {
+const VersionSwitcher = ({}) => {
+  const [currentVersion, setCurrentVersion] = useState(latestJSVersion)
   const router = useRouter()
   const versions = useMemo(
-    () => Object.values(navigation).map((navItem) => navItem.title),
-    [navigation]
+    () => Object.values(JSReference).map((navItem) => navItem.title),
+    [JSReference]
   )
 
   const isOnDocsPath = router.pathname.startsWith('/docs/yajsapi/reference')
@@ -19,21 +23,21 @@ const VersionSwitcher = ({ navigation, currentVersion, onVersionChange }) => {
   useEffect(() => {
     if (isOnDocsPath) {
       const findCurrentVersion = () => {
-        const matchingNavItem = Object.values(navigation).find(
+        const matchingNavItem = Object.values(JSReference).find(
           (navItem) => navItem.pathname === router.pathname
         )
         if (matchingNavItem) {
-          onVersionChange(matchingNavItem.title)
+          setCurrentVersion(matchingNavItem.title)
         }
       }
 
       findCurrentVersion()
     }
-  }, [router, isOnDocsPath, navigation, onVersionChange])
+  }, [router, isOnDocsPath, JSReference, setCurrentVersion])
 
   const switchVersion = (version) => {
     if (isOnDocsPath) {
-      onVersionChange(version)
+      setCurrentVersion(version)
       const newPath = router.asPath.replace(
         /\/docs\/yajsapi\/reference\/[^/]+/,
         `/docs/yajsapi/reference/${version}`

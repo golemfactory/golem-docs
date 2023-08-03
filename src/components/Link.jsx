@@ -1,20 +1,13 @@
-import NextLink from 'next/link'
 import { UnionIcon } from './icons/UnionIcon'
 import { Icon } from '@/components/Icon'
-
-const icons = {
-  note: (props) => <Icon icon="lightbulb" {...props} />,
-  warning: (props) => <Icon icon="warning" color="amber" {...props} />,
-}
+import { useRouter } from 'next/router'
 
 export function Link({ href, title, icon = '', hideunion = false }) {
-  let IconComponent = icons[icon]
+  const router = useRouter()
   return (
-    <NextLink
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="test my-6 inline-flex items-center gap-x-2 rounded-md border border-primary  px-3 py-2 text-center  text-sm font-medium capitalize text-primary"
+    <button
+      onClick={() => window.open(href, '_blank')}
+      className=" my-6 inline-flex items-center gap-x-2 rounded-md border border-primary  px-3 py-2 text-center  text-sm font-medium capitalize text-primary"
     >
       {icon && (
         <Icon icon={icon} className="block h-5 w-5 fill-primary text-primary" />
@@ -22,6 +15,6 @@ export function Link({ href, title, icon = '', hideunion = false }) {
       {title}
 
       {!hideunion && <UnionIcon className="-ml-1 -mt-3 fill-primary" />}
-    </NextLink>
+    </button>
   )
 }
