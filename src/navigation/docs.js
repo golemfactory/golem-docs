@@ -1,9 +1,47 @@
 export const navigation = [
   {
+    title: 'Home',
+    links: [
+      { title: 'index', href: '/' },
+    ]
+  },
+  {
+    title: 'QuickStarts',
+    links: [
+      { title: 'index', href: '/docs/quickstarts/' },
+      { title: 'JS QuickStart (node.js)', href: '/docs/quickstarts/js_quickstart' },
+      { title: 'Golem in a Browser', href: '/docs/quickstarts/web_browser_qs' },
+      { title: '"no-code" app deployment', href: '/docs/quickstarts/no_code_quickstart' },
+    ],
+  },
+  {
+    title: 'Create on Golem',
+    links: [
+      { title: 'index', href: '/docs/creators/' },
+      { title: 'JavaScript', children: [
+        { title: 'index', href: '/docs/creators/javascript/' },
+        { title: 'QuickStarts', href: '/docs/creators/javascript/quickstart',children: [
+          {
+            title: 'index',
+            href: '/docs/creators/javascript/quickstart/',
+          },
+          {
+            title: 'Golem in Node.js',
+            href: '/docs/creators/javascript/quickstart/quickstart',
+          },
+          {
+            title: 'Golem in browser',
+            href: '/docs/creators/javascript/quickstart/web_browser_qs',
+          },], 
+        },], 
+      },
+    ],
+  },
+  {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/' },
-      { title: 'Installation', href: '/docs/installation' },
+      { title: 'Getting started', href: '/blabla' },
+      { title: 'Installation', href: '/docs/installation' }
     ],
   },
   {

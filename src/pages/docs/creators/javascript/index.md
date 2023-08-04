@@ -1,0 +1,1 @@
+javascript intro will be here / index
