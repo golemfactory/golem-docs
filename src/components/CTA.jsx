@@ -16,7 +16,7 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
           src={imageUrl}
           alt=""
         />
-        <div className="first-letter: z-50 grid items-center gap-y-4 px-12 ">
+        <div className="first-letter: z-30 grid items-center gap-y-4 px-12 ">
           <p className="text-3xl font-semibold text-dark dark:text-white ">
             {title}
           </p>

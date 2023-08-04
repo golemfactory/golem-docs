@@ -1,9 +1,14 @@
+import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import { DiscordIconBlue } from './icons/DiscordIconBlue'
 import { GithubIcon } from './icons/GithubIcon'
 import { GolemIcon } from './icons/GolemIcon'
 import { LinkedInIcon } from './icons/LinkedIn'
 import { RedditIcon } from './icons/RedditIcon'
 import { YoutubeIcon } from './icons/YoutubeIcon'
+import { javascript, python } from '@/navigation/footer'
+import { ArrowRightIcon } from './icons/ArrowRightIcon'
+
+const links = [...javascript, ...python]
 
 const navigation = [
   {
@@ -34,36 +39,106 @@ const navigation = [
   },
 ]
 
-export const Footer = () => {
-  return (
-    <footer className="bg-white pt-8 dark:bg-transparent">
-      <div className="relative mx-auto ">
-        <div className="mx-auto flex max-w-8xl justify-between  px-8 lg:px-8 xl:px-20">
-          <div className="flex justify-center space-x-6 md:order-2">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-400 hover:text-gray-500"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon
-                  className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-50"
-                  aria-hidden="true"
-                />
-              </a>
-            ))}
-          </div>
-          <div className="mt-8 md:order-1 md:mt-0">
-            <GolemIcon className="-ml-4 h-12 fill-primary text-primary dark:fill-darkprimary dark:text-darkprimary" />
-          </div>
+const LinkSection = ({ title, links }) => (
+  <section className="ml-4 mt-6">
+    <h2 className="-ml-4 text-base font-medium text-primary dark:text-darkprimary">
+      {title}
+    </h2>
+    <ul role="list" className="list-disc">
+      {links.map(({ title, href }) => (
+        <li key={href}>
+          <a
+            href={href}
+            className="text-sm font-medium leading-6 text-primary dark:text-darkprimary"
+          >
+            {title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)
+
+const DocSection = ({ title, data }) => (
+  <div>
+    <DocHeader classes={"text-xl"} title={title + " Docs"} />
+    <div
+      role="list"
+      className="mb-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
+    >
+      {data.map(({ type, links }) => (
+        <LinkSection key={type} title={type} links={links} />
+      ))}
+    </div>
+  </div>
+)
+
+const DocHeader = ({ title, classes }) => (
+  <>
+    <h1 className={`${classes} font-semibold dark:text-white/50`}>{title}</h1>
+    <p className="text-sm text-gray-500 dark:text-white/50">
+      Contracts or people on the network
+    </p>
+    <NavLink />
+  </>
+)
+
+const NavLink = () => (
+  <a
+    href="/docs"
+    aria-label="Overview"
+    className="flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-darkprimary"
+  >
+    Overview{' '}
+    <ArrowRightIcon className="h-3 w-3 fill-primary dark:fill-darkprimary" />
+  </a>
+)
+
+export const Footer = () => (
+  <footer className="bg-white pt-8 dark:bg-transparent">
+    <div className="mb-4 bg-lightblue dark:bg-darkbg border-y border-y-lightbluedarker">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-18 lg:px-8 ">
+      <div className='mb-12'>
+        <DocHeader classes={"text-2xl"} title="Learn Dapps" />
         </div>
+        <DocSection title="JS" data={javascript} />
+        <DocSection title="Python" data={python} />
       </div>
-      <div className=" mx-auto mb-2 max-w-7xl border-t text-center dark:border-t-gray-800">
-        <span className="my-4 block text-sm text-normalgray dark:text-white dark:opacity-50">
-          Copyright © 2023 Golem Factory GmbH
-        </span>
+    </div>
+    <LowerFooter />
+  </footer>
+)
+
+const LowerFooter = () => (
+  <div>
+    <div className="relative mx-auto ">
+      <div className="mx-auto flex max-w-8xl justify-between  px-8 lg:px-8 xl:px-20">
+        <FooterNav />
+        <GolemIcon className="-ml-4 h-12 fill-primary text-primary dark:fill-darkprimary dark:text-darkprimary" />
       </div>
-    </footer>
-  )
-}
+    </div>
+    <div className=" mx-auto mb-2 max-w-7xl border-t text-center dark:border-t-gray-800">
+      <span className="my-4 block text-sm text-normalgray dark:text-white dark:opacity-50">
+        Copyright © 2023 Golem Factory GmbH
+      </span>
+    </div>
+  </div>
+)
+
+const FooterNav = () => (
+  <div className="flex justify-center space-x-6 md:order-2">
+    {navigation.map((item) => (
+      <a
+        key={item.name}
+        href={item.href}
+        className="text-gray-400 hover:text-gray-500"
+      >
+        <span className="sr-only">{item.name}</span>
+        <item.icon
+          className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-50"
+          aria-hidden="true"
+        />
+      </a>
+    ))}
+  </div>
+)
