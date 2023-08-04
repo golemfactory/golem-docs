@@ -9,9 +9,9 @@ export const navigation = [
     title: 'QuickStarts',
     links: [
       { title: 'index', href: '/docs/quickstarts/' },
-      { title: 'JS QuickStart (node.js)', href: '/docs/quickstarts/js_quickstart' },
-      { title: 'Golem in a Browser', href: '/docs/quickstarts/web_browser_qs' },
-      { title: '"no-code" app deployment', href: '/docs/quickstarts/no_code_quickstart' },
+      { title: 'JS QuickStart (node.js)', href: '/docs/quickstarts/js-quickstart' },
+      { title: 'Golem in a Browser', href: '/docs/quickstarts/golem-in-a-browser' },
+      { title: '"no-code" app deployment', href: '/docs/quickstarts/no-code-app-deployment' },
     ],
   },
   {
@@ -21,20 +21,20 @@ export const navigation = [
       { title: 'JavaScript', children: 
         [
           { title: 'index', href: '/docs/creators/javascript/' },
-          { title: 'QuickStarts', href: '/docs/creators/javascript/quickstart',
+          { title: 'QuickStarts', href: '/docs/creators/javascript/quickstarts',
             children: 
             [
               {
                 title: 'index',
-                href: '/docs/creators/javascript/quickstart/',
+                href: '/docs/creators/javascript/quickstarts',
               },
               {
                 title: 'Golem in Node.js',
-                href: '/docs/creators/javascript/quickstart/quickstart',
+                href: '/docs/creators/javascript/quickstarts/quickstart',
               },
               {
                 title: 'Golem in browser',
-                href: '/docs/creators/javascript/quickstart/web_browser_qs',
+                href: '/docs/creators/javascript/quickstarts/web_browser_qs',
               },
             ],
           },
@@ -88,7 +88,7 @@ export const navigation = [
               },
               {
                 title: 'Working with results',
-                href: '/docs/creators/javascript/examples/workingwith-results',
+                href: '/docs/creators/javascript/examples/working-with-results',
               },
               {
                 title: 'Selecting providers',
@@ -113,11 +113,19 @@ export const navigation = [
               },
               {
                 title: 'Task Model',
-                href: '/docs/creators/javascript/guides/task-odel',
+                href: '/docs/creators/javascript/guides/task-model',
               },
               {
                 title: 'Golem images',
                 href: '/docs/creators/javascript/guides/golem-images',
+              },
+              {
+                title: 'Golem images FAQ',
+                href: '/docs/creators/javascript/guides/golem-images-faq',
+              },
+              {
+                title: 'Switching to mainnet',
+                href: '/docs/creators/javascript/guides/switching-to-mainnet',
               },
               {
                 title: 'Troubleshooting',
@@ -134,19 +142,19 @@ export const navigation = [
               },
               {
                 title: 'Yagna installation for requestors',
-                href: '/docs/creators/javascript/examples/tools/quickstart-explained',
+                href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
               },
               {
                 title: 'Converting Docker image to Golem format',
-                href: '/docs/creators/javascript/examples/tools/running-parallel-tasks',
+                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
               },
               {
                 title: 'Gvmkit_build installation (image conversion tool)',
-                href: '/docs/creators/javascript/examples/tools/running-in-browser',
+                href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
               },
               {
                 title: 'Publishing custom images',
-                href: '/docs/creators/javascript/examples/tools/building-custom-image',
+                href: '/docs/creators/javascript/examples/tools/publishing-custom-images',
               },
               {
                 title: 'Golem wallet backup',
@@ -171,19 +179,19 @@ export const navigation = [
               },
               {
                 title: 'classes',
-                href: '/docs/creators/javascript/quickstart/docs/classes',
+                href: '/docs/creators/javascript/docs/classes',
               },
               {
                 title: 'enums',
-                href: '/docs/creators/javascript/quickstart/docs/enums',
+                href: '/docs/creators/javascript/docs/enums',
               },
               {
                 title: 'interfaces',
-                href: '/docs/creators/javascript/quickstart/docs/interfaces',
+                href: '/docs/creators/javascript/docs/interfaces',
               },
               {
                 title: 'mudules',
-                href: '/docs/creators/javascript/quickstart/docs/modules',
+                href: '/docs/creators/javascript/docs/modules',
               },
             ],
           },
@@ -223,19 +231,20 @@ export const navigation = [
     links: [
       { title: 'index', href: '/docs/providers/' },
       { title: 'Provider installation', href: '/docs/providers/provider-installation' },
-      { title: 'Provider basic configuration', href: '/docs/providers/provider-basic-configuration' },
+      { title: 'Provider basic configuration', href: '/docs/providers/provider-basic-configuration' },      
+      { title: 'Provider troubleshooting', href: '/docs/providers/provider-troubleshooting' },
+      { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
+      { title: 'Yagna CLI reference', href: '/docs/providers/yagna-cli-reference' },
       { title: 'Provider Maintenance',         
         children: 
         [ 
           { title: 'index', href: '/docs/providers/maintenance' },
-          { title: 'Wallet maintenance', href: '/docs/providers/wallet-maintenance' },
-          { title: 'Wallet backup', href: '/docs/providers/wallet-backup' },
-          { title: 'Wallet restoration', href: '/docs/providers/wallet-restoration' },
+          { title: 'Wallet maintenance', href: '/docs/providers/maintenance/wallet-maintenance' },
+          { title: 'Wallet backup', href: '/docs/providers/maintenance/wallet-backup' },
+          { title: 'Wallet restoration', href: '/docs/providers/maintenance/wallet-restoration' },
         ] 
       },
-      { title: 'Provider FAQ', href: '/docs/providers/Provider-faq' },
-      { title: 'Provider troubleshooting', href: '/docs/providers/provider-troubleshooting' },
-      { title: 'Yagna CLI reference', href: '/docs/providers/yagna-cli-reference' },
+
     ]
   },
   {
@@ -249,14 +258,14 @@ export const navigation = [
           { title: 'index', href: '/docs/golem/overview' },
           { title: 'Provider', href: '/docs/golem/overview/provider' },
           { title: 'Requestor', href: '/docs/golem/overview/requestor' },
-          { title: 'Provider FAQ', href: '/docs/golem/overview/provider-faq' },
+          { title: 'Requestor FAQ', href: '/docs/golem/overview/requestor-faq' },
         ] 
       },
       { title: 'Payments',         
         children: 
         [ 
-          { title: 'index', href: '/docs/providers/payments' },
-          { title: 'Layer 2 Payments', href: '/docs/golem/providers/payments/layer-2-payments' },
+          { title: 'index', href: '/docs/golem/payments' },
+          { title: 'Layer 2 Payments', href: '/docs/golem/payments/layer-2-payments' },
           { title: 'Golem token conversion', href: '/docs/golem/payments/golem-token-conversion' },
         ] 
       },
