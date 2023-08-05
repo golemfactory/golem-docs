@@ -10,7 +10,7 @@ Description: Golem in browser QuickStart explained
 
 ## Prerequisites
 
-Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](../examples/tools/install_yagna.md). 
+Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](../examples/tools/yagna-installation-for-requestors.md). 
 
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 

@@ -109,4 +109,5 @@ If port forwarding doesn't work, you may need to call your ISP to change setting
 
 !!! golem-icon "Next steps:"
 
-    [Provider configuration in CLI](config.md){ .md-button .md-button--primary }
+    [Provider basic configuration](./provider-basic-configuration.md)
+    [Provider configuration in CLI](./yagna-cli-reference.md)

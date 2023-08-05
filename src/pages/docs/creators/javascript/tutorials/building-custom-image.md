@@ -11,7 +11,7 @@ This article will go through the process of creating a Dockerfile, building a Do
     
     * Tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
     * Docker service running is required
-    * Required to have followed the [gvmkit-build installation](../examples/tools/installing-gvmkit-build.md)
+    * Required to have followed the [gvmkit-build installation](../examples/tools/gvmkit-build-installation.md)
     * Required: an installation of Yagna
 
 

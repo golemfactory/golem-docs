@@ -50,7 +50,7 @@ Yagna is a daemon whose purpose is to communicate and perform operations on the 
 
 
 !!! Note
-    Should you encounter any problems, please reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for troubleshooting: [Yagna Troubleshooting](missinglink_yagna_troubleshooting.md)
+    Should you encounter any problems, please reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](../guides/troubleshooting.md).
 
 #### Start the daemon
 
@@ -126,7 +126,7 @@ import { TaskExecutor } from "yajsapi";
 
 !!! info
 
-    You can find a detailed explanation of the above code [here](../tutorials/quickstart_explained.md)
+    You can find a detailed explanation of the above code [here](../tutorials/quickstart-explained.md)
 
 
 ## Running the script on Golem Network
@@ -150,8 +150,8 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 
 Next steps:
 
-* [QuickStart Explained](../tutorials/quickstart_explained.md)
+* [QuickStart Explained](../tutorials/quickstart-explained.md)
 * [Simple introduction to the Golem Network and Task Model](../guides/task-model.md)
-* [Parallel processing tutorial](../tutorials/parallel_processing.md)
+* [Parallel processing tutorial](../tutorials/running-parallel-tasks.md)
 
 

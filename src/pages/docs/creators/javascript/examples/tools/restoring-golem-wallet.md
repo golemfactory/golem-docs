@@ -4,7 +4,7 @@ Description: Setting up a new Yagna instance to use a saved keystore file.
 
 # Restoring a backed-up wallet
 
-If, for whatever reason, your Golem wallet is destroyed or corrupted e.g. you moved on to a new machine and forgot to take move Golem's installation with it, you'll be faced with the necessity to recover your wallet from your previously backed-up keystore file.
+If, for whatever reason, your Golem wallet gets destroyed or corrupted or you moved on to a new machine and forgot to take the Yagna installation, you would face the necessity to recover your wallet from your previously backed-up keystore file.
 
 To restore your wallet, first start with a fresh yagna install:
 
@@ -13,7 +13,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
 !!! Warning
-The above line assumes you're a requestor on a Unix-like platform (Linux or Mac). If that's not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](../Ncreators/javascript/examples/tools/install_yagna.md) or the [analogous instructions for providers](../providers/install.md).
+The above line assumes you are a requestor on a Unix-like platform (Linux or Mac). If that is not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](./yagna-installation-for-requestors.md) or the [analogous instructions for providers](../../../../providers/provider-installation.md).
 
 Once Yagna is installed, run it with:
 

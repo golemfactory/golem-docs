@@ -33,8 +33,8 @@ export const navigation = [
                 href: '/docs/creators/javascript/quickstarts/quickstart',
               },
               {
-                title: 'Golem in browser',
-                href: '/docs/creators/javascript/quickstarts/web_browser_qs',
+                title: 'Golem in a browser',
+                href: '/docs/creators/javascript/quickstarts/golem-in-a-browser',
               },
             ],
           },
@@ -239,7 +239,7 @@ export const navigation = [
         children: 
         [ 
           { title: 'index', href: '/docs/providers/maintenance' },
-          { title: 'Wallet maintenance', href: '/docs/providers/maintenance/wallet-maintenance' },
+          { title: 'Provider maintenance', href: '/docs/providers/maintenance/provider-maintenance' },
           { title: 'Wallet backup', href: '/docs/providers/maintenance/wallet-backup' },
           { title: 'Wallet restoration', href: '/docs/providers/maintenance/wallet-restoration' },
         ] 

@@ -16,9 +16,9 @@ The general process of creating a Golem image looks like this:
 
 * Define the image content in Docker format (Dockerfile)
 * Build a Docker image from the Dockerfile
-* Convert to Golem image using gvmkit-build ([example](../examples/tools/converting-an-image.md))
+* Convert to Golem image using gvmkit-build ([example](../examples/tools/converting-docker-image-to-golem-format.md))
 
-See our [Create Golem Image Tutorial](#custom-golem-image-step-by-step-tutorial) and [Examples](#installation-guide-and-other-examples) section to see how to create an image and examples on how to use the tool. 
+See our [Create Golem Image Tutorial](../tutorials/building-custom-image.md) on how to use the tool. 
 
 ## Publishing the image
 
@@ -32,8 +32,8 @@ The image must be downloaded to a remote computer therefore we need to publish i
 If you intend to use your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
 * Publishing the image anonymously. <!-- example is missing -->
-* Publishing the image using tags. ([example](../examples/tools/publishing.md))
-* Using the tag or hash in a requestor script. ([example](../examples/images.md))
+* Publishing the image using tags. ([example](../examples/tools/publishing-custom-images.md))
+* Using the tag or hash in a requestor script. ([example](../examples/working-with-images.md))
 
 ## Dockerfile command support 
 
@@ -67,16 +67,16 @@ In Golem terms such an image run on the provider is called an Activity. Activiti
 
 !!! golem-icon ""
 
-    [Installing gvmkit-build](../examples/tools/installing-gvmkit-build.md)
+    [Installing gvmkit-build](../examples/tools/gvmkit-build-installation.md)
 
 ### Custom Golem image Step-by-step Tutorial
 
 !!! golem-icon ""
 
-    [Creating custom Golem Image](../tutorials/image.md)
+    [Creating custom Golem Image](../tutorials/building-custom-image.md)
 
 ### Golem images FAQ
 
 !!! golem-icon ""
 
-    [Golem Images FAQ](./images-FAQ.md)
+    [Golem Images FAQ](./golem-images-faq.md)

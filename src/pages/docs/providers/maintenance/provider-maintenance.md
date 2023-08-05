@@ -2,10 +2,11 @@
 Description: Your Golem wallet and Yagna setup for Mainnet payments.
 ---
 
-In this article we present usage examples related to management of you Yagna wallet.
+In this article we present commands related to daily management of you Yagna.
 
 * Checking the wallet address
 * Checking the status of the wallet
+* upgrading Yagna
 
 
 !!! Prerequisites
@@ -42,5 +43,8 @@ In the context of running Golem on mainnet, here are the commands for each of th
     yagna payment status --sender --network=mainnet --driver=erc20
     ```
 
+## Upgrading Yagna 
 
+!!! Error 
+missing example
 

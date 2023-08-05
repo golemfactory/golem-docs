@@ -9,8 +9,8 @@ This section is aimed mainly at **requestors** wishing to switch from running si
 
 If you are a requestor:
 
-* You need to configure your requestor agent to negotiate Polygon or Ethereum as a payment platform. You can find a JS example [here](../Ncreators/javascript/examples/mainnet.md).
-* Next, you need to [enable payments](../Ncreators/javascript/examples/tools/your-golem-wallet.md) on the platform you choose (Polygon on Ethereum).
+* You need to configure your requestor agent to negotiate Polygon or Ethereum as a payment platform. You can find a JS example [here](../examples/switching-to-mainnet.md).
+* Next, you need to [enable payments](../examples/tools/managing-golem-wallet.md) on the platform you choose (Polygon on Ethereum).
 
 Okay, so while technically we now know how to hand out tasks to providers on paid networks, in the context of running **Golem on the mainnet**, a few important questions remain largely unanswered:
 
@@ -29,19 +29,19 @@ While direct, on-chain transactions using ERC-20-based tokens have long become t
 
 Of course, if you're willing to accept that disproportion, you may continue to use the Ethereum mainnet payments but for the majority of Golem node users, **Polygon** will be the main platform both when paying for tasks and receiving payments for their execution.
 
-For more information regarding Layer 2 and Polygon, please refer to our introduction to [Layer 2 payments](payment-layer-2.md):
+For more information regarding Layer 2 and Polygon, please refer to our introduction to [Layer 2 payments](../../../golem/payments/layer-2-payments.md):
 
 ## How to monitor the status of your wallet
 
 There are a number of the `Yagna` commands that will enable you to monitor the status of your wallet.
 
-They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here]()
+They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](../examples/tools/managing-golem-wallet.md)
 
 
 ## Securing your Golem wallet
 
 Golem provides a procedure to backup your wallet in a secure way, as well as to restore it to the new Yagna installation. 
-Please follow the instructions provided in [Golem wallet backup](../Ncreators/javascript/examples/tools/wallet-backup.md) and [Restore Golem wallet](../Ncreators/javascript/examples/tools/wallet-restore.md) tutorials.
+Please follow the instructions provided in [Golem wallet backup](../examples/tools/golem-wallet-backup.md) and [Restore Golem wallet](../examples/tools/restoring-golem-wallet.md) tutorials.
 
 ## Getting funds to your requestor
 

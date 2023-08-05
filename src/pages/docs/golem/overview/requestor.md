@@ -25,7 +25,7 @@ Such a scenario usually assumes the user has access to the requestor node, howev
 
 Yet another scenario allows you to run the requestor agent directly in the browser context. This case requires the user to have access to the Yagna daemon REST API 
 
-The basic requestor development tutorials are [here](../../Ncreators/javascript/tutorials/index.md) (JS):
+The basic requestor development tutorials are [here](../../creators/javascript/tutorials/index.md) (JS):
 
 
 ## Requestor FAQ

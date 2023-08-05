@@ -8,7 +8,7 @@ Description: Guide on how to convert an image from Docker to Golem using gvmkit-
 !!! info
 
     * The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-    * Required: [gvmkit-build installation](installing-gvmkit-build.md)
+    * Required: [gvmkit-build installation](./gvmkit-build-installation.md)
     * Basic knowledge of Docker along with the Docker service running
     
     (Note: you can use npx and pipx tools to run gvmkit-build without installation). 
@@ -105,6 +105,6 @@ Note if the image was already converted to `.gvmi`, it will only be pushed.
 
 !!! golem-icon "Next steps:"
 
-    [Publishing an image in the registry](publishing.md){ .md-button .md-button--primary }
+    [Publishing an image in the registry](./publishing-custom-images.md)
 
     Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

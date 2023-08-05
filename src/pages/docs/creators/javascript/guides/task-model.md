@@ -20,8 +20,8 @@ Tasks are __executed__ on __providers__ aka __remote computers__.
 So, to run your app on Golem Network you need:
 
 * A Yagna demon that will let you connect to the Golem Network.
-* A Docker-like [Image](../guides/golem-images-explained.md), that constitutes an environment in which you will run your commands.
-* A [requestor script](../guides/golem-images-explained.md), in which you will define tasks and execute them.
+* A Docker-like [Image](../guides/golem-images.md), that constitutes an environment in which you will run your commands.
+* A [requestor script](../tutorials/quickstart-explained.md), in which you will define tasks and execute them.
 
 The script will use Task API provided by JS SDK lib, so let’s get familiar with the Task model.
 
@@ -52,7 +52,7 @@ Task executor may run:
 
 Users can also define the maximum number of concurrently engaged providers (`maxParallelTasks` parameter).
 
-See examples [here](../examples/tasks.md).
+See examples [here](../examples/executing-tasks.md).
 
     
 ### Composing task
@@ -64,7 +64,7 @@ Tasks are defined by task functions. The simplest function contains just a singl
     * Promise (`.end()` method)
     * ReadableStream (`.endStream()` method) 
 
-See examples [here](../examples/commands.md).   
+See examples [here](../examples/composing-tasks.md).   
 
 ### Sending data to and from providers
 
@@ -76,7 +76,7 @@ Users can send:
 
 Note: The user must define a VOLUME within an image definition, to indicate a folder designed to contain files on a remote computer to enable data transfer.
 
-See examples [here](../examples/data.md).   
+See examples [here](../examples/tansferring-data.md).   
 
 ###  Processing results
 
@@ -85,7 +85,7 @@ Each command (run, uploadFile) produces a result object that contains stdout, st
 The way you can process results depends on the method you compose tasks and how tasks are composed. 
 It also defines how the potential failures on the provider side are handled by the JS SDK.
 
-See examples [here](../examples/results.md).    
+See examples [here](../examples/working-with-results.md).    
   
 
 ### Defining minimal requirements for provider system / selecting providers.
@@ -96,7 +96,7 @@ JS SDK provides the user with several built-in filters: `whiteListProposalIdsFil
 
 The user can also define his filter using the custom `proposalFilter`.
 
-See examples [here](../examples/demands.md).    
+See examples [here](../examples/selecting-providers.md).    
 
 
 !!! golem-icon "Next steps:"

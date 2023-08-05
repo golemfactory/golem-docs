@@ -41,7 +41,7 @@ Later on we're going to see how to specify the runtime to be used by the debugge
 ## Running the debugger
 
 !!! Info
-This section assumes you already have a `.gvmi` file ready on your machine. If you don't then follow the [Creating a custom image](image.md) tutorial or [Converting an image from Docker to Golem](../examples/tools/converting-an-image.md) example.
+This section assumes you already have a `.gvmi` file ready on your machine. If you don't then follow the [Creating a custom image](./building-custom-image.md) tutorial or [Converting an image from Docker to Golem](../examples/tools/converting-docker-image-to-golem-format.md) example.
 
 
 Let's now see how we can use `ya-runtime-dbg` together with our image. We can learn about the program's required arguments by calling `ya-runtime-dbg --help`:
@@ -137,7 +137,7 @@ Success! Our input data is there and can be read by the VM.
 
 Once you're done debugging or want to restart the VM, press `Ctrl+D` while in the debugger prompt.
 
-Having issues? Make sure to take a look at our [VM runtime FAQ](../guides/images-FAQ.md).
+Having issues? Make sure to take a look at our [VM runtime FAQ](../guides/golem-images-faq.md).
 
 ## Summary
 

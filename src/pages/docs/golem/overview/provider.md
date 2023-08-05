@@ -16,6 +16,6 @@ Currently, Golem provides:
 
 In our examples, we utilize VM runtimes that run a requestor-provided GVMI image.
 
-You can learn more about becoming a Golem providers [here](../../providers/install.md).
+You can learn more about becoming a Golem provider [here](../../providers/index.md).
 
-You can learn more about the Golem images [here](../../Ncreators/javascript/guides/golem-images-explained.md).
+You can learn more about the Golem images [here](../../creators/javascript/guides/golem-images.md).
