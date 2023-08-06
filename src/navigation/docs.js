@@ -269,6 +269,14 @@ export const navigation = [
           { title: 'Golem token conversion', href: '/docs/golem/payments/golem-token-conversion' },
         ] 
       },
+      { title: 'Payload Manifest',         
+        children: 
+        [ 
+          { title: 'index', href: '/docs/golem/payload-manifest' },
+          { title: 'schema', href: '/docs/golem/payload-manifest/computation-payload-manifest.schema.json' },
+          { title: 'Schema docs', href: '/docs/golem/payload-manifest/computation-payload-manifest.schema' },
+        ] 
+      },
     ]
   },
   {
