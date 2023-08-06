@@ -13,7 +13,7 @@ By following this tutorial, you'll be able to get more confident about:
 * Creating a descriptor reflecting your app using YAML syntax similar to that used by `docker-compose`.
 * Deploying your app to Golem using `dapp-runner`.
 
-This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` daemon as a requestor](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
+This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` daemon as a requestor](creators/javascript/examples/tools/yagna-installation-for-requestors.md) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
 
 ## Prerequisites
 
@@ -28,12 +28,7 @@ The example that we're going to show you here uses a very simple Python HTTP ser
 
 On the other hand, if you're more acquainted with any other language or platform that enables you to easily create a simple HTTP server and pack it into a Docker image, go for it.
 
-Just as well - if the setup and construction of such a simple app is obvious to you, feel free to jump to
-
-<a href="#converting-the-image-to-golem" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Converting the image to Golem</span>
-</a>
+Just as well - if the setup and construction of such a simple app is obvious to you, feel free to jump to __Converting the image to Golem__
 
 ## Environment preparation
 
@@ -153,10 +148,7 @@ We need to start with a Docker image since the only currently-supported way of c
 
 If you'd like to know more about the GVMI images and about the conversion process, please refer to:
 
-<a href="https://handbook.golem.network/requestor-tutorials/vm-runtime/" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>VM Runtime</span>
-</a>
+[Golem Images explained](creators/javascript/guides/golem-images.md)
 
 Let's back-up a little and ensure that we're one directory above `server_app`.
 
@@ -345,7 +337,7 @@ yagna service run
 
 !!! info
 
-    If you haven't set-up your yagna daemon before, please refer to our [quick start guide](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development).
+    If you haven't set-up your yagna daemon before, please refer to our [Yagna installation instruction](creators/javascript/examples/tools/yagna-installation-for-requestors.md).
 
 ### Obtain the application key
 

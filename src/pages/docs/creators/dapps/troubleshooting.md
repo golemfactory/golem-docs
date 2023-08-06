@@ -6,7 +6,7 @@ For any issues that are not listed below, or in case you'd like to chat with us,
 
 **Issues during the yagna setup**
 
-If you encounter problems during the yagna daemon initialization, please refer to this [handbook article on getting started as a creator](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development).
+If you encounter problems during the yagna daemon initialization, please refer to this [Yagna Daemon installation instruction](creators/javascript/examples/tools/yagna-installation-for-requestors.md).
 
 **\[Errno 104] Connection reset by peer**
 
@@ -32,12 +32,7 @@ Each of the commands listed in the `init` section of the node has to finish its 
 
 **Retrieving complete logs from the provider**
 
-Currently, a requestor user only has access to logs of the yagna daemon and dapp runtime. Logs from the provider side are not retrievable. One way to mitigate this, is to run the `goth` utility to have access to provider-side logs - to learn more, visit the article below:
-
-<a href="https://handbook.golem.network/requestor-tutorials/interactive-testing-environment" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Interactive Testing Environment</span>
-</a>
+Currently, a requestor user only has access to logs of the yagna daemon and dapp runtime. Logs from the provider side are not retrievable. One way to mitigate this, is to run the `goth` utility to have access to provider-side logs - to learn more.
 
 **Bad default listening address**
 

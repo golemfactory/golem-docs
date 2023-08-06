@@ -57,8 +57,7 @@ Yagna is a daemon that will let you communicate with Golem Network and perform o
 
 !!! Note
 
-    If you have encountered problems, contact us on the discord channel or take a look here: [Yagna troublesooting](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
-
+    If you have encountered problems, contact us on the [discord channel](https://chat.golem.network/)
 
 #### Start the daemon
 
@@ -137,7 +136,7 @@ import { TaskExecutor } from "yajsapi";
 
 !!! info
 
-    You can find a detailed explanation of the above code [here](../creators/javascript/tutorials/quickstart-explained.md)
+    You can find a detailed explanation of the above code [here](creators/javascript/tutorials/quickstart-explained)
 
 
 ## Running the script on Golem Network

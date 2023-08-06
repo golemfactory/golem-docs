@@ -24,26 +24,13 @@ Golem’s virtual machine runtime uses its own image format, which is derived fr
 
 For instructions on how to create a Golem VM image, please refer to:
 
-<a href="https://handbook.golem.network/requestor-tutorials/vm-runtime/creating-a-docker-image" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Creating a Docker image</span>
-</a>
-
-and:
-
-<a href="https://handbook.golem.network/requestor-tutorials/vm-runtime/convert-a-docker-image-into-a-golem-image" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Convert a Docker image</span>
-</a>
+[Converting a Docker image to the Golem image Tutorial](creators/javascript/examples/tools/converting-docker-image-to-golem-format.md)
 
 What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re listing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](docker-containers-vs-golem-vms.md)
 
 For a GVMI image to be used by providers, it needs to be published somewhere where providers can download it. The easiest way is uploading it to the Golem image repository. For instructions on how to do it, refer to:
 
-<a href="https://handbook.golem.network/requestor-tutorials/vm-runtime/uploading-a-golem-image" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Uploading a Golem image</span>
-</a>
+[Publishing a Golem image](creators/javascript/examples/tools/publishing-custom-images.md)
 
 If the image is uploaded to the repository, it’s hash is the only piece of information needed for the image to be retrieved and used by the providers. If it’s available under a different, publicly-available URL, both the image hash and the URL need to be supplied.
 
@@ -102,10 +89,8 @@ The manifests are JSON files conforming to a specific schema, e.g.:
 
 For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to:
 
-<a href="https://handbook.golem.network/requestor-tutorials/vm-runtime/computation-payload-manifest" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Computation payload manifest</span>
-</a>
+[Computation Payload Manifest](golem/payload-manifest/index.md)
+
 
 ### **Manifest signatures**
 
@@ -117,10 +102,7 @@ For a complete list of those locations, please refer to:
 
 Each provider can freely add new addresses and patterns to the whitelist. For documentation on how to do that, please refer to:
 
-<a href="https://handbook.golem.network/provider-tutorials/provider-cli" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Provider CLI</span>
-</a>
+[Yagna CLI](providers/yagna-cli-reference.md)
 
 If the application wishes to access a URL which matches one of the entries on a whitelist, it only needs to supply that address within the manifest file.
 
@@ -158,10 +140,7 @@ One way to do it is bundling it with `docker-compose` and verifying all of its c
 
 Other than that, each singular image comprising your application may be tested separately using a tool known as `ya-runtime-dbg`. It’s especially useful if you encounter an elusive, hard-to-pinpoint issue when trying to launch your app on Golem. For more information, please refer to:
 
-<a href="https://handbook.golem.network/requestor-tutorials/vm-runtime/gvmi-debugging" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>GVMI Debugging</span>
-</a>
+[Testing a Golem image tutorial](creators/javascript/tutorials/testing-golem-image.md)
 
 #### Lack of network connectivity in ya-runtime-dbg
 

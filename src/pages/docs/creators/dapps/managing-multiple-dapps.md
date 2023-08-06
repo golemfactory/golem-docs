@@ -18,9 +18,8 @@ running instances of the `dapp-runner`.
 As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly configured
 [yagna](https://github.com/golemfactory/yagna) daemon, you'll need to have it set up.
 
-Please follow the ["Requestor development: a quick primer"](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
-tutorial and ensure that your `yagna` is up and running. Only the first part of this
-tutorial is required - you don't need to run the blender example.
+Please follow the [Yagna installation instruction](creators/javascript/examples/tools/yagna-installation-for-requestors.md)
+tutorial and ensure that your `yagna` is up and running. 
 
 Most importantly, make sure you have set the `YAGNA_APPKEY` in your environment, e.g. with:
 

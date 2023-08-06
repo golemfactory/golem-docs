@@ -228,12 +228,12 @@ Additionally, it enables configuration of the certificate keystore and of the do
 
 The provider has an embedded certificate keystore which is used to validate any additional permissions for the payload launched by the requestors.
 
-By default, it contains only Golem public certificate which allows executing [example app](https://handbook.golem.network/requestor-tutorials/service-development/service-example-6-external-api-request) and apps from trusted by Golem creators (certificates allow to verify incoming _Demand_'s [Computational Payload Manifests](https://handbook.golem.network/requestor-tutorials/vm-runtime/computation-payload-manifest)).
+By default, it contains only Golem public certificate which allows executing examples in tutorials and apps from trusted by Golem creators. 
 
 Run `ya-provider keystore --help` to see possible subcommands
 
 ### Domain whitelist
 
-The [Computational Payload Manifests](https://handbook.golem.network/requestor-tutorials/vm-runtime/computation-payload-manifest) embedded in the Demands can specify a list of URLs that may get called by the services running on a Provider. If the manifest declares requests to URLs in domains that are not whitelisted, it must come with a [signature and app author's public certificate](https://handbook.golem.network/requestor-tutorials/vm-runtime/computation-payload-manifest). By default, the domains `whitelist` consists of a curated set of public websites and APIs like GitHub, dockerhub or public Ethereum nodes.
+The [Computational Payload Manifests](golem/payload-manifest/index) embedded in the Demands can specify a list of URLs that may get called by the services running on a Provider. If the manifest declares requests to URLs in domains that are not whitelisted, it must come with a signature and app author's public certificate. By default, the domains `whitelist` consists of a curated set of public websites and APIs like GitHub, dockerhub or public Ethereum nodes.
 
 Run `ya-provider whitelist --help` to see possible subcommands.
