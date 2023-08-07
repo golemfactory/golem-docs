@@ -85,7 +85,7 @@ export const NavigationItem = ({ item, isActive }) =>
       {item.title}
     </Link>
   ) : (
-    <span className={clsx({ 'text-primary': isActive })}>{item.title}</span>
+    <span className={clsx({ 'text-primary dark:text-darkprimary': isActive })}>{item.title}</span>
   )
 
 export const Dropdown = ({ children }) => {
