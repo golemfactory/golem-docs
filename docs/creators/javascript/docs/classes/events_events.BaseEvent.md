@@ -114,7 +114,7 @@ CustomEvent&lt;DataType\&gt;.constructor
 
 #### Defined in
 
-[yajsapi/events/events.ts:28](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L28)
+[yajsapi/events/events.ts:28](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/events/events.ts#L28)
 
 ## Properties
 
@@ -128,7 +128,7 @@ CustomEvent.detail
 
 #### Defined in
 
-[yajsapi/events/events.ts:16](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L16)
+[yajsapi/events/events.ts:16](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/events/events.ts#L16)
 
 ___
 
@@ -142,7 +142,7 @@ CustomEvent.name
 
 #### Defined in
 
-[yajsapi/events/events.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L17)
+[yajsapi/events/events.ts:17](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/events/events.ts#L17)
 
 ___
 
@@ -156,4 +156,4 @@ CustomEvent.timestamp
 
 #### Defined in
 
-[yajsapi/events/events.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L18)
+[yajsapi/events/events.ts:18](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/events/events.ts#L18)

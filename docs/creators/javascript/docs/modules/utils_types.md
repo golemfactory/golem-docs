@@ -21,4 +21,4 @@
 
 #### Defined in
 
-[yajsapi/utils/types.ts:12](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/types.ts#L12)
+[yajsapi/utils/types.ts:12](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/types.ts#L12)

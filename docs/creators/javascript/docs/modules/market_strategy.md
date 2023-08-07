@@ -32,7 +32,7 @@ Default Proposal filter that accept all proposal coming from the market
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:4](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L4)
+[yajsapi/market/strategy.ts:4](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/strategy.ts#L4)
 
 ___
 
@@ -66,7 +66,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:7](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L7)
+[yajsapi/market/strategy.ts:7](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/strategy.ts#L7)
 
 ___
 
@@ -100,7 +100,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:11](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L11)
+[yajsapi/market/strategy.ts:11](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/strategy.ts#L11)
 
 ___
 
@@ -134,7 +134,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L15)
+[yajsapi/market/strategy.ts:15](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/strategy.ts#L15)
 
 ___
 
@@ -168,7 +168,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:19](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L19)
+[yajsapi/market/strategy.ts:19](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/strategy.ts#L19)
 
 ___
 
@@ -202,7 +202,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:23](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L23)
+[yajsapi/market/strategy.ts:23](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/strategy.ts#L23)
 
 ___
 
@@ -236,4 +236,4 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 #### Defined in
 
-[yajsapi/market/strategy.ts:27](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/strategy.ts#L27)
+[yajsapi/market/strategy.ts:27](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/strategy.ts#L27)

@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[yajsapi/network/network.ts:28](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/network.ts#L28)
+[yajsapi/network/network.ts:28](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/network/network.ts#L28)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[yajsapi/network/network.ts:29](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/network.ts#L29)
+[yajsapi/network/network.ts:29](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/network/network.ts#L29)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[yajsapi/network/network.ts:30](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/network.ts#L30)
+[yajsapi/network/network.ts:30](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/network/network.ts#L30)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[yajsapi/network/network.ts:31](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/network/network.ts#L31)
+[yajsapi/network/network.ts:31](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/network/network.ts#L31)

@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[yajsapi/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/pinoLogger.ts#L4)
+[yajsapi/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/pinoLogger.ts#L4)

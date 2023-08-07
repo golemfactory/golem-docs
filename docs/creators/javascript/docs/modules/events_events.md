@@ -52,4 +52,4 @@ Global Event Type with which all API events will be emitted. It should be used o
 
 #### Defined in
 
-[yajsapi/events/events.ts:9](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/events/events.ts#L9)
+[yajsapi/events/events.ts:9](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/events/events.ts#L9)

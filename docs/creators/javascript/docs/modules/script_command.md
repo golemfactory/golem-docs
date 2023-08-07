@@ -25,4 +25,4 @@
 
 #### Defined in
 
-[yajsapi/script/command.ts:46](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L46)
+[yajsapi/script/command.ts:46](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/script/command.ts#L46)

@@ -29,7 +29,7 @@ Default DebitNotes filter that accept all debit notes without any validation
 
 #### Defined in
 
-[yajsapi/payment/strategy.ts:5](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/strategy.ts#L5)
+[yajsapi/payment/strategy.ts:5](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/strategy.ts#L5)
 
 ___
 
@@ -51,7 +51,7 @@ Default Invoices filter that accept all invoices without any validation
 
 #### Defined in
 
-[yajsapi/payment/strategy.ts:7](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/strategy.ts#L7)
+[yajsapi/payment/strategy.ts:7](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/strategy.ts#L7)
 
 ___
 
@@ -85,7 +85,7 @@ A custom filter that only accepts debit notes below a given value
 
 #### Defined in
 
-[yajsapi/payment/strategy.ts:10](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/strategy.ts#L10)
+[yajsapi/payment/strategy.ts:10](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/strategy.ts#L10)
 
 ___
 
@@ -119,4 +119,4 @@ A custom filter that only accepts invoices below a given value
 
 #### Defined in
 
-[yajsapi/payment/strategy.ts:14](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/strategy.ts#L14)
+[yajsapi/payment/strategy.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/strategy.ts#L14)

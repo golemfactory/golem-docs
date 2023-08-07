@@ -20,4 +20,4 @@ Helper function implements simple logger prints all messages to console
 
 #### Defined in
 
-[yajsapi/utils/logger/consoleLogger.ts:5](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/consoleLogger.ts#L5)
+[yajsapi/utils/logger/consoleLogger.ts:5](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/consoleLogger.ts#L5)

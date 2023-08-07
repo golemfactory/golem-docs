@@ -8,6 +8,8 @@
 
   ↳ [`PaymentOptions`](payment_payments.PaymentOptions.md)
 
+  ↳ [`PaymentOptions`](payment_service.PaymentOptions.md)
+
 ## Table of contents
 
 ### Properties
@@ -28,7 +30,7 @@
 
 #### Defined in
 
-[yajsapi/payment/config.ts:28](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L28)
+[yajsapi/payment/config.ts:28](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L28)
 
 ___
 
@@ -38,7 +40,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/config.ts:29](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L29)
+[yajsapi/payment/config.ts:29](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L29)
 
 ___
 
@@ -55,7 +57,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/config.ts:30](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L30)
+[yajsapi/payment/config.ts:30](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L30)
 
 ___
 
@@ -65,7 +67,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/config.ts:31](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L31)
+[yajsapi/payment/config.ts:31](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L31)
 
 ___
 
@@ -75,7 +77,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/config.ts:32](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L32)
+[yajsapi/payment/config.ts:32](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L32)
 
 ___
 
@@ -85,7 +87,7 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/config.ts:33](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L33)
+[yajsapi/payment/config.ts:33](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L33)
 
 ___
 
@@ -95,4 +97,4 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/config.ts:34](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/config.ts#L34)
+[yajsapi/payment/config.ts:34](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L34)

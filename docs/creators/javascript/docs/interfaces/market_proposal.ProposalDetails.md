@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:7](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L7)
+[yajsapi/market/proposal.ts:7](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L7)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:8](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L8)
+[yajsapi/market/proposal.ts:8](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L8)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:9](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L9)
+[yajsapi/market/proposal.ts:9](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L9)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:10](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L10)
+[yajsapi/market/proposal.ts:10](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L10)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:11](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L11)
+[yajsapi/market/proposal.ts:11](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L11)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:12](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L12)
+[yajsapi/market/proposal.ts:12](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L12)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:13](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L13)
+[yajsapi/market/proposal.ts:13](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L13)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:14](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L14)
+[yajsapi/market/proposal.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L14)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L15)
+[yajsapi/market/proposal.ts:15](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L15)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:16](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L16)
+[yajsapi/market/proposal.ts:16](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L16)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L17)
+[yajsapi/market/proposal.ts:17](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L17)
 
 ___
 
@@ -137,4 +137,4 @@ ___
 
 #### Defined in
 
-[yajsapi/market/proposal.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/proposal.ts#L18)
+[yajsapi/market/proposal.ts:18](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L18)

@@ -26,4 +26,4 @@ Create a logger that writes a JSON object for every log line.
 
 #### Defined in
 
-[yajsapi/utils/logger/jsonLogger.ts:8](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/jsonLogger.ts#L8)
+[yajsapi/utils/logger/jsonLogger.ts:8](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/jsonLogger.ts#L8)

@@ -29,7 +29,7 @@ The selector used when choosing a provider from a pool of existing offers (from 
 
 #### Defined in
 
-[yajsapi/agreement/service.ts:22](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/service.ts#L22)
+[yajsapi/agreement/service.ts:22](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/service.ts#L22)
 
 ___
 
@@ -45,7 +45,7 @@ AgreementOptions.yagnaOptions
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:34](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L34)
+[yajsapi/agreement/agreement.ts:34](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/agreement.ts#L34)
 
 ___
 
@@ -61,7 +61,7 @@ AgreementOptions.agreementRequestTimeout
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:36](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L36)
+[yajsapi/agreement/agreement.ts:36](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/agreement.ts#L36)
 
 ___
 
@@ -77,7 +77,7 @@ AgreementOptions.agreementWaitingForApprovalTimeout
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:38](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L38)
+[yajsapi/agreement/agreement.ts:38](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/agreement.ts#L38)
 
 ___
 
@@ -93,7 +93,7 @@ AgreementOptions.logger
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:40](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L40)
+[yajsapi/agreement/agreement.ts:40](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/agreement.ts#L40)
 
 ___
 
@@ -109,4 +109,4 @@ AgreementOptions.eventTarget
 
 #### Defined in
 
-[yajsapi/agreement/agreement.ts:42](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/agreement.ts#L42)
+[yajsapi/agreement/agreement.ts:42](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/agreement.ts#L42)

@@ -43,7 +43,7 @@ Command.constructor
 
 #### Defined in
 
-[yajsapi/script/command.ts:75](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L75)
+[yajsapi/script/command.ts:75](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/script/command.ts#L75)
 
 ## Properties
 
@@ -57,7 +57,7 @@ Command.args
 
 #### Defined in
 
-[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L8)
+[yajsapi/script/command.ts:8](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/script/command.ts#L8)
 
 ## Methods
 
@@ -75,7 +75,7 @@ Command.toJson
 
 #### Defined in
 
-[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L12)
+[yajsapi/script/command.ts:12](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/script/command.ts#L12)
 
 ___
 
@@ -93,7 +93,7 @@ Command.toExeScriptRequest
 
 #### Defined in
 
-[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L17)
+[yajsapi/script/command.ts:17](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/script/command.ts#L17)
 
 ___
 
@@ -111,7 +111,7 @@ Command.before
 
 #### Defined in
 
-[yajsapi/script/command.ts:20](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L20)
+[yajsapi/script/command.ts:20](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/script/command.ts#L20)
 
 ___
 
@@ -129,4 +129,4 @@ Command.after
 
 #### Defined in
 
-[yajsapi/script/command.ts:23](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/script/command.ts#L23)
+[yajsapi/script/command.ts:23](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/script/command.ts#L23)

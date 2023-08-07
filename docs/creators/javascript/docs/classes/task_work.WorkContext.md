@@ -45,7 +45,7 @@ Work Context
 
 #### Defined in
 
-[yajsapi/task/work.ts:51](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L51)
+[yajsapi/task/work.ts:51](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ Work Context
 
 #### Defined in
 
-[yajsapi/task/work.ts:42](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L42)
+[yajsapi/task/work.ts:42](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L42)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:43](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L43)
+[yajsapi/task/work.ts:43](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L43)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:44](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L44)
+[yajsapi/task/work.ts:44](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L44)
 
 ## Methods
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:61](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L61)
+[yajsapi/task/work.ts:61](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L61)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:96](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L96)
+[yajsapi/task/work.ts:96](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L96)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:106](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L106)
+[yajsapi/task/work.ts:106](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L106)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:110](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L110)
+[yajsapi/task/work.ts:110](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L110)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:115](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L115)
+[yajsapi/task/work.ts:115](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L115)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:119](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L119)
+[yajsapi/task/work.ts:119](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L119)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:122](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L122)
+[yajsapi/task/work.ts:122](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L122)
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:125](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L125)
+[yajsapi/task/work.ts:125](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L125)
 
 ___
 
@@ -251,4 +251,4 @@ ___
 
 #### Defined in
 
-[yajsapi/task/work.ts:130](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/work.ts#L130)
+[yajsapi/task/work.ts:130](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/work.ts#L130)
