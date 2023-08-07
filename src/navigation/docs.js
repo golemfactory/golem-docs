@@ -1,29 +1,38 @@
 export const navigation = [
   {
     title: 'Home',
-    links: [
-      { title: 'index', href: '/' },
-    ]
+    links: [{ title: 'index', href: '/' }],
   },
   {
     title: 'QuickStarts',
     links: [
-      { title: 'index', href: '/docs/quickstarts/' },
-      { title: 'JS QuickStart (node.js)', href: '/docs/quickstarts/js-quickstart' },
-      { title: 'Golem in a Browser', href: '/docs/quickstarts/golem-in-a-browser' },
-      { title: '"no-code" app deployment', href: '/docs/quickstarts/no-code-app-deployment' },
+      { title: 'index', href: '/docs/quickstarts' },
+      {
+        title: 'JS QuickStart (node.js)',
+        href: '/docs/quickstarts/js-quickstart',
+      },
+      {
+        title: 'Golem in a Browser',
+        href: '/docs/quickstarts/golem-in-a-browser',
+      },
+      {
+        title: '"no-code" app deployment',
+        href: '/docs/quickstarts/no-code-app-deployment',
+      },
     ],
   },
   {
     title: 'Create on Golem',
     links: [
       { title: 'index', href: '/docs/creators/' },
-      { title: 'JavaScript', children: 
-        [
+      {
+        title: 'JavaScript',
+        children: [
           { title: 'index', href: '/docs/creators/javascript/' },
-          { title: 'QuickStarts', href: '/docs/creators/javascript/quickstarts',
-            children: 
-            [
+          {
+            title: 'QuickStarts',
+            href: '/docs/creators/javascript/quickstarts',
+            children: [
               {
                 title: 'index',
                 href: '/docs/creators/javascript/quickstarts',
@@ -38,9 +47,9 @@ export const navigation = [
               },
             ],
           },
-          { title: 'Tutorials', href: '',
-            children: 
-            [
+          {
+            title: 'Tutorials',
+            children: [
               {
                 title: 'index',
                 href: '/docs/creators/javascript/tutorials/',
@@ -65,11 +74,12 @@ export const navigation = [
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
               },
-            ], 
+            ],
           },
-          { title: 'JS Task API Examples', href: '',
-            children: 
-            [
+          {
+            title: 'JS Task API Examples',
+            href: '',
+            children: [
               {
                 title: 'index',
                 href: '/docs/creators/javascript/examples/',
@@ -102,11 +112,12 @@ export const navigation = [
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/examples/switching-to-mainnet',
               },
-            ], 
+            ],
           },
-          { title: 'Guides', href: '',
-            children: 
-            [
+          {
+            title: 'Guides',
+            href: '',
+            children: [
               {
                 title: 'index',
                 href: '/docs/creators/javascript/guides/',
@@ -131,11 +142,12 @@ export const navigation = [
                 title: 'Troubleshooting',
                 href: '/docs/creators/javascript/guides/troubleshooting',
               },
-            ], 
+            ],
           },
-          { title: 'Golem tools examples', href: '',
-            children: 
-            [
+          {
+            title: 'Golem tools examples',
+            href: '',
+            children: [
               {
                 title: 'index',
                 href: '/docs/creators/javascript/examples/tools/',
@@ -168,11 +180,12 @@ export const navigation = [
                 title: 'Managing Golem wallet',
                 href: '/docs/creators/javascript/examples/tools/managing-golem-wallet',
               },
-            ], 
+            ],
           },
-          { title: 'JS Task API Reference', href: '/docs/creators/javascript/docs',
-            children: 
-            [
+          {
+            title: 'JS Task API Reference',
+            href: '/docs/creators/javascript/docs',
+            children: [
               {
                 title: 'Content overview',
                 href: '/docs/creators/javascript/docs/',
@@ -195,95 +208,94 @@ export const navigation = [
               },
             ],
           },
-        ], 
+        ],
       },
-      { title: 'Deploying apps on Golem',
-        children: 
-          [ 
-            { title: 'index', href: '/docs/creators/dapps/' },
-            { title: 'Quickstart', href: '/docs/creators/dapps/run-a-dapp' },
-            {
-             title: 'Hello World Dapp',
-             href: '/docs/creators/dapps/hello-world-dapp',
-            },
-            {
-             title: 'Managing multiple dapps',
-             href: '/docs/creators/dapps/managing-multiple-dapps',
-            },
-            {
-             title: 'Creating Golem Dapps',
-             href: '/docs/dapps/creating-golem-dapps',
-            },
-            {
-             title: 'Differences between Docker containers and Golem VM runtime',
-             href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
-            },
-            { 
-              title: 'Troubleshooting', 
-              href: '/docs/creators/dapps/troubleshooting' 
-            },
+      {
+        title: 'Deploying apps on Golem',
+        children: [
+          { title: 'index', href: '/docs/creators/dapps/' },
+          { title: 'Quickstart', href: '/docs/creators/dapps/run-a-dapp' },
+          {
+            title: 'Hello World Dapp',
+            href: '/docs/creators/dapps/hello-world-dapp',
+          },
+          {
+            title: 'Managing multiple dapps',
+            href: '/docs/creators/dapps/managing-multiple-dapps',
+          },
+          {
+            title: 'Creating Golem Dapps',
+            href: '/docs/dapps/creating-golem-dapps',
+          },
+          {
+            title: 'Differences between Docker containers and Golem VM runtime',
+            href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
+          },
+          {
+            title: 'Troubleshooting',
+            href: '/docs/creators/dapps/troubleshooting',
+          },
         ],
       },
     ],
   },
   {
     title: 'Share and Earn',
-    links: [
-      { title: 'index', href: '/docs/providers/' },
-      { title: 'Provider installation', href: '/docs/providers/provider-installation' },
-      { title: 'Provider basic configuration', href: '/docs/providers/provider-basic-configuration' },      
-      { title: 'Provider troubleshooting', href: '/docs/providers/provider-troubleshooting' },
-      { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-      { title: 'Yagna CLI reference', href: '/docs/providers/yagna-cli-reference' },
-      { title: 'Provider Maintenance',         
-        children: 
-        [ 
-          { title: 'index', href: '/docs/providers/maintenance' },
-          { title: 'Provider maintenance', href: '/docs/providers/maintenance/provider-maintenance' },
-          { title: 'Wallet backup', href: '/docs/providers/maintenance/wallet-backup' },
-          { title: 'Wallet restoration', href: '/docs/providers/maintenance/wallet-restoration' },
-        ] 
-      },
-
-    ]
+    links: [{ title: 'indexee', href: '/docs/providers' }],
+    links: [{ title: 'indexee', href: '/docs/providers' }],
   },
   {
     title: 'General Info',
     links: [
-      { title: 'index', href: '/docs/golem/' },
+      { title: 'index', href: '/docs/golem' },
       { title: 'Terms', href: '/docs/golem/terms' },
-      { title: 'Golem Overview',         
-        children: 
-        [ 
+      {
+        title: 'Golem Overview',
+        children: [
           { title: 'index', href: '/docs/golem/overview' },
           { title: 'Provider', href: '/docs/golem/overview/provider' },
           { title: 'Requestor', href: '/docs/golem/overview/requestor' },
-          { title: 'Requestor FAQ', href: '/docs/golem/overview/requestor-faq' },
-        ] 
+          {
+            title: 'Requestor FAQ',
+            href: '/docs/golem/overview/requestor-faq',
+          },
+        ],
       },
-      { title: 'Payments',         
-        children: 
-        [ 
+      {
+        title: 'Payments',
+        children: [
           { title: 'index', href: '/docs/golem/payments' },
-          { title: 'Layer 2 Payments', href: '/docs/golem/payments/layer-2-payments' },
-          { title: 'Golem token conversion', href: '/docs/golem/payments/golem-token-conversion' },
-        ] 
+          {
+            title: 'Layer 2 Payments',
+            href: '/docs/golem/payments/layer-2-payments',
+          },
+          {
+            title: 'Golem token conversion',
+            href: '/docs/golem/payments/golem-token-conversion',
+          },
+        ],
       },
-      { title: 'Payload Manifest',         
-        children: 
-        [ 
+      {
+        title: 'Payload Manifest',
+        children: [
           { title: 'index', href: '/docs/golem/payload-manifest' },
-          { title: 'schema', href: '/docs/golem/payload-manifest/computation-payload-manifest.schema.json' },
-          { title: 'Schema docs', href: '/docs/golem/payload-manifest/computation-payload-manifest.schema' },
-        ] 
+          {
+            title: 'schema',
+            href: '/docs/golem/payload-manifest/computation-payload-manifest.schema.json',
+          },
+          {
+            title: 'Schema docs',
+            href: '/docs/golem/payload-manifest/computation-payload-manifest.schema',
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/blabla' },
-      { title: 'Installation', href: '/docs/installation' }
+      { title: 'Getting started', href: '/docs/javascript/demo' },
+      { title: 'Installation', href: '/docs/installation' },
     ],
   },
   {
