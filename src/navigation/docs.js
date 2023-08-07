@@ -294,7 +294,7 @@ export const navigation = [
   {
     title: 'Introduction',
     links: [
-      { title: 'Getting started', href: '/docs/javascript/demo' },
+      { title: 'Designer Demo', href: '/docs/javascript/demo' },
     ],
   },
   {

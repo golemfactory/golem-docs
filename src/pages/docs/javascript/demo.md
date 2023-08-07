@@ -152,3 +152,7 @@ Want to use a YAML-based approach to configure the deployment
 {% /selectioncard %}
 
 {% /grid %}
+
+# Example of an image being used
+
+![Hacker image](/hacker.png)
