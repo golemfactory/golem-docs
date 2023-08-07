@@ -11,12 +11,5 @@ We provide multiple examples that will help you start your journey with Golem:
 |[JS QuickStart (in a browser)](/docs/quickstarts/golem-in-a-browser) |   This will lead to how to run a quick primer from within a browser.|
 | ['no-code' app deployment](/docs/quickstarts/no-code-app-deployment)| This example will show you how to deploy your docker app on Golem without coding. |
 
-[JS QuickStart (node.js)](/docs/quickstarts/js-quickstart) 
-
-[JS QuickStart (node.js)](/docs/quickstarts/quickstarts/js-quickstart) 
-
-[JS QuickStart (node.js)](/docs/quickstarts//quickstarts/js-quickstart) 
-
-[JS QuickStart (node.js)](/docs/quickstarts/js-quickstart) 
 
 
