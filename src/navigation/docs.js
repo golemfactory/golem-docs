@@ -28,7 +28,7 @@ export const navigation = [
       {
         title: 'JavaScript',
         children: [
-          { title: 'index', href: '/docs/creators/javascript/' },
+          { title: 'index', href: '/docs/creators/javascript' },
           {
             title: 'QuickStarts',
             href: '/docs/creators/javascript/quickstarts',
@@ -52,7 +52,7 @@ export const navigation = [
             children: [
               {
                 title: 'index',
-                href: '/docs/creators/javascript/tutorials/',
+                href: '/docs/creators/javascript/tutorials',
               },
               {
                 title: 'QuickStart Explained',
@@ -82,7 +82,7 @@ export const navigation = [
             children: [
               {
                 title: 'index',
-                href: '/docs/creators/javascript/examples/',
+                href: '/docs/creators/javascript/examples',
               },
               {
                 title: 'Executing tasks',
@@ -120,7 +120,7 @@ export const navigation = [
             children: [
               {
                 title: 'index',
-                href: '/docs/creators/javascript/guides/',
+                href: '/docs/creators/javascript/guides',
               },
               {
                 title: 'Task Model',
@@ -150,7 +150,7 @@ export const navigation = [
             children: [
               {
                 title: 'index',
-                href: '/docs/creators/javascript/examples/tools/',
+                href: '/docs/creators/javascript/examples/tools',
               },
               {
                 title: 'Yagna installation for requestors',
@@ -188,7 +188,7 @@ export const navigation = [
             children: [
               {
                 title: 'Content overview',
-                href: '/docs/creators/javascript/docs/',
+                href: '/docs/creators/javascript/docs',
               },
               {
                 title: 'classes',
@@ -213,7 +213,7 @@ export const navigation = [
       {
         title: 'Deploying apps on Golem',
         children: [
-          { title: 'index', href: '/docs/creators/dapps/' },
+          { title: 'index', href: '/docs/creators/dapps' },
           { title: 'Quickstart', href: '/docs/creators/dapps/run-a-dapp' },
           {
             title: 'Hello World Dapp',
@@ -295,7 +295,6 @@ export const navigation = [
     title: 'Introduction',
     links: [
       { title: 'Getting started', href: '/docs/javascript/demo' },
-      { title: 'Installation', href: '/docs/installation' },
     ],
   },
   {
