@@ -93,8 +93,8 @@ export const navigation = [
                 href: '/docs/creators/javascript/examples/composing-tasks',
               },
               {
-                title: 'Tansferring data',
-                href: '/docs/creators/javascript/examples/tansferring-data',
+                title: 'Transferring data',
+                href: '/docs/creators/javascript/examples/transferring-data',
               },
               {
                 title: 'Working with results',

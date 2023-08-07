@@ -2,12 +2,11 @@
 Description: Sending data
 ---
 
-In this article, we will present methods that let you send files to and from a provider as well as send JSON to a remote computer.
 
-!!! Note: At this moment sending files and JSON methods are available only in scripts that are run in node.js. 
+{% alert level="info" %}
 
-!!! Prerequisites 
-- Yagna daemon installed and running
+# Prerequisites 
+Yagna daemon installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
@@ -18,6 +17,16 @@ mkdir golem-example
 npm init
 npm i yajsapi
 ```
+{% /alert %}
+
+## Introduction
+
+In this article, we will present methods that let you send files to and from a provider as well as send JSON to a remote computer.
+
+{% alert level="warning" %}
+At this moment sending files and JSON methods are available only in scripts that are run in node.js. 
+{% /alert %}
+
 
 ## Uploading a file to the provider
 
@@ -57,7 +66,7 @@ const hash = createHash('md5').update(buff).digest('hex');
 ```
 
 
-![uploadfile](/assets/uplaodfile_log.png "Requestor script output logs")
+![Uploadfile output log](/uplaodfile_log.png)
 
 
 ## Downloading a file from the provider
@@ -97,9 +106,9 @@ import { TaskExecutor } from "yajsapi";
 
 ```
 
-![Downloadfile](/assets/downloadfile_log.png "Requestor script output logs")
+![Downloadfile output log](/downloadfile_log.png)
 
-### Uploading JSON to provider
+## Uploading JSON to provider
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -139,4 +148,4 @@ import * as fs from 'fs';
 
 ```
 
-
+![DownloadJSON output logs](/downloadJSON_log.png)

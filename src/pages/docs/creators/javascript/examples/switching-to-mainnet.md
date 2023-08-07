@@ -2,13 +2,11 @@
 Description: Switching to mainnet
 ---
 
-By default JS SDK will execute your task in testnet - this is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
+{% alert level="info" %}
 
-In this article, we will show how to run your tasks on Polygon.
-
-!!! Prerequisites 
-- Yagna daemon installed and running
-- have some funds available on Polygon: both GLM and MATIC
+# Prerequisites 
+Yagna daemon installed and running with `try_golem` app-key configured.
+Some funds available on Polygon Network: both GLM and MATIC.
 
 # Setting up project
 
@@ -19,6 +17,13 @@ mkdir golem-example
 npm init
 npm i yajsapi
 ```
+{% /alert %}
+
+## Intriduction
+
+By default JS SDK will execute your task in testnet - this is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
+
+In this article, we will show how to run your tasks on Polygon.
 
 ## Running your tasks on the Polygon Network 
 

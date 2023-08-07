@@ -3,25 +3,31 @@ description: Working with results
 ---
 
 
-!!! Prerequisites	
-- Yagna daemon installed and running
+{% alert level="info" %}
 
+# Prerequisites 
+Yagna daemon installed and running with `try_golem` app-key configured.
 
-# Setting up a project
+# Setting up project
 
-Create a project folder, initialize a Node.js project and install the `yajsapi`` library.
+Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
 
 ```bash
 mkdir golem-example
 npm init
 npm i yajsapi
 ```
+{% /alert %}
 
-## Obtaining results 
 
-### Single command task
 
-For each command that is run, you can obtain a result object. Let's look at the simple example: we will run a tasks that consists of single command and will print the content of the result object:
+## Introduction
+
+For each command that is run, you can obtain a result object.
+
+## Single command task
+
+Let's look at the simple example: we will run a tasks that consists of single command and will print the content of the result object:
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -43,16 +49,16 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-Note: In this example, our task consists of a single command: `node -v`. `ctx.run()` returns an object that is then passed to the `result` variable and printed.
+In this example, our task consists of a single command: `node -v`. `ctx.run()` returns an object that is then passed to the `result` variable and printed.
 
 Index refers to the sequential number of a command (we have just one, and counting starts from 0),
 `status` of the result is "ok" which indicates the command was completed successfully, and the actual results of the command are under `stdout`.
 
 
-![result](/assets/result_log.png "Requestor script output logs")
+![Result ](/result_log.png)
 
 
-### Multi-command task
+## Multi-command task
 
 When you run your tasks in a batch that is concluded with `.end()`: 
   
@@ -89,7 +95,7 @@ When you run your tasks in a batch that is concluded with `.end()`:
   
 you will receive an array of result objects:
 
-![results](/assets/result_batch_log.png "Requestor script output logs") 
+![results logs](/result_batch_log.png) 
 
 
 In case you end your batch with the `endStream()` method:
@@ -125,11 +131,11 @@ import { TaskExecutor } from "yajsapi";
 ```
 Each `data` chunk will contain a result object, in the sequence that the commands where in within the batch:
 
-![results](/assets/batch_result_endstream_1.png "Requestor script output logs") 
-![results](/assets/batch_result_endstream_2.png "Requestor script output logs") 
+![results output logs](/batch_result_endstream_1.png) 
+![results output logs](/batch_result_endstream_2.png) 
 
       
-###  What to do if your commands fail?
+##  What to do if your command failed?
   
 When your command fails, the ExeUnit (the component responsible for running your image on the remote computer) will terminate all remote processes. As a result, the entire task will be terminated.
 
@@ -167,7 +173,7 @@ import { TaskExecutor } from "yajsapi";
  
 })();
 ```
-![batch_fail](/assets/bad_result_single_log.png "Requestor script output logs")
+![Batch failure output log](/bad_result_single_log.png)
 
 Note 1: while the user will receive the error message, the output is only for the failing command not for all commands in the task. 
 
@@ -199,8 +205,8 @@ import { TaskExecutor } from "yajsapi";
 
 ```
 
-![single_fail](/assets/bad_result_log_1.png "Requestor script output logs")
-![single_fail](/assets/bad_result_log_2.png "Requestor script output logs")
+![Single failure output log](/bad_result_log_1.png)
+![Single failure output log](/bad_result_log_2.png)
 
 Note we have no `catch()` inside the task function this time, therefore TaskExecutor retries the task on 3 other providers before terminating the whole Job. 
 

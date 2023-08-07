@@ -3,16 +3,36 @@ Title: Using Golem images
 Description: Examples of how to use your own Golem image in a requestor script
 ---
 
-# Using Golem images
+{% alert level="info" %}
 
-!!! info
+# Prerequisites 
+Yagna daemon installed and running with `try_golem` app-key configured.
 
-    * Required: [gvmkit-build installation](/docs/creators/javascript/examples/tools/gvmkit-build-installation), a Golem image hash or a Golem image tag, and an environment for requesting
+[gvmkit-build installed](/docs/creators/javascript/examples/tools/gvmkit-build-installation), 
+
+a Golem image hash or a Golem image tag
+
+# Setting up project
+
+Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+
+
+```bash
+mkdir golem-example
+npm init
+npm i yajsapi
+```
+{% /alert %}
+
+# Introduction
+
+Golem images define a remote environment here you execute tasks. They are identified either by their `tags`` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
+
+## Using Golem images
 
 Below you will find an example requestor script used in the [QuickStart](/docs/creators/javascript/quickstarts/quickstart). 
 
-=== "JavaScript/npm"
-    **requestor.mjs**    
+
 ```js
 import { TaskExecutor } from "yajsapi";
 
@@ -53,8 +73,15 @@ package: "golem/my_example:latest",
 ```
 
 
-!!! golem-icon "Next steps:"
+{% docnavigation title="Next steps" %}
 
-    [Custom Golem image creation step by step tutorial](/docs/creators/javascript/tutorials/building-custom-image)
+- [Custom Golem image creation step by step tutorial](/docs/creators/javascript/tutorials/building-custom-image)
+
+{% /docnavigation %}
+
  
-    Note: More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+{% docnavigation title="See also" %}
+
+Our [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+
+{% /docnavigation %}

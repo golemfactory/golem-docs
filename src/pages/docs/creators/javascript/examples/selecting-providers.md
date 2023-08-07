@@ -1,8 +1,11 @@
 ---
 Description: Selecting providers
 ---
-!!! Prerequisites 
-- Yagna daemon installed and running
+
+{% alert level="info" %}
+
+# Prerequisites 
+Yagna daemon installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
@@ -13,7 +16,9 @@ mkdir golem-example
 npm init
 npm i yajsapi
 ```
+{% /alert %}
 
+## Introduction
 
 You can select providers that suit your needs:
 
@@ -25,10 +30,10 @@ You can select providers that suit your needs:
 ## Filtering providers based on minimal requirements:
 
 You can define minimal requirements for an environment provided by a node by stating a minimal number of:
-* CPU cores `minCpuCores`, 
-* RAM `minMemGib`, 
-* disk space `minStorageGib` or 
-* CPU threads `minCpuThreads`.
+- CPU cores `minCpuCores`, 
+- RAM `minMemGib`, 
+- disk space `minStorageGib` or 
+- CPU threads `minCpuThreads`.
 
 You can do this in the TaskExecutor options:
 
@@ -51,20 +56,22 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-!!! Note
-
+{% alert level="warning" %}
 Be careful, filtering is done internally by Yagna and if your requirements turn out to be too demanding you will not receive any proposal from providers and your requestor script will terminate after the timeout.
+{% /alert %}
 
-![](../../../assets/timeout_log.png)
+
+
+![Job timeout log](/timeout_log.png)
 
 
 ## Selecting providers based on the whitelist
 
 In some situations, you might need your tasks to be executed on a certain provider or exclude specific providers. If you know providers' IDs or names you can use the `proposalFilter` option and use one of the predefined filters: 
-* `ProposalFilters.whiteListProposalIdsFilter()`,
-* `ProposalFilters.blackListProposalIdsFilter()`, 
-* `ProposalFilters.whiteListProposalNamesFilter()`. 
-* `ProposalFilters.blackListProposalNamesFilter()`
+- `ProposalFilters.whiteListProposalIdsFilter()`,
+- `ProposalFilters.blackListProposalIdsFilter()`, 
+- `ProposalFilters.whiteListProposalNamesFilter()`. 
+- `ProposalFilters.blackListProposalNamesFilter()`
 
 All these filters will accept an array with IDs or names of the providers that should be accepted or excluded.  
 
@@ -101,7 +108,10 @@ for(let i=0; i< whiteListIds.length; i++) {
 
 ```
 
-Note: You can read provider names from `ctx` workContext or from the proposal. We will look into proposals in the next section 
+{% alert level="info" %}
+You can read provider names from `ctx` workContext or from the proposal. We will look into proposals in the next section.
+{% /alert %}
+
 
 ## Selecting providers based on the proposed costs using a custom filter
 
