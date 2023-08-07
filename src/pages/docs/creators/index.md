@@ -13,19 +13,19 @@ type: design
 
 {% selectioncontent %}
 
-Have a problem that can be split into multiple computational tasks that will run in parallel on Golem
+Prefer to code in JS and run your app in the Node.js or a web browser
 
 {% /selectioncontent %}
 
 {% selectioncontent %}
 
-Want to use either Node.js or web browser to schedule the tasks
+Have a problem that can be split into multiple tasks that can be run in parallel
 
 {% /selectioncontent %}
 
 {% selectioncontent %}
 
-Need more control over the deployment process on Golem Network (like adjust market strategy)
+Need a backend to offload your system
 
 {% /selectioncontent %}
 
@@ -35,18 +35,19 @@ Need more control over the deployment process on Golem Network (like adjust mark
 
 {% selectioncontent %}
 
+Already use Docker or Docker Compose to deploy your application
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
 Want to deploy an application on Golem that consists of service(s) that run constantly
 
 {% /selectioncontent %}
 
 {% selectioncontent %}
 
-Already use Docker or Docker Compose to deploy your application
-{% /selectioncontent %}
-
-{% selectioncontent %}
-
-Want to use a YAML-based approach to configure the deployment
+Glad to use a YAML-based approach to configure the deployment
 
 {% /selectioncontent %}
 
