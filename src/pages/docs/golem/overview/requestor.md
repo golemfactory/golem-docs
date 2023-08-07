@@ -1,21 +1,24 @@
 ---
 Description: The requestor actor in the Golem
 ---
-
-# Requestor architecture
+#
+## Requestor architecture
 
 Seeing the requestor just as a node with the Yagna daemon installed is a simplified perspective. 
 
-We have a user, who needs additional resources to run his job. He will use a requestor agent to achieve this. Requestor agent is a piece of software (actually a script) that communicates via REST API with the Yagna daemon. The user's job must be run in a controlled environment. It is defined by the image - a software package that is deployed on a provider, where the requestor's job is finally executed. 
+We have a user, who needs additional resources to run his job. He will use a requestor agent to achieve this. Requestor agent is a piece of software (actually a script) that communicates via REST API with the Yagna daemon. The user's job must be run in a controlled environment. It is defined by the [image](/docs/creators/javascript/guides/golem-images) - a software package that is deployed on a provider, where the requestor's job is finally executed. 
 
 The job can be split into many tasks and run parallel. That is one of the main advantages of using the Golem Network.
 
 To create and run the Golem app, one generally needs:
-* Yagna daemon up and running
-* Image defining expected software environment on a remote machine
-* A requestor agent script that implements actual requestor logic.
+- Yagna daemon up and running
+- Image defining expected software environment on a remote machine
+- A requestor agent script that implements actual requestor logic.
 
-A requestor agent can be written in any language as long as it's able to talk to the daemon's REST API. To make things easy for the developers though, we provide two high-level API libraries[: yapapi](https://github.com/golemfactory/yapapi) for Python 3.6+ and [golem-js](https://github.com/golemfactory/yajsapi), our JS/TS API runnable under Node.js or in browsers.
+A requestor agent can be written in any language as long as it's able to talk to the daemon's REST API. To make things easy for the developers though, we provide two high-level API libraries:
+
+- [yapapi](https://github.com/golemfactory/yapapi) for Python 3.6+ and 
+- [golem-js](https://github.com/golemfactory/yajsapi), our JS/TS API runnable under Node.js or in browsers.
 
 As requestors address specific business needs there is no single requestor agent that fits all the use cases. 
 
@@ -25,8 +28,11 @@ Such a scenario usually assumes the user has access to the requestor node, howev
 
 Yet another scenario allows you to run the requestor agent directly in the browser context. This case requires the user to have access to the Yagna daemon REST API 
 
-The basic requestor development tutorials are [here](/docs/creators/javascript/tutorials/index) (JS):
+{% docnavigation title="Next steps" %}
 
+The basic requestor development tutorials in JS are [here](/docs/creators/javascript/tutorials/index).
+
+{% /docnavigation %}
 
 ## Requestor FAQ
 

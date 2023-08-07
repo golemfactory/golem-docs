@@ -30,7 +30,7 @@ A user wishing to enter and exit Polygon - that is transfer funds between Polygo
 
 The good news is that a user having funds on Polygon - e.g. someone who received tokens as a Golem provider - may not have an immediate need to exit from Polygon to mainnet as there are a lot of centralized and decentralized exchanges and other kinds of DeFi solutions already operating directly _on_ the Polygon chain.
 
-Moreover, from the perspective of Golem requestors, Polygon is currently an indisputably superior solution because the ratio between the amounts paid for computing resources and the transaction fees is much more favorable than on the main chain or zkSync. 
+Moreover, from the perspective of Golem requestors, Polygon is currently an indisputably superior solution because the ratio between the amounts paid for computing resources and the transaction fees is much more favorable than on the main chain. 
 
 ## Current support in Golem
 
@@ -38,19 +38,25 @@ The providers are ready to receive payments on any of the supported platforms - 
 
 On the other hand, because we assume requestors will first start by testing the ground using their just-created apps on a testnet, the default payment platform for Requestor nodes is Goerli.
 
-When you run `yagna payment fund` on testnet, Golem initializes a new account from our custom faucet (a service that transfers test tokens to an address that asks for it) which provides it with test ETH and GLM tokens.
+When you run `yagna payment fund` on testnet, Golem initializes a new account from our custom faucet (a service that transfers test tokens to an address that asks for it) which provides it with test Matic and test GLM tokens.
 
 Of course, you also need to enable your accounts' sender mode, which is done using `yagna payment init`. 
 
-If you're interested in running a requestor on the Polygon Ethereum mainnet, to be able to leverage the main pool of Golem providers, please refer to:
 
-[Using Golem on the mainnet](/docs/creators/javascript/guides/switching-to-mainnet)
 
-Please also see how you can send GLM tokens from the Ethereum Mainnet to Polygon and vice versa:
+{% docnavigation title="Next steps" %}
 
-[GLM  mainnet polygon conversion](/docs/golem/payments/golem-token-conversion)
+- If you're interested in running a requestor on the Polygon Ethereum mainnet, to be able to leverage the main pool of Golem providers, please refer to [Using Golem on the mainnet](/docs/creators/javascript/guides/switching-to-mainnet).
 
-## Further reading
+- You can be also interested how you can send GLM tokens from the Ethereum Mainnet to Polygon and vice versa: [GLM  mainnet polygon conversion](/docs/golem/payments/golem-token-conversion)
 
-* [Polygon](https://polygon.technology/technology/)
-* [GLM token on Polygon](https://polygonscan.com/token/0x0b220b82f3ea3b7f6d9a1d8ab58930c064a2b5bf)
+{% /docnavigation %}
+
+{% docnavigation title="See also" %}
+
+- [Polygon](https://polygon.technology/technology/)
+- [GLM token on Polygon](https://polygonscan.com/token/0x0b220b82f3ea3b7f6d9a1d8ab58930c064a2b5bf)
+
+{% /docnavigation %}
+
+

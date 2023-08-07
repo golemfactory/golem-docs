@@ -4,8 +4,8 @@
 
 **Can I run services (web servers, Node.js, etc.) on Golem?**
 
-Yes but in a limited way, meaning that you could use the network as a proxy for computing the response locally on the providers and then use your requestor as a load balancer that takes in requests, and forwards the responses from the providers to the end user. \
-\
+Yes but in a limited way, meaning that you could use the network as a proxy for computing the response locally on the providers and then use your requestor as a load balancer that takes in requests, and forwards the responses from the providers to the end user.
+
 Here's an example of such a setup.  [https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy](https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy)
 
 **Are there any stats for the network?**
@@ -13,6 +13,7 @@ Here's an example of such a setup.  [https://github.com/golemfactory/yapapi/tree
 Yes, you can check out : [https://stats.golem.network/](https://stats.golem.network/)
 
 **How does CPU/h pricing work?**
+
 CPU/h is the pricing per utilization of a core. So if a requestor is using 4 cores and you have a CPU/h pricing of 0.1 GLM, then it would cost the requestor 0.4 GLM to use those 4 cores for an hour.
 
 **What is Layer 1 and Layer 2 ?**
@@ -22,14 +23,20 @@ As a requestor, we recommend you use a layer 2 solution like Polygon to pay for 
 
 **What is tGLM and GLM :**
 
-tGLM – test currency that you can obtain for free to test your requestor node. These tokens have no real value.
-GLM – real currency that can be exchanged for cash
+- tGLM – test currency that you can obtain for free to test your requestor node. These tokens have no real value.
+- GLM – real currency that can be exchanged for cash
 
 **Where can I find Yagna logs :**
+{% tabs %}
 
+{% tab label="Linux / MacOS" %}
 
-=== "Linux / MacOS"
-    `$HOME/.local/share/yagna/yagna_rCURRENT.log`
+`$HOME/.local/share/yagna/yagna_rCURRENT.log`
 
-=== "Windows"
-    ` %USERPROFILE%\AppData\Roaming\GolemFactory\yagna\data\yagna_rCURRENT.log`
+{% /tab  %}
+{% tab label="Windows" %}
+
+` %USERPROFILE%\AppData\Roaming\GolemFactory\yagna\data\yagna_rCURRENT.log`
+
+{% /tab  %}    
+{% /tabs %}

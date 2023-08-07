@@ -280,10 +280,6 @@ export const navigation = [
         children: [
           { title: 'index', href: '/docs/golem/payload-manifest' },
           {
-            title: 'schema',
-            href: '/docs/golem/payload-manifest/computation-payload-manifest.schema.json',
-          },
-          {
             title: 'Schema docs',
             href: '/docs/golem/payload-manifest/computation-payload-manifest.schema',
           },

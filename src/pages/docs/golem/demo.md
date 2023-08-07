@@ -156,3 +156,11 @@ Want to use a YAML-based approach to configure the deployment
 # Example of an image being used
 
 ![Hacker image](/hacker.png)
+
+
+# working comments (see source)
+(below this line there is comment: see source)
+
+[//]: <> ( comment  is here )
+
+(above this line there is a comment: see source)

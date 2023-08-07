@@ -1,12 +1,16 @@
 # Objects
-* [`Application Metadata`]
-* [`Computation Manifest`]
-* [`Computation Payload Manifest`]
-* [`Payload`]
-* [`Platform`]
+* [`Application Metadata`](#application-metadata)
+* [`Computation Manifest`](#computation-manifest)
+* [`Computation Payload Manifest`](#computation-payload-manifest)
+* [`Payload`](#payload)
+* [`Platform`](#payload-platform)
+* [`Internet Network`](#internet-network)
+* [`Internet Outbound Network`](#internet-outbound-network)
+* [`Net`](#net)
+* [`Script`](#script)
 
 ---------------------------------------
-<a name="reference-appmetadata"></a>
+
 ## Application Metadata
 
 **`Application Metadata` Properties**
@@ -49,22 +53,7 @@ Additional properties are allowed.
 * **Required**: No
 
 
-
-
 ---------------------------------------
-<a name="reference-argmatch"></a>
-## Argument Match
-
-
-
----------------------------------------
-<a name="reference-command"></a>
-## Command
-
-
-
----------------------------------------
-<a name="reference-compmanifest"></a>
 ## Computation Manifest
 
 Computation Manifests let Requestors define a certain set of allowed actions, to be negotiated with and approved by a Provider. Requestors' actions will be verified against the Manifest during computation.
@@ -108,7 +97,7 @@ Applies constraints to networking. Currently, outgoing requests to the public In
 
 
 ---------------------------------------
-<a name="reference-computation-payload-manifest"></a>
+
 ## Computation Payload Manifest
 
 **`Computation Payload Manifest` Properties**
@@ -124,7 +113,7 @@ Applies constraints to networking. Currently, outgoing requests to the public In
 
 Additional properties are allowed.
 
-* **JSON schema**: [computation-payload-manifest.schema.json](/docs/golem/payload-manifest/computation-payload-manifest.schema.json/computation-payload-manifest.schema.json)
+* **JSON schema**: [computation-payload-manifest.schema.json](https://github.com/golemfactory/yagna-docs/blob/master/requestor-tutorials/vm-runtime/computation-payload-manifest.schema.json)
 
 ### Computation Payload Manifest.version
 
@@ -166,7 +155,7 @@ Semver
 
 
 ---------------------------------------
-<a name="reference-inet"></a>
+
 ## Internet Network
 
 **`Internet Network` Properties**
@@ -191,7 +180,7 @@ Internet Outbound Network
 
 
 ---------------------------------------
-<a name="reference-inetout"></a>
+
 ## Internet Outbound Network
 
 Applies constraints to networking. Currently, outgoing requests to the public Internet network are covered.
@@ -225,7 +214,6 @@ List of allowed external URLs that outbound requests can be sent to. E.g. ["http
 
 
 ---------------------------------------
-<a name="reference-net"></a>
 ## Net
 
 Applies constraints to networking. Currently, outgoing requests to the public Internet network are covered.
@@ -250,7 +238,6 @@ Additional properties are allowed.
 
 
 ---------------------------------------
-<a name="reference-apppayload"></a>
 ## Payload
 
 **`Payload` Properties**
@@ -285,7 +272,6 @@ Additional properties are allowed.
 
 
 ---------------------------------------
-<a name="reference-payloadplatform"></a>
 ## Payload Platform
 
 **`Payload Platform` Properties**
@@ -319,7 +305,6 @@ Additional properties are allowed.
 
 
 ---------------------------------------
-<a name="reference-script"></a>
 ## Script
 
 Defines a set of allowed ExeScript commands and applies constraints to their arguments.

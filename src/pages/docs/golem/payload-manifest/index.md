@@ -1,26 +1,28 @@
 ---
 description: Computation Payload Manifest description, its schema, and configuration guide
 ---
-
+#
 # Computation Payload Manifest
 
-_Computation Payload Manifest_ allows a [requestor](/docs/golem/payload-manifest/golem/overview/requestor) to define an application package _Payload_ and allows to set constraints on the computations performed on a [Provider](/docs/golem/payload-manifest/golem/overview/provider) node.
+_Computation Payload Manifest_ allows a [requestor](/docs/golem/overview/requestor) to define an application package _Payload_ and allows to set constraints on the computations performed on a [provider](/docs/golem/overview/provider) node.
 
-A manifest can be [configured in yapapi]. 
+A manifest can be configured in yapapi. 
+
+[//]: <> ( removed link to yapapi in the sentence above )
 
 The provider node operator controls what computations can be performed by:
 
-  - [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/golem/payload-manifest/providers/yagna-cli-reference#keystore) (which allows the provider agent to verify _manifest_ signatures)
-
-  - Adding domain patterns to Provider's [domain whitelist](/docs/golem/payload-manifest/providers/yagna-cli-reference#domain-whitelist) (which makes the manifest [signature] optional).
+  - [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/yagna-cli-reference#keystore) (which allows the provider agent to verify _manifest_ signatures)
+  - Adding domain patterns to Provider's [domain whitelist](/docs/providers/yagna-cli-reference#domain-whitelist) (which makes the manifest [signature] optional).
 
 ## Configuration
 
-The manifest can be configured as a [yapapi.payload.vm.manifest](/docs/golem/payload-manifest/https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.manifest) function parameter together with an optional manifest signature and the [App author's certificate].
+The manifest can be configured as a [yapapi.payload.vm.manifest](https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.manifest) function parameter together with an optional manifest signature and the [App author's certificate].
 
 ## Manifest schema
 
-_Computation Payload Manifest_ must follow a specific [JSON Schema](/docs/golem/payload-manifest/computation-payload-manifest.schema.json) ([Documentation](/docs/golem/payload-manifest/computation-payload-manifest.schema))
+_Computation Payload Manifest_ must follow a specific [JSON Schema](https://github.com/golemfactory/yagna-docs/blob/master/requestor-tutorials/vm-runtime/computation-payload-manifest.schema.json) ([Documentation](/docs/golem/payload-manifest/computation-payload-manifest.schema))
+
 
 ### Schema verification
 
@@ -36,7 +38,7 @@ jsonschema --instance manifest.json computation-payload-manifest.schema.json
 
 _Computation Payload Manifest_ **must** contain at least one _Payload_ object. 
 
-_Payload_ definition allows to define [GVMI images](/docs/golem/payload-manifest/creators/javascript/guides/golem-images) used by Application and supported architecture.
+_Payload_ definition allows to define [GVMI images](/docs/creators/javascript/guides/golem-images) used by Application and supported architecture.
 
 Simple _Computation Payload Manifest_ with _Payload_ definition:
 
@@ -64,7 +66,7 @@ Simple _Computation Payload Manifest_ with _Payload_ definition:
 
 _Computation Payload Manifest_ **can** contain _Computation Manifests_ object. 
 
-With a Computation Manifest object, [Requestor](/docs/golem/overview/requestor) constrains themself to a certain set of allowed actions, to be negotiated with and approved by a [Provider](/docs/golem/overview/provider). 
+With a Computation Manifest object, [requestor](/docs/golem/overview/requestor) constrains themself to a certain set of allowed actions, to be negotiated with and approved by a [provider](/docs/golem/overview/provider). 
 
 Requestors' actions will be verified against the _Manifest_ during computation.
 
@@ -142,7 +144,7 @@ Supported _Computation Manifest_ constraints:
 
         List of allowed external URLs that outbound requests can be sent to. E.g. ["https://api.some-public-service.com", "https://some-other-service.com/api/resource"]
 
-#### Example of _Computation Payload Manifest_ with _Computation Manifest_ definition:
+### Example of _Computation Payload Manifest_ with _Computation Manifest_ definition:
 
 ```json
 {
@@ -178,11 +180,11 @@ Supported _Computation Manifest_ constraints:
 }
 ```
 
-### Certificates
+## Certificates
 
 _App author's certificate_ gets sent in a demand together with a _Computation Payload Manifest_ and its signature. The certificate is used to verify the signature. In order to verify the signature, a _Provider_ first needs to verify the incoming _App author's certificate_. To do so, it has to have a certificate that's used to sign the _App author's certificate_ [imported] into its keystore (together with every intermediate certificate in the chain).
 
-#### Manifest signature
+### Manifest signature
 
 Signature allows a _Provider_ to verify the content of an incoming _Computation Payload Manifest_.
 
@@ -197,11 +199,11 @@ base64 manifest.json.base64.sign.sha256 --wrap=0 > manifest.json.base64.sign.sha
 base64 author.crt.pem --wrap=0 > author.crt.pem.base64
 ```
 
-#### Self signed certificate example
+### Self signed certificate example
 
 A basic example showing the generation a self-signed root CA certificate to then sign the App author's certificate, and afterwards importing a generated root CA certificate into the Provider's keystore.
 
-##### 1. Generating self signed root CA certificate
+#### 1. Generating self signed root CA certificate
 
 Create `openssl-ca.conf` for CA certificate
 
@@ -243,7 +245,7 @@ Then generate the CA certificate and key pair:
 
 `openssl req -new -newkey rsa:2048 -days 360 -nodes -x509 -sha256 -keyout ca.key.pem -out ca.crt.pem -config openssl-ca.conf`
 
-##### 2. Generating Requestor certificate
+#### 2. Generating Requestor certificate
 
 Create `openssl.conf` for the App author's certificate:
 
@@ -263,14 +265,18 @@ basicConstraints = CA:true
 
 Then generate _App author's certificate_ Signing Request (use same `organizationName`):
 
+
 `openssl req -new -newkey rsa:2048 -days 360 -sha256 -keyout author.key.pem -out author.csr.pem -config openssl.conf`
+
 
 Finally, generate _App author's certificate_ using CSR and CA certificate:
 
+
 `openssl x509 -req -in author.csr.pem -CA ca.crt.pem -CAkey ca.key.pem -CAcreateserial -out author.crt.pem`
 
-##### 3. Importing application author's certificates
 
-To import the certificate into the keystore, use a [`ya-provider keystore add`](/docs/provider-tutorials/provider-cli#keystore) command:
+#### 3. Importing application author's certificates
+
+To import the certificate into the keystore, use a [`ya-provider keystore add`](/docs/providers/yagna-cli-reference#keystore) command:
 
 `ya-provider keystore add ca.crt.pem`
