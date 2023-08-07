@@ -190,9 +190,9 @@ export function Layout({
             <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64 ">
               <SideBar navigation={normalNavLinks} />
               {/* <Navigation links={normalNavLinks} /> */}
-              {/* <div className=" mt-9">
+              <div className=" mt-9">
                 <ReferenceNavigation />
-              </div> */}
+              </div>
             </div>
           </div>
         )}
@@ -300,7 +300,7 @@ export function Layout({
           </div>
         )}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
