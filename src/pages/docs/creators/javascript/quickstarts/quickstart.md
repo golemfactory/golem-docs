@@ -10,12 +10,13 @@ The goal is to run just a basic shell command on a rented provider.
 It should take just a few minutes to complete and finally, you will see the command's result printed in your terminal. 
 
 
-!!! Info
+{% alert level="info" %}
     **Note: This example has been designed to work with the following environments:**
 
 * OS X 10.14+, Ubuntu 20.04 or Windows
 * Node.js 16.0.0 or above
-    
+{% /alert %}
+
 
 ## Installing and running Yagna 
 
@@ -23,52 +24,64 @@ Yagna is a daemon whose purpose is to communicate and perform operations on the 
 
 #### Install Yagna
 
-=== "Easy installation"
+
+{% tabs %}
+{% tab label="Easy installation" %}
     
     On Linux/ MacOS you can install it using our helper script like this:
     
     ```bash
     curl -sSf https://join.golem.network/as-requestor | bash -
     ```
+
     You might be asked to modify your PATH afterward.
+{% /tab %}
+{% tab label="Windows Manual installation" %}
 
-=== "Windows Manual installation"
 
     Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
     
     1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+    
     2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
+    
     3. Copy those files to `C:\Windows\System32`.
+{% /tab %}
+{% tab label="Unix Manual installation" %}
 
-=== "Unix Manual installation"
 
     Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
     
     1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+    
     2. Unpack `yagna` and `gftp` binaries and put them somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries into your PATH.
-   
+{% /tab %}
+{% /tabs %}  
 
 
-!!! Note
+{% alert level="info" %}
     Should you encounter any problems, please reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/creators/javascript/guides/troubleshooting).
+{% /alert %}
 
 #### Start the daemon
 
 Open a terminal (command line window) and  define the key to identify your application script:
 
-=== "MacOS / Linux"
-
+{% tabs %}
+{% tab label="MacOS / Linux" %}
    
-    ```bash
+    ```shell
     export YAGNA_AUTOCONF_APPKEY=try_golem
     ```
-
-=== "Windows"
-
+{% /tab %}
+{% tab label="Windows" %}
     
-    ```bash
+    ```shell
     set YAGNA_AUTOCONF_APPKEY=try_golem
     ```
+
+{% /tab %}
+{% /tabs %}  
 
 Then start the daemon:
 
@@ -124,10 +137,9 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-!!! info
-
+{% alert level="info" %}
     You can find a detailed explanation of the above code [here](/docs/creators/javascript/tutorials/quickstart-explained)
-
+{% /alert %}
 
 ## Running the script on Golem Network
 
@@ -139,19 +151,20 @@ node requestor.mjs
 
 The output of the script should look very similar to the one below:
 
-![](/assets/js-tutorial-05.gif)
+![Output logs](/js-tutorial-05.gif)
 
-You can find information regarding the version of the node used on the remote computer - v.16.14.0 - at the end of the script's logs. This is the version incorporated into the standard Golem image used to execute the task.
+You can find information regarding the version of the node used on the remote computer - `v.16.14.0` - at the end of the script's logs. This is the version incorporated into the standard Golem image used to execute the task.
 
 ## Summary
 
 You've installed the Yagna daemon and executed a simple task on the Golem Network.
 However, you can accomplish much more. Here are some suggested next steps to explore the Golem Network world:
 
-Next steps:
-
-* [QuickStart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
-* [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
-* [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
-
+{% docnavigation title="Next steps" %}
+- [QuickStart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
+{% /docnavigation %}
+{% docnavigation title="See also" %}
+- [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
+- [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
+{% /docnavigation %}
 
