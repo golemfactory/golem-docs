@@ -241,9 +241,19 @@ export const navigation = [
   },
   {
     title: 'Share and Earn',
-    links: [{ title: 'indexee', href: '/docs/providers' }],
-    links: [{ title: 'indexee', href: '/docs/providers' }],
-  },
+    links: [{ title: 'index', href: '/docs/providers' },
+            { title: 'Installation', href: '/docs/providers/provider-installation' },
+            { title: 'Basic Configuration', href: '/docs/providers/provider-basic-configuration' },
+            { title: 'Provider FAQ', href: '/docs/providers/provider-faq',       },
+            { title: 'Troubleshooting', href: '/docs/providers/provider-troubleshooting',       },
+            { title: 'Yagna CLI reference', href: '/docs/providers/yagna-cli-reference',       },
+            { title: 'Maintenance',         children: [
+              { title: 'index', href: '/docs/providers/maintenance' },
+              { title: 'Maintenance', href: '/docs/providers/maintenance/provider-maintenance' },
+              { title: 'Wallet Backup', href: '/docs/providers/maintenance/wallet-backup' },
+              { title: 'Wallet Restore', href: '/docs/providers/maintenance/wallet-restoration' },]
+            },
+    ], },
   {
     title: 'General Info',
     links: [
