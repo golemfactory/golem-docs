@@ -46,6 +46,7 @@ function Header({ navigation }) {
         isScrolled ? 'dark:bg-darkbg ' : 'dark:bg-transparent'
       )}
     >
+      
       <div className="relative mx-auto  flex max-w-8xl sm:px-2 lg:px-8 xl:px-12">
         <div className="mr-6 flex lg:hidden">
           <MobileNavigation navigation={navigation} />
@@ -55,21 +56,7 @@ function Header({ navigation }) {
             <Logo className="hidden h-full  fill-slate-700 dark:fill-sky-100 lg:block" />
           </Link>
 
-          <div className="ml-4 hidden gap-x-6 lg:flex">
-            <a href="/" className="text-sm text-primary dark:text-lightergray">
-              Home
-            </a>
-
-            <span className="text-sm text-primary dark:text-lightergray">
-              Quickstart
-            </span>
-            <span className="text-sm text-primary dark:text-lightergray">
-              Create
-            </span>
-            <span className="text-sm text-primary dark:text-lightergray">
-              Share and earn
-            </span>
-          </div>
+          <MenuBar navigation={{ normalNavLinks }} />
         </div>
 
         <div className="relative flex flex-grow basis-0 items-center justify-end gap-6 sm:gap-8">
@@ -148,7 +135,7 @@ function useTableOfContents(tableOfContents) {
 }
 import { navigation as normalNavLinks } from '@/navigation/docs'
 import { navigation as JSReference } from '@/navigation/jsreference'
-import { Navigation } from './Navigation'
+import { Navigation, MenuBar, SideBar } from './Navigation'
 import { ForkIcon } from './icons/ForkIcon'
 import { StarIcon } from './icons/StarIcon'
 import { GitIcon } from './icons/GitIcon'
@@ -202,7 +189,8 @@ export function Layout({
             <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
             <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
             <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64 ">
-              <Navigation links={normalNavLinks} />
+              <SideBar navigation={normalNavLinks} />
+              {/* <Navigation links={normalNavLinks} /> */}
               <div className=" mt-9">
                 <ReferenceNavigation />
               </div>

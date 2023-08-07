@@ -4,6 +4,64 @@ import clsx from 'clsx'
 import { useState, useEffect } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
+export const MenuBar = ({ navigation }) => {
+  
+  const router = useRouter()
+  return (
+    <div className='ml-4 hidden gap-x-6 lg:flex'>
+      {navigation.normalNavLinks.map(({ title, links }) => (
+        <Link className='text-sm text-primary dark:text-lightergray' href={links[0].href} key={title}>
+          {title}
+        </Link>
+      ))}
+    </div>
+  )
+}
+
+export const SideBar = ({ navigation }) => {
+  const router = useRouter()
+
+  const currentSection = navigation.find((section) =>
+    section.links.some((link) => link.href === router.pathname)
+  )
+
+  const isActive = (item) =>
+    item.href &&
+    (router.pathname === item.href || router.pathname === item.href)
+
+  const renderNavItems = (items) =>
+    items.map((item) => {
+      const itemIsActive = isActive(item)
+      const hasChildren = item.children?.length
+      return (
+        <li className='text-sm' key={item.href || item.title}>
+          {hasChildren ? (
+            <Dropdown isActive={items.some(isActive)}>
+              {[
+                <NavigationItem
+                  item={item}
+                  isActive={itemIsActive}
+                  key={item.title}
+                />,
+                renderNavItems(item.children),
+              ]}
+            </Dropdown>
+          ) : (
+            <NavigationItem item={item} isActive={itemIsActive} />
+          )}
+        </li>
+      )
+    })
+
+  return currentSection ? (
+    <nav>
+      <h1 className="dark:text-white"
+      >{currentSection.title}</h1>
+      <ul role="list">{renderNavItems(currentSection.links)}</ul>
+    </nav>
+  ) : null
+}
+
 export const NavigationItem = ({ item, isActive }) =>
   item.href ? (
     <Link
