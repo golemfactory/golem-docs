@@ -24,7 +24,7 @@ export const navigation = [
   {
     title: 'Create on Golem',
     links: [
-      { title: 'index', href: '/docs/creators/' },
+      { title: 'index', href: '/docs/creators' },
       {
         title: 'JavaScript',
         children: [

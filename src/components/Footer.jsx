@@ -46,7 +46,7 @@ const LinkSection = ({ title, links }) => (
     </h2>
     <ul role="list" className="list-disc">
       {links.map(({ title, href }) => (
-        <li key={href}>
+        <li key={href+title}>
           <a
             href={href}
             className="text-sm font-medium leading-6 text-primary dark:text-darkprimary"
@@ -127,9 +127,9 @@ const LowerFooter = () => (
 
 const FooterNav = () => (
   <div className="flex justify-center space-x-6 md:order-2">
-    {navigation.map((item) => (
+    {navigation.map((item, index) => (
       <a
-        key={item.name}
+        key={item.name + index}
         href={item.href}
         className="text-gray-400 hover:text-gray-500"
       >

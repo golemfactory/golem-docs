@@ -10,7 +10,6 @@ export const MenuBar = ({ navigation }) => {
   return (
     <div className="ml-4 hidden gap-x-6 lg:flex">
       {navigation.normalNavLinks.map((item) => {
-        console.log(item.links[0].href)
         return (
           <Link
             className="text-sm text-primary dark:text-lightergray"
@@ -28,23 +27,19 @@ export const MenuBar = ({ navigation }) => {
 export const SideBar = ({ navigation }) => {
   const router = useRouter()
 
-  const currentSection = navigation.find((section) =>
-    section.links.some(
-      (link) =>
-        link.href === router.pathname || link.href === `${router.pathname}/`
-    )
-  )
-
   const isActive = (item) => {
     if (
       item.href &&
-      (router.pathname.includes(item.href) ||
-        router.pathname.includes(`${item.href}/`))
+      (router.pathname === item.href || router.pathname === `${item.href}/`)
     ) {
       return true
     }
-    return false
+    return item.children?.some(isActive) || false
   }
+
+  const currentSection = navigation.find((section) =>
+    section.links.some(isActive)
+  )
 
   const renderNavItems = (items) =>
     items.map((item) => {
