@@ -8,7 +8,7 @@ description: Deploying long-running, decentralized services on Golem using no-co
 
     Looking for a quick start?
     
-    [See how easy it is to run an application on Golem](run-a-dapp.md)
+    [See how easy it is to run an application on Golem](/docs/creators/dapps/run-a-dapp)
 
 
 ## Introduction

@@ -10,7 +10,7 @@ Description: Golem in browser QuickStart explained
 
 ## Prerequisites
 
-Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](../examples/tools/yagna-installation-for-requestors.md). 
+Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
@@ -142,7 +142,7 @@ Now let's create the `appendResults()` function which will put the output of our
 
 ## Getting logs
 
-The TaskExecutor offers an optional logger parameter. It will accept an object that implements the 'Logger' [Logger](../docs/interfaces/utils_logger.Logger.md) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
+The TaskExecutor offers an optional logger parameter. It will accept an object that implements the 'Logger' [Logger](/docs/creators/javascript/docs/interfaces/utils_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
 
 ```html
 <script>

@@ -7,9 +7,9 @@ Description: Examples of how to use your own Golem image in a requestor script
 
 !!! info
 
-    * Required: [gvmkit-build installation](./tools/gvmkit-build-installation.md), a Golem image hash or a Golem image tag, and an environment for requesting
+    * Required: [gvmkit-build installation](/docs/creators/javascript/examples/tools/gvmkit-build-installation), a Golem image hash or a Golem image tag, and an environment for requesting
 
-Below you will find an example requestor script used in the [QuickStart](../quickstarts/quickstart.md). 
+Below you will find an example requestor script used in the [QuickStart](/docs/creators/javascript/quickstarts/quickstart). 
 
 === "JavaScript/npm"
     **requestor.mjs**    
@@ -55,6 +55,6 @@ package: "golem/my_example:latest",
 
 !!! golem-icon "Next steps:"
 
-    [Custom Golem image creation step by step tutorial](../tutorials/building-custom-image.md)
+    [Custom Golem image creation step by step tutorial](/docs/creators/javascript/tutorials/building-custom-image)
  
     Note: More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

@@ -102,7 +102,7 @@ To make it easier, here's a possible check:
 $ cat ./key.json | grep address
 ```
 
-To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](./wallet-restoration.md) using this newly created keystore file.
+To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/maintenance/wallet-restoration) using this newly created keystore file.
 
 !!! Warning
 Ensure you store that key file in a safe place. In case your Golem wallet gets corrupted or lost, if you don't have the backup, your funds will be lost forever.

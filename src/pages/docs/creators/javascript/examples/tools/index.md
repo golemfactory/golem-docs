@@ -6,13 +6,13 @@ Instructions on how to use Golem tools
 
 | Topic     |    Content    |
 |:----------:|:---------------------------------------------|
-|[Yagna installation for requestors](./yagna-installation-for-requestors.md) | Simple instructions on how to install Yagna daemon and become part of the Golem Network |
-|[Managing Golem wallet](./managing-golem-wallet.md) | Instructions on how to check your wallet address, monitor status, enable payments on the main network, and obtain test token |
-|[Backup Golem wallet](./golem-wallet-backup.md) | Procedure how to the backup and secure your Golem wallet. |
-|[Restoring Golem wallet](./restoring-golem-wallet.md) | Procedure how to the restore your wallet after new Yagna installation. |
-|[Converting Docker image to Golem format](./converting-docker-image-to-golem-format.md) | Instructions on how to convert Docker image into Golem format   |
-|[Gvmkit-build installation (image conversion tool)](./gvmkit-build-installation.md) | How to install the tool that can convert Docker image into Golem format (+ instructions on how to run it without installation). |
-|[Publishing custom images](./publishing-custom-images.md)| Information on how to make your image available for providers: both "hash" and "tag" naming conventions covered.   |
+|[Yagna installation for requestors](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) | Simple instructions on how to install Yagna daemon and become part of the Golem Network |
+|[Managing Golem wallet](/docs/creators/javascript/examples/tools/managing-golem-wallet) | Instructions on how to check your wallet address, monitor status, enable payments on the main network, and obtain test token |
+|[Backup Golem wallet](/docs/creators/javascript/examples/tools/golem-wallet-backup) | Procedure how to the backup and secure your Golem wallet. |
+|[Restoring Golem wallet](/docs/creators/javascript/examples/tools/restoring-golem-wallet) | Procedure how to the restore your wallet after new Yagna installation. |
+|[Converting Docker image to Golem format](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format) | Instructions on how to convert Docker image into Golem format   |
+|[Gvmkit-build installation (image conversion tool)](/docs/creators/javascript/examples/tools/gvmkit-build-installation) | How to install the tool that can convert Docker image into Golem format (+ instructions on how to run it without installation). |
+|[Publishing custom images](/docs/creators/javascript/examples/tools/publishing-custom-images)| Information on how to make your image available for providers: both "hash" and "tag" naming conventions covered.   |
 
 
 JS code examples:

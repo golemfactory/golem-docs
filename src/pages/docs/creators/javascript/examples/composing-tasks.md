@@ -34,7 +34,7 @@ The following commands are currently available:
 | `uploadJSON()` | yes | no |
 | `downloadFile()` | yes | no |
 
-This article focuses on the `run()` command and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](./tansferring-data.md) article.
+This article focuses on the `run()` command and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](/docs/creators/javascript/examples/tansferring-data) article.
 
 We'll start with a simple example featuring a single `run()` command. Then, we'll focus on organizing a more complex task that requires a series of steps:
 

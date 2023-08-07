@@ -128,7 +128,7 @@ This command will produce the hash of the image that you can use in the example.
 
 
 !!! Info
-  The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](link)
+  The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format)
 
 
 ## The requestor script code
@@ -390,6 +390,6 @@ In this tutorial, we led you through the following steps:
 
 !!! golem-icon "Next steps:"
 
-  [Examples](index.md){ .md-button .md-button--primary }
+  [Examples](/docs/creators/javascript/tutorials/index){ .md-button .md-button--primary }
 
 

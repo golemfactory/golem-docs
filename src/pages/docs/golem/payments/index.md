@@ -11,7 +11,7 @@ The basic premise of the Golem Network is as follows:
 * Providers make some resources available to potential requestors for a price,
 * Requestors rent those resources and pay the providers in exchange.
 
-The payments are made with Golem Network's native ERC-20 token, [GLM](https://etherscan.io/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429), using either the Ethereum Mainnet directly or, preferably, one of the [Layer 2 solutions](./layer-2-payments.md).
+The payments are made with Golem Network's native ERC-20 token, [GLM](https://etherscan.io/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429), using either the Ethereum Mainnet directly or, preferably, one of the [Layer 2 solutions](/docs/golem/payments/layer-2-payments).
 
 Of course, such a simplified description only answers the most basic question about the roles of providers and requestors in Golem and defines the actual transaction layer. Below, we'd like to give you a glimpse at the process through which the payments for providers' services are arranged for and paid, without delving into the nature of those services.
 
@@ -79,5 +79,5 @@ It also partially protects against dishonest requestors who would have the provi
 
 ## Further reading
 
-* [Layer 2 payments](./layer-2-payments.md)
+* [Layer 2 payments](/docs/golem/payments/layer-2-payments)
 

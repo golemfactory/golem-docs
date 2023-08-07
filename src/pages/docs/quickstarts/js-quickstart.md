@@ -136,7 +136,7 @@ import { TaskExecutor } from "yajsapi";
 
 !!! info
 
-    You can find a detailed explanation of the above code [here](creators/javascript/tutorials/quickstart-explained)
+    You can find a detailed explanation of the above code [here](/docs/quickstarts/creators/javascript/tutorials/quickstart-explained)
 
 
 ## Running the script on Golem Network
@@ -162,9 +162,9 @@ You can do much more. There are some of the next steps to explore the Golem Netw
 
 Next steps:
 
-* [Quickstart Explained](../creators/javascript/tutorials/quickstart-explained.md)
-* [Parallel processing tutorial](../creators/javascript/tutorials/running-parallel-tasks.md)
-* [Simple introduction to Golem Network and Task Model](../creators/javascript/guides/task-model.md)
+* [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
+* [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
+* [Simple introduction to Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
 
 
 

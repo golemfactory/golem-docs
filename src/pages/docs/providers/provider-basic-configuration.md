@@ -82,8 +82,8 @@ Next steps:
 
 !!! golem-icon "Next steps:"
 
-    [Troubleshooting](./provider-troubleshooting.md)
+    [Troubleshooting](/docs/providers/provider-troubleshooting)
 
-    [Provider CLI reference](./yagna-cli-reference.md)
+    [Provider CLI reference](/docs/providers/yagna-cli-reference)
 
 

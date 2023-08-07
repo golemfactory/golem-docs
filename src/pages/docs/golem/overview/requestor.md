@@ -25,11 +25,11 @@ Such a scenario usually assumes the user has access to the requestor node, howev
 
 Yet another scenario allows you to run the requestor agent directly in the browser context. This case requires the user to have access to the Yagna daemon REST API 
 
-The basic requestor development tutorials are [here](../../creators/javascript/tutorials/index.md) (JS):
+The basic requestor development tutorials are [here](/docs/creators/javascript/tutorials/index) (JS):
 
 
 ## Requestor FAQ
 
-You can find answers to frequently asked questions about the Golem Requestor [here](./requestor-faq.md).
+You can find answers to frequently asked questions about the Golem Requestor [here](/docs/golem/overview/requestor-faq).
 
 

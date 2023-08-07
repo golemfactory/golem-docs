@@ -8,12 +8,12 @@ Description: Guide on how to publish a Golem image to the registry using gvmkit-
 !!! info
 
     * The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-    * Required: [gvmkit-build installation](./gvmkit-build-installation.md)
+    * Required: [gvmkit-build installation](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
     * Required: a Docker image 
 <!--
     is gvmi required??? see the above point
-    * ??? Have you [Docker image converted to .gvmi format](./converting-docker-image-to-golem-format.md) ???
-    * Have [gvmkit-build installed](./gvmkit-build-installation.md) 
+    * ??? Have you [Docker image converted to .gvmi format](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format) ???
+    * Have [gvmkit-build installed](/docs/creators/javascript/examples/tools/gvmkit-build-installation) 
 -->
 
 Note: You can also use npx / pipx tools to run gvmkit-build, the former for not having to install the tool and the latter for isolation.
@@ -55,6 +55,6 @@ Your tag `golem/my_example:latest` is ready to use in one of Golem Network APIs
 
 !!! golem-icon "Next steps:"
 
-    [Using an image in a requestor script](../working-with-images.md)
+    [Using an image in a requestor script](/docs/creators/javascript/examples/working-with-images)
 
     Note: More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

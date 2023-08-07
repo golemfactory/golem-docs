@@ -172,7 +172,7 @@ The `beforeEach()` method is used to upload a file to a remote computer, that wi
 
 Note how we utilized the `ctx` worker context to get the provider name using the `provider.name` property.
 
-In the task function used in the `forEach()` method, we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](./composing-tasks.md) article.
+In the task function used in the `forEach()` method, we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
 
 ![BeforeEach](/assets/before_log.png)
 

@@ -50,7 +50,7 @@ import { TaskExecutor } from "yajsapi";
 ```
 
 In (1) we create a TaskExecutor Instance using a factory method. In this example, we use the minimal set of parameters: namely the hash indicating the image with Node.js installed - the image we will deploy on the provider and api-key value - a key that will give us access to `yagna` REST API. `yagna` is a daemon that connects us to the network. 
-We use api-key that was generated in the process of [Yagna installation](../examples/tools/yagna-installation-for-requestors.md)
+We use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
 
 ```js
  const executor = await TaskExecutor.create({
@@ -60,7 +60,7 @@ We use api-key that was generated in the process of [Yagna installation](../exam
 
 Next (2) we run the task. Here we use a run method that accepts the worker function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable. 
 
-Note: there are other methods that allow you to execute tasks, they are introduced in [Task API Guide](../guides/task-model.md) and explained in [examples](../examples/index.md) section.
+Note: there are other methods that allow you to execute tasks, they are introduced in [Task API Guide](/docs/creators/javascript/guides/task-model) and explained in [examples](/docs/creators/javascript/examples/index) section.
 
 
 ```js

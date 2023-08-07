@@ -5,7 +5,7 @@ description: Manager multiple apps on a single requestor node easily with `dapp-
 # dApp Manager
 
 `dapp-manager` is a purposefully minimalistic manager for decentralized applications running on
-Golem. It works together with the [dapp-runner](run-a-dapp.md).
+Golem. It works together with the [dapp-runner](/docs/creators/dapps/run-a-dapp).
 
 While the responsibility of the latter is to run a single Golem application (which may consist of
 multiple services), `dapp-manager` takes care of spawning, interacting with, and stopping the
@@ -18,7 +18,7 @@ running instances of the `dapp-runner`.
 As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly configured
 [yagna](https://github.com/golemfactory/yagna) daemon, you'll need to have it set up.
 
-Please follow the [Yagna installation instruction](creators/javascript/examples/tools/yagna-installation-for-requestors.md)
+Please follow the [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors)
 tutorial and ensure that your `yagna` is up and running. 
 
 Most importantly, make sure you have set the `YAGNA_APPKEY` in your environment, e.g. with:

@@ -13,7 +13,7 @@ By following this tutorial, you'll be able to get more confident about:
 * Creating a descriptor reflecting your app using YAML syntax similar to that used by `docker-compose`.
 * Deploying your app to Golem using `dapp-runner`.
 
-This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` daemon as a requestor](creators/javascript/examples/tools/yagna-installation-for-requestors.md) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
+This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` daemon as a requestor](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
 
 ## Prerequisites
 
@@ -148,7 +148,7 @@ We need to start with a Docker image since the only currently-supported way of c
 
 If you'd like to know more about the GVMI images and about the conversion process, please refer to:
 
-[Golem Images explained](creators/javascript/guides/golem-images.md)
+[Golem Images explained](/docs/creators/dapps/creators/javascript/guides/golem-images)
 
 Let's back-up a little and ensure that we're one directory above `server_app`.
 
@@ -250,7 +250,7 @@ If the command fails because the image has already been uploaded, feel free to u
 
 Now that we have the image ready, uploaded into the Golem repo and its hash in hand, we can prepare the descriptor of the application that we're going to launch on Golem.
 
-For a more complete information about the dApp descriptors, please consult the [appropriate section of the "Creating Golem dApps" article](creating-golem-dapps.md#application-descriptor). Here, we're just cover the bare minimum.
+For a more complete information about the dApp descriptors, please consult the [appropriate section of the "Creating Golem dApps" article](/docs/creators/dapps/creating-golem-dapps#application-descriptor). Here, we're just cover the bare minimum.
 
 Here's what it looks like:
 
@@ -337,7 +337,7 @@ yagna service run
 
 !!! info
 
-    If you haven't set-up your yagna daemon before, please refer to our [Yagna installation instruction](creators/javascript/examples/tools/yagna-installation-for-requestors.md).
+    If you haven't set-up your yagna daemon before, please refer to our [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors).
 
 ### Obtain the application key
 

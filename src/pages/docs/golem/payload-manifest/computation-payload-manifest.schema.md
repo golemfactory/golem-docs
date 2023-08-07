@@ -1,10 +1,9 @@
 # Objects
-* [`Application Metadata`](#reference-appmetadata)
-* [`Computation Manifest`](#reference-compmanifest)
-* [`Computation Payload Manifest`](#reference-computation-payload-manifest) (root object)
-* [`Payload`](#reference-apppayload)
-    * [`Platform`](#reference-payloadplatform)
-
+* [`Application Metadata`]
+* [`Computation Manifest`]
+* [`Computation Payload Manifest`]
+* [`Payload`]
+* [`Platform`]
 
 ---------------------------------------
 <a name="reference-appmetadata"></a>
@@ -125,7 +124,7 @@ Applies constraints to networking. Currently, outgoing requests to the public In
 
 Additional properties are allowed.
 
-* **JSON schema**: [computation-payload-manifest.schema.json](computation-payload-manifest.schema.json/computation-payload-manifest.schema.json)
+* **JSON schema**: [computation-payload-manifest.schema.json](/docs/golem/payload-manifest/computation-payload-manifest.schema.json/computation-payload-manifest.schema.json)
 
 ### Computation Payload Manifest.version
 

@@ -6,7 +6,7 @@ For any issues that are not listed below, or in case you'd like to chat with us,
 
 **Issues during the yagna setup**
 
-If you encounter problems during the yagna daemon initialization, please refer to this [Yagna Daemon installation instruction](creators/javascript/examples/tools/yagna-installation-for-requestors.md).
+If you encounter problems during the yagna daemon initialization, please refer to this [Yagna Daemon installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors).
 
 **\[Errno 104] Connection reset by peer**
 
@@ -16,7 +16,7 @@ Receiving this error after the `gvmkit-build <image> --push` command, means the 
 
 There are currently a few shortcomings of our decentralized application stack and behaviours that are either not completely obvious or just different from what one might expect. Some of them are easily resolved with simple workarounds.
 
-Most of them are outlined in the previous article, which describes the [differences between docker containers and Golem virtual machines](docker-containers-vs-golem-vms.md).
+Most of them are outlined in the previous article, which describes the [differences between docker containers and Golem virtual machines](/docs/creators/dapps/docker-containers-vs-golem-vms).
 
 Other than that, there are a couple more issues that you should be aware of:
 
@@ -44,7 +44,7 @@ The solution is to add adequate configuration or arguments to make them listen o
 
 **Accessing specific ports using outbound network connections**
 
-As described in the ["Creating Golem dApps"](creating-golem-dapps.md) article, to access an address that uses a specific port, e.g. `http://geth.golem.network:55555`, this address, including the port must be specified in the manifest file. Specifying just the address, e.g. `http://geth.golem.network` will only allow connections to be made to port 80.
+As described in the ["Creating Golem dApps"](/docs/creators/dapps/creating-golem-dapps) article, to access an address that uses a specific port, e.g. `http://geth.golem.network:55555`, this address, including the port must be specified in the manifest file. Specifying just the address, e.g. `http://geth.golem.network` will only allow connections to be made to port 80.
 
 **Errors while running commands terminate the activity**
 

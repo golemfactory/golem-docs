@@ -16,9 +16,9 @@ The general process of creating a Golem image looks like this:
 
 * Define the image content in Docker format (Dockerfile)
 * Build a Docker image from the Dockerfile
-* Convert to Golem image using gvmkit-build ([example](../examples/tools/converting-docker-image-to-golem-format.md))
+* Convert to Golem image using gvmkit-build ([example](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format))
 
-See our [Create Golem Image Tutorial](../tutorials/building-custom-image.md) on how to use the tool. 
+See our [Create Golem Image Tutorial](/docs/creators/javascript/tutorials/building-custom-image) on how to use the tool. 
 
 ## Publishing the image
 
@@ -32,8 +32,8 @@ The image must be downloaded to a remote computer therefore we need to publish i
 If you intend to use your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
 * Publishing the image anonymously. <!-- example is missing -->
-* Publishing the image using tags. ([example](../examples/tools/publishing-custom-images.md))
-* Using the tag or hash in a requestor script. ([example](../examples/working-with-images.md))
+* Publishing the image using tags. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images))
+* Using the tag or hash in a requestor script. ([example](/docs/creators/javascript/examples/working-with-images))
 
 ## Dockerfile command support 
 
@@ -67,16 +67,16 @@ In Golem terms such an image run on the provider is called an Activity. Activiti
 
 !!! golem-icon ""
 
-    [Installing gvmkit-build](../examples/tools/gvmkit-build-installation.md)
+    [Installing gvmkit-build](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
 
 ### Custom Golem image Step-by-step Tutorial
 
 !!! golem-icon ""
 
-    [Creating custom Golem Image](../tutorials/building-custom-image.md)
+    [Creating custom Golem Image](/docs/creators/javascript/tutorials/building-custom-image)
 
 ### Golem images FAQ
 
 !!! golem-icon ""
 
-    [Golem Images FAQ](./golem-images-faq.md)
+    [Golem Images FAQ](/docs/creators/javascript/guides/golem-images-faq)
