@@ -46,7 +46,6 @@ function Header({ navigation }) {
         isScrolled ? 'dark:bg-darkbg ' : 'dark:bg-transparent'
       )}
     >
-      
       <div className="relative mx-auto  flex max-w-8xl sm:px-2 lg:px-8 xl:px-12">
         <div className="mr-6 flex lg:hidden">
           <MobileNavigation navigation={navigation} />
@@ -191,9 +190,9 @@ export function Layout({
             <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64 ">
               <SideBar navigation={normalNavLinks} />
               {/* <Navigation links={normalNavLinks} /> */}
-              <div className=" mt-9">
+              {/* <div className=" mt-9">
                 <ReferenceNavigation />
-              </div>
+              </div> */}
             </div>
           </div>
         )}
@@ -232,35 +231,7 @@ export function Layout({
 
             <Prose>{children}</Prose>
           </article>
-          {!isHomePage && (
-            <>
-              {/* hidden for now until we have a CMS <Feedback /> */}
-              <dl className="mt-12 flex  dark:border-slate-800">
-                {previousPage && (
-                  <div>
-                    <Link
-                      href={previousPage.href}
-                      className="font-display text-sm font-medium text-primary dark:text-white/50"
-                    >
-                      <ArrowLeftIcon className="mr-1 inline-block h-3 w-3 fill-primary" />
-                      Return
-                    </Link>
-                  </div>
-                )}
-                {nextPage && (
-                  <div className="ml-auto text-right">
-                    <Link
-                      href={nextPage.href}
-                      className="font-display text-sm font-medium text-primary dark:text-white/50"
-                    >
-                      Continue
-                      <ArrowRightIcon className="ml-1 inline-block h-3 w-3 fill-primary" />
-                    </Link>
-                  </div>
-                )}
-              </dl>
-            </>
-          )}
+         
         </div>
         {!isHomePage && (
           <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
@@ -329,7 +300,7 @@ export function Layout({
           </div>
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

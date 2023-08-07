@@ -5,15 +5,22 @@ import { useState, useEffect } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 export const MenuBar = ({ navigation }) => {
-  
   const router = useRouter()
+
   return (
-    <div className='ml-4 hidden gap-x-6 lg:flex'>
-      {navigation.normalNavLinks.map(({ title, links }) => (
-        <Link className='text-sm text-primary dark:text-lightergray' href={links[0].href} key={title}>
-          {title}
-        </Link>
-      ))}
+    <div className="ml-4 hidden gap-x-6 lg:flex">
+      {navigation.normalNavLinks.map((item) => {
+        console.log(item.links[0].href)
+        return (
+          <Link
+            className="text-sm text-primary dark:text-lightergray"
+            key={item.title}
+            href={item.links[0].href}
+          >
+            {item.title}
+          </Link>
+        )
+      })}
     </div>
   )
 }
@@ -22,19 +29,29 @@ export const SideBar = ({ navigation }) => {
   const router = useRouter()
 
   const currentSection = navigation.find((section) =>
-    section.links.some((link) => link.href === router.pathname)
+    section.links.some(
+      (link) =>
+        link.href === router.pathname || link.href === `${router.pathname}/`
+    )
   )
 
-  const isActive = (item) =>
-    item.href &&
-    (router.pathname === item.href || router.pathname === item.href)
+  const isActive = (item) => {
+    if (
+      item.href &&
+      (router.pathname.includes(item.href) ||
+        router.pathname.includes(`${item.href}/`))
+    ) {
+      return true
+    }
+    return false
+  }
 
   const renderNavItems = (items) =>
     items.map((item) => {
       const itemIsActive = isActive(item)
       const hasChildren = item.children?.length
       return (
-        <li className='text-sm' key={item.href || item.title}>
+        <li className="text-sm" key={item.href || item.title}>
           {hasChildren ? (
             <Dropdown isActive={items.some(isActive)}>
               {[
@@ -55,8 +72,7 @@ export const SideBar = ({ navigation }) => {
 
   return currentSection ? (
     <nav>
-      <h1 className="dark:text-white"
-      >{currentSection.title}</h1>
+      <h1 className="dark:text-white">{currentSection.title}</h1>
       <ul role="list">{renderNavItems(currentSection.links)}</ul>
     </nav>
   ) : null
