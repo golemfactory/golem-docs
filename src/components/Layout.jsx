@@ -245,7 +245,7 @@ export function Layout({
                           isActive(child)
                         )
                         return (
-                          <li className="py-1.5 pl-4" key={section.id}>
+                          <li className="py-0.5 pl-4" key={section.id}>
                             <h3>
                               <a
                                 href={`#${section.id}`}
