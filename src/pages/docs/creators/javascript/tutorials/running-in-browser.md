@@ -1,45 +1,67 @@
 ---
 Description: Golem in browser QuickStart explained
+title: Golem in browser QuickStart explained
 ---
 
-!!! info
-
-    In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window. 
-
-    While in the QuickStart the js script is in an external file, in this tutorial we will keep both HTML and js script in the same file.  
-
-## Prerequisites
-
-Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
-
-In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
-
-
-=== "MacOS / Linux"
-
-   
-    ```shell
-    yagna service run --api-allow-origin='http://localhost:8080'
-    ```
-
-=== "Windows"
-
-    ```shell
-    yagna service run --api-allow-origin=http://localhost:8080
-    ```
-
-The `--api-allow-origin` value should be set to the URL where your web application will be served.
-In this example, we will use `http-server`.
+{% alert level="info" %}
 
 ## Setting up project
 
 ```bash
 mkdir web_golem
 cd web_golem
+
+```
+
+next
+
+```shell
 npm install --global http-server
 ```
 
 This will install `http-server` utility to host our web page, where we will run our Golem app.
+
+{% /alert  %}
+
+{% alert level="warning" %}
+
+## Prerequisites
+
+Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+
+{% /alert  %}
+
+In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
+
+{% tabs %}
+
+{% tab label="MacOS / Linux" %}
+   
+```shell
+yagna service run --api-allow-origin='http://localhost:8080'
+```
+{% /tab %}
+{% tab label="Windows" %}
+
+```shell
+yagna service run --api-allow-origin=http://localhost:8080
+```
+
+{% /tab %}
+{% /tabs %}
+
+The `--api-allow-origin` value should be set to the URL where your web application will be served.
+In this example, we will use `http-server`.
+
+
+## Introduction
+
+In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window. 
+
+While in the QuickStart the js script is in an external file, in this tutorial we will keep both HTML and js script in the same file.  
+
+
+
 
 ## HTML page
 
@@ -94,9 +116,9 @@ First, we will import the `yajsapi` library:
 When use will press the `Run` button `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. So we will create it, then run the task function, and finally will end it.
 
 Note that the `create()` method received additional 3 parameters: 
-* `package` identifies the image that we want to use on a provider,
-* `apiKey` is the key that enables our script to use Yagna REST API,
-* Logger is a function that will be used by SDK to log - we will define it in a moment.
+- `package` identifies the image that we want to use on a provider,
+- `apiKey` is the key that enables our script to use Yagna REST API,
+- Logger is a function that will be used by SDK to log - we will define it in a moment.
 
 ```html
 <script>
@@ -129,13 +151,18 @@ Now let's create the `appendResults()` function which will put the output of our
 ```html
 <script>
     //
-    // .. previously added code 
+    // .. previously added import statement  
     // 
     function appendResults(result) {
         const results = document.getElementById('results');
         const div = document.createElement('div');
         div.appendChild(document.createTextNode(result));
         results.appendChild(div);
+
+    //
+    // .. async function run ....
+    // 
+    
     }
 </script>
 ```
@@ -163,6 +190,10 @@ The TaskExecutor offers an optional logger parameter. It will accept an object t
         info: (msg) => appendLog(msg, 'info'),
         table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
     }
+
+    //
+    // .. async function run ....
+    // 
 </script>
 ```
 
@@ -213,13 +244,29 @@ Now that we have all the necessary components defined, the code between `<script
     </script>
 ```
 
-Now if we have a running Yagna daemon started with the ``--api-allow-origin` properly set to `http://localhost:8080` and have your Yagna APP key set to 'try_golem' launch `http-server` we should see our app available in the browser.
+Now if we have:
+- a running Yagna daemon started with the `--api-allow-origin` properly set to  `http://localhost:8080`  and 
+- have your Yagna APP key set to 'try_golem' 
+
+launch `http-server`.
+
+You should see the app available in the browser.
 
 [ Open localhost ](http://localhost:8080)
 
 If you click the run button, after a while in the result container, we should get the result of the script: `Hello World`, and in the log container we should see the logs of executed commands.
 
-![Output logs](../../../assets/browser_log.png)
+![Output logs](/browser_log.png)
 
-!!! golem-icon "Next steps:"
+{% docnavigation title="Next steps" %}
+
+Other [tutorials](/docs/creators/javascript/tutorials).
+
+{% /docnavigation %}
+
+{% docnavigation title="See also" %}
+
+Introduction to [JS Task API](/docs/creators/javascript/guides/task-model)
+
+{% /docnavigation %}
 

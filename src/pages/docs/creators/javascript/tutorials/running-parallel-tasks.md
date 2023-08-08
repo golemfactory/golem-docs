@@ -2,23 +2,28 @@
 Description: Parallel processing on Golem Network - Tutorial
 ---
 
+#
 
+{% alert level="info" %}
 
-This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network. 
-
-
-!!! Prerequisites
-  * Install and run the Yagna daemon on your machine (see quickstart)
-  * Initialize payment with yagna payment init --sender (Note: payment needs to be initialized after each launch of yagna service run)
+Prerequisites
+  * Yagna daemon installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
   * Have Docker installed and Docker service available
 
 
+{% /alert %}
+
+
+## Introduction
+
+This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network. 
+
 We will go through the following steps:
 
-* Define the problem and split it into chunks that can be executed in parallel
-* Create a Golem image
-* Create a requestor script
-* Run the tasks in parallel and process the output
+- Define the problem and split it into chunks that can be executed in parallel
+- Create a Golem image
+- Create a requestor script
+- Run the tasks in parallel and process the output
 
 
 ## Define the problem
@@ -27,7 +32,7 @@ As a practical example of a problem that is suitable for parallel processing, we
 
 Let`s assume we have a password hash obtained from an unknown password processed using the "phpass" algorithm. (Phpass is used as a hashing method by popular web frameworks such as WordPress and Drupal) and we know a password mask ?a?a?a (this means the password consists of three alphanumeric characters).
  
-Our objective is to recover the password using  `Hashcat - a command-line utility that cracks unknown passwords from their known hashes. 
+Our objective is to recover the password using  `Hashcat` - a command-line utility that cracks unknown passwords from their known hashes. 
 Hashcat supports 320 hashing algorithms and 5 different attack types, but for this example, we`ll use only the "phpass" algorithm and a simple brute-force attack.
 
 
@@ -67,22 +72,23 @@ hashcat -a 3 -m 400 in.hash --skip 3009 --limit 6016  ?a?a?a
 
 The above command will process the `3009..6016` fragment, and any results in that range will be written to the `hashcat.pot` file.
 
-!!! info
+{% alert level="info" %}
 
 For more information on hashcat arguments, see the complete [reference](https://hashcat.net/wiki/doku.php?id=hashcat)
-
+{% /alert %}
 
 ## Preparing Image
 
-!!! Info
+{% alert level="info" %}
 
 You can skip this section if you do not have Docker installed and use the image hash provided in the example.
+{% /alert %}
 
 The tasks that we send to the remote computer are executed in the context of the specified software package - the image. When we create Task Executor we provide the hashID of the image that will be used during processing. In the QuickStart example, we used an image that contained Node.js.
 
 In our case, we need to prepare a custom image containing `hashcat` software that we will use on the provider’s machines. 
 Golem images are converted from Docker images, so we can start with any existing Docker image that meets your needs and modify it to create a custom one.
-For our task, we will use an off-the-shelf hashcat image (dizcza/docker-hashcat:intel-cpu) and modify it slightly for Golem.
+For our task, we will use an off-the-shelf hashcat image (`dizcza/docker-hashcat:intel-cpu`) and modify it slightly for Golem.
 
 ### Dockerfile
 Create a `Dockerfile` file with the following content:
@@ -92,8 +98,7 @@ FROM dizcza/docker-hashcat:intel-cpu
 WORKDIR /golem/work
 ```
 
-We use `dizcza/docker-hashcat:intel-cpu` Docker image as starting point,
-and then we define a working directory - `WORKDIR /golem/entrypoint` - do we need it?
+We use `dizcza/docker-hashcat:intel-cpu` Docker image as starting point, and then we define a working directory - `WORKDIR /golem/entrypoint`.
 
 ### Docker image
 
@@ -104,7 +109,8 @@ docker build . -f .Dockerfile -t hashcat
 
 ### Conversion to golem image
 
-If you have not installed it yet: install the Golem image conversion tool (gvmkit-build)
+If you have not installed it yet, install the Golem image conversion tool (gvmkit-build):
+
 ```bash
 npm install -g @golem-sdk/gvmkit-build
 ```
@@ -120,16 +126,18 @@ gvmkit-build --direct-file-upload hashcat.gvmi --push --nologin
 This command will produce the hash of the image that you can use in the example. 
 
 ```bash
+....
 -- image link (for use in SDK): 
+....
 ```
 
-!!! Info
+{% alert level="info" %}
   Note that the lifetime of images uploaded anonymously to the repository is limited, and they can be removed from the registry portal after some time without notice.
+{% /alert %}
 
-
-!!! Info
+{% alert level="info" %}
   The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format)
-
+{% /alert %}
 
 ## The requestor script code
 
@@ -137,9 +145,9 @@ This command will produce the hash of the image that you can use in the example.
 
 Based on the usage of the `hashcat` tool our algorithm will be straightforward:
 
-* First we will calculate the keyspace, then 
-* split it into several segments and run tasks in parallel on many providers, as defined by the user.
-* Finally we will collect the results and provide the user with the output.
+- First we will calculate the keyspace, then 
+- split it into several segments and run tasks in parallel on many providers, as defined by the user.
+- Finally we will collect the results and provide the user with the output.
 
 Note we could calculate the keyspace locally, but in this example we will also do it on a remote computer, avoiding installing hashcat on our computer. 
 
@@ -255,9 +263,9 @@ Next, we can start looking for the password using multiple workers, executing th
 
 For each worker, we perform the following steps:
 
-* Execute hashcat with proper --skip and --limit values on the provider.
-* Get the hashcat_{skip}.potfile from the provider to the requestor.
-* Parse the result from the .potfile.
+- Execute hashcat with proper --skip and --limit values on the provider.
+- Get the hashcat_{skip}.potfile from the provider to the requestor.
+- Parse the result from the .potfile.
 
 With the range, we use the executor.map method to run the split tasks simultaneously on the Golem Network:
 
@@ -362,34 +370,45 @@ main(options).catch((e) => console.error(e));
 
 To test our script, copy it into the index.mjs file. Ensure your Yagna daemon is running run:
 
-=== "Linux/ Mac"
+
+{% tabs %}
+
+{% tab label="Linux/ Mac" %}
     
   ```js
   node index.mjs  --mask `?a?a?a` --hash `$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/`
   ```
-=== "Windows"
+{% /tab  %}   
+{% tab label="Windows" %}
+ 
   ```js
   node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
   ```
+{% /tab  %}  
+{% /tabs %}
 
-
-!!! Info
+{% alert level="info" %}
 
 You can clone the yajsapi repository and find the complete project in the `examples/hashcat` folder.
-
+{% /alert  %}
 
 ## Summary
 
 In this tutorial, we led you through the following steps:
 
-* Custom Golem image creation
-* Parallel task execution across multiple providers
-* Submitting multiple command sequences as a single task
-* Reading output from commands executed on a provider
+- Custom Golem image creation
+- Parallel task execution across multiple providers
+- Submitting multiple command sequences as a single task
+- Reading output from commands executed on a provider
 
 
-!!! golem-icon "Next steps:"
+{% docnavigation title="Next steps" %}
 
-  [Examples](/docs/creators/javascript/tutorials/index){ .md-button .md-button--primary }
+- Other JS [Tutorials](/docs/creators/javascript/tutorials)
+
+
+{% /docnavigation %}
+
+
 
 

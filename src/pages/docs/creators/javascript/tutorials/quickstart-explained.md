@@ -4,13 +4,27 @@ Description: Create your own JavaScript application on Golem
 
 # JS QuickStart Explained
 
-Let's look closer at our requestor.mjs script that is used to run a JS QuickStart task on Golem Network.
+{% alert level="info" %}
+
+## Prerequisites 
+Yagna daemon installed and running with `try_golem` app-key configured.
+
+## Setting up project
+
+Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+
+```bash
+mkdir golem-example
+npm init
+npm i yajsapi
+```
+{% /alert %}
 
 ## JS script structure
 
 The basic structure of the script:
 
-```bash
+```js
 import { TaskExecutor } from "yajsapi";
 
 (async () => {
@@ -37,7 +51,7 @@ import { TaskExecutor } from "yajsapi";
         package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
         yagnaOptions: { appKey: 'try_golem' }});
     
-    // 2. run the task
+    // 2. Run the task
     const taskResult = await executor.run( /*taskToRunOnProvider to be provided here */);
 
     
@@ -58,9 +72,9 @@ We use api-key that was generated in the process of [Yagna installation](/docs/c
         yagnaOptions: { appKey: 'try_golem' }});
 ```
 
-Next (2) we run the task. Here we use a run method that accepts the worker function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable. 
+Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable. 
 
-Note: there are other methods that allow you to execute tasks, they are introduced in [Task API Guide](/docs/creators/javascript/guides/task-model) and explained in [examples](/docs/creators/javascript/examples/index) section.
+Note: there are other methods that allow you to execute tasks, they are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
 
 
 ```js
@@ -117,11 +131,11 @@ import { TaskExecutor } from "yajsapi";
 We had created the simplest requestor script, that ran a single command on a remote computer. 
 To achieve it we had:
 
-* imported yajsapi lib
-* utilized Immediately Invoked Async Function Expression
-* created Task Executor
-* defined a task as a function that runs our command
-* Finally read the command result from the result object and provide it to the user
+- imported yajsapi lib
+- utilized Immediately Invoked Async Function Expression
+- created Task Executor
+- defined a task as a function that runs our command
+- Finally read the command result from the result object and provide it to the user
 
 
 In this example, we ran a simple command (node -v) in a shell on the remote computer. You can run other executable programs in more interesting scenarios. See other examples for more advanced use cases.
