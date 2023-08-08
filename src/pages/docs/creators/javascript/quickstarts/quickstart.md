@@ -6,15 +6,6 @@ Description: Create your own JavaScript application on Golem
 
 In this article, we'll show you how to run a simple task on the Golem Network. 
 
-## h2
-
-### h3
-
-#### h4
-
-##### h5
-
-###### h6
 The goal is to run just a basic shell command on a rented provider.  
 It should take just a few minutes to complete and finally, you will see the command's result printed in your terminal. 
 
@@ -26,7 +17,7 @@ It should take just a few minutes to complete and finally, you will see the comm
 * Node.js 16.0.0 or above
 {% /alert %}
 
-# random
+
 ## Installing and running Yagna 
 
 Yagna is a daemon whose purpose is to communicate and perform operations on the Golem Network. Let's get started by installing it.
