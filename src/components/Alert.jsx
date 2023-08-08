@@ -24,22 +24,22 @@ export function Alert({ children, level }) {
         <span className="flex items-center px-4 font-semibold capitalize dark:text-white dark:opacity-50">
           {level === 'info' && (
             <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#678AAA] ">
-              <InfoIcon className="h-2.5 w-2.5 fill-[#ADDDEC]" />
+              <InfoIcon className="h-3 w-3 fill-[#ADDDEC]" />
             </div>
           )}
           {level === 'warning' && (
             <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#C9885C] ">
-              <WarningIcon className="h-2 w-2 fill-[#FFD9BE]" />
+              <WarningIcon className="h-3 w-3 fill-[#FFD9BE]" />
             </div>
           )}
           {level === 'danger' && (
             <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#92344A] ">
-              <DangerIcon className="h-2 w-2 fill-[#FFC1CE]" />
+              <DangerIcon className="h-3 w-3 fill-[#FFC1CE]" />
             </div>
           )}
           {level === 'success' && (
             <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#64A37C] ">
-              <SuccessIcon className="h-2 w-2 fill-[#D4EADD]" />
+              <SuccessIcon className="h-3 w-3 fill-[#D4EADD]" />
             </div>
           )}
 

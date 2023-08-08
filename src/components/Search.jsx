@@ -86,7 +86,7 @@ function LoadingIcon(props) {
 function HighlightQuery({ text, query }) {
   return (
     <Highlighter
-      highlightClassName="group-aria-selected:underline bg-transparent text-sky-600 dark:text-sky-400"
+      highlightClassName="group-aria-selected:underline bg-transparent text-primary dark:text-darkprimary"
       searchWords={[query]}
       autoEscape={true}
       textToHighlight={text}
@@ -117,7 +117,7 @@ function SearchResult({ result, autocomplete, collection, query }) {
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="text-sm text-slate-700 group-aria-selected:text-sky-600 dark:text-slate-300 dark:group-aria-selected:text-sky-400"
+        className="text-sm text-slate-700 group-aria-selected:text-primary dark:text-white/50 dark:group-aria-selected:text-white/50"
       >
         <HighlightQuery text={result.title} query={query} />
       </div>
@@ -152,7 +152,7 @@ function SearchResults({ autocomplete, query, collection }) {
     return (
       <p className="px-4 py-8 text-center text-sm text-slate-700 dark:text-slate-400">
         No results for &ldquo;
-        <span className="break-words text-slate-900 dark:text-white">
+        <span className="break-words text-primary dark:text-darkprimary">
           {query}
         </span>
         &rdquo;
@@ -353,10 +353,10 @@ export function Search() {
         </span>
         {modifierKey && (
           <kbd className="ml-auto hidden gap-x-2 text-xs  font-medium text-lightgray  dark:text-white/50 md:flex">
-            <kbd className="rounded border border-lightgray dark:border-white/50 px-2 py-0.5 font-sans dark:border-slate-500">
+            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-500 dark:border-white/50">
               {modifierKey}
             </kbd>
-            <kbd className="rounded border border-lightgray dark:border-white/50 px-2 py-0.5 font-sans dark:border-slate-500">
+            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-500 dark:border-white/50">
               K
             </kbd>
           </kbd>

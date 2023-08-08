@@ -28,7 +28,7 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
       <div className="p-6">
         <Link
           href={href}
-          className="not-prose inline-flex cursor-pointer items-center gap-x-2 rounded bg-primary px-4 py-1 text-sm font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+          className="not-prose inline-flex cursor-pointer items-center gap-x-2 rounded bg-primary px-4 py-0.5 text-base font-medium text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80"
         >
           {buttonText} <ArrowRightIcon className="h-3.5 w-3.5 fill-white" />
         </Link>
