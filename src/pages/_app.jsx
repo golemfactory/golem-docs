@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import { Layout } from '@/components/Layout'
 
@@ -77,23 +78,27 @@ export default function App({ Component, pageProps }) {
   console.log(tableOfContents)
 
   return (
-    <div className={inter.className}>
-      <Head>
-        <title>{pageTitle}</title>
-        {description && <meta name="description" content={description} />}
-        <meta
-          name="google-site-verification"
-          content="_AoJ-bZkWRFuikUYy_DE51TeMgqwPurevNapFTxcLbE"
-        />
-      </Head>
-      <Layout
-        title={title}
-        tableOfContents={tableOfContents}
-        type={type}
-        tags={tags}
-      >
-        <Component {...pageProps} />
-      </Layout>
-    </div>
+    <>
+      <GoogleAnalytics trackPageViews />
+
+      <div className={inter.className}>
+        <Head>
+          <title>{pageTitle}</title>
+          {description && <meta name="description" content={description} />}
+          <meta
+            name="google-site-verification"
+            content="_AoJ-bZkWRFuikUYy_DE51TeMgqwPurevNapFTxcLbE"
+          />
+        </Head>
+        <Layout
+          title={title}
+          tableOfContents={tableOfContents}
+          type={type}
+          tags={tags}
+        >
+          <Component {...pageProps} />
+        </Layout>
+      </div>
+    </>
   )
 }

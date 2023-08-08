@@ -1,6 +1,4 @@
-
-
- ---
+---
 Description: Guides to help you troubleshoot a faulty provider.
 ---
 
