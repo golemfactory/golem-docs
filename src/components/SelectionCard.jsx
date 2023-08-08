@@ -11,7 +11,7 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
             <div className="flex items-center justify-center rounded-full bg-white p-2">
               <Icon icon={icon} className="h-6 w-6 fill-dark" />
             </div>
-            <h1 className="text-2xl font-semibold text-dark">{title}</h1>
+            <h4 className=" font-semibold text-dark">{title}</h4>
           </div>
         </div>
 
@@ -19,7 +19,7 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
           {children.map((child, index) => (
             <div key={index} className="not-prose flex items-start gap-x-2">
               <CheckIcon className="mt-1.5 h-4 w-4 flex-shrink-0 fill-dark" />
-              <h1 className="text-dark">{child}</h1>
+              <p className="text-dark">{child}</p>
             </div>
           ))}
         </div>
@@ -28,7 +28,7 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
       <div className="p-6">
         <Link
           href={href}
-          className="not-prose inline-flex cursor-pointer items-center gap-x-2 rounded bg-primary px-4 py-0.5 text-base font-medium text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+          className="not-prose inline-flex cursor-pointer items-center gap-x-2 rounded bg-primary px-4 py-1 text-base font-medium text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80"
         >
           {buttonText} <ArrowRightIcon className="h-3.5 w-3.5 fill-white" />
         </Link>

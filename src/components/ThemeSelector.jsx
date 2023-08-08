@@ -67,7 +67,7 @@ export function ThemeToggler() {
       <span
         aria-hidden="true"
         className={classNames(
-          enabled ? 'bg-[#DDDEE8]' : 'bg-lightbluedarker',
+          enabled ? 'bg-[#DDDEE8]' : 'bg-[#525369]',
           'pointer-events-none absolute mx-auto h-4 w-9 rounded-full transition-colors duration-200 ease-in-out'
         )}
       />
@@ -77,7 +77,7 @@ export function ThemeToggler() {
           aria-hidden="true"
           className={classNames(
             enabled
-              ? 'translate-x-5 bg-[#DDDEE8]'
+              ? 'translate-x-5 bg-[#BABCDC] rotate-[230deg] '
               : 'translate-x-0 bg-lightbluedarker',
 
             'pointer-events-none absolute left-0 inline-block h-5 w-5 transform items-center rounded-full  p-0.5   transition-transform duration-200  ease-in-out'
@@ -90,8 +90,8 @@ export function ThemeToggler() {
           aria-hidden="true"
           className={classNames(
             enabled
-              ? 'translate-x-5 bg-[#DDDEE8]'
-              : 'translate-x-0 bg-lightbluedarker',
+              ? 'translate-x-5 bg-[#BABCDC]'
+              : 'translate-x-0 bg-[#34354B] fill-white',
             'pointer-events-none absolute left-0 inline-block h-5 w-5 transform items-center rounded-full p-0.5  transition-transform duration-200  ease-in-out'
           )}
         >

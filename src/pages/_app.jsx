@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }) {
 
   let pageTitle =
     pageProps.markdoc?.frontmatter.pageTitle ||
-    `${pageProps.markdoc?.frontmatter.title} - Docs`
+    `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
 
