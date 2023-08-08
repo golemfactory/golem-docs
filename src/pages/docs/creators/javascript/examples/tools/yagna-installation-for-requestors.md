@@ -2,16 +2,24 @@
 Description: Yagna daemon installation
 ---
 
+#
 
-In this article, we'll show you how to install and configure Yagna in case you want to enable your applications to connect the the network.  
+ 
 
-!!! Info
-    **Note: This example is designed for the environment:**
+
+{% alert level="info" %}
+
+**Note: These instructions are designed for the environment:**
 
 * OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
 * Node.js version above 16.0.0
-* Familiarity with the command line
-    
+
+{% /alert %}
+
+
+## Introduction
+
+In this article, we'll show you how to install and configure Yagna in case you want to enable your applications to connect the the network.     
 
 ## Installing and running Yagna 
 
@@ -19,18 +27,19 @@ Yagna is a daemon that will let you communicate with Golem Network and perform o
 
 #### Install Yagna
 
-=== "Easy installation"
-    
-    On Linux/ MacOS you can install it using our helper script like this:
-    
-    ```bash
-    curl -sSf https://join.golem.network/as-requestor | bash -
-    ```
-    You might be asked to modify your PATH afterward.
 
-    
+{% tabs %}
+{% tab label="Easy installation" %}    
 
-=== "Windows Manual installation"
+On Linux/ MacOS you can install it using our helper script like this:
+    
+```bash
+curl -sSf https://join.golem.network/as-requestor | bash -
+```
+You might be asked to modify your PATH afterward.
+
+{% /tab %}
+{% tab label="Windows Manual installation" %}    
 
     Alternatively, if you can't install it easily, you will do it manually in the following way:
     
@@ -40,7 +49,9 @@ Yagna is a daemon that will let you communicate with Golem Network and perform o
     
     Note: the link will lead you to the latest stable release, you can go to [https://github.com/golemfactory/yagna/releases](https://github.com/golemfactory/yagna/releases) and select another version if you want to explore the preview features.
 
-=== "Unix Manual installation"
+{% /tab %}
+{% tab label="Unix Manual installation" %}
+
 
     Alternatively, if you can't install it easily, you will do it manually in the following way:
     
@@ -49,37 +60,42 @@ Yagna is a daemon that will let you communicate with Golem Network and perform o
 
     Note: the link will lead you to the latest stable release, you can go to [https://github.com/golemfactory/yagna/releases](https://github.com/golemfactory/yagna/releases) and select another version if you want to explore the preview features.
 
+{% /tab %}
+{% /tabs %}
 
-!!! Note
+{% alert level="info" %}
 
     If you have encountered problems, contact us on [discord channel](https://chat.golem.network/): 
-
+{% /alert  %}
 
 #### Start the daemon
 
 Open a terminal (command line window) and  define the key to identify your application script:
 
-=== "MacOS / Linux"
 
+{% tabs %}
+{% tab label="MacOS / Linux" %}  
    
     ```bash
     export YAGNA_AUTOCONF_APPKEY=try_golem
     ```
 
-=== "Windows"
-
+{% /tab %}
+{% tab label="Windows" %}
     
     ```bash
     set YAGNA_AUTOCONF_APPKEY=try_golem
     ```
+
+{% /tab %}
+{% /tabs %}
+
 
 Then start the daemon:
 
 ```bash
 yagna service run
 ```
-
-
 
 
 #### Get some funds
@@ -95,10 +111,12 @@ yagna payment init
 ```
 
 
-Next steps:
+    
+{% docnavigation title="Next steps" %}
 
-    You can learn more about Golem architecture, production and test networks, GLM tokens [here](/docs/golem/overview/index):
+- You can learn more about Golem architecture, production and test networks, GLM tokens [here](/docs/golem/overview):
 
+{% /docnavigation %}
 
 
 
