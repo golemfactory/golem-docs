@@ -1,5 +1,6 @@
 import { JSIcon } from './icons/JSIcon'
 import { PythonIcon } from './icons/PythonIcon'
+import Image from 'next/image'
 
 export function Hero() {
   return (
@@ -38,9 +39,11 @@ export function Hero() {
           </div>
         </div>
         <div className="hidden md:block md:w-1/3 lg:w-1/2">
-          <img
+          <Image
             className="mt-8 lg:absolute lg:right-0 lg:top-0 lg:mt-0 lg:h-full lg:w-2/3 lg:scale-x-[-1]  lg:rounded-xl"
             src={'/hero.png'}
+            width={500}
+            height={500}
             alt=""
           />
         </div>

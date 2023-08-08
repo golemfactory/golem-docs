@@ -1,19 +1,24 @@
 import Link from 'next/link'
 import { DiscordIcon } from './icons/DiscordIcon'
+import Image from 'next/image'
 export function CTA({ title, description, imageUrl, buttonText, href }) {
   return (
     <div className="not-prose relative w-full rounded-lg bg-lightblue px-4 pb-20 pt-16 dark:bg-darkcontent">
-      <img
-        className="hidden md:absolute md:left-0 md:top-0 md:block md:h-full md:object-contain"
+      <Image
         src={imageUrl}
-        alt=""
+        alt="Description of Image"
+        width={800}
+        height={800}
+        className="hidden md:absolute md:left-0 md:top-10 md:block"
       />
 
       <div className="relative grid gap-y-4 md:grid-cols-2 md:gap-y-4">
         <div className="relative h-full w-full"></div>
-        <img
+        <Image
           className="rounded-xl object-cover md:hidden"
           src={imageUrl}
+          width={500}
+          height={500}
           alt=""
         />
         <div className="first-letter: z-30 grid items-center gap-y-4 px-12 ">
