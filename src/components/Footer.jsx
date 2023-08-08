@@ -46,7 +46,7 @@ const LinkSection = ({ title, links }) => (
     </h2>
     <ul role="list" className="list-disc">
       {links.map(({ title, href }) => (
-        <li key={href+title}>
+        <li key={href + title}>
           <a
             href={href}
             className="text-sm font-medium leading-6 text-primary dark:text-darkprimary"
@@ -61,7 +61,7 @@ const LinkSection = ({ title, links }) => (
 
 const DocSection = ({ title, data }) => (
   <div>
-    <DocHeader classes={"text-xl"} title={title + " Docs"} />
+    <DocHeader classes={'text-xl'} title={title + ' Docs'} />
     <div
       role="list"
       className="mb-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
@@ -75,7 +75,7 @@ const DocSection = ({ title, data }) => (
 
 const DocHeader = ({ title, classes }) => (
   <>
-    <h1 className={`${classes} font-semibold dark:text-white/50`}>{title}</h1>
+    <h5 className={`${classes}  font-semibold dark:text-white/50`}>{title}</h5>
     <p className="text-sm text-gray-500 dark:text-white/50">
       Contracts or people on the network
     </p>
@@ -96,10 +96,10 @@ const NavLink = () => (
 
 export const Footer = () => (
   <footer className="bg-white pt-8 dark:bg-transparent">
-    <div className="mb-4 bg-lightblue dark:bg-darkbg border-y border-y-lightbluedarker">
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-18 lg:px-8 ">
-      <div className='mb-12'>
-        <DocHeader classes={"text-2xl"} title="Learn Dapps" />
+    <div className="mb-4 border-y border-y-lightbluedarker bg-lightblue dark:bg-darkbg">
+      <div className="sm:pt-18 mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 ">
+        <div className="mb-12">
+          <DocHeader classes={'text-3xl'} title="Learn Dapps" />
         </div>
         <DocSection title="JS" data={javascript} />
         <DocSection title="Python" data={python} />

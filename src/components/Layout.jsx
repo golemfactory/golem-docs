@@ -13,6 +13,55 @@ import { Search } from '@/components/Search'
 import { ThemeToggler } from '@/components/ThemeSelector'
 import VersionSwitcher from '@/components/VersionSwitcher'
 
+function Heading({ section, isActive }) {
+  const isChildActive = section.children.some(isActive)
+  return (
+    <h3>
+      <a
+        href={`#${section.id}`}
+        className={clsx(
+          isActive(section) && !isChildActive
+            ? 'relative text-sm text-primary dark:text-white'
+            : 'text-sm font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+        )}
+      >
+        {isActive(section) && !isChildActive && (
+          <div className="absolute -left-[1.35rem] mt-1.5 h-2.5 w-2.5 overflow-visible rounded-full bg-primary text-sm dark:bg-darkprimary"></div>
+        )}
+        {section.title}
+      </a>
+    </h3>
+  )
+}
+
+function recursiveRender(children, isActive) {
+  return children.map((node) => (
+    <li key={node.id}>
+      <a
+        href={`#${node.id}`}
+        className={
+          isActive(node)
+            ? 'relative text-sm text-primary dark:text-white'
+            : 'text-sm hover:text-slate-600 dark:hover:text-slate-300'
+        }
+      >
+        {isActive(node) && (
+          <div className="absolute -left-[2.6rem] mt-1.5 h-2.5 w-2.5 overflow-visible rounded-full bg-primary dark:bg-darkprimary"></div>
+        )}
+        {node.title}
+      </a>
+      {node.children && node.children.length > 0 && (
+        <ul
+          role="list"
+          className=" space-y-3 pl-5 text-slate-500 dark:text-slate-400"
+        >
+          {recursiveRender(node.children, isActive)}
+        </ul>
+      )}
+    </li>
+  ))
+}
+
 function Header({ navigation }) {
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -64,7 +113,7 @@ function Header({ navigation }) {
 
           <Link
             href="https://github.com/golemfactory/yagna"
-            className="group hidden items-center gap-x-2 lg:flex flex-none"
+            className="group hidden flex-none items-center gap-x-2 lg:flex"
             aria-label="GitHub"
             rel="noopener noreferrer"
             target="_blank"
@@ -97,18 +146,20 @@ function useTableOfContents(tableOfContents) {
   let [currentSection, setCurrentSection] = useState(tableOfContents[0]?.id)
 
   let getHeadings = useCallback((tableOfContents) => {
-    return tableOfContents
-      .flatMap((node) => [node.id, ...node.children.map((child) => child.id)])
-      .map((id) => {
-        let el = document.getElementById(id)
-        if (!el) return
+    function getNodeIds(nodes) {
+      return nodes.flatMap((node) => [node.id, ...getNodeIds(node.children)])
+    }
 
-        let style = window.getComputedStyle(el)
-        let scrollMt = parseFloat(style.scrollMarginTop)
+    return getNodeIds(tableOfContents).map((id) => {
+      let el = document.getElementById(id)
+      if (!el) return
 
-        let top = window.scrollY + el.getBoundingClientRect().top - scrollMt
-        return { id, top }
-      })
+      let style = window.getComputedStyle(el)
+      let scrollMt = parseFloat(style.scrollMarginTop)
+
+      let top = window.scrollY + el.getBoundingClientRect().top - scrollMt
+      return { id, top }
+    })
   }, [])
 
   useEffect(() => {
@@ -168,13 +219,7 @@ export function Layout({
   const currentSection = useTableOfContents(isHomePage ? [] : tableOfContents)
 
   function isActive(section) {
-    if (section.id === currentSection) {
-      return true
-    }
-    if (!section.children) {
-      return false
-    }
-    return section.children.findIndex(isActive) > -1
+    return section.id === currentSection
   }
 
   return (
@@ -240,54 +285,19 @@ export function Layout({
                   </h2>
                   <ol role="list" className="mt-4 space-y-3 pl-4 text-sm">
                     <div className="border-l">
-                      {tableOfContents.map((section) => {
-                        const isChildActive = section.children.some((child) =>
-                          isActive(child)
-                        )
-                        return (
-                          <li className="py-1.5 pl-4" key={section.id}>
-                            <h3>
-                              <a
-                                href={`#${section.id}`}
-                                className={clsx(
-                                  isActive(section) && !isChildActive
-                                    ? ' relative text-sm text-primary dark:text-white'
-                                    : ' text-sm font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
-                                )}
-                              >
-                                {isActive(section) && !isChildActive && (
-                                  <div className="absolute -left-[1.35rem] mt-1.5 h-2.5  w-2.5 overflow-visible rounded-full bg-primary text-sm dark:bg-darkprimary"></div>
-                                )}
-                                {section.title}
-                              </a>
-                            </h3>
-                            {section.children.length > 0 && (
-                              <ol
-                                role="list"
-                                className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400"
-                              >
-                                {section.children.map((subSection) => (
-                                  <li key={subSection.id}>
-                                    <a
-                                      href={`#${subSection.id}`}
-                                      className={
-                                        isActive(subSection)
-                                          ? 'relative text-sm text-primary dark:text-white'
-                                          : ' text-sm hover:text-slate-600 dark:hover:text-slate-300'
-                                      }
-                                    >
-                                      {isActive(subSection) && (
-                                        <div className="absolute -left-[2.6rem] mt-1.5 h-2.5  w-2.5 overflow-visible rounded-full bg-primary dark:bg-darkprimary"></div>
-                                      )}
-                                      {subSection.title}
-                                    </a>
-                                  </li>
-                                ))}
-                              </ol>
-                            )}
-                          </li>
-                        )
-                      })}
+                      {tableOfContents.map((section) => (
+                        <li className="py-0.5 pl-4" key={section.id}>
+                          <Heading section={section} isActive={isActive} />
+                          {section.children.length > 0 && (
+                            <ul
+                              role="list"
+                              className=" space-y-3 pl-5 text-slate-500 dark:text-slate-400"
+                            >
+                              {recursiveRender(section.children, isActive)}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
                     </div>
                   </ol>
                 </>

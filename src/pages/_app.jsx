@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import { Layout } from '@/components/Layout'
 
@@ -18,37 +19,47 @@ function getNodeText(node) {
   return text
 }
 
-function collectHeadings(nodes, slugify = slugifyWithCounter()) {
+function collectHeadings(nodes, slugify = slugifyWithCounter(), lastNode) {
   let sections = []
 
   for (let node of nodes) {
-    if (node.name === 'h2' || node.name === 'h3') {
+    if (
+      node.name === 'h1' ||
+      node.name === 'h2' ||
+      node.name === 'h3' ||
+      node.name === 'h4' ||
+      node.name === 'h5' ||
+      node.name === 'h6'
+    ) {
       let title = getNodeText(node)
       if (title) {
         let id = slugify(title)
         node.attributes.id = id
-        if (node.name === 'h3') {
-          if (!sections[sections.length - 1]) {
-            throw new Error(
-              'Cannot add `h3` to table of contents without a preceding `h2`'
-            )
+        let level = parseInt(node.name.slice(1))
+        if (level > 2) {
+          if (!lastNode || level !== lastNode.level + 1) {
+            // throw new Error(
+            //   `Cannot add '${node.name}' without preceding 'h${level - 1}'`
+            // )
           }
-          sections[sections.length - 1].children.push({
-            ...node.attributes,
-            title,
-          })
-        } else {
-          sections.push({ ...node.attributes, title, children: [] })
+          console.warn(
+            `Cannot add '${node.name}' without preceding 'h${level - 1}'`
+          )
         }
+        let newNode = { ...node.attributes, title, children: [], level }
+        if (lastNode && level - 1 === lastNode.level) {
+          lastNode.children.push(newNode)
+        } else {
+          sections.push(newNode)
+        }
+        lastNode = newNode
       }
     }
-
-    sections.push(...collectHeadings(node.children ?? [], slugify))
+    sections.push(...collectHeadings(node.children ?? [], slugify, lastNode))
   }
 
   return sections
 }
-
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
   let type = pageProps.markdoc?.frontmatter.type
@@ -64,19 +75,30 @@ export default function App({ Component, pageProps }) {
     ? collectHeadings(pageProps.markdoc.content)
     : []
 
+  console.log(tableOfContents)
+
   return (
-    <div className={inter.className}>
-      <Head>
-        <title>{pageTitle}</title>
-        {description && <meta name="description" content={description} />}
-        <meta
-          name="google-site-verification"
-          content="_AoJ-bZkWRFuikUYy_DE51TeMgqwPurevNapFTxcLbE"
-        />
-      </Head>
-      <Layout title={title} tableOfContents={tableOfContents} type={type} tags={tags}>
-        <Component {...pageProps} />
-      </Layout>
-    </div>
+    <>
+      <GoogleAnalytics trackPageViews />
+
+      <div className={inter.className}>
+        <Head>
+          <title>{pageTitle}</title>
+          {description && <meta name="description" content={description} />}
+          <meta
+            name="google-site-verification"
+            content="_AoJ-bZkWRFuikUYy_DE51TeMgqwPurevNapFTxcLbE"
+          />
+        </Head>
+        <Layout
+          title={title}
+          tableOfContents={tableOfContents}
+          type={type}
+          tags={tags}
+        >
+          <Component {...pageProps} />
+        </Layout>
+      </div>
+    </>
   )
 }

@@ -41,6 +41,13 @@ module.exports = {
           letterSpacing: '-2%',
         },
       ],
+      xl: [
+        '24px',
+        {
+          lineHeight: '120%',
+          letterSpacing: '-2%',
+        },
+      ],
       '3xl': [
         '32px',
         {
