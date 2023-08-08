@@ -29,8 +29,6 @@ This will install `http-server` utility to host our web page, where we will run 
 
 Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
-{% /alert  %}
-
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
 {% tabs %}
@@ -49,6 +47,12 @@ yagna service run --api-allow-origin=http://localhost:8080
 
 {% /tab %}
 {% /tabs %}
+
+{% /alert  %}
+
+
+
+
 
 The `--api-allow-origin` value should be set to the URL where your web application will be served.
 In this example, we will use `http-server`.

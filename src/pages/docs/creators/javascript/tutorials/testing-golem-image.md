@@ -1,20 +1,28 @@
 ---
 description: How to run a .gvmi image locally for the sake of testing and debugging
+title: Testing a Golem image
 ---
 
-# Testing a Golem image
+# 
+
+{% alert level="info" %}
+
+This tutorial assumes that you're already familiar with Docker and the basics of building a Golem application.
+
+{% /alert %}
 
 ## Introduction
 
 In this tutorial we're going to explore `ya-runtime-dbg`, a tool built specifically for debugging user-built images.
 
-!!! Info
-This tutorial assumes that you're already familiar with Docker and the basics of building a Golem application.
 
 ## Installation
 
-!!! Warning
+{% alert level="warning" %}
+
 `ya-runtime-dbg` is currently available for **Linux** **only**.
+
+{% /alert %}
 
 You can download the latest `.deb` package from the project's [releases page](https://github.com/golemfactory/ya-runtime-dbg/releases) and install it using `dpkg`:
 
@@ -40,9 +48,9 @@ Later on we're going to see how to specify the runtime to be used by the debugge
 
 ## Running the debugger
 
-!!! Info
-This section assumes you already have a `.gvmi` file ready on your machine. If you don't then follow the [Creating a custom image](/docs/creators/javascript/tutorials/building-custom-image) tutorial or [Converting an image from Docker to Golem](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format) example.
-
+{% alert level="info" %}
+This section assumes you already have a `.gvmi` file ready on your machine. If you don't, then follow the [Creating a custom image](/docs/creators/javascript/tutorials/building-custom-image) tutorial or [Converting an image from Docker to Golem](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format) example.
+{% /alert %}
 
 Let's now see how we can use `ya-runtime-dbg` together with our image. We can learn about the program's required arguments by calling `ya-runtime-dbg --help`:
 
@@ -53,12 +61,15 @@ USAGE:
 
 The program has three mandatory arguments:
 
-* `--runtime` path to the Golem runtime we want to use,
-* `--task-package` path to the package (i.e. `.gvmi` image) we'd like to debug,
-* `--workdir` path to the directory that will store directories mounted as volumes inside the image.
+- `--runtime` path to the Golem runtime we want to use,
+- `--task-package` path to the package (i.e. `.gvmi` image) we'd like to debug,
+- `--workdir` path to the directory that will store directories mounted as volumes inside the image.
 
-!!! Warning
+{% alert level="warning" %}
+
 Please note: the program does not support **relative paths** (i.e. paths relative to your shell's present directory).
+
+{% /alert  %}
 
 Let's now run the debugger supplying it with appropriate parameters:
 
@@ -132,8 +143,9 @@ stuff
 
 Success! Our input data is there and can be read by the VM.
 
-!!! Info
+{% alert level="info" %}
 `ya-runtime-dbg` is going to create new directories for volumes in each run.
+{% /alert  %}
 
 Once you're done debugging or want to restart the VM, press `Ctrl+D` while in the debugger prompt.
 
@@ -145,7 +157,7 @@ Having issues? Make sure to take a look at our [VM runtime FAQ](/docs/creators/j
 
 Here are some other advantages of using this debugger while developing a Golem application:
 
-* shorter iteration times while working on the payload for the provider,
-* isolated testing: no need to run the entire application,
-* fully controlled, local environment with access to mounted volumes,
-* full shell access to the virtual machine.
+- shorter iteration times while working on the payload for the provider,
+- isolated testing: no need to run the entire application,
+- fully controlled, local environment with access to mounted volumes,
+- full shell access to the virtual machine.

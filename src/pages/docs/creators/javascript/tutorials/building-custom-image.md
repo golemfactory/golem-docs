@@ -3,20 +3,23 @@ title: Creating and using images on Golem
 Description: Creating and using images on Golem
 ---
 
-# Creating and using images on Golem
+#
+## Introduction
 
 This article will go through the process of creating a Dockerfile, building a Docker image, then converting it to a Golem image and using it in a requestor script.
 
-!!! info
+{% alert level="info" %}
+
+Tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+
+Prerequisites:
+
+- Have Docker installed and Docker service available.  If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
+- Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
+- Yagna daemon installed and running with `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors))
+
+{% /alert %}
     
-    * Tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-    * Docker service running is required
-    * Required to have followed the [gvmkit-build installation](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
-    * Required: an installation of Yagna
-
-
-!!! Note
-    If you don't have Docker installed follow these instructions: https://www.docker.com/products/docker-desktop.
 
 
 ## Creating the Dockerfile
@@ -33,23 +36,28 @@ WORKDIR /golem/work
 
 To build the Docker image from the `Dockerfile`, we can run the following command in the same directory (`.`) as the Dockerfile to build an image tagged `golem-example`:
 
-=== "Ubuntu"
+
+{% tabs %}
+{% tab label="Linux" %}
 
     ```bash
     docker build -t golem-example .
     ```
-
-=== "macOS"
+{% /tab %}
+{% tab label="macOS" %}
 
     ```bash
     docker build --platform linux/amd64 -t golem-example .
     ```
+{% /tab %}
+{% tab label="Windows" %}
 
-=== "Windows"
 
     ```bash
     docker build -t golem-example .
     ```
+{% /tab %}
+{% /tabs %}
 
 The output should look like this:
 
@@ -70,40 +78,38 @@ The output should look like this:
 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 ```
 
-!!! info
+{% alert level="info" %}
 
-    Note that the image won't be turned into a file in the same directory. You don't need to see this file, but if you do, search the internet for where images are stored in your operating system.
+Note that the image won't be turned into a file in the same directory. You don't need to see this file, but if you do, search the internet for where images are stored in your operating system.
 
+{% /alert  %}
 
 ## Converting from Docker to Golem and uploading it to the registry
 
 Now when you have a Docker image built, we can convert it to a Golem image. To save time, we will also upload it to the registry with the same command. To do this, you need to run the appropriate command that uses `gvmkit-build` to convert and push the image `golem-example` to the registry.
 
-=== "Python/pip"
-    === "Ubuntu"
-        ```bash
-        python3 -m gvmkit_build golem-example --push --nologin
-        ```
-    === "macOS"
-        ```bash
-        python3 -m gvmkit_build golem-example --push --nologin
-        ```
-    === "Windows"
-        ```bash
-        python -m gvmkit_build golem-example --push --nologin
-        ```
 
-=== "JavaScript/npm"
+{% tabs %}
+{% tab label="JavaScript" %}
+```bash
+gvmkit-build golem-example --push --nologin
+```
+{% /tab %}
+{% tab label="Python on Linux/macOS " %}
 
-    ```bash
-    gvmkit-build golem-example --push --nologin
-    ```
+```bash
+python3 -m gvmkit_build golem-example --push --nologin
+```
 
-=== "Rust/cargo"
+{% /tab %}
+{% tab label="Python on Windows " %}
+  
+```bash
+python -m gvmkit_build golem-example --push --nologin
+```
+{% /tab %}
+{% /tabs %}
 
-    ```bash
-    gvmkit-build golem- --push --nologin
-    ```
 
 After running the command, you will see an output that looks like this:
 
@@ -145,17 +151,18 @@ The hash is found after the `image link`, which in this case gives us the hash `
 
 To include the `yajsapi` library, we need to prepare our environment with the following commands:
 
-```
+```bash
 npm init
 npm install yajsapi
 ```
 
 We can now create our `index.mjs` requestor file, with the `package: ...` matching our image hash.
 
-=== "JavaScript/npm"
+{% tabs %}
+{% tab label="JavaScript" %}
     **index.mjs**
     
-    ```js
+```js
     import { TaskExecutor } from "yajsapi";
     (async () => {
     const executor = await TaskExecutor.create({ package: "28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9" });
@@ -166,7 +173,11 @@ We can now create our `index.mjs` requestor file, with the `package: ...` matchi
     });
     await executor.end();
     })();
-    ```
+```
+{% /tab  %}
+{% /tabs %}
+
+
 
 Lastly, create an `image_description.txt` file to be uploaded and used on the provider:
 
@@ -186,12 +197,8 @@ Run the following command after ensuring the Yagna service is running and config
 
 You have successfully created and used your Golem image in a requestor script!
 
-<!-- !!! info
+{% docnavigation title="Next steps" %}
 
-Note that the full path to a file is required in all commands inside a requestor script, regardless if the defined workign directory by `WORKDIR` instruction in your Dockerfile. -->
+- Try your image in one of [examples](/docs/examples)!
 
-<!--
-!!! "Challenge yourself:"
-
-    Try to see if you can change the command so that it logs out the contents of the file or if you can figure out how to download the file to your computer.
--->
+{% /docnavigation %}
