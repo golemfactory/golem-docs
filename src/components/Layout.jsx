@@ -64,7 +64,7 @@ function Header({ navigation }) {
 
           <Link
             href="https://github.com/golemfactory/yagna"
-            className="group hidden items-center gap-x-2 lg:flex flex-none"
+            className="group hidden flex-none items-center gap-x-2 lg:flex"
             aria-label="GitHub"
             rel="noopener noreferrer"
             target="_blank"
