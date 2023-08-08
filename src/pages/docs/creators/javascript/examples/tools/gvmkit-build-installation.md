@@ -3,43 +3,55 @@ Title: Installing gvmkit-build
 Description: Guide on how to install gvmkit-build
 ---
 
-# Installing gvmkit-build
+# 
 
-!!! info
+{% alert level="info" %}
+- The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
-    * The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-    * Required: npm or pip
+Prerequisites:
+- npm or pip installed
+{% /alert %}
 
+# Introduction
 
 Gvmkit-build is a tool that converts Docker images into .gvmi formats used by Golem. To install the tool, you need to follow the steps found below for your appropriate setup:
 
 
-=== "JavaScript/npm"
+{% tabs %}
+{% tab label="JavaScript/npm" %}
+Note that npm must be installed.
     
-    Note that npm must be installed.
+```bash
+npm install -g @golem-sdk/gvmkit-build
+```
+
+The installation can be verified by running the following command: `gvmkit-build --version`
+
+{% /tab %}
+{% tab label="Python/pip" %}
+Note that python3/python with a pip installer is required.
     
-    ```bash
-    npm install -g @golem-sdk/gvmkit-build
-    ```
+```bash
+pip install gvmkit-build
+```
 
-    The installation can be verified by running the following command: `gvmkit-build --version`
+{% /tab %}
+{% /tabs %}
 
-=== "Python/pip"
-    
-    Note that python3/python with a pip installer is required.
-    
-    ```bash
-    pip install gvmkit-build
-    ```
-
-    The installation can be verified by running the following command: `python3 -m gvmkit-build --version` on everything except Windows, where you instead run: `python -m gvmkit-build --version`
+The installation can be verified by running the following command: `gvmkit-build --version'.
 
 
+{% docnavigation title="Next steps" %}
 
-!!! golem-icon "Next steps:"
+- [Converting an image to Golem format](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format)
+- [Custom Golem image Step by step Tutorial](/docs/creators/javascript/tutorials/building-custom-image)
 
-    [Converting an image to Golem format](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format){ .md-button .md-button--primary }
+{% /docnavigation %}
 
-    [Custom Golem image Step by step Tutorial](/docs/creators/javascript/tutorials/building-custom-image){ .md-button .md-button--primary }
+{% docnavigation title="See also" %}
 
-    Note: More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+
+{% /docnavigation %}
+
+ 

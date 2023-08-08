@@ -16,10 +16,12 @@ yagna id export --file-path=./key.json
 
 The resultant `key.json` file in the directory you ran the command from will contain the private key for your Golem wallet.
 
-!!! Warning
+{% alert level="warning" %}
 Keep in mind that saving your wallet this way results in the creation of an unprotected keystore file.
 
 Whoever enters into possession of your `key.json` file will have complete control over the wallet and any funds therein. Unless you're sure that you want this, use the password-protected export described below.
+
+{% /alert %}
 
 ## Password-protected keystore
 
@@ -67,8 +69,12 @@ Ok:
 
 Notice that `isLocked` is now set to `true`.
 
-!!! Warning
+{% alert level="warning" %}
+
 Remember to save your passphrase somewhere safe as losing it will make it impossible to unlock the key later on.
+
+{% /alert %}
+
 
 ### Export the key
 
@@ -104,7 +110,16 @@ $ cat ./key.json | grep address
 
 To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/maintenance/wallet-restoration) using this newly created keystore file.
 
-!!! Warning
+{% alert level="warning" %}
+
 Ensure you store that key file in a safe place. In case your Golem wallet gets corrupted or lost, if you don't have the backup, your funds will be lost forever.
 
 Likewise, consider encrypting or password-protecting the keystore file so that someone who'd take hold of the file won't automatically be able to take control of your funds. We have included the appropriate instructions above.
+
+{% /alert %}
+
+{% docnavigation title="Next steps" %}
+
+- Restoring [Golem wallet](/docs/provider/maintenance/wallet-restoration)
+
+{% /docnavigation %}

@@ -5,18 +5,23 @@ Description: Guide on how to convert an image from Docker to Golem using gvmkit-
 
 # Converting an image
 
-!!! info
+{% alert level="info" %}
 
-    * The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-    * Required: [gvmkit-build installation](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
-    * Basic knowledge of Docker along with the Docker service running
-    
-    (Note: you can use npx and pipx tools to run gvmkit-build without installation). 
+Example is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+
+Prerequisites:
+
+- Have Docker installed and Docker service available.  If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
+- Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
+
+Note: you can use npx and pipx tools to run gvmkit-build without installation. 
+
+{% /alert %}
+
+  
+## Introduction  
 
 Golem images are based on Docker images, which means that it is required to have a Docker image to be able to convert it to a Golem image. We will include a simple Dockerfile just to show how the tool and its commands work for demonstration purposes, and you are free to create your own Dockerfile.
-
-!!! Note
-    If you don't have Docker installed follow these instructions: https://www.docker.com/products/docker-desktop.
 
 
 ## Building your Docker image
@@ -31,46 +36,51 @@ WORKDIR /golem/work
 
 Now build a Docker image tagged `golem-example` using the above Dockerfile. 
 
-=== "Linux"
 
-    ```bash
-    docker build . -t golem-example
-    ```
+{% tabs %}
 
-=== "macOS"
-
-    ```bash
-    docker build . --platform linux/amd64 -t golem-example
-    ```
-
-=== "Windows"
-
-    ```bash
-    docker build . -t golem-example
-    ```
+{% tab label="Linux" %}
+```bash
+docker build . -t golem-example
+```
+{% /tab %}
+{% tab label="macOS" %}
+```bash
+docker build . --platform linux/amd64 -t golem-example
+```
+{% /tab %}
+{% tab label="Windows" %}
+```bash
+docker build . -t golem-example
+```
+{% /tab %}
+{% /tabs %}
 
 
 ## Converting Docker image to a Golem image
 
 The examples below show how to convert the Docker image tagged `golem-example` to a `.gmvi` file in the current directory.
 
-=== "JavaScript/npm"
-    ```bash
-    npx gvmkit-build golem-example
-    ```
-=== "Python/pip"
-    === "Ubuntu"
-        ```bash
-        python3 -m gvmkit_build golem-example
-        ```
-    === "macOS"
-        ```bash
-        python3 -m gvmkit_build golem-example
-        ```
-    === "Windows"
-        ```bash
-        python -m gvmkit_build golem-example
-        ```
+{% tabs %}
+{% tab label="JavaScript" %}
+```bash
+npx gvmkit-build golem-example
+```
+{% /tab %}
+{% tab label="Python on Linux/macOS " %}
+
+```bash
+python3 -m gvmkit_build golem-example
+```
+
+{% /tab %}
+{% tab label="Python on Windows " %}
+  
+```bash
+python -m gvmkit_build golem-example
+```
+{% /tab %}
+{% /tabs %}        
 
 
 ## Converting and publishing your image at once (hash-based)
@@ -85,26 +95,37 @@ The hash is found in the `image link` line of the console output:
 
 Note if the image was already converted to `.gvmi`, it will only be pushed. 
 
-=== "JavaScript/npm"
-    ```bash
-    gvmkit-build golem-example --push --nologin
-    ```
-=== "Python/pip"
-    === "Ubuntu"
-        ```bash
-            python3 -m gvmkit_build golem-example --push --nologin
-        ```
-    === "macOS"
-        ```bash
-            python3 -m gvmkit_build golem-example --push --nologin
-        ```
-    === "Windows"
-        ```bash
-            python -m gvmkit_build golem-example --push --nologin
-        ```
+{% tabs %}
+{% tab label="JavaScript" %}
+```bash
+gvmkit-build golem-example --push --nologin
+```
+{% /tab %}
+{% tab label="Python on Linux/macOS " %}
 
-!!! golem-icon "Next steps:"
+```bash
+python3 -m gvmkit_build golem-example --push --nologin
+```
 
-    [Publishing an image in the registry](/docs/creators/javascript/examples/tools/publishing-custom-images)
+{% /tab %}
+{% tab label="Python on Windows " %}
+  
+```bash
+python -m gvmkit_build golem-example --push --nologin
+```
+{% /tab %}
+{% /tabs %}
 
-    Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+ 
+{% docnavigation title="Next steps" %}
+
+- [Publishing an image in the registry](/docs/creators/javascript/examples/tools/publishing-custom-images)
+
+{% /docnavigation %}
+
+
+{% docnavigation title="See also" %}
+
+Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+
+{% /docnavigation %}

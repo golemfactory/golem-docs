@@ -12,8 +12,12 @@ To restore your wallet, first start with a fresh yagna install:
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-!!! Warning
+{% alert level="warning" %}
+
 The above line assumes you're a requestor on a Unix-like platform (Linux or Mac). If that's not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) or the [analogous instructions for providers](/docs/providers/provider-installation).
+
+{% /alert %}
+
 
 Once Yagna is installed, run it with:
 
@@ -51,19 +55,26 @@ yagna id update --set-default 0x-the-address
 
 **3.** Remove `yagna`'s accounts configuration file
 
-=== "Linux"
-    ```bash
-    rm $HOME/.local/share/yagna/accounts.json
-    ```
-=== "macOS X"
-    ```bash
-    rm $HOME/Library/Application\ Support/GolemFactory.yagna/accounts.json
-    ```
 
-=== "Windows"
-    ```bash
-    del %APPDATA%\GolemFactory\yagna\data\accounts.json
-    ```
+{% tabs %}
+
+{% tab label="Linux" %}
+```bash
+rm $HOME/.local/share/yagna/accounts.json
+```
+{% /tab %}
+{% tab label="macOS X" %}
+```bash
+rm $HOME/Library/Application\ Support/GolemFactory.yagna/accounts.json
+```
+{% /tab %}
+{% tab label="Windows" %}
+```bash
+del %APPDATA%\GolemFactory\yagna\data\accounts.json
+```
+{% /tab %}
+{% /tabs %}
+
 
 **4. Start your yagna daemon again** (as usual, do it in a separate command line terminal and allow it to run in the background)
 
@@ -79,8 +90,11 @@ yagna id show
 
 The `nodeId` property should display the Ethereum address of your backed-up wallet.
 
-!!! Warning
+{% alert level="warning" %}
+
 If your key is password-protected, you'll need to unlock it before it can be used for payments. In such case, `yagna id show` command above will report:
+
+{% /alert %}
 
 `isLocked: true`
 

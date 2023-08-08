@@ -1,13 +1,14 @@
 ---
-Title: Yagna installation for providers
+title: Yagna installation for providers
 description: 
 ---
 
 # Yagna provider installation
 
-!!! info
-
-    * The provider works on: Ubuntu 18.04 or 20.04
+{% alert level="info" %}
+- The provider works on: Ubuntu 18.04 or 20.04
+{% /alert %}
+    
 
 ## Installation
 
@@ -23,11 +24,11 @@ curl -sSf https://join.golem.network/as-provider | bash -
 
 After installing all required components you will be asked to set up your node. If you leave them empty the default values presented in brackets will be applied.
 
-Node name (default=generated-name): - Type in the name of your new node and press Enter
-
-Ethereum wallet address (default=internal wallet): - Paste your own Ethereum address to which you have private keys stored. If you leave this space empty, an address will be created for you on your local system.
-
-price GLM per hour (default=0.1): - Type in the value of renting your computer power as a provider. You can use the default price (0.1 GLM per hour) by leaving this field empty. This command shows up only when running GolemSP for the first time.
+|||
+|:------------------------|:---------------------------------------------------------------------|
+|`Node name (default=generated-name)` |Type in the name of your new node and press Enter|
+|`Ethereum wallet address (default=internal wallet)`|Paste your own Ethereum address to which you have private keys stored. If you leave this space empty, an address will be created for you on your local system.
+|`price GLM per hour (default=0.1)`|Type in the value of renting your computer power as a provider. You can use the default price (0.1 GLM per hour) by leaving this field empty. This command shows up only when running GolemSP for the first time.||
 
 ### Modifying your PATH
 
@@ -60,13 +61,16 @@ To run the Golem provider on the mainnet, type the following in the terminal:
 golemsp run --payment-network testnet
 ```
 
-!!! info
+{% alert level="warning" %}
 
-    Please keep in mind that golemsp run will remember the parameters used the last time so after you finish your tests, you may want to change them back to the public network:
+Please keep in mind that golemsp run will remember the parameters used the last time so after you finish your tests, you may want to change them back to the public network:
 
-    ```bash
-    golemsp run --subnet public --payment-network mainnet
-    ```
+```bash
+golemsp run --subnet public --payment-network mainnet
+```
+{% /alert %}
+
+
 
 ## Verifying node status
 
@@ -107,7 +111,11 @@ For router specific instructions on how to forward your ports go to [https://por
 If port forwarding doesn't work, you may need to call your ISP to change settings on your router. 
 
 
-!!! golem-icon "Next steps:"
+{% docnavigation title="Next steps" %}
 
-    [Provider basic configuration](/docs/providers/provider-basic-configuration)
-    [Provider configuration in CLI](/docs/providers/yagna-cli-reference)
+- [Provider basic configuration](/docs/providers/provider-basic-configuration)
+
+- [Provider CLI Reference](/docs/providers/yagna-cli-reference)
+
+{% /docnavigation %}
+

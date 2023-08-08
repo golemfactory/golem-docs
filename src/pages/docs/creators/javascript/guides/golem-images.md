@@ -31,9 +31,9 @@ The image must be downloaded to a remote computer therefore we need to publish i
 
 If you intend to use your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
-* Publishing the image anonymously. <!-- example is missing -->
-* Publishing the image using tags. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images))
-* Using the tag or hash in a requestor script. ([example](/docs/creators/javascript/examples/working-with-images))
+- Publishing the image anonymously. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-hash-based))
+- Publishing the image using tags. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
+- Using the tag or hash in a requestor script. ([example](/docs/creators/javascript/examples/working-with-images))
 
 ## Dockerfile command support 
 
