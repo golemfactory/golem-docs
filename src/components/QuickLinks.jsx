@@ -28,18 +28,18 @@ export function QuickLink({
     >
       <div className="relative grid gap-y-4 overflow-hidden p-6">
         <Icon icon={icon} className="h-full w-full" />
-        <h5
+        <h3
           className={`font-display not-prose font-semibold 
         ${disabled ? ' text-gray-500' : 'text-dark dark:text-white'}
         `}
         >
           {title}
-        </h5>
+        </h3>
         <p className="max-h-[12em] overflow-hidden  text-sm text-normalgray dark:text-slate-400">
           {description}
         </p>
       </div>
-      <div className=" p-6">
+      <div className=" px-6 py-10">
         {disabled ? (
           <button
             className=" cursor-not-allowed rounded bg-gray-400 px-4 py-2 text-base text-white dark:bg-gray-700/20"

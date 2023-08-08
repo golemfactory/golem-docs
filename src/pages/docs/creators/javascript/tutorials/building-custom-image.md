@@ -3,8 +3,7 @@ title: Creating and using images on Golem
 Description: Creating and using images on Golem
 ---
 
-#
-## Introduction
+# Introduction
 
 This article will go through the process of creating a Dockerfile, building a Docker image, then converting it to a Golem image and using it in a requestor script.
 
@@ -14,13 +13,11 @@ Tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
 Prerequisites:
 
-- Have Docker installed and Docker service available.  If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
+- Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
 - Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
 - Yagna daemon installed and running with `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors))
 
 {% /alert %}
-    
-
 
 ## Creating the Dockerfile
 
@@ -36,26 +33,27 @@ WORKDIR /golem/work
 
 To build the Docker image from the `Dockerfile`, we can run the following command in the same directory (`.`) as the Dockerfile to build an image tagged `golem-example`:
 
-
 {% tabs %}
 {% tab label="Linux" %}
 
     ```bash
     docker build -t golem-example .
     ```
+
 {% /tab %}
 {% tab label="macOS" %}
 
     ```bash
     docker build --platform linux/amd64 -t golem-example .
     ```
+
 {% /tab %}
 {% tab label="Windows" %}
-
 
     ```bash
     docker build -t golem-example .
     ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -88,12 +86,13 @@ Note that the image won't be turned into a file in the same directory. You don't
 
 Now when you have a Docker image built, we can convert it to a Golem image. To save time, we will also upload it to the registry with the same command. To do this, you need to run the appropriate command that uses `gvmkit-build` to convert and push the image `golem-example` to the registry.
 
-
 {% tabs %}
 {% tab label="JavaScript" %}
+
 ```bash
 gvmkit-build golem-example --push --nologin
 ```
+
 {% /tab %}
 {% tab label="Python on Linux/macOS " %}
 
@@ -103,13 +102,13 @@ python3 -m gvmkit_build golem-example --push --nologin
 
 {% /tab %}
 {% tab label="Python on Windows " %}
-  
+
 ```bash
 python -m gvmkit_build golem-example --push --nologin
 ```
+
 {% /tab %}
 {% /tabs %}
-
 
 After running the command, you will see an output that looks like this:
 
@@ -160,24 +159,28 @@ We can now create our `index.mjs` requestor file, with the `package: ...` matchi
 
 {% tabs %}
 {% tab label="JavaScript" %}
-    **index.mjs**
-    
+**index.mjs**
+
 ```js
-    import { TaskExecutor } from "yajsapi";
-    (async () => {
-    const executor = await TaskExecutor.create({ package: "28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9" });
-    await executor.run(async (ctx) => {
-        await ctx.uploadFile("image_description.txt", "/golem/work/image_description.txt");
-        var result = (await ctx.run('cat image_description.txt')).stdout;
-        console.log(result);
-    });
-    await executor.end();
-    })();
+import { TaskExecutor } from 'yajsapi'
+;(async () => {
+  const executor = await TaskExecutor.create({
+    package: '28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9',
+  })
+  await executor.run(async (ctx) => {
+    await ctx.uploadFile(
+      'image_description.txt',
+      '/golem/work/image_description.txt'
+    )
+    var result = (await ctx.run('cat image_description.txt')).stdout
+    console.log(result)
+  })
+  await executor.end()
+})()
 ```
+
 {% /tab  %}
 {% /tabs %}
-
-
 
 Lastly, create an `image_description.txt` file to be uploaded and used on the provider:
 
@@ -193,7 +196,7 @@ We also run the uploadFile command to upload the text file you're reading right 
 
 Run the following command after ensuring the Yagna service is running and configured correctly:
 
-```node index.mjs```
+`node index.mjs`
 
 You have successfully created and used your Golem image in a requestor script!
 

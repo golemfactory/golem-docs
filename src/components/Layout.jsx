@@ -267,7 +267,7 @@ export function Layout({
               )}
             </div>
 
-            {(title || section) && <header className="mb-9 space-y-1"></header>}
+            
 
             <Prose>{children}</Prose>
           </article>

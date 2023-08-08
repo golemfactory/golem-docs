@@ -7,7 +7,7 @@ type: design
 
 {% padding padding="8" %}
 
-#### How would you like to start?
+# How would you like to start?
 
 {% quick-links %}
 
