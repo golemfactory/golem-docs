@@ -241,19 +241,42 @@ export const navigation = [
   },
   {
     title: 'Share and Earn',
-    links: [{ title: 'index', href: '/docs/providers' },
-            { title: 'Installation', href: '/docs/providers/provider-installation' },
-            { title: 'Basic Configuration', href: '/docs/providers/provider-basic-configuration' },
-            { title: 'Provider FAQ', href: '/docs/providers/provider-faq',       },
-            { title: 'Troubleshooting', href: '/docs/providers/provider-troubleshooting',       },
-            { title: 'Yagna CLI reference', href: '/docs/providers/yagna-cli-reference',       },
-            { title: 'Maintenance',         children: [
-              { title: 'index', href: '/docs/providers/maintenance' },
-              { title: 'Maintenance', href: '/docs/providers/maintenance/provider-maintenance' },
-              { title: 'Wallet Backup', href: '/docs/providers/maintenance/wallet-backup' },
-              { title: 'Wallet Restore', href: '/docs/providers/maintenance/wallet-restoration' },]
-            },
-    ], },
+    links: [
+      { title: 'index', href: '/docs/providers' },
+      { title: 'Installation', href: '/docs/providers/provider-installation' },
+      {
+        title: 'Basic Configuration',
+        href: '/docs/providers/provider-basic-configuration',
+      },
+      { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
+      {
+        title: 'Troubleshooting',
+        href: '/docs/providers/provider-troubleshooting',
+      },
+      {
+        title: 'Yagna CLI reference',
+        href: '/docs/providers/yagna-cli-reference',
+      },
+      {
+        title: 'Maintenance',
+        children: [
+          { title: 'index', href: '/docs/providers/maintenance' },
+          {
+            title: 'Maintenance',
+            href: '/docs/providers/maintenance/provider-maintenance',
+          },
+          {
+            title: 'Wallet Backup',
+            href: '/docs/providers/maintenance/wallet-backup',
+          },
+          {
+            title: 'Wallet Restore',
+            href: '/docs/providers/maintenance/wallet-restoration',
+          },
+        ],
+      },
+    ],
+  },
   {
     title: 'General Info',
     links: [
@@ -295,56 +318,6 @@ export const navigation = [
           },
         ],
       },
-    ],
-  },
-  {
-    title: 'Introduction',
-    links: [
-      { title: 'Designer Demo', href: '/docs/javascript/demo' },
-    ],
-  },
-  {
-    title: 'Javascript SDK',
-    links: [
-      { title: 'Designer Demo', href: '/docs/javascript/demo' },
-      { title: 'Intro', href: '/docs/javascript/intro' },
-      {
-        title: 'Quickstart',
-        href: '/docs/javascript/quickstart',
-      },
-    ],
-  },
-  {
-    title: 'Decentralized apps on Golem',
-    links: [
-      { title: 'Quickstart', href: '/docs/dapps/run-a-dapp' },
-      {
-        title: 'Hello World Dapp',
-        href: '/docs/dapps/hello-world-dapp',
-      },
-      {
-        title: 'Managing multiple dapps',
-        href: '/docs/dapps/managing-multiple-dapps',
-        children: [
-          {
-            title: 'Managing multiple dapps',
-            href: '/docs/dapps/managing-multiple-dapps',
-          },
-          {
-            title: 'Managing multiple dapps2',
-            href: '/docs/dapps/hello-world-dapp',
-          },
-        ],
-      },
-      {
-        title: 'Creating Golem Dapps',
-        href: '/docs/dapps/creating-golem-dapps',
-      },
-      {
-        title: 'Differences between Docker containers and Golem VM runtime',
-        href: '/docs/dapps/docker-containers-vs-golem-vms',
-      },
-      { title: 'Troubleshooting', href: '/docs/dapps/troubleshooting' },
     ],
   },
 ]

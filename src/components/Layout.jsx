@@ -64,23 +64,26 @@ function Header({ navigation }) {
 
           <Link
             href="https://github.com/golemfactory/yagna"
-            className=" group hidden items-center gap-x-2 lg:flex "
+            className="group hidden items-center gap-x-2 lg:flex flex-none"
             aria-label="GitHub"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <GitIcon className="group h-6 w-6 fill-black group-hover:fill-primary dark:fill-[#BFC0C5]  dark:group-hover:fill-darkprimary" />
-            <div className="">
-              <p className="text-sm font-medium dark:text-[#BFC0C5]">GitHub</p>
-              <div className="grid grid-cols-2 gap-x-2 ">
-                <span className="flex items-center text-sm  dark:text-[#BFC0C5] lg:text-xs">
-                  <StarIcon className="mr-1 h-3 w-3 fill-black dark:fill-[#BFC0C5] " />{' '}
+            <GitIcon className="h-6 w-6 fill-black group-hover:fill-primary dark:fill-[#BFC0C5] dark:group-hover:fill-darkprimary" />
+
+            <div>
+              <p className="text-sm dark:text-[#BFC0C5]">GitHub</p>
+
+              <div className="grid grid-cols-2 gap-x-2">
+                <div className="flex items-center text-sm dark:text-[#BFC0C5] lg:text-xs">
+                  <StarIcon className="mr-1 h-3 w-3 fill-black dark:fill-[#BFC0C5]" />
                   {githubInfo.stargazersCount}
-                </span>
-                <span className="flex items-center fill-black text-xs dark:text-[#BFC0C5]">
-                  <ForkIcon className="mr-1 h-3 w-3 fill-black  dark:fill-[#BFC0C5] " />{' '}
+                </div>
+
+                <div className="flex items-center text-sm dark:text-[#BFC0C5] lg:text-xs">
+                  <ForkIcon className="mr-1 h-3 w-3 fill-black dark:fill-[#BFC0C5]" />
                   {githubInfo.forks}
-                </span>
+                </div>
               </div>
             </div>
           </Link>
@@ -200,7 +203,7 @@ export function Layout({
           <article>
             <div className="mb-1 flex items-center gap-x-4">
               {type === 'guide' && (
-                <div className="inline-flex items-center gap-x-2 rounded-2xl bg-lightbluedarker px-1.5 py-1 font-medium">
+                <div className="mb-4 inline-flex items-center gap-x-2 rounded-2xl bg-lightbluedarker px-1.5 py-1 font-medium">
                   <GuideIcon className="h-6 w-6  text-white" />
                   <span className="text-sm text-dark ">Guide</span>
                 </div>
@@ -219,15 +222,7 @@ export function Layout({
               )}
             </div>
 
-            {(title || section) && (
-              <header className="mb-9 space-y-1">
-                {title && (
-                  <h1 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
-                    {title}
-                  </h1>
-                )}
-              </header>
-            )}
+            {(title || section) && <header className="mb-9 space-y-1"></header>}
 
             <Prose>{children}</Prose>
           </article>
@@ -256,12 +251,12 @@ export function Layout({
                                 href={`#${section.id}`}
                                 className={clsx(
                                   isActive(section) && !isChildActive
-                                    ? ' relative text-primary dark:text-white'
-                                    : ' font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+                                    ? ' relative text-sm text-primary dark:text-white'
+                                    : ' text-sm font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
                                 )}
                               >
                                 {isActive(section) && !isChildActive && (
-                                  <div className="absolute -left-[1.35rem] mt-1.5 h-2.5  w-2.5 overflow-visible rounded-full bg-primary dark:bg-darkprimary"></div>
+                                  <div className="absolute -left-[1.35rem] mt-1.5 h-2.5  w-2.5 overflow-visible rounded-full bg-primary text-sm dark:bg-darkprimary"></div>
                                 )}
                                 {section.title}
                               </a>
@@ -277,8 +272,8 @@ export function Layout({
                                       href={`#${subSection.id}`}
                                       className={
                                         isActive(subSection)
-                                          ? 'relative text-primary dark:text-white'
-                                          : ' hover:text-slate-600 dark:hover:text-slate-300'
+                                          ? 'relative text-sm text-primary dark:text-white'
+                                          : ' text-sm hover:text-slate-600 dark:hover:text-slate-300'
                                       }
                                     >
                                       {isActive(subSection) && (

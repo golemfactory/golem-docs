@@ -6,7 +6,7 @@ import { WarningIcon } from './icons/WarningIcon'
 export function Alert({ children, level }) {
   return (
     <div
-      className={`my-6 rounded-md  border text-xs 
+      className={`my-6 rounded-md  border text-base
     ${level === 'warning' ? '  border-[#C9885C]' : ''}
     ${level === 'info' ? '  border-[#678AAA]' : ''}
     ${level === 'success' ? '  border-[#64A37C]' : ''}

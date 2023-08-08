@@ -4,6 +4,16 @@ import clsx from 'clsx'
 import { useState, useEffect } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
+const isActive = (item, router) => {
+  if (
+    item.href &&
+    (router.pathname === item.href || router.pathname === `${item.href}/`)
+  ) {
+    return true
+  }
+  return item.children?.some((child) => isActive(child, router)) || false
+}
+
 export const MenuBar = ({ navigation }) => {
   const router = useRouter()
 
@@ -12,7 +22,7 @@ export const MenuBar = ({ navigation }) => {
       {navigation.normalNavLinks.map((item) => {
         return (
           <Link
-            className="text-sm text-primary dark:text-lightergray"
+            className="text-base text-primary dark:text-lightergray"
             key={item.title}
             href={item.links[0].href}
           >
@@ -45,10 +55,11 @@ export const SideBar = ({ navigation }) => {
     items.map((item) => {
       const itemIsActive = isActive(item)
       const hasChildren = item.children?.length
+
       return (
-        <li className="text-sm" key={item.href || item.title}>
+        <li className="text-sm " key={item.href || item.title}>
           {hasChildren ? (
-            <Dropdown isActive={items.some(isActive)}>
+            <Dropdown isActive={isActive(item, router)}>
               {[
                 <NavigationItem
                   item={item}
@@ -67,7 +78,9 @@ export const SideBar = ({ navigation }) => {
 
   return currentSection ? (
     <nav>
-      <h1 className="dark:text-white">{currentSection.title}</h1>
+      <h1 className="mb-2 text-base font-semibold dark:text-white">
+        {currentSection.title}
+      </h1>
       <ul role="list">{renderNavItems(currentSection.links)}</ul>
     </nav>
   ) : null
@@ -85,11 +98,22 @@ export const NavigationItem = ({ item, isActive }) =>
       {item.title}
     </Link>
   ) : (
-    <span className={clsx({ 'text-primary dark:text-darkprimary': isActive })}>{item.title}</span>
+    <span
+      className={clsx('text-sm', {
+        'text-primary dark:text-darkprimary': isActive,
+      })}
+    >
+      {item.title}
+    </span>
   )
 
-export const Dropdown = ({ children }) => {
+export const Dropdown = ({ children, isActive }) => {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    setIsOpen(isActive)
+  }, [isActive])
+
   const btnClick = () => setIsOpen((prev) => !prev)
 
   return (
@@ -118,10 +142,11 @@ export const Navigation = ({ className, links, title = '' }) => {
     items.map((item) => {
       const itemIsActive = isActive(item)
       const hasChildren = item.children?.length
+
       return (
-        <li className="not-prose mt-1.5" key={item.href || item.title}>
+        <li className="not-prose  text-sm" key={item.href || item.title}>
           {hasChildren ? (
-            <Dropdown isActive={items.some(isActive)}>
+            <Dropdown isActive={isActive(item, router)}>
               {[
                 <NavigationItem
                   item={item}
@@ -142,7 +167,7 @@ export const Navigation = ({ className, links, title = '' }) => {
     <nav className={clsx('text-base lg:text-sm', className)}>
       {links.map((section) => (
         <div className="mb-4" key={section.title}>
-          <h1 className="font-display font-semibold text-slate-900 dark:text-white">
+          <h1 className="font-display mb-2 text-base font-semibold text-slate-900 dark:text-white">
             {title ? title : section.title}
           </h1>
           <ul role="list" className="not-prose ml-4">
