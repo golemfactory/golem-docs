@@ -48,7 +48,7 @@ function Header({ navigation }) {
     >
       <div className="relative mx-auto  flex max-w-8xl sm:px-2 lg:px-8 xl:px-12">
         <div className="mr-6 flex lg:hidden">
-          <MobileNavigation navigation={navigation} />
+          <MobileNavigation />
         </div>
         <div className="relative flex flex-grow  items-center">
           <Link href="/" aria-label="Home page">

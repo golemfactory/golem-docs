@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Dialog } from '@headlessui/react'
-
+import { navigation } from '@/navigation/docs'
+import { navigation as JSReference } from '@/navigation/jsreference'
 import { Logomark } from '@/components/Logo'
 import { ReferenceNavigation } from '@/components/JSReferenceNavigation'
+import { MenuBar, SideBar } from './Navigation'
 
 function MenuIcon(props) {
   return (
@@ -36,7 +38,7 @@ function CloseIcon(props) {
   )
 }
 
-export function MobileNavigation({ navigation }) {
+export function MobileNavigation({}) {
   let router = useRouter()
   let [isOpen, setIsOpen] = useState(false)
 
@@ -73,7 +75,7 @@ export function MobileNavigation({ navigation }) {
         aria-label="Navigation"
       >
         <Dialog.Panel className="min-h-full w-full max-w-xs bg-white px-4 pb-12 pt-5 dark:bg-slate-900 sm:px-6">
-          <div className="flex items-center">
+          <div className="mb-4 flex items-center">
             <button
               type="button"
               onClick={() => setIsOpen(false)}
@@ -85,7 +87,26 @@ export function MobileNavigation({ navigation }) {
               <Logomark className="h-9 w-9" />
             </Link>
           </div>
-          <ReferenceNavigation navigation={navigation} className="mt-5 px-1" />
+
+          {navigation.map((section) => (
+            <div className="mb-4" key={section.title}>
+              <Link
+                href={section.links[0].href}
+                className="font-display font-semibold text-dark dark:text-white"
+              >
+                {section.title}
+              </Link>
+            </div>
+          ))}
+          <div className="pt-10">
+            <SideBar navigation={navigation} className="mt-5 px-1" />
+          </div>
+          {/* <div className="pt-10">
+            <ReferenceNavigation
+              navigation={JSReference}
+              className="mt-5 px-1"
+            />
+          </div> */}
         </Dialog.Panel>
       </Dialog>
     </>
