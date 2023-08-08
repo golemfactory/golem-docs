@@ -25,7 +25,7 @@ export function Fence({ children, language }) {
       theme={undefined}
     >
       {({ className, style, tokens, getTokenProps }) => (
-        <div className="relative bg-[#fafafa] pr-12">
+        <div className="relative rounded-md bg-[#fafafa] pr-12">
           <div className="absolute right-4 top-3.5 z-30 h-5 w-5">
             <button type="button" onClick={handleClick}>
               {copied ? (
@@ -49,7 +49,7 @@ export function Fence({ children, language }) {
             </button>
           </div>
           <pre className={`${className} relative pr-8`} style={style}>
-            <code>
+            <code className="override-code-styles">
               {tokens.map((line, lineIndex) => (
                 <Fragment key={lineIndex}>
                   {line
