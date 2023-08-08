@@ -3,21 +3,42 @@ Title: Publishing an image
 Description: Guide on how to publish a Golem image to the registry using gvmkit-build
 ---
 
-# Publishing an image in the registry (identified by tag)
+# Publishing an image in the registry
 
-!!! info
 
-    * The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-    * Required: [gvmkit-build installation](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
-    * Required: a Docker image 
-<!--
-    is gvmi required??? see the above point
-    * ??? Have you [Docker image converted to .gvmi format](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format) ???
-    * Have [gvmkit-build installed](/docs/creators/javascript/examples/tools/gvmkit-build-installation) 
--->
+{% alert level="info" %}
+- The tool works on: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+
+Prerequisites:
+- npm or pip installed
+- gvmkit-build installed [instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
+- a Docker image build [see instructions](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format#building-your-docker-image)
 
 Note: You can also use npx / pipx tools to run gvmkit-build, the former for not having to install the tool and the latter for isolation.
-    
+
+{% /alert %}
+
+## Introduction
+
+Once your image is built and tested you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
+You can identify ou image by a `hash` or by a `tag`.
+
+If you intend to use your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
+
+
+## Publishing custom Golem image to the registry (hash-based)
+
+If you have you `gvmi` image build from a Docker image you can push it to repository with following command:
+
+```bash
+gvmkit-build --direct-file-upload my-test-<>.gvmi --push --nologin
+```
+{% alert level="info" %}
+
+While the Docker image is not stored in user folder, after convertion to GVMI format the output file is placed in the folder where you run coversion tool. By default the image name is a Docker image name followed by a part of its `hash`. When you [ush the gvmi image using this method you need to provide the name of the .gvmi file.]
+
+{% /alert %}
+
 
 
 ## Publishing custom Golem image to the registry (tag-based)
@@ -32,29 +53,41 @@ Let's assume for this example your username is `golem`, your Docker image is tag
 3. Crate and copy personal access token from the registry portal.
 4. Run the following command (you will be asked for login and personal access token)
 
-=== "JavaScript/npm"
-    ```bash
-        gvmkit-build golem-example --push-to golem/my_example:latest
-    ```
-=== "Python/pip"
-    === "Ubuntu"
-        ```bash
-            python3 -m gvmkit_build golem-example --push-to golem/my_example:latest
-        ```
-    === "macOS"
-        ```bash
-            python3 -m gvmkit_build golem-example --push-to golem/my_example:latest
-        ```
-    === "Windows"
-        ```bash
-            python -m gvmkit_build golem-example --push-to golem/my_example:latest
-        ```
+
+{% tabs %}
+{% tab label="JavaScript" %}
+```bash
+gvmkit-build golem-example --push-to golem/my_example:latest
+```
+{% /tab %}
+{% tab label="Python on Linux/macOS " %}
+
+```bash
+python3 -m gvmkit_build golem-example --push-to golem/my_example:latest
+```
+
+{% /tab %}
+{% tab label="Python on Windows " %}
+  
+```bash
+python -m gvmkit_build golem-example --push-to golem/my_example:latest
+```
+{% /tab %}
+{% /tabs %}     
 
 
 Your tag `golem/my_example:latest` is ready to use in one of Golem Network APIs
 
-!!! golem-icon "Next steps:"
+   
 
-    [Using an image in a requestor script](/docs/creators/javascript/examples/working-with-images)
+{% docnavigation title="Next steps" %}
 
-    Note: More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+- [Using an image in a requestor script](/docs/creators/javascript/examples/working-with-images) (JS API)
+
+{% /docnavigation %}
+
+{% docnavigation title="See also" %}
+
+More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+
+{% /docnavigation %}

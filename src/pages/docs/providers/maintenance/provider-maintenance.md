@@ -1,16 +1,22 @@
 ---
-Description: Your Golem wallet and Yagna setup for Mainnet payments.
+description: Your Golem wallet and Yagna setup for Mainnet payments.
 ---
 
-In this article we present commands related to daily management of you Yagna.
+{% alert level="info" %}
 
-* Checking the wallet address
-* Checking the status of the wallet
-* upgrading Yagna
+Prerequisites
+    Please make sure the Yagna daemon is up and running
+
+{% /alert %}
 
 
-!!! Prerequisites
-Yagna daemon is up and running
+# Introduction
+
+In this article, we present commands related to the daily management of your Yagna.
+
+- Checking the wallet address
+- Checking the status of the wallet
+- upgrading Yagna
 
 # Your Golem wallet address
 
@@ -33,18 +39,21 @@ Because of that, when you run `yagna payment status` to verify the state of your
 
 In the context of running Golem on mainnet, here are the commands for each of the supported mainnet platforms:
 
-=== "Polygon"
-    ```bash
-    yagna payment status --sender --network=polygon --driver=erc20
-    ```
+{% tabs %}
 
-=== "Ethereum mainnet"
-    ```bash
-    yagna payment status --sender --network=mainnet --driver=erc20
-    ```
+{% tab label="Polygon" %}
+```bash
+yagna payment status --sender --network=polygon --driver=erc20
+```
+{% /tab %}
+{% tab label="Ethereum mainnet" %}
+```bash
+yagna payment status --sender --network=mainnet --driver=erc20
+```
+{% /tab %}
+{% /tabs %}
 
 ## Upgrading Yagna 
 
-!!! Error 
-missing example
+To upgrade Yagna daemon stop it (Ctrl-C) and follow installation procedure [(instructions)](/docs/providers/provider-installation)
 
