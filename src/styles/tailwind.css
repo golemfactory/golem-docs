@@ -43,10 +43,3 @@ ul {
   @apply dark:marker:text-darkprimary !important;
   @apply marker:text-primary !important;
 }
-
-.prose :where(code):not(:where([class~='not-prose'] *)) {
-  background-color: #f5f5f5;
-  color: #36464e;
-  font-weight: 400;
-  @apply px-1;
-}
