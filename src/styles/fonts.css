@@ -23,37 +23,37 @@
 }
 
 .prose h1 {
-  font-size: 56px;
-  line-height: 110%;
-  letter-spacing: -2%;
-}
-
-.prose h2 {
   font-size: 48px;
   line-height: 110%;
   letter-spacing: -2%;
 }
 
-.prose h3 {
+.prose h2 {
   font-size: 40px;
   line-height: 110%;
   letter-spacing: -2%;
 }
 
-.prose h4 {
+.prose h3 {
   font-size: 32px;
-  line-height: 120%;
+  line-height: 110%;
   letter-spacing: -2%;
 }
 
-.prose h5 {
+.prose h4 {
   font-size: 24px;
   line-height: 120%;
   letter-spacing: -2%;
 }
 
-.prose h6 {
+.prose h5 {
   font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.prose h6 {
+  font-size: 18px;
   line-height: 120%;
   letter-spacing: -2%;
 }
