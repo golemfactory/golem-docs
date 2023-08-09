@@ -1,15 +1,16 @@
 ---
 description: Deploying long-running, decentralized services on Golem using no-code tools.
+title: Deploying long-running, decentralized services on Golem using no-code tools.
 ---
 
 # Decentralized applications on Golem
 
-!!! info
-
-    Looking for a quick start?
+{% alert level="info" %}
+    Looking for a QuickStart?
     
     [See how easy it is to run an application on Golem](/docs/creators/dapps/run-a-dapp)
 
+{% /alert %}
 
 ## Introduction
 
@@ -21,9 +22,13 @@ By a **dApp** - or a decentralized application, in the context of Golem, we unde
 
 Such services or decentralized applications can be run by virtually anyone as long as they have some GLM tokens to pay the providers for their work.
 
-!!! danger
+{% alert level="danger" %}
 
-    Please be aware that the dApps on Golem project is still in early access and should be considered experimental. Please [reach out to us on our community Discord](https://chat.golem.network/) if you'd like to help us improve these tools.
+Please be aware that the dApps on Golem project is still in early access and should be considered experimental. Please [reach out to us on our community Discord](https://chat.golem.network/) if you'd like to help us improve these tools.
+
+{% /alert %}
+
+
 
 
 ## Available experiments
@@ -38,7 +43,7 @@ This application showcases utilizing the Golem Network to host a 3-layer applica
 
 ### Weather Stats Application [\[GitHub\]](https://github.com/golemfactory/dapp-experiments/tree/main/02\_weather\_stats)
 
-<figure><img src="/assets/weather-stats.png" alt=""><figcaption><p>Weather Stats App</p></figcaption></figure>
+![Weather Stats App](/weather-stats.png)
 
 This application presents usage of the Golem Network with access to external services (not hosted on Golem) taking advantage of the outbound network connections.
 
@@ -60,26 +65,17 @@ Instead, those definitions are constructed using a simple, hierarchical structur
 
 The model and the schema used are documented in:
 
-<a href="https://github.com/golemfactory/golem-architecture/blob/master/gaps/gap-16_golem_deploy/gap-16_golem_deploy.md" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223082283-56b1a350-2168-4dd6-8767-ebdd36756b98.png" alt="gh-icon">
-    <span>See GAP-16 on GitHub</span>
-</a>
+[See GAP-16 on GitHub](https://github.com/golemfactory/golem-architecture/blob/master/gaps/gap-16_golem_deploy/gap-16_golem_deploy.md)
 
 ### Dapp-runner
 
 Dapp-runner is an initial, reference implementation that allows applications defined as Golem dApps to be deployed and maintained on the Golem network. It takes one or more application descriptors expressed as YAML files, constructs the desired dApp model for such an application and executes all operations needed for the services constituting the app to be successfully deployed on Golem.
 
-<a href="https://github.com/golemfactory/dapp-runner/" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223082283-56b1a350-2168-4dd6-8767-ebdd36756b98.png" alt="gh-icon">
-    <span>See dapp-runner on GitHub</span>
-</a>
+[See dapp-runner on GitHub](https://github.com/golemfactory/dapp-runner/)
 
 
 ### Dapp-manager
 
 Dapp-manager is a simple CLI tool used to manage and run several separate instances of the `dapp-runner`. So, whereas `dapp-runner` ’s sole responsibility is deployment of a single application, `dapp-manager` can facilitate running several applications and easily monitoring their states using a simple command-line interface.
 
-<a href="https://github.com/golemfactory/dapp-manager/" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223082283-56b1a350-2168-4dd6-8767-ebdd36756b98.png" alt="gh-icon">
-    <span>See dapp-manager on GitHub</span>
-</a>
+[See dapp-manager on GitHub](https://github.com/golemfactory/dapp-manager/)

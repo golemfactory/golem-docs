@@ -63,22 +63,22 @@ The examples below show how to convert the Docker image tagged `golem-example` t
 
 {% tabs %}
 {% tab label="JavaScript" %}
+
+```bash
+gvmkit-build golem-example
+```
+or if you do not have `gvmkit-build`` installed:
+
 ```bash
 npx gvmkit-build golem-example
 ```
 {% /tab %}
-{% tab label="Python on Linux/macOS " %}
+{% tab label="Python" %}
 
 ```bash
-python3 -m gvmkit_build golem-example
+gvmkit-build golem-example
 ```
 
-{% /tab %}
-{% tab label="Python on Windows " %}
-  
-```bash
-python -m gvmkit_build golem-example
-```
 {% /tab %}
 {% /tabs %}        
 
@@ -100,19 +100,18 @@ Note if the image was already converted to `.gvmi`, it will only be pushed.
 ```bash
 gvmkit-build golem-example --push --nologin
 ```
-{% /tab %}
-{% tab label="Python on Linux/macOS " %}
+or if you do not have `gvmkit-build` installed:
 
 ```bash
-python3 -m gvmkit_build golem-example --push --nologin
+npx gvmkit-build golem-example --push --nologin
+```
+{% /tab %}
+{% tab label="Python" %}
+
+```bash
+gvmkit_build golem-example --push --nologin
 ```
 
-{% /tab %}
-{% tab label="Python on Windows " %}
-  
-```bash
-python -m gvmkit_build golem-example --push --nologin
-```
 {% /tab %}
 {% /tabs %}
 

@@ -1,5 +1,6 @@
 ---
 description: Create your first "Hello World" dApp on Golem
+title: dApp on Golem tutorial
 ---
 
 # Hello World dApp
@@ -8,18 +9,22 @@ description: Create your first "Hello World" dApp on Golem
 
 By following this tutorial, you'll be able to get more confident about:
 
-* Preparing a Docker image for your app with the ultimate purpose of deploying it on Golem.
-* Converting the VM image to Golem and uploading it to Golem's repository.
-* Creating a descriptor reflecting your app using YAML syntax similar to that used by `docker-compose`.
-* Deploying your app to Golem using `dapp-runner`.
+- Preparing a Docker image for your app with the ultimate purpose of deploying it on Golem.
+- Converting the VM image to Golem and uploading it to Golem's repository.
+- Creating a descriptor reflecting your app using YAML syntax similar to that used by `docker-compose`.
+- Deploying your app to Golem using `dapp-runner`.
 
 This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` daemon as a requestor](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
 
 ## Prerequisites
 
-!!! info
+{% alert level="info" %}
 
-    To follow this tutorial in full, you need to have Docker installed on your machine. If you don't have it installed, please refer to [instructions on Docker's website](https://docs.docker.com/get-docker/).
+To follow this tutorial in full, you need to have Docker installed on your machine. If you don't have it installed, please refer to [instructions on Docker's website](https://docs.docker.com/get-docker/).
+
+{% /alert %}
+
+
 
 
 ## Choice of tools
@@ -32,29 +37,27 @@ Just as well - if the setup and construction of such a simple app is obvious to 
 
 ## Environment preparation
 
-For the sake of completeness, we're including the steps that prepare our Python environment. Again, you're free to do it your way and skip to:
+For the sake of completeness, we're including the steps that prepare our Python environment. Again, you're free to do it your way and skip to [Hello World dApp](#hello-world-app):
 
-<a href="#hello-world-app" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Hello World dApp</span>
-</a>
 
 ### Create and activate the virtual environment
 
-```shell
+```bash
 python3 -m venv ~/.envs/hello-dapps
 source ~/.envs/hello-dapps/bin/activate
 pip install -U pip poetry
 ```
 
-!!! warning
+{% alert level="warning" %}
 
-    On Windows, the above needs to be replaced with: 
+On Windows in the regular `cmd` shell, you need to replace the above with:
     
-    ```shell
-    python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps
-    %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps\Scripts\activate.bat
-    ```
+```shell
+python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps
+%HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps\Scripts\activate.bat
+```
+{% /alert %}
+
 
 ### Initialize the project
 
@@ -64,16 +67,17 @@ cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```
 
-!!! warning
+{% alert level="warning" %}
 
-    Again, on Windows: 
+Again, on Windows: 
     
-    ```shell
-    mkdir  "hello_golem\server_app"
-    cd hello_golem/server_app/
-    poetry init --no-interaction --python="^3.9"
-    ```
+```shell
+mkdir  "hello_golem\server_app"
+cd hello_golem/server_app/
+poetry init --no-interaction --python="^3.9"
+```
 
+{% /alert %}
 
 ### Add the requirements
 
@@ -87,16 +91,18 @@ There, we're ready to start coding our app.
 
 ## Hello world app
 
-!!! info
+{% alert level="info" %}
 
-    If you're lost in any moment, feel free to consult our source of the "Hello World" application available at: [https://github.com/golemfactory/dapp-experiments/tree/main/05\_hello\_world](https://github.com/golemfactory/dapp-experiments/tree/main/05\_hello\_world)
+If you're lost in any moment, feel free to consult our source of the "Hello World" application available at: [https://github.com/golemfactory/dapp-experiments/tree/main/05\_hello\_world](https://github.com/golemfactory/dapp-experiments/tree/main/05\_hello\_world)
     
-    Similarly, instead of coding along, you may just check out the whole thing from the repository:
+Similarly, instead of coding along, you may just check out the whole thing from the repository:
     
-    ```shell
-    git clone https://github.com/golemfactory/dapp-experiments.git
-    cd dapp-experiments/05_hello_world
-    ```
+```shell
+git clone https://github.com/golemfactory/dapp-experiments.git
+cd dapp-experiments/05_hello_world
+```
+
+{% /alert %}
 
 Fire up your favourite editor or IDE navigate to the `hello_golem/server_app` directory that we have set up above.
 
@@ -115,20 +121,20 @@ app.run(host="0.0.0.0")
 
 The above code achieves the following:
 
-1. import the `Flask` engine
-2. define our Flask app
-3. set up the root route for the app
-4. launch the Flask server
+1. Import the `Flask` engine
+2. Define our Flask app
+3. Set up the root route for the app
+4. Launch the Flask server
 
-!!! info
+{% alert level="info" %}
 
-    You may wish to customize the "Hello..." message up there, so as to make your application (and, more importantly, its VM image) unique. Our repository is set up to reject repeated uploads of images with matching signatures so, if you encounter an issue while uploading your application later in this tutorial, just please use the hash that we'll provide you there.
+You may wish to customize the "Hello..." message up there, so as to make your application (and, more importantly, its VM image) unique. Our repository is set up to reject repeated uploads of images with matching signatures so, if you encounter an issue while uploading your application later in this tutorial, just please use the hash that we'll provide you there.
+{% /alert %}
 
+{% alert level="warning" %}
 
-!!! warning
-
-    For local testing, we could have gotten away with just `app.run()`. That makes the server listen on the local host address (`127.0.0.1`) by default. We need it to bind to all addresses so that it can later work correctly in Golem.
-
+For local testing, we could have gotten away with just `app.run()`. That makes the server listen on the local host address (`127.0.0.1`) by default. We need it to bind to all addresses so that it can later work correctly in Golem.
+{% /alert %}
 
 ## Local test
 
@@ -147,8 +153,7 @@ You should see "Hello from Golem!" which proves that our minimal app is working 
 We need to start with a Docker image since the only currently-supported way of creating a GVMI (Golem Virtual Machine Image) file is by providing a Docker image for conversion.
 
 If you'd like to know more about the GVMI images and about the conversion process, please refer to:
-
-[Golem Images explained](/docs/creators/dapps/creators/javascript/guides/golem-images)
+[Golem Images explained](/docs/creators/javascript/guides/golem-images)
 
 Let's back-up a little and ensure that we're one directory above `server_app`.
 
@@ -223,16 +228,10 @@ To be able to use our newly-created image on Golem, we need to convert it to the
 pip install gvmkit-build
 ```
 
-### Convert the image to GVMI
-
-```shell
-gvmkit-build hello-dapps
-```
-
 ### Upload the image to the repository
 
 ```shell
-gvmkit-build hello-dapps --push
+gvmkit-build golem-example --push --nologin
 ```
 
 Once the command completes, you should get a line containing the image hash, e.g.:

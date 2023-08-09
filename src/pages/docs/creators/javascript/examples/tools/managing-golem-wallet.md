@@ -1,5 +1,6 @@
 ---
 description: Your Golem wallet and Yagna setup for Mainnet payments.
+title: Yagna management for requestors
 ---
 
 {% alert level="info" %}
@@ -18,6 +19,7 @@ In this article, we present commands related to the daily management of your Yag
 - Enabling mainnet accounts
 - Checking the status of the wallet
 - Getting test funds
+- Generating the app-keys
 
 
 # Your Golem wallet address
@@ -98,4 +100,27 @@ yagna payment fund
 Golem will transfer test tokens from our custom faucet (a service that transfers test tokens to an address that asks for them).
 Note, you also need to enable your accounts' sender mode, which is done using `yagna payment init`. 
 
+## Generating the app key
 
+With the daemon running, enter the daemon's directory using another shell and generate the yagna app key that will be used by your requestor agent to access yagna's REST API.
+Note that the `requestor` in the command is a tag of the key.
+
+```bash
+yagna app-key create requestor
+```
+
+This should produce a 32-character-long hexadecimal app key that you need to note down as it will be needed to run the requestor agent.
+
+{% alert level="warning" %}
+
+If you intend to expose your yagna daemon's REST API port to the outside world (which we strongly discourage), you should absolutely ensure that you keep this key secret, as anyone with access to the key and the port will have complete control over your daemon.
+
+{% /alert %}
+
+In case you lose your app key, you can retrieve it with:
+
+```bash
+yagna app-key list
+```
+
+the value in the key column is the key you need.

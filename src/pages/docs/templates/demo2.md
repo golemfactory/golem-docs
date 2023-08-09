@@ -30,3 +30,31 @@ qwe
 ### Heading 3 nested
 
 # h1 reset
+
+
+Let's now go through what happens there.
+
+1. Take a stock Python Docker image (the slim version, we won't need anything more here):
+
+```dockerfile
+FROM python:3.9-slim
+```
+
+2. Install the needed tools:
+
+```dockerfile
+RUN pip install -U pip poetry
+```
+
+3. Copy the app contents to the image:
+
+```dockerfile
+RUN mkdir /app
+COPY server_app/* /app/
+```
+
+4. Install the app's requirements:
+
+```dockerfile
+WORKDIR /app
+RUN poetry install --no-root
