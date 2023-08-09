@@ -51,10 +51,7 @@ function recursiveRender(children, isActive) {
         {node.title}
       </a>
       {node.children && node.children.length > 0 && (
-        <ul
-          role="list"
-          className=" space-y-3 pl-5 text-slate-500 dark:text-slate-400"
-        >
+        <ul role="list" className="  pl-5 text-slate-500 dark:text-slate-400">
           {recursiveRender(node.children, isActive)}
         </ul>
       )}
@@ -267,8 +264,6 @@ export function Layout({
               )}
             </div>
 
-            
-
             <Prose>{children}</Prose>
           </article>
         </div>
@@ -283,7 +278,7 @@ export function Layout({
                   >
                     On this page
                   </h2>
-                  <ol role="list" className="mt-4 space-y-3 pl-4 text-sm">
+                  <ol role="list" className="mt-4  pl-4 text-sm">
                     <div className="border-l">
                       {tableOfContents.map((section) => (
                         <li className="py-0.5 pl-4" key={section.id}>
@@ -291,7 +286,7 @@ export function Layout({
                           {section.children.length > 0 && (
                             <ul
                               role="list"
-                              className=" space-y-3 pl-5 text-slate-500 dark:text-slate-400"
+                              className="  pl-5 text-slate-500 dark:text-slate-400"
                             >
                               {recursiveRender(section.children, isActive)}
                             </ul>
