@@ -19,47 +19,34 @@ function getNodeText(node) {
   return text
 }
 
-function collectHeadings(nodes, slugify = slugifyWithCounter(), lastNode) {
+function collectHeadings(
+  nodes,
+  slugify = slugifyWithCounter(),
+  lastNodes = []
+) {
   let sections = []
-
   for (let node of nodes) {
-    if (
-      node.name === 'h1' ||
-      node.name === 'h2' ||
-      node.name === 'h3' ||
-      node.name === 'h4' ||
-      node.name === 'h5' ||
-      node.name === 'h6'
-    ) {
+    if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
       let title = getNodeText(node)
       if (title) {
         let id = slugify(title)
         node.attributes.id = id
         let level = parseInt(node.name.slice(1))
-        if (level > 2) {
-          if (!lastNode || level !== lastNode.level + 1) {
-            // throw new Error(
-            //   `Cannot add '${node.name}' without preceding 'h${level - 1}'`
-            // )
-          }
-          console.warn(
-            `Cannot add '${node.name}' without preceding 'h${level - 1}'`
-          )
-        }
         let newNode = { ...node.attributes, title, children: [], level }
-        if (lastNode && level - 1 === lastNode.level) {
-          lastNode.children.push(newNode)
+        if (lastNodes[level - 2]) {
+          lastNodes[level - 2].children.push(newNode)
         } else {
           sections.push(newNode)
         }
-        lastNode = newNode
+        lastNodes[level - 1] = newNode
+        lastNodes.length = level
       }
     }
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNode))
+    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
   }
-
   return sections
 }
+
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
   let type = pageProps.markdoc?.frontmatter.type
@@ -74,8 +61,6 @@ export default function App({ Component, pageProps }) {
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
-
-  console.log(tableOfContents)
 
   return (
     <>
