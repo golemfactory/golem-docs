@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[yajsapi/utils/env.ts:3](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/env.ts#L3)
+[yajsapi/utils/env.ts:3](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/env.ts#L3)

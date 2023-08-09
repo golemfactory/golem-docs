@@ -34,7 +34,7 @@ Default selector that selects a random provider from the pool
 
 #### Defined in
 
-[yajsapi/agreement/strategy.ts:4](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/strategy.ts#L4)
+[yajsapi/agreement/strategy.ts:4](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/strategy.ts#L4)
 
 ___
 
@@ -62,7 +62,7 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 #### Defined in
 
-[yajsapi/agreement/strategy.ts:8](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/strategy.ts#L8)
+[yajsapi/agreement/strategy.ts:8](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/strategy.ts#L8)
 
 ___
 
@@ -96,4 +96,4 @@ Selector selecting the provider according to the provided list of scores
 
 #### Defined in
 
-[yajsapi/agreement/strategy.ts:17](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/strategy.ts#L17)
+[yajsapi/agreement/strategy.ts:17](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/strategy.ts#L17)

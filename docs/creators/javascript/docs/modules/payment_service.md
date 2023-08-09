@@ -2,6 +2,10 @@
 
 ## Table of contents
 
+### Interfaces
+
+- [PaymentOptions](../interfaces/payment_service.PaymentOptions.md)
+
 ### Type Aliases
 
 - [DebitNoteFilter](payment_service.md#debitnotefilter)
@@ -29,7 +33,7 @@
 
 #### Defined in
 
-[yajsapi/payment/service.ts:30](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/service.ts#L30)
+[yajsapi/payment/service.ts:27](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L27)
 
 ___
 
@@ -53,4 +57,4 @@ ___
 
 #### Defined in
 
-[yajsapi/payment/service.ts:31](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/service.ts#L31)
+[yajsapi/payment/service.ts:28](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L28)

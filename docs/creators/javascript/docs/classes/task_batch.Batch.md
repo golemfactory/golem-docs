@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[yajsapi/task/batch.ts:12](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L12)
+[yajsapi/task/batch.ts:12](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L12)
 
 ## Methods
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[yajsapi/task/batch.ts:9](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L9)
+[yajsapi/task/batch.ts:9](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L9)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L15)
+[yajsapi/task/batch.ts:15](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L15)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:21](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L21)
+[yajsapi/task/batch.ts:21](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L21)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:26](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L26)
+[yajsapi/task/batch.ts:26](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L26)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:32](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L32)
+[yajsapi/task/batch.ts:32](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L32)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:37](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L37)
+[yajsapi/task/batch.ts:37](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L37)
 
 ___
 
@@ -167,4 +167,4 @@ ___
 
 #### Defined in
 
-[yajsapi/task/batch.ts:60](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/task/batch.ts#L60)
+[yajsapi/task/batch.ts:60](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/task/batch.ts#L60)

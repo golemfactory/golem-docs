@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[yajsapi/payment/payments.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/payments.ts#L15)
+[yajsapi/payment/payments.ts:15](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L15)

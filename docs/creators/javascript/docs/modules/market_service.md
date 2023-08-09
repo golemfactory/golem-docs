@@ -2,6 +2,10 @@
 
 ## Table of contents
 
+### Interfaces
+
+- [MarketOptions](../interfaces/market_service.MarketOptions.md)
+
 ### Type Aliases
 
 - [ProposalFilter](market_service.md#proposalfilter)
@@ -28,4 +32,4 @@
 
 #### Defined in
 
-[yajsapi/market/service.ts:10](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/market/service.ts#L10)
+[yajsapi/market/service.ts:10](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/service.ts#L10)

@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[yajsapi/agreement/service.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/service.ts#L15)
+[yajsapi/agreement/service.ts:15](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/service.ts#L15)
 
 ## Properties
 
@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[yajsapi/agreement/service.ts:14](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/service.ts#L14)
+[yajsapi/agreement/service.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/service.ts#L14)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[yajsapi/agreement/service.ts:15](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/service.ts#L15)
+[yajsapi/agreement/service.ts:15](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/service.ts#L15)

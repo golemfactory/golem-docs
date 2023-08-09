@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:14](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L14)
+[yajsapi/storage/gftp.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L14)
 
 ## Methods
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:20](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L20)
+[yajsapi/storage/gftp.ts:20](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L20)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:31](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L31)
+[yajsapi/storage/gftp.ts:31](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L31)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:47](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L47)
+[yajsapi/storage/gftp.ts:47](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L47)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:52](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L52)
+[yajsapi/storage/gftp.ts:52](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L52)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:59](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L59)
+[yajsapi/storage/gftp.ts:59](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L59)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:63](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L63)
+[yajsapi/storage/gftp.ts:63](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L63)
 
 ___
 
@@ -178,4 +178,4 @@ ___
 
 #### Defined in
 
-[yajsapi/storage/gftp.ts:89](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/storage/gftp.ts#L89)
+[yajsapi/storage/gftp.ts:89](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/storage/gftp.ts#L89)

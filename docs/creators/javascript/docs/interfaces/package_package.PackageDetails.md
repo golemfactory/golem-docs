@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[yajsapi/package/package.ts:42](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/package/package.ts#L42)
+[yajsapi/package/package.ts:38](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L38)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:43](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/package/package.ts#L43)
+[yajsapi/package/package.ts:39](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L39)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:44](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/package/package.ts#L44)
+[yajsapi/package/package.ts:40](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L40)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:45](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/package/package.ts#L45)
+[yajsapi/package/package.ts:41](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L41)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:46](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/package/package.ts#L46)
+[yajsapi/package/package.ts:42](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L42)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:47](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/package/package.ts#L47)
+[yajsapi/package/package.ts:43](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L43)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[yajsapi/package/package.ts:48](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/package/package.ts#L48)
+[yajsapi/package/package.ts:44](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L44)

@@ -37,7 +37,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[yajsapi/payment/payments.ts:27](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/payments.ts#L27)
+[yajsapi/payment/payments.ts:27](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L27)
 
 ## Methods
 
@@ -57,7 +57,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[yajsapi/payment/payments.ts:23](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/payments.ts#L23)
+[yajsapi/payment/payments.ts:23](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L23)
 
 ___
 
@@ -73,4 +73,4 @@ Unsubscribe demand from the market
 
 #### Defined in
 
-[yajsapi/payment/payments.ts:37](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/payment/payments.ts#L37)
+[yajsapi/payment/payments.ts:37](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L37)

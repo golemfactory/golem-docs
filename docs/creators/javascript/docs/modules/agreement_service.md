@@ -37,4 +37,4 @@
 
 #### Defined in
 
-[yajsapi/agreement/service.ts:18](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/agreement/service.ts#L18)
+[yajsapi/agreement/service.ts:18](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/service.ts#L18)

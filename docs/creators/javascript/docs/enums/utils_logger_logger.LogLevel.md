@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[yajsapi/utils/logger/logger.ts:2](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/logger.ts#L2)
+[yajsapi/utils/logger/logger.ts:2](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L2)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger/logger.ts:3](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/logger.ts#L3)
+[yajsapi/utils/logger/logger.ts:3](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L3)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger/logger.ts:4](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/logger.ts#L4)
+[yajsapi/utils/logger/logger.ts:4](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L4)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger/logger.ts:5](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/logger.ts#L5)
+[yajsapi/utils/logger/logger.ts:5](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L5)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[yajsapi/utils/logger/logger.ts:6](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/logger.ts#L6)
+[yajsapi/utils/logger/logger.ts:6](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L6)

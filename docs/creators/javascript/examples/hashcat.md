@@ -401,7 +401,3 @@ This will display the help message with information on all the optional paramete
         [Task Example 1: Simple Usage of Task API](simple.md){ .md-button .md-button--primary }
 
         [Task Example 3: Requestor in browser](web.md){ .md-button .md-button--primary }
-
-    ??? question "Continue"
-
-        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }

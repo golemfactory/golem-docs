@@ -25,5 +25,4 @@ The JS Core API gives developers access to the Golem-specific components, such a
 
 Choose the level of abstraction that best suits your needs and follow the links provided to learn more about each level and its capabilities.
 
-[JS Task API](../mid-level/index.md){ .md-button .md-button--primary }
 [JS Core API](../high-level/index.md){ .md-button .md-button--primary }

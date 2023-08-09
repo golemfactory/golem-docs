@@ -16,11 +16,11 @@
 
 ### ExecutorOptions
 
-Ƭ **ExecutorOptions**: { `package?`: `string` \| `Package` ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger.md) ; `logLevel?`: [`LogLevel`](../enums/utils_logger_logger.LogLevel.md) \| `string` ; `yagnaOptions?`: [`YagnaOptions`](executor_executor.md#yagnaoptions) ; `eventTarget?`: `EventTarget` ; `maxTaskRetries?`: `number` ; `storageProvider?`: [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) ; `isSubprocess?`: `boolean` ; `activityPreparingTimeout?`: `number`  } & `MarketOptions` & `ActivityOptions` & `AgreementOptions` & `PaymentOptions` & `DemandOptions` & `Omit`<`PackageOptions`, ``"imageHash"`` \| ``"imageTag"``\> & [`TaskOptions`](../interfaces/task_service.TaskOptions.md) & `NetworkServiceOptions` & [`AgreementServiceOptions`](../interfaces/agreement_service.AgreementServiceOptions.md) & `Omit`<[`WorkOptions`](../interfaces/task_work.WorkOptions.md), ``"isRunning"``\>
+Ƭ **ExecutorOptions**: { `package?`: `string` \| [`Package`](../classes/package_package.Package.md) ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger.md) ; `logLevel?`: [`LogLevel`](../enums/utils_logger_logger.LogLevel.md) \| `string` ; `yagnaOptions?`: [`YagnaOptions`](executor_executor.md#yagnaoptions) ; `eventTarget?`: `EventTarget` ; `maxTaskRetries?`: `number` ; `storageProvider?`: [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) ; `isSubprocess?`: `boolean` ; `activityPreparingTimeout?`: `number`  } & `Omit`<[`PackageOptions`](package_package.md#packageoptions), ``"imageHash"`` \| ``"imageTag"``\> & [`MarketOptions`](../interfaces/market_service.MarketOptions.md) & [`TaskOptions`](../interfaces/task_service.TaskOptions.md) & [`PaymentOptions`](../interfaces/payment_service.PaymentOptions.md) & [`NetworkServiceOptions`](network_service.md#networkserviceoptions) & [`AgreementServiceOptions`](../interfaces/agreement_service.AgreementServiceOptions.md) & `Omit`<[`WorkOptions`](../interfaces/task_work.WorkOptions.md), ``"isRunning"``\>
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:23](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L23)
+[yajsapi/executor/executor.ts:23](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/executor/executor.ts#L23)
 
 ___
 
@@ -32,7 +32,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:60](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L60)
+[yajsapi/executor/executor.ts:60](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/executor/executor.ts#L60)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[yajsapi/executor/executor.ts:62](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/executor/executor.ts#L62)
+[yajsapi/executor/executor.ts:62](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/executor/executor.ts#L62)

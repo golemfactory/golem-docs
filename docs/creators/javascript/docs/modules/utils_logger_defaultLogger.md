@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[yajsapi/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/defaultLogger.ts#L3)
+[yajsapi/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/defaultLogger.ts#L3)

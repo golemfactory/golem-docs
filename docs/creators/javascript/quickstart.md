@@ -233,7 +233,8 @@ const taskToRunOnProvider = async (workerContext) => {
 
 #### Define commands to run in the task scope
 
-This function gets first parameter `workContext` that is a [WorkContext](../docs/classes/task_work.WorkContext) object. This object allow you set the commands that you want to run in the scope of one task on one provider. So the command we would like to run on the provider is `node -v`:
+This function gets first parameter `workContext` that is a [WorkContext](../javascript/docs/classes/task_work.WorkContext.md) object. This object allow you set the commands that you want to run in the scope of one task on one provider. So the command we would like to run on the provider is `node -v`:
+
 
 ```js
 const commandToRunInProviderShell = "node -v";
@@ -374,7 +375,7 @@ When we have a file with the task ready, we should modify our executor code to s
 
 #### Uploading the script to provider machine
 
-When you look at the interface of the [WorkContext](../docs/classes/task_work.WorkContext) object, you will notice that there is an [uploadFile()](../docs/classes/task_work.WorkContext/#uploadfile) method, among others. This method is used to upload file to provider instance in a scope of single task. So in order to upload our task.js file to the provider we need to add the command:
+When you look at the interface of the [WorkContext](../javascript/docs/classes/task_work.WorkContext.md) object, you will notice that there is an [uploadFile()](../docs/classes/task_work.WorkContext/#uploadfile) method, among others. This method is used to upload file to provider instance in a scope of single task. So in order to upload our task.js file to the provider we need to add the command:
 
 ```js
     await ctx.uploadFile("./task.js", "/golem/resource/task.js");

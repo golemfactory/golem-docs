@@ -159,7 +159,3 @@ The output "Hello World" is the result received from executing the `echo "Hello 
         [Task Example 2: Hashcat on Golem](hashcat.md){ .md-button .md-button--primary }
 
         [Task Example 3: Requestor in browser](web.md){ .md-button .md-button--primary }
-
-    ??? question "Continue"
-
-        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }

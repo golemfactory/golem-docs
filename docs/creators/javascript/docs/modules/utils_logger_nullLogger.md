@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[yajsapi/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/yajsapi/blob/d7422f1/yajsapi/utils/logger/nullLogger.ts#L3)
+[yajsapi/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/nullLogger.ts#L3)

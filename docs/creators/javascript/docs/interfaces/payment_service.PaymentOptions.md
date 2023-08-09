@@ -1,6 +1,6 @@
 # Interface: PaymentOptions
 
-[payment/payments](../modules/payment_payments.md).PaymentOptions
+[payment/service](../modules/payment_service.md).PaymentOptions
 
 ## Hierarchy
 
@@ -12,18 +12,20 @@
 
 ### Properties
 
-- [invoiceFetchingInterval](payment_payments.PaymentOptions.md#invoicefetchinginterval)
-- [debitNotesFetchingInterval](payment_payments.PaymentOptions.md#debitnotesfetchinginterval)
-- [payingInterval](payment_payments.PaymentOptions.md#payinginterval)
-- [maxInvoiceEvents](payment_payments.PaymentOptions.md#maxinvoiceevents)
-- [maxDebitNotesEvents](payment_payments.PaymentOptions.md#maxdebitnotesevents)
-- [yagnaOptions](payment_payments.PaymentOptions.md#yagnaoptions)
-- [budget](payment_payments.PaymentOptions.md#budget)
-- [payment](payment_payments.PaymentOptions.md#payment)
-- [paymentTimeout](payment_payments.PaymentOptions.md#paymenttimeout)
-- [paymentRequestTimeout](payment_payments.PaymentOptions.md#paymentrequesttimeout)
-- [logger](payment_payments.PaymentOptions.md#logger)
-- [eventTarget](payment_payments.PaymentOptions.md#eventtarget)
+- [invoiceFetchingInterval](payment_service.PaymentOptions.md#invoicefetchinginterval)
+- [debitNotesFetchingInterval](payment_service.PaymentOptions.md#debitnotesfetchinginterval)
+- [payingInterval](payment_service.PaymentOptions.md#payinginterval)
+- [maxInvoiceEvents](payment_service.PaymentOptions.md#maxinvoiceevents)
+- [maxDebitNotesEvents](payment_service.PaymentOptions.md#maxdebitnotesevents)
+- [debitNotesFilter](payment_service.PaymentOptions.md#debitnotesfilter)
+- [invoiceFilter](payment_service.PaymentOptions.md#invoicefilter)
+- [yagnaOptions](payment_service.PaymentOptions.md#yagnaoptions)
+- [budget](payment_service.PaymentOptions.md#budget)
+- [payment](payment_service.PaymentOptions.md#payment)
+- [paymentTimeout](payment_service.PaymentOptions.md#paymenttimeout)
+- [paymentRequestTimeout](payment_service.PaymentOptions.md#paymentrequesttimeout)
+- [logger](payment_service.PaymentOptions.md#logger)
+- [eventTarget](payment_service.PaymentOptions.md#eventtarget)
 
 ## Properties
 
@@ -31,9 +33,11 @@
 
 • `Optional` **invoiceFetchingInterval**: `number`
 
+Interval for checking new invoices
+
 #### Defined in
 
-[yajsapi/payment/payments.ts:8](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L8)
+[yajsapi/payment/service.ts:12](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L12)
 
 ___
 
@@ -41,9 +45,11 @@ ___
 
 • `Optional` **debitNotesFetchingInterval**: `number`
 
+Interval for checking new debit notes
+
 #### Defined in
 
-[yajsapi/payment/payments.ts:9](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L9)
+[yajsapi/payment/service.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L14)
 
 ___
 
@@ -51,9 +57,11 @@ ___
 
 • `Optional` **payingInterval**: `number`
 
+Interval for processing payments
+
 #### Defined in
 
-[yajsapi/payment/payments.ts:10](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L10)
+[yajsapi/payment/service.ts:16](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L16)
 
 ___
 
@@ -61,9 +69,11 @@ ___
 
 • `Optional` **maxInvoiceEvents**: `number`
 
+Maximum number of invoice events per one fetching
+
 #### Defined in
 
-[yajsapi/payment/payments.ts:11](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L11)
+[yajsapi/payment/service.ts:18](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L18)
 
 ___
 
@@ -71,9 +81,35 @@ ___
 
 • `Optional` **maxDebitNotesEvents**: `number`
 
+Maximum number of debit notes events per one fetching
+
 #### Defined in
 
-[yajsapi/payment/payments.ts:12](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/payments.ts#L12)
+[yajsapi/payment/service.ts:20](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L20)
+
+___
+
+### debitNotesFilter
+
+• `Optional` **debitNotesFilter**: [`DebitNoteFilter`](../modules/payment_service.md#debitnotefilter)
+
+A custom filter that checks every debit notes coming from providers
+
+#### Defined in
+
+[yajsapi/payment/service.ts:22](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L22)
+
+___
+
+### invoiceFilter
+
+• `Optional` **invoiceFilter**: [`InvoiceFilter`](../modules/payment_service.md#invoicefilter)
+
+A custom filter that checks every invoices coming from providers
+
+#### Defined in
+
+[yajsapi/payment/service.ts:24](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L24)
 
 ___
 
