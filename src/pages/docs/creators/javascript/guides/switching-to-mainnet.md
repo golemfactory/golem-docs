@@ -1,5 +1,6 @@
 ---
 Description: How to move and ensure the safety of your funds when operating on mainnet
+title: Switching to mainnet
 ---
 
 # Using Golem on Mainnet
@@ -36,9 +37,7 @@ For more information regarding Layer 2 and Polygon, please refer to our introduc
 
 ## How to monitor the status of your wallet
 
-There are a number of the `Yagna` commands that will enable you to monitor the status of your wallet.
-
-They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
+There are a number of the `Yagna` commands that will enable you to monitor the status of your wallet.They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
 
 
 ## Securing your Golem wallet
@@ -74,7 +73,7 @@ To facilitate operation of blockchains it is useful export your Golem wallet add
 
 #### Acquiring MATICS directly on Polygon and converting some of them to GLMs
 
-1. Find an exchange platform that enables you to buy MATIC for FIAT [i.e. Ramp](https://ramp.network/).
+1. Find an exchange platform that enables you to buy MATIC for FIAT i.e. [Ramp](https://ramp.network/).
 2. Buy MATICs on Polygon
 3. Swap some of MATICs to GLMs on uniswap
 
@@ -101,6 +100,6 @@ You can consider one of the following options:
 * swapping GLM tokens to MATIC and selling them directly on a trading platform or
 * bridging them to Ethereum Mainnet 
 
-Note:
-
+{% alert level="info" %}
 It is easier to access your ERC-20 tokens by exporting your wallet (in Ethereum wallet v3 format) and then importing it into MetaMask. 
+{% /alert %}

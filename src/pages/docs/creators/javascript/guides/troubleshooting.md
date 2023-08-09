@@ -1,12 +1,13 @@
 ---
 description: ...
+title: JS troubleshooting
 ---
 
-Draft:
+We have collected common errors experienced by users of the JS SDK with information on how to address them.
 
 
-| Area  | Error message | Potential reason |
-|:------|:--------------|:------------------|
+| Area                | Error message | Potential reason and a remedy |
+|:------------------- |:--------------|:------------------|
 |  When launching requestor script | Error: Unable to create allocation for driver/network erc20/goerli. There is no requestor account supporting this platform. | Payment driver is not initialized for the network you use in the requestor script. Run `yagna payment init `    |
 |  When launching requestor script  |  Error: Could not create new allocation. Insufficient funds to make allocation. Top up your account or release all existing allocations to unlock the funds via `yagna payment release-allocations` |  You can add additional funds on the test network by `yagna payment fund` or unlock the funds via `yagna payment release-allocations`  |
 | When launching requestor script    | Error: Unable to get requestor accounts Invalid application key  |  Please make sure your script uses the defined api-key. You can check what keys are configured using: `yagna app-key list` or autoconfigure one by setting the environment variable `YAGNA_AUTOCONF_APPKEY`. Please see [Yagna installation example](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) for instructions on how to do it. |
@@ -14,4 +15,4 @@ Draft:
 |  when launching requestor script  |   Error: Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465  | Make sure your yagna service is up and running i.e. `yagna --version` |
 | after running `yagna payment fund --network goerli` | Error: deadline has elapsed| Run the command again |
 | When starting yagna with `--api-allow-origin` | error: Found argument '--api-allow-origin' which wasn't expected, or isn't valid in this context | CORS is supported in versions 0.13 - please download release candidate of that version if the stable is not available | 
-| in requestor script output |  Error: connect ECONNREFUSED 127.0.0.1:7465 | please make sure your yagna is still running and available |
+| in requestor script output |  Error: connect ECONNREFUSED 127.0.0.1:7465 | Please make sure your yagna is still running and available |

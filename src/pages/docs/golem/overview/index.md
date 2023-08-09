@@ -79,7 +79,7 @@ The whole process is handled by Golem software Yagna and SDK.
 
 The last step in the interactions is a payment between requestors and providers for the usage of the resources. There are many possible payment scenarios. Currently, the default is to use the [Polygon](https://polygon.technology/), a Layer2 solution that greatly improves cost-effectiveness. However, a user can also opt to use the Ethereum mainnet, should they wish to do so.
 
-More on the payment process you can find [here](/docs/golem/payments/index).
+More on the payment process you can find [here](/docs/golem/payments).
 
 ### Networks
 

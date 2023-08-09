@@ -1,5 +1,6 @@
 ---
-Description: Introduction to Golem Network and Task model
+description: Introduction to Golem Network and Task model
+title: Introduction to Golem Network and Task model
 ---
 
 
@@ -38,9 +39,10 @@ Tasks are run in the context that is defined by an image. Images are defined usi
 
 ## Main Task API features:
 
-!!! info
-
-    Click on the links to go the the usage examples.
+{% alert level="info" %}
+Click on the links to go the the usage examples.
+{% /alert %}
+    
 
 ### Orchestrating task execution
 
@@ -99,8 +101,25 @@ The user can also define his filter using the custom `proposalFilter`.
 See examples [here](/docs/creators/javascript/examples/selecting-providers).    
 
 
-!!! golem-icon "Next steps:"
+### Switching to the mainnet
 
-[JS Examples](/docs/creators/javascript/examples/index)
-You can explore our [tutorials] to see how to use these features effectively.
+By default JS SDK will execute your task in testnet - this is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
+
+See example [here](/docs/creators/javascript/examples/switching-to-mainnet).    
+
+{% docnavigation title="Next steps" %}
+
+See our [JS Examples](/docs/creators/javascript/examples)
+
+
+{% /docnavigation %}
+
+
+{% docnavigation title="See also" %}
+
+You can explore our [tutorials](/docs/creators/javascript/tutorials) to see how to use these features in a defined scenario.
+
+{% /docnavigation %}
+
+
    
