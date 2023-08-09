@@ -14,7 +14,7 @@ Golem images are based on Docker images that are converted using the gvmkit-buil
 
 The general process of creating a Golem image looks like this:
 
-* Define the image content in Docker format (Dockerfile)
+* Define the image content in Docker format
 * Build a Docker image from the Dockerfile
 * Convert to Golem image using gvmkit-build ([example](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format))
 
@@ -57,26 +57,19 @@ Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` 
 
 ## Images, Virual Machines and file system content
 
-When you engage a provider, its provider_agent runs exe-unit (a runtime) to run your image or WASM code. In the case of Golem Images that are run in VMs, the runtime being used is ya-runtime-vm.
+When you engage a provider, its provider_agent runs exe-unit (a runtime) to run your image or WASM code. In the case of Golem Images that are run in VMs, the runtime being used is `ya-runtime-vm`.
 
-In Golem terms such an image run on the provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks that will be scheduled on the same provider will use the same activity - meaning the same image container with its history. That means that within the lifecycle of the Activity the state of the file system is maintained. One consequence is that any filesystem changes - be it updates to volumes or to other locations within the VM - performed within a single execution of a task will still be present when subsequent tasks get executed.
+In Golem terms such an image run on the provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks that will be scheduled on the same provider will use the same activity - meaning the same image container with its history. That means that within the lifecycle of the Activity the state of the file system is maintained. One consequence is that any filesystem changes - be it updates to volumes or to other locations within the VM - performed within a single execution of a task, will still be present when subsequent tasks get executed.
 
-## Next steps
+{% docnavigation title="Next steps" %}
 
-### Installation guide and other examples
+- [Installing gvmkit-build](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
 
-!!! golem-icon ""
+{% /docnavigation %}
 
-    [Installing gvmkit-build](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
+{% docnavigation title="See also" %}
 
-### Custom Golem image Step-by-step Tutorial
+- [Creating custom Golem Image](/docs/creators/javascript/tutorials/building-custom-image) Step-by-step tutorial
+- [Golem Images FAQ](/docs/creators/javascript/guides/golem-images-faq)
 
-!!! golem-icon ""
-
-    [Creating custom Golem Image](/docs/creators/javascript/tutorials/building-custom-image)
-
-### Golem images FAQ
-
-!!! golem-icon ""
-
-    [Golem Images FAQ](/docs/creators/javascript/guides/golem-images-faq)
+{% /docnavigation %}
