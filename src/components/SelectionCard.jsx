@@ -11,7 +11,7 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
             <div className="flex items-center justify-center rounded-full bg-white p-2">
               <Icon icon={icon} className="h-6 w-6 fill-dark" />
             </div>
-            <h5 className=" font-semibold text-dark">{title}</h5>
+            <h2 className=" font-semibold text-dark">{title}</h2>
           </div>
         </div>
 
