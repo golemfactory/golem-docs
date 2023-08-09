@@ -175,33 +175,33 @@ ENTRYPOINT poetry run python hello_golem.py
 
 Let's now go through what happens there.
 
-1. Take a stock Python Docker image (the slim version, we won't need anything more here):
+1). Take a stock Python Docker image (the slim version, we won't need anything more here):
 
 ```dockerfile
 FROM python:3.9-slim
 ```
 
-2. Install the needed tools:
+2). Install the needed tools:
 
 ```dockerfile
 RUN pip install -U pip poetry
 ```
 
-3. Copy the app contents to the image:
+3). Copy the app contents to the image:
 
 ```dockerfile
 RUN mkdir /app
 COPY server_app/* /app/
 ```
 
-4. Install the app's requirements:
+4). Install the app's requirements:
 
 ```dockerfile
 WORKDIR /app
 RUN poetry install --no-root
 ```
 
-5. Finally, set up the Docker's entrypoint:
+5). Finally, set up the Docker's entrypoint:
 
 ```dockerfile
 ENTRYPOINT poetry run python hello_golem.py
@@ -334,9 +334,12 @@ First, let's make sure that you have your yagna daemon up and running and if not
 yagna service run
 ```
 
-!!! info
+{% alert level="info" %}
 
-    If you haven't set-up your yagna daemon before, please refer to our [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors).
+If you haven't set-up your yagna daemon before, please refer to our [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors).
+{% /alert %}
+
+
 
 ### Obtain the application key
 
@@ -345,7 +348,6 @@ Please, run:
 ```shell
 yagna app-key list
 ```
-
 and copy the value listed in the `key` column.
 
 If the above command doesn't give you any keys, just create your app key:
@@ -360,13 +362,16 @@ and copy the value output by this command.
 export YAGNA_APPKEY=<your key>
 ```
 
-!!! warning
-
-    On Windows, you'll need to use:
+{% alert level="warning" %}
+On Windows, you'll need to use:
     
-    ```
-    set YAGNA_APPKEY=<your key>
-    ```
+```
+set YAGNA_APPKEY=<your key>
+```
+
+{% /alert %}
+
+
 
 
 ### Install the `dapp-runner`

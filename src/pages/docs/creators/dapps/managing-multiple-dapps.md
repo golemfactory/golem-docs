@@ -1,5 +1,6 @@
 ---
-description: Manager multiple apps on a single requestor node easily with `dapp-manager`.
+description: Manage multiple apps on a single requestor node easily with `dapp-manager`.
+title: Managing multiple apps on a single requestor node.
 ---
 
 # dApp Manager
@@ -18,8 +19,12 @@ running instances of the `dapp-runner`.
 As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly configured
 [yagna](https://github.com/golemfactory/yagna) daemon, you'll need to have it set up.
 
-Please follow the [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors)
-tutorial and ensure that your `yagna` is up and running. 
+Please follow the [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running. 
+
+{% alert level="info" %}
+Note that if you followed installation instructions above you should have autoconfigured app-key of  `try-golem` instead of `32-char-app-key-here`.
+
+{% /alert %}
 
 Most importantly, make sure you have set the `YAGNA_APPKEY` in your environment, e.g. with:
 
@@ -47,10 +52,10 @@ First, ensure you have Python 3.8 or later:
 python3 --version
 ```
 
-!!! info
+{% alert level="info" %}
 
-    Depending on the platform, it may be just `python` instead of `python3`.
-
+Depending on the platform, it may be just `python` instead of `python3`.
+{% /alert %}
 
 If your Python version is older, consider using [pyenv](https://github.com/pyenv/pyenv-installer).
 
@@ -112,10 +117,10 @@ waiting for the following line
 {"web": {"local_proxy_address": "http://localhost:8080"}}
 ```
 
-!!! info
+{% alert level="info" %}
 
     Your port number (`8080` above) may be different.
-
+{% /alert %}
 
 Once you get it, you can access the launched app by following that link.
 
@@ -244,10 +249,14 @@ The completion functions are defined in `dapp_manager/autocomplete/scripts`.
 
 Should the entrypoint name ever change, those files will need to be updated as well.
 
-!!! warning
+{% alert level="warning" %}
 
-    Completion will **NOT WORK** when the program is invoked with `python -m dapp_manager`.
+Completion will **NOT WORK** when the program is invoked with `python -m dapp_manager`.
 
-    Only the installed entrypoint (i.e. `dapp-manager`) is supported.
-    To have it available, run `poetry install` when using the source version of `dapp-manager`.
+Only the installed entrypoint (i.e. `dapp-manager`) is supported.
+To have it available, run `poetry install` when using the source version of `dapp-manager`.
+{% /alert %}
+
+
+
 
