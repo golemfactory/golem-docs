@@ -1,11 +1,11 @@
 import { navigation } from './docs'
-import { navigation as reference } from './jsreference'
+import { navigation as reference, latestJSVersion } from './jsreference'
 
 const mergeNavAndRef = (navigation, reference) => {
   let targetReference
 
   reference.forEach((refItem) => {
-    if (refItem.title === 'support-new-docs') {
+    if (refItem.title === latestJSVersion) {
       targetReference = {
         title: 'JS Task API Reference',
         children: refItem.links,
