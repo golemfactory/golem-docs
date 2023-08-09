@@ -109,6 +109,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/examples/working-with-images',
               },
               {
+                title: 'Using app-keys',
+                href: '/docs/creators/javascript/examples/using-app-keys',
+              },
+              {
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/examples/switching-to-mainnet',
               },

@@ -1,3 +1,8 @@
+---
+description: dApps Troubleshooting
+title: dApps Troubleshooting
+---
+
 # Troubleshooting
 
 #### Troubleshooting

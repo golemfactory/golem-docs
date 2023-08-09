@@ -1,15 +1,18 @@
 ---
 Description: Parallel processing on Golem Network - Tutorial
-title: Parallel processing on Golem Network Tutorial
-
+title:
 ---
+
+This template is not completed yet.
+
+#
 
 {% alert level="info" %}
 
 Prerequisites:
 
 - Yagna daemon installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
-- Docker installed and Docker service available.
+- Have Docker installed and Docker service available
 
 
 {% /alert %}
