@@ -1,4 +1,9 @@
-# Differences between Docker containers and Golem VM runtime
+---
+description: Differences between Docker containers and Golem VM runtime
+title: Differences between Docker containers and Golem VM runtime
+---
+
+# Differences between Docker containers and Golem VM runtime 
 
 While Golem’s VM images derive from Docker’s, there are quite a few implementation and design differences necessitate careful approach when creating Golem decentralized apps.
 

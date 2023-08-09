@@ -200,7 +200,7 @@ export const navigation = [
           },
           {
             title: 'Creating Golem Dapps',
-            href: '/docs/dapps/creating-golem-dapps',
+            href: '/docs/creators/dapps/creating-golem-dapps',
           },
           {
             title: 'Differences between Docker containers and Golem VM runtime',

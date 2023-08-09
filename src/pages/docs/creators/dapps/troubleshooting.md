@@ -6,7 +6,7 @@ For any issues that are not listed below, or in case you'd like to chat with us,
 
 **Issues during the yagna setup**
 
-If you encounter problems during the yagna daemon initialization, please refer to this [Yagna Daemon installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors).
+If you encounter problems during the yagna daemon initialization, please refer to this [Yagna Daemon installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
 
 **\[Errno 104] Connection reset by peer**
 
