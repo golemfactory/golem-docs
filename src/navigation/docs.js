@@ -182,32 +182,7 @@ export const navigation = [
               },
             ],
           },
-          {
-            title: 'JS Task API Reference',
-            href: '/docs/creators/javascript/docs',
-            children: [
-              {
-                title: 'Content overview',
-                href: '/docs/creators/javascript/docs',
-              },
-              {
-                title: 'classes',
-                href: '/docs/creators/javascript/docs/classes',
-              },
-              {
-                title: 'enums',
-                href: '/docs/creators/javascript/docs/enums',
-              },
-              {
-                title: 'interfaces',
-                href: '/docs/creators/javascript/docs/interfaces',
-              },
-              {
-                title: 'mudules',
-                href: '/docs/creators/javascript/docs/modules',
-              },
-            ],
-          },
+         
         ],
       },
       {
