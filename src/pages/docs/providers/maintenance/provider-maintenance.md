@@ -55,5 +55,15 @@ yagna payment status --sender --network=mainnet --driver=erc20
 
 ## Upgrading Yagna 
 
-To upgrade Yagna daemon stop it (Ctrl-C) and follow installation procedure [(instructions)](/docs/providers/provider-installation)
+To upgrade Yagna daemon stop it (Ctrl-C) and follow installation procedure [(instructions)](/docs/providers/provider-installation).
+
+
+{% docnavigation title="See also" %}
+
+- [Sending GLM from the Ethereum Mainnet to Polygon and back.](/docs/golem/payments/golem-token-conversion)
+
+{% /docnavigation %}
+
+
+
 

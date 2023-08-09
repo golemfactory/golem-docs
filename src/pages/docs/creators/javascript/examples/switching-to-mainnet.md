@@ -19,7 +19,7 @@ npm i yajsapi
 ```
 {% /alert %}
 
-## Intriduction
+## Introduction
 
 By default JS SDK will execute your task in testnet - this is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
 

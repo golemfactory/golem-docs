@@ -4,8 +4,11 @@ Description: How to move and ensure the safety of your funds when operating on m
 
 # Using Golem on Mainnet
 
-!!! Warning
+{% alert level="warning" %}
+
 This section is aimed mainly at **requestors** wishing to switch from running simple test tasks on our development subnet (testnet) to launching production payloads utilizing the vast number of providers on the public subnet.
+
+{% /alert %}
 
 If you are a requestor:
 
@@ -59,6 +62,15 @@ yagna payment fund
 
 Note: To provide payments in GLM on blockchains you will need both GLMs and the tokens required to pay for the gas.
 Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
+
+
+{% alert level="info" %}
+
+To facilitate operation of blockchains it is useful export your Golem wallet address to external application that enables transactions in teh internet. You can find instruction on how to backup and restore you wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
+
+{% /alert %}
+
+
 
 #### Acquiring MATICS directly on Polygon and converting some of them to GLMs
 
