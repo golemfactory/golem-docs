@@ -111,7 +111,9 @@ We will present the end result by taking advantage of the `appendResult` functio
 
 ## Getting logs
 
-The TaskExecutor offers a logger parameter as optional. To accomplish this, you need to implement the 'Logger' [Logger](../../docs/interfaces/utils_logger.Logger) interface. To capture logging messages in our script for display purposes, we will develop a unique `logger` and create the `appendLog` function to add applicable records to the log storage area.
+The TaskExecutor offers a logger parameter as optional. To accomplish this, you need to implement the 'Logger' [Logger](../docs/interfaces/utils_logger_logger.Logger.md) interface. To capture logging messages in our script for display purposes, we will develop a unique `logger` and create the `appendLog` function to add applicable records to the log storage area.
+
+
 ```html
 <script>
     function appendLog(msg, level = 'info') {
@@ -190,7 +192,3 @@ And if we click the run button, after a while in the result container, we should
         [Task Example 1: Simple Usage of Task API](simple.md){ .md-button .md-button--primary }
 
         [Task Example 2: Hashcat on Golem](hashcat.md){ .md-button .md-button--primary }
-
-    ??? question "Continue"
-
-        [Diving deeper with Core API](../mid-level/index.md){ .md-button .md-button--primary }
