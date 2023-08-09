@@ -2,6 +2,7 @@
 description:
   Answers to popular questions about Golem's VM runtime and how to create images
   for it
+title: Golem Images - frequently asked questions
 ---
 
 # Frequently asked questions
@@ -52,7 +53,7 @@ This is related to the answer given to 'My VM has run out of storage space' topi
 There you are two options here:
 
 1. If the files are **static** (that is: they are always the same) then you can include them in the VM image itself while building it. You can learn more about that in [Golem image explained](/docs/creators/javascript/guides/golem-images).
-2. If the files are **dynamic** (that is: they may differ between task executions) then your best option is to transfer the files from the requestor agent. Make sure you use a **volume directory as the destination**.
+2. If the files are **dynamic** (that is: they may differ between task executions) then your best option is to transfer the files as a command within the requestor agent. Make sure you use a **volume directory as the destination**.
 
 
 
