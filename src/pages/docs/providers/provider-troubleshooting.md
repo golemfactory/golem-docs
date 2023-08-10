@@ -4,6 +4,8 @@ Description: Guides to help you troubleshoot a faulty provider.
 
 # Provider Troubleshooting
 
+This article will show you how to troubleshoot some common issues with providers. If none of the following information is helpful, you can join our [Discord Server](https://chat.golem.network/) for tech support.
+
 ## Provider installer on Ubuntu exits without an error but doesn't run.
 
 If you run the Golem Provider one-line installer on a minimal install of Ubuntu and it completes without error but doesn't run then you might have a symlink issue.

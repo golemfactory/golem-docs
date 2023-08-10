@@ -35,6 +35,10 @@ SUBCOMMANDS:
 
 Invoke `golemsp run --help` to see more options.
 
+### Stop
+
+`golemsp stop` - Stop the Golem provider.
+
 ### Settings
 
 ```bash
@@ -189,10 +193,9 @@ In the three columns, you can check the basic information regarding the status o
 #### Wallet
 
 * Account address
-* Payment network: `mainnet` or `rinkeby`
+* Payment network: `mainnet` or `testnet`
 * Amount of tokens that you have earned for successful computation
-* On-chain amount of tokens that you have earned (explorer [etherscan.io](https://etherscan.io/) or [rinkeby.etherscan.io](https://rinkeby.etherscan.io/))
-* Zk-sync amount of tokens that you have earned (explorer [zkscan.io](https://zkscan.io) or [rinkeby.zkscan.io](https://rinkeby.zkscan.io/))
+* On-chain amount of tokens that you have earned (explorer [etherscan.io](https://etherscan.io/) or [goerli.etherscan.io](https://goerli.etherscan.io/))
 * Pending payments that you should receive for computation
 * Amount of tokens that are still unconfirmed and may not show on your account
 
@@ -206,7 +209,7 @@ In the three columns, you can check the basic information regarding the status o
 
 While not specific to the provider CLI, at some point, you may want to move your tokens. By default, mainnet tasks are paid on Layer 2. Assuming you have a local wallet, you can interact with the payment driver to exit your tokens from Layer 2 to Layer 1. This is done using the`yagna payment exit` command. With this command, there are two main flags to keep in mind; `--network`and `--to-address`.
 
-For `--network`you have two options, either `mainnet` or `rinkeby`. For `--to-address`you can specify a destination address other than the local wallet address.
+For `--network` you have two options, either `mainnet` or `testnet`. For `--to-address` you can specify a destination address other than the local wallet address.
 
 **To exit your GLM to the same address on Ethereum mainnet type:**
 
