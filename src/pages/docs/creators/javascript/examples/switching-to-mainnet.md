@@ -1,11 +1,12 @@
 ---
-Description: Switching to mainnet
+description: Switching to mainnet
+title: Switching to mainnet
 ---
 
 {% alert level="info" %}
 
 # Prerequisites 
-Yagna daemon installed and running with `try_golem` app-key configured.
+Yagna service installed and running with `try_golem` app-key configured.
 Some funds available on Polygon Network: both GLM and MATIC.
 
 # Setting up project

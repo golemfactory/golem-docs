@@ -1,3 +1,8 @@
+---
+description: General Info Introduction
+title: General Info Introduction
+---
+
 In this section you will find:
 
 - Information on the Terms,  User Interaction Guidelines, and Privacy Policy - [Terms](/docs/golem/terms)

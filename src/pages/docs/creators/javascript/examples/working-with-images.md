@@ -1,12 +1,12 @@
 ---
-Title: Using Golem images
-Description: Examples of how to use your own Golem image in a requestor script
+title: Working with Golem images
+description: Examples of how to use your own Golem image in a requestor script
 ---
 
 {% alert level="info" %}
 
 # Prerequisites 
-Yagna daemon installed and running with `try_golem` app-key configured.
+Yagna service installed and running with `try_golem` app-key configured.
 
 [gvmkit-build installed](/docs/creators/javascript/examples/tools/gvmkit-build-installation), 
 

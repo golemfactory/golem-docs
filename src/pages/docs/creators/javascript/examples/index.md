@@ -1,5 +1,6 @@
 ---
-Description: List of examples
+description: List of examples
+title: JS Examples
 ---
 
 JS code examples are organized in articles dedicated to specific topics:

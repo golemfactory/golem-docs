@@ -7,7 +7,7 @@ title: Golem Node.js QuickStart
 
 In this article, we'll show you how to run a simple task on the Golem Network. 
 
-The goal is to run just a basic shell command on a rented provider.  
+For a QuickStart we take a simple task: just run a basic shell command on a rented provider.  
 It should take just a few minutes to complete and finally, you will see the command's result printed in your terminal. 
 
 
@@ -123,7 +123,7 @@ npm init
 npm install yajsapi
 ```
 
-Create a file named `requestor.mjs`` and copy the following content into it. The code itself defines a task whose goal is to run the command `node -v` on the Golem Network and print the result to your terminal.
+Create a file named `requestor.mjs` and copy the following content into it. The code itself defines a task whose goal is to run the command `node -v` on the Golem Network and print the result to your terminal.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -161,7 +161,7 @@ You can find information regarding the version of the node used on the remote co
 
 ## Summary
 
-You've installed the Yagna daemon and executed a simple task on the Golem Network.
+You've installed the Yagna service and executed a simple task on the Golem Network.
 However, you can accomplish much more. Here are some suggested next steps to explore the Golem Network world:
 
 {% docnavigation title="Next steps" %}

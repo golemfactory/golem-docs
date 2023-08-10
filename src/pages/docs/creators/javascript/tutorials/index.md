@@ -1,5 +1,6 @@
 ---
 description: Tutorials
+title: JS SDK Tutorials
 ---
 
 # Golem JS Tutorials 

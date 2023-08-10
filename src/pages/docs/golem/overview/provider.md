@@ -1,5 +1,6 @@
 ---
-Description: The provider actor in the Golem
+title: Provider 
+description: The provider actor in the Golem
 ---
 #
 
@@ -9,7 +10,7 @@ Provider node can be run on a 64-bit x86-64 CPU computer with Ubuntu only.
 
 ## Provider architecture
 
-The provider is a node with the Yagna daemon, with additional components installed. These components implement the provider logic. 
+The provider is a node with the Yagna service, with additional components installed. These components implement the provider logic. 
 To make its resources available to the requestor providers utilize an **execution unit** (exe-unit for short). Exe-unit starts and controls a runtime - the type of runtime depends on the type of image the requestor wants to run. Exe-unit allows also for interaction with the running runtime.
 
 Currently, Golem provides:

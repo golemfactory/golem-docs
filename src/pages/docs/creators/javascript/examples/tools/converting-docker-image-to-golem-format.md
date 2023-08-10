@@ -1,6 +1,6 @@
 ---
 title: Converting an image
-Description: Guide on how to convert an image from Docker to Golem using gvmkit-build
+description: Guide on how to convert an image from Docker to Golem using gvmkit-build
 ---
 
 # Converting an image

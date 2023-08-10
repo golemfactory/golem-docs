@@ -1,14 +1,13 @@
 ---
-Description: Parallel processing on Golem Network - Tutorial
+description: Parallel processing on Golem Network - Tutorial
 title: Parallel processing on Golem Network Tutorial
-
 ---
 
 {% alert level="info" %}
 
 Prerequisites:
 
-- Yagna daemon installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
+- Yagna service installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
 - Docker installed and Docker service available.
 
 
@@ -38,8 +37,7 @@ Hashcat supports 320 hashing algorithms and 5 different attack types, but for th
 
 
 To find the password that matches the given hash and mask, we could run the following command:
-```bash
-...................................................................................................hashcat -a 3 -m 400 in.hash ?a?a?a 
+```bash hashcat -a 3 -m 400 in.hash ?a?a?a 
 ```
 
 where
@@ -369,7 +367,7 @@ main(options).catch((e) => console.error(e));
 
 ```
 
-To test our script, copy it into the index.mjs file. Ensure your Yagna daemon is running run:
+To test our script, copy it into the index.mjs file. Ensure your Yagna service is running and run:
 
 
 {% tabs %}

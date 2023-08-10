@@ -1,5 +1,6 @@
 ---
-Description: How payments are made between the providers and requestors within the Golem Network.
+title: Golem payments introduction
+description: How payments are made between the providers and requestors within the Golem Network.
 ---
 
 # Payments in Golem explained

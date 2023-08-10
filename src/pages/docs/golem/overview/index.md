@@ -1,13 +1,13 @@
 ---
-Description: Solution architecture and details.
-Title: Golem Overview
+description: Solution architecture and details.
+title: Golem Overview
 ---
 
 ## Golem overview
 
-Golem is a network of nodes that implement the Golem network protocol. We provide the default implementation of such a node in the form of the Golem daemon, called [Yagna](https://github.com/golemfactory/yagna).
+Golem is a network of nodes that implement the Golem network protocol. We provide the default implementation of such a node in the form of the Golem service, called [Yagna](https://github.com/golemfactory/yagna).
 
-The nodes in the network can act as __providers__ or __requestors__. Both the requestor and the provider share the same implementation of the Golem daemon.
+The nodes in the network can act as __providers__ or __requestors__. Both the requestor and the provider share the same implementation of the Golem service.
 
 [//]: <> (The diagram above shows the architecture of the network. For the sake of simplicity, it shows just one requestor and one provider.)
 

@@ -1,12 +1,13 @@
 ---
-Description: List of examples
+description: List of examples
+title: JS SDK tool instructions
 ---
 
 Instructions on how to use Golem tools:
 
 | Topic          |    Content    |
 |:----------|:-------------------------------------------------------|
-|[Yagna installation for requestors](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) | Simple instructions on how to install Yagna daemon and become part of the Golem Network |
+|[Yagna installation for requestors](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) | Simple instructions on how to install `Yagna` service and become part of the Golem Network |
 |[Managing Golem wallet](/docs/creators/javascript/examples/tools/managing-golem-wallet) | Instructions on how to check your wallet address, monitor status, enable payments on the main network, and obtain test token |
 |[Golem wallet backup](/docs/creators/javascript/examples/tools/golem-wallet-backup) | Procedure how to the backup and secure your Golem wallet |
 |[Restoring Golem wallet](/docs/creators/javascript/examples/tools/restoring-golem-wallet) | Procedure how to restore your wallet after new Yagna installation |

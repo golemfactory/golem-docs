@@ -1,5 +1,6 @@
 ---
-Description: Better solution for computation cost reimbursements
+title: Layer 2 payment solution
+description: Better solution for computation cost reimbursements
 ---
 
 # Layer 2 payments

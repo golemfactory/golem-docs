@@ -1,12 +1,13 @@
 ---
 description: Working with results
+title: Working with results
 ---
 
 
 {% alert level="info" %}
 
 # Prerequisites 
-Yagna daemon installed and running with `try_golem` app-key configured.
+Yagna service installed and running with `try_golem` app-key configured.
 
 # Setting up project
 

@@ -1,3 +1,9 @@
+---
+description: Payload Manifest schema
+title: Payload Manifest schema
+---
+
+
 # Objects
 * [`Application Metadata`](#application-metadata)
 * [`Computation Manifest`](#computation-manifest)

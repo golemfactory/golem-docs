@@ -1,5 +1,6 @@
 ---
-Description: Yagna daemon installation
+description: Yagna service installation
+title: yagna intsallation for requestors
 ---
 
 #
@@ -23,7 +24,7 @@ In this article, we'll show you how to install and configure Yagna in case you w
 
 ## Installing and running Yagna 
 
-Yagna is a daemon that will let you communicate with Golem Network and perform operations on it. Let's install it.
+Yagna is a service that will let you communicate with Golem Network and perform operations on it. Let's install it.
 
 #### Install Yagna
 
@@ -68,7 +69,7 @@ You might be asked to modify your PATH afterward.
     If you have encountered problems, contact us on [discord channel](https://chat.golem.network/): 
 {% /alert  %}
 
-#### Start the daemon
+#### Start the service
 
 Open a terminal (command line window) and  define the key to identify your application script:
 
@@ -91,7 +92,7 @@ Open a terminal (command line window) and  define the key to identify your appli
 {% /tabs %}
 
 
-Then start the daemon:
+Then start the service:
 
 ```bash
 yagna service run

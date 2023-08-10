@@ -5,8 +5,9 @@ title: Provider maintenance
 
 {% alert level="info" %}
 
-Prerequisites
-    Please make sure the Yagna service is up and running
+**Prerequisites**
+
+Please make sure the Yagna service is up and running
 
 {% /alert %}
 

@@ -1,3 +1,8 @@
+---
+description: intro for providers
+title: Introduction for Providers
+---
+
 In the network you can have two roles: you can request hardware resources to run your apps - then you are a requestor, or you can share your idling hardware in exchange for GLM tokens - then you become a provider.
 
 For all this to happen each node must run a piece of software that implements the protocol that was designed by our open-source project. Yagna is our Rust implementation and is freely distributed to the community. If you have a computer running Linux you can easily join the network and become a provider.

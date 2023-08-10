@@ -40,7 +40,11 @@ docker run --privileged
 **or** mount the `/dev/kvm` device to the Docker container.
 
   
-c\) If: `unsupported virtualization type: XEN` We do not support **XEN hypervisor**
+c\) If: `unsupported virtualization type: XEN` 
+
+We do not support **XEN hypervisor**
+
+
 
 * In any other case with the virtualization we recommend the:
 

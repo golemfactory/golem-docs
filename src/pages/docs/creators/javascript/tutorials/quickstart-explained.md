@@ -1,5 +1,6 @@
 ---
-Description: Create your own JavaScript application on Golem
+description: Create your own JavaScript application on Golem
+title: Node.js QuickStart
 ---
 
 # JS QuickStart Explained
@@ -7,7 +8,7 @@ Description: Create your own JavaScript application on Golem
 {% alert level="info" %}
 
 ## Prerequisites 
-Yagna daemon installed and running with `try_golem` app-key configured.
+Yagna service installed and running with `try_golem` app-key configured.
 
 ## Setting up project
 
@@ -63,7 +64,7 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-In (1) we create a TaskExecutor Instance using a factory method. In this example, we use the minimal set of parameters: namely the hash indicating the image with Node.js installed - the image we will deploy on the provider and api-key value - a key that will give us access to `yagna` REST API. `yagna` is a daemon that connects us to the network. 
+In (1) we create a TaskExecutor Instance using a factory method. In this example, we use the minimal set of parameters: namely the hash indicating the image with Node.js installed - the image we will deploy on the provider and api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. 
 We use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
 
 ```js

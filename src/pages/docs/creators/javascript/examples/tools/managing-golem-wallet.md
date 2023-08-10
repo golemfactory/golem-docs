@@ -6,7 +6,7 @@ title: Yagna management for requestors
 {% alert level="info" %}
 
 Prerequisites
-    Please make sure the Yagna daemon is up and running
+    Please make sure the Yagna service is up and running
 
 {% /alert %}
 
@@ -24,7 +24,7 @@ In this article, we present commands related to the daily management of your Yag
 
 # Your Golem wallet address
 
-Golem's wallet is automatically initialized for you the first time you start your `yagna` daemon and thus, an address associated with it is also generated automatically.
+Golem's wallet is automatically initialized for you the first time you start your `yagna` service and thus, an address associated with it is also generated automatically.
 
 To have any kind of funds transferred to your Golem's wallet, you'll need its address. You may obtain it using the `id` command:
 
@@ -37,9 +37,9 @@ The value described as `nodeId` in the output is the Ethereum address of your Go
 
 ## Enable the mainnet account
 
-In the current version of the requestor's set-up, the daemon is configured to use the Goerli testnet by default. Also, all accounts are initialized in the receiver mode by default so you need to enable them as a sender (that's the reason we're adding the `--sender` flag below).
+In the current version of the requestor's set-up, the service is configured to use the Goerli testnet by default. Also, all accounts are initialized in the receiver mode by default so you need to enable them as a sender (that's the reason we're adding the `--sender` flag below).
 
-To enable the daemon to use the mainnet, you'll need to instruct it to use a command appropriate to your desired mainnet payment platform.
+To enable the service to use the mainnet, you'll need to instruct it to use a command appropriate to your desired mainnet payment platform.
 
 {% tabs %}
 
@@ -63,7 +63,7 @@ Again, unless you have good reasons not to, we recommend using Polygon for the l
 
 {% alert level="info" %}
 
-The initialization must be performed after every restart of the `yagna` daemon.
+The initialization must be performed after every restart of the `yagna` service.
 {% /alert %}
 
 ## Checking the status of your accounts
@@ -102,7 +102,7 @@ Note, you also need to enable your accounts' sender mode, which is done using `y
 
 ## Generating the app key
 
-With the daemon running, enter the daemon's directory using another shell and generate the yagna app key that will be used by your requestor agent to access yagna's REST API.
+With the service running, enter the service's directory using another shell and generate the yagna app key that will be used by your requestor agent to access yagna's REST API.
 Note that the `requestor` in the command is a tag of the key.
 
 ```bash
@@ -113,7 +113,7 @@ This should produce a 32-character-long hexadecimal app key that you need to not
 
 {% alert level="warning" %}
 
-If you intend to expose your yagna daemon's REST API port to the outside world (which we strongly discourage), you should absolutely ensure that you keep this key secret, as anyone with access to the key and the port will have complete control over your daemon.
+If you intend to expose your yagna service's REST API port to the outside world (which we strongly discourage), you should absolutely ensure that you keep this key secret, as anyone with access to the key and the port will have complete control over your service.
 
 {% /alert %}
 
