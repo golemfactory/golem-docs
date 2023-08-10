@@ -7,8 +7,8 @@ title: Golem Node.js QuickStart
 
 In this article, we'll show you how to run a simple task on the Golem Network. 
 
-For a QuickStart we take a simple task: just run a basic shell command on a rented provider.  
-It should take just a few minutes to complete and finally, you will see the command's result printed in your terminal. 
+For the QuickStart we perform a simple task: just running a basic shell command on a rented provider.  
+It should take just a few minutes to complete, and you will see the output of the command printed in your terminal. 
 
 
 {% alert level="info" %}
