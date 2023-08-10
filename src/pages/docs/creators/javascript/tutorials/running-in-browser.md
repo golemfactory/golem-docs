@@ -105,9 +105,9 @@ In this layout, there are three elements:
 Note the `<script>` tag in the `<head>` section  - here we will place our js code.
 
 
-## Using the Yajsapi bundle library
+## Using the @golem-sdk/golem-js bundle library
 
-First, we will import the `yajsapi` library:
+First, we will import the `@golem-sdk/golem-js` library:
 
 ```html
         <script>

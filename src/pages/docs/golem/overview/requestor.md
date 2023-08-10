@@ -18,7 +18,7 @@ To create and run the Golem app, one generally needs:
 A requestor agent can be written in any language as long as it's able to talk to the service's REST API. To make things easy for the developers though, we provide two high-level API libraries:
 
 - [yapapi](https://github.com/golemfactory/yapapi) for Python 3.6+ and 
-- [golem-js](https://github.com/golemfactory/yajsapi), our JS/TS API runnable under Node.js or in browsers.
+- [golem-js](https://github.com/golemfactory/golem-js), our JS/TS API runnable under Node.js or in browsers.
 
 As requestors address specific business needs there is no single requestor agent that fits all the use cases. 
 

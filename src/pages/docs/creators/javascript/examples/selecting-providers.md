@@ -10,12 +10,12 @@ Yagna service installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -40,7 +40,7 @@ You can do this in the TaskExecutor options:
 
 ```js
 
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async function main() {
   const executor = await TaskExecutor.create({
@@ -77,8 +77,7 @@ In some situations, you might need your tasks to be executed on a certain provid
 All these filters will accept an array with IDs or names of the providers that should be accepted or excluded.  
 
 ```js
-import { TaskExecutor, ProposalFilters } from "yajsapi";
-//import { ProposalFilters } from "yajsapi/dist/market/strategy";
+import { TaskExecutor, ProposalFilters } from "@golem-sdk/golem-js";
 
 /**
  * Example demonstrating how to use the predefined filter `whiteListProposalIdsFilter`,
@@ -123,7 +122,7 @@ Note: The whole process is started with requestor demand. The network will respo
 Let's how to use it:
 
 ```js
-import { TaskExecutor} from "yajsapi";
+import { TaskExecutor} from "@golem-sdk/golem-js";
 
 /**
  * Example demonstrating how to write a custom proposal filter.

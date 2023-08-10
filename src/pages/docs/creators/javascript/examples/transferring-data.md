@@ -11,12 +11,12 @@ Yagna service installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -34,7 +34,7 @@ At this moment sending files and JSON methods are available only in scripts that
 In this example, we calculate the `md5` hash of the example script `worker.mjs`, send it to a remote computer, and calculate the `md5` hash of the file in the remote location. Finally, we print both values for comparison.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 import {createHash} from 'node:crypto';
 import * as fs from 'fs';
 
@@ -75,7 +75,7 @@ const hash = createHash('md5').update(buff).digest('hex');
 In this example, we create a file on a remote computer, list its content to a result object, and finally download it to compare its content with the result obtained remotely.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -112,7 +112,7 @@ import { TaskExecutor } from "yajsapi";
 ## Uploading JSON to provider
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 import * as fs from 'fs';
 
 

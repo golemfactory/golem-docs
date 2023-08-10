@@ -10,12 +10,12 @@ Yagna service installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 

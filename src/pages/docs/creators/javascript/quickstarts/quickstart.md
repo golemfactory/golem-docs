@@ -120,13 +120,13 @@ Create a new Node.js project and install the Golem SDK by typing in the command 
 mkdir try_golem
 cd try_golem
 npm init
-npm install yajsapi
+npm install @golem-sdk/golem-js
 ```
 
 Create a file named `requestor.mjs` and copy the following content into it. The code itself defines a task whose goal is to run the command `node -v` on the Golem Network and print the result to your terminal.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({

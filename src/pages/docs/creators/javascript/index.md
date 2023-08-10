@@ -8,7 +8,7 @@ Description: Create your task application on Golem
 
 Welcome to the docs page for Golem JS SDK.
 
-The core of JS SDK is the **yajsapi** library which enables interaction with the Golem Network. Your JS scripts can be run in Node.js and web browsers. We provide you with a documentation package that will help you to quickly understand and use Golem Network as well as necessary tools.
+The core of JS SDK is the **@golem-sdk/golem-js** library which enables interaction with the Golem Network. Your JS scripts can be run in Node.js and web browsers. We provide you with a documentation package that will help you to quickly understand and use Golem Network as well as necessary tools.
 
 There are many ways you can start your journey with Golem and create great decentralized apps, you can learn in the way that suits your style and preference:
 

@@ -11,12 +11,12 @@ Some funds available on Polygon Network: both GLM and MATIC.
 
 # Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -31,7 +31,7 @@ In this article, we will show how to run your tasks on Polygon.
 In this example, we create the TaskExecutor with additional parameters that indicate that we intend to run our task on the Polygon platform.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({

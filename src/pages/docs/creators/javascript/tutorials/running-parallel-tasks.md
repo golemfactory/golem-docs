@@ -152,19 +152,19 @@ Note we could calculate the keyspace locally, but in this example we will also d
 
 ### JS project setup
 
-Now create a project folder, initialize the project, and install the `yajsapi` library.
+Now create a project folder, initialize the project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir parallel-example
 cd parallel-example
 npm init
-npm install yajsapi
+npm install @golem-sdk/golem-js
 ```
 
 Copy the requestor script skeleton into the index.mjs file:
 
 ```bash
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 import { program } from "commander";
 
 async function main(args) {
@@ -308,7 +308,7 @@ Once we get the password we print it in the console and end executor.
 ### The complete example
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 import { program } from "commander";
 
 async function main(args) {
@@ -388,7 +388,7 @@ To test our script, copy it into the index.mjs file. Ensure your Yagna service i
 
 {% alert level="info" %}
 
-You can clone the yajsapi repository and find the complete project in the `examples/hashcat` folder.
+You can clone the @golem-sdk/golem-js repository and find the complete project in the `examples/hashcat` folder.
 {% /alert  %}
 
 ## Summary

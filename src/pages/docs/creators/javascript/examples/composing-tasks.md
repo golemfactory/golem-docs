@@ -10,12 +10,12 @@ Yagna service installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -53,7 +53,7 @@ We'll start with a simple example featuring a single `run()` command. Then, we'l
 Below is an example of a simple script that remotely executes `node -v`.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -77,7 +77,7 @@ Note that `ctx.run()` accepts a string as an argument. This string is a command 
 Your task function can consist of multiple steps, all run on the `ctx` context.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -124,7 +124,7 @@ Depending on how you finalize your batch you will obtain either:
 Use the beginBatch() method and chain commands followed by `.end()`. 
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -165,7 +165,7 @@ The output of the 3rd command, `run('cat /golem/input/output.txt')`, is under th
 To produce a Readable Stream, use the `beginBatch()` method and chain commands, followed by `endStream()`.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -206,7 +206,7 @@ Once the stream is closed, we can terminate our TaskExecutor instance.
 Since closing the chain with `.endStream()` produces ReadableStream, you can also synchronously retrieve the results:
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({

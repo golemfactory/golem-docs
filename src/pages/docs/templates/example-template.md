@@ -13,12 +13,12 @@ List prerequisites here, with links to instructions:
 
 ## Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -51,7 +51,7 @@ If all examples in the artcle follow specific scenario, you can explain it here.
 Examples title should tell what is the outcome of the example.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 ```
 

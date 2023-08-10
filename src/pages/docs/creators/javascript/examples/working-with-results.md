@@ -11,12 +11,12 @@ Yagna service installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -31,7 +31,7 @@ For each command that is run, you can obtain a result object.
 Let's look at the simple example: we will run a tasks that consists of single command and will print the content of the result object:
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -64,7 +64,7 @@ Index refers to the sequential number of a command (we have just one, and counti
 When you run your tasks in a batch that is concluded with `.end()`: 
   
 ```js
-  import { TaskExecutor } from "yajsapi";
+  import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -102,7 +102,7 @@ you will receive an array of result objects:
 In case you end your batch with the `endStream()` method:
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -146,7 +146,7 @@ In the below case, the user's commands are chained in a batch. An error occurs a
 This command will raise an error and the whole task will be terminated. The next command, listing the content of `/golem/` folder, will not be executed at all.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -185,7 +185,7 @@ In the case of the data transfer method you will receive a message describing th
 Let's see another example:
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({

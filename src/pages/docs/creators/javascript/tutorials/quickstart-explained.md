@@ -12,12 +12,12 @@ Yagna service installed and running with `try_golem` app-key configured.
 
 ## Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -26,7 +26,7 @@ npm i yajsapi
 The basic structure of the script:
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
      //... Function body in here 
@@ -35,7 +35,7 @@ import { TaskExecutor } from "yajsapi";
 
 Here we do two things:
 
-* import TaskExecutor from yajsapi and 
+* import TaskExecutor from @golem-sdk/golem-js and 
 * create IIAFE (Immediately Invoked Async Function Expression). It has an async function declaration because TaskExecutor provides async methods.
 
 
@@ -44,7 +44,7 @@ Here we do two things:
 Inside the function body, there will be a sequence of 3 steps, that constitute the simplest Task Executor lifecycle. Task Executor is a primary object provided by our Task API.  
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 (async () => {
 
     // 1. Create Task Executor Instance
@@ -110,7 +110,7 @@ Finally, we print it to the console.
 
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
 
@@ -132,7 +132,7 @@ import { TaskExecutor } from "yajsapi";
 We had created the simplest requestor script, that ran a single command on a remote computer. 
 To achieve it we had:
 
-- imported yajsapi lib
+- imported @golem-sdk/golem-js lib
 - utilized Immediately Invoked Async Function Expression
 - created Task Executor
 - defined a task as a function that runs our command

@@ -10,12 +10,12 @@ Yagna service installed and running with `try_golem` app-key configured.
 
 # Setting up project
 
-Create a project folder, initialize a Node.js project, and install the `yajsapi` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
 npm init
-npm i yajsapi
+npm i @golem-sdk/golem-js
 ```
 {% /alert %}
 
@@ -37,7 +37,7 @@ In this article, the following examples are presented:
 If you want to run your tasks in parallel, you can use the `map()` method. 
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -76,7 +76,7 @@ Note that even though provider `sharkoon_379_8` was engaged before provider `10h
 If you do not need an object to facilitate the processing results of all the tasks, you can use another method that can also execute tasks in parallel. Even if the `forEach()` method does not return an object to iterate through, you can still access the result object for each command within the task function.  
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -109,7 +109,7 @@ Note that the actual number of engaged providers might be:
 Below, you can see how to define the maximum number of providers to be engaged.
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -139,7 +139,7 @@ Normally, when a larger job is divided into smaller tasks to be run in parallel 
 You can address such a need using the `beforeEach()` method of the TaskExecutor. Here is an example:
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
@@ -200,7 +200,7 @@ Sometimes you don't need to run tasks in parallel and a single run is sufficient
 
 
 ```js
-import { TaskExecutor } from "yajsapi";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({

@@ -148,11 +148,11 @@ The hash is found after the `image link`, which in this case gives us the hash `
 
 ## Preparing the environment
 
-To include the `yajsapi` library, we need to prepare our environment with the following commands:
+To include the `@golem-sdk/golem-js` library, we need to prepare our environment with the following commands:
 
 ```bash
 npm init
-npm install yajsapi
+npm install @golem-sdk/golem-js
 ```
 
 We can now create our `index.mjs` requestor file, with the `package: ...` matching our image hash.
@@ -162,7 +162,7 @@ We can now create our `index.mjs` requestor file, with the `package: ...` matchi
 **index.mjs**
 
 ```js
-import { TaskExecutor } from 'yajsapi'
+import { TaskExecutor } from '@golem-sdk/golem-js'
 ;(async () => {
   const executor = await TaskExecutor.create({
     package: '28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9',
