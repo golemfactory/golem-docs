@@ -1,8 +1,9 @@
 ---
 description: Quick start to running your first decentralized application on Golem
+title: QuickStart to running your first decentralized application
 ---
 
-# Quick start
+# QuickStart
 
 ## What's in it for me?
 
@@ -17,12 +18,7 @@ To launch applications on Golem, you request computational resources from the ne
 * a running `yagna` daemon (v0.12 or higher)
 * your requestor app key
 
-Setting these up is a part of the tutorial linked below. You only need to complete the first part, and omit "Run first task on Golem". Once you have your yagna daemon running and your application key copied, feel free to proceed here.
-
-<a href="https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Requestor development: a quick primer</span>
-</a>
+Setting these up is a part of the [tutorial](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
 Please also ensure you have `curl` available on your system.
 
@@ -47,14 +43,17 @@ python3 -m venv --clear ~/.envs/dapps
 source ~/.envs/dapps/bin/activate
 ```
 
-!!! warning
+{% alert level="warning" %}
 
-    On Windows in the regular `cmd` shell, you need to replace the above with:
+On Windows in the regular `cmd` shell, you need to replace the above with:
     
-    ```
-    python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapps
-    %HOMEDRIVE%%HOMEPATH%\.envs\dapps\Scripts\activate.bat
-    ```
+```shell
+python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapps
+%HOMEDRIVE%%HOMEPATH%\.envs\dapps\Scripts\activate.bat
+```
+{% /alert %}
+
+
 
 ### Install `dapp-runner`
 
@@ -80,18 +79,22 @@ curl https://raw.githubusercontent.com/golemfactory/dapp-runner/main/configs/def
 
 ### Export your application key to the environment
 
+{% alert level="info" %}
+If you followed the  installation instruction provided above you can use autoconfigured application key: `try_golem`.
+{% /alert %}
+
 ```bash
 export YAGNA_APPKEY=<your key>
 ```
 
-!!! warning
+{% alert level="warning" %}
 
-    On Windows, you'll need to use:
+On Windows in the regular `cmd` shell, you need to replace the above with:
     
-    ```
-    set YAGNA_APPKEY=<your key>
-    ```
-
+```shall
+set YAGNA_APPKEY=<your key>
+```
+{% /alert %}
 
 ### Run the app
 
@@ -111,11 +114,12 @@ This means that the app is ready and can be viewed at: [http://localhost:8080](h
 
 (The port on your machine may be different)
 
-_**That's it :smile: **_
+That's it!
 
-Now that you've been able to experience launching decentralized apps on Golem, you might wish to learn what it takes to build one yourself.
 
-<a href="../hello-world-dapp" style="border: 1px solid black; padding: 10px 25px; border-radius: 5px; display: flex; align-items: center; gap: 10px">
-    <img height="20" width="20" src="https://user-images.githubusercontent.com/5244214/223086561-ae7422f6-d7c5-49ff-b29c-b7293df482b1.png" alt="gh-icon">
-    <span>Hello World dApp</span>
-</a>
+{% docnavigation title="Next steps" %}
+
+- Now that you've been able to experience launching decentralized apps on Golem, you might wish to learn what it takes to build one yourself: [Hello World dApp](/docs/creators/dapps/hello-world-dapp)
+
+
+{% /docnavigation %}
