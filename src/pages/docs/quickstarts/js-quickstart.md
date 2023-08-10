@@ -1,83 +1,93 @@
 ---
 Description: Create your own JavaScript application on Golem
+title: Golem Node.js QuickStart
 ---
 
+# Introduction
 
-# JS QuickStart (node.js)
+In this article, we'll show you how to run a simple task on the Golem Network. 
 
-In this article, we'll show you how to run a simple task on Golem Network. 
-
-The task is just a single shell command (checking node version) run on a rented computer. 
-It will take just a few minutes to create and run a script that will request that task to be executed in the network and finally print out the result in the console. 
+The goal is to run just a basic shell command on a rented provider.  
+It should take just a few minutes to complete and finally, you will see the command's result printed in your terminal. 
 
 
-!!! Info
-    **Note: This example is designed for the environment:**
+{% alert level="info" %}
+**Note: This example has been designed to work with the following environments:**
 
-* OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
-* Node.js version above 16.0.0
-* Familiarity with the command line
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+{% /alert %}
+
+
+## Installing and running Yagna 
+
+Yagna is a service whose purpose is to communicate and perform operations on the Golem Network. Let's get started by installing it.
+
+#### Install Yagna
+
+
+{% tabs %}
+{% tab label="Easy installation" %}
     
-
-## Installing and running yagna 
-
-Yagna is a daemon that will let you communicate with Golem Network and perform operations on it. Let's install it.
-
-#### Install yagna
-
-=== "Easy installation"
+On Linux/ MacOS you can install it using our helper script like this:
     
-    On Linux/ MacOS you can install it using our helper script like this:
+```bash
+curl -sSf https://join.golem.network/as-requestor | bash -
+```
+
+You might be asked to modify your PATH afterward.
+{% /tab %}
+{% tab label="Windows Manual installation" %}
+
+
+Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
     
-    ```bash
-    curl -sSf https://join.golem.network/as-requestor | bash -
-    ```
-    You might be asked to modify your PATH afterward.
-
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
     
-
-=== "Windows Manual installation"
-
-    Alternatively, if you can't install it easily, you will do it manually in the following way:
+2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/latest).
-    2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
-    3. Copy those files to `C:\Windows\System32`.
-    ?? shall we install Yagna in the local folder for a quickstart ??
+3. Copy those files to `C:\Windows\System32`.
+{% /tab %}
+{% tab label="Unix Manual installation" %}
 
 
-=== "Unix Manual installation"
-
-    Alternatively, if you can't install it easily, you will do it manually in the following way:
+Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/tag/v0.12.0](https://github.com/golemfactory/yagna/releases/tag/v0.12.0).
-    2. Unpack `yagna` and `gftp` binaries and put within somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries into your PATH.
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+    
+2. Unpack `yagna` and `gftp` binaries and put them somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries into your PATH.
+
+{% /tab %}
+{% /tabs %}  
 
 
+{% alert level="info" %}
 
-!!! Note
+Should you encounter any problems, please reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/creators/javascript/guides/troubleshooting).
+{% /alert %}
 
-    If you have encountered problems, contact us on the [discord channel](https://chat.golem.network/)
-
-#### Start the daemon
+#### Start the Yagna service
 
 Open a terminal (command line window) and  define the key to identify your application script:
 
-=== "MacOS / Linux"
+{% tabs %}
+{% tab label="MacOS / Linux" %}
 
-   
-    ```bash
-    export YAGNA_AUTOCONF_APPKEY=try_golem
-    ```
+```bash
+export YAGNA_AUTOCONF_APPKEY=try_golem
+```
 
-=== "Windows"
-
+{% /tab %}
+{% tab label="Windows" %}
     
-    ```bash
-    set YAGNA_AUTOCONF_APPKEY=try_golem
-    ```
+```shell
+set YAGNA_AUTOCONF_APPKEY=try_golem
+```
 
-Then start the daemon:
+{% /tab %}
+{% /tabs %}  
+
+Then start the `Yagna` service:
 
 ```bash
 yagna service run
@@ -86,29 +96,25 @@ yagna service run
 
 
 
-#### Get some funds
+#### Get test GLM tokens
 
-Requesting tasks on the Golem Network requires some credits on the network (GLM tokens). 
-As this example will run on a test network you can get test credits.
+Requesting tasks on the Golem Network requires some GLM tokens. 
+As this example will run on a test network you can get test GLM.
 
 Open another terminal and run the following command to complete the configuration:
 
 ```bash
-yagna payment fund
 yagna payment init
+yagna payment fund
 ```
-
-
-!!! info
-
-    You can learn more about Golem architecture, production, and text network, GLM tokens here:
-
+The first one will initialize the payment driver.
+The second one will top up your account with test GLM tokens. You can pay with them only in the test network, where by default your apps are running. 
 
 
 ## Building your first Golem Network App 
 
 
-Create a new Node.js project and install Golem SDK by typing in the command line:
+Create a new Node.js project and install the Golem SDK by typing in the command line:
 
 ```bash
 mkdir try_golem
@@ -117,7 +123,7 @@ npm init
 npm install yajsapi
 ```
 
-Create a requestor.mjs file and copy the following content there. This script defines the task ('node -v'), requests it to be run on the Network, and prints the result on the console.
+Create a file named `requestor.mjs`` and copy the following content into it. The code itself defines a task whose goal is to run the command `node -v` on the Golem Network and print the result to your terminal.
 
 ```js
 import { TaskExecutor } from "yajsapi";
@@ -134,10 +140,10 @@ import { TaskExecutor } from "yajsapi";
 })();
 ```
 
-!!! info
+{% alert level="info" %}
 
-    You can find a detailed explanation of the above code [here](/docs/quickstarts/creators/javascript/tutorials/quickstart-explained)
-
+You can find a detailed explanation of the above code [here](/docs/creators/javascript/tutorials/quickstart-explained)
+{% /alert %}
 
 ## Running the script on Golem Network
 
@@ -147,24 +153,22 @@ Simply run the command:
 node requestor.mjs
 ```
 
-The result in the command line will look like this:
+The output of the script should look very similar to the one below:
 
-![](/assets/js-tutorial-05.gif)
+![Output logs](/js-tutorial-05.gif)
 
-
-At the end of the script's logs, you can see information about the node version used on the remote computer: v.16.14.0. This is a version included in the Golem standard image that was used to run the task.
-
+You can find information regarding the version of the node used on the remote computer - `v.16.14.0` - at the end of the script's logs. This is the version incorporated into the standard Golem image used to execute the task.
 
 ## Summary
 
-You have installed the yagna daemon and run a simple task on Golem Network.
-You can do much more. There are some of the next steps to explore the Golem Network world:
+You've installed the Yagna daemon and executed a simple task on the Golem Network.
+However, you can accomplish much more. Here are some suggested next steps to explore the Golem Network world:
 
-Next steps:
-
-* [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
-* [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
-* [Simple introduction to Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
-
-
+{% docnavigation title="Next steps" %}
+- [QuickStart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
+{% /docnavigation %}
+{% docnavigation title="See also" %}
+- [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
+- [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
+{% /docnavigation %}
 

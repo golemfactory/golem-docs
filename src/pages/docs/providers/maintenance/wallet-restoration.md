@@ -1,5 +1,6 @@
 ---
-Description: Setting up a new Yagna instance to use a saved keystore file.
+description: Setting up a new Yagna instance to use a saved keystore file.
+title: Provider wallet restoration
 ---
 
 # Restoring a backed-up wallet
@@ -25,7 +26,7 @@ Once Yagna is installed, run it with:
 yagna service run
 ```
 
-Now, as usual, leave the daemon running in the background and proceed with the rest of the process in another terminal window.
+Now, as usual, leave the service running in the background and proceed with the rest of the process in another terminal window.
 
 ## Retrieve your keystore
 
@@ -49,9 +50,9 @@ On the other hand, if the message reads: `isLocked: false`, it means that you're
 yagna id update --set-default 0x-the-address
 ```
 
-**2. Stop your Yagna daemon**
+**2. Stop your Yagna service**
 
-(Just press Ctrl-C in the console that's running `yagna service run` and wait for the daemon to exit)
+(Just press Ctrl-C in the console that's running `yagna service run` and wait for the service to exit)
 
 **3.** Remove `yagna`'s accounts configuration file
 
@@ -76,7 +77,7 @@ del %APPDATA%\GolemFactory\yagna\data\accounts.json
 {% /tabs %}
 
 
-**4. Start your yagna daemon again** (as usual, do it in a separate command line terminal and allow it to run in the background)
+**4. Start your yagna service again** (as usual, do it in a separate command line terminal and allow it to run in the background)
 
 ```bash
 yagna service run
@@ -110,12 +111,12 @@ This will unlock your key and `yagna` will be able to use it for outgoing paymen
 
 `isLocked: false`
 
-You'll need to unlock your key each time you start your Yagna daemon because, for security reasons, Yagna does not save your passphrase anywhere.
+You'll need to unlock your key each time you start your Yagna service because, for security reasons, Yagna does not save your passphrase anywhere.
 
 
 ## Make sure your Yagna application key is bound to the correct account
 
-If you have used `yagna` before, you have probably already created an application key (the key that the requestor agent uses to connect to the `yagna` daemon).
+If you have used `yagna` before, you have probably already created an application key (the key that the requestor agent uses to connect to the `yagna` service).
 
 In that case, after you import your Ethereum mainnet key, you need to re-create Yagna's application key, as the previous one is now bound to your old key:
 

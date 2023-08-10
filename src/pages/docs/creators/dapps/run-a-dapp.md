@@ -1,9 +1,9 @@
 ---
 description: Quick start to running your first decentralized application on Golem
-title: Quick start to running your first decentralized application
+title: QuickStart to running your first decentralized application
 ---
 
-# Quick start
+# QuickStart
 
 ## What's in it for me?
 

@@ -1,34 +1,44 @@
 ---
-Description: A minimal example of a functional Golem requestor agent in a browser
+description: A minimal example of a functional Golem requestor agent in a browser
+title: Requestor in browser QuickStart
 ---
 
-# Requestor in browser
+# Introduction
 
 In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
     
 
+{% alert level="info" %}
 ## Prerequisites
 
 Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
+{% /alert %}
+
+{% alert level="warning" %}
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
 
-=== "MacOS / Linux"
 
-   
-    ```shell
-    yagna service run --api-allow-origin='http://localhost:8080'
-    ```
 
-=== "Windows"
-
-    ```shell
+{% tabs %}
+{% tab label="MacOS / Linux" %}
+```shell
+yagna service run --api-allow-origin='http://localhost:8080'
+```
+{% /tab %}
+{% tab label="Windows" %}
+```shell
     yagna service run --api-allow-origin=http://localhost:8080
-    ```
+```
+{% /tab %}
+
+{% /tabs %}
 
 The `--api-allow-origin` value should be set to the URL where your web application will be served.
 In this example, we will use `http-server`.
+
+{% /alert %}
 
 ## Setting up project
 
@@ -125,14 +135,18 @@ export { };
 
 Note the file contains the `run()` function that creates the body of the requestor script (similar to the one we use in Node.js) and a set of helper functions that will let us present the logs and results in the browser window.
 
-Now, if we have a running Yagna daemon started with the ``--api-allow-origin` properly set to `http://localhost:8080` and have your Yagna APP key set to 'try_golem' launch `http-server` we should see our app available in the browser.
+Now, if we have a running Yagna daemon started with the `--api-allow-origin` properly set to `http://localhost:8080` and have your Yagna APP key set to 'try_golem' launch `http-server` we should see our app available in the browser.
 
 [ Open localhost ](http://localhost:8080)
 
 If you click the run button, after a while, in the result container, we should get the result of the script: `Hello World` and see the logs of executed commands in the log container.
 
-![Output logs](../../../assets/browser_log.png)
+![Output logs](/browser_log.png)
 
-!!! golem-icon "Next steps:"
+{% docnavigation title="Next steps" %}
 
-[Golem in web browser example explained](/docs/creators/javascript/tutorials/running-in-browser)
+- [Golem in web browser example explained](/docs/creators/javascript/tutorials/running-in-browser)
+
+{% /docnavigation %}
+
+

@@ -1,11 +1,12 @@
 ---
-description: Your Golem wallet and Yagna setup for Mainnet payments.
+description: Provider maintenance.
+title: Provider maintenance
 ---
 
 {% alert level="info" %}
 
 Prerequisites
-    Please make sure the Yagna daemon is up and running
+    Please make sure the Yagna service is up and running
 
 {% /alert %}
 
@@ -16,11 +17,11 @@ In this article, we present commands related to the daily management of your Yag
 
 - Checking the wallet address
 - Checking the status of the wallet
-- upgrading Yagna
+- Upgrading Yagna
 
 # Your Golem wallet address
 
-Golem's wallet is automatically initialized for you the first time you start your `yagna` daemon and thus, an address associated with it is also generated automatically.
+Golem's wallet is automatically initialized for you the first time you start your `yagna` service and thus, an address associated with it is also generated automatically.
 
 To have any kind of funds transferred to your Golem's wallet, you'll need its address. You may obtain it using the `id` command:
 
@@ -55,7 +56,14 @@ yagna payment status --sender --network=mainnet --driver=erc20
 
 ## Upgrading Yagna 
 
-To upgrade Yagna daemon stop it (Ctrl-C) and follow installation procedure [(instructions)](/docs/providers/provider-installation).
+When you start the Yagna service, it will check if a new version is available and, if so, will provide information in output logs displayed on the console.
+
+If you want to check the current version of yagna, type:
+```bash
+yagna --version
+```
+
+To upgrade Yagna service stop it (Ctrl-C) and follow installation procedure [(instructions)](/docs/providers/provider-installation).
 
 
 {% docnavigation title="See also" %}
