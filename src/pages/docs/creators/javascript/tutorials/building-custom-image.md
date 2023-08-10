@@ -159,7 +159,7 @@ We can now create our `index.mjs` requestor file, with the `package: ...` matchi
 
 {% tabs %}
 {% tab label="JavaScript" %}
-**index.mjs**
+**`index.mjs`**
 
 ```js
 import { TaskExecutor } from '@golem-sdk/golem-js'

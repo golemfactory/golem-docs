@@ -89,7 +89,7 @@ In this layout, there are three elements:
 ## Requestor script
 
 
-Next, we'll create a requestor.mjs file with the following content:
+Next, we'll create a `requestor.mjs` file with the following content:
 
 ```js
 import * as yajsapi from "https://unpkg.com/yajsapi"

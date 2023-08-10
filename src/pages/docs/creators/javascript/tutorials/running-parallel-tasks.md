@@ -161,7 +161,7 @@ npm init
 npm install @golem-sdk/golem-js
 ```
 
-Copy the requestor script skeleton into the index.mjs file:
+Copy the requestor script skeleton into the `index.mjs` file:
 
 ```bash
 import { TaskExecutor } from "@golem-sdk/golem-js";
@@ -367,7 +367,7 @@ main(options).catch((e) => console.error(e));
 
 ```
 
-To test our script, copy it into the index.mjs file. Ensure your Yagna service is running and run:
+To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
 
 
 {% tabs %}
