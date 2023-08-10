@@ -22,7 +22,7 @@ npm i yajsapi
 ## Introduction
 
 To use `Yagna` REST API you application must identify itself by api-key.
-In our examples we utilize `try_golem` key, that is automatically created if you have `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna daemon.
+In our examples we utilize `try_golem` key, that is automatically created if you have `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
 
 Such an api-key is easy to read and remember, and useful for quickstarts and testing examples, but normally you should rather use unique api-keys to protect access to your requstor and its wallet.
 

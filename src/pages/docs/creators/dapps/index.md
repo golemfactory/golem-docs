@@ -55,7 +55,7 @@ Golem __Service model__ describes a way to run specific Golem payloads and defin
 
 The payloads are the definitions of activities that a requestor wishes to be executed on Golem along with a complete set of parameters needed to initialize those activities. Those parameters can specify, e.g. what runtime and which container image to use or what the CPU or memory specifications are required by the payload.
 
-An example of such a service could be e.g. a web server that is to be deployed using Golem’s VM runtime with a VM image containing an HTTP daemon, using a specific initialization script, exposed to the outside world using a specific gateway.
+An example of such a service could be e.g. a web server that is to be deployed using Golem’s VM runtime with a VM image containing an HTTP service, using a specific initialization script, exposed to the outside world using a specific gateway.
 
 ### Golem Deploy model
 

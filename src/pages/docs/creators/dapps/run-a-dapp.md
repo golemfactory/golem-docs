@@ -15,7 +15,7 @@ You should be able to complete it regardless of your level of experience. Howeve
 
 To launch applications on Golem, you request computational resources from the network. Therefore, you need the following prerequisites prior to execution:
 
-* a running `yagna` daemon (v0.12 or higher)
+* a running `yagna` service (v0.12 or higher)
 * your requestor app key
 
 Setting these up is a part of the [tutorial](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 

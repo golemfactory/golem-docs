@@ -269,7 +269,7 @@ Once a service is launched and `dapp-runner` succeeds in starting a local proxy,
 
 You should be able to access your service using that published URL.
 
-The chief difference between the HTTP proxy and the generic TCP socket proxy is that the first one is protocol-aware and limited to HTTP only. The second one is more versatile and connections to any TCP services (e.g. databases, SSH daemons, etc) running on the provider nodes.
+The chief difference between the HTTP proxy and the generic TCP socket proxy is that the first one is protocol-aware and limited to HTTP only. The second one is more versatile and connections to any TCP services (e.g. databases, SSH services, etc) running on the provider nodes.
 
 The tradeoff is that only the HTTP proxy can be used with external platforms exactly because in order to correctly map the addresses, the platform must be able to interpret the incoming requests.
 
@@ -279,7 +279,7 @@ Again, please note that both types of connections are only able to be connected-
 
 ### dapp-runner
 
-The most straightforward way of running your dApp on Golem currently is by using `dapp-runner` directly. Dapp-runner is our reference implementation of the Golem Deploy model, able to take your application descriptor and connect to a Yagna daemon to first orchestrate deployment of all the components of your app and then supervise their state.
+The most straightforward way of running your dApp on Golem currently is by using `dapp-runner` directly. Dapp-runner is our reference implementation of the Golem Deploy model, able to take your application descriptor and connect to a Yagna service to first orchestrate deployment of all the components of your app and then supervise their state.
 
 Extensive information on running and installing the `dapp-runner` can be found in it README:
 
@@ -365,7 +365,7 @@ $ dapp-manager exec <insert_app_id> backend -- /bin/bash -c "ls -alh"
 
 Because those commands are sent as ExeScripts to the underlying Golem Activity, the main issue currently is that any error while executing such a command is treated as a failure of the activity in question and both the activity and the agreement are immediately terminated by the provider.
 
-As a work-around, one could e.g. bundle and start an SSH daemon in your image and connect to it using a [TCP proxy](/docs/creators/dapps/creating-golem-dapps#tcp-proxy).
+As a work-around, one could e.g. bundle and start an SSH service in your image and connect to it using a [TCP proxy](/docs/creators/dapps/creating-golem-dapps#tcp-proxy).
 
 For an illustration of such usage, please refer to the following `yapapi` SSH connection example:
 

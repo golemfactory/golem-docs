@@ -8,7 +8,7 @@ title: This is the page title displayed in a browser tab.
 ## Prerequisites 
 
 List prerequisites here, with links to instructions: 
-- Yagna daemon installed and running with `try_golem` app-key configured ([instructions](/docs/templates/example-template)).
+- Yagna service installed and running with `try_golem` app-key configured ([instructions](/docs/templates/example-template)).
 - Docker installed and Docker service available.
 
 ## Setting up project

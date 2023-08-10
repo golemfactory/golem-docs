@@ -11,7 +11,7 @@ In most of our examples, we demonstrate how to run a requestor script in Node.js
 {% alert level="info" %}
 ## Prerequisites
 
-Before getting started, you need to install and launch the Yagna daemon in version 0.13.0+. Note such a version is available as `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note such a version is available as `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
 {% /alert %}
 
@@ -135,7 +135,7 @@ export { };
 
 Note the file contains the `run()` function that creates the body of the requestor script (similar to the one we use in Node.js) and a set of helper functions that will let us present the logs and results in the browser window.
 
-Now, if we have a running Yagna daemon started with the `--api-allow-origin` properly set to `http://localhost:8080` and have your Yagna APP key set to 'try_golem' launch `http-server` we should see our app available in the browser.
+Now, if we have a running Yagna service started with the `--api-allow-origin` properly set to `http://localhost:8080` and have your Yagna APP key set to 'try_golem' launch `http-server` we should see our app available in the browser.
 
 [ Open localhost ](http://localhost:8080)
 

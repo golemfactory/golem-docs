@@ -14,10 +14,10 @@ running instances of the `dapp-runner`.
 
 ## Quick start
 
-### Yagna daemon
+### Yagna service
 
 As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly configured
-[yagna](https://github.com/golemfactory/yagna) daemon, you'll need to have it set up.
+[yagna](https://github.com/golemfactory/yagna) service, you'll need to have it set up.
 
 Please follow the [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running. 
 
@@ -170,7 +170,7 @@ Options:
 ```
 
 Importantly, it requires a config file which contains the parameters used to connect to the `yagna`
-daemon and initialize the requestor engine.
+service and initialize the requestor engine.
 
 Of course, it also requires one or more descriptor files that are used by the `dapp-runner` to
 deploy the specified applications on Golem.

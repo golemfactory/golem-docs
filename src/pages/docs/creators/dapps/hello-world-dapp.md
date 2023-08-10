@@ -14,7 +14,7 @@ By following this tutorial, you'll be able to get more confident about:
 - Creating a descriptor reflecting your app using YAML syntax similar to that used by `docker-compose`.
 - Deploying your app to Golem using `dapp-runner`.
 
-This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` daemon as a requestor](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
+This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` service as a requestor](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
 
 ## Prerequisites
 
@@ -326,9 +326,9 @@ curl https://raw.githubusercontent.com/golemfactory/dapp-runner/main/configs/def
 
 ## Running your app
 
-### Ensure your yagna daemon is started
+### Ensure your yagna service is started
 
-First, let's make sure that you have your yagna daemon up and running and if not, execute this in another console session:
+First, let's make sure that you have your yagna service up and running and if not, execute this in another console session:
 
 ```shell
 yagna service run
@@ -336,7 +336,7 @@ yagna service run
 
 {% alert level="info" %}
 
-If you haven't set-up your yagna daemon before, please refer to our [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors).
+If you haven't set-up your yagna service before, please refer to our [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors).
 {% /alert %}
 
 

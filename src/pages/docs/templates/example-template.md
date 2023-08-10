@@ -8,7 +8,7 @@ title: This is page title displayed in browser tab.
 ## Prerequisites 
 
 List prerequisites here, with links to instructions: 
-- Yagna daemon installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
+- Yagna service installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
 - Docker installed and Docker service available.
 
 ## Setting up project

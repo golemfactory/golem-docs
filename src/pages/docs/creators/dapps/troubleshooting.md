@@ -11,7 +11,7 @@ For any issues that are not listed below, or in case you'd like to chat with us,
 
 **Issues during the yagna setup**
 
-If you encounter problems during the yagna daemon initialization, please refer to this [Yagna Daemon installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
+If you encounter problems during the yagna service initialization, please refer to this [Yagna service installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
 
 **\[Errno 104] Connection reset by peer**
 
@@ -25,7 +25,7 @@ Most of them are outlined in the previous article, which describes the [differen
 
 Other than that, there are a couple more issues that you should be aware of:
 
-**Init commands which start daemon processes have to be run in the background**
+**Init commands which start service processes have to be run in the background**
 
 Each of the commands listed in the `init` section of the node has to finish its execution in order for the services to be treated as `started`. That's why, commands that stay running, e.g. serving the API, have to be suffixed with and ampersand (`&`) to instruct the shell to put them into the background, e.g.
 
@@ -37,7 +37,7 @@ Each of the commands listed in the `init` section of the node has to finish its 
 
 **Retrieving complete logs from the provider**
 
-Currently, a requestor user only has access to logs of the yagna daemon and dapp runtime. Logs from the provider side are not retrievable. One way to mitigate this, is to run the `goth` utility to have access to provider-side logs - to learn more.
+Currently, a requestor user only has access to logs of the `yagna` service and dapp runtime. Logs from the provider side are not retrievable. One way to mitigate this, is to run the `goth` utility to have access to provider-side logs - to learn more.
 
 **Bad default listening address**
 

@@ -8,7 +8,7 @@ title: Introduction to Golem Network and Task model
 
 ## Golem Network
 
-Golem Network is a p2p network that consists of many nodes. Each node is a system with a __Yagna__ daemon running on it. The nodes that offer their resources to others are called __providers__. The nodes that hire resources are called __requestors__.
+Golem Network is a p2p network that consists of many nodes. Each node is a system with a __Yagna__ service running on it. The nodes that offer their resources to others are called __providers__. The nodes that hire resources are called __requestors__.
     
 To get things done (the Job) in the Network, you need to define it, split it into task(s), and send it to the network using the Yagna demon. This is done using a __requestor script__ (or simply __Golem app__) that will utilize Golem JS SDK. You also need to define the environment used to run your activity on a provider, it is done by a software package in the form of a Docker-like __image__. 
 
