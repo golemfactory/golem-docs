@@ -19,7 +19,7 @@ running instances of the `dapp-runner`.
 As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly configured
 [yagna](https://github.com/golemfactory/yagna) service, you'll need to have it set up.
 
-Please follow the [Yagna installation instruction](/docs/creators/dapps/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running. 
+Please follow the [Yagna installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running. 
 
 {% alert level="info" %}
 Note that if you followed installation instructions above you should have autoconfigured app-key of  `try-golem` instead of `32-char-app-key-here`.

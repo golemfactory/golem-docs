@@ -22,7 +22,7 @@ If you create a link to file `index.md` point to the folder that contains that f
 
 |         |                                                                                          |
 |:-------|:------------------------------------------------------------------------------------------|
-|Name of the section | In the index page referring to a menu that has a submenu, you can place the [link]() in the description. |
-|[Title of article]()| In case you point to articles, the link is under the title of the article.|
+|Name of the section | In the index page referring to a menu that has a submenu, you can place the [link](/docs/templates/index-template) in the description. |
+|[Title of article](/docs/templates/index-template)| In case you point to articles, the link is under the title of the article.|
 
 

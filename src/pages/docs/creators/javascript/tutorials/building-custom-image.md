@@ -202,6 +202,6 @@ You have successfully created and used your Golem image in a requestor script!
 
 {% docnavigation title="Next steps" %}
 
-- Try your image in one of [examples](/docs/examples)!
+- Try your image in one of [examples](/docs/creators/javascript/examples)!
 
 {% /docnavigation %}
