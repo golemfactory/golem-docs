@@ -4,7 +4,7 @@ Description: Configuration examples for Yagna
 
 # Configuration examples for yagna
 
-This article will show how to configure basic yagna options.
+This article will show how to configure basic yagna options, such as changing settings and running the provider node in different ways.
 
 ## Settings
 
@@ -29,35 +29,19 @@ SUBCOMMANDS:
 
 ### Settings set
 
-`golemsp settings set --help` - to see how to change settings. Invoking this will prompt usage, flags, and options.
-
 example
 
-```bash
-$ golemsp settings set --help
-golemsp-settings-set 0.3.0
-Change settings
-
-USAGE:
-    golemsp settings set [OPTIONS]
-
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
-
-OPTIONS:
-        --node-name <node-name>             
-        --cores <num>                       Number of shared CPU cores
-        --memory <bytes (like "1.5GiB")>    Size of shared RAM
-        --disk <bytes (like "1.5GiB")>      Size of shared disk space
-        --starting-fee <GLM (float)>        Price for starting a task
-        --env-per-hour <GLM (float)>        Price for working environment per hour
-        --cpu-per-hour <GLM (float)>        Price for CPU per hour
-        --account <account>                 Account for payments [env: YA_ACCOUNT=]
-        --payment-network <network>         Payment network [env: YA_PAYMENT_NETWORK_GROUP=]  [default: mainnet]
-                                            [possible values: mainnet, testnet]
-
-```
+|Value(s)                  |   Value  description  |
+|:----------------------|:----------------------------------------|
+|--node-name|The name of your provider|
+|--cores|The number of threads allocated to the provider service|
+|--memory|The amount of RAM (in bytes) allocated to the provider service (note: prefixes such as GiB are OK)|
+|--disk|The amount of HDD/SDD (in bytes) allocated to the provider service (note: prefixes such as GiB are OK)|
+|--starting-fee|A decimal number of how much GLM you want to start a task/service|
+|--env-per-hour|A decimal number of how much GLM you want for misc. activities such as downloading a Golem image or finalizing a task|
+|--cpu-per-hour|A decimal number of how much GLM you want for every one allocated thread while working (note: this value is multiplied automatically afterwards, 256-thread CPU's can reasonably have the same value as 2-thread CPUs)|
+|--account|Yagna account for payments|
+|--payment-network|The network where you want to be paid in, e.g., mainnet or testnet|
 
 To change a particular setting (for eg. price settings) type:
 
@@ -76,6 +60,14 @@ and restart your node afterward for it to update. To check if your address has b
 ### Settings show
 
 `golemsp settings show` - Show current settings.
+
+## Running golemsp on testnet
+
+To run the Golem provider on the test network, type the following command into the terminal:
+
+```bash
+golemsp run --payment-network testnet
+```
 
 
 Next steps:

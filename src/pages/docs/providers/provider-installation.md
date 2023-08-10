@@ -8,7 +8,8 @@ description:
 {% alert level="info" %}
 - The provider works on: Ubuntu 18.04 or 20.04
 {% /alert %}
-    
+
+This article will show you how to set up and run a provider node on Golem to start earning GLM tokens.
 
 ## Installation
 
@@ -32,7 +33,7 @@ After installing all required components you will be asked to set up your node. 
 
 ### Modifying your PATH
 
-You might be asked to modify your PATH afterward for future terminal sessions:
+You might be asked to modify your PATH afterward for future terminal sessions. Modifying your PATH is helpful to run the command in an easier way, without having to search for the executable file for every instance.
 
 ```bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
@@ -45,31 +46,11 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ## Running the provider
 
-### Mainnet
-
-To run the Golem provider on the mainnet, type the following in the terminal:
+To run the Golem provider on the main/production network, type the following command into the terminal:
 
 ```bash
 golemsp run
 ```
-
-### Testnet
-
-To run the Golem provider on the mainnet, type the following in the terminal:
-
-```bash
-golemsp run --payment-network testnet
-```
-
-{% alert level="warning" %}
-
-Please keep in mind that golemsp run will remember the parameters used the last time so after you finish your tests, you may want to change them back to the public network:
-
-```bash
-golemsp run --subnet public --payment-network mainnet
-```
-{% /alert %}
-
 
 
 ## Verifying node status
@@ -80,7 +61,15 @@ To check your node's status and see if it is active and computing tasks from the
 golemsp status
 ```
 
-As an output, you will get the information about your node's current state as shown below:
+As an output, you will get the information about your node's current state as shown below. The following more important values are given and correspond to:
+
+|Value(s)                  |   Value  description  |
+|:----------------------|:----------------------------------------|
+|Service|Shows the running status of the provider|
+|Wallet|The ERC-20 wallet address where you receive your GLM|
+|Network|Which network you are on, e.g., mainnet or testnet|
+|Amount|For each respective network, it shows how much GLM is owned|
+|Tasks|Information of how much work your provider has done|
 
 ```bash
 $ golemsp status

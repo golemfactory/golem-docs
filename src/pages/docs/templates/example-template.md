@@ -7,7 +7,7 @@ title: This is page title displayed in browser tab.
 
 ## Prerequisites 
 
-List prerequisites here, with links to instruction 
+List prerequisites here, with links to instructions: 
 - Yagna daemon installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
 - Docker installed and Docker service available.
 
@@ -89,12 +89,12 @@ Variant 2 body here
 
 {% docnavigation title="Next steps" %}
 
-- [Title of the article you believe reader should read](#another-example)
+- [Title of the article you believe the reader should read](#another-example) next.
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-- [Title](https://github.com) of other related sections: i.e. Tutorials, Guides 
+- [Title](https://github.com) of other related sections: i.e. Tutorials, Guides. 
 
 {% /docnavigation %}
