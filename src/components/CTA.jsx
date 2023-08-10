@@ -25,13 +25,13 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
           <p className="text-3xl font-semibold text-dark dark:text-white ">
             {title}
           </p>
-          <p className=" text-base text-normalgray dark:text-white dark:opacity-50">
+          <p className="text-base-design text-normalgray dark:text-white dark:opacity-50">
             {description}
           </p>
           <div className=" mt-4 flex">
             <Link
               href={href}
-              className="flex h-full items-center rounded bg-primary px-4 py-2 text-base font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+              className="text-base-design flex h-full items-center rounded bg-primary px-4 py-2 font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
             >
               <DiscordIcon className="mr-2 h-5 w-5 fill-white" />
 

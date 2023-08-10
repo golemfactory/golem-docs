@@ -35,14 +35,14 @@ export function QuickLink({
         >
           {title}
         </h3>
-        <p className="max-h-[12em] overflow-hidden  text-sm text-normalgray dark:text-slate-400">
+        <p className="text-base-design max-h-[12em]  overflow-hidden text-normalgray dark:text-slate-400">
           {description}
         </p>
       </div>
       <div className=" px-6 py-10">
         {disabled ? (
           <button
-            className=" cursor-not-allowed rounded bg-gray-400 px-4 py-2 text-base text-white dark:bg-gray-700/20"
+            className=" text-base-design cursor-not-allowed rounded bg-gray-400 px-4 py-2 text-white dark:bg-gray-700/20"
             disabled
           >
             Available Soon
@@ -50,7 +50,7 @@ export function QuickLink({
         ) : (
           <Link
             href={href}
-            className=" cursor-pointer rounded bg-primary px-4 py-2 text-base font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
+            className=" text-base-design cursor-pointer rounded bg-primary px-4 py-2 font-medium text-white hover:bg-primary/80 dark:bg-darkprimary dark:hover:bg-darkprimary/80"
           >
             {buttonText}
           </Link>
