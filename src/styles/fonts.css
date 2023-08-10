@@ -99,3 +99,7 @@ h6 {
   line-height: 120%;
   letter-spacing: -2%;
 }
+
+.prose .text-base {
+  font-size: 14px;
+}
