@@ -237,10 +237,6 @@ export function Layout({
             <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
             <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64 ">
               <SideBar navigation={mergednavs} />
-              {/* <Navigation links={normalNavLinks} /> */}
-              <div className=" mt-9">
-                <ReferenceNavigation />
-              </div>
             </div>
           </div>
         )}
