@@ -5,7 +5,7 @@ import { GolemIcon } from './icons/GolemIcon'
 import { LinkedInIcon } from './icons/LinkedIn'
 import { RedditIcon } from './icons/RedditIcon'
 import { YoutubeIcon } from './icons/YoutubeIcon'
-import { javascript, python } from '@/navigation/footer'
+import { javascript, python, dapps } from '@/navigation/footer'
 import { ArrowRightIcon } from './icons/ArrowRightIcon'
 
 const links = [...javascript, ...python]
@@ -59,33 +59,35 @@ const LinkSection = ({ title, links }) => (
   </section>
 )
 
-const DocSection = ({ title, data }) => (
+const DocSection = ({ title, description, link, data }) => (
   <div>
-    <DocHeader classes={'text-xl'} title={title + ' Docs'} />
-    <div
-      role="list"
-      className="mb-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
-    >
-      {data.map(({ type, links }) => (
-        <LinkSection key={type} title={type} links={links} />
-      ))}
+    <DocHeader
+      classes={'text-xl'}
+      title={title}
+      description={description}
+      link={link}
+    />
+    <div role="list" className="grid-rows mb-12 grid">
+      {data.map(({ type, links }) =>
+        links.length > 0 ? (
+          <LinkSection key={type} title={type} links={links} />
+        ) : null
+      )}
     </div>
   </div>
 )
 
-const DocHeader = ({ title, classes }) => (
+const DocHeader = ({ title, description, link, classes }) => (
   <>
     <h5 className={`${classes}  font-semibold dark:text-white/50`}>{title}</h5>
-    <p className="text-sm text-gray-500 dark:text-white/50">
-      Contracts or people on the network
-    </p>
-    <NavLink />
+    <p className="text-sm text-gray-500 dark:text-white/50">{description}</p>
+    <NavLink link={link} />
   </>
 )
 
-const NavLink = () => (
+const NavLink = ({ link }) => (
   <a
-    href="/docs"
+    href={link}
     aria-label="Overview"
     className="flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-darkprimary"
   >
@@ -97,12 +99,21 @@ const NavLink = () => (
 export const Footer = () => (
   <footer className="bg-white pt-8 dark:bg-transparent">
     <div className="mb-4 border-y border-y-lightbluedarker bg-lightblue dark:bg-darkbg">
-      <div className="sm:pt-18 mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 ">
-        <div className="mb-12">
-          <DocHeader classes={'text-3xl'} title="Learn Dapps" />
-        </div>
-        <DocSection title="JS" data={javascript} />
-        <DocSection title="Python" data={python} />
+      <div className="sm:pt-18 mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 pb-8 pt-16 lg:px-8">
+        <DocSection
+          title="JS Docs"
+          data={javascript}
+          description={'Contracts or people on the network'}
+          link={'/docs/creators/javascript'}
+        />
+        <DocSection
+          title="Learn Dapps"
+          data={dapps}
+          description={'Contracts or people on the network'}
+          link={'/docs/creators/dapps'}
+        />
+
+        {/* <DocSection title="Python" data={python} /> */}
       </div>
     </div>
     <LowerFooter />

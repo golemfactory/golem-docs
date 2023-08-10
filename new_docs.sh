@@ -1,11 +1,11 @@
 #!/bin/bash
 
-REPO_URL='https://github.com/golemfactory/yajsapi.git'
+REPO_URL='https://github.com/golemfactory/golem-js.git'
 TEMP_PATH='./temp'
 BRANCH_PREFIX='b0'
 BRANCH_FORMAT="^${BRANCH_PREFIX}\\.\\d+$"
-OUTPUT_PATH_RELATIVE='../src/pages/docs/yajsapi/reference'
-TYPEDOC_PARAMS='yajsapi/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-clear-references.cjs --hideBreadcrumbs true'
+OUTPUT_PATH_RELATIVE='../src/pages/docs/golem-js/reference'
+TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-clear-references.cjs --hideBreadcrumbs true'
 BRANCH_NAME="support-new-docs"
 git clone $REPO_URL $TEMP_PATH
 
