@@ -1,5 +1,6 @@
 ---
-Description: Ensuring the safety of your Golem funds.
+description: Ensuring the safety of your Golem funds.
+title: Provider wallet backup
 ---
 
 # Backing up your Golem wallet
@@ -25,7 +26,7 @@ Whoever enters into possession of your `key.json` file will have complete contro
 
 ## Password-protected keystore
 
-Better yet, create a password-encrypted keystore. Yagna daemon allows it and it fundamentally improves the security of the funds kept in that exported wallet.
+Better yet, create a password-encrypted keystore. Yagna service allows it and it fundamentally improves the security of the funds kept in that exported wallet.
 
 ### Verify the currently used key
 
@@ -86,7 +87,7 @@ yagna id export --file-path=./key.json
 
 ### Unlocking on Yagna restart
 
-An, arguably positive, side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the yagna daemon is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
+An, arguably positive, side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the yagna service is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
 
 ### Reverting to an unprotected key
 

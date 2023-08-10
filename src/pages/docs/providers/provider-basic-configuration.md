@@ -1,10 +1,11 @@
 ---
 Description: Configuration examples for Yagna
+title: Basic provider configuration
 ---
 
 # Configuration examples for yagna
 
-This article will show how to configure basic yagna options, such as changing settings and running the provider node in different ways.
+This article will show how to configure basic `Yagna` options, such as changing settings and running the provider node in different ways.
 
 ## Settings
 
@@ -70,12 +71,14 @@ golemsp run --payment-network testnet
 ```
 
 
-Next steps:
+{% docnavigation title="See also" %}
 
-!!! golem-icon "Next steps:"
+[Troubleshooting](/docs/providers/provider-troubleshooting)
 
-    [Troubleshooting](/docs/providers/provider-troubleshooting)
+[Provider CLI reference](/docs/providers/yagna-cli-reference)
 
-    [Provider CLI reference](/docs/providers/yagna-cli-reference)
+{% /docnavigation %}
+
+
 
 

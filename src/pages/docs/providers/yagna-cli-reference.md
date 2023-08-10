@@ -1,6 +1,6 @@
 ---
-Title: Provider CLI reference
-Description: Yagna CLI reference
+description: Yagna CLI reference
+title: Provider CLI reference
 ---
 
 # Provider CLI reference
@@ -204,22 +204,6 @@ In the three columns, you can check the basic information regarding the status o
 * Number of tasks that you were computing in the last hour
 * Number of tasks that were in progress during the last hour
 * Total tasks that you were trying to compute - including those that were not computed
-
-### Exit GLM tokens to Ethereum
-
-While not specific to the provider CLI, at some point, you may want to move your tokens. By default, mainnet tasks are paid on Layer 2. Assuming you have a local wallet, you can interact with the payment driver to exit your tokens from Layer 2 to Layer 1. This is done using the`yagna payment exit` command. With this command, there are two main flags to keep in mind; `--network`and `--to-address`.
-
-For `--network` you have two options, either `mainnet` or `testnet`. For `--to-address` you can specify a destination address other than the local wallet address.
-
-**To exit your GLM to the same address on Ethereum mainnet type:**
-
-`yagna payment exit --network=mainnet`
-
-**To exit your GLM to a different address on Ethereum mainnet type:**
-
-`yagna payment exit --to-address=<address> --network=mainnet`
-
-**Note that if you decide to use an external wallet during your setup process, you can connect to ZkSync's wallet at** [**https://wallet.zksync.io/**](https://wallet.zksync.io/) **and exit that way. In the scenario that a different payment driver is being used, you will need to use the relevant available options to connect and access your tokens.**
 
 ## Advanced Settings
 
