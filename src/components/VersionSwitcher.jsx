@@ -2,10 +2,8 @@ import { useMemo, useState, useEffect, Fragment } from 'react'
 import { useRouter } from 'next/router'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import {
-  navigation as JSReference,
-  latestJSVersion,
-} from '@/navigation/jsreference'
+import { navigation as JSReference } from '@/navigation/jsreference'
+import { latestJSVersion } from '@/navigation/meta'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -18,7 +16,7 @@ const VersionSwitcher = ({}) => {
     [JSReference]
   )
 
-  const isOnDocsPath = router.pathname.startsWith('/docs/yajsapi/reference')
+  const isOnDocsPath = router.pathname.startsWith('/docs/golem-js/reference')
 
   useEffect(() => {
     if (isOnDocsPath) {
@@ -39,8 +37,8 @@ const VersionSwitcher = ({}) => {
     if (isOnDocsPath) {
       setCurrentVersion(version)
       const newPath = router.asPath.replace(
-        /\/docs\/yajsapi\/reference\/[^/]+/,
-        `/docs/yajsapi/reference/${version}`
+        /\/docs\/golem-js\/reference\/[^/]+/,
+        `/docs/golem-js/reference/${version}`
       )
       router.push(newPath)
     }

@@ -6,7 +6,6 @@ import clsx from 'clsx'
 import { Hero } from '@/components/Hero'
 import { Logo } from '@/components/Logo'
 import { MobileNavigation } from '@/components/MobileNavigation'
-import { ReferenceNavigation } from '@/components/JSReferenceNavigation'
 
 import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'

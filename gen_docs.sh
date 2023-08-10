@@ -1,11 +1,11 @@
 #!/bin/bash
 
-REPO_URL='https://github.com/golemfactory/yajsapi.git'
+REPO_URL='https://github.com/golemfactory/golem-js.git'
 TEMP_PATH='./temp'
 BRANCH_PREFIX='b0'
 BRANCH_FORMAT="^${BRANCH_PREFIX}\\.\\d+$"
-OUTPUT_PATH_RELATIVE='../src/pages/docs/yajsapi/reference'
-TYPEDOC_PARAMS='yajsapi/ --plugin typedoc-plugin-markdown'
+OUTPUT_PATH_RELATIVE='../src/pages/docs/golem-js/reference'
+TYPEDOC_PARAMS='golem-js/ --plugin typedoc-plugin-markdown'
 
 git clone $REPO_URL $TEMP_PATH
 
@@ -21,14 +21,14 @@ for branch_name in $(git branch -r | cut -d/ -f2- | grep -E $BRANCH_FORMAT); do
         git checkout $branch_name
 
         echo "Installing dependencies for branch ${branch_name}..."
-        cd yajsapi
+        cd golem-js
         npm install --force
         cd ..
         pwd
 
         OUTPUT_PATH="${OUTPUT_PATH_RELATIVE}/${branch_name}"
         echo "Generating typedoc for branch ${branch_name}... at ${OUTPUT_PATH}"
-
+        echo "typedoc $TYPEDOC_PARAMS --out $OUTPUT_PATH"
         npx typedoc $TYPEDOC_PARAMS --out $OUTPUT_PATH
         cd ..
         node generateTypedoc.mjs ${branch_name}

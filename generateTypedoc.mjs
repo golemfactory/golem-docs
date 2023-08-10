@@ -5,7 +5,7 @@ import * as path from 'path'
 import { createRequire } from 'module' // built-in module
 const require = createRequire(import.meta.url) // construct the require function for this ES module
 
-const docsPath = path.resolve('./src/pages/docs/yajsapi/reference')
+const docsPath = path.resolve('./src/pages/docs/golem-js/reference')
 
 const branchPrefix = process.argv[2]
 
@@ -35,7 +35,7 @@ const util = require('util')
 const glob = util.promisify(require('glob'))
 
 async function generateTypedoc(branchPrefix) {
-  const outputPath = './src/pages/docs/yajsapi/reference'
+  const outputPath = './src/pages/docs/golem-js/reference'
 
   // Once typedoc is done, start looking for .md files and remove ".md" mentions.
   const files = await glob(outputPath + '/' + branchPrefix + '/**/*.md')
@@ -61,10 +61,10 @@ async function generateNavigation(versions) {
         const links = await Promise.all([
           {
             title: 'Content overview',
-            href: `/docs/yajsapi/reference/${version}/overview`,
+            href: `/docs/golem-js/reference/${version}/overview`,
           },
           ...childrenDirs.map(async (item) => {
-            const hrefPrefix = `/docs/yajsapi/reference/${version}/${item}`
+            const hrefPrefix = `/docs/golem-js/reference/${version}/${item}`
 
             return {
               title: item,

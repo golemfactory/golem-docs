@@ -1,5 +1,6 @@
 import { navigation } from './docs'
-import { navigation as reference, latestJSVersion } from './jsreference'
+import { navigation as reference } from './jsreference'
+import { latestJSVersion } from './meta'
 
 const mergeNavAndRef = (navigation, reference) => {
   let targetReference

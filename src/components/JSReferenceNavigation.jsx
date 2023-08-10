@@ -2,7 +2,8 @@ import { useMemo } from 'react'
 
 import { Navigation } from './Navigation'
 
-import { navigation, latestJSVersion } from '@/navigation/jsreference'
+import { navigation } from '@/navigation/jsreference'
+import { latestJSVersion } from '@/navigation/meta'
 
 export const ReferenceNavigation = ({}) => {
   const currentNavItem = useMemo(() => {
@@ -13,5 +14,5 @@ export const ReferenceNavigation = ({}) => {
     return null
   }
 
-  return <Navigation links={navigation} title="Yajsapi API reference" />
+  return <Navigation links={navigation} title="Golem-js API reference" />
 }
