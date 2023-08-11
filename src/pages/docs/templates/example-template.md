@@ -3,26 +3,39 @@ description: Template for an example article
 title: This is page title displayed in browser tab.
 ---
 
+# Example title
+
 {% alert level="info" %}
 
-## Prerequisites 
+This example has been designed to work with the following environments:
 
-List prerequisites here, with links to instructions: 
-- Yagna service installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
-- Docker installed and Docker service available.
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
 
-## Setting up project
+{% /alert %}
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
+## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
+cd golem-example
 npm init
 npm i @golem-sdk/golem-js
 ```
-{% /alert %}
 
-# Introduction
+Copy the code into the `index.mjs` file in the project folder and run:
+
+```bash
+node index.mjs
+```
+
+## Introduction
 
 Examples should be simple, short and each code snippet ready to copy and run.
 
@@ -46,7 +59,7 @@ You can notify reader about some important topics.
 
 If all examples in the artcle follow specific scenario, you can explain it here.
 
-# Giving a title
+## Giving a title
 
 Examples title should tell what is the outcome of the example.
 
@@ -62,7 +75,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 Images should be placed in /public folder.
 
 
-# Another example
+## Another example
 
 In the example tell:
 - why reader might use it
@@ -71,7 +84,7 @@ In the example tell:
 - point to interesting things that can tell more about he network 
 
 
-# Showing variants
+## Showing variants
 
 {% tabs %}
 

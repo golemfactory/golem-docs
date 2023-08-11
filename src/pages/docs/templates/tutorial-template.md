@@ -3,24 +3,20 @@ description: Golem Tutorial template tutorial
 title: This is the page title displayed in a browser tab.
 ---
 
+# Tutorial title 
+
 {% alert level="info" %}
 
-## Prerequisites 
+This example has been designed to work with the following environments:
 
-List prerequisites here, with links to instructions: 
-- Yagna service installed and running with `try_golem` app-key configured ([instructions](/docs/templates/example-template)).
-- Docker installed and Docker service available.
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
 
-## Setting up project
-
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
-
-```bash
-mkdir golem-example
-npm init
-npm i @golem-sdk/golem-js
-```
 {% /alert %}
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
 
 
 ## Introduction

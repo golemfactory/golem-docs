@@ -3,13 +3,14 @@ Description: A minimal example of a functional Golem requestor agent in a browse
 title: Requestor in browser QuickStart
 ---
 
-# Introduction
+
+# Requestor in browser QuickStart
+## Introduction
 
 In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
-    
+   
 
 {% alert level="info" %}
-## Prerequisites
 
 Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note such a version is available as `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
@@ -17,9 +18,6 @@ Before getting started, you need to install and launch the Yagna service in vers
 
 {% alert level="warning" %}
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
-
-
-
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}

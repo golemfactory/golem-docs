@@ -3,42 +3,58 @@ description: Using app-key
 title: Using app-key
 ---
 
+# JS Task API Examples: using app-key
+
 {% alert level="info" %}
 
-# Prerequisites 
-Yagna service installed and running with `try_golem` app-key configured.
+This example has been designed to work with the following environments:
 
-# Setting up project
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
+## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
+cd golem-example
 npm init
 npm i @golem-sdk/golem-js
 ```
-{% /alert %}
+
+Copy the code into the `index.mjs` file in the project folder and run:
+
+```bash
+node index.mjs
+```
 
 ## Introduction
 
-To use `Yagna` REST API you application must identify itself by api-key.
+To use Yagna REST API you application must identify itself by api-key.
 In our examples we utilize `try_golem` key, that is automatically created if you have `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
 
-Such an api-key is easy to read and remember, and useful for quickstarts and testing examples, but normally you should rather use unique api-keys to protect access to your requstor and its wallet.
+Such an api-key is easy to read and remember, and useful for quickstarts and testing examples, but normally you should rather use unique 32-char api-keys to protect access to your requstor and its wallet.
 
 ### Creating unique app-keys
 
-You can generate an unique api-key with the `Yagna` command:
+You can generate an unique api-key with the `yagna` command:
 
 ```bash
 yagna app-key create requestor
 ```
 
-In the command above `requestor` is a name of the key.
+In the command above `requestor` is a name of the key. The output is the 32-char app-key.
 
 ### Listing available app-keys
 
-You can list available app-keys in your `Yagna` instance with:
+You can list available app-keys in your `yagna` instance with:
 
 ```bash
 yagna app-key list
@@ -51,7 +67,7 @@ You can identify your key by `name` and copy value from  `key` column.
 Once you have created an app-key you can use it in your requestor script replacing `insert-your-32-char-app-key-here` with the actual key.
 
 {% alert level="info" %}
-Note that while from the `Yagna` perspective we are talking about an applications accessing its API, therefore `Yagna` uses the `app-key` term, while from applications perspective they obtain the access to REST API, and therefore the have `apikey` attribute.
+Note that while from the `yagna` perspective we are talking about an applications accessing its API, therefore `yagna` uses the `app-key` term, while from applications perspective they obtain the access to REST API, and therefore the have `apikey` attribute.
 {% /alert %}
 
 ```js

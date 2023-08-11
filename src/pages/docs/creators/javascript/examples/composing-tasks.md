@@ -3,21 +3,39 @@ tescription: Composing tasks
 title: Composing tasks
 ---
 
+# JS Task API Examples: composing tasks
+
 {% alert level="info" %}
 
-# Prerequisites 
-Yagna service installed and running with `try_golem` app-key configured.
+This example has been designed to work with the following environments:
 
-# Setting up project
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
+## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
+cd golem-example
 npm init
 npm i @golem-sdk/golem-js
 ```
-{% /alert %}
+
+Copy the code into the `index.mjs` file in the project folder and run:
+
+```bash
+node index.mjs
+```
+
+
 
 ## Introduction
 
@@ -48,7 +66,7 @@ We'll start with a simple example featuring a single `run()` command. Then, we'l
 - download the `output.txt` file to back to your computer.
 
 
-## Running a single command
+### Running a single command
 
 Below is an example of a simple script that remotely executes `node -v`.
 
@@ -72,7 +90,7 @@ const result = await executor.run(
 Note that `ctx.run()` accepts a string as an argument. This string is a command invocation, executed exactly as one would do in the console. The command will be run in the folder defined by the `WORKDIR` entry in your image definition. 
 
 
-## Running multiple commands (prosaic way)
+### Running multiple commands (prosaic way)
 
 Your task function can consist of multiple steps, all run on the `ctx` context.
 
@@ -111,7 +129,7 @@ To ensure the proper sequence of execution, all calls must be awaited. We only h
 
 ![Multiple Commands output log](/command_prosaic_log.png)
 
-## Organizing commands into batches
+### Organizing commands into batches
 
 Now, let's take a look at how you can arrange multiple commands into batches.
 Depending on how you finalize your batch you will obtain either:

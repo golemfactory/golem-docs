@@ -12,7 +12,7 @@ It should take just a few minutes to complete, and you will see the output of th
 
 
 {% alert level="info" %}
-**Note: This example has been designed to work with the following environments:**
+** This example has been designed to work with the following environments:**
 
 - OS X 10.14+, Ubuntu 20.04 or Windows
 - Node.js 16.0.0 or above
@@ -87,7 +87,7 @@ set YAGNA_AUTOCONF_APPKEY=try_golem
 {% /tab %}
 {% /tabs %}  
 
-Then start the `Yagna` service:
+Then start the `yagna` service:
 
 ```bash
 yagna service run

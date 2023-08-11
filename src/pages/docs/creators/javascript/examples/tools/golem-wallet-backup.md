@@ -87,7 +87,7 @@ yagna id export --file-path=./key.json
 
 ### Unlocking on Yagna restart
 
-An, arguably positive, side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the `Yagna` service is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
+An, arguably positive, side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the `yagna` service is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
 
 ### Reverting to an unprotected key
 

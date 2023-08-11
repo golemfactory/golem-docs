@@ -3,42 +3,55 @@ description: A minimal example of a functional Golem requestor agent in a browse
 title: Requestor in browser QuickStart
 ---
 
-# Introduction
-
-In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
-    
+# Golem in a browser QuickStart
 
 {% alert level="info" %}
-## Prerequisites
 
-Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note such a version is available as `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+This tutorial has been designed to work with the following environments:
+
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Chrome
 
 {% /alert %}
 
-{% alert level="warning" %}
+
+## Introduction
+
+In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
+    
+## Prerequisites
+
+Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
-
-
-
 {% tabs %}
+
 {% tab label="MacOS / Linux" %}
+   
 ```shell
 yagna service run --api-allow-origin='http://localhost:8080'
 ```
 {% /tab %}
 {% tab label="Windows" %}
-```shell
-    yagna service run --api-allow-origin=http://localhost:8080
-```
-{% /tab %}
 
+```shell
+yagna service run --api-allow-origin=http://localhost:8080
+```
+
+{% /tab %}
 {% /tabs %}
+
+
+{% alert level="warning" %}
+
 
 The `--api-allow-origin` value should be set to the URL where your web application will be served.
 In this example, we will use `http-server`.
 
-{% /alert %}
+
+{% /alert  %}
+
 
 ## Setting up project
 

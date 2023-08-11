@@ -3,27 +3,16 @@ Description: Golem in browser QuickStart explained
 title: Golem in browser QuickStart explained
 ---
 
+# Golem in browser QuickStart explained
+
 {% alert level="info" %}
 
-## Setting up project
+This tutorial has been designed to work with the following environments:
 
-```bash
-mkdir web_golem
-cd web_golem
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Chrome
 
-```
-
-next
-
-```shell
-npm install --global http-server
-```
-
-This will install `http-server` utility to host our web page, where we will run our Golem app.
-
-{% /alert  %}
-
-{% alert level="warning" %}
+{% /alert %}
 
 ## Prerequisites
 
@@ -48,21 +37,40 @@ yagna service run --api-allow-origin=http://localhost:8080
 {% /tab %}
 {% /tabs %}
 
-{% /alert  %}
 
-
-
+{% alert level="warning" %}
 
 
 The `--api-allow-origin` value should be set to the URL where your web application will be served.
 In this example, we will use `http-server`.
 
 
+{% /alert  %}
+
 ## Introduction
 
 In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window. 
 
 While in the QuickStart the js script is in an external file, in this tutorial we will keep both HTML and js script in the same file.  
+
+
+
+
+## Setting up project
+
+```bash
+mkdir web_golem
+cd web_golem
+
+```
+
+next
+
+```shell
+npm install --global http-server
+```
+
+This will install `http-server` utility to host our web page, where we will run our Golem app.
 
 
 

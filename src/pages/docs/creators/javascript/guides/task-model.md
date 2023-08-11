@@ -76,7 +76,7 @@ Users can send:
 * files from remote computer (`.downloadFile()` method)
 * json to remote computer (`.uploadJson()` method)
 
-Note: The user must define a VOLUME within an image definition, to indicate a folder designed to contain files on a remote computer to enable data transfer.
+The user must define a VOLUME within an image definition, to indicate a folder designed to contain files on a remote computer to enable data transfer.
 
 See examples [here](/docs/creators/javascript/examples/transferring-data).   
 

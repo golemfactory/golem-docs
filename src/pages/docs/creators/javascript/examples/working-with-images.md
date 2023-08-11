@@ -5,24 +5,34 @@ description: Examples of how to use your own Golem image in a requestor script
 
 {% alert level="info" %}
 
-# Prerequisites 
-Yagna service installed and running with `try_golem` app-key configured.
+This example has been designed to work with the following environments:
 
-[gvmkit-build installed](/docs/creators/javascript/examples/tools/gvmkit-build-installation), 
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
 
-a Golem image hash or a Golem image tag
+{% /alert %}
 
-# Setting up project
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
+## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
-
 ```bash
 mkdir golem-example
+cd golem-example
 npm init
 npm i @golem-sdk/golem-js
 ```
-{% /alert %}
+
+Copy the code into the `index.mjs` file in the project folder and run:
+
+```bash
+node index.mjs
+```
+
 
 # Introduction
 
@@ -82,6 +92,6 @@ package: "golem/my_example:latest",
  
 {% docnavigation title="See also" %}
 
-Our [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+- [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
 
 {% /docnavigation %}

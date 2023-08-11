@@ -14,17 +14,15 @@ By following this tutorial, you'll be able to get more confident about:
 - Creating a descriptor reflecting your app using YAML syntax similar to that used by `docker-compose`.
 - Deploying your app to Golem using `dapp-runner`.
 
-This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` service as a requestor](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
-
 ## Prerequisites
-
-{% alert level="info" %}
 
 To follow this tutorial in full, you need to have Docker installed on your machine. If you don't have it installed, please refer to [instructions on Docker's website](https://docs.docker.com/get-docker/).
 
+{% alert level="info" %}
+
+This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` service as a requestor](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
+
 {% /alert %}
-
-
 
 
 ## Choice of tools

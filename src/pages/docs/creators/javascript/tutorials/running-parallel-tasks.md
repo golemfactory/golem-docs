@@ -3,14 +3,22 @@ description: Parallel processing on Golem Network - Tutorial
 title: Parallel processing on Golem Network Tutorial
 ---
 
+# Executing tasks in parallel - tutorial
+
 {% alert level="info" %}
 
-Prerequisites:
+This example has been designed to work with the following environments:
 
-- Yagna service installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
-- Docker installed and Docker service available.
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
 
 {% /alert %}
+
+## Prerequisites
+
+- Yagna service is installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
+- Docker installed and Docker service available.
+
 
 ## Introduction
 

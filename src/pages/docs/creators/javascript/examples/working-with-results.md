@@ -4,22 +4,37 @@ title: Working with results
 ---
 
 
+# JS Task API Examples: working with results
+
 {% alert level="info" %}
 
-# Prerequisites 
-Yagna service installed and running with `try_golem` app-key configured.
+This example has been designed to work with the following environments:
 
-# Setting up project
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
+## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
+cd golem-example
 npm init
 npm i @golem-sdk/golem-js
 ```
-{% /alert %}
 
+Copy the code into the `index.mjs` file in the project folder and run:
+
+```bash
+node index.mjs
+```
 
 
 ## Introduction

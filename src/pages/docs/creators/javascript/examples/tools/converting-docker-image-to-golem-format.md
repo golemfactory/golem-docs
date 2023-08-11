@@ -1,20 +1,29 @@
 ---
 title: Converting an image
-description: Guide on how to convert an image from Docker to Golem using gvmkit-build
+description: Instructions on how to convert an image from Docker to Golem using gvmkit-build
 ---
 
 # Converting an image
 
+
 {% alert level="info" %}
 
-Example is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+These intructions has been designed to work with the following environments:
 
-Prerequisites:
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+## Prerequisites
 
 - Have Docker installed and Docker service available.  If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
 - Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
 
-Note: you can use npx and pipx tools to run gvmkit-build without installation. 
+
+{% alert level="info" %}
+
+You can use npx and pipx tools to run gvmkit-build without installation. 
 
 {% /alert %}
 
@@ -125,6 +134,6 @@ gvmkit_build golem-example --push --nologin
 
 {% docnavigation title="See also" %}
 
-Note: more information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+- [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
 
 {% /docnavigation %}

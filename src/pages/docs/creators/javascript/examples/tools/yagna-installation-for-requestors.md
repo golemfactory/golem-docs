@@ -10,7 +10,7 @@ title: yagna intsallation for requestors
 
 {% alert level="info" %}
 
-**Note: These instructions are designed for the environment:**
+**These instructions are designed for the environment:**
 
 * OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
 * Node.js version above 16.0.0

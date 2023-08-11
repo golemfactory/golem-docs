@@ -5,10 +5,8 @@ title: Node.js QuickStart
 
 # JS QuickStart Explained
 
-{% alert level="info" %}
-
 ## Prerequisites 
-Yagna service installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with `try_golem` app-key configured.
 
 ## Setting up project
 
@@ -16,10 +14,10 @@ Create a project folder, initialize a Node.js project, and install the `@golem-s
 
 ```bash
 mkdir golem-example
+cd golem-example
 npm init
 npm i @golem-sdk/golem-js
 ```
-{% /alert %}
 
 ## JS script structure
 
@@ -75,7 +73,7 @@ We use api-key that was generated in the process of [Yagna installation](/docs/c
 
 Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable. 
 
-Note: there are other methods that allow you to execute tasks, they are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
+There are other methods that allow you to execute tasks, they are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
 
 
 ```js

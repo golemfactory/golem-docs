@@ -3,16 +3,13 @@ description: Provider maintenance.
 title: Provider maintenance
 ---
 
-{% alert level="info" %}
+# Provider maintenance
 
-**Prerequisites**
+## Prerequisites
 
-Please make sure the Yagna service is up and running
+Yagna service is installed and running.
 
-{% /alert %}
-
-
-# Introduction
+## Introduction
 
 In this article, we present commands related to the daily management of your Yagna.
 
@@ -20,7 +17,7 @@ In this article, we present commands related to the daily management of your Yag
 - Checking the status of the wallet
 - Upgrading Yagna
 
-# Your Golem wallet address
+## Your Golem wallet address
 
 Golem's wallet is automatically initialized for you the first time you start your `yagna` service and thus, an address associated with it is also generated automatically.
 

@@ -5,7 +5,7 @@ title: Basic provider configuration
 
 # Configuration examples for yagna
 
-This article will show how to configure basic `Yagna` options, such as changing settings and running the provider node in different ways.
+This article will show how to configure basic `yagna` options, such as changing settings and running the provider node in different ways.
 
 ## Settings
 

@@ -37,7 +37,7 @@ For more information regarding Layer 2 and Polygon, please refer to our introduc
 
 ## How to monitor the status of your wallet
 
-There are a number of the `Yagna` commands that will enable you to monitor the status of your wallet.They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
+There are a number of the `yagna` commands that will enable you to monitor the status of your wallet.They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
 
 
 ## Securing your Golem wallet
@@ -47,7 +47,7 @@ Please follow the instructions provided in [Golem wallet backup](/docs/creators/
 
 ## Getting funds to your requestor
 
-Note: To provide payments in GLM on blockchains you will need both GLMs and the tokens required to pay for the gas.
+To provide payments in GLM on blockchains you will need both GLMs and the tokens required to pay for the gas.
 Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 
 ### On test network
@@ -59,7 +59,7 @@ yagna payment fund
 ```
 ### On paid network
 
-Note: To provide payments in GLM on blockchains you will need both GLMs and the tokens required to pay for the gas.
+To provide payments in GLM on blockchains you will need both GLMs and the tokens required to pay for the gas.
 Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 
 
