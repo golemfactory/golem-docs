@@ -5,6 +5,16 @@ title: Node.js QuickStart
 
 # JS QuickStart Explained
 
+{% alert level="info" %}
+
+This tutorial has been designed to work with the following environments:
+
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+
 ## Prerequisites 
 Yagna service is installed and running with `try_golem` app-key configured.
 

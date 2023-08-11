@@ -36,23 +36,23 @@ To build the Docker image from the `Dockerfile`, we can run the following comman
 {% tabs %}
 {% tab label="Linux" %}
 
-    ```bash
-    docker build -t golem-example .
-    ```
+```bash
+docker build -t golem-example .
+```
 
 {% /tab %}
 {% tab label="macOS" %}
 
-    ```bash
-    docker build --platform linux/amd64 -t golem-example .
-    ```
+```bash
+docker build --platform linux/amd64 -t golem-example .
+```
 
 {% /tab %}
 {% tab label="Windows" %}
 
-    ```bash
-    docker build -t golem-example .
-    ```
+```bash
+docker build -t golem-example .
+```
 
 {% /tab %}
 {% /tabs %}
