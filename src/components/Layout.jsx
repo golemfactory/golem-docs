@@ -219,8 +219,6 @@ export function Layout({
     return section.id === currentSection
   }
 
-  console.log(mergednavs)
-
   return (
     <>
       <VersionSwitcher />
