@@ -91,8 +91,8 @@ export const NavigationItem = ({ item, isActive }) =>
     <Link
       href={item.href}
       aria-current={isActive ? 'page' : undefined}
-      className={`
-      ${isActive ? 'text-primary dark:text-darkprimary' : 'dark:text-white/50'}
+      className={`break-words
+      ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/50'}
       `}
     >
       {item.title}
