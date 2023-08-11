@@ -6,7 +6,7 @@ export const navigation = [
   {
     title: 'QuickStarts',
     links: [
-      { title: 'index', href: '/docs/quickstarts' },
+      { title: 'Introduction', href: '/docs/quickstarts' },
       {
         title: 'JS QuickStart (node.js)',
         href: '/docs/quickstarts/js-quickstart',
@@ -24,19 +24,15 @@ export const navigation = [
   {
     title: 'Create on Golem',
     links: [
-      { title: 'index', href: '/docs/creators' },
+      { title: 'How do you want to create?', href: '/docs/creators' },
       {
         title: 'JavaScript',
         children: [
-          { title: 'index', href: '/docs/creators/javascript' },
+          { title: 'Introduction', href: '/docs/creators/javascript' },
           {
             title: 'QuickStarts',
             href: '/docs/creators/javascript/quickstarts',
             children: [
-              {
-                title: 'index',
-                href: '/docs/creators/javascript/quickstarts',
-              },
               {
                 title: 'Golem in Node.js',
                 href: '/docs/creators/javascript/quickstarts/quickstart',
@@ -51,7 +47,7 @@ export const navigation = [
             title: 'Tutorials',
             children: [
               {
-                title: 'index',
+                title: 'List of tutorials',
                 href: '/docs/creators/javascript/tutorials',
               },
               {
@@ -63,7 +59,7 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/running-parallel-tasks',
               },
               {
-                title: 'Running Golem from browser',
+                title: 'Golem in a Browser',
                 href: '/docs/creators/javascript/tutorials/running-in-browser',
               },
               {
@@ -81,7 +77,7 @@ export const navigation = [
             href: '',
             children: [
               {
-                title: 'index',
+                title: 'List of examples',
                 href: '/docs/creators/javascript/examples',
               },
               {
@@ -123,7 +119,7 @@ export const navigation = [
             href: '',
             children: [
               {
-                title: 'index',
+                title: 'List of guides',
                 href: '/docs/creators/javascript/guides',
               },
               {
@@ -153,19 +149,19 @@ export const navigation = [
             href: '',
             children: [
               {
-                title: 'index',
+                title: 'List of instructions',
                 href: '/docs/creators/javascript/examples/tools',
               },
               {
-                title: 'Yagna installation for requestors',
+                title: 'Yagna installation',
                 href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
               },
               {
-                title: 'Converting Docker image to Golem format',
+                title: 'Converting images',
                 href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
               },
               {
-                title: 'Gvmkit_build installation (image conversion tool)',
+                title: 'Gvmkit-build installation',
                 href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
               },
               {
@@ -192,7 +188,7 @@ export const navigation = [
       {
         title: 'Deploying apps on Golem',
         children: [
-          { title: 'index', href: '/docs/creators/dapps' },
+          { title: 'Introduction', href: '/docs/creators/dapps' },
           { title: 'Quickstart', href: '/docs/creators/dapps/run-a-dapp' },
           {
             title: 'Hello World Dapp',
@@ -207,7 +203,7 @@ export const navigation = [
             href: '/docs/creators/dapps/creating-golem-dapps',
           },
           {
-            title: 'Differences between Docker containers and Golem VM runtime',
+            title: 'Docker vs Golem VM diffs',
             href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
           },
           {
@@ -221,7 +217,7 @@ export const navigation = [
   {
     title: 'Share and Earn',
     links: [
-      { title: 'index', href: '/docs/providers' },
+      { title: 'Introduction', href: '/docs/providers' },
       { title: 'Installation', href: '/docs/providers/provider-installation' },
       {
         title: 'Basic Configuration',
@@ -239,7 +235,6 @@ export const navigation = [
       {
         title: 'Maintenance',
         children: [
-          { title: 'index', href: '/docs/providers/maintenance' },
           {
             title: 'Maintenance',
             href: '/docs/providers/maintenance/provider-maintenance',
@@ -259,24 +254,20 @@ export const navigation = [
   {
     title: 'General Info',
     links: [
-      { title: 'index', href: '/docs/golem' },
+      { title: 'Contents', href: '/docs/golem' },
       { title: 'Terms', href: '/docs/golem/terms' },
       {
         title: 'Golem Overview',
         children: [
-          { title: 'index', href: '/docs/golem/overview' },
+          { title: 'Golem overview', href: '/docs/golem/overview' },
           { title: 'Provider', href: '/docs/golem/overview/provider' },
           { title: 'Requestor', href: '/docs/golem/overview/requestor' },
-          {
-            title: 'Requestor FAQ',
-            href: '/docs/golem/overview/requestor-faq',
-          },
         ],
       },
       {
         title: 'Payments',
         children: [
-          { title: 'index', href: '/docs/golem/payments' },
+          { title: 'Payments explained', href: '/docs/golem/payments' },
           {
             title: 'Layer 2 Payments',
             href: '/docs/golem/payments/layer-2-payments',
@@ -290,9 +281,9 @@ export const navigation = [
       {
         title: 'Payload Manifest',
         children: [
-          { title: 'index', href: '/docs/golem/payload-manifest' },
+          { title: 'Payload Manifest explained', href: '/docs/golem/payload-manifest' },
           {
-            title: 'Schema docs',
+            title: 'Schema',
             href: '/docs/golem/payload-manifest/computation-payload-manifest.schema',
           },
         ],

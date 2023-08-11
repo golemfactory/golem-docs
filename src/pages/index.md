@@ -11,11 +11,11 @@ type: design
 
 {% quick-links %}
 
-{% quick-link title="Quickstart" icon="flash" href="/docs/dapps/run-a-dapp" description="Follow this tutorial to build & run example app in the Golem Network in less than 10 minutes" buttonText="Try Golem" /%}
+{% quick-link title="Quickstart" icon="flash" href="/docs/quickstarts/js-quickstart" description="Follow this tutorial to build & run example app in the Golem Network in less than 10 minutes" buttonText="Try Golem" /%}
 
-{% quick-link title="Create on Golem" icon="knowledge" href="/" description="Begin adventure with decentralized computations with comprehensive tutorials and guides. " buttonText="Start building your app" /%}
+{% quick-link title="Create on Golem" icon="knowledge" href="/docs/creators" description="Begin adventure with decentralized computations with comprehensive tutorials and guides. " buttonText="Start building your app" /%}
 
-{% quick-link title="Share and earn" icon="software" href="/" description="Support the open-source movement and earn crypto by sharing your computer resources with the Golem Network." buttonText="Join the Golem Network" /%}
+{% quick-link title="Share and earn" icon="software" href="/docs/providers" description="Support the open-source movement and earn crypto by sharing your computer resources with the Golem Network." buttonText="Join the Golem Network" /%}
 
 {% /quick-links %}
 

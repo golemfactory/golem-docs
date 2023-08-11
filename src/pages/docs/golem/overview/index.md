@@ -26,22 +26,8 @@ To become a provider one needs to install a provider agent - a specific piece of
 
 Providers are recommended to upgrade their nodes to the latest package version available. This strategy shall provide the widest market coverage and therefore ensure the highest probability of profit.
 
-{% docnavigation title="Next steps" %}
-
 - Provider installation and configuration instructions are [here](/docs/providers/provider-installation).
-
-{% /docnavigation %}
-
-{% docnavigation title="See also" %}
-
-- [Provider upgrade instructions](/docs/providers/maintenance/provider-maintenance)
-
 - More details on how the provider works [here](/docs/golem/overview/provider).
-
-{% /docnavigation %}
-
-
-
 
 ### Requestor
 
@@ -49,19 +35,13 @@ __Requestor__ is a node that wants to use hardware resources that are available 
 
 The main or most typical benefit for the requestor is to have instant access to a very large pool of hardware. Instead of using local hardware, the requestor can use the IT resources available on the decentralized market. What's more one requestor can use the hardware from many providers at the same time.
 
-
-{% docnavigation title="See also" %}
-
 - More details on how the requestor works [here](/docs/golem/overview/requestor).
-
-{% /docnavigation %}
 
 ### How do Requestors and Providers interact?
 
 {% alert level="info" %}
 
-This is a simplified process description provided to illustrate the relationship between the provider and the requestor.
-The whole process is handled by Golem software Yagna and SDK.
+This is a simplified process description provided to illustrate the relationship between the provider and the requestor. The whole process is handled by Golem software Yagna and SDK.
 
 {% /alert %}
 
@@ -86,7 +66,5 @@ More on the payment process you can find [here](/docs/golem/payments).
 As a Provider, you will probably tend to operate in networks where payments are done in real GLM tokens. Your provider's Yagna by default is configured to work in these networks and use Polygon and Ethereum Mainnet as payment platforms.
 
 If you are a requestor you would rather start in a development environment - your Yagna installation is by default configured to do payments in Goerli Network. Thus you work in the testnet. You pay there in test GLM tokens that are available from a faucet. It is free, but you cannot expect capacity and performance. Once you have tested your application you should consider switching to mainnet.
-
-
 
 
