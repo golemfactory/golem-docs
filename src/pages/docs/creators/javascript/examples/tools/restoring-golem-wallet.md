@@ -118,7 +118,7 @@ You'll need to unlock your key each time you start your Yagna service because, f
 
 If you have used `yagna` before, you have probably already created an application key (the key that the requestor agent uses to connect to the `yagna` service).
 
-In that case, after you import your Ethereum key, you need to re-create Yagna's application key, as the previous one is now bound to your old key:
+In that case, after you import your Ethereum mainnet key, you need to re-create Yagna's application key, as the previous one is now bound to your old key:
 
 ```bash
  yagna app-key create requestor-mainnet
