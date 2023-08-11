@@ -48,7 +48,7 @@ To enable the service to use the mainnet, you'll need to instruct it to use a co
 yagna payment init --sender --network=polygon --driver=erc20
 ```
 {% /tab %}
-{% tab label="Ethereum mainnet" %}
+{% tab label="Ethereum" %}
 ```bash
 yagna payment init --sender --network=mainnet --driver=erc20
 ```
@@ -81,7 +81,7 @@ In the context of running Golem on mainnet, here are the commands for each of th
 yagna payment status --sender --network=polygon --driver=erc20
 ```
 {% /tab %}
-{% tab label="Ethereum mainnet" %}
+{% tab label="Ethereum" %}
 ```bash
 yagna payment status --sender --network=mainnet --driver=erc20
 ```

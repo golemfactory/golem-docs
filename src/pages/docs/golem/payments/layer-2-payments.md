@@ -27,7 +27,7 @@ What makes Polygon attractive is that its chain is fully compatible with Ethereu
 
 The consensus on Polygon's mainnet chain is maintained by a carefully selected and somewhat decentralized set of validator nodes who use a proof-of-stake mechanism, whereby the validators stake their MATIC tokens. Because of this setup and because no active synchronization with Ethereum is attempted, the costs of transactions are several orders of magnitude lower than on Ethereum.
 
-A user wishing to enter and exit Polygon - that is transfer funds between Polygon and the Ethereum mainnet - needs to use a bridge - a special kind of contract that locks user's funds on one chain and transfers them a respective amount on the other chain. Because those bridges need to work on the Ethereum, they're pretty costly to interact with. 
+A user wishing to enter and exit Polygon - that is transfer funds between Polygon and the Ethereum - needs to use a bridge - a special kind of contract that locks user's funds on one chain and transfers them a respective amount on the other chain. Because those bridges need to work on the Ethereum, they're pretty costly to interact with. 
 
 The good news is that a user having funds on Polygon - e.g. someone who received tokens as a Golem provider - may not have an immediate need to exit from Polygon to mainnet as there are a lot of centralized and decentralized exchanges and other kinds of DeFi solutions already operating directly _on_ the Polygon chain.
 
@@ -47,9 +47,9 @@ Of course, you also need to enable your accounts' sender mode, which is done usi
 
 {% docnavigation title="Next steps" %}
 
-- If you're interested in running a requestor on the Polygon Ethereum mainnet, to be able to leverage the main pool of Golem providers, please refer to [Using Golem on the mainnet](/docs/creators/javascript/guides/switching-to-mainnet).
+- If you're interested in running a requestor on the Polygon Ethereum, to be able to leverage the main pool of Golem providers, please refer to [Using Golem on the mainnet](/docs/creators/javascript/guides/switching-to-mainnet).
 
-- You can be also interested how you can send GLM tokens from the Ethereum Mainnet to Polygon and vice versa: [GLM  mainnet polygon conversion](/docs/golem/payments/golem-token-conversion)
+- You can be also interested how you can send GLM tokens from the Ethereum to Polygon and vice versa: [GLM  mainnet polygon conversion](/docs/golem/payments/golem-token-conversion)
 
 {% /docnavigation %}
 

@@ -29,9 +29,9 @@ Okay, so while technically we now know how to hand out tasks to providers on pai
 
 The most important distinction in basically every piece of payment-related activity, both when you consider transactions between the network's nodes but also when talking about getting funds in and out of Golem is whether you're using the regular ERC-20 token directly on the Ethereum blockchain or whether you're using Polygon.
 
-While direct, on-chain transactions using ERC-20-based tokens have long become the daily bread for the Ethereum mainnet and constitute a significant part of more than a million transactions passing through the chain each day, the ETH's price and the average gas prices make it almost completely useless as a means of exchange in Golem where the values paid will usually be orders of magnitude smaller than the transaction fees.
+While direct, on-chain transactions using ERC-20-based tokens have long become the daily bread for the Ethereum and constitute a significant part of more than a million transactions passing through the chain each day, the ETH's price and the average gas prices make it almost completely useless as a means of exchange in Golem where the values paid will usually be orders of magnitude smaller than the transaction fees.
 
-Of course, if you're willing to accept that disproportion, you may continue to use the Ethereum mainnet payments but for the majority of Golem node users, **Polygon** will be the main platform both when paying for tasks and receiving payments for their execution.
+Of course, if you're willing to accept that disproportion, you may continue to use the Ethereum payments but for the majority of Golem node users, **Polygon** will be the main platform both when paying for tasks and receiving payments for their execution.
 
 For more information regarding Layer 2 and Polygon, please refer to our introduction to [Layer 2 payments](/docs/golem/payments/layer-2-payments):
 
@@ -48,7 +48,7 @@ Please follow the instructions provided in [Golem wallet backup](/docs/creators/
 ## Getting funds to your requestor
 
 Note: To provide payments in GLM on blockchains you will need both GLMs and the tokens required to pay for the gas.
-Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
+Just like any transactions on the Ethereum require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 
 ### On test network
 
@@ -60,7 +60,7 @@ yagna payment fund
 ### On paid network
 
 Note: To provide payments in GLM on blockchains you will need both GLMs and the tokens required to pay for the gas.
-Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
+Just like any transactions on the Ethereum require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 
 
 {% alert level="info" %}
@@ -77,7 +77,7 @@ To facilitate operation of blockchains it is useful export your Golem wallet add
 2. Buy MATICs on Polygon
 3. Swap some of MATICs to GLMs on uniswap
 
-#### Acquiring MATIC or GLM tokens on Polygon from Ethereum Mainnet
+#### Acquiring MATIC or GLM tokens on Polygon from Ethereum
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
 
@@ -98,7 +98,7 @@ To facilitate operation of blockchains it is useful export your Golem wallet add
 You can consider one of the following options:
 
 * swapping GLM tokens to MATIC and selling them directly on a trading platform or
-* bridging them to Ethereum Mainnet 
+* bridging them to Ethereum 
 
 {% alert level="info" %}
 It is easier to access your ERC-20 tokens by exporting your wallet (in Ethereum wallet v3 format) and then importing it into MetaMask. 
