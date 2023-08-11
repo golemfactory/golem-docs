@@ -48,7 +48,7 @@ In the context of running Golem on mainnet, here are the commands for each of th
 yagna payment status --sender --network=polygon --driver=erc20
 ```
 {% /tab %}
-{% tab label="Ethereum" %}
+{% tab label="Ethereum mainnet" %}
 ```bash
 yagna payment status --sender --network=mainnet --driver=erc20
 ```
@@ -69,7 +69,7 @@ To upgrade Yagna service stop it (Ctrl-C) and follow installation procedure [(in
 
 {% docnavigation title="See also" %}
 
-- [Sending GLM from the Ethereum to Polygon and back.](/docs/golem/payments/golem-token-conversion)
+- [Sending GLM from the Ethereum Mainnet to Polygon and back.](/docs/golem/payments/golem-token-conversion)
 
 {% /docnavigation %}
 

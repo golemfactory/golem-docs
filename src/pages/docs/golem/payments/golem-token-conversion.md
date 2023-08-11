@@ -1,5 +1,5 @@
 ---
-description: Sending GLM from the Ethereum to Polygon and back.
+description: Sending GLM from the Ethereum Mainnet to Polygon and back.
 title: Golem Token conversion
 ---
 #
@@ -7,7 +7,7 @@ title: Golem Token conversion
 
 Since the Beta.4 release of Golem, Polygon network became the default platform for payments between Golem requestors and providers.
 
-While Polygon itself offers countless opportunities in the form of distributed exchanges and other DeFi platforms, one might still want to move their hard-earned GLM tokens to the safety of the Ethereum, or conversely, get their mainnet GLMs to Polygon to pay for tasks on Golem.
+While Polygon itself offers countless opportunities in the form of distributed exchanges and other DeFi platforms, one might still want to move their hard-earned GLM tokens to the safety of the Ethereum Mainnet, or conversely, get their mainnet GLMs to Polygon to pay for tasks on Golem.
 
 Whatever your need, there may come a time when you'd like to send your GLMs one way or the other and the instructions below will serve as your guide.
 
@@ -15,7 +15,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 For some of the instructions below you need to configure the Metamask wallet extension for browser and add your wallet.
 {% /alert %}
 
-### Ethereum to Polygon and Polygon to Ethereum
+### Ethereum Mainnet to Polygon and Polygon to Ethereum Mainnet
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
 
@@ -26,7 +26,7 @@ For some of the instructions below you need to configure the Metamask wallet ext
 
 ## MATIC tokens
 
-Just like any transactions on the Ethereum require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
+Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 
 - You can use the bridge to exchange other tokens to MATICs, or
 - you can buy MATICS directly on trading platform or

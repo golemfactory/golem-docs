@@ -1,13 +1,13 @@
 ---
 title: GLM Conversion
-description: Sending GLM from the Ethereum to Polygon and back.
+description: Sending GLM from the Ethereum Mainnet to Polygon and back.
 ---
 
 # Mainnet / Polygon GLM Conversion
 
 Since the Beta.4 release of Golem, Polygon network became the default platform for payments between Golem requestors and providers.
 
-While Polygon itself offers countless opportunities in the form of distributed exchanges and other DeFi platforms, one might still want to move their hard-earned GLM tokens to the safety of the Ethereum, or conversely, get their mainnet GLMs to Polygon to pay for tasks on Golem.
+While Polygon itself offers countless opportunities in the form of distributed exchanges and other DeFi platforms, one might still want to move their hard-earned GLM tokens to the safety of the Ethereum Mainnet, or conversely, get their mainnet GLMs to Polygon to pay for tasks on Golem.
 
 Whatever your need, there may come a time when you'd like to send your GLMs one way or the other and the instructions below will serve as your guide.
 
@@ -16,7 +16,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 * Configure the Metamask wallet extension for Chrome / Firefox / Opera and add your wallet.   
 
 
-## Ethereum to Polygon
+## Ethereum Mainnet to Polygon
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology/login?next=%2Fbridge) **(Polygon Bridge)**
 
@@ -40,7 +40,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 
 ![](missing_png_etherscan.png)
 
-## Polygon to Ethereum
+## Polygon to Ethereum Mainnet
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology/login?next=%2Fbridge) **(Polygon Bridge)**
 
@@ -54,7 +54,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 
 Apart from the GLM tokens used for payments on the Golem network, one still needs to use the network's base token to pay for gas.
 
-Just like any transactions on the Ethereum require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
+Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 
 ### Obtaining MATIC tokens
 
