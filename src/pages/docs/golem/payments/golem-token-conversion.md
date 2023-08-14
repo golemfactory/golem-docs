@@ -15,7 +15,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 For some of the instructions below you need to configure the Metamask wallet extension for browser and add your wallet.
 {% /alert %}
 
-### Ethereum Mainnet to Polygon and Polygon to Ethereum Mainnet
+### Ethereum <-> Polygon
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
 
@@ -35,7 +35,7 @@ Just like any transactions on the Ethereum Mainnet require ETH, operations on th
 
 [//]: <> ( see https://www.reddit.com/r/GolemProject/comments/r3ejkl/guide_part_2_l2_glm_to_exchange_swapping_glm_for/ )
 
-### Swapping MATIC and GLM tokens on Polygon
+### Swapping GLM tokens for MATIC on Polygon
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
 1. Select **Proof of Stake** and then **Swap** (in the Wallet Features section)
