@@ -3,7 +3,7 @@ description: Tutorials
 title: JS SDK Tutorials
 ---
 
-# Golem JS Tutorials 
+# Golem JS Tutorials
 
 JS tutorials are designed for developers who want to learn Golem concepts by a practical realization of proposed project challenges. 
 Here is a list of available tutorials and their content:
