@@ -8,6 +8,7 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+  distDir: 'dist',
 }
 
 export default withSearch(
