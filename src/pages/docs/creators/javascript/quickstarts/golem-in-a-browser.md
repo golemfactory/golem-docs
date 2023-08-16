@@ -53,28 +53,38 @@ This will install `http-server` utility to host our web page, where we will run 
 Next, we'll create the main `index.html` file with the following content:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Golem App</title>
-    <script type="module" src="requestor.mjs"></script>
-</head>
-<body>
-    <button onclick="run()">Run</button>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebRequestor QuickStart</title>
+
+  </head>
+  <body>
+    <h1>WebRequestor - QuickStart</h1>
     <div class="container">
-        <div>
-            <p>Results</p>
-            <pre id="results"></pre>
+      <div class="col-6">
+        <h3>Actions</h3>
+        <div class="row vertical">
+          <div>
+            <button id="echo" onclick="run()">Echo Hello World</button>
+          </div>
         </div>
-        <div>
-            <p>Logs</p>
-            <pre id="logs"></pre>
+        <div class="results console">
+          <h3>Results</h3>
+          <ul id="results"></ul>
         </div>
+      </div>
+      <div class="col-6 border-left">
+        <div class="logs console">
+          <h3>Logs</h3>
+          <ul id="logs"></ul>
+        </div>
+      </div>
     </div>
-  <script></script>
-</body>
-</html>
+    <script type="module" src="requestor.mjs"></script>
+    </body>
+</html>     
 ```
 
 In this layout, there are three elements:
@@ -90,7 +100,8 @@ In this layout, there are three elements:
 Next, we'll create a `requestor.mjs` file with the following content:
 
 ```js
-import * as yajsapi from "https://unpkg.com/yajsapi"
+import * as golem from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js"
+
 
 function appendResults(result) {
     const results = document.getElementById('results');
@@ -108,34 +119,35 @@ const logger = {
     log: (msg) => appendLog(msg),
     warn: (msg) => appendLog(msg, 'warn'),
     //debug: (msg) => appendLog(msg, 'debug'),
+    debug: (msg) => console.log(msg),
     error: (msg) => appendLog(msg, 'error'),
     info: (msg) => appendLog(msg, 'info'),
     table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
 }
 async function run() {
 
-    const executor = await yajsapi.TaskExecutor.create({
+    const executor = await golem.TaskExecutor.create({
         package: "dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3",
-        //yagnaOptions: { apiKey: '1083168de3ae4ba2bda2cd55b58c3e9b' },
         yagnaOptions: { apiKey: 'try_golem' },
         logger
     }).catch(e => logger.error(e));
+
     await executor
         .run(async (ctx) => appendResults((await ctx.run("echo 'Hello World'")).stdout))
         .catch(e => logger.error(e));
+
     await executor.end();
 }
 
 document.run = run;
 
-export { };
 ```
 
 Note the file contains the `run()` function that creates the body of the requestor script (similar to the one we use in Node.js) and a set of helper functions that will let us present the logs and results in the browser window.
 
 Now, if we have a running Yagna service started with the `--api-allow-origin` properly set to `http://localhost:8080` and have your Yagna APP key set to 'try_golem' launch `http-server` we should see our app available in the browser.
 
-[ Open localhost ](http://localhost:8080)
+[ Open localhost ](http://localhost:8080/index)
 
 If you click the run button, after a while, in the result container, we should get the result of the script: `Hello World` and see the logs of executed commands in the log container.
 
