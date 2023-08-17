@@ -35,7 +35,7 @@ function Heading({ section, isActive }) {
 
 function recursiveRender(children, isActive) {
   return children.map((node) => (
-    <li key={node.id}>
+    <li className="py-1" key={node.id}>
       <Link
         href={`#${node.id}`}
         className={
