@@ -193,7 +193,7 @@ import { Footer } from './Footer'
 import { Feedback } from './Feedback'
 import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
-import { GuideIcon } from './icons/GuideIcon'
+import { ArticleType } from './ArticleType'
 
 export function Layout({
   children,
@@ -240,12 +240,7 @@ export function Layout({
         <div className="min-w-0 max-w-5xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
           <article>
             <div className="mb-1 flex items-center gap-x-4">
-              {type === 'guide' && (
-                <div className="mb-4 inline-flex items-center gap-x-2 rounded-2xl bg-lightbluedarker px-1.5 py-1 font-medium">
-                  <GuideIcon className="h-6 w-6  text-white" />
-                  <span className="text-sm text-dark ">Guide</span>
-                </div>
-              )}
+              {type && <ArticleType type={type} />}
               {tags && (
                 <div className="flex gap-x-4 ">
                   {tags.split(',').map((tag, index, array) => (
