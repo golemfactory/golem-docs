@@ -57,3 +57,10 @@ ul {
   @apply text-inherit;
   @apply font-normal;
 }
+
+.prose
+  :where(tbody td:first-child, tfoot td:first-child):not(
+    :where([class~='not-prose'] *)
+  ) {
+  @apply md:min-w-[20rem]
+}

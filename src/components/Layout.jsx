@@ -16,7 +16,7 @@ function Heading({ section, isActive }) {
   const isChildActive = section.children.some(isActive)
   return (
     <h3>
-      <a
+      <Link
         href={`#${section.id}`}
         className={clsx(
           isActive(section) && !isChildActive
@@ -28,7 +28,7 @@ function Heading({ section, isActive }) {
           <div className="absolute -left-[1.35rem] mt-1.5 h-2.5 w-2.5 overflow-visible rounded-full bg-primary text-sm dark:bg-darkprimary"></div>
         )}
         {section.title}
-      </a>
+      </Link>
     </h3>
   )
 }
@@ -36,7 +36,7 @@ function Heading({ section, isActive }) {
 function recursiveRender(children, isActive) {
   return children.map((node) => (
     <li key={node.id}>
-      <a
+      <Link
         href={`#${node.id}`}
         className={
           isActive(node)
@@ -48,7 +48,7 @@ function recursiveRender(children, isActive) {
           <div className="absolute -left-[2.6rem] mt-1.5 h-2.5 w-2.5 overflow-visible rounded-full bg-primary dark:bg-darkprimary"></div>
         )}
         {node.title}
-      </a>
+      </Link>
       {node.children && node.children.length > 0 && (
         <ul role="list" className="  pl-5 text-slate-500 dark:text-slate-400">
           {recursiveRender(node.children, isActive)}
@@ -193,7 +193,7 @@ import { Footer } from './Footer'
 import { Feedback } from './Feedback'
 import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
-import { GuideIcon } from './icons/GuideIcon'
+import { ArticleType } from './ArticleType'
 
 export function Layout({
   children,
@@ -240,12 +240,7 @@ export function Layout({
         <div className="min-w-0 max-w-5xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
           <article>
             <div className="mb-1 flex items-center gap-x-4">
-              {type === 'guide' && (
-                <div className="mb-4 inline-flex items-center gap-x-2 rounded-2xl bg-lightbluedarker px-1.5 py-1 font-medium">
-                  <GuideIcon className="h-6 w-6  text-white" />
-                  <span className="text-sm text-dark ">Guide</span>
-                </div>
-              )}
+              {type && <ArticleType type={type} />}
               {tags && (
                 <div className="flex gap-x-4 ">
                   {tags.split(',').map((tag, index, array) => (

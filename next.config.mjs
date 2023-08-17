@@ -3,7 +3,6 @@ import withSearch from './src/markdoc/search.mjs'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md'],
   experimental: {
@@ -13,6 +12,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+}
+
+if (!process.env.VERCEL) {
+  nextConfig.output = 'export'
 }
 
 export default withSearch(
