@@ -72,9 +72,12 @@ See examples [here](/docs/creators/javascript/examples/composing-tasks).
 
 Users can send:
 
-* files to remote computer (`.uploadFile()` method)
-* files from remote computer (`.downloadFile()` method)
+* files to remote computer (`.uploadFile()` method) (node.js)
+* files from remote computer (`.downloadFile()` method) (node.js)
 * json to remote computer (`.uploadJson()` method)
+* data to remote computer (`.uploadData()` method) (web browser and node.js)
+* data form remote computer (`.downloadData()` method) (web browser)
+
 
 The user must define a VOLUME within an image definition, to indicate a folder designed to contain files on a remote computer to enable data transfer.
 

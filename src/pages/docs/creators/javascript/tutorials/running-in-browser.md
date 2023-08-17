@@ -85,7 +85,7 @@ Next, we'll create the main `index.html` file with a minimal layout:
 <head>
     <meta charset="UTF-8">
     <title>Golem App</title>
-    <script type="module"> // replace with script code </script>
+
 </head>
 <body>
     <button onclick="run()">Run</button>
@@ -99,7 +99,7 @@ Next, we'll create the main `index.html` file with a minimal layout:
             <pre id="logs"></pre>
         </div>
     </div>
-  <script></script>
+<script type="module"> // replace with script code </script>
 </body>
 </html>
 ```
@@ -118,8 +118,8 @@ Note the `<script>` tag in the `<head>` section  - here we will place our js cod
 First, we will import the `@golem-sdk/golem-js` library:
 
 ```html
-        <script>
-       import * as yajsapi from "https://unpkg.com/yajsapi"
+        <script type="module">
+         import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js";
        </script>
 ```
 
@@ -133,21 +133,22 @@ Note that the `create()` method received additional 3 parameters:
 - Logger is a function that will be used by SDK to log - we will define it in a moment.
 
 ```html
-<script>
+<script type="module">
     //
     // .. previously added code 
     // 
-    async function run() {
-        const executor = await yajsapi.TaskExecutor.create({
-            package: "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae",
-            yagnaOptions: { apiKey: 'try_golem' }
-            logger
+      async function run() {
+        const executor = await TaskExecutor.create({
+          yagnaOptions: { apiKey: 'try_golem' },
+          package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
+          logger,
         });
         await executor
-            .run(async (ctx) => appendResults((await ctx.run("echo 'Hello World'")).stdout))
-            .catch(e => logger.error(e));
+          .run(async (ctx) => appendResults((await ctx.run("echo 'Hello World'")).stdout))
+          .catch((e) => logger.error(e));
         await executor.end();
-    }
+      }
+      window.run = run;
 </script>
 ```
 
@@ -161,21 +162,20 @@ The result is passed as an input param of the `appendResults()` function that wi
 Now let's create the `appendResults()` function which will put the output of our application into the designated `results` container.
 
 ```html
-<script>
+<script type="module">
     //
     // .. previously added import statement  
     // 
-    function appendResults(result) {
-        const results = document.getElementById('results');
-        const div = document.createElement('div');
-        div.appendChild(document.createTextNode(result));
-        results.appendChild(div);
+    export function appendResults(result) {
+        const results_el = document.getElementById("results");
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(result));
+        results_el.appendChild(li);
+      }
 
     //
     // .. async function run ....
     // 
-    
-    }
 </script>
 ```
 
@@ -185,24 +185,25 @@ The TaskExecutor offers an optional logger parameter. It will accept an object t
 
 
 ```html
-<script>
+<script type="module">
     //
     // .. previously added code 
     // 
-    function appendLog(msg, level = 'info') {
-        const logs = document.getElementById('logs');
-        const div = document.createElement('div');
-        div.appendChild(document.createTextNode(`[${new Date().toISOString()}] [${level}] ${msg}`));
-        logs.appendChild(div);
-    }
+    export function appendLog(msg) {
+        const logs_el = document.getElementById("logs");
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        logs_el.appendChild(li);
+      }
+
     const logger = {
-        log: (msg) => appendLog(msg),
-        warn: (msg) => appendLog(msg, 'warn'),
-        debug: (msg) => appendLog(msg, 'debug'),
-        error: (msg) => appendLog(msg, 'error'),
-        info: (msg) => appendLog(msg, 'info'),
+        log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
+        warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
+        debug: (msg) => appendLog(`[${new Date().toISOString()}] [debug] ${msg}`),
+        error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
+        info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
         table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
-    }
+    };
 
     //
     // .. async function run ....
@@ -215,46 +216,74 @@ The TaskExecutor offers an optional logger parameter. It will accept an object t
 Now that we have all the necessary components defined, the code between `<script>` tags should look like this:
 
 ```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebRequestor Task API</title>
+  </head>
+  <body>
+    <h1>WebRequestor - Hello World</h1>
+    <div class="container">
+      <div class="col-6">
+        <h3>Actions</h3>
+        <div class="row vertical">
+          <div>
+            <button id="echo" onclick="run()">Echo Hello World</button>
+          </div>
+        </div>
+        <div class="results console">
+          <h3>Results</h3>
+          <ul id="results"></ul>
+        </div>
+      </div>
+      <div class="col-6 border-left">
+        <div class="logs console">
+          <h3>Logs</h3>
+          <ul id="logs"></ul>
+        </div>
+      </div>
+    </div>
+
     <script type="module">
+      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js";
+      
+      export function appendLog(msg) {
+        const logs_el = document.getElementById("logs");
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        logs_el.appendChild(li);
+      }
+      export function appendResults(result) {
+        const results_el = document.getElementById("results");
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(result));
+        results_el.appendChild(li);
+      }
 
-    
-     
-     import * as yajsapi from "https://unpkg.com/yajsapi"
-
-
-        function appendResults(result) {
-            const results = document.getElementById('results');
-            const div = document.createElement('div');
-            div.appendChild(document.createTextNode(result));
-            results.appendChild(div);
-        }
-        function appendLog(msg, level = 'info') {
-            const logs = document.getElementById('logs');
-            const div = document.createElement('div');
-            div.appendChild(document.createTextNode(`[${new Date().toISOString()}] [${level}] ${msg}`));
-            logs.appendChild(div);
-        }
-        const logger = {
-            log: (msg) => appendLog(msg),
-            warn: (msg) => appendLog(msg, 'warn'),
-            debug: (msg) => appendLog(msg, 'debug'),
-            error: (msg) => appendLog(msg, 'error'),
-            info: (msg) => appendLog(msg, 'info'),
-            table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
-        }
-        async function run() {
-            const executor = await yajsapi.TaskExecutor.create({
-                package: "dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3",
-                yagnaOptions: { apiKey: 'try_golem' },
-                logger
-            }).catch(e => logger.error(e));
-            await executor
-                .run(async (ctx) => appendResults((await ctx.run("echo 'Hello World'")).stdout))
-                .catch(e => logger.error(e));
-            await executor.end();
-        }
-        document.run = run;
+      const logger = {
+        log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
+        warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
+        debug: (msg) => console.log(msg),
+        error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
+        info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
+        table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
+      };
+      async function run() {
+        const executor = await TaskExecutor.create({
+          yagnaOptions: { apiKey: 'try_golem' },
+          package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
+          logger,
+        });
+        await executor
+          .run(async (ctx) => appendResults((await ctx.run("echo 'Hello World'")).stdout))
+          .catch((e) => logger.error(e));
+        await executor.end();
+      }
+      window.run = run;
     </script>
+  </body>
+</html>
 ```
 
 Now if we have:
@@ -265,7 +294,7 @@ launch `http-server`.
 
 You should see the app available in the browser.
 
-[ Open localhost ](http://localhost:8080)
+[ Open localhost ](http://localhost:8080/index)
 
 If you click the run button, after a while in the result container, we should get the result of the script: `Hello World`, and in the log container we should see the logs of executed commands.
 

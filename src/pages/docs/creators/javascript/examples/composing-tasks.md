@@ -52,8 +52,14 @@ The following commands are currently available:
 | ----------- | :------------------:|:------------------------:| 
 | `run()` | yes | yes|
 | `uploadFile()` | yes | no |
-| `uploadJSON()` | yes | no |
+| `uploadJson()` | yes | yes |
 | `downloadFile()` | yes | no |
+| `uploadData()` | yes | yes |
+| `downloadData()` | no |  yes |
+| `downloadJson()` | no | yes |
+
+
+
 
 {% alert level="info" %}
 This article focuses on the `run()` command and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](/docs/creators/javascript/examples/transferring-data) article.
