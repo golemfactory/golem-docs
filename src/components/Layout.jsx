@@ -16,7 +16,7 @@ function Heading({ section, isActive }) {
   const isChildActive = section.children.some(isActive)
   return (
     <h3>
-      <a
+      <Link
         href={`#${section.id}`}
         className={clsx(
           isActive(section) && !isChildActive
@@ -28,7 +28,7 @@ function Heading({ section, isActive }) {
           <div className="absolute -left-[1.35rem] mt-1.5 h-2.5 w-2.5 overflow-visible rounded-full bg-primary text-sm dark:bg-darkprimary"></div>
         )}
         {section.title}
-      </a>
+      </Link>
     </h3>
   )
 }
@@ -36,7 +36,7 @@ function Heading({ section, isActive }) {
 function recursiveRender(children, isActive) {
   return children.map((node) => (
     <li key={node.id}>
-      <a
+      <Link
         href={`#${node.id}`}
         className={
           isActive(node)
@@ -48,7 +48,7 @@ function recursiveRender(children, isActive) {
           <div className="absolute -left-[2.6rem] mt-1.5 h-2.5 w-2.5 overflow-visible rounded-full bg-primary dark:bg-darkprimary"></div>
         )}
         {node.title}
-      </a>
+      </Link>
       {node.children && node.children.length > 0 && (
         <ul role="list" className="  pl-5 text-slate-500 dark:text-slate-400">
           {recursiveRender(node.children, isActive)}

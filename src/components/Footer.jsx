@@ -7,6 +7,7 @@ import { RedditIcon } from './icons/RedditIcon'
 import { YoutubeIcon } from './icons/YoutubeIcon'
 import { javascript, python, dapps } from '@/navigation/footer'
 import { ArrowRightIcon } from './icons/ArrowRightIcon'
+import Link from 'next/link'
 
 const links = [...javascript, ...python]
 
@@ -47,12 +48,12 @@ const LinkSection = ({ title, links }) => (
     <ul role="list" className="list-disc">
       {links.map(({ title, href }) => (
         <li key={href + title}>
-          <a
+          <Link
             href={href}
             className="text-sm font-medium leading-6 text-primary dark:text-darkprimary"
           >
             {title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -86,14 +87,14 @@ const DocHeader = ({ title, description, link, classes }) => (
 )
 
 const NavLink = ({ link }) => (
-  <a
+  <Link
     href={link}
     aria-label="Overview"
     className="flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-darkprimary"
   >
     Overview{' '}
     <ArrowRightIcon className="h-3 w-3 fill-primary dark:fill-darkprimary" />
-  </a>
+  </Link>
 )
 
 export const Footer = () => (
@@ -139,7 +140,7 @@ const LowerFooter = () => (
 const FooterNav = () => (
   <div className="flex justify-center space-x-6 md:order-2">
     {navigation.map((item, index) => (
-      <a
+      <Link
         key={item.name + index}
         href={item.href}
         className="text-gray-400 hover:text-gray-500"
@@ -149,7 +150,7 @@ const FooterNav = () => (
           className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-50"
           aria-hidden="true"
         />
-      </a>
+      </Link>
     ))}
   </div>
 )
