@@ -1,6 +1,6 @@
 ---
 description: 
-title: Golem Quickstarts
+title: Golem QuickStarts
 ---
 
 We provide some QuickStart examples to help you start your journey with Golem:

@@ -164,13 +164,6 @@ const myFilter = async (proposal) => {
   console.log(proposal.properties['golem.node.id.name'] , proposal.properties['golem.com.pricing.model.linear.coeffs']);  
   return decision;
 };
-/*
-const myFilter2 = async (proposal) => {
-
-    console.log(proposal.properties['golem.com.usage.vector'], 
-                proposal.properties['golem.node.id.name']);
-    return false;
-}*/
 
 (async function main() {
   const executor = await TaskExecutor.create({

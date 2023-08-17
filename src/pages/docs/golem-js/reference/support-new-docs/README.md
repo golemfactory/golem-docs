@@ -16,7 +16,7 @@
 
 ## Golem application development
 
-For a detailed introduction to using Golem and `@golem-sdk/golem-js` to run your tasks on Golem [please consult our quickstart section](https://docs.golem.network/creators/javascript/quickstart/).
+For a detailed introduction to using Golem and `@golem-sdk/golem-js` to run your tasks on Golem [please consult our QuickStarts section](https://docs.golem.network/creators/javascript/quickstart/).
 
 ### Installation
 
@@ -119,7 +119,7 @@ yarn format
 - [Golem](https://golem.network), a global, open-source, decentralized supercomputer that anyone can access.
 - Learn what you need to know to set up your Golem requestor node:
   - [Requestor development: a quick primer](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development)
-  - [Quick start](https://docs.golem.network/creators/javascript/quickstart/)
+  - [QuickStarts](https://docs.golem.network/creators/javascript/quickstart/)
 - Have a look at the most important concepts behind any Golem application: [Golem application fundamentals](https://handbook.golem.network/requestor-tutorials/golem-application-fundamentals)
 - Learn about preparing your own Docker-like images for the [VM runtime](https://handbook.golem.network/requestor-tutorials/vm-runtime)
 - Write your own app with [JavaScript API](https://docs.golem.network/creators/javascript/high-level/task-model/)
