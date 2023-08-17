@@ -5,7 +5,7 @@ description:
 type: design
 ---
 
-# How would you like to create?
+# How do you want to create?
 
 {% grid %}
 
