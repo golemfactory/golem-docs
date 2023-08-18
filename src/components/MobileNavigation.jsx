@@ -2,11 +2,9 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Dialog } from '@headlessui/react'
-import { navigation } from '@/navigation/docs'
-import { navigation as JSReference } from '@/navigation/jsreference'
+import { mergednavs } from '@/navigation/mergeNavigation'
 import { Logomark } from '@/components/Logo'
-import { ReferenceNavigation } from '@/components/JSReferenceNavigation'
-import { MenuBar, SideBar } from './Navigation'
+import { SideBar } from './Navigation'
 
 function MenuIcon(props) {
   return (
@@ -88,7 +86,7 @@ export function MobileNavigation({}) {
             </Link>
           </div>
 
-          {navigation.map((section) => (
+          {mergednavs.map((section) => (
             <div className="mb-4" key={section.title}>
               <Link
                 href={section.links[0].href}
@@ -99,7 +97,7 @@ export function MobileNavigation({}) {
             </div>
           ))}
           <div className="pt-10">
-            <SideBar navigation={navigation} className="mt-5 px-1" />
+            <SideBar navigation={mergednavs} className="mt-5 px-1" />
           </div>
           {/* <div className="pt-10">
             <ReferenceNavigation
