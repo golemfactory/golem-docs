@@ -78,13 +78,21 @@ Use 'docker scan' to run Snyk tests against images to find vulnerabilities and l
 
 {% alert level="info" %}
 
-Note that the image won't be turned into a file in the same directory. You don't need to see this file, but if you do, search the internet for where images are stored in your operating system.
+Note that the image won't be turned into a file in the same directory. Location of the actual Docker image file depends on the Docker and your operating system version. Please consult docker manual for additional information.
+
+
 
 {% /alert  %}
 
 ## Converting from Docker to Golem and uploading it to the registry
 
 Now when you have a Docker image built, we can convert it to a Golem image. To save time, we will also upload it to the registry with the same command. To do this, you need to run the appropriate command that uses `gvmkit-build` to convert and push the image `golem-example` to the registry.
+
+{% alert level="info" %}
+
+If you do not have `gvmkit-build` installed please follow [installation intructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation). You can also use it without installation using `npx` or `pipx` commands.
+
+{% /alert  %}
 
 {% tabs %}
 {% tab label="JavaScript" %}
@@ -94,19 +102,11 @@ gvmkit-build golem-example --push --nologin
 ```
 
 {% /tab %}
-{% tab label="Python on Linux/macOS " %}
+{% tab label="Python" %}
 
 ```bash
-python3 -m gvmkit_build golem-example --push --nologin
+gvmkit_build golem-example --push --nologin
 ```
-
-{% /tab %}
-{% tab label="Python on Windows " %}
-
-```bash
-python -m gvmkit_build golem-example --push --nologin
-```
-
 {% /tab %}
 {% /tabs %}
 
@@ -146,13 +146,17 @@ Uploading image to golem registry: https://registry.golem.network
 
 The hash is found after the `image link`, which in this case gives us the hash `28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9`. If you ever lose your hash, you can always recover/re-generate it by running the same command again.
 
-## Preparing the environment
+## Using the image in a requestor script
 
-To include the `@golem-sdk/golem-js` library, we need to prepare our environment with the following commands:
+Let's use the newly created image in a requestor script and ensure this is the one we have just made.
+
+We need to prepare our environment:
 
 ```bash
+mkdir golem-example
+cd golem-example
 npm init
-npm install @golem-sdk/golem-js
+npm i @golem-sdk/golem-js
 ```
 
 We can now create our `index.mjs` requestor file, with the `package: ...` matching our image hash.

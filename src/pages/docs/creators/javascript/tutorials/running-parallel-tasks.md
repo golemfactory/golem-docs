@@ -336,7 +336,7 @@ const executor = await TaskExecutor.create({
  const range = [...Array(Math.floor(keyspace / step)+1).keys()].map((i) => i*step);
 
  const results = executor.map(range, async (ctx, skip = 0) => {
-   console.log(`hashcat -a 3 -m 400 `${args.hash}` `${args.mask}` --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`);
+   //console.log(`hashcat -a 3 -m 400 `${args.hash}` `${args.mask}` --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`);
    const results = await ctx
            .beginBatch()
            .run(`hashcat -a 3 -m 400 `${args.hash}` `${args.mask}` --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`)
