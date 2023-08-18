@@ -1,6 +1,6 @@
 ---
 description: Template for an example article
-title: This is page title displayed in browser tab.
+title: This is the page title displayed in a browser tab.
 ---
 
 # Example title
@@ -37,13 +37,13 @@ node index.mjs
 
 ## Introduction
 
-Examples should be simple, short and each code snippet ready to copy and run.
+Examples should be simple, and short and each code snippet ready to copy and run.
 
 Examples should focus on single aspects and show how to use a given feature. 
 
-If you have more than one examples listem them.
+If you have more than one example list them.
 
-If there is a need to compare differnt points use a table.
+If there is a need to compare different points use a table.
 
 
 | Command     | Available in node.js| Available in web browser |
@@ -54,10 +54,10 @@ If there is a need to compare differnt points use a table.
 | `downloadFile()` | yes | no |
 
 {% alert level="info" %}
-You can notify reader about some important topics. 
+You can notify readers about some important topics. 
 {% /alert %}
 
-If all examples in the artcle follow specific scenario, you can explain it here.
+If all examples in the article follow a specific scenario, you can explain it here.
 
 ## Giving a title
 
@@ -78,10 +78,10 @@ Images should be placed in /public folder.
 ## Another example
 
 In the example tell:
-- why reader might use it
+- Why readers might use it
 - how he should use it
-- point to outcome
-- point to interesting things that can tell more about he network 
+- Point to outcome
+- Point to interesting things that can tell more about the network 
 
 
 ## Showing variants

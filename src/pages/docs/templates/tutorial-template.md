@@ -99,12 +99,12 @@ Note that this point is not on the agenda, and this is __not__ a good practice.
 Before running make sure:
  remember the readers about the prerequisites:
   What services should be running
-  What what created so far
+  What has been created so far
 
 
 ## Summary
 
-In this tutorial, the reader wha he has done and what he achieved:
+In this tutorial, the reader what he has done and what he achieved:
 
 - Explain the aim of the tutorial
 - Tell a little about the structure
@@ -122,3 +122,6 @@ In this tutorial, the reader wha he has done and what he achieved:
 - [Title](https://github.com) of other related sections: i.e. Tutorials, Guides.
 
 {% /docnavigation %}
+
+
+

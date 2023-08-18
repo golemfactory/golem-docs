@@ -5,15 +5,15 @@ title: This is the page title displayed in a browser tab.
 
 # Introduction to Golem Network Guides
 
-Golem aricles are classified as Examples, Tutorials and Guides. Sometime it is difficult to tell the clear border, as the content depends on the author stile.
+Golem articles are classified as Examples, Tutorials, and Guides. Sometimes it is difficult to tell the clear border, as the content depends on the author's style.
 
 As with every classification, it should be treated more as a guideline.
 
 ## Guides
 
-Guides should introdice concepts and explain terms. The should also intriduce appropiate wording that will be used to name the activities and relations between different entitis.
+Guides should introduce concepts and explain terms. They should also introduce appropriate wording that will be used to name the activities and relations between different entities.
 
-Guides do not not have to contain exmaples or detailes instructions. Rather then they should contain a high level overview of the process:
+Guides do not have to contain examples or detailed instructions. Rather they should contain a high-level overview of the process:
 
 - Introduce terms
 - Explain them
@@ -21,21 +21,21 @@ Guides do not not have to contain exmaples or detailes instructions. Rather then
 
 and refer to examples or tutorials for details.
 
-## Tuorials and examples:
+## Tutorials and examples:
 
-Examples should be possibel to complete in one step. Should focus on specific topic and all not relevant topic should be simplified
+Examples should be possible to complete in one step. Should focus on specific topics and all relevant topics should be simplified
 
-Tuorials, on the other hand, can be done in steps. there might be interaction beteen different elements that impact the proposed solution.
-The steps can be from different areas: how to organize debugging, how to name the file, how to install a tool, how to define a function in the code.
+Tutorials, on the other hand, can be done in steps. there might be interactions between different elements that impact the proposed solution.
+The steps can be from different areas: how to organize debugging, how to name the file, how to install a tool, and how to define a function in the code.
 
 
 # Task model
 
-As the normal nody text is montounus and borring (and difficutl to read), make sure that __term__ are visible or even are [link](#task-model) to specific sections or other articles.
+As the normal body text is monotonous and boring (and difficult to read), make sure that __term__ are visible or even are [link](#task-model) to specific sections or other articles.
 
-## Remember this is guide
+## Remember this is a guide
 
-So shoud cover the topic broadly, and point to the artcles that explore topics in depth.
+So should cover the topic broadly, and point to the articles that explore topics in depth.
 
 You can also provide an overview of interesting areas and point to specific examples or tutorials.
 
@@ -52,7 +52,7 @@ Refer to another [Examples](/docs/templates/example-template)
 
 You can explore our [tutorials](/docs/templates/tutorial-template) to see how to use these features in a defined scenario.
 
-You can provide external source of information [here](https://github.com)
+You can provide an external source of information [here](https://github.com)
 
 {% /docnavigation %}
 
