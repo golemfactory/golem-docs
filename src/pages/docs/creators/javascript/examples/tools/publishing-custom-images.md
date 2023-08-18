@@ -73,19 +73,14 @@ Let's assume for this example your username is `golem`, your Docker image is tag
 gvmkit-build golem-example --push-to golem/my_example:latest
 ```
 {% /tab %}
-{% tab label="Python on Linux/macOS " %}
+{% tab label="Python" %}
 
 ```bash
-python3 -m gvmkit_build golem-example --push-to golem/my_example:latest
+gvmkit-build golem-example --push-to golem/my_example:latest
 ```
 
 {% /tab %}
-{% tab label="Python on Windows " %}
-  
-```bash
-python -m gvmkit_build golem-example --push-to golem/my_example:latest
-```
-{% /tab %}
+
 {% /tabs %}     
 
 

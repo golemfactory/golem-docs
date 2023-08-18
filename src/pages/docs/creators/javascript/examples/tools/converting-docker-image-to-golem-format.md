@@ -118,7 +118,7 @@ npx gvmkit-build golem-example --push --nologin
 {% tab label="Python" %}
 
 ```bash
-gvmkit_build golem-example --push --nologin
+gvmkit-build golem-example --push --nologin
 ```
 
 {% /tab %}
