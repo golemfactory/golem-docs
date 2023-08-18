@@ -400,7 +400,7 @@ $ dapp-manager exec <insert_app_id> backend -- /bin/bash -c "ls -alh"
 
 Because those commands are sent as ExeScripts to the underlying Golem Activity, the main issue currently is that any error while executing such a command is treated as a failure of the activity in question and both the activity and the agreement are immediately terminated by the provider.
 
-As a work-around, one could e.g. bundle and start an SSH daemon in your image and connect to it using a [TCP proxy](creating-golem-dapps.md#tcp-proxy).
+As a workaround, one could e.g. bundle and start an SSH daemon in your image and connect to it using a [TCP proxy](creating-golem-dapps.md#tcp-proxy).
 
 For an illustration of such usage, please refer to the following `yapapi` SSH connection example:
 

@@ -108,7 +108,7 @@ If the above commands executed correctly, congratulations you have just installe
 
 ### Configure requestor and fund your wallet
 
-To start using Golem Network you need a key, which will be also be the address of your wallet. For the purposes of this tutorial we are using testnet. To generate a key and fund your wallet follow these steps:
+To start using Golem Network you need a key, which will also be the address of your wallet. For the purposes of this tutorial we are using testnet. To generate a key and fund your wallet follow these steps:
 
 #### Start the daemon
 
@@ -124,11 +124,11 @@ yagna service run
 
 !!! info
 
-    If you have encountered problems please take look on [Run the daemon](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/#run-the-daemon) section
+    If you have encountered problems please take a look at [Run the daemon](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development/#run-the-daemon) section
 
 #### Generate the app key
 
-To use the network you must have your own unique key for which is used for billing. To generate the key, make sure you have running `yagna` daemon from the [previous step](quickstart.md#start-the-daemon), leave it running in the background and in a separate command line window type in:
+To use the network you must have your own unique key which is used for billing. To generate the key, make sure you have running `yagna` daemon from the [previous step](quickstart.md#start-the-daemon), leave it running in the background and in a separate command line window type in:
 
 ```bash
 yagna app-key create requestor
@@ -233,7 +233,7 @@ const taskToRunOnProvider = async (workerContext) => {
 
 #### Define commands to run in the task scope
 
-This function gets first parameter `workContext` that is a [WorkContext](../javascript/docs/classes/task_work.WorkContext.md) object. This object allow you set the commands that you want to run in the scope of one task on one provider. So the command we would like to run on the provider is `node -v`:
+This function gets first parameter `workContext` that is a [WorkContext](../javascript/docs/classes/task_work.WorkContext.md) object. This object allows you to set the commands that you want to run in the scope of one task on one provider. So the command we would like to run on the provider is `node -v`:
 
 
 ```js

@@ -12,9 +12,9 @@ If you encounter problems during the yagna daemon initialization, please refer t
 
 Receiving this error after the `gvmkit-build <image> --push` command, means the image had already been uploaded (no changes detected). Please use the previously-obtained hash instead.
 
-#### Known caveats and work-arounds
+#### Known caveats and workarounds
 
-There are currently a few shortcomings of our decentralized application stack and behaviors that are either not completely obvious or just different from what one might expect. Some of them are easily resolved with simple work-arounds.
+There are currently a few shortcomings of our decentralized application stack and behaviors that are either not completely obvious or just different from what one might expect. Some of them are easily resolved with simple workarounds.
 
 Most of them are outlined in the previous article, which describes the [differences between docker containers and Golem virtual machines](docker-containers-vs-golem-vms.md).
 
@@ -55,7 +55,7 @@ As described in the ["Creating Golem dApps"](creating-golem-dapps.md) article, t
 
 If a command sent as part of `init` exits with a non-zero exit code, it's treated as an error and the underlying activity is terminated.
 
-There's currently no work-around.
+There's currently no workaround.
 
 **Accessing locations in the containers from the front-end**
 
