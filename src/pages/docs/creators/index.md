@@ -1,11 +1,11 @@
 ---
 title:
 pageTitle: Golem Docs. How to you want to create?
-description: 
+description:
 type: design
 ---
 
-# How do to you like to create?
+# How do you want to create?
 
 {% grid %}
 
@@ -54,9 +54,3 @@ Glad to use a YAML-based approach to configure the deployment
 {% /selectioncard %}
 
 {% /grid %}
-
-
-
-
-
-
