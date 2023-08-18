@@ -15,7 +15,7 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
       <div className="relative grid gap-y-4 md:grid-cols-2 md:gap-y-4">
         <div className="relative h-full w-full"></div>
         <Image
-          className="rounded-xl object-cover md:hidden"
+          className="rounded-xl object-cover hidden"
           src={imageUrl}
           width={500}
           height={500}
