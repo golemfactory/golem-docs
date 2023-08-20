@@ -18,7 +18,7 @@ To launch applications on Golem, you request computational resources from the ne
 * a running `yagna` service (v0.12 or higher)
 * your requestor app key
 
-Setting these up is a part of the [tutorial](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+Setting these up is a part of the [Yagna installation instructions ](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
 Please also ensure you have `curl` available on your system.
 
@@ -26,7 +26,7 @@ Please also ensure you have `curl` available on your system.
 curl --version
 ```
 
-If not, please install it using the instructions appropriate for your system from: https://curl.se/download.html.
+If not, please install it using the instructions appropriate for your system from [here](https://curl.se/download.html).
 
 ## Installation
 

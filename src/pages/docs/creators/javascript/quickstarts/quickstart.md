@@ -7,8 +7,9 @@ title: Golem Node.js QuickStart
 
 In this article, we'll show you how to run a simple task on the Golem Network. 
 
-For the QuickStart we perform a simple task: just running a basic shell command on a rented provider.  
-It should take just a few minutes to complete, and you will see the output of the command printed in your terminal. 
+We perform a simple tasks for the QuickStart: just running a basic shell command on a rented provider.  
+
+It should take just a few minutes to complete, and you will see the command output printed in your terminal. 
 
 
 {% alert level="info" %}
@@ -21,7 +22,7 @@ It should take just a few minutes to complete, and you will see the output of th
 
 ## Installing and running Yagna 
 
-Yagna is a service whose purpose is to communicate and perform operations on the Golem Network. Let's get started by installing it.
+Yagna is a service that aims to communicate and perform operations on the Golem Network. Let's get started by installing it.
 
 #### Install Yagna
 
@@ -99,7 +100,7 @@ yagna service run
 #### Get test GLM tokens
 
 Requesting tasks on the Golem Network requires some GLM tokens. 
-As this example will run on a test network you can get test GLM.
+As this example will run on a test network you can use test GLM.
 
 Open another terminal and run the following command to complete the configuration:
 
@@ -108,7 +109,7 @@ yagna payment init
 yagna payment fund
 ```
 The first one will initialize the payment driver.
-The second one will top up your account with test GLM tokens. You can pay with them only in the test network, where by default your apps are running. 
+The second one will top up your account with test GLM tokens. You can pay with them only in the test network, where your apps are running by default. 
 
 
 ## Building your first Golem Network App 
@@ -123,7 +124,7 @@ npm init
 npm install @golem-sdk/golem-js
 ```
 
-Create a file named `requestor.mjs` and copy the following content into it. The code itself defines a task whose goal is to run the command `node -v` on the Golem Network and print the result to your terminal.
+Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that aims to run the command `node -v` on the Golem Network and print the result to your terminal.
 
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";
@@ -147,7 +148,7 @@ You can find a detailed explanation of the above code [here](/docs/creators/java
 
 ## Running the script on Golem Network
 
-Simply run the command:
+Run the command:
 
 ```bash
 node requestor.mjs
@@ -157,7 +158,7 @@ The output of the script should look very similar to the one below:
 
 ![Output logs](/js-tutorial-05.gif)
 
-You can find information regarding the version of the node used on the remote computer - `v.16.14.0` - at the end of the script's logs. This is the version incorporated into the standard Golem image used to execute the task.
+You can find information regarding the `node.js` version used on the remote computer - `v.16.14.0` - at the end of the script's logs. This version is incorporated into the current standard Golem image used to execute the task.
 
 ## Summary
 
