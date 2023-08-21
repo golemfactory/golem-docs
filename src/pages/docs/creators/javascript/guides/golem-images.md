@@ -52,6 +52,12 @@ If your application requires transferring files to and/or from the provider node
 
 Additionally, in the case of large files, it is recommended to generate and store them in directories defined using the VOLUME clause. In such cases, they are stored on the host's disk drive and do not consume the storage available in RAM.
 
+{% alert level="warning" %}
+
+When you define the image (in Dockerfile) do not copy your files into folders that are defined as volumes. When a Golem virtual machine is started, __a new directory__ is created in the host's file system for each of the defined volumes. This directory is then made available inside the VM under its specified path (for example: /golem/input).
+
+{% /alert %}
+
 ### WORKDIR
 
 This will define the default directory to be used in shell commands sent to a remote computer once the VM is running.

@@ -1,6 +1,6 @@
 ---
 title: Creating and using images on Golem
-Description: Creating and using images on Golem
+description: Creating and using images on Golem
 ---
 
 # Introduction
@@ -9,7 +9,7 @@ This article will go through the process of creating a Dockerfile, building a Do
 
 {% alert level="info" %}
 
-Tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+The tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
 Prerequisites:
 
@@ -21,37 +21,44 @@ Prerequisites:
 
 ## Creating the Dockerfile
 
-This is the simple `Dockerfile` we are going to use, using the `Debian` base image, creating one volume, and setting the working directory. Simply create a file with the name `Dockerfile`, without any file extension, and paste the following contents:
+This is the simple `Dockerfile` we are going to use, using the `Node` base image, creating one volume, and setting the working directory. Simply create a file with the name `Dockerfile`, without any file extension, and paste the following contents:
 
 ```dockerfile
-FROM debian:latest
-VOLUME /golem/work
+FROM node:latest
 WORKDIR /golem/work
+VOLUME /golem/work
+COPY Dockerfile /golem/info/description.txt
+COPY Dockerfile /golem/work/info.txt
 ```
+
+Note we copy Dockerfile content into 2 different locations:
+- to /golem/info (this folder is not defined as VOLUME)
+- and to /golem/work (this folder is defied as VOLUME)
+
 
 ## Building the Docker image
 
-To build the Docker image from the `Dockerfile`, we can run the following command in the same directory (`.`) as the Dockerfile to build an image tagged `golem-example`:
+To build the Docker image from the `Dockerfile`, we can run the following command in the same directory (`.`) as the Dockerfile to build an image tagged `golem-node`:
 
 {% tabs %}
 {% tab label="Linux" %}
 
 ```bash
-docker build -t golem-example .
+docker build -t golem-node .
 ```
 
 {% /tab %}
 {% tab label="macOS" %}
 
 ```bash
-docker build --platform linux/amd64 -t golem-example .
+docker build --platform linux/amd64 -t golem-node .
 ```
 
 {% /tab %}
 {% tab label="Windows" %}
 
 ```bash
-docker build -t golem-example .
+docker build -t golem-node .
 ```
 
 {% /tab %}
@@ -59,34 +66,17 @@ docker build -t golem-example .
 
 The output should look like this:
 
-```
-[+] Building 2.1s (6/6) FINISHED
- => [internal] load build definition from Dockerfile                                                               0.0s
- => => transferring dockerfile: 96B                                                                                0.0s
- => [internal] load .dockerignore                                                                                  0.0s
- => => transferring context: 2B                                                                                    0.0s
- => [internal] load metadata for docker.io/library/debian:latest                                                   1.9s
- => [1/2] FROM docker.io/library/debian:latest@sha256:3d868b5eb908155f3784317b3dda2941df87bbbbaa4608f84881de66d9b  0.0s
- => CACHED [2/2] WORKDIR /golem/work                                                                               0.0s
- => exporting to image                                                                                             0.1s
- => => exporting layers                                                                                            0.0s
- => => writing image sha256:a77505dbbedf13b43beca98a3a93e55a8f32acf0b1a8279c647c8d73ce281cc5                       0.1s
- => => naming to docker.io/library/golem-example                                                                   0.0s
-
-Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
-```
+![](/image_tutorial_build.png)
 
 {% alert level="info" %}
 
-Note that the image won't be turned into a file in the same directory. Location of the actual Docker image file depends on the Docker and your operating system version. Please consult docker manual for additional information.
-
-
+Note that the image won't be turned into a file in the same directory. The location of the actual Docker image file depends on the Docker and your operating system version. Please consult the Docker manual for additional information.
 
 {% /alert  %}
 
 ## Converting from Docker to Golem and uploading it to the registry
 
-Now when you have a Docker image built, we can convert it to a Golem image. To save time, we will also upload it to the registry with the same command. To do this, you need to run the appropriate command that uses `gvmkit-build` to convert and push the image `golem-example` to the registry.
+Now when you have a Docker image built, we can convert it to a Golem image. To save time, we will also upload it to the registry with the same command. To do this, you need to run the appropriate command that uses `gvmkit-build` to convert and push the image `golem-node` to the registry.
 
 {% alert level="info" %}
 
@@ -98,53 +88,23 @@ If you do not have `gvmkit-build` installed please follow [installation intructi
 {% tab label="JavaScript" %}
 
 ```bash
-gvmkit-build golem-example --push --nologin
+gvmkit-build golem-node --push --nologin
 ```
 
 {% /tab %}
 {% tab label="Python" %}
 
 ```bash
-gvmkit-build golem-example --push --nologin
+gvmkit-build golem-node --push --nologin
 ```
 {% /tab %}
 {% /tabs %}
 
 After running the command, you will see an output that looks like this:
 
-```bash
-Building image: golem-example
- -- connected to docker engine platform: Docker Engine - Community version: 20.10.12
- * Step1 - image for given name golem-example found, image creation skipped
- * Step2 - inspect docker image: golem-example ...
- -- Image name: golem-example
- -- Image id: 6cd25ac0a005cfb24538f44d6c683c688c41d07b9f81633be2dba3dc77a30db5
- -- Image size: 116.48 MB
- -- GVMI image output path: C:\Users\user\Desktop\convert_and_push_test\golem-example-latest-6cd25ac0a0.gvmi
- * Step3 - create container from image: golem-example ...
- -- Container id: 888e84f71116
- * Step4 - tool image used for gvmi generation already exists: scx1332/squashfs ...
- -- Image command: mksquashfs /work/in /work/out/image.squashfs -info -comp lzo -noappend
- -- Tool container id: cbff22637454
- * Step5 - copy data between containers 888e84f71116 and cbff22637454 ...
- -- Copying data finished. Copied 121286144 bytes vs 116484482 bytes image
- * Step6 - Starting tool container to create image: cbff22637454
- * Step7 - Waiting for tool container to finish...
- -- Tool container finished
- * Step8 - Adding metadata... -- container metadata (399 bytes) added
- -- Output gvmi image size: 51.18 MB (51184015 bytes), path: C:\Users\user\Desktop\convert_and_push_test\golem-example-latest-6cd25ac0a0.gvmi
- * Writing file descriptor to C:\Users\user\Desktop\convert_and_push_test\golem-example-latest-6cd25ac0a0.gvmi.descr.bin
- -- file descriptor created successfully
- -- image link (for use in SDK): 28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9
-Uploading image to golem registry: https://registry.golem.network
- * Uploading image descriptor to: https://registry.golem.network
- -- descriptor uploaded successfully
- -- download link: https://registry.golem.network/download/55170fad5369f44406d6aa8b9a1e8a3e793cf81c7c544a648f988d7119b8a2af
- -- chunked upload finished successfully
- -- image validated successfully
-```
+![](/image_tutorial_upload.png)
 
-The hash is found after the `image link`, which in this case gives us the hash `28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9`. If you ever lose your hash, you can always recover/re-generate it by running the same command again.
+The hash is found after the `image link`, which in this case gives us the hash `8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c`. If you ever lose your hash, you can always recover/re-generate it by running the same command again.
 
 ## Using the image in a requestor script
 
@@ -159,42 +119,46 @@ npm init
 npm i @golem-sdk/golem-js
 ```
 
-We can now create our `index.mjs` requestor file, with the `package: ...` matching our image hash.
+We can now create our `index.mjs` requestor file, with the `package: "8b238595..."` matching our image hash.
 
 {% tabs %}
 {% tab label="JavaScript" %}
 **`index.mjs`**
 
 ```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-;(async () => {
+import { TaskExecutor } from "@golem-sdk/golem-js";
+
+(async () => {
   const executor = await TaskExecutor.create({
-    package: '28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9',
-  })
-  await executor.run(async (ctx) => {
-    await ctx.uploadFile(
-      'image_description.txt',
-      '/golem/work/image_description.txt'
-    )
-    var result = (await ctx.run('cat image_description.txt')).stdout
-    console.log(result)
-  })
-  await executor.end()
-})()
+    package: "8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c",    
+    yagnaOptions: { apiKey: 'try_golem' }
+  });
+
+
+  const result = await executor.run(
+        async (ctx) =>  {
+    
+          console.log('Description.txt: ',(await ctx.run("cat /golem/info/description.txt")).stdout);
+          console.log('/golem/work content: ', (await ctx.run("ls /golem/work")).stdout);
+        });
+        
+
+  
+
+
+  await executor.end(); 
+    
+  
+})();
+
 ```
 
 {% /tab  %}
 {% /tabs %}
 
-Lastly, create an `image_description.txt` file to be uploaded and used on the provider:
-
-```txt
-The image hash is `28704b5186fb46099b6138e6f1db814a631f6963da456492476d0db9`. By altering the hash to another value  - corresponding to a different image, you ask the provider use anotjhe image to create remote environment when you will run you tasks.
-
-The result is the console output of the `cat /golem/work/image_description.txt` command. By changing this, we can experiment with other functionality.
-
-We also run the uploadFile command to upload the text file you're reading right now from the local machine to the provider machine.
-```
+In the script, we define that our tasks should use the newly created image (indicated by `hash`: `8b238595...`).
+This time our task is to display the content of the decription.txt file (it should be the content of the Dockerfile used to define the image).
+The second command will list the content of the /golem/work folder. In Dockerfile we copied its content there as well, but as /golem/work is defined as VOLUME and created when VM is started, this folder will be empty.
 
 ## Running the script
 
@@ -203,6 +167,10 @@ Run the following command after ensuring the Yagna service is running and config
 `node index.mjs`
 
 You have successfully created and used your Golem image in a requestor script!
+
+![](/image_tutorial_upload.png)
+
+Note that the content of the `description.txt` file that was created in the  /golem/info folder is accessible, while the /golem/work folder is empty.
 
 {% docnavigation title="Next steps" %}
 
