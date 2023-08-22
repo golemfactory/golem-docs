@@ -37,7 +37,7 @@ Each of the commands listed in the `init` section of the node has to finish its 
 
 **Retrieving complete logs from the provider**
 
-Currently, a requestor user only has access to logs of the `yagna` service and dapp runtime. Logs from the provider side are not retrievable. One way to mitigate this, is to run the `goth` utility to have access to provider-side logs - to learn more.
+Currently, a requestor user only has access to logs of the `yagna` service and dapp runtime. Logs from the provider side are not retrievable. One way to mitigate this, is to run the `goth` utility to have access to provider-side logs.
 
 **Bad default listening address**
 

@@ -73,7 +73,7 @@ poetry init --no-interaction --python="^3.9"
 {% /tab %}
 {% tab label="Windows" %}
 ```shell
-mkdir  "hello_golem\server_app"
+mkdir "hello_golem\server_app"
 cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```

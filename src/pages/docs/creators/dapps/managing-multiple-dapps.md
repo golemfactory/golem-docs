@@ -8,9 +8,19 @@ title: Managing multiple apps on a single requestor node.
 `dapp-manager` is a purposefully minimalistic manager for decentralized applications running on
 Golem. It works together with the [dapp-runner](/docs/creators/dapps/run-a-dapp).
 
-While the responsibility of the latter is to run a single Golem application (which may consist of
-multiple services), `dapp-manager` takes care of spawning, interacting with, and stopping the
-running instances of the `dapp-runner`.
+While the responsibility of the latter is to run a single Golem application (which may consist of multiple services), `dapp-manager` takes care of spawning, interacting with, and stopping the running instances of the `dapp-runner`.
+
+## Prerequisites
+
+Ensure you have `curl` available on your system.
+
+```shell
+curl --version
+```
+
+If not, please install it using the instructions appropriate for your system from [here](https://curl.se/download.html).
+
+You should have `python` and `pip` installed.  
 
 ## Quick start
 
@@ -72,7 +82,7 @@ python --version
 {% /tab %}
 {% /tabs %}
 
-If your Python version is older, consider using [pyenv](https://github.com/pyenv/pyenv-installer).
+If your Python version is older, consider using [pyenv](https://github.com/pyenv/pyenv-installer) to install and use multiple versions..
 
 Once your python interpreter reports a version 3.8 or later, you can set up your virtual
 environment:
@@ -92,7 +102,6 @@ python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapp-manager
 ```
 {% /tab %}
 {% /tabs %}
-
 
 ### dApp manager
 

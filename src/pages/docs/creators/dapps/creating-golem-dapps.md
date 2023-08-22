@@ -31,7 +31,7 @@ What should be kept in mind is that there are still important discrepancies betw
 
 For a GVMI image to be used by providers, it needs to be published somewhere where providers can download it. The easiest way is uploading it to the Golem image repository. For instructions on how to do it, refer to: [Publishing a Golem image](/docs/creators/javascript/examples/tools/publishing-custom-images)
 
-If the image is uploaded to the repository, it’s hash is the only piece of information needed for the image to be retrieved and used by the providers. If it’s available under a different, publicly-available URL, both the image hash and the URL need to be supplied.
+If the image is uploaded to the repository, its hash is the only piece of information needed for the image to be retrieved and used by the providers. If it’s available under a different, publicly-available URL, both the image hash and the URL need to be supplied.
 
 The above is true if the image uses a default set of privileges - or - in other words - if it doesn’t need to access external internet locations. To enable outbound internet access from VM runtimes, the images need to be accompanied by [Manifest files](/docs/creators/dapps/creating-golem-dapps#manifest-files).
 
