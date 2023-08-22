@@ -18,7 +18,7 @@ To launch applications on Golem, you request computational resources from the ne
 * a running `yagna` service (v0.12 or higher)
 * your requestor app key
 
-Setting these up is a part of the [Yagna installation instructions ](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+Setting these up is a part of the [Yagna installation instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
 Please also ensure you have `curl` available on your system.
 
@@ -32,26 +32,27 @@ If not, please install it using the instructions appropriate for your system fro
 
 ### Get the virtual environment set up
 
-It's best to run any Python applications in a virtual environment so as not to clutter your system's Python installation with unnecessary packages.
+It's best to run any Python application in a virtual environment. It will let you avoid cluttering your system's Python installation with unnecessary packages.
 
 Ensure you're running Python >= 3.8, and you have the `venv` module installed (it's normally included in the Python distribution).
 
 Prepare a virtual environment for the tutorial script:
 
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
 ```bash
 python3 -m venv --clear ~/.envs/dapps
 source ~/.envs/dapps/bin/activate
 ```
-
-{% alert level="warning" %}
-
-On Windows in the regular `cmd` shell, you need to replace the above with:
-    
+{% /tab %}
+{% tab label="Windows" %}
 ```shell
 python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapps
 %HOMEDRIVE%%HOMEPATH%\.envs\dapps\Scripts\activate.bat
 ```
-{% /alert %}
+{% /tab %}
+{% /tabs %}
 
 
 
@@ -79,22 +80,28 @@ curl https://raw.githubusercontent.com/golemfactory/dapp-runner/main/configs/def
 
 ### Export your application key to the environment
 
-{% alert level="info" %}
-If you followed the  installation instruction provided above you can use autoconfigured application key: `try_golem`.
-{% /alert %}
+Generate an unique api-key with the `yagna` command:
 
+```bash
+yagna app-key create dapp-runner
+```
+It will produce a 32-char key. 
+
+Copy and export it:
+
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
 ```bash
 export YAGNA_APPKEY=<your key>
 ```
-
-{% alert level="warning" %}
-
-On Windows in the regular `cmd` shell, you need to replace the above with:
-    
-```shall
+{% /tab %}
+{% tab label="Windows" %}
+```bash
 set YAGNA_APPKEY=<your key>
 ```
-{% /alert %}
+{% /tab %}
+{% /tabs %}
 
 ### Run the app
 

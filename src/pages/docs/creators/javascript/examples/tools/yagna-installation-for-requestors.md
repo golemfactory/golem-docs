@@ -71,25 +71,30 @@ You might be asked to modify your PATH afterward.
 
 #### Start the service
 
-Open a terminal (command line window) and  define the key to identify your application script:
+Open a terminal (command line window) and  define the app-key that will allow our script to use the Yagna API:
 
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}  
    
-    ```bash
-    export YAGNA_AUTOCONF_APPKEY=try_golem
-    ```
+```bash
+export YAGNA_AUTOCONF_APPKEY=try_golem
+```
 
 {% /tab %}
 {% tab label="Windows" %}
     
-    ```bash
-    set YAGNA_AUTOCONF_APPKEY=try_golem
-    ```
+```bash
+set YAGNA_AUTOCONF_APPKEY=try_golem
+```
 
 {% /tab %}
 {% /tabs %}
+
+{% alert level="warning" %}
+The instructions above allow you to set a temporary app-key that will disappear after the Yagna service restart. That is good for experiments and for running examples and tutorials. For production deployment, it is recommended to use a unique app-key generated according to instructions provided [here](/docs/creators/javascript/examples/using-app-keys#creating-unique-app-keys).
+
+{% /alert %}
 
 
 Then start the service:

@@ -17,7 +17,7 @@ Before getting started, you need to install and launch the Yagna service in vers
 {% /alert %}
 
 {% alert level="warning" %}
-In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
+In addition, follow the instructions to [set up the app-key](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors), but start the Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}
@@ -27,7 +27,7 @@ yagna service run --api-allow-origin='http://localhost:8080'
 {% /tab %}
 {% tab label="Windows" %}
 ```shell
-    yagna service run --api-allow-origin=http://localhost:8080
+yagna service run --api-allow-origin=http://localhost:8080
 ```
 {% /tab %}
 
@@ -38,7 +38,7 @@ In this example, we will use `http-server`.
 
 {% /alert %}
 
-## Setting up project
+## Setting up the project
 
 ```bash
 mkdir web_golem
@@ -145,11 +145,21 @@ document.run = run;
 
 Note the file contains the `run()` function that creates the body of the requestor script (similar to the one we use in Node.js) and a set of helper functions that will let us present the logs and results in the browser window.
 
-Now, if we have a running Yagna service started with the `--api-allow-origin` properly set to `http://localhost:8080` and have your Yagna APP key set to 'try_golem' launch `http-server` we should see our app available in the browser.
+Now, if we have:
+- a running Yagna service started with the `--api-allow-origin` properly set to `http://localhost:8080` and 
+- have your Yagna APP key set to `try_golem`
+
+Launch `http-server` in the project folder.
+
+```
+http-server
+```
+
+You should see our app available in the browser.
 
 [ Open localhost ](http://localhost:8080/index)
 
-If you click the run button, after a while, in the result container, we should get the result of the script: `Hello World` and see the logs of executed commands in the log container.
+If you click the __Run__ button, after a while, in the result container, you should get the result of the script: `Hello World` and see the logs of executed commands in the log container.
 
 ![Output logs](/browser_log.png)
 

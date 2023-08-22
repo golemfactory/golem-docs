@@ -21,58 +21,78 @@ As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly 
 
 Please follow the [Yagna installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running. 
 
-{% alert level="info" %}
-Note that if you followed installation instructions above you should have autoconfigured app-key of  `try-golem` instead of `32-char-app-key-here`.
+{% alert level="warning" %}
+For this tutorial instead of using the autoconfigured app-key of `try-golem`
+you need to use 32-char app-key. 
 
 {% /alert %}
 
-Most importantly, make sure you have set the `YAGNA_APPKEY` in your environment, e.g. with:
-
-```bash
-export YAGNA_APPKEY=insert-your-32-char-app-key-here
-```
-
-or, on Windows:
-
-```bash
-set YAGNA_APPKEY=insert-your-32-char-app-key-here
-```
-
-and if you don't know what your app-key is, you can always query `yagna` with:
+Query `yagna` with:
 
 ```bash
 yagna app-key list
 ```
+If the above command doesn't give you any 32-char keys, just create your app key:
+
+`shell yagna app-key create requestor`
+
+and copy the value output by this command.
+
+Set the `YAGNA_APPKEY` in your environment, e.g. with:
+
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
+```bash
+export YAGNA_APPKEY=insert-your-32-char-app-key-here
+```
+{% /tab %}
+{% tab label="Windows" %}
+```bash
+set YAGNA_APPKEY=insert-your-32-char-app-key-here
+```
+{% /tab %}
+{% /tabs %}
 
 ### Python environment
 
 First, ensure you have Python 3.8 or later:
 
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
 ```bash
 python3 --version
 ```
-
-{% alert level="info" %}
-
-Depending on the platform, it may be just `python` instead of `python3`.
-{% /alert %}
+{% /tab %}
+{% tab label="Windows" %}
+```bash
+python --version
+```
+{% /tab %}
+{% /tabs %}
 
 If your Python version is older, consider using [pyenv](https://github.com/pyenv/pyenv-installer).
 
 Once your python interpreter reports a version 3.8 or later, you can set up your virtual
 environment:
 
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
 ```bash
 python3 -m venv ~/.envs/dapp-manager
 source ~/.envs/dapp-manager/bin/activate
 ```
-
-or, if you're on Windows:
-
+{% /tab %}
+{% tab label="Windows" %}
 ```shell
 python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapp-manager
 %HOMEDRIVE%%HOMEPATH%\.envs\dapp-manager\Scripts\activate.bat
 ```
+{% /tab %}
+{% /tabs %}
+
 
 ### dApp manager
 

@@ -40,42 +40,45 @@ For the sake of completeness, we're including the steps that prepare our Python 
 
 ### Create and activate the virtual environment
 
+
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
 ```bash
 python3 -m venv ~/.envs/hello-dapps
 source ~/.envs/hello-dapps/bin/activate
 pip install -U pip poetry
 ```
-
-{% alert level="warning" %}
-
-On Windows in the regular `cmd` shell, you need to replace the above with:
-    
+{% /tab %}
+{% tab label="Windows" %}
 ```shell
 python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps
 %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps\Scripts\activate.bat
 ```
-{% /alert %}
+{% /tab %}
+{% /tabs %}
+
 
 
 ### Initialize the project
 
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
 ```shell
 mkdir -p hello_golem/server_app
 cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```
-
-{% alert level="warning" %}
-
-Again, on Windows: 
-    
+{% /tab %}
+{% tab label="Windows" %}
 ```shell
 mkdir  "hello_golem\server_app"
 cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```
-
-{% /alert %}
+{% /tab %}
+{% /tabs %}
 
 ### Add the requirements
 
@@ -348,7 +351,7 @@ yagna app-key list
 ```
 and copy the value listed in the `key` column.
 
-If the above command doesn't give you any keys, just create your app key:
+If the above command doesn't give you any 32-char keys, just create your app key:
 
 `shell yagna app-key create requestor`
 
@@ -356,29 +359,42 @@ and copy the value output by this command.
 
 ### Export your application key to the environment
 
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
 ```bash
 export YAGNA_APPKEY=<your key>
 ```
-
-{% alert level="warning" %}
-On Windows, you'll need to use:
-    
-```
+{% /tab %}
+{% tab label="Windows" %}
+```bash
 set YAGNA_APPKEY=<your key>
 ```
-
-{% /alert %}
+{% /tab %}
+{% /tabs %}
 
 
 
 
 ### Install the `dapp-runner`
 
-```shell
-python3 -m venv ~/.envs/dapp-runner
+{% tabs %}
+
+{% tab label="Linux / MacOS" %}
+```bash
+python3 -m venv --clear ~/.envs/dapp-runner
 source ~/.envs/dapp-runner/bin/activate
 pip install dapp-runner
 ```
+{% /tab %}
+{% tab label="Windows" %}
+```shell
+python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapp-runner
+%HOMEDRIVE%%HOMEPATH%\.envs\dapp-runner\Scripts\activate.bat
+pip install dapp-runner
+```
+{% /tab %}
+{% /tabs %}
 
 ### Run the app
 

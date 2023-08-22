@@ -12,7 +12,7 @@ It should take just a few minutes to complete, and you will see the output of th
 
 
 {% alert level="info" %}
-**This example has been designed to work with the following environments:**
+This example has been designed to work with the following environments:
 
 - OS X 10.14+, Ubuntu 20.04 or Windows
 - Node.js 16.0.0 or above
@@ -68,7 +68,7 @@ Should you encounter any problems, please reach out to us via our [Discord chann
 
 #### Start the Yagna service
 
-Open a terminal (command line window) and  define the key to identify your application script:
+Open a terminal (command line window) and  define the app-key that will allow our script to use the Yagna API:
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}

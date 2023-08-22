@@ -56,7 +56,7 @@ While in the QuickStart the js script is in an external file, in this tutorial w
 
 
 
-## Setting up project
+## Setting up the project
 
 ```bash
 mkdir web_golem

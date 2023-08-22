@@ -18,7 +18,7 @@ This tutorial has been designed to work with the following environments:
 ## Prerequisites 
 Yagna service is installed and running with `try_golem` app-key configured.
 
-## Setting up project
+## Setting up the project
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
 
