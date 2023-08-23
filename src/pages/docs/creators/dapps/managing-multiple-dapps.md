@@ -31,9 +31,8 @@ As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly 
 
 Please follow the [Yagna installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running. 
 
-{% alert level="warning" %}
-For this tutorial instead of using the autoconfigured app-key of `try-golem`
-you need to use 32-char app-key. 
+{% alert level="info" %}
+Instead of using the autoconfigured app-key of `try_golem` in this tutorial, we will use a unique 32-char app-key. 
 
 {% /alert %}
 
