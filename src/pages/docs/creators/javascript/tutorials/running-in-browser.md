@@ -229,7 +229,7 @@ Now that we have all the necessary components defined, the code between `<script
         <h3>Actions</h3>
         <div class="row vertical">
           <div>
-            <button id="echo" onclick="run()">Echo Hello World</button>
+            <button id="echo">Echo Hello World</button>
           </div>
         </div>
         <div class="results console">
@@ -280,7 +280,7 @@ Now that we have all the necessary components defined, the code between `<script
           .catch((e) => logger.error(e));
         await executor.end();
       }
-      window.run = run;
+      document.getElementById("echo").onclick = run;
     </script>
   </body>
 </html>

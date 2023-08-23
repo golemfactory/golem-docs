@@ -385,7 +385,7 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
         }).catch(e => logger.error(e));
         await executor.end();
       }
-      document.run = run;
+      document.getElementById('echo').onclick = run;
 
     </script>
 

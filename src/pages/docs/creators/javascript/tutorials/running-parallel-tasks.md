@@ -225,7 +225,7 @@ To execute our tasks on the Golem network, we need to create a TaskExecutor inst
 
 ```bash
 const executor = await TaskExecutor.create({
-   package: "",
+   package: "055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db",
    maxParallelTasks: args.numberOfProviders,
    yagnaOptions: { apiKey: `try_golem` }
  });
@@ -235,11 +235,11 @@ The package parameter is required and points to the image that we want the conta
 
 The other parameters are:
 `maxParallelTasks`: the maximum number of tasks we want to run in parallel
-`yagnaOptions: { apiKey: `try_golem` }` - the api key that links your script to identity on the network.
+`yagnaOptions: { apiKey: 'try_golem' }` - the api key that links your script to identity on the network.
 
 ### Running a single task on the network to calculate the keyspace
 
-The first step in the computation is to check the keyspace size. For this, we only need to execute hashcat with --keyspace and read the command`s output.
+The first step in the computation is to check the keyspace size. For this, we only need to execute hashcat with --keyspace and read the commands' output.
 With the TaskExecutor instance running, we can now send such a task to one of the providers using the run method:
 
 ```bash
@@ -282,16 +282,19 @@ For each worker, we perform the following steps:
 
 With the range, we use the executor.map method to run the split tasks simultaneously on the Golem Network:
 
+```js
 const results = executor.map(range, async (ctx, skip = 0) => {
 const results = await ctx
-.beginBatch()
-.run(`hashcat -a 3 -m 400 `${args.hash}` `${args.mask}` --skip=${skip} --limit=${Math.min(keyspace-1,step + step-1)} -o pass.potfile`)
-.run("cat pass.potfile")
-.end()
-.catch((err) => console.error(err));
+  .beginBatch()
+  .run(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${Math.min(keyspace-1,step + step-1)} -o pass.potfile`)
+  .run("cat pass.potfile")
+  .end()
+  .catch((err) => console.error(err));
+
 if (!results?.[1]?.stdout) return false;
 return results?.[1]?.stdout.split(":")[1];
 });
+```
 
 Note, that we use the `beginBatch()` method to organize together two sequential commands: the first will run the hashcat and the second will print the content of the output file.
 As we conclude the batch with the `end()` method the task function will return an array of results objects. As the `cat pass.potfile` is run as a second command its result will be at index 1. Keep in mind that tasks executed on a single worker instance run within the same virtual machine and share the contents of a VOLUME. It means that files in the VOLUME left over from one task execution will be present in a subsequent run as long as the execution takes place on the same provider and thus, the same file system.
@@ -325,7 +328,7 @@ async function main(args) {
 
 
 const executor = await TaskExecutor.create({
-   package: "",
+   package: "055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db",
    maxParallelTasks: args.numberOfProviders,
    yagnaOptions: { apiKey: `try_golem` }
  });
@@ -343,10 +346,10 @@ const executor = await TaskExecutor.create({
  const range = [...Array(Math.floor(keyspace / step)+1).keys()].map((i) => i*step);
 
  const results = executor.map(range, async (ctx, skip = 0) => {
-   //console.log(`hashcat -a 3 -m 400 `${args.hash}` `${args.mask}` --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`);
+   //console.log(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`);
    const results = await ctx
            .beginBatch()
-           .run(`hashcat -a 3 -m 400 `${args.hash}` `${args.mask}` --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`)
+           .run(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`)
            .run("cat pass.potfile")
            .end()
            .catch((err) => console.error(err));
@@ -374,6 +377,7 @@ program
 program.parse();
 const options = program.opts();
 main(options).catch((e) => console.error(e));
+
 ```
 
 To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
@@ -383,7 +387,7 @@ To test our script, copy it into the `index.mjs` file. Ensure your Yagna service
 {% tab label="Linux/ Mac" %}
 
 ```js
-node index.mjs  --mask `?a?a?a` --hash `$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/`
+node index.mjs  --mask '?a?a?a' --hash '$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/'
 ```
 
 {% /tab  %}  

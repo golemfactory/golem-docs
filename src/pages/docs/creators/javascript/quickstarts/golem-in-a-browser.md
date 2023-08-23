@@ -67,7 +67,7 @@ Next, we'll create the main `index.html` file with the following content:
         <h3>Actions</h3>
         <div class="row vertical">
           <div>
-            <button id="echo" onclick="run()">Echo Hello World</button>
+            <button id="echo">Echo Hello World</button>
           </div>
         </div>
         <div class="results console">
@@ -139,7 +139,7 @@ async function run() {
     await executor.end();
 }
 
-document.run = run;
+document.getElementById("echo").onclick = run;
 
 ```
 
