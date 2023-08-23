@@ -232,7 +232,7 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
     </div>
 
     <script type="module">
-      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js";
+      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
 
       let activity;
       const imgInput = document.getElementById("MEME_IMG");
@@ -345,7 +345,7 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
     <meta charset="UTF-8">
     <title>Golem JSON App</title>
     <script type="module">
-      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js";
+      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
 
       function appendResults(result) {
         const results = document.getElementById('results');
