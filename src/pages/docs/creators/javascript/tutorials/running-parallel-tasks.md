@@ -35,15 +35,15 @@ We will go through the following steps:
 
 As a practical example of a problem that is suitable for parallel processing, we selected the task of recovering passwords using the `hashcat` tool. You can apply a similar procedure to utilize Golem Network for other problems that require parallel processing.
 
-Let`s assume we have a password hash obtained from an unknown password processed using the "phpass" algorithm. (Phpass is used as a hashing method by popular web frameworks such as WordPress and Drupal) and we know a password mask ?a?a?a (this means the password consists of three alphanumeric characters).
+Let's assume we have a password hash obtained from an unknown password processed using the "phpass" algorithm. (Phpass is used as a hashing method by popular web frameworks such as WordPress and Drupal) and we know a password mask ?a?a?a (this means the password consists of three alphanumeric characters).
 
 Our objective is to recover the password using `Hashcat` - a command-line utility that cracks unknown passwords from their known hashes.
 Hashcat supports 320 hashing algorithms and 5 different attack types, but for this example, we`ll use only the "phpass" algorithm and a simple brute-force attack.
 
 To find the password that matches the given hash and mask, we could run the following command:
 
-```bash hashcat -a 3 -m 400 in.hash ?a?a?a
-
+```bash 
+hashcat -a 3 -m 400 in.hash ?a?a?a
 ```
 
 where
@@ -83,6 +83,15 @@ The above command will process the `3009..6016` fragment, and any results in tha
 For more information on hashcat arguments, see the complete [reference](https://hashcat.net/wiki/doku.php?id=hashcat)
 {% /alert %}
 
+## Setting up the project
+
+Create a project folder and open it.
+
+```bash
+mkdir parallel-example
+cd parallel-example
+```
+
 ## Preparing Image
 
 {% alert level="info" %}
@@ -90,7 +99,7 @@ For more information on hashcat arguments, see the complete [reference](https://
 You can skip this section if you do not have Docker installed and use the image hash provided in the example.
 {% /alert %}
 
-The tasks that we send to the remote computer are executed in the context of the specified software package - the image. When we create Task Executor we provide the hashID of the image that will be used during processing. In the QuickStart example, we used an image that contained Node.js.
+The tasks that we send to the remote computer are executed in the context of the specified software package - the image. When we create Task Executor we provide the `hash` of the image that will be used during processing. In the QuickStart example, we used an image that contained Node.js.
 
 In our case, we need to prepare a custom image containing `hashcat` software that we will use on the provider’s machines.
 Golem images are converted from Docker images, so we can start with any existing Docker image that meets your needs and modify it to create a custom one.
@@ -112,10 +121,10 @@ We use `dizcza/docker-hashcat:intel-cpu` Docker image as starting point, and the
 To build the Docker image, use the following commands:
 
 ```bash
-docker build . -f .Dockerfile -t hashcat
+docker build . -t hashcat
 ```
 
-### Conversion to golem image
+### Conversion to the Golem image
 
 If you have not installed it yet, install the Golem image conversion tool (gvmkit-build):
 
@@ -165,16 +174,14 @@ Note we could calculate the keyspace locally, but in this example we will also d
 
 ### JS project setup
 
-Now create a project folder, initialize the project, and install the `@golem-sdk/golem-js` library.
+Now initialize the project, and install the `@golem-sdk/golem-js` library.
 
 ```bash
-mkdir parallel-example
-cd parallel-example
 npm init
 npm install @golem-sdk/golem-js
 ```
 
-Copy the requestor script skeleton into the `index.mjs` file:
+Create the `index.mjs` file with the following content:
 
 ```bash
 import { TaskExecutor } from "@golem-sdk/golem-js";

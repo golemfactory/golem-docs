@@ -101,7 +101,7 @@ Finally (3) we gracefully finish task executor:
 
 Let’s see how the task is defined and replace the `taskToRunOnProvider` placeholder we used in the previous step.
 
-The task is defined as a function that implements the Worker interface. This function will get its parameter `workerContext`` from the executor. It is an object that lets you run your commands in the scope of one task on one provider. 
+The task is defined as a function that implements the Worker interface. This function will get its parameter `workerContext` from the executor. It is an object that lets you run your commands in the scope of one task on one provider. 
 
 ```js
 const taskToRunOnProvider = async (ctx) => // task is defined here;
@@ -144,7 +144,7 @@ To achieve it we had:
 - utilized Immediately Invoked Async Function Expression
 - created Task Executor
 - defined a task as a function that runs our command
-- Finally read the command result from the result object and provide it to the user
+- finally read the command result from the result object and provide it to the user
 
 
 In this example, we ran a simple command (node -v) in a shell on the remote computer. You can run other executable programs in more interesting scenarios. See other examples for more advanced use cases.

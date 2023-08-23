@@ -153,7 +153,7 @@ Note that the `create()` method received additional 3 parameters:
 ```
 
 The body of the `executor.run()` method is identical as in the case of Node.js executor script:
-It is a task function that receives worker context. It is used to run an `echo 'Hello World'` command. `cts.run()` will produce a Promise of the result object. It will contain a stdout property that will store the output of our command.
+It is a task function that receives worker context. It is used to run an `echo 'Hello World'` command. `ctx.run()` will produce a Promise of the result object. It will contain a stdout property that will store the output of our command.
 
 The result is passed as an input param of the `appendResults()` function that will be responsible for displaying the outcome on the screen.
 
@@ -288,7 +288,7 @@ Now that we have all the necessary components defined, the code between `<script
 
 Now if we have:
 - a running Yagna service started with the `--api-allow-origin` properly set to  `http://localhost:8080`  and 
-- have your Yagna app-key set to 'try_golem' 
+- have your Yagna app-key set to 'try_golem' (or `apiKey` is assigned a value of any other valid 32-char key - see [here](/creators/javascript/examples/using-app-keys.md)) for details.
 
 launch `http-server`.
 
