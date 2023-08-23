@@ -84,7 +84,7 @@ Generate an unique api-key with the `yagna` command:
 
 {% alert level="info" %}
 
-If you followed [Yagna installation instructions](/docs/creators//javascript/examples/tools/yagna-installation-for-requestors) you can use 'try_golem' key.
+If you followed [Yagna installation instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) you can use 'try_golem' key.
  
 {% /alert %}
 

@@ -288,7 +288,7 @@ Now that we have all the necessary components defined, the code between `<script
 
 Now if we have:
 - a running Yagna service started with the `--api-allow-origin` properly set to  `http://localhost:8080`  and 
-- have your Yagna app-key set to 'try_golem' (or `apiKey` is assigned a value of any other valid 32-char key - see [here](/creators/javascript/examples/using-app-keys.md)) for details.
+- have your Yagna app-key set to 'try_golem' (or `apiKey` is assigned a value of any other valid 32-char key - see [here](/docs/creators/javascript/examples/using-app-keys)) for details.
 
 launch `http-server`.
 

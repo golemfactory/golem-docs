@@ -182,7 +182,8 @@ The example utilizes a basic HTML boilerplate that defines UI components:
 
 {% alert level="warning" %}
 
-To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. See [Web QuickStart](/docs/creators/javascript/quickstart/golem-in-a-browser) for instructions.
+To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. See [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
+
 
 {% /alert  %}
 
@@ -320,7 +321,7 @@ The `.uploadData(fileData, inputImage)` method is used to copy the user-provided
 
 The `.downloadData(outputImage)` method downloads the data whitch accessible in the `data` attribute of the respective result object. The `setResponse()` function is used to update the `src` attribute of the dom element devised to display the output.
 
-Other fucntions are expained in the [Web QuickStart](/docs/creators/javascript/quickstart/golem-in-a-browser) article.
+Other fucntions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
 
 ## Uploading JSON to and from the provider (in a browser)
 
@@ -334,7 +335,7 @@ The example utilizes a basic HTML boilerplate that defines UI components:
 
 {% alert level="warning" %}
 
-To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. See [Web QuickStart](/docs/creators/javascript/quickstart/golem-in-a-browser) for instructions.
+To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. See [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
 
 {% /alert  %}
 
@@ -416,4 +417,4 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
 </html>
 ```
 
-All other fucntions are expained in the [Web QuickStart](/docs/creators/javascript/quickstart/golem-in-a-browser) article.
+All other fucntions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
