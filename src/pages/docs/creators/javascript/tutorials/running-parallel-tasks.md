@@ -110,8 +110,10 @@ For our task, we will use an off-the-shelf hashcat image (`dizcza/docker-hashcat
 Create a `Dockerfile` file with the following content:
 
 ```bash
-FROM dizcza/docker-hashcat:intel-cpu
+FROM ubuntu
 WORKDIR /golem/work
+RUN apt update
+RUN apt install -y hashcat
 ```
 
 We use `dizcza/docker-hashcat:intel-cpu` Docker image as starting point, and then we define a working directory - `WORKDIR /golem/entrypoint`.
