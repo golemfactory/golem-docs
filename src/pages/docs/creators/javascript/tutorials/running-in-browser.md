@@ -119,7 +119,7 @@ First, we will import the `@golem-sdk/golem-js` library:
 
 ```html
         <script type="module">
-         import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js";
+         import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
        </script>
 ```
 
@@ -246,7 +246,7 @@ Now that we have all the necessary components defined, the code between `<script
     </div>
 
     <script type="module">
-      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js";
+      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
       
       export function appendLog(msg) {
         const logs_el = document.getElementById("logs");

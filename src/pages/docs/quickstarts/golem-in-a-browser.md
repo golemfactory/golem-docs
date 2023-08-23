@@ -100,7 +100,7 @@ In this layout, there are three elements:
 Next, we'll create a `requestor.mjs` file with the following content:
 
 ```js
-import * as golem from "https://unpkg.com/@golem-sdk/golem-js@latest/dist/golem-js.min.js"
+import * as golem from "https://unpkg.com/@golem-sdk/golem-js"
 
 
 function appendResults(result) {
