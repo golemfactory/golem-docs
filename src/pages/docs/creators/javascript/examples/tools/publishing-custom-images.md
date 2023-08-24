@@ -1,6 +1,6 @@
 ---
 title: Publishing an image
-tescription: Guide on how to publish a Golem image to the registry using gvmkit-build
+description: Guide on how to publish a Golem image to the registry using gvmkit-build
 ---
 
 # Publishing an image in the registry
@@ -34,25 +34,29 @@ You can use npx and pipx tools to run gvmkit-build without installation.
 ## Introduction
 
 Once your image is built and tested you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
-You can identify ou image by a `hash` or by a `tag`.
+You can identify your image by a `hash` or by a `tag`.
 
 If you intend to use your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
 
 ## Publishing custom Golem image to the registry (hash-based)
 
-If you have you `gvmi` image build from a Docker image you can push it to repository with following command:
+If you have your `gvmi` image built from a Docker image you can push it to the repository with the following command:
 
 ```bash
 gvmkit-build --direct-file-upload my-test-<>.gvmi --push --nologin
 ```
 {% alert level="info" %}
 
-While the Docker image is not stored in user folder, after convertion to GVMI format the output file is placed in the folder where you run coversion tool. By default the image name is a Docker image name followed by a part of its `hash`. When you [ush the gvmi image using this method you need to provide the name of the .gvmi file.]
+While the Docker image is not stored in the user folder, after conversion to GVMI format the output file is placed in the folder where you run the coversion tool. By default, the image name is a Docker image name followed by a part of its `hash`. When you push the gvmi image using this method you need to provide the name of the .gvmi file.
 
 {% /alert %}
 
+You can convert your Docker image and push the Golem image to the repository with one command:
 
+```bash
+gvmkit-build docker-image-name --push --nologin
+```
 
 ## Publishing custom Golem image to the registry (tag-based)
 
@@ -71,6 +75,11 @@ Let's assume for this example your username is `golem`, your Docker image is tag
 {% tab label="JavaScript" %}
 ```bash
 gvmkit-build golem-example --push-to golem/my_example:latest
+```
+or if you do not have `gvmkit-build` installed:
+
+```bash
+npx gvmkit-build golem-example --push-to golem/my_example:latest
 ```
 {% /tab %}
 {% tab label="Python" %}

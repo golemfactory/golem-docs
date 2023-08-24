@@ -31,7 +31,7 @@ Note that npm must be installed.
 npm install -g @golem-sdk/gvmkit-build
 ```
 
-The installation can be verified by running the following command: `gvmkit-build --version`
+
 
 {% /tab %}
 {% tab label="Python/pip" %}
@@ -44,7 +44,7 @@ pip install gvmkit-build
 {% /tab %}
 {% /tabs %}
 
-The installation can be verified by running the following command: `gvmkit-build --version'.
+The installation can be verified by running the following command: `gvmkit-build --version`
 
 
 {% docnavigation title="Next steps" %}

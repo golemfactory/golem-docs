@@ -26,7 +26,7 @@ Create a project folder, initialize a Node.js project, and install the `@golem-s
 mkdir golem-example
 cd golem-example
 npm init
-npm i @golem-sdk/golem-js
+npm install @golem-sdk/golem-js
 ```
 
 Copy the code into the `index.mjs` file in the project folder and run:
@@ -91,6 +91,15 @@ In some situations, you might need your tasks to be executed on a certain provid
 - `ProposalFilters.blackListProposalNamesFilter()`
 
 All these filters will accept an array with IDs or names of the providers that should be accepted or excluded.  
+
+{% alert level="info" %}
+
+For this example, you might need to update the provider's list in the `whiteListsIds`. 
+Go to the [Golem Network Stats](https://stats.golem.network/network/providers/online) and scroll the list to find a provider working on `Testnet`. Then click on its name and copy its ID.
+
+{% /alert  %}
+
+
 
 ```js
 import { TaskExecutor, ProposalFilters } from "@golem-sdk/golem-js";
@@ -169,7 +178,7 @@ const myFilter = async (proposal) => {
   const executor = await TaskExecutor.create({
     package: "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae",
     proposalFilter: myFilter,
-    yagnaOptions: { apiKey: 'f153492c12e0422d89f3b95017bca735' }
+    yagnaOptions: { apiKey: 'try_golem' }
         
   });
   await executor.run(async (ctx) => console.log((await ctx.run(`echo "This task is run on ${ctx.provider.id}"`)).stdout, ctx.provider.id));

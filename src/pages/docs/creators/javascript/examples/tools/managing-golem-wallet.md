@@ -85,12 +85,12 @@ In the context of running Golem on mainnet, here are the commands for each of th
 
 {% tab label="Polygon" %}
 ```bash
-yagna payment status --sender --network=polygon --driver=erc20
+yagna payment status --network=polygon --driver=erc20
 ```
 {% /tab %}
 {% tab label="Ethereum mainnet" %}
 ```bash
-yagna payment status --sender --network=mainnet --driver=erc20
+yagna payment status --network=mainnet --driver=erc20
 ```
 {% /tab %}
 {% /tabs %}

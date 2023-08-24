@@ -29,6 +29,14 @@ cd golem-example
 npm init
 npm i @golem-sdk/golem-js
 ```
+{% alert level="info" %}
+
+Some of the examples require a simple `worker.mjs` script that can be created with the following command:
+```bash
+echo console.log("Hello Golem World!"); > worker.mjs
+```
+
+{% /alert  %}
 
 Copy the code into the `index.mjs` file in the project folder and run:
 
@@ -221,18 +229,13 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 ```
 
-![Single failure output log](/bad_result_log_1.png)
-![Single failure output log](/bad_result_log_2.png)
+![Single failure output log](/bad_result_log_3.png)
 
-Note we have no `catch()` inside the task function this time, therefore TaskExecutor retries the task on 3 other providers before terminating the whole Job. 
+In case of the failure in the `run()` we receive the result object with the attributes:
+- `result: 'Error'`,
+- `stdout: null`,
+- `stderr: 'node: bad option: -w\n',` - the command output
+- `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system, exit code 9 for node indicates: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
 
-In case of the failure in the `run()` method we receive the exit code of the command that failed.
-So in case of `node -w` as the node command runs but returns the error user received exit code 9, that is node exit code that means:
-
-"Exit Code 9, Invalid Argument: This is employed when an unspecified option was given or when a value-required option was given without one.."
-
-In case the shell could not run the command, the user would receive the exit code 127 from linux shell. 
-
-Final note: if you run your tasks using `map()` or `forEach()` methods TaskExecutor will stop the whole Job and will not continue after failure of any Task.
-
+Final note: If you run your tasks using the `map()` or `forEach()` methods TaskExecutor will stop the whole Job and will not continue after failure of any Task.
 

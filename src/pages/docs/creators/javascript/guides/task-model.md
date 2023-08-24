@@ -10,17 +10,15 @@ title: Introduction to Golem Network and Task model
 
 Golem Network is a p2p network that consists of many nodes. Each node is a system with a __Yagna__ service running on it. The nodes that offer their resources to others are called __providers__. The nodes that hire resources are called __requestors__.
     
-To get things done (the Job) in the Network, you need to define it, split it into task(s), and send it to the network using the Yagna demon. This is done using a __requestor script__ (or simply __Golem app__) that will utilize Golem JS SDK. You also need to define the environment used to run your activity on a provider, it is done by a software package in the form of a Docker-like __image__. 
+To get things done (the Job) in the Network, you need to define it, split it into task(s), and send it to the network using the Yagna service. This is done using a __requestor script__ (or simply __Golem app__) that will utilize Golem JS SDK. You also need to define the environment used to run your activity on a provider, it is done by a software package in the form of a Docker-like __image__. 
 
 Let's get familiar with other terms that will help you navigate through Golem docs and find relevant information more easily.
 
-A most simple operation, like running a command or sending a file, is called a __command__
-We __compose__ tasks from commands.
-Tasks are __executed__ on __providers__ aka __remote computers__.
+A most simple operation, like running a command or sending a file, is called a __command__. We __compose__ tasks from commands. Tasks are __executed__ on __providers__ a.k.a. __remote computers__.
 
 So, to run your app on Golem Network you need:
 
-* A Yagna demon that will let you connect to the Golem Network.
+* A Yagna service that will let you connect to the Golem Network.
 * A Docker-like [Image](/docs/creators/javascript/guides/golem-images), that constitutes an environment in which you will run your commands.
 * A [requestor script](/docs/creators/javascript/tutorials/quickstart-explained), in which you will define tasks and execute them.
 
@@ -33,7 +31,7 @@ You can use the Golem Network resources to do a Job. A simple Job is just a sing
     
 A single Task will be run on a single provider. If you can divide your Job into many smaller independent fragments - they will be processed in parallel on multiple providers. The Task API will spawn them on available providers for you.
 
-Tasks are defined as functions that implement Worker Interface. Each task function may be a single command (like: `echo “Hello World”``) but may consist of multiple, separate steps, including sending files to and from the provider. We provide examples showing the usage of API in different scenarios.
+Tasks are defined as functions that implement Worker Interface. Each task function may be a single command (like: `echo “Hello World”`) but may consist of multiple, separate steps, including sending files to and from the provider. We provide examples showing the usage of API in different scenarios.
 
 Tasks are run in the context that is defined by an image. Images are defined using Dockerfiles and then converted to Golem format using Golem provided tool. In our examples, we use Golem standard images, but we also provide tutorials on how to prepare your image.
 

@@ -60,6 +60,15 @@ The following commands are currently available:
 
 In this example, we calculate the `md5` hash of the example script `worker.mjs`, send it to a remote computer, and calculate the `md5` hash of the file in the remote location. Finally, we print both values for comparison.
 
+{% alert level="info" %}
+
+This example requires a simple `worker.mjs` script that can be created with the following command:
+```bash
+echo console.log("Hello Golem World!"); > worker.mjs
+```
+
+{% /alert  %}
+
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";
 import {createHash} from 'node:crypto';
@@ -106,7 +115,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    package: "dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3",    
     yagnaOptions: { apiKey: 'try_golem' }
   });
 
@@ -126,6 +135,8 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
        return res[2]?.stdout
        
   });
+
+
 
   console.log(result);
   await executor.end();
@@ -151,22 +162,24 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
   const output = await executor.run(async (ctx) => {
      
     // Upload test JSON object
-    await ctx.uploadJson({ "input": "Hello World" }, '/golem/input/input.json');
-    
+
+     await ctx.uploadJson({ "input": "Hello World" }, '/golem/work/input.json');
+
     // Read the content of JSON object.
-    return await ctx.run('cat /golem/input/input.json');
+    return await ctx.run('cat /golem/work/input.json');
     
    
   });
 
-  console.log(output.sdout);
+  console.log(output.stdout);
 
   await executor.end();
  
 })();
 ```
 
-![DownloadJSON output logs](/downloadJSON_log.png)
+![DownloadJSON output logs](/uploadJSON_log.png)
+
 
 
 ## Uploading data to and from the provider (in a browser)
@@ -182,10 +195,11 @@ The example utilizes a basic HTML boilerplate that defines UI components:
 
 {% alert level="warning" %}
 
-To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. See [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
-
+To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. 
+The example code should be saved as the `index.html` file and served by i.e. `http-server`. See [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
 
 {% /alert  %}
+
 
 ```html
 <!doctype html>
@@ -319,9 +333,9 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
 
 The `.uploadData(fileData, inputImage)` method is used to copy the user-provided data to the location defined by `inputImage`. The file is read from a disk by the `readFile()` function.
 
-The `.downloadData(outputImage)` method downloads the data whitch accessible in the `data` attribute of the respective result object. The `setResponse()` function is used to update the `src` attribute of the dom element devised to display the output.
+The `.downloadData(outputImage)` method downloads the data which accessible in the `data` attribute of the respective result object. The `setResponse()` function is used to update the `src` attribute of the dom element devised to display the output.
 
-Other fucntions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+Other functions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
 
 ## Uploading JSON to and from the provider (in a browser)
 
@@ -417,4 +431,4 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
 </html>
 ```
 
-All other fucntions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+All other functions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.

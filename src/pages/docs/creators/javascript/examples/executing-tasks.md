@@ -26,7 +26,7 @@ Create a project folder, initialize a Node.js project, and install the `@golem-s
 mkdir golem-example
 cd golem-example
 npm init
-npm i @golem-sdk/golem-js
+npm install @golem-sdk/golem-js
 ```
 
 Copy the code into the `index.mjs` file in the project folder and run:
@@ -149,6 +149,12 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 ## Initialization tasks
 
 Normally, when a larger job is divided into smaller tasks to be run in parallel on a limited number of providers, these providers might be utilized for more than one task. In such cases, each task is executed in the same environment as the previous task run on that provider. To optimize performance, you might decide that some initialization tasks need only be run once per provider. This can be particularly useful if you have to send a large amount of data to the provider.
+
+This example requires an `action_log.txt` file that can be created with the following command:
+
+```bash
+echo Action log: > action_log.txt
+```
 
 You can address such a need using the `beforeEach()` method of the TaskExecutor. Here is an example:
 

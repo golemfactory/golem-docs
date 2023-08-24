@@ -18,6 +18,15 @@ This example has been designed to work with the following environments:
 
 Yagna service is installed and running with `try_golem` app-key configured.
 
+{% alert level="info" %}
+
+Some of the examples require a simple `worker.mjs` script that can be created with the following command:
+```bash
+echo console.log("Hello Golem World!"); > worker.mjs
+```
+
+{% /alert  %}
+
 ## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
@@ -100,6 +109,8 @@ Note that `ctx.run()` accepts a string as an argument. This string is a command 
 
 Your task function can consist of multiple steps, all run on the `ctx` context.
 
+
+
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";
 
@@ -147,6 +158,7 @@ Depending on how you finalize your batch you will obtain either:
 
 Use the beginBatch() method and chain commands followed by `.end()`. 
 
+
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";
 
@@ -187,6 +199,8 @@ The output of the 3rd command, `run('cat /golem/input/output.txt')`, is under th
 ### Organizing commands into a batch producing a Readable stream
 
 To produce a Readable Stream, use the `beginBatch()` method and chain commands, followed by `endStream()`.
+
+
 
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";

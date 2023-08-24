@@ -49,7 +49,7 @@ Please follow the instructions provided in [Golem wallet backup](/docs/creators/
 
 Golem Network payments are done on Blockchain with GLM tokens. Consequently, to enable such payments You will need:
 - GLM tokens to pay the Provider
-- Native token of the choosen Blockchain to pay for the gas a.k.a transaction fees
+- Native token of the chosen Blockchain to pay for the gas a.k.a. transaction fees
 
 Ethereum native token is ETH, whereas Polygon Network has MATIC.
 
@@ -72,9 +72,9 @@ To facilitate operation of blockchains it is useful export your Golem wallet add
 
 #### Acquiring MATIC directly on Polygon and converting some of them to GLMs
 
-1. Find an exchange platform that enables you to buy MATIC for FIAT i.e. [Ramp](https://ramp.network/).
+1. Find an exchange platform that enables you to buy MATIC for FIAT i.e. [Ramp](https://ramp.network/)
 2. Buy MATICs on Polygon
-3. Swap some of MATICs to GLMs on [quickswap](https://quickswap.exchange) or [uniswap](https://uniswap.org/).
+3. Swap some of MATICs to GLMs on [quickswap](https://quickswap.exchange) or [uniswap](https://uniswap.org/)
 
 #### Acquiring MATIC or GLM tokens on Polygon from Ethereum Mainnet
 
@@ -96,8 +96,8 @@ To facilitate operation of blockchains it is useful export your Golem wallet add
 
 You can consider one of the following options:
 
-* swapping GLM tokens to MATIC and selling them directly on a trading platform or
-* bridging them to Ethereum Mainnet 
+- swapping GLM tokens to MATIC and selling them directly on a trading platform or
+- bridging them to Ethereum Mainnet 
 
 {% alert level="info" %}
 It is easier to access your ERC-20 tokens by exporting your wallet (in Ethereum wallet v3 format) and then importing it into MetaMask. 

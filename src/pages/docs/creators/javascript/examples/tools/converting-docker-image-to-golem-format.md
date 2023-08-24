@@ -68,7 +68,7 @@ docker build . -t golem-example
 
 ## Converting Docker image to a Golem image
 
-The examples below show how to convert the Docker image tagged `golem-example` to a `.gmvi` file in the current directory.
+The examples below show how to convert the Docker image tagged `golem-example` to a `.gvmi` file in the current directory.
 
 {% tabs %}
 {% tab label="JavaScript" %}
@@ -76,7 +76,7 @@ The examples below show how to convert the Docker image tagged `golem-example` t
 ```bash
 gvmkit-build golem-example
 ```
-or if you do not have `gvmkit-build`` installed:
+or if you do not have `gvmkit-build` installed:
 
 ```bash
 npx gvmkit-build golem-example
@@ -96,13 +96,8 @@ gvmkit-build golem-example
 
 This example explains how to convert and publish an image that will be identified by its hash. The examples assume you have a Docker image tagged `golem-example` already created. 
 
-The hash is found in the `image link` line of the console output:
 
-```bash
- -- image link (for use in SDK): dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3
-``` 
-
-Note if the image was already converted to `.gvmi`, it will only be pushed. 
+Note if the image was already converted to `.gvmi` format, it will only be pushed. 
 
 {% tabs %}
 {% tab label="JavaScript" %}
@@ -123,6 +118,13 @@ gvmkit-build golem-example --push --nologin
 
 {% /tab %}
 {% /tabs %}
+
+
+The hash is found in the `image link` line of the console output:
+
+```bash
+ -- image link (for use in SDK): 99e40c2168cef0231dde2ed7ed74ebb607f25d8ed4bf9fe537f8da7b
+``` 
 
  
 {% docnavigation title="Next steps" %}

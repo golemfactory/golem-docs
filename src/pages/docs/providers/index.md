@@ -7,7 +7,7 @@ The Golem network is a p2p network of computers. It is being created by a commun
 
 You can also support our open-source project and earn some tokens by joining the network. All you need to do is to install our Yagna service. It is a simple and quick process. See our [instructions](/docs/providers/provider-installation) on how to quickly install the Yagna service and join the Golem Network.
 
-Once you installed the service don't forget to [join](https://chat.golem.network/) the discord channel of our community to meet great people who share the same values as you.
+Once you installed the service don't forget to [join](https://chat.golem.network/) the Discord channel of our community to meet great people who share the same values as you.
 
 {% docnavigation title="Next steps" %}
 

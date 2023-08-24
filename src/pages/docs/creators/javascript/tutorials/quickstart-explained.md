@@ -58,7 +58,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
     // 1. Create Task Executor Instance
     const executor = await TaskExecutor.create({
         package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-        yagnaOptions: { appKey: 'try_golem' }});
+        yagnaOptions: { apiKey: 'try_golem' }});
     
     // 2. Run the task
     const taskResult = await executor.run( /*taskToRunOnProvider to be provided here */);
@@ -78,7 +78,7 @@ We use api-key that was generated in the process of [Yagna installation](/docs/c
 ```js
  const executor = await TaskExecutor.create({
         package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-        yagnaOptions: { appKey: 'try_golem' }});
+        yagnaOptions: { apiKey: 'try_golem' }});
 ```
 
 Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable. 
@@ -124,7 +124,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
     const executor = await TaskExecutor.create({
         package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-        yagnaOptions: { appKey: 'try_golem' }});
+        yagnaOptions: { apiKey: 'try_golem' }});
     
     const taskResult = await executor.run(async (ctx) => (await ctx.run("node -v")).stdout);
     

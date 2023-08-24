@@ -103,3 +103,22 @@ set YAGNA_APPKEY=insert-your-32-char-app-key-here
 {% /tab %}
 {% /tabs %}
 
+### Using YAGNA_AUTO_CONF environment variable
+
+If you have the `YAGNA_AUTO_CONF` variable set at the moment the Yagna service starts its value will be used to define autoconfigured app-key.
+This app-key is not stored and will disappear after restart (unless the variable is still set). While this is convenient for examples and tutorials, normally it is recommended to use a unique app-key to manage access of apps to your Yagna REST API.
+
+{% tabs %}
+
+{% tab label="linux / macOS" %}
+```bash
+export YAGNA_AUTO_CONF=insert-your-desired-app-key-here
+```
+{% /tab %}
+{% tab label="Windows" %}
+
+```bash
+set YAGNA_AUTO_CONF=insert-your-desired-app-key-here
+```
+{% /tab %}
+{% /tabs %}

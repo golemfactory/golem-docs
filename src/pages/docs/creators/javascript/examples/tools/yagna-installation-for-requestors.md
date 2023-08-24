@@ -44,9 +44,10 @@ You might be asked to modify your PATH afterward.
 
     Alternatively, if you can't install it easily, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
-    2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
-    3. Copy those files to `C:\Windows\System32`.
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+    
+2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
+3. Copy those files to `C:\Windows\System32`.
     
     Note: the link will lead you to the latest stable release, you can go to [https://github.com/golemfactory/yagna/releases](https://github.com/golemfactory/yagna/releases) and select another version if you want to explore the preview features.
 
@@ -56,8 +57,9 @@ You might be asked to modify your PATH afterward.
 
     Alternatively, if you can't install it easily, you will do it manually in the following way:
     
-    1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
-    2. Unpack `yagna` and `gftp` binaries and put them somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries into your PATH.
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+    
+2. Unpack `yagna` and `gftp` binaries and put them somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries into your PATH.
 
     Note: the link will lead you to the latest stable release, you can go to [https://github.com/golemfactory/yagna/releases](https://github.com/golemfactory/yagna/releases) and select another version if you want to explore the preview features.
 
@@ -66,7 +68,7 @@ You might be asked to modify your PATH afterward.
 
 {% alert level="info" %}
 
-    If you have encountered problems, contact us on [discord channel](https://chat.golem.network/): 
+    If you have encountered problems, contact us on [Discord channel](https://chat.golem.network/): 
 {% /alert  %}
 
 #### Start the service

@@ -11,7 +11,7 @@ A Golem image is a software package that contains libraries, tools, configuratio
 
 ### Execution environment
 
-Golem's virtual machine runtime is an primary execution environment. This runtime allows provider nodes to run Docker-like images defined by Golem application developers. The runtime is a binary used by `yagna` service on provider nodes. A given runtime is responsible for running a certain type of an image (we have separate runtimes for VMs and for WASM code). In the case of Golem VMs, the runtime being used is ya-runtime-vm.
+Golem's virtual machine runtime is currently the primary execution environment. This runtime allows provider nodes to run Docker-like images defined by Golem application developers. The runtime is a binary used by the `yagna` service on provider nodes. A given runtime is responsible for running a certain type of image (we have separate runtimes for VMs and for WASM code). In the case of Golem VMs, the runtime being used is ya-runtime-vm.
 
 ## Golem image creation 
 
@@ -66,11 +66,11 @@ This will define the default directory to be used in shell commands sent to a re
 
 Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` statements are effectively ignored. You need to pass the relevant initialization commands as part of the task sent to a remote computer as a part of your task function or use `beforeEach()` method. See examples.
 
-## Images, Virual Machines and file system content
+## Images, Virtual Machines, and file system content
 
 When you engage a provider, its provider_agent runs exe-unit (a runtime) to run your image or WASM code. In the case of Golem Images that are run in VMs, the runtime being used is `ya-runtime-vm`.
 
-In Golem terms such an image run on the provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks that will be scheduled on the same provider will use the same activity - meaning the same image container with its history. That means that within the lifecycle of the Activity the state of the file system is maintained. One consequence is that any filesystem changes - be it updates to volumes or to other locations within the VM - performed within a single execution of a task, will still be present when subsequent tasks get executed.
+In Golem terms such an image run on the provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks that will be scheduled on the same provider will use the same activity - meaning the same image container with its history. That means that within the lifecycle of the Activity the state of the file system is maintained. One consequence is that any filesystem changes - be it updates to volumes or other locations within the VM - performed within a single execution of a task, will still be present when subsequent tasks get executed.
 
 {% docnavigation title="Next steps" %}
 
