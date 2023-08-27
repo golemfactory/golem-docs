@@ -64,8 +64,6 @@ SUBCOMMANDS:
 
 `golemsp settings set --help` - to see how to change settings. Invoking this will prompt usage, flags, and options.
 
-example
-
 ```bash
 $ golemsp settings set --help
 golemsp-settings-set 0.3.0
@@ -104,7 +102,9 @@ You can also combine multiple settings in one command as follows:
 
 `golemsp settings set --account <address>`
 
-and restart your node afterward for it to update. To check if your address has been updated properly run `golemsp status`
+and restart your node afterward for it to update. To check if your address has been updated properly run
+
+`golemsp status`
 
 #### Settings show
 

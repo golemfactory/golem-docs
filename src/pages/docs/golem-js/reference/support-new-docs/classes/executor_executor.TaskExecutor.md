@@ -171,7 +171,7 @@ ___
 
 ▸ **run**<`OutputType`\>(`worker`): `Promise`<`undefined` \| `OutputType`\>
 
-Run task - allows to execute a single worker function on the Golem network with a single provider.
+Run task - allows to execute a single worker function on the Golem Network with a single provider.
 
 #### Type parameters
 

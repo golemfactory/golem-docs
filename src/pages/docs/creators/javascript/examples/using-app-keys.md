@@ -74,7 +74,8 @@ Note that while from the `yagna` perspective we are talking about an application
 (async () => {
   const executor = await TaskExecutor.create({
     package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }});
+    yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
+    });
 
 const result = await executor.run(
     async (ctx) => (await ctx.run("node -v")).stdout);
@@ -86,7 +87,12 @@ const result = await executor.run(
 
 ### Using app-key from environment variable
 
-There is yet another option, to read the apikey value from the `YAGNA_APPKEY` environemnt variable.
+There is yet another option, to read the apikey value from the `YAGNA_APPKEY` environemnt variable. JS SDK library will read the value of this variable. Therefore you do need to specify it inside the script and you can skip the 
+
+```js
+yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
+```
+line when you create TaskExecutor.
 
 {% tabs %}
 

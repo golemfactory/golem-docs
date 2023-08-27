@@ -1,5 +1,5 @@
 ---
-Description: Configuration examples for Yagna
+description: Configuration examples for Yagna
 title: Basic provider configuration
 ---
 
@@ -30,8 +30,6 @@ SUBCOMMANDS:
 
 ### Settings set
 
-example
-
 |Value(s)                  |   Value  description  |
 |:----------------------|:----------------------------------------|
 |--node-name|The name of your provider|
@@ -41,7 +39,7 @@ example
 |--starting-fee|A decimal number of how much GLM you want to start a task/service|
 |--env-per-hour|A decimal number of how much GLM you want for misc. activities such as downloading a Golem image or finalizing a task|
 |--cpu-per-hour|A decimal number of how much GLM you want for every one allocated thread while working (note: this value is multiplied automatically afterwards, 256-thread CPU's can reasonably have the same value as 2-thread CPUs)|
-|--account|Yagna account for payments|
+|--account|Yagna account (Ethereum address) for payments|
 |--payment-network|The network where you want to be paid in, e.g., mainnet or testnet|
 
 To change a particular setting (for eg. price settings) type:
@@ -56,7 +54,9 @@ You can also combine multiple settings in one command as follows:
 
 `golemsp settings set --account <address>`
 
-and restart your node afterward for it to update. To check if your address has been updated properly run `golemsp status`
+and restart your node afterward for it to update. To check if your address has been updated properly run 
+
+`golemsp status`
 
 ### Settings show
 
@@ -69,7 +69,6 @@ To run the Golem provider on the test network, type the following command into t
 ```bash
 golemsp run --payment-network testnet
 ```
-
 
 {% docnavigation title="See also" %}
 

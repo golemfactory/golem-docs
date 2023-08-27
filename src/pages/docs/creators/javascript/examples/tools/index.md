@@ -21,7 +21,7 @@ JS code examples are organized in articles dedicated to specific topics:
 
 | Topic         |    Content    |
 |:-------------------|:---------------------------------------------|
-|[Executing tasks](/docs/creators/javascript/examples/executing-tasks) | Illustrate how to execute tasks in parallel on the Golem network, how to initialise providers, and how to run single task.              |
+|[Executing tasks](/docs/creators/javascript/examples/executing-tasks) | Illustrate how to execute tasks in parallel on the Golem Network, how to initialise providers, and how to run single task.              |
 |[Defining tasks](/docs/creators/javascript/examples/composing-tasks)  | Shows how to build tasks from commands, especially how commands can be chained. |
 |[Sending data](/docs/creators/javascript/examples/transferring-data)    | Shows how to use specific commands dedicated to sending data in the network|
 |[Working with results](/docs/creators/javascript/examples/working-with-results) |Presents structure of the results depending on the way the tasks are defined and explains how to handle failures|

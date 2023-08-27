@@ -52,7 +52,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 
 ## MATIC tokens
 
-Apart from the GLM tokens used for payments on the Golem network, one still needs to use the network's base token to pay for gas.
+Apart from the GLM tokens used for payments on the Golem Network, one still needs to use the network's base token to pay for gas.
 
 Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 

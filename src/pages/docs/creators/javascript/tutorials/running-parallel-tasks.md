@@ -223,7 +223,7 @@ We do not run anything on Golem yet.
 
 ### TaskExecutor and package definition
 
-To execute our tasks on the Golem network, we need to create a TaskExecutor instance.
+To execute our tasks on the Golem Network, we need to create a TaskExecutor instance.
 
 ```bash
 const executor = await TaskExecutor.create({

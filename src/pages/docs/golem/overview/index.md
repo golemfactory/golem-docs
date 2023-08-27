@@ -5,7 +5,7 @@ title: Golem Overview
 
 ## Golem overview
 
-Golem is a network of nodes that implement the Golem network protocol. We provide the default implementation of such a node in the form of the Golem service, called [Yagna](https://github.com/golemfactory/yagna).
+Golem is a network of nodes that implement the Golem Network protocol. We provide the default implementation of such a node in the form of the Golem service, called [Yagna](https://github.com/golemfactory/yagna).
 
 The nodes in the network can act as __providers__ or __requestors__. Both the requestor and the provider share the same implementation of the Golem service.
 
@@ -20,9 +20,9 @@ In general, almost any computer might act as a provider. It can be a laptop, des
 
 Resources can be utilized in different scenarios: it might be a computation requiring heavy lifting right away but it could be also maintaining a service up and running and ready to serve requests coming from requestors whenever they come. 
 
-In exchange for the resource sharing you will receive payment in GLM, and the payment is executed through [Polygon](https://polygon.technology/).
+In exchange for the resource sharing you will receive payment in GLM, and the payment is most commonly executed through [Polygon](https://polygon.technology/).
 
-To become a provider one needs to install a provider agent - a specific piece of code that implements the Golem network protocol, thus the machine running it acts as a Golem node. Golem Factory provides the provider binaries as a pre-built Linux installation package. You do not need to perform any development or extensive configuration to have a Golem provider up and running on your Linux machine.
+To become a provider one needs to install a provider agent - a specific piece of code that implements the Golem Network protocol, thus the machine running it acts as a Golem node. Golem Factory provides the provider binaries as a pre-built Linux installation package. You do not need to perform any development or extensive configuration to have a Golem provider up and running on your Linux machine.
 
 Providers are recommended to upgrade their nodes to the latest package version available. This strategy shall provide the widest market coverage and therefore ensure the highest probability of profit.
 
@@ -31,9 +31,9 @@ Providers are recommended to upgrade their nodes to the latest package version a
 
 ### Requestor
 
-__Requestor__ is a node that wants to use hardware resources that are available in the Golem network, shared by its providers.
+__Requestor__ is a node that wants to use hardware resources that are available in the Golem Network, shared by its providers.
 
-The main or most typical benefit for the requestor is to have instant access to a very large pool of hardware. Instead of using local hardware, the requestor can use the IT resources available on the decentralized market. What's more one requestor can use the hardware from many providers at the same time.
+The main or most typical benefit for the requestor is to have instant access to a very large pool of hardware. Instead of using local hardware, the requestor can use the IT resources available on the decentralized market. What's more one requestor can use the hardware from many providers at the same time and run its tasks in prallel.
 
 - More details on how the requestor works [here](/docs/golem/overview/requestor).
 
@@ -41,18 +41,18 @@ The main or most typical benefit for the requestor is to have instant access to 
 
 {% alert level="info" %}
 
-This is a simplified process description provided to illustrate the relationship between the provider and the requestor. The whole process is handled by Golem software Yagna and SDK.
+It is a simplified description of the process, provided to illustrate the relationship between the provider and the requestor in a scenario when the payments take place on the [Polygon](https://polygon.technology/) network. The whole process is handled by Golem's software Yagna along with its SDK.
 
 {% /alert %}
 
 
 1. The Provider announces the availability of its resources in the Golem market. This is called an __Offer__.
-2. Requestor defines his needs in a form od __Demand__ and publishes it on the Golem market.
+2. Requestor defines his needs in a form of a __Demand__ and publishes it on the Golem market.
 2. The Golem market performs the matching between the provider side \(Offers\) and the requestor side  \(Demands\).
 3. If a Requestor is willing to use the Provider's resources, the Agreement is signed.
 4. The resources are used by the Requestor \(for example by transferring input/output files and running a particular Golem VM Image, which is derived from the Docker image, on the Provider's hardware\).
 5. The Provider bills the Requestor in GLM tokens.
-6. The Requestor performs an [Polygon](https://polygon.technology/) payment for resource usage.
+6. The Requestor performs an Polygon payment for resource usage.
 
 
 ### Payments

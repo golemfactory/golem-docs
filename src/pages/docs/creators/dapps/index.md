@@ -18,7 +18,7 @@ Golem is a network which enables its participants to make computing resources av
 
 The dApps on Golem project is a solution to deploy multi-layer apps on the Golem Network, without a need to dive into the APIs. Instead, the structure of the application is stored in YAML files, so the process may feel familiar for those of you who have some experience with e.g. docker-compose.
 
-By a **dApp** - or a decentralized application, in the context of Golem, we understand such a combination of services and additional resources within the network, that together constitutes a full application, e.g. a website or a public API, running entirely on the Golem network.
+By a **dApp** - or a decentralized application, in the context of Golem, we understand such a combination of services and additional resources within the network, that together constitutes a full application, e.g. a website or a public API, running entirely on the Golem Network.
 
 Such services or decentralized applications can be run by virtually anyone as long as they have some GLM tokens to pay the providers for their work.
 
@@ -69,7 +69,7 @@ The model and the schema used are documented in:
 
 ### Dapp-runner
 
-Dapp-runner is an initial, reference implementation that allows applications defined as Golem dApps to be deployed and maintained on the Golem network. It takes one or more application descriptors expressed as YAML files, constructs the desired dApp model for such an application and executes all operations needed for the services constituting the app to be successfully deployed on Golem.
+Dapp-runner is an initial, reference implementation that allows applications defined as Golem dApps to be deployed and maintained on the Golem Network. It takes one or more application descriptors expressed as YAML files, constructs the desired dApp model for such an application and executes all operations needed for the services constituting the app to be successfully deployed on Golem.
 
 [See dapp-runner on GitHub](https://github.com/golemfactory/dapp-runner/)
 
