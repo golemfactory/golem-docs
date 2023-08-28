@@ -25,7 +25,7 @@ JS code examples are organized in articles dedicated to specific topics:
 | [Working with results](/docs/creators/javascript/examples/working-with-results) | Presents the structure of the results depending on the way tasks are defined and explains how to handle failures.            |
 | [Selecting providers](/docs/creators/javascript/examples/selecting-providers)   | Shows how to select better providers.                                                                                        |
 | [Using images](/docs/creators/javascript/examples/working-with-images)          | Shows how you can define your custom image.                                                                                  |
-| [Using app-keys](/docs/creators/javascript/examples/using-app-keys)             | Shows how to create and use in the code unique app-key to manage access to your Yagna.                                       |
+| [Using app-keys](/docs/creators/javascript/examples/using-app-keys)             | Shows how to create and use in the code, a unique app-key to manage access to your Yagna.                                       |
 | [Switching to mainnet](/docs/creators/javascript/examples/switching-to-mainnet) | Instructions that will help you run your app on a main net.                                                                  |
 
 
