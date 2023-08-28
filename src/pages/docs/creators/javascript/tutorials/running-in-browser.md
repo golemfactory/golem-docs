@@ -16,17 +16,18 @@ This tutorial has been designed to work with the following environments:
 
 ## Prerequisites
 
-Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+Before proceeding, you'll need to install and launch the Yagna service, version 0.13.0 or later. Note that this version is available as a **release candidate**. Installation instructions can be found through the manual Yagna installation guide available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
 
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
 {% tabs %}
 
 {% tab label="MacOS / Linux" %}
-   
+
 ```shell
 yagna service run --api-allow-origin='http://localhost:8080'
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
 
@@ -37,24 +38,18 @@ yagna service run --api-allow-origin=http://localhost:8080
 {% /tab %}
 {% /tabs %}
 
-
 {% alert level="warning" %}
-
 
 The `--api-allow-origin` value should be set to the URL where your web application will be served.
 In this example, we will use `http-server`.
-
 
 {% /alert  %}
 
 ## Introduction
 
-In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window. 
+In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window.
 
-While in the QuickStart the js script is in an external file, in this tutorial we will keep both HTML and js script in the same file.  
-
-
-
+While in the QuickStart the js script is in an external file, in this tutorial we will keep both HTML and js script in the same file.
 
 ## Setting up the project
 
@@ -70,10 +65,7 @@ next
 npm install --global http-server
 ```
 
-This will install `http-server` utility to host our web page, where we will run our Golem app.
-
-
-
+This will install the `http-server` utility to host our web page, where we will run our Golem app.
 
 ## HTML page
 
@@ -82,25 +74,26 @@ Next, we'll create the main `index.html` file with a minimal layout:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Golem App</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <button onclick="run()">Run</button>
     <div class="container">
-        <div>
-            <p>Results</p>
-            <pre id="results"></pre>
-        </div>
-        <div>
-            <p>Logs</p>
-            <pre id="logs"></pre>
-        </div>
+      <div>
+        <p>Results</p>
+        <pre id="results"></pre>
+      </div>
+      <div>
+        <p>Logs</p>
+        <pre id="logs"></pre>
+      </div>
     </div>
-<script type="module"> // replace with script code </script>
-</body>
+    <script type="module">
+      // replace with script code
+    </script>
+  </body>
 </html>
 ```
 
@@ -110,52 +103,54 @@ In this layout, there are three elements:
 - A "Results" container, which displays the results
 - A "Logs" container, which displays the API logs
 
-Note the `<script>` tag in the `<head>` section  - here we will place our js code.
-
+Take note of the `<script>` tag in the `<head>` section; this is where we'll place our JavaScript code.
 
 ## Using the @golem-sdk/golem-js bundle library
 
 First, we will import the `@golem-sdk/golem-js` library:
 
 ```html
-        <script type="module">
-         import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
-       </script>
+<script type="module">
+  import { TaskExecutor } from 'https://unpkg.com/@golem-sdk/golem-js'
+</script>
 ```
 
 ### Task Executor
 
-When use will press the `Run` button `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. So we will create it, then run the task function, and finally will end it.
+When the user presses the `Run` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, end it"
 
-Note that the `create()` method received additional 3 parameters: 
-- `package` identifies the image that we want to use on a provider,
-- `apiKey` is the key that enables our script to use Yagna REST API,
-- Logger is a function that will be used by SDK to log - we will define it in a moment.
+Note that the `create()` method received 3 additional parameters:
+
+- `package` identifies the image that we want to run on a provider,
+- `apiKey` is the key that enables our script to use the Yagna REST API,
+- `logger` is a function that the SDK will use for logging. We'll define it shortly.
 
 ```html
 <script type="module">
-    //
-    // .. previously added code 
-    // 
-      async function run() {
-        const executor = await TaskExecutor.create({
-          yagnaOptions: { apiKey: 'try_golem' },
-          package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
-          logger,
-        });
-        await executor
-          .run(async (ctx) => appendResults((await ctx.run("echo 'Hello World'")).stdout))
-          .catch((e) => logger.error(e));
-        await executor.end();
-      }
-      window.run = run;
+  //
+  // .. previously added code
+  //
+  async function run() {
+    const executor = await TaskExecutor.create({
+      yagnaOptions: { apiKey: 'try_golem' },
+      package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
+      logger,
+    })
+    await executor
+      .run(async (ctx) =>
+        appendResults((await ctx.run("echo 'Hello World'")).stdout)
+      )
+      .catch((e) => logger.error(e))
+    await executor.end()
+  }
+  window.run = run
 </script>
 ```
 
-The body of the `executor.run()` method is identical as in the case of Node.js executor script:
-It is a task function that receives worker context. It is used to run an `echo 'Hello World'` command. `ctx.run()` will produce a Promise of the result object. It will contain a stdout property that will store the output of our command.
+The body of the `executor.run()` method is identical as in the case of the Node.js executor script:
+It is a task function that receives a worker context. It is designed to execute the command `echo 'Hello World'`. The `ctx.run()` method returns a Promise which resolves to a result object. This object has a `stdout` property that holds the output of our command.
 
-The result is passed as an input param of the `appendResults()` function that will be responsible for displaying the outcome on the screen.
+The result is passed as an input parameter of the `appendResults()` function that will be responsible for displaying the result on the screen.
 
 ## Getting results
 
@@ -163,51 +158,50 @@ Now let's create the `appendResults()` function which will put the output of our
 
 ```html
 <script type="module">
-    //
-    // .. previously added import statement  
-    // 
-    export function appendResults(result) {
-        const results_el = document.getElementById("results");
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(result));
-        results_el.appendChild(li);
-      }
+  //
+  // .. previously added import statement
+  //
+  export function appendResults(result) {
+    const results_el = document.getElementById('results')
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(result))
+    results_el.appendChild(li)
+  }
 
-    //
-    // .. async function run ....
-    // 
+  //
+  // .. async function run ....
+  //
 </script>
 ```
 
 ## Getting logs
 
-The TaskExecutor offers an optional logger parameter. It will accept an object that implements the 'Logger' [Logger](/docs/golem-js/reference/support-new-docs/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
-
+The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/golem-js/reference/support-new-docs/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
 
 ```html
 <script type="module">
-    //
-    // .. previously added code 
-    // 
-    export function appendLog(msg) {
-        const logs_el = document.getElementById("logs");
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(msg));
-        logs_el.appendChild(li);
-      }
+  //
+  // .. previously added code
+  //
+  export function appendLog(msg) {
+    const logs_el = document.getElementById('logs')
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(msg))
+    logs_el.appendChild(li)
+  }
 
-    const logger = {
-        log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
-        warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
-        debug: (msg) => appendLog(`[${new Date().toISOString()}] [debug] ${msg}`),
-        error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
-        info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-        table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
-    };
+  const logger = {
+    log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
+    warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
+    debug: (msg) => appendLog(`[${new Date().toISOString()}] [debug] ${msg}`),
+    error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
+    info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
+    table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
+  }
 
-    //
-    // .. async function run ....
-    // 
+  //
+  // .. async function run ....
+  //
 </script>
 ```
 
@@ -216,7 +210,7 @@ The TaskExecutor offers an optional logger parameter. It will accept an object t
 Now that we have all the necessary components defined, the code between `<script>` tags should look like this:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -246,51 +240,55 @@ Now that we have all the necessary components defined, the code between `<script
     </div>
 
     <script type="module">
-      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
-      
+      import { TaskExecutor } from 'https://unpkg.com/@golem-sdk/golem-js'
+
       export function appendLog(msg) {
-        const logs_el = document.getElementById("logs");
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(msg));
-        logs_el.appendChild(li);
+        const logs_el = document.getElementById('logs')
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(msg))
+        logs_el.appendChild(li)
       }
       export function appendResults(result) {
-        const results_el = document.getElementById("results");
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(result));
-        results_el.appendChild(li);
+        const results_el = document.getElementById('results')
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(result))
+        results_el.appendChild(li)
       }
 
       const logger = {
         log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
         warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
         debug: (msg) => console.log(msg),
-        error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
+        error: (msg) =>
+          appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
         info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-        table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
-      };
+        table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
+      }
       async function run() {
         const executor = await TaskExecutor.create({
           yagnaOptions: { apiKey: 'try_golem' },
           package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
           logger,
-        });
+        })
         await executor
-          .run(async (ctx) => appendResults((await ctx.run("echo 'Hello World'")).stdout))
-          .catch((e) => logger.error(e));
-        await executor.end();
+          .run(async (ctx) =>
+            appendResults((await ctx.run("echo 'Hello World'")).stdout)
+          )
+          .catch((e) => logger.error(e))
+        await executor.end()
       }
-      document.getElementById("echo").onclick = run;
+      document.getElementById('echo').onclick = run
     </script>
   </body>
 </html>
 ```
 
 Now if we have:
-- a running Yagna service started with the `--api-allow-origin` properly set to  `http://localhost:8080`  and 
-- have your Yagna app-key set to 'try_golem' (or `apiKey` is assigned a value of any other valid 32-char key - see [here](/docs/creators/javascript/examples/using-app-keys)) for details.
 
-launch `http-server`.
+- The Yagna service is running, and it's started with the `--api-allow-origin` parameter correctly set to `http://localhost:8080`.
+- Your Yagna app-key is either set to `try_golem`, or the `apiKey` has been assigned a value of another valid 32-character key (More details [here](/docs/creators/javascript/examples/using-app-keys))."
+
+Run `http-server` to start the webserver.
 
 You should see the app available in the browser.
 
@@ -311,4 +309,3 @@ Other [tutorials](/docs/creators/javascript/tutorials).
 Introduction to [JS Task API](/docs/creators/javascript/guides/task-model)
 
 {% /docnavigation %}
-
