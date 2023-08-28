@@ -1,6 +1,6 @@
 ---
 title:
-pageTitle: Golem Docs. How to you want to create?
+pageTitle: Golem Docs. How do you want to create?
 description:
 type: design
 ---
@@ -41,7 +41,7 @@ Already use Docker or Docker Compose to deploy your application
 
 {% selectioncontent %}
 
-Want to deploy an application on Golem that consists of service(s) that run constantly
+Want to deploy an application on Golem that consists of a service(s) that run constantly
 
 {% /selectioncontent %}
 

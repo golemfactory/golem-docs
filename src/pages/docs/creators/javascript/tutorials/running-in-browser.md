@@ -49,7 +49,7 @@ In this example, we will use `http-server`.
 
 In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window.
 
-While in the QuickStart the js script is in an external file, in this tutorial we will keep both HTML and js script in the same file.
+In the QuickStart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
 
 ## Setting up the project
 
@@ -117,9 +117,9 @@ First, we will import the `@golem-sdk/golem-js` library:
 
 ### Task Executor
 
-When the user presses the `Run` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, end it"
+When the user presses the `Run` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, we will end it.
 
-Note that the `create()` method received 3 additional parameters:
+Note that the `create()` method received an additional 3 parameters:
 
 - `package` identifies the image that we want to run on a provider,
 - `apiKey` is the key that enables our script to use the Yagna REST API,
@@ -148,7 +148,7 @@ Note that the `create()` method received 3 additional parameters:
 ```
 
 The body of the `executor.run()` method is identical as in the case of the Node.js executor script:
-It is a task function that receives a worker context. It is designed to execute the command `echo 'Hello World'`. The `ctx.run()` method returns a Promise which resolves to a result object. This object has a `stdout` property that holds the output of our command.
+It is a task function that receives a worker context. It is designed to execute the command `echo 'Hello World'`. The `ctx.run()` method returns a `Promise` which resolves to a result object. This object has a `stdout` property that holds the output of our command.
 
 The result is passed as an input parameter of the `appendResults()` function that will be responsible for displaying the result on the screen.
 

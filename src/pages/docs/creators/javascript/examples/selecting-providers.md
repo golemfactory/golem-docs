@@ -74,7 +74,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 ```
 
 {% alert level="warning" %}
-Be careful, filtering is done internally by Yagna and if your requirements turn out to be too demanding you will not receive any proposal from providers and your requestor script will terminate after the timeout.
+Be careful, filtering is done internally by Yagna and if your requirements turn out to be too demanding you will not receive any proposals from providers and your requestor script will terminate after the timeout.
 {% /alert %}
 
 
@@ -90,7 +90,7 @@ In some situations, you might need your tasks to be executed on a certain provid
 - `ProposalFilters.whiteListProposalNamesFilter()`. 
 - `ProposalFilters.blackListProposalNamesFilter()`
 
-All these filters will accept an array with IDs or names of the providers that should be accepted or excluded.  
+All these filters will accept an array with IDs, or names of the providers, which should be accepted or excluded.  
 
 {% alert level="info" %}
 
@@ -140,11 +140,11 @@ You can read provider names from `ctx` workContext or from the proposal. We will
 
 ## Selecting providers based on the proposed costs using a custom filter
 
-In this example, we will show a custom filter that can be used to select the best provider. We will use it to filter based on the price, but this filter can be used to filter by any other attribute that is included in the provider proposals or even scan the market to see what is proposed.
+In this example, we will show a custom filter that can be used to select the best provider. We will use it to filter based on the price, but it can be used to filter by any other attribute that is included in the provider proposals or even scan the market to see what is proposed.
 
-The whole process is started with requestor demand. The network will respond with proposals from active providers. Proposals are then negotiated until an agreement is reached. Once the requestor and provider will sign the agreement activity can be started and TaskExecutor can execute them.
+The whole process begins with requestor demand. The network will respond with proposals from active providers. Proposals are then negotiated until an agreement is reached. Once the requestor and provider sign the agreement, activity can be started and TaskExecutor can execute them.
 
-Let's how to use it:
+Let's see how to use it:
 
 ```js
 import { TaskExecutor} from "@golem-sdk/golem-js";
@@ -190,8 +190,8 @@ Note that `customFilter` is a function that accepts a `proposal` object as its p
 
 Our custom function collects pricing data until we have a set of 10 proposals. Then it accepts proposals only if the price is lower than average from the last ten proposals.
 
-Provider price is calculated as the product of prices defined per specific usage counter,
+Provider price is calculated as the product of prices defined per specific usage counter.
 
-The counters are defined in `'golem.com.usage.vector'` property and the prices are defined in `'golem.com.pricing.model.linear.coeffs'`. The last element in the price coeffs array is a fixed element of the total price (one can consider it the one-time price for deployment). 
+The counters are defined in `golem.com.usage.vector` property and the prices are defined in `golem.com.pricing.model.linear.coeffs`. The last element in the price coeffs array is a fixed element of the total price (one can consider it the one-time price for deployment). 
 
-Note that the sequence of the counters is not fixed therefore we need to find the index of the specific counter. In our examples, we take into account only the price related to the usage of the total environment (as our example task has a very short execution time). 
+Note that the sequence of the counters is not fixed, therefore we need to find the index of the specific counter. In our examples, we take into account only the price related to the usage of the total environment (as our example task has a very short execution time). 

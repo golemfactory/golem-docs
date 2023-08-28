@@ -20,11 +20,11 @@ A requestor agent can be written in any language as long as it's able to talk to
 - [yapapi](https://github.com/golemfactory/yapapi) for Python 3.6+ and 
 - [golem-js](https://github.com/golemfactory/golem-js), our JS/TS API runnable under Node.js or in browsers.
 
-As requestors address specific business needs there is no single requestor agent that fits all the use cases. 
+As requestors address specific business needs, there is no single requestor agent that fits all the use cases. 
 
 In case a user would like to use the Golem Network for a computation job, an example implementation could have a computation engine included in the image, then split the job into many tasks and run them in parallel on many providers. Each task would consist of several steps like sending input data to the provider, launching the computation, and downloading the results.  
 
-Such a scenario usually assumes the user has access to the requestor node, however, that is not always the case: One can imagine another scenario where the user accesses an application server via a web client, and the server is using the Golem Network via the Yagna service.
+Such a scenario usually assumes the user has access to the requestor node. However, that is not always the case: One can imagine another scenario where the user accesses an application server via a web client, and the server is using the Golem Network via the Yagna service.
 
 Yet another scenario allows you to run the requestor agent directly in the browser context. This case requires the user to have access to the Yagna service REST API 
 

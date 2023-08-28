@@ -37,7 +37,7 @@ node index.mjs
 
 ## Introduction
 
-With Golem JS Task API you can execute just a single task on a single provider or a series of multiple tasks in parallel on many providers. In the case of the latter, you can additionally define how providers should be initialized and how many tasks you want to run simulanously.
+With Golem JS Task API you can execute just a single task on a single provider or a series of multiple tasks in parallel on many providers. In the case of the latter, you can additionally define how providers should be initialized and how many tasks you want to run simultaneously.
 
 In this article, the following examples are presented:
 
@@ -73,13 +73,13 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 ```
 The method `map()` accepts an array that defines the total number of tasks to be executed and may contain the data used to define a task.
-In the example we have an array of 5 elements `[1, 2, 3, 4, 5]` and we use these values within the task function to define task steps. For each task, another element from the `data` array is passed as an `item` and then used to customize the argument for the `echo` command.
+In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we use these values within the task function to define task steps. For each task, another element from the `data` array is passed as an `item` and then used to customize the argument for the `echo` command.
 
 Note that the result of the executor `map()` is an asynchronous iterable object with each element accessible with the `for await` statement. 
 
 ![Multiple run map](/map_log.png)
  
-In the output logs you can have some interesting observations:
+In the output logs, you can have some interesting observations:
 
 The provider `sharkoon_379_6` was engaged first. When he had finished his first task he was still the only available provider and he received another task to execute. In the meantime, other providers were successfully engaged and the next tasks were dispatched to them.
 
@@ -114,7 +114,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 ## Defining the number of providers used 
 
-You can set the maximum number of providers to be engaged at the same time. The TaskExecutor will scan available proposals and engage additional providers if the number of actually engaged providers is lower than 'maxParallelTasks` and there are still some tasks to be executed.
+You can set the maximum number of providers to be engaged at the same time. The TaskExecutor will scan available proposals and engage additional providers if the number of actually engaged providers is lower than `maxParallelTasks` and there are still some tasks to be executed.
 If you do not define this parameter, a default value of 5 will be used.
 
 Note that the actual number of engaged providers might be:
@@ -191,9 +191,9 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 ```
 
-In the code we decreased the `maxParallelTasks` value from the default value of 5, to make sure that some of our five tasks will be run on the same provider.
+In the code, we decreased the `maxParallelTasks` value from the default value of 5, to make sure that some of our five tasks will be run on the same provider.
 
-The `beforeEach()` method is used to upload a file to a remote computer, that will be used to log all future activity run on this provider. The task function used in the `beforeEach()` method contains an additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `beforeEach()` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
+The `beforeEach()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The task function used in the `beforeEach()` method contains an additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `beforeEach()` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
 
 Note how we utilized the `ctx` worker context to get the provider name using the `provider.name` property.
 
@@ -201,7 +201,8 @@ In the task function used in the `forEach()` method, we employed the `beginBatch
 
 ![BeforeEach](/before_log.png)
 
-Log from this example shows that even if the provider `imapp1019_2.h` eventually was used to execute 3 tasks, it uploaded the log only once. Its output file downloaded after the last task was executed contained the following:
+The log from this example shows that even if the provider `imapp1019_2.h` was eventually
+used to execute 3 tasks, it uploaded the log only once. Its output file - downloaded after the last task was executed - contained the following:
 
 
 ```
@@ -236,7 +237,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 })();
 ```
 
-The requestor script runs a single task defined by a task function: `ctx.run("node -v")`. The output of the command is available through stdout of the result object returned from the `ctx.run()` function:
+The requestor script runs a single task defined by a task function: `ctx.run("node -v")`. The output of the command is available through `stdout` of the `result` object returned from the `ctx.run()` function:
 
 Below, you can see the script logs:
 

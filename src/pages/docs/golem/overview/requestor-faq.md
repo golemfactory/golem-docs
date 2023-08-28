@@ -15,7 +15,7 @@ Here's an example of such a setup:  [https://github.com/golemfactory/yapapi/tree
 
 ## Are there any stats for the network?
 
-Yes, you can check out [Golem Stats](https://stats.golem.network/).
+Yes, you can check them out here: [Golem Stats](https://stats.golem.network/).
 
 ## How does CPU/h pricing work?
 
@@ -23,7 +23,7 @@ CPU/h is the pricing per utilization of a core. So if a requestor is using 4 cor
 
 ## What is Layer 1 and Layer 2?
 
-Here's a very very simplified explanation: Layer 1 is the upper layer in the blockchain which contains all information in transactions. Layer 2 solutions are further down and don't include as much information and thus it's cheaper to send transactions because you don't include as much info on the blockchain compared to Layer 1.
+Here's a very, very simplified explanation: Layer 1 is the upper layer in the blockchain which contains all information in transactions. Layer 2 solutions are further down and don't include as much information and thus it's cheaper to send transactions because you don't include as much info on the blockchain compared to Layer 1.
 As a requestor, we recommend you use a layer 2 solution like Polygon to pay for your tasks. Polygon is around 50-100x cheaper than other solutions on the network in terms of gas fees.
 
 ## What is tGLM and GLM:

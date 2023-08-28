@@ -37,13 +37,13 @@ node index.mjs
 
 ## Introduction
 
-Examples should be simple, and short and each code snippet ready to copy and run.
+Examples should be simple and short with each code snippet ready to copy and run.
 
 Examples should focus on single aspects and show how to use a given feature. 
 
-If you have more than one example list them.
+If you have more than one example, list them.
 
-If there is a need to compare different points use a table.
+If there is a need to compare different points, use a table.
 
 
 | Command     | Available in node.js| Available in web browser |
@@ -61,7 +61,7 @@ If all examples in the article follow a specific scenario, you can explain it he
 
 ## Giving a title
 
-Examples title should tell what is the outcome of the example.
+Example titles should tell what is the outcome of the example.
 
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";
@@ -77,11 +77,11 @@ Images should be placed in /public folder.
 
 ## Another example
 
-In the example tell:
+In the example, explain:
 - Why readers might use it
-- how he should use it
-- Point to outcome
-- Point to interesting things that can tell more about the network 
+- How they should use it
+- Point to outcomes
+- Point to interesting things that can tell readers more about the network 
 
 
 ## Showing variants

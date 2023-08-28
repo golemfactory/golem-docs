@@ -1,5 +1,5 @@
 ---
-tescription: Composing tasks
+description: Composing tasks
 title: Composing tasks
 ---
 
@@ -78,7 +78,7 @@ We'll start with a simple example featuring a single `run()` command. Then, we'l
 
 - send a `worker.js` script to the provider (this is a simple script that prints "Good morning Golem!" in the terminal), 
 - run the `worker.js` on a provider and save the output to a file (output.txt) and finally
-- download the `output.txt` file to back to your computer.
+- download the `output.txt` file back to your computer.
 
 
 ### Running a single command
@@ -141,7 +141,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 To ensure the proper sequence of execution, all calls must be awaited. We only handle the result of the second `run()` and ignore the others.
 
 {% alert level="info" %}
- If you use this approach, each command is sent separately to the provider and then executed.
+If you use this approach, each command is sent separately to the provider and then executed.
 {% /alert %}
 
 ![Multiple Commands output log](/command_prosaic_log.png)
@@ -149,7 +149,7 @@ To ensure the proper sequence of execution, all calls must be awaited. We only h
 ### Organizing commands into batches
 
 Now, let's take a look at how you can arrange multiple commands into batches.
-Depending on how you finalize your batch you will obtain either:
+Depending on how you finalize your batch, you will obtain either:
 
 - an array of result objects or 
 - ReadableStream

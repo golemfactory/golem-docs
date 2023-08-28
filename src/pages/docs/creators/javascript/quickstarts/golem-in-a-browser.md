@@ -1,5 +1,5 @@
 ---
-Description: A minimal example of a functional Golem requestor agent in a browser
+description: A minimal example of a functional Golem requestor agent in a browser
 title: Requestor in browser QuickStart
 ---
 
@@ -12,7 +12,7 @@ In most of our examples, we demonstrate how to run a requestor script in Node.js
 
 {% alert level="info" %}
 
-Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note such a version is available as `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note that such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
 
 {% /alert %}
 
@@ -46,7 +46,7 @@ cd web_golem
 npm install --global http-server
 ```
 
-This will install `http-server` utility to host our web page, where we will run our Golem app.
+This will install the `http-server` utility to host our web page, where we will run our Golem app.
 
 ## HTML page
 
@@ -155,7 +155,7 @@ Launch `http-server` in the project folder.
 http-server
 ```
 
-You should see our app available in the browser.
+We should see our app available in the browser.
 
 [ Open localhost ](http://localhost:8080/index)
 

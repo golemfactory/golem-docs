@@ -36,7 +36,7 @@ node index.mjs
 
 # Introduction
 
-Golem images define a remote environment here you execute tasks. They are identified either by their `tags` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
+Golem images define a remote environment where you execute tasks. They are identified either by their `tags` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
 
 ## Using Golem images
 

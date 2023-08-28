@@ -202,7 +202,7 @@ base64 author.crt.pem --wrap=0 > author.crt.pem.base64
 
 ### Self signed certificate example
 
-A basic example showing the generation a self-signed root CA certificate to then sign the App author's certificate, and afterwards importing a generated root CA certificate into the Provider's keystore.
+A basic example showing the generation of a self-signed root CA certificate to then sign the App author's certificate, and afterwards importing a generated root CA certificate into the Provider's keystore.
 
 #### 1. Generating self signed root CA certificate
 

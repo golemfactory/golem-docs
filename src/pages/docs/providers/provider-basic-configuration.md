@@ -54,7 +54,7 @@ You can also combine multiple settings in one command as follows:
 
 `golemsp settings set --account <address>`
 
-and restart your node afterward for it to update. To check if your address has been updated properly run 
+and restart your node afterward for it to update. To check if your address has been updated properly, run 
 
 `golemsp status`
 

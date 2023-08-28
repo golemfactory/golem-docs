@@ -17,14 +17,14 @@ But why do we need this? Most importantly, to reduce the setup time for provider
 
 There is only one strict requirement: **at least one volume** directory must be specified using the `VOLUME` command.
 
-Besides the above a number of commands are currently **not supported** by `gvmkit-build` converter. These are:
+Besides the above, a number of commands are currently **not supported** by `gvmkit-build` converter. These are:
 
 * `CMD`
 * `ENTRYPOINT`
 * `ENV`
 * `PORTS`
 
-## When building my image I copied some files to one of the volumes. Why can't I see them when I run the image?
+## When building my image, I copied some files to one of the volumes. Why can't I see them when I run the image?
 
 When a `.gvmi` image is started by the VM runtime, an **empty host directory is mounted** under each of its directories declared as **volumes** (`VOLUME` command in the `Dockerfile`).
 
@@ -44,13 +44,13 @@ In general, it's better to test the `.gvmi` image itself rather than the base Do
 
 You can learn more about testing the VM runtime locally in the [Testing a Golem image](/docs/creators/javascript/tutorials/testing-golem-image) article.
 
-## My application's use case requires large files being processed by the providers. How to best approach this?
+## My application's use case requires large files being processed by the providers. What is the best way to approach this?
 
-This is related to the answer given to 'My VM has run out of storage space' topic aboce.
+This is related to the answer given to 'My VM has run out of storage space' topic above.
 
 There you are two options here:
 
-1. If the files are **static** (that is: they are always the same) then you can include them in the VM image itself while building it. You can learn more about that in [Golem image explained](/docs/creators/javascript/guides/golem-images).
+1. If the files are **static** (that is: they are always the same) then you can include them in the VM image itself while building it. You can learn more about that in: [Golem image explained](/docs/creators/javascript/guides/golem-images).
 2. If the files are **dynamic** (that is: they may differ between task executions) then your best option is to transfer the files as a command within the requestor agent. Make sure you use a **volume directory as the destination**.
 
 

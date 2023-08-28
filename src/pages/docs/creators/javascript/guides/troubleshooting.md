@@ -1,5 +1,5 @@
 ---
-description: ...
+description: JS troubleshooting
 title: JS troubleshooting
 ---
 

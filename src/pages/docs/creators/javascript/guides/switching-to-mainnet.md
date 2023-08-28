@@ -27,17 +27,17 @@ Okay, so while technically we now know how to hand out tasks to providers on pai
 
 ## Ethereum vs Layer-2
 
-The most important decision you need to make when it comes to Golem payments (both between Requestors <-> Providers, as well as getting funds in and out of Golem Network) is whether to use Ethereum or it's Layer-2 scaling sidechain: Polygon. 
+The most important decision you need to make when it comes to Golem payments (both between Requestors <-> Providers, as well as getting funds in and out of Golem Network) is whether to use Ethereum or its Layer-2 scaling sidechain: Polygon. 
 
-While direct, on-chain transactions using ERC-20-based tokens have long become the daily bread for the Ethereum mainnet and constitute a significant part of more than a million transactions passing through the chain each day, current ETH's price and the average gas fees make it extremely hard to use as a mean of exchange. It is because Golem payments will usually be orders of magnitude smaller than the typical transaction fee on Ethereum.
+While direct, on-chain transactions using ERC-20-based tokens have long become the daily bread for the Ethereum mainnet and constitute a significant part of more than a million transactions passing through the chain each day, current ETH's price and the average gas fees make it extremely hard to use as a mean of exchange. This is because Golem payments will usually be orders of magnitude smaller than the typical transaction fee on Ethereum.
 
-Of course, if you're willing to accept that disproportion, you may continue to use the Ethereum mainnet payments but for the majority of Golem users, **Polygon** will be the prefered platform both when paying for tasks and receiving payments for their execution.
+Of course, if you're willing to accept that disproportion, you may continue to use the Ethereum mainnet payments but for the majority of Golem users, **Polygon** will be the preferred platform both when paying for tasks and receiving payments for their execution.
 
 For more information regarding Layer 2 and Polygon, please refer to our introduction to [Layer 2 payments](/docs/golem/payments/layer-2-payments):
 
 ## How to monitor the status of your wallet
 
-There are a number of the `yagna` commands that will enable you to monitor the status of your wallet. They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
+There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
 
 
 ## Securing your Golem wallet
@@ -64,7 +64,7 @@ yagna payment fund
 
 {% alert level="info" %}
 
-To facilitate operation of blockchains it is useful export your Golem wallet address to external application that enables transactions on the internet. You can find instruction on how to backup and restore you wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
+To facilitate operation on blockchains it is useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to backup and restore your wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
 
 {% /alert %}
 

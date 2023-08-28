@@ -40,7 +40,7 @@ node index.mjs
 In this article, we will present methods that let you send files to and from a provider as well as send JSON to a remote computer.
 
 {% alert level="warning" %}
-Look at the table below to check in what environment particular methods are available. 
+Look at the table below to check what particular methods are available in each environment. 
 {% /alert %}
 
 The following commands are currently available:
@@ -165,7 +165,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
      await ctx.uploadJson({ "input": "Hello World" }, '/golem/work/input.json');
 
-    // Read the content of JSON object.
+    // Read the content of the JSON object.
     return await ctx.run('cat /golem/work/input.json');
     
    
@@ -185,7 +185,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 ## Uploading data to and from the provider (in a browser)
 
 
-In this example, we show how to use the `uploadData()` and `downloadData()` methods that allow you to send and receive data when you run your requestor script from a browser. The code below realizes the following job: let the user select an image file and a text, then send it to the provider where it utilizes ImageMagick to combine the image and text to create a meme. The result is displayed in the browser window.
+In this example, we demonstrate how to use the `uploadData()` and `downloadData()` methods that allow you to send and receive data when you run your requestor script from a browser. The code below realizes the following job: let the user select an image file and a text, then send it to the provider where it utilizes ImageMagick to combine the image and text to create a meme. The result is displayed in the browser window.
 
 The example utilizes a basic HTML boilerplate that defines UI components:
 - a form to select the background image for the meme and user text.
@@ -333,14 +333,14 @@ The example code should be saved as the `index.html` file and served by i.e. `ht
 
 The `.uploadData(fileData, inputImage)` method is used to copy the user-provided data to the location defined by `inputImage`. The file is read from a disk by the `readFile()` function.
 
-The `.downloadData(outputImage)` method downloads the data which accessible in the `data` attribute of the respective result object. The `setResponse()` function is used to update the `src` attribute of the dom element devised to display the output.
+The `.downloadData(outputImage)` method downloads the data which is accessible in the `data` attribute of the respective result object. The `setResponse()` function is used to update the `src` attribute of the dom element devised to display the output.
 
-Other functions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+Other functions are explained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
 
 ## Uploading JSON to and from the provider (in a browser)
 
 
-In this example, we show how to use the `uploadJson()` and `downloadJson()` methods that allow you to send and receive JSON data when you run your requestor script from a browser. The code below realizes the following job: let the user define JSON obejcct `{ "input": "Hello World" }`, then send it to the provider. On remote computer JSON is saved as `/golem/work/input.json`. Next the attribute `input` is replaced into `output` with `sed` command and saved as `/golem/work/output.json`. Finally the file is downloaded with `downloadJson()` method. The output of the command contains the JSON as `data` attribute.
+In this example, we demonstrate how to use the `uploadJson()` and `downloadJson()` methods that allow you to send and receive JSON data when you run your requestor script from a browser. The code below realizes the following job: let the user define the JSON object `{ "input": "Hello World" }`, then send it to the provider. On the remote computer, JSON is saved as `/golem/work/input.json`. Next the attribute `input` is replaced into `output` with `sed` command and saved as `/golem/work/output.json`. Finally, the file is downloaded with the `downloadJson()` method. The output of the command contains the JSON as `data` attribute.
 
 The example utilizes a basic HTML boilerplate that defines UI components:
 - the `Run` button to trigger the task
@@ -431,4 +431,4 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
 </html>
 ```
 
-All other functions are expained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+All other functions are explained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.

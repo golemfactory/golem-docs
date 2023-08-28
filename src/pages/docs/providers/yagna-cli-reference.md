@@ -221,6 +221,6 @@ Run `ya-provider keystore --help` to see possible subcommands
 
 ### Domain whitelist
 
-The [Computational Payload Manifests](/docs/golem/payload-manifest) embedded in the Demands can specify a list of URLs that may get called by the services running on a Provider. If the manifest declares requests to URLs in domains that are not whitelisted, it must come with a signature and app author's public certificate. By default, the domains `whitelist` consists of a curated set of public websites and APIs like GitHub, dockerhub or public Ethereum nodes.
+The [Computational Payload Manifests](/docs/golem/payload-manifest) embedded in the Demands can specify a list of URLs that may get called by the services running on a Provider. If the manifest declares requests to URLs in domains that are not whitelisted, it must come with a signature and app author's public certificate. By default, the domain `whitelist` consists of a curated set of public websites and APIs like GitHub, dockerhub, or public Ethereum nodes.
 
 Run `ya-provider whitelist --help` to see possible subcommands.

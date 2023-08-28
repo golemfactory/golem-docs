@@ -47,7 +47,7 @@ cd web_golem
 npm install --global http-server
 ```
 
-This will install `http-server` utility to host our web page, where we will run our Golem app.
+This will install the `http-server` utility to host our web page, where we will run our Golem app.
 
 ## HTML page
 

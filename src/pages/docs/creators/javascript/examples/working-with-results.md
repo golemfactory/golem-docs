@@ -51,7 +51,7 @@ For each command that is run, you can obtain a result object.
 
 ## Single command task
 
-Let's look at the simple example: we will run a tasks that consists of single command and will print the content of the result object:
+Let's look at the simple example: we will run a task that consists of single command and will print the content of the result object:
 
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";
@@ -73,7 +73,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 })();
 ```
 
-In this example, our task consists of a single command: `node -v`. `ctx.run()` returns an object that is then passed to the `result` variable and printed.
+In this example, our task consists of a single command: `node -v`. `ctx.run()` which returns an object that is then passed to the `result` variable and printed.
 
 Index refers to the sequential number of a command (we have just one, and counting starts from 0),
 `status` of the result is "ok" which indicates the command was completed successfully, and the actual results of the command are under `stdout`.
@@ -153,13 +153,13 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 })();
 
 ```
-Each `data` chunk will contain a result object, in the sequence that the commands where in within the batch:
+Each `data` chunk will contain a result object, in the sequence that the commands were in within the batch:
 
 ![results output logs](/batch_result_endstream_1.png) 
 ![results output logs](/batch_result_endstream_2.png) 
 
       
-##  What to do if your command failed?
+##  What to do if your command fails?
   
 When your command fails, the ExeUnit (the component responsible for running your image on the remote computer) will terminate all remote processes. As a result, the entire task will be terminated.
 
@@ -199,11 +199,11 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 ```
 ![Batch failure output log](/bad_result_single_log.png)
 
-Note 1: while the user will receive the error message, the output is only for the failing command not for all commands in the task. 
+While the user will receive the error message, the output is only for the failing command, not for all commands in the task. 
 
-The level detail of the message depends on the type of method that causes the error.
+The level of detail in the message depends on the type of method that causes the error.
 
-In the case of the data transfer method you will receive a message describing the cause of the error.
+In the case of the data transfer method, you will receive a message describing the cause of the error.
 
 Let's see another example:
 
@@ -218,7 +218,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
   });
 
 
-  // there is mistake and instead of 'node -v' we call 'node -w' 
+  // there is a mistake and instead of 'node -v' we call 'node -w' 
   const result = await executor.run(async (ctx) => (await ctx.run("node -w")));
   console.log("Task result:", result);
   
@@ -231,11 +231,11 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 ![Single failure output log](/bad_result_log_3.png)
 
-In case of the failure in the `run()` we receive the result object with the attributes:
+In the case of the failure in the `run()` method, we receive the result object with following attributes:
 - `result: 'Error'`,
 - `stdout: null`,
 - `stderr: 'node: bad option: -w\n',` - the command output
-- `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system, exit code 9 for node indicates: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
+- `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
 
-Final note: If you run your tasks using the `map()` or `forEach()` methods TaskExecutor will stop the whole Job and will not continue after failure of any Task.
+Final note: If you run your tasks using the `map()` or `forEach()` methods, TaskExecutor will stop the whole Job and will not continue after failure of any Task.
 

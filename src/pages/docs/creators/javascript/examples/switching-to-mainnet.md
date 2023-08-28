@@ -3,7 +3,7 @@ description: Switching to mainnet
 title: Switching to mainnet
 ---
 
-# JS Task API Examples: swiching to mainnet
+# JS Task API Examples: switching to mainnet
 
 {% alert level="info" %}
 
@@ -37,13 +37,13 @@ node index.mjs
 
 ## Introduction
 
-By default JS SDK will execute your task in testnet - this is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
+By default, JS SDK will execute your task in testnet. This is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
 
 In this article, we will show how to run your tasks on Polygon.
 
 ## Running your tasks on the Polygon Network 
 
-In this example, we create the TaskExecutor with additional parameters that indicate that we intend to run our task on the Polygon platform.
+In this example, we create the TaskExecutor with additional parameters that indicate we intend to run our task on the Polygon platform.
 
 ```js
 import { TaskExecutor } from "@golem-sdk/golem-js";

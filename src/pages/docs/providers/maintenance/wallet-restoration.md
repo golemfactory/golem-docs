@@ -5,7 +5,7 @@ title: Provider wallet restoration
 
 # Restoring a backed-up wallet
 
-If, for whatever reason, your Golem wallet is destroyed or corrupted e.g. you moved on to a new machine and forgot to take move Golem's installation with it, you'll be faced with the necessity to recover your wallet from your previously backed-up keystore file.
+If, for whatever reason, your Golem wallet is destroyed or corrupted e.g. you moved on to a new machine and forgot to take Golem's installation with it, you'll be faced with the necessity to recover your wallet from your previously backed-up keystore file.
 
 To restore your wallet, first start with a fresh yagna install:
 
@@ -30,7 +30,7 @@ Now, as usual, leave the service running in the background and proceed with the 
 
 ## Retrieve your keystore
 
-Here you'll need the `key.json` file you had previously backed up. Do whatever you need to restore it - e.g. decrypt it if you previously encrypted it. For the process to work, it must be the same plain-text JSON file that Yagna originally exported.
+Here you'll need the `key.json` file you had previously backed up. Do whatever you need to do to restore it - e.g. decrypt it if you previously encrypted it. For the process to work, it must be the same plain-text JSON file that Yagna originally exported.
 
 Be sure that your `key.json` file is in your current working directory and run:
 
@@ -93,7 +93,7 @@ The `nodeId` property should display the Ethereum address of your backed-up wall
 
 {% alert level="warning" %}
 
-If your key is password-protected, you'll need to unlock it before it can be used for payments. In such case, `yagna id show` command above will report:
+If your key is password-protected, you'll need to unlock it before it can be used for payments. In such a case, the `yagna id show` command above will report:
 
 {% /alert %}
 
@@ -126,7 +126,7 @@ In that case, after you import your Ethereum mainnet key, you need to re-create 
 
 The name (`requestor-mainnet`above) is not important as long as it doesn't collide with the existing one (assuming it was just `requestor`).
 
-After you have done that run:
+After you have done that, run:
 
 ```bash
 yagna app-key list

@@ -9,7 +9,7 @@ This article will go through the process of creating a Dockerfile, building a Do
 
 {% alert level="info" %}
 
-The tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+This the tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
 Prerequisites:
 
@@ -156,9 +156,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 {% /tab  %}
 {% /tabs %}
 
-In the script, we define that our tasks should use the newly created image (indicated by `hash`: `8b238595...`).
-This time our task is to display the content of the decription.txt file (it should be the content of the Dockerfile used to define the image).
-The second command will list the content of the /golem/work folder. In Dockerfile we copied its content there as well, but as /golem/work is defined as VOLUME and created when VM is started, this folder will be empty.
+In the script, we specify that our task should use the newly created image (indicated by `hash`: `8b238595...`). We try to run two commands. The first one prints the the content of the `decription.txt` file (it is a copy of the Dockerfile used to create the image). The second command should list the content of the /golem/work folder. We copied some files there as well (check the content of the `description.txt` file), but as /golem/work is defined as VOLUME and created as new when VM is started, this folder will be empty.
 
 ## Running the script
 

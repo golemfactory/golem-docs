@@ -99,7 +99,7 @@ cd parallel-example
 You can skip this section if you do not have Docker installed and use the image hash provided in the example.
 {% /alert %}
 
-The tasks that we send to the remote computer are executed in the context of the specified software package - the image. When we create Task Executor we provide the `hash` of the image that will be used during processing. In the QuickStart example, we used an image that contained Node.js.
+The tasks that we send to the remote computer are executed in the context of the specified software package - the image. When we create the Task Executor we provide the `hash` of the image that will be used during processing. In the QuickStart example, we used an image that contained Node.js.
 
 In our case, we need to prepare a custom image containing `hashcat` software that we will use on the provider’s machines.
 Golem images are converted from Docker images, so we can start with any existing Docker image that meets your needs and modify it to create a custom one.
@@ -166,13 +166,13 @@ The details of docker image conversion are described here: [Converting an image 
 
 ### Our algorithm
 
-Based on the usage of the `hashcat` tool our algorithm will be straightforward:
+Based on the usage of the `hashcat` tool, our algorithm will be straightforward:
 
 - First we will calculate the keyspace, then
-- split it into several segments and run tasks in parallel on many providers, as defined by the user.
+- Split it into several segments and run tasks in parallel on many providers, as defined by the user.
 - Finally we will collect the results and provide the user with the output.
 
-Note we could calculate the keyspace locally, but in this example we will also do it on a remote computer, avoiding installing hashcat on our computer.
+Note, we could calculate the keyspace locally, but in this example we will also do it on a remote computer, avoiding installing hashcat on our computer.
 
 ### JS project setup
 
@@ -256,7 +256,7 @@ if (!keyspace) throw new Error(`Cannot calculate keyspace`);
 
 This call tells the `executor` to execute a single task defined by the task function `async (ctx) => {}`. The ctx object allows us to run a task consisting of a single or batch of commands on the provider side.
 The keyspace size can be obtained from the stdout attribute of the result object returned by the task function.
-In case we cannot calculate the size of keyspace we will throw an error.
+In case we cannot calculate the size of the keyspace we will throw an error.
 
 ### Calculate boundaries for chunks
 
@@ -270,7 +270,7 @@ const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map(
 )
 ```
 
-Note that the number of chunks does not determine the number of engaged providers. In this example, we decided to split the job into 3 tasks, but the number of providers we want to engage is determined by the `maxParallelTasks` parameter. The executor will try to engage that number of providers and then pass the tasks to them. Once a provider is ready to execute a task, it takes up the next task from a common pool of tasks, so a fast provider may end up executing more tasks than a slow one.
+Note that the number of chunks does not determine the number of engaged providers. In this example, we decided to split the job into 3 tasks, but the number of providers we want to engage is determined by the `maxParallelTasks` parameter. The executor will try to engage that number of providers and then pass the tasks to them. Once a provider is ready to execute a task, it takes up the next task from a common pool of tasks. As such, a fast provider may end up executing more tasks than a slow one.
 
 ### Running many tasks on multiple providers
 

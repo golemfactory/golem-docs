@@ -20,7 +20,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology/login?next=%2Fbridge) **(Polygon Bridge)**
 
-1. Choose the prefered wallet (This manual will use Metamask as example)
+1. Choose the preferred wallet (This manual will use Metamask as example)
 
 2. Add a permission for the Metamask wallet (Press SIGN > top right corner)
 
@@ -46,9 +46,9 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 
 **(Use the Withdraw Tab)**
 
-![](](missing_png_withdraw.png))
+![](missing_png_withdraw.png)
 
-**NOTE** : The above screenshot is missing the very last step because of the high gas fee ($60). Just press confirm, sign the transaction in your metamask wallet and it's done.
+**NOTE** : The above screenshot is missing the very last step because of the high gas fee ($60). Just press confirm, sign the transaction in your metamask wallet, and it's done.
 
 ## MATIC tokens
 
@@ -61,9 +61,9 @@ Just like any transactions on the Ethereum Mainnet require ETH, operations on th
 1. Go to "Swap for Gas Token" -> [https://wallet.polygon.technology/gas-swap](https://wallet.polygon.technology/gas-swap)
 2. Choose the required amount (Minimum = 1 MATIC) and follow the instructions (See the image below)
 
-![](](missing_png_swap_1.png))
+![](missing_png_swap_1.png)
 
-3. You can check how much MATIC you have using the "Assets on Polygon" tab![](](missing_png_swap_2.png))
+3. You can check how much MATIC you have using the "Assets on Polygon" tab![](missing_png_swap_2.png)
 
 !!! Info
 Just for reference, currently (as of March 23rd, 2022), the transaction fees for an ERC-20 transfer on Polygon oscillate around slightly above 0.001 MATIC so converting even the minimal value of 1 MATIC will get you enough to pay gas fees of hundreds of GLM transfers.
@@ -72,6 +72,6 @@ Just for reference, currently (as of March 23rd, 2022), the transaction fees for
 
 ### Acquiring GLM and MATIC for FIAT
 
-1. Find an exchange platform that enables to buy MATIC for FIAT [i.e. Ramp](https://ramp.network/).
+1. Find an exchange platform that enables you to buy MATICs for FIATs [i.e. Ramp](https://ramp.network/).
 2. Buy MATICSs on Polygon
 3. Swap some of MATICs to GLMs on uniswap

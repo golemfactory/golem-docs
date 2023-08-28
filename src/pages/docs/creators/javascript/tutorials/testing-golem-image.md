@@ -13,7 +13,7 @@ This tutorial assumes that you're already familiar with Docker and the basics of
 
 ## Introduction
 
-In this tutorial we're going to explore `ya-runtime-dbg`, a tool built specifically for debugging user-built images.
+In this tutorial, we're going to explore `ya-runtime-dbg`, a tool built specifically for debugging user-built images.
 
 
 ## Installation
@@ -40,7 +40,7 @@ A set of default runtimes can be installed by the `yagna` provider installer:
 curl -sSf https://join.golem.network/as-provider | bash -
 ```
 
-After using the installer your runtime binaries should be present under `~/.local/lib/yagna/plugins` (again, we're assuming Linux as it's the only supported platform for `ya-runtime-dbg` for now).
+After using the installer, your runtime binaries should be present under `~/.local/lib/yagna/plugins` (again, we're assuming Linux as it's the only supported platform for `ya-runtime-dbg` for now).
 
 Alternatively, you can download a runtime package manually from its releases page (e.g. [VM runtime](https://github.com/golemfactory/ya-runtime-vm/releases)).
 
@@ -83,7 +83,7 @@ ya-runtime-dbg \
 The command is split into multiple lines using `\` so that it's easier to read. Some remarks related to the above call:
 
 1. The path in `--task-package` needs to be changed so that it points to where you built your `.gvmi` file.
-2. `/tmp/workdir` is an example path, it may not exist on your system. You can create it by calling `mkdir /tmp/workdir` or use some other location.
+2. `/tmp/workdir` is an example path, it may not exist on your system. You can create it by calling `mkdir /tmp/workdir` or using some other location.
 
 Running the command should produce output similar to this:
 
@@ -98,7 +98,7 @@ Followed by a prompt character (`▶`). This indicates the debugger is now ready
 
 ## Using the debugger
 
-With the debugger running we now have full access to our virtual machine!
+With the debugger running, we now have full access to our virtual machine!
 
 The debugger provides us with an interactive shell which, by default, uses `bash`(indicated by the name next to the prompt character). This means we can use regular command line tools, for example:
 
@@ -134,7 +134,7 @@ Let's say we'd like to provide some data to the VM. We can do so by creating a f
 echo "stuff" > /tmp/workdir/vol-32e25157-5865-4fd2-9d35-909cd9893682/data.txt
 ```
 
-With the debugger still running, let's now verify that this file is accessible inside our VM. Using the debugger prompt let's issue the below command:
+With the debugger still running, let's now verify that this file is accessible inside our VM. Using the debugger prompt, let's issue the below command:
 
 ```bash
 bash ▶ cat /golem/input/data.txt
@@ -149,7 +149,7 @@ Success! Our input data is there and can be read by the VM.
 
 Once you're done debugging or want to restart the VM, press `Ctrl+D` while in the debugger prompt.
 
-Having issues? Make sure to take a look at our [VM runtime FAQ](/docs/creators/javascript/guides/golem-images-faq).
+Having issues? Make sure to take a look at our: [VM runtime FAQ](/docs/creators/javascript/guides/golem-images-faq).
 
 ## Summary
 

@@ -11,18 +11,18 @@ They can be used to provide an introduction to the section.
 
 In most cases, we use them to explain what readers can expect in different sections.
 
-To increase readability it is suggested to use a table.
+To increase readability, it is suggested to use a table.
 
 The best way to provide a link is to provide an absolute path: `[text](/docs/templates/index-template)`.
 
 Note that links to articles should be without extension.
-If you create a link to file `index.md` point to the folder that contains that file.
+If you create a link to file `index.md`, point to the folder that contains that file.
 
 
 
 |         |                                                                                          |
 |:-------|:------------------------------------------------------------------------------------------|
-|Name of the section | In the index page referring to a menu that has a submenu, you can place the [link](/docs/templates/index-template) in the description. |
+|Name of the section | In the index page, referring to a menu that has a submenu, you can place the [link](/docs/templates/index-template) in the description. |
 |[Title of article](/docs/templates/index-template)| In case you point to articles, the link is under the title of the article.|
 
 

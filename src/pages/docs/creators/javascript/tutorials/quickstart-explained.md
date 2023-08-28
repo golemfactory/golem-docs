@@ -47,7 +47,7 @@ Here we do two things:
 * create IIAFE (Immediately Invoked Async Function Expression). It has an async function declaration because TaskExecutor provides async methods.
 
 
-## Utilising Task Executor instance
+## Utilizing Task Executor instance
 
 Inside the function body, there will be a sequence of 3 steps, that constitute the simplest Task Executor lifecycle. Task Executor is a primary object provided by our Task API.  
 
@@ -83,7 +83,7 @@ We use api-key that was generated in the process of [Yagna installation](/docs/c
 
 Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable. 
 
-There are other methods that allow you to execute tasks, they are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
+There are other methods that allow you to execute tasks. They are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
 
 
 ```js
@@ -107,7 +107,7 @@ The task is defined as a function that implements the Worker interface. This fun
 const taskToRunOnProvider = async (ctx) => // task is defined here;
 ```
 
-Our task in this example is simple and consists of a single command: namely `node -v`. We will use the async method `run()` of workerContext `ctx`. The output of this method is a Promise of a `result` object, once it is resolved it contains the output of the command we run, available as a `stdout` property.
+Our task in this example is simple and consists of a single command: namely `node -v`. We will use the async method `run()` of workerContext `ctx`. The output of this method is a `Promise` of a `result` object, once it is resolved it contains the output of the command we run, available as a `stdout` property.
 
 ```js
 const taskToRunOnProvider = async (ctx) =>  (await ctx.run("node -v")).stdout;

@@ -36,10 +36,10 @@ You can use npx and pipx tools to run gvmkit-build without installation.
 Once your image is built and tested you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
 You can identify your image by a `hash` or by a `tag`.
 
-If you intend to use your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
+If you intend to use your image just for testing, it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
 
-## Publishing custom Golem image to the registry (hash-based)
+## Publishing a custom Golem image to the registry (hash-based)
 
 If you have your `gvmi` image built from a Docker image you can push it to the repository with the following command:
 
@@ -58,17 +58,17 @@ You can convert your Docker image and push the Golem image to the repository wit
 gvmkit-build docker-image-name --push --nologin
 ```
 
-## Publishing custom Golem image to the registry (tag-based)
+## Publishing a custom Golem image to the registry (tag-based)
 
-Golem image tags have a format of `username/repository_name:tag`, where `username` is your login to the registry portal, `repository_name` is the name of your repository, and `tag` is a text that you chose to describe the content/version of the image. The `tag` can be `latest` to constantly keep the latest version, or you can use a versioning system and e.g. make it `v0.0.1` and so on.
+Golem image tags have a format of `username/repository_name:tag`, where `username` is your login to the registry portal, `repository_name` is the name of your repository, and `tag` is the text that you chose to describe the content/version of the image. The `tag` can be `latest` to constantly keep the latest version, or you can use a versioning system and e.g. make it `v0.0.1` and so on.
 
 Let's assume for this example your username is `golem`, your Docker image is tagged `golem-example`, your repository name is `my_example` and the version is `latest`.
 
 
 1. Create an account on the [registry portal](https://registry.golem.network/).
 2. Create a repository on the registry portal.
-3. Crate and copy personal access token from the registry portal.
-4. Run the following command (you will be asked for login and personal access token)
+3. Create and copy a personal access token from the registry portal.
+4. Run the following command (you will be asked for your login and personal access token)
 
 
 {% tabs %}

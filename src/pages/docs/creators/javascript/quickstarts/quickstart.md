@@ -1,5 +1,5 @@
 ---
-Description: Create your own JavaScript application on Golem
+description: Create your own JavaScript application on Golem
 title: Golem Node.js QuickStart
 ---
 
@@ -7,7 +7,7 @@ title: Golem Node.js QuickStart
 
 In this article, we'll show you how to run a simple task on the Golem Network. 
 
-We perform a simple tasks for the QuickStart: just running a basic shell command on a rented provider.  
+We perform a simple tasks for QuickStart: just running a basic shell command on a rented provider.  
 
 It should take just a few minutes to complete, and you will see the command output printed in your terminal. 
 
@@ -30,7 +30,7 @@ Yagna is a service that aims to communicate and perform operations on the Golem 
 {% tabs %}
 {% tab label="Easy installation" %}
     
-On Linux/ MacOS you can install it using our helper script like this:
+On Linux/ MacOS, you can install it using our helper script like this:
     
 ```bash
 curl -sSf https://join.golem.network/as-requestor | bash -
@@ -69,7 +69,7 @@ Should you encounter any problems, please reach out to us via our [Discord chann
 
 #### Start the Yagna service
 
-Open a terminal (command line window) and  define the app-key that will allow our script to use the Yagna API:
+Open a terminal (command line window) and define the app-key that will allow our script to use the Yagna API:
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}
@@ -100,7 +100,7 @@ yagna service run
 #### Get test GLM tokens
 
 Requesting tasks on the Golem Network requires some GLM tokens. 
-As this example will run on a test network you can use test GLM.
+As this example will run on a test network, you can use test GLM.
 
 Open another terminal and run the following command to complete the configuration:
 

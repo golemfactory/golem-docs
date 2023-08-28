@@ -5,7 +5,7 @@ title: This is the page title displayed in a browser tab.
 
 # Introduction to Golem Network Guides
 
-Golem articles are classified as Examples, Tutorials, and Guides. Sometimes it is difficult to tell the clear border, as the content depends on the author's style.
+Golem articles are classified as Examples, Tutorials, and Guides. Sometimes it is difficult to tell the type, as the content depends on the author's style.
 
 As with every classification, it should be treated more as a guideline.
 
@@ -23,7 +23,7 @@ and refer to examples or tutorials for details.
 
 ## Tutorials and examples:
 
-Examples should be possible to complete in one step. Should focus on specific topics and all relevant topics should be simplified
+Examples should be possible to complete in one step. They should focus on specific topics and all relevant topics should be simplified
 
 Tutorials, on the other hand, can be done in steps. there might be interactions between different elements that impact the proposed solution.
 The steps can be from different areas: how to organize debugging, how to name the file, how to install a tool, and how to define a function in the code.
@@ -31,11 +31,11 @@ The steps can be from different areas: how to organize debugging, how to name th
 
 # Task model
 
-As the normal body text is monotonous and boring (and difficult to read), make sure that __term__ are visible or even are [link](#task-model) to specific sections or other articles.
+As the normal body text is monotonous and boring (and difficult to read), make sure that __term__ are visible or even are in a form of a [link](#task-model) to specific sections or other articles.
 
 ## Remember this is a guide
 
-So should cover the topic broadly, and point to the articles that explore topics in depth.
+As such, it should cover the topic broadly, and point to articles that explore it in more depth.
 
 You can also provide an overview of interesting areas and point to specific examples or tutorials.
 

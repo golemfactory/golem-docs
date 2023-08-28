@@ -17,7 +17,7 @@ When payments are performed directly on Ethereum, each payment must be executed 
 
 The common feature of all the platforms gathered under the "Layer 2" umbrella is that they move most of the transactions to their side chains while maintaining a varying degree of synchronization with the base Ethereum chain. 
 
-As Layer 2 solutions implement their ways to ensure the integrity of their side chains, their cost of a singular transaction is reduced, sometimes by several orders of magnitude. The usual tradeoff is some level of centralization which, arguably, reduces the trustless-ness and thus, to a smaller or larger extent, also the security of users' funds.
+As Layer 2 solutions implement their ways to ensure the integrity of their side chains, their cost of a singular transaction is reduced, sometimes by several orders of magnitude. The usual trade off is some level of centralization which, arguably, reduces the trustless-ness and thus, to a smaller or larger extent, also the security of users' funds.
 
 ### Polygon
 

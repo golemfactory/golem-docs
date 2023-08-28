@@ -5,7 +5,7 @@ title: Restore a Golem wallet
 
 # Restoring a backed-up wallet
 
-If, for whatever reason, your Golem wallet is destroyed or corrupted e.g. you moved on to a new machine and forgot to take move Golem's installation with it, you'll be faced with the necessity to recover your wallet from your previously backed-up keystore file.
+If, for whatever reason, your Golem wallet is destroyed or corrupted e.g. you moved on to a new machine and forgot to take Golem's installation with it, you'll be faced with the necessity to recover your wallet from your previously backed-up keystore file.
 
 To restore your wallet, first start with a fresh yagna install:
 
@@ -93,7 +93,7 @@ The `nodeId` property should display the Ethereum address of your backed-up wall
 
 {% alert level="warning" %}
 
-If your key is password-protected, you'll need to unlock it before it can be used for payments. In such case, `yagna id show` command above will report:
+If your key is password-protected, you'll need to unlock it before it can be used for payments. In such a case, `yagna id show` command above will report:
 
 {% /alert %}
 
@@ -126,13 +126,13 @@ In that case, after you import your Ethereum mainnet key, you need to re-create 
 
 The name (`requestor-mainnet`above) is not important as long as it doesn't collide with the existing one (assuming it was just `requestor`).
 
-After you have done that run:
+After you have done that, run:
 
 ```bash
 yagna app-key list
 ```
 
-and verify that in the table like the one below, your new app-key is bound to your mainnet Ethereum address
+and verify that, in the table like the one below, your new app-key is bound to your mainnet Ethereum address
 
 ```bash
 ┌─────────────────────┬────────────────┬───────────────────────────┬───────────┬──────────────────────────────┐

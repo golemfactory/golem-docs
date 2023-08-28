@@ -87,11 +87,11 @@ yagna id export --file-path=./key.json
 
 ### Unlocking on Yagna restart
 
-An, arguably positive, side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the yagna service is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
+An arguably positive side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the yagna service is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
 
 ### Reverting to an unprotected key
 
-If for some reason you'd like to revert to an unprotected yagna key, unlock it using your saved passphrase and they lock it again using an empty one, that is run:
+If, for some reason, you'd like to revert to an unprotected yagna key, unlock it using your saved passphrase and they lock it again using an empty one, that is run:
 
 ```bash
 yagna id lock --new-password
@@ -101,7 +101,7 @@ and input an empty password (just press "Enter") twice. Now, Yagna will start wi
 
 ## Verify the resultant keystore file
 
-Once the file is created, examine its contents and ensure that the `address` property in it is identical to the address of your node's Ethereum address. Normally there's no reason for this field to differ - but treat this step as a redundant check to ensure that you have backed up what you intended to back up.
+Once the file is created, examine its contents and ensure that the `address` property in it is identical to the address of your node's Ethereum address. Normally there's no reason for this field to differ, but treat this step as a redundant check to ensure that you have backed up what you intended to back up.
 
 To make it easier, here's a possible check:
 
@@ -115,7 +115,7 @@ To be entirely sure that your backup is correct, launch a completely new, separa
 
 Ensure you store that key file in a safe place. In case your Golem wallet gets corrupted or lost, if you don't have the backup, your funds will be lost forever.
 
-Likewise, consider encrypting or password-protecting the keystore file so that someone who'd take hold of the file won't automatically be able to take control of your funds. We have included the appropriate instructions above.
+Likewise, consider encrypting or password-protecting the keystore file so that someone who gets hold of the file won't automatically be able to take control of your funds. We have included the appropriate instructions above.
 
 {% /alert %}
 

@@ -61,7 +61,7 @@ If you want to check the current version of yagna, type:
 yagna --version
 ```
 
-To upgrade Yagna service stop it (Ctrl-C) and follow installation procedure [(instructions)](/docs/providers/provider-installation).
+To upgrade Yagna service, stop it (Ctrl-C) and follow this installation procedure: [(instructions)](/docs/providers/provider-installation).
 
 
 {% docnavigation title="See also" %}

@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet [Link inside text](https://github.com) Lorem ipsum do
 
 Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.Morbi in sem quis dui placerat ornare. **Pellentesque odio nisi,** euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
 
-### Example of process
+### Example of a process
 
 - Golem, a global, open-source, decentralized supercomputer that anyone can access.
 - Learn what you need to know to set-up your Golem requestor node:

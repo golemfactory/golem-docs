@@ -8,7 +8,7 @@ description: Instructions on how to convert an image from Docker to Golem using 
 
 {% alert level="info" %}
 
-These intructions has been designed to work with the following environments:
+These instructions has been designed to work with the following environments:
 
 - OS X 10.14+, Ubuntu 20.04 or Windows
 - Node.js 16.0.0 or above
@@ -17,7 +17,7 @@ These intructions has been designed to work with the following environments:
 
 ## Prerequisites
 
-- Have Docker installed and Docker service available.  If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
+- Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
 - Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
 
 

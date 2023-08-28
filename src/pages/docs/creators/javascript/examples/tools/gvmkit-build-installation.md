@@ -56,7 +56,7 @@ The installation can be verified by running the following command: `gvmkit-build
 
 {% docnavigation title="See also" %}
 
-More information can be found in the [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
+More information can be found in the: [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
 
 {% /docnavigation %}
 

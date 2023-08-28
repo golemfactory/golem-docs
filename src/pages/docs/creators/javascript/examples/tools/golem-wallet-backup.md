@@ -47,7 +47,7 @@ Ok:
   nodeId: "0x-the-hexadecimal-ethereum-address"
 ```
 
-It's important to verify that the command shows you `isDefault: true` and `isLocked: false` and that the address shown by `nodeId` is the address you're expecting to see. `isDefault: true` means that the key for the address is currently in use by yagna and `isLocked: false` confirms that the private key is currently unlocked and accessible to the yagna node (trying to lock an already-locked key will result in an error).
+It's important to verify that the command shows you `isDefault: true` and `isLocked: false` and that the address shown by `nodeId`, is the address you're expecting to see. `isDefault: true` means that the key for the address is currently in use by yagna and `isLocked: false` confirms that the private key is currently unlocked and accessible to the yagna node (trying to lock an already-locked key will result in an error).
 
 ### Lock the key
 
@@ -87,11 +87,11 @@ yagna id export --file-path=./key.json
 
 ### Unlocking on Yagna restart
 
-An, arguably positive, side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the `yagna` service is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
+An arguably positive side effect of locking the key that way is that a `yagna id unlock` command will now be needed each time the `yagna` service is restarted. This means that no one can use your yagna node as a requestor without knowing your passphrase.
 
 ### Reverting to an unprotected key
 
-If for some reason you'd like to revert to an unprotected yagna key, unlock it using your saved passphrase and they lock it again using an empty one, that is run:
+If for some reason you'd like to revert to an unprotected yagna key, unlock it using your saved passphrase and then lock it again using an empty one, which is run:
 
 ```bash
 yagna id lock --new-password
@@ -113,9 +113,9 @@ To be entirely sure that your backup is correct, launch a completely new, separa
 
 {% alert level="warning" %}
 
-Ensure you store that key file in a safe place. In case your Golem wallet gets corrupted or lost, if you don't have the backup, your funds will be lost forever.
+Ensure you store that key file in a safe place. In a situation where your Golem wallet gets corrupted or lost, if you don't have the backup, your funds will be lost forever.
 
-Likewise, consider encrypting or password-protecting the keystore file so that someone who'd take hold of the file won't automatically be able to take control of your funds. We have included the appropriate instructions above.
+Likewise, consider encrypting or password-protecting the keystore file so that someone who gets hold of the file won't automatically be able to take control of your funds. We have included the appropriate instructions above.
 
 {% /alert %}
 

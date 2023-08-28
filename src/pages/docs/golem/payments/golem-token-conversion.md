@@ -12,7 +12,7 @@ While Polygon itself offers countless opportunities in the form of distributed e
 Whatever your need, there may come a time when you'd like to send your GLMs one way or the other and the instructions below will serve as your guide.
 
 {% alert level="info" %}
-For some of the instructions below you need to configure the Metamask wallet extension for browser and add your wallet.
+For some of the instructions below you need to configure the Metamask wallet extension for your browser and add your wallet.
 {% /alert %}
 
 ### Ethereum <-> Polygon
@@ -29,8 +29,8 @@ For some of the instructions below you need to configure the Metamask wallet ext
 Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
 
 - You can use the bridge to exchange other tokens to MATICs, or
-- you can buy MATICS directly on trading platform or
-- if you posses GLM you can swap them for Matics.
+- You can buy MATICS directly on trading platform or
+- If you possess GLM you can swap them for MATICs.
 
 
 [//]: <> ( see https://www.reddit.com/r/GolemProject/comments/r3ejkl/guide_part_2_l2_glm_to_exchange_swapping_glm_for/ )

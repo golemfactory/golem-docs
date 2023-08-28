@@ -1,6 +1,6 @@
 ---
 description: Learn what a Golem image is and how to create and use one
-title: Golme images explained
+title: Golem images explained
 ---
 
 # Golem images and usage explained
@@ -11,7 +11,7 @@ A Golem image is a software package that contains libraries, tools, configuratio
 
 ### Execution environment
 
-Golem's virtual machine runtime is currently the primary execution environment. This runtime allows provider nodes to run Docker-like images defined by Golem application developers. The runtime is a binary used by the `yagna` service on provider nodes. A given runtime is responsible for running a certain type of image (we have separate runtimes for VMs and for WASM code). In the case of Golem VMs, the runtime being used is ya-runtime-vm.
+Golem's virtual machine runtime is currently a primary execution environment. This runtime allows provider nodes to run Docker-like images defined by Golem application developers. The runtime is a binary used by the `yagna` service on provider nodes. A given runtime is responsible for running a certain type of image (we have separate runtimes for VMs and for WASM code). In the case of Golem VMs, the runtime being used is ya-runtime-vm.
 
 ## Golem image creation 
 
@@ -27,14 +27,14 @@ See our [Create Golem Image Tutorial](/docs/creators/javascript/tutorials/buildi
 
 ## Publishing the image
 
-Once your image is built and tested you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
+Once your image is built and tested, you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
 
 
 ## Golem image use
 
-The image must be downloaded to a remote computer therefore we need to publish it. Golem provides a ‘repository’ to publish images. Images can be identified by their image hash or a tag name. The type of identifier depends on the way you publish your image and is driven by intended usage.
+For providers to be able to download and use the image you specify in your demand, the image must be available for them, so you need to publish it. Images can be identified by their image hash or a tag name. The type of identifier depends on the way you publish your image and is driven by intended usage.
 
-If you intend to use your image just for testing it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
+If you intend to use your image just for testing then it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and use tags to describe your images. Both cases are illustrated in our examples.
 
 - Publishing the image anonymously. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-hash-based))
 - Publishing the image using tags. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
@@ -64,13 +64,13 @@ This will define the default directory to be used in shell commands sent to a re
 
 ### ENTRYPOINT, CMD
 
-Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` statements are effectively ignored. You need to pass the relevant initialization commands as part of the task sent to a remote computer as a part of your task function or use `beforeEach()` method. See examples.
+Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` statements are effectively ignored. You need to pass the relevant initialization commands as part of the task sent to a remote computer as a part of your task function or use the `beforeEach()` method. See examples.
 
 ## Images, Virtual Machines, and file system content
 
 When you engage a provider, its provider_agent runs exe-unit (a runtime) to run your image or WASM code. In the case of Golem Images that are run in VMs, the runtime being used is `ya-runtime-vm`.
 
-In Golem terms such an image run on the provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks that will be scheduled on the same provider will use the same activity - meaning the same image container with its history. That means that within the lifecycle of the Activity the state of the file system is maintained. One consequence is that any filesystem changes - be it updates to volumes or other locations within the VM - performed within a single execution of a task, will still be present when subsequent tasks get executed.
+In Golem terms, such an image run on the provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks that will be scheduled on the same provider will use the same activity - meaning the same image container with its history. That means that within the lifecycle of the Activity, the state of the file system is maintained. One consequence is that any file system changes - be it updates to volumes or other locations within the VM - performed within a single execution of a task, will still be present when subsequent tasks get executed.
 
 {% docnavigation title="Next steps" %}
 

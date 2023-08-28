@@ -37,10 +37,10 @@ node index.mjs
 
 ## Introduction
 
-To use Yagna REST API you application must identify itself by api-key.
-In our examples we utilize `try_golem` key, that is automatically created if you have `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
+To use Yagna REST API, your application must identify itself by api-key.
+In our examples we utilize the `try_golem` key, which is automatically created if you have the `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
 
-Such an api-key is easy to read and remember, and useful for quickstarts and testing examples, but normally you should rather use unique 32-char api-keys to protect access to your requstor and its wallet.
+Such an api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
 
 ### Creating unique app-keys
 
@@ -50,7 +50,7 @@ You can generate an unique api-key with the `yagna` command:
 yagna app-key create requestor
 ```
 
-In the command above `requestor` is a name of the key. The output is the 32-char app-key.
+In the command above `requestor` is the name of the key. The output is the 32-char app-key.
 
 ### Listing available app-keys
 
@@ -60,14 +60,14 @@ You can list available app-keys in your `yagna` instance with:
 yagna app-key list
 ```
 
-You can identify your key by `name` and copy value from  `key` column.
+You can identify your key by `name` and copy the value from the `key` column.
 
 ### Using app-key in JS requestors scripts
 
 Once you have created an app-key you can use it in your requestor script replacing `insert-your-32-char-app-key-here` with the actual key.
 
 {% alert level="info" %}
-Note that while from the `yagna` perspective we are talking about an applications accessing its API, therefore `yagna` uses the `app-key` term, while from applications perspective they obtain the access to REST API, and therefore the have `apikey` attribute.
+Note that from the `yagna` perspective we are talking about an application accessing its API, therefore `yagna` uses the `app-key` term, while from an application's perspective they obtain the access to REST API, and therefore they have `apiKey` attribute.
 {% /alert %}
 
 ```js
@@ -87,7 +87,7 @@ const result = await executor.run(
 
 ### Using app-key from environment variable
 
-There is yet another option, to read the apikey value from the `YAGNA_APPKEY` environemnt variable. JS SDK library will read the value of this variable. Therefore you do need to specify it inside the script and you can skip the 
+There is yet another option, to read the `apiKey` value from the `YAGNA_APPKEY` environment variable. JS SDK library will read the value of this variable. Therefore you do need to specify it inside the script and you can skip the 
 
 ```js
 yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }

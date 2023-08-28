@@ -14,7 +14,7 @@ The basic premise of the Golem Network is as follows:
 
 The payments are made with Golem Network's native ERC-20 token, [GLM](https://etherscan.io/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429), using either the Ethereum Mainnet directly or, preferably, one of the [Layer 2 solutions](/docs/golem/payments/layer-2-payments).
 
-Of course, such a simplified description only answers the most basic question about the roles of providers and requestors in Golem and defines the actual transaction layer. Below, we'd like to give you a glimpse at the process through which the payments for providers' services are arranged for and paid, without delving into the nature of those services.
+Of course, such a simplified description only answers the most basic question about the roles of providers and requestors in Golem and defines the actual transaction layer. Below, we'd like to give you a glimpse at the process through which the payments for providers' services are arranged and paid for, without delving into the nature of those services.
 
 ## Pay as you go
 
@@ -48,7 +48,7 @@ To partially address this problem, very early on, we introduced a keep-alive mec
 
 That way, on one end, the requestors have the potential to compare the reported cost with their assumptions. On the other, by having those debit notes accepted, the providers can be sure that the requestors are still there and are willing to pay the final invoice.
 
-In this setup, if a requestor fails to accept a debit note before a set timeout, the provider may assume the requestor is no longer interested in keeping the agreement alive and thus, may terminate the agreement at will to stop accumulating the cost that now has little chance to be paid for.
+In this setup, if a requestor fails to accept a debit note before a set timeout, the provider may assume the requestor is no longer interested in keeping the agreement alive and thus, may terminate the agreement at will to stop accumulating the cost which now has little chance to be paid.
 
 As you may see, this solution is still suboptimal. It still requires the requestor to be, on one hand, present and ready to respond without delay to the provider's debit notes and, on another, to be honest, and pay the invoice that the provider issues at the very end.
 

@@ -1,6 +1,6 @@
 ---
-description:  Golem JS QickStarts
-title: Golem JS QickStarts
+description:  Golem JS QuickStarts
+title: Golem JS QuickStarts
 ---
 
 
