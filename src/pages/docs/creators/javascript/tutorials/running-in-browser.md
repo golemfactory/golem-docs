@@ -1,5 +1,5 @@
 ---
-Description: Golem in browser QuickStart explained
+description: Golem in browser QuickStart explained
 title: Golem in browser QuickStart explained
 ---
 
