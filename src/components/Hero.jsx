@@ -13,7 +13,8 @@ export function Hero() {
             developer resources
           </h1>
           <p className=" text-lg text-gray-600 dark:text-gray-400">
-            A creator's manual for Golem. <br /> By developers, for developers.
+            A creator&apos;s manual for Golem. <br /> By developers, for
+            developers.
           </p>
           <div className="mt-8 flex flex-col gap-2 md:flex-row">
             <div className="flex justify-center gap-4">

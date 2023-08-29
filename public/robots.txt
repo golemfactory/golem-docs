@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://golem-docs.vercel.app/
+Host: https://docs.golem.network/
 
 # Sitemaps
-Sitemap: https://golem-docs.vercel.app/sitemap.xml
+Sitemap: https://docs.golem.network/sitemap.xml
