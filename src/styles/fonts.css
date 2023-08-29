@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/fonts/lexend.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+}
+
+/* PROSE FONT-SIZES */
+
+.prose h1 {
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -2%;
+}
+
+.prose h2 {
+  font-size: 28px;
+  line-height: 110%;
+  letter-spacing: -2%;
+}
+
+.prose h3 {
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: -2%;
+}
+
+.prose h4 {
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.prose h5 {
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.prose h6 {
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+li {
+  @apply text-base;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: -2%;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -2%;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
+.prose .text-base {
+  font-size: 14px;
+}
+
+.prose .text-base-design {
+  font-size: 16px;
+}
+
