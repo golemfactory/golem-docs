@@ -13,19 +13,19 @@ type: design
 
 {% selectioncontent %}
 
-Prefer to code in JS and run your app in the Node.js or a web browser
+Prefer to code in JS and run your app in the Node.js or a web browser?
 
 {% /selectioncontent %}
 
 {% selectioncontent %}
 
-Have a problem that can be split into multiple tasks that can be run in parallel
+Have a problem that can be split into multiple tasks that can be run in parallel?
 
 {% /selectioncontent %}
 
 {% selectioncontent %}
 
-Need a backend to offload your system
+Need a backend to offload your system?
 
 {% /selectioncontent %}
 
@@ -35,19 +35,19 @@ Need a backend to offload your system
 
 {% selectioncontent %}
 
-Already use Docker or Docker Compose to deploy your application
+Already use Docker or Docker Compose to deploy your application?
 
 {% /selectioncontent %}
 
 {% selectioncontent %}
 
-Want to deploy an application on Golem that consists of a service(s) that run constantly
+Want to deploy an application on Golem that consists of a service(s) that run constantly?
 
 {% /selectioncontent %}
 
 {% selectioncontent %}
 
-Glad to use a YAML-based approach to configure the deployment
+Glad to use a YAML-based approach to configure the deployment?
 
 {% /selectioncontent %}
 
