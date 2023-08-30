@@ -30,11 +30,11 @@
 
 #### Parameters
 
-| Name             | Type            |
-| :--------------- | :-------------- |
+| Name | Type |
+| :------ | :------ |
 | `configuration?` | `Configuration` |
-| `basePath?`      | `string`        |
-| `axios?`         | `AxiosInstance` |
+| `basePath?` | `string` |
+| `axios?` | `AxiosInstance` |
 
 #### Inherited from
 

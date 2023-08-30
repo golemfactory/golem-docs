@@ -27,9 +27,9 @@
 
 #### Parameters
 
-| Name       | Type                                                              |
-| :--------- | :---------------------------------------------------------------- |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)               |
+| Name | Type |
+| :------ | :------ |
+| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Overrides
@@ -48,9 +48,9 @@ EventTarget.constructor
 
 #### Parameters
 
-| Name       | Type                                                              |
-| :--------- | :---------------------------------------------------------------- |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)               |
+| Name | Type |
+| :------ | :------ |
+| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Returns
@@ -61,7 +61,7 @@ EventTarget.constructor
 
 [src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/payments.ts#L22)
 
----
+___
 
 ### unsubscribe
 

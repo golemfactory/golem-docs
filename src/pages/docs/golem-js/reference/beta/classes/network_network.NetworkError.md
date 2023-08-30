@@ -22,8 +22,8 @@
 
 #### Parameters
 
-| Name       | Type     |
-| :--------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `message?` | `string` |
 
 #### Inherited from
@@ -38,9 +38,9 @@ node_modules/typescript/lib/lib.es5.d.ts:1073
 
 #### Parameters
 
-| Name       | Type           |
-| :--------- | :------------- |
-| `message?` | `string`       |
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
 | `options?` | `ErrorOptions` |
 
 #### Inherited from

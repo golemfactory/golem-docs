@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `state`: `string` }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `state`: `string`  }\>
 
   ↳ **`ActivityStateChanged`**
 
@@ -28,10 +28,10 @@
 
 #### Parameters
 
-| Name         | Type     |
-| :----------- | :------- |
-| `data?`      | `Object` |
-| `data.id`    | `string` |
+| Name | Type |
+| :------ | :------ |
+| `data?` | `Object` |
+| `data.id` | `string` |
 | `data.state` | `string` |
 
 #### Inherited from
@@ -50,9 +50,9 @@
 
 #### Type declaration
 
-| Name    | Type     |
-| :------ | :------- |
-| `id`    | `string` |
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
 | `state` | `string` |
 
 #### Inherited from
@@ -63,7 +63,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L16)
 
----
+___
 
 ### name
 
@@ -77,7 +77,7 @@
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L17)
 
----
+___
 
 ### timestamp
 

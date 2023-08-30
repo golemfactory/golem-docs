@@ -34,7 +34,7 @@
 
 [src/payment/payments.ts:8](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/payments.ts#L8)
 
----
+___
 
 ### debitNotesFetchingInterval
 
@@ -44,7 +44,7 @@
 
 [src/payment/payments.ts:9](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/payments.ts#L9)
 
----
+___
 
 ### maxInvoiceEvents
 
@@ -54,7 +54,7 @@
 
 [src/payment/payments.ts:10](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/payments.ts#L10)
 
----
+___
 
 ### maxDebitNotesEvents
 
@@ -64,7 +64,7 @@
 
 [src/payment/payments.ts:11](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/payments.ts#L11)
 
----
+___
 
 ### yagnaOptions
 
@@ -78,7 +78,7 @@
 
 [src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L23)
 
----
+___
 
 ### budget
 
@@ -92,7 +92,7 @@
 
 [src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L24)
 
----
+___
 
 ### payment
 
@@ -100,9 +100,9 @@
 
 #### Type declaration
 
-| Name       | Type     |
-| :--------- | :------- |
-| `driver?`  | `string` |
+| Name | Type |
+| :------ | :------ |
+| `driver?` | `string` |
 | `network?` | `string` |
 
 #### Inherited from
@@ -113,7 +113,7 @@
 
 [src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L25)
 
----
+___
 
 ### paymentTimeout
 
@@ -127,7 +127,7 @@
 
 [src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L26)
 
----
+___
 
 ### paymentRequestTimeout
 
@@ -141,7 +141,7 @@
 
 [src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L27)
 
----
+___
 
 ### logger
 
@@ -155,7 +155,7 @@
 
 [src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L28)
 
----
+___
 
 ### eventTarget
 

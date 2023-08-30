@@ -20,7 +20,7 @@
 
 [src/utils/yagna/identity.ts:6](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/identity.ts#L6)
 
----
+___
 
 ### name
 
@@ -30,7 +30,7 @@
 
 [src/utils/yagna/identity.ts:7](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/identity.ts#L7)
 
----
+___
 
 ### role
 

@@ -22,8 +22,8 @@
 
 ##### Parameters
 
-| Name   | Type         |
-| :----- | :----------- |
+| Name | Type |
+| :------ | :------ |
 | `data` | `Uint8Array` |
 
 ##### Returns

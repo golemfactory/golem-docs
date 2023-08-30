@@ -55,7 +55,7 @@ Close storage provider and release all resources.
 
 [src/storage/null.ts:14](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/null.ts#L14)
 
----
+___
 
 ### init
 
@@ -75,7 +75,7 @@ Initialize storage provider.
 
 [src/storage/null.ts:18](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/null.ts#L18)
 
----
+___
 
 ### publishData
 
@@ -85,8 +85,8 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Parameters
 
-| Name  | Type         |
-| :---- | :----------- |
+| Name | Type |
+| :------ | :------ |
 | `src` | `Uint8Array` |
 
 #### Returns
@@ -101,7 +101,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 [src/storage/null.ts:23](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/null.ts#L23)
 
----
+___
 
 ### publishFile
 
@@ -111,8 +111,8 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `src` | `string` |
 
 #### Returns
@@ -127,7 +127,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 [src/storage/null.ts:28](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/null.ts#L28)
 
----
+___
 
 ### receiveFile
 
@@ -137,8 +137,8 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `path` | `string` |
 
 #### Returns
@@ -153,7 +153,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 [src/storage/null.ts:33](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/null.ts#L33)
 
----
+___
 
 ### receiveData
 
@@ -163,8 +163,8 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Parameters
 
-| Name       | Type                                                                                     |
-| :--------- | :--------------------------------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `callback` | [`StorageProviderDataCallback`](../modules/storage_provider#storageproviderdatacallback) |
 
 #### Returns
@@ -179,7 +179,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 [src/storage/null.ts:38](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/null.ts#L38)
 
----
+___
 
 ### release
 
@@ -189,8 +189,8 @@ Release previously allocated resource URL from Yagna.
 
 #### Parameters
 
-| Name   | Type       |
-| :----- | :--------- |
+| Name | Type |
+| :------ | :------ |
 | `urls` | `string`[] |
 
 #### Returns

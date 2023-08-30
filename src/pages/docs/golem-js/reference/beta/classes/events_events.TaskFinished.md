@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string`  }\>
 
   ↳ **`TaskFinished`**
 
@@ -28,9 +28,9 @@
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
-| `data?`   | `Object` |
+| Name | Type |
+| :------ | :------ |
+| `data?` | `Object` |
 | `data.id` | `string` |
 
 #### Inherited from
@@ -49,8 +49,8 @@
 
 #### Type declaration
 
-| Name | Type     |
-| :--- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `id` | `string` |
 
 #### Inherited from
@@ -61,7 +61,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L16)
 
----
+___
 
 ### name
 
@@ -75,7 +75,7 @@
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L17)
 
----
+___
 
 ### timestamp
 

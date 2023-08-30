@@ -10,9 +10,9 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 ## Type parameters
 
-| Name         | Type      |
-| :----------- | :-------- |
-| `InputType`  | `unknown` |
+| Name | Type |
+| :------ | :------ |
+| `InputType` | `unknown` |
 | `OutputType` | `unknown` |
 
 ## Implements
@@ -55,20 +55,20 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Type parameters
 
-| Name         | Type      |
-| :----------- | :-------- |
-| `InputType`  | `unknown` |
+| Name | Type |
+| :------ | :------ |
+| `InputType` | `unknown` |
 | `OutputType` | `unknown` |
 
 #### Parameters
 
-| Name             | Type                                                                | Default value |
-| :--------------- | :------------------------------------------------------------------ | :------------ |
-| `id`             | `string`                                                            | `undefined`   |
-| `worker`         | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | `undefined`   |
-| `data?`          | `InputType`                                                         | `undefined`   |
-| `initWorker?`    | [`Worker`](../modules/task_work#worker)<`undefined`\>               | `undefined`   |
-| `maxTaskRetries` | `number`                                                            | `MAX_RETRIES` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `id` | `string` | `undefined` |
+| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | `undefined` |
+| `data?` | `InputType` | `undefined` |
+| `initWorker?` | [`Worker`](../modules/task_work#worker)<`undefined`\> | `undefined` |
+| `maxTaskRetries` | `number` | `MAX_RETRIES` |
 
 #### Defined in
 
@@ -98,7 +98,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 [src/task/task.ts:33](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L33)
 
----
+___
 
 ### stop
 
@@ -106,11 +106,11 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Parameters
 
-| Name       | Type         | Default value |
-| :--------- | :----------- | :------------ |
-| `results?` | `OutputType` | `undefined`   |
-| `error?`   | `Error`      | `undefined`   |
-| `retry`    | `boolean`    | `true`        |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `results?` | `OutputType` | `undefined` |
+| `error?` | `Error` | `undefined` |
+| `retry` | `boolean` | `true` |
 
 #### Returns
 
@@ -120,7 +120,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 [src/task/task.ts:36](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L36)
 
----
+___
 
 ### isQueueable
 
@@ -138,7 +138,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:46](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L46)
 
----
+___
 
 ### isRetry
 
@@ -152,7 +152,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:49](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L49)
 
----
+___
 
 ### isDone
 
@@ -166,7 +166,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:53](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L53)
 
----
+___
 
 ### isFinished
 
@@ -180,7 +180,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:56](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L56)
 
----
+___
 
 ### isRejected
 
@@ -194,7 +194,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:59](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L59)
 
----
+___
 
 ### isPending
 
@@ -208,7 +208,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:62](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L62)
 
----
+___
 
 ### isNew
 
@@ -222,7 +222,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:65](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L65)
 
----
+___
 
 ### getResults
 
@@ -236,7 +236,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:68](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L68)
 
----
+___
 
 ### getData
 
@@ -250,7 +250,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:71](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L71)
 
----
+___
 
 ### getWorker
 
@@ -264,7 +264,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:74](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L74)
 
----
+___
 
 ### getInitWorker
 
@@ -278,7 +278,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:77](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L77)
 
----
+___
 
 ### getRetriesCount
 
@@ -292,7 +292,7 @@ QueueableTask.isQueueable
 
 [src/task/task.ts:80](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L80)
 
----
+___
 
 ### getError
 

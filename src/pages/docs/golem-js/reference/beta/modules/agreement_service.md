@@ -27,8 +27,8 @@
 
 ##### Parameters
 
-| Name         | Type                                                                      |
-| :----------- | :------------------------------------------------------------------------ |
+| Name | Type |
+| :------ | :------ |
 | `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[] |
 
 ##### Returns

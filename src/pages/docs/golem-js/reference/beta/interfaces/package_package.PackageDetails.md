@@ -24,7 +24,7 @@
 
 [src/package/package.ts:41](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/package/package.ts#L41)
 
----
+___
 
 ### minStorageGib
 
@@ -34,7 +34,7 @@
 
 [src/package/package.ts:42](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/package/package.ts#L42)
 
----
+___
 
 ### minCpuThreads
 
@@ -44,7 +44,7 @@
 
 [src/package/package.ts:43](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/package/package.ts#L43)
 
----
+___
 
 ### minCpuCores
 
@@ -54,7 +54,7 @@
 
 [src/package/package.ts:44](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/package/package.ts#L44)
 
----
+___
 
 ### engine
 
@@ -64,7 +64,7 @@
 
 [src/package/package.ts:45](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/package/package.ts#L45)
 
----
+___
 
 ### capabilities
 
@@ -74,7 +74,7 @@
 
 [src/package/package.ts:46](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/package/package.ts#L46)
 
----
+___
 
 ### imageHash
 

@@ -36,7 +36,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L15)
 
----
+___
 
 ### taskRunningInterval
 
@@ -46,7 +46,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L16)
 
----
+___
 
 ### activityStateCheckingInterval
 
@@ -56,7 +56,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L17)
 
----
+___
 
 ### activityPreparingTimeout
 
@@ -66,7 +66,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L18)
 
----
+___
 
 ### taskTimeout
 
@@ -76,7 +76,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L19)
 
----
+___
 
 ### logger
 
@@ -92,7 +92,7 @@ Logger module
 
 [src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L20)
 
----
+___
 
 ### storageProvider
 
@@ -102,7 +102,7 @@ Logger module
 
 [src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L21)
 
----
+___
 
 ### activityRequestTimeout
 
@@ -118,7 +118,7 @@ timeout for sending and creating batch
 
 [src/activity/activity.ts:32](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L32)
 
----
+___
 
 ### activityExecuteTimeout
 
@@ -134,7 +134,7 @@ timeout for executing batch
 
 [src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L34)
 
----
+___
 
 ### activityExeBatchResultsFetchInterval
 
@@ -150,7 +150,7 @@ interval for fetching batch results while polling
 
 [src/activity/activity.ts:36](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L36)
 
----
+___
 
 ### eventTarget
 
