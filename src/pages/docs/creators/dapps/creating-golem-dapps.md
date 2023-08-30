@@ -9,31 +9,31 @@ title: Creating Golem dApps
 
 Just as it would be the case with any other platform, you start with a specification of components comprising your application.
 
-For now, we’re going to assume that everything is run on Golem’s virtual machine (VM) runtime. Although individual Golem providers can run any number of runtime environments, and we even provide Golem Runtime SDK to create your own, custom runtimes, the default provider configuration right now includes just two - the VM runtime and the WASM runtime. Additionally, of these two, only the former is presently, directly supported by the Golem Deploy platform.
+For now, we’re going to assume that everything is run on Golem’s virtual machine (VM) runtime. Although individual Golem providers can run any number of runtime environments, and we even provide Golem Runtime SDK to create your own custom runtimes, the default provider configuration right now includes just two - the VM runtime and the WASM runtime. Additionally, of these two, only the former is directly supported by the Golem Deploy platform at present.
 
 As the virtual machine image format that the VM runtime operates on is derived from Docker, the decision then comes down to packaging your app into a number of Docker containers. Of course it’s up to an application developer to decide how exactly to proceed here. Still, there are a few criteria that should be considered here.
 
-While it would be, in most cases, easier to set-up your app as a single image, it is bound to make the application as a whole a lot harder to maintain. Imagine you’d like to replace or update one of the components. In case of a single image you’d need to re-build and re-upload the whole thing instead of just one piece. Secondly, it’s much easier to test and debug each component of your app if they’re logically partitioned than it would be if you had just one large box.
+While it would, in most cases, be easier to set-up your app as a single image, it is bound to make the application as a whole a lot harder to maintain. Imagine you’d like to replace or update one of the components. In the case of a single image, you’d need to rebuild and re-upload the whole thing instead of just one piece. Secondly, it’s much easier to test and debug each component of your app if they’re logically partitioned than it would be if you had just one large box.
 
-One more, important point to consider is that each VM image is run on a different Golem provider. Having smaller and more specialized images will make it easier for providers to run each one and it will also make your app easier to scale in the long run.
+Another important point to consider is that each VM image is run on a different Golem provider. Having smaller and more specialized images will make it easier for providers to run each one, and it will also make your app easier to scale in the long term.
 
-The obvious downsides, given the above, is that you’re paying for each running VM image and additionally, there’s always some communications overhead incurred when the components connect over the Golem Network. That’s why one should always consider the advantages and disadvantages of both approaches when designing their own decentralized apps for Golem.
+The obvious downside is that you’re paying for each running VM image and additionally, there is always a communications overhead incurred when the components connect over the Golem Network. That’s why you should always consider the advantages and disadvantages of both approaches when designing your own decentralized apps for Golem.
 
 ## Preparing Golem VM images
 
-Golem’s virtual machine runtime uses its own image format, which is derived from Docker’s and we offer a tool to convert the images from Docker to GVMI.
+Golem’s virtual machine runtime uses its own image format, which is derived from Docker’s, and we offer a tool to convert the images from Docker to GVMI (Golem Virtual Machine Image).
 
 For instructions on how to create a Golem VM image, please refer to:
 
 [Converting a Docker image to the Golem image Tutorial](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format)
 
-What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re listing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](/docs/creators/dapps/docker-containers-vs-golem-vms)
+What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re providing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](/docs/creators/dapps/docker-containers-vs-golem-vms)
 
-For a GVMI image to be used by providers, it needs to be published somewhere where providers can download it. The easiest way is uploading it to the Golem image repository. For instructions on how to do it, refer to: [Publishing a Golem image](/docs/creators/javascript/examples/tools/publishing-custom-images)
+For a GVMI image to be used by providers, it needs to be published somewhere where it can be downloaded. The easiest way to do this is by uploading it to the Golem image repository. For instructions, please refer to: [Publishing a Golem image](/docs/creators/javascript/examples/tools/publishing-custom-images)
 
-If the image is uploaded to the repository, its hash is the only piece of information needed for the image to be retrieved and used by the providers. If it’s available under a different, publicly-available URL, both the image hash and the URL need to be supplied.
+If the image is uploaded to the repository, its hash is the only piece of information needed for the image to be retrieved and used by providers. If it’s available under a different, publicly-available URL, both the image hash and the URL need to be supplied.
 
-The above is true if the image uses a default set of privileges - or - in other words - if it doesn’t need to access external internet locations. To enable outbound internet access from VM runtimes, the images need to be accompanied by [Manifest files](/docs/creators/dapps/creating-golem-dapps#manifest-files).
+The above is true if the image uses a default set of privileges, or - in other words - if it doesn’t need to access external internet locations. To enable outbound internet access from VM runtimes, the images need to be accompanied by [Manifest files](/docs/creators/dapps/creating-golem-dapps#manifest-files).
 
 ## Manifest files
 
@@ -86,7 +86,7 @@ The manifests are JSON files conforming to a specific schema, e.g.:
   }
 ```
 
-For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to [Computation Payload Manifest](/docs/golem/payload-manifest/index).
+For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to: [Computation Payload Manifest](/docs/golem/payload-manifest/index).
 
 
 ### **Manifest signatures**
@@ -103,7 +103,7 @@ Each provider can freely add new addresses and patterns to the whitelist. For do
 
 If the application wishes to access a URL which matches one of the entries on a whitelist, it only needs to supply that address within the manifest file.
 
-Locations from outside the above whitelist additionally require the manifest to be signed using a requestor certificate trusted by a provider. By default, providers trust certificates issued by Golem Factory but they can clear others at their leisure.
+Locations from outside the above whitelist, additionally require the manifest to be signed using a requestor certificate trusted by a provider. By default, providers trust certificates issued by Golem Factory, but they can clear others at their leisure.
 
 ### **Accessing non-standard ports**
 
@@ -125,13 +125,13 @@ One important caveat is that specifying a URL in the manifest only enables the i
       }
 ```
 
-At the moment, the manifests support no way to specify a port range or a wildcard that would include all the ports on a given address. Therefore, if you require accessing any ports different than the default, you must include several lines in the manifest, each with a different port number.
+At the moment, the manifests provide no way to specify a port range or a wildcard that would include all the ports on a given address. Therefore, if you need to access any ports other than the default, you must include several lines in the manifest, each with a different port number.
 
 ## Testing the images
 
 Before deploying the app to Golem, you may wish to test it.
 
-One way to do it is bundling it with `docker-compose` and verifying all of its components work as intended when launched as a whole. Of course, there are currently quite a few differences between Docker and Golem that confirming your application works correctly on the former is not yet a guarantee of success when launched on the latter but it still remains a great way of ensuring no detail has been missed at this stage.
+One way to do this is by bundling it with `docker-compose` and verifying that all of its components work as intended when launched as a whole. Of course, there are currently quite a few differences between Docker and Golem, Therefore, confirming that your application works correctly on the former is not yet a guarantee of success when launched on the latter, but it still remains a great way of ensuring no detail has been missed at this stage.
 
 ### ya-runtime-dbg
 
@@ -141,11 +141,11 @@ Other than that, each singular image comprising your application may be tested s
 
 #### Lack of network connectivity in ya-runtime-dbg
 
-The main issue with testing your apps this way is that `ya-runtime-dbg` doesn’t currently offer a way to expose the network ports of services within the image nor does it allow an app running inside it from accessing any external network locations.
+The main issue with testing your apps this way is that `ya-runtime-dbg` doesn’t currently offer a way to expose the network ports of services within the image nor does it allow an app running inside it to access any external network locations.
 
 ## Application descriptor
 
-Now that your VM images and manifest files are ready, it’s time to combine them into a Golem Deploy application. Golem’s decentralized app descriptors are YAML files, vaguely similar to those used by Docker’s compose.
+Now that your VM images and manifest files are ready, it’s time to combine them into a Golem Deploy application. Golem’s decentralized app descriptors are YAML files, vaguely similar to those used by docker-compose.
 
 Example app descriptor for a two-layer HTTP + DB application:
 
@@ -202,13 +202,13 @@ There are three important root elements of the descriptor, namely `payloads`, `n
 
 ### Payloads
 
-The payloads part enumerates all the VM images or other runtime definitions that constitute components of your application. Each of the payload translates to a demand published on the Golem Network to which any providers eager to run them will respond.
+The payloads part enumerates all the VM images or other runtime definitions that constitute components of your application. Each of the payloads translates to a demand published on the Golem Network to which any providers eager to run them will respond.
 
 As mentioned earlier, in case of the VM runtime, the payload may be an image hash or - if your image needs to access external URLs - a base64-encoded manifest.
 
 ### Nodes
 
-If the payloads could be said to describe the “what” of your app, the nodes part describes the “how”. Each entry translates to a service that’s deployed to a provider. Each service must, obviously specify the payload that it uses.
+If the payloads could be said to describe the “what” of your app, the nodes part describes the “how”. Each entry translates to a service that’s deployed to a provider. Each service must obviously specify the payload that it uses.
 
 #### `init`
 
@@ -226,7 +226,7 @@ init:
 
 #### `network` and `ip`
 
-Most of applications consisting of more than one node will likely require the individual nodes to be connected to each other. That’s what the `network` and `ip` elements are for. As expected, they specify, respectively, which of the defined networks the given node should be part of and what IP address within the network a given node should be assigned.
+Most of the applications consisting of more than one node will likely require the individual nodes to be connected to each other. That’s what the `network` and `ip` elements are for. As expected, they specify, respectively, which of the defined networks a given node should be part of and what IP address should be assigned to the node within the network.
 
 Example definition:
 
@@ -238,7 +238,7 @@ network: "default"
 
 #### `depends_on`
 
-In addition to enumerating the services, you may wish to specify dependencies between them. If e.g. your back-end application assumes that it can connect to a database when it starts, you’ll need the database to be already up and running when you start the back-end. In such case, your back-end component should specify a `depends_on` element pointing to the DB node. The startup of the back-end will then only be executed once the database is confirmed to be started successfully.
+In addition to enumerating the services, you may wish to specify dependencies between them. If e.g. your back-end application assumes that it can connect to a database when it starts, you’ll need the database to be up and running already when you start the back-end. In such a case, your back-end component should specify a `depends_on` element pointing to the DB node. The startup of the back-end will then only be executed once the database is confirmed to have started successfully.
 
 Example:
 
@@ -259,9 +259,9 @@ http_proxy:
         - "80"
 ```
 
-You can specify just one port or a colon-separated mapping. If a single number is specified, the given remote port will be mapped to an automatically-chosen local port. On the other hand, specifying another number after a colon will attempt to map the remote port to this specific local port but will fail if that port is already taken.
+You can specify just one port or a colon-separated mapping. If a single number is specified, the given remote port will be mapped to an automatically-chosen local port. On the other hand, specifying another number after a colon will attempt to map the remote port to this specific local port but will fail if it is already taken.
 
-Once a service is launched and `dapp-runner` succeeds in starting a local proxy, it will emit a following message to the `data` stream:
+Once a service is launched and `dapp-runner` succeeds in starting a local proxy, it will emit the following message to the `data` stream:
 
 ```json
 {"cache": {"local_proxy_address": "http://localhost:8080"}}
@@ -269,11 +269,11 @@ Once a service is launched and `dapp-runner` succeeds in starting a local proxy,
 
 You should be able to access your service using that published URL.
 
-The chief difference between the HTTP proxy and the generic TCP socket proxy is that the first one is protocol-aware and limited to HTTP only. The second one is more versatile and connections to any TCP services (e.g. databases, SSH services, etc) running on the provider nodes.
+The chief difference between the HTTP proxy and the generic TCP socket proxy is that the first one is protocol-aware and limited to HTTP only. The second one is more versatile and connects to any TCP services (e.g. databases, SSH services, etc) running on the provider nodes.
 
-The tradeoff is that only the HTTP proxy can be used with external platforms exactly because in order to correctly map the addresses, the platform must be able to interpret the incoming requests.
+The tradeoff is that only the HTTP proxy can be used with external platforms exactly because, in order to correctly map the addresses, the platform must be able to interpret the incoming requests.
 
-Again, please note that both types of connections are only able to be connected-to through ports on the same machine that `dapp-runner` is running on. In the future we’re planning to support remote relays that will enable connections to services to be made without requiring requestor’s active participation.
+Again, please note that both types of connections are only exposed through ports on the same machine that `dapp-runner` is running on. In the future, we’re planning to support remote relays that will enable connections to services to be made without requiring the requestor’s active participation.
 
 ## Running the application
 
@@ -281,17 +281,17 @@ Again, please note that both types of connections are only able to be connected-
 
 The most straightforward way of running your dApp on Golem currently is by using `dapp-runner` directly. Dapp-runner is our reference implementation of the Golem Deploy model, able to take your application descriptor and connect to a Yagna service to first orchestrate deployment of all the components of your app and then supervise their state.
 
-Extensive information on running and installing the `dapp-runner` can be found in it README:
+Extensive information on running and installing the `dapp-runner` can be found in its README:
 
 [See dapp-runner on GitHub](https://github.com/golemfactory/dapp-runner/).
 
 ### dapp-manager
 
-While starting apps with the `dapp-runner` is the simplest and most straightforward way of starting and testing your dApps on Golem, it may become cumbersome when you wish to run multiple such apps at the same time.
+While starting apps with the `dapp-runner` is the simplest and most straightforward way of starting and testing your dApps on Golem, it may become cumbersome when you wish to run multiple apps at the same time.
 
 That’s where `dapp-manager` comes in - it makes it more convenient to launch multiple apps and monitor their states alongside.
 
-Again, for details on installation and running of `dapp-manager`, have a look at its documentation in the github repository:
+Again, for details on the installation and running of `dapp-manager`, have a look at its documentation in the github repository:
 
 [See dapp-manager on GitHub](https://github.com/golemfactory/dapp-manager/).
 
@@ -318,17 +318,17 @@ nodes:
         - "80"
 ```
 
-This enables an automatically-chosen local port to be mapped to remote port. Once the service is completely initialized on the remote node, dapp-runner a data message with a location of the mapped port:
+This enables an automatically-chosen local port to be mapped to a remote port. Once the service is completely initialized on the remote node, dapp-runner emits a data message with a location of the mapped port:
 
 ```json
 {"backend": {"local_proxy_address": "http://localhost:8081"}}
 ```
 
-You can then use your browser or any other HTTP-based tool to access the service. Choosing the HTTP proxy has two benefits as compared with the generic TCP proxy. First, it causes requests and responses to be logged by the `dapp-runner` and allows for easier debugging in case of issues. Secondly, and possibly more importantly, it allows the service exposed in this way to be available when the application is deployed.
+You can then use your browser or any other HTTP-based tool to access the service. Choosing the HTTP proxy has two benefits as compared with the generic TCP proxy. First, it causes requests and responses to be logged by the `dapp-runner` and allows for easier debugging in case of issues. Secondly, and possibly more importantly, it allows the service exposed in this way to be available when the application is deployed on Golem's Portal.
 
 #### TCP proxy
 
-As opposed to the HTTP proxy, the TCP proxy opens a generic, two-way connection between the specified remote port and a local port and is enabled using, e.g.:
+As opposed to the HTTP proxy, the TCP proxy opens a generic, two-way connection between the specified remote port and a local port. It is enabled using, e.g.:
 
 ```yaml
 nodes:
@@ -347,11 +347,11 @@ After the given node has finished its startup, dapp-runner emits a data message 
 {"mongo": {"local_tcp_proxy_address": "localhost:8080"}}
 ```
 
-Using a generic TCP proxy enables connections to all kinds of TCP-based services. You can use it to connect directly to a database, an SSH server or other kinds of services. This may be useful for debugging purposes or maybe because running a database on a provider that you connect to from the outside is exactly what you want to use Golem Deploy framework for.
+Using a generic TCP proxy enables connections to all kinds of TCP-based services. You can use it to connect directly to a database, an SSH server, or other kinds of services. This may be useful for debugging purposes or maybe because running a database on a provider that you connect to from the outside is exactly what you want to use Golem Deploy framework for.
 
 ### Running commands on the remote nodes
 
-While developing, testing or just using your app, it may happen that you’ll want to access a shell or execute additional commands on the deployed service nodes. Dapp-manager’s `exec` command serves exactly this purpose.
+While developing, testing, or just using your app, you might want to access a shell or execute additional commands on the deployed service nodes. Dapp-manager’s `exec` command serves exactly this purpose.
 
 #### Usage
 
