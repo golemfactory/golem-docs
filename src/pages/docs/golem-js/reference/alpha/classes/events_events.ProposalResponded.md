@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `counteringProposalId`: `string` }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `counteringProposalId`: `string`  }\>
 
   ↳ **`ProposalResponded`**
 
@@ -28,11 +28,11 @@
 
 #### Parameters
 
-| Name                        | Type     |
-| :-------------------------- | :------- |
-| `data?`                     | `Object` |
-| `data.id`                   | `string` |
-| `data.providerId`           | `string` |
+| Name | Type |
+| :------ | :------ |
+| `data?` | `Object` |
+| `data.id` | `string` |
+| `data.providerId` | `string` |
 | `data.counteringProposalId` | `string` |
 
 #### Inherited from
@@ -51,10 +51,10 @@
 
 #### Type declaration
 
-| Name                   | Type     |
-| :--------------------- | :------- |
-| `id`                   | `string` |
-| `providerId`           | `string` |
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `providerId` | `string` |
 | `counteringProposalId` | `string` |
 
 #### Inherited from
@@ -65,7 +65,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L16)
 
----
+___
 
 ### name
 
@@ -79,7 +79,7 @@
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L17)
 
----
+___
 
 ### timestamp
 

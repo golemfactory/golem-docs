@@ -38,7 +38,7 @@ Interval for checking new invoices
 
 [src/payment/service.ts:12](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L12)
 
----
+___
 
 ### debitNotesFetchingInterval
 
@@ -50,7 +50,7 @@ Interval for checking new debit notes
 
 [src/payment/service.ts:14](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L14)
 
----
+___
 
 ### maxInvoiceEvents
 
@@ -62,7 +62,7 @@ Maximum number of invoice events per one fetching
 
 [src/payment/service.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L16)
 
----
+___
 
 ### maxDebitNotesEvents
 
@@ -74,7 +74,7 @@ Maximum number of debit notes events per one fetching
 
 [src/payment/service.ts:18](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L18)
 
----
+___
 
 ### debitNotesFilter
 
@@ -86,7 +86,7 @@ A custom filter that checks every debit notes coming from providers
 
 [src/payment/service.ts:20](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L20)
 
----
+___
 
 ### invoiceFilter
 
@@ -98,7 +98,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/service.ts:22](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L22)
 
----
+___
 
 ### yagnaOptions
 
@@ -112,7 +112,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L26)
 
----
+___
 
 ### budget
 
@@ -126,7 +126,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L27)
 
----
+___
 
 ### payment
 
@@ -134,9 +134,9 @@ A custom filter that checks every invoices coming from providers
 
 #### Type declaration
 
-| Name       | Type     |
-| :--------- | :------- |
-| `driver?`  | `string` |
+| Name | Type |
+| :------ | :------ |
+| `driver?` | `string` |
 | `network?` | `string` |
 
 #### Inherited from
@@ -147,7 +147,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L28)
 
----
+___
 
 ### paymentTimeout
 
@@ -161,7 +161,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L29)
 
----
+___
 
 ### paymentRequestTimeout
 
@@ -175,7 +175,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/config.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L30)
 
----
+___
 
 ### logger
 
@@ -189,7 +189,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/config.ts:31](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L31)
 
----
+___
 
 ### eventTarget
 

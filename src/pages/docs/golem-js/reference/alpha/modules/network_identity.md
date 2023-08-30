@@ -16,9 +16,9 @@ A helper function to get the requestor's ID
 
 #### Parameters
 
-| Name                    | Type                                             |
-| :---------------------- | :----------------------------------------------- |
-| `options?`              | `Object`                                         |
+| Name | Type |
+| :------ | :------ |
+| `options?` | `Object` |
 | `options.yagnaOptions?` | [`YagnaOptions`](executor_executor#yagnaoptions) |
 
 #### Returns

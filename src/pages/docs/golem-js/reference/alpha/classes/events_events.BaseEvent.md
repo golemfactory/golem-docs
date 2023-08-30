@@ -4,8 +4,8 @@
 
 ## Type parameters
 
-| Name       |
-| :--------- |
+| Name |
+| :------ |
 | `DataType` |
 
 ## Hierarchy
@@ -98,14 +98,14 @@
 
 #### Type parameters
 
-| Name       |
-| :--------- |
+| Name |
+| :------ |
 | `DataType` |
 
 #### Parameters
 
-| Name    | Type       |
-| :------ | :--------- |
+| Name | Type |
+| :------ | :------ |
 | `data?` | `DataType` |
 
 #### Overrides
@@ -130,7 +130,7 @@ CustomEvent.detail
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L16)
 
----
+___
 
 ### name
 
@@ -144,7 +144,7 @@ CustomEvent.name
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L17)
 
----
+___
 
 ### timestamp
 

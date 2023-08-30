@@ -27,8 +27,8 @@
 
 #### Parameters
 
-| Name       | Type                                                              |
-| :--------- | :---------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Overrides
@@ -47,8 +47,8 @@ EventTarget.constructor
 
 #### Parameters
 
-| Name       | Type                                                              |
-| :--------- | :---------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Returns
@@ -59,7 +59,7 @@ EventTarget.constructor
 
 [src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/payments.ts#L22)
 
----
+___
 
 ### unsubscribe
 

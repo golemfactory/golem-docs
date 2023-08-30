@@ -27,16 +27,16 @@
 
 #### Type declaration
 
-| Name        | Type     | Description                          |
-| :---------- | :------- | :----------------------------------- |
-| `apiKey?`   | `string` | Yagna Api Key                        |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `apiKey?` | `string` | Yagna Api Key |
 | `basePath?` | `string` | Yagna base path to Activity REST Api |
 
 #### Defined in
 
 [src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L30)
 
----
+___
 
 ### activityRequestTimeout
 
@@ -48,7 +48,7 @@ timeout for sending and creating batch
 
 [src/activity/activity.ts:37](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L37)
 
----
+___
 
 ### activityExecuteTimeout
 
@@ -60,7 +60,7 @@ timeout for executing batch
 
 [src/activity/activity.ts:39](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L39)
 
----
+___
 
 ### activityExeBatchResultsFetchInterval
 
@@ -72,7 +72,7 @@ interval for fetching batch results while polling
 
 [src/activity/activity.ts:41](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L41)
 
----
+___
 
 ### logger
 
@@ -84,7 +84,7 @@ Logger module
 
 [src/activity/activity.ts:43](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L43)
 
----
+___
 
 ### eventTarget
 

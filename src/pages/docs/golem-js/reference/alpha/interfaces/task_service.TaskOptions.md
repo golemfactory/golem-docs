@@ -37,7 +37,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L15)
 
----
+___
 
 ### taskRunningInterval
 
@@ -47,7 +47,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L16)
 
----
+___
 
 ### activityStateCheckingInterval
 
@@ -57,7 +57,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L17)
 
----
+___
 
 ### activityPreparingTimeout
 
@@ -67,7 +67,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L18)
 
----
+___
 
 ### taskTimeout
 
@@ -77,7 +77,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 [src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L19)
 
----
+___
 
 ### logger
 
@@ -93,7 +93,7 @@ Logger module
 
 [src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L20)
 
----
+___
 
 ### storageProvider
 
@@ -103,7 +103,7 @@ Logger module
 
 [src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L21)
 
----
+___
 
 ### yagnaOptions
 
@@ -111,9 +111,9 @@ Logger module
 
 #### Type declaration
 
-| Name        | Type     | Description                          |
-| :---------- | :------- | :----------------------------------- |
-| `apiKey?`   | `string` | Yagna Api Key                        |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `apiKey?` | `string` | Yagna Api Key |
 | `basePath?` | `string` | Yagna base path to Activity REST Api |
 
 #### Inherited from
@@ -124,7 +124,7 @@ Logger module
 
 [src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L30)
 
----
+___
 
 ### activityRequestTimeout
 
@@ -140,7 +140,7 @@ timeout for sending and creating batch
 
 [src/activity/activity.ts:37](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L37)
 
----
+___
 
 ### activityExecuteTimeout
 
@@ -156,7 +156,7 @@ timeout for executing batch
 
 [src/activity/activity.ts:39](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L39)
 
----
+___
 
 ### activityExeBatchResultsFetchInterval
 
@@ -172,7 +172,7 @@ interval for fetching batch results while polling
 
 [src/activity/activity.ts:41](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L41)
 
----
+___
 
 ### eventTarget
 

@@ -33,8 +33,8 @@
 
 #### Parameters
 
-| Name       | Type                                                                    |
-| :--------- | :---------------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `options?` | [`BasePaymentOptions`](../interfaces/payment_config.BasePaymentOptions) |
 
 #### Inherited from
@@ -59,7 +59,7 @@ BaseConfig.yagnaOptions
 
 [src/payment/config.ts:38](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L38)
 
----
+___
 
 ### paymentTimeout
 
@@ -73,7 +73,7 @@ BaseConfig.paymentTimeout
 
 [src/payment/config.ts:39](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L39)
 
----
+___
 
 ### api
 
@@ -87,7 +87,7 @@ BaseConfig.api
 
 [src/payment/config.ts:40](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L40)
 
----
+___
 
 ### logger
 
@@ -101,7 +101,7 @@ BaseConfig.logger
 
 [src/payment/config.ts:41](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L41)
 
----
+___
 
 ### eventTarget
 
@@ -115,7 +115,7 @@ BaseConfig.eventTarget
 
 [src/payment/config.ts:42](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L42)
 
----
+___
 
 ### payment
 
@@ -123,9 +123,9 @@ BaseConfig.eventTarget
 
 #### Type declaration
 
-| Name      | Type     |
-| :-------- | :------- |
-| `driver`  | `string` |
+| Name | Type |
+| :------ | :------ |
+| `driver` | `string` |
 | `network` | `string` |
 
 #### Inherited from
@@ -136,7 +136,7 @@ BaseConfig.payment
 
 [src/payment/config.ts:43](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L43)
 
----
+___
 
 ### httpAgent
 
@@ -150,7 +150,7 @@ BaseConfig.httpAgent
 
 [src/payment/config.ts:44](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L44)
 
----
+___
 
 ### options
 

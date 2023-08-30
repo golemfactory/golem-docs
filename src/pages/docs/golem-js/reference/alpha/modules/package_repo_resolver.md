@@ -1,1 +1,1 @@
-# Module: package/repo_resolver
+# Module: package/repo\_resolver

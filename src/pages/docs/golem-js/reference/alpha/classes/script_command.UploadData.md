@@ -35,11 +35,11 @@
 
 #### Parameters
 
-| Name              | Type                                                                |
-| :---------------- | :------------------------------------------------------------------ |
+| Name | Type |
+| :------ | :------ |
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
-| `src`             | `Uint8Array`                                                        |
-| `dstPath`         | `string`                                                            |
+| `src` | `Uint8Array` |
+| `dstPath` | `string` |
 
 #### Overrides
 
@@ -63,7 +63,7 @@ Transfer.from
 
 [src/script/command.ts:116](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L116)
 
----
+___
 
 ### to
 
@@ -77,7 +77,7 @@ Transfer.to
 
 [src/script/command.ts:117](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L117)
 
----
+___
 
 ### args
 
@@ -109,7 +109,7 @@ Transfer.before
 
 [src/script/command.ts:160](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L160)
 
----
+___
 
 ### after
 
@@ -117,8 +117,8 @@ Transfer.before
 
 #### Parameters
 
-| Name     | Type                 |
-| :------- | :------------------- |
+| Name | Type |
+| :------ | :------ |
 | `result` | `Result`<`unknown`\> |
 
 #### Returns
@@ -133,7 +133,7 @@ Transfer.after
 
 [src/script/command.ts:164](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L164)
 
----
+___
 
 ### toJson
 
@@ -151,7 +151,7 @@ Transfer.toJson
 
 [src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L25)
 
----
+___
 
 ### toExeScriptRequest
 

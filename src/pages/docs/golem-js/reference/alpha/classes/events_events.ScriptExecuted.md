@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `activityId`: `string` ; `agreementId`: `string` ; `success`: `boolean` }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `activityId`: `string` ; `agreementId`: `string` ; `success`: `boolean`  }\>
 
   ↳ **`ScriptExecuted`**
 
@@ -28,12 +28,12 @@
 
 #### Parameters
 
-| Name               | Type      |
-| :----------------- | :-------- |
-| `data?`            | `Object`  |
-| `data.activityId`  | `string`  |
-| `data.agreementId` | `string`  |
-| `data.success`     | `boolean` |
+| Name | Type |
+| :------ | :------ |
+| `data?` | `Object` |
+| `data.activityId` | `string` |
+| `data.agreementId` | `string` |
+| `data.success` | `boolean` |
 
 #### Inherited from
 
@@ -51,11 +51,11 @@
 
 #### Type declaration
 
-| Name          | Type      |
-| :------------ | :-------- |
-| `activityId`  | `string`  |
-| `agreementId` | `string`  |
-| `success`     | `boolean` |
+| Name | Type |
+| :------ | :------ |
+| `activityId` | `string` |
+| `agreementId` | `string` |
+| `success` | `boolean` |
 
 #### Inherited from
 
@@ -65,7 +65,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L16)
 
----
+___
 
 ### name
 
@@ -79,7 +79,7 @@
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L17)
 
----
+___
 
 ### timestamp
 

@@ -27,11 +27,11 @@
 
 #### Parameters
 
-| Name              | Type                                                                |
-| :---------------- | :------------------------------------------------------------------ |
-| `activity`        | `Activity`                                                          |
+| Name | Type |
+| :------ | :------ |
+| `activity` | `Activity` |
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
-| `logger?`         | [`Logger`](../interfaces/utils_logger_logger.Logger)                |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
 #### Defined in
 
@@ -45,11 +45,11 @@
 
 #### Parameters
 
-| Name              | Type                                                                |
-| :---------------- | :------------------------------------------------------------------ |
-| `activity`        | `Activity`                                                          |
+| Name | Type |
+| :------ | :------ |
+| `activity` | `Activity` |
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
-| `logger?`         | [`Logger`](../interfaces/utils_logger_logger.Logger)                |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
 #### Returns
 
@@ -59,7 +59,7 @@
 
 [src/task/batch.ts:11](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/batch.ts#L11)
 
----
+___
 
 ### run
 
@@ -69,8 +69,8 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Parameters
 
-| Name          | Type     | Description               |
-| :------------ | :------- | :------------------------ |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `commandLine` | `string` | Shell command to execute. |
 
 #### Returns
@@ -87,10 +87,10 @@ Execute an executable on provider.
 
 #### Parameters
 
-| Name         | Type       | Description           |
-| :----------- | :--------- | :-------------------- |
-| `executable` | `string`   | Executable to run.    |
-| `args`       | `string`[] | Executable arguments. |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `executable` | `string` | Executable to run. |
+| `args` | `string`[] | Executable arguments. |
 
 #### Returns
 
@@ -100,7 +100,7 @@ Execute an executable on provider.
 
 [src/task/batch.ts:36](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/batch.ts#L36)
 
----
+___
 
 ### uploadFile
 
@@ -108,8 +108,8 @@ Execute an executable on provider.
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `src` | `string` |
 | `dst` | `string` |
 
@@ -121,7 +121,7 @@ Execute an executable on provider.
 
 [src/task/batch.ts:47](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/batch.ts#L47)
 
----
+___
 
 ### uploadJson
 
@@ -129,10 +129,10 @@ Execute an executable on provider.
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `json` | `object` |
-| `dst`  | `string` |
+| `dst` | `string` |
 
 #### Returns
 
@@ -142,7 +142,7 @@ Execute an executable on provider.
 
 [src/task/batch.ts:52](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/batch.ts#L52)
 
----
+___
 
 ### uploadData
 
@@ -150,10 +150,10 @@ Execute an executable on provider.
 
 #### Parameters
 
-| Name   | Type         |
-| :----- | :----------- |
+| Name | Type |
+| :------ | :------ |
 | `data` | `Uint8Array` |
-| `dst`  | `string`     |
+| `dst` | `string` |
 
 #### Returns
 
@@ -163,7 +163,7 @@ Execute an executable on provider.
 
 [src/task/batch.ts:58](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/batch.ts#L58)
 
----
+___
 
 ### downloadFile
 
@@ -171,8 +171,8 @@ Execute an executable on provider.
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `src` | `string` |
 | `dst` | `string` |
 
@@ -184,7 +184,7 @@ Execute an executable on provider.
 
 [src/task/batch.ts:63](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/batch.ts#L63)
 
----
+___
 
 ### end
 
@@ -202,7 +202,7 @@ In case any of the commands will fail, the execution of the batch will be interr
 
 [src/task/batch.ts:73](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/batch.ts#L73)
 
----
+___
 
 ### endStream
 
