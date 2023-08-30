@@ -4,21 +4,21 @@
 
 ### Classes
 
-- [WorkContext](../classes/task_work.WorkContext.md)
+- [WorkContext](../classes/task_work.WorkContext)
 
 ### Interfaces
 
-- [WorkOptions](../interfaces/task_work.WorkOptions.md)
+- [WorkOptions](../interfaces/task_work.WorkOptions)
 
 ### Type Aliases
 
-- [Worker](task_work.md#worker)
+- [Worker](task_work#worker)
 
 ## Type Aliases
 
 ### Worker
 
-Ƭ **Worker**<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext.md), `data?`: `InputType`) => `Promise`<`OutputType`\>
+Ƭ **Worker**<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`<`OutputType`\>
 
 #### Type parameters
 
@@ -35,7 +35,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `ctx` | [`WorkContext`](../classes/task_work.WorkContext.md) |
+| `ctx` | [`WorkContext`](../classes/task_work.WorkContext) |
 | `data?` | `InputType` |
 
 ##### Returns

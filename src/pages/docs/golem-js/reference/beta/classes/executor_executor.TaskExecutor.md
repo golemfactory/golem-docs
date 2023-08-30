@@ -1,6 +1,6 @@
 # Class: TaskExecutor
 
-[executor/executor](../modules/executor_executor.md).TaskExecutor
+[executor/executor](../modules/executor_executor).TaskExecutor
 
 A high-level module for defining and executing tasks in the golem network
 
@@ -8,21 +8,21 @@ A high-level module for defining and executing tasks in the golem network
 
 ### Methods
 
-- [create](executor_executor.TaskExecutor.md#create)
-- [init](executor_executor.TaskExecutor.md#init)
-- [end](executor_executor.TaskExecutor.md#end)
-- [getStats](executor_executor.TaskExecutor.md#getstats)
-- [beforeEach](executor_executor.TaskExecutor.md#beforeeach)
-- [run](executor_executor.TaskExecutor.md#run)
-- [map](executor_executor.TaskExecutor.md#map)
-- [forEach](executor_executor.TaskExecutor.md#foreach)
-- [cancel](executor_executor.TaskExecutor.md#cancel)
+- [create](executor_executor.TaskExecutor#create)
+- [init](executor_executor.TaskExecutor#init)
+- [end](executor_executor.TaskExecutor#end)
+- [getStats](executor_executor.TaskExecutor#getstats)
+- [beforeEach](executor_executor.TaskExecutor#beforeeach)
+- [run](executor_executor.TaskExecutor#run)
+- [map](executor_executor.TaskExecutor#map)
+- [forEach](executor_executor.TaskExecutor#foreach)
+- [cancel](executor_executor.TaskExecutor#cancel)
 
 ## Methods
 
 ### create
 
-▸ `Static` **create**(`options`): `Promise`<[`TaskExecutor`](executor_executor.TaskExecutor.md)\>
+▸ `Static` **create**(`options`): `Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 Create a new Task Executor
 
@@ -30,11 +30,11 @@ Create a new Task Executor
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | [`ExecutorOptionsMixin`](../modules/executor_executor.md#executoroptionsmixin) | Task executor options |
+| `options` | [`ExecutorOptionsMixin`](../modules/executor_executor#executoroptionsmixin) | Task executor options |
 
 #### Returns
 
-`Promise`<[`TaskExecutor`](executor_executor.TaskExecutor.md)\>
+`Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 TaskExecutor
 
@@ -139,7 +139,7 @@ Define worker function that will be runs before every each computation Task, wit
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work.md#worker) | worker function - task |
+| `worker` | [`Worker`](../modules/task_work#worker) | worker function - task |
 
 #### Returns
 
@@ -183,7 +183,7 @@ Run task - allows to execute a single worker function on the Golem network with 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work.md#worker)<`undefined`, `OutputType`\> | function that run task |
+| `worker` | [`Worker`](../modules/task_work#worker)<`undefined`, `OutputType`\> | function that run task |
 
 #### Returns
 
@@ -221,7 +221,7 @@ Map iterable data to worker function and return computed Task result as AsyncIte
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work.md#worker)<`InputType`, `OutputType`\> | worker function |
+| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | worker function |
 
 #### Returns
 
@@ -261,7 +261,7 @@ Iterates over given data and execute task using worker function
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work.md#worker)<`InputType`, `OutputType`\> | Worker function |
+| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | Worker function |
 
 #### Returns
 

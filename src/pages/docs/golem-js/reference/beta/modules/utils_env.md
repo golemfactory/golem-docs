@@ -4,7 +4,7 @@
 
 ### Variables
 
-- [EnvUtils](utils_env.md#envutils)
+- [EnvUtils](utils_env#envutils)
 
 ## Variables
 

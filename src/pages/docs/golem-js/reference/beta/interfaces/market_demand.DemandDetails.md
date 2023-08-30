@@ -1,13 +1,13 @@
 # Interface: DemandDetails
 
-[market/demand](../modules/market_demand.md).DemandDetails
+[market/demand](../modules/market_demand).DemandDetails
 
 ## Table of contents
 
 ### Properties
 
-- [properties](market_demand.DemandDetails.md#properties)
-- [constraints](market_demand.DemandDetails.md#constraints)
+- [properties](market_demand.DemandDetails#properties)
+- [constraints](market_demand.DemandDetails#constraints)
 
 ## Properties
 

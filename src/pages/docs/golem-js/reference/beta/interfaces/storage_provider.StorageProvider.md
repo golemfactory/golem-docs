@@ -1,24 +1,24 @@
 # Interface: StorageProvider
 
-[storage/provider](../modules/storage_provider.md).StorageProvider
+[storage/provider](../modules/storage_provider).StorageProvider
 
 ## Implemented by
 
-- [`GftpStorageProvider`](../classes/storage_gftp.GftpStorageProvider.md)
-- [`NullStorageProvider`](../classes/storage_null.NullStorageProvider.md)
-- [`WebSocketBrowserStorageProvider`](../classes/storage_ws_browser.WebSocketBrowserStorageProvider.md)
+- [`GftpStorageProvider`](../classes/storage_gftp.GftpStorageProvider)
+- [`NullStorageProvider`](../classes/storage_null.NullStorageProvider)
+- [`WebSocketBrowserStorageProvider`](../classes/storage_ws_browser.WebSocketBrowserStorageProvider)
 
 ## Table of contents
 
 ### Methods
 
-- [init](storage_provider.StorageProvider.md#init)
-- [close](storage_provider.StorageProvider.md#close)
-- [receiveFile](storage_provider.StorageProvider.md#receivefile)
-- [receiveData](storage_provider.StorageProvider.md#receivedata)
-- [publishFile](storage_provider.StorageProvider.md#publishfile)
-- [publishData](storage_provider.StorageProvider.md#publishdata)
-- [release](storage_provider.StorageProvider.md#release)
+- [init](storage_provider.StorageProvider#init)
+- [close](storage_provider.StorageProvider#close)
+- [receiveFile](storage_provider.StorageProvider#receivefile)
+- [receiveData](storage_provider.StorageProvider#receivedata)
+- [publishFile](storage_provider.StorageProvider#publishfile)
+- [publishData](storage_provider.StorageProvider#publishdata)
+- [release](storage_provider.StorageProvider#release)
 
 ## Methods
 
@@ -86,7 +86,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | [`StorageProviderDataCallback`](../modules/storage_provider.md#storageproviderdatacallback) |
+| `callback` | [`StorageProviderDataCallback`](../modules/storage_provider#storageproviderdatacallback) |
 
 #### Returns
 

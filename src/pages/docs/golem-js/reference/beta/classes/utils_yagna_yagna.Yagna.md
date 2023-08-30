@@ -1,28 +1,28 @@
 # Class: Yagna
 
-[utils/yagna/yagna](../modules/utils_yagna_yagna.md).Yagna
+[utils/yagna/yagna](../modules/utils_yagna_yagna).Yagna
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](utils_yagna_yagna.Yagna.md#constructor)
+- [constructor](utils_yagna_yagna.Yagna#constructor)
 
 ### Properties
 
-- [apiKey](utils_yagna_yagna.Yagna.md#apikey)
-- [apiBaseUrl](utils_yagna_yagna.Yagna.md#apibaseurl)
+- [apiKey](utils_yagna_yagna.Yagna#apikey)
+- [apiBaseUrl](utils_yagna_yagna.Yagna#apibaseurl)
 
 ### Methods
 
-- [getApi](utils_yagna_yagna.Yagna.md#getapi)
-- [connect](utils_yagna_yagna.Yagna.md#connect)
-- [end](utils_yagna_yagna.Yagna.md#end)
-- [createApi](utils_yagna_yagna.Yagna.md#createapi)
-- [getApiConfig](utils_yagna_yagna.Yagna.md#getapiconfig)
-- [getApiUrl](utils_yagna_yagna.Yagna.md#getapiurl)
-- [errorHandler](utils_yagna_yagna.Yagna.md#errorhandler)
-- [addErrorHandler](utils_yagna_yagna.Yagna.md#adderrorhandler)
+- [getApi](utils_yagna_yagna.Yagna#getapi)
+- [connect](utils_yagna_yagna.Yagna#connect)
+- [end](utils_yagna_yagna.Yagna#end)
+- [createApi](utils_yagna_yagna.Yagna#createapi)
+- [getApiConfig](utils_yagna_yagna.Yagna#getapiconfig)
+- [getApiUrl](utils_yagna_yagna.Yagna#getapiurl)
+- [errorHandler](utils_yagna_yagna.Yagna#errorhandler)
+- [addErrorHandler](utils_yagna_yagna.Yagna#adderrorhandler)
 
 ## Constructors
 
@@ -34,7 +34,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [`YagnaOptions`](../modules/utils_yagna_yagna.md#yagnaoptions) |
+| `options?` | [`YagnaOptions`](../modules/utils_yagna_yagna#yagnaoptions) |
 
 #### Defined in
 
@@ -64,11 +64,11 @@ ___
 
 ### getApi
 
-▸ **getApi**(): [`YagnaApi`](../modules/utils_yagna_yagna.md#yagnaapi)
+▸ **getApi**(): [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
 
 #### Returns
 
-[`YagnaApi`](../modules/utils_yagna_yagna.md#yagnaapi)
+[`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
 
 #### Defined in
 
@@ -106,11 +106,11 @@ ___
 
 ### createApi
 
-▸ `Protected` **createApi**(): [`YagnaApi`](../modules/utils_yagna_yagna.md#yagnaapi)
+▸ `Protected` **createApi**(): [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
 
 #### Returns
 
-[`YagnaApi`](../modules/utils_yagna_yagna.md#yagnaapi)
+[`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
 
 #### Defined in
 
@@ -180,7 +180,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `api` | [`YagnaApi`](../modules/utils_yagna_yagna.md#yagnaapi) |
+| `api` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 
 #### Returns
 

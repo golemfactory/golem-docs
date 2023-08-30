@@ -4,8 +4,8 @@
 
 ### Enumerations
 
-- [ResultState](../enums/activity_results.ResultState.md)
+- [ResultState](../enums/activity_results.ResultState)
 
 ### Interfaces
 
-- [StreamingBatchEvent](../interfaces/activity_results.StreamingBatchEvent.md)
+- [StreamingBatchEvent](../interfaces/activity_results.StreamingBatchEvent)

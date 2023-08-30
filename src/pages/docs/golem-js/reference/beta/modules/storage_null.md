@@ -4,4 +4,4 @@
 
 ### Classes
 
-- [NullStorageProvider](../classes/storage_null.NullStorageProvider.md)
+- [NullStorageProvider](../classes/storage_null.NullStorageProvider)

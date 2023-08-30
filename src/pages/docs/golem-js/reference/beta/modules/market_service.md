@@ -4,17 +4,17 @@
 
 ### Interfaces
 
-- [MarketOptions](../interfaces/market_service.MarketOptions.md)
+- [MarketOptions](../interfaces/market_service.MarketOptions)
 
 ### Type Aliases
 
-- [ProposalFilter](market_service.md#proposalfilter)
+- [ProposalFilter](market_service#proposalfilter)
 
 ## Type Aliases
 
 ### ProposalFilter
 
-Ƭ **ProposalFilter**: (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)) => `Promise`<`boolean`\>
+Ƭ **ProposalFilter**: (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
 
 #### Type declaration
 
@@ -24,7 +24,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns
 

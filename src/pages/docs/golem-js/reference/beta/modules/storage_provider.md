@@ -4,11 +4,11 @@
 
 ### Interfaces
 
-- [StorageProvider](../interfaces/storage_provider.StorageProvider.md)
+- [StorageProvider](../interfaces/storage_provider.StorageProvider)
 
 ### Type Aliases
 
-- [StorageProviderDataCallback](storage_provider.md#storageproviderdatacallback)
+- [StorageProviderDataCallback](storage_provider#storageproviderdatacallback)
 
 ## Type Aliases
 

@@ -4,4 +4,4 @@
 
 ### Interfaces
 
-- [DemandDetails](../interfaces/market_demand.DemandDetails.md)
+- [DemandDetails](../interfaces/market_demand.DemandDetails)

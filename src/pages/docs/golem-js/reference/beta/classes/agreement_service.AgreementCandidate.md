@@ -1,17 +1,17 @@
 # Class: AgreementCandidate
 
-[agreement/service](../modules/agreement_service.md).AgreementCandidate
+[agreement/service](../modules/agreement_service).AgreementCandidate
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](agreement_service.AgreementCandidate.md#constructor)
+- [constructor](agreement_service.AgreementCandidate#constructor)
 
 ### Properties
 
-- [agreement](agreement_service.AgreementCandidate.md#agreement)
-- [proposal](agreement_service.AgreementCandidate.md#proposal)
+- [agreement](agreement_service.AgreementCandidate#agreement)
+- [proposal](agreement_service.AgreementCandidate#proposal)
 
 ## Constructors
 
@@ -23,7 +23,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md) |
+| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 #### Defined in
 
@@ -33,7 +33,7 @@
 
 ### agreement
 
-• `Optional` **agreement**: [`AgreementDTO`](../interfaces/agreement_service.AgreementDTO.md)
+• `Optional` **agreement**: [`AgreementDTO`](../interfaces/agreement_service.AgreementDTO)
 
 #### Defined in
 
@@ -43,7 +43,7 @@ ___
 
 ### proposal
 
-• `Readonly` **proposal**: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO.md)
+• `Readonly` **proposal**: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)
 
 #### Defined in
 

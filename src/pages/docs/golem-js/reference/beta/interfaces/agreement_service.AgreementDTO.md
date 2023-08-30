@@ -1,13 +1,13 @@
 # Interface: AgreementDTO
 
-[agreement/service](../modules/agreement_service.md).AgreementDTO
+[agreement/service](../modules/agreement_service).AgreementDTO
 
 ## Table of contents
 
 ### Properties
 
-- [id](agreement_service.AgreementDTO.md#id)
-- [provider](agreement_service.AgreementDTO.md#provider)
+- [id](agreement_service.AgreementDTO#id)
+- [provider](agreement_service.AgreementDTO#provider)
 
 ## Properties
 

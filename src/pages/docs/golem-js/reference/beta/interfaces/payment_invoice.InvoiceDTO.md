@@ -1,22 +1,22 @@
 # Interface: InvoiceDTO
 
-[payment/invoice](../modules/payment_invoice.md).InvoiceDTO
+[payment/invoice](../modules/payment_invoice).InvoiceDTO
 
 ## Table of contents
 
 ### Properties
 
-- [id](payment_invoice.InvoiceDTO.md#id)
-- [providerId](payment_invoice.InvoiceDTO.md#providerid)
-- [timestamp](payment_invoice.InvoiceDTO.md#timestamp)
-- [activityIds](payment_invoice.InvoiceDTO.md#activityids)
-- [agreementId](payment_invoice.InvoiceDTO.md#agreementid)
-- [paymentDueDate](payment_invoice.InvoiceDTO.md#paymentduedate)
-- [status](payment_invoice.InvoiceDTO.md#status)
-- [payeeAddr](payment_invoice.InvoiceDTO.md#payeeaddr)
-- [payerAddr](payment_invoice.InvoiceDTO.md#payeraddr)
-- [paymentPlatform](payment_invoice.InvoiceDTO.md#paymentplatform)
-- [amount](payment_invoice.InvoiceDTO.md#amount)
+- [id](payment_invoice.InvoiceDTO#id)
+- [providerId](payment_invoice.InvoiceDTO#providerid)
+- [timestamp](payment_invoice.InvoiceDTO#timestamp)
+- [activityIds](payment_invoice.InvoiceDTO#activityids)
+- [agreementId](payment_invoice.InvoiceDTO#agreementid)
+- [paymentDueDate](payment_invoice.InvoiceDTO#paymentduedate)
+- [status](payment_invoice.InvoiceDTO#status)
+- [payeeAddr](payment_invoice.InvoiceDTO#payeeaddr)
+- [payerAddr](payment_invoice.InvoiceDTO#payeraddr)
+- [paymentPlatform](payment_invoice.InvoiceDTO#paymentplatform)
+- [amount](payment_invoice.InvoiceDTO#amount)
 
 ## Properties
 

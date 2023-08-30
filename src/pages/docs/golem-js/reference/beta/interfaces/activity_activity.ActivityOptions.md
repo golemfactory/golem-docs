@@ -1,22 +1,22 @@
 # Interface: ActivityOptions
 
-[activity/activity](../modules/activity_activity.md).ActivityOptions
+[activity/activity](../modules/activity_activity).ActivityOptions
 
 ## Hierarchy
 
 - **`ActivityOptions`**
 
-  ↳ [`TaskOptions`](task_service.TaskOptions.md)
+  ↳ [`TaskOptions`](task_service.TaskOptions)
 
 ## Table of contents
 
 ### Properties
 
-- [activityRequestTimeout](activity_activity.ActivityOptions.md#activityrequesttimeout)
-- [activityExecuteTimeout](activity_activity.ActivityOptions.md#activityexecutetimeout)
-- [activityExeBatchResultsFetchInterval](activity_activity.ActivityOptions.md#activityexebatchresultsfetchinterval)
-- [logger](activity_activity.ActivityOptions.md#logger)
-- [eventTarget](activity_activity.ActivityOptions.md#eventtarget)
+- [activityRequestTimeout](activity_activity.ActivityOptions#activityrequesttimeout)
+- [activityExecuteTimeout](activity_activity.ActivityOptions#activityexecutetimeout)
+- [activityExeBatchResultsFetchInterval](activity_activity.ActivityOptions#activityexebatchresultsfetchinterval)
+- [logger](activity_activity.ActivityOptions#logger)
+- [eventTarget](activity_activity.ActivityOptions#eventtarget)
 
 ## Properties
 
@@ -58,7 +58,7 @@ ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
 
 Logger module
 

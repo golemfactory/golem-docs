@@ -4,15 +4,15 @@
 
 ### Functions
 
-- [randomAgreementSelector](agreement_strategy.md#randomagreementselector)
-- [randomAgreementSelectorWithPriorityForExistingOnes](agreement_strategy.md#randomagreementselectorwithpriorityforexistingones)
-- [bestAgreementSelector](agreement_strategy.md#bestagreementselector)
+- [randomAgreementSelector](agreement_strategy#randomagreementselector)
+- [randomAgreementSelectorWithPriorityForExistingOnes](agreement_strategy#randomagreementselectorwithpriorityforexistingones)
+- [bestAgreementSelector](agreement_strategy#bestagreementselector)
 
 ## Functions
 
 ### randomAgreementSelector
 
-▸ **randomAgreementSelector**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+▸ **randomAgreementSelector**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Default selector that selects a random provider from the pool
 
@@ -20,17 +20,17 @@ Default selector that selects a random provider from the pool
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)[] |
+| `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[] |
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
@@ -40,7 +40,7 @@ ___
 
 ### randomAgreementSelectorWithPriorityForExistingOnes
 
-▸ **randomAgreementSelectorWithPriorityForExistingOnes**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+▸ **randomAgreementSelectorWithPriorityForExistingOnes**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Selector selecting a random provider from the pool, but giving priority to those who already have a confirmed agreement and deployed activity
 
@@ -48,17 +48,17 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)[] |
+| `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[] |
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
@@ -68,7 +68,7 @@ ___
 
 ### bestAgreementSelector
 
-▸ **bestAgreementSelector**(`scores`): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+▸ **bestAgreementSelector**(`scores`): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Selector selecting the provider according to the provided list of scores
 
@@ -82,17 +82,17 @@ Selector selecting the provider according to the provided list of scores
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)[] |
+| `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[] |
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate.md)\>
+`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 

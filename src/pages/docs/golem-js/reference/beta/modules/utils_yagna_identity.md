@@ -4,8 +4,8 @@
 
 ### Classes
 
-- [RequestorApi](../classes/utils_yagna_identity.RequestorApi.md)
+- [RequestorApi](../classes/utils_yagna_identity.RequestorApi)
 
 ### Interfaces
 
-- [IdentityModel](../interfaces/utils_yagna_identity.IdentityModel.md)
+- [IdentityModel](../interfaces/utils_yagna_identity.IdentityModel)

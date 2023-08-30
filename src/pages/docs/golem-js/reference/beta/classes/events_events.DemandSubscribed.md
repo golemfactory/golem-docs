@@ -1,10 +1,10 @@
 # Class: DemandSubscribed
 
-[events/events](../modules/events_events.md).DemandSubscribed
+[events/events](../modules/events_events).DemandSubscribed
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `details`: [`DemandDetails`](../interfaces/market_demand.DemandDetails.md)  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `details`: [`DemandDetails`](../interfaces/market_demand.DemandDetails)  }\>
 
   ↳ **`DemandSubscribed`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.DemandSubscribed.md#constructor)
+- [constructor](events_events.DemandSubscribed#constructor)
 
 ### Properties
 
-- [detail](events_events.DemandSubscribed.md#detail)
-- [name](events_events.DemandSubscribed.md#name)
-- [timestamp](events_events.DemandSubscribed.md#timestamp)
+- [detail](events_events.DemandSubscribed#detail)
+- [name](events_events.DemandSubscribed#name)
+- [timestamp](events_events.DemandSubscribed#timestamp)
 
 ## Constructors
 
@@ -32,11 +32,11 @@
 | :------ | :------ |
 | `data?` | `Object` |
 | `data.id` | `string` |
-| `data.details` | [`DemandDetails`](../interfaces/market_demand.DemandDetails.md) |
+| `data.details` | [`DemandDetails`](../interfaces/market_demand.DemandDetails) |
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -53,11 +53,11 @@
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
-| `details` | [`DemandDetails`](../interfaces/market_demand.DemandDetails.md) |
+| `details` | [`DemandDetails`](../interfaces/market_demand.DemandDetails) |
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -71,7 +71,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

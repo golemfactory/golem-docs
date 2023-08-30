@@ -4,17 +4,17 @@
 
 ### Interfaces
 
-- [DebitNoteDTO](../interfaces/payment_debit_note.DebitNoteDTO.md)
+- [DebitNoteDTO](../interfaces/payment_debit_note.DebitNoteDTO)
 
 ### Type Aliases
 
-- [InvoiceOptions](payment_debit_note.md#invoiceoptions)
+- [InvoiceOptions](payment_debit_note#invoiceoptions)
 
 ## Type Aliases
 
 ### InvoiceOptions
 
-Ƭ **InvoiceOptions**: [`BasePaymentOptions`](../interfaces/payment_config.BasePaymentOptions.md)
+Ƭ **InvoiceOptions**: [`BasePaymentOptions`](../interfaces/payment_config.BasePaymentOptions)
 
 #### Defined in
 

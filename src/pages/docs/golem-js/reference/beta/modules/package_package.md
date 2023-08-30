@@ -4,8 +4,8 @@
 
 ### Classes
 
-- [Package](../classes/package_package.Package.md)
+- [Package](../classes/package_package.Package)
 
 ### Interfaces
 
-- [PackageDetails](../interfaces/package_package.PackageDetails.md)
+- [PackageDetails](../interfaces/package_package.PackageDetails)

@@ -1,15 +1,15 @@
 # Interface: StreamingBatchEvent
 
-[activity/results](../modules/activity_results.md).StreamingBatchEvent
+[activity/results](../modules/activity_results).StreamingBatchEvent
 
 ## Table of contents
 
 ### Properties
 
-- [batch\_id](activity_results.StreamingBatchEvent.md#batch_id)
-- [index](activity_results.StreamingBatchEvent.md#index)
-- [timestamp](activity_results.StreamingBatchEvent.md#timestamp)
-- [kind](activity_results.StreamingBatchEvent.md#kind)
+- [batch\_id](activity_results.StreamingBatchEvent#batch_id)
+- [index](activity_results.StreamingBatchEvent#index)
+- [timestamp](activity_results.StreamingBatchEvent#timestamp)
+- [kind](activity_results.StreamingBatchEvent#kind)
 
 ## Properties
 

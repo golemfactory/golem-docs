@@ -1,6 +1,6 @@
 # Class: Terminate
 
-[script/command](../modules/script_command.md).Terminate
+[script/command](../modules/script_command).Terminate
 
 ## Hierarchy
 
@@ -12,18 +12,18 @@
 
 ### Constructors
 
-- [constructor](script_command.Terminate.md#constructor)
+- [constructor](script_command.Terminate#constructor)
 
 ### Properties
 
-- [args](script_command.Terminate.md#args)
+- [args](script_command.Terminate#args)
 
 ### Methods
 
-- [toJson](script_command.Terminate.md#tojson)
-- [toExeScriptRequest](script_command.Terminate.md#toexescriptrequest)
-- [before](script_command.Terminate.md#before)
-- [after](script_command.Terminate.md#after)
+- [toJson](script_command.Terminate#tojson)
+- [toExeScriptRequest](script_command.Terminate#toexescriptrequest)
+- [before](script_command.Terminate#before)
+- [after](script_command.Terminate#after)
 
 ## Constructors
 

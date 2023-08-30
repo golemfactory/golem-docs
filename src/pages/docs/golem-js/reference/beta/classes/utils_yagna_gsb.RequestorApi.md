@@ -1,6 +1,6 @@
 # Class: RequestorApi
 
-[utils/yagna/gsb](../modules/utils_yagna_gsb.md).RequestorApi
+[utils/yagna/gsb](../modules/utils_yagna_gsb).RequestorApi
 
 ## Hierarchy
 
@@ -16,12 +16,12 @@
 
 ### Constructors
 
-- [constructor](utils_yagna_gsb.RequestorApi.md#constructor)
+- [constructor](utils_yagna_gsb.RequestorApi#constructor)
 
 ### Methods
 
-- [createService](utils_yagna_gsb.RequestorApi.md#createservice)
-- [deleteService](utils_yagna_gsb.RequestorApi.md#deleteservice)
+- [createService](utils_yagna_gsb.RequestorApi#createservice)
+- [deleteService](utils_yagna_gsb.RequestorApi#deleteservice)
 
 ## Constructors
 
@@ -49,18 +49,18 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 ### createService
 
-▸ **createService**(`fileInfo`, `components`): `Promise`<`AxiosResponse`<[`ServiceModel`](../modules/utils_yagna_gsb.md#servicemodel), `any`\>\>
+▸ **createService**(`fileInfo`, `components`): `Promise`<`AxiosResponse`<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fileInfo` | [`GftpFileInfo`](../modules/utils_yagna_gsb.md#gftpfileinfo) |
+| `fileInfo` | [`GftpFileInfo`](../modules/utils_yagna_gsb#gftpfileinfo) |
 | `components` | `string`[] |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ServiceModel`](../modules/utils_yagna_gsb.md#servicemodel), `any`\>\>
+`Promise`<`AxiosResponse`<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
 
 #### Implementation of
 

@@ -4,4 +4,4 @@
 
 ### Classes
 
-- [GftpStorageProvider](../classes/storage_gftp.GftpStorageProvider.md)
+- [GftpStorageProvider](../classes/storage_gftp.GftpStorageProvider)

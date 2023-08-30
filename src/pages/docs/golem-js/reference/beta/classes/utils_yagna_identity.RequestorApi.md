@@ -1,6 +1,6 @@
 # Class: RequestorApi
 
-[utils/yagna/identity](../modules/utils_yagna_identity.md).RequestorApi
+[utils/yagna/identity](../modules/utils_yagna_identity).RequestorApi
 
 ## Hierarchy
 
@@ -16,11 +16,11 @@
 
 ### Constructors
 
-- [constructor](utils_yagna_identity.RequestorApi.md#constructor)
+- [constructor](utils_yagna_identity.RequestorApi#constructor)
 
 ### Methods
 
-- [getIdentity](utils_yagna_identity.RequestorApi.md#getidentity)
+- [getIdentity](utils_yagna_identity.RequestorApi#getidentity)
 
 ## Constructors
 
@@ -48,11 +48,11 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 ### getIdentity
 
-▸ **getIdentity**(): `Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel.md), `any`\>\>
+▸ **getIdentity**(): `Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
 
 #### Implementation of
 

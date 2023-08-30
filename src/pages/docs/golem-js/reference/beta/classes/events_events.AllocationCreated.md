@@ -1,10 +1,10 @@
 # Class: AllocationCreated
 
-[events/events](../modules/events_events.md).AllocationCreated
+[events/events](../modules/events_events).AllocationCreated
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `amount`: `number` ; `platform?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `amount`: `number` ; `platform?`: `string`  }\>
 
   ↳ **`AllocationCreated`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.AllocationCreated.md#constructor)
+- [constructor](events_events.AllocationCreated#constructor)
 
 ### Properties
 
-- [detail](events_events.AllocationCreated.md#detail)
-- [name](events_events.AllocationCreated.md#name)
-- [timestamp](events_events.AllocationCreated.md#timestamp)
+- [detail](events_events.AllocationCreated#detail)
+- [name](events_events.AllocationCreated#name)
+- [timestamp](events_events.AllocationCreated#timestamp)
 
 ## Constructors
 
@@ -37,7 +37,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -59,7 +59,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -73,7 +73,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -87,7 +87,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

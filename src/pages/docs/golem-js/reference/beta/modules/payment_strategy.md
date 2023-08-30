@@ -4,10 +4,10 @@
 
 ### Functions
 
-- [acceptAllDebitNotesFilter](payment_strategy.md#acceptalldebitnotesfilter)
-- [acceptAllInvoicesFilter](payment_strategy.md#acceptallinvoicesfilter)
-- [acceptMaxAmountDebitNoteFilter](payment_strategy.md#acceptmaxamountdebitnotefilter)
-- [acceptMaxAmountInvoiceFilter](payment_strategy.md#acceptmaxamountinvoicefilter)
+- [acceptAllDebitNotesFilter](payment_strategy#acceptalldebitnotesfilter)
+- [acceptAllInvoicesFilter](payment_strategy#acceptallinvoicesfilter)
+- [acceptMaxAmountDebitNoteFilter](payment_strategy#acceptmaxamountdebitnotefilter)
+- [acceptMaxAmountInvoiceFilter](payment_strategy#acceptmaxamountinvoicefilter)
 
 ## Functions
 
@@ -57,7 +57,7 @@ ___
 
 ### acceptMaxAmountDebitNoteFilter
 
-▸ **acceptMaxAmountDebitNoteFilter**(`maxAmount`): (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO.md)) => `Promise`<`boolean`\>
+▸ **acceptMaxAmountDebitNoteFilter**(`maxAmount`): (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`<`boolean`\>
 
 A custom filter that only accepts debit notes below a given value
 
@@ -77,7 +77,7 @@ A custom filter that only accepts debit notes below a given value
 
 | Name | Type |
 | :------ | :------ |
-| `debitNote` | [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO.md) |
+| `debitNote` | [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO) |
 
 ##### Returns
 
@@ -91,7 +91,7 @@ ___
 
 ### acceptMaxAmountInvoiceFilter
 
-▸ **acceptMaxAmountInvoiceFilter**(`maxAmount`): (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO.md)) => `Promise`<`boolean`\>
+▸ **acceptMaxAmountInvoiceFilter**(`maxAmount`): (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`<`boolean`\>
 
 A custom filter that only accepts invoices below a given value
 
@@ -111,7 +111,7 @@ A custom filter that only accepts invoices below a given value
 
 | Name | Type |
 | :------ | :------ |
-| `invoice` | [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO.md) |
+| `invoice` | [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO) |
 
 ##### Returns
 

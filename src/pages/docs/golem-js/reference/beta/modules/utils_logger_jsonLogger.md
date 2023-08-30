@@ -4,13 +4,13 @@
 
 ### Functions
 
-- [jsonLogger](utils_logger_jsonLogger.md#jsonlogger)
+- [jsonLogger](utils_logger_jsonLogger#jsonlogger)
 
 ## Functions
 
 ### jsonLogger
 
-▸ **jsonLogger**(`filename?`): [`Logger`](../interfaces/utils_logger_logger.Logger.md)
+▸ **jsonLogger**(`filename?`): [`Logger`](../interfaces/utils_logger_logger.Logger)
 
 Create a logger that writes a JSON object for every log line.
 
@@ -22,7 +22,7 @@ Create a logger that writes a JSON object for every log line.
 
 #### Returns
 
-[`Logger`](../interfaces/utils_logger_logger.Logger.md)
+[`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Defined in
 

@@ -4,17 +4,17 @@
 
 ### Functions
 
-- [nullLogger](utils_logger_nullLogger.md#nulllogger)
+- [nullLogger](utils_logger_nullLogger#nulllogger)
 
 ## Functions
 
 ### nullLogger
 
-▸ **nullLogger**(): [`Logger`](../interfaces/utils_logger_logger.Logger.md)
+▸ **nullLogger**(): [`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Returns
 
-[`Logger`](../interfaces/utils_logger_logger.Logger.md)
+[`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Defined in
 

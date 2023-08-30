@@ -1,6 +1,6 @@
 # Class: Package
 
-[package/package](../modules/package_package.md).Package
+[package/package](../modules/package_package).Package
 
 Package module - an object for descriptions of the payload required by the requestor.
 
@@ -8,24 +8,24 @@ Package module - an object for descriptions of the payload required by the reque
 
 ### Accessors
 
-- [details](package_package.Package.md#details)
+- [details](package_package.Package#details)
 
 ### Methods
 
-- [create](package_package.Package.md#create)
-- [getImageIdentifier](package_package.Package.md#getimageidentifier)
-- [GetHashFromTag](package_package.Package.md#gethashfromtag)
-- [getDemandDecoration](package_package.Package.md#getdemanddecoration)
+- [create](package_package.Package#create)
+- [getImageIdentifier](package_package.Package#getimageidentifier)
+- [GetHashFromTag](package_package.Package#gethashfromtag)
+- [getDemandDecoration](package_package.Package#getdemanddecoration)
 
 ## Accessors
 
 ### details
 
-• `get` **details**(): [`PackageDetails`](../interfaces/package_package.PackageDetails.md)
+• `get` **details**(): [`PackageDetails`](../interfaces/package_package.PackageDetails)
 
 #### Returns
 
-[`PackageDetails`](../interfaces/package_package.PackageDetails.md)
+[`PackageDetails`](../interfaces/package_package.PackageDetails)
 
 #### Defined in
 
@@ -35,7 +35,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 ### create
 
-▸ `Static` **create**(`options`): [`Package`](package_package.Package.md)
+▸ `Static` **create**(`options`): [`Package`](package_package.Package)
 
 #### Parameters
 
@@ -45,7 +45,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Returns
 
-[`Package`](package_package.Package.md)
+[`Package`](package_package.Package)
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### getImageIdentifier
 
-▸ `Static` **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types.md#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
+▸ `Static` **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
 
 #### Parameters
 
@@ -65,7 +65,7 @@ ___
 
 #### Returns
 
-[`RequireAtLeastOne`](../modules/utils_types.md#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
+[`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
 
 #### Defined in
 

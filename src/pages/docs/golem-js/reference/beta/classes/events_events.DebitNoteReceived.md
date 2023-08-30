@@ -1,10 +1,10 @@
 # Class: DebitNoteReceived
 
-[events/events](../modules/events_events.md).DebitNoteReceived
+[events/events](../modules/events_events).DebitNoteReceived
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `amount`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `amount`: `string`  }\>
 
   ↳ **`DebitNoteReceived`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.DebitNoteReceived.md#constructor)
+- [constructor](events_events.DebitNoteReceived#constructor)
 
 ### Properties
 
-- [detail](events_events.DebitNoteReceived.md#detail)
-- [name](events_events.DebitNoteReceived.md#name)
-- [timestamp](events_events.DebitNoteReceived.md#timestamp)
+- [detail](events_events.DebitNoteReceived#detail)
+- [name](events_events.DebitNoteReceived#name)
+- [timestamp](events_events.DebitNoteReceived#timestamp)
 
 ## Constructors
 
@@ -38,7 +38,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -61,7 +61,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -75,7 +75,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -89,7 +89,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

@@ -4,19 +4,19 @@
 
 ### Functions
 
-- [consoleLogger](utils_logger_consoleLogger.md#consolelogger)
+- [consoleLogger](utils_logger_consoleLogger#consolelogger)
 
 ## Functions
 
 ### consoleLogger
 
-▸ **consoleLogger**(): [`Logger`](../interfaces/utils_logger_logger.Logger.md)
+▸ **consoleLogger**(): [`Logger`](../interfaces/utils_logger_logger.Logger)
 
 Helper function implements simple logger prints all messages to console
 
 #### Returns
 
-[`Logger`](../interfaces/utils_logger_logger.Logger.md)
+[`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Defined in
 

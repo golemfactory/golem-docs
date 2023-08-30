@@ -1,23 +1,23 @@
 # Interface: ProposalDetails
 
-[market/proposal](../modules/market_proposal.md).ProposalDetails
+[market/proposal](../modules/market_proposal).ProposalDetails
 
 ## Table of contents
 
 ### Properties
 
-- [transferProtocol](market_proposal.ProposalDetails.md#transferprotocol)
-- [cpuBrand](market_proposal.ProposalDetails.md#cpubrand)
-- [cpuCapabilities](market_proposal.ProposalDetails.md#cpucapabilities)
-- [cpuCores](market_proposal.ProposalDetails.md#cpucores)
-- [cpuThreads](market_proposal.ProposalDetails.md#cputhreads)
-- [memory](market_proposal.ProposalDetails.md#memory)
-- [storage](market_proposal.ProposalDetails.md#storage)
-- [providerName](market_proposal.ProposalDetails.md#providername)
-- [publicNet](market_proposal.ProposalDetails.md#publicnet)
-- [runtimeCapabilities](market_proposal.ProposalDetails.md#runtimecapabilities)
-- [runtimeName](market_proposal.ProposalDetails.md#runtimename)
-- [state](market_proposal.ProposalDetails.md#state)
+- [transferProtocol](market_proposal.ProposalDetails#transferprotocol)
+- [cpuBrand](market_proposal.ProposalDetails#cpubrand)
+- [cpuCapabilities](market_proposal.ProposalDetails#cpucapabilities)
+- [cpuCores](market_proposal.ProposalDetails#cpucores)
+- [cpuThreads](market_proposal.ProposalDetails#cputhreads)
+- [memory](market_proposal.ProposalDetails#memory)
+- [storage](market_proposal.ProposalDetails#storage)
+- [providerName](market_proposal.ProposalDetails#providername)
+- [publicNet](market_proposal.ProposalDetails#publicnet)
+- [runtimeCapabilities](market_proposal.ProposalDetails#runtimecapabilities)
+- [runtimeName](market_proposal.ProposalDetails#runtimename)
+- [state](market_proposal.ProposalDetails#state)
 
 ## Properties
 

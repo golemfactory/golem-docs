@@ -4,8 +4,8 @@
 
 ### Enumerations
 
-- [LogLevel](../enums/utils_logger_logger.LogLevel.md)
+- [LogLevel](../enums/utils_logger_logger.LogLevel)
 
 ### Interfaces
 
-- [Logger](../interfaces/utils_logger_logger.Logger.md)
+- [Logger](../interfaces/utils_logger_logger.Logger)

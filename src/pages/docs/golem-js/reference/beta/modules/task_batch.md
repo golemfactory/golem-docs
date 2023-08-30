@@ -4,4 +4,4 @@
 
 ### Classes
 
-- [Batch](../classes/task_batch.Batch.md)
+- [Batch](../classes/task_batch.Batch)

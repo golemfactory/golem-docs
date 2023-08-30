@@ -1,16 +1,16 @@
 # Enumeration: LogLevel
 
-[utils/logger/logger](../modules/utils_logger_logger.md).LogLevel
+[utils/logger/logger](../modules/utils_logger_logger).LogLevel
 
 ## Table of contents
 
 ### Enumeration Members
 
-- [debug](utils_logger_logger.LogLevel.md#debug)
-- [info](utils_logger_logger.LogLevel.md#info)
-- [warn](utils_logger_logger.LogLevel.md#warn)
-- [error](utils_logger_logger.LogLevel.md#error)
-- [log](utils_logger_logger.LogLevel.md#log)
+- [debug](utils_logger_logger.LogLevel#debug)
+- [info](utils_logger_logger.LogLevel#info)
+- [warn](utils_logger_logger.LogLevel#warn)
+- [error](utils_logger_logger.LogLevel#error)
+- [log](utils_logger_logger.LogLevel#log)
 
 ## Enumeration Members
 

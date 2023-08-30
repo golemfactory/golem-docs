@@ -1,23 +1,23 @@
 # Class: Batch
 
-[task/batch](../modules/task_batch.md).Batch
+[task/batch](../modules/task_batch).Batch
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](task_batch.Batch.md#constructor)
+- [constructor](task_batch.Batch#constructor)
 
 ### Methods
 
-- [create](task_batch.Batch.md#create)
-- [run](task_batch.Batch.md#run)
-- [uploadFile](task_batch.Batch.md#uploadfile)
-- [uploadJson](task_batch.Batch.md#uploadjson)
-- [uploadData](task_batch.Batch.md#uploaddata)
-- [downloadFile](task_batch.Batch.md#downloadfile)
-- [end](task_batch.Batch.md#end)
-- [endStream](task_batch.Batch.md#endstream)
+- [create](task_batch.Batch#create)
+- [run](task_batch.Batch#run)
+- [uploadFile](task_batch.Batch#uploadfile)
+- [uploadJson](task_batch.Batch#uploadjson)
+- [uploadData](task_batch.Batch#uploaddata)
+- [downloadFile](task_batch.Batch#downloadfile)
+- [end](task_batch.Batch#end)
+- [endStream](task_batch.Batch#endstream)
 
 ## Constructors
 
@@ -30,8 +30,8 @@
 | Name | Type |
 | :------ | :------ |
 | `activity` | `Activity` |
-| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) |
-| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger.md) |
+| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
 #### Defined in
 
@@ -41,19 +41,19 @@
 
 ### create
 
-▸ `Static` **create**(`activity`, `storageProvider`, `logger?`): [`Batch`](task_batch.Batch.md)
+▸ `Static` **create**(`activity`, `storageProvider`, `logger?`): [`Batch`](task_batch.Batch)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `activity` | `Activity` |
-| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) |
-| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger.md) |
+| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 
@@ -63,7 +63,7 @@ ___
 
 ### run
 
-▸ **run**(`commandLine`): [`Batch`](task_batch.Batch.md)
+▸ **run**(`commandLine`): [`Batch`](task_batch.Batch)
 
 Execute a command on provider using a shell (/bin/sh).
 
@@ -75,13 +75,13 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 
 [src/task/batch.ts:28](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L28)
 
-▸ **run**(`executable`, `args`): [`Batch`](task_batch.Batch.md)
+▸ **run**(`executable`, `args`): [`Batch`](task_batch.Batch)
 
 Execute an executable on provider.
 
@@ -94,7 +94,7 @@ Execute an executable on provider.
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 
@@ -104,7 +104,7 @@ ___
 
 ### uploadFile
 
-▸ **uploadFile**(`src`, `dst`): [`Batch`](task_batch.Batch.md)
+▸ **uploadFile**(`src`, `dst`): [`Batch`](task_batch.Batch)
 
 #### Parameters
 
@@ -115,7 +115,7 @@ ___
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 
@@ -125,7 +125,7 @@ ___
 
 ### uploadJson
 
-▸ **uploadJson**(`json`, `dst`): [`Batch`](task_batch.Batch.md)
+▸ **uploadJson**(`json`, `dst`): [`Batch`](task_batch.Batch)
 
 #### Parameters
 
@@ -136,7 +136,7 @@ ___
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 
@@ -146,7 +146,7 @@ ___
 
 ### uploadData
 
-▸ **uploadData**(`data`, `dst`): [`Batch`](task_batch.Batch.md)
+▸ **uploadData**(`data`, `dst`): [`Batch`](task_batch.Batch)
 
 #### Parameters
 
@@ -157,7 +157,7 @@ ___
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 
@@ -167,7 +167,7 @@ ___
 
 ### downloadFile
 
-▸ **downloadFile**(`src`, `dst`): [`Batch`](task_batch.Batch.md)
+▸ **downloadFile**(`src`, `dst`): [`Batch`](task_batch.Batch)
 
 #### Parameters
 
@@ -178,7 +178,7 @@ ___
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 
@@ -190,7 +190,7 @@ ___
 
 ▸ **end**(): `Promise`<`Result`<`unknown`\>[]\>
 
-Executes the batch of commands added via [run](task_batch.Batch.md#run) returning result for each of the steps.
+Executes the batch of commands added via [run](task_batch.Batch#run) returning result for each of the steps.
 
 In case any of the commands will fail, the execution of the batch will be interrupted by the Provider.
 

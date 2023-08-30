@@ -1,14 +1,14 @@
 # Interface: IdentityModel
 
-[utils/yagna/identity](../modules/utils_yagna_identity.md).IdentityModel
+[utils/yagna/identity](../modules/utils_yagna_identity).IdentityModel
 
 ## Table of contents
 
 ### Properties
 
-- [identity](utils_yagna_identity.IdentityModel.md#identity)
-- [name](utils_yagna_identity.IdentityModel.md#name)
-- [role](utils_yagna_identity.IdentityModel.md#role)
+- [identity](utils_yagna_identity.IdentityModel#identity)
+- [name](utils_yagna_identity.IdentityModel#name)
+- [role](utils_yagna_identity.IdentityModel#role)
 
 ## Properties
 

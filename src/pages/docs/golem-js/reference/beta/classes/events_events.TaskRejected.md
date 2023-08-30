@@ -1,10 +1,10 @@
 # Class: TaskRejected
 
-[events/events](../modules/events_events.md).TaskRejected
+[events/events](../modules/events_events).TaskRejected
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `reason?`: `string`  }\>
 
   ↳ **`TaskRejected`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.TaskRejected.md#constructor)
+- [constructor](events_events.TaskRejected#constructor)
 
 ### Properties
 
-- [detail](events_events.TaskRejected.md#detail)
-- [name](events_events.TaskRejected.md#name)
-- [timestamp](events_events.TaskRejected.md#timestamp)
+- [detail](events_events.TaskRejected#detail)
+- [name](events_events.TaskRejected#name)
+- [timestamp](events_events.TaskRejected#timestamp)
 
 ## Constructors
 
@@ -40,7 +40,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -65,7 +65,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -79,7 +79,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -93,7 +93,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

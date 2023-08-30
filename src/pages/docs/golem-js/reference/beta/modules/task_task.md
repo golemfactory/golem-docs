@@ -4,8 +4,8 @@
 
 ### Enumerations
 
-- [TaskState](../enums/task_task.TaskState.md)
+- [TaskState](../enums/task_task.TaskState)
 
 ### Classes
 
-- [Task](../classes/task_task.Task.md)
+- [Task](../classes/task_task.Task)

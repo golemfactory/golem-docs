@@ -1,10 +1,10 @@
 # Class: PackageCreated
 
-[events/events](../modules/events_events.md).PackageCreated
+[events/events](../modules/events_events).PackageCreated
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types.md#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails.md)  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails)  }\>
 
   ↳ **`PackageCreated`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.PackageCreated.md#constructor)
+- [constructor](events_events.PackageCreated#constructor)
 
 ### Properties
 
-- [detail](events_events.PackageCreated.md#detail)
-- [name](events_events.PackageCreated.md#name)
-- [timestamp](events_events.PackageCreated.md#timestamp)
+- [detail](events_events.PackageCreated#detail)
+- [name](events_events.PackageCreated#name)
+- [timestamp](events_events.PackageCreated#timestamp)
 
 ## Constructors
 
@@ -31,12 +31,12 @@
 | Name | Type |
 | :------ | :------ |
 | `data?` | `Object` |
-| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types.md#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
-| `data.details` | [`PackageDetails`](../interfaces/package_package.PackageDetails.md) |
+| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
+| `data.details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -52,12 +52,12 @@
 
 | Name | Type |
 | :------ | :------ |
-| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types.md#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
-| `details` | [`PackageDetails`](../interfaces/package_package.PackageDetails.md) |
+| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
+| `details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -71,7 +71,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

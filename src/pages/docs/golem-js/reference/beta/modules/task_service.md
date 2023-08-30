@@ -4,4 +4,4 @@
 
 ### Interfaces
 
-- [TaskOptions](../interfaces/task_service.TaskOptions.md)
+- [TaskOptions](../interfaces/task_service.TaskOptions)

@@ -4,7 +4,7 @@
 
 ### Type Aliases
 
-- [NetworkServiceOptions](network_service.md#networkserviceoptions)
+- [NetworkServiceOptions](network_service#networkserviceoptions)
 
 ## Type Aliases
 

@@ -1,18 +1,18 @@
 # Interface: WebSocketStorageProviderOptions
 
-[storage/ws-browser](../modules/storage_ws_browser.md).WebSocketStorageProviderOptions
+[storage/ws-browser](../modules/storage_ws_browser).WebSocketStorageProviderOptions
 
 ## Table of contents
 
 ### Properties
 
-- [logger](storage_ws_browser.WebSocketStorageProviderOptions.md#logger)
+- [logger](storage_ws_browser.WebSocketStorageProviderOptions#logger)
 
 ## Properties
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
 
 #### Defined in
 

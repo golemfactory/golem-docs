@@ -1,13 +1,13 @@
 # Enumeration: ResultState
 
-[activity/results](../modules/activity_results.md).ResultState
+[activity/results](../modules/activity_results).ResultState
 
 ## Table of contents
 
 ### Enumeration Members
 
-- [OK](activity_results.ResultState.md#ok)
-- [ERROR](activity_results.ResultState.md#error)
+- [OK](activity_results.ResultState#ok)
+- [ERROR](activity_results.ResultState#error)
 
 ## Enumeration Members
 

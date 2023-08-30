@@ -4,4 +4,4 @@
 
 ### Classes
 
-- [NetworkNode](../classes/network_node.NetworkNode.md)
+- [NetworkNode](../classes/network_node.NetworkNode)

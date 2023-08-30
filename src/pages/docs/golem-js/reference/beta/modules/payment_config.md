@@ -4,4 +4,4 @@
 
 ### Interfaces
 
-- [BasePaymentOptions](../interfaces/payment_config.BasePaymentOptions.md)
+- [BasePaymentOptions](../interfaces/payment_config.BasePaymentOptions)

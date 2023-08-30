@@ -1,22 +1,22 @@
 # Interface: Logger
 
-[utils/logger/logger](../modules/utils_logger_logger.md).Logger
+[utils/logger/logger](../modules/utils_logger_logger).Logger
 
 ## Table of contents
 
 ### Properties
 
-- [level](utils_logger_logger.Logger.md#level)
+- [level](utils_logger_logger.Logger#level)
 
 ### Methods
 
-- [setLevel](utils_logger_logger.Logger.md#setlevel)
-- [log](utils_logger_logger.Logger.md#log)
-- [info](utils_logger_logger.Logger.md#info)
-- [warn](utils_logger_logger.Logger.md#warn)
-- [error](utils_logger_logger.Logger.md#error)
-- [debug](utils_logger_logger.Logger.md#debug)
-- [table](utils_logger_logger.Logger.md#table)
+- [setLevel](utils_logger_logger.Logger#setlevel)
+- [log](utils_logger_logger.Logger#log)
+- [info](utils_logger_logger.Logger#info)
+- [warn](utils_logger_logger.Logger#warn)
+- [error](utils_logger_logger.Logger#error)
+- [debug](utils_logger_logger.Logger#debug)
+- [table](utils_logger_logger.Logger#table)
 
 ## Properties
 

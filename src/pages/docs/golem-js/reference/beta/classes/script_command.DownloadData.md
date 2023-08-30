@@ -1,6 +1,6 @@
 # Class: DownloadData
 
-[script/command](../modules/script_command.md).DownloadData
+[script/command](../modules/script_command).DownloadData
 
 ## Hierarchy
 
@@ -12,20 +12,20 @@
 
 ### Constructors
 
-- [constructor](script_command.DownloadData.md#constructor)
+- [constructor](script_command.DownloadData#constructor)
 
 ### Properties
 
-- [from](script_command.DownloadData.md#from)
-- [to](script_command.DownloadData.md#to)
-- [args](script_command.DownloadData.md#args)
+- [from](script_command.DownloadData#from)
+- [to](script_command.DownloadData#to)
+- [args](script_command.DownloadData#args)
 
 ### Methods
 
-- [before](script_command.DownloadData.md#before)
-- [after](script_command.DownloadData.md#after)
-- [toJson](script_command.DownloadData.md#tojson)
-- [toExeScriptRequest](script_command.DownloadData.md#toexescriptrequest)
+- [before](script_command.DownloadData#before)
+- [after](script_command.DownloadData#after)
+- [toJson](script_command.DownloadData#tojson)
+- [toExeScriptRequest](script_command.DownloadData#toexescriptrequest)
 
 ## Constructors
 
@@ -37,7 +37,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) |
+| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
 | `srcPath` | `string` |
 
 #### Overrides

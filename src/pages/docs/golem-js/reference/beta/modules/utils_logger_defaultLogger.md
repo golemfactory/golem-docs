@@ -4,13 +4,13 @@
 
 ### Functions
 
-- [defaultLogger](utils_logger_defaultLogger.md#defaultlogger)
+- [defaultLogger](utils_logger_defaultLogger#defaultlogger)
 
 ## Functions
 
 ### defaultLogger
 
-▸ **defaultLogger**(`filename?`): [`Logger`](../interfaces/utils_logger_logger.Logger.md)
+▸ **defaultLogger**(`filename?`): [`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Parameters
 
@@ -20,7 +20,7 @@
 
 #### Returns
 
-[`Logger`](../interfaces/utils_logger_logger.Logger.md)
+[`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Defined in
 

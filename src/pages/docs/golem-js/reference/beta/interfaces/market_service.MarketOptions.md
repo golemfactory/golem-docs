@@ -1,6 +1,6 @@
 # Interface: MarketOptions
 
-[market/service](../modules/market_service.md).MarketOptions
+[market/service](../modules/market_service).MarketOptions
 
 ## Hierarchy
 
@@ -12,23 +12,23 @@
 
 ### Properties
 
-- [proposalFilter](market_service.MarketOptions.md#proposalfilter)
-- [debitNotesAcceptanceTimeout](market_service.MarketOptions.md#debitnotesacceptancetimeout)
-- [subnetTag](market_service.MarketOptions.md#subnettag)
-- [yagnaOptions](market_service.MarketOptions.md#yagnaoptions)
-- [marketTimeout](market_service.MarketOptions.md#markettimeout)
-- [marketOfferExpiration](market_service.MarketOptions.md#marketofferexpiration)
-- [logger](market_service.MarketOptions.md#logger)
-- [maxOfferEvents](market_service.MarketOptions.md#maxofferevents)
-- [offerFetchingInterval](market_service.MarketOptions.md#offerfetchinginterval)
-- [proposalTimeout](market_service.MarketOptions.md#proposaltimeout)
-- [eventTarget](market_service.MarketOptions.md#eventtarget)
+- [proposalFilter](market_service.MarketOptions#proposalfilter)
+- [debitNotesAcceptanceTimeout](market_service.MarketOptions#debitnotesacceptancetimeout)
+- [subnetTag](market_service.MarketOptions#subnettag)
+- [yagnaOptions](market_service.MarketOptions#yagnaoptions)
+- [marketTimeout](market_service.MarketOptions#markettimeout)
+- [marketOfferExpiration](market_service.MarketOptions#marketofferexpiration)
+- [logger](market_service.MarketOptions#logger)
+- [maxOfferEvents](market_service.MarketOptions#maxofferevents)
+- [offerFetchingInterval](market_service.MarketOptions#offerfetchinginterval)
+- [proposalTimeout](market_service.MarketOptions#proposaltimeout)
+- [eventTarget](market_service.MarketOptions#eventtarget)
 
 ## Properties
 
 ### proposalFilter
 
-• `Optional` **proposalFilter**: [`ProposalFilter`](../modules/market_service.md#proposalfilter)
+• `Optional` **proposalFilter**: [`ProposalFilter`](../modules/market_service#proposalfilter)
 
 A custom filter that checks every proposal coming from the market
 
@@ -66,7 +66,7 @@ ___
 
 ### yagnaOptions
 
-• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor.md#yagnaoptions)
+• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor#yagnaoptions)
 
 #### Inherited from
 
@@ -108,7 +108,7 @@ ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
 
 #### Inherited from
 

@@ -4,5 +4,5 @@
 
 ### Interfaces
 
-- [ProposalDetails](../interfaces/market_proposal.ProposalDetails.md)
-- [ProposalDTO](../interfaces/market_proposal.ProposalDTO.md)
+- [ProposalDetails](../interfaces/market_proposal.ProposalDetails)
+- [ProposalDTO](../interfaces/market_proposal.ProposalDTO)

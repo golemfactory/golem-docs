@@ -4,4 +4,4 @@
 
 ### Interfaces
 
-- [ActivityOptions](../interfaces/activity_activity.ActivityOptions.md)
+- [ActivityOptions](../interfaces/activity_activity.ActivityOptions)

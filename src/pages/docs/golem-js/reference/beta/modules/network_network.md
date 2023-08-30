@@ -4,8 +4,8 @@
 
 ### Classes
 
-- [NetworkError](../classes/network_network.NetworkError.md)
+- [NetworkError](../classes/network_network.NetworkError)
 
 ### Interfaces
 
-- [NetworkInfo](../interfaces/network_network.NetworkInfo.md)
+- [NetworkInfo](../interfaces/network_network.NetworkInfo)

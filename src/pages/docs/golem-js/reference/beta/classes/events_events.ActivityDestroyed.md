@@ -1,10 +1,10 @@
 # Class: ActivityDestroyed
 
-[events/events](../modules/events_events.md).ActivityDestroyed
+[events/events](../modules/events_events).ActivityDestroyed
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `agreementId`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `agreementId`: `string`  }\>
 
   ↳ **`ActivityDestroyed`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.ActivityDestroyed.md#constructor)
+- [constructor](events_events.ActivityDestroyed#constructor)
 
 ### Properties
 
-- [detail](events_events.ActivityDestroyed.md#detail)
-- [name](events_events.ActivityDestroyed.md#name)
-- [timestamp](events_events.ActivityDestroyed.md#timestamp)
+- [detail](events_events.ActivityDestroyed#detail)
+- [name](events_events.ActivityDestroyed#name)
+- [timestamp](events_events.ActivityDestroyed#timestamp)
 
 ## Constructors
 
@@ -36,7 +36,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -57,7 +57,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -71,7 +71,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

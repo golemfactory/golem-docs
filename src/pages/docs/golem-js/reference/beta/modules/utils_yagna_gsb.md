@@ -4,12 +4,12 @@
 
 ### Classes
 
-- [RequestorApi](../classes/utils_yagna_gsb.RequestorApi.md)
+- [RequestorApi](../classes/utils_yagna_gsb.RequestorApi)
 
 ### Type Aliases
 
-- [ServiceModel](utils_yagna_gsb.md#servicemodel)
-- [GftpFileInfo](utils_yagna_gsb.md#gftpfileinfo)
+- [ServiceModel](utils_yagna_gsb#servicemodel)
+- [GftpFileInfo](utils_yagna_gsb#gftpfileinfo)
 
 ## Type Aliases
 

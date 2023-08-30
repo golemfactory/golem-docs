@@ -1,10 +1,10 @@
 # Class: DemandFailed
 
-[events/events](../modules/events_events.md).DemandFailed
+[events/events](../modules/events_events).DemandFailed
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `reason?`: `string`  }\>
 
   ↳ **`DemandFailed`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.DemandFailed.md#constructor)
+- [constructor](events_events.DemandFailed#constructor)
 
 ### Properties
 
-- [detail](events_events.DemandFailed.md#detail)
-- [name](events_events.DemandFailed.md#name)
-- [timestamp](events_events.DemandFailed.md#timestamp)
+- [detail](events_events.DemandFailed#detail)
+- [name](events_events.DemandFailed#name)
+- [timestamp](events_events.DemandFailed#timestamp)
 
 ## Constructors
 
@@ -35,7 +35,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -55,7 +55,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -69,7 +69,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -83,7 +83,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

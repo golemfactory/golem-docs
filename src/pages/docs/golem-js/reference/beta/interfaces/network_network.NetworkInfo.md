@@ -1,15 +1,15 @@
 # Interface: NetworkInfo
 
-[network/network](../modules/network_network.md).NetworkInfo
+[network/network](../modules/network_network).NetworkInfo
 
 ## Table of contents
 
 ### Properties
 
-- [id](network_network.NetworkInfo.md#id)
-- [ip](network_network.NetworkInfo.md#ip)
-- [mask](network_network.NetworkInfo.md#mask)
-- [nodes](network_network.NetworkInfo.md#nodes)
+- [id](network_network.NetworkInfo#id)
+- [ip](network_network.NetworkInfo#ip)
+- [mask](network_network.NetworkInfo#mask)
+- [nodes](network_network.NetworkInfo#nodes)
 
 ## Properties
 

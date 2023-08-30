@@ -4,13 +4,13 @@
 
 ### Functions
 
-- [pinoLogger](utils_logger_pinoLogger.md#pinologger)
+- [pinoLogger](utils_logger_pinoLogger#pinologger)
 
 ## Functions
 
 ### pinoLogger
 
-▸ **pinoLogger**(`optionsOrStream?`): [`Logger`](../interfaces/utils_logger_logger.Logger.md)
+▸ **pinoLogger**(`optionsOrStream?`): [`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Parameters
 
@@ -20,7 +20,7 @@
 
 #### Returns
 
-[`Logger`](../interfaces/utils_logger_logger.Logger.md)
+[`Logger`](../interfaces/utils_logger_logger.Logger)
 
 #### Defined in
 

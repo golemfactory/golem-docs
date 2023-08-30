@@ -1,28 +1,28 @@
 # Class: GftpStorageProvider
 
-[storage/gftp](../modules/storage_gftp.md).GftpStorageProvider
+[storage/gftp](../modules/storage_gftp).GftpStorageProvider
 
 ## Implements
 
-- [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md)
+- [`StorageProvider`](../interfaces/storage_provider.StorageProvider)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](storage_gftp.GftpStorageProvider.md#constructor)
+- [constructor](storage_gftp.GftpStorageProvider#constructor)
 
 ### Methods
 
-- [init](storage_gftp.GftpStorageProvider.md#init)
-- [isInitiated](storage_gftp.GftpStorageProvider.md#isinitiated)
-- [receiveFile](storage_gftp.GftpStorageProvider.md#receivefile)
-- [receiveData](storage_gftp.GftpStorageProvider.md#receivedata)
-- [publishFile](storage_gftp.GftpStorageProvider.md#publishfile)
-- [publishData](storage_gftp.GftpStorageProvider.md#publishdata)
-- [release](storage_gftp.GftpStorageProvider.md#release)
-- [close](storage_gftp.GftpStorageProvider.md#close)
-- [readStream](storage_gftp.GftpStorageProvider.md#readstream)
+- [init](storage_gftp.GftpStorageProvider#init)
+- [isInitiated](storage_gftp.GftpStorageProvider#isinitiated)
+- [receiveFile](storage_gftp.GftpStorageProvider#receivefile)
+- [receiveData](storage_gftp.GftpStorageProvider#receivedata)
+- [publishFile](storage_gftp.GftpStorageProvider#publishfile)
+- [publishData](storage_gftp.GftpStorageProvider#publishdata)
+- [release](storage_gftp.GftpStorageProvider#release)
+- [close](storage_gftp.GftpStorageProvider#close)
+- [readStream](storage_gftp.GftpStorageProvider#readstream)
 
 ## Constructors
 
@@ -34,7 +34,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger.md) |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
 #### Defined in
 
@@ -54,7 +54,7 @@ Initialize storage provider.
 
 #### Implementation of
 
-[StorageProvider](../interfaces/storage_provider.StorageProvider.md).[init](../interfaces/storage_provider.StorageProvider.md#init)
+[StorageProvider](../interfaces/storage_provider.StorageProvider).[init](../interfaces/storage_provider.StorageProvider#init)
 
 #### Defined in
 
@@ -94,7 +94,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Implementation of
 
-[StorageProvider](../interfaces/storage_provider.StorageProvider.md).[receiveFile](../interfaces/storage_provider.StorageProvider.md#receivefile)
+[StorageProvider](../interfaces/storage_provider.StorageProvider).[receiveFile](../interfaces/storage_provider.StorageProvider#receivefile)
 
 #### Defined in
 
@@ -112,7 +112,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | [`StorageProviderDataCallback`](../modules/storage_provider.md#storageproviderdatacallback) |
+| `callback` | [`StorageProviderDataCallback`](../modules/storage_provider#storageproviderdatacallback) |
 
 #### Returns
 
@@ -120,7 +120,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Implementation of
 
-[StorageProvider](../interfaces/storage_provider.StorageProvider.md).[receiveData](../interfaces/storage_provider.StorageProvider.md#receivedata)
+[StorageProvider](../interfaces/storage_provider.StorageProvider).[receiveData](../interfaces/storage_provider.StorageProvider#receivedata)
 
 #### Defined in
 
@@ -146,7 +146,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Implementation of
 
-[StorageProvider](../interfaces/storage_provider.StorageProvider.md).[publishFile](../interfaces/storage_provider.StorageProvider.md#publishfile)
+[StorageProvider](../interfaces/storage_provider.StorageProvider).[publishFile](../interfaces/storage_provider.StorageProvider#publishfile)
 
 #### Defined in
 
@@ -172,7 +172,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Implementation of
 
-[StorageProvider](../interfaces/storage_provider.StorageProvider.md).[publishData](../interfaces/storage_provider.StorageProvider.md#publishdata)
+[StorageProvider](../interfaces/storage_provider.StorageProvider).[publishData](../interfaces/storage_provider.StorageProvider#publishdata)
 
 #### Defined in
 
@@ -198,7 +198,7 @@ Release previously allocated resource URL from Yagna.
 
 #### Implementation of
 
-[StorageProvider](../interfaces/storage_provider.StorageProvider.md).[release](../interfaces/storage_provider.StorageProvider.md#release)
+[StorageProvider](../interfaces/storage_provider.StorageProvider).[release](../interfaces/storage_provider.StorageProvider#release)
 
 #### Defined in
 
@@ -218,7 +218,7 @@ Close storage provider and release all resources.
 
 #### Implementation of
 
-[StorageProvider](../interfaces/storage_provider.StorageProvider.md).[close](../interfaces/storage_provider.StorageProvider.md#close)
+[StorageProvider](../interfaces/storage_provider.StorageProvider).[close](../interfaces/storage_provider.StorageProvider#close)
 
 #### Defined in
 

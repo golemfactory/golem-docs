@@ -1,6 +1,6 @@
 # Class: WorkContext
 
-[task/work](../modules/task_work.md).WorkContext
+[task/work](../modules/task_work).WorkContext
 
 Work Context
 
@@ -10,28 +10,28 @@ Work Context
 
 ### Constructors
 
-- [constructor](task_work.WorkContext.md#constructor)
+- [constructor](task_work.WorkContext#constructor)
 
 ### Properties
 
-- [provider](task_work.WorkContext.md#provider)
-- [agreementId](task_work.WorkContext.md#agreementid)
-- [activityId](task_work.WorkContext.md#activityid)
+- [provider](task_work.WorkContext#provider)
+- [agreementId](task_work.WorkContext#agreementid)
+- [activityId](task_work.WorkContext#activityid)
 
 ### Methods
 
-- [before](task_work.WorkContext.md#before)
-- [run](task_work.WorkContext.md#run)
-- [uploadFile](task_work.WorkContext.md#uploadfile)
-- [uploadJson](task_work.WorkContext.md#uploadjson)
-- [uploadData](task_work.WorkContext.md#uploaddata)
-- [downloadFile](task_work.WorkContext.md#downloadfile)
-- [downloadData](task_work.WorkContext.md#downloaddata)
-- [downloadJson](task_work.WorkContext.md#downloadjson)
-- [beginBatch](task_work.WorkContext.md#beginbatch)
-- [rejectResult](task_work.WorkContext.md#rejectresult)
-- [getWebsocketUri](task_work.WorkContext.md#getwebsocketuri)
-- [getState](task_work.WorkContext.md#getstate)
+- [before](task_work.WorkContext#before)
+- [run](task_work.WorkContext#run)
+- [uploadFile](task_work.WorkContext#uploadfile)
+- [uploadJson](task_work.WorkContext#uploadjson)
+- [uploadData](task_work.WorkContext#uploaddata)
+- [downloadFile](task_work.WorkContext#downloadfile)
+- [downloadData](task_work.WorkContext#downloaddata)
+- [downloadJson](task_work.WorkContext#downloadjson)
+- [beginBatch](task_work.WorkContext#beginbatch)
+- [rejectResult](task_work.WorkContext#rejectresult)
+- [getWebsocketUri](task_work.WorkContext#getwebsocketuri)
+- [getState](task_work.WorkContext#getstate)
 
 ## Constructors
 
@@ -44,7 +44,7 @@ Work Context
 | Name | Type |
 | :------ | :------ |
 | `activity` | `Activity` |
-| `options?` | [`WorkOptions`](../interfaces/task_work.WorkOptions.md) |
+| `options?` | [`WorkOptions`](../interfaces/task_work.WorkOptions) |
 
 #### Defined in
 
@@ -279,11 +279,11 @@ ___
 
 ### beginBatch
 
-▸ **beginBatch**(): [`Batch`](task_batch.Batch.md)
+▸ **beginBatch**(): [`Batch`](task_batch.Batch)
 
 #### Returns
 
-[`Batch`](task_batch.Batch.md)
+[`Batch`](task_batch.Batch)
 
 #### Defined in
 

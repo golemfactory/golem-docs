@@ -4,7 +4,7 @@
 
 ### Type Aliases
 
-- [RequireAtLeastOne](utils_types.md#requireatleastone)
+- [RequireAtLeastOne](utils_types#requireatleastone)
 
 ## Type Aliases
 

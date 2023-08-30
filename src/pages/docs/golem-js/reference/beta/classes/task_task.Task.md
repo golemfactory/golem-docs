@@ -1,6 +1,6 @@
 # Class: Task<InputType, OutputType\>
 
-[task/task](../modules/task_task.md).Task
+[task/task](../modules/task_task).Task
 
 One computation unit.
 
@@ -23,29 +23,29 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 ### Constructors
 
-- [constructor](task_task.Task.md#constructor)
+- [constructor](task_task.Task#constructor)
 
 ### Properties
 
-- [id](task_task.Task.md#id)
+- [id](task_task.Task#id)
 
 ### Methods
 
-- [start](task_task.Task.md#start)
-- [stop](task_task.Task.md#stop)
-- [isQueueable](task_task.Task.md#isqueueable)
-- [isRetry](task_task.Task.md#isretry)
-- [isDone](task_task.Task.md#isdone)
-- [isFinished](task_task.Task.md#isfinished)
-- [isRejected](task_task.Task.md#isrejected)
-- [isPending](task_task.Task.md#ispending)
-- [isNew](task_task.Task.md#isnew)
-- [getResults](task_task.Task.md#getresults)
-- [getData](task_task.Task.md#getdata)
-- [getWorker](task_task.Task.md#getworker)
-- [getInitWorker](task_task.Task.md#getinitworker)
-- [getRetriesCount](task_task.Task.md#getretriescount)
-- [getError](task_task.Task.md#geterror)
+- [start](task_task.Task#start)
+- [stop](task_task.Task#stop)
+- [isQueueable](task_task.Task#isqueueable)
+- [isRetry](task_task.Task#isretry)
+- [isDone](task_task.Task#isdone)
+- [isFinished](task_task.Task#isfinished)
+- [isRejected](task_task.Task#isrejected)
+- [isPending](task_task.Task#ispending)
+- [isNew](task_task.Task#isnew)
+- [getResults](task_task.Task#getresults)
+- [getData](task_task.Task#getdata)
+- [getWorker](task_task.Task#getworker)
+- [getInitWorker](task_task.Task#getinitworker)
+- [getRetriesCount](task_task.Task#getretriescount)
+- [getError](task_task.Task#geterror)
 
 ## Constructors
 
@@ -65,9 +65,9 @@ Represents one computation unit that will be run on the one provider machine (e.
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `id` | `string` | `undefined` |
-| `worker` | [`Worker`](../modules/task_work.md#worker)<`InputType`, `OutputType`\> | `undefined` |
+| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | `undefined` |
 | `data?` | `InputType` | `undefined` |
-| `initWorker?` | [`Worker`](../modules/task_work.md#worker)<`undefined`\> | `undefined` |
+| `initWorker?` | [`Worker`](../modules/task_work#worker)<`undefined`\> | `undefined` |
 | `maxTaskRetries` | `number` | `MAX_RETRIES` |
 
 #### Defined in
@@ -254,11 +254,11 @@ ___
 
 ### getWorker
 
-▸ **getWorker**(): [`Worker`](../modules/task_work.md#worker)<`InputType`\>
+▸ **getWorker**(): [`Worker`](../modules/task_work#worker)<`InputType`\>
 
 #### Returns
 
-[`Worker`](../modules/task_work.md#worker)<`InputType`\>
+[`Worker`](../modules/task_work#worker)<`InputType`\>
 
 #### Defined in
 
@@ -268,11 +268,11 @@ ___
 
 ### getInitWorker
 
-▸ **getInitWorker**(): `undefined` \| [`Worker`](../modules/task_work.md#worker)<`undefined`\>
+▸ **getInitWorker**(): `undefined` \| [`Worker`](../modules/task_work#worker)<`undefined`\>
 
 #### Returns
 
-`undefined` \| [`Worker`](../modules/task_work.md#worker)<`undefined`\>
+`undefined` \| [`Worker`](../modules/task_work#worker)<`undefined`\>
 
 #### Defined in
 

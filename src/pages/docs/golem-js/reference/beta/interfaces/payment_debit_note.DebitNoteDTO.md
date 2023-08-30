@@ -1,17 +1,17 @@
 # Interface: DebitNoteDTO
 
-[payment/debit_note](../modules/payment_debit_note.md).DebitNoteDTO
+[payment/debit_note](../modules/payment_debit_note).DebitNoteDTO
 
 ## Table of contents
 
 ### Properties
 
-- [id](payment_debit_note.DebitNoteDTO.md#id)
-- [timestamp](payment_debit_note.DebitNoteDTO.md#timestamp)
-- [activityId](payment_debit_note.DebitNoteDTO.md#activityid)
-- [agreementId](payment_debit_note.DebitNoteDTO.md#agreementid)
-- [totalAmountDue](payment_debit_note.DebitNoteDTO.md#totalamountdue)
-- [usageCounterVector](payment_debit_note.DebitNoteDTO.md#usagecountervector)
+- [id](payment_debit_note.DebitNoteDTO#id)
+- [timestamp](payment_debit_note.DebitNoteDTO#timestamp)
+- [activityId](payment_debit_note.DebitNoteDTO#activityid)
+- [agreementId](payment_debit_note.DebitNoteDTO#agreementid)
+- [totalAmountDue](payment_debit_note.DebitNoteDTO#totalamountdue)
+- [usageCounterVector](payment_debit_note.DebitNoteDTO#usagecountervector)
 
 ## Properties
 

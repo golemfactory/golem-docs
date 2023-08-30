@@ -1,16 +1,16 @@
 # Interface: ProposalDTO
 
-[market/proposal](../modules/market_proposal.md).ProposalDTO
+[market/proposal](../modules/market_proposal).ProposalDTO
 
 ## Table of contents
 
 ### Properties
 
-- [id](market_proposal.ProposalDTO.md#id)
-- [issuerId](market_proposal.ProposalDTO.md#issuerid)
-- [provider](market_proposal.ProposalDTO.md#provider)
-- [properties](market_proposal.ProposalDTO.md#properties)
-- [constraints](market_proposal.ProposalDTO.md#constraints)
+- [id](market_proposal.ProposalDTO#id)
+- [issuerId](market_proposal.ProposalDTO#issuerid)
+- [provider](market_proposal.ProposalDTO#provider)
+- [properties](market_proposal.ProposalDTO#properties)
+- [constraints](market_proposal.ProposalDTO#constraints)
 
 ## Properties
 

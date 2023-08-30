@@ -4,13 +4,13 @@
 
 ### Classes
 
-- [Terminate](../classes/script_command.Terminate.md)
-- [UploadData](../classes/script_command.UploadData.md)
-- [DownloadData](../classes/script_command.DownloadData.md)
+- [Terminate](../classes/script_command.Terminate)
+- [UploadData](../classes/script_command.UploadData)
+- [DownloadData](../classes/script_command.DownloadData)
 
 ### Type Aliases
 
-- [Capture](script_command.md#capture)
+- [Capture](script_command#capture)
 
 ## Other
 

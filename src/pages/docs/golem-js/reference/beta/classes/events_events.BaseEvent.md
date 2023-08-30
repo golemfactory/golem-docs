@@ -1,6 +1,6 @@
 # Class: BaseEvent<DataType\>
 
-[events/events](../modules/events_events.md).BaseEvent
+[events/events](../modules/events_events).BaseEvent
 
 ## Type parameters
 
@@ -14,81 +14,81 @@
 
   ↳ **`BaseEvent`**
 
-  ↳↳ [`ComputationStarted`](events_events.ComputationStarted.md)
+  ↳↳ [`ComputationStarted`](events_events.ComputationStarted)
 
-  ↳↳ [`ComputationFinished`](events_events.ComputationFinished.md)
+  ↳↳ [`ComputationFinished`](events_events.ComputationFinished)
 
-  ↳↳ [`ComputationFailed`](events_events.ComputationFailed.md)
+  ↳↳ [`ComputationFailed`](events_events.ComputationFailed)
 
-  ↳↳ [`TaskStarted`](events_events.TaskStarted.md)
+  ↳↳ [`TaskStarted`](events_events.TaskStarted)
 
-  ↳↳ [`TaskRedone`](events_events.TaskRedone.md)
+  ↳↳ [`TaskRedone`](events_events.TaskRedone)
 
-  ↳↳ [`TaskRejected`](events_events.TaskRejected.md)
+  ↳↳ [`TaskRejected`](events_events.TaskRejected)
 
-  ↳↳ [`TaskFinished`](events_events.TaskFinished.md)
+  ↳↳ [`TaskFinished`](events_events.TaskFinished)
 
-  ↳↳ [`AllocationCreated`](events_events.AllocationCreated.md)
+  ↳↳ [`AllocationCreated`](events_events.AllocationCreated)
 
-  ↳↳ [`DemandSubscribed`](events_events.DemandSubscribed.md)
+  ↳↳ [`DemandSubscribed`](events_events.DemandSubscribed)
 
-  ↳↳ [`DemandFailed`](events_events.DemandFailed.md)
+  ↳↳ [`DemandFailed`](events_events.DemandFailed)
 
-  ↳↳ [`DemandUnsubscribed`](events_events.DemandUnsubscribed.md)
+  ↳↳ [`DemandUnsubscribed`](events_events.DemandUnsubscribed)
 
-  ↳↳ [`CollectFailed`](events_events.CollectFailed.md)
+  ↳↳ [`CollectFailed`](events_events.CollectFailed)
 
-  ↳↳ [`ProposalReceived`](events_events.ProposalReceived.md)
+  ↳↳ [`ProposalReceived`](events_events.ProposalReceived)
 
-  ↳↳ [`ProposalRejected`](events_events.ProposalRejected.md)
+  ↳↳ [`ProposalRejected`](events_events.ProposalRejected)
 
-  ↳↳ [`ProposalResponded`](events_events.ProposalResponded.md)
+  ↳↳ [`ProposalResponded`](events_events.ProposalResponded)
 
-  ↳↳ [`ProposalFailed`](events_events.ProposalFailed.md)
+  ↳↳ [`ProposalFailed`](events_events.ProposalFailed)
 
-  ↳↳ [`ProposalConfirmed`](events_events.ProposalConfirmed.md)
+  ↳↳ [`ProposalConfirmed`](events_events.ProposalConfirmed)
 
-  ↳↳ [`PackageCreated`](events_events.PackageCreated.md)
+  ↳↳ [`PackageCreated`](events_events.PackageCreated)
 
-  ↳↳ [`AgreementCreated`](events_events.AgreementCreated.md)
+  ↳↳ [`AgreementCreated`](events_events.AgreementCreated)
 
-  ↳↳ [`AgreementConfirmed`](events_events.AgreementConfirmed.md)
+  ↳↳ [`AgreementConfirmed`](events_events.AgreementConfirmed)
 
-  ↳↳ [`AgreementRejected`](events_events.AgreementRejected.md)
+  ↳↳ [`AgreementRejected`](events_events.AgreementRejected)
 
-  ↳↳ [`AgreementTerminated`](events_events.AgreementTerminated.md)
+  ↳↳ [`AgreementTerminated`](events_events.AgreementTerminated)
 
-  ↳↳ [`InvoiceReceived`](events_events.InvoiceReceived.md)
+  ↳↳ [`InvoiceReceived`](events_events.InvoiceReceived)
 
-  ↳↳ [`DebitNoteReceived`](events_events.DebitNoteReceived.md)
+  ↳↳ [`DebitNoteReceived`](events_events.DebitNoteReceived)
 
-  ↳↳ [`PaymentAccepted`](events_events.PaymentAccepted.md)
+  ↳↳ [`PaymentAccepted`](events_events.PaymentAccepted)
 
-  ↳↳ [`DebitNoteAccepted`](events_events.DebitNoteAccepted.md)
+  ↳↳ [`DebitNoteAccepted`](events_events.DebitNoteAccepted)
 
-  ↳↳ [`PaymentFailed`](events_events.PaymentFailed.md)
+  ↳↳ [`PaymentFailed`](events_events.PaymentFailed)
 
-  ↳↳ [`ActivityCreated`](events_events.ActivityCreated.md)
+  ↳↳ [`ActivityCreated`](events_events.ActivityCreated)
 
-  ↳↳ [`ActivityDestroyed`](events_events.ActivityDestroyed.md)
+  ↳↳ [`ActivityDestroyed`](events_events.ActivityDestroyed)
 
-  ↳↳ [`ActivityStateChanged`](events_events.ActivityStateChanged.md)
+  ↳↳ [`ActivityStateChanged`](events_events.ActivityStateChanged)
 
-  ↳↳ [`ScriptSent`](events_events.ScriptSent.md)
+  ↳↳ [`ScriptSent`](events_events.ScriptSent)
 
-  ↳↳ [`ScriptExecuted`](events_events.ScriptExecuted.md)
+  ↳↳ [`ScriptExecuted`](events_events.ScriptExecuted)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](events_events.BaseEvent.md#constructor)
+- [constructor](events_events.BaseEvent#constructor)
 
 ### Properties
 
-- [detail](events_events.BaseEvent.md#detail)
-- [name](events_events.BaseEvent.md#name)
-- [timestamp](events_events.BaseEvent.md#timestamp)
+- [detail](events_events.BaseEvent#detail)
+- [name](events_events.BaseEvent#name)
+- [timestamp](events_events.BaseEvent#timestamp)
 
 ## Constructors
 

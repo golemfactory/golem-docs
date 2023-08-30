@@ -4,18 +4,18 @@
 
 ### Interfaces
 
-- [PaymentOptions](../interfaces/payment_service.PaymentOptions.md)
+- [PaymentOptions](../interfaces/payment_service.PaymentOptions)
 
 ### Type Aliases
 
-- [DebitNoteFilter](payment_service.md#debitnotefilter)
-- [InvoiceFilter](payment_service.md#invoicefilter)
+- [DebitNoteFilter](payment_service#debitnotefilter)
+- [InvoiceFilter](payment_service#invoicefilter)
 
 ## Type Aliases
 
 ### DebitNoteFilter
 
-Ƭ **DebitNoteFilter**: (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO.md)) => `Promise`<`boolean`\>
+Ƭ **DebitNoteFilter**: (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`<`boolean`\>
 
 #### Type declaration
 
@@ -25,7 +25,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `debitNote` | [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO.md) |
+| `debitNote` | [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO) |
 
 ##### Returns
 
@@ -39,7 +39,7 @@ ___
 
 ### InvoiceFilter
 
-Ƭ **InvoiceFilter**: (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO.md)) => `Promise`<`boolean`\>
+Ƭ **InvoiceFilter**: (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`<`boolean`\>
 
 #### Type declaration
 
@@ -49,7 +49,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `invoice` | [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO.md) |
+| `invoice` | [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO) |
 
 ##### Returns
 

@@ -1,6 +1,6 @@
 # Class: NetworkNode
 
-[network/node](../modules/network_node.md).NetworkNode
+[network/node](../modules/network_node).NetworkNode
 
 Describes a node in a VPN, mapping a Golem node id to an IP address
 
@@ -8,17 +8,17 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 ### Constructors
 
-- [constructor](network_node.NetworkNode.md#constructor)
+- [constructor](network_node.NetworkNode#constructor)
 
 ### Properties
 
-- [id](network_node.NetworkNode.md#id)
-- [ip](network_node.NetworkNode.md#ip)
+- [id](network_node.NetworkNode#id)
+- [ip](network_node.NetworkNode#ip)
 
 ### Methods
 
-- [getNetworkConfig](network_node.NetworkNode.md#getnetworkconfig)
-- [getWebsocketUri](network_node.NetworkNode.md#getwebsocketuri)
+- [getNetworkConfig](network_node.NetworkNode#getnetworkconfig)
+- [getWebsocketUri](network_node.NetworkNode#getwebsocketuri)
 
 ## Constructors
 
@@ -32,7 +32,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 | :------ | :------ |
 | `id` | `any` |
 | `ip` | `IPv4` |
-| `getNetworkInfo` | () => [`NetworkInfo`](../interfaces/network_network.NetworkInfo.md) |
+| `getNetworkInfo` | () => [`NetworkInfo`](../interfaces/network_network.NetworkInfo) |
 | `apiUrl` | `string` |
 
 #### Defined in

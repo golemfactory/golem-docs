@@ -1,6 +1,6 @@
 # Class: NetworkError
 
-[network/network](../modules/network_network.md).NetworkError
+[network/network](../modules/network_network).NetworkError
 
 ## Hierarchy
 
@@ -12,7 +12,7 @@
 
 ### Constructors
 
-- [constructor](network_network.NetworkError.md#constructor)
+- [constructor](network_network.NetworkError#constructor)
 
 ## Constructors
 

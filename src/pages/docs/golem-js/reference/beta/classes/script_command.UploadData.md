@@ -1,6 +1,6 @@
 # Class: UploadData
 
-[script/command](../modules/script_command.md).UploadData
+[script/command](../modules/script_command).UploadData
 
 ## Hierarchy
 
@@ -12,20 +12,20 @@
 
 ### Constructors
 
-- [constructor](script_command.UploadData.md#constructor)
+- [constructor](script_command.UploadData#constructor)
 
 ### Properties
 
-- [from](script_command.UploadData.md#from)
-- [to](script_command.UploadData.md#to)
-- [args](script_command.UploadData.md#args)
+- [from](script_command.UploadData#from)
+- [to](script_command.UploadData#to)
+- [args](script_command.UploadData#args)
 
 ### Methods
 
-- [before](script_command.UploadData.md#before)
-- [after](script_command.UploadData.md#after)
-- [toJson](script_command.UploadData.md#tojson)
-- [toExeScriptRequest](script_command.UploadData.md#toexescriptrequest)
+- [before](script_command.UploadData#before)
+- [after](script_command.UploadData#after)
+- [toJson](script_command.UploadData#tojson)
+- [toExeScriptRequest](script_command.UploadData#toexescriptrequest)
 
 ## Constructors
 
@@ -37,7 +37,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider.md) |
+| `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
 | `src` | `Uint8Array` |
 | `dstPath` | `string` |
 

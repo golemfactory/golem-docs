@@ -4,7 +4,7 @@
 
 ### Variables
 
-- [isNode](utils_runtimeContextChecker.md#isnode)
+- [isNode](utils_runtimeContextChecker#isnode)
 
 ## Variables
 

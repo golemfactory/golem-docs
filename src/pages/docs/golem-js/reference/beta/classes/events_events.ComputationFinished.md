@@ -1,10 +1,10 @@
 # Class: ComputationFinished
 
-[events/events](../modules/events_events.md).ComputationFinished
+[events/events](../modules/events_events).ComputationFinished
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<`undefined`\>
+- [`BaseEvent`](events_events.BaseEvent)<`undefined`\>
 
   ↳ **`ComputationFinished`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.ComputationFinished.md#constructor)
+- [constructor](events_events.ComputationFinished#constructor)
 
 ### Properties
 
-- [detail](events_events.ComputationFinished.md#detail)
-- [name](events_events.ComputationFinished.md#name)
-- [timestamp](events_events.ComputationFinished.md#timestamp)
+- [detail](events_events.ComputationFinished#detail)
+- [name](events_events.ComputationFinished#name)
+- [timestamp](events_events.ComputationFinished#timestamp)
 
 ## Constructors
 
@@ -34,7 +34,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -48,7 +48,7 @@
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -62,7 +62,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -76,7 +76,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

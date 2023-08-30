@@ -1,10 +1,10 @@
 # Class: ProposalReceived
 
-[events/events](../modules/events_events.md).ProposalReceived
+[events/events](../modules/events_events).ProposalReceived
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent.md)<{ `id`: `string` ; `providerId`: `string` ; `parentId`: `string` \| ``null`` ; `details`: [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails.md)  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `parentId`: `string` \| ``null`` ; `details`: [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails)  }\>
 
   ↳ **`ProposalReceived`**
 
@@ -12,13 +12,13 @@
 
 ### Constructors
 
-- [constructor](events_events.ProposalReceived.md#constructor)
+- [constructor](events_events.ProposalReceived#constructor)
 
 ### Properties
 
-- [detail](events_events.ProposalReceived.md#detail)
-- [name](events_events.ProposalReceived.md#name)
-- [timestamp](events_events.ProposalReceived.md#timestamp)
+- [detail](events_events.ProposalReceived#detail)
+- [name](events_events.ProposalReceived#name)
+- [timestamp](events_events.ProposalReceived#timestamp)
 
 ## Constructors
 
@@ -34,11 +34,11 @@
 | `data.id` | `string` |
 | `data.providerId` | `string` |
 | `data.parentId` | ``null`` \| `string` |
-| `data.details` | [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails.md) |
+| `data.details` | [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails) |
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[constructor](events_events.BaseEvent.md#constructor)
+[BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
@@ -57,11 +57,11 @@
 | `id` | `string` |
 | `providerId` | `string` |
 | `parentId` | ``null`` \| `string` |
-| `details` | [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails.md) |
+| `details` | [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails) |
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[detail](events_events.BaseEvent.md#detail)
+[BaseEvent](events_events.BaseEvent).[detail](events_events.BaseEvent#detail)
 
 #### Defined in
 
@@ -75,7 +75,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[name](events_events.BaseEvent.md#name)
+[BaseEvent](events_events.BaseEvent).[name](events_events.BaseEvent#name)
 
 #### Defined in
 
@@ -89,7 +89,7 @@ ___
 
 #### Inherited from
 
-[BaseEvent](events_events.BaseEvent.md).[timestamp](events_events.BaseEvent.md#timestamp)
+[BaseEvent](events_events.BaseEvent).[timestamp](events_events.BaseEvent#timestamp)
 
 #### Defined in
 

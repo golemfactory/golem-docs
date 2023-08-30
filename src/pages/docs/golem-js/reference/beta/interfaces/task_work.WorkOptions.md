@@ -1,18 +1,18 @@
 # Interface: WorkOptions
 
-[task/work](../modules/task_work.md).WorkOptions
+[task/work](../modules/task_work).WorkOptions
 
 ## Table of contents
 
 ### Properties
 
-- [activityPreparingTimeout](task_work.WorkOptions.md#activitypreparingtimeout)
-- [activityStateCheckingInterval](task_work.WorkOptions.md#activitystatecheckinginterval)
-- [provider](task_work.WorkOptions.md#provider)
-- [storageProvider](task_work.WorkOptions.md#storageprovider)
-- [networkNode](task_work.WorkOptions.md#networknode)
-- [logger](task_work.WorkOptions.md#logger)
-- [initWorker](task_work.WorkOptions.md#initworker)
+- [activityPreparingTimeout](task_work.WorkOptions#activitypreparingtimeout)
+- [activityStateCheckingInterval](task_work.WorkOptions#activitystatecheckinginterval)
+- [provider](task_work.WorkOptions#provider)
+- [storageProvider](task_work.WorkOptions#storageprovider)
+- [networkNode](task_work.WorkOptions#networknode)
+- [logger](task_work.WorkOptions#logger)
+- [initWorker](task_work.WorkOptions#initworker)
 
 ## Properties
 
@@ -56,7 +56,7 @@ ___
 
 ### storageProvider
 
-• `Optional` **storageProvider**: [`StorageProvider`](storage_provider.StorageProvider.md)
+• `Optional` **storageProvider**: [`StorageProvider`](storage_provider.StorageProvider)
 
 #### Defined in
 
@@ -66,7 +66,7 @@ ___
 
 ### networkNode
 
-• `Optional` **networkNode**: [`NetworkNode`](../classes/network_node.NetworkNode.md)
+• `Optional` **networkNode**: [`NetworkNode`](../classes/network_node.NetworkNode)
 
 #### Defined in
 
@@ -76,7 +76,7 @@ ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
 
 #### Defined in
 
@@ -86,7 +86,7 @@ ___
 
 ### initWorker
 
-• `Optional` **initWorker**: [`Worker`](../modules/task_work.md#worker)<`undefined`, `unknown`\>
+• `Optional` **initWorker**: [`Worker`](../modules/task_work#worker)<`undefined`, `unknown`\>
 
 #### Defined in
 

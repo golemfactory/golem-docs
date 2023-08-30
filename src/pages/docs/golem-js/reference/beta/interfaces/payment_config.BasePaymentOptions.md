@@ -1,32 +1,32 @@
 # Interface: BasePaymentOptions
 
-[payment/config](../modules/payment_config.md).BasePaymentOptions
+[payment/config](../modules/payment_config).BasePaymentOptions
 
 ## Hierarchy
 
 - **`BasePaymentOptions`**
 
-  ↳ [`PaymentOptions`](payment_payments.PaymentOptions.md)
+  ↳ [`PaymentOptions`](payment_payments.PaymentOptions)
 
-  ↳ [`PaymentOptions`](payment_service.PaymentOptions.md)
+  ↳ [`PaymentOptions`](payment_service.PaymentOptions)
 
 ## Table of contents
 
 ### Properties
 
-- [yagnaOptions](payment_config.BasePaymentOptions.md#yagnaoptions)
-- [budget](payment_config.BasePaymentOptions.md#budget)
-- [payment](payment_config.BasePaymentOptions.md#payment)
-- [paymentTimeout](payment_config.BasePaymentOptions.md#paymenttimeout)
-- [paymentRequestTimeout](payment_config.BasePaymentOptions.md#paymentrequesttimeout)
-- [logger](payment_config.BasePaymentOptions.md#logger)
-- [eventTarget](payment_config.BasePaymentOptions.md#eventtarget)
+- [yagnaOptions](payment_config.BasePaymentOptions#yagnaoptions)
+- [budget](payment_config.BasePaymentOptions#budget)
+- [payment](payment_config.BasePaymentOptions#payment)
+- [paymentTimeout](payment_config.BasePaymentOptions#paymenttimeout)
+- [paymentRequestTimeout](payment_config.BasePaymentOptions#paymentrequesttimeout)
+- [logger](payment_config.BasePaymentOptions#logger)
+- [eventTarget](payment_config.BasePaymentOptions#eventtarget)
 
 ## Properties
 
 ### yagnaOptions
 
-• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor.md#yagnaoptions)
+• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor#yagnaoptions)
 
 #### Defined in
 
@@ -83,7 +83,7 @@ ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
 
 #### Defined in
 

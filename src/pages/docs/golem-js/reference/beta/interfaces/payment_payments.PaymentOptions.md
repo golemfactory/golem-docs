@@ -1,10 +1,10 @@
 # Interface: PaymentOptions
 
-[payment/payments](../modules/payment_payments.md).PaymentOptions
+[payment/payments](../modules/payment_payments).PaymentOptions
 
 ## Hierarchy
 
-- [`BasePaymentOptions`](payment_config.BasePaymentOptions.md)
+- [`BasePaymentOptions`](payment_config.BasePaymentOptions)
 
   ↳ **`PaymentOptions`**
 
@@ -12,17 +12,17 @@
 
 ### Properties
 
-- [invoiceFetchingInterval](payment_payments.PaymentOptions.md#invoicefetchinginterval)
-- [debitNotesFetchingInterval](payment_payments.PaymentOptions.md#debitnotesfetchinginterval)
-- [maxInvoiceEvents](payment_payments.PaymentOptions.md#maxinvoiceevents)
-- [maxDebitNotesEvents](payment_payments.PaymentOptions.md#maxdebitnotesevents)
-- [yagnaOptions](payment_payments.PaymentOptions.md#yagnaoptions)
-- [budget](payment_payments.PaymentOptions.md#budget)
-- [payment](payment_payments.PaymentOptions.md#payment)
-- [paymentTimeout](payment_payments.PaymentOptions.md#paymenttimeout)
-- [paymentRequestTimeout](payment_payments.PaymentOptions.md#paymentrequesttimeout)
-- [logger](payment_payments.PaymentOptions.md#logger)
-- [eventTarget](payment_payments.PaymentOptions.md#eventtarget)
+- [invoiceFetchingInterval](payment_payments.PaymentOptions#invoicefetchinginterval)
+- [debitNotesFetchingInterval](payment_payments.PaymentOptions#debitnotesfetchinginterval)
+- [maxInvoiceEvents](payment_payments.PaymentOptions#maxinvoiceevents)
+- [maxDebitNotesEvents](payment_payments.PaymentOptions#maxdebitnotesevents)
+- [yagnaOptions](payment_payments.PaymentOptions#yagnaoptions)
+- [budget](payment_payments.PaymentOptions#budget)
+- [payment](payment_payments.PaymentOptions#payment)
+- [paymentTimeout](payment_payments.PaymentOptions#paymenttimeout)
+- [paymentRequestTimeout](payment_payments.PaymentOptions#paymentrequesttimeout)
+- [logger](payment_payments.PaymentOptions#logger)
+- [eventTarget](payment_payments.PaymentOptions#eventtarget)
 
 ## Properties
 
@@ -68,11 +68,11 @@ ___
 
 ### yagnaOptions
 
-• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor.md#yagnaoptions)
+• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor#yagnaoptions)
 
 #### Inherited from
 
-[BasePaymentOptions](payment_config.BasePaymentOptions.md).[yagnaOptions](payment_config.BasePaymentOptions.md#yagnaoptions)
+[BasePaymentOptions](payment_config.BasePaymentOptions).[yagnaOptions](payment_config.BasePaymentOptions#yagnaoptions)
 
 #### Defined in
 
@@ -86,7 +86,7 @@ ___
 
 #### Inherited from
 
-[BasePaymentOptions](payment_config.BasePaymentOptions.md).[budget](payment_config.BasePaymentOptions.md#budget)
+[BasePaymentOptions](payment_config.BasePaymentOptions).[budget](payment_config.BasePaymentOptions#budget)
 
 #### Defined in
 
@@ -107,7 +107,7 @@ ___
 
 #### Inherited from
 
-[BasePaymentOptions](payment_config.BasePaymentOptions.md).[payment](payment_config.BasePaymentOptions.md#payment)
+[BasePaymentOptions](payment_config.BasePaymentOptions).[payment](payment_config.BasePaymentOptions#payment)
 
 #### Defined in
 
@@ -121,7 +121,7 @@ ___
 
 #### Inherited from
 
-[BasePaymentOptions](payment_config.BasePaymentOptions.md).[paymentTimeout](payment_config.BasePaymentOptions.md#paymenttimeout)
+[BasePaymentOptions](payment_config.BasePaymentOptions).[paymentTimeout](payment_config.BasePaymentOptions#paymenttimeout)
 
 #### Defined in
 
@@ -135,7 +135,7 @@ ___
 
 #### Inherited from
 
-[BasePaymentOptions](payment_config.BasePaymentOptions.md).[paymentRequestTimeout](payment_config.BasePaymentOptions.md#paymentrequesttimeout)
+[BasePaymentOptions](payment_config.BasePaymentOptions).[paymentRequestTimeout](payment_config.BasePaymentOptions#paymentrequesttimeout)
 
 #### Defined in
 
@@ -145,11 +145,11 @@ ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
 
 #### Inherited from
 
-[BasePaymentOptions](payment_config.BasePaymentOptions.md).[logger](payment_config.BasePaymentOptions.md#logger)
+[BasePaymentOptions](payment_config.BasePaymentOptions).[logger](payment_config.BasePaymentOptions#logger)
 
 #### Defined in
 
@@ -163,7 +163,7 @@ ___
 
 #### Inherited from
 
-[BasePaymentOptions](payment_config.BasePaymentOptions.md).[eventTarget](payment_config.BasePaymentOptions.md#eventtarget)
+[BasePaymentOptions](payment_config.BasePaymentOptions).[eventTarget](payment_config.BasePaymentOptions#eventtarget)
 
 #### Defined in
 

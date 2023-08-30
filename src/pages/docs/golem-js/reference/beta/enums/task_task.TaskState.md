@@ -1,16 +1,16 @@
 # Enumeration: TaskState
 
-[task/task](../modules/task_task.md).TaskState
+[task/task](../modules/task_task).TaskState
 
 ## Table of contents
 
 ### Enumeration Members
 
-- [New](task_task.TaskState.md#new)
-- [Retry](task_task.TaskState.md#retry)
-- [Pending](task_task.TaskState.md#pending)
-- [Done](task_task.TaskState.md#done)
-- [Rejected](task_task.TaskState.md#rejected)
+- [New](task_task.TaskState#new)
+- [Retry](task_task.TaskState#retry)
+- [Pending](task_task.TaskState#pending)
+- [Done](task_task.TaskState#done)
+- [Rejected](task_task.TaskState#rejected)
 
 ## Enumeration Members
 

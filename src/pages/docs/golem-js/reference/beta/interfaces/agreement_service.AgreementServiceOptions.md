@@ -1,6 +1,6 @@
 # Interface: AgreementServiceOptions
 
-[agreement/service](../modules/agreement_service.md).AgreementServiceOptions
+[agreement/service](../modules/agreement_service).AgreementServiceOptions
 
 ## Hierarchy
 
@@ -12,18 +12,18 @@
 
 ### Properties
 
-- [agreementSelector](agreement_service.AgreementServiceOptions.md#agreementselector)
-- [yagnaOptions](agreement_service.AgreementServiceOptions.md#yagnaoptions)
-- [agreementRequestTimeout](agreement_service.AgreementServiceOptions.md#agreementrequesttimeout)
-- [agreementWaitingForApprovalTimeout](agreement_service.AgreementServiceOptions.md#agreementwaitingforapprovaltimeout)
-- [logger](agreement_service.AgreementServiceOptions.md#logger)
-- [eventTarget](agreement_service.AgreementServiceOptions.md#eventtarget)
+- [agreementSelector](agreement_service.AgreementServiceOptions#agreementselector)
+- [yagnaOptions](agreement_service.AgreementServiceOptions#yagnaoptions)
+- [agreementRequestTimeout](agreement_service.AgreementServiceOptions#agreementrequesttimeout)
+- [agreementWaitingForApprovalTimeout](agreement_service.AgreementServiceOptions#agreementwaitingforapprovaltimeout)
+- [logger](agreement_service.AgreementServiceOptions#logger)
+- [eventTarget](agreement_service.AgreementServiceOptions#eventtarget)
 
 ## Properties
 
 ### agreementSelector
 
-• `Optional` **agreementSelector**: [`AgreementSelector`](../modules/agreement_service.md#agreementselector)
+• `Optional` **agreementSelector**: [`AgreementSelector`](../modules/agreement_service#agreementselector)
 
 The selector used when choosing a provider from a pool of existing offers (from the market or already used before)
 
@@ -35,7 +35,7 @@ ___
 
 ### yagnaOptions
 
-• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor.md#yagnaoptions)
+• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor#yagnaoptions)
 
 yagnaOptions
 
@@ -83,7 +83,7 @@ ___
 
 ### logger
 
-• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger.md)
+• `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
 
 Logger module
 

@@ -4,8 +4,8 @@
 
 ### Classes
 
-- [WebSocketBrowserStorageProvider](../classes/storage_ws_browser.WebSocketBrowserStorageProvider.md)
+- [WebSocketBrowserStorageProvider](../classes/storage_ws_browser.WebSocketBrowserStorageProvider)
 
 ### Interfaces
 
-- [WebSocketStorageProviderOptions](../interfaces/storage_ws_browser.WebSocketStorageProviderOptions.md)
+- [WebSocketStorageProviderOptions](../interfaces/storage_ws_browser.WebSocketStorageProviderOptions)

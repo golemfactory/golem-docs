@@ -1,6 +1,6 @@
 # Class: Payments
 
-[payment/payments](../modules/payment_payments.md).Payments
+[payment/payments](../modules/payment_payments).Payments
 
 ## Hierarchy
 
@@ -12,12 +12,12 @@
 
 ### Constructors
 
-- [constructor](payment_payments.Payments.md#constructor)
+- [constructor](payment_payments.Payments#constructor)
 
 ### Methods
 
-- [create](payment_payments.Payments.md#create)
-- [unsubscribe](payment_payments.Payments.md#unsubscribe)
+- [create](payment_payments.Payments#create)
+- [unsubscribe](payment_payments.Payments#unsubscribe)
 
 ## Constructors
 
@@ -29,8 +29,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna.md#yagnaapi) |
-| `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions.md) |
+| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
+| `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Overrides
 
@@ -44,18 +44,18 @@ EventTarget.constructor
 
 ### create
 
-▸ `Static` **create**(`yagnaApi`, `options?`): `Promise`<[`Payments`](payment_payments.Payments.md)\>
+▸ `Static` **create**(`yagnaApi`, `options?`): `Promise`<[`Payments`](payment_payments.Payments)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna.md#yagnaapi) |
-| `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions.md) |
+| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
+| `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Returns
 
-`Promise`<[`Payments`](payment_payments.Payments.md)\>
+`Promise`<[`Payments`](payment_payments.Payments)\>
 
 #### Defined in
 

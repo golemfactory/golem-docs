@@ -4,15 +4,15 @@
 
 ### Classes
 
-- [Payments](../classes/payment_payments.Payments.md)
+- [Payments](../classes/payment_payments.Payments)
 
 ### Interfaces
 
-- [PaymentOptions](../interfaces/payment_payments.PaymentOptions.md)
+- [PaymentOptions](../interfaces/payment_payments.PaymentOptions)
 
 ### Variables
 
-- [PaymentEventType](payment_payments.md#paymenteventtype)
+- [PaymentEventType](payment_payments#paymenteventtype)
 
 ## Variables
 
