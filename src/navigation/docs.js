@@ -186,6 +186,209 @@ export const navigation = [
         ],
       },
       {
+        title: 'Python',
+        children: [
+          { title: 'Introduction', href: '/docs/creators/python' },
+          {
+            title: 'QuickStarts',
+            href: '/docs/creators/python/quickstarts',
+            children: [
+              {
+                title: 'Task API QuickStart',
+                href: '/docs/creators/python/quickstarts/run-first-task-on-golem',
+              },
+              {
+                title: 'Service API QuickStart',
+                href: '/docs/creators/python/quickstarts/run-first-service-on-golem',
+              },
+            ]
+          },
+          {
+            title: 'Guides',
+            href: '',
+            children: [
+              {
+                title: 'List of guides',
+                href: '/docs/creators/python/guides',
+              },
+              {
+                title: 'Application fundamentals',
+                href: '/docs/creators/python/guides/application-fundamentals',
+              },
+              {
+                title: 'Task Model',
+                href: '/docs/creators/python/guides/task-model',
+              },
+              {
+                title: 'Service Model',
+                href: '/docs/creators/python/guides/service-model',
+              },
+              {
+                title: 'Service Model Dive',
+                href: '/docs/creators/python/guides/service-model-dive',
+              },
+              {
+                title: 'Golem images',
+                href: '/docs/creators/python/guides/golem-images',
+              },
+              {
+                title: 'Golem images FAQ',
+                href: '/docs/creators/python/guides/golem-images-faq',
+              },
+              {
+                title: 'Switching to mainnet',
+                href: '/docs/creators/python/guides/switching-to-mainnet',
+              },
+              {
+                title: 'Troubleshooting',
+                href: '/docs/creators/python/guides/troubleshooting',
+              },
+              {
+                title: 'VPN',
+                href: '/docs/creators/python/guides/vpn',
+              },
+              {
+                title: 'Debugging',
+                href: '/docs/creators/python/guides/debugging',
+              },
+            ],
+          },
+          {
+            title: 'Tutorials',
+            children: [
+              {
+                title: 'List of tutorials',
+                href: '/docs/creators/python/tutorials',
+              },
+              {
+                title: 'Task API - QuickStart explained',
+                href: '/docs/creators/python/tutorials/task-example-0-hello',
+              },
+              {
+                title: 'Task API - Cracker',
+                href: '/docs/creators/python/tutorials/task-example-1-cracker',
+              },
+              {
+                title: 'Task API - Hashcat',
+                href: '/docs/creators/python/tutorials/task-example-2-hashcat',
+              },
+              {
+                title: 'Service API - Hello World',
+                href: '/docs/creators/python/tutorials/service-example-0-hello-world',
+              },
+              {
+                title: 'Service API - Simple',
+                href: '/docs/creators/python/tutorials/service-example-1-simple-service',
+              },
+              {
+                title: 'Service API - SSH',
+                href: '/docs/creators/python/tutorials/service-example-2-vpn-ssh-terminal',
+              },
+              {
+                title: 'Service API - Proxy',
+                href: '/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy',
+              },
+              {
+                title: 'Service API - Counter',
+                href: '/docs/creators/python/tutorials/service-example-4-custom-usage-counters',
+              },
+              {
+                title: 'Service API - Web app',
+                href: '/docs/creators/python/tutorials/service-example-5-webapp',
+              },
+              {
+                title: 'Service API - External API',
+                href: '/docs/creators/python/tutorials/service-example-6-external-api-request',
+              },
+            ],
+          },
+          {
+            title: 'Python Examples',
+            href: '',
+            children: [
+              {
+                title: 'List of examples',
+                href: '/docs/creators/python/examples',
+              },
+              {
+                title: 'Executing tasks',
+                href: '/docs/creators/python/examples/executing-tasks',
+              },
+              {
+                title: 'Composing tasks',
+                href: '/docs/creators/python/examples/composing-tasks',
+              },
+              {
+                title: 'Transferring data',
+                href: '/docs/creators/python/examples/transferring-data',
+              },
+              {
+                title: 'Working with results',
+                href: '/docs/creators/python/examples/working-with-results',
+              },
+              {
+                title: 'Selecting providers',
+                href: '/docs/creators/python/examples/selecting-providers',
+              },
+              {
+                title: 'Working with images',
+                href: '/docs/creators/python/examples/working-with-images',
+              },
+              {
+                title: 'Using app-keys',
+                href: '/docs/creators/python/examples/using-app-keys',
+              },
+              {
+                title: 'Switching to mainnet',
+                href: '/docs/creators/python/examples/switching-to-mainnet',
+              },
+              {
+                title: 'Enable logging',
+                href: '/docs/creators/python/examples/enable-logging',
+              },
+            ],
+          },
+          {
+            title: 'Golem tools examples',
+            href: '',
+            children: [
+              {
+                title: 'List of instructions',
+                href: '/docs/creators/python/examples/tools',
+              },
+              {
+                title: 'Yagna installation',
+                href: '/docs/creators/python/examples/tools/yagna-installation-for-requestors',
+              },
+              {
+                title: 'Converting images',
+                href: '/docs/creators/python/examples/tools/converting-docker-image-to-golem-format',
+              },
+              {
+                title: 'Gvmkit-build installation',
+                href: '/docs/creators/python/examples/tools/gvmkit-build-installation',
+              },
+              {
+                title: 'Publishing custom images',
+                href: '/docs/creators/python/examples/tools/publishing-custom-images',
+              },
+              {
+                title: 'Golem wallet backup',
+                href: '/docs/creators/python/examples/tools/golem-wallet-backup',
+              },
+              {
+                title: 'Restoring Golem wallet',
+                href: '/docs/creators/python/examples/tools/restoring-golem-wallet',
+              },
+              {
+                title: 'Managing Golem wallet',
+                href: '/docs/creators/python/examples/tools/managing-golem-wallet',
+              },
+            ],
+          },        
+        ],
+      },
+      {
         title: 'Deploying apps on Golem',
         children: [
           { title: 'Introduction', href: '/docs/creators/dapps' },
@@ -209,6 +412,36 @@ export const navigation = [
           {
             title: 'Troubleshooting',
             href: '/docs/creators/dapps/troubleshooting',
+          },
+        ],
+      },
+      {
+        title: 'Common Developer tools',
+        children: [  
+
+          {
+            title: 'Goth',
+            href: '/docs/creators/tools/goth',
+            children: [
+              {
+                title: 'Goth Tutorial',
+                href: '/docs/creators/tools/goth/running-goth',
+              },
+              {
+                title: 'Goth in interactive mode',
+                href: '/docs/creators/tools/goth/running-goths-interactive-mode',
+              },
+            ],
+          },
+          {
+            title: 'Images',
+            href: '',
+            children: [
+              {
+                title: 'Self-hosted VM images',
+                href: '/docs/creators/tools/images/self-hosted-vm-images',
+              },
+            ],
           },
         ],
       },
