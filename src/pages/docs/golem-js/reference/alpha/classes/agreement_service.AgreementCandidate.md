@@ -21,8 +21,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 #### Defined in
@@ -39,7 +39,7 @@
 
 [src/agreement/service.ts:14](https://github.com/golemfactory/golem-js/blob/614ea72/src/agreement/service.ts#L14)
 
-___
+---
 
 ### proposal
 

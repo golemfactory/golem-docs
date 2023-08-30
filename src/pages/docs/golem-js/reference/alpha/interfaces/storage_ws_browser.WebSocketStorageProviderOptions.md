@@ -17,16 +17,16 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `apiKey` | `string` |
+| Name       | Type     |
+| :--------- | :------- |
+| `apiKey`   | `string` |
 | `basePath` | `string` |
 
 #### Defined in
 
 [src/storage/ws-browser.ts:9](https://github.com/golemfactory/golem-js/blob/614ea72/src/storage/ws-browser.ts#L9)
 
-___
+---
 
 ### logger
 

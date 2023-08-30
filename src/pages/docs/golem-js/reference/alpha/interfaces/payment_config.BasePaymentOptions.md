@@ -32,7 +32,7 @@
 
 [src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L26)
 
-___
+---
 
 ### budget
 
@@ -42,7 +42,7 @@ ___
 
 [src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L27)
 
-___
+---
 
 ### payment
 
@@ -50,16 +50,16 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `driver?` | `string` |
+| Name       | Type     |
+| :--------- | :------- |
+| `driver?`  | `string` |
 | `network?` | `string` |
 
 #### Defined in
 
 [src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L28)
 
-___
+---
 
 ### paymentTimeout
 
@@ -69,7 +69,7 @@ ___
 
 [src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L29)
 
-___
+---
 
 ### paymentRequestTimeout
 
@@ -79,7 +79,7 @@ ___
 
 [src/payment/config.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L30)
 
-___
+---
 
 ### logger
 
@@ -89,7 +89,7 @@ ___
 
 [src/payment/config.ts:31](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L31)
 
-___
+---
 
 ### eventTarget
 

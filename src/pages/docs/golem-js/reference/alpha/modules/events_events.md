@@ -46,7 +46,7 @@
 
 ### EventType
 
-• `Const` **EventType**: ``"GolemEvent"``
+• `Const` **EventType**: `"GolemEvent"`
 
 Global Event Type with which all API events will be emitted. It should be used on all listeners that would like to handle events.
 

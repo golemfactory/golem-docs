@@ -6,22 +6,22 @@
 
 ### Properties
 
-- [batch\_id](activity_results.StreamingBatchEvent#batch_id)
+- [batch_id](activity_results.StreamingBatchEvent#batch_id)
 - [index](activity_results.StreamingBatchEvent#index)
 - [timestamp](activity_results.StreamingBatchEvent#timestamp)
 - [kind](activity_results.StreamingBatchEvent#kind)
 
 ## Properties
 
-### batch\_id
+### batch_id
 
-• **batch\_id**: `string`
+• **batch_id**: `string`
 
 #### Defined in
 
 [src/activity/results.ts:28](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/results.ts#L28)
 
-___
+---
 
 ### index
 
@@ -31,7 +31,7 @@ ___
 
 [src/activity/results.ts:29](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/results.ts#L29)
 
-___
+---
 
 ### timestamp
 
@@ -41,7 +41,7 @@ ___
 
 [src/activity/results.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/results.ts#L30)
 
-___
+---
 
 ### kind
 

@@ -13,8 +13,7 @@ Whatever your need, there may come a time when you'd like to send your GLMs one 
 
 ## Prerequisites
 
-* Configure the Metamask wallet extension for Chrome / Firefox / Opera and add your wallet.   
-
+- Configure the Metamask wallet extension for Chrome / Firefox / Opera and add your wallet.
 
 ## Ethereum Mainnet to Polygon
 
@@ -67,8 +66,6 @@ Just like any transactions on the Ethereum Mainnet require ETH, operations on th
 
 !!! Info
 Just for reference, currently (as of March 23rd, 2022), the transaction fees for an ERC-20 transfer on Polygon oscillate around slightly above 0.001 MATIC so converting even the minimal value of 1 MATIC will get you enough to pay gas fees of hundreds of GLM transfers.
-
-
 
 ### Acquiring GLM and MATIC for FIAT
 

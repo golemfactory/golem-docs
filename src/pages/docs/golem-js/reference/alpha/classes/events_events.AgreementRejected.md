@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `reason?`: `string` }\>
 
   ↳ **`AgreementRejected`**
 
@@ -28,12 +28,12 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data?` | `Object` |
-| `data.id` | `string` |
+| Name              | Type     |
+| :---------------- | :------- |
+| `data?`           | `Object` |
+| `data.id`         | `string` |
 | `data.providerId` | `string` |
-| `data.reason?` | `string` |
+| `data.reason?`    | `string` |
 
 #### Inherited from
 
@@ -51,11 +51,11 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+| Name         | Type     |
+| :----------- | :------- |
+| `id`         | `string` |
 | `providerId` | `string` |
-| `reason?` | `string` |
+| `reason?`    | `string` |
 
 #### Inherited from
 
@@ -65,7 +65,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L16)
 
-___
+---
 
 ### name
 
@@ -79,7 +79,7 @@ ___
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L17)
 
-___
+---
 
 ### timestamp
 

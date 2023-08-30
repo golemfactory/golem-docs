@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 export const SuccessIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -13,4 +13,4 @@ export const SuccessIcon = (props) => (
       fill="#D4EADD"
     />
   </svg>
-)
+);

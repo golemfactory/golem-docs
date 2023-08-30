@@ -77,7 +77,7 @@ FLAGS:
     -V, --version    Prints version information
 
 OPTIONS:
-        --node-name <node-name>             
+        --node-name <node-name>
         --cores <num>                       Number of shared CPU cores
         --memory <bytes (like "1.5GiB")>    Size of shared RAM
         --disk <bytes (like "1.5GiB")>      Size of shared disk space
@@ -184,26 +184,26 @@ In the three columns, you can check the basic information regarding the status o
 
 #### Status
 
-* Whether your node is running
-* Version of your node (with commit, build date, and build number)
-* Name of your node
-* Subnet in which your node is currently running
-* VM status
+- Whether your node is running
+- Version of your node (with commit, build date, and build number)
+- Name of your node
+- Subnet in which your node is currently running
+- VM status
 
 #### Wallet
 
-* Account address
-* Payment network: `mainnet` or `testnet`
-* Amount of tokens that you have earned for successful computation
-* On-chain amount of tokens that you have earned (explorer [etherscan.io](https://etherscan.io/) or [goerli.etherscan.io](https://goerli.etherscan.io/))
-* Pending payments that you should receive for computation
-* Amount of tokens that are still unconfirmed and may not show on your account
+- Account address
+- Payment network: `mainnet` or `testnet`
+- Amount of tokens that you have earned for successful computation
+- On-chain amount of tokens that you have earned (explorer [etherscan.io](https://etherscan.io/) or [goerli.etherscan.io](https://goerli.etherscan.io/))
+- Pending payments that you should receive for computation
+- Amount of tokens that are still unconfirmed and may not show on your account
 
 #### Tasks
 
-* Number of tasks that you were computing in the last hour
-* Number of tasks that were in progress during the last hour
-* Total tasks that you were trying to compute - including those that were not computed
+- Number of tasks that you were computing in the last hour
+- Number of tasks that were in progress during the last hour
+- Total tasks that you were trying to compute - including those that were not computed
 
 ## Advanced Settings
 
@@ -215,7 +215,7 @@ Additionally, it enables configuration of the certificate keystore and of the do
 
 The provider has an embedded certificate keystore which is used to validate any additional permissions for the payload launched by the requestors.
 
-By default, it contains only Golem public certificate which allows executing examples in tutorials and apps from trusted by Golem creators. 
+By default, it contains only Golem public certificate which allows executing examples in tutorials and apps from trusted by Golem creators.
 
 Run `ya-provider keystore --help` to see possible subcommands
 

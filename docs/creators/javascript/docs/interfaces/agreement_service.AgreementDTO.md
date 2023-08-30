@@ -19,7 +19,7 @@
 
 [yajsapi/agreement/service.ts:9](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/agreement/service.ts#L9)
 
-___
+---
 
 ### provider
 
@@ -27,9 +27,9 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+| Name   | Type     |
+| :----- | :------- |
+| `id`   | `string` |
 | `name` | `string` |
 
 #### Defined in

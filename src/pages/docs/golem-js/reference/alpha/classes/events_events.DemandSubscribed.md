@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `details`: [`DemandDetails`](../interfaces/market_demand.DemandDetails)  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `details`: [`DemandDetails`](../interfaces/market_demand.DemandDetails) }\>
 
   ↳ **`DemandSubscribed`**
 
@@ -28,10 +28,10 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data?` | `Object` |
-| `data.id` | `string` |
+| Name           | Type                                                         |
+| :------------- | :----------------------------------------------------------- |
+| `data?`        | `Object`                                                     |
+| `data.id`      | `string`                                                     |
 | `data.details` | [`DemandDetails`](../interfaces/market_demand.DemandDetails) |
 
 #### Inherited from
@@ -50,9 +50,9 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+| Name      | Type                                                         |
+| :-------- | :----------------------------------------------------------- |
+| `id`      | `string`                                                     |
 | `details` | [`DemandDetails`](../interfaces/market_demand.DemandDetails) |
 
 #### Inherited from
@@ -63,7 +63,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L16)
 
-___
+---
 
 ### name
 
@@ -77,7 +77,7 @@ ___
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L17)
 
-___
+---
 
 ### timestamp
 

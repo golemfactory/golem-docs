@@ -1,4 +1,4 @@
-import { EyeIcon } from '@/components/icons/EyeIcon'
+import { EyeIcon } from "@/components/icons/EyeIcon";
 export function DocNavigation({ title, children }) {
   return (
     <div
@@ -14,5 +14,5 @@ export function DocNavigation({ title, children }) {
       </div>
       <div className="mt-2 px-4">{children}</div>
     </div>
-  )
+  );
 }

@@ -38,7 +38,7 @@ One important factor influencing any decisions regarding the payment solutions i
 
 While we were able to cut the transaction fees by orders of magnitude using Layer 2 solutions (initially zkSync and more recently - Polygon), they still constitute a substantial portion of the value of the payment itself.
 
-Naturally, the requestor's aim in such a scenario is to optimize this cost by performing as few transactions as possible. 
+Naturally, the requestor's aim in such a scenario is to optimize this cost by performing as few transactions as possible.
 
 Contrariwise, the providers are equally interested in transactions happening as often as possible to ensure they are not left with uncovered, already incurred costs should the agreement be broken by the other side.
 
@@ -83,4 +83,3 @@ It also partially protects against dishonest requestors who would have the provi
 - [Layer 2 payments](/docs/golem/payments/layer-2-payments)
 
 {% /docnavigation %}
-

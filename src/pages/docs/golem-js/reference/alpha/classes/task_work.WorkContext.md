@@ -41,9 +41,9 @@ Work Context
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `activity` | `Activity` |
+| Name       | Type                                                 |
+| :--------- | :--------------------------------------------------- |
+| `activity` | `Activity`                                           |
 | `options?` | [`WorkOptions`](../interfaces/task_work.WorkOptions) |
 
 #### Defined in
@@ -58,17 +58,17 @@ Work Context
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `id` | `string` |
+| Name             | Type     |
+| :--------------- | :------- |
+| `name`           | `string` |
+| `id`             | `string` |
 | `networkConfig?` | `object` |
 
 #### Defined in
 
 [src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L52)
 
-___
+---
 
 ### agreementId
 
@@ -78,7 +78,7 @@ ___
 
 [src/task/work.ts:53](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L53)
 
-___
+---
 
 ### activityId
 
@@ -102,7 +102,7 @@ ___
 
 [src/task/work.ts:74](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L74)
 
-___
+---
 
 ### run
 
@@ -112,10 +112,10 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `commandLine` | `string` | Shell command to execute. |
-| `options?` | `CommandOptions` | Additional run options. |
+| Name          | Type             | Description               |
+| :------------ | :--------------- | :------------------------ |
+| `commandLine` | `string`         | Shell command to execute. |
+| `options?`    | `CommandOptions` | Additional run options.   |
 
 #### Returns
 
@@ -131,11 +131,11 @@ Execute an executable on provider.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `executable` | `string` | Executable to run. |
-| `args` | `string`[] | Executable arguments. |
-| `options?` | `CommandOptions` | Additional run options. |
+| Name         | Type             | Description             |
+| :----------- | :--------------- | :---------------------- |
+| `executable` | `string`         | Executable to run.      |
+| `args`       | `string`[]       | Executable arguments.   |
+| `options?`   | `CommandOptions` | Additional run options. |
 
 #### Returns
 
@@ -145,7 +145,7 @@ Execute an executable on provider.
 
 [src/task/work.ts:126](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L126)
 
-___
+---
 
 ### uploadFile
 
@@ -153,10 +153,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src` | `string` |
-| `dst` | `string` |
+| Name       | Type             |
+| :--------- | :--------------- |
+| `src`      | `string`         |
+| `dst`      | `string`         |
 | `options?` | `CommandOptions` |
 
 #### Returns
@@ -167,7 +167,7 @@ ___
 
 [src/task/work.ts:138](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L138)
 
-___
+---
 
 ### uploadJson
 
@@ -175,10 +175,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `json` | `any` |
-| `dst` | `string` |
+| Name       | Type             |
+| :--------- | :--------------- |
+| `json`     | `any`            |
+| `dst`      | `string`         |
 | `options?` | `CommandOptions` |
 
 #### Returns
@@ -189,7 +189,7 @@ ___
 
 [src/task/work.ts:143](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L143)
 
-___
+---
 
 ### uploadData
 
@@ -197,10 +197,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Uint8Array` |
-| `dst` | `string` |
+| Name       | Type             |
+| :--------- | :--------------- |
+| `data`     | `Uint8Array`     |
+| `dst`      | `string`         |
 | `options?` | `CommandOptions` |
 
 #### Returns
@@ -211,7 +211,7 @@ ___
 
 [src/task/work.ts:148](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L148)
 
-___
+---
 
 ### downloadFile
 
@@ -219,10 +219,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src` | `string` |
-| `dst` | `string` |
+| Name       | Type             |
+| :--------- | :--------------- |
+| `src`      | `string`         |
+| `dst`      | `string`         |
 | `options?` | `CommandOptions` |
 
 #### Returns
@@ -233,7 +233,7 @@ ___
 
 [src/task/work.ts:152](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L152)
 
-___
+---
 
 ### downloadData
 
@@ -241,9 +241,9 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src` | `string` |
+| Name       | Type             |
+| :--------- | :--------------- |
+| `src`      | `string`         |
 | `options?` | `CommandOptions` |
 
 #### Returns
@@ -254,7 +254,7 @@ ___
 
 [src/task/work.ts:156](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L156)
 
-___
+---
 
 ### downloadJson
 
@@ -262,9 +262,9 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src` | `string` |
+| Name       | Type             |
+| :--------- | :--------------- |
+| `src`      | `string`         |
 | `options?` | `CommandOptions` |
 
 #### Returns
@@ -275,7 +275,7 @@ ___
 
 [src/task/work.ts:161](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L161)
 
-___
+---
 
 ### beginBatch
 
@@ -289,7 +289,7 @@ ___
 
 [src/task/work.ts:176](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L176)
 
-___
+---
 
 ### rejectResult
 
@@ -297,8 +297,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type     |
+| :---- | :------- |
 | `msg` | `string` |
 
 #### Returns
@@ -313,7 +313,7 @@ This function is only used to throw errors from unit tests. It should be removed
 
 [src/task/work.ts:183](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L183)
 
-___
+---
 
 ### getWebsocketUri
 
@@ -321,8 +321,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `port` | `number` |
 
 #### Returns
@@ -333,7 +333,7 @@ ___
 
 [src/task/work.ts:187](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L187)
 
-___
+---
 
 ### getState
 

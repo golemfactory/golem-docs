@@ -1,5 +1,5 @@
-import { LikeIcon } from './icons/LikeIcon'
-import { DislikeIcon } from './icons/DislikeIcon'
+import { LikeIcon } from "./icons/LikeIcon";
+import { DislikeIcon } from "./icons/DislikeIcon";
 export const Feedback = () => {
   return (
     <div className="my-6 w-full rounded-md bg-lightblue py-12 text-center">
@@ -15,5 +15,5 @@ export const Feedback = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};

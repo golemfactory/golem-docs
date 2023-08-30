@@ -21,7 +21,7 @@
 
 [src/network/network.ts:28](https://github.com/golemfactory/golem-js/blob/614ea72/src/network/network.ts#L28)
 
-___
+---
 
 ### ip
 
@@ -31,7 +31,7 @@ ___
 
 [src/network/network.ts:29](https://github.com/golemfactory/golem-js/blob/614ea72/src/network/network.ts#L29)
 
-___
+---
 
 ### mask
 
@@ -41,7 +41,7 @@ ___
 
 [src/network/network.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/network/network.ts#L30)
 
-___
+---
 
 ### nodes
 

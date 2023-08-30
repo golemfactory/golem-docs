@@ -14,8 +14,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type     |
+| :---------- | :------- |
 | `filename?` | `string` |
 
 #### Returns

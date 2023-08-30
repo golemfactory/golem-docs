@@ -33,8 +33,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type     |
+| :------ | :------- |
 | `args?` | `object` |
 
 #### Overrides
@@ -77,7 +77,7 @@ Command.toJson
 
 [src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L25)
 
-___
+---
 
 ### toExeScriptRequest
 
@@ -95,7 +95,7 @@ Command.toExeScriptRequest
 
 [src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L31)
 
-___
+---
 
 ### before
 
@@ -115,7 +115,7 @@ Command.before
 
 [src/script/command.ts:38](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L38)
 
-___
+---
 
 ### after
 
@@ -131,8 +131,8 @@ error result.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                 |
+| :-------- | :------------------- |
 | `result?` | `Result`<`unknown`\> |
 
 #### Returns

@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `activityId`: `string` ; `agreementId`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `activityId`: `string` ; `agreementId`: `string` }\>
 
   ↳ **`ScriptSent`**
 
@@ -28,10 +28,10 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data?` | `Object` |
-| `data.activityId` | `string` |
+| Name               | Type     |
+| :----------------- | :------- |
+| `data?`            | `Object` |
+| `data.activityId`  | `string` |
 | `data.agreementId` | `string` |
 
 #### Inherited from
@@ -50,9 +50,9 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `activityId` | `string` |
+| Name          | Type     |
+| :------------ | :------- |
+| `activityId`  | `string` |
 | `agreementId` | `string` |
 
 #### Inherited from
@@ -63,7 +63,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L16)
 
-___
+---
 
 ### name
 
@@ -77,7 +77,7 @@ ___
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/events/events.ts#L17)
 
-___
+---
 
 ### timestamp
 

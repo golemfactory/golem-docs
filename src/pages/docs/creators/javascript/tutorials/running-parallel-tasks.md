@@ -19,7 +19,6 @@ This tutorial has been designed to work with the following environments:
 - Yagna service is installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
 - Docker installed and Docker service available.
 
-
 ## Introduction
 
 This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network.
@@ -42,7 +41,7 @@ Hashcat supports 320 hashing algorithms and 5 different attack types, but for th
 
 To find the password that matches the given hash and mask, we could run the following command:
 
-```bash 
+```bash
 hashcat -a 3 -m 400 in.hash ?a?a?a
 ```
 
@@ -264,10 +263,10 @@ As we will run hashcat on a fragment of the whole keyspace, using the --skip and
 Knowing the keyspace size and maximum number of providers we range for each of the tasks:
 
 ```js
-const step = Math.floor(keyspace / args.numberOfProviders + 1)
+const step = Math.floor(keyspace / args.numberOfProviders + 1);
 const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map(
   (i) => i * step
-)
+);
 ```
 
 Note that the number of chunks does not determine the number of engaged providers. In this example, we decided to split the job into 3 tasks, but the number of providers we want to engage is determined by the `maxParallelTasks` parameter. The executor will try to engage that number of providers and then pass the tasks to them. Once a provider is ready to execute a task, it takes up the next task from a common pool of tasks. As such, a fast provider may end up executing more tasks than a slow one.
@@ -286,15 +285,22 @@ With the range, we use the executor.map method to run the split tasks simultaneo
 
 ```js
 const results = executor.map(range, async (ctx, skip = 0) => {
-const results = await ctx
-  .beginBatch()
-  .run(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${Math.min(keyspace-1,step + step-1)} -o pass.potfile`)
-  .run("cat pass.potfile")
-  .end()
-  .catch((err) => console.error(err));
+  const results = await ctx
+    .beginBatch()
+    .run(
+      `hashcat -a 3 -m 400 '${args.hash}' '${
+        args.mask
+      }' --skip=${skip} --limit=${Math.min(
+        keyspace - 1,
+        step + step - 1
+      )} -o pass.potfile`
+    )
+    .run("cat pass.potfile")
+    .end()
+    .catch((err) => console.error(err));
 
-if (!results?.[1]?.stdout) return false;
-return results?.[1]?.stdout.split(":")[1];
+  if (!results?.[1]?.stdout) return false;
+  return results?.[1]?.stdout.split(":")[1];
 });
 ```
 
@@ -308,14 +314,14 @@ The results object returned by `map()` is of the type of AsyncIterable, that can
 ```js
 for await (const result of results) {
   if (result) {
-    password = result
-    break
+    password = result;
+    break;
   }
 }
-if (!password) console.log('No password found')
-else console.log(`Password found: ${password}`)
+if (!password) console.log("No password found");
+else console.log(`Password found: ${password}`);
 
-await executor.end()
+await executor.end();
 ```
 
 Once we get the password we print it in the console and end executor.
@@ -343,7 +349,7 @@ async function main(args) {
   console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`);
   const step = Math.floor(keyspace / args.numberOfProviders + 1);
   const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map(
-    (i) => i * step,
+    (i) => i * step
   );
 
   const results = executor.map(range, async (ctx, skip = 0) => {
@@ -355,8 +361,8 @@ async function main(args) {
           args.mask
         }' --skip=${skip} --limit=${Math.min(
           keyspace,
-          skip + step,
-        )} -o pass.potfile`,
+          skip + step
+        )} -o pass.potfile`
       )
       .run("cat pass.potfile")
       .end()
@@ -383,14 +389,13 @@ program
     "--number-of-providers <number_of_providers>",
     "number of providers",
     (value) => parseInt(value),
-    3,
+    3
   )
   .option("--mask <mask>")
   .requiredOption("--hash <hash>");
 program.parse();
 const options = program.opts();
 main(options).catch((e) => console.error(e));
-
 ```
 
 To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
@@ -413,14 +418,10 @@ node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 {% /tab  %}  
 {% /tabs %}
 
-
 You should see an output similar to the one below. Note, that once we obtained the solution, `executor.end()` terminates other tasks, that might not finished yet, and we observe the errors, due to `.catch((err) => console.error(err));` inside the task function.
 
 ![](/hashcat_output_1.png)
 ![](/hashcat_output_2.png)
-
-
-
 
 {% alert level="info" %}
 

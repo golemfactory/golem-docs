@@ -13,13 +13,13 @@
 
 ### properties
 
-• **properties**: { `key`: `string` ; `value`: `string` \| `number` \| `boolean`  }[]
+• **properties**: { `key`: `string` ; `value`: `string` \| `number` \| `boolean` }[]
 
 #### Defined in
 
 [src/market/demand.ts:14](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/demand.ts#L14)
 
-___
+---
 
 ### constraints
 

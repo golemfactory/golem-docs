@@ -20,7 +20,7 @@ curl --version
 
 If not, please install it using the instructions appropriate for your system from [here](https://curl.se/download.html).
 
-You should have `python` and `pip` installed.  
+You should have `python` and `pip` installed.
 
 ## Quick start
 
@@ -29,10 +29,10 @@ You should have `python` and `pip` installed.
 As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly configured
 [yagna](https://github.com/golemfactory/yagna) service, you'll need to have it set up.
 
-Please follow the [Yagna installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running. 
+Please follow the [Yagna installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running.
 
 {% alert level="info" %}
-Instead of using the autoconfigured app-key of `try_golem` in this tutorial, we will use a unique 32-char app-key. 
+Instead of using the autoconfigured app-key of `try_golem` in this tutorial, we will use a unique 32-char app-key.
 
 {% /alert %}
 
@@ -41,6 +41,7 @@ Query `yagna` with:
 ```bash
 yagna app-key list
 ```
+
 If the above command doesn't give you any 32-char keys, just create your app key:
 
 `shell yagna app-key create requestor`
@@ -52,14 +53,18 @@ Set the `YAGNA_APPKEY` in your environment, e.g. with:
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 export YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```bash
 set YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -70,14 +75,18 @@ First, ensure you have Python 3.8 or later:
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 python3 --version
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```bash
 python --version
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -89,16 +98,20 @@ environment:
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 python3 -m venv ~/.envs/dapp-manager
 source ~/.envs/dapp-manager/bin/activate
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```shell
 python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapp-manager
 %HOMEDRIVE%%HOMEPATH%\.envs\dapp-manager\Scripts\activate.bat
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -109,7 +122,6 @@ Install `dapp-manager` with a simple:
 ```bash
 pip install dapp-manager
 ```
-
 
 ## Run an example application
 
@@ -148,19 +160,19 @@ waiting for the following line
 {% alert level="info" %}
 
     Your port number (`8080` above) may be different.
+
 {% /alert %}
 
 Once you get it, you can access the launched app by following that link.
 
-
 In case something goes amiss, `dapp-manager` will output:
-```App <the-hex-string> is not running.```
+`App <the-hex-string> is not running.`
 
 Whatever the reason, you can still query the various streams of a terminated dapp by adding the
 `--no-ensure-alive` option, e.g.:
 
 ```bash
-dapp-manager read <the-hex-string> --no-ensure-alive stderr 
+dapp-manager read <the-hex-string> --no-ensure-alive stderr
 ```
 
 ## Full usage
@@ -244,7 +256,7 @@ Options:
 ```
 
 By default, the stream will only be output if the app is currently running. Otherwise, you'll get
-the ```App <the-hex-string> is not running.``` message and no stream.
+the `App <the-hex-string> is not running.` message and no stream.
 
 If you wish to query a stream of a terminated app, add the `--no-ensure-alive` parameter to the
 specific `read` command.
@@ -255,23 +267,23 @@ This program supports shell completion for all of its commands, as well as exist
 
 To enable completion, use the `autocomplete` command with your shell of choice:
 
-* **bash**:
+- **bash**:
 
-    ```bash
-    dapp-manager autocomplete bash
-    ```
+  ```bash
+  dapp-manager autocomplete bash
+  ```
 
-* **zsh**:
+- **zsh**:
 
-    ```bash
-    dapp-manager autocomplete zsh
-    ```
+  ```bash
+  dapp-manager autocomplete zsh
+  ```
 
-* **fish**:
+- **fish**:
 
-    ```bash
-    dapp-manager autocomplete fish
-    ```
+  ```bash
+  dapp-manager autocomplete fish
+  ```
 
 The completion functions are defined in `dapp_manager/autocomplete/scripts`.
 
@@ -284,7 +296,3 @@ Completion will **NOT WORK** when the program is invoked with `python -m dapp_ma
 Only the installed entrypoint (i.e. `dapp-manager`) is supported.
 To have it available, run `poetry install` when using the source version of `dapp-manager`.
 {% /alert %}
-
-
-
-

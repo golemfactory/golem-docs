@@ -13,22 +13,21 @@ A Golem image is a software package that contains libraries, tools, configuratio
 
 Golem's virtual machine runtime is currently a primary execution environment. This runtime allows provider nodes to run Docker-like images defined by Golem application developers. The runtime is a binary used by the `yagna` service on provider nodes. A given runtime is responsible for running a certain type of image (we have separate runtimes for VMs and for WASM code). In the case of Golem VMs, the runtime being used is ya-runtime-vm.
 
-## Golem image creation 
+## Golem image creation
 
 Golem images are based on Docker images that are converted using the gvmkit-build tool to a `.gvmi` file format. The conversion brings a visible advantage for users. By using SquashFS we significantly reduced the size of the images thus saving file space and shortening the time needed to transfer the image to the provider node. Another benefit is running images in VMs instead of running them as Docker containers, which provides a separation of providers and requestor data and processes.
 
 The general process of creating a Golem image looks like this:
 
-* Define the image content in Docker format
-* Build a Docker image from the Dockerfile
-* Convert to Golem image using gvmkit-build ([example](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format))
+- Define the image content in Docker format
+- Build a Docker image from the Dockerfile
+- Convert to Golem image using gvmkit-build ([example](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format))
 
-See our [Create Golem Image Tutorial](/docs/creators/javascript/tutorials/building-custom-image) on how to use the tool. 
+See our [Create Golem Image Tutorial](/docs/creators/javascript/tutorials/building-custom-image) on how to use the tool.
 
 ## Publishing the image
 
-Once your image is built and tested, you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
-
+Once your image is built and tested, you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements.
 
 ## Golem image use
 
@@ -40,7 +39,7 @@ If you intend to use your image just for testing then it is enough to use image 
 - Publishing the image using tags. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
 - Using the tag or hash in a requestor script. ([example](/docs/creators/javascript/examples/working-with-images))
 
-## Dockerfile command support 
+## Dockerfile command support
 
 All the Docker commands that are related to the definition of the image content are supported. So if you can create a Docker image from your Dockerfile, you should be able to convert it to a Golem image.
 
@@ -54,7 +53,7 @@ Additionally, in the case of large files, it is recommended to generate and stor
 
 {% alert level="warning" %}
 
-When you define the image (in Dockerfile) do not copy your files into folders that are defined as volumes. When a Golem virtual machine is started, __a new directory__ is created in the host's file system for each of the defined volumes. This directory is then made available inside the VM under its specified path (for example: /golem/input).
+When you define the image (in Dockerfile) do not copy your files into folders that are defined as volumes. When a Golem virtual machine is started, **a new directory** is created in the host's file system for each of the defined volumes. This directory is then made available inside the VM under its specified path (for example: /golem/input).
 
 {% /alert %}
 

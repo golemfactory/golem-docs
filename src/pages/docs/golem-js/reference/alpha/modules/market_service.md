@@ -22,8 +22,8 @@
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns

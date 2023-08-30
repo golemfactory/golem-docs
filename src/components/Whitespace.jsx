@@ -1,3 +1,3 @@
 export function Whitespace({}) {
-  return <br />
+  return <br />;
 }

@@ -2,7 +2,9 @@
 description: Sending GLM from the Ethereum Mainnet to Polygon and back.
 title: Golem Token conversion
 ---
+
 #
+
 ## Mainnet / Polygon GLM Conversion
 
 Since the Beta.4 release of Golem, Polygon network became the default platform for payments between Golem requestors and providers.
@@ -32,15 +34,12 @@ Just like any transactions on the Ethereum Mainnet require ETH, operations on th
 - You can buy MATICS directly on trading platform or
 - If you possess GLM you can swap them for MATICs.
 
-
 [//]: <> ( see https://www.reddit.com/r/GolemProject/comments/r3ejkl/guide_part_2_l2_glm_to_exchange_swapping_glm_for/ )
 
 ### Swapping GLM tokens for MATIC on Polygon
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
+
 1. Select **Proof of Stake** and then **Swap** (in the Wallet Features section)
 2. Connect your wallet
 3. Choose the token you want to get and follow the instructions
-
-
-
