@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e # Exit immediately if a command exits with a non-zero status.
 
 # Variable Definitions
 REPO_URL='https://github.com/golemfactory/golem-js.git'
@@ -8,6 +9,7 @@ TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-cle
 BRANCH_NAME=$1
 
 # Cloning Repository to Temporary Path
+if [ -d "$TEMP_PATH" ]; then rm -Rf $TEMP_PATH; fi
 git clone $REPO_URL $TEMP_PATH
 
 # Entering cloned Repository
@@ -46,3 +48,6 @@ content="export const latestJSVersion = '${BRANCH_NAME}'"
 
 # Removing old content and Writing New Content in Meta.js
 rm -f $file && echo $content >$file
+
+# Removing Temporary Path
+rm -Rf $TEMP_PATH
