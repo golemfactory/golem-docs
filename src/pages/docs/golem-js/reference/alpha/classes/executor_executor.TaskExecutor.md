@@ -28,8 +28,8 @@ Create a new Task Executor
 
 #### Parameters
 
-| Name      | Type                                                                        | Description           |
-| :-------- | :-------------------------------------------------------------------------- | :-------------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `options` | [`ExecutorOptionsMixin`](../modules/executor_executor#executoroptionsmixin) | Task executor options |
 
 #### Returns
@@ -48,15 +48,10 @@ Factory Method that create and initialize an instance of the TaskExecutor
 
 The executor can be created by passing appropriate initial parameters such as package, budget, subnet tag, payment driver, payment network etc.
 One required parameter is a package. This can be done in two ways. First by passing only package image hash or image tag, e.g.
-
 ```js
-const executor = await TaskExecutor.create(
-  "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae"
-);
+const executor = await TaskExecutor.create("9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae");
 ```
-
 or
-
 ```js
 const executor = await TaskExecutor.create("golem/alpine:3.18.2");
 ```
@@ -66,7 +61,6 @@ const executor = await TaskExecutor.create("golem/alpine:3.18.2");
 **Usage of Task Executor with custom parameters**
 
 Or by passing some optional parameters, e.g.
-
 ```js
 const executor = await TaskExecutor.create({
   subnetTag: "public",
@@ -79,7 +73,7 @@ const executor = await TaskExecutor.create({
 
 [src/executor/executor.ts:116](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L116)
 
----
+___
 
 ### init
 
@@ -99,7 +93,7 @@ Method responsible initialize all executor services.
 
 [src/executor/executor.ts:170](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L170)
 
----
+___
 
 ### end
 
@@ -115,7 +109,7 @@ Stop all executor services and shut down executor instance
 
 [src/executor/executor.ts:210](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L210)
 
----
+___
 
 ### getStats
 
@@ -133,7 +127,7 @@ array
 
 [src/executor/executor.ts:229](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L229)
 
----
+___
 
 ### beforeEach
 
@@ -143,8 +137,8 @@ Define worker function that will be runs before every each computation Task, wit
 
 #### Parameters
 
-| Name     | Type                                    | Description            |
-| :------- | :-------------------------------------- | :--------------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `worker` | [`Worker`](../modules/task_work#worker) | worker function - task |
 
 #### Returns
@@ -159,13 +153,11 @@ executor.beforeEach(async (ctx) => {
 });
 
 await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
-  await ctx
-    .beginBatch()
-    .run(
-      `/run_some_command.sh --input ${item} --params /input_params.txt --output /output.txt`
-    )
-    .downloadFile("/output.txt", "./output.txt")
-    .end();
+   await ctx
+     .beginBatch()
+     .run(`/run_some_command.sh --input ${item} --params /input_params.txt --output /output.txt`)
+     .downloadFile("/output.txt", "./output.txt")
+     .end();
 });
 ```
 
@@ -173,7 +165,7 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 [src/executor/executor.ts:252](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L252)
 
----
+___
 
 ### run
 
@@ -183,14 +175,14 @@ Run task - allows to execute a single worker function on the Golem network with 
 
 #### Type parameters
 
-| Name         | Type                 |
-| :----------- | :------------------- |
+| Name | Type |
+| :------ | :------ |
 | `OutputType` | `Result`<`unknown`\> |
 
 #### Parameters
 
-| Name     | Type                                                                | Description            |
-| :------- | :------------------------------------------------------------------ | :--------------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `worker` | [`Worker`](../modules/task_work#worker)<`undefined`, `OutputType`\> | function that run task |
 
 #### Returns
@@ -202,16 +194,14 @@ result of task computation
 **`Example`**
 
 ```typescript
-await executor.run(async (ctx) =>
-  console.log((await ctx.run("echo 'Hello World'")).stdout)
-);
+await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'")).stdout));
 ```
 
 #### Defined in
 
 [src/executor/executor.ts:266](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L266)
 
----
+___
 
 ### map
 
@@ -221,16 +211,16 @@ Map iterable data to worker function and return computed Task result as AsyncIte
 
 #### Type parameters
 
-| Name         |
-| :----------- |
-| `InputType`  |
+| Name |
+| :------ |
+| `InputType` |
 | `OutputType` |
 
 #### Parameters
 
-| Name     | Type                                                                | Description     |
-| :------- | :------------------------------------------------------------------ | :-------------- |
-| `data`   | `Iterable`<`InputType`\>                                            | Iterable data   |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Iterable`<`InputType`\> | Iterable data |
 | `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | worker function |
 
 #### Returns
@@ -251,7 +241,7 @@ for await (const result of results) console.log(result.stdout);
 
 [src/executor/executor.ts:286](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L286)
 
----
+___
 
 ### forEach
 
@@ -261,16 +251,16 @@ Iterates over given data and execute task using worker function
 
 #### Type parameters
 
-| Name         |
-| :----------- |
-| `InputType`  |
+| Name |
+| :------ |
+| `InputType` |
 | `OutputType` |
 
 #### Parameters
 
-| Name     | Type                                                                | Description     |
-| :------- | :------------------------------------------------------------------ | :-------------- |
-| `data`   | `Iterable`<`InputType`\>                                            | Iterable data   |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Iterable`<`InputType`\> | Iterable data |
 | `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | Worker function |
 
 #### Returns
@@ -282,7 +272,7 @@ Iterates over given data and execute task using worker function
 ```typescript
 const data = [1, 2, 3, 4, 5];
 await executor.forEach(data, async (ctx, item) => {
-  console.log((await ctx.run(`echo "${item}"`)).stdout);
+    console.log((await ctx.run(`echo "${item}"`)).stdout);
 });
 ```
 
@@ -290,7 +280,7 @@ await executor.forEach(data, async (ctx, item) => {
 
 [src/executor/executor.ts:334](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L334)
 
----
+___
 
 ### cancel
 
@@ -298,8 +288,8 @@ await executor.forEach(data, async (ctx, item) => {
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `reason?` | `string` |
 
 #### Returns

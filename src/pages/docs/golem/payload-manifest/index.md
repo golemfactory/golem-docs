@@ -2,21 +2,19 @@
 title: Payload Manifest Introduction
 description: Computation Payload Manifest description, its schema, and configuration guide
 ---
-
 #
-
 # Computation Payload Manifest
 
 _Computation Payload Manifest_ allows a [requestor](/docs/golem/overview/requestor) to define an application package _Payload_ and allows to set constraints on the computations performed on a [provider](/docs/golem/overview/provider) node.
 
-A manifest can be configured in yapapi.
+A manifest can be configured in yapapi. 
 
 [//]: <> ( removed link to yapapi in the sentence above )
 
 The provider node operator controls what computations can be performed by:
 
-- [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/yagna-cli-reference#keystore) (which allows the provider agent to verify _manifest_ signatures)
-- Adding domain patterns to Provider's [domain whitelist](/docs/providers/yagna-cli-reference#domain-whitelist) (which makes the manifest [signature] optional).
+  - [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/yagna-cli-reference#keystore) (which allows the provider agent to verify _manifest_ signatures)
+  - Adding domain patterns to Provider's [domain whitelist](/docs/providers/yagna-cli-reference#domain-whitelist) (which makes the manifest [signature] optional).
 
 ## Configuration
 
@@ -25,6 +23,7 @@ The manifest can be configured as a [yapapi.payload.vm.manifest](https://yapapi.
 ## Manifest schema
 
 _Computation Payload Manifest_ must follow a specific [JSON Schema](https://github.com/golemfactory/yagna-docs/blob/master/requestor-tutorials/vm-runtime/computation-payload-manifest.schema.json) ([Documentation](/docs/golem/payload-manifest/computation-payload-manifest.schema))
+
 
 ### Schema verification
 
@@ -38,7 +37,7 @@ jsonschema --instance manifest.json computation-payload-manifest.schema.json
 
 ### Payload object
 
-_Computation Payload Manifest_ **must** contain at least one _Payload_ object.
+_Computation Payload Manifest_ **must** contain at least one _Payload_ object. 
 
 _Payload_ definition allows to define [GVMI images](/docs/creators/javascript/guides/golem-images) used by Application and supported architecture.
 
@@ -66,84 +65,85 @@ Simple _Computation Payload Manifest_ with _Payload_ definition:
 
 ### Computation Manifest object
 
-_Computation Payload Manifest_ **can** contain _Computation Manifests_ object.
+_Computation Payload Manifest_ **can** contain _Computation Manifests_ object. 
 
-With a Computation Manifest object, [requestor](/docs/golem/overview/requestor) constrains themself to a certain set of allowed actions, to be negotiated with and approved by a [provider](/docs/golem/overview/provider).
+With a Computation Manifest object, [requestor](/docs/golem/overview/requestor) constrains themself to a certain set of allowed actions, to be negotiated with and approved by a [provider](/docs/golem/overview/provider). 
 
 Requestors' actions will be verified against the _Manifest_ during computation.
 
 Supported _Computation Manifest_ constraints:
 
-- #### `compManifest.script`
+  - #### `compManifest.script`
 
-  Defines a set of allowed ExeScript commands and applies constraints to their arguments.
+    Defines a set of allowed ExeScript commands and applies constraints to their arguments.
 
-  - #### `compManifest.script.commands` : List[Script]
+    - #### `compManifest.script.commands` : List[Script]
+  
+      Specifies a curated list of commands in a form of:
 
-    Specifies a curated list of commands in a form of:
+      - UTF-8 encoded JSON strings
 
-    - UTF-8 encoded JSON strings
+        Command context (e.g. env) or argument matching mode needs to be specified for a command.
 
-      Command context (e.g. env) or argument matching mode needs to be specified for a command.
-
-      Example:
-
-      ```json
-      [
-        "{
-          \"run\": {
-            \"args\": \"/bin/date -R\",
-            \"env\": {
-              \"MYVAR\": \"42\",
-              \"match\": \"strict\"
+        Example: 
+        
+        ```json
+        [
+          "{
+            \"run\": { 
+              \"args\": \"/bin/date -R\", 
+              \"env\": { 
+                \"MYVAR\": \"42\", 
+                \"match\": \"strict\" 
+              }
             }
-          }
-        }"
-      ]
+          }"
+        ]
 
-      ```
+      - UTF-8 encoded strings
 
-    - UTF-8 encoded strings
+        No command context or matching mode needs to be specified.
 
-      No command context or matching mode needs to be specified.
+        Example: 
+        
+        ```json
+        [
+          "run /bin/cat /etc/motd", 
+          "run /bin/date -R"
+        ]
+        ```
 
-      Example:
+      - Mix of both
 
-      ```json
-      ["run /bin/cat /etc/motd", "run /bin/date -R"]
-      ```
+      Commands `deploy`, `start` and `terminate` are always allowed. These values become the default if no `compManifest.script.commands` property has been set, but the `compManifest` object is present.
 
-    - Mix of both
+    - #### `compManifest.script.match` : String
+    
+      Selects a default way of comparing command arguments stated in the manifest and the ones received in the ExeScript, unless stated otherwise in a command JSON object.
 
-    Commands `deploy`, `start` and `terminate` are always allowed. These values become the default if no `compManifest.script.commands` property has been set, but the `compManifest` object is present.
+      The `match` property could be one of:
 
-  - #### `compManifest.script.match` : String
+        - `strict`: byte-to-byte argument equality (default)
 
-    Selects a default way of comparing command arguments stated in the manifest and the ones received in the ExeScript, unless stated otherwise in a command JSON object.
+        - `regex`: treat arguments as regular expressions
 
-    The `match` property could be one of:
+          Syntax: Perl-compatible regular expressions (UTF-8 Unicode mode), w/o the support for a look around and backreferences (among others).
+  
+  - #### `compManifest.net` : Object
 
-    - `strict`: byte-to-byte argument equality (default)
+    Applies constraints to networking.
 
-    - `regex`: treat arguments as regular expressions
+    - #### `compManifest.net.inet.out` : Object
 
-      Syntax: Perl-compatible regular expressions (UTF-8 Unicode mode), w/o the support for a look around and backreferences (among others).
+      Outgoing requests to the public Internet network constraints.
 
-- #### `compManifest.net` : Object
+      - #### `compManifest.net.inet.out.protocols` : List[String]
 
-  Applies constraints to networking.
+        List of allowed outbound protocols. Currently fixed at ["http", "https"].
 
-  - #### `compManifest.net.inet.out` : Object
+      - #### `compManifest.net.inet.out.urls` : List[String]
 
-    Outgoing requests to the public Internet network constraints.
-
-    - #### `compManifest.net.inet.out.protocols` : List[String]
-
-      List of allowed outbound protocols. Currently fixed at ["http", "https"].
-
-    - #### `compManifest.net.inet.out.urls` : List[String]
-
-      List of allowed external URLs that outbound requests can be sent to. E.g. ["https://api.some-public-service.com", "https://some-other-service.com/api/resource"]
+        List of allowed external URLs that outbound requests can be sent to. E.g. ["https://api.some-public-service.com", "https://some-other-service.com/api/resource"]
 
 ### Example of _Computation Payload Manifest_ with _Computation Manifest_ definition:
 
@@ -163,7 +163,10 @@ Supported _Computation Manifest_ constraints:
   "compManifest": {
     "version": "0.1.0",
     "script": {
-      "commands": ["run curl.*", "transfer .*/output.txt"],
+      "commands": [
+        "run curl.*",
+        "transfer .*/output.txt"
+      ],
       "match": "regex"
     },
     "net": {
@@ -263,11 +266,15 @@ basicConstraints = CA:true
 
 Then generate _App author's certificate_ Signing Request (use same `organizationName`):
 
+
 `openssl req -new -newkey rsa:2048 -days 360 -sha256 -keyout author.key.pem -out author.csr.pem -config openssl.conf`
+
 
 Finally, generate _App author's certificate_ using CSR and CA certificate:
 
+
 `openssl x509 -req -in author.csr.pem -CA ca.crt.pem -CAkey ca.key.pem -CAcreateserial -out author.crt.pem`
+
 
 #### 3. Importing application author's certificates
 

@@ -36,7 +36,7 @@ A custom filter that checks every proposal coming from the market
 
 [yajsapi/market/service.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/service.ts#L14)
 
----
+___
 
 ### debitNotesAcceptanceTimeout
 
@@ -48,7 +48,7 @@ Maximum time for debit note acceptance
 
 [yajsapi/market/service.ts:16](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/service.ts#L16)
 
----
+___
 
 ### subnetTag
 
@@ -62,7 +62,7 @@ DemandOptions.subnetTag
 
 [yajsapi/market/demand.ts:21](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L21)
 
----
+___
 
 ### yagnaOptions
 
@@ -76,7 +76,7 @@ DemandOptions.yagnaOptions
 
 [yajsapi/market/demand.ts:22](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L22)
 
----
+___
 
 ### marketTimeout
 
@@ -90,7 +90,7 @@ DemandOptions.marketTimeout
 
 [yajsapi/market/demand.ts:23](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L23)
 
----
+___
 
 ### marketOfferExpiration
 
@@ -104,7 +104,7 @@ DemandOptions.marketOfferExpiration
 
 [yajsapi/market/demand.ts:24](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L24)
 
----
+___
 
 ### logger
 
@@ -118,7 +118,7 @@ DemandOptions.logger
 
 [yajsapi/market/demand.ts:25](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L25)
 
----
+___
 
 ### maxOfferEvents
 
@@ -132,7 +132,7 @@ DemandOptions.maxOfferEvents
 
 [yajsapi/market/demand.ts:26](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L26)
 
----
+___
 
 ### offerFetchingInterval
 
@@ -146,7 +146,7 @@ DemandOptions.offerFetchingInterval
 
 [yajsapi/market/demand.ts:27](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L27)
 
----
+___
 
 ### proposalTimeout
 
@@ -160,7 +160,7 @@ DemandOptions.proposalTimeout
 
 [yajsapi/market/demand.ts:28](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L28)
 
----
+___
 
 ### eventTarget
 

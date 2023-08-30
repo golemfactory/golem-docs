@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 export const StarIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,4 +23,4 @@ export const StarIcon = (props) => (
       mask="url(#path-1-outside-1_95_609)"
     />
   </svg>
-);
+)

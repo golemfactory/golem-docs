@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { DiscordIcon } from "./icons/DiscordIcon";
-import Image from "next/image";
+import Link from 'next/link'
+import { DiscordIcon } from './icons/DiscordIcon'
+import Image from 'next/image'
 export function CTA({ title, description, imageUrl, buttonText, href }) {
   return (
     <div className="not-prose relative w-full rounded-lg bg-lightblue px-4 pb-20 pt-16 dark:bg-darkcontent">
@@ -15,7 +15,7 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
       <div className="relative grid gap-y-4 md:grid-cols-2 md:gap-y-4">
         <div className="relative h-full w-full"></div>
         <Image
-          className="hidden rounded-xl object-cover"
+          className="rounded-xl object-cover hidden"
           src={imageUrl}
           width={500}
           height={500}
@@ -41,5 +41,5 @@ export function CTA({ title, description, imageUrl, buttonText, href }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

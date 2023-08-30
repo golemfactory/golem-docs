@@ -47,40 +47,47 @@ The manifests are JSON files conforming to a specific schema, e.g.:
 
 ```json
 {
-  "version": "0.1.0",
-  "createdAt": "2022-12-01T00:00:00.000000Z",
-  "expiresAt": "2100-01-01T00:00:00.000000Z",
-  "payload": [
-    {
-      "platform": {
-        "arch": "x86_64",
-        "os": "linux"
-      },
-      "urls": [
-        "http://girepo.dev.golem.network:8000/docker-gas_scanner_backend_image-latest-91c471517a.gvmi"
-      ],
-      "hash": "sha3:05270a8a938ff5f5e30b0e61bc983a8c3e286c5cd414a32e1a077657"
-    }
-  ],
-  "compManifest": {
     "version": "0.1.0",
-    "script": {
-      "commands": ["run .*"],
-      "match": "regex"
-    },
-    "net": {
-      "inet": {
-        "out": {
-          "protocols": ["http"],
-          "urls": ["http://bor.golem.network"]
+    "createdAt": "2022-12-01T00:00:00.000000Z",
+    "expiresAt": "2100-01-01T00:00:00.000000Z",
+    "payload": [
+        {
+          "platform": {
+            "arch": "x86_64",
+            "os": "linux"
+          },
+          "urls": [
+            "http://girepo.dev.golem.network:8000/docker-gas_scanner_backend_image-latest-91c471517a.gvmi"
+          ],
+          "hash": "sha3:05270a8a938ff5f5e30b0e61bc983a8c3e286c5cd414a32e1a077657"
+        }
+      ],
+      "compManifest": {
+      "version": "0.1.0",
+      "script": {
+        "commands": [
+          "run .*"
+        ],
+        "match": "regex"
+      },
+      "net": {
+        "inet": {
+          "out": {
+            "protocols": [
+              "http"
+            ],
+            "urls": [
+                "http://bor.golem.network"
+            ]
+          }
         }
       }
     }
   }
-}
 ```
 
 For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to [Computation Payload Manifest](/docs/golem/payload-manifest/index).
+
 
 ### **Manifest signatures**
 
@@ -211,10 +218,10 @@ Example initialization ExeScript:
 
 ```yaml
 init:
-  - run:
-      args: ["/bin/chmod", "a+x", "/"]
-  - run:
-      args: ["/bin/bash", "-c", "/bin/run_web.sh 192.168.0.3 &"]
+      - run:
+          args: ["/bin/chmod", "a+x", "/"]
+      - run:
+          args: ["/bin/bash", "-c", "/bin/run_web.sh 192.168.0.3 &"]
 ```
 
 #### `network` and `ip`
@@ -237,7 +244,7 @@ Example:
 
 ```yaml
 depends_on:
-  - "api"
+      - "api"
 ```
 
 #### `http_proxy` and `tcp_proxy`
@@ -248,8 +255,8 @@ Example:
 
 ```yaml
 http_proxy:
-  ports:
-    - "80"
+      ports:
+        - "80"
 ```
 
 You can specify just one port or a colon-separated mapping. If a single number is specified, the given remote port will be mapped to an automatically-chosen local port. On the other hand, specifying another number after a colon will attempt to map the remote port to this specific local port but will fail if that port is already taken.
@@ -257,7 +264,7 @@ You can specify just one port or a colon-separated mapping. If a single number i
 Once a service is launched and `dapp-runner` succeeds in starting a local proxy, it will emit a following message to the `data` stream:
 
 ```json
-{ "cache": { "local_proxy_address": "http://localhost:8080" } }
+{"cache": {"local_proxy_address": "http://localhost:8080"}}
 ```
 
 You should be able to access your service using that published URL.
@@ -294,7 +301,7 @@ As an additional perk, using `dapp-manager` enables you to more conveniently int
 
 ### Connecting to services running on the providers
 
-As mentioned in the application descriptor section above ([`http_proxy` and `tcp_proxy`](/docs/creators/dapps/creating-golem-dapps#http_proxy-and-tcp_proxy)) by specifying a `http_proxy` or `tcp_proxy` in the application descriptor, you enable a given port within the node to be accessed using a local port on the requestor’s machine.
+As mentioned in the application descriptor section above ([`http_proxy` and `tcp_proxy`](/docs/creators/dapps/creating-golem-dapps#http\_proxy-and-tcp\_proxy)) by specifying a `http_proxy` or `tcp_proxy` in the application descriptor, you enable a given port within the node to be accessed using a local port on the requestor’s machine.
 
 #### Local HTTP proxy
 
@@ -314,7 +321,7 @@ nodes:
 This enables an automatically-chosen local port to be mapped to remote port. Once the service is completely initialized on the remote node, dapp-runner a data message with a location of the mapped port:
 
 ```json
-{ "backend": { "local_proxy_address": "http://localhost:8081" } }
+{"backend": {"local_proxy_address": "http://localhost:8081"}}
 ```
 
 You can then use your browser or any other HTTP-based tool to access the service. Choosing the HTTP proxy has two benefits as compared with the generic TCP proxy. First, it causes requests and responses to be logged by the `dapp-runner` and allows for easier debugging in case of issues. Secondly, and possibly more importantly, it allows the service exposed in this way to be available when the application is deployed.
@@ -337,7 +344,7 @@ nodes:
 After the given node has finished its startup, dapp-runner emits a data message giving the location of the mapped port:
 
 ```json
-{ "mongo": { "local_tcp_proxy_address": "localhost:8080" } }
+{"mongo": {"local_tcp_proxy_address": "localhost:8080"}}
 ```
 
 Using a generic TCP proxy enables connections to all kinds of TCP-based services. You can use it to connect directly to a database, an SSH server or other kinds of services. This may be useful for debugging purposes or maybe because running a database on a provider that you connect to from the outside is exactly what you want to use Golem Deploy framework for.

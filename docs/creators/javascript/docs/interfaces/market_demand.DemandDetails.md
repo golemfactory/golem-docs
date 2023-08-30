@@ -13,13 +13,13 @@
 
 ### properties
 
-• **properties**: { `key`: `string` ; `value`: `string` \| `number` \| `boolean` }[]
+• **properties**: { `key`: `string` ; `value`: `string` \| `number` \| `boolean`  }[]
 
 #### Defined in
 
 [yajsapi/market/demand.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/demand.ts#L14)
 
----
+___
 
 ### constraints
 

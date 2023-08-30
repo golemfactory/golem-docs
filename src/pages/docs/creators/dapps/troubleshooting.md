@@ -30,9 +30,9 @@ Other than that, there are a couple more issues that you should be aware of:
 Each of the commands listed in the `init` section of the node has to finish its execution in order for the services to be treated as `started`. That's why, commands that stay running, e.g. serving the API, have to be suffixed with and ampersand (`&`) to instruct the shell to put them into the background, e.g.
 
 ```yaml
-init:
-  - run:
-      args: ["/bin/bash", "-c", "/bin/run_web.sh 192.168.0.3 &"]
+    init:
+      - run:
+          args: ["/bin/bash", "-c", "/bin/run_web.sh 192.168.0.3 &"]
 ```
 
 **Retrieving complete logs from the provider**

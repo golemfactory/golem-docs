@@ -39,7 +39,7 @@ Interval for checking new invoices
 
 [yajsapi/payment/service.ts:12](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L12)
 
----
+___
 
 ### debitNotesFetchingInterval
 
@@ -51,7 +51,7 @@ Interval for checking new debit notes
 
 [yajsapi/payment/service.ts:14](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L14)
 
----
+___
 
 ### payingInterval
 
@@ -63,7 +63,7 @@ Interval for processing payments
 
 [yajsapi/payment/service.ts:16](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L16)
 
----
+___
 
 ### maxInvoiceEvents
 
@@ -75,7 +75,7 @@ Maximum number of invoice events per one fetching
 
 [yajsapi/payment/service.ts:18](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L18)
 
----
+___
 
 ### maxDebitNotesEvents
 
@@ -87,7 +87,7 @@ Maximum number of debit notes events per one fetching
 
 [yajsapi/payment/service.ts:20](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L20)
 
----
+___
 
 ### debitNotesFilter
 
@@ -99,7 +99,7 @@ A custom filter that checks every debit notes coming from providers
 
 [yajsapi/payment/service.ts:22](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L22)
 
----
+___
 
 ### invoiceFilter
 
@@ -111,7 +111,7 @@ A custom filter that checks every invoices coming from providers
 
 [yajsapi/payment/service.ts:24](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/service.ts#L24)
 
----
+___
 
 ### yagnaOptions
 
@@ -125,7 +125,7 @@ A custom filter that checks every invoices coming from providers
 
 [yajsapi/payment/config.ts:28](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L28)
 
----
+___
 
 ### budget
 
@@ -139,7 +139,7 @@ A custom filter that checks every invoices coming from providers
 
 [yajsapi/payment/config.ts:29](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L29)
 
----
+___
 
 ### payment
 
@@ -147,9 +147,9 @@ A custom filter that checks every invoices coming from providers
 
 #### Type declaration
 
-| Name       | Type     |
-| :--------- | :------- |
-| `driver?`  | `string` |
+| Name | Type |
+| :------ | :------ |
+| `driver?` | `string` |
 | `network?` | `string` |
 
 #### Inherited from
@@ -160,7 +160,7 @@ A custom filter that checks every invoices coming from providers
 
 [yajsapi/payment/config.ts:30](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L30)
 
----
+___
 
 ### paymentTimeout
 
@@ -174,7 +174,7 @@ A custom filter that checks every invoices coming from providers
 
 [yajsapi/payment/config.ts:31](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L31)
 
----
+___
 
 ### paymentRequestTimeout
 
@@ -188,7 +188,7 @@ A custom filter that checks every invoices coming from providers
 
 [yajsapi/payment/config.ts:32](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L32)
 
----
+___
 
 ### logger
 
@@ -202,7 +202,7 @@ A custom filter that checks every invoices coming from providers
 
 [yajsapi/payment/config.ts:33](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/payment/config.ts#L33)
 
----
+___
 
 ### eventTarget
 

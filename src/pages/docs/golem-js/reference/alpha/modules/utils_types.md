@@ -14,9 +14,9 @@
 
 #### Type parameters
 
-| Name   | Type                          |
-| :----- | :---------------------------- |
-| `T`    | `T`                           |
+| Name | Type |
+| :------ | :------ |
+| `T` | `T` |
 | `Keys` | extends keyof `T` = keyof `T` |
 
 #### Defined in

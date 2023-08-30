@@ -36,8 +36,8 @@
 
 #### Parameters
 
-| Name    | Type     |
-| :------ | :------- |
+| Name | Type |
+| :------ | :------ |
 | `level` | `string` |
 
 #### Returns
@@ -48,7 +48,7 @@
 
 [src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/logger/logger.ts#L10)
 
----
+___
 
 ### log
 
@@ -56,8 +56,8 @@
 
 #### Parameters
 
-| Name  | Type  |
-| :---- | :---- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `any` |
 
 #### Returns
@@ -68,7 +68,7 @@
 
 [src/utils/logger/logger.ts:11](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/logger/logger.ts#L11)
 
----
+___
 
 ### info
 
@@ -76,8 +76,8 @@
 
 #### Parameters
 
-| Name  | Type  |
-| :---- | :---- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `any` |
 
 #### Returns
@@ -88,7 +88,7 @@
 
 [src/utils/logger/logger.ts:12](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/logger/logger.ts#L12)
 
----
+___
 
 ### warn
 
@@ -96,8 +96,8 @@
 
 #### Parameters
 
-| Name  | Type  |
-| :---- | :---- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `any` |
 
 #### Returns
@@ -108,7 +108,7 @@
 
 [src/utils/logger/logger.ts:13](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/logger/logger.ts#L13)
 
----
+___
 
 ### error
 
@@ -116,8 +116,8 @@
 
 #### Parameters
 
-| Name  | Type  |
-| :---- | :---- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `any` |
 
 #### Returns
@@ -128,7 +128,7 @@
 
 [src/utils/logger/logger.ts:14](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/logger/logger.ts#L14)
 
----
+___
 
 ### debug
 
@@ -136,8 +136,8 @@
 
 #### Parameters
 
-| Name  | Type  |
-| :---- | :---- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `any` |
 
 #### Returns
@@ -148,7 +148,7 @@
 
 [src/utils/logger/logger.ts:15](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/logger/logger.ts#L15)
 
----
+___
 
 ### table
 
@@ -159,8 +159,8 @@ This is currently used to display cost summary.
 
 #### Parameters
 
-| Name     | Type  |
-| :------- | :---- |
+| Name | Type |
+| :------ | :------ |
 | `object` | `any` |
 
 #### Returns

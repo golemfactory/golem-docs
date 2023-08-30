@@ -1,4 +1,4 @@
-# Module: payment/debit_note
+# Module: payment/debit\_note
 
 ## Table of contents
 

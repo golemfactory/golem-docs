@@ -1,11 +1,9 @@
-import { useMemo, useState, useEffect, Fragment } from "react";
-import { useRouter } from "next/router";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import { navigation as JSReference } from "@/navigation/jsreference";
-import { latestJSVersion } from "@/navigation/meta";
+import { useMemo, Fragment } from 'react'
+import { useRouter } from 'next/router'
+import { Listbox, Transition } from '@headlessui/react'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 const VersionSwitcher = () => {
@@ -58,8 +56,8 @@ const VersionSwitcher = () => {
                     key={idx}
                     className={({ active }) =>
                       classNames(
-                        active ? "bg-primary text-white" : "text-gray-900",
-                        "relative cursor-default select-none px-4 py-2"
+                        active ? 'bg-primary text-white' : 'text-gray-900',
+                        'relative cursor-default select-none px-4 py-2'
                       )
                     }
                     value={version}
@@ -68,8 +66,8 @@ const VersionSwitcher = () => {
                       <>
                         <span
                           className={classNames(
-                            selected ? "font-semibold" : "font-normal",
-                            "block truncate"
+                            selected ? 'font-semibold' : 'font-normal',
+                            'block truncate'
                           )}
                         >
                           {getDisplayVersion(version)}
@@ -77,8 +75,8 @@ const VersionSwitcher = () => {
                         {selected ? (
                           <span
                             className={classNames(
-                              active ? "text-white" : "text-primary",
-                              "absolute inset-y-0 right-0 flex items-center pr-4"
+                              active ? 'text-white' : 'text-primary',
+                              'absolute inset-y-0 right-0 flex items-center pr-4'
                             )}
                           >
                             <CheckIcon className="h-5 w-5" aria-hidden="true" />
@@ -97,4 +95,4 @@ const VersionSwitcher = () => {
   );
 };
 
-export default VersionSwitcher;
+export default VersionSwitcher

@@ -1,21 +1,21 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import clsx from "clsx";
-import { useState, useEffect } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import clsx from 'clsx'
+import { useState, useEffect } from 'react'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 const isActive = (item, router) => {
   if (
     item.href &&
     (router.pathname === item.href || router.pathname === `${item.href}/`)
   ) {
-    return true;
+    return true
   }
-  return item.children?.some((child) => isActive(child, router)) || false;
-};
+  return item.children?.some((child) => isActive(child, router)) || false
+}
 
 export const MenuBar = ({ navigation }) => {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <div className="ml-4 hidden gap-x-6 lg:flex">
@@ -28,33 +28,33 @@ export const MenuBar = ({ navigation }) => {
           >
             {item.title}
           </Link>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
 export const SideBar = ({ navigation }) => {
-  const router = useRouter();
+  const router = useRouter()
 
   const isActive = (item) => {
     if (
       item.href &&
       (router.pathname === item.href || router.pathname === `${item.href}/`)
     ) {
-      return true;
+      return true
     }
-    return item.children?.some(isActive) || false;
-  };
+    return item.children?.some(isActive) || false
+  }
 
   const currentSection = navigation.find((section) =>
     section.links.some(isActive)
-  );
+  )
 
   const renderNavItems = (items) =>
     items.map((item) => {
-      const itemIsActive = isActive(item);
-      const hasChildren = item.children?.length;
+      const itemIsActive = isActive(item)
+      const hasChildren = item.children?.length
 
       return (
         <li className="text-sm " key={item.href || item.title}>
@@ -73,8 +73,8 @@ export const SideBar = ({ navigation }) => {
             <NavigationItem item={item} isActive={itemIsActive} />
           )}
         </li>
-      );
-    });
+      )
+    })
 
   return currentSection ? (
     <nav>
@@ -83,38 +83,38 @@ export const SideBar = ({ navigation }) => {
       </h1>
       <ul role="list">{renderNavItems(currentSection.links)}</ul>
     </nav>
-  ) : null;
-};
+  ) : null
+}
 
 export const NavigationItem = ({ item, isActive }) =>
   item.href ? (
     <Link
       href={item.href}
-      aria-current={isActive ? "page" : undefined}
+      aria-current={isActive ? 'page' : undefined}
       className={`break-words
-      ${isActive ? "text-primary dark:text-darkprimary " : "dark:text-white/50"}
+      ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/50'}
       `}
     >
       {item.title}
     </Link>
   ) : (
     <span
-      className={clsx("text-sm", {
-        "text-primary dark:text-darkprimary": isActive,
+      className={clsx('text-sm', {
+        'text-primary dark:text-darkprimary': isActive,
       })}
     >
       {item.title}
     </span>
-  );
+  )
 
 export const Dropdown = ({ children, isActive }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    setIsOpen(isActive);
-  }, [isActive]);
+    setIsOpen(isActive)
+  }, [isActive])
 
-  const btnClick = () => setIsOpen((prev) => !prev);
+  const btnClick = () => setIsOpen((prev) => !prev)
 
   return (
     <div>
@@ -128,20 +128,20 @@ export const Dropdown = ({ children, isActive }) => {
       </button>
       {isOpen && <div className="ml-4">{children.slice(1)}</div>}
     </div>
-  );
-};
+  )
+}
 
-export const Navigation = ({ className, links, title = "" }) => {
-  const router = useRouter();
+export const Navigation = ({ className, links, title = '' }) => {
+  const router = useRouter()
 
   const isActive = (item) =>
     item.href &&
-    (router.pathname === item.href || router.pathname === item.href);
+    (router.pathname === item.href || router.pathname === item.href)
 
   const renderNavItems = (items) =>
     items.map((item) => {
-      const itemIsActive = isActive(item);
-      const hasChildren = item.children?.length;
+      const itemIsActive = isActive(item)
+      const hasChildren = item.children?.length
 
       return (
         <li className="not-prose  text-sm" key={item.href || item.title}>
@@ -160,11 +160,11 @@ export const Navigation = ({ className, links, title = "" }) => {
             <NavigationItem item={item} isActive={itemIsActive} />
           )}
         </li>
-      );
-    });
+      )
+    })
 
   return (
-    <nav className={clsx("text-base lg:text-sm", className)}>
+    <nav className={clsx('text-base lg:text-sm', className)}>
       {links.map((section) => (
         <div className="mb-4" key={section.title}>
           <h1 className="font-display mb-2 text-base font-semibold text-slate-900 dark:text-white">
@@ -176,5 +176,5 @@ export const Navigation = ({ className, links, title = "" }) => {
         </div>
       ))}
     </nav>
-  );
-};
+  )
+}

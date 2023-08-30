@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 export const FlashIcon = (props) => (
   <svg
     width="40"
@@ -20,4 +20,4 @@ export const FlashIcon = (props) => (
       </clipPath>
     </defs>
   </svg>
-);
+)

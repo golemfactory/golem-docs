@@ -73,46 +73,39 @@ Note that from the `yagna` perspective we are talking about an application acces
 ```js
 (async () => {
   const executor = await TaskExecutor.create({
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",
-    yagnaOptions: { apiKey: "insert-your-32-char-app-key-here" },
-  });
+    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
+    });
 
-  const result = await executor.run(
-    async (ctx) => (await ctx.run("node -v")).stdout
-  );
-  await executor.end();
+const result = await executor.run(
+    async (ctx) => (await ctx.run("node -v")).stdout);
+ await executor.end();
 
-  console.log("Task result:", result);
+ console.log("Task result:", result);
 })();
 ```
 
 ### Using app-key from environment variable
 
-There is yet another option, to read the `apiKey` value from the `YAGNA_APPKEY` environment variable. JS SDK library will read the value of this variable. Therefore you do need to specify it inside the script and you can skip the
+There is yet another option, to read the `apiKey` value from the `YAGNA_APPKEY` environment variable. JS SDK library will read the value of this variable. Therefore you do need to specify it inside the script and you can skip the 
 
 ```js
-yagnaOptions: {
-  apiKey: "insert-your-32-char-app-key-here";
-}
+yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
 ```
-
 line when you create TaskExecutor.
 
 {% tabs %}
 
 {% tab label="linux / macOS" %}
-
 ```bash
 export YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
-
 {% /tab %}
 {% tab label="Windows" %}
 
 ```bash
 set YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
-
 {% /tab %}
 {% /tabs %}
 
@@ -124,17 +117,14 @@ This app-key is not stored and will disappear after restart (unless the variable
 {% tabs %}
 
 {% tab label="linux / macOS" %}
-
 ```bash
 export YAGNA_AUTO_CONF=insert-your-desired-app-key-here
 ```
-
 {% /tab %}
 {% tab label="Windows" %}
 
 ```bash
 set YAGNA_AUTO_CONF=insert-your-desired-app-key-here
 ```
-
 {% /tab %}
 {% /tabs %}

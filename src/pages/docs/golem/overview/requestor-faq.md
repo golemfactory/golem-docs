@@ -5,13 +5,13 @@ title: Requestor FAQ
 
 # Requestor FAQ
 
----
+****
 
 ## Can I run services (web servers, Node.js, etc.) on Golem?
 
 Yes but in a limited way, meaning that you could use the network as a proxy for computing the response locally on the providers and then use your requestor as a load balancer that takes in requests, and forwards the responses from the providers to the end user.
 
-Here's an example of such a setup: [https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy](https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy).
+Here's an example of such a setup:  [https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy](https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy).
 
 ## Are there any stats for the network?
 
@@ -32,7 +32,6 @@ As a requestor, we recommend you use a layer 2 solution like Polygon to pay for 
 - GLM – real currency that can be exchanged for cash.
 
 ## Where can I find Yagna logs:
-
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
@@ -44,5 +43,5 @@ As a requestor, we recommend you use a layer 2 solution like Polygon to pay for 
 
 ` %USERPROFILE%\AppData\Roaming\GolemFactory\yagna\data\yagna_rCURRENT.log`
 
-{% /tab  %}  
+{% /tab  %}    
 {% /tabs %}

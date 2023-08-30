@@ -3,7 +3,7 @@ description: Differences between Docker containers and Golem VM runtime
 title: Differences between Docker containers and Golem VM runtime
 ---
 
-# Differences between Docker containers and Golem VM runtime
+# Differences between Docker containers and Golem VM runtime 
 
 While Golem’s VM images derive from Docker’s, there are quite a few implementation and design differences necessitate careful approach when creating Golem decentralized apps.
 
@@ -27,6 +27,7 @@ To map the contents of the host directory to a VM volume, the virtual machine ru
 
 The only, currently supported solution is switching the working locations to a location that’s not on a volume.
 
+
 ## Broken file permissions on the root directory
 
 The VM runtime overrides the permissions for the root directory of the container. It’s owned by `root` and only includes permission for the root user. If you launch processes as non-root users, as some stock VM images do by default (notably `nginx` and `postgresql`), they won’t be able to access their data directories.
@@ -35,9 +36,10 @@ Specifically, the stock image of the nginx server fails to serve the data files 
 
 The solution is to incorporate a `chmod +x /` command at the beginning of your `init` script.
 
+
 ## No support for ENTRYPOINT and/or CMD
 
-Dapp-runner doesn’t currently support executing initialization scripts configured directly in the image with `ENTRYPOINT` and `CMD` clauses. Such support already exists in the VM runtime and will soon be included in the the rest of the stack.
+Dapp-runner doesn’t currently support executing initialization scripts configured directly in the image with `ENTRYPOINT` and `CMD` clauses. Such support already exists in the VM runtime and will soon be included in the the rest of the stack. 
 
 There is a caveat though that running commands this way (either through entrypoint or by scheduling them to run in the background) makes the execution script finish after those commands are launched and their output/error streams are no longer available.
 
@@ -47,7 +49,7 @@ There’s no way to pass environment variables to commands executed from the app
 
 ```yaml
 init:
-  - ["/bin/sh", "-c", "YOUR_VAR=123 your command"]
+      - ["/bin/sh", "-c", "YOUR_VAR=123 your command"]
 ```
 
 Direct support for passing of environment variables is planned soon.

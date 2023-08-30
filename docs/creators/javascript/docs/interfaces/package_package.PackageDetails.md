@@ -24,7 +24,7 @@
 
 [yajsapi/package/package.ts:38](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L38)
 
----
+___
 
 ### minStorageGib
 
@@ -34,7 +34,7 @@
 
 [yajsapi/package/package.ts:39](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L39)
 
----
+___
 
 ### minCpuThreads
 
@@ -44,7 +44,7 @@
 
 [yajsapi/package/package.ts:40](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L40)
 
----
+___
 
 ### minCpuCores
 
@@ -54,7 +54,7 @@
 
 [yajsapi/package/package.ts:41](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L41)
 
----
+___
 
 ### engine
 
@@ -64,7 +64,7 @@
 
 [yajsapi/package/package.ts:42](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L42)
 
----
+___
 
 ### capabilities
 
@@ -74,7 +74,7 @@
 
 [yajsapi/package/package.ts:43](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/package/package.ts#L43)
 
----
+___
 
 ### imageHash
 

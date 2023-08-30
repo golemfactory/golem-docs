@@ -1,18 +1,18 @@
-import { Callout } from "@/components/Callout";
-import { QuickLink, QuickLinks } from "@/components/QuickLinks";
-import { CTA } from "@/components/CTA";
-import { Alert } from "../components/Alert";
-import { Whitespace } from "@/components/Whitespace";
-import { Tabs } from "@/components/Tabs";
-import { Tab } from "@/components/Tab";
-import { Tag } from "@markdoc/markdoc";
-import { DocNavigation } from "@/components/DocNavigation";
-import { Link } from "@/components/Link";
-import { Highlight } from "@/components/Highlight";
-import { SelectionCard } from "@/components/SelectionCard";
-import { SelectionContent } from "@/components/SelectionContent";
-import { Grid } from "@/components/Grid";
-import { Padding } from "@/components/Padding";
+import { Callout } from '@/components/Callout'
+import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import { CTA } from '@/components/CTA'
+import { Alert } from '../components/Alert'
+import { Whitespace } from '@/components/Whitespace'
+import { Tabs } from '@/components/Tabs'
+import { Tab } from '@/components/Tab'
+import { Tag } from '@markdoc/markdoc'
+import { DocNavigation } from '@/components/DocNavigation'
+import { Link } from '@/components/Link'
+import { Highlight } from '@/components/Highlight'
+import { SelectionCard } from '@/components/SelectionCard'
+import { SelectionContent } from '@/components/SelectionContent'
+import { Grid } from '@/components/Grid'
+import { Padding } from '@/components/Padding'
 const tags = {
   tabs: {
     render: Tabs,
@@ -20,10 +20,10 @@ const tags = {
     transform(node, config) {
       const labels = node
         .transformChildren(config)
-        .filter((child) => child && child.name === "Tab")
-        .map((tab) => (typeof tab === "object" ? tab.attributes.label : null));
+        .filter((child) => child && child.name === 'Tab')
+        .map((tab) => (typeof tab === 'object' ? tab.attributes.label : null))
 
-      return new Tag(this.render, { labels }, node.transformChildren(config));
+      return new Tag(this.render, { labels }, node.transformChildren(config))
     },
   },
   padding: {
@@ -88,9 +88,9 @@ const tags = {
       title: { type: String },
       type: {
         type: String,
-        default: "note",
-        matches: ["note", "warning"],
-        errorLevel: "critical",
+        default: 'note',
+        matches: ['note', 'warning'],
+        errorLevel: 'critical',
       },
     },
     render: Callout,
@@ -102,7 +102,7 @@ const tags = {
       alt: { type: String },
       caption: { type: String },
     },
-    render: ({ src, alt = "", caption }) => (
+    render: ({ src, alt = '', caption }) => (
       <figure>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={src} alt={alt} />
@@ -110,10 +110,10 @@ const tags = {
       </figure>
     ),
   },
-  "quick-links": {
+  'quick-links': {
     render: QuickLinks,
   },
-  "quick-link": {
+  'quick-link': {
     selfClosing: true,
     render: QuickLink,
     attributes: {
@@ -147,6 +147,6 @@ const tags = {
     selfClosing: true,
     render: Whitespace,
   },
-};
+}
 
-export default tags;
+export default tags

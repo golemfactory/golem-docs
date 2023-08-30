@@ -3,7 +3,7 @@ description: How to run a .gvmi image locally for the sake of testing and debugg
 title: Testing a Golem image
 ---
 
-#
+# 
 
 {% alert level="info" %}
 
@@ -14,6 +14,7 @@ This tutorial assumes that you're already familiar with Docker and the basics of
 ## Introduction
 
 In this tutorial, we're going to explore `ya-runtime-dbg`, a tool built specifically for debugging user-built images.
+
 
 ## Installation
 

@@ -67,7 +67,6 @@ It all comes down to if KVM access is available on the hosting platform (e.g. AW
 ## Where do I find Yagna logs?
 
 Please check here:
-
 ```bash
 `$HOME/.local/share/yagna/yagna_rCURRENT.log`
 `$HOME/.local/share/ya-provider/ya-provider_rCURRENT.log`

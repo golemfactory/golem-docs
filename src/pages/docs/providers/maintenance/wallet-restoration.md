@@ -19,6 +19,7 @@ The above line assumes you're a requestor on a Unix-like platform (Linux or Mac)
 
 {% /alert %}
 
+
 Once Yagna is installed, run it with:
 
 ```bash
@@ -55,30 +56,26 @@ yagna id update --set-default 0x-the-address
 
 **3.** Remove `yagna`'s accounts configuration file
 
+
 {% tabs %}
 
 {% tab label="Linux" %}
-
 ```bash
 rm $HOME/.local/share/yagna/accounts.json
 ```
-
 {% /tab %}
 {% tab label="macOS X" %}
-
 ```bash
 rm $HOME/Library/Application\ Support/GolemFactory.yagna/accounts.json
 ```
-
 {% /tab %}
 {% tab label="Windows" %}
-
 ```bash
 del %APPDATA%\GolemFactory\yagna\data\accounts.json
 ```
-
 {% /tab %}
 {% /tabs %}
+
 
 **4. Start your yagna service again** (as usual, do it in a separate command line terminal and allow it to run in the background)
 
@@ -115,6 +112,7 @@ This will unlock your key and `yagna` will be able to use it for outgoing paymen
 `isLocked: false`
 
 You'll need to unlock your key each time you start your Yagna service because, for security reasons, Yagna does not save your passphrase anywhere.
+
 
 ## Make sure your Yagna application key is bound to the correct account
 

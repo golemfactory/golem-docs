@@ -29,7 +29,7 @@
 
 [src/market/proposal.ts:7](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L7)
 
----
+___
 
 ### cpuBrand
 
@@ -39,7 +39,7 @@
 
 [src/market/proposal.ts:8](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L8)
 
----
+___
 
 ### cpuCapabilities
 
@@ -49,7 +49,7 @@
 
 [src/market/proposal.ts:9](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L9)
 
----
+___
 
 ### cpuCores
 
@@ -59,7 +59,7 @@
 
 [src/market/proposal.ts:10](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L10)
 
----
+___
 
 ### cpuThreads
 
@@ -69,7 +69,7 @@
 
 [src/market/proposal.ts:11](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L11)
 
----
+___
 
 ### memory
 
@@ -79,7 +79,7 @@
 
 [src/market/proposal.ts:12](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L12)
 
----
+___
 
 ### storage
 
@@ -89,7 +89,7 @@
 
 [src/market/proposal.ts:13](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L13)
 
----
+___
 
 ### providerName
 
@@ -99,7 +99,7 @@
 
 [src/market/proposal.ts:14](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L14)
 
----
+___
 
 ### publicNet
 
@@ -109,7 +109,7 @@
 
 [src/market/proposal.ts:15](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L15)
 
----
+___
 
 ### runtimeCapabilities
 
@@ -119,7 +119,7 @@
 
 [src/market/proposal.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L16)
 
----
+___
 
 ### runtimeName
 
@@ -129,7 +129,7 @@
 
 [src/market/proposal.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/proposal.ts#L17)
 
----
+___
 
 ### state
 

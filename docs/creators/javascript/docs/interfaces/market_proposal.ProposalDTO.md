@@ -22,7 +22,7 @@
 
 [yajsapi/market/proposal.ts:22](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L22)
 
----
+___
 
 ### issuerId
 
@@ -32,7 +32,7 @@
 
 [yajsapi/market/proposal.ts:23](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L23)
 
----
+___
 
 ### provider
 
@@ -40,16 +40,16 @@
 
 #### Type declaration
 
-| Name   | Type     |
-| :----- | :------- |
-| `id`   | `string` |
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
 | `name` | `string` |
 
 #### Defined in
 
 [yajsapi/market/proposal.ts:24](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L24)
 
----
+___
 
 ### properties
 
@@ -59,7 +59,7 @@
 
 [yajsapi/market/proposal.ts:25](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/market/proposal.ts#L25)
 
----
+___
 
 ### constraints
 

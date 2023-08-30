@@ -16,47 +16,47 @@
 
 ### New
 
-• **New** = `0`
+• **New** = ``0``
 
 #### Defined in
 
 [src/task/task.ts:5](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/task.ts#L5)
 
----
+___
 
 ### Retry
 
-• **Retry** = `1`
+• **Retry** = ``1``
 
 #### Defined in
 
 [src/task/task.ts:6](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/task.ts#L6)
 
----
+___
 
 ### Pending
 
-• **Pending** = `2`
+• **Pending** = ``2``
 
 #### Defined in
 
 [src/task/task.ts:7](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/task.ts#L7)
 
----
+___
 
 ### Done
 
-• **Done** = `3`
+• **Done** = ``3``
 
 #### Defined in
 
 [src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/task.ts#L8)
 
----
+___
 
 ### Rejected
 
-• **Rejected** = `4`
+• **Rejected** = ``4``
 
 #### Defined in
 

@@ -1,1 +1,1 @@
-export const latestJSVersion = "alpha";
+export const latestJSVersion = 'alpha'

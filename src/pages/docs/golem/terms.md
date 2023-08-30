@@ -63,19 +63,19 @@ Please read these User Interaction Guidelines carefully. By accessing or using t
 
 **I. Definitions In these Guidelines:**
 
-- "Company" means Golem Factory GmbH, a company construed under the Laws of Switzerland;
-- "Golem Platform" means thesoftware release of the Golem project (implementation name, “Yagna");
-- “Golem” means a project built by Golem Factory GmbH
-- "Providers" means a User who is contributing computer resources;
-- "Requestors" means a User who is renting out additional computing Power from the Network;
-- "Users" means any User of the Golem Platform, i.e. a Provider or Requestor;
-- "Software" means the underlying software protocol that governs the Golem Platform, which in this case is developed and published under the GNU GPL;
-- "GNU GPL" means the GNU General Public License version 3, a free, copyleft license for software. The terms and conditions for copying, distribution and modification the GNU GPL are available at [https://www.gnu.org/licenses/gpl-3.0.de.html](https://www.gnu.org/licenses/gpl-3.0.de.html) and form an integral part of these Guidelines;
-- "NGNT" means the Rinkeby testnet Golem Network Token; “NGNT” do neither carry any value nor give rights and/or claims against Company or anyone else;
-- "tGLM" means the Rinkeby testnet Golem Network Token; “tGLM” do neither carry any value nor give rights and/or claims against Company or anyone else;
-- "rETH" means the Rinkeby testnet Cryptocurrency Ether; rETH do not carry any value nor give rights and/or claims against Company or anyone else;
-- "GLM" means the Golem Network Token;
-- "ETH" means the Cryptocurrency Ether.
+* "Company" means Golem Factory GmbH, a company construed under the Laws of Switzerland;
+* "Golem Platform" means thesoftware release of the Golem project (implementation name, “Yagna");
+* “Golem” means a project built by Golem Factory GmbH
+* "Providers" means a User who is contributing computer resources;
+* "Requestors" means a User who is renting out additional computing Power from the Network;
+* "Users" means any User of the Golem Platform, i.e. a Provider or Requestor;
+* "Software" means the underlying software protocol that governs the Golem Platform, which in this case is developed and published under the GNU GPL;
+* "GNU GPL" means the GNU General Public License version 3, a free, copyleft license for software. The terms and conditions for copying, distribution and modification the GNU GPL are available at [https://www.gnu.org/licenses/gpl-3.0.de.html](https://www.gnu.org/licenses/gpl-3.0.de.html) and form an integral part of these Guidelines;
+* "NGNT" means the Rinkeby testnet Golem Network Token; “NGNT” do neither carry any value nor give rights and/or claims against Company or anyone else;
+* "tGLM" means the Rinkeby testnet Golem Network Token; “tGLM” do neither carry any value nor give rights and/or claims against Company or anyone else;
+* "rETH" means the Rinkeby testnet Cryptocurrency Ether; rETH do not carry any value nor give rights and/or claims against Company or anyone else;
+* "GLM" means the Golem Network Token;
+* "ETH" means the Cryptocurrency Ether.
 
 **II. Acceptance of Guidelines**
 By accepting these Guidelines, you acknowledge that neither the download of the Golem Software nor the use of the Golem Platform shall constitute, or be deemed to constitute, a partnership, association, joint venture or other co-operative entity between the Company and the Users.

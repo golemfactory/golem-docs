@@ -76,6 +76,7 @@ Remember to save your passphrase somewhere safe as losing it will make it imposs
 
 {% /alert %}
 
+
 ### Export the key
 
 Now, issue the same export command that you'd use for an unprotected keystore:

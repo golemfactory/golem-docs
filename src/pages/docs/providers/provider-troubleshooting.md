@@ -39,10 +39,14 @@ docker run --privileged
 
 **or** mount the `/dev/kvm` device to the Docker container.
 
-c\) If: `unsupported virtualization type: XEN`
+  
+c\) If: `unsupported virtualization type: XEN` 
 
 We do not support **XEN hypervisor**
 
-- In any other case with the virtualization, we recommend the:
+
+
+* In any other case with the virtualization, we recommend the:
 
 `sudo apt install cpu-checker && sudo kvm-ok` command and follow the steps as given in the terminal interface.
+

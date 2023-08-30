@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 export const KnowledgeCatalog = (props) => (
   <svg
     width="41"
@@ -32,4 +32,4 @@ export const KnowledgeCatalog = (props) => (
       </clipPath>
     </defs>
   </svg>
-);
+)

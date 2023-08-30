@@ -31,7 +31,7 @@ Default DebitNotes filter that accept all debit notes without any validation
 
 [src/payment/strategy.ts:5](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/strategy.ts#L5)
 
----
+___
 
 ### acceptAllInvoicesFilter
 
@@ -53,7 +53,7 @@ Default Invoices filter that accept all invoices without any validation
 
 [src/payment/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/strategy.ts#L7)
 
----
+___
 
 ### acceptMaxAmountDebitNoteFilter
 
@@ -63,8 +63,8 @@ A custom filter that only accepts debit notes below a given value
 
 #### Parameters
 
-| Name        | Type     |
-| :---------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `maxAmount` | `number` |
 
 #### Returns
@@ -75,8 +75,8 @@ A custom filter that only accepts debit notes below a given value
 
 ##### Parameters
 
-| Name        | Type                                                            |
-| :---------- | :-------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `debitNote` | [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO) |
 
 ##### Returns
@@ -87,7 +87,7 @@ A custom filter that only accepts debit notes below a given value
 
 [src/payment/strategy.ts:10](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/strategy.ts#L10)
 
----
+___
 
 ### acceptMaxAmountInvoiceFilter
 
@@ -97,8 +97,8 @@ A custom filter that only accepts invoices below a given value
 
 #### Parameters
 
-| Name        | Type     |
-| :---------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `maxAmount` | `number` |
 
 #### Returns
@@ -109,8 +109,8 @@ A custom filter that only accepts invoices below a given value
 
 ##### Parameters
 
-| Name      | Type                                                     |
-| :-------- | :------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `invoice` | [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO) |
 
 ##### Returns
