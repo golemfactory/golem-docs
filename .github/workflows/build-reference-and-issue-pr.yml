@@ -14,8 +14,9 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install -g glob
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - name: Generate documentation
         run: ./generate-reference.sh ${{ github.event.inputs.branch }}
       - name: Create Pull Request
