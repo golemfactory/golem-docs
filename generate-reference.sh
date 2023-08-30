@@ -4,7 +4,7 @@ set -e # Exit immediately if a command exits with a non-zero status.
 # Variable Definitions
 REPO_URL='https://github.com/golemfactory/golem-js.git'
 TEMP_PATH='./temp'
-OUTPUT_PATH_REL='../src/pages/docs/golem-js/reference'
+OUTPUT_PATH='../src/pages/docs/golem-js/reference'
 TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-clear-references.cjs --hideBreadcrumbs true'
 BRANCH_NAME=$1
 
@@ -26,9 +26,6 @@ npm install --force
 
 # Exit to Parent Directory
 cd ..
-
-# Define Output Path
-OUTPUT_PATH="${OUTPUT_PATH_REL}/${BRANCH_NAME}"
 
 # Enter Temporary Path
 cd $TEMP_PATH
