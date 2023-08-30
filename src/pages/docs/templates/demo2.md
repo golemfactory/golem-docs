@@ -1,5 +1,5 @@
 ---
-title: 'Learn dApps: overview'
+title: "Learn dApps: overview"
 description: Create your own JavaScript application on Golem
 type: guide
 tags: tag 1, tag 2
@@ -31,7 +31,6 @@ qwe
 
 # h1 reset
 
-
 Let's now go through what happens there.
 
 1. Take a stock Python Docker image (the slim version, we won't need anything more here):
@@ -58,3 +57,4 @@ COPY server_app/* /app/
 ```dockerfile
 WORKDIR /app
 RUN poetry install --no-root
+```

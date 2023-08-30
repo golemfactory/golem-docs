@@ -1,22 +1,22 @@
-import { Fragment } from 'react'
-import Highlight, { defaultProps } from 'prism-react-renderer'
-import { ClipboardIcon } from '@/components/icons/ClipboardIcon'
-import { useState, useEffect } from 'react'
+import { Fragment } from "react";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import { ClipboardIcon } from "@/components/icons/ClipboardIcon";
+import { useState, useEffect } from "react";
 export function Fence({ children, language }) {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
   const handleClick = () => {
     navigator.clipboard
       .writeText(children.trimEnd())
       .then(() => setCopied(true))
-      .catch(() => console.error('Could not copy text'))
-  }
+      .catch(() => console.error("Could not copy text"));
+  };
 
   useEffect(() => {
     if (copied) {
-      const timer = setTimeout(() => setCopied(false), 2000)
-      return () => clearTimeout(timer)
+      const timer = setTimeout(() => setCopied(false), 2000);
+      return () => clearTimeout(timer);
     }
-  }, [copied])
+  }, [copied]);
   return (
     <Highlight
       {...defaultProps}
@@ -57,7 +57,7 @@ export function Fence({ children, language }) {
                     .map((token, tokenIndex) => (
                       <span key={tokenIndex} {...getTokenProps({ token })} />
                     ))}
-                  {'\n'}
+                  {"\n"}
                 </Fragment>
               ))}
             </code>
@@ -65,5 +65,5 @@ export function Fence({ children, language }) {
         </div>
       )}
     </Highlight>
-  )
+  );
 }

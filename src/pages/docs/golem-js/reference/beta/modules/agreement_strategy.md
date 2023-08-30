@@ -24,8 +24,8 @@ Default selector that selects a random provider from the pool
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type                                                                      |
+| :----------- | :------------------------------------------------------------------------ |
 | `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[] |
 
 ##### Returns
@@ -36,7 +36,7 @@ Default selector that selects a random provider from the pool
 
 [src/agreement/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/strategy.ts#L4)
 
-___
+---
 
 ### randomAgreementSelectorWithPriorityForExistingOnes
 
@@ -52,8 +52,8 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type                                                                      |
+| :----------- | :------------------------------------------------------------------------ |
 | `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[] |
 
 ##### Returns
@@ -64,7 +64,7 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 [src/agreement/strategy.ts:8](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/strategy.ts#L8)
 
-___
+---
 
 ### bestAgreementSelector
 
@@ -74,8 +74,8 @@ Selector selecting the provider according to the provided list of scores
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `scores` | `Object` |
 
 #### Returns
@@ -86,8 +86,8 @@ Selector selecting the provider according to the provided list of scores
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type                                                                      |
+| :----------- | :------------------------------------------------------------------------ |
 | `candidates` | [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[] |
 
 ##### Returns

@@ -28,12 +28,12 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `any` |
-| `ip` | `IPv4` |
+| Name             | Type                                                             |
+| :--------------- | :--------------------------------------------------------------- |
+| `id`             | `any`                                                            |
+| `ip`             | `IPv4`                                                           |
 | `getNetworkInfo` | () => [`NetworkInfo`](../interfaces/network_network.NetworkInfo) |
-| `apiUrl` | `string` |
+| `apiUrl`         | `string`                                                         |
 
 #### Defined in
 
@@ -49,7 +49,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 [src/network/node.ts:9](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/network/node.ts#L9)
 
-___
+---
 
 ### ip
 
@@ -73,15 +73,15 @@ on the provider's end.
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `net` | { `nodeIp`: `string` ; `id`: `string` ; `ip`: `string` ; `mask`: `string` ; `nodes`: { `[ip: string]`: `string`;  }  }[] |
+| Name  | Type                                                                                                                   |
+| :---- | :--------------------------------------------------------------------------------------------------------------------- |
+| `net` | { `nodeIp`: `string` ; `id`: `string` ; `ip`: `string` ; `mask`: `string` ; `nodes`: { `[ip: string]`: `string`; } }[] |
 
 #### Defined in
 
 [src/network/node.ts:20](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/network/node.ts#L20)
 
-___
+---
 
 ### getWebsocketUri
 
@@ -91,8 +91,8 @@ Get the websocket URI corresponding with a specific TCP port on this Node.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type     | Description                                |
+| :----- | :------- | :----------------------------------------- |
 | `port` | `number` | TCP port of the service within the runtime |
 
 #### Returns

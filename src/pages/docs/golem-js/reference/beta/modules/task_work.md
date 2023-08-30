@@ -22,9 +22,9 @@
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `InputType` | `unknown` |
+| Name         | Type      |
+| :----------- | :-------- |
+| `InputType`  | `unknown` |
 | `OutputType` | `unknown` |
 
 #### Type declaration
@@ -33,10 +33,10 @@
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ctx` | [`WorkContext`](../classes/task_work.WorkContext) |
-| `data?` | `InputType` |
+| Name    | Type                                              |
+| :------ | :------------------------------------------------ |
+| `ctx`   | [`WorkContext`](../classes/task_work.WorkContext) |
+| `data?` | `InputType`                                       |
 
 ##### Returns
 

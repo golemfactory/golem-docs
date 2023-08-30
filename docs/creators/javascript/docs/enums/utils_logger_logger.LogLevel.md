@@ -16,47 +16,47 @@
 
 ### debug
 
-• **debug** = ``"debug"``
+• **debug** = `"debug"`
 
 #### Defined in
 
 [yajsapi/utils/logger/logger.ts:2](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L2)
 
-___
+---
 
 ### info
 
-• **info** = ``"info"``
+• **info** = `"info"`
 
 #### Defined in
 
 [yajsapi/utils/logger/logger.ts:3](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L3)
 
-___
+---
 
 ### warn
 
-• **warn** = ``"warn"``
+• **warn** = `"warn"`
 
 #### Defined in
 
 [yajsapi/utils/logger/logger.ts:4](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L4)
 
-___
+---
 
 ### error
 
-• **error** = ``"error"``
+• **error** = `"error"`
 
 #### Defined in
 
 [yajsapi/utils/logger/logger.ts:5](https://github.com/golemfactory/yajsapi/blob/87b4066/yajsapi/utils/logger/logger.ts#L5)
 
-___
+---
 
 ### log
 
-• **log** = ``"log"``
+• **log** = `"log"`
 
 #### Defined in
 

@@ -23,8 +23,8 @@
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type                                                            |
+| :---------- | :-------------------------------------------------------------- |
 | `debitNote` | [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO) |
 
 ##### Returns
@@ -35,7 +35,7 @@
 
 [src/payment/service.ts:24](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/service.ts#L24)
 
-___
+---
 
 ### InvoiceFilter
 
@@ -47,8 +47,8 @@ ___
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                                                     |
+| :-------- | :------------------------------------------------------- |
 | `invoice` | [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO) |
 
 ##### Returns

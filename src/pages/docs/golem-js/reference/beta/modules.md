@@ -19,7 +19,7 @@
 - [network/service](modules/network_service)
 - [package/package](modules/package_package)
 - [payment/config](modules/payment_config)
-- [payment/debit\_note](modules/payment_debit_note)
+- [payment/debit_note](modules/payment_debit_note)
 - [payment/invoice](modules/payment_invoice)
 - [payment/payments](modules/payment_payments)
 - [payment/service](modules/payment_service)

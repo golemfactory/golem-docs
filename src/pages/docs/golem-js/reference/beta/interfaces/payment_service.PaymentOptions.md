@@ -38,7 +38,7 @@ Interval for checking new invoices
 
 [src/payment/service.ts:11](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/service.ts#L11)
 
-___
+---
 
 ### debitNotesFetchingInterval
 
@@ -50,7 +50,7 @@ Interval for checking new debit notes
 
 [src/payment/service.ts:13](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/service.ts#L13)
 
-___
+---
 
 ### maxInvoiceEvents
 
@@ -62,7 +62,7 @@ Maximum number of invoice events per one fetching
 
 [src/payment/service.ts:15](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/service.ts#L15)
 
-___
+---
 
 ### maxDebitNotesEvents
 
@@ -74,7 +74,7 @@ Maximum number of debit notes events per one fetching
 
 [src/payment/service.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/service.ts#L17)
 
-___
+---
 
 ### debitNotesFilter
 
@@ -86,7 +86,7 @@ A custom filter that checks every debit notes coming from providers
 
 [src/payment/service.ts:19](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/service.ts#L19)
 
-___
+---
 
 ### invoiceFilter
 
@@ -98,7 +98,7 @@ A custom filter that checks every invoices coming from providers
 
 [src/payment/service.ts:21](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/service.ts#L21)
 
-___
+---
 
 ### yagnaOptions
 
@@ -112,7 +112,7 @@ ___
 
 [src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L23)
 
-___
+---
 
 ### budget
 
@@ -126,7 +126,7 @@ ___
 
 [src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L24)
 
-___
+---
 
 ### payment
 
@@ -134,9 +134,9 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `driver?` | `string` |
+| Name       | Type     |
+| :--------- | :------- |
+| `driver?`  | `string` |
 | `network?` | `string` |
 
 #### Inherited from
@@ -147,7 +147,7 @@ ___
 
 [src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L25)
 
-___
+---
 
 ### paymentTimeout
 
@@ -161,7 +161,7 @@ ___
 
 [src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L26)
 
-___
+---
 
 ### paymentRequestTimeout
 
@@ -175,7 +175,7 @@ ___
 
 [src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L27)
 
-___
+---
 
 ### logger
 
@@ -189,7 +189,7 @@ ___
 
 [src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/config.ts#L28)
 
-___
+---
 
 ### eventTarget
 

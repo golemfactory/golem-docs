@@ -32,8 +32,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                        |
+| :--------- | :---------------------------------------------------------- |
 | `options?` | [`YagnaOptions`](../modules/utils_yagna_yagna#yagnaoptions) |
 
 #### Defined in
@@ -50,7 +50,7 @@
 
 [src/utils/yagna/yagna.ts:32](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L32)
 
-___
+---
 
 ### apiBaseUrl
 
@@ -74,7 +74,7 @@ ___
 
 [src/utils/yagna/yagna.ts:44](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L44)
 
-___
+---
 
 ### connect
 
@@ -88,7 +88,7 @@ ___
 
 [src/utils/yagna/yagna.ts:48](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L48)
 
-___
+---
 
 ### end
 
@@ -102,7 +102,7 @@ ___
 
 [src/utils/yagna/yagna.ts:52](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L52)
 
-___
+---
 
 ### createApi
 
@@ -116,7 +116,7 @@ ___
 
 [src/utils/yagna/yagna.ts:57](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L57)
 
-___
+---
 
 ### getApiConfig
 
@@ -130,7 +130,7 @@ ___
 
 [src/utils/yagna/yagna.ts:78](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L78)
 
-___
+---
 
 ### getApiUrl
 
@@ -138,8 +138,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type     |
+| :--------- | :------- |
 | `apiName?` | `string` |
 
 #### Returns
@@ -150,7 +150,7 @@ ___
 
 [src/utils/yagna/yagna.ts:89](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L89)
 
-___
+---
 
 ### errorHandler
 
@@ -158,8 +158,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                            |
+| :------ | :------------------------------ |
 | `error` | `AxiosError`<`unknown`, `any`\> |
 
 #### Returns
@@ -170,7 +170,7 @@ ___
 
 [src/utils/yagna/yagna.ts:93](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/yagna.ts#L93)
 
-___
+---
 
 ### addErrorHandler
 
@@ -178,8 +178,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type                                                |
+| :---- | :-------------------------------------------------- |
 | `api` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 
 #### Returns

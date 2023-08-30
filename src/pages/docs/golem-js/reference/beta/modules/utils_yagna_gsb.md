@@ -19,15 +19,15 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type     |
+| :----------- | :------- |
 | `servicesId` | `string` |
 
 #### Defined in
 
 [src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/gsb.ts#L5)
 
-___
+---
 
 ### GftpFileInfo
 
@@ -35,9 +35,9 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+| Name  | Type     |
+| :---- | :------- |
+| `id`  | `string` |
 | `url` | `string` |
 
 #### Defined in

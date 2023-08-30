@@ -19,10 +19,10 @@ There is only one strict requirement: **at least one volume** directory must be 
 
 Besides the above, a number of commands are currently **not supported** by `gvmkit-build` converter. These are:
 
-* `CMD`
-* `ENTRYPOINT`
-* `ENV`
-* `PORTS`
+- `CMD`
+- `ENTRYPOINT`
+- `ENV`
+- `PORTS`
 
 ## When building my image, I copied some files to one of the volumes. Why can't I see them when I run the image?
 
@@ -52,6 +52,3 @@ There you are two options here:
 
 1. If the files are **static** (that is: they are always the same) then you can include them in the VM image itself while building it. You can learn more about that in: [Golem image explained](/docs/creators/javascript/guides/golem-images).
 2. If the files are **dynamic** (that is: they may differ between task executions) then your best option is to transfer the files as a command within the requestor agent. Make sure you use a **volume directory as the destination**.
-
-
-

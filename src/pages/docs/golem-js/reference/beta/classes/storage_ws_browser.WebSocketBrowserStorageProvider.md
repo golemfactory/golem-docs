@@ -32,10 +32,10 @@ Storage provider that uses GFTP over WebSockets.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
-| `options` | [`WebSocketStorageProviderOptions`](../interfaces/storage_ws_browser.WebSocketStorageProviderOptions) |
+| Name       | Type                                                                                                  |
+| :--------- | :---------------------------------------------------------------------------------------------------- |
+| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)                                                   |
+| `options`  | [`WebSocketStorageProviderOptions`](../interfaces/storage_ws_browser.WebSocketStorageProviderOptions) |
 
 #### Defined in
 
@@ -61,7 +61,7 @@ Close storage provider and release all resources.
 
 [src/storage/ws-browser.ts:68](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/ws-browser.ts#L68)
 
-___
+---
 
 ### init
 
@@ -81,7 +81,7 @@ Initialize storage provider.
 
 [src/storage/ws-browser.ts:72](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/ws-browser.ts#L72)
 
-___
+---
 
 ### publishData
 
@@ -91,8 +91,8 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type         |
+| :----- | :----------- |
 | `data` | `Uint8Array` |
 
 #### Returns
@@ -107,7 +107,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 [src/storage/ws-browser.ts:76](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/ws-browser.ts#L76)
 
-___
+---
 
 ### publishFile
 
@@ -127,7 +127,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 [src/storage/ws-browser.ts:101](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/ws-browser.ts#L101)
 
-___
+---
 
 ### receiveData
 
@@ -137,8 +137,8 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                                                     |
+| :--------- | :--------------------------------------------------------------------------------------- |
 | `callback` | [`StorageProviderDataCallback`](../modules/storage_provider#storageproviderdatacallback) |
 
 #### Returns
@@ -153,7 +153,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 [src/storage/ws-browser.ts:105](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/ws-browser.ts#L105)
 
-___
+---
 
 ### receiveFile
 
@@ -173,7 +173,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 [src/storage/ws-browser.ts:131](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/ws-browser.ts#L131)
 
-___
+---
 
 ### release
 
@@ -183,8 +183,8 @@ Release previously allocated resource URL from Yagna.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type       |
+| :----- | :--------- |
 | `urls` | `string`[] |
 
 #### Returns

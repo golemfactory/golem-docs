@@ -13,17 +13,17 @@
 
 ### OK
 
-• **OK** = ``"Ok"``
+• **OK** = `"Ok"`
 
 #### Defined in
 
 [src/activity/results.ts:2](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/results.ts#L2)
 
-___
+---
 
 ### ERROR
 
-• **ERROR** = ``"Error"``
+• **ERROR** = `"Error"`
 
 #### Defined in
 

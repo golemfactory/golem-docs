@@ -31,7 +31,7 @@ The selector used when choosing a provider from a pool of existing offers (from 
 
 [src/agreement/service.ts:23](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/service.ts#L23)
 
-___
+---
 
 ### yagnaOptions
 
@@ -47,7 +47,7 @@ AgreementOptions.yagnaOptions
 
 [src/agreement/agreement.ts:35](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/agreement.ts#L35)
 
-___
+---
 
 ### agreementRequestTimeout
 
@@ -63,7 +63,7 @@ AgreementOptions.agreementRequestTimeout
 
 [src/agreement/agreement.ts:37](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/agreement.ts#L37)
 
-___
+---
 
 ### agreementWaitingForApprovalTimeout
 
@@ -79,7 +79,7 @@ AgreementOptions.agreementWaitingForApprovalTimeout
 
 [src/agreement/agreement.ts:39](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/agreement.ts#L39)
 
-___
+---
 
 ### logger
 
@@ -95,7 +95,7 @@ AgreementOptions.logger
 
 [src/agreement/agreement.ts:41](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/agreement.ts#L41)
 
-___
+---
 
 ### eventTarget
 

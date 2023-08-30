@@ -19,7 +19,7 @@
 
 [src/agreement/service.ts:10](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/agreement/service.ts#L10)
 
-___
+---
 
 ### provider
 
@@ -27,9 +27,9 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+| Name   | Type     |
+| :----- | :------- |
+| `id`   | `string` |
 | `name` | `string` |
 
 #### Defined in

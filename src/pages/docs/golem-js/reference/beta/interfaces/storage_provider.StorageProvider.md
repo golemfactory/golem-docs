@@ -36,7 +36,7 @@ Initialize storage provider.
 
 [src/storage/provider.ts:7](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/provider.ts#L7)
 
-___
+---
 
 ### close
 
@@ -52,7 +52,7 @@ Close storage provider and release all resources.
 
 [src/storage/provider.ts:12](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/provider.ts#L12)
 
-___
+---
 
 ### receiveFile
 
@@ -62,8 +62,8 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type     |
+| :--------- | :------- |
 | `destPath` | `string` |
 
 #### Returns
@@ -74,7 +74,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 [src/storage/provider.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/provider.ts#L17)
 
-___
+---
 
 ### receiveData
 
@@ -84,8 +84,8 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                                                     |
+| :--------- | :--------------------------------------------------------------------------------------- |
 | `callback` | [`StorageProviderDataCallback`](../modules/storage_provider#storageproviderdatacallback) |
 
 #### Returns
@@ -96,7 +96,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 [src/storage/provider.ts:22](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/provider.ts#L22)
 
-___
+---
 
 ### publishFile
 
@@ -106,8 +106,8 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `srcPath` | `string` |
 
 #### Returns
@@ -118,7 +118,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 [src/storage/provider.ts:28](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/provider.ts#L28)
 
-___
+---
 
 ### publishData
 
@@ -128,8 +128,8 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type         |
+| :----- | :----------- |
 | `data` | `Uint8Array` |
 
 #### Returns
@@ -140,7 +140,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 [src/storage/provider.ts:34](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/storage/provider.ts#L34)
 
-___
+---
 
 ### release
 
@@ -150,8 +150,8 @@ Release previously allocated resource URL from Yagna.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type       |
+| :----- | :--------- |
 | `urls` | `string`[] |
 
 #### Returns

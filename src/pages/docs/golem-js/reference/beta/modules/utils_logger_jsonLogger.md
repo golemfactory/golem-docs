@@ -16,8 +16,8 @@ Create a logger that writes a JSON object for every log line.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type     | Description                                                                |
+| :---------- | :------- | :------------------------------------------------------------------------- |
 | `filename?` | `string` | path to the file to write to, if not specified, logs are written to stdout |
 
 #### Returns

@@ -15,10 +15,10 @@ You should be able to complete it regardless of your level of experience. Howeve
 
 To launch applications on Golem, you request computational resources from the network. Therefore, you need the following prerequisites prior to execution:
 
-* a running `yagna` service (v0.12 or higher)
-* your requestor app key
+- a running `yagna` service (v0.12 or higher)
+- your requestor app key
 
-Setting these up is a part of the [Yagna installation instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors). 
+Setting these up is a part of the [Yagna installation instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
 
 Please also ensure you have `curl` available on your system.
 
@@ -41,20 +41,22 @@ Prepare a virtual environment for the tutorial script:
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 python3 -m venv --clear ~/.envs/dapps
 source ~/.envs/dapps/bin/activate
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```shell
 python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapps
 %HOMEDRIVE%%HOMEPATH%\.envs\dapps\Scripts\activate.bat
 ```
+
 {% /tab %}
 {% /tabs %}
-
-
 
 ### Install `dapp-runner`
 
@@ -85,27 +87,32 @@ Generate an unique api-key with the `yagna` command:
 {% alert level="info" %}
 
 If you followed [Yagna installation instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) you can use 'try_golem' key.
- 
+
 {% /alert %}
 
 ```bash
 yagna app-key create dapp-runner
 ```
-It will produce a 32-char key. 
+
+It will produce a 32-char key.
 
 Copy and export it:
 
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 export YAGNA_APPKEY=<your key>
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```bash
 set YAGNA_APPKEY=<your key>
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -114,13 +121,13 @@ set YAGNA_APPKEY=<your key>
 Having the above setup complete, you can verify it by running a sample application that comes together with `dapp-runner` repository using the following commands:
 
 ```shell
-dapp-runner start --config config.yaml webapp.yaml 
+dapp-runner start --config config.yaml webapp.yaml
 ```
 
 Once the app is deployed on Golem, you should see a line reading:
 
 ```json
-{"web": {"local_proxy_address": "http://localhost:8080"}}
+{ "web": { "local_proxy_address": "http://localhost:8080" } }
 ```
 
 This means that the app is ready and can be viewed at: [http://localhost:8080](http://localhost:8080)
@@ -129,10 +136,8 @@ This means that the app is ready and can be viewed at: [http://localhost:8080](h
 
 That's it!
 
-
 {% docnavigation title="Next steps" %}
 
 - Now that you've been able to experience launching decentralized apps on Golem, you might wish to learn what it takes to build one yourself: [Hello World dApp](/docs/creators/dapps/hello-world-dapp)
-
 
 {% /docnavigation %}

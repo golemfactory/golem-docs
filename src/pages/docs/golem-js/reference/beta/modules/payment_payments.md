@@ -18,7 +18,7 @@
 
 ### PaymentEventType
 
-• `Const` **PaymentEventType**: ``"PaymentReceived"``
+• `Const` **PaymentEventType**: `"PaymentReceived"`
 
 #### Defined in
 

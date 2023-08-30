@@ -34,7 +34,7 @@ Default Proposal filter that accept all proposal coming from the market
 
 [src/market/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/strategy.ts#L4)
 
-___
+---
 
 ### blackListProposalIdsFilter
 
@@ -44,8 +44,8 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name           | Type       |
+| :------------- | :--------- |
 | `blackListIds` | `string`[] |
 
 #### Returns
@@ -56,8 +56,8 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns
@@ -68,7 +68,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 [src/market/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/strategy.ts#L7)
 
-___
+---
 
 ### blackListProposalNamesFilter
 
@@ -78,8 +78,8 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name             | Type       |
+| :--------------- | :--------- |
 | `blackListNames` | `string`[] |
 
 #### Returns
@@ -90,8 +90,8 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns
@@ -102,7 +102,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 [src/market/strategy.ts:11](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/strategy.ts#L11)
 
-___
+---
 
 ### blackListProposalRegexpFilter
 
@@ -112,8 +112,8 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `regexp` | `RegExp` |
 
 #### Returns
@@ -124,8 +124,8 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns
@@ -136,7 +136,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 [src/market/strategy.ts:15](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/strategy.ts#L15)
 
-___
+---
 
 ### whiteListProposalIdsFilter
 
@@ -146,8 +146,8 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name           | Type       |
+| :------------- | :--------- |
 | `whiteListIds` | `string`[] |
 
 #### Returns
@@ -158,8 +158,8 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns
@@ -170,7 +170,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 [src/market/strategy.ts:19](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/strategy.ts#L19)
 
-___
+---
 
 ### whiteListProposalNamesFilter
 
@@ -180,8 +180,8 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name             | Type       |
+| :--------------- | :--------- |
 | `whiteListNames` | `string`[] |
 
 #### Returns
@@ -192,8 +192,8 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns
@@ -204,7 +204,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 [src/market/strategy.ts:23](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/strategy.ts#L23)
 
-___
+---
 
 ### whiteListProposalRegexpFilter
 
@@ -214,8 +214,8 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `regexp` | `RegExp` |
 
 #### Returns
@@ -226,8 +226,8 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                       |
+| :--------- | :--------------------------------------------------------- |
 | `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
 
 ##### Returns

@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `agreementId`: `string` ; `amount`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `agreementId`: `string` ; `amount`: `string` }\>
 
   ↳ **`PaymentAccepted`**
 
@@ -28,13 +28,13 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data?` | `Object` |
-| `data.id` | `string` |
-| `data.providerId` | `string` |
+| Name               | Type     |
+| :----------------- | :------- |
+| `data?`            | `Object` |
+| `data.id`          | `string` |
+| `data.providerId`  | `string` |
 | `data.agreementId` | `string` |
-| `data.amount` | `string` |
+| `data.amount`      | `string` |
 
 #### Inherited from
 
@@ -52,12 +52,12 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `providerId` | `string` |
+| Name          | Type     |
+| :------------ | :------- |
+| `id`          | `string` |
+| `providerId`  | `string` |
 | `agreementId` | `string` |
-| `amount` | `string` |
+| `amount`      | `string` |
 
 #### Inherited from
 
@@ -67,7 +67,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L16)
 
-___
+---
 
 ### name
 
@@ -81,7 +81,7 @@ ___
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L17)
 
-___
+---
 
 ### timestamp
 

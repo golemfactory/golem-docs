@@ -1,5 +1,5 @@
-@import './fonts.css';
-@import './prism.css';
+@import "./fonts.css";
+@import "./prism.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +11,7 @@
 }
 
 .prose-a\:after\:content-\[\'_\2197\'\]
-  :is(:where(a):not(:where([class~='not-prose'] *)))::after {
+  :is(:where(a):not(:where([class~="not-prose"] *)))::after {
   font-size: 0.75rem;
   position: absolute;
   margin-left: 2px;
@@ -26,15 +26,15 @@ html {
   scroll-behavior: smooth;
 }
 
-.prose :where(code):not(:where([class~='not-prose'] *))::before {
-  content: '';
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+  content: "";
 }
 
-.prose :where(code):not(:where([class~='not-prose'] *))::after {
-  content: '';
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+  content: "";
 }
 
-.prose :where(li):not(:where([class~='not-prose'] *)) {
+.prose :where(li):not(:where([class~="not-prose"] *)) {
   margin-bottom: 6px;
   margin-top: 0px;
 }
@@ -44,7 +44,7 @@ ul {
   @apply marker:text-primary !important;
 }
 
-.prose :where(code):not(:where([class~='not-prose'] *)) {
+.prose :where(code):not(:where([class~="not-prose"] *)) {
   background-color: #f5f5f5;
   color: #36464e;
   font-weight: 400;
@@ -60,7 +60,7 @@ ul {
 
 .prose
   :where(tbody td:first-child, tfoot td:first-child):not(
-    :where([class~='not-prose'] *)
+    :where([class~="not-prose"] *)
   ) {
-  @apply md:min-w-[20rem]
+  @apply md:min-w-[20rem];
 }

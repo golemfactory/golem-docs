@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails)  }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string` }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails) }\>
 
   ↳ **`PackageCreated`**
 
@@ -28,11 +28,11 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data?` | `Object` |
-| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
-| `data.details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
+| Name                    | Type                                                                                                                                      |
+| :---------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| `data?`                 | `Object`                                                                                                                                  |
+| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string` }\> |
+| `data.details`          | [`PackageDetails`](../interfaces/package_package.PackageDetails)                                                                          |
 
 #### Inherited from
 
@@ -50,10 +50,10 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
-| `details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
+| Name               | Type                                                                                                                                      |
+| :----------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string` }\> |
+| `details`          | [`PackageDetails`](../interfaces/package_package.PackageDetails)                                                                          |
 
 #### Inherited from
 
@@ -63,7 +63,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L16)
 
-___
+---
 
 ### name
 
@@ -77,7 +77,7 @@ ___
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L17)
 
-___
+---
 
 ### timestamp
 

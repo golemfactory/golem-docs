@@ -3,5 +3,5 @@ export function Highlight({ text }) {
     <span className="bg-lightbluedarker text-dark dark:text-white/50">
       {text}
     </span>
-  )
+  );
 }

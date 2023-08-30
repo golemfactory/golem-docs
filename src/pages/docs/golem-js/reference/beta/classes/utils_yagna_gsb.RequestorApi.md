@@ -31,11 +31,11 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name             | Type            |
+| :--------------- | :-------------- |
 | `configuration?` | `Configuration` |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `basePath?`      | `string`        |
+| `axios?`         | `AxiosInstance` |
 
 #### Inherited from
 
@@ -53,10 +53,10 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fileInfo` | [`GftpFileInfo`](../modules/utils_yagna_gsb#gftpfileinfo) |
-| `components` | `string`[] |
+| Name         | Type                                                      |
+| :----------- | :-------------------------------------------------------- |
+| `fileInfo`   | [`GftpFileInfo`](../modules/utils_yagna_gsb#gftpfileinfo) |
+| `components` | `string`[]                                                |
 
 #### Returns
 
@@ -70,7 +70,7 @@ GsbRequestorApi.createService
 
 [src/utils/yagna/gsb.ts:20](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/yagna/gsb.ts#L20)
 
-___
+---
 
 ### deleteService
 
@@ -78,8 +78,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name | Type     |
+| :--- | :------- |
 | `id` | `string` |
 
 #### Returns
