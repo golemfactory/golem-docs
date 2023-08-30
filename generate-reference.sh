@@ -18,6 +18,9 @@ cd $TEMP_PATH
 # Switching to Desired Branch
 git checkout $BRANCH_NAME
 
+# If Branch is Master, then change it to latest
+[ $BRANCH_NAME = "master" ] && BRANCH_NAME="latest"
+
 # Installing Necessary Dependencies
 npm install --force
 
@@ -29,6 +32,9 @@ OUTPUT_PATH="${OUTPUT_PATH_REL}/${BRANCH_NAME}"
 
 # Enter Temporary Path
 cd $TEMP_PATH
+
+# If current API reference exist for branch, then remove it to ensure that we don't keep old files.
+if [ -d "$OUTPUT_PATH" ]; then rm -Rf $OUTPUT_PATH; fi
 
 # Generate TypeDoc
 npx typedoc $TYPEDOC_PARAMS --out $OUTPUT_PATH

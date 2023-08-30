@@ -1,56 +1,40 @@
-import { useMemo, useState, useEffect, Fragment } from "react";
+import { useState, useEffect, useMemo, Fragment } from "react";
 import { useRouter } from "next/router";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import { navigation as JSReference } from "@/navigation/jsreference";
-import { latestJSVersion } from "@/navigation/meta";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const VersionSwitcher = ({}) => {
-  const [currentVersion, setCurrentVersion] = useState(latestJSVersion);
+const VersionSwitcher = () => {
   const router = useRouter();
-  const versions = useMemo(
-    () => Object.values(JSReference).map((navItem) => navItem.title),
-    [JSReference]
-  );
+  const versions = useMemo(() => {
+    return [
+      { name: "Latest", url: process.env.NEXT_PUBLIC_LATEST_URL },
+      { name: "Beta", url: process.env.NEXT_PUBLIC_BETA_URL },
+      { name: "Alpha", url: process.env.NEXT_PUBLIC_ALPHA_URL },
+    ];
+  }, []);
 
-  const isOnDocsPath = router.pathname.startsWith("/docs/golem-js/reference");
+  const [currentURL, setCurrentURL] = useState("");
 
   useEffect(() => {
-    if (isOnDocsPath) {
-      const findCurrentVersion = () => {
-        const matchingNavItem = Object.values(JSReference).find(
-          (navItem) => navItem.pathname === router.pathname
-        );
-        if (matchingNavItem) {
-          setCurrentVersion(matchingNavItem.title);
-        }
-      };
+    setCurrentURL(window.location.host);
+  }, []);
 
-      findCurrentVersion();
-    }
-  }, [router, isOnDocsPath, JSReference, setCurrentVersion]);
+  const currentVersion =
+    versions.find((version) => new URL(version.url).host === currentURL) ||
+    versions[0];
 
   const switchVersion = (version) => {
-    if (isOnDocsPath) {
-      setCurrentVersion(version);
-      const newPath = router.asPath.replace(
-        /\/docs\/golem-js\/reference\/[^/]+/,
-        `/docs/golem-js/reference/${version}`
-      );
-      router.push(newPath);
-    }
+    const url = new URL(router.asPath, version.url);
+    window.location.assign(url.toString());
   };
 
-  const getDisplayVersion = (version) => {
-    return version === versions[versions.length - 1]
-      ? `latest (${version})`
-      : version;
-  };
+  const getDisplayVersion = ({ name }) => name;
 
-  return isOnDocsPath ? (
+  return (
     <Listbox value={currentVersion} onChange={switchVersion}>
       {({ open }) => (
         <>
@@ -115,7 +99,7 @@ const VersionSwitcher = ({}) => {
         </>
       )}
     </Listbox>
-  ) : null;
+  );
 };
 
 export default VersionSwitcher;
