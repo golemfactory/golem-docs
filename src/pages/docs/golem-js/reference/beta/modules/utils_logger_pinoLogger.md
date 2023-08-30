@@ -14,8 +14,8 @@
 
 #### Parameters
 
-| Name               | Type                                   |
-| :----------------- | :------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `optionsOrStream?` | `LoggerOptions` \| `DestinationStream` |
 
 #### Returns

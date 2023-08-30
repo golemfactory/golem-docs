@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 export const TutorialIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ export const TutorialIcon = (props) => (
       </clipPath>
     </defs>
   </svg>
-);
+)

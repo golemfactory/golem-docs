@@ -1,44 +1,44 @@
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
-import { DiscordIconBlue } from "./icons/DiscordIconBlue";
-import { GithubIcon } from "./icons/GithubIcon";
-import { GolemIcon } from "./icons/GolemIcon";
-import { LinkedInIcon } from "./icons/LinkedIn";
-import { RedditIcon } from "./icons/RedditIcon";
-import { YoutubeIcon } from "./icons/YoutubeIcon";
-import { javascript, python, dapps } from "@/navigation/footer";
-import { ArrowRightIcon } from "./icons/ArrowRightIcon";
-import Link from "next/link";
+import { ChevronRightIcon } from '@heroicons/react/24/solid'
+import { DiscordIconBlue } from './icons/DiscordIconBlue'
+import { GithubIcon } from './icons/GithubIcon'
+import { GolemIcon } from './icons/GolemIcon'
+import { LinkedInIcon } from './icons/LinkedIn'
+import { RedditIcon } from './icons/RedditIcon'
+import { YoutubeIcon } from './icons/YoutubeIcon'
+import { javascript, python, dapps } from '@/navigation/footer'
+import { ArrowRightIcon } from './icons/ArrowRightIcon'
+import Link from 'next/link'
 
-const links = [...javascript, ...python];
+const links = [...javascript, ...python]
 
 const navigation = [
   {
-    name: "GitHub",
-    href: "https://github.com/golemfactory",
+    name: 'GitHub',
+    href: 'https://github.com/golemfactory',
     icon: GithubIcon,
   },
   {
-    name: "Discord",
-    href: "https://chat.golem.network",
+    name: 'Discord',
+    href: 'https://chat.golem.network',
     icon: DiscordIconBlue,
   },
   {
-    name: "Reddit",
-    href: "https://www.reddit.com/r/GolemProject/",
+    name: 'Reddit',
+    href: 'https://www.reddit.com/r/GolemProject/',
     icon: RedditIcon,
   },
 
   {
-    name: "Youtube",
-    href: "https://www.youtube.com/@GolemNetwork",
+    name: 'Youtube',
+    href: 'https://www.youtube.com/@GolemNetwork',
     icon: YoutubeIcon,
   },
   {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/company/golem-network/",
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/golem-network/',
     icon: LinkedInIcon,
   },
-];
+]
 
 const LinkSection = ({ title, links }) => (
   <section className="ml-4 mt-6">
@@ -58,12 +58,12 @@ const LinkSection = ({ title, links }) => (
       ))}
     </ul>
   </section>
-);
+)
 
 const DocSection = ({ title, description, link, data }) => (
   <div>
     <DocHeader
-      classes={"text-xl"}
+      classes={'text-xl'}
       title={title}
       description={description}
       link={link}
@@ -76,7 +76,7 @@ const DocSection = ({ title, description, link, data }) => (
       )}
     </div>
   </div>
-);
+)
 
 const DocHeader = ({ title, description, link, classes }) => (
   <>
@@ -84,7 +84,7 @@ const DocHeader = ({ title, description, link, classes }) => (
     <p className="text-sm text-gray-500 dark:text-white/50">{description}</p>
     <NavLink link={link} />
   </>
-);
+)
 
 const NavLink = ({ link }) => (
   <Link
@@ -92,26 +92,26 @@ const NavLink = ({ link }) => (
     aria-label="Overview"
     className="flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-darkprimary"
   >
-    Overview{" "}
+    Overview{' '}
     <ArrowRightIcon className="h-3 w-3 fill-primary dark:fill-darkprimary" />
   </Link>
-);
+)
 
 export const Footer = () => (
   <footer className="bg-white pt-8 dark:bg-transparent">
     <div className="mb-4 border-y border-y-lightbluedarker bg-lightblue dark:bg-darkbg">
-      <div className="sm:pt-18 mx-auto grid max-w-7xl grid-cols-1 px-6 pb-8 pt-16 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
+      <div className="sm:pt-18 mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 pb-8 pt-16 lg:px-8">
         <DocSection
           title="JS Docs"
           data={javascript}
-          description={"Contracts or people on the network"}
-          link={"/docs/creators/javascript"}
+          description={'Contracts or people on the network'}
+          link={'/docs/creators/javascript'}
         />
         <DocSection
           title="Learn Dapps"
           data={dapps}
-          description={"Contracts or people on the network"}
-          link={"/docs/creators/dapps"}
+          description={'Contracts or people on the network'}
+          link={'/docs/creators/dapps'}
         />
 
         {/* <DocSection title="Python" data={python} /> */}
@@ -119,7 +119,7 @@ export const Footer = () => (
     </div>
     <LowerFooter />
   </footer>
-);
+)
 
 const LowerFooter = () => (
   <div>
@@ -135,7 +135,7 @@ const LowerFooter = () => (
       </span>
     </div>
   </div>
-);
+)
 
 const FooterNav = () => (
   <div className="flex justify-center space-x-6 md:order-2">
@@ -153,4 +153,4 @@ const FooterNav = () => (
       </Link>
     ))}
   </div>
-);
+)

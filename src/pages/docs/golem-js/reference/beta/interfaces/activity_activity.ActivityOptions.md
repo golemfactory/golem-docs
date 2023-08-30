@@ -30,7 +30,7 @@ timeout for sending and creating batch
 
 [src/activity/activity.ts:32](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L32)
 
----
+___
 
 ### activityExecuteTimeout
 
@@ -42,7 +42,7 @@ timeout for executing batch
 
 [src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L34)
 
----
+___
 
 ### activityExeBatchResultsFetchInterval
 
@@ -54,7 +54,7 @@ interval for fetching batch results while polling
 
 [src/activity/activity.ts:36](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L36)
 
----
+___
 
 ### logger
 
@@ -66,7 +66,7 @@ Logger module
 
 [src/activity/activity.ts:38](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L38)
 
----
+___
 
 ### eventTarget
 

@@ -6,9 +6,8 @@ title: Yagna installation for providers
 # Yagna provider installation
 
 {% alert level="info" %}
-
 - The provider works on: Ubuntu 18.04 or 20.04
-  {% /alert %}
+{% /alert %}
 
 This article will show you how to set up and run a provider node on Golem to start earning GLM tokens.
 
@@ -26,11 +25,12 @@ curl -sSf https://join.golem.network/as-provider | bash -
 
 After installing all required components, you will be asked to set up your node, by providing configuration values. If you leave them empty, the default values (presented in brackets) will be applied. Press Enter for each entry to save it.
 
-|                                                     |                                                                                                                                                                                                                   |
-| :-------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Node name (default=generated-name)`                | Type in the name of your new node. If you leave this space empty, a random auto-generated name will be used.                                                                                                      |
-| `Ethereum wallet address (default=internal wallet)` | Paste your own Ethereum address to which you have private keys stored. If you leave this space empty, an address will be created for you on your local system.                                                    |
-| `price GLM per hour (default=0.1)`                  | Type in the value of renting your computer power as a provider. You can use the default price (0.1 GLM per hour) by leaving this field empty. This command shows up only when running GolemSP for the first time. |
+
+|||
+|:------------------------|:---------------------------------------------------------------------|
+|`Node name (default=generated-name)` |Type in the name of your new node. If you leave this space empty, a random auto-generated name will be used.|
+|`Ethereum wallet address (default=internal wallet)`|Paste your own Ethereum address to which you have private keys stored. If you leave this space empty, an address will be created for you on your local system.|
+|`price GLM per hour (default=0.1)`|Type in the value of renting your computer power as a provider. You can use the default price (0.1 GLM per hour) by leaving this field empty. This command shows up only when running GolemSP for the first time.|
 
 ### Modifying your PATH
 
@@ -40,8 +40,7 @@ You might be asked to modify your PATH afterward for future terminal sessions. M
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 ```
 
-Update your active shell(s) with:
-
+Update your active shell(s) with: 
 ```bash
 export PATH="$HOME/.local/bin:$PATH"
 ```
@@ -54,6 +53,7 @@ To run the Golem provider on the main/production network, type the following com
 golemsp run
 ```
 
+
 ## Verifying node status
 
 To check your node's status and see if it is active and computing tasks from the network, open a new terminal window and type:
@@ -64,13 +64,13 @@ golemsp status
 
 As an output, you will get the information about your node's current state as shown below. The following, more important values are given and correspond to:
 
-| Value(s) | Value description                                           |
-| :------- | :---------------------------------------------------------- |
-| Service  | Shows the running status of the provider                    |
-| Wallet   | The ERC-20 wallet address where you receive your GLM        |
-| Network  | Which network you are on, e.g., mainnet or testnet          |
-| Amount   | For each respective network, it shows how much GLM is owned |
-| Tasks    | Information of how much work your provider has done         |
+|Value(s)                  |   Value  description  |
+|:----------------------|:----------------------------------------|
+|Service|Shows the running status of the provider|
+|Wallet|The ERC-20 wallet address where you receive your GLM|
+|Network|Which network you are on, e.g., mainnet or testnet|
+|Amount|For each respective network, it shows how much GLM is owned|
+|Tasks|Information of how much work your provider has done|
 
 ```bash
 $ golemsp status
@@ -91,14 +91,15 @@ $ golemsp status
 
 ## Port forwarding
 
-Yagna service is using the UDP protocol on port 11500 for communication.
+Yagna service is using the UDP protocol on port 11500 for communication. 
 To help the Golem Network grow and become more resilient and stable it needs more nodes with public IP addresses.
-Nodes with an IP address offer better network performance and are more attractive for Requestors.
-If you want to help, and at the same time improve communication of your node with the Golem Network, you need to manually open the port on your router and set up port forwarding.
+Nodes with an IP address offer better network performance and are more attractive for Requestors. 
+If you want to help, and at the same time improve communication of your node with the Golem Network, you need to manually open the port on your router and set up port forwarding. 
 
-For router specific instructions on how to forward your ports go to:: [https://portforward.com/](https://portforward.com/).
+For router specific instructions on how to forward your ports go to:: [https://portforward.com/](https://portforward.com/). 
 
-To check if your ports are forwarded correctly you can use [https://canyouseeme.org/](https://canyouseeme.org/). If port forwarding doesn't work, you may need to call your ISP to change settings on your router.
+To check if your ports are forwarded correctly you can use [https://canyouseeme.org/](https://canyouseeme.org/). If port forwarding doesn't work, you may need to call your ISP to change settings on your router. 
+
 
 {% docnavigation title="Next steps" %}
 
@@ -107,3 +108,4 @@ To check if your ports are forwarded correctly you can use [https://canyouseeme.
 - [Provider CLI Reference](/docs/providers/yagna-cli-reference)
 
 {% /docnavigation %}
+

@@ -36,7 +36,7 @@ A custom filter that checks every proposal coming from the market
 
 [src/market/service.ts:14](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/service.ts#L14)
 
----
+___
 
 ### debitNotesAcceptanceTimeout
 
@@ -48,7 +48,7 @@ Maximum time for debit note acceptance
 
 [src/market/service.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/service.ts#L16)
 
----
+___
 
 ### subnetTag
 
@@ -62,7 +62,7 @@ DemandOptions.subnetTag
 
 [src/market/demand.ts:21](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L21)
 
----
+___
 
 ### yagnaOptions
 
@@ -76,7 +76,7 @@ DemandOptions.yagnaOptions
 
 [src/market/demand.ts:22](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L22)
 
----
+___
 
 ### marketTimeout
 
@@ -90,7 +90,7 @@ DemandOptions.marketTimeout
 
 [src/market/demand.ts:23](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L23)
 
----
+___
 
 ### marketOfferExpiration
 
@@ -104,7 +104,7 @@ DemandOptions.marketOfferExpiration
 
 [src/market/demand.ts:24](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L24)
 
----
+___
 
 ### logger
 
@@ -118,7 +118,7 @@ DemandOptions.logger
 
 [src/market/demand.ts:25](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L25)
 
----
+___
 
 ### maxOfferEvents
 
@@ -132,7 +132,7 @@ DemandOptions.maxOfferEvents
 
 [src/market/demand.ts:26](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L26)
 
----
+___
 
 ### offerFetchingInterval
 
@@ -146,7 +146,7 @@ DemandOptions.offerFetchingInterval
 
 [src/market/demand.ts:27](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L27)
 
----
+___
 
 ### proposalTimeout
 
@@ -160,7 +160,7 @@ DemandOptions.proposalTimeout
 
 [src/market/demand.ts:28](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L28)
 
----
+___
 
 ### eventTarget
 

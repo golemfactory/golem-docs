@@ -14,14 +14,14 @@
 
 #### Type declaration
 
-| Name                | Type            |
-| :------------------ | :-------------- |
-| `getYagnaApiUrl`    | () => `string`  |
-| `getYagnaAppKey`    | () => `string`  |
-| `getYagnaSubnet`    | () => `string`  |
-| `getRepoUrl`        | () => `string`  |
-| `getPaymentNetwork` | () => `string`  |
-| `isDevMode`         | () => `boolean` |
+| Name | Type |
+| :------ | :------ |
+| `getYagnaApiUrl` | () => `string` |
+| `getYagnaAppKey` | () => `string` |
+| `getYagnaSubnet` | () => `string` |
+| `getRepoUrl` | () => `string` |
+| `getPaymentNetwork` | () => `string` |
+| `isDevMode` | () => `boolean` |
 
 #### Defined in
 

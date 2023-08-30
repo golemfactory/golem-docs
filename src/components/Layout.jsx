@@ -1,27 +1,27 @@
-import { useCallback, useEffect, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import clsx from "clsx";
+import { useCallback, useEffect, useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import clsx from 'clsx'
 
-import { Hero } from "@/components/Hero";
-import { Logo } from "@/components/Logo";
-import { MobileNavigation } from "@/components/MobileNavigation";
+import { Hero } from '@/components/Hero'
+import { Logo } from '@/components/Logo'
+import { MobileNavigation } from '@/components/MobileNavigation'
 
-import { Prose } from "@/components/Prose";
-import { Search } from "@/components/Search";
-import { ThemeToggler } from "@/components/ThemeSelector";
-import VersionSwitcher from "@/components/VersionSwitcher";
+import { Prose } from '@/components/Prose'
+import { Search } from '@/components/Search'
+import { ThemeToggler } from '@/components/ThemeSelector'
+import VersionSwitcher from '@/components/VersionSwitcher'
 
 function Heading({ section, isActive }) {
-  const isChildActive = section.children.some(isActive);
+  const isChildActive = section.children.some(isActive)
   return (
     <h3>
       <Link
         href={`#${section.id}`}
         className={clsx(
           isActive(section) && !isChildActive
-            ? "relative text-sm text-primary dark:text-white"
-            : "text-sm font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
+            ? 'relative text-sm text-primary dark:text-white'
+            : 'text-sm font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
         )}
       >
         {isActive(section) && !isChildActive && (
@@ -30,7 +30,7 @@ function Heading({ section, isActive }) {
         {section.title}
       </Link>
     </h3>
-  );
+  )
 }
 
 function recursiveRender(children, isActive) {
@@ -40,8 +40,8 @@ function recursiveRender(children, isActive) {
         href={`#${node.id}`}
         className={
           isActive(node)
-            ? "relative text-sm text-primary dark:text-white"
-            : "text-sm hover:text-slate-600 dark:hover:text-slate-300"
+            ? 'relative text-sm text-primary dark:text-white'
+            : 'text-sm hover:text-slate-600 dark:hover:text-slate-300'
         }
       >
         {isActive(node) && (
@@ -55,43 +55,40 @@ function recursiveRender(children, isActive) {
         </ul>
       )}
     </li>
-  ));
+  ))
 }
 
 function Header({ navigation }) {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
+      setIsScrolled(window.scrollY > 0)
+    }
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
-  const [githubInfo, setGithubInfo] = useState({
-    stargazersCount: 0,
-    forks: 0,
-  });
+  const [githubInfo, setGithubInfo] = useState({ stargazersCount: 0, forks: 0 })
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/golemfactory/yagna")
+    fetch('https://api.github.com/repos/golemfactory/yagna')
       .then((response) => response.json())
       .then((data) => {
         setGithubInfo({
           stargazersCount: data.stargazers_count,
           forks: data.forks,
-        });
-      });
-  }, []);
+        })
+      })
+  }, [])
 
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50   border-b border-b-lightbluedarker bg-lightblue px-4 py-5 transition duration-500 dark:border-b-[#161721] sm:px-6 lg:px-8",
-        isScrolled ? "dark:bg-darkbg " : "dark:bg-transparent"
+        'sticky top-0 z-50   border-b border-b-lightbluedarker bg-lightblue px-4 py-5 transition duration-500 dark:border-b-[#161721] sm:px-6 lg:px-8',
+        isScrolled ? 'dark:bg-darkbg ' : 'dark:bg-transparent'
       )}
     >
       <div className="relative mx-auto  flex max-w-8xl sm:px-2 lg:px-8 xl:px-12">
@@ -138,88 +135,88 @@ function Header({ navigation }) {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
 function useTableOfContents(tableOfContents) {
-  let [currentSection, setCurrentSection] = useState(tableOfContents[0]?.id);
+  let [currentSection, setCurrentSection] = useState(tableOfContents[0]?.id)
 
   let getHeadings = useCallback((tableOfContents) => {
     function getNodeIds(nodes) {
-      return nodes.flatMap((node) => [node.id, ...getNodeIds(node.children)]);
+      return nodes.flatMap((node) => [node.id, ...getNodeIds(node.children)])
     }
 
     return getNodeIds(tableOfContents).map((id) => {
-      let el = document.getElementById(id);
-      if (!el) return;
+      let el = document.getElementById(id)
+      if (!el) return
 
-      let style = window.getComputedStyle(el);
-      let scrollMt = parseFloat(style.scrollMarginTop);
+      let style = window.getComputedStyle(el)
+      let scrollMt = parseFloat(style.scrollMarginTop)
 
-      let top = window.scrollY + el.getBoundingClientRect().top - scrollMt;
-      return { id, top };
-    });
-  }, []);
+      let top = window.scrollY + el.getBoundingClientRect().top - scrollMt
+      return { id, top }
+    })
+  }, [])
 
   useEffect(() => {
-    if (tableOfContents.length === 0) return;
-    let headings = getHeadings(tableOfContents);
+    if (tableOfContents.length === 0) return
+    let headings = getHeadings(tableOfContents)
     function onScroll() {
-      let top = window.scrollY;
-      let current = headings[0].id;
+      let top = window.scrollY
+      let current = headings[0].id
       for (let heading of headings) {
         if (top >= heading.top) {
-          current = heading.id;
+          current = heading.id
         } else {
-          break;
+          break
         }
       }
-      setCurrentSection(current);
+      setCurrentSection(current)
     }
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
     return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [getHeadings, tableOfContents]);
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [getHeadings, tableOfContents])
 
-  return currentSection;
+  return currentSection
 }
-import { navigation as normalNavLinks } from "@/navigation/docs";
-import { mergednavs } from "@/navigation/mergeNavigation";
-import { navigation as JSReference } from "@/navigation/jsreference";
-import { Navigation, MenuBar, SideBar } from "./Navigation";
-import { ForkIcon } from "./icons/ForkIcon";
-import { StarIcon } from "./icons/StarIcon";
-import { GitIcon } from "./icons/GitIcon";
-import { Footer } from "./Footer";
-import { Feedback } from "./Feedback";
-import { ArrowLeftIcon } from "@/components/icons/ArrowLeftIcon";
-import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon";
-import { ArticleType } from "./ArticleType";
+import { navigation as normalNavLinks } from '@/navigation/docs'
+import { mergednavs } from '@/navigation/mergeNavigation'
+import { navigation as JSReference } from '@/navigation/jsreference'
+import { Navigation, MenuBar, SideBar } from './Navigation'
+import { ForkIcon } from './icons/ForkIcon'
+import { StarIcon } from './icons/StarIcon'
+import { GitIcon } from './icons/GitIcon'
+import { Footer } from './Footer'
+import { Feedback } from './Feedback'
+import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
+import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
+import { ArticleType } from './ArticleType'
 
 export function Layout({
   children,
   title,
   tableOfContents,
   tags,
-  type = "guide",
+  type = 'guide',
 }) {
-  let router = useRouter();
-  let isHomePage = router.pathname === "/";
-  let allLinks = normalNavLinks.flatMap((section) => section.links);
-  let LinkIndex = allLinks.findIndex((link) => link.href === router.pathname);
+  let router = useRouter()
+  let isHomePage = router.pathname === '/'
+  let allLinks = normalNavLinks.flatMap((section) => section.links)
+  let LinkIndex = allLinks.findIndex((link) => link.href === router.pathname)
 
-  let previousPage = allLinks[LinkIndex - 1];
-  let nextPage = allLinks[LinkIndex + 1];
+  let previousPage = allLinks[LinkIndex - 1]
+  let nextPage = allLinks[LinkIndex + 1]
 
   let section = normalNavLinks.find((section) =>
     section.links.find((link) => link.href === router.pathname)
-  );
-  const currentSection = useTableOfContents(isHomePage ? [] : tableOfContents);
+  )
+  const currentSection = useTableOfContents(isHomePage ? [] : tableOfContents)
 
   function isActive(section) {
-    return section.id === currentSection;
+    return section.id === currentSection
   }
 
   return (
@@ -246,7 +243,7 @@ export function Layout({
               {type && <ArticleType type={type} />}
               {tags && (
                 <div className="flex gap-x-4 ">
-                  {tags.split(",").map((tag, index, array) => (
+                  {tags.split(',').map((tag, index, array) => (
                     <span
                       className="text-sm text-normalgray dark:text-white/50"
                       key={tag}
@@ -297,5 +294,5 @@ export function Layout({
       </div>
       <Footer />
     </>
-  );
+  )
 }

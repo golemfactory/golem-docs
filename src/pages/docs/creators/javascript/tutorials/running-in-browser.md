@@ -111,7 +111,7 @@ First, we will import the `@golem-sdk/golem-js` library:
 
 ```html
 <script type="module">
-  import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
+  import { TaskExecutor } from 'https://unpkg.com/@golem-sdk/golem-js'
 </script>
 ```
 
@@ -132,18 +132,18 @@ Note that the `create()` method received an additional 3 parameters:
   //
   async function run() {
     const executor = await TaskExecutor.create({
-      yagnaOptions: { apiKey: "try_golem" },
-      package: "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae",
+      yagnaOptions: { apiKey: 'try_golem' },
+      package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
       logger,
-    });
+    })
     await executor
       .run(async (ctx) =>
         appendResults((await ctx.run("echo 'Hello World'")).stdout)
       )
-      .catch((e) => logger.error(e));
-    await executor.end();
+      .catch((e) => logger.error(e))
+    await executor.end()
   }
-  window.run = run;
+  window.run = run
 </script>
 ```
 
@@ -162,10 +162,10 @@ Now let's create the `appendResults()` function which will put the output of our
   // .. previously added import statement
   //
   export function appendResults(result) {
-    const results_el = document.getElementById("results");
-    const li = document.createElement("li");
-    li.appendChild(document.createTextNode(result));
-    results_el.appendChild(li);
+    const results_el = document.getElementById('results')
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(result))
+    results_el.appendChild(li)
   }
 
   //
@@ -184,10 +184,10 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
   // .. previously added code
   //
   export function appendLog(msg) {
-    const logs_el = document.getElementById("logs");
-    const li = document.createElement("li");
-    li.appendChild(document.createTextNode(msg));
-    logs_el.appendChild(li);
+    const logs_el = document.getElementById('logs')
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(msg))
+    logs_el.appendChild(li)
   }
 
   const logger = {
@@ -196,8 +196,8 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
     debug: (msg) => appendLog(`[${new Date().toISOString()}] [debug] ${msg}`),
     error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
     info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-    table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
-  };
+    table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
+  }
 
   //
   // .. async function run ....
@@ -240,19 +240,19 @@ Now that we have all the necessary components defined, the code between `<script
     </div>
 
     <script type="module">
-      import { TaskExecutor } from "https://unpkg.com/@golem-sdk/golem-js";
+      import { TaskExecutor } from 'https://unpkg.com/@golem-sdk/golem-js'
 
       export function appendLog(msg) {
-        const logs_el = document.getElementById("logs");
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(msg));
-        logs_el.appendChild(li);
+        const logs_el = document.getElementById('logs')
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(msg))
+        logs_el.appendChild(li)
       }
       export function appendResults(result) {
-        const results_el = document.getElementById("results");
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(result));
-        results_el.appendChild(li);
+        const results_el = document.getElementById('results')
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(result))
+        results_el.appendChild(li)
       }
 
       const logger = {
@@ -262,22 +262,22 @@ Now that we have all the necessary components defined, the code between `<script
         error: (msg) =>
           appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
         info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-        table: (msg) => appendLog(JSON.stringify(msg, null, "\t")),
-      };
+        table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
+      }
       async function run() {
         const executor = await TaskExecutor.create({
-          yagnaOptions: { apiKey: "try_golem" },
-          package: "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae",
+          yagnaOptions: { apiKey: 'try_golem' },
+          package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
           logger,
-        });
+        })
         await executor
           .run(async (ctx) =>
             appendResults((await ctx.run("echo 'Hello World'")).stdout)
           )
-          .catch((e) => logger.error(e));
-        await executor.end();
+          .catch((e) => logger.error(e))
+        await executor.end()
       }
-      document.getElementById("echo").onclick = run;
+      document.getElementById('echo').onclick = run
     </script>
   </body>
 </html>

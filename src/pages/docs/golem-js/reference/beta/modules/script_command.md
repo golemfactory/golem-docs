@@ -20,8 +20,8 @@
 
 #### Type declaration
 
-| Name      | Type          |
-| :-------- | :------------ |
+| Name | Type |
+| :------ | :------ |
 | `stdout?` | `CaptureMode` |
 | `stderr?` | `CaptureMode` |
 
@@ -29,4 +29,4 @@
 
 [src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/script/command.ts#L76)
 
----
+___

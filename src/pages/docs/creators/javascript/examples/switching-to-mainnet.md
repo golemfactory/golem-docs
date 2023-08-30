@@ -41,7 +41,7 @@ By default, JS SDK will execute your task in testnet. This is a development netw
 
 In this article, we will show how to run your tasks on Polygon.
 
-## Running your tasks on the Polygon Network
+## Running your tasks on the Polygon Network 
 
 In this example, we create the TaskExecutor with additional parameters that indicate we intend to run our task on the Polygon platform.
 
@@ -50,15 +50,14 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
-    subnetTag: "public", // do we need to show subnet ??
+    subnetTag: "public",  // do we need to show subnet ??
     payment: { driver: "erc-20", network: "polygon" },
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",
-    yagnaOptions: { apiKey: "try_golem" },
+    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    yagnaOptions: { apiKey: 'try_golem' }
   });
 
   const result = await executor.run(
-    async (ctx) => (await ctx.run("node -v")).stdout
-  );
+    async (ctx) => (await ctx.run("node -v")).stdout);
   await executor.end();
 
   console.log("Task result:", result);
@@ -66,3 +65,4 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 ```
 
 In the script output, you can see that now the network is a `Polygon`.
+

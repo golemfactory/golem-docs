@@ -23,7 +23,7 @@
 
 [src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/debit_note.ts#L11)
 
----
+___
 
 ### timestamp
 
@@ -33,7 +33,7 @@
 
 [src/payment/debit_note.ts:12](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/debit_note.ts#L12)
 
----
+___
 
 ### activityId
 
@@ -43,7 +43,7 @@
 
 [src/payment/debit_note.ts:13](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/debit_note.ts#L13)
 
----
+___
 
 ### agreementId
 
@@ -53,7 +53,7 @@
 
 [src/payment/debit_note.ts:14](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/debit_note.ts#L14)
 
----
+___
 
 ### totalAmountDue
 
@@ -63,7 +63,7 @@
 
 [src/payment/debit_note.ts:15](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/payment/debit_note.ts#L15)
 
----
+___
 
 ### usageCounterVector
 

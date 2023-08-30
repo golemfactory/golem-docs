@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: "The branch of the golem-js repository that should have API reference generated"
+        description: 'The branch of the golem-js repository that should have API reference generated'
         required: true
-        default: "master"
+        default: 'master'
 
 jobs:
   build:
@@ -21,8 +21,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: "feat: Update golem-js API Reference for branch ${{ github.event.inputs.branch }}"
-          title: "feat: Update golem-js API Reference for branch ${{ github.event.inputs.branch }}"
+          commit-message: 'feat: Update golem-js API Reference for branch ${{ github.event.inputs.branch }}'
+          title: 'feat: Update golem-js API Reference for branch ${{ github.event.inputs.branch }}'
           branch: patch/golem-js-api-reference-${{ github.event.inputs.branch }}
           reviewers: cryptobench
           base: ${{ github.event.inputs.branch }}

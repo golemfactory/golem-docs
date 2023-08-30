@@ -24,7 +24,7 @@
 
 [src/task/work.ts:30](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L30)
 
----
+___
 
 ### activityStateCheckingInterval
 
@@ -34,7 +34,7 @@
 
 [src/task/work.ts:31](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L31)
 
----
+___
 
 ### provider
 
@@ -42,17 +42,17 @@
 
 #### Type declaration
 
-| Name             | Type     |
-| :--------------- | :------- |
-| `name`           | `string` |
-| `id`             | `string` |
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `id` | `string` |
 | `networkConfig?` | `object` |
 
 #### Defined in
 
 [src/task/work.ts:32](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L32)
 
----
+___
 
 ### storageProvider
 
@@ -62,7 +62,7 @@
 
 [src/task/work.ts:33](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L33)
 
----
+___
 
 ### networkNode
 
@@ -72,7 +72,7 @@
 
 [src/task/work.ts:34](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L34)
 
----
+___
 
 ### logger
 
@@ -82,7 +82,7 @@
 
 [src/task/work.ts:35](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L35)
 
----
+___
 
 ### initWorker
 

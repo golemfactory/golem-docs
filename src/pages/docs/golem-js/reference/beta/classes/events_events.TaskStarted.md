@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `providerId`: `string` ; `providerName`: `string` }\>
+- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `providerId`: `string` ; `providerName`: `string`  }\>
 
   ↳ **`TaskStarted`**
 
@@ -28,13 +28,13 @@
 
 #### Parameters
 
-| Name                | Type     |
-| :------------------ | :------- |
-| `data?`             | `Object` |
-| `data.id`           | `string` |
-| `data.agreementId`  | `string` |
-| `data.activityId`   | `string` |
-| `data.providerId`   | `string` |
+| Name | Type |
+| :------ | :------ |
+| `data?` | `Object` |
+| `data.id` | `string` |
+| `data.agreementId` | `string` |
+| `data.activityId` | `string` |
+| `data.providerId` | `string` |
 | `data.providerName` | `string` |
 
 #### Inherited from
@@ -53,12 +53,12 @@
 
 #### Type declaration
 
-| Name           | Type     |
-| :------------- | :------- |
-| `id`           | `string` |
-| `agreementId`  | `string` |
-| `activityId`   | `string` |
-| `providerId`   | `string` |
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `agreementId` | `string` |
+| `activityId` | `string` |
+| `providerId` | `string` |
 | `providerName` | `string` |
 
 #### Inherited from
@@ -69,7 +69,7 @@
 
 [src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L16)
 
----
+___
 
 ### name
 
@@ -83,7 +83,7 @@
 
 [src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/events/events.ts#L17)
 
----
+___
 
 ### timestamp
 

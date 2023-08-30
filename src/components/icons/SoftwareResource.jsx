@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 export const SoftwareResource = (props) => (
   <svg
     width="41"
@@ -37,4 +37,4 @@ export const SoftwareResource = (props) => (
       </clipPath>
     </defs>
   </svg>
-);
+)

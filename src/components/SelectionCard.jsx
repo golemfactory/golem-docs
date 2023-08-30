@@ -1,7 +1,7 @@
-import { Icon } from "@/components/Icon";
-import Link from "next/link";
-import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon";
-import { CheckIcon } from "@/components/icons/CheckIcon";
+import { Icon } from '@/components/Icon'
+import Link from 'next/link'
+import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
+import { CheckIcon } from '@/components/icons/CheckIcon'
 export function SelectionCard({ children, icon, title, buttonText, href }) {
   return (
     <div className="not-prose flex min-h-full flex-col justify-between rounded-md border border-lightbluedarker bg-lightblue">
@@ -34,5 +34,5 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
         </Link>
       </div>
     </div>
-  );
+  )
 }

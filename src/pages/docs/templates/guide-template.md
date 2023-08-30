@@ -28,9 +28,10 @@ Examples should be possible to complete in one step. They should focus on specif
 Tutorials, on the other hand, can be done in steps. there might be interactions between different elements that impact the proposed solution.
 The steps can be from different areas: how to organize debugging, how to name the file, how to install a tool, and how to define a function in the code.
 
+
 # Task model
 
-As the normal body text is monotonous and boring (and difficult to read), make sure that **term** are visible or even are in a form of a [link](#task-model) to specific sections or other articles.
+As the normal body text is monotonous and boring (and difficult to read), make sure that __term__ are visible or even are in a form of a [link](#task-model) to specific sections or other articles.
 
 ## Remember this is a guide
 
@@ -38,11 +39,14 @@ As such, it should cover the topic broadly, and point to articles that explore i
 
 You can also provide an overview of interesting areas and point to specific examples or tutorials.
 
+
 {% docnavigation title="Next steps" %}
 
 Refer to another [Examples](/docs/templates/example-template)
 
+
 {% /docnavigation %}
+
 
 {% docnavigation title="See also" %}
 
@@ -51,3 +55,6 @@ You can explore our [tutorials](/docs/templates/tutorial-template) to see how to
 You can provide an external source of information [here](https://github.com)
 
 {% /docnavigation %}
+
+
+   
