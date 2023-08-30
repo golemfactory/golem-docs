@@ -5,10 +5,17 @@ import { useState, useEffect } from "react";
 export function Fence({ children, language, content }) {
   const [copied, setCopied] = useState(false);
   const handleClick = () => {
-    navigator.clipboard
-      .writeText(children.trimEnd())
-      .then(() => setCopied(true))
-      .catch(() => console.error("Could not copy text"));
+    if (children) {
+      navigator.clipboard
+        .writeText(children.trimEnd())
+        .then(() => setCopied(true))
+        .catch(() => console.error("Could not copy text"));
+    } else {
+      navigator.clipboard
+        .writeText(content)
+        .then(() => setCopied(true))
+        .catch(() => console.error("Could not copy text"));
+    }
   };
 
   useEffect(() => {
