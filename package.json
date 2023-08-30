@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "doc": "typedoc yajsapi/tsconfig.json --plugin typedoc-plugin-markdown",
-    "prepare": "husky install",
+    "prepare": "husky install .husky",
     "precommit": "prettier . --write"
   },
   "browserslist": "defaults, not ie <= 11",
