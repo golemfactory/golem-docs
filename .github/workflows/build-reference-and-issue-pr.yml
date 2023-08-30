@@ -15,7 +15,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2
       - name: Generate documentation
-        run: ${{ github.workspace }}/generate-reference.sh ${{ github.event.inputs.branch }}
+        run: ./generate-reference.sh ${{ github.event.inputs.branch }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
