@@ -24,6 +24,6 @@ jobs:
           commit-message: 'feat: Update golem-js API Reference for branch ${{ github.event.inputs.branch }}'
           title: 'feat: Update golem-js API Reference for branch ${{ github.event.inputs.branch }}'
           branch: patch/golem-js-api-reference-${{ github.event.inputs.branch }}
-          reviewers: ${{ github.repository_owner }}
+          reviewers: cryptobench
           base: ${{ github.event.inputs.branch }}
           delete-branch: true
