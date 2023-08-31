@@ -7,7 +7,7 @@ title: QuickStart to running your first decentralized application
 
 ## What's in it for me?
 
-By following this tutorial, you'll see how easy it is to deploy web applications to Golem.
+By following this tutorial, you'll see how easy it is to deploy web applications on Golem.
 
 You should be able to complete it regardless of your level of experience. However, it will help if you have some fluency using basic unix tools like `curl` or `git` and are not afraid of running console commands.
 
