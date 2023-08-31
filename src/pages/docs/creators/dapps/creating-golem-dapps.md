@@ -131,7 +131,7 @@ At the moment, the manifests provide no way to specify a port range or a wildcar
 
 Before deploying the app to Golem, you may wish to test it.
 
-One way to do this is by bundling it with `docker-compose` and verifying that all of its components work as intended when launched as a whole. Of course, there are currently quite a few differences between Docker and Golem, Therefore, confirming that your application works correctly on the former is not yet a guarantee of success when launched on the latter, but it still remains a great way of ensuring no detail has been missed at this stage.
+One way to do this is by bundling it with `docker-compose` and verifying that all of its components work as intended when launched as a whole. Of course, there are currently quite a few differences between Docker and Golem. Therefore, confirming that your application works correctly on the former is not yet a guarantee of success when launched on the latter, but it still remains a great way of ensuring no detail has been missed at this stage.
 
 ### ya-runtime-dbg
 
