@@ -35,7 +35,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 #### Defined in
 
-[src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L15)
+[src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/service.ts#L15)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L16)
+[src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/service.ts#L16)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L17)
+[src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/service.ts#L17)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L18)
+[src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/service.ts#L18)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L19)
+[src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/service.ts#L19)
 
 ___
 
@@ -91,7 +91,7 @@ Logger module
 
 #### Defined in
 
-[src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L20)
+[src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/service.ts#L20)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/service.ts#L21)
+[src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/service.ts#L21)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L30)
+[src/activity/activity.ts:24](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L24)
 
 ___
 
@@ -138,7 +138,7 @@ timeout for sending and creating batch
 
 #### Defined in
 
-[src/activity/activity.ts:37](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L37)
+[src/activity/activity.ts:31](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L31)
 
 ___
 
@@ -154,7 +154,7 @@ timeout for executing batch
 
 #### Defined in
 
-[src/activity/activity.ts:39](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L39)
+[src/activity/activity.ts:33](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L33)
 
 ___
 
@@ -170,7 +170,7 @@ interval for fetching batch results while polling
 
 #### Defined in
 
-[src/activity/activity.ts:41](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L41)
+[src/activity/activity.ts:35](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L35)
 
 ___
 
@@ -186,4 +186,4 @@ Event Bus implements EventTarget
 
 #### Defined in
 
-[src/activity/activity.ts:45](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/activity.ts#L45)
+[src/activity/activity.ts:39](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L39)

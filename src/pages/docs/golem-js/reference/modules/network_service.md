@@ -14,4 +14,4 @@
 
 #### Defined in
 
-[src/network/service.ts:7](https://github.com/golemfactory/golem-js/blob/614ea72/src/network/service.ts#L7)
+[src/network/service.ts:7](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/network/service.ts#L7)

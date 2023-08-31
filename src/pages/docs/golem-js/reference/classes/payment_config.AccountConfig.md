@@ -43,7 +43,7 @@ BaseConfig.constructor
 
 #### Defined in
 
-[src/payment/config.ts:46](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L46)
+[src/payment/config.ts:46](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L46)
 
 ## Properties
 
@@ -57,7 +57,7 @@ BaseConfig.yagnaOptions
 
 #### Defined in
 
-[src/payment/config.ts:38](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L38)
+[src/payment/config.ts:38](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L38)
 
 ___
 
@@ -71,7 +71,7 @@ BaseConfig.paymentTimeout
 
 #### Defined in
 
-[src/payment/config.ts:39](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L39)
+[src/payment/config.ts:39](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L39)
 
 ___
 
@@ -85,7 +85,7 @@ BaseConfig.api
 
 #### Defined in
 
-[src/payment/config.ts:40](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L40)
+[src/payment/config.ts:40](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L40)
 
 ___
 
@@ -99,7 +99,7 @@ BaseConfig.logger
 
 #### Defined in
 
-[src/payment/config.ts:41](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L41)
+[src/payment/config.ts:41](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L41)
 
 ___
 
@@ -113,7 +113,7 @@ BaseConfig.eventTarget
 
 #### Defined in
 
-[src/payment/config.ts:42](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L42)
+[src/payment/config.ts:42](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L42)
 
 ___
 
@@ -134,7 +134,7 @@ BaseConfig.payment
 
 #### Defined in
 
-[src/payment/config.ts:43](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L43)
+[src/payment/config.ts:43](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L43)
 
 ___
 
@@ -148,7 +148,7 @@ BaseConfig.httpAgent
 
 #### Defined in
 
-[src/payment/config.ts:44](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L44)
+[src/payment/config.ts:44](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L44)
 
 ___
 
@@ -162,4 +162,4 @@ BaseConfig.options
 
 #### Defined in
 
-[src/payment/config.ts:46](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/config.ts#L46)
+[src/payment/config.ts:46](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/config.ts#L46)

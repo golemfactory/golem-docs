@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/storage/ws-browser.ts:9](https://github.com/golemfactory/golem-js/blob/614ea72/src/storage/ws-browser.ts#L9)
+[src/storage/ws-browser.ts:9](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/storage/ws-browser.ts#L9)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[src/storage/ws-browser.ts:13](https://github.com/golemfactory/golem-js/blob/614ea72/src/storage/ws-browser.ts#L13)
+[src/storage/ws-browser.ts:13](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/storage/ws-browser.ts#L13)

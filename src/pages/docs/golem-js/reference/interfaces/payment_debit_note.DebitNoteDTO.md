@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/payment/debit_note.ts:10](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/debit_note.ts#L10)
+[src/payment/debit_note.ts:10](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/debit_note.ts#L10)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/debit_note.ts#L11)
+[src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/debit_note.ts#L11)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:12](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/debit_note.ts#L12)
+[src/payment/debit_note.ts:12](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/debit_note.ts#L12)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:13](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/debit_note.ts#L13)
+[src/payment/debit_note.ts:13](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/debit_note.ts#L13)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:14](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/debit_note.ts#L14)
+[src/payment/debit_note.ts:14](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/debit_note.ts#L14)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:15](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/debit_note.ts#L15)
+[src/payment/debit_note.ts:15](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/debit_note.ts#L15)
