@@ -5,12 +5,15 @@
 ### Modules
 
 - [activity/activity](modules/activity_activity)
+- [activity/results.test](modules/activity_results_test)
 - [activity/results](modules/activity_results)
 - [agreement/service](modules/agreement_service)
 - [agreement/strategy](modules/agreement_strategy)
 - [events/events](modules/events_events)
 - [executor/executor](modules/executor_executor)
+- [market/builder](modules/market_builder)
 - [market/demand](modules/market_demand)
+- [market/proposal.test](modules/market_proposal_test)
 - [market/proposal](modules/market_proposal)
 - [market/service](modules/market_service)
 - [market/strategy](modules/market_strategy)

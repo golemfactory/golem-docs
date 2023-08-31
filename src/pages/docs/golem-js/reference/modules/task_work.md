@@ -9,6 +9,7 @@
 ### Interfaces
 
 - [WorkOptions](../interfaces/task_work.WorkOptions)
+- [CommandOptions](../interfaces/task_work.CommandOptions)
 
 ### Type Aliases
 
@@ -44,4 +45,4 @@
 
 #### Defined in
 
-[src/task/work.ts:19](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L19)
+[src/task/work.ts:19](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L19)

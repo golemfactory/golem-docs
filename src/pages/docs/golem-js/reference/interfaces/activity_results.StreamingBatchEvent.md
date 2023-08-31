@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/activity/results.ts:28](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/results.ts#L28)
+[src/activity/results.ts:67](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L67)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:29](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/results.ts#L29)
+[src/activity/results.ts:68](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L68)
 
 ___
 
@@ -39,14 +39,14 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:30](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/results.ts#L30)
+[src/activity/results.ts:69](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L69)
 
 ___
 
 ### kind
 
-• **kind**: `RuntimeEventKind`
+• **kind**: [`RuntimeEventKind`](activity_results.RuntimeEventKind)
 
 #### Defined in
 
-[src/activity/results.ts:31](https://github.com/golemfactory/golem-js/blob/614ea72/src/activity/results.ts#L31)
+[src/activity/results.ts:70](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L70)

@@ -25,4 +25,4 @@
 
 #### Defined in
 
-[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/env.ts#L3)
+[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/utils/env.ts#L3)

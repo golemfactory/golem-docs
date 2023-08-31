@@ -29,7 +29,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:140](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L140)
+[src/package/package.ts:137](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/package/package.ts#L137)
 
 ## Methods
 
@@ -41,7 +41,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `PackageOptions` |
+| `options` | [`PackageOptions`](../modules/package_package#packageoptions) |
 
 #### Returns
 
@@ -49,7 +49,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:60](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L60)
+[src/package/package.ts:57](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/package/package.ts#L57)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:66](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L66)
+[src/package/package.ts:63](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/package/package.ts#L63)
 
 ___
 
@@ -89,18 +89,18 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:81](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L81)
+[src/package/package.ts:78](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/package/package.ts#L78)
 
 ___
 
 ### getDemandDecoration
 
-▸ **getDemandDecoration**(): `Promise`<`MarketDecoration`\>
+▸ **getDemandDecoration**(): `Promise`<[`MarketDecoration`](../modules/market_builder#marketdecoration)\>
 
 #### Returns
 
-`Promise`<`MarketDecoration`\>
+`Promise`<[`MarketDecoration`](../modules/market_builder#marketdecoration)\>
 
 #### Defined in
 
-[src/package/package.ts:85](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L85)
+[src/package/package.ts:82](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/package/package.ts#L82)

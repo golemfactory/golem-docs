@@ -14,22 +14,22 @@
 
 ### ProposalFilter
 
-Ƭ **ProposalFilter**: (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+Ƭ **ProposalFilter**: (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\> \| `boolean`
 
 #### Type declaration
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`<`boolean`\> \| `boolean`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
+| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`<`boolean`\> \| `boolean`
 
 #### Defined in
 
-[src/market/service.ts:9](https://github.com/golemfactory/golem-js/blob/614ea72/src/market/service.ts#L9)
+[src/market/service.ts:9](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/market/service.ts#L9)
