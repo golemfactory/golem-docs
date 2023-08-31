@@ -1,5 +1,6 @@
 
 * Classes
+	* [Result<TData\>](classes/activity_results.Result)
 	* [AgreementCandidate](classes/agreement_service.AgreementCandidate)
 	* [ActivityCreated](classes/events_events.ActivityCreated)
 	* [ActivityDestroyed](classes/events_events.ActivityDestroyed)
@@ -50,7 +51,6 @@
 	* [Task<InputType, OutputType\>](classes/task_task.Task)
 	* [WorkContext](classes/task_work.WorkContext)
 * Enums
-	* [ResultState](enums/activity_results.ResultState)
 	* [TaskState](enums/task_task.TaskState)
 	* [LogLevel](enums/utils_logger_logger.LogLevel)
 * Interfaces
@@ -59,7 +59,6 @@
 	* [AgreementDTO](interfaces/agreement_service.AgreementDTO)
 	* [AgreementServiceOptions](interfaces/agreement_service.AgreementServiceOptions)
 	* [DemandDetails](interfaces/market_demand.DemandDetails)
-	* [ProposalDTO](interfaces/market_proposal.ProposalDTO)
 	* [ProposalDetails](interfaces/market_proposal.ProposalDetails)
 	* [MarketOptions](interfaces/market_service.MarketOptions)
 	* [NetworkInfo](interfaces/network_network.NetworkInfo)
@@ -77,12 +76,14 @@
 * Modules
 	* [activity/activity](modules/activity_activity)
 	* [activity/results](modules/activity_results)
+	* [activity/results.test](modules/activity_results_test)
 	* [agreement/service](modules/agreement_service)
 	* [agreement/strategy](modules/agreement_strategy)
 	* [events/events](modules/events_events)
 	* [executor/executor](modules/executor_executor)
 	* [market/demand](modules/market_demand)
 	* [market/proposal](modules/market_proposal)
+	* [market/proposal.test](modules/market_proposal_test)
 	* [market/service](modules/market_service)
 	* [market/strategy](modules/market_strategy)
 	* [network/identity](modules/network_identity)

@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/payment/invoice.ts:6](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/invoice.ts#L6)
+[src/payment/invoice.ts:6](https://github.com/golemfactory/golem-js/blob/f1546de/src/payment/invoice.ts#L6)

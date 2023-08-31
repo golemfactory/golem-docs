@@ -27,6 +27,6 @@
 
 #### Defined in
 
-[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/614ea72/src/script/command.ts#L76)
+[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/f1546de/src/script/command.ts#L76)
 
 ___

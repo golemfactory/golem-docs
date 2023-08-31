@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/executor/executor.ts:22](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L22)
+[src/executor/executor.ts:22](https://github.com/golemfactory/golem-js/blob/f1546de/src/executor/executor.ts#L22)
 
 ___
 
@@ -32,7 +32,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[src/executor/executor.ts:59](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L59)
+[src/executor/executor.ts:59](https://github.com/golemfactory/golem-js/blob/f1546de/src/executor/executor.ts#L59)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:61](https://github.com/golemfactory/golem-js/blob/614ea72/src/executor/executor.ts#L61)
+[src/executor/executor.ts:61](https://github.com/golemfactory/golem-js/blob/f1546de/src/executor/executor.ts#L61)

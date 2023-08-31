@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/package/package.ts:41](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L41)
+[src/package/package.ts:41](https://github.com/golemfactory/golem-js/blob/f1546de/src/package/package.ts#L41)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:42](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L42)
+[src/package/package.ts:42](https://github.com/golemfactory/golem-js/blob/f1546de/src/package/package.ts#L42)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:43](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L43)
+[src/package/package.ts:43](https://github.com/golemfactory/golem-js/blob/f1546de/src/package/package.ts#L43)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:44](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L44)
+[src/package/package.ts:44](https://github.com/golemfactory/golem-js/blob/f1546de/src/package/package.ts#L44)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:45](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L45)
+[src/package/package.ts:45](https://github.com/golemfactory/golem-js/blob/f1546de/src/package/package.ts#L45)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:46](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L46)
+[src/package/package.ts:46](https://github.com/golemfactory/golem-js/blob/f1546de/src/package/package.ts#L46)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:47](https://github.com/golemfactory/golem-js/blob/614ea72/src/package/package.ts#L47)
+[src/package/package.ts:47](https://github.com/golemfactory/golem-js/blob/f1546de/src/package/package.ts#L47)

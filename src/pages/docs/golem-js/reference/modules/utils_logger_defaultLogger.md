@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/logger/defaultLogger.ts#L3)
+[src/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/golem-js/blob/f1546de/src/utils/logger/defaultLogger.ts#L3)

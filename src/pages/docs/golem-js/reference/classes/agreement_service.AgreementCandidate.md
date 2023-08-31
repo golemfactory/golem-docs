@@ -23,11 +23,11 @@
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO) |
+| `proposal` | `Proposal` |
 
 #### Defined in
 
-[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/614ea72/src/agreement/service.ts#L15)
+[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/f1546de/src/agreement/service.ts#L15)
 
 ## Properties
 
@@ -37,14 +37,14 @@
 
 #### Defined in
 
-[src/agreement/service.ts:14](https://github.com/golemfactory/golem-js/blob/614ea72/src/agreement/service.ts#L14)
+[src/agreement/service.ts:14](https://github.com/golemfactory/golem-js/blob/f1546de/src/agreement/service.ts#L14)
 
 ___
 
 ### proposal
 
-• `Readonly` **proposal**: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)
+• `Readonly` **proposal**: `Proposal`
 
 #### Defined in
 
-[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/614ea72/src/agreement/service.ts#L15)
+[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/f1546de/src/agreement/service.ts#L15)

@@ -37,4 +37,4 @@
 
 #### Defined in
 
-[src/agreement/service.ts:18](https://github.com/golemfactory/golem-js/blob/614ea72/src/agreement/service.ts#L18)
+[src/agreement/service.ts:18](https://github.com/golemfactory/golem-js/blob/f1546de/src/agreement/service.ts#L18)

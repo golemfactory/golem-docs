@@ -29,4 +29,4 @@ requestorId
 
 #### Defined in
 
-[src/network/identity.ts:12](https://github.com/golemfactory/golem-js/blob/614ea72/src/network/identity.ts#L12)
+[src/network/identity.ts:12](https://github.com/golemfactory/golem-js/blob/f1546de/src/network/identity.ts#L12)

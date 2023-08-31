@@ -32,4 +32,4 @@
 
 #### Defined in
 
-[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/614ea72/src/storage/provider.ts#L1)
+[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/f1546de/src/storage/provider.ts#L1)

@@ -21,4 +21,4 @@
 
 #### Defined in
 
-[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/614ea72/src/utils/types.ts#L12)
+[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/f1546de/src/utils/types.ts#L12)

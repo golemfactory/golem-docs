@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L25)
+[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/f1546de/src/payment/service.ts#L25)
 
 ___
 
@@ -57,4 +57,4 @@ ___
 
 #### Defined in
 
-[src/payment/service.ts:26](https://github.com/golemfactory/golem-js/blob/614ea72/src/payment/service.ts#L26)
+[src/payment/service.ts:26](https://github.com/golemfactory/golem-js/blob/f1546de/src/payment/service.ts#L26)
