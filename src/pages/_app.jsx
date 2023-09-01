@@ -19,6 +19,14 @@ function getNodeText(node) {
   return text
 }
 
+function modifyID(id) {
+  if (typeof id !== 'string') {
+    return '' // or some default value, as you see fit
+  }
+
+  return id.replace(/-/g, '')
+}
+
 function collectHeadings(
   nodes,
   slugify = slugifyWithCounter(),
@@ -30,7 +38,8 @@ function collectHeadings(
       let title = getNodeText(node)
       if (title) {
         let id = slugify(title)
-        node.attributes.id = id
+        node.attributes.id = modifyID(id)
+        console.log(modifyID(id))
         let level = parseInt(node.name.slice(1))
         let newNode = { ...node.attributes, title, children: [], level }
         if (lastNodes[level - 2]) {
@@ -57,7 +66,6 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
-
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
