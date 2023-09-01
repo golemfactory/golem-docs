@@ -19,14 +19,6 @@ function getNodeText(node) {
   return text
 }
 
-function modifyID(id) {
-  if (typeof id !== 'string') {
-    return '' // or some default value, as you see fit
-  }
-
-  return id.replace(/-/g, '')
-}
-
 function collectHeadings(
   nodes,
   slugify = slugifyWithCounter(),
@@ -38,7 +30,7 @@ function collectHeadings(
       let title = getNodeText(node)
       if (title) {
         let id = slugify(title)
-        node.attributes.id = modifyID(id)
+        node.attributes.id = id.replace(/-/g, '') // Used to fix the linking on reference page
         let level = parseInt(node.name.slice(1))
         let newNode = { ...node.attributes, title, children: [], level }
         if (lastNodes[level - 2]) {
