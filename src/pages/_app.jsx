@@ -30,7 +30,7 @@ function collectHeadings(
       let title = getNodeText(node)
       if (title) {
         let id = slugify(title)
-        node.attributes.id = id
+        node.attributes.id = id.replace(/-/g, '') // Used to fix the linking on reference page
         let level = parseInt(node.name.slice(1))
         let newNode = { ...node.attributes, title, children: [], level }
         if (lastNodes[level - 2]) {
@@ -57,7 +57,6 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
-
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
