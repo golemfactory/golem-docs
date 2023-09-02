@@ -1,9 +1,13 @@
 ---
-description: Using app-key
-title: Using app-key
+description: Using app-keys
+title: Using app-keys
 ---
 
-# JS Task API Examples: using app-key
+# JS Task API Examples: using app-keys
+
+## Introduction
+
+This example will show you the different ways of using different sorts of app-keys when requesting.
 
 {% alert level="info" %}
 

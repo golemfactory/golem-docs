@@ -5,6 +5,10 @@ description: Guide on how to install gvmkit-build
 
 # Gvmkit-build installation
 
+## Introduction
+
+Gvmkit-build is a tool that converts Docker images into .gvmi formats used by Golem. To install the tool, you need to follow the steps found below.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -16,11 +20,6 @@ This example has been designed to work with the following environments:
 ## Prerequisites
 
 - npm or pip installed
-
-
-## Introduction
-
-Gvmkit-build is a tool that converts Docker images into .gvmi formats used by Golem. To install the tool, you need to follow the steps found below for your appropriate setup:
 
 
 {% tabs %}

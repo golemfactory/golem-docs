@@ -3,6 +3,12 @@ title: Working with Golem images
 description: Examples of how to use your own Golem image in a requestor script
 ---
 
+# Examples of how to use your own Golem image in a requestor script
+
+## Introduction
+
+This example will show you how to switch the Golem image used on a provider to run your commands in your own defined environment.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:

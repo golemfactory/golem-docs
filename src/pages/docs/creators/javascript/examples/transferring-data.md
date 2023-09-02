@@ -5,6 +5,10 @@ title: Transferring data
 
 # JS Task API Examples: transferring data
 
+## Introduction
+
+This example will show you how to transfer data between your requestor and your rented provider(s).
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
