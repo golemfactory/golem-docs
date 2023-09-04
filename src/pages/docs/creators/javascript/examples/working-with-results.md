@@ -3,8 +3,11 @@ description: Working with results
 title: Working with results
 ---
 
-
 # JS Task API Examples: working with results
+
+## Introduction
+
+This example will show you how the task result can be managed by code in different ways for different use-cases.
 
 {% alert level="info" %}
 

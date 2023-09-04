@@ -5,6 +5,10 @@ title: Switching to mainnet
 
 # JS Task API Examples: switching to mainnet
 
+## Introduction
+
+This example will show you how to run your tasks on Golem's main network with real cryptocurrency.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:

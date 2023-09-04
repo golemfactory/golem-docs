@@ -5,6 +5,10 @@ title: Selecting providers
 
 # JS Task API Examples: selecting providers
 
+## Introduction
+
+This example will show you how to programmatically select providers based off your own custom strategies.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:

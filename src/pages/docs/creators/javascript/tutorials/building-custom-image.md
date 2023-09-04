@@ -3,21 +3,21 @@ title: Creating and using images on Golem
 description: Creating and using images on Golem
 ---
 
-# Introduction
+## Introduction
 
 This article will go through the process of creating a Dockerfile, building a Docker image, then converting it to a Golem image and using it in a requestor script.
 
 {% alert level="info" %}
 
-This the tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
-Prerequisites:
+{% /alert %}
+
+## Prerequisites
 
 - Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
 - Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
 - Yagna service installed and running with `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors))
-
-{% /alert %}
 
 ## Creating the Dockerfile
 

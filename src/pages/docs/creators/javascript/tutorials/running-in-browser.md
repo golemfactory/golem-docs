@@ -5,6 +5,12 @@ title: Golem in browser QuickStart explained
 
 # Golem in browser QuickStart explained
 
+## Introduction
+
+In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window.
+
+In the QuickStart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
+
 {% alert level="info" %}
 
 This tutorial has been designed to work with the following environments:
@@ -44,12 +50,6 @@ The `--api-allow-origin` value should be set to the URL where your web applicati
 In this example, we will use `http-server`.
 
 {% /alert  %}
-
-## Introduction
-
-In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window.
-
-In the QuickStart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
 
 ## Setting up the project
 

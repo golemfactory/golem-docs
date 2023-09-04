@@ -5,6 +5,10 @@ title: Composing tasks
 
 # JS Task API Examples: composing tasks
 
+## Introduction
+
+This article will show you examples on how to compose tasks in different ways.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
