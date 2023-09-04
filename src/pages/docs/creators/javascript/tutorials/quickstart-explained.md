@@ -76,9 +76,9 @@ In (1) we create a TaskExecutor Instance using a factory method. In this example
 We use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
 
 ```js
- const executor = await TaskExecutor.create({
-        package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-        yagnaOptions: { apiKey: 'try_golem' }});
+const executor = await TaskExecutor.create({
+    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    yagnaOptions: { apiKey: 'try_golem' }});
 ```
 
 Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable. 
@@ -87,13 +87,13 @@ There are other methods that allow you to execute tasks. They are briefly presen
 
 
 ```js
-    const taskResult = await executor.run(taskToRunOnProvider);
+const taskResult = await executor.run(taskToRunOnProvider);
 ```
 
 Finally (3) we gracefully finish task executor:
 
 ```js
-    await executor.end();
+await executor.end();
 ```
 
 
