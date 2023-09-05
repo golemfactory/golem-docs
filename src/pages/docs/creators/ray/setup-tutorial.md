@@ -27,7 +27,7 @@ pip install -U ray[default] golem-ray
 
 For now, you also need to manually install yagna to be able to connect to the Golem network. Later on, we will make the installation happen behind the scenes.
 Please follow the [yagna installation guide from Golem handbook](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development). 
-Stop before running the daemon - `golem-ray` will do the rest for you <!--(TODO change to running yagna manually if the payments won't work with subprocess)-->
+Stop before running the daemon - `golem-ray` will do the rest for you. 
 
 TLDR install yagna:
 

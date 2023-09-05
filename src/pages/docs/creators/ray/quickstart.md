@@ -43,7 +43,7 @@ ray up example-golem-cluster.yaml
 
 ```
 
-## Execution application
+## Execute a Ray application
 
 Download our example Ray app and execute it locally (a Ray instance will be created on your machine)
 
