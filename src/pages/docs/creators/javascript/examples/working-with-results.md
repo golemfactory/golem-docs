@@ -87,7 +87,7 @@ Index refers to the sequential number of a command (we have just one, and counti
 When you run your tasks in a batch that is concluded with `.end()`: 
   
 ```js
-  import { TaskExecutor } from "@golem-sdk/golem-js";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
