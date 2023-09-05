@@ -1,6 +1,7 @@
 ---
 description: example of a little bit more sophisticated Ray on Golem usage
 title: Practical bridge simulation tutorial 
+type: example 
 ---
 
 # Practical bridge simulation tutorial

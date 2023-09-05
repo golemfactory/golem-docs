@@ -1,6 +1,7 @@
 ---
 description: quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 title: Ray on Golem QuickStart
+type: guide 
 ---
 
 # Quickstart

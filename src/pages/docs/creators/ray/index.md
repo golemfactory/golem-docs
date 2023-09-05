@@ -1,6 +1,7 @@
 ---
 description: Ray on Golem Introduction 
 title: Ray on Golem Introduction
+type: article
 ---
 
 # Run you Python code on Golem with Ray on Golem

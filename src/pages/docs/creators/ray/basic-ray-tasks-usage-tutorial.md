@@ -1,6 +1,7 @@
 ---
 description: anatomy of Ray application based on a simple code showcasing Ray tasks
 title: Basic Ray tasks usage tutorial 
+type: example 
 ---
 
 # Basic Ray tasks usage tutorial

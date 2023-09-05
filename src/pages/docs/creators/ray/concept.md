@@ -1,6 +1,7 @@
 ---
 description: guide on what Ray and Ray on Golem is, listing all pieces needed to use them 
 title: Ray on Golem Concept
+type: article
 ---
 
 # Concept

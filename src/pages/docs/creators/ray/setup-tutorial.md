@@ -1,6 +1,7 @@
 ---
 description: step-by-step explanation of the quickstart instructions
 title: Ray on Golem setup tutorial
+type: guide 
 ---
 
 # Ray on Golem setup tutorial 
