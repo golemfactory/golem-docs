@@ -8,7 +8,7 @@ jobs:
   build:
     strategy:
       matrix:
-        branch: ['master', 'beta', 'alpha']
+        branch: ['master', 'beta', 'alpha', 'next']
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
