@@ -10,6 +10,14 @@ export const navigation = [
         title: "classes",
         children: [
 {
+            title: "Activity",
+            href: "/docs/golem-js/reference/classes/activity_activity.Activity"
+          },
+{
+            title: "Result",
+            href: "/docs/golem-js/reference/classes/activity_results.Result"
+          },
+{
             title: "AgreementCandidate",
             href: "/docs/golem-js/reference/classes/agreement_service.AgreementCandidate"
           },
@@ -150,6 +158,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/executor_executor.TaskExecutor"
           },
 {
+            title: "Proposal",
+            href: "/docs/golem-js/reference/classes/market_proposal.Proposal"
+          },
+{
             title: "NetworkError",
             href: "/docs/golem-js/reference/classes/network_network.NetworkError"
           },
@@ -219,8 +231,8 @@ export const navigation = [
         title: "enums",
         children: [
 {
-            title: "ResultState",
-            href: "/docs/golem-js/reference/enums/activity_results.ResultState"
+            title: "ActivityStateEnum",
+            href: "/docs/golem-js/reference/enums/activity_activity.ActivityStateEnum"
           },
 {
             title: "TaskState",
@@ -240,6 +252,18 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/activity_activity.ActivityOptions"
           },
 {
+            title: "ExeScriptRequest",
+            href: "/docs/golem-js/reference/interfaces/activity_activity.ExeScriptRequest"
+          },
+{
+            title: "ResultData",
+            href: "/docs/golem-js/reference/interfaces/activity_results.ResultData"
+          },
+{
+            title: "RuntimeEventKind",
+            href: "/docs/golem-js/reference/interfaces/activity_results.RuntimeEventKind"
+          },
+{
             title: "StreamingBatchEvent",
             href: "/docs/golem-js/reference/interfaces/activity_results.StreamingBatchEvent"
           },
@@ -254,10 +278,6 @@ export const navigation = [
 {
             title: "DemandDetails",
             href: "/docs/golem-js/reference/interfaces/market_demand.DemandDetails"
-          },
-{
-            title: "ProposalDTO",
-            href: "/docs/golem-js/reference/interfaces/market_proposal.ProposalDTO"
           },
 {
             title: "ProposalDetails",
@@ -304,8 +324,12 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/storage_ws_browser.WebSocketStorageProviderOptions"
           },
 {
-            title: "TaskOptions",
-            href: "/docs/golem-js/reference/interfaces/task_service.TaskOptions"
+            title: "TaskServiceOptions",
+            href: "/docs/golem-js/reference/interfaces/task_service.TaskServiceOptions"
+          },
+{
+            title: "CommandOptions",
+            href: "/docs/golem-js/reference/interfaces/task_work.CommandOptions"
           },
 {
             title: "WorkOptions",
@@ -333,6 +357,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/activity_results"
           },
 {
+            title: "Activity_results_test",
+            href: "/docs/golem-js/reference/modules/activity_results_test"
+          },
+{
             title: "Agreement_service",
             href: "/docs/golem-js/reference/modules/agreement_service"
           },
@@ -349,12 +377,20 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/executor_executor"
           },
 {
+            title: "Market_builder",
+            href: "/docs/golem-js/reference/modules/market_builder"
+          },
+{
             title: "Market_demand",
             href: "/docs/golem-js/reference/modules/market_demand"
           },
 {
             title: "Market_proposal",
             href: "/docs/golem-js/reference/modules/market_proposal"
+          },
+{
+            title: "Market_proposal_test",
+            href: "/docs/golem-js/reference/modules/market_proposal_test"
           },
 {
             title: "Market_service",

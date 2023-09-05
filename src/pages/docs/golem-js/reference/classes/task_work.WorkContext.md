@@ -43,12 +43,12 @@ Work Context
 
 | Name | Type |
 | :------ | :------ |
-| `activity` | `Activity` |
+| `activity` | [`Activity`](activity_activity.Activity) |
 | `options?` | [`WorkOptions`](../interfaces/task_work.WorkOptions) |
 
 #### Defined in
 
-[src/task/work.ts:60](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L60)
+[src/task/work.ts:60](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L60)
 
 ## Properties
 
@@ -66,7 +66,7 @@ Work Context
 
 #### Defined in
 
-[src/task/work.ts:51](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L51)
+[src/task/work.ts:51](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L51)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L52)
+[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L52)
 
 ___
 
@@ -86,27 +86,27 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:53](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L53)
+[src/task/work.ts:53](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L53)
 
 ## Methods
 
 ### before
 
-▸ **before**(): `Promise`<`void` \| `Result`<`unknown`\>[]\>
+▸ **before**(): `Promise`<`void` \| [`Result`](activity_results.Result)<`any`\>[]\>
 
 #### Returns
 
-`Promise`<`void` \| `Result`<`unknown`\>[]\>
+`Promise`<`void` \| [`Result`](activity_results.Result)<`any`\>[]\>
 
 #### Defined in
 
-[src/task/work.ts:73](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L73)
+[src/task/work.ts:73](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L73)
 
 ___
 
 ### run
 
-▸ **run**(`commandLine`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **run**(`commandLine`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 Execute a command on provider using a shell (/bin/sh).
 
@@ -115,17 +115,17 @@ Execute a command on provider using a shell (/bin/sh).
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `commandLine` | `string` | Shell command to execute. |
-| `options?` | `CommandOptions` | Additional run options. |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) | Additional run options. |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Defined in
 
-[src/task/work.ts:116](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L116)
+[src/task/work.ts:116](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L116)
 
-▸ **run**(`executable`, `args`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **run**(`executable`, `args`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 Execute an executable on provider.
 
@@ -135,21 +135,21 @@ Execute an executable on provider.
 | :------ | :------ | :------ |
 | `executable` | `string` | Executable to run. |
 | `args` | `string`[] | Executable arguments. |
-| `options?` | `CommandOptions` | Additional run options. |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) | Additional run options. |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Defined in
 
-[src/task/work.ts:125](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L125)
+[src/task/work.ts:125](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L125)
 
 ___
 
 ### uploadFile
 
-▸ **uploadFile**(`src`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **uploadFile**(`src`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Parameters
 
@@ -157,21 +157,21 @@ ___
 | :------ | :------ |
 | `src` | `string` |
 | `dst` | `string` |
-| `options?` | `CommandOptions` |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Defined in
 
-[src/task/work.ts:137](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L137)
+[src/task/work.ts:137](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L137)
 
 ___
 
 ### uploadJson
 
-▸ **uploadJson**(`json`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **uploadJson**(`json`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Parameters
 
@@ -179,21 +179,21 @@ ___
 | :------ | :------ |
 | `json` | `any` |
 | `dst` | `string` |
-| `options?` | `CommandOptions` |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Defined in
 
-[src/task/work.ts:142](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L142)
+[src/task/work.ts:142](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L142)
 
 ___
 
 ### uploadData
 
-▸ **uploadData**(`data`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **uploadData**(`data`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Parameters
 
@@ -201,21 +201,21 @@ ___
 | :------ | :------ |
 | `data` | `Uint8Array` |
 | `dst` | `string` |
-| `options?` | `CommandOptions` |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Defined in
 
-[src/task/work.ts:147](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L147)
+[src/task/work.ts:147](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L147)
 
 ___
 
 ### downloadFile
 
-▸ **downloadFile**(`src`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **downloadFile**(`src`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Parameters
 
@@ -223,57 +223,57 @@ ___
 | :------ | :------ |
 | `src` | `string` |
 | `dst` | `string` |
-| `options?` | `CommandOptions` |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Defined in
 
-[src/task/work.ts:151](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L151)
+[src/task/work.ts:151](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L151)
 
 ___
 
 ### downloadData
 
-▸ **downloadData**(`src`, `options?`): `Promise`<`Result`<`Uint8Array`\>\>
+▸ **downloadData**(`src`, `options?`): `Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `src` | `string` |
-| `options?` | `CommandOptions` |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) |
 
 #### Returns
 
-`Promise`<`Result`<`Uint8Array`\>\>
+`Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
 
 #### Defined in
 
-[src/task/work.ts:155](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L155)
+[src/task/work.ts:155](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L155)
 
 ___
 
 ### downloadJson
 
-▸ **downloadJson**(`src`, `options?`): `Promise`<`Result`<`any`\>\>
+▸ **downloadJson**(`src`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `src` | `string` |
-| `options?` | `CommandOptions` |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) |
 
 #### Returns
 
-`Promise`<`Result`<`any`\>\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
 #### Defined in
 
-[src/task/work.ts:160](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L160)
+[src/task/work.ts:160](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L160)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:175](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L175)
+[src/task/work.ts:175](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L175)
 
 ___
 
@@ -311,7 +311,7 @@ This function is only used to throw errors from unit tests. It should be removed
 
 #### Defined in
 
-[src/task/work.ts:182](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L182)
+[src/task/work.ts:182](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L182)
 
 ___
 
@@ -331,18 +331,18 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:186](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L186)
+[src/task/work.ts:186](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L186)
 
 ___
 
 ### getState
 
-▸ **getState**(): `Promise`<`ActivityStateEnum`\>
+▸ **getState**(): `Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 #### Returns
 
-`Promise`<`ActivityStateEnum`\>
+`Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 #### Defined in
 
-[src/task/work.ts:191](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/work.ts#L191)
+[src/task/work.ts:191](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L191)

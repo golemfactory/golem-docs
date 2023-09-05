@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/market/demand.ts:14](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L14)
+[src/market/demand.ts:14](https://github.com/golemfactory/golem-js/blob/570d226/src/market/demand.ts#L14)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/market/demand.ts#L15)
+[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/570d226/src/market/demand.ts#L15)
