@@ -29,13 +29,13 @@
 
 | Name | Type |
 | :------ | :------ |
-| `activity` | `Activity` |
+| `activity` | [`Activity`](activity_activity.Activity) |
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
 | `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
 #### Defined in
 
-[src/task/batch.ts:15](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L15)
+[src/task/batch.ts:15](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L15)
 
 ## Methods
 
@@ -47,7 +47,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `activity` | `Activity` |
+| `activity` | [`Activity`](activity_activity.Activity) |
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
 | `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[src/task/batch.ts:11](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L11)
+[src/task/batch.ts:11](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L11)
 
 ___
 
@@ -79,7 +79,7 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Defined in
 
-[src/task/batch.ts:28](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L28)
+[src/task/batch.ts:28](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L28)
 
 ▸ **run**(`executable`, `args`): [`Batch`](task_batch.Batch)
 
@@ -98,7 +98,7 @@ Execute an executable on provider.
 
 #### Defined in
 
-[src/task/batch.ts:36](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L36)
+[src/task/batch.ts:36](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L36)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:47](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L47)
+[src/task/batch.ts:47](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L47)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:52](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L52)
+[src/task/batch.ts:52](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L52)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:58](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L58)
+[src/task/batch.ts:58](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L58)
 
 ___
 
@@ -182,13 +182,13 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:63](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L63)
+[src/task/batch.ts:63](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L63)
 
 ___
 
 ### end
 
-▸ **end**(): `Promise`<`Result`<`unknown`\>[]\>
+▸ **end**(): `Promise`<[`Result`](activity_results.Result)<`any`\>[]\>
 
 Executes the batch of commands added via [run](task_batch.Batch#run) returning result for each of the steps.
 
@@ -196,11 +196,11 @@ In case any of the commands will fail, the execution of the batch will be interr
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>[]\>
+`Promise`<[`Result`](activity_results.Result)<`any`\>[]\>
 
 #### Defined in
 
-[src/task/batch.ts:73](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L73)
+[src/task/batch.ts:73](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L73)
 
 ___
 
@@ -214,4 +214,4 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:99](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/batch.ts#L99)
+[src/task/batch.ts:106](https://github.com/golemfactory/golem-js/blob/570d226/src/task/batch.ts#L106)

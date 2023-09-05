@@ -6,58 +6,58 @@
 
 ### Enumeration Members
 
-- [debug](utils_logger_logger.LogLevel#debug)
-- [info](utils_logger_logger.LogLevel#info)
-- [warn](utils_logger_logger.LogLevel#warn)
-- [error](utils_logger_logger.LogLevel#error)
-- [log](utils_logger_logger.LogLevel#log)
+- [Debug](utils_logger_logger.LogLevel#debug)
+- [Info](utils_logger_logger.LogLevel#info)
+- [Warn](utils_logger_logger.LogLevel#warn)
+- [Error](utils_logger_logger.LogLevel#error)
+- [Log](utils_logger_logger.LogLevel#log)
 
 ## Enumeration Members
 
-### debug
+### Debug
 
-• **debug** = ``"debug"``
+• **Debug** = ``"debug"``
 
 #### Defined in
 
-[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/logger/logger.ts#L2)
+[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/logger/logger.ts#L2)
 
 ___
 
-### info
+### Info
 
-• **info** = ``"info"``
+• **Info** = ``"info"``
 
 #### Defined in
 
-[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/logger/logger.ts#L3)
+[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/logger/logger.ts#L3)
 
 ___
 
-### warn
+### Warn
 
-• **warn** = ``"warn"``
+• **Warn** = ``"warn"``
 
 #### Defined in
 
-[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/logger/logger.ts#L4)
+[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/logger/logger.ts#L4)
 
 ___
 
-### error
+### Error
 
-• **error** = ``"error"``
+• **Error** = ``"error"``
 
 #### Defined in
 
-[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/logger/logger.ts#L5)
+[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/logger/logger.ts#L5)
 
 ___
 
-### log
+### Log
 
-• **log** = ``"log"``
+• **Log** = ``"log"``
 
 #### Defined in
 
-[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/utils/logger/logger.ts#L6)
+[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/logger/logger.ts#L6)

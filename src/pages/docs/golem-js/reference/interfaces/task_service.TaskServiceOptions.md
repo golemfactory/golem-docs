@@ -1,28 +1,28 @@
-# Interface: TaskOptions
+# Interface: TaskServiceOptions
 
-[task/service](../modules/task_service).TaskOptions
+[task/service](../modules/task_service).TaskServiceOptions
 
 ## Hierarchy
 
 - [`ActivityOptions`](activity_activity.ActivityOptions)
 
-  ↳ **`TaskOptions`**
+  ↳ **`TaskServiceOptions`**
 
 ## Table of contents
 
 ### Properties
 
-- [maxParallelTasks](task_service.TaskOptions#maxparalleltasks)
-- [taskRunningInterval](task_service.TaskOptions#taskrunninginterval)
-- [activityStateCheckingInterval](task_service.TaskOptions#activitystatecheckinginterval)
-- [activityPreparingTimeout](task_service.TaskOptions#activitypreparingtimeout)
-- [taskTimeout](task_service.TaskOptions#tasktimeout)
-- [logger](task_service.TaskOptions#logger)
-- [storageProvider](task_service.TaskOptions#storageprovider)
-- [activityRequestTimeout](task_service.TaskOptions#activityrequesttimeout)
-- [activityExecuteTimeout](task_service.TaskOptions#activityexecutetimeout)
-- [activityExeBatchResultsFetchInterval](task_service.TaskOptions#activityexebatchresultsfetchinterval)
-- [eventTarget](task_service.TaskOptions#eventtarget)
+- [maxParallelTasks](task_service.TaskServiceOptions#maxparalleltasks)
+- [taskRunningInterval](task_service.TaskServiceOptions#taskrunninginterval)
+- [activityStateCheckingInterval](task_service.TaskServiceOptions#activitystatecheckinginterval)
+- [activityPreparingTimeout](task_service.TaskServiceOptions#activitypreparingtimeout)
+- [taskTimeout](task_service.TaskServiceOptions#tasktimeout)
+- [logger](task_service.TaskServiceOptions#logger)
+- [storageProvider](task_service.TaskServiceOptions#storageprovider)
+- [activityRequestTimeout](task_service.TaskServiceOptions#activityrequesttimeout)
+- [activityExecuteTimeout](task_service.TaskServiceOptions#activityexecutetimeout)
+- [activityExeBatchResultsFetchInterval](task_service.TaskServiceOptions#activityexebatchresultsfetchinterval)
+- [eventTarget](task_service.TaskServiceOptions#eventtarget)
 
 ## Properties
 
@@ -34,7 +34,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 #### Defined in
 
-[src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L15)
+[src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/570d226/src/task/service.ts#L15)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L16)
+[src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/570d226/src/task/service.ts#L16)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L17)
+[src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/570d226/src/task/service.ts#L17)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L18)
+[src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/570d226/src/task/service.ts#L18)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L19)
+[src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/570d226/src/task/service.ts#L19)
 
 ___
 
@@ -90,7 +90,7 @@ Logger module
 
 #### Defined in
 
-[src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L20)
+[src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/570d226/src/task/service.ts#L20)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/service.ts#L21)
+[src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/570d226/src/task/service.ts#L21)
 
 ___
 
@@ -116,7 +116,7 @@ timeout for sending and creating batch
 
 #### Defined in
 
-[src/activity/activity.ts:32](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L32)
+[src/activity/activity.ts:26](https://github.com/golemfactory/golem-js/blob/570d226/src/activity/activity.ts#L26)
 
 ___
 
@@ -132,7 +132,7 @@ timeout for executing batch
 
 #### Defined in
 
-[src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L34)
+[src/activity/activity.ts:28](https://github.com/golemfactory/golem-js/blob/570d226/src/activity/activity.ts#L28)
 
 ___
 
@@ -148,7 +148,7 @@ interval for fetching batch results while polling
 
 #### Defined in
 
-[src/activity/activity.ts:36](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L36)
+[src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/570d226/src/activity/activity.ts#L30)
 
 ___
 
@@ -164,4 +164,4 @@ Event Bus implements EventTarget
 
 #### Defined in
 
-[src/activity/activity.ts:40](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/activity/activity.ts#L40)
+[src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/570d226/src/activity/activity.ts#L34)

@@ -51,7 +51,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 ### constructor
 
-• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `maxTaskRetries?`)
+• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `options?`)
 
 #### Type parameters
 
@@ -62,17 +62,17 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `id` | `string` | `undefined` |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | `undefined` |
-| `data?` | `InputType` | `undefined` |
-| `initWorker?` | [`Worker`](../modules/task_work#worker)<`undefined`\> | `undefined` |
-| `maxTaskRetries` | `number` | `MAX_RETRIES` |
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> |
+| `data?` | `InputType` |
+| `initWorker?` | [`Worker`](../modules/task_work#worker)<`undefined`\> |
+| `options?` | [`TaskOptions`](../modules/task_task#taskoptions) |
 
 #### Defined in
 
-[src/task/task.ts:25](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L25)
+[src/task/task.ts:38](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L38)
 
 ## Properties
 
@@ -82,7 +82,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Defined in
 
-[src/task/task.ts:26](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L26)
+[src/task/task.ts:39](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L39)
 
 ## Methods
 
@@ -96,7 +96,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Defined in
 
-[src/task/task.ts:33](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L33)
+[src/task/task.ts:49](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L49)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:36](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L36)
+[src/task/task.ts:53](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L53)
 
 ___
 
@@ -136,7 +136,7 @@ QueueableTask.isQueueable
 
 #### Defined in
 
-[src/task/task.ts:46](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L46)
+[src/task/task.ts:64](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L64)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:49](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L49)
+[src/task/task.ts:67](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L67)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:53](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L53)
+[src/task/task.ts:71](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L71)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:56](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L56)
+[src/task/task.ts:74](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L74)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:59](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L59)
+[src/task/task.ts:77](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L77)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:62](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L62)
+[src/task/task.ts:80](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L80)
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:65](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L65)
+[src/task/task.ts:83](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L83)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:68](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L68)
+[src/task/task.ts:86](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L86)
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:71](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L71)
+[src/task/task.ts:89](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L89)
 
 ___
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:74](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L74)
+[src/task/task.ts:92](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L92)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:77](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L77)
+[src/task/task.ts:95](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L95)
 
 ___
 
@@ -290,7 +290,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:80](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L80)
+[src/task/task.ts:98](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L98)
 
 ___
 
@@ -304,4 +304,4 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:83](https://github.com/golemfactory/golem-js/blob/c28a1b0/src/task/task.ts#L83)
+[src/task/task.ts:101](https://github.com/golemfactory/golem-js/blob/570d226/src/task/task.ts#L101)
