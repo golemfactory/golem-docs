@@ -8,7 +8,7 @@ title: Ray on Golem Introduction
 This documentation is designed for developers wanting to run their Python code on Golem.
 We will use Ray to parallelize the code and Ray on Golem to execute it.
 
-- [Quickstart](#quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
+- [Quickstart](/docs/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 - [Concept](#concept) - guide on what Ray and Ray on Golem is, listing all pieces needed to use them
 - [Setup tutorial](#setup-tutorial) - step-by-step explanation of the quickstart instructions
 - [Basic Ray tasks usage tutorial](#basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
