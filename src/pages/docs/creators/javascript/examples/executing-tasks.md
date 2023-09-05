@@ -7,6 +7,15 @@ title: Executing task
 
 ## Introduction
 
+With Golem JS Task API you can execute just a single task on a single provider or a series of multiple tasks in parallel on many providers. In the case of the latter, you can additionally define how providers should be initialized and how many tasks you want to run simultaneously.
+
+In this article, the following examples are presented:
+
+- Running tasks in parallel (map())
+- Running tasks in parallel (forEach())
+- Defining the number of providers working in parallel
+- Initializing providers
+- Running a single task
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -36,18 +45,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-With Golem JS Task API you can execute just a single task on a single provider or a series of multiple tasks in parallel on many providers. In the case of the latter, you can additionally define how providers should be initialized and how many tasks you want to run simultaneously.
-
-In this article, the following examples are presented:
-
-- Running tasks in parallel (map())
-- Running tasks in parallel (forEach())
-- Defining the number of providers working in parallel
-- Initializing providers
-- Running a single task
 
 ## Running tasks in parallel using the map() method
 
