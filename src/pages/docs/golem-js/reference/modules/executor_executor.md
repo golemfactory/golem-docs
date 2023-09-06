@@ -16,11 +16,11 @@
 
 ### ExecutorOptions
 
-Ƭ **ExecutorOptions**: { `package?`: `string` \| [`Package`](../classes/package_package.Package) ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger) ; `logLevel?`: [`LogLevel`](../enums/utils_logger_logger.LogLevel) \| `string` ; `yagnaOptions?`: [`YagnaOptions`](executor_executor#yagnaoptions) ; `eventTarget?`: `EventTarget` ; `maxTaskRetries?`: `number` ; `storageProvider?`: [`StorageProvider`](../interfaces/storage_provider.StorageProvider) ; `isSubprocess?`: `boolean` ; `activityPreparingTimeout?`: `number`  } & `Omit`<[`PackageOptions`](package_package#packageoptions), ``"imageHash"`` \| ``"imageTag"``\> & [`MarketOptions`](../interfaces/market_service.MarketOptions) & [`TaskOptions`](../interfaces/task_service.TaskOptions) & [`PaymentOptions`](../interfaces/payment_service.PaymentOptions) & [`NetworkServiceOptions`](network_service#networkserviceoptions) & [`AgreementServiceOptions`](../interfaces/agreement_service.AgreementServiceOptions) & `Omit`<[`WorkOptions`](../interfaces/task_work.WorkOptions), ``"isRunning"``\>
+Ƭ **ExecutorOptions**: { `package?`: `string` \| [`Package`](../classes/package_package.Package) ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger) ; `logLevel?`: [`LogLevel`](../enums/utils_logger_logger.LogLevel) \| `string` ; `yagnaOptions?`: [`YagnaOptions`](executor_executor#yagnaoptions) ; `eventTarget?`: `EventTarget` ; `maxTaskRetries?`: `number` ; `storageProvider?`: [`StorageProvider`](../interfaces/storage_provider.StorageProvider) ; `isSubprocess?`: `boolean` ; `activityPreparingTimeout?`: `number`  } & `Omit`<[`PackageOptions`](package_package#packageoptions), ``"imageHash"`` \| ``"imageTag"``\> & [`MarketOptions`](../interfaces/market_service.MarketOptions) & [`TaskServiceOptions`](../interfaces/task_service.TaskServiceOptions) & [`PaymentOptions`](../interfaces/payment_service.PaymentOptions) & [`NetworkServiceOptions`](network_service#networkserviceoptions) & [`AgreementServiceOptions`](../interfaces/agreement_service.AgreementServiceOptions) & `Omit`<[`WorkOptions`](../interfaces/task_work.WorkOptions), ``"isRunning"``\>
 
 #### Defined in
 
-[src/executor/executor.ts:22](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/executor/executor.ts#L22)
+[src/executor/executor.ts:22](https://github.com/golemfactory/golem-js/blob/491c0c9/src/executor/executor.ts#L22)
 
 ___
 
@@ -32,7 +32,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[src/executor/executor.ts:59](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/executor/executor.ts#L59)
+[src/executor/executor.ts:59](https://github.com/golemfactory/golem-js/blob/491c0c9/src/executor/executor.ts#L59)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:61](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/executor/executor.ts#L61)
+[src/executor/executor.ts:61](https://github.com/golemfactory/golem-js/blob/491c0c9/src/executor/executor.ts#L61)

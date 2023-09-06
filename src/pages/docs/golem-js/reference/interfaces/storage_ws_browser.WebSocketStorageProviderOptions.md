@@ -6,27 +6,9 @@
 
 ### Properties
 
-- [yagnaOptions](storage_ws_browser.WebSocketStorageProviderOptions#yagnaoptions)
 - [logger](storage_ws_browser.WebSocketStorageProviderOptions#logger)
 
 ## Properties
-
-### yagnaOptions
-
-• **yagnaOptions**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `apiKey` | `string` |
-| `basePath` | `string` |
-
-#### Defined in
-
-[src/storage/ws-browser.ts:9](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/storage/ws-browser.ts#L9)
-
-___
 
 ### logger
 
@@ -34,4 +16,4 @@ ___
 
 #### Defined in
 
-[src/storage/ws-browser.ts:13](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/storage/ws-browser.ts#L13)
+[src/storage/ws-browser.ts:8](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/ws-browser.ts#L8)

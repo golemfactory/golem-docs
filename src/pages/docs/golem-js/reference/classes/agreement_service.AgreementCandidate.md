@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/agreement/service.ts#L15)
+[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/service.ts#L16)
 
 ## Properties
 
@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[src/agreement/service.ts:14](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/agreement/service.ts#L14)
+[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/service.ts#L15)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/agreement/service.ts#L15)
+[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/service.ts#L16)
