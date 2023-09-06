@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/yagna/yagna.ts#L12)
+[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/yagna.ts#L12)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/yagna/yagna.ts#L22)
+[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/yagna.ts#L22)

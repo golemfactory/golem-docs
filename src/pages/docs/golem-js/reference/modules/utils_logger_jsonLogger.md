@@ -26,4 +26,4 @@ Create a logger that writes a JSON object for every log line.
 
 #### Defined in
 
-[src/utils/logger/jsonLogger.ts:8](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/logger/jsonLogger.ts#L8)
+[src/utils/logger/jsonLogger.ts:8](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/jsonLogger.ts#L8)

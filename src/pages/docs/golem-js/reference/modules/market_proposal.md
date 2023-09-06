@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/market/proposal.ts:6](https://github.com/golemfactory/golem-js/blob/570d226/src/market/proposal.ts#L6)
+[src/market/proposal.ts:6](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/market/proposal.ts#L6)
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:12](https://github.com/golemfactory/golem-js/blob/570d226/src/market/proposal.ts#L12)
+[src/market/proposal.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/market/proposal.ts#L12)

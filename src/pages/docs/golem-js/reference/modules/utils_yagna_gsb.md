@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/yagna/gsb.ts#L5)
+[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/gsb.ts#L5)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/yagna/gsb.ts#L9)
+[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/gsb.ts#L9)

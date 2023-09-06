@@ -32,4 +32,4 @@
 
 #### Defined in
 
-[src/market/service.ts:10](https://github.com/golemfactory/golem-js/blob/570d226/src/market/service.ts#L10)
+[src/market/service.ts:10](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/market/service.ts#L10)
