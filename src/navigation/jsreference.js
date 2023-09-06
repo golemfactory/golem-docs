@@ -158,6 +158,18 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/executor_executor.TaskExecutor"
           },
 {
+            title: "GolemNetwork",
+            href: "/docs/golem-js/reference/classes/golem_network_golem_network.GolemNetwork"
+          },
+{
+            title: "Job",
+            href: "/docs/golem-js/reference/classes/job_job.Job"
+          },
+{
+            title: "InMemoryJobStorage",
+            href: "/docs/golem-js/reference/classes/job_storage.InMemoryJobStorage"
+          },
+{
             title: "Proposal",
             href: "/docs/golem-js/reference/classes/market_proposal.Proposal"
           },
@@ -276,6 +288,14 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/agreement_service.AgreementServiceOptions"
           },
 {
+            title: "GolemNetworkConfig",
+            href: "/docs/golem-js/reference/interfaces/golem_network_golem_network.GolemNetworkConfig"
+          },
+{
+            title: "JobStorage",
+            href: "/docs/golem-js/reference/interfaces/job_storage.JobStorage"
+          },
+{
             title: "DemandDetails",
             href: "/docs/golem-js/reference/interfaces/market_demand.DemandDetails"
           },
@@ -375,6 +395,18 @@ export const navigation = [
 {
             title: "Executor_executor",
             href: "/docs/golem-js/reference/modules/executor_executor"
+          },
+{
+            title: "Golem_network_golem_network",
+            href: "/docs/golem-js/reference/modules/golem_network_golem_network"
+          },
+{
+            title: "Job_job",
+            href: "/docs/golem-js/reference/modules/job_job"
+          },
+{
+            title: "Job_storage",
+            href: "/docs/golem-js/reference/modules/job_storage"
           },
 {
             title: "Market_builder",

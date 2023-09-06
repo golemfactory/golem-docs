@@ -45,4 +45,4 @@
 
 #### Defined in
 
-[src/task/work.ts:19](https://github.com/golemfactory/golem-js/blob/570d226/src/task/work.ts#L19)
+[src/task/work.ts:19](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/work.ts#L19)

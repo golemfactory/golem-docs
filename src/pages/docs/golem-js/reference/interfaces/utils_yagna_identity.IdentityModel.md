@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:6](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/yagna/identity.ts#L6)
+[src/utils/yagna/identity.ts:6](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/identity.ts#L6)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:7](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/yagna/identity.ts#L7)
+[src/utils/yagna/identity.ts:7](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/identity.ts#L7)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:8](https://github.com/golemfactory/golem-js/blob/570d226/src/utils/yagna/identity.ts#L8)
+[src/utils/yagna/identity.ts:8](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/identity.ts#L8)
