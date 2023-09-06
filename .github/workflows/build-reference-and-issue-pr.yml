@@ -20,7 +20,7 @@ jobs:
       - uses: peter-evans/create-pull-request@v3
         with:
           commit-message: 'feat: Update golem-js API Reference for branch ${{ matrix.branch }}'
-          title: 'Update ${ { matrix.branch }} branch'
+          title: 'Update ${{ matrix.branch }} branch'
           branch: patch/${{ matrix.branch }}-golem-js-api-reference
           reviewers: cryptobench
           base: ${{ matrix.branch }}
