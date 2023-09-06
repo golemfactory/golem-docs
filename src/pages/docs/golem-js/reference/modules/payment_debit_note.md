@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/payment/debit_note.ts:7](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/debit_note.ts#L7)
+[src/payment/debit_note.ts:8](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/debit_note.ts#L8)

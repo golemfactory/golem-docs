@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/payments.ts#L14)
+[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/payments.ts#L14)

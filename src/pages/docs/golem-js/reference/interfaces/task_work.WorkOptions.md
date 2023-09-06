@@ -13,7 +13,6 @@
 - [networkNode](task_work.WorkOptions#networknode)
 - [logger](task_work.WorkOptions#logger)
 - [initWorker](task_work.WorkOptions#initworker)
-- [isRunning](task_work.WorkOptions#isrunning)
 
 ## Properties
 
@@ -23,7 +22,7 @@
 
 #### Defined in
 
-[src/task/work.ts:30](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L30)
+[src/task/work.ts:30](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L30)
 
 ___
 
@@ -33,7 +32,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:31](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L31)
+[src/task/work.ts:31](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L31)
 
 ___
 
@@ -51,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:32](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L32)
+[src/task/work.ts:32](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L32)
 
 ___
 
@@ -61,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:33](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L33)
+[src/task/work.ts:33](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L33)
 
 ___
 
@@ -71,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:34](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L34)
+[src/task/work.ts:34](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L34)
 
 ___
 
@@ -81,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:35](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L35)
+[src/task/work.ts:35](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L35)
 
 ___
 
@@ -91,22 +90,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:36](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L36)
-
-___
-
-### isRunning
-
-• **isRunning**: () => `boolean`
-
-#### Type declaration
-
-▸ (): `boolean`
-
-##### Returns
-
-`boolean`
-
-#### Defined in
-
-[src/task/work.ts:37](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L37)
+[src/task/work.ts:36](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L36)

@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/activity/results.ts:67](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L67)
+[src/activity/results.ts:67](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L67)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:68](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L68)
+[src/activity/results.ts:68](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L68)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:69](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L69)
+[src/activity/results.ts:69](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L69)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:70](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/results.ts#L70)
+[src/activity/results.ts:70](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L70)

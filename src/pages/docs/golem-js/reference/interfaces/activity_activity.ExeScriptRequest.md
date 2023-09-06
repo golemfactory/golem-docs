@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/activity/activity.ts:20](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L20)
+[src/activity/activity.ts:21](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L21)

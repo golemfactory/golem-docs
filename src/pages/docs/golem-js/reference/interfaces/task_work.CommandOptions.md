@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/task/work.ts:41](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L41)
+[src/task/work.ts:40](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L40)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L42)
+[src/task/work.ts:41](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L41)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:43](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L43)
+[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L42)
