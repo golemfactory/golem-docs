@@ -34,7 +34,7 @@ It will give you a cluster of one node (which will expand when you feed it with 
 
 ```bash
 # Download the example-golem-cluster.yaml
-wget http://golem.network/ray/example-golem-cluster.yaml
+wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
@@ -50,7 +50,7 @@ Download our example Ray app and execute it locally (a Ray instance will be crea
 
 ```bash
 # Download the example Ray app
-wget http://golem.network/ray/example-ray-app.py
+wget https://github.com/golemfactory/golem-ray/blob/mateusz/docs/examples/simple-task.py
 
 # Execute the app locally by starting a local ray instance on your computer
 python3 example-ray-app.py

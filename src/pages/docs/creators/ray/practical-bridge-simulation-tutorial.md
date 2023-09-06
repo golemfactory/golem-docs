@@ -9,7 +9,7 @@ This tutorial explains step-by-step how to parallelize an example bridge-themed 
 
 ## The example Double Dummy Solver app
 
-Download our [example bridge application](https://golem.network/ray/examples/dds-without-ray.py)
+Download our [example bridge application](https://github.com/golemfactory/golem-ray/blob/mateusz/docs/examples/dds-without-ray.py)
 ```bash
 # Download the example bridge app
 wget https://golem.network/ray/examples/dds-without-ray.py
@@ -156,7 +156,7 @@ pip install -U golem-ray
 curl -sSf https://join.golem.network/as-requestor | bash -
 
 # Download the example-golem-cluster.yaml
-wget http://golem.network/ray/example-golem-cluster.yaml
+wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
