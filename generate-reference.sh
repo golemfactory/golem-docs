@@ -5,7 +5,7 @@ set -e # Exit immediately if a command exits with a non-zero status.
 REPO_URL='https://github.com/golemfactory/golem-js.git'
 TEMP_PATH='./temp'
 OUTPUT_PATH='../src/pages/docs/golem-js/reference'
-TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-clear-references.cjs --hideBreadcrumbs true'
+TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-clear-references.cjs --plugin .docs/typedoc-frontmatter-theme.cjs --hideBreadcrumbs true'
 BRANCH_NAME=$1
 
 # Cloning Repository to Temporary Path
