@@ -26,6 +26,14 @@ For now, you also need to download and install Golem node software representing 
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
+## Start `golem-ray` server
+
+For the time being you need to manually run `golem-ray` server (in a separate terminal)
+
+```bash
+python golem_ray/server/run.py
+```
+
 ## Set the cluster up
 
 With the packages in place, you can download our sample golem cluster configuration yaml, and feed it to `ray up` to start up the cluster.
@@ -75,6 +83,8 @@ In the end, stop your cluster to free the Golem network providers and to avoid t
 # Tear down the cluster.
 ray down golem-cluster.yaml
 ```
+
+For the time being you also nee to stop `golem-ray` server (with `Control-C`).
 
 ## Summary
 

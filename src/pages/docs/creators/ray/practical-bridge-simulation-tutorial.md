@@ -155,6 +155,9 @@ pip install -U golem-ray
 # install yagna - golem network daemon
 curl -sSf https://join.golem.network/as-requestor | bash -
 
+# start golem-ray server
+python golem_ray/server/run.py
+
 # Download the golem-cluster.yaml
 wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
@@ -240,3 +243,4 @@ When you are done, it is a good practice to stop the cluster. In default configu
 ray down golem-cluster.yaml
 ```
 
+For the time being you also nee to stop `golem-ray` server (with `Control-C`).

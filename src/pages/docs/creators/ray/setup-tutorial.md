@@ -37,9 +37,17 @@ TLDR install yagna:
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
+## Start `golem-ray` server
+
+For the time being you need to manually run `golem-ray` server (in a separate terminal)
+
+```bash
+python golem_ray/server/run.py
+```
+
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed you can immediately proceed to launching your cluster. 
+Once the packages are installed you can immediately proceed to launching your cluster.
 The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
 that is configured to autoscale to up to 10 worker nodes (with ??? cpus, ??? ram, ??? disk space each).
 
@@ -132,4 +140,4 @@ It is important because running a cluster uses up the Golem network nodes. In th
 ray down golem-cluster.yaml
 ```
 
-
+For the time being you also nee to stop `golem-ray` server (with `Control-C`).
