@@ -14,6 +14,7 @@ const useFetch = (url) => {
   return data
 }
 
+
 export function GithubCode({ children, githubPath, language = 'js' }) {
   const code = useFetch(
     `https://raw.githubusercontent.com/golemfactory/golem-js/${process.env.NEXT_PUBLIC_BRANCH}/${githubPath}`
