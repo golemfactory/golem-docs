@@ -7,6 +7,11 @@ type: example
 # Practical bridge simulation tutorial
 This tutorial explains step-by-step how to parallelize an example bridge-themed app, set Ray on Golem cluster up, run the app on the cluster, and finally stop the cluster.
 
+The parallelization part is also explained in our PoC demo video
+
+{% youtube link="https://www.youtube.com/watch?v=IneVyiVdMKQ" %}
+{% /youtube %}
+
 ## The example Double Dummy Solver app
 
 Download our [example bridge application](https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py)
