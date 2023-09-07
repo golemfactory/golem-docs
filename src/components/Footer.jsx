@@ -5,7 +5,7 @@ import { GolemIcon } from './icons/GolemIcon'
 import { LinkedInIcon } from './icons/LinkedIn'
 import { RedditIcon } from './icons/RedditIcon'
 import { YoutubeIcon } from './icons/YoutubeIcon'
-import { javascript, python, dapps } from '@/navigation/footer'
+import { javascript, python, ray, dapps } from '@/navigation/footer'
 import { ArrowRightIcon } from './icons/ArrowRightIcon'
 import Link from 'next/link'
 
@@ -106,6 +106,12 @@ export const Footer = () => (
           data={javascript}
           description={'Contracts or people on the network'}
           link={'/docs/creators/javascript'}
+        />
+        <DocSection
+          title="Ray on Golem Docs"
+          data={ray}
+          description={'Contracts or people on the network'}
+          link={'/docs/creators/ray'}
         />
         <DocSection
           title="Learn Dapps"
