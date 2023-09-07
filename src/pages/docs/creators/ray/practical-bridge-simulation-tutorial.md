@@ -9,10 +9,10 @@ This tutorial explains step-by-step how to parallelize an example bridge-themed 
 
 ## The example Double Dummy Solver app
 
-Download our [example bridge application](https://github.com/golemfactory/golem-ray/blob/mateusz/docs/examples/dds-without-ray.py)
+Download our [example bridge application](https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py)
 ```bash
 # Download the example bridge app
-wget https://golem.network/ray/examples/dds-without-ray.py
+wget https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py
 ```
 
 The app is using the [endplay library](https://pypi.org/project/endplay/)
@@ -162,7 +162,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 # * yagna starts in the background (if not running)
 # * golem-ray cluster manager starts in the background
 # * ray head node is started on a golem provider
-ray up example-golem-cluster.yaml
+ray up golem-cluster.yaml
 
 # Check if Ray on Golem cluster is running 
 ray exec example-golem-cluster.yaml 'python -c \'import ray; ray.init(address="auto")\''

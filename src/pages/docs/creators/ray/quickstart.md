@@ -40,7 +40,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 # * yagna starts in the background (if not running)
 # * golem-ray cluster manager starts in the background
 # * ray head node is started on a golem provider
-ray up example-golem-cluster.yaml
+ray up golem-cluster.yaml
 
 ```
 
@@ -50,10 +50,10 @@ Download our example Ray app and execute it locally (a Ray instance will be crea
 
 ```bash
 # Download the example Ray app
-wget https://github.com/golemfactory/golem-ray/blob/mateusz/docs/examples/simple-task.py
+wget https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py
 
 # Execute the app locally by starting a local ray instance on your computer
-python3 example-ray-app.py
+python simple-task.py
 ```
 
 Feed the app to the cluster. Observe how Ray on Golem cluster expands during the computation

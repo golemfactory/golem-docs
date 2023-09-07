@@ -54,14 +54,14 @@ The example cluster config file contains payment information. As a default it ru
 The command to start the cluster is `ray up`:
 
 ```bash
-# Download the example-golem-cluster.yaml
+# Download the example golem-cluster.yaml
 wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
 # * golem-ray cluster manager starts in the background
 # * ray head node is started on a golem provider
-ray up example-golem-cluster.yaml
+ray up golem-cluster.yaml
 
 ```
 
@@ -70,7 +70,7 @@ It will connect to the head node and execute the simplest ray code on the cluste
 
 ```bash
 # Check if Ray on Golem cluster is running 
-ray exec example-golem-cluster.yaml 'python -c \'import ray; ray.init(address="auto")\''
+ray exec golem-cluster.yaml 'python -c \'import ray; ray.init(address="auto")\''
 
 ```
 
@@ -88,13 +88,10 @@ At first, it is recommended to run the app locally (without connecting to the cl
 
 ```bash
 # Download the example Ray app
-wget https://github.com/golemfactory/golem-ray/blob/mateusz/docs/examples/simple-task.py 
-
-# Submit the app to be executed on your cluster
-python3 example-ray-app.py
+wget https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py 
 
 # Execute the app locally by starting a local ray instance on your computer
-python3 example-ray-app.py
+python simple-task.py
 ```
 
 This particular app shows information about the cluster it is being run on and also visualizes the number of tasks run on different nodes.
@@ -107,7 +104,7 @@ After you are sure the app works you can feed it to your Ray on Golem cluster
 # B) Or create worker node(s) on the Golem Network. Worker nodes will be later auto-terminated by the autoscaler
 
 # Submit the app to be executed on your cluster
-ray submit example-ray-app.py
+ray submit golem-cluster.yaml simple-task.py
 ```
 
 You can see the information about the cluster both before and after running the computations.
