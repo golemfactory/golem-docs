@@ -4,7 +4,7 @@ title: Ray on Golem Concept
 type: article
 ---
 
-# Concept
+# About Ray and Ray on Golem
 This doc explains Ray and Ray on Golem basic concepts.
 
 ## Introduction
