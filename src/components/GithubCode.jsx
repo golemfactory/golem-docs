@@ -3,14 +3,9 @@ import { Fence } from './Fence'
 
 const useFetch = (url) => {
   const [data, setData] = useState(null)
-  useEffect(() => {
-    const fetchGhCode = async () => {
-      const res = await fetch(url)
-      const text = await res.text()
-      setData(text)
-    }
-    fetchGhCode()
-  }, [url])
+  const res = fetch(url)
+  const text = res.text()
+  setData(text)
   return data
 }
 
