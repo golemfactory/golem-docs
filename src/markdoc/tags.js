@@ -13,6 +13,8 @@ import { SelectionCard } from '@/components/SelectionCard'
 import { SelectionContent } from '@/components/SelectionContent'
 import { Grid } from '@/components/Grid'
 import { Padding } from '@/components/Padding'
+
+import { GithubCode } from '@/components/GithubCode'
 const tags = {
   tabs: {
     render: Tabs,
@@ -146,6 +148,13 @@ const tags = {
   whitespace: {
     selfClosing: true,
     render: Whitespace,
+  },
+  github: {
+    render: GithubCode,
+    selfClosing: true,
+    attributes: {
+      githubPath: { type: String },
+    },
   },
 }
 
