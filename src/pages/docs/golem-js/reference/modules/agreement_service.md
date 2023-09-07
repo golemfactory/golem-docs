@@ -1,3 +1,8 @@
+---
+title: "Module agreement/service - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module agreement/service within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: agreement/service
 
 ## Table of contents
@@ -37,4 +42,4 @@
 
 #### Defined in
 
-[src/agreement/service.ts:19](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/service.ts#L19)
+[src/agreement/service.ts:19](https://github.com/golemfactory/golem-js/blob/ecc063e/src/agreement/service.ts#L19)

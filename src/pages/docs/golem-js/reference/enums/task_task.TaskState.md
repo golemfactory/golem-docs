@@ -1,3 +1,8 @@
+---
+title: "Enum TaskState - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Enum TaskState within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Enumeration: TaskState
 
 [task/task](../modules/task_task).TaskState
@@ -16,48 +21,48 @@
 
 ### New
 
-• **New** = ``0``
+• **New** = ``"new"``
 
 #### Defined in
 
-[src/task/task.ts:5](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/task.ts#L5)
+[src/task/task.ts:5](https://github.com/golemfactory/golem-js/blob/ecc063e/src/task/task.ts#L5)
 
 ___
 
 ### Retry
 
-• **Retry** = ``1``
+• **Retry** = ``"retry"``
 
 #### Defined in
 
-[src/task/task.ts:6](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/task.ts#L6)
+[src/task/task.ts:6](https://github.com/golemfactory/golem-js/blob/ecc063e/src/task/task.ts#L6)
 
 ___
 
 ### Pending
 
-• **Pending** = ``2``
+• **Pending** = ``"pending"``
 
 #### Defined in
 
-[src/task/task.ts:7](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/task.ts#L7)
+[src/task/task.ts:7](https://github.com/golemfactory/golem-js/blob/ecc063e/src/task/task.ts#L7)
 
 ___
 
 ### Done
 
-• **Done** = ``3``
+• **Done** = ``"done"``
 
 #### Defined in
 
-[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/task.ts#L8)
+[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/ecc063e/src/task/task.ts#L8)
 
 ___
 
 ### Rejected
 
-• **Rejected** = ``4``
+• **Rejected** = ``"rejected"``
 
 #### Defined in
 
-[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/task.ts#L9)
+[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/ecc063e/src/task/task.ts#L9)

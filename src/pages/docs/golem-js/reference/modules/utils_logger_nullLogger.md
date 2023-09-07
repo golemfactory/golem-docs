@@ -1,3 +1,8 @@
+---
+title: "Module utils/logger/nullLogger - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module utils/logger/nullLogger within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: utils/logger/nullLogger
 
 ## Table of contents
@@ -18,4 +23,4 @@
 
 #### Defined in
 
-[src/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/nullLogger.ts#L3)
+[src/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/logger/nullLogger.ts#L3)

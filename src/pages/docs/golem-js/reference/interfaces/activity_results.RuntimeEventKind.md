@@ -1,3 +1,8 @@
+---
+title: "Interface RuntimeEventKind - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface RuntimeEventKind within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: RuntimeEventKind
 
 [activity/results](../modules/activity_results).RuntimeEventKind
@@ -19,7 +24,7 @@
 
 #### Defined in
 
-[src/activity/results.ts:74](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L74)
+[src/activity/results.ts:74](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/results.ts#L74)
 
 ___
 
@@ -29,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:75](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L75)
+[src/activity/results.ts:75](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/results.ts#L75)
 
 ___
 
@@ -39,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:76](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L76)
+[src/activity/results.ts:76](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/results.ts#L76)
 
 ___
 
@@ -49,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:77](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/results.ts#L77)
+[src/activity/results.ts:77](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/results.ts#L77)

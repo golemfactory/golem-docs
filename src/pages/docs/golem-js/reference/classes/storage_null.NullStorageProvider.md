@@ -1,3 +1,8 @@
+---
+title: "Class NullStorageProvider - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class NullStorageProvider within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: NullStorageProvider
 
 [storage/null](../modules/storage_null).NullStorageProvider
@@ -53,7 +58,7 @@ Close storage provider and release all resources.
 
 #### Defined in
 
-[src/storage/null.ts:14](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/null.ts#L14)
+[src/storage/null.ts:14](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/null.ts#L14)
 
 ___
 
@@ -73,7 +78,7 @@ Initialize storage provider.
 
 #### Defined in
 
-[src/storage/null.ts:18](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/null.ts#L18)
+[src/storage/null.ts:18](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/null.ts#L18)
 
 ___
 
@@ -99,7 +104,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Defined in
 
-[src/storage/null.ts:23](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/null.ts#L23)
+[src/storage/null.ts:23](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/null.ts#L23)
 
 ___
 
@@ -125,7 +130,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Defined in
 
-[src/storage/null.ts:28](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/null.ts#L28)
+[src/storage/null.ts:28](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/null.ts#L28)
 
 ___
 
@@ -151,7 +156,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/null.ts:33](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/null.ts#L33)
+[src/storage/null.ts:33](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/null.ts#L33)
 
 ___
 
@@ -177,7 +182,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/null.ts:38](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/null.ts#L38)
+[src/storage/null.ts:38](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/null.ts#L38)
 
 ___
 
@@ -203,4 +208,4 @@ Release previously allocated resource URL from Yagna.
 
 #### Defined in
 
-[src/storage/null.ts:43](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/null.ts#L43)
+[src/storage/null.ts:43](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/null.ts#L43)

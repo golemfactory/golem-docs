@@ -1,3 +1,8 @@
+---
+title: "Module utils/logger/defaultLogger - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module utils/logger/defaultLogger within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: utils/logger/defaultLogger
 
 ## Table of contents
@@ -24,4 +29,4 @@
 
 #### Defined in
 
-[src/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/defaultLogger.ts#L3)
+[src/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/logger/defaultLogger.ts#L3)

@@ -1,3 +1,8 @@
+---
+title: "Enum ActivityStateEnum - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Enum ActivityStateEnum within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Enumeration: ActivityStateEnum
 
 [activity/activity](../modules/activity_activity).ActivityStateEnum
@@ -21,7 +26,7 @@
 
 #### Defined in
 
-[src/activity/activity.ts:12](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L12)
+[src/activity/activity.ts:12](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/activity.ts#L12)
 
 ___
 
@@ -31,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:13](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L13)
+[src/activity/activity.ts:13](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/activity.ts#L13)
 
 ___
 
@@ -41,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L14)
+[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/activity.ts#L14)
 
 ___
 
@@ -51,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:15](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L15)
+[src/activity/activity.ts:15](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/activity.ts#L15)
 
 ___
 
@@ -61,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:16](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L16)
+[src/activity/activity.ts:16](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/activity.ts#L16)
 
 ___
 
@@ -71,4 +76,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:17](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L17)
+[src/activity/activity.ts:17](https://github.com/golemfactory/golem-js/blob/ecc063e/src/activity/activity.ts#L17)

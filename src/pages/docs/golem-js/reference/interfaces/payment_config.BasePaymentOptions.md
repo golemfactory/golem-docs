@@ -1,3 +1,8 @@
+---
+title: "Interface BasePaymentOptions - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface BasePaymentOptions within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: BasePaymentOptions
 
 [payment/config](../modules/payment_config).BasePaymentOptions
@@ -30,7 +35,7 @@
 
 #### Defined in
 
-[src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/config.ts#L23)
+[src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/ecc063e/src/payment/config.ts#L23)
 
 ___
 
@@ -40,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/config.ts#L24)
+[src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/ecc063e/src/payment/config.ts#L24)
 
 ___
 
@@ -57,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/config.ts#L25)
+[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/ecc063e/src/payment/config.ts#L25)
 
 ___
 
@@ -67,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/config.ts#L26)
+[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/ecc063e/src/payment/config.ts#L26)
 
 ___
 
@@ -77,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/config.ts#L27)
+[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/ecc063e/src/payment/config.ts#L27)
 
 ___
 
@@ -87,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/config.ts#L28)
+[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/ecc063e/src/payment/config.ts#L28)
 
 ___
 
@@ -97,4 +102,4 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/config.ts#L29)
+[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/ecc063e/src/payment/config.ts#L29)

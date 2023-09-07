@@ -1,3 +1,8 @@
+---
+title: "Module utils/env - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module utils/env within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: utils/env
 
 ## Table of contents
@@ -25,4 +30,4 @@
 
 #### Defined in
 
-[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/env.ts#L3)
+[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/env.ts#L3)

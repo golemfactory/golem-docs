@@ -1,3 +1,8 @@
+---
+title: "Interface AgreementDTO - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface AgreementDTO within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: AgreementDTO
 
 [agreement/service](../modules/agreement_service).AgreementDTO
@@ -17,7 +22,7 @@
 
 #### Defined in
 
-[src/agreement/service.ts:10](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/service.ts#L10)
+[src/agreement/service.ts:10](https://github.com/golemfactory/golem-js/blob/ecc063e/src/agreement/service.ts#L10)
 
 ___
 
@@ -34,4 +39,4 @@ ___
 
 #### Defined in
 
-[src/agreement/service.ts:11](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/service.ts#L11)
+[src/agreement/service.ts:11](https://github.com/golemfactory/golem-js/blob/ecc063e/src/agreement/service.ts#L11)

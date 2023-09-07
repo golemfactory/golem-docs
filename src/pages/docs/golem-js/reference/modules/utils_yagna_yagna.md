@@ -1,3 +1,8 @@
+---
+title: "Module utils/yagna/yagna - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module utils/yagna/yagna within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: utils/yagna/yagna
 
 ## Table of contents
@@ -33,7 +38,7 @@
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/yagna/yagna.ts#L12)
+[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/yagna/yagna.ts#L12)
 
 ___
 
@@ -50,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/yagna/yagna.ts#L22)
+[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/yagna/yagna.ts#L22)

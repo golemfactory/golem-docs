@@ -1,3 +1,8 @@
+---
+title: "Class TaskRedone - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class TaskRedone within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: TaskRedone
 
 [events/events](../modules/events_events).TaskRedone
@@ -45,7 +50,7 @@
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/491c0c9/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/ecc063e/src/events/events.ts#L28)
 
 ## Properties
 
@@ -71,7 +76,7 @@
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/491c0c9/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/ecc063e/src/events/events.ts#L16)
 
 ___
 
@@ -85,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/491c0c9/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/ecc063e/src/events/events.ts#L17)
 
 ___
 
@@ -99,4 +104,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/491c0c9/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/ecc063e/src/events/events.ts#L18)

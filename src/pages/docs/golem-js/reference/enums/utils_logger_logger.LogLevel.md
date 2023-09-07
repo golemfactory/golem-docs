@@ -1,3 +1,8 @@
+---
+title: "Enum LogLevel - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Enum LogLevel within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Enumeration: LogLevel
 
 [utils/logger/logger](../modules/utils_logger_logger).LogLevel
@@ -20,7 +25,7 @@
 
 #### Defined in
 
-[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L2)
+[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/logger/logger.ts#L2)
 
 ___
 
@@ -30,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L3)
+[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/logger/logger.ts#L3)
 
 ___
 
@@ -40,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L4)
+[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/logger/logger.ts#L4)
 
 ___
 
@@ -50,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L5)
+[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/logger/logger.ts#L5)
 
 ___
 
@@ -60,4 +65,4 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L6)
+[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/ecc063e/src/utils/logger/logger.ts#L6)

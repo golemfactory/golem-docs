@@ -1,3 +1,8 @@
+---
+title: "Class GftpStorageProvider - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class GftpStorageProvider within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: GftpStorageProvider
 
 [storage/gftp](../modules/storage_gftp).GftpStorageProvider
@@ -38,7 +43,7 @@
 
 #### Defined in
 
-[src/storage/gftp.ts:20](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L20)
+[src/storage/gftp.ts:20](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L20)
 
 ## Methods
 
@@ -58,7 +63,7 @@ Initialize storage provider.
 
 #### Defined in
 
-[src/storage/gftp.ts:26](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L26)
+[src/storage/gftp.ts:26](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L26)
 
 ___
 
@@ -72,7 +77,7 @@ ___
 
 #### Defined in
 
-[src/storage/gftp.ts:61](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L61)
+[src/storage/gftp.ts:61](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L61)
 
 ___
 
@@ -98,7 +103,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:77](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L77)
+[src/storage/gftp.ts:77](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L77)
 
 ___
 
@@ -124,7 +129,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:83](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L83)
+[src/storage/gftp.ts:83](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L83)
 
 ___
 
@@ -150,7 +155,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:87](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L87)
+[src/storage/gftp.ts:87](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L87)
 
 ___
 
@@ -176,7 +181,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:93](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L93)
+[src/storage/gftp.ts:93](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L93)
 
 ___
 
@@ -202,7 +207,7 @@ Release previously allocated resource URL from Yagna.
 
 #### Defined in
 
-[src/storage/gftp.ts:106](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L106)
+[src/storage/gftp.ts:106](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L106)
 
 ___
 
@@ -222,7 +227,7 @@ Close storage provider and release all resources.
 
 #### Defined in
 
-[src/storage/gftp.ts:120](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L120)
+[src/storage/gftp.ts:120](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L120)
 
 ___
 
@@ -242,4 +247,4 @@ ___
 
 #### Defined in
 
-[src/storage/gftp.ts:147](https://github.com/golemfactory/golem-js/blob/491c0c9/src/storage/gftp.ts#L147)
+[src/storage/gftp.ts:147](https://github.com/golemfactory/golem-js/blob/ecc063e/src/storage/gftp.ts#L147)
