@@ -11,6 +11,7 @@ import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'
 import { ThemeToggler } from '@/components/ThemeSelector'
 import VersionSwitcher from '@/components/VersionSwitcher'
+import useSWR from 'swr'
 
 function Heading({ section, isActive }) {
   const isChildActive = section.children.some(isActive)
@@ -71,18 +72,17 @@ function Header({ navigation }) {
     }
   }, [])
 
-  const [githubInfo, setGithubInfo] = useState({ stargazersCount: 0, forks: 0 })
+  const fetcher = (url) => fetch(url).then((res) => res.json())
 
-  useEffect(() => {
-    fetch('https://api.github.com/repos/golemfactory/yagna')
-      .then((response) => response.json())
-      .then((data) => {
-        setGithubInfo({
-          stargazersCount: data.stargazers_count,
-          forks: data.forks,
-        })
-      })
-  }, [])
+  const { data, error } = useSWR(
+    'https://api.github.com/repos/golemfactory/yagna',
+    fetcher
+  )
+
+  const githubInfo = {
+    stargazersCount: data?.stargazers_count || 0,
+    forks: data?.forks || 0,
+  }
 
   return (
     <header
