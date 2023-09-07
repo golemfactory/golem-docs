@@ -26,13 +26,11 @@ function collectHeadings(
 ) {
   let sections = []
   for (let node of nodes) {
-    if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
+    if (node.name === 'Heading') {
+      let { level, id } = node.attributes
       let title = getNodeText(node)
       if (title) {
-        let id = slugify(title)
-        node.attributes.id = id.replace(/-/g, '') // Used to fix the linking on reference page
-        let level = parseInt(node.name.slice(1))
-        let newNode = { ...node.attributes, title, children: [], level }
+        let newNode = { ...node.attributes, title, children: [] }
         if (lastNodes[level - 2]) {
           lastNodes[level - 2].children.push(newNode)
         } else {
@@ -42,7 +40,7 @@ function collectHeadings(
         lastNodes.length = level
       }
     }
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
+    sections.push(...collectHeadings(node.children ?? [], lastNodes))
   }
   return sections
 }

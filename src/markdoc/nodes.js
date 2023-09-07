@@ -1,6 +1,21 @@
-import { nodes as defaultNodes } from "@markdoc/markdoc";
+import { nodes as defaultNodes } from '@markdoc/markdoc'
 
-import { Fence } from "@/components/Fence";
+import { Fence } from '@/components/Fence'
+import { Heading } from '@/components/Heading'
+import { Tag } from '@markdoc/markdoc'
+
+function generateID(children, attributes) {
+  if (attributes.id && typeof attributes.id === 'string') {
+    return attributes.id
+  }
+  return children
+    .filter((child) => typeof child === 'string')
+    .join(' ')
+    .replace(/[?]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-/g, '')
+    .toLowerCase()
+}
 
 const nodes = {
   document: {
@@ -12,15 +27,7 @@ const nodes = {
       ...defaultNodes.th.attributes,
       scope: {
         type: String,
-        default: "col",
-      },
-    },
-  },
-  h3: {
-    ...defaultNodes.h3,
-    attributes: {
-      id: {
-        type: String,
+        default: 'col',
       },
     },
   },
@@ -32,6 +39,21 @@ const nodes = {
       process: { type: Boolean, render: false, default: true },
     },
   },
-};
+  heading: {
+    render: Heading,
+    children: ['inline'],
+    attributes: {
+      id: { type: String },
+      level: { type: Number, required: true, default: 1 },
+    },
+    transform(node, config) {
+      const attributes = node.transformAttributes(config)
+      const children = node.transformChildren(config)
+      const id = generateID(children, attributes)
 
-export default nodes;
+      return new Tag(this.render, { ...attributes, id }, children)
+    },
+  },
+}
+
+export default nodes
