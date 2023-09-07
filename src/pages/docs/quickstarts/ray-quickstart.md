@@ -33,14 +33,14 @@ It will give you a cluster of one node (which will expand when you feed it with 
 
 
 ```bash
-# Download the example-golem-cluster.yaml
-wget http://golem.network/ray/example-golem-cluster.yaml
+# Download the golem-cluster.yaml
+wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
 # * golem-ray cluster manager starts in the background
 # * ray head node is started on a golem provider
-ray up example-golem-cluster.yaml
+ray up golem-cluster.yaml
 
 ```
 
@@ -50,10 +50,10 @@ Download our example Ray app and execute it locally (a Ray instance will be crea
 
 ```bash
 # Download the example Ray app
-wget http://golem.network/ray/example-ray-app.py
+wget https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py
 
 # Execute the app locally by starting a local ray instance on your computer
-python3 example-ray-app.py
+python simple-task.py
 ```
 
 Feed the app to the cluster. Observe how Ray on Golem cluster expands during the computation
@@ -64,7 +64,7 @@ Feed the app to the cluster. Observe how Ray on Golem cluster expands during the
 # B) Or create worker node(s) on the Golem Network. Worker nodes will be later auto-terminated by the autoscaler)
 
 # Submit the app to be executed on your cluster
-ray submit example-ray-app.py
+ray submit golem-cluster.yaml simple-task.py 
 ```
 
 ## Stop the cluster
@@ -73,7 +73,7 @@ In the end, stop your cluster to free the Golem network providers and to avoid t
 
 ```bash
 # Tear down the cluster.
-ray down example-golem-cluster.yaml
+ray down golem-cluster.yaml
 ```
 
 ## Summary
