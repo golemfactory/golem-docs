@@ -25,26 +25,30 @@ function collectHeadings(
   lastNodes = []
 ) {
   let sections = []
-  for (let node of nodes) {
-    if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
-      let title = getNodeText(node)
-      if (title) {
-        let id = slugify(title)
-        node.attributes.id = id.replace(/-/g, '') // Used to fix the linking on reference page
-        let level = parseInt(node.name.slice(1))
-        let newNode = { ...node.attributes, title, children: [], level }
-        if (lastNodes[level - 2]) {
-          lastNodes[level - 2].children.push(newNode)
-        } else {
-          sections.push(newNode)
+  try {
+    for (let node of nodes) {
+      if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
+        let title = getNodeText(node)
+        if (title) {
+          let id = slugify(title)
+          node.attributes.id = id.replace(/-/g, '') // Used to fix the linking on reference page
+          let level = parseInt(node.name.slice(1))
+          let newNode = { ...node.attributes, title, children: [], level }
+          if (lastNodes[level - 2]) {
+            lastNodes[level - 2].children.push(newNode)
+          } else {
+            sections.push(newNode)
+          }
+          lastNodes[level - 1] = newNode
+          lastNodes.length = level
         }
-        lastNodes[level - 1] = newNode
-        lastNodes.length = level
       }
+      sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
     }
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
+    return sections
+  } catch (err) {
+    return []
   }
-  return sections
 }
 
 export default function App({ Component, pageProps }) {

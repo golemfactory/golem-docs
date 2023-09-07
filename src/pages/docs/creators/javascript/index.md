@@ -5,10 +5,6 @@ title: JS SDK Introduction
 
 # Create your task application using Task API
 
-{% github githubPath="examples/blender/blender.ts" %}
-
-{% /github %}
-
 Welcome to the docs page for Golem JS SDK.
 
 The core of JS SDK is the **@golem-sdk/golem-js** library that enables interaction with the Golem Network. Your JS scripts can be run in Node.js and web browsers. We provide a documentation package that helps quickly understand and use the Golem Network and the essential tools.
