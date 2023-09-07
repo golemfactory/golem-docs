@@ -129,7 +129,7 @@ It is important because running a cluster uses up the Golem network nodes. In th
 
 ```bash
 # Tear down the cluster.
-ray down example-golem-cluster.yaml
+ray down golem-cluster.yaml
 ```
 
 

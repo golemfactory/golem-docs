@@ -49,11 +49,11 @@ There is cluster provider-specific information (node definitions, payment platfo
 Ray also exposes a command line interface to manage the cluster (and nodes).
 
 While `ray start` & `ray stop` are for manual node setup there are also many cluster commands
-- `ray up cluster.yaml` starts up the cluster specified by the yaml
-- `ray down cluster.yaml` terminates the cluster
-- `ray submit cluster.yaml ray-app.py` executes the app on the cluster
-- `ray exec cluster.yaml 'shell-command-line'` executes shell commands on the head node
-- `ray attach cluster.yaml` gives you shell access to the head node
+- `ray up golem-cluster.yaml` starts up the cluster specified by the yaml
+- `ray down golem-cluster.yaml` terminates the cluster
+- `ray submit golem-cluster.yaml ray-app.py` executes the app on the cluster
+- `ray exec golem-cluster.yaml 'shell-command-line'` executes shell commands on the head node
+- `ray attach golem-cluster.yaml` gives you shell access to the head node
 
 ## How to start
 

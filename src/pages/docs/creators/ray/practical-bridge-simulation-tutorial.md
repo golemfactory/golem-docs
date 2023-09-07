@@ -155,7 +155,7 @@ pip install -U golem-ray
 # install yagna - golem network daemon
 curl -sSf https://join.golem.network/as-requestor | bash -
 
-# Download the example-golem-cluster.yaml
+# Download the golem-cluster.yaml
 wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
@@ -165,7 +165,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 ray up golem-cluster.yaml
 
 # Check if Ray on Golem cluster is running 
-ray exec example-golem-cluster.yaml 'python -c \'import ray; ray.init(address="auto")\''
+ray exec golem-cluster.yaml 'python -c \'import ray; ray.init(address="auto")\''
 ```
 
 ## Run the app
@@ -190,7 +190,7 @@ When you run the code, it takes a bit longer than previously, as Ray needs to cr
 
 With the cluster up and running, with Ray notified about endplay lib dependency, executing our app is as simple as:
 ```bash
-ray submit example-golem-cluster.yaml dds-with-ray.py
+ray submit golem-cluster.yaml dds-with-ray.py
 ```
 ```
 (...TODO...)
@@ -200,7 +200,7 @@ Notice how at first there is only one node, and after the computation, there is 
 When you resubmit the app to the cluster fast enough all the nodes will be available right from the beginning
 
 ```bash
-ray submit example-golem-cluster.yaml dds-with-ray.py
+ray submit golem-cluster.yaml dds-with-ray.py
 ```
 ```
 (...TODO...)
@@ -220,7 +220,7 @@ python dds-with-ray.py
 
 And on Golem:
 ```bash
-ray submit example-golem-cluster.yaml dds-with-ray.py
+ray submit golem-cluster.yaml dds-with-ray.py
 ```
 
 At some point (typically 100-200 deals tend to be enough) the execution on your Ray on Golem cluster will be visibly faster :)
@@ -237,6 +237,6 @@ You can play with the app and with cluster config yaml - change the maximum numb
 When you are done, it is a good practice to stop the cluster. In default configuration, it runs on the testnet which is free, but keeping it running causes worse provider availability for others. When you run on the mainnet - stopping the cluster saves you money.
 
 ```python
-ray down example-golem-cluster.yaml
+ray down golem-cluster.yaml
 ```
 

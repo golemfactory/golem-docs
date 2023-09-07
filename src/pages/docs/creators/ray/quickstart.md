@@ -33,7 +33,7 @@ It will give you a cluster of one node (which will expand when you feed it with 
 
 
 ```bash
-# Download the example-golem-cluster.yaml
+# Download the golem-cluster.yaml
 wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
@@ -73,7 +73,7 @@ In the end, stop your cluster to free the Golem network providers and to avoid t
 
 ```bash
 # Tear down the cluster.
-ray down example-golem-cluster.yaml
+ray down golem-cluster.yaml
 ```
 
 ## Summary

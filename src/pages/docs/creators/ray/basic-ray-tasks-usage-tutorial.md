@@ -58,7 +58,7 @@ python simple-task.py
 
 Or, you can execute it on Ray on Golem cluster with
 ```bash
-ray submit cluster-confiuration-yaml-used-with-ray-up simple-task.py
+ray submit cluster-confiuration-yaml-used-with-ray-up.yaml simple-task.py
 ```
 
 Let's have a look at ray usage in the app.
