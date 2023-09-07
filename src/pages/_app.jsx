@@ -55,6 +55,7 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
+  console.log('content', pageProps.markdoc?.content)
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
@@ -65,10 +66,6 @@ export default function App({ Component, pageProps }) {
 
       <div className={inter.className}>
         <Head>
-          <meta
-            name="google-site-verification"
-            content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
-          />
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
         </Head>
