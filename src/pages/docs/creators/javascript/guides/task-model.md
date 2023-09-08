@@ -6,6 +6,10 @@ title: Introduction to Golem Network and Task model
 
 # Introduction to Golem Network and Task model
 
+## Introduction
+
+This article will explain Golem Network and details around the Task model.
+
 ## Golem Network
 
 Golem Network is a p2p network that consists of many nodes. Each node is a system with a __Yagna__ service running on it. The nodes that offer their resources to others are called __providers__. The nodes that hire resources are called __requestors__.
