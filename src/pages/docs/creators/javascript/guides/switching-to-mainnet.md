@@ -5,6 +5,8 @@ title: Switching to mainnet
 
 # Using Golem on Mainnet
 
+## Introduction
+
 {% alert level="warning" %}
 
 This section is aimed mainly at **requestors** wishing to switch from running simple test tasks on our development subnet (testnet) to launching production payloads utilizing the vast number of providers on the public subnet.
