@@ -47,11 +47,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 node index.mjs
 ```
 
-
-## Introduction
-
-For each command that is run, you can obtain a result object.
-
 ## Single command task
 
 Let's look at the simple example: we will run a task that consists of single command and will print the content of the result object:
