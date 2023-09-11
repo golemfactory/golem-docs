@@ -111,7 +111,7 @@ Next, we'll create the main `index.html` file with a minimal layout:
 
 In this layout, there are three elements:
 
-- A "Run" button, which executes the script on Golem
+- A "Echo Hello World" button, which executes the script on Golem
 - A "Results" container, which displays the results
 - A "Logs" container, which displays the API logs
 
@@ -129,14 +129,13 @@ First, we will import the `@golem-sdk/golem-js` library:
 
 ### Task Executor
 
-When the user presses the `Run` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, we will end it.
+When the user presses the `Echo Hello World` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, we will end it.
 
 Note that the `create()` method received an additional 3 parameters:
 
 - `package` identifies the image that we want to run on a provider,
 - `apiKey` is the key that enables our script to use the Yagna REST API,
-- `logger` is a function that the SDK will use for logging. We'll define it shortly.
-
+- `logger` is a function that the SDK will use for logging. We'll define it short
 ```html
 <script type="module">
   //
@@ -306,7 +305,7 @@ You should see the app available in the browser.
 
 [ Open localhost ](http://localhost:8080/index)
 
-If you click the run button, after a while in the result container, we should get the result of the script: `Hello World`, and in the log container we should see the logs of executed commands.
+If you click the 'Echo Hello World' button, after a while in the result container, we should get the result of the script, and in the log container we should see the logs of executed commands.
 
 ![Output logs](/browser_log.png)
 
