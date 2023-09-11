@@ -16,6 +16,12 @@ In this article, the following examples are presented:
 - Defining the number of providers working in parallel
 - Initializing providers
 - Running a single task
+
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -24,10 +30,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 

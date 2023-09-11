@@ -9,6 +9,10 @@ title: Working with results
 
 This example will show you how the task result can be managed by code in different ways for different use-cases.
 
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -17,10 +21,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 

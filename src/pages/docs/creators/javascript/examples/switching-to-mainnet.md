@@ -11,6 +11,10 @@ By default, JS SDK will execute your task in testnet. This is a development netw
 
 In this article, we will show how to run your tasks on Polygon.
 
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -19,10 +23,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 

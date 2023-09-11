@@ -39,6 +39,10 @@ We'll start with a simple example featuring a single `run()` command. Then, we'l
 - run the `worker.js` on a provider and save the output to a file (output.txt) and finally
 - download the `output.txt` file back to your computer.
 
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -47,19 +51,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
-
-{% alert level="info" %}
-
-Some of the examples require a simple `worker.mjs` script that can be created with the following command:
-```bash
-echo console.log("Hello Golem World!"); > worker.mjs
-```
-
-{% /alert  %}
 
 ## How to run examples
 
@@ -78,6 +69,11 @@ Copy the code into the `index.mjs` file in the project folder and run:
 node index.mjs
 ```
 
+Some of the examples require a simple `worker.mjs` script that can be created with the following command:
+
+```bash
+echo console.log("Hello Golem World!"); > worker.mjs
+```
 
 ### Running a single command
 
