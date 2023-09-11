@@ -4,6 +4,31 @@ title: Golem JS Guides
 ---
 
 
+## High-level API libraries
+
+The low-level mechanics of the Golem market are quite complex, and building robust applications directly using the low-level APIs, while possible, may not be the most efficient approach. For this reason, a concept of High-level API libraries has been designed, as "bindings" of specific programming languages with Golem platform.
+
+The purpose of a high-level API is to wrap the intricacies of Golem APIs with more efficient programming models, based on computation models more intuitive than Golem market, activity and payment concepts. A developer using these libraries should have a basic understanding of Golem platform's fundamental concepts \(Demand/Offer market matching, activity execution, payment-related logic\), but all the low-level logic is implemented in a high-level API library.
+
+Following high-level API libraries are supported by Golem Factory:
+
+{% embed url="https://yapapi.readthedocs.io/en/latest/api.html" %}{% /embed %}
+
+{% page-ref page="../../yajsapi/yajsapi.md" /%}
+
+## Task Model vs Service Model
+
+Two basic computation models are supported by Golem high-level APIs.
+
+- **Task model** is designed to support **batch processing**, where an application is expected to perform a set of "computation jobs" on Golem network. A high-level API library provides structure for a developer to define batch tasks, which are then efficiently distributed across a selected number of providers available in Golem network. Batch jobs may require input data to be transferred to the provider side, and may produce output data, which needs to be fetched once the computation is complete.
+- **Service model** is an abstraction over **interactive processes** which get launched, and operate in order to respond to requests. A service generally is expected to be active until explicitly stopped, however all the concepts of input/output data transfer also do apply.
+
+Please refer to following sections for a dive into those two Golem programming models:
+
+{% page-ref page="../task-processing-development/" /%}
+
+{% page-ref page="../service-development/" /%}
+
 
 Task Model
 
