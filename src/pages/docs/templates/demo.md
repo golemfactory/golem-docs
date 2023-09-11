@@ -157,10 +157,16 @@ Want to use a YAML-based approach to configure the deployment
 
 ![Hacker image](/hacker.png)
 
-
 # working comments (see source)
+
 (below this line there is comment: see source)
 
-[//]: <> ( comment  is here )
+[//]: <> ( comment is here )
 
 (above this line there is a comment: see source)
+
+# Example of code from Github
+
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/blender/blender.ts" language="typescript" %}
+
+{% /codefromgithub %}
