@@ -39,7 +39,7 @@ export function Heading({ id = '', level = 1, children, className }) {
           {copied ? (
             'Copied'
           ) : (
-            <LinkIcon className="h-3.5 w-3.5 text-primary" />
+            <LinkIcon className="h-3.5 w-3.5 text-primary dark:text-darkprimary" />
           )}
         </button>
       </div>
