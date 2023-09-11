@@ -41,8 +41,7 @@ On the other hand, because we assume requestors will first start by testing the 
 
 When you run `yagna payment fund` on testnet, Golem initializes a new account from our custom faucet (a service that transfers test tokens to an address that asks for it) which provides it with test Matic and test GLM tokens.
 
-Of course, you also need to enable your accounts' sender mode, which is done using `yagna payment init`. 
-
+To enable the service to use the `mainnet`, you must use a command appropriate to your desired mainnet payment platform. For instructions look [here](/docs/creators/javascript/examples/tools/managing-golem-wallet#enable-the-mainnet-account).
 
 
 {% docnavigation title="Next steps" %}
@@ -55,7 +54,7 @@ Of course, you also need to enable your accounts' sender mode, which is done usi
 
 {% docnavigation title="See also" %}
 
-- [Polygon](https://polygon.technology/technology/)
+- [Polygon](https://polygon.technology/)
 - [GLM token on Polygon](https://polygonscan.com/token/0x0b220b82f3ea3b7f6d9a1d8ab58930c064a2b5bf)
 
 {% /docnavigation %}

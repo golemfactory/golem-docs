@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/package/package.ts#L7)
+[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/491c0c9/src/package/package.ts#L7)
