@@ -22,33 +22,44 @@ function getNodeText(node) {
 function collectHeadings(
   nodes,
   slugify = slugifyWithCounter(),
-  lastNodes = []
+  lastNodes = [],
+  idMap = {}
 ) {
   let sections = []
-  try {
-    for (let node of nodes) {
-      if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
-        let title = getNodeText(node)
-        if (title) {
-          let id = slugify(title)
-          node.attributes.id = id.replace(/-/g, '') // Used to fix the linking on reference page
-          let level = parseInt(node.name.slice(1))
-          let newNode = { ...node.attributes, title, children: [], level }
-          if (lastNodes[level - 2]) {
-            lastNodes[level - 2].children.push(newNode)
-          } else {
-            sections.push(newNode)
-          }
-          lastNodes[level - 1] = newNode
-          lastNodes.length = level
-        }
+
+  for (let node of nodes) {
+    if (node.name === 'Heading') {
+      let { level, id } = node.attributes
+      id = id.replace(/-/g, '')
+
+      if (idMap[id]) {
+        idMap[id] += 1
+        id = `${id}${idMap[id]}`
+      } else {
+        idMap[id] = 1
       }
-      sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
+
+      node.attributes.id = id
+
+      let title = getNodeText(node)
+
+      if (title) {
+        let newNode = { ...node.attributes, title, children: [], level }
+        if (lastNodes[level - 2]) {
+          lastNodes[level - 2].children.push(newNode)
+        } else {
+          sections.push(newNode)
+        }
+        lastNodes[level - 1] = newNode
+        lastNodes.length = level
+      }
     }
-    return sections
-  } catch (err) {
-    return []
+
+    sections.push(
+      ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
+    )
   }
+  return sections
 }
 
 export default function App({ Component, pageProps }) {
@@ -71,10 +82,6 @@ export default function App({ Component, pageProps }) {
 
       <div className={inter.className}>
         <Head>
-          <meta
-            name="google-site-verification"
-            content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
-          />
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
         </Head>
