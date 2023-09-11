@@ -55,7 +55,7 @@ Of course, you also need to enable your accounts' sender mode, which is done usi
 
 {% docnavigation title="See also" %}
 
-- [Polygon](https://polygon.technology/technology/)
+- [Polygon](https://polygon.technology/)
 - [GLM token on Polygon](https://polygonscan.com/token/0x0b220b82f3ea3b7f6d9a1d8ab58930c064a2b5bf)
 
 {% /docnavigation %}
