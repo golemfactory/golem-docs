@@ -5,6 +5,10 @@ title: Switching to mainnet
 
 # JS Task API Examples: switching to mainnet
 
+## Introduction
+
+This section is aimed mainly at __requestors__ wishing to switch from running simple test tasks on our `testnet` to launching production payloads utilizing the vast number of providers on the `mainnet`.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -16,7 +20,7 @@ This example has been designed to work with the following environments:
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
