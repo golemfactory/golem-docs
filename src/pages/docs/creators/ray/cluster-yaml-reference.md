@@ -6,7 +6,7 @@ type: article
 
 # Ray on Golem cluster yaml reference
 
-This article explains Ray on Golem cluster yaml options.
+This article explains the options available in the configuration yaml file when setting up a Ray on Golem cluster.
 
 ## Example Ray on Golem cluster configuration
 
@@ -14,11 +14,10 @@ The basic `golem-cluter.yaml` is [available on github](https://github.com/golemf
 
 It allows you to start a cluster on our testnet with one head node and three worker nodes. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
 
-All the details of general Ray supported properties can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
-
+The details of all the properties that are generally supported by Ray, can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
 
 Ray on Golem strives to support all configuration possibilities available for general Ray cluster managers. 
-When you find a property we are not supporting yet, please [let us know](https://discord.com/channels/684703559954333727/1136986696907505775).
+When you find a property we don't support yet, please [let us know](https://discord.com/channels/684703559954333727/1136986696907505775).
 
 ## Interesting properties
 
@@ -26,7 +25,7 @@ Let's have a look at more interesting properties (including the ones specific fo
 
 ### Max workers
 
-Max workers define the size of the cluster that the Ray autoscaler might scale up to. This includes the head node.
+The "Max workers" setting defines the size of the cluster that the Ray autoscaler may scale up to, including the head node.
 Consider using more workers when you run your cluster on the mainnet.
 
 
@@ -37,8 +36,8 @@ max_workers: 10
 
 ### Min workers
 
-Minimum number of workers can be specified per node type, and decide how many nodes are started with `ray up`.
-Also when Ray is scaling the cluster down, it will stop when there is the minimum number of nodes running.
+Minimum number of workers can be specified per node type, and influences how many such nodes are started with `ray up`.
+Additionally, this is the lowest number of nodes that Ray will automatically scale down to.
 
 ```yaml
   ray.worker.default:
@@ -48,7 +47,7 @@ Also when Ray is scaling the cluster down, it will stop when there is the minimu
 
 ### Idle timeout 
 
-Idle timeout controls how fast Ray decommisions nodes that are not busy. It will always leave `min_workers` workers though.
+Idle timeout controls how fast Ray decommisions the nodes that are not busy. It will always leave at least `min_workers` workers, though.
 
 ```yaml
 # The number of minutes that need to pass before an idle worker node is removed by the Autoscaler
@@ -57,7 +56,7 @@ idle_timeout_minutes: 5
 
 ### Initialization commands
 
-You can use initialization commands to initialize your nodes - install all dependencies with pip.
+You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies.
 
 ```yaml
 # List of commands that will be run to initialize the nodes (before `setup_commands`)
@@ -69,8 +68,8 @@ initialization_commands: []
 
 ### Provider section
 
-The whole provider section describes lots of Golem node provider internals.
-You can change some of the properties.
+The whole "provider" section describes quite a lot of Golem node provider internals. 
+Some of these properties interact with how Ray on Golem works in general, so be careful with those that you're unfamiliar with as changing them may render your cluster unusable.
 
 #### Webserver port
 
@@ -78,9 +77,9 @@ Ray on Golem uses `golem-ray` server to control Golem nodes, payments etc. This 
 
 #### Network
 
-Ray on Golem uses blockchain technology to pay for ray nodes hosting.
-Currently, while we support only Golem testnet, the payments use Goerli test blockchain.
-When you move to mainnet `network` property needs to be changed to `polygon`
+Ray on Golem uses the GLM token on the Ethereum blockchain to pay for the hosting of ray nodes.
+Currently, while we support only Golem testnet, the payments use the `goerli` test blockchain.
+When you move to mainnet, the `network` property needs to be changed to `polygon`
 
 ```yaml
 # Blockchain used for payments. 
@@ -91,10 +90,8 @@ network: "goerli"
 
 #### Image tag and image hash
 
-Image tag and image hash properties describe images Golem nodes will start to host ray software.
+Image tag and image hash properties refer to the virtual machine images that Golem provider nodes will start to host ray software.
 
-Ray on Golem autodetects your local configuration and starts images with matching Python and Ray versions
+Ray on Golem automatically detects your local configuration and starts images with matching Python and Ray versions.
 
-You can however use the properties to override the detection and order a specific image. Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
-
-
+However, you can use these properties to override the detection and request a specific image. Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
