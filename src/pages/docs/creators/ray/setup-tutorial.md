@@ -6,7 +6,7 @@ type: guide
 
 # Ray on Golem setup tutorial 
 
-This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster.
+This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster. It largely replicates [Ray on Golem Quickstart](/docs/creators/ray/quickstart) but is much more elaborated.
 
 To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Golem Ray cluster manager.
 
@@ -48,7 +48,9 @@ python golem_ray/server/run.py
 
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed you can immediately proceed to launching your cluster.
+Once the packages are installed and `golem-ray` cluster manager is running, you can immediately proceed with launching your cluster.
+The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
+that is configured to autoscale to up to 10 worker nodes (with ??? cpus, ??? ram, ??? disk space each).
 
 Each Ray cluster consists of one head node and a number of worker nodes. The head node drives the computation, and the worker nodes execute the tasks. The head node also serves as one of the workers.
 
@@ -82,7 +84,7 @@ It will connect to the head node and execute the simplest ray code on the cluste
 
 ```bash
 # Check if Ray on Golem cluster is running 
-ray exec golem-cluster.yaml 'python -c \'import ray; ray.init(address="auto")\''
+ray exec golem-cluster.yaml "python -c 'import ray; ray.init()'"
 
 ```
 

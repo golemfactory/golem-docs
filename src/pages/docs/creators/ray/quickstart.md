@@ -72,7 +72,7 @@ Execute the app on the cluster. Observe how Ray on Golem cluster expands during 
 # B) Or create worker node(s) on the Golem Network. Worker nodes will be later auto-terminated by the autoscaler)
 
 # Submit the app to be executed on your cluster
-ray submit example-ray-app.py
+ray submit golem-cluster.yaml simple-task.py 
 ```
 
 ## Stop the cluster

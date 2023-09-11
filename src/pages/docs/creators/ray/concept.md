@@ -28,11 +28,16 @@ For the time being, you also need yagna - Golem daemon facilitating communicatio
 
 When you have the software installed, you need a cluster configuration yaml file. We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
 
-When your application is ready, and you need more power, you can get GLMs (to pay the providers) and MATICs (for Polygon payment transaction fees) and can move your cluster to the Golem network mainnet.
+When your application is ready, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
+
+Payments within Golem Network happen on blockchain called [Polygon](https://polygon.technology), you need tokens named GLM (to pay the providers) and MATIC (for payment transaction fees).
+Please read more about [mainnet payments and funding your Ray on Golem](/docs/creators/javascript/guides/switching-to-mainnet) (it is called Requestor on Golem Network)
+
+When you have the tokens you need to configure `network: "polygon"` in cluster yaml ([more details](/docs/creators/ray/cluster-yaml-reference#network))
 
 Check out [the machines](https://stats.golem.network/network/providers/online) ready to execute your payloads.
 
-## Life cycle of Ray on Golem cluster
+## Life cycle of working with Ray on Golem
 
 The basic flow of working with Ray and Ray on Golem consists of:
 

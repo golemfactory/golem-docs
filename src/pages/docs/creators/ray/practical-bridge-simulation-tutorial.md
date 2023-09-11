@@ -173,7 +173,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 ray up golem-cluster.yaml
 
 # Check if Ray on Golem cluster is running 
-ray exec golem-cluster.yaml 'python -c \'import ray; ray.init(address="auto")\''
+ray exec golem-cluster.yaml "python -c 'import ray; ray.init()'"
 ```
 
 ## Run the app
