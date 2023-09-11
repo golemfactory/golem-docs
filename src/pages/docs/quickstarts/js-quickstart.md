@@ -87,7 +87,7 @@ yagna service run
 
 #### Get test GLM tokens
 
-Requesting tasks on the Golem Network requires some GLM tokens.
+Requesting tasks on the Golem Network requires GLM tokens.
 As this example will run on a test network, you can use test GLM.
 
 Open another terminal and run the following command to complete the configuration:
@@ -96,8 +96,7 @@ Open another terminal and run the following command to complete the configuratio
 yagna payment fund
 ```
 
-The first one will initialize the payment driver.
-The second one will top up your account with test GLM tokens. You can pay with them only in the test network, where your apps are running by default.
+It will top up your account with test GLM tokens. You can pay with them only in the test network, where your apps are running by default.
 
 ## Building your first Golem Network App
 
