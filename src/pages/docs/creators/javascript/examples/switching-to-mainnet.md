@@ -7,7 +7,9 @@ title: Switching to mainnet
 
 ## Introduction
 
-This example will show you how to run your tasks on Golem's main network with real cryptocurrency.
+By default, JS SDK will execute your task in testnet. This is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
+
+In this article, we will show how to run your tasks on Polygon.
 
 {% alert level="info" %}
 
@@ -38,12 +40,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-By default, JS SDK will execute your task in testnet. This is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
-
-In this article, we will show how to run your tasks on Polygon.
 
 ## Running your tasks on the Polygon Network 
 

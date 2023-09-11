@@ -7,7 +7,10 @@ title: Using app-keys
 
 ## Introduction
 
-This example will show you the different ways of using different sorts of app-keys when requesting.
+To use Yagna REST API, your application must identify itself by api-key.
+In our examples we utilize the `try_golem` key, which is automatically created if you have the `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
+
+Such an api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
 
 {% alert level="info" %}
 
@@ -38,13 +41,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-To use Yagna REST API, your application must identify itself by api-key.
-In our examples we utilize the `try_golem` key, which is automatically created if you have the `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
-
-Such an api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
 
 ### Creating unique app-keys
 

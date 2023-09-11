@@ -7,7 +7,7 @@ description: Examples of how to use your own Golem image in a requestor script
 
 ## Introduction
 
-This example will show you how to switch the Golem image used on a provider to run your commands in your own defined environment.
+Golem images define a remote environment where you execute tasks. They are identified either by their `tags` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
 
 {% alert level="info" %}
 
@@ -38,11 +38,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-
-# Introduction
-
-Golem images define a remote environment where you execute tasks. They are identified either by their `tags` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
 
 ## Using Golem images
 

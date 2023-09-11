@@ -7,7 +7,37 @@ title: Composing tasks
 
 ## Introduction
 
-This article will show you examples on how to compose tasks in different ways.
+Task Executor methods take a task function as a parameter for each of its methods. 
+This function is asynchronous and provides access to the WorkContext object, which is provided as one of its parameters.
+
+A task function may be very simple, consisting of a single command, or it may consist of a set of steps that include running commands or sending data to and from providers. 
+
+Commands can be run in sequence or can be chained in batches. Depending on how you define your batch, you can obtain results of different types.
+
+The following commands are currently available:
+
+| Command     | Available in node.js| Available in web browser |
+| ----------- | :------------------:|:------------------------:| 
+| `run()` | yes | yes|
+| `uploadFile()` | yes | no |
+| `uploadJson()` | yes | yes |
+| `downloadFile()` | yes | no |
+| `uploadData()` | yes | yes |
+| `downloadData()` | no |  yes |
+| `downloadJson()` | no | yes |
+
+
+
+
+{% alert level="info" %}
+This article focuses on the `run()` command and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](/docs/creators/javascript/examples/transferring-data) article.
+{% /alert %}
+
+We'll start with a simple example featuring a single `run()` command. Then, we'll focus on organizing a more complex task that requires a series of steps:
+
+- send a `worker.js` script to the provider (this is a simple script that prints "Good morning Golem!" in the terminal), 
+- run the `worker.js` on a provider and save the output to a file (output.txt) and finally
+- download the `output.txt` file back to your computer.
 
 {% alert level="info" %}
 
@@ -47,42 +77,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-
-
-## Introduction
-
-Task Executor methods take a task function as a parameter for each of its methods. 
-This function is asynchronous and provides access to the WorkContext object, which is provided as one of its parameters.
-
-A task function may be very simple, consisting of a single command, or it may consist of a set of steps that include running commands or sending data to and from providers. 
-
-Commands can be run in sequence or can be chained in batches. Depending on how you define your batch, you can obtain results of different types.
-
-The following commands are currently available:
-
-| Command     | Available in node.js| Available in web browser |
-| ----------- | :------------------:|:------------------------:| 
-| `run()` | yes | yes|
-| `uploadFile()` | yes | no |
-| `uploadJson()` | yes | yes |
-| `downloadFile()` | yes | no |
-| `uploadData()` | yes | yes |
-| `downloadData()` | no |  yes |
-| `downloadJson()` | no | yes |
-
-
-
-
-{% alert level="info" %}
-This article focuses on the `run()` command and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](/docs/creators/javascript/examples/transferring-data) article.
-{% /alert %}
-
-We'll start with a simple example featuring a single `run()` command. Then, we'll focus on organizing a more complex task that requires a series of steps:
-
-- send a `worker.js` script to the provider (this is a simple script that prints "Good morning Golem!" in the terminal), 
-- run the `worker.js` on a provider and save the output to a file (output.txt) and finally
-- download the `output.txt` file back to your computer.
 
 
 ### Running a single command

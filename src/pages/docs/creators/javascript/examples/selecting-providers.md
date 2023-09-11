@@ -7,7 +7,12 @@ title: Selecting providers
 
 ## Introduction
 
-This example will show you how to programmatically select providers based off your own custom strategies.
+You can select providers that suit your needs:
+
+- Select a provider based on minimal requirements for remote computer
+  CPU, storage, ram
+- Select a provider based on the whitelist/blacklist
+- Select a provider based on the proposed costs using a custom filter
 
 {% alert level="info" %}
 
@@ -38,15 +43,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-You can select providers that suit your needs:
-
-- Select a provider based on minimal requirements for remote computer
-  CPU, storage, ram
-- Select a provider based on the whitelist/blacklist
-- Select a provider based on the proposed costs using a custom filter
 
 ## Filtering providers based on minimal requirements:
 

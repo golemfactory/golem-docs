@@ -7,7 +7,23 @@ title: Transferring data
 
 ## Introduction
 
-This example will show you how to transfer data between your requestor and your rented provider(s).
+In this article, we will present methods that let you send files to and from a provider as well as send JSON to a remote computer.
+
+{% alert level="warning" %}
+Look at the table below to check what particular methods are available in each environment. 
+{% /alert %}
+
+The following commands are currently available:
+
+| Command     | Available in node.js| Available in web browser |
+| ----------- | :------------------:|:------------------------:| 
+| `run()` | yes | yes|
+| `uploadFile()` | yes | no |
+| `uploadJson()` | yes | yes |
+| `downloadFile()` | yes | no |
+| `uploadData()` | yes | yes |
+| `downloadData()` | no |  yes |
+| `downloadJson()` | no | yes |
 
 {% alert level="info" %}
 
@@ -38,26 +54,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-In this article, we will present methods that let you send files to and from a provider as well as send JSON to a remote computer.
-
-{% alert level="warning" %}
-Look at the table below to check what particular methods are available in each environment. 
-{% /alert %}
-
-The following commands are currently available:
-
-| Command     | Available in node.js| Available in web browser |
-| ----------- | :------------------:|:------------------------:| 
-| `run()` | yes | yes|
-| `uploadFile()` | yes | no |
-| `uploadJson()` | yes | yes |
-| `downloadFile()` | yes | no |
-| `uploadData()` | yes | yes |
-| `downloadData()` | no |  yes |
-| `downloadJson()` | no | yes |
 
 
 ## Uploading a file to the provider
