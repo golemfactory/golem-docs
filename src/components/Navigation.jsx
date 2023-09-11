@@ -57,7 +57,7 @@ export const SideBar = ({ navigation }) => {
       const hasChildren = item.children?.length
 
       return (
-        <li className="text-sm " key={item.href || item.title}>
+        <li className="py-0.5 text-sm" key={item.href || item.title}>
           {hasChildren ? (
             <Dropdown isActive={isActive(item, router)}>
               {[
@@ -91,7 +91,7 @@ export const NavigationItem = ({ item, isActive }) =>
     <Link
       href={item.href}
       aria-current={isActive ? 'page' : undefined}
-      className={`break-words
+      className={`break-words py-0.5
       ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/50'}
       `}
     >
@@ -99,7 +99,7 @@ export const NavigationItem = ({ item, isActive }) =>
     </Link>
   ) : (
     <span
-      className={clsx('text-sm', {
+      className={clsx('py-0.5 text-sm', {
         'text-primary dark:text-darkprimary': isActive,
       })}
     >
