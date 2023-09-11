@@ -31,7 +31,7 @@ When your application is ready, and you need more power you can get GLMs (to pay
 
 Check out [the machines](https://stats.golem.network/network/providers/online) ready to execute your payloads.
 
-## Life cycle of Ray on Golem cluster
+## Life cycle of working with Ray on Golem
 
 The basic flow of working with Ray and Ray on Golem consists of:
 
