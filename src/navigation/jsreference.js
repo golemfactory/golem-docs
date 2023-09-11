@@ -174,10 +174,6 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/package_package.Package"
           },
 {
-            title: "AccountConfig",
-            href: "/docs/golem-js/reference/classes/payment_config.AccountConfig"
-          },
-{
             title: "Payments",
             href: "/docs/golem-js/reference/classes/payment_payments.Payments"
           },
@@ -216,6 +212,18 @@ export const navigation = [
 {
             title: "WorkContext",
             href: "/docs/golem-js/reference/classes/task_work.WorkContext"
+          },
+{
+            title: "RequestorApi",
+            href: "/docs/golem-js/reference/classes/utils_yagna_gsb.RequestorApi"
+          },
+{
+            title: "RequestorApi",
+            href: "/docs/golem-js/reference/classes/utils_yagna_identity.RequestorApi"
+          },
+{
+            title: "Yagna",
+            href: "/docs/golem-js/reference/classes/utils_yagna_yagna.Yagna"
           }
         ]
       },
@@ -316,8 +324,8 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/storage_ws_browser.WebSocketStorageProviderOptions"
           },
 {
-            title: "TaskOptions",
-            href: "/docs/golem-js/reference/interfaces/task_service.TaskOptions"
+            title: "TaskServiceOptions",
+            href: "/docs/golem-js/reference/interfaces/task_service.TaskServiceOptions"
           },
 {
             title: "CommandOptions",
@@ -330,6 +338,10 @@ export const navigation = [
 {
             title: "Logger",
             href: "/docs/golem-js/reference/interfaces/utils_logger_logger.Logger"
+          },
+{
+            title: "IdentityModel",
+            href: "/docs/golem-js/reference/interfaces/utils_yagna_identity.IdentityModel"
           }
         ]
       },
@@ -389,10 +401,6 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/market_strategy"
           },
 {
-            title: "Network_identity",
-            href: "/docs/golem-js/reference/modules/network_identity"
-          },
-{
             title: "Network_network",
             href: "/docs/golem-js/reference/modules/network_network"
           },
@@ -407,10 +415,6 @@ export const navigation = [
 {
             title: "Package_package",
             href: "/docs/golem-js/reference/modules/package_package"
-          },
-{
-            title: "Package_repo_resolver",
-            href: "/docs/golem-js/reference/modules/package_repo_resolver"
           },
 {
             title: "Payment_config",
@@ -507,6 +511,18 @@ export const navigation = [
 {
             title: "Utils_types",
             href: "/docs/golem-js/reference/modules/utils_types"
+          },
+{
+            title: "Utils_yagna_gsb",
+            href: "/docs/golem-js/reference/modules/utils_yagna_gsb"
+          },
+{
+            title: "Utils_yagna_identity",
+            href: "/docs/golem-js/reference/modules/utils_yagna_identity"
+          },
+{
+            title: "Utils_yagna_yagna",
+            href: "/docs/golem-js/reference/modules/utils_yagna_yagna"
           }
         ]
       }

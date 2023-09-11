@@ -48,7 +48,7 @@ Work Context
 
 #### Defined in
 
-[src/task/work.ts:61](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L61)
+[src/task/work.ts:60](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L60)
 
 ## Properties
 
@@ -66,7 +66,7 @@ Work Context
 
 #### Defined in
 
-[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L52)
+[src/task/work.ts:51](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L51)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:53](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L53)
+[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L52)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:54](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L54)
+[src/task/work.ts:53](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L53)
 
 ## Methods
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:74](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L74)
+[src/task/work.ts:73](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L73)
 
 ___
 
@@ -123,7 +123,7 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Defined in
 
-[src/task/work.ts:117](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L117)
+[src/task/work.ts:116](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L116)
 
 ▸ **run**(`executable`, `args`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
@@ -143,7 +143,7 @@ Execute an executable on provider.
 
 #### Defined in
 
-[src/task/work.ts:126](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L126)
+[src/task/work.ts:125](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L125)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:138](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L138)
+[src/task/work.ts:137](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L137)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:143](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L143)
+[src/task/work.ts:142](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L142)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:148](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L148)
+[src/task/work.ts:147](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L147)
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:152](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L152)
+[src/task/work.ts:151](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L151)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:156](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L156)
+[src/task/work.ts:155](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L155)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:161](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L161)
+[src/task/work.ts:160](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L160)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:176](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L176)
+[src/task/work.ts:175](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L175)
 
 ___
 
@@ -311,7 +311,7 @@ This function is only used to throw errors from unit tests. It should be removed
 
 #### Defined in
 
-[src/task/work.ts:183](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L183)
+[src/task/work.ts:182](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L182)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:187](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L187)
+[src/task/work.ts:186](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L186)
 
 ___
 
@@ -345,4 +345,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:192](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/task/work.ts#L192)
+[src/task/work.ts:191](https://github.com/golemfactory/golem-js/blob/491c0c9/src/task/work.ts#L191)

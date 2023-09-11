@@ -16,7 +16,7 @@ This example has been designed to work with the following environments:
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -167,7 +167,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
     yagnaOptions: { apiKey: 'try_golem' }, 
     maxParallelTasks: 3,
     }
-  });
+  );
 
   executor.beforeEach(async (ctx) => {
     console.log(ctx.provider.name + ' is downloading action_log file');

@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/utils/logger/logger.ts#L2)
+[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L2)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/utils/logger/logger.ts#L3)
+[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L3)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/utils/logger/logger.ts#L4)
+[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L4)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/utils/logger/logger.ts#L5)
+[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L5)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/utils/logger/logger.ts#L6)
+[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/logger/logger.ts#L6)

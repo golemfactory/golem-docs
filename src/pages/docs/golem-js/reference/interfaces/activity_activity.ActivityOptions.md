@@ -6,13 +6,12 @@
 
 - **`ActivityOptions`**
 
-  ↳ [`TaskOptions`](task_service.TaskOptions)
+  ↳ [`TaskServiceOptions`](task_service.TaskServiceOptions)
 
 ## Table of contents
 
 ### Properties
 
-- [yagnaOptions](activity_activity.ActivityOptions#yagnaoptions)
 - [activityRequestTimeout](activity_activity.ActivityOptions#activityrequesttimeout)
 - [activityExecuteTimeout](activity_activity.ActivityOptions#activityexecutetimeout)
 - [activityExeBatchResultsFetchInterval](activity_activity.ActivityOptions#activityexebatchresultsfetchinterval)
@@ -20,23 +19,6 @@
 - [eventTarget](activity_activity.ActivityOptions#eventtarget)
 
 ## Properties
-
-### yagnaOptions
-
-• `Optional` **yagnaOptions**: `Object`
-
-#### Type declaration
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `apiKey?` | `string` | Yagna Api Key |
-| `basePath?` | `string` | Yagna base path to Activity REST Api |
-
-#### Defined in
-
-[src/activity/activity.ts:24](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L24)
-
-___
 
 ### activityRequestTimeout
 
@@ -46,7 +28,7 @@ timeout for sending and creating batch
 
 #### Defined in
 
-[src/activity/activity.ts:31](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L31)
+[src/activity/activity.ts:26](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L26)
 
 ___
 
@@ -58,7 +40,7 @@ timeout for executing batch
 
 #### Defined in
 
-[src/activity/activity.ts:33](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L33)
+[src/activity/activity.ts:28](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L28)
 
 ___
 
@@ -70,7 +52,7 @@ interval for fetching batch results while polling
 
 #### Defined in
 
-[src/activity/activity.ts:35](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L35)
+[src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L30)
 
 ___
 
@@ -82,7 +64,7 @@ Logger module
 
 #### Defined in
 
-[src/activity/activity.ts:37](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L37)
+[src/activity/activity.ts:32](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L32)
 
 ___
 
@@ -94,4 +76,4 @@ Event Bus implements EventTarget
 
 #### Defined in
 
-[src/activity/activity.ts:39](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/activity/activity.ts#L39)
+[src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/491c0c9/src/activity/activity.ts#L34)

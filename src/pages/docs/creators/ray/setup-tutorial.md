@@ -6,7 +6,9 @@ type: guide
 
 # Ray on Golem setup tutorial 
 
-This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster. It largely replicates [Ray on Golem Quickstart](/docs/creators/ray/quickstart) but is much more elaborated.
+This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster. 
+If you have already proceeded through our [Quickstart](/docs/creators/ray/quickstart), you'll find this tutorial familiar. 
+The point is to go through the same actions but now, providing you with more details on each one.
 
 To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Golem Ray cluster manager.
 
@@ -94,7 +96,7 @@ Congrats, you have started a Ray on Golem cluster!
 
 ## Test the cluster with example app
 
-You are now ready to run some ray computations.
+You are now ready to run some ray computations. 
 
 We have provided a test application that you can use to check if your brand-new cluster works properly.
 
@@ -147,3 +149,11 @@ ray down golem-cluster.yaml
 ```
 
 For the time being you also need to explicitly stop the `golem-ray` server (with `Control-C`).
+
+
+<!-- Testing comments -->
+
+<!-- Testing 
+multiline 
+comments
+-->

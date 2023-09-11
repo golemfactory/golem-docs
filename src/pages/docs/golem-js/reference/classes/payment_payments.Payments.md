@@ -23,12 +23,13 @@
 
 ### constructor
 
-• **new Payments**(`options?`)
+• **new Payments**(`yagnaApi`, `options?`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
+| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Overrides
@@ -37,18 +38,19 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/payments.ts#L26)
+[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/payments.ts#L26)
 
 ## Methods
 
 ### create
 
-▸ `Static` **create**(`options?`): `Promise`<[`Payments`](payment_payments.Payments)\>
+▸ `Static` **create**(`yagnaApi`, `options?`): `Promise`<[`Payments`](payment_payments.Payments)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
+| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Returns
@@ -57,7 +59,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/payments.ts#L22)
+[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/payments.ts#L22)
 
 ___
 
@@ -73,4 +75,4 @@ Unsubscribe demand from the market
 
 #### Defined in
 
-[src/payment/payments.ts:36](https://github.com/golemfactory/golem-js/blob/cbc3a8c/src/payment/payments.ts#L36)
+[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/payments.ts#L39)
