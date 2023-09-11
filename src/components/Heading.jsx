@@ -33,7 +33,7 @@ export function Heading({ id = '', level = 1, children, className }) {
           children
         )}
         <button
-          className={`text-xs ${copied ? 'font-semibold text-primary' : ''}`}
+          className={`text-xs ${copied ? 'font-semibold text-primary dark:text-darkprimary' : ''}`}
           aria-label={copied ? 'Copied' : 'Copy link'}
         >
           {copied ? (
