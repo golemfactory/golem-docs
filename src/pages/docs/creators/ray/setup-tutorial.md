@@ -88,7 +88,7 @@ Congrats, you have started a Ray on Golem cluster!
 
 ## Test the cluster with example app
 
-You are now ready to run some ray computations.
+You are now ready to run some ray computations. 
 
 We have provided a test application that you can use to check if your brand-new cluster works properly.
 
@@ -141,3 +141,12 @@ ray down golem-cluster.yaml
 ```
 
 For the time being you also nee to stop `golem-ray` server (with `Control-C`).
+
+
+<!-- Testing comments -->
+
+<!-- Testing 
+multiline 
+comments
+-->
+
