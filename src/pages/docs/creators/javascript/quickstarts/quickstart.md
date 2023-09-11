@@ -22,7 +22,7 @@ This example has been designed to work with the following environments:
 
 Yagna is a service that communicates and performs operations on the Golem Network. Let's get started by installing it.
 
-#### Install Yagna
+## Install Yagna
 
 {% tabs %}
 {% tab label="Easy installation" %}
@@ -58,7 +58,7 @@ Alternatively, if you can't install it in an easy way, you will do it manually i
 Should you encounter any problems, please reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/creators/javascript/guides/troubleshooting).
 {% /alert %}
 
-#### Start the Yagna service
+## Start the Yagna service
 
 Open a terminal (command line window) and define the app-key that will allow our script to use the Yagna API:
 
@@ -85,7 +85,7 @@ Then start the `yagna` service:
 yagna service run
 ```
 
-#### Get test GLM tokens
+## Get test GLM tokens
 
 Requesting tasks on the Golem Network requires GLM tokens.
 As this example will run on a test network, you can use test GLM.
