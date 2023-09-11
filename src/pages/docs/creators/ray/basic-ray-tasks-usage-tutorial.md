@@ -75,9 +75,9 @@ This is how Ray initialization looks like. `ray.init()` without parameters tells
 
 ## Cluster information
 
-`ray.autoscaler.sdk.request_resources` package exposes methods we use to print the information about the cluster (before and after ray computation).
-Notice that when you run the app on a fresh Ray on Golem cluster the cluster after the computation will be bigger.
-It is because Ray autoscaler observes the amount of work pending and requests additional nodes when the queues are getting longer.
+The `ray.autoscaler.sdk.request_resources` module exposes methods we use to print the information about the cluster (before and after ray computation).
+Notice that when you run the script on a fresh Ray on Golem cluster the number of nodes after the computation will be bigger.
+This happens because Ray autoscaler monitors the amount of work pending and requests additional nodes when the queues are getting longer.
 
 It also decommissions the nodes when they start to feel idle (5 mins in the example config we are providing).
 
