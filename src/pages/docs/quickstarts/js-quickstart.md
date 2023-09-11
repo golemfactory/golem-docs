@@ -96,7 +96,7 @@ Open another terminal and run the following command to complete the configuratio
 yagna payment fund
 ```
 
-It will top up your account with test GLM tokens. You can pay with them only in the test network, where your apps are running by default.
+It will top up your account with test GLM tokens. These tokens can only be used on the testnet. Unless specified otherwise, the testnet is the default network.
 
 ## Building your first Golem Network App
 
