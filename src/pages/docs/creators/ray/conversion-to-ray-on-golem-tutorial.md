@@ -1,11 +1,11 @@
 ---
 description: example of a little bit more sophisticated Ray on Golem usage
-title: Practical bridge simulation tutorial 
+title: Converting a real-life use case to Ray on Golem
 type: example 
 ---
 
-# Practical bridge simulation tutorial
-This tutorial explains step-by-step how to parallelize an example bridge-themed app, set Ray on Golem cluster up, run the app on the cluster, and finally stop the cluster.
+# Converting a real-life use case to Ray on Golem
+This tutorial explains step-by-step how to parallelize an example app, set Ray on Golem cluster up, run the script on the cluster, and finally stop the cluster.
 
 The parallelization part is also explained in our PoC demo video
 
@@ -14,24 +14,26 @@ The parallelization part is also explained in our PoC demo video
 
 ## The example Double Dummy Solver app
 
-Download our [example bridge application](https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py)
+In our case, the application is a very simple script running a simple bridge (the card game) simulation.
+
+Download our [example bridge script](https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py)
 ```bash
 # Download the example bridge app
 wget https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py
 ```
 
-The app is using the [endplay library](https://pypi.org/project/endplay/)
+The script uses the [endplay library](https://pypi.org/project/endplay/)
 ```bash
 # Install endplay lib
 pip install endplay==0.4.11b0
 ```
 
-When you run the code it randomly generates 50 bridge deals and for each deal calculates potential winnings for each player and each trump suit  - `get_deal()` and `get_lots_of_deals()` methods.
-It prints the results in a rather cryptic bridge language, you can learn more on [endplay docs site](https://endplay.readthedocs.io/en/latest/pages/readme/04_tutorial.html#dd-tables).
+When you run the code it randomly generates 50 bridge deals and for each deal, it calculates potential winnings for each player and each trump suit  - `get_deal()` and `get_lots_of_deals()` functions.
+It prints the results in a rather cryptic bridge language. You can learn more on [endplay docs site](https://endplay.readthedocs.io/en/latest/pages/readme/04_tutorial.html#dd-tables).
 
-Finally, the code prints information about the time it took to calculate all the deals.
+Finally, the code outputs the time it took to calculate all the deals.
 
-In this form it works in a very single-threaded way - it waits for each deal to be calculated before starting with the next one.
+In this form, it works in a very single-threaded way - it waits for each deal to be calculated before starting with the next one.
 
 ```bash
 # Run the example bridge app
@@ -64,7 +66,7 @@ ray.init()
 
 Empty `ray.init()` arguments tell ray to look for an existing cluster (we will use this path later) or start a local instance for the time of app execution.
 
-Save the app under a new name, so they don't mix up :)
+Save the script under a new name, so they don't mix up :)
 
 Run the code, and notice information about a local Ray instance starting.
 
@@ -91,7 +93,7 @@ The decorator tells Ray that this piece of code can be scheduled to run on a rem
 
 ### Remote call and waiting for results with `ray.get()`
 
-We need to explicitly acknowledge the remoteness of the call by adding `.remote()` inside `get_lots_of_deals()` method.
+We need to explicitly acknowledge the remoteness of the call by adding `.remote()` inside `get_lots_of_deals()` function.
 Additionally, now we aren't getting the results right away. `get_deal.remote()` merely schedules the execution and returns a future - an id - needed to get the results later with `ray.get()`:
 
 ```python
@@ -120,7 +122,7 @@ python dds-with-ray.py
 
 ### Add cluster info
 
-The last thing before proceeding to run our app on a Ray on Golem cluster is adding cluster information to the output.
+As the one last touch before proceeding to run our script on a Ray on Golem cluster, we'll add some information about the cluster to the output.
 Add this after `ray.init()` and at the end of the code:
 ```python
 print('''This cluster consists of
@@ -129,7 +131,7 @@ print('''This cluster consists of
       '''.format(len(ray.nodes()), ray.cluster_resources()['CPU']))
 ```
 
-Run it and see how many cores Ray finds in your computer:
+Run it and see how many cores Ray finds on your machine:
 ```bash
 python dds-with-ray.py 
 ```
@@ -149,7 +151,7 @@ This cluster consists of
 
 ## Set up your Ray on Golem cluster
 
-We will now scale the app execution even further - we will use a Ray on Golem cluster.
+We will now scale the execution even further - we will use a Ray on Golem cluster.
 
 Run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
@@ -180,7 +182,7 @@ ray exec golem-cluster.yaml "python -c 'import ray; ray.init()'"
 
 ### Pass endplay library requirement to Ray
 
-Now that the app will be running on Ray, we need to inform it that `endplay` library is required on the cluster nodes.
+Now that the app will be running on a cluster, we need to inform it that `endplay` library is required on individual worker nodes.
 
 Replacing `ray.init()` with the following will do the trick:
 ```python
@@ -204,8 +206,8 @@ ray submit golem-cluster.yaml dds-with-ray.py
 (...TODO...)
 ```
 
-Notice how at first there is only one node, and after the computation, there is five. This is Ray autoscaler at work.
-When you resubmit the app to the cluster fast enough all the nodes will be available right from the beginning
+Notice how at first, there is only one node, and after the computation, there are five. This is Ray autoscaler at work.
+When you resubmit the app to the cluster fast enough, all the nodes will be available right from the beginning.
 
 ```bash
 ray submit golem-cluster.yaml dds-with-ray.py
@@ -216,10 +218,10 @@ ray submit golem-cluster.yaml dds-with-ray.py
 
 ### Scale up
 
-Our DDS app by default computes 50 bridge deals - a rather small amount to make setting the environment up smoother.
-The small size of the sample however probably doesn't benefit from distribution to Golem Network.
+Our DDS script computes 50 bridge deals by default - a rather small number - so that the execution time does not get in the way of your following this tutorial.
+However, the small size of the sample probably won't benefit from the distribution to Golem Network.
 
-Increase the `DEAL_COUNT` 10 times, 50 times, however you want.
+To see actual profits from such parallelization, increase the `DEAL_COUNT` 10 or 50 times, however you want.
 
 Then you can run it locally (you can comment out `runtime_env` argument for `ray.init()` if you want the fastest local execution):
 ```bash
@@ -231,21 +233,21 @@ And on Golem:
 ray submit golem-cluster.yaml dds-with-ray.py
 ```
 
-At some point (typically 100-200 deals tend to be enough) the execution on your Ray on Golem cluster will be visibly faster :)
+At some point (typically 100-200 deals tend to be enough), the execution on your Ray on Golem cluster will be visibly faster :)
 
 ## Play around :)
 
 Everything is set up at this point and you can play around.
 
-You can play with the app and with cluster config yaml - change the maximum number of nodes, autoscaling speed, etc.
+You can play with the script and with the cluster config yaml - change the maximum number of nodes, autoscaling speed, etc.
 
 
 ## Stop the cluster
 
-When you are done, it is a good practice to stop the cluster. In default configuration, it runs on the testnet which is free, but keeping it running causes worse provider availability for others. When you run on the mainnet - stopping the cluster saves you money.
+When you are done, it is a good practice to stop the cluster. In the default configuration, it runs on the testnet which is free, but keeping it running impairs the provider availability for others. On the other hand, when you run on the mainnet, stopping the cluster saves you money.
 
 ```python
 ray down golem-cluster.yaml
 ```
 
-For the time being you also nee to stop `golem-ray` server (with `Control-C`).
+For the time being, you also need to stop `golem-ray` server (with `Control-C`).

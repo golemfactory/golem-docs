@@ -58,7 +58,7 @@ python simple-task.py
 
 Or, you can execute it on Ray on Golem cluster with
 ```bash
-ray submit cluster-confiuration-yaml-used-with-ray-up.yaml simple-task.py
+ray submit cluster-configuration-yaml-used-with-ray-up.yaml simple-task.py
 ```
 
 Let's have a look at ray usage in the app.
@@ -76,10 +76,10 @@ This is how Ray initialization looks like. `ray.init()` without parameters tells
 ## Cluster information
 
 The `ray.autoscaler.sdk.request_resources` module exposes methods we use to print the information about the cluster (before and after ray computation).
-Notice that when you run the script on a fresh Ray on Golem cluster the number of nodes after the computation will be bigger.
-This happens because Ray autoscaler monitors the amount of work pending and requests additional nodes when the queues are getting longer.
+Notice that when you run the script on a fresh Ray on Golem cluster, the number of nodes will increase as a result of the computation.
+This happens because Ray autoscaler monitors the amount of work pending and requests additional nodes as the queues get longer.
 
-It also decommissions the nodes when they start to feel idle (5 mins in the example config we are providing).
+It also decommissions the nodes when they start to idle (5 mins in the example config we are providing).
 
 ## Remote tasks declaration and execution
 
@@ -88,14 +88,15 @@ It also decommissions the nodes when they start to feel idle (5 mins in the exam
 def f:
 ```
 
-The Ray decorator declares that the method can be executed remotely (on a different node). Ray scheduler kicks in when it sees this decorator.
-In our case, the method just sleeps for a moment and then returns the IP address of the node it was executed on.
+Ray's `remote` decorator turns a regular local funtion into Ray's an object, which enables the function to be executed remotely (on a different node). 
+When you subsequently call its `.remote` method, Ray scheduler will queue its execution. 
+In our case, the function just sleeps for a moment and then returns the IP address of the node it was executed on.
 
 ```python
 object_ids = [f.remote() for _ in range(1000)]
 ```
 
-We run the method using the `remote` method added by the `@ray.remote` decorator. It immediately returns an id - a future - that can be used to get the results later.
+What happens when you call the `remote` method added by the `@ray.remote` decorator, is that it immediately returns an id - a kind of a future promise - that can be used to get the results later.
 
 ## Waiting for the results of remote calls
 
@@ -103,7 +104,7 @@ We run the method using the `remote` method added by the `@ray.remote` decorator
 ip_addresses = ray.get(object_ids)
 ```
 
-The future(s) can be waited for with `ray.get`. It returns only when all the remote tasks are executed.
+The future(s) can be awaited with `ray.get`. It returns only when all the remote tasks are executed.
 
 
 ## Conclussion
