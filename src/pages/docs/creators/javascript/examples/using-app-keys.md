@@ -87,27 +87,33 @@ const result = await executor.run(
 
 ### Using app-key from environment variable
 
-There is yet another option, to read the `apiKey` value from the `YAGNA_APPKEY` environment variable. JS SDK library will read the value of this variable. Therefore you do need to specify it inside the script and you can skip the 
+There is yet another option to set the `apiKey`. By default, JS SDK will try to read the value from the `YAGNA_APPKEY` environment variable and set it as the `apiKey`. 
 
-```js
-yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
-```
-line when you create TaskExecutor.
+To assign an app-key value to the `YAGNA_APPKEY` environment variable use this command:
 
 {% tabs %}
 
 {% tab label="linux / macOS" %}
+
 ```bash
 export YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
 
 ```bash
 set YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
+
 {% /tab %}
 {% /tabs %}
+
+and then remove the following line from the example script: 
+
+```js
+yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
+```
 
 ### Using YAGNA_AUTO_CONF environment variable
 

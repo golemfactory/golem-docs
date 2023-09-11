@@ -76,22 +76,34 @@ Next, we'll create the main `index.html` file with a minimal layout:
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Golem App</title>
+    <title>WebRequestor Task API</title>
   </head>
   <body>
-    <button onclick="run()">Run</button>
+    <h1>WebRequestor - Hello World</h1>
     <div class="container">
-      <div>
-        <p>Results</p>
-        <pre id="results"></pre>
+      <div class="col-6">
+        <h3>Actions</h3>
+        <div class="row vertical">
+          <div>
+            <button id="echo">Echo Hello World</button>
+          </div>
+        </div>
+        <div class="results console">
+          <h3>Results</h3>
+          <ul id="results"></ul>
+        </div>
       </div>
-      <div>
-        <p>Logs</p>
-        <pre id="logs"></pre>
+      <div class="col-6 border-left">
+        <div class="logs console">
+          <h3>Logs</h3>
+          <ul id="logs"></ul>
+        </div>
       </div>
     </div>
+
     <script type="module">
       // replace with script code
+
     </script>
   </body>
 </html>
