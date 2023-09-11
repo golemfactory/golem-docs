@@ -22,15 +22,29 @@ function getNodeText(node) {
 function collectHeadings(
   nodes,
   slugify = slugifyWithCounter(),
-  lastNodes = []
+  lastNodes = [],
+  idMap = {}
 ) {
   let sections = []
+
   for (let node of nodes) {
     if (node.name === 'Heading') {
       let { level, id } = node.attributes
+      id = id.replace(/-/g, '')
+
+      if (idMap[id]) {
+        idMap[id] += 1
+        id = `${id}${idMap[id]}`
+      } else {
+        idMap[id] = 1
+      }
+
+      node.attributes.id = id
+
       let title = getNodeText(node)
+
       if (title) {
-        let newNode = { ...node.attributes, title, children: [] }
+        let newNode = { ...node.attributes, title, children: [], level }
         if (lastNodes[level - 2]) {
           lastNodes[level - 2].children.push(newNode)
         } else {
@@ -40,7 +54,10 @@ function collectHeadings(
         lastNodes.length = level
       }
     }
-    sections.push(...collectHeadings(node.children ?? [], lastNodes))
+
+    sections.push(
+      ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
+    )
   }
   return sections
 }
@@ -55,7 +72,6 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
-  console.log('content', pageProps.markdoc?.content)
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []

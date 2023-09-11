@@ -14,6 +14,8 @@ import { SelectionContent } from '@/components/SelectionContent'
 import { Grid } from '@/components/Grid'
 import { Padding } from '@/components/Padding'
 import { MarginBottom } from '@/components/MarginBottom'
+
+import { GithubCode } from '@/components/GithubCode'
 const tags = {
   tabs: {
     render: Tabs,
@@ -153,6 +155,37 @@ const tags = {
     render: MarginBottom,
     attributes: {
       amount: { type: Number },
+    },
+  },
+  codefromgithub: {
+    render: GithubCode,
+    selfClosing: true,
+    attributes: {
+      url: { type: String },
+      language: { type: String },
+    },
+    async transform(node, config) {
+      const { url } = node.attributes
+      if (!url) return null
+      try {
+        const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error(
+            `HTTP Error: ${response.status} when fetching from URL ${url}`
+          )
+        }
+        const exampleCode = await response.text()
+        const attributes = node.transformAttributes(config)
+        return new Tag(
+          this.render,
+          { ...attributes, code: exampleCode },
+          node.transformChildren(config)
+        )
+      } catch (e) {
+        throw new Error(
+          `Failed to fetch example from URL ${url} due to: ${e.message}`
+        )
+      }
     },
   },
 }
