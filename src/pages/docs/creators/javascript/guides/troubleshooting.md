@@ -16,6 +16,6 @@ We have collected common errors experienced by users of the JS SDK with informat
 | After running `yagna payment fund --network goerli`. | Error: deadline has elapsed| Run the command again. |
 | When starting yagna with `--api-allow-origin`. | Error: Found argument '--api-allow-origin' which wasn't expected, or isn't valid in this context. | CORS is supported in versions 0.13 - please download release candidate of that version if the stable is not available. | 
 | In requestor script output. |  Error: connect ECONNREFUSED 127.0.0.1:7465. | Please make sure your yagna is still running and available. |
-| When uploading file to a provider. | WARN: Task error on provider fractal_01_1.h. Error: Local service error: Transfer error: Send error: send failed because receiver is gone. Stdout: undefined. Stderr: undefined. | The folder where you try to upload the file is not defined as VOLUME in the image definition. |
+| When uploading file to a provider. | WARN: Task error on provider fractal_01_1.h. Error: Local service error: Transfer error: Send error: send failed because receiver is gone. Stdout: undefined. Stderr: undefined. | The folder where you try to upload the file is not defined as VOLUME in the `Dockerfile`. |
 | When downloading file from a provider. | WARN: Task error on provider fractal_02_2.h. Error: Local service error: Transfer error: IO error: path not found in container: /golem/work/file.txt. Stdout: undefined. Stderr: undefined. | The `/golem/work` folder is not defined as VOLUME in the `Dockerfile`. |
 
