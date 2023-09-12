@@ -10,7 +10,7 @@ title: Using app-keys
 To use Yagna REST API, your application must identify itself by api-key.
 In our examples we utilize the `try_golem` key, which is automatically created if you have the `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
 
-Such an api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
+The `try_golem` api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ node index.mjs
 
 ### Creating unique app-keys
 
-You can generate an unique api-key with the `yagna` command:
+You can generate a unique api-key with the `yagna` command:
 
 ```bash
 yagna app-key create requestor
@@ -87,32 +87,37 @@ const result = await executor.run(
 
 ### Using app-key from environment variable
 
-There is yet another option, to read the `apiKey` value from the `YAGNA_APPKEY` environment variable. JS SDK library will read the value of this variable. Therefore you do need to specify it inside the script and you can skip the 
+There is yet another option to set the `apiKey`. By default, the JS SDK will try to read the value from the `YAGNA_APPKEY` environment variable and set it as the `apiKey`. 
 
-```js
-yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
-```
-line when you create TaskExecutor.
+To assign an app-key value to the `YAGNA_APPKEY` environment variable use this command:
 
 {% tabs %}
 
 {% tab label="linux / macOS" %}
+
 ```bash
 export YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
 
 ```bash
 set YAGNA_APPKEY=insert-your-32-char-app-key-here
 ```
+
 {% /tab %}
 {% /tabs %}
 
+and then remove the following line from the example script: 
+
+```js
+yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
+```
+
 ### Using YAGNA_AUTO_CONF environment variable
 
-If you have the `YAGNA_AUTO_CONF` variable set at the moment the Yagna service starts its value will be used to define autoconfigured app-key.
-This app-key is not stored and will disappear after restart (unless the variable is still set). While this is convenient for examples and tutorials, normally it is recommended to use a unique app-key to manage access of apps to your Yagna REST API.
+When the Yagna service starts, if the environment variable `YAGNA_AUTO_CONF` has been set, its value will be used to create an autoconfigured app-key. However, this app-key isn't permanent; it will vanish upon restarting the service unless the `YAGNA_AUTO_CONF` variable is set again. While this approach is handy for tutorials and demonstrations, for regular use it's recommended to have a distinct app-key. This provides better management over access to your Yagna REST API.
 
 {% tabs %}
 
