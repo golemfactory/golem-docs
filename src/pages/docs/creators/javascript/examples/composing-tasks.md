@@ -5,47 +5,6 @@ title: Composing tasks
 
 # JS Task API Examples: composing tasks
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with the `try_golem` app-key configured.
-
-{% alert level="info" %}
-
-Some of the examples require a simple `worker.mjs` script that can be created with the following command:
-```bash
-echo console.log("Hello Golem World!"); > worker.mjs
-```
-
-{% /alert  %}
-
-## How to run examples
-
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
-
-```bash
-mkdir golem-example
-cd golem-example
-npm init
-npm i @golem-sdk/golem-js
-```
-
-Copy the code into the `index.mjs` file in the project folder and run:
-
-```bash
-node index.mjs
-```
-
-
-
 ## Introduction
 
 Task Executor methods take a task function as a parameter for each of its methods. 
@@ -80,6 +39,41 @@ We'll start with a simple example featuring a single `run()` command. Then, we'l
 - run the `worker.js` on a provider and save the output to a file (output.txt) and finally
 - download the `output.txt` file back to your computer.
 
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
+{% alert level="info" %}
+
+This example has been designed to work with the following environments:
+
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+## How to run examples
+
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
+
+```bash
+mkdir golem-example
+cd golem-example
+npm init
+npm i @golem-sdk/golem-js
+```
+
+Copy the code into the `index.mjs` file in the project folder and run:
+
+```bash
+node index.mjs
+```
+
+Some of the examples require a simple `worker.mjs` script that can be created with the following command:
+
+```bash
+echo console.log("Hello Golem World!"); > worker.mjs
+```
 
 ### Running a single command
 

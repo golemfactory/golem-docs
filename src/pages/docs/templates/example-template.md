@@ -3,7 +3,13 @@ description: Template for an example article
 title: This is the page title displayed in a browser tab.
 ---
 
-# Example title
+# Introduction
+
+Explain what will be demonstrated in this article.
+
+## Prerequisites
+
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -14,9 +20,6 @@ This example has been designed to work with the following environments:
 
 {% /alert %}
 
-## Prerequisites
-
-Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
