@@ -104,13 +104,13 @@ export const Footer = () => (
         <DocSection
           title="JS Docs"
           data={javascript}
-          description={'Contracts or people on the network'}
+          description={''}
           link={'/docs/creators/javascript'}
         />
         <DocSection
           title="Learn Dapps"
           data={dapps}
-          description={'Contracts or people on the network'}
+          description={''}
           link={'/docs/creators/dapps'}
         />
 
