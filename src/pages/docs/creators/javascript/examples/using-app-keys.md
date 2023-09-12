@@ -37,7 +37,7 @@ node index.mjs
 
 ## Introduction
 
-For using the Yagna REST API, your application must identify itself by an api-key. In our examples, we utilize the `try_golem` key. We assign such value to the `YAGNA_AUTOCONF_APPKEY` variable in the terminal **before** we start the Yagna service. Because of that, such a key is automatically created and available for our exercises.
+To use the Yagna REST API, your application must identify itself by an api-key. In our examples, we utilize the `try_golem` key. We assign this value to the `YAGNA_AUTOCONF_APPKEY` variable in the terminal **before** we start the Yagna service. Because of that, a key is automatically created and available for our exercises.
 
 Such an api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
 
