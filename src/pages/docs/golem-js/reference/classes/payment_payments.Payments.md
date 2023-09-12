@@ -1,3 +1,8 @@
+---
+title: "Class Payments - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class Payments within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: Payments
 
 [payment/payments](../modules/payment_payments).Payments
@@ -38,7 +43,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/payments.ts#L26)
+[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/0448b6b/src/payment/payments.ts#L26)
 
 ## Methods
 
@@ -59,7 +64,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/payments.ts#L22)
+[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/0448b6b/src/payment/payments.ts#L22)
 
 ___
 
@@ -75,4 +80,4 @@ Unsubscribe demand from the market
 
 #### Defined in
 
-[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/491c0c9/src/payment/payments.ts#L39)
+[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/0448b6b/src/payment/payments.ts#L39)

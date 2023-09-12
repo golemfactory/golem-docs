@@ -1,3 +1,8 @@
+---
+title: "Interface NetworkInfo - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface NetworkInfo within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: NetworkInfo
 
 [network/network](../modules/network_network).NetworkInfo
@@ -19,7 +24,7 @@
 
 #### Defined in
 
-[src/network/network.ts:29](https://github.com/golemfactory/golem-js/blob/491c0c9/src/network/network.ts#L29)
+[src/network/network.ts:29](https://github.com/golemfactory/golem-js/blob/0448b6b/src/network/network.ts#L29)
 
 ___
 
@@ -29,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:30](https://github.com/golemfactory/golem-js/blob/491c0c9/src/network/network.ts#L30)
+[src/network/network.ts:30](https://github.com/golemfactory/golem-js/blob/0448b6b/src/network/network.ts#L30)
 
 ___
 
@@ -39,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:31](https://github.com/golemfactory/golem-js/blob/491c0c9/src/network/network.ts#L31)
+[src/network/network.ts:31](https://github.com/golemfactory/golem-js/blob/0448b6b/src/network/network.ts#L31)
 
 ___
 
@@ -53,4 +58,4 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:32](https://github.com/golemfactory/golem-js/blob/491c0c9/src/network/network.ts#L32)
+[src/network/network.ts:32](https://github.com/golemfactory/golem-js/blob/0448b6b/src/network/network.ts#L32)

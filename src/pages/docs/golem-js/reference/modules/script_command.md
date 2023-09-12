@@ -1,3 +1,8 @@
+---
+title: "Module script/command - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module script/command within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: script/command
 
 ## Table of contents
@@ -28,7 +33,7 @@
 
 #### Defined in
 
-[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/491c0c9/src/script/command.ts#L76)
+[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/0448b6b/src/script/command.ts#L76)
 
 ___
 
@@ -38,6 +43,6 @@ ___
 
 #### Defined in
 
-[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/491c0c9/src/script/command.ts#L80)
+[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/0448b6b/src/script/command.ts#L80)
 
 ___

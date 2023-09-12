@@ -1,3 +1,8 @@
+---
+title: "Module market/service - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module market/service within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: market/service
 
 ## Table of contents
@@ -32,4 +37,4 @@
 
 #### Defined in
 
-[src/market/service.ts:10](https://github.com/golemfactory/golem-js/blob/491c0c9/src/market/service.ts#L10)
+[src/market/service.ts:10](https://github.com/golemfactory/golem-js/blob/0448b6b/src/market/service.ts#L10)
