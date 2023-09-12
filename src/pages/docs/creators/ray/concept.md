@@ -69,7 +69,7 @@ You can also use [our example apps](https://github.com/golemfactory/golem-ray/tr
 You can also check out a more detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/practical-bridge-simulation-tutorial).
 
 If you have any questions, comments, insights, praises, or doubts about these docs and Ray on Golem in general please don't hesitate to reach out to us either on
-- [Ray on Golem discord channel](https://discord.com/channels/684703559954333727/1136986696907505775)
+- [`#Ray on Golem` discord channel](https://chat.golem.network/) 
 - [Ray on Golem general feedback form](https://qkjx8blh5hm.typeform.com/to/GtaCVz0b)
 
 

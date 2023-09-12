@@ -17,7 +17,7 @@ It allows you to start a cluster on our testnet with one head node and three wor
 The details of all the properties that are generally supported by Ray, can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
 
 Ray on Golem strives to support all configuration possibilities available for general Ray cluster managers. 
-When you find a property we don't support yet, please [let us know](https://discord.com/channels/684703559954333727/1136986696907505775).
+When you find a property we don't support yet, please [let us know (on `#Ray on Golem` discord channel)](https://chat.golem.network/).
 
 ## Most important properties
 

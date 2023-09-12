@@ -17,7 +17,7 @@ Currently, we officially support a handful of python and ray version combination
 - todo
 - todo 
 
-We are preparing the tools for users to build and upload their own images, but for now - please let [us know (on our Discord)](https://discord.com/channels/684703559954333727/1136986696907505775) if you are in a need of an image with a version combination we haven't prepared yet. We will be happy to help you.
+We are preparing the tools for users to build and upload their own images, but for now - please [let us know on `#Ray on Golem` discord channel)](https://chat.golem.network/) if you are in a need of an image with a version combination we haven't prepared yet. We will be happy to help you.
 
 ## Libraries
 
