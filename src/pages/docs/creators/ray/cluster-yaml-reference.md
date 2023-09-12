@@ -26,7 +26,7 @@ Let's have a look at most important properties (including the ones specific for 
 ### Max workers
 
 The "Max workers" setting defines the size of the cluster that the Ray autoscaler may scale up to, including the head node.
-Consider using more workers when you run your cluster on the mainnet.
+There is a limited number of providers on the testnet, so when you need more workers you should consider moving to the mainnet.
 
 
 ```yaml
