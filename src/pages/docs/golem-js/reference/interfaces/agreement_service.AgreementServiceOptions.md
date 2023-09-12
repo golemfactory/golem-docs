@@ -1,3 +1,8 @@
+---
+title: "Interface AgreementServiceOptions - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface AgreementServiceOptions within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: AgreementServiceOptions
 
 [agreement/service](../modules/agreement_service).AgreementServiceOptions
@@ -29,7 +34,7 @@ The selector used when choosing a provider from a pool of existing offers (from 
 
 #### Defined in
 
-[src/agreement/service.ts:23](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/service.ts#L23)
+[src/agreement/service.ts:23](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/service.ts#L23)
 
 ___
 
@@ -45,7 +50,7 @@ AgreementOptions.yagnaOptions
 
 #### Defined in
 
-[src/agreement/agreement.ts:35](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/agreement.ts#L35)
+[src/agreement/agreement.ts:35](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/agreement.ts#L35)
 
 ___
 
@@ -61,7 +66,7 @@ AgreementOptions.agreementRequestTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:37](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/agreement.ts#L37)
+[src/agreement/agreement.ts:37](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/agreement.ts#L37)
 
 ___
 
@@ -77,7 +82,7 @@ AgreementOptions.agreementWaitingForApprovalTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:39](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/agreement.ts#L39)
+[src/agreement/agreement.ts:39](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/agreement.ts#L39)
 
 ___
 
@@ -93,7 +98,7 @@ AgreementOptions.logger
 
 #### Defined in
 
-[src/agreement/agreement.ts:41](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/agreement.ts#L41)
+[src/agreement/agreement.ts:41](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/agreement.ts#L41)
 
 ___
 
@@ -109,4 +114,4 @@ AgreementOptions.eventTarget
 
 #### Defined in
 
-[src/agreement/agreement.ts:43](https://github.com/golemfactory/golem-js/blob/491c0c9/src/agreement/agreement.ts#L43)
+[src/agreement/agreement.ts:43](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/agreement.ts#L43)

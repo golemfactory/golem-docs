@@ -1,3 +1,8 @@
+---
+title: "Module network/service - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module network/service within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: network/service
 
 ## Table of contents
@@ -14,4 +19,4 @@
 
 #### Defined in
 
-[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/491c0c9/src/network/service.ts#L6)
+[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/0448b6b/src/network/service.ts#L6)

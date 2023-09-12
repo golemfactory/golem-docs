@@ -1,3 +1,8 @@
+---
+title: "Module activity/activity - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module activity/activity within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: activity/activity
 
 ## Table of contents
