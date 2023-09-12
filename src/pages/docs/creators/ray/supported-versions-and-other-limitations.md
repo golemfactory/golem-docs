@@ -22,5 +22,5 @@ We are preparing the tools for users to build and upload their own images, but f
 ## Libraries
 
 You may want to use any library in your Ray app. You can instruct Ray on Golem to install it on the workers by passing `runtime_env` parameter to `ray.init()`.
-It is demonstrated for example in [this tutorial](/docs/creators/ray/practical-bridge-simulation-tutorial#passendplaylibraryrequirementtoray).
+It is demonstrated for example in [this tutorial](/docs/creators/ray/conversion-to-ray-on-golem-tutorial#passendplaylibraryrequirementtoray).
 
