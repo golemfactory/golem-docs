@@ -53,7 +53,7 @@ Start your app by running `node index.mjs` and run `curl http://localhost:3000` 
 Hello World!
 ```
 
-So far so good! Stop the app by pressing `Ctrl+C` and let's move on to the next step.
+So far, so good! Stop the app by pressing `Ctrl+C` and let's move on to the next step.
 
 ## Connecting to the Golem Network
 
@@ -88,7 +88,7 @@ process.on('SIGINT', async () => {
 
 ## Creating a retrievable task
 
-Let's add a new endpoint to our API that will take some text from request body and create a new task on the Golem Network. To do that, we will use the `createJob()` method. This method will give us a `Job` object that we can use to get the state of the job and it's results later. On the provider side we will run the `espeak` command to convert the text to speech, save it to a `.wav` file download that file to your local filesystem with the `downloadFile()` method. We will give the file a random name to avoid collisions.
+Let's add a new endpoint to our API that will take some text from the request body and create a new task on the Golem Network. To do that, we will use the `createJob()` method. This method will give us a `Job` object that we can use to get the state of the job and its results later. On the provider side, we will run the `espeak` command to convert the text to speech, save it to a `.wav` file and download that file to your local file system with the `downloadFile()` method. We will give the file a random name to avoid collisions.
 
 ```js
 app.post('/tts', async (req, res) => {
@@ -127,7 +127,7 @@ app.get('/tts/:id', async (req, res) => {
 
 ## Getting the job results
 
-Finally, let's add an endpoint that will allow us to get the results of the job. We will use the `fetchResults()` method of the `Job` object to get the results of the job and return them to the user. We will also serve the files from the `/public` directory so that the user can easily listen to the results in a browser.
+Finally, let's add an endpoint that will allow us to get the results of the job. We will use the `fetchResults()` method of the `Job` object to get the results of the job, and return them to the user. We will also serve the files from the `/public` directory, so that the user can easily listen to the results in a browser.
 
 ```js
 // serve files in the /public directory
@@ -146,55 +146,71 @@ app.get('/tts/:id/results', async (req, res) => {
 })
 ```
 
-## Running the API
+## Testing the app
 
-Start your app by running `node index.mjs` and run the following command in another terminal window (feel free to replace `Hello Golem` with any text you want):
+We're done with the code! Let's start the app and test it.
+
+First, let's start the server:
+
+```bash
+node index.mjs
+```
+
+### Sending a POST request
+
+Open a new terminal window. Let's send a POST request to the `/tts` endpoint. Feel free to replace `Hello Golem` with any text you want:
 
 ```bash
 curl \
-    --header "Content-Type: text/plain" \
-    --request POST \
-    --data "Hello Golem" \
-    http://localhost:3000/tts
+    --header "Content-Type: text/plain" \
+    --request POST \
+    --data "Hello Golem" \
+    http://localhost:3000/tts
 ```
 
-You should see the following output:
+You should see the output:
 
 ```bash
 Job started! ID: <job_id>
 ```
 
-Now run (replace `<job_id>` with the job ID you got in the previous step):
+Make sure to write down the job ID, as we will need it in the next step.
+
+### Sending a GET request to get the job state
+
+Now let's send a GET request to the `/tts/<job_id>` endpoint to get the state of the job:
 
 ```bash
 curl http://localhost:3000/tts/<job_id>
 ```
 
-And you should see the following output:
+You should see the output:
 
 ```
 pending
 ```
 
-Wait a couple of seconds and repeat the previous command. You should see the following output:
+Wait a few seconds and send the same request again. You should see the output:
 
 ```
 done
 ```
 
-Finally, run
+### Sending a GET request to get the job results
+
+Finally, let's send a GET request to the `/tts/<job_id>/results` endpoint to get the results of the job:
 
 ```bash
 curl http://localhost:3000/tts/<job_id>/results
 ```
 
-You should see the following output:
+You should see the output:
 
 ```
-Job completed successfully! Open the following link in your browser to listen to the result: http://localhost:3000/results/<random_file_name>.wav
+Job completed successfully! Open the following link in your browser to listen to the result: http://localhost:3000/results/<file_name>
 ```
 
-Open the link in your browser and you should hear the text you sent to the Golem Network converted to speech!
+Open the link in your browser, and you should hear the text you sent to the API!
 
 Congratulations! You have just created a REST API that uses the Golem Network to process data! 🎉
 
