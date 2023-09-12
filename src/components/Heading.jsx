@@ -33,13 +33,13 @@ export function Heading({ id = '', level = 1, children, className }) {
           children
         )}
         <button
-          className={`text-xs ${copied ? 'font-semibold text-primary' : ''}`}
+          className={`text-xs ${copied ? 'font-semibold text-primary dark:text-darkprimary' : ''}`}
           aria-label={copied ? 'Copied' : 'Copy link'}
         >
           {copied ? (
             'Copied'
           ) : (
-            <LinkIcon className="h-3.5 w-3.5 text-primary" />
+            <LinkIcon className="h-3.5 w-3.5 text-primary dark:text-darkprimary" />
           )}
         </button>
       </div>

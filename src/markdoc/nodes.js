@@ -13,7 +13,6 @@ function generateID(children, attributes) {
     .join(' ')
     .replace(/[?]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/-/g, '')
     .toLowerCase()
 }
 
