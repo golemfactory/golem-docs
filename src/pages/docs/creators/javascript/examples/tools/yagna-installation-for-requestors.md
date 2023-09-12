@@ -3,11 +3,6 @@ description: Yagna service installation
 title: Yagna installation for requestors
 ---
 
-#
-
- 
-
-
 {% alert level="info" %}
 
 **These instructions are designed for the environments:**
