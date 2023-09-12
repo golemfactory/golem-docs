@@ -52,16 +52,13 @@ python golem_ray/server/run.py
 
 Once the packages are installed and `golem-ray` cluster manager is running, you can immediately proceed with launching your cluster.
 The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
-that is configured to autoscale to up to 10 worker nodes (with ??? cpus, ??? ram, ??? disk space each).
+that is configured to autoscale to up to 10 worker nodes.
 
 Each Ray cluster consists of one head node and a number of worker nodes. The head node drives the computation, and the worker nodes execute the tasks. The head node also serves as one of the workers.
 
 When you run Ray locally, it starts the head node on your computer - it allows Ray to speed your code out of the box just by running it on all of your CPU cores.
 
 On the other hand, running a Ray cluster allows your computations to scale to an indefinite number of CPUs.
-
-The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node, 
-that is configured to automatically scale to up to 10 worker nodes (with ??? cpus, ??? ram, ??? disk space each).
 
 Note that you will get the Golem daemon configured during the first startup of the cluster. 
 
