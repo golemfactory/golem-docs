@@ -3,10 +3,11 @@ description: Yagna service installation
 title: Yagna installation for requestors
 ---
 
-#
+# Yagna installation
 
- 
+## Introduction
 
+In this article, we'll show you how to install and configure Yagna in case you want to enable your applications to connect to the network.     
 
 {% alert level="info" %}
 
@@ -16,11 +17,6 @@ title: Yagna installation for requestors
 * Node.js version above 16.0.0
 
 {% /alert %}
-
-
-## Introduction
-
-In this article, we'll show you how to install and configure Yagna in case you want to enable your applications to connect to the network.     
 
 ## Installing and running Yagna 
 
@@ -115,14 +111,13 @@ Open another terminal and run the following command to complete the configuratio
 
 ```bash
 yagna payment fund
-yagna payment init
 ```
 
 
     
 {% docnavigation title="Next steps" %}
 
-- You can learn more about Golem architecture, production and test networks, and GLM tokens [here](/docs/golem/overview):
+- You can learn more about the Golem architecture, production and test networks, and GLM tokens [here](/docs/golem/overview):
 
 {% /docnavigation %}
 

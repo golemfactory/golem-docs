@@ -5,6 +5,17 @@ title: Parallel processing on Golem Network Tutorial
 
 # Executing tasks in parallel - tutorial
 
+## Introduction
+
+This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network.
+
+We will go through the following steps:
+
+- Define the problem and split it into chunks that can be executed in parallel
+- Create a Golem image
+- Create a requestor script
+- Run the tasks in parallel and process the output
+
 {% alert level="info" %}
 
 This tutorial has been designed to work with the following environments:
@@ -16,19 +27,8 @@ This tutorial has been designed to work with the following environments:
 
 ## Prerequisites
 
-- Yagna service is installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
+- Yagna service is installed and running with the `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
 - Docker installed and Docker service available.
-
-## Introduction
-
-This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network.
-
-We will go through the following steps:
-
-- Define the problem and split it into chunks that can be executed in parallel
-- Create a Golem image
-- Create a requestor script
-- Run the tasks in parallel and process the output
 
 ## Define the problem
 

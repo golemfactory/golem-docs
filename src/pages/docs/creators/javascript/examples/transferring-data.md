@@ -5,36 +5,6 @@ title: Transferring data
 
 # JS Task API Examples: transferring data
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
-
-## How to run examples
-
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
-
-```bash
-mkdir golem-example
-cd golem-example
-npm init
-npm i @golem-sdk/golem-js
-```
-
-Copy the code into the `index.mjs` file in the project folder and run:
-
-```bash
-node index.mjs
-```
-
 ## Introduction
 
 In this article, we will present methods that let you send files to and from a provider as well as send JSON to a remote computer.
@@ -55,6 +25,35 @@ The following commands are currently available:
 | `downloadData()` | no |  yes |
 | `downloadJson()` | no | yes |
 
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
+{% alert level="info" %}
+
+This example has been designed to work with the following environments:
+
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+## How to run examples
+
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
+
+```bash
+mkdir golem-example
+cd golem-example
+npm init
+npm i @golem-sdk/golem-js
+```
+
+Unless detailed instructions would not advise otherwise, to run the examples provided below, copy the code supplied there into the `index.mjs` file in the project folder and run:
+
+```bash
+node index.mjs
+```
 
 ## Uploading a file to the provider
 
@@ -86,15 +85,15 @@ const hash = createHash('md5').update(buff).digest('hex');
 
   const result = await executor.run(async (ctx) => {
      
-           await ctx.uploadFile("./worker.mjs", "/golem/input/worker.mjs");
+    await ctx.uploadFile("./worker.mjs", "/golem/input/worker.mjs");
 
-           const res  = await ctx.run(`node -e "const crypto = require('node:crypto'); const fs = require('fs'); const buff = fs.readFileSync('/golem/input/worker.mjs'); const hash = crypto.createHash('md5').update(buff).digest('hex'); console.log(hash); "`);
+    const res  = await ctx.run(`node -e "const crypto = require('node:crypto'); const fs = require('fs'); const buff = fs.readFileSync('/golem/input/worker.mjs'); const hash = crypto.createHash('md5').update(buff).digest('hex'); console.log(hash); "`);
        
-       return res.stdout;
+    return res.stdout;
        
   });
 
-  console.log('md5 of the file send to provider: ',result);
+  console.log('md5 of the file sent to provider: ',result);
   console.log('Locally computed  md5: ',hash);
 
   await executor.end();
@@ -145,7 +144,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 ```
 
-![Downloadfile output log](/downloadfile_log.png)
+![Downloadfile output log](/downloadFile_log.png)
 
 ## Uploading JSON to provider
 

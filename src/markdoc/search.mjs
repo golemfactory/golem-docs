@@ -30,7 +30,7 @@ function extractSections(node, sections, isRoot = true) {
     let content = toString(node).trim()
     if (node.type === 'heading' && node.attributes.level <= 2) {
       let hash = node.attributes?.id ?? slugify(content)
-      sections.push([content, hash, []])
+      sections.push([content, hash.replace(/-/g, ''), []])
     } else {
       sections.at(-1)[2].push(content)
     }

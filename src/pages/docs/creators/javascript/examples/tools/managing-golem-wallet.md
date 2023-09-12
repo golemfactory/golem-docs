@@ -5,6 +5,16 @@ title: Yagna management for requestors
 
 # Yagna management for requestors
 
+## Introduction
+
+In this article, we present commands related to the daily management of your Yagna.
+
+- Checking the wallet address
+- Enabling mainnet accounts
+- Checking the status of the wallet
+- Getting test funds
+- Generating the unique app-keys
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -16,17 +26,6 @@ This example has been designed to work with the following environments:
 ## Prerequisites
 
 Yagna service is installed and running.
-
-
-## Introduction
-
-In this article, we present commands related to the daily management of your Yagna.
-
-- Checking the wallet address
-- Enabling mainnet accounts
-- Checking the status of the wallet
-- Getting test funds
-- Generating the unique app-keys
 
 
 ## Your Golem wallet address
@@ -105,7 +104,6 @@ yagna payment fund
 ```
 
 Golem will transfer test tokens from our custom faucet (a service that transfers test tokens to an address that asks for them).
-Note, you also need to enable your accounts' sender mode, which is done using `yagna payment init`. 
 
 ## Generating the app key
 

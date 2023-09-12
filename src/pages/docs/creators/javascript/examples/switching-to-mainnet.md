@@ -5,6 +5,18 @@ title: Switching to mainnet
 
 # JS Task API Examples: switching to mainnet
 
+## Introduction
+
+This section is aimed mainly at **requestors** wishing to switch from running simple test tasks on our `testnet` to launching production payloads utilizing the vast number of providers on the `mainnet`.
+
+By default, the JS SDK will execute your task on the `testnet`. It is a development network with a limited amount of providers and limited amounts of computational resources available. If you would rather need a larger amount of providers to compute on, you should switch to the mainnet.
+
+In this article, we will show how to run your tasks on Polygon.
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -13,10 +25,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -34,12 +42,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-By default, JS SDK will execute your task in testnet. This is a development network, where you cannot expect performance and capacity however, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
-
-In this article, we will show how to run your tasks on Polygon.
 
 ## Running your tasks on the Polygon Network 
 

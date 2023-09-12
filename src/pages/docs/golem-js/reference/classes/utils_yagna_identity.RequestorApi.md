@@ -1,3 +1,8 @@
+---
+title: "Class RequestorApi - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class RequestorApi within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: RequestorApi
 
 [utils/yagna/identity](../modules/utils_yagna_identity).RequestorApi
@@ -60,4 +65,4 @@ IdentityRequestorApi.getIdentity
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:16](https://github.com/golemfactory/golem-js/blob/491c0c9/src/utils/yagna/identity.ts#L16)
+[src/utils/yagna/identity.ts:16](https://github.com/golemfactory/golem-js/blob/0448b6b/src/utils/yagna/identity.ts#L16)

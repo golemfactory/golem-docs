@@ -5,6 +5,23 @@ title: Executing task
 
 # JS Task API Examples: executing tasks
 
+## Introduction
+
+With Golem JS Task API you can execute just a single task on a single provider or a series of multiple tasks in parallel on many providers. In the case of the latter, you can additionally define how providers should be initialized and how many tasks you want to run simultaneously.
+
+In this article, the following examples are presented:
+
+- Running tasks in parallel (map())
+- Running tasks in parallel (forEach())
+- Defining the number of providers working in parallel
+- Initializing providers
+- Running a single task
+
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -13,10 +30,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -34,18 +47,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-With Golem JS Task API you can execute just a single task on a single provider or a series of multiple tasks in parallel on many providers. In the case of the latter, you can additionally define how providers should be initialized and how many tasks you want to run simultaneously.
-
-In this article, the following examples are presented:
-
-- Running tasks in parallel (map())
-- Running tasks in parallel (forEach())
-- Defining the number of providers working in parallel
-- Initializing providers
-- Running a single task
 
 ## Running tasks in parallel using the map() method
 
@@ -167,7 +168,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
     yagnaOptions: { apiKey: 'try_golem' }, 
     maxParallelTasks: 3,
     }
-  });
+  );
 
   executor.beforeEach(async (ctx) => {
     console.log(ctx.provider.name + ' is downloading action_log file');
