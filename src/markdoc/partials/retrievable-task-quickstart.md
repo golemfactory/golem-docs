@@ -1,8 +1,3 @@
----
-Description: Create a retrievable task on Golem
-title: Golem Retrievable Task (Job API) QuickStart
----
-
 # Introduction
 
 In the previous QuickStart, we showed you how to run a simple task on the Golem Network. In real applications, you will often want to run tasks that take a significant amount of time to complete. For such cases, it is useful to be able to check the status of the task and retrieve the results or errors after the task has completed. In this QuickStart, we will show you how to do just that.
