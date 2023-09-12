@@ -19,16 +19,17 @@ You can use pip to install the Ray CLI with cluster launcher support.
 
 Below you can see how to install default ray packages, but if you need more Ray-specific details follow [the Ray installation documentation](https://docs.ray.io/en/latest/ray-overview/installation.html#installation).
 
-You also need to download the Golem cluster manager, which will facilitate your access to Golem network nodes.
+You also need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 
 ```bash
 # install ray & golem-ray
 pip install -U ray[default] golem-ray
 ```
 
-## Install yagna (Golem daemon used to schedule work on Golem Network)
+## Install yagna (Golem daemon used to schedule work on the Golem Network)
 
-For now, you also need to manually install yagna to be able to connect to the Golem network. Later on, we will make the installation happen behind the scenes.
+For now, you need to manually install yagna to be able to connect to the Golem network.
+Later on, we will make the installation happen behind the scenes.
 Please follow the [yagna installation guide from Golem handbook](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development). 
 Stop before running the daemon - `golem-ray` will do the rest for you. 
 
@@ -41,7 +42,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 ## Start `golem-ray` server
 
-For the time being you need to manually run `golem-ray` server (in a separate terminal)
+For the time being, you need to manually run `golem-ray` server (in a separate terminal)
 
 ```bash
 python golem_ray/server/run.py
@@ -49,15 +50,20 @@ python golem_ray/server/run.py
 
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed and `golem-ray` cluster manager is running, you can immediately proceed to launching your cluster.
+Once the packages are installed and `golem-ray` cluster manager is running, you can immediately proceed with launching your cluster.
 The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
 that is configured to autoscale to up to 10 worker nodes (with ??? cpus, ??? ram, ??? disk space each).
 
-Each Ray cluster consists of one head node and a number of worker nodes. The head node drives the computation, and the worker nodes execute the tasks. The head node serves also as a worker. 
+Each Ray cluster consists of one head node and a number of worker nodes. The head node drives the computation, and the worker nodes execute the tasks. The head node also serves as one of the workers.
 
-When you run Ray locally it starts the head node on your computer - it allows Ray to speed your code out of the box just by running it on all cores.
+When you run Ray locally, it starts the head node on your computer - it allows Ray to speed your code out of the box just by running it on all of your CPU cores.
 
-Note that you will get yagna (Golem daemon used to schedule work on Golem Network) configured during the first startup of the cluster. 
+On the other hand, running a Ray cluster allows your computations to scale to an indefinite number of CPUs.
+
+The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node, 
+that is configured to automatically scale to up to 10 worker nodes (with ??? cpus, ??? ram, ??? disk space each).
+
+Note that you will get the Golem daemon configured during the first startup of the cluster. 
 
 The example cluster config file contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now)
 
@@ -75,7 +81,7 @@ ray up golem-cluster.yaml
 
 ```
 
-Test now that your Ray on Golem cluster works by running the following commands on your local machine. 
+You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
 It will connect to the head node and execute the simplest ray code on the cluster.
 
 ```bash
@@ -104,9 +110,9 @@ wget https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py
 python simple-task.py
 ```
 
-This particular app shows information about the cluster it is being run on and also visualizes the number of tasks run on different nodes.
+This particular script shows information about the cluster it is being run on, and also visualizes the number of tasks run on different nodes.
 
-After you are sure the app works you can feed it to your Ray on Golem cluster
+Once you ensure the app works, you can feed it to your Ray on Golem cluster
 
 ```bash
 # Run some ray-based code (that knows *nothing** about Golem) - this will either:
@@ -118,11 +124,11 @@ ray submit golem-cluster.yaml simple-task.py
 ```
 
 You can see the information about the cluster both before and after running the computations.
-Observe how at first the cluster consists of only one node and how autoscaler expands the cluster during the work.
+Observe how, at first, the cluster consists of only one node, and how the autoscaler expands it, as the work progresses.
 
-The above way shows the usual work with Ray apps. 
-- You develop them at the same time testing them on your local machine.
-- When you are ready to get more power - you send them to Ray cluster **without changing a single line** of your code.
+The above shows the usual workflow with Ray apps.
+- You develop them, while at the same time testing them, on your local machine.
+- When you are ready to get more power - you send them to a Ray cluster **without changing a single line** of your application's code.
 
 ## Run your own ray app on your golem cluster
 
@@ -133,16 +139,16 @@ If you need help with preparing your ray code you can check out [ray getting sta
 
 ## Stop the cluster
 
-When you are happy with your results you can stop your cluster until you need it again.
+When you are happy with your results, you can stop your cluster until you need it again.
 
-It is important because running a cluster uses up the Golem network nodes. In the case of testnet, it means others might find the network busy, and in the case of mainnet, it means you pay more :)
+This is important because running a cluster uses up the Golem network nodes. In the case of testnet, it means others might find the network busy, and in the case of mainnet, it means you pay more :)
 
 ```bash
 # Tear down the cluster.
 ray down golem-cluster.yaml
 ```
 
-For the time being you also nee to stop `golem-ray` server (with `Control-C`).
+For the time being you also need to explicitly stop the `golem-ray` server (with `Control-C`).
 
 
 <!-- Testing comments -->
@@ -151,4 +157,3 @@ For the time being you also nee to stop `golem-ray` server (with `Control-C`).
 multiline 
 comments
 -->
-

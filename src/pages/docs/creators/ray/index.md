@@ -13,7 +13,7 @@ We will use Ray to parallelize the code and Ray on Golem to execute it.
 - [Concept](/docs/creators/ray/concept) - guide on what Ray and Ray on Golem is, listing all pieces needed to use them
 - [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
-- [Practical bridge simulation tutorial](/docs/creators/ray/practical-bridge-simulation-tutorial) - example of a little bit more sophisticated Ray on Golem usage
+- [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
 - [Cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) - details of every configuration option of Ray on Golem cluster yaml
 - [Supported versions & other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python & ray versions, and other known issues
 

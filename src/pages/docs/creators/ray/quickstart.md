@@ -12,7 +12,7 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 
 ## Install software
 
-The first step is installing Ray and Ray on Golem (recommended within a clean venv)
+The first step is installing Ray and Ray on Golem (recommended within a clean virtual environment)
 
 ```bash
 # install ray & golem-ray
@@ -36,7 +36,7 @@ python golem_ray/server/run.py
 
 ## Set the cluster up
 
-With the packages in place, you can download our sample golem cluster configuration yaml, and feed it to `ray up` to start up the cluster.
+With the packages in place, you can download our sample golem cluster configuration yaml, and use it with `ray up` to start up the cluster.
 It will give you a cluster of one node (which will expand when you feed it with work) on the Golem test network (free, but not very powerful)
 
 
@@ -64,7 +64,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py
 python simple-task.py
 ```
 
-Feed the app to the cluster. Observe how Ray on Golem cluster expands during the computation
+Execute the app on the cluster. Observe how Ray on Golem cluster expands during the computation
 
 ```bash
 # Run some ray-based code (that knows *nothing** about Golem) - this will either:
@@ -77,14 +77,14 @@ ray submit golem-cluster.yaml simple-task.py
 
 ## Stop the cluster
 
-In the end, stop your cluster to free the Golem network providers and to avoid too much spending (the testnet is free, but good practice is a good practice)
+Finally, stop your cluster to free the Golem network providers and to avoid spending more than needed (the testnet is free, but good practice is a good practice).
 
 ```bash
 # Tear down the cluster.
 ray down golem-cluster.yaml
 ```
 
-For the time being you also nee to stop `golem-ray` server (with `Control-C`).
+For the time being, you also need to stop the `golem-ray` server (with `Control-C`).
 
 ## Summary
 
