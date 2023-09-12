@@ -1,3 +1,8 @@
+---
+title: "Project JavaScript API reference - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Project JavaScript API reference within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Golem JavaScript API
 
 ## Table of contents
