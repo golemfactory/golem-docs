@@ -1,56 +1,40 @@
-import { useMemo, useState, useEffect, Fragment } from 'react'
-import { useRouter } from 'next/router'
-import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import { navigation as JSReference } from '@/navigation/jsreference'
-import { latestJSVersion } from '@/navigation/meta'
+import { useState, useEffect, useMemo, Fragment } from "react";
+import { useRouter } from "next/router";
+import { Listbox, Transition } from "@headlessui/react";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
-const VersionSwitcher = ({}) => {
-  const [currentVersion, setCurrentVersion] = useState(latestJSVersion)
-  const router = useRouter()
-  const versions = useMemo(
-    () => Object.values(JSReference).map((navItem) => navItem.title),
-    [JSReference]
-  )
+const VersionSwitcher = () => {
+  const router = useRouter();
+  const versions = useMemo(() => {
+    return [
+      { name: "Latest", url: process.env.NEXT_PUBLIC_LATEST_URL },
+      { name: "Beta", url: process.env.NEXT_PUBLIC_BETA_URL },
+      { name: "Alpha", url: process.env.NEXT_PUBLIC_ALPHA_URL },
+    ];
+  }, []);
 
-  const isOnDocsPath = router.pathname.startsWith('/docs/golem-js/reference')
+  const [currentURL, setCurrentURL] = useState("");
 
   useEffect(() => {
-    if (isOnDocsPath) {
-      const findCurrentVersion = () => {
-        const matchingNavItem = Object.values(JSReference).find(
-          (navItem) => navItem.pathname === router.pathname
-        )
-        if (matchingNavItem) {
-          setCurrentVersion(matchingNavItem.title)
-        }
-      }
+    setCurrentURL(window.location.host);
+  }, []);
 
-      findCurrentVersion()
-    }
-  }, [router, isOnDocsPath, JSReference, setCurrentVersion])
+  const currentVersion =
+    versions.find((version) => new URL(version.url).host === currentURL) ||
+    versions[0];
 
   const switchVersion = (version) => {
-    if (isOnDocsPath) {
-      setCurrentVersion(version)
-      const newPath = router.asPath.replace(
-        /\/docs\/golem-js\/reference\/[^/]+/,
-        `/docs/golem-js/reference/${version}`
-      )
-      router.push(newPath)
-    }
-  }
+    const url = new URL(router.asPath, version.url);
+    window.location.assign(url.toString());
+  };
 
-  const getDisplayVersion = (version) => {
-    return version === versions[versions.length - 1]
-      ? `latest (${version})`
-      : version
-  }
+  const getDisplayVersion = ({ name }) => name;
 
-  return isOnDocsPath ? (
+  return (
     <Listbox value={currentVersion} onChange={switchVersion}>
       {({ open }) => (
         <>
@@ -79,8 +63,8 @@ const VersionSwitcher = ({}) => {
                     key={idx}
                     className={({ active }) =>
                       classNames(
-                        active ? 'bg-primary text-white' : 'text-gray-900',
-                        'relative cursor-default select-none px-4 py-2'
+                        active ? "bg-primary text-white" : "text-gray-900",
+                        "relative cursor-default select-none px-4 py-2"
                       )
                     }
                     value={version}
@@ -89,8 +73,8 @@ const VersionSwitcher = ({}) => {
                       <>
                         <span
                           className={classNames(
-                            selected ? 'font-semibold' : 'font-normal',
-                            'block truncate'
+                            selected ? "font-semibold" : "font-normal",
+                            "block truncate"
                           )}
                         >
                           {getDisplayVersion(version)}
@@ -98,8 +82,8 @@ const VersionSwitcher = ({}) => {
                         {selected ? (
                           <span
                             className={classNames(
-                              active ? 'text-white' : 'text-primary',
-                              'absolute inset-y-0 right-0 flex items-center pr-4'
+                              active ? "text-white" : "text-primary",
+                              "absolute inset-y-0 right-0 flex items-center pr-4"
                             )}
                           >
                             <CheckIcon className="h-5 w-5" aria-hidden="true" />
@@ -115,7 +99,7 @@ const VersionSwitcher = ({}) => {
         </>
       )}
     </Listbox>
-  ) : null
-}
+  );
+};
 
-export default VersionSwitcher
+export default VersionSwitcher;

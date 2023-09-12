@@ -17,7 +17,7 @@ This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
 - Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
 - Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
-- Yagna service installed and running with `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors))
+- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors))
 
 ## Creating the Dockerfile
 
@@ -31,10 +31,10 @@ COPY Dockerfile /golem/info/description.txt
 COPY Dockerfile /golem/work/info.txt
 ```
 
-Note we copy Dockerfile content into 2 different locations:
-- to /golem/info (this folder is not defined as VOLUME)
-- and to /golem/work (this folder is defied as VOLUME)
+Note we copy the Dockerfile content into 2 different locations:
 
+- to /golem/info (this folder is not defined as VOLUME)
+- and to /golem/work (this folder is defined as VOLUME)
 
 ## Building the Docker image
 
@@ -97,6 +97,7 @@ gvmkit-build golem-node --push --nologin
 ```bash
 gvmkit-build golem-node --push --nologin
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -126,31 +127,27 @@ We can now create our `index.mjs` requestor file, with the `package: "8b238595..
 **`index.mjs`**
 
 ```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
+import { TaskExecutor } from '@golem-sdk/golem-js'
 
-(async () => {
+;(async () => {
   const executor = await TaskExecutor.create({
-    package: "8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c",    
-    yagnaOptions: { apiKey: 'try_golem' }
-  });
+    package: '8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c',
+    yagnaOptions: { apiKey: 'try_golem' },
+  })
 
+  const result = await executor.run(async (ctx) => {
+    console.log(
+      'Description.txt: ',
+      (await ctx.run('cat /golem/info/description.txt')).stdout
+    )
+    console.log(
+      '/golem/work content: ',
+      (await ctx.run('ls /golem/work')).stdout
+    )
+  })
 
-  const result = await executor.run(
-        async (ctx) =>  {
-    
-          console.log('Description.txt: ',(await ctx.run("cat /golem/info/description.txt")).stdout);
-          console.log('/golem/work content: ', (await ctx.run("ls /golem/work")).stdout);
-        });
-        
-
-  
-
-
-  await executor.end(); 
-    
-  
-})();
-
+  await executor.end()
+})()
 ```
 
 {% /tab  %}
@@ -168,7 +165,7 @@ You have successfully created and used your Golem image in a requestor script!
 
 ![](/image_tutorial_upload.png)
 
-Note that the content of the `description.txt` file that was created in the  /golem/info folder is accessible, while the /golem/work folder is empty.
+Note that the content of the `description.txt` file that was created in the /golem/info folder is accessible, while the /golem/work folder is empty.
 
 {% docnavigation title="Next steps" %}
 

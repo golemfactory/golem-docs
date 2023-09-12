@@ -22,16 +22,28 @@ function getNodeText(node) {
 function collectHeadings(
   nodes,
   slugify = slugifyWithCounter(),
-  lastNodes = []
+  lastNodes = [],
+  idMap = {}
 ) {
   let sections = []
+
   for (let node of nodes) {
-    if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
+    if (node.name === 'Heading') {
+      let { level, id } = node.attributes
+      id = id.replace(/-/g, '')
+
+      if (idMap[id]) {
+        idMap[id] += 1
+        id = `${id}${idMap[id]}`
+      } else {
+        idMap[id] = 1
+      }
+
+      node.attributes.id = id
+
       let title = getNodeText(node)
+
       if (title) {
-        let id = slugify(title)
-        node.attributes.id = id
-        let level = parseInt(node.name.slice(1))
         let newNode = { ...node.attributes, title, children: [], level }
         if (lastNodes[level - 2]) {
           lastNodes[level - 2].children.push(newNode)
@@ -42,7 +54,10 @@ function collectHeadings(
         lastNodes.length = level
       }
     }
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
+
+    sections.push(
+      ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
+    )
   }
   return sections
 }
@@ -57,7 +72,6 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
-
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
@@ -68,10 +82,6 @@ export default function App({ Component, pageProps }) {
 
       <div className={inter.className}>
         <Head>
-          <meta
-            name="google-site-verification"
-            content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
-          />
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
         </Head>

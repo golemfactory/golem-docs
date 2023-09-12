@@ -111,14 +111,13 @@ Open another terminal and run the following command to complete the configuratio
 
 ```bash
 yagna payment fund
-yagna payment init
 ```
 
 
     
 {% docnavigation title="Next steps" %}
 
-- You can learn more about Golem architecture, production and test networks, and GLM tokens [here](/docs/golem/overview):
+- You can learn more about the Golem architecture, production and test networks, and GLM tokens [here](/docs/golem/overview):
 
 {% /docnavigation %}
 

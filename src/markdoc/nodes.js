@@ -1,6 +1,21 @@
 import { nodes as defaultNodes } from '@markdoc/markdoc'
 
 import { Fence } from '@/components/Fence'
+import { Heading } from '@/components/Heading'
+import { Tag } from '@markdoc/markdoc'
+
+function generateID(children, attributes) {
+  if (attributes.id && typeof attributes.id === 'string') {
+    return attributes.id
+  }
+  return children
+    .filter((child) => typeof child === 'string')
+    .join(' ')
+    .replace(/[?]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-/g, '')
+    .toLowerCase()
+}
 
 const nodes = {
   document: {
@@ -16,20 +31,27 @@ const nodes = {
       },
     },
   },
-  h3: {
-    ...defaultNodes.h3,
-    attributes: {
-      id: {
-        type: String,
-      },
-    },
-  },
   fence: {
     render: Fence,
     attributes: {
-      language: {
-        type: String,
-      },
+      content: { type: String, render: true, required: true },
+      language: { type: String },
+      process: { type: Boolean, render: false, default: true },
+    },
+  },
+  heading: {
+    render: Heading,
+    children: ['inline'],
+    attributes: {
+      id: { type: String },
+      level: { type: Number, required: true, default: 1 },
+    },
+    transform(node, config) {
+      const attributes = node.transformAttributes(config)
+      const children = node.transformChildren(config)
+      const id = generateID(children, attributes)
+
+      return new Tag(this.render, { ...attributes, id }, children)
     },
   },
 }

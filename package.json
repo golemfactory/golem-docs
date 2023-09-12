@@ -1,6 +1,6 @@
 {
-  "name": "tailwindui-syntax",
-  "version": "0.1.0",
+  "name": "Golem Docs",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,8 +17,8 @@
     "@algolia/autocomplete-core": "^1.9.2",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.18",
-    "@markdoc/markdoc": "0.1.7",
-    "@markdoc/next.js": "0.1.6",
+    "@markdoc/markdoc": "^0.3.2",
+    "@markdoc/next.js": "^0.3.3",
     "@sindresorhus/slugify": "^2.1.0",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.12",

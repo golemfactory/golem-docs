@@ -123,7 +123,7 @@ If you have used `yagna` before, you have probably already created an applicatio
 In that case, after you import your Ethereum mainnet key, you need to re-create Yagna's application key, as the previous one is now bound to your old key:
 
 ```bash
- yagna app-key create requestor-mainnet
+yagna app-key create requestor-mainnet
 ```
 
 The name (`requestor-mainnet`above) is not important as long as it doesn't collide with the existing one (assuming it was just `requestor`).

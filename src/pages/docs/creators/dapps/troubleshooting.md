@@ -27,12 +27,12 @@ Other than that, there are a couple more issues that you should be aware of:
 
 **Init commands which start service processes have to be run in the background**
 
-Each of the commands listed in the `init` section of the node has to finish its execution in order for the services to be treated as `started`. That's why, commands that stay running, e.g. serving the API, have to be suffixed with and ampersand (`&`) to instruct the shell to put them into the background, e.g.
+Each of the commands listed in the `init` section of the node has to finish its execution in order for the services to be treated as `started`. That's why commands that stay running, e.g. serving the API, have to be suffixed with an ampersand (`&`) to instruct the shell to put them into the background, e.g.
 
 ```yaml
-    init:
-      - run:
-          args: ["/bin/bash", "-c", "/bin/run_web.sh 192.168.0.3 &"]
+init:
+  - run:
+    args: ["/bin/bash", "-c", "/bin/run_web.sh 192.168.0.3 &"]
 ```
 
 **Retrieving complete logs from the provider**
@@ -61,4 +61,4 @@ There's currently no workaround.
 
 Cross-origin resource sharing (CORS) restrictions prevent accessing content from other containers from the front-end. Additionally, as local proxy ports are assigned dynamically, one might not even know the location to access up front.
 
-For this reason it’s recommended for an application to bundle its front-end along with an HTTP server that will handle all requests - both front- and back-end - and redirect them to the back-end through a provider-to-provider VPN.
+For this reason, it’s recommended for an application to bundle its front-end along with an HTTP server that will handle all requests - both front and back-end - and redirect them to the back-end through a provider-to-provider VPN.

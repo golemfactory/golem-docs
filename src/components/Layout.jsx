@@ -239,20 +239,17 @@ export function Layout({
         )}
         <div className="min-w-0 max-w-5xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
           <article>
-            <div className="mb-1 flex items-center gap-x-4">
+            <div className="pb-4 flex items-center gap-x-4">
               {type && <ArticleType type={type} />}
-              {tags && (
-                <div className="flex gap-x-4 ">
-                  {tags.split(',').map((tag, index, array) => (
-                    <span
-                      className="text-sm text-normalgray dark:text-white/50"
-                      key={tag}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
+              {tags &&
+                tags.split(',').map((tag, index, array) => (
+                  <div
+                    className="block text-sm text-normalgray dark:text-white/50"
+                    key={tag}
+                  >
+                    {tag}
+                  </div>
+                ))}
             </div>
 
             <Prose>{children}</Prose>

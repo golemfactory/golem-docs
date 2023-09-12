@@ -158,8 +158,8 @@ var costData = [];
 const myFilter = async (proposal) => {
   
    let decision = false; 
-   let usageVecor = proposal.properties['golem.com.usage.vector'];
-   let counterIdx = usageVecor.findIndex((ele) => ele === 'golem.usage.duration_sec');
+   let usageVector = proposal.properties['golem.com.usage.vector'];
+   let counterIdx = usageVector.findIndex((ele) => ele === 'golem.usage.duration_sec');
    let proposedCost = proposal.properties['golem.com.pricing.model.linear.coeffs'][counterIdx];
    costData.push(proposedCost);
   if (costData.length < 11) return false;

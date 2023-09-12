@@ -104,7 +104,6 @@ yagna payment fund
 ```
 
 Golem will transfer test tokens from our custom faucet (a service that transfers test tokens to an address that asks for them).
-Note, you also need to enable your accounts' sender mode, which is done using `yagna payment init`. 
 
 ## Generating the app key
 
