@@ -56,6 +56,10 @@ function collectHeadings(
 
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
+  if (!title) {
+    console.log(pageProps.markdoc)
+    throw new Error('No title found in file', pageProps.markdoc)
+  }
   let type = pageProps.markdoc?.frontmatter.type
   let tags = pageProps.markdoc?.frontmatter.tags
 
@@ -64,6 +68,12 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
+
+  if (!description) {
+    console.log(pageProps.markdoc)
+    throw new Error('No description found in file', pageProps.markdoc)
+  }
+
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
