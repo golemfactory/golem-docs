@@ -19,9 +19,9 @@ The details of all the properties that are generally supported by Ray, can be fo
 Ray on Golem strives to support all configuration possibilities available for general Ray cluster managers. 
 When you find a property we don't support yet, please [let us know](https://discord.com/channels/684703559954333727/1136986696907505775).
 
-## Interesting properties
+## Most important properties
 
-Let's have a look at more interesting properties (including the ones specific for Ray on Golem clusters)
+Let's have a look at most important properties (including the ones specific for Ray on Golem clusters)
 
 ### Max workers
 
