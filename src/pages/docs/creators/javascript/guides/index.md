@@ -11,6 +11,7 @@ The Guides section contains articles that explain concepts, introduce terms, and
 |[Introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model) | This is a short introduction to the Golem Network concepts explaining basic terms like `yagna`, `image`, `requestor`, and `provider`. It also clarifies the basic components of applications running on the Golem Network and introduces the Task Model supporting our Task API. You can also find a list of major features provided by TASK API. |
 |[Working with Golem images](/docs/creators/javascript/guides/golem-images)   | This guide explains what are: the Golem image, the process of creating a custom one, and how you refer to the image in your code.    |
 |[Moving your apps to mainnet](/docs/creators/javascript/guides/switching-to-mainnet) | A guide explaining what you need to do, and consider, to switch from testnet to the production network. |
+|[Retrievable tasks (Job API)](/docs/creators/javascript/guides/retrievable-tasks) | A guide explaining how to use the Job API to run tasks on the network and get access to their state, results and error messages after they have been started. |
 
 
 {% docnavigation title="See also" %}
