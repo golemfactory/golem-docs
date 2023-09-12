@@ -2,8 +2,6 @@
 title: Provider 
 description: The provider actor in the Golem
 ---
-#
-
 {% alert level="warning" %}
 Provider node can be run on a 64-bit x86-64 CPU computer with Ubuntu only.
 {% /alert %}

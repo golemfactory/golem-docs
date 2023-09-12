@@ -2,7 +2,6 @@
 description: Sending GLM from the Ethereum Mainnet to Polygon and back.
 title: Golem Token conversion
 ---
-#
 ## Mainnet / Polygon GLM Conversion
 
 Since the Beta.4 release of Golem, Polygon network became the default platform for payments between Golem requestors and providers.

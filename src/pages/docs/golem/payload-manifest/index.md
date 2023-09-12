@@ -2,7 +2,6 @@
 title: Payload Manifest Introduction
 description: Computation Payload Manifest description, its schema, and configuration guide
 ---
-#
 # Computation Payload Manifest
 
 _Computation Payload Manifest_ allows a [requestor](/docs/golem/overview/requestor) to define an application package _Payload_ and allows to set constraints on the computations performed on a [provider](/docs/golem/overview/provider) node.
