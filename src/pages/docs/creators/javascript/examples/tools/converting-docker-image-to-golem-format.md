@@ -5,6 +5,9 @@ description: Instructions on how to convert an image from Docker to Golem using 
 
 # Converting an image
 
+## Introduction  
+
+Golem images are based on Docker images, which means that it is required to have a Docker image to be able to convert it to a Golem image. We will include a simple Dockerfile just to show how the tool and its commands work for demonstration purposes, and you are free to create your own Dockerfile.
 
 {% alert level="info" %}
 
@@ -26,11 +29,6 @@ These instructions has been designed to work with the following environments:
 You can use npx and pipx tools to run gvmkit-build without installation. 
 
 {% /alert %}
-
-  
-## Introduction  
-
-Golem images are based on Docker images, which means that it is required to have a Docker image to be able to convert it to a Golem image. We will include a simple Dockerfile just to show how the tool and its commands work for demonstration purposes, and you are free to create your own Dockerfile.
 
 
 ## Building your Docker image

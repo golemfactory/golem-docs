@@ -5,6 +5,8 @@ title: Restore a Golem wallet
 
 # Restoring a backed-up wallet
 
+## Introduction
+
 If, for whatever reason, your Golem wallet is destroyed or corrupted e.g. you moved on to a new machine and forgot to take Golem's installation with it, you'll be faced with the necessity to recover your wallet from your previously backed-up keystore file.
 
 To restore your wallet, first start with a fresh yagna install:

@@ -1,9 +1,20 @@
 ---
-description: Using app-key
-title: Using app-key
+description: Using app-keys
+title: Using app-keys
 ---
 
-# JS Task API Examples: using app-key
+# JS Task API Examples: using app-keys
+
+## Introduction
+
+To use Yagna REST API, your application must identify itself by api-key.
+In our examples we utilize the `try_golem` key, which is automatically created if you have the `YAGNA_AUTOCONF_APPKEY` variable set in the terminal where you start the Yagna service.
+
+The `try_golem` api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -13,10 +24,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -34,12 +41,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-To use the Yagna REST API, your application must identify itself by an api-key. In our examples, we utilize the `try_golem` key. We assign this value to the `YAGNA_AUTOCONF_APPKEY` variable in the terminal **before** we start the Yagna service. Because of that, a key is automatically created and available for our exercises.
-
-Such an api-key is easy to read and remember, and useful for quickstarts and testing examples. However, normally you should rather use unique 32-char api-keys to better protect access to your requestor and its wallet.
 
 ### Creating unique app-keys
 
