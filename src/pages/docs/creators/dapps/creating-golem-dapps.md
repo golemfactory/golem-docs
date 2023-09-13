@@ -86,7 +86,7 @@ The manifests are JSON files conforming to a specific schema, e.g.:
   }
 ```
 
-For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to: [Computation Payload Manifest](/docs/golem/payload-manifest/index).
+For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to: [Computation Payload Manifest](/docs/golem/payload-manifest).
 
 
 ### **Manifest signatures**

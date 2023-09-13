@@ -4,7 +4,7 @@ const marked = require('marked')
 const glob = require('glob')
 
 let flag = true
-
+let errors = []
 const root = path.join(__dirname, 'src/pages')
 
 glob('src/pages/docs/**/*.md', (err, files) => {
@@ -21,7 +21,7 @@ glob('src/pages/docs/**/*.md', (err, files) => {
         const indexHref = path.join(root, `${href.split('#')[0]}/index.md`)
 
         if (href.endsWith('index') && !href.endsWith('#index')) {
-          console.error(
+          errors.push(
             `Broken link in file ${file}: linking to ${href} --> Links ending with index are not allowed due to Next.js routing. \n`
           )
           flag = false
@@ -32,7 +32,7 @@ glob('src/pages/docs/**/*.md', (err, files) => {
           const newHref =
             path.join(dirname, '..', cleanHref.replace('../', '')) + '.md'
           if (!fs.existsSync(newHref)) {
-            console.error(`Broken link in file ${file}: linking to ${href} \n`)
+            errors.push(`Broken link in file ${file}: linking to ${href} \n`)
             flag = false
           }
           return
@@ -43,7 +43,8 @@ glob('src/pages/docs/**/*.md', (err, files) => {
           if (dirname.startsWith('src/pages/docs/golem-js/reference')) {
             return
           }
-          console.error(`Broken link in file ${file}: linking to ${href} \n`)
+
+          errors.push(`Broken link in file ${file}: linking to ${href} \n`)
           flag = false
         }
       }
@@ -54,5 +55,10 @@ glob('src/pages/docs/**/*.md', (err, files) => {
 })
 
 process.on('exit', () => {
-  if (flag) console.log('All links are valid')
+  if (errors.length) {
+    console.error(errors.join('\n'))
+    process.exit(1)
+  } else {
+    console.log('All links are valid')
+  }
 })
