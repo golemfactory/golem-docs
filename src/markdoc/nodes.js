@@ -8,8 +8,13 @@ function generateID(children, attributes) {
   if (attributes.id && typeof attributes.id === 'string') {
     return attributes.id
   }
+
   return children
-    .filter((child) => typeof child === 'string')
+    .map((child) =>
+      typeof child === 'object' && child.$$mdtype === 'Tag'
+        ? child.children.join(' ')
+        : child
+    )
     .join(' ')
     .replace(/[?]/g, '')
     .replace(/\s+/g, '-')
