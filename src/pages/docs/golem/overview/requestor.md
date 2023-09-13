@@ -30,7 +30,7 @@ Yet another scenario allows you to run the requestor agent directly in the brows
 
 {% docnavigation title="Next steps" %}
 
-The basic requestor development tutorials in JS are [here](/docs/creators/javascript/tutorials/index).
+The basic requestor development tutorials in JS are [here](/docs/creators/javascript/tutorials).
 
 {% /docnavigation %}
 
