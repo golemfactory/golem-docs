@@ -4,12 +4,16 @@ title: Ray on Golem Concept
 type: article
 ---
 
-# About Ray and Ray on Golem
-This doc explains Ray and Ray on Golem basic concepts.
+# About Golem, Ray and Ray on Golem
+This doc explains Golem, Ray and Ray on Golem basic concepts.
 
 ## Introduction
 
-Ray is an open-source framework for scaling Python applications. 
+Golem is a decentralized marketplace for computing power, where the providers let the requestors use their machines for a small fee.
+
+Ray on Golem makes it super easy to set up and use Golem Network to run your Ray application.
+
+Ray on the other hand is an open-source framework for scaling Python applications. 
 It specializes in tooling for AI/ML applications, but at the same time, it is based on Ray Core which understands every piece of generic Python code.
 
 Ray uses concepts of tasks, actors, and objects for building and scaling distributed applications.
@@ -17,9 +21,6 @@ It can be used to parallelize your Python code to use all cores on your own comp
 
 You can learn about Ray Core mechanisms on [Ray docs website](https://docs.ray.io/en/latest/ray-core/walkthrough.html).
 
-Golem on the other hand is a decentralized marketplace for computing power, where the providers let the requestors use their machines for a small fee.
-
-Ray on Golem makes it super easy to set up and use Golem Network to run your Ray application.
 
 ## What do you need
 
