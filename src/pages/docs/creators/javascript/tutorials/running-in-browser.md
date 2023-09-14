@@ -1,6 +1,7 @@
 ---
 description: Golem in browser QuickStart explained
 title: Golem in browser QuickStart explained
+type: Tutorial
 ---
 
 # Golem in browser QuickStart explained

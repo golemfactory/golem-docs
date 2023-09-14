@@ -1,6 +1,7 @@
 ---
 description: Setting up a new Yagna instance to use a saved keystore file.
 title: Provider wallet restoration
+type: Guide
 ---
 
 # Restoring a backed-up wallet

@@ -1,6 +1,7 @@
 ---
 description: Step by step guide to create a REST API with Express.js that uses the Golem Network to process data.
 title: REST API example with Express.js
+type: Tutorial
 ---
 
 # REST API example with Express.js

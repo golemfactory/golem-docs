@@ -1,6 +1,7 @@
 ---
 description: Configuration examples for Yagna
 title: Basic provider configuration
+type: Instructions
 ---
 
 # Configuration examples for yagna
