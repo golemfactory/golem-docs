@@ -22,8 +22,8 @@ Below you can see how to install default ray packages, but if you need more Ray-
 You also need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 
 ```bash
-# install ray & golem-ray
-pip install -U ray[default] golem-ray
+# install ray & ray-on-golem
+pip install -U ray[default] ray-on-golem
 ```
 
 ## Install yagna (Golem daemon used to schedule work on the Golem Network)
@@ -31,7 +31,7 @@ pip install -U ray[default] golem-ray
 For now, you need to manually install yagna to be able to connect to the Golem network.
 Later on, we will make the installation happen behind the scenes.
 Please follow the [yagna installation guide from Golem handbook](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development). 
-Stop before running the daemon - `golem-ray` will do the rest for you. 
+Stop before running the daemon - `ray-on-golem` will do the rest for you. 
 
 TLDR install yagna:
 
@@ -40,9 +40,9 @@ TLDR install yagna:
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-## Start `golem-ray` server
+## Start `ray-on-golem` server
 
-For the time being, you need to manually run `golem-ray` server (in a separate terminal)
+For the time being, you need to manually run `ray-on-golem` server (in a separate terminal)
 
 ```bash
 python golem_ray/server/run.py
@@ -50,7 +50,7 @@ python golem_ray/server/run.py
 
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed and `golem-ray` cluster manager is running, you can immediately proceed with launching your cluster.
+Once the packages are installed and `ray-on-golem` cluster manager is running, you can immediately proceed with launching your cluster.
 The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
 that is configured to autoscale to up to 10 worker nodes.
 
@@ -72,7 +72,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
-# * golem-ray cluster manager starts in the background
+# * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml
 
@@ -145,7 +145,7 @@ This is important because running a cluster uses up the Golem network nodes. In 
 ray down golem-cluster.yaml
 ```
 
-For the time being you also need to explicitly stop the `golem-ray` server (with `Control-C`).
+For the time being you also need to explicitly stop the `ray-on-golem` server (with `Control-C`).
 
 
 <!-- Testing comments -->

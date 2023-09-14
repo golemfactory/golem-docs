@@ -15,8 +15,8 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 The first step is installing Ray and Ray on Golem (recommended within a clean virtual environment)
 
 ```bash
-# install ray & golem-ray
-pip install -U ray[default] golem-ray
+# install ray & ray-on-golem
+pip install -U ray[default] ray-on-golem
 ```
 
 For now, you also need to download and install Golem node software representing you in the Golem network.
@@ -26,9 +26,9 @@ For now, you also need to download and install Golem node software representing 
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-## Start `golem-ray` server
+## Start `ray-on-golem` server
 
-For the time being you need to manually run `golem-ray` server (in a separate terminal)
+For the time being you need to manually run `ray-on-golem` server (in a separate terminal)
 
 ```bash
 python golem_ray/server/run.py
@@ -46,7 +46,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
-# * golem-ray cluster manager starts in the background
+# * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml
 
@@ -84,12 +84,12 @@ Finally, stop your cluster to free the Golem network providers and to avoid spen
 ray down golem-cluster.yaml
 ```
 
-For the time being, you also need to stop the `golem-ray` server (with `Control-C`).
+For the time being, you also need to stop the `ray-on-golem` server (with `Control-C`).
 
 ## Summary
 
 By completing the above quickstart you have successfully:
-- installed ray and golem-ray packages
+- installed ray and ray-on-golem packages
 - downloaded the example golem cluster yaml and the example ray application
 - started up the Ray on Golem cluster
 - run the app on your local computer and then on the cluster
