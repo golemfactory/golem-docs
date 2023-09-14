@@ -1,6 +1,7 @@
 ---
 description: Create your own JavaScript application on Golem
 title: Node.js QuickStart
+type: Tutorial
 ---
 
 # JS QuickStart Explained

@@ -1,6 +1,7 @@
 ---
 description: Transferring data
 title: Transferring data
+type: Example
 ---
 
 # JS Task API Examples: transferring data

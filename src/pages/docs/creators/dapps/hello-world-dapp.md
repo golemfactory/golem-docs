@@ -1,6 +1,7 @@
 ---
 description: Create your first "Hello World" dApp on Golem
 title: dApp on Golem tutorial
+type: Tutorial
 ---
 
 # Hello World dApp

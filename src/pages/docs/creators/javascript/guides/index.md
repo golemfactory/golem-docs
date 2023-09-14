@@ -1,6 +1,7 @@
 ---
 description: Golem JS Guides
 title: Golem JS Guides
+type: Toc
 ---
 
 

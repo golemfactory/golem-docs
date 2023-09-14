@@ -1,6 +1,7 @@
 ---
 title: Installing gvmkit-build
 description: Guide on how to install gvmkit-build
+type: Instructions
 ---
 
 # Gvmkit-build installation

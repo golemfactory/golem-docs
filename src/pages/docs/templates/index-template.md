@@ -1,6 +1,7 @@
 ---
 description: Template for an index article
 title: This is the page title displayed in a browser tab.
+type: Introduction
 ---
 
 # Title describing the content of the section

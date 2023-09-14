@@ -1,6 +1,7 @@
 ---
 description: Executing task
 title: Executing task
+type: Example
 ---
 
 # JS Task API Examples: executing tasks

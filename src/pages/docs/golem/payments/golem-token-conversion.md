@@ -1,6 +1,7 @@
 ---
 description: Sending GLM from the Ethereum Mainnet to Polygon and back.
 title: Golem Token conversion
+type: Guide
 ---
 # Mainnet / Polygon GLM Conversion
 

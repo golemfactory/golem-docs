@@ -1,6 +1,7 @@
 ---
 description: Setting up a new Yagna instance to use a saved keystore file.
 title: Restore a Golem wallet 
+type: Instructions
 ---
 
 # Restoring a backed-up wallet
