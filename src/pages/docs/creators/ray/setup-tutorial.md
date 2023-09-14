@@ -83,7 +83,7 @@ It will connect to the head node and execute the simplest ray code on the cluste
 
 ```bash
 # Check if Ray on Golem cluster is running 
-ray exec golem-cluster.yaml "python -c 'import ray; ray.init()'"
+ray exec golem-cluster.yaml 'ray status'
 
 ```
 

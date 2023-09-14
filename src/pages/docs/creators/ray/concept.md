@@ -59,6 +59,7 @@ While `ray start` & `ray stop` are for manual node setup there are also many clu
 - `ray up golem-cluster.yaml` starts up a cluster specified by the yaml
 - `ray down golem-cluster.yaml` terminates the cluster
 - `ray submit golem-cluster.yaml ray-app.py` executes an app on the cluster
+- `ray exec golem-cluster.yaml 'ray status'` show cluster status
 - `ray exec golem-cluster.yaml 'shell-command-line'` executes shell commands on the head node
 - `ray attach golem-cluster.yaml` gives you shell access to the head node
 
