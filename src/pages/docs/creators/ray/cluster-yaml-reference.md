@@ -10,7 +10,7 @@ This article explains the options available in the configuration yaml file when 
 
 ## Example Ray on Golem cluster configuration
 
-The basic `golem-cluter.yaml` is [available on github](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml).
+The basic `golem-cluster.yaml` is [available on github](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml).
 
 It allows you to start a cluster on our testnet with one head node and three worker nodes. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
 
