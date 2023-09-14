@@ -156,13 +156,13 @@ We will now scale the execution even further - we will use a Ray on Golem cluste
 Run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
 ```bash
-# install golem-ray
-pip install -U golem-ray
+# install ray-on-golem
+pip install -U ray-on-golem
 
 # install yagna - golem network daemon
 curl -sSf https://join.golem.network/as-requestor | bash -
 
-# start golem-ray server
+# start ray-on-golem server
 python golem_ray/server/run.py
 
 # Download the golem-cluster.yaml
@@ -170,7 +170,7 @@ wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
-# * golem-ray cluster manager starts in the background
+# * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml
 
@@ -250,4 +250,4 @@ When you are done, it is a good practice to stop the cluster. In the default con
 ray down golem-cluster.yaml
 ```
 
-For the time being, you also need to stop `golem-ray` server (with `Control-C`).
+For the time being, you also need to stop `ray-on-golem` server (with `Control-C`).
