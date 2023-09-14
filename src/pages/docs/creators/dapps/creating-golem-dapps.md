@@ -229,7 +229,7 @@ network: "default"
       - "192.168.0.4"
 ```
 
-#### this_sentence
+#### depends_on
 
 In addition to enumerating the services, you may wish to specify dependencies between them. If e.g. your back-end application assumes that it can connect to a database when it starts, you’ll need the database to be up and running already when you start the back-end. In such a case, your back-end component should specify a `depends_on` element pointing to the DB node. The startup of the back-end will then only be executed once the database is confirmed to have started successfully.
 
