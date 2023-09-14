@@ -163,7 +163,7 @@ pip install -U ray-on-golem
 curl -sSf https://join.golem.network/as-requestor | bash -
 
 # start ray-on-golem server
-python golem_ray/server/run.py
+ray-on golem
 
 # Download the golem-cluster.yaml
 wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml

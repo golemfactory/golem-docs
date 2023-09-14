@@ -45,7 +45,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 For the time being, you need to manually run `ray-on-golem` server (in a separate terminal)
 
 ```bash
-python golem_ray/server/run.py
+ray-on-golem
 ```
 
 ## Start Ray with the Ray cluster launcher
