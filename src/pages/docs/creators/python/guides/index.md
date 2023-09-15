@@ -3,6 +3,7 @@ description: Golem JS Guides
 title: Golem JS Guides
 ---
 
+Our Services API provides an abstraction over Golem low-level APIs, which is aimed at making the building of service-oriented applications straightforward for a developer. The abstraction is based on a logical concept of a Service, in other words, an entity that implements the logic of a service application, and which, from Requestor's perspective, follows a certain sequence of states:
 
 ## High-level API libraries
 

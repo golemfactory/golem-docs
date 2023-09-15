@@ -1,8 +1,3 @@
----
-description: Development and deployment of a Golem requestor agent (service model)
----
-
-# How does it work? Dive into requestor agent \(service model\)
 
 How can I host services in Golem network?
 
