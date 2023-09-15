@@ -1,6 +1,7 @@
 ---
 description: Answers to popular questions about Golem's VM runtime and how to create images for it
 title: Golem Images - frequently asked questions
+type: Article
 ---
 
 # Frequently asked questions

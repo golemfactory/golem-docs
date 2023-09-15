@@ -1,6 +1,7 @@
 ---
 description: Learn what a Golem VM image is and how to create and use one
 title: Golem images explained
+type: Guide
 ---
 
 # Golem VM images and their usage explained

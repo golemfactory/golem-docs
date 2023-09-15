@@ -1,7 +1,7 @@
 ---
-description: >-
-  Introducing log files as a tool to identify and fix issues in your requestor
-  applications.
+description: Introducing log files as a tool to identify and fix issues in your requestor applications.
+title: Debugging with the use of log files
+type: Guide
 ---
 
 
