@@ -27,7 +27,7 @@ Okay, so while technically we now know how to hand out tasks to providers on pai
 
 ## Ethereum vs Layer-2
 
-The most important decision you need to make when it comes to Golem payments (both between Requestors <-> Providers, as well as getting funds in and out of Golem Network) is whether to use Ethereum or its Layer-2 scaling sidechain: Polygon. 
+The most important decision you need to make when it comes to Golem payments (both between Requestors <-> Providers, as well as getting funds in and out of Golem Network) is whether to use the Ethereum mainnet or its Layer-2 scaling sidechain: Polygon.
 
 While direct, on-chain transactions using ERC-20-based tokens have long become the daily bread for the Ethereum mainnet and constitute a significant part of more than a million transactions passing through the chain each day, current ETH's price and the average gas fees make it extremely hard to use as a mean of exchange. This is because Golem payments will usually be orders of magnitude smaller than the typical transaction fee on Ethereum.
 
@@ -37,21 +37,21 @@ For more information regarding Layer 2 and Polygon, please refer to our introduc
 
 ## How to monitor the status of your wallet
 
-There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
+There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you verify the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
 
 
 ## Securing your Golem wallet
 
-Golem provides a procedure to backup your wallet in a secure way, as well as to restore it to the new Yagna installation. 
+Golem provides a procedure to back up your wallet in a secure way, as well as to restore it to a new Yagna installation.
 Please follow the instructions provided in [Golem wallet backup](/docs/creators/javascript/examples/tools/golem-wallet-backup) and [Restore Golem wallet](/docs/creators/javascript/examples/tools/restoring-golem-wallet) tutorials.
 
 ## Getting funds to your requestor
 
-Golem Network payments are done on Blockchain with GLM tokens. Consequently, to enable such payments you will need:
+Golem Network payments are performed on blockchain using GLM tokens. Consequently, to enable such payments you will need:
 - GLM tokens to pay the Provider
-- Native token of the chosen Blockchain to pay for the gas a.k.a. transaction fees
+- Native token of the chosen blockchain to pay for the gas a.k.a. transaction fees
 
-Ethereum native token is ETH, whereas Polygon Network has MATIC.
+Ethereum's native token is ETH, whereas Polygon Network has MATIC.
 
 ### On test network
 
@@ -60,15 +60,14 @@ You can top up your wallet with the following command:
 ```bash
 yagna payment fund
 ```
+
 ### On paid network
 
 {% alert level="info" %}
 
-To facilitate operation on blockchains it is useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to backup and restore your wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
+It may be useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to back up and restore your wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
 
 {% /alert %}
-
-
 
 #### Acquiring MATIC directly on Polygon and converting some of them to GLMs
 

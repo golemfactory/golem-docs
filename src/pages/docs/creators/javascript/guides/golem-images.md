@@ -1,21 +1,23 @@
 ---
-description: Learn what a Golem image is and how to create and use one
+description: Learn what a Golem VM image is and how to create and use one
 title: Golem images explained
 ---
 
-# Golem images and usage explained
+# Golem VM images and their usage explained
 
-## Golem Image
+## Golem VM Image
 
-A Golem image is a software package that contains libraries, tools, configurations, dependencies, and settings that are required to execute your tasks on a remote computer. The image is used to create the environment (VM) where your tasks are executed.
+A Golem VM image is a virtual medium that contains libraries, tools, configurations, dependencies, and settings that are required to execute your tasks or services on a remote computer. The image is used to bootstrap the environment (VM) where those components are executed.
 
 ### Execution environment
 
-Golem's virtual machine runtime is currently a primary execution environment. This runtime allows provider nodes to run Docker-like images defined by Golem application developers. The runtime is a binary used by the `yagna` service on provider nodes. A given runtime is responsible for running a certain type of image (we have separate runtimes for VMs and for WASM code). In the case of Golem VMs, the runtime being used is ya-runtime-vm.
+Golem's virtual machine runtime is currently the primary execution environment. This runtime allows provider nodes to run Docker-like images defined by Golem application developers.
+
+A runtime is a binary used by the `yagna` service on provider nodes. A given runtime is responsible for deploying a certain type of payload (we have separate runtimes for VMs and for WASM code). In the case of Golem VMs, the runtime used is `ya-runtime-vm`.
 
 ## Golem image creation 
 
-Golem images are based on Docker images that are converted using the gvmkit-build tool to a `.gvmi` file format. The conversion brings a visible advantage for users. By using SquashFS we significantly reduced the size of the images thus saving file space and shortening the time needed to transfer the image to the provider node. Another benefit is running images in VMs instead of running them as Docker containers, which provides a separation of providers and requestor data and processes.
+Golem VM images are based on Docker images that are converted using the gvmkit-build tool to the `GVMI` file format. The conversion brings a visible advantage to users. By using SquashFS we're significantly reducing the size of the images, thus saving file space and shortening the time needed to transfer the images to provider nodes. Another benefit is running images in VMs instead of running them as Docker containers, which provides a separation of providers and requestor data and processes.
 
 The general process of creating a Golem image looks like this:
 
@@ -32,9 +34,14 @@ Once your image is built and tested, you can push it to a remote repository so t
 
 ## Golem image use
 
-For providers to be able to download and use the image you specify in your demand, the image must be available for them, so you need to publish it. Images can be identified by their image hash or a tag name. The type of identifier depends on the way you publish your image and is driven by intended usage.
+Any images that you intend to specify in your demand must be publicly available, so that the providers can download and deploy them.
+Therefore, you either need to publish them to our registry or host it yourself in a publicly-accessible location.
 
-If you intend to use your image just for testing then it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and use tags to describe your images. Both cases are illustrated in our examples.
+Within our registry, the images can be identified by their image hash or their tag name.
+The type of identifier depends on the way you publish your image and is driven by intended usage.
+
+If you intend to use your image just for testing, it is enough to use the hashes and upload the images anonymously to the registry.
+On the other hand, if you intend to work on a more complex project, where you would like to use several different versions of your image or collaborate with other developers - you should consider creating an account in the registry and use tags to describe your images. Both cases are illustrated in our examples.
 
 - Publishing the image anonymously. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-hash-based))
 - Publishing the image using tags. ([example](/docs/creators/javascript/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
@@ -42,7 +49,7 @@ If you intend to use your image just for testing then it is enough to use image 
 
 ## Dockerfile command support 
 
-All the Docker commands that are related to the definition of the image content are supported. So if you can create a Docker image from your Dockerfile, you should be able to convert it to a Golem image.
+All the Docker commands that are related to the definition of the image content are supported. So if you can build a Docker image from your Dockerfile, you should be able to convert it to a Golem image.
 
 Please take into account the following points:
 
@@ -54,7 +61,7 @@ Additionally, in the case of large files, it is recommended to generate and stor
 
 {% alert level="warning" %}
 
-When you define the image (in Dockerfile) do not copy your files into folders that are defined as volumes. When a Golem virtual machine is started, __a new directory__ is created in the host's file system for each of the defined volumes. This directory is then made available inside the VM under its specified path (for example: /golem/input).
+When you define the image (in Dockerfile), do not copy your files into folders that are defined as volumes. When a Golem virtual machine is started, __a new directory__ is created in the host's file system for each of the defined volumes. This directory is then made available inside the VM under its specified path (for example: /golem/input).
 
 {% /alert %}
 
@@ -66,11 +73,11 @@ This will define the default directory to be used in shell commands sent to a re
 
 Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` statements are effectively ignored. You need to pass the relevant initialization commands as part of the task sent to a remote computer as a part of your task function or use the `beforeEach()` method. See examples.
 
-## Images, Virtual Machines, and file system content
+## File system content
 
-When you engage a provider, its provider_agent runs exe-unit (a runtime) to run your image or WASM code. In the case of Golem Images that are run in VMs, the runtime being used is `ya-runtime-vm`.
+When you engage a provider, it launches an execution unit (a runtime) to run your VM image.
 
-In Golem terms, such an image run on the provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks that will be scheduled on the same provider will use the same activity - meaning the same image container with its history. That means that within the lifecycle of the Activity, the state of the file system is maintained. One consequence is that any file system changes - be it updates to volumes or other locations within the VM - performed within a single execution of a task, will still be present when subsequent tasks get executed.
+In Golem terms, such a singular launch on a provider is called an Activity. Activities are utilized to execute requestor tasks. Unless an activity is terminated, all subsequent tasks scheduled on the same provider use the same activity - meaning the same VM container with its history. Therefore, within the lifecycle of the Activity, the state of the file system is maintained. One consequence is that any file system changes - be it updates to volumes or other locations within the VM - performed within a single execution of a task, will still be present when subsequent tasks get executed.
 
 {% docnavigation title="Next steps" %}
 

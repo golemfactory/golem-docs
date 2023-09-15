@@ -53,6 +53,16 @@ Golem Network payments are performed on blockchain using GLM tokens. Consequentl
 
 Ethereum's native token is ETH, whereas Polygon Network has MATIC.
 
+### On test network
+
+You can top up your wallet with the following command:
+
+```bash
+yagna payment fund
+```
+
+### On paid network
+
 {% alert level="info" %}
 
 It may be useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to back up and restore your wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
