@@ -39,7 +39,7 @@ Default selector that selects a random provider from the pool
 
 #### Defined in
 
-[src/agreement/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/strategy.ts#L4)
+[src/agreement/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/agreement/strategy.ts#L4)
 
 ___
 
@@ -67,7 +67,7 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 #### Defined in
 
-[src/agreement/strategy.ts:8](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/strategy.ts#L8)
+[src/agreement/strategy.ts:8](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/agreement/strategy.ts#L8)
 
 ___
 
@@ -101,4 +101,4 @@ Selector selecting the provider according to the provided list of scores
 
 #### Defined in
 
-[src/agreement/strategy.ts:17](https://github.com/golemfactory/golem-js/blob/0448b6b/src/agreement/strategy.ts#L17)
+[src/agreement/strategy.ts:17](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/agreement/strategy.ts#L17)
