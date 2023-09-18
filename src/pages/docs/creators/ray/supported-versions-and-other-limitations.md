@@ -33,11 +33,8 @@ Ray on Golem image contains only the basic Python libraries.
 If you need any dependencies in your Ray app,
 you can use `pip` via [cluster yaml `initialization_commands`](https://golem-docs-git-mateusz-ray-on-golem-pre-alpha-golem.vercel.app/docs/creators/ray/cluster-yaml-reference#initializationcommands)
 
+You can also instruct Ray on Golem to use the needed libraries during execution by passing `runtime_env` parameter to `ray.init()`.
 It is demonstrated for example in [this tutorial](/docs/creators/ray/conversion-to-ray-on-golem-tutorial#passendplaylibraryrequirementtoray).
-
-<!--You can instruct Ray on Golem to install it on the workers by passing `runtime_env` parameter to `ray.init()`.
-It is demonstrated for example in [this tutorial](/docs/creators/ray/conversion-to-ray-on-golem-tutorial#passendplaylibraryrequirementtoray).
--->
 
 
 

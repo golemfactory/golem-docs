@@ -26,6 +26,9 @@ For now, you also need to download and install Golem node software representing 
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
+Additonally, a tool named websocat is needed to wrap connections between your machine and Ray on Golem cluster.
+You can install websocat using instructions on its website: https://lib.rs/crates/websocat
+
 ## Start `ray-on-golem` server
 
 For the time being you need to manually run `ray-on-golem` server (in a separate terminal)
