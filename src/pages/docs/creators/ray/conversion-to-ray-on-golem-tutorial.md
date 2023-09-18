@@ -185,7 +185,7 @@ Now, run the following to start a basic cluster, based on our example configurat
 
 ```bash
 # start ray-on-golem server
-ray-on golem
+ray-on-golem
 
 # Download the golem-cluster.yaml
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
