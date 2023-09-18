@@ -1,3 +1,8 @@
+---
+title: "Interface Logger - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface Logger within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: Logger
 
 [utils/logger/logger](../modules/utils_logger_logger).Logger
@@ -26,7 +31,7 @@
 
 #### Defined in
 
-[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L9)
+[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L9)
 
 ## Methods
 
@@ -46,7 +51,7 @@
 
 #### Defined in
 
-[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L10)
+[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L10)
 
 ___
 
@@ -66,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:11](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L11)
+[src/utils/logger/logger.ts:11](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L11)
 
 ___
 
@@ -86,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L12)
+[src/utils/logger/logger.ts:12](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L12)
 
 ___
 
@@ -106,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:13](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L13)
+[src/utils/logger/logger.ts:13](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L13)
 
 ___
 
@@ -126,7 +131,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:14](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L14)
+[src/utils/logger/logger.ts:14](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L14)
 
 ___
 
@@ -146,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:15](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L15)
+[src/utils/logger/logger.ts:15](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L15)
 
 ___
 
@@ -169,4 +174,4 @@ This is currently used to display cost summary.
 
 #### Defined in
 
-[src/utils/logger/logger.ts:22](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/logger/logger.ts#L22)
+[src/utils/logger/logger.ts:22](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/logger/logger.ts#L22)

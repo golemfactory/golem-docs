@@ -1,3 +1,8 @@
+---
+title: "Module payment/debit_note - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module payment/debit_note within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: payment/debit\_note
 
 ## Table of contents
@@ -18,4 +23,4 @@
 
 #### Defined in
 
-[src/payment/debit_note.ts:8](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/payment/debit_note.ts#L8)
+[src/payment/debit_note.ts:8](https://github.com/golemfactory/golem-js/blob/7df98a2/src/payment/debit_note.ts#L8)

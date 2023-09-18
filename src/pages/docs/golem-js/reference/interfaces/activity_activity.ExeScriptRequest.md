@@ -1,3 +1,8 @@
+---
+title: "Interface ExeScriptRequest - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface ExeScriptRequest within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: ExeScriptRequest
 
 [activity/activity](../modules/activity_activity).ExeScriptRequest
@@ -16,4 +21,4 @@
 
 #### Defined in
 
-[src/activity/activity.ts:21](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L21)
+[src/activity/activity.ts:21](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L21)

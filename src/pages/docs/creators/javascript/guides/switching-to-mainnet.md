@@ -1,9 +1,12 @@
 ---
 Description: How to move and ensure the safety of your funds when operating on mainnet
 title: Switching to mainnet
+type: Guide
 ---
 
 # Using Golem on Mainnet
+
+## Introduction
 
 {% alert level="warning" %}
 

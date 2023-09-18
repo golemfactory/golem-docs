@@ -1,3 +1,8 @@
+---
+title: "Interface StorageProvider - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface StorageProvider within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: StorageProvider
 
 [storage/provider](../modules/storage_provider).StorageProvider
@@ -34,7 +39,7 @@ Initialize storage provider.
 
 #### Defined in
 
-[src/storage/provider.ts:7](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/storage/provider.ts#L7)
+[src/storage/provider.ts:7](https://github.com/golemfactory/golem-js/blob/7df98a2/src/storage/provider.ts#L7)
 
 ___
 
@@ -50,7 +55,7 @@ Close storage provider and release all resources.
 
 #### Defined in
 
-[src/storage/provider.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/storage/provider.ts#L12)
+[src/storage/provider.ts:12](https://github.com/golemfactory/golem-js/blob/7df98a2/src/storage/provider.ts#L12)
 
 ___
 
@@ -72,7 +77,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/provider.ts:17](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/storage/provider.ts#L17)
+[src/storage/provider.ts:17](https://github.com/golemfactory/golem-js/blob/7df98a2/src/storage/provider.ts#L17)
 
 ___
 
@@ -94,7 +99,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/provider.ts:22](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/storage/provider.ts#L22)
+[src/storage/provider.ts:22](https://github.com/golemfactory/golem-js/blob/7df98a2/src/storage/provider.ts#L22)
 
 ___
 
@@ -116,7 +121,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Defined in
 
-[src/storage/provider.ts:28](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/storage/provider.ts#L28)
+[src/storage/provider.ts:28](https://github.com/golemfactory/golem-js/blob/7df98a2/src/storage/provider.ts#L28)
 
 ___
 
@@ -138,7 +143,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Defined in
 
-[src/storage/provider.ts:34](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/storage/provider.ts#L34)
+[src/storage/provider.ts:34](https://github.com/golemfactory/golem-js/blob/7df98a2/src/storage/provider.ts#L34)
 
 ___
 
@@ -160,4 +165,4 @@ Release previously allocated resource URL from Yagna.
 
 #### Defined in
 
-[src/storage/provider.ts:40](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/storage/provider.ts#L40)
+[src/storage/provider.ts:40](https://github.com/golemfactory/golem-js/blob/7df98a2/src/storage/provider.ts#L40)

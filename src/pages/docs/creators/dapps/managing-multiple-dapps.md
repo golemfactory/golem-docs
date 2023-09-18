@@ -1,6 +1,7 @@
 ---
 description: Manage multiple apps on a single requestor node easily with `dapp-manager`.
 title: Managing multiple apps on a single requestor node.
+type: Guide
 ---
 
 # dApp Manager
@@ -43,7 +44,9 @@ yagna app-key list
 ```
 If the above command doesn't give you any 32-char keys, just create your app key:
 
-`shell yagna app-key create requestor`
+```bash
+yagna app-key create requestor
+```
 
 and copy the value output by this command.
 
@@ -139,7 +142,7 @@ Most importantly, you may query the `data` stream with:
 dapp-manager read --follow <the-hex-string> data
 ```
 
-waiting for the following line
+waiting for the following line:
 
 ```shell
 {"web": {"local_proxy_address": "http://localhost:8080"}}
@@ -151,7 +154,6 @@ waiting for the following line
 {% /alert %}
 
 Once you get it, you can access the launched app by following that link.
-
 
 In case something goes amiss, `dapp-manager` will output:
 ```App <the-hex-string> is not running.```
@@ -208,7 +210,7 @@ deploy the specified applications on Golem.
 The `stop` and `kill` commands terminate the given `dapp-runner` instance, the main difference
 being the signal that's sent to do that. Essentially, `stop` should be enough and should give the
 `dapp-runner` a chance to shut the app down gracefully, correctly terminating the services,
-closing the agreements and paying for them.
+closing the agreements, and paying for them.
 
 In case `stop` is stuck for whatever reason, you might want to resort to `kill` which terminates
 the `dapp-runner` immediately without allowing for any graceful shutdown.

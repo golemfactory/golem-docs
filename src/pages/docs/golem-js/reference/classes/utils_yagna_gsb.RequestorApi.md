@@ -1,3 +1,8 @@
+---
+title: "Class RequestorApi - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class RequestorApi within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: RequestorApi
 
 [utils/yagna/gsb](../modules/utils_yagna_gsb).RequestorApi
@@ -68,7 +73,7 @@ GsbRequestorApi.createService
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:20](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/gsb.ts#L20)
+[src/utils/yagna/gsb.ts:20](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/yagna/gsb.ts#L20)
 
 ___
 
@@ -92,4 +97,4 @@ GsbRequestorApi.deleteService
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:35](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/yagna/gsb.ts#L35)
+[src/utils/yagna/gsb.ts:35](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/yagna/gsb.ts#L35)

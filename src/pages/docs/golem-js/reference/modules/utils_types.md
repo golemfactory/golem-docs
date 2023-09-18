@@ -1,3 +1,8 @@
+---
+title: "Module utils/types - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module utils/types within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: utils/types
 
 ## Table of contents
@@ -21,4 +26,4 @@
 
 #### Defined in
 
-[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/utils/types.ts#L12)
+[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/types.ts#L12)

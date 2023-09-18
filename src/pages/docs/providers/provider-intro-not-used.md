@@ -1,6 +1,7 @@
 ---
 description: intro for providers
 title: Introduction for Providers
+type: Introduction
 ---
 
 In the network, you can have two roles: you can request hardware resources to run your apps - then you are a requestor, or you can share your idling hardware in exchange for GLM tokens - then you become a provider.

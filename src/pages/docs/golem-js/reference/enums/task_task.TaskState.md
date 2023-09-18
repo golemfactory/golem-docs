@@ -1,3 +1,8 @@
+---
+title: "Enum TaskState - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Enum TaskState within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Enumeration: TaskState
 
 [task/task](../modules/task_task).TaskState
@@ -20,7 +25,7 @@
 
 #### Defined in
 
-[src/task/task.ts:5](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/task.ts#L5)
+[src/task/task.ts:5](https://github.com/golemfactory/golem-js/blob/7df98a2/src/task/task.ts#L5)
 
 ___
 
@@ -30,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:6](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/task.ts#L6)
+[src/task/task.ts:6](https://github.com/golemfactory/golem-js/blob/7df98a2/src/task/task.ts#L6)
 
 ___
 
@@ -40,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:7](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/task.ts#L7)
+[src/task/task.ts:7](https://github.com/golemfactory/golem-js/blob/7df98a2/src/task/task.ts#L7)
 
 ___
 
@@ -50,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/task.ts#L8)
+[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/7df98a2/src/task/task.ts#L8)
 
 ___
 
@@ -60,4 +65,4 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/task.ts#L9)
+[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/7df98a2/src/task/task.ts#L9)

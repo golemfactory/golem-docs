@@ -19,6 +19,10 @@ export const navigation = [
         title: '"no-code" app deployment',
         href: '/docs/quickstarts/no-code-app-deployment',
       },
+      {
+        title: 'Retrievable Task',
+        href: '/docs/quickstarts/retrievable-task',
+      },
     ],
   },
   {
@@ -40,6 +44,10 @@ export const navigation = [
               {
                 title: 'Golem in a browser',
                 href: '/docs/creators/javascript/quickstarts/golem-in-a-browser',
+              },
+              {
+                title: 'Retrievable Task (Job API)',
+                href: '/docs/creators/javascript/quickstarts/retrievable-task',
               },
             ],
           },
@@ -69,6 +77,10 @@ export const navigation = [
               {
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
+              },
+              {
+                title: 'REST API with Express.js',
+                href: '/docs/creators/javascript/tutorials/rest-api-with-express',
               },
             ],
           },
@@ -127,6 +139,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/guides/task-model',
               },
               {
+                title: 'Retrievable tasks (Job API)',
+                href: '/docs/creators/javascript/guides/retrievable-tasks',
+              },
+              {
                 title: 'Golem images',
                 href: '/docs/creators/javascript/guides/golem-images',
               },
@@ -182,7 +198,6 @@ export const navigation = [
               },
             ],
           },
-         
         ],
       },
       {
@@ -281,7 +296,10 @@ export const navigation = [
       {
         title: 'Payload Manifest',
         children: [
-          { title: 'Payload Manifest explained', href: '/docs/golem/payload-manifest' },
+          {
+            title: 'Payload Manifest explained',
+            href: '/docs/golem/payload-manifest',
+          },
           {
             title: 'Schema',
             href: '/docs/golem/payload-manifest/computation-payload-manifest.schema',

@@ -1,3 +1,8 @@
+---
+title: "Interface JobStorage - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface JobStorage within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: JobStorage
 
 [job/storage](../modules/job_storage).JobStorage
@@ -34,7 +39,7 @@
 
 #### Defined in
 
-[src/job/storage.ts:10](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/job/storage.ts#L10)
+[src/job/storage.ts:10](https://github.com/golemfactory/golem-js/blob/7df98a2/src/job/storage.ts#L10)
 
 ___
 
@@ -54,4 +59,4 @@ ___
 
 #### Defined in
 
-[src/job/storage.ts:11](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/job/storage.ts#L11)
+[src/job/storage.ts:11](https://github.com/golemfactory/golem-js/blob/7df98a2/src/job/storage.ts#L11)

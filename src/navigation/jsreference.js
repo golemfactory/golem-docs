@@ -377,10 +377,6 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/activity_results"
           },
 {
-            title: "Activity_results_test",
-            href: "/docs/golem-js/reference/modules/activity_results_test"
-          },
-{
             title: "Agreement_service",
             href: "/docs/golem-js/reference/modules/agreement_service"
           },
@@ -419,10 +415,6 @@ export const navigation = [
 {
             title: "Market_proposal",
             href: "/docs/golem-js/reference/modules/market_proposal"
-          },
-{
-            title: "Market_proposal_test",
-            href: "/docs/golem-js/reference/modules/market_proposal_test"
           },
 {
             title: "Market_service",

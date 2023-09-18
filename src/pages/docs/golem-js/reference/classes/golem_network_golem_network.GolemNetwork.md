@@ -1,3 +1,8 @@
+---
+title: "Class GolemNetwork - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class GolemNetwork within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: GolemNetwork
 
 [golem_network/golem_network](../modules/golem_network_golem_network).GolemNetwork
@@ -42,7 +47,7 @@ network.init().then(() => {
 
 ### constructor
 
-• **new GolemNetwork**(`config?`)
+• **new GolemNetwork**(`config`)
 
 #### Parameters
 
@@ -52,7 +57,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:36](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/golem_network/golem_network.ts#L36)
+[src/golem_network/golem_network.ts:58](https://github.com/golemfactory/golem-js/blob/7df98a2/src/golem_network/golem_network.ts#L58)
 
 ## Methods
 
@@ -66,7 +71,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:50](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/golem_network/golem_network.ts#L50)
+[src/golem_network/golem_network.ts:67](https://github.com/golemfactory/golem-js/blob/7df98a2/src/golem_network/golem_network.ts#L67)
 
 ___
 
@@ -80,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:54](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/golem_network/golem_network.ts#L54)
+[src/golem_network/golem_network.ts:71](https://github.com/golemfactory/golem-js/blob/7df98a2/src/golem_network/golem_network.ts#L71)
 
 ___
 
@@ -126,7 +131,7 @@ console.log(status);
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:82](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/golem_network/golem_network.ts#L82)
+[src/golem_network/golem_network.ts:101](https://github.com/golemfactory/golem-js/blob/7df98a2/src/golem_network/golem_network.ts#L101)
 
 ___
 
@@ -146,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:86](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/golem_network/golem_network.ts#L86)
+[src/golem_network/golem_network.ts:105](https://github.com/golemfactory/golem-js/blob/7df98a2/src/golem_network/golem_network.ts#L105)
 
 ___
 
@@ -180,7 +185,7 @@ The runTask method is the simplest way to run some code on Golem Network. Simply
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:97](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/golem_network/golem_network.ts#L97)
+[src/golem_network/golem_network.ts:116](https://github.com/golemfactory/golem-js/blob/7df98a2/src/golem_network/golem_network.ts#L116)
 
 ___
 
@@ -194,4 +199,4 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:101](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/golem_network/golem_network.ts#L101)
+[src/golem_network/golem_network.ts:120](https://github.com/golemfactory/golem-js/blob/7df98a2/src/golem_network/golem_network.ts#L120)

@@ -1,3 +1,8 @@
+---
+title: "Module golem_network/golem_network - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module golem_network/golem_network within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: golem\_network/golem\_network
 
 ## Table of contents

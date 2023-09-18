@@ -1,6 +1,7 @@
 ---
 description: Provider FAQ
 title: Provider FAQ
+type: Guide
 ---
 
 # Provider FAQ

@@ -1,9 +1,12 @@
 ---
 description: Setting up a new Yagna instance to use a saved keystore file.
 title: Restore a Golem wallet 
+type: Instructions
 ---
 
 # Restoring a backed-up wallet
+
+## Introduction
 
 If, for whatever reason, your Golem wallet is destroyed or corrupted e.g. you moved on to a new machine and forgot to take Golem's installation with it, you'll be faced with the necessity to recover your wallet from your previously backed-up keystore file.
 
@@ -121,7 +124,7 @@ If you have used `yagna` before, you have probably already created an applicatio
 In that case, after you import your Ethereum mainnet key, you need to re-create Yagna's application key, as the previous one is now bound to your old key:
 
 ```bash
- yagna app-key create requestor-mainnet
+yagna app-key create requestor-mainnet
 ```
 
 The name (`requestor-mainnet`above) is not important as long as it doesn't collide with the existing one (assuming it was just `requestor`).

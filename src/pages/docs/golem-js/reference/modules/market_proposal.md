@@ -1,3 +1,8 @@
+---
+title: "Module market/proposal - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module market/proposal within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: market/proposal
 
 ## Table of contents
@@ -31,7 +36,7 @@
 
 #### Defined in
 
-[src/market/proposal.ts:6](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/market/proposal.ts#L6)
+[src/market/proposal.ts:6](https://github.com/golemfactory/golem-js/blob/7df98a2/src/market/proposal.ts#L6)
 
 ___
 
@@ -41,4 +46,4 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/market/proposal.ts#L12)
+[src/market/proposal.ts:12](https://github.com/golemfactory/golem-js/blob/7df98a2/src/market/proposal.ts#L12)

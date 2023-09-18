@@ -1,3 +1,8 @@
+---
+title: "Class Activity - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Class Activity within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Class: Activity
 
 [activity/activity](../modules/activity_activity).Activity
@@ -32,7 +37,7 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:54](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L54)
+[src/activity/activity.ts:54](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L54)
 
 ___
 
@@ -44,7 +49,7 @@ agreement ID
 
 #### Defined in
 
-[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L55)
+[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L55)
 
 ___
 
@@ -56,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L56)
+[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L56)
 
 ___
 
@@ -68,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L57)
+[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L57)
 
 ## Methods
 
@@ -95,7 +100,7 @@ Activity
 
 #### Defined in
 
-[src/activity/activity.ts:71](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L71)
+[src/activity/activity.ts:71](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L71)
 
 ___
 
@@ -119,7 +124,7 @@ Execute script
 
 #### Defined in
 
-[src/activity/activity.ts:88](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L88)
+[src/activity/activity.ts:88](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L88)
 
 ___
 
@@ -137,7 +142,7 @@ boolean
 
 #### Defined in
 
-[src/activity/activity.ts:113](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L113)
+[src/activity/activity.ts:113](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L113)
 
 ___
 
@@ -159,7 +164,7 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:125](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L125)
+[src/activity/activity.ts:125](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L125)
 
 ___
 
@@ -179,4 +184,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:142](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/activity/activity.ts#L142)
+[src/activity/activity.ts:142](https://github.com/golemfactory/golem-js/blob/7df98a2/src/activity/activity.ts#L142)

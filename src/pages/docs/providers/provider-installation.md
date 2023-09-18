@@ -1,6 +1,7 @@
 ---
 description: Yagna installation for providers
 title: Yagna installation for providers
+type: Instructions
 ---
 
 # Yagna provider installation

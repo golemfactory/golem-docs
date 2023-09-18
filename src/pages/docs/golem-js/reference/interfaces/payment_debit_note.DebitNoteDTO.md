@@ -1,3 +1,8 @@
+---
+title: "Interface DebitNoteDTO - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface DebitNoteDTO within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Interface: DebitNoteDTO
 
 [payment/debit_note](../modules/payment_debit_note).DebitNoteDTO
@@ -21,7 +26,7 @@
 
 #### Defined in
 
-[src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/payment/debit_note.ts#L11)
+[src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/7df98a2/src/payment/debit_note.ts#L11)
 
 ___
 
@@ -31,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/payment/debit_note.ts#L12)
+[src/payment/debit_note.ts:12](https://github.com/golemfactory/golem-js/blob/7df98a2/src/payment/debit_note.ts#L12)
 
 ___
 
@@ -41,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:13](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/payment/debit_note.ts#L13)
+[src/payment/debit_note.ts:13](https://github.com/golemfactory/golem-js/blob/7df98a2/src/payment/debit_note.ts#L13)
 
 ___
 
@@ -51,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:14](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/payment/debit_note.ts#L14)
+[src/payment/debit_note.ts:14](https://github.com/golemfactory/golem-js/blob/7df98a2/src/payment/debit_note.ts#L14)
 
 ___
 
@@ -61,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:15](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/payment/debit_note.ts#L15)
+[src/payment/debit_note.ts:15](https://github.com/golemfactory/golem-js/blob/7df98a2/src/payment/debit_note.ts#L15)
 
 ___
 
@@ -71,4 +76,4 @@ ___
 
 #### Defined in
 
-[src/payment/debit_note.ts:16](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/payment/debit_note.ts#L16)
+[src/payment/debit_note.ts:16](https://github.com/golemfactory/golem-js/blob/7df98a2/src/payment/debit_note.ts#L16)

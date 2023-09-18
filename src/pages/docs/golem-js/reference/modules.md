@@ -1,3 +1,8 @@
+---
+title: "Project JavaScript API reference - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Project JavaScript API reference within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # JavaScript API reference
 
 ## Table of contents
@@ -5,7 +10,6 @@
 ### Modules
 
 - [activity/activity](modules/activity_activity)
-- [activity/results.test](modules/activity_results_test)
 - [activity/results](modules/activity_results)
 - [agreement/service](modules/agreement_service)
 - [agreement/strategy](modules/agreement_strategy)
@@ -16,7 +20,6 @@
 - [job/storage](modules/job_storage)
 - [market/builder](modules/market_builder)
 - [market/demand](modules/market_demand)
-- [market/proposal.test](modules/market_proposal_test)
 - [market/proposal](modules/market_proposal)
 - [market/service](modules/market_service)
 - [market/strategy](modules/market_strategy)

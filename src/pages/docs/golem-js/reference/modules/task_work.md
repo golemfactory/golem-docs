@@ -1,3 +1,8 @@
+---
+title: "Module task/work - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module task/work within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: task/work
 
 ## Table of contents
@@ -45,4 +50,4 @@
 
 #### Defined in
 
-[src/task/work.ts:19](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/work.ts#L19)
+[src/task/work.ts:19](https://github.com/golemfactory/golem-js/blob/7df98a2/src/task/work.ts#L19)

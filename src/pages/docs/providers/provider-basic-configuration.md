@@ -1,6 +1,7 @@
 ---
 description: Configuration examples for Yagna
 title: Basic provider configuration
+type: Instructions
 ---
 
 # Configuration examples for yagna
@@ -62,7 +63,7 @@ and restart your node afterward for it to update. To check if your address has b
 
 `golemsp settings show` - Show current settings.
 
-## Running golemsp on testnet
+## Running Golem on testnet
 
 To run the Golem provider on the test network, type the following command into the terminal:
 

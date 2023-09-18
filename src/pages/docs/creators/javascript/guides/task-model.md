@@ -1,10 +1,15 @@
 ---
 description: Introduction to Golem Network and Task model
 title: Introduction to Golem Network and Task model
+type: Guide
 ---
 
 
 # Introduction to Golem Network and Task model
+
+## Introduction
+
+This article will explain Golem Network and details around the Task model.
 
 ## Golem Network
 

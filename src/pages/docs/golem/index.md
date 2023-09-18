@@ -1,6 +1,7 @@
 ---
 description: General Info Introduction
 title: General Info Introduction
+type: Introduction
 ---
 
 In this section you will find:

@@ -1,6 +1,7 @@
 ---
 description: Learn what a Golem image is and how to create and use one
 title: Golem images explained
+type: Guide
 ---
 
 # Golem images and usage explained

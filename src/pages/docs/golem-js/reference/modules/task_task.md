@@ -1,3 +1,8 @@
+---
+title: "Module task/task - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Module task/task within the golem-js SDK for the Golem Network."
+type: "reference"
+---
 # Module: task/task
 
 ## Table of contents
@@ -29,4 +34,4 @@
 
 #### Defined in
 
-[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/2e4ff2e/src/task/task.ts#L12)
+[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/7df98a2/src/task/task.ts#L12)
