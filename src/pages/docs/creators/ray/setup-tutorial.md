@@ -43,6 +43,19 @@ TLDR install yagna:
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
+## Start and initialize `yagna` service
+
+For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
+
+```bash
+yagna service run
+```
+
+Next (in the separate terminal), you need to initialize testnet payments.
+```bash
+yagna payment fund
+```
+
 ## Start `ray-on-golem` server
 
 For the time being, you need to manually run `ray-on-golem` server (in a separate terminal)
