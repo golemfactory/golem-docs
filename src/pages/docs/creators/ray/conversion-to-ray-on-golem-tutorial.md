@@ -16,10 +16,10 @@ The parallelization part is also explained in our PoC demo video
 
 In our case, the application is a very simple script running a simple bridge (the card game) simulation.
 
-Download our [example bridge script](https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py)
+Download our [example bridge script](https://github.com/golemfactory/ray-on-golem/raw/main/examples/dds-without-ray.py)
 ```bash
 # Download the example bridge app
-wget https://github.com/golemfactory/golem-ray/blob/main/examples/dds-without-ray.py
+wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/dds-without-ray.py
 ```
 
 The script uses the [endplay library](https://pypi.org/project/endplay/)
@@ -171,7 +171,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 ray-on golem
 
 # Download the golem-cluster.yaml
-wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
+wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)

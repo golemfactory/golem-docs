@@ -54,7 +54,7 @@ ray-on-golem
 ## Start Ray with the Ray cluster launcher
 
 Once the packages are installed and `ray-on-golem` cluster manager is running, you can immediately proceed with launching your cluster.
-The provided [example golem cluster config file](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
+The provided [example golem cluster config file](https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
 that is configured to autoscale to up to 10 worker nodes.
 
 Each Ray cluster consists of one head node and a number of worker nodes. The head node drives the computation, and the worker nodes execute the tasks. The head node also serves as one of the workers.
@@ -71,7 +71,7 @@ The command to start the cluster is `ray up`:
 
 ```bash
 # Download the example golem-cluster.yaml
-wget https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml
+wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
@@ -104,7 +104,7 @@ At first, it is recommended to run the app locally (without connecting to the cl
 
 ```bash
 # Download the example Ray app
-wget https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py 
+wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py 
 
 # Execute the app locally by starting a local ray instance on your computer
 python simple-task.py
