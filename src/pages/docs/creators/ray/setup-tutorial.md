@@ -26,8 +26,10 @@ You also need to download the Golem cluster manager, which enables Ray to utiliz
 pip install -U ray[default] ray-on-golem
 ```
 
+{% alert level="info" %}
 Additonally, a tool named websocat is needed to wrap connections between your machine and Ray on Golem cluster.
 You can install websocat using instructions on its website: https://lib.rs/crates/websocat
+{% /alert %}
 
 ## Install yagna (Golem daemon used to schedule work on the Golem Network)
 

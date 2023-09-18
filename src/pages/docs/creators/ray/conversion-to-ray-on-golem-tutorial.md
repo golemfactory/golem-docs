@@ -155,8 +155,10 @@ This cluster consists of
 
 We will now scale the execution even further - we will use a Ray on Golem cluster.
 
+{% alert level="info" %}
 A tool named websocat is needed to wrap connections between your machine and Ray on Golem cluster.
 You can install websocat using instructions on its website: https://lib.rs/crates/websocat
+{% /alert %}
 
 Run the following to install needed software.
 
