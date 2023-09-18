@@ -7,8 +7,8 @@ Type: Introduction
 # Decentralized applications on Golem
 
 {% alert level="info" %}
-    Looking for a QuickStart?
-    
+Looking for a QuickStart?
+
     [See how easy it is to run an application on Golem](/docs/creators/dapps/run-a-dapp)
 
 {% /alert %}
@@ -29,30 +29,27 @@ Please be aware that the dApps on Golem project is still in early access and sho
 
 {% /alert %}
 
-
-
-
 ## Available experiments
 
 While working with dApps, we created a few applications on top of it, which served us both as a testing ground and as a way to validate our approach. On the other hand, they were also designed to give you, first, a good starting point, and later, a reference, when developing your own, similar apps.
 
-### ToDo List Application [\[GitHub\]](https://github.com/golemfactory/dapp-experiments/tree/main/01\_todo\_app)
+### ToDo List Application
 
 ![ToDo List App](https://user-images.githubusercontent.com/33448819/223681578-03193431-ed28-46e7-9faf-00bc0ea00613.png)
 
-This application showcases utilizing the Golem Network to host a 3-layer application (**React** + **Flask** + **RQLite**)
+This [application](https://github.com/golemfactory/dapp-experiments/tree/main/01_todo_app) showcases utilizing the Golem Network to host a 3-layer application (**React** + **Flask** + **RQLite**)
 
-### Weather Stats Application [\[GitHub\]](https://github.com/golemfactory/dapp-experiments/tree/main/02\_weather\_stats)
+### Weather Stats Application
 
 ![Weather Stats App](/weather-stats.png)
 
-This application presents usage of the Golem Network with access to external services (not hosted on Golem) taking advantage of the outbound network connections.
+This [application](https://github.com/golemfactory/dapp-experiments/tree/main/02_weather_stats) presents usage of the Golem Network with access to external services (not hosted on Golem) taking advantage of the outbound network connections.
 
 ## Components
 
 ### Golem Services
 
-Golem __Service model__ describes a way to run specific Golem payloads and defines operations that need to be applied on state transitions throughout their lifetime.
+Golem **Service model** describes a way to run specific Golem payloads and defines operations that need to be applied on state transitions throughout their lifetime.
 
 The payloads are the definitions of activities that a requestor wishes to be executed on Golem along with a complete set of parameters needed to initialize those activities. Those parameters can specify, e.g. what runtime and which container image to use or what the CPU or memory specifications are required by the payload.
 
@@ -73,7 +70,6 @@ The model and the schema used are documented in:
 Dapp-runner is an initial, reference implementation that allows applications defined as Golem dApps to be deployed and maintained on the Golem Network. It takes one or more application descriptors expressed as YAML files, constructs the desired dApp model for such an application, and executes all operations needed for the services constituting the app to be successfully deployed on Golem.
 
 [See dapp-runner on GitHub](https://github.com/golemfactory/dapp-runner/)
-
 
 ### Dapp-manager
 
