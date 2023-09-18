@@ -1,6 +1,6 @@
 ---
-title:
-pageTitle: Golem Docs. Get started with Golem Network
+title: Golem Docs | Get started with Golem Network
+pageTitle: Golem Docs | Get started with Golem Network
 description: Jump onboard the decentralized super computer and take your applications to the next level.
 type: design
 ---
