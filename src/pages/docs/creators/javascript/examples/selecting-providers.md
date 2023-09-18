@@ -1,6 +1,7 @@
 ---
 description: Selecting providers
 title: Selecting providers
+type: Example
 ---
 
 # JS Task API Examples: selecting providers

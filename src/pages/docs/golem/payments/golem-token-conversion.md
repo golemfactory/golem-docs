@@ -1,6 +1,7 @@
 ---
 title: Bridging the GLM token
 description: Bridging GLM from the Ethereum Mainnet to Polygon and back.
+type: Guide
 ---
 
 # Mainnet / Polygon GLM Conversion

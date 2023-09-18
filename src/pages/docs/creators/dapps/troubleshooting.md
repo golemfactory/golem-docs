@@ -1,6 +1,7 @@
 ---
 description: dApps Troubleshooting
 title: dApps Troubleshooting
+type: Guide
 ---
 
 # Troubleshooting

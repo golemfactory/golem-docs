@@ -1,6 +1,7 @@
 ---
 description: Differences between Docker containers and Golem VM runtime
 title: Differences between Docker containers and Golem VM runtime
+type: Guide
 ---
 
 # Differences between Docker containers and Golem VM runtime 

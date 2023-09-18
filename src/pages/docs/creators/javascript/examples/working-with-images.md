@@ -1,6 +1,7 @@
 ---
 title: Working with Golem images
 description: Examples of how to use your own Golem image in a requestor script
+type: Example
 ---
 
 # Examples of how to use your own Golem image in a requestor script

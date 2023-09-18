@@ -1,6 +1,7 @@
 ---
 description: Yagna CLI reference
 title: Provider CLI reference
+type: Reference
 ---
 
 # Provider CLI reference

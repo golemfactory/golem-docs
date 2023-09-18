@@ -1,6 +1,7 @@
 ---
 description: Master the transition from Golem testnet to mainnet with our in-depth guide. Learn all about payment platforms, Ethereum vs Layer-2, wallet security and funds acquisition while enhancing your Mainnet Golem experience.
 title: Using Golem on the mainnet
+type: Guide
 ---
 
 # Using Golem on Mainnet

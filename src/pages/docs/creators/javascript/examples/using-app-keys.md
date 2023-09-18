@@ -1,6 +1,7 @@
 ---
 description: Using app-keys
 title: Using app-keys
+type: Example
 ---
 
 # JS Task API Examples: using app-keys

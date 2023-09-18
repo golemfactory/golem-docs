@@ -1,6 +1,7 @@
 ---
 description: Yagna service installation
 title: Yagna installation for requestors
+type: Instructions
 ---
 
 # Yagna installation

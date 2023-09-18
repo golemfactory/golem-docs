@@ -1,6 +1,7 @@
 ---
 description: Solution architecture and details.
 title: Golem Overview
+type: Guide
 ---
 
 ## Golem overview
