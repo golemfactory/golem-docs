@@ -1,6 +1,7 @@
 ---
 description: Your Golem wallet and Yagna setup for Mainnet payments.
 title: Yagna management for requestors
+type: Instructions
 ---
 
 # Yagna management for requestors

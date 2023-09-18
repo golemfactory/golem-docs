@@ -1,6 +1,7 @@
 ---
 description: Introduction to Golem Network and Task model
 title: Introduction to Golem Network and Task model
+type: Guide
 ---
 
 

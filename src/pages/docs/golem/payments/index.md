@@ -1,6 +1,7 @@
 ---
 title: Golem payments introduction
 description: How payments are made between the providers and requestors within the Golem Network.
+type: Guide
 ---
 
 # Payments in Golem explained

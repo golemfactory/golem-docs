@@ -1,6 +1,7 @@
 ---
 description: Guides to help you troubleshoot a faulty provider.
 title: Provider troubleshooting
+type: Instructions
 ---
 
 # Provider Troubleshooting

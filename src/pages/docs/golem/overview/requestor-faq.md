@@ -1,6 +1,7 @@
 ---
 description: Requestor FAQ
 title: Requestor FAQ
+type: Guide
 ---
 
 # Requestor FAQ

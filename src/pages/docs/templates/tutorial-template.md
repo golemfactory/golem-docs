@@ -1,6 +1,7 @@
 ---
 description: Golem Tutorial template tutorial
 title: This is the page title displayed in a browser tab.
+type: Tutorial
 ---
 
 # Tutorial title 

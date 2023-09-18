@@ -1,6 +1,7 @@
 ---
 description: Switching to mainnet
 title: Switching to mainnet
+type: Example
 ---
 
 # JS Task API Examples: switching to mainnet

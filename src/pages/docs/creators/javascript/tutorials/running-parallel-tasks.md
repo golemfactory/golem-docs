@@ -1,6 +1,7 @@
 ---
 description: Parallel processing on Golem Network - Tutorial
 title: Parallel processing on Golem Network Tutorial
+type: Tutorial
 ---
 
 # Executing tasks in parallel - tutorial

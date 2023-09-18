@@ -1,6 +1,7 @@
 ---
 description: Working with results
 title: Working with results
+type: Example
 ---
 
 # JS Task API Examples: working with results

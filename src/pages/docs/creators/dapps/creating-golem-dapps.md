@@ -1,6 +1,7 @@
 ---
 description: Creating your own decentralized Golem Applications
 title: Creating Golem dApps
+type: Guide
 ---
 
 # Creating Golem dApps

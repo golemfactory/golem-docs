@@ -1,6 +1,7 @@
 ---
 title: Payload Manifest Introduction
 description: Computation Payload Manifest description, its schema, and configuration guide
+type: Guide
 ---
 
 # Computation Payload Manifest

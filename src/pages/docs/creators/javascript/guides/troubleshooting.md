@@ -1,6 +1,7 @@
 ---
 description: JS troubleshooting
 title: JS troubleshooting
+type: article
 ---
 
 We have collected common errors experienced by users of the JS SDK with information on how to address them.

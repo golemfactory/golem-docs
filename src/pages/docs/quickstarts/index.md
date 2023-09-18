@@ -1,6 +1,7 @@
 ---
 description: Golem QuickStarts
 title: Golem QuickStarts
+type: Toc
 ---
 
 We provide some QuickStart examples to help you start your journey with Golem:

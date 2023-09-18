@@ -1,6 +1,7 @@
 ---
 description: Introduction to retrievable tasks on Golem Network
 title: Retrievable tasks (Job API)
+type: Guide
 ---
 
 # Retrievable tasks (Job API)
