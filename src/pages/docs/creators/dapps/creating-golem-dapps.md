@@ -80,7 +80,7 @@ The manifests are JSON files conforming to a specific schema, e.g.:
 }
 ```
 
-For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to: [Computation Payload Manifest](/docs/golem/payload-manifest/index).
+For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to: [Computation Payload Manifest](/docs/golem/payload-manifest).
 
 ### **Manifest signatures**
 
@@ -203,7 +203,7 @@ As mentioned earlier, in case of the VM runtime, the payload may be an image has
 
 If the payloads could be said to describe the “what” of your app, the nodes part describes the “how”. Each entry translates to a service that’s deployed to a provider. Each service must obviously specify the payload that it uses.
 
-#### `init`
+#### init
 
 Services need to specify any and all ExeScript commands that must be run in order for a given service to start. Those commands comprise the content of the `init` clause. Currently, only the `run` command is supported by the `dapp-runner`.
 
@@ -294,7 +294,7 @@ As an additional perk, using `dapp-manager` enables you to more conveniently int
 
 ### Connecting to services running on the providers
 
-As mentioned in the application descriptor section above ([`http_proxy` and `tcp_proxy`](/docs/creators/dapps/creating-golem-dapps#http_proxy-and-tcp_proxy)) by specifying a `http_proxy` or `tcp_proxy` in the application descriptor, you enable a given port within the node to be accessed using a local port on the requestor’s machine.
+As mentioned in the application descriptor section above ([`http_proxy` and `tcp_proxy`](/docs/creators/dapps/creating-golem-dapps#http-proxy-and-tcp-proxy)) by specifying a `http_proxy` or `tcp_proxy` in the application descriptor, you enable a given port within the node to be accessed using a local port on the requestor’s machine.
 
 #### Local HTTP proxy
 
