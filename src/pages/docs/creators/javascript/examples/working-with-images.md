@@ -1,7 +1,18 @@
 ---
 title: Working with Golem images
 description: Examples of how to use your own Golem image in a requestor script
+type: Example
 ---
+
+# Examples of how to use your own Golem image in a requestor script
+
+## Introduction
+
+Golem images define a remote environment where you execute tasks. They are identified either by their `tags` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -11,10 +22,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -32,11 +39,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-
-# Introduction
-
-Golem images define a remote environment where you execute tasks. They are identified either by their `tags` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
 
 ## Using Golem images
 
@@ -66,9 +68,9 @@ Note the `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4` hash in the 
 
 
 ```js
-    const executor = await TaskExecutor.create({
-            package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-        yagnaOptions: { apiKey: 'try_golem' }});
+const executor = await TaskExecutor.create({
+        package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
+    yagnaOptions: { apiKey: 'try_golem' }});
 ```
 
 If you had created your custom Golem image and published it to the repository, you can simply replace the hash (`529 [...] 1106d4`) in the script with the hash generated for your image by gvmkit-build tool or with your own defined tag.

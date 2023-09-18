@@ -1,10 +1,18 @@
 ---
 description: Working with results
 title: Working with results
+type: Example
 ---
 
-
 # JS Task API Examples: working with results
+
+## Introduction
+
+This example will show you how the task result can be managed by code in different ways for different use-cases.
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -14,10 +22,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -43,11 +47,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-
-## Introduction
-
-For each command that is run, you can obtain a result object.
 
 ## Single command task
 
@@ -87,7 +86,7 @@ Index refers to the sequential number of a command (we have just one, and counti
 When you run your tasks in a batch that is concluded with `.end()`: 
   
 ```js
-  import { TaskExecutor } from "@golem-sdk/golem-js";
+import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({

@@ -1,6 +1,7 @@
 ---
-description: List of examples
+description: List of instructions
 title: JS SDK tool instructions
+type: ToC
 ---
 
 Instructions on how to use Golem tools:

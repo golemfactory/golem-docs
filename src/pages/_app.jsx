@@ -30,16 +30,20 @@ function modifyID(id) {
 function collectHeadings(
   nodes,
   slugify = slugifyWithCounter(),
-  lastNodes = []
+  lastNodes = [],
+  idMap = {}
 ) {
   let sections = []
+
   for (let node of nodes) {
-    if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
+    if (node.name === 'Heading') {
+      let { level, id } = node.attributes
+
+      node.attributes.id = slugify(id)
+
       let title = getNodeText(node)
+
       if (title) {
-        let id = slugify(title)
-        node.attributes.id = modifyID(id)
-        let level = parseInt(node.name.slice(1))
         let newNode = { ...node.attributes, title, children: [], level }
         if (lastNodes[level - 2]) {
           lastNodes[level - 2].children.push(newNode)
@@ -50,13 +54,24 @@ function collectHeadings(
         lastNodes.length = level
       }
     }
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
+
+    sections.push(
+      ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
+    )
   }
   return sections
 }
 
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
+  if (!title) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a title. Please add a title to the frontmatter.'
+    )
+  }
   let type = pageProps.markdoc?.frontmatter.type
   let tags = pageProps.markdoc?.frontmatter.tags
 
@@ -65,6 +80,16 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
+
+  if (!description) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a description. Please add a description to the frontmatter.'
+    )
+  }
+
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
@@ -75,10 +100,6 @@ export default function App({ Component, pageProps }) {
 
       <div className={inter.className}>
         <Head>
-          <meta
-            name="google-site-verification"
-            content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
-          />
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
         </Head>

@@ -1,7 +1,7 @@
 ---
 title: 'Learn dApps: overview'
 description: Create your own JavaScript application on Golem
-type: guide
+type: demo
 tags: tag 1, tag 2
 ---
 
@@ -157,10 +157,30 @@ Want to use a YAML-based approach to configure the deployment
 
 ![Hacker image](/hacker.png)
 
-
 # working comments (see source)
+
 (below this line there is comment: see source)
 
-[//]: <> ( comment  is here )
+[//]: <> ( comment is here )
 
 (above this line there is a comment: see source)
+
+# Example of code from Github
+
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/blender/blender.ts" language="typescript" %}
+
+{% /codefromgithub %}
+
+# How to import from other files
+
+If you wish to import content from another file, these files has to go
+into the `src/markdoc/partials` directory. You can then import the content using the following
+syntax.
+
+```markdown {% process=false %}
+{% partial file="demo.md" /%}
+```
+
+Keep in mind that this partial syntax root is in the directory specified above.
+
+{% partial file="demo.md" /%}

@@ -1,7 +1,9 @@
 ---
 title: Requestor
 description: The requestor actor in the Golem
+type: Guide
 ---
+
 # Requestor architecture
 
 Seeing the requestor just as a node with the Yagna service installed is a simplified perspective. 
@@ -30,7 +32,7 @@ Yet another scenario allows you to run the requestor agent directly in the brows
 
 {% docnavigation title="Next steps" %}
 
-The basic requestor development tutorials in JS are [here](/docs/creators/javascript/tutorials/index).
+The basic requestor development tutorials in JS are [here](/docs/creators/javascript/tutorials).
 
 {% /docnavigation %}
 
