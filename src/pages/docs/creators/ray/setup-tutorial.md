@@ -92,7 +92,7 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 # * yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
-ray up golem-cluster.yaml
+ray up golem-cluster.yaml --yes
 
 ```
 
@@ -160,7 +160,7 @@ This is important because running a cluster uses up the Golem network nodes. In 
 
 ```bash
 # Tear down the cluster.
-ray down golem-cluster.yaml
+ray down golem-cluster.yaml --yes
 ```
 
 For the time being you also need to explicitly stop the `ray-on-golem` server (with `Control-C`).

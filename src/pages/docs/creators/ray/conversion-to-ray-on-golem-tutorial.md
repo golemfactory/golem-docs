@@ -194,7 +194,7 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 # * yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
-ray up golem-cluster.yaml
+ray up golem-cluster.yaml --yes
 
 # Check if Ray on Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
@@ -315,7 +315,7 @@ You can play with the script and with the cluster config yaml - change the maxim
 When you are done, it is a good practice to stop the cluster. In the default configuration, it runs on the testnet which is free, but keeping it running impairs the provider availability for others. On the other hand, when you run on the mainnet, stopping the cluster saves you money.
 
 ```python
-ray down golem-cluster.yaml
+ray down golem-cluster.yaml --yes
 ```
 
 For the time being, you also need to stop `ray-on-golem` server (with `Control-C`).
