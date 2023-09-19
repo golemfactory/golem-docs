@@ -34,5 +34,5 @@ Ensure that the nested virtualization flag for the VM is toggled on. For platfor
 Virtualbox is not compatible with Golem. Consider switching to Vmware Workstation Player or another supported platform.
 
 {% /solution %}
-{% feedback identifier="js-sdk-connection-reset-by-peer" /%}
+{% feedback identifier="provider-could-not-access-kvm" /%}
 {% /troubleshooting %}

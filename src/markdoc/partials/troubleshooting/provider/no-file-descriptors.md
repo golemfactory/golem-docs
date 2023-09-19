@@ -23,5 +23,5 @@ To solve this issue, increase the file descriptors' limit before launching Golem
 3. In the same terminal window, launch the provider again using `golemsp run`
 
 {% /solution %}
-{% feedback identifier="js-sdk-connection-reset-by-peer" /%}
+{% feedback identifier="provider-no-file-descriptors" /%}
 {% /troubleshooting %}

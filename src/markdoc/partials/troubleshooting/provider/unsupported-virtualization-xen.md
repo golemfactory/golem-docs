@@ -11,5 +11,5 @@ The `golemsp run` command exits shortly after running it.
 Your system is unfortunately not supported, as we do not support the XEN hypervisor.
 
 {% /solution %}
-{% feedback identifier="js-sdk-connection-reset-by-peer" /%}
+{% feedback identifier="provider-xen-not-supported" /%}
 {% /troubleshooting %}

@@ -44,5 +44,5 @@ export PATH="$HOME/.local/bin:$PATH"
 4. Try running the `golemsp run` command again.
 
 {% /solution %}
-{% feedback identifier="provider-failed-to-initialize-kvm" /%}
+{% feedback identifier="command-golemsp-not-found" /%}
 {% /troubleshooting %}
