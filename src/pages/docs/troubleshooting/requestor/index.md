@@ -1,8 +1,7 @@
 ---
-title: Golem provider troubleshooting
-description: This is the troubleshooting section for providers on Golem.
+title: Requestor troubleshooting
+description: This is the troubleshooting section for requestor on Golem.
 type: troubleshooting
-tags: Provider
 ---
 
 # Requestor troubleshooting

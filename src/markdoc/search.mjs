@@ -26,11 +26,24 @@ function extractSections(node, sections, isRoot = true) {
   if (isRoot) {
     slugify.reset()
   }
+
+  if (node.type === 'tag' && node.tag === 'partial' && node.attributes.file) {
+    const file = fs.readFileSync(
+      `./src/markdoc/partials/${node.attributes.file}`,
+      'utf8'
+    )
+    const partialAst = Markdoc.parse(file)
+    partialAst.children.forEach((child) =>
+      extractSections(child, sections, false)
+    )
+  }
+
   if (node.type === 'heading' || node.type === 'paragraph') {
     let content = toString(node).trim()
+
     if (node.type === 'heading' && node.attributes.level <= 2) {
       let hash = node.attributes?.id ?? slugify(content)
-      sections.push([content, hash.replace(/-/g, ''), []])
+      sections.push([content, hash, []])
     } else {
       sections.at(-1)[2].push(content)
     }
@@ -72,6 +85,7 @@ export default function (nextConfig = {}) {
                     /^title:\s*(.*?)\s*$/m
                   )?.[1]
                 sections = [[title, null, []]]
+
                 extractSections(ast, sections)
                 cache.set(file, [md, sections])
               }

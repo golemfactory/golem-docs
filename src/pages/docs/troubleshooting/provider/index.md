@@ -2,7 +2,6 @@
 title: Golem provider troubleshooting
 description: This is the troubleshooting section for providers on Golem.
 type: troubleshooting
-tags: Provider
 ---
 
 # Provider troubleshooting

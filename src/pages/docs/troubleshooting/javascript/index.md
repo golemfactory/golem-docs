@@ -2,7 +2,6 @@
 title: Javascript troubleshooting
 description: This is the troubleshooting section for all javascript related errors on Golem.
 type: troubleshooting
-tags: Javascript
 ---
 
 # Troubleshooting Golem JS SDK
