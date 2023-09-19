@@ -165,10 +165,3 @@ ray down golem-cluster.yaml
 
 For the time being you also need to explicitly stop the `ray-on-golem` server (with `Control-C`).
 
-
-<!-- Testing comments -->
-
-<!-- Testing 
-multiline 
-comments
--->
