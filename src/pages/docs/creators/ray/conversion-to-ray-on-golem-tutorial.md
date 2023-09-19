@@ -48,7 +48,7 @@ python dds-without-ray.py
 
 Let's now proceed to parallelization.
 
-We need to install ray :)
+We need to install ray.
 ```bash
 # Install ray
 pip install ray[default]
@@ -66,7 +66,7 @@ ray.init()
 
 Empty `ray.init()` arguments tell ray to look for an existing cluster (we will use this path later) or start a local instance for the time of app execution.
 
-Save the script under a new name, so they don't mix up :)
+Save the script under a new name, so they don't mix up.
 
 Run the code, and notice information about a local Ray instance starting.
 
@@ -109,7 +109,7 @@ def get_lots_of_deals():
 ```
 
 And that's it!
-Run the code now - the output should look the same, but the whole thing should take a little less time :)
+Run the code now - the output should look the same, but the whole thing should take a little less time.
 
 The time difference is the result of Ray using more cores of your local CPU (vs using only one core by the original app).
 
@@ -301,9 +301,9 @@ And on Golem:
 ray submit golem-cluster.yaml dds-with-ray.py
 ```
 
-At some point (typically 100-200 deals tend to be enough), the execution on your Ray on Golem cluster will be visibly faster :)
+At some point (typically 100-200 deals tend to be enough), the execution on your Ray on Golem cluster will be visibly faster.
 
-## Play around :)
+## Play around
 
 Everything is set up at this point and you can play around.
 

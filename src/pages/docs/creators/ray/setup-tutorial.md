@@ -156,7 +156,7 @@ If you need help with preparing your ray code you can check out [ray getting sta
 
 When you are happy with your results, you can stop your cluster until you need it again.
 
-This is important because running a cluster uses up the Golem network nodes. In the case of testnet, it means others might find the network busy, and in the case of mainnet, it means you pay more :)
+This is important because running a cluster uses up the Golem network nodes. In the case of testnet, it means others might find the network busy, and in the case of mainnet, it means you pay more.
 
 ```bash
 # Tear down the cluster.
