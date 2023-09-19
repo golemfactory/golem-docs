@@ -233,7 +233,7 @@ export function Layout({
       <div className="relative mx-auto flex max-w-8xl justify-center ">
         {type !== 'design' &&
           (!isHomePage || !is404Page || !is500Page ? (
-            <div className="lg:relative lg:block lg:flex-none">
+            <div className="hidden lg:relative lg:block lg:flex-none">
               <div className="absolute inset-y-0 right-0 w-[50vw] bg-lightblue dark:hidden" />
               <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
               <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
