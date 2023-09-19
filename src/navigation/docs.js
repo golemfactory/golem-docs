@@ -231,12 +231,16 @@ export const navigation = [
         title: 'Troubleshooting',
         children: [
           {
-            title: 'Javascript',
-            href: '/docs/troubleshooting/javascript',
+            title: 'Requestor',
+            href: '/docs/troubleshooting/requestor',
           },
           {
             title: 'Provider',
             href: '/docs/troubleshooting/provider',
+          },
+          {
+            title: 'Javascript',
+            href: '/docs/troubleshooting/javascript',
           },
         ],
       },
