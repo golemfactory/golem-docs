@@ -227,6 +227,19 @@ export const navigation = [
           },
         ],
       },
+      {
+        title: 'Troubleshooting',
+        children: [
+          {
+            title: 'Javascript',
+            href: '/docs/troubleshooting/javascript',
+          },
+          {
+            title: 'Provider',
+            href: '/docs/troubleshooting/provider',
+          },
+        ],
+      },
     ],
   },
   {

@@ -40,8 +40,8 @@ function recursiveRender(children, isActive) {
         href={`#${node.id}`}
         className={
           isActive(node)
-            ? 'relative text-sm text-primary dark:text-white'
-            : 'text-sm hover:text-slate-600 dark:hover:text-slate-300'
+            ? 'relative break-words text-sm text-primary dark:text-white'
+            : 'break-words text-sm hover:text-slate-600 dark:hover:text-slate-300'
         }
       >
         {isActive(node) && (
@@ -220,8 +220,6 @@ export function Layout({
   function isActive(section) {
     return section.id === currentSection
   }
-
-  console.log(type)
 
   return (
     <>
