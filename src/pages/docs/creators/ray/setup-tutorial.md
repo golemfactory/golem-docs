@@ -22,8 +22,8 @@ Below you can see how to install default ray packages, but if you need more Ray-
 You also need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 
 ```bash
-# install ray & ray-on-golem (recommended within a clean virtual environment)
-pip3 install -U ray[default] ray-on-golem
+# install ray-on-golem and ray (recommended within a clean virtual environment)
+pip3 install -U ray-on-golem
 ```
 
 {% alert level="info" %}

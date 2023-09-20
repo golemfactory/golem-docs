@@ -48,10 +48,10 @@ python3 dds-without-ray.py
 
 Let's now proceed to parallelization.
 
-We need to install ray.
+We need to install `ray-on-golem`. It will install `ray` as a dependency.
 ```bash
-# Install ray
-pip3 install ray[default]
+# Install ray-on-golem and ray
+pip3 install -U ray-on-golem 
 ```
 
 ### Ray initialization
@@ -160,10 +160,10 @@ A tool named websocat is needed to wrap connections between your machine and Ray
 You can install websocat using instructions on its website: https://lib.rs/crates/websocat
 {% /alert %}
 
-Run the following to install needed software.
+Run the following to install needed software - Golem node used to communicate with Golem Network.
 
 ```bash
-# install ray-on-golem
+# install ray-on-golem (just make sure you have it after the previous steps)
 pip3 install -U ray-on-golem
 
 # install yagna - golem network daemon
