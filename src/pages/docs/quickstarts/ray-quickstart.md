@@ -26,11 +26,8 @@ For now, you also need to download and install Golem node software representing 
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-{% alert level="info" %}
-Additonally, a tool named websocat is needed to wrap connections between your machine and Ray on Golem cluster.
-You can install websocat using instructions on its website: https://lib.rs/crates/websocat
-{% /alert %}
-
+Additonally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on Golem cluster.
+You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
 ## Start and initialize `yagna` service
 

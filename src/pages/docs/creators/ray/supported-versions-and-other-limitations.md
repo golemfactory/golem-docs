@@ -36,5 +36,8 @@ you can use `pip` via [cluster yaml `initialization_commands`](https://golem-doc
 You can also instruct Ray on Golem to use the needed libraries during execution by passing `runtime_env` parameter to `ray.init()`.
 It is demonstrated for example in [this tutorial](/docs/creators/ray/conversion-to-ray-on-golem-tutorial#passendplaylibraryrequirementtoray).
 
+## Websocat
 
+Ray on Golem uses a tool named [websocat](https://lib.rs/crates/websocat) to wrap connections between your machine and Ray on Golem cluster.
+You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 

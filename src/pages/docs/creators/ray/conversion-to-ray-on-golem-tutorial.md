@@ -153,11 +153,6 @@ deal count: 50 time: 0:00:04.550863
 
 We will now scale the execution even further - we will use a Ray on Golem cluster.
 
-{% alert level="info" %}
-A tool named websocat is needed to wrap connections between your machine and Ray on Golem cluster.
-You can install websocat using instructions on its website: https://lib.rs/crates/websocat
-{% /alert %}
-
 Run the following to install needed software - Golem node used to communicate with Golem Network.
 
 ```bash
@@ -167,6 +162,9 @@ pip3 install -U ray-on-golem
 # install yagna - golem network daemon
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
+
+Additonally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on Golem cluster.
+You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
 For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
 
