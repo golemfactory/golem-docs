@@ -24,7 +24,7 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/dds-without-
 
 The script uses the [endplay library](https://pypi.org/project/endplay/)
 ```bash
-# Install endplay lib
+# Install endplay lib (recommended within a clean virtual environment)
 pip3 install endplay==0.4.11b0
 ```
 

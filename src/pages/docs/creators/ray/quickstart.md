@@ -15,7 +15,7 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 The first step is installing Ray and Ray on Golem (recommended within a clean virtual environment)
 
 ```bash
-# install ray & ray-on-golem
+# install ray & ray-on-golem (recommended within a clean virtual environment)
 pip3 install -U ray[default] ray-on-golem
 ```
 
