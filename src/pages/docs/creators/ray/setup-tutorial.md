@@ -64,19 +64,9 @@ ray-on-golem
 
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed and `ray-on-golem` cluster manager is running, you can immediately proceed with launching your cluster.
-The provided [example golem cluster config file](https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
-that is configured to autoscale to up to 10 worker nodes.
+Once the packages are installed and `ray-on-golem` cluster manager is running, you can proceed with launching your cluster.
 
-Each Ray cluster consists of one head node and a number of worker nodes. The head node drives the computation, and the worker nodes execute the tasks. The head node also serves as one of the workers.
-
-When you run Ray locally, it starts the head node on your computer - it allows Ray to speed your code out of the box just by running it on all of your CPU cores.
-
-On the other hand, running a Ray cluster allows your computations to scale to an indefinite number of CPUs.
-
-Note that you will get the Golem daemon configured during the first startup of the cluster. 
-
-The example cluster config file contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now)
+All you need is a cluster config file, you can download an example one from our repository.
 
 The command to start the cluster is `ray up`:
 
@@ -92,8 +82,17 @@ ray up golem-cluster.yaml --yes
 
 ```
 
+The provided example golem cluster config file defines a small Golem cluster with one head node 
+that is configured to autoscale to up to 10 worker nodes.
+
+When you run Ray locally, it starts one node on your computer - it allows Ray to speed your code out of the box just by running it on all of your CPU cores.
+
+On the other hand, running a Ray cluster allows your computations to scale to an indefinite number of CPUs.
+
+The example cluster config file contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now)
+
 You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
-It will connect to the head node and execute the simplest ray code on the cluster.
+It will connect to the head node and execute `ray status` command which will print cluster information.
 
 ```bash
 # Check if Ray on Golem cluster is running 
