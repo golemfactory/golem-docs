@@ -23,8 +23,6 @@ import time
 import ray
 ray.init()
 
-from ray.autoscaler.sdk import request_resources
-
 print('''This cluster consists of
     {} nodes in total
     {} CPU resources in total
@@ -75,7 +73,7 @@ This is how Ray initialization looks like. `ray.init()` without parameters tells
 
 ## Cluster information
 
-The `ray.autoscaler.sdk.request_resources` module exposes methods we use to print the information about the cluster (before and after ray computation).
+The `ray` module exposes methods we use to print the information about the cluster (before and after ray computation).
 Notice that when you run the script on a fresh Ray on Golem cluster, the number of nodes will increase as a result of the computation.
 This happens because Ray autoscaler monitors the amount of work pending and requests additional nodes as the queues get longer.
 
