@@ -16,7 +16,7 @@ The first step is installing Ray and Ray on Golem (recommended within a clean ve
 
 ```bash
 # install ray & ray-on-golem
-pip install -U ray[default] ray-on-golem
+pip3 install -U ray[default] ray-on-golem
 ```
 
 For now, you also need to download and install Golem node software representing you in the Golem network.
@@ -80,7 +80,7 @@ Download our example Ray app and execute it locally (a Ray instance will be crea
 wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py
 
 # Execute the app locally by starting a local ray instance on your computer
-python simple-task.py
+python3 simple-task.py
 ```
 
 Feed the app to the cluster. Observe how Ray on Golem cluster expands during the computation

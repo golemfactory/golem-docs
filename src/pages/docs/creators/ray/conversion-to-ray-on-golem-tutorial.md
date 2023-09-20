@@ -25,7 +25,7 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/dds-without-
 The script uses the [endplay library](https://pypi.org/project/endplay/)
 ```bash
 # Install endplay lib
-pip install endplay==0.4.11b0
+pip3 install endplay==0.4.11b0
 ```
 
 When you run the code it randomly generates 50 bridge deals and for each deal, it calculates potential winnings for each player and each trump suit  - `get_deal()` and `get_lots_of_deals()` functions.
@@ -37,7 +37,7 @@ In this form, it works in a very single-threaded way - it waits for each deal to
 
 ```bash
 # Run the example bridge app
-python dds-without-ray.py 
+python3 dds-without-ray.py 
 ```
 ```
 ['N:K53.4.J652.KQJ98 AJ8.T863.T98.A64 T62.AKQ7.Q43.T75 Q974.J952.AK7.32 ♣,♦,♥,♠,NT;N:8,7,6,6,7;E:4,6,7,7,6;S:8,7,6,6,7;W:4,6,7,7,6', 'N:J.J543.KQJ75.KQ9 A843.AKQ.A63.AT4 KQ2.92.942.J8653 T9765.T876.T8.72 ♣,♦,♥,♠,NT;N:7,7,5,4,6;E:5,6,8,9,6;S:7,7,5,4,6;W:5,6,8,9,6', 'N:4.973.T643.KQ753 KT32.AK4.J2.9864 AQ87.QT8.AKQ98.2 J965.J652.75.AJT ♣,♦,♥,♠,NT;N:8,10,8,7,8;E:4,3,5,6,4;S:8,10,8,7,8;W:4,3,4,6,4', 'N:AQ84.Q.984.AT853 K2.A8432.652.976 J53.J975.AQ7.J42 T976.KT6.KJT3.KQ ♣,♦,♥,♠,NT;N:8,5,4,7,6;E:5,7,8,6,6;S:8,5,5,7,7;W:5,7,8,6,6', 'N:3.K64.AKJT9.AT93 K7652.J72.764.74 JT94.AQT93.82.65 AQ8.85.Q53.KQJ82 ♣,♦,♥,♠,NT;N:7,11,11,8,10;E:5,2,1,5,2;S:7,11,11,8,10;W:5,2,1,5,2', 'N:.T932.A983.T9832 742.A875.T75.KQ4 AKJ9853.Q.J4.AJ7 QT6.KJ64.KQ62.65 ♣,♦,♥,♠,NT;N:9,6,5,9,6;E:3,7,8,4,5;S:9,6,5,9,6;W:3,7,8,4,6', 'N:JT.AKQ43.KQJT3.6 Q984.J986.87.A42 K752.7.942.KT985 A63.T52.A65.QJ73 ♣,♦,♥,♠,NT;N:7,10,9,7,7;E:6,3,4,6,5;S:7,10,9,7,7;W:6,3,4,6,5', 'N:JT84.K94.T6.T763 5.A2.QJ74.AKJ985 Q93.QT765.K32.42 AK762.J83.A985.Q ♣,♦,♥,♠,NT;N:0,0,4,2,0;E:13,13,9,10,13;S:0,0,4,2,0;W:13,13,8,10,13', 'N:7.JT87.QJT94.983 K83.A943.8632.K2 QJT6542.Q5.K.AJ7 A9.K62.A75.QT654 ♣,♦,♥,♠,NT;N:3,5,4,6,3;E:9,8,9,7,10;S:3,5,4,6,3;W:9,8,9,7,10', 'N:KQ542.9.953.J975 J.76432.AKJ6.KQ2 A9863.A85.T4.A83 T7.KQJT.Q872.T64 ♣,♦,♥,♠,NT;N:8,3,4,9,7;E:5,8,9,3,6;S:8,3,4,9,7;W:5,8,9,3,6', 'N:AK.A932.6.JT7643 654.T.KQ732.KQ92 JT93.QJ874.9.A85 Q872.K65.AJT854. ♣,♦,♥,♠,NT;N:9,3,9,5,7;E:4,10,3,7,5;S:9,3,9,5,7;W:4,10,4,8,5', 'N:T3.872.AQ5432.93 AKQ8.KT6.T8.8762 542.943.KJ.KQJT4 J976.AQJ5.976.A5 ♣,♦,♥,♠,NT;N:6,7,3,3,4;E:7,6,9,10,7;S:6,7,3,3,4;W:7,6,9,10,7', 'N:K9.AJT3.KJ953.K6 J7432.2.T864.Q92 AQT5.Q84.AQ2.AJ3 86.K9765.7.T8754 ♣,♦,♥,♠,NT;N:11,13,11,12,13;E:2,0,2,1,0;S:11,13,11,12,13;W:2,0,2,1,0', 'N:K875.T94.A63.Q64 JT92.AK762.J75.K Q64.J5.Q942.AJ82 A3.Q83.KT8.T9753 ♣,♦,♥,♠,NT;N:6,6,3,6,5;E:7,6,9,7,7;S:6,6,4,6,5;W:7,6,9,7,7', 'N:753.K8763.Q4.Q63 AKQ96.A4.9865.72 JT842.Q95.J32.98 .JT2.AKT7.AKJT54 ♣,♦,♥,♠,NT;N:2,1,4,3,2;E:11,12,9,9,10;S:2,1,4,3,2;W:11,12,9,10,9', 'N:A85.K5.T43.A9763 92.T964.K8762.QJ J74.QJ872.QJ5.54 KQT63.A3.A9.KT82 ♣,♦,♥,♠,NT;N:4,4,6,3,3;E:8,8,7,9,9;S:4,4,6,3,3;W:8,8,7,9,9', 'N:Q987.5.KJT965.A2 64.AK8.A82.K8643 AKT3.J743.Q743.Q J52.QT962..JT975 ♣,♦,♥,♠,NT;N:3,11,3,9,5;E:9,2,9,2,6;S:3,11,3,10,5;W:9,2,9,2,6', 'N:K63.KQT95.K853.A J542.43.Q6.98742 QT97.82.T94.KQ63 A8.AJ76.AJ72.JT5 ♣,♦,♥,♠,NT;N:7,8,7,8,9;E:6,5,4,4,4;S:7,8,7,8,9;W:6,5,4,4,4', 'N:Q5.AQ3.4.QJ98753 762.T96.AQ76.AK6 AJ943.J2.KJ982.4 KT8.K8754.T53.T2 ♣,♦,♥,♠,NT;N:9,8,6,9,7;E:4,5,6,4,5;S:9,8,6,9,7;W:4,5,6,4,5', 'N:A97.AJ83.A.KJ874 K83.Q95.KQ72.Q93 6542.74.98643.A2 QJT.KT62.JT5.T65 ♣,♦,♥,♠,NT;N:8,7,8,9,7;E:5,6,5,4,6;S:8,7,8,9,7;W:5,6,5,4,6', 'N:85.K92.AT43.9873 K43.AJT4.J65.QT4 JT972.5.KQ9.AJ65 AQ6.Q8763.872.K2 ♣,♦,♥,♠,NT;N:8,7,4,7,5;E:5,6,9,6,8;S:8,7,4,7,5;W:5,6,9,6,8', 'N:K63.T752.T852.72 QJ5.Q9.QJ764.AT8 742.KJ643.9.J963 AT98.A8.AK3.KQ54 ♣,♦,♥,♠,NT;N:2,1,6,1,1;E:11,12,6,11,12;S:2,1,6,1,1;W:10,11,6,11,10', 'N:AK62.K62.QT3.KQ7 J9.A.AK76542.T42 QT8543.JT5.J98.5 7.Q98743..AJ9863 ♣,♦,♥,♠,NT;N:2,5,5,6,7;E:10,8,8,4,4;S:2,5,5,6,9;W:10,8,8,4,4', 'N:Q65.KT973.98.AT9 AJ92.A82.42.8432 87.654.QJT75.KQ7 KT43.QJ.AK63.J65 ♣,♦,♥,♠,NT;N:4,6,6,3,5;E:9,7,7,10,8;S:4,6,6,3,5;W:9,7,7,10,8', 'N:92.T654.865.9653 K863.Q.KJ93.KQ84 QJ.AK9873.T7.T72 AT754.J2.AQ42.AJ ♣,♦,♥,♠,NT;N:0,0,5,0,0;E:10,12,7,12,7;S:0,0,5,0,0;W:10,12,7,12,7', 'N:7.T.AQ764.A98642 AK84.AJ9742.KJ2. Q9632.K53..KQJ73 JT5.Q86.T9853.T5 ♣,♦,♥,♠,NT;N:11,6,3,6,8;E:2,7,10,7,5;S:11,6,3,6,8;W:2,7,9,7,5', 'N:865.7.K987.KT832 .Q985432.T643.J5 AKQJT32.JT.J.Q76 974.AK6.AQ52.A94 ♣,♦,♥,♠,NT;N:8,3,3,10,4;E:4,9,10,3,6;S:8,3,3,10,4;W:4,9,10,3,6', 'N:A8654.JT8.AJ.T52 QT972.AQ53.3.A97 .K9742.QT876.QJ6 KJ3.6.K9542.K843 ♣,♦,♥,♠,NT;N:4,6,8,4,6;E:9,6,5,9,7;S:4,6,8,4,6;W:8,6,5,8,7', 'N:KJ954.T42.K9.QJ7 7.AKJ763.AJT4.K4 3.Q985.Q8632.A62 AQT862..75.T9853 ♣,♦,♥,♠,NT;N:5,6,6,5,7;E:8,7,7,8,6;S:5,6,6,5,7;W:7,7,7,8,6', 'N:T2.654.76.QJT987 Q753.AK982.J5.65 K6.JT7.AQT83.AK2 AJ984.Q3.K942.43 ♣,♦,♥,♠,NT;N:7,6,2,1,3;E:5,7,10,10,6;S:7,6,2,1,3;W:5,7,10,10,6', 'N:9763.763.K93.A74 J84.QT.875.KQ952 T52.J542.AJT2.86 AKQ.AK98.Q64.JT3 ♣,♦,♥,♠,NT;N:3,5,4,5,4;E:9,7,8,8,8;S:3,5,4,5,4;W:9,7,9,8,9', 'N:T4.AQJ952.Q962.K KJ82.T7.87.87542 Q76.K863.43.QT63 A953.4.AKJT5.AJ9 ♣,♦,♥,♠,NT;N:4,3,8,2,6;E:9,9,5,10,7;S:4,3,8,2,6;W:9,9,5,10,7', 'N:642.AQJ92.A9.AT9 KQJ875.87.74.432 A9.K6.JT632.KJ85 T3.T543.KQ85.Q76 ♣,♦,♥,♠,NT;N:12,11,12,7,11;E:1,2,1,6,1;S:12,11,12,7,11;W:1,2,1,6,1', 'N:T73.QJ2.754.QT86 AK8654.964.AQ3.5 Q9.AK83.KJ8.AK32 J2.T75.T962.J974 ♣,♦,♥,♠,NT;N:9,7,9,7,9;E:3,4,3,6,3;S:9,7,9,7,9;W:3,4,3,6,3', 'N:JT432.KQ754.QJ3. K87.AJT2.84.Q982 AQ5.6.A72.KJT764 96.983.KT965.A53 ♣,♦,♥,♠,NT;N:8,7,8,10,7;E:5,6,5,3,6;S:8,7,8,10,7;W:5,6,5,3,5', 'N:AT5.A.AKJ6432.K4 42.K85.QT95.AQ87 3.Q7632.87.JT962 KQJ9876.JT94..53 ♣,♦,♥,♠,NT;N:8,10,7,3,6;E:5,3,6,10,7;S:8,9,7,3,6;W:5,3,6,10,7', 'N:86532.KJ5.A5.862 K4.84.KT63.AKT43 AQ97.A7632.Q8.97 JT.QT9.J9742.QJ5 ♣,♦,♥,♠,NT;N:5,5,11,11,8;E:8,8,2,2,2;S:5,5,11,11,8;W:8,8,2,2,2', 'N:AT87.964.53.9874 52.AQ752.A72.652 KQJ93.J8.K64.KT3 64.KT3.QJT98.AQJ ♣,♦,♥,♠,NT;N:5,3,3,7,4;E:7,10,10,6,8;S:5,3,3,7,4;W:7,10,10,6,8', 'N:A84.J642.64.KT53 KQ92.AKT9.QJ8.J2 T65.873.AK52.Q74 J73.Q5.T973.A986 ♣,♦,♥,♠,NT;N:6,4,5,4,5;E:7,9,8,8,8;S:6,4,5,4,5;W:7,9,8,8,8', 'N:JT5.A76.52.KJT43 Q873.943.JT976.Q 964.J852.KQ4.987 AK2.KQT.A83.A652 ♣,♦,♥,♠,NT;N:6,2,4,2,4;E:7,11,8,10,8;S:6,2,4,2,4;W:7,11,8,10,8', 'N:JT4.543.J962.T54 732.AT9.T83.KJ83 AKQ986.QJ6.A5.Q9 5.K872.KQ74.A762 ♣,♦,♥,♠,NT;N:3,4,3,8,6;E:10,9,9,5,6;S:3,4,4,8,6;W:10,9,9,5,6', 'N:AQT5.KJ852.9.863 J743.AT976.KT5.K 82..AQ763.AQJ742 K96.Q43.J842.T95 ♣,♦,♥,♠,NT;N:13,11,8,9,10;E:0,2,5,4,2;S:13,11,8,9,10;W:0,2,5,4,2', 'N:KJ6.T53.K85.K732 A3.AKQJ92.AQ.JT9 QT97.76.T9743.84 8542.84.J62.AQ65 ♣,♦,♥,♠,NT;N:1,6,1,4,1;E:10,7,11,8,10;S:1,6,1,4,1;W:10,7,11,8,10', 'N:AT8542.KQ9.AKJ.2 K973.873.Q86.J75 Q6.J54.32.AKT864 J.AT62.T9754.Q93 ♣,♦,♥,♠,NT;N:10,8,9,11,9;E:3,5,4,2,3;S:10,8,9,11,9;W:3,5,4,2,3', 'N:52.AKQ74.A853.A8 8.JT832.J7.Q9432 AKQJ9763.95.KQT. T4.6.9642.KJT765 ♣,♦,♥,♠,NT;N:5,13,11,13,13;E:8,0,2,0,0;S:5,13,11,13,13;W:8,0,2,0,0', 'N:AT95.A975.95.T97 Q86.K42.QT843.QJ J2.QJT8.AJ762.42 K743.63.K.AK8653 ♣,♦,♥,♠,NT;N:3,6,8,5,5;E:9,6,5,8,8;S:3,6,8,5,5;W:9,6,5,8,8', 'N:K97.985.T83.A863 Q84.KT73.KQ42.T5 J2.Q2.AJ975.QJ42 AT653.AJ64.6.K97 ♣,♦,♥,♠,NT;N:8,7,4,4,4;E:5,6,9,9,7;S:7,7,4,4,4;W:5,6,9,9,7', 'N:KJ7652.A32.8.AK3 AQ8.T94.AJ95.T54 9.J875.KT42.J962 T43.KQ6.Q763.Q87 ♣,♦,♥,♠,NT;N:7,5,6,7,5;E:6,6,5,6,8;S:7,5,6,7,5;W:6,6,5,6,8', 'N:AJT93.764.42.KQ7 Q5.KQ982.AQ76.98 87.JT53.KT5.JT63 K642.A.J983.A542 ♣,♦,♥,♠,NT;N:6,3,4,6,5;E:7,10,9,7,8;S:6,3,4,6,5;W:7,10,9,7,8', 'N:J8.A86.75.AQJ642 AK93.QJ52.AK.K97 T762.KT74.T93.T3 Q54.93.QJ8642.85 ♣,♦,♥,♠,NT;N:7,3,6,4,4;E:6,10,7,8,9;S:7,3,6,4,3;W:6,10,7,8,9']
@@ -51,7 +51,7 @@ Let's now proceed to parallelization.
 We need to install ray.
 ```bash
 # Install ray
-pip install ray[default]
+pip3 install ray[default]
 ```
 
 ### Ray initialization
@@ -71,7 +71,7 @@ Save the script under a new name, so they don't mix up.
 Run the code, and notice information about a local Ray instance starting.
 
 ```bash
-python dds-with-ray.py
+python3 dds-with-ray.py
 ```
 ``` 
 2023-08-29 14:45:30,359	INFO worker.py:1612 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265 
@@ -114,7 +114,7 @@ Run the code now - the output should look the same, but the whole thing should t
 The time difference is the result of Ray using more cores of your local CPU (vs using only one core by the original app).
 
 ```bash
-python dds-with-ray.py 
+python3 dds-with-ray.py 
 ```
 ```
 2023-08-29 15:00:40,130	INFO worker.py:1612 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265 
@@ -135,7 +135,7 @@ print('''This cluster consists of
 
 Run it and see how many cores Ray finds on your machine:
 ```bash
-python dds-with-ray.py 
+python3 dds-with-ray.py 
 ```
 ```
 2023-08-29 15:08:48,590	INFO worker.py:1612 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265 
@@ -164,7 +164,7 @@ Run the following to install needed software.
 
 ```bash
 # install ray-on-golem
-pip install -U ray-on-golem
+pip3 install -U ray-on-golem
 
 # install yagna - golem network daemon
 curl -sSf https://join.golem.network/as-requestor | bash -
@@ -293,7 +293,7 @@ To see actual profits from such parallelization, increase the `DEAL_COUNT` 10 or
 
 Then you can run it locally (you can comment out `runtime_env` argument for `ray.init()` if you want the fastest local execution):
 ```bash
-python dds-with-ray.py
+python3 dds-with-ray.py
 ```
 
 And on Golem:

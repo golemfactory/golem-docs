@@ -53,7 +53,7 @@ print('''This cluster consists of
 
 You can run the app on your local machine with
 ```bash
-python simple-task.py
+python3 simple-task.py
 ```
 
 Or, you can execute it on Ray on Golem cluster with

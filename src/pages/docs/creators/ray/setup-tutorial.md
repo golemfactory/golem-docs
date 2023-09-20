@@ -23,7 +23,7 @@ You also need to download the Golem cluster manager, which enables Ray to utiliz
 
 ```bash
 # install ray & ray-on-golem
-pip install -U ray[default] ray-on-golem
+pip3 install -U ray[default] ray-on-golem
 ```
 
 {% alert level="info" %}
@@ -122,7 +122,7 @@ At first, it is recommended to run the app locally (without connecting to the cl
 wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py 
 
 # Execute the app locally by starting a local ray instance on your computer
-python simple-task.py
+python3 simple-task.py
 ```
 
 This particular script shows information about the cluster it is being run on, and also visualizes the number of tasks run on different nodes.
