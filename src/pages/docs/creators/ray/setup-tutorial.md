@@ -35,10 +35,6 @@ You can install websocat using instructions on its website: https://lib.rs/crate
 
 For now, you need to manually install yagna to be able to connect to the Golem network.
 Later on, we will make the installation happen behind the scenes.
-Please follow the [yagna installation guide from Golem handbook](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development). 
-Stop before running the daemon - `ray-on-golem` will do the rest for you. 
-
-TLDR install yagna:
 
 ```bash
 # install yagna - golem network daemon
