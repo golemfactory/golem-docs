@@ -235,6 +235,10 @@ export const navigation = [
             href: '/docs/troubleshooting/requestor',
           },
           {
+            title: 'Exit codes',
+            href: '/docs/troubleshooting/requestor/exit-codes',
+          },
+          {
             title: 'Provider',
             href: '/docs/troubleshooting/provider',
           },
