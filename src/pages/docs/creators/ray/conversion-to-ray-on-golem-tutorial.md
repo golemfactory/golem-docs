@@ -174,17 +174,22 @@ For the time being, you need to manually run `yagna` service (in a separate term
 yagna service run
 ```
 
-Next (in the separate terminal), you need to initialize testnet payments.
+Leave it running, and in a separate terminal, initialize testnet payments.
+
 ```bash
 yagna payment fund
+```
+
+Next, start `ray-on-golem` server and also leave it running.
+
+```bash
+# start ray-on-golem server
+ray-on-golem
 ```
 
 Now, run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
 ```bash
-# start ray-on-golem server
-ray-on-golem
-
 # Download the golem-cluster.yaml
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 

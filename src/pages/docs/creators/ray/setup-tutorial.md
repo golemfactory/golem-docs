@@ -49,14 +49,14 @@ For the time being, you need to manually run `yagna` service (in a separate term
 yagna service run
 ```
 
-Next (in the separate terminal), you need to initialize testnet payments.
+Leave it running, and in a separate terminal, initialize testnet payments.
 ```bash
 yagna payment fund
 ```
 
 ## Start `ray-on-golem` server
 
-For the time being, you need to manually run `ray-on-golem` server (in a separate terminal)
+For the time being, you need to manually run `ray-on-golem` server - leave it running in a separate terminal.
 
 ```bash
 ray-on-golem
