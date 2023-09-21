@@ -5,7 +5,7 @@ type: example
 ---
 
 # Converting a real-life use case to Ray on Golem
-This tutorial explains step-by-step how to parallelize an example app, set Ray on Golem cluster up, run the script on the cluster, and finally stop the cluster.
+This tutorial explains step-by-step how to parallelize an example app, set Ray on the Golem cluster up, run the script on the cluster and finally stop the cluster.
 
 The parallelization part is also explained in our PoC demo video
 
@@ -60,7 +60,7 @@ Ray needs to be imported and initialized. Add the following before `get_deal()` 
 ```python
 import ray
 
-# Use default ray cluster or start a local one
+# Use the default ray cluster or start a local one
 ray.init()
 ``` 
 
@@ -93,7 +93,7 @@ Please note, that if the remote task is too small, the scheduling overhead might
 
 ### Remote call and waiting for results with ray.get()
 
-We need to explicitly acknowledge the remoteness of the call by adding `.remote()` inside `get_lots_of_deals()` function.
+We need to explicitly acknowledge the remoteness of the call by adding `.remote()` inside the `get_lots_of_deals()` function.
 Additionally, now we aren't getting the results right away. `get_deal.remote()` merely schedules the execution and returns a future - an id - needed to get the results later with `ray.get()`:
 
 ```python
@@ -109,7 +109,7 @@ def get_lots_of_deals():
 And that's it!
 Run the code now - the output should look the same, but the whole thing should take a little less time.
 
-The time difference is the result of Ray using more cores of your local CPU (vs using only one core by the original app).
+The time difference is the result of Ray using more cores of your local CPU (vs. using only one core by the original app).
 
 ```bash
 python3 dds.py 
@@ -149,9 +149,9 @@ This cluster consists of
 deal count: 50 time: 0:00:04.550863
 ```
 
-## Set up your Ray on Golem cluster
+## Set up your Ray on the Golem cluster
 
-We will now scale the execution even further - we will use a Ray on Golem cluster.
+We will now scale the execution even further - we will use a Ray on the Golem cluster.
 
 Run the following to install needed software - Golem node used to communicate with Golem Network.
 
@@ -163,10 +163,10 @@ pip3 install -U ray-on-golem
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-Additonally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on Golem cluster.
+Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
 You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
-For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
+For the time being, you need to manually run the `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
 
 ```bash
 yagna service run
@@ -178,7 +178,7 @@ Leave it running, and in a separate terminal, initialize testnet payments.
 yagna payment fund
 ```
 
-Next, start `ray-on-golem` server and also leave it running.
+Next, start the `ray-on-golem` server and also leave it running.
 
 ```bash
 # start ray-on-golem server
@@ -192,12 +192,12 @@ Now, run the following to start a basic cluster, based on our example configurat
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * yagna starts in the background (if not running)
+# * Yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
 
-# Check if Ray on Golem cluster is running 
+# Check if Ray on the Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 ```
 
@@ -205,14 +205,14 @@ ray exec golem-cluster.yaml 'ray status'
 
 ### Pass endplay library requirement to Ray
 
-Now that the app will be running on a cluster, we need to inform it that `endplay` library is required on individual worker nodes.
+Now that the app will be running on a cluster, we need to inform it that the `endplay` library is required on individual worker nodes.
 
 Replacing `ray.init()` with the following will do the trick:
 ```python
 # endplay library dependency
 runtime_env = {"pip": ["endplay==0.4.11b0"]}
 
-# Use default ray cluster or start a local one
+# Use the default ray cluster or start a local one
 # Make sure endplay lib is installed
 ray.init(runtime_env=runtime_env)
 ```
@@ -250,10 +250,10 @@ This cluster consists of
           2.0 CPU resources in total
       
 deal count: 50 time: 0:00:18.404510
-Shared connection to 192.168.0.3 closed.
+shared connection to 192.168.0.3 closed.
 ```
 
-Notice how at first, there is only one node, and after the computation, there is  more. This is Ray autoscaler at work. If you increase `DEAL_CNT` or rerun the app, the difference will be more visible
+Notice how at first, there is only one node, and after the computation, there is more. This is Ray autoscaler at work. If you increase `DEAL_CNT` or rerun the app, the difference will be more visible
 When you resubmit the app to the cluster fast enough, all the nodes will be available right from the beginning.
 
 ```bash
@@ -281,18 +281,18 @@ This cluster consists of
           7.0 CPU resources in total
       
 deal count: 100 time: 0:00:14.398623
-Shared connection to 192.168.0.3 closed.
+shared connection to 192.168.0.3 closed.
 
 ```
 
 ### Scale up
 
 Our DDS script computes 50 bridge deals by default - a rather small number - so that the execution time does not get in the way of your following this tutorial.
-However, the small size of the sample probably won't benefit from the distribution to Golem Network.
+However, the small size of the sample probably won't benefit from the distribution to the Golem Network.
 
-To see actual profits from such parallelization, increase the `DEAL_COUNT` 10 or 50 times, however you want.
+To see actual profits from such parallelization, increase the `DEAL_COUNT` 10 or 50 times, however, you want.
 
-Then you can run it locally (you can comment out `runtime_env` argument for `ray.init()` if you want the fastest local execution):
+Then you can run it locally (you can comment out the `runtime_env` argument for `ray.init()` if you want the fastest local execution):
 ```bash
 python3 dds.py
 ```
@@ -315,10 +315,10 @@ You can play with the script and with the cluster config yaml - change the maxim
 
 ## Stop the cluster
 
-When you are done, it is a good practice to stop the cluster. In the default configuration, it runs on the testnet which is free, but keeping it running impairs the provider availability for others. On the other hand, when you run on the mainnet, stopping the cluster saves you money.
+When you are done, it is a good practice to stop the cluster. In the default configuration, it runs on the free testnet, but keeping it running impairs the provider availability for others. On the other hand, when you run on the mainnet, stopping the cluster saves you money.
 
 ```python
 ray down golem-cluster.yaml --yes
 ```
 
-For the time being, you also need to stop `ray-on-golem` server (with `Control-C`).
+For the time being, you also need to stop the `ray-on-golem` server (with `Control-C`).
