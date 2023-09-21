@@ -421,8 +421,8 @@ node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 
 You should see an output similar to the one below. Note, that once we obtained the solution, `executor.end()` terminates other tasks, that might not be finished yet, and we observe the errors, due to `.catch((err) => console.error(err));` inside the task function.
 
-![](/hashcat_output_1.png)
-![](/hashcat_output_2.png)
+![Output of hashcat](/hashcat_output_1.png)
+![Second output of hashcat](/hashcat_output_2.png)
 
 {% alert level="info" %}
 

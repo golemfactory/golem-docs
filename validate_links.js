@@ -20,6 +20,30 @@ foldersToCheck.forEach((folder) => {
       const data = fs.readFileSync(file, 'utf8')
       const renderer = new marked.Renderer()
 
+      renderer.image = function (href, title, text) {
+        if (text === '') {
+          errors.push(`Missing image name in file ${file}: ${href} \n`)
+          flag = false
+        }
+
+        if (!href.startsWith('http')) {
+          if (!href.startsWith('/')) {
+            errors.push(`Missing / in image link in file ${file}: ${href} \n`)
+            flag = false
+          } else {
+            const imagePath = path.join(
+              __dirname,
+              'public',
+              href.replace('/', '')
+            )
+            if (!fs.existsSync(imagePath)) {
+              errors.push(`Broken image in file ${file}: linking to ${href} \n`)
+              flag = false
+            }
+          }
+        }
+      }
+
       renderer.link = function (href) {
         if (!(href.startsWith('http') || href.startsWith('#'))) {
           const dirname = path.dirname(file)

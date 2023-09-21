@@ -66,7 +66,7 @@ docker build -t golem-node .
 
 The output should look like this:
 
-![](/image_tutorial_build.png)
+![Terminal output of building a docker image](/image_tutorial_build.png)
 
 {% alert level="info" %}
 
@@ -103,7 +103,7 @@ gvmkit-build golem-node --push --nologin
 
 After running the command, you will see an output that looks like this:
 
-![](/image_tutorial_upload.png)
+![Image showing the output of the command](/image_tutorial_upload.png)
 
 The hash is found after the `image link`, which in this case gives us the hash `8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c`. If you ever lose your hash, you can always recover/re-generate it by running the same command again.
 
@@ -128,7 +128,6 @@ We can now create our `index.mjs` requestor file, with the `package: "8b238595..
 
 ```js
 import { TaskExecutor } from '@golem-sdk/golem-js'
-
 ;(async () => {
   const executor = await TaskExecutor.create({
     package: '8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c',
@@ -163,7 +162,7 @@ Run the following command after ensuring the Yagna service is running and config
 
 You have successfully created and used your Golem image in a requestor script!
 
-![](/image_tutorial_upload.png)
+![Image showing successfull use of a golem image in a script](/image_tutorial_upload.png)
 
 Note that the content of the `description.txt` file that was created in the /golem/info folder is accessible, while the /golem/work folder is empty.
 
