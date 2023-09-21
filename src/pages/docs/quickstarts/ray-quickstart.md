@@ -1,10 +1,10 @@
 ---
 description: quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 title: Ray on Golem QuickStart
-type: guide 
+type: quickstart 
 ---
 
-# Quickstart
+# QuickStart
 
 This quickstart shows you how to set Ray and Ray on Golem up, start your cluster, test it, and then stop it.
 It limits the explanation to the bare minimum - if you are looking for more details jump to [setup tutorial](/docs/creators/ray/setup-tutorial)
