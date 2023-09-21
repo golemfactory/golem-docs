@@ -87,7 +87,7 @@ When you run Ray locally, it starts one node on your computer - it allows Ray to
 
 On the other hand, running a Ray cluster allows your computations to scale to an indefinite number of CPUs.
 
-The example cluster config file contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now)
+The example cluster config file contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
 
 You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
 It will connect to the head node and execute `ray status` command which will print cluster information.
