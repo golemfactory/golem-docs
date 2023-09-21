@@ -201,7 +201,7 @@ export const ray = [
         href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
       },
       {
-        title: 'Practical bridge simulation tutorial',
+        title: 'Converting a real-life use case to Ray on Golem',
         href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
       },
       {
