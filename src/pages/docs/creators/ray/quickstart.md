@@ -31,7 +31,7 @@ You can install websocat using [these instructions](https://lindevs.com/install-
 
 ## Start and initialize yagna service
 
-For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
+For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network:
 
 ```bash
 yagna service run
@@ -44,7 +44,7 @@ yagna payment fund
 
 ## Start ray-on-golem server
 
-For the time being you need to manually run `ray-on-golem` server - leave it running in a separate terminal
+For the time being you need to manually run `ray-on-golem` server - leave it running in a separate terminal.
 
 ```bash
 ray-on-golem
@@ -80,7 +80,7 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.
 python3 simple-task.py
 ```
 
-Execute the app on the cluster. Observe how Ray on Golem cluster expands during the computation
+Now that you know that Ray is working, execute the app on the cluster. Observe how Ray on Golem cluster expands during the computation
 
 ```bash
 # Run some ray-based code (that knows *nothing** about Golem) - this will either:
