@@ -23,7 +23,7 @@ We are preparing the tools for users to build and upload their own images, but f
 
 ## Platforms
 
-We have tested Ray on Golem on Ubuntu and on WSL. It should work on other Linux distributuions, might work on MacOS and shouldn't on bare Windows.
+We have tested Ray on Golem on Ubuntu and on WSL, but it should work on other Linux distributions. For now, we don't support MacOS or bare Windows.
 
 
 ## Libraries
