@@ -1,14 +1,14 @@
 ---
-description: step-by-step explanation of the quickstart instructions
+description: a step-by-step explanation of the quickstart instructions
 title: Ray on Golem setup tutorial
 type: guide 
 ---
 
 # Ray on Golem setup tutorial 
 
-This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster. 
+This tutorial explains all the steps needed to start, test, and stop a Ray on the Golem cluster. 
 If you have already proceeded through our [Quickstart](/docs/creators/ray/quickstart), you'll find this tutorial familiar. 
-The point is to go through the same actions but now, providing you with more details on each one.
+The point is to go through the same actions but now, provide you with more details on each one.
 
 To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Ray on Golem cluster manager.
 
@@ -19,19 +19,19 @@ You can use pip to install the Ray CLI with cluster launcher support (recommende
 
 You need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 
-It will install default ray package as a dependency, but if you want more Ray-specific details follow [the Ray installation documentation](https://docs.ray.io/en/latest/ray-overview/installation.html#installation).
+It will install the default ray package as a dependency, but if you want more Ray-specific details follow [the Ray installation documentation](https://docs.ray.io/en/latest/ray-overview/installation.html#installation).
 
 ```bash
 # install ray-on-golem and ray (recommended within a clean virtual environment)
 pip3 install -U ray-on-golem
 ```
 
-Additonally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on Golem cluster.
+Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
 You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
 ## Install yagna (Golem daemon used to schedule work on the Golem Network)
 
-For now, you need to manually install yagna to be able to connect to the Golem network.
+For now, you need to manually install Yagna to be able to connect to the Golem network.
 Later on, we will make the installation happen behind the scenes.
 
 ```bash
@@ -41,7 +41,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 ## Start and initialize yagna service
 
-For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
+For the time being, you need to manually run the `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
 
 ```bash
 yagna service run
@@ -54,7 +54,7 @@ yagna payment fund
 
 ## Start ray-on-golem server
 
-For the time being, you need to manually run `ray-on-golem` server - leave it running in a separate terminal.
+For the time being, you need to manually run the `ray-on-golem` server - leave it running in a separate terminal.
 
 ```bash
 ray-on-golem
@@ -62,18 +62,18 @@ ray-on-golem
 
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed and `ray-on-golem` cluster manager is running, you can proceed with launching your cluster.
+Once the packages are installed and the `ray-on-golem` cluster manager is running, you can proceed with launching your cluster.
 
 All you need is a cluster config file, you can download an example one from our repository.
 
-The commands to start the cluster is `ray up`:
+The command to start the cluster is `ray up`:
 
 ```bash
 # Download the example golem-cluster.yaml
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * yagna starts in the background (if not running)
+# * Yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
@@ -88,15 +88,15 @@ The example cluster config file also contains payment information. As a default 
 If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
 
 You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
-It will connect to the head node and execute `ray status` command which will print cluster information.
+It will connect to the head node and execute the `ray status` command which will print cluster information.
 
 ```bash
-# Check if Ray on Golem cluster is running 
+# Check if Ray on the Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 
 ```
 
-Congrats, you have started a Ray on Golem cluster!
+Congrats, you have started a Ray on the Golem cluster!
 
 
 
@@ -116,9 +116,9 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.
 python3 simple-task.py
 ```
 
-This particular script shows information about the cluster it is being run on, and also visualizes the number of tasks run on different nodes.
+This particular script shows information about the cluster it is being run on and also visualizes the number of tasks run on different nodes.
 
-Once you ensure the app works, you can feed it to your Ray on Golem cluster
+Once you ensure the app works, you can feed it to your Ray on the Golem cluster
 
 ```bash
 # Run some ray-based code (that knows *nothing** about Golem) - this will either:
@@ -136,9 +136,9 @@ The above shows the usual workflow with Ray apps.
 - You develop them, while at the same time testing them, on your local machine.
 - When you are ready to get more power - you send them to a Ray cluster **without changing a single line** of your application's code.
 
-## Run your own ray app on your golem cluster
+## Run your ray app on your golem cluster
 
-You are now ready to run your own code with `ray submit` \o/.
+You are now ready to run your code with `ray submit` \o/.
 
 If you need help with preparing your ray code you can check out [ray getting started guide](https://docs.ray.io/en/latest/ray-core/walkthrough.html). 
 
