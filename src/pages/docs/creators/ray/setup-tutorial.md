@@ -83,11 +83,9 @@ ray up golem-cluster.yaml --yes
 The provided example golem cluster config file defines a small Golem cluster with one head node 
 that is configured to autoscale to up to 10 worker nodes.
 
-When you run Ray locally, it starts one node on your computer - it allows Ray to speed your code out of the box just by running it on all of your CPU cores.
+The example cluster config file also contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
 
-On the other hand, running a Ray cluster allows your computations to scale to an indefinite number of CPUs.
-
-The example cluster config file contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
+If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
 
 You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
 It will connect to the head node and execute `ray status` command which will print cluster information.
