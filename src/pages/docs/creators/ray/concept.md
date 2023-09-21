@@ -68,7 +68,8 @@ While `ray start` & `ray stop` are for manual node setup there are also many clu
 Basically, you need a piece of code to execute on Golem. Once you have a Ray app, you can immediately proceed to [launching it on Golem](/docs/creators/ray/setup-tutorial).
 You can also use [our example apps](https://github.com/golemfactory/golem-ray/tree/main/examples) to play with Ray on Golem. 
 
-You can also check out a more detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/practical-bridge-simulation-tutorial).
+You can also check out a more detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
+
 
 If you have any questions, comments, insights, praises, or doubts about these docs and Ray on Golem in general please don't hesitate to reach out to us either on
 - [`#Ray on Golem` discord channel](https://chat.golem.network/) 
