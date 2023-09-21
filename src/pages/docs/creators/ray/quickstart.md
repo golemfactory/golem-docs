@@ -29,7 +29,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 Additonally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on Golem cluster.
 You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
-## Start and initialize `yagna` service
+## Start and initialize yagna service
 
 For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
 
@@ -42,7 +42,7 @@ Leave it running, and in a separate terminal, initialize testnet payments.
 yagna payment fund
 ```
 
-## Start `ray-on-golem` server
+## Start ray-on-golem server
 
 For the time being you need to manually run `ray-on-golem` server - leave it running in a separate terminal
 

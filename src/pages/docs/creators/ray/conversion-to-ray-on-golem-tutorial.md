@@ -77,7 +77,7 @@ python3 dds.py
 deal count: 50 time: 0:00:08.060884
 ```
 
-### `@ray.remote` decorator
+### @ray.remote decorator
 
 We call the `get_deal()` method a lot, it uses the CPU intensively and doesn't need any external communication - it is a great candidate for parallelization.
 
@@ -91,7 +91,7 @@ The decorator tells Ray that this piece of code can be scheduled to run on a rem
 
 Please note, that if the remote task is too small, the scheduling overhead might be too big for the parallelization to be beneficial. Consider grouping smaller tasks into chunks that need more CPU time.
 
-### Remote call and waiting for results with `ray.get()`
+### Remote call and waiting for results with ray.get()
 
 We need to explicitly acknowledge the remoteness of the call by adding `.remote()` inside `get_lots_of_deals()` function.
 Additionally, now we aren't getting the results right away. `get_deal.remote()` merely schedules the execution and returns a future - an id - needed to get the results later with `ray.get()`:
