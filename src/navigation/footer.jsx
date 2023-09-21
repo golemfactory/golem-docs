@@ -202,7 +202,7 @@ export const ray = [
       },
       {
         title: 'Practical bridge simulation tutorial',
-        href: '/docs/creators/ray/practical-bridge-simulation-tutorial',
+        href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
       },
       {
         title: 'Cluster yaml reference',
