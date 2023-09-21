@@ -39,30 +39,9 @@ Later on, we will make the installation happen behind the scenes.
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-## Start and initialize yagna service
-
-For the time being, you need to manually run the `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
-
-```bash
-yagna service run
-```
-
-Leave it running, and in a separate terminal, initialize testnet payments.
-```bash
-yagna payment fund
-```
-
-## Start ray-on-golem server
-
-For the time being, you need to manually run the `ray-on-golem` server - leave it running in a separate terminal.
-
-```bash
-ray-on-golem
-```
-
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed and the `ray-on-golem` cluster manager is running, you can proceed with launching your cluster.
+Once the packages are installed, you can proceed with launching your cluster.
 
 All you need is a cluster config file, you can download an example one from our repository.
 
@@ -153,6 +132,4 @@ This is important because running a cluster uses up the Golem network nodes. In 
 # Tear down the cluster.
 ray down golem-cluster.yaml --yes
 ```
-
-For the time being you also need to explicitly stop the `ray-on-golem` server (with `Control-C`).
 
