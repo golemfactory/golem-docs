@@ -56,7 +56,9 @@ foldersToCheck.forEach((folder) => {
         }
 
         if (href.startsWith('http')) {
-          validateExternalLink(href)
+          if (!process.env.VERCEL) {
+            validateExternalLink(href)
+          }
         } else if (!href.startsWith('/')) {
           errors.push(`Missing / in image link in file ${file}: ${href} \n`)
           flag = false
@@ -86,8 +88,9 @@ foldersToCheck.forEach((folder) => {
           ) {
             return
           }
-
-          await validateExternalLink(href)
+          if (!process.env.VERCEL) {
+            await validateExternalLink(href)
+          }
         } else if (!href.startsWith('#')) {
           const newHref = path.join(root, `${href.split('#')[0]}.md`)
           const indexHref = path.join(root, `${href.split('#')[0]}/index.md`)
