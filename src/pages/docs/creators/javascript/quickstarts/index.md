@@ -1,6 +1,7 @@
 ---
 description:  Golem JS QuickStarts
 title: Golem JS QuickStarts
+type: Toc
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 description: Template for an example article
 title: This is the page title displayed in a browser tab.
+type: Example
 ---
 
 # Introduction

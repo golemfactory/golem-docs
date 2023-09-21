@@ -1,6 +1,7 @@
 ---
 description: Create your task application on Golem
 title: JS SDK Introduction
+type: Introduction
 ---
 
 # Create your task application using Task API

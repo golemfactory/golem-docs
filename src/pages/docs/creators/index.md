@@ -1,8 +1,8 @@
 ---
-title:
-pageTitle: Golem Docs. How do you want to create?
-description:
-type: design
+title: Golem Docs | How do you want to create?
+pageTitle: Golem Docs | How do you want to create?
+description: Dive into Golem's comprehensive software documentation for creators. Whether you're working with JS or prefer a no-code approach, our in-depth user guides provide all the information you need to streamline your development process.
+type: noicon
 ---
 
 # How do you want to create?

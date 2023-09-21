@@ -14,7 +14,7 @@ import { SelectionContent } from '@/components/SelectionContent'
 import { Grid } from '@/components/Grid'
 import { Padding } from '@/components/Padding'
 import { MarginBottom } from '@/components/MarginBottom'
-
+import { CustomError } from '../components/CustomError'
 import { GithubCode } from '@/components/GithubCode'
 const tags = {
   tabs: {
@@ -155,6 +155,15 @@ const tags = {
     render: MarginBottom,
     attributes: {
       amount: { type: Number },
+    },
+  },
+  customerror: {
+    render: CustomError,
+    selfClosing: true,
+    attributes: {
+      errorCode: { type: Number },
+      title: { type: String },
+      description: { type: String },
     },
   },
   codefromgithub: {

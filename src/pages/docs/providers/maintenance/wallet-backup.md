@@ -1,6 +1,7 @@
 ---
 description: Ensuring the safety of your Golem funds.
 title: Provider wallet backup
+type: Guide
 ---
 
 # Backing up your Golem wallet

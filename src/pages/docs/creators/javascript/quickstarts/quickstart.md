@@ -1,6 +1,7 @@
 ---
 description: Create your own JavaScript application on Golem
 title: Golem Node.js QuickStart
+type: Quickstart
 ---
 
 # Introduction

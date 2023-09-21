@@ -1,6 +1,7 @@
 ---
 description: Payload Manifest schema
 title: Payload Manifest schema
+type: Schema
 ---
 
 

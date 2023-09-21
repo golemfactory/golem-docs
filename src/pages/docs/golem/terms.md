@@ -1,6 +1,7 @@
 ---
 description: Disclaimer and privacy warning for the alpha reveal of The Next Milestone
 title: Terms
+type: Terms
 ---
 
 # Terms

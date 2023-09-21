@@ -1,6 +1,7 @@
 ---
 description: Composing tasks
 title: Composing tasks
+type: Example
 ---
 
 # JS Task API Examples: composing tasks

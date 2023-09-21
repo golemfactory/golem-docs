@@ -1,13 +1,15 @@
 ---
 description: Create your own JavaScript application on Golem
 title: Node.js QuickStart
+type: Tutorial
 ---
 
 # JS QuickStart Explained
 
 ## Introduction
 
-This tutorial will utilize the same example found in [QuickStart](../quickstarts/quickstart) and include thorough explanations.
+This tutorial will utilize the same example found in [QuickStart](/docs/creators/javascript/quickstarts/quickstart) and include thorough explanations.
+
 
 ## Prerequisites 
 Yagna service is installed and running with the `try_golem` app-key configured.

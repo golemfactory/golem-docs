@@ -34,4 +34,4 @@ type: "reference"
 
 #### Defined in
 
-[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/0448b6b/src/task/task.ts#L12)
+[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/task/task.ts#L12)

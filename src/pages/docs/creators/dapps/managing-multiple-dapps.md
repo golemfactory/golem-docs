@@ -1,6 +1,7 @@
 ---
 description: Manage multiple apps on a single requestor node easily with `dapp-manager`.
 title: Managing multiple apps on a single requestor node.
+type: Guide
 ---
 
 # dApp Manager

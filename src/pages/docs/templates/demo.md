@@ -1,7 +1,7 @@
 ---
 title: 'Learn dApps: overview'
 description: Create your own JavaScript application on Golem
-type: guide
+type: demo
 tags: tag 1, tag 2
 ---
 

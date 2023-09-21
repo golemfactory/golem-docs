@@ -1,6 +1,7 @@
 ---
 description: Provider maintenance.
 title: Provider maintenance
+type: Guide
 ---
 
 # Provider maintenance

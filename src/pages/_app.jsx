@@ -56,6 +56,14 @@ function collectHeadings(
 
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
+  if (!title) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a title. Please add a title to the frontmatter.'
+    )
+  }
   let type = pageProps.markdoc?.frontmatter.type
   let tags = pageProps.markdoc?.frontmatter.tags
 
@@ -64,6 +72,16 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
+
+  if (!description) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a description. Please add a description to the frontmatter.'
+    )
+  }
+
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []

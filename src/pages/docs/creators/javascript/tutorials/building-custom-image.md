@@ -1,6 +1,7 @@
 ---
 title: Creating and using images on Golem
 description: Creating and using images on Golem
+type: tutorial
 ---
 
 ## Introduction

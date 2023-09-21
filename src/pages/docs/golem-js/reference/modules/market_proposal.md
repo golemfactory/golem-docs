@@ -36,7 +36,7 @@ type: "reference"
 
 #### Defined in
 
-[src/market/proposal.ts:6](https://github.com/golemfactory/golem-js/blob/0448b6b/src/market/proposal.ts#L6)
+[src/market/proposal.ts:6](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/market/proposal.ts#L6)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:12](https://github.com/golemfactory/golem-js/blob/0448b6b/src/market/proposal.ts#L12)
+[src/market/proposal.ts:12](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/market/proposal.ts#L12)

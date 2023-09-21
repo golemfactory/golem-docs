@@ -204,6 +204,8 @@ export function Layout({
 }) {
   let router = useRouter()
   let isHomePage = router.pathname === '/'
+  let is404Page = router.pathname === '/404'
+  let is500Page = router.pathname === '/500'
   let allLinks = normalNavLinks.flatMap((section) => section.links)
   let LinkIndex = allLinks.findIndex((link) => link.href === router.pathname)
 
@@ -219,6 +221,8 @@ export function Layout({
     return section.id === currentSection
   }
 
+  console.log(type)
+
   return (
     <>
       <VersionSwitcher />
@@ -227,19 +231,21 @@ export function Layout({
       {isHomePage && <Hero />}
 
       <div className="relative mx-auto flex max-w-8xl justify-center ">
-        {!isHomePage && (
-          <div className="hidden lg:relative lg:block lg:flex-none">
-            <div className="absolute inset-y-0 right-0 w-[50vw] bg-lightblue dark:hidden" />
-            <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
-            <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
-            <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64 ">
-              <SideBar navigation={mergednavs} />
+        {type !== 'design' &&
+          (!isHomePage || !is404Page || !is500Page ? (
+            <div className="hidden lg:relative lg:block lg:flex-none">
+              <div className="absolute inset-y-0 right-0 w-[50vw] bg-lightblue dark:hidden" />
+              <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
+              <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
+              <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64">
+                <SideBar navigation={mergednavs} />
+              </div>
             </div>
-          </div>
-        )}
+          ) : null)}
+
         <div className="min-w-0 max-w-5xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
           <article>
-            <div className="pb-4 flex items-center gap-x-4">
+            <div className="flex items-center gap-x-4 pb-4">
               {type && <ArticleType type={type} />}
               {tags &&
                 tags.split(',').map((tag, index, array) => (
@@ -255,39 +261,40 @@ export function Layout({
             <Prose>{children}</Prose>
           </article>
         </div>
-        {!isHomePage && (
-          <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
-            <nav aria-labelledby="on-this-page-title" className="w-56">
-              {tableOfContents.length > 0 && (
-                <>
-                  <h2
-                    id="on-this-page-title"
-                    className="font-display pl-4 text-sm font-medium text-slate-900 dark:text-white"
-                  >
-                    On this page
-                  </h2>
-                  <ol role="list" className="mt-4  pl-4 text-sm">
-                    <div className="border-l">
-                      {tableOfContents.map((section) => (
-                        <li className="py-0.5 pl-4" key={section.id}>
-                          <Heading section={section} isActive={isActive} />
-                          {section.children.length > 0 && (
-                            <ul
-                              role="list"
-                              className="  pl-5 text-slate-500 dark:text-slate-400"
-                            >
-                              {recursiveRender(section.children, isActive)}
-                            </ul>
-                          )}
-                        </li>
-                      ))}
-                    </div>
-                  </ol>
-                </>
-              )}
-            </nav>
-          </div>
-        )}
+        {type !== 'design' &&
+          (!isHomePage || !is404Page || !is500Page ? (
+            <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+              <nav aria-labelledby="on-this-page-title" className="w-56">
+                {tableOfContents.length > 0 && (
+                  <>
+                    <h2
+                      id="on-this-page-title"
+                      className="font-display pl-4 text-sm font-medium text-slate-900 dark:text-white"
+                    >
+                      On this page
+                    </h2>
+                    <ol role="list" className="mt-4  pl-4 text-sm">
+                      <div className="border-l">
+                        {tableOfContents.map((section) => (
+                          <li className="py-0.5 pl-4" key={section.id}>
+                            <Heading section={section} isActive={isActive} />
+                            {section.children.length > 0 && (
+                              <ul
+                                role="list"
+                                className="  pl-5 text-slate-500 dark:text-slate-400"
+                              >
+                                {recursiveRender(section.children, isActive)}
+                              </ul>
+                            )}
+                          </li>
+                        ))}
+                      </div>
+                    </ol>
+                  </>
+                )}
+              </nav>
+            </div>
+          ) : null)}
       </div>
       <Footer />
     </>

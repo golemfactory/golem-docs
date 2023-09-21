@@ -21,4 +21,4 @@ type: "reference"
 
 #### Defined in
 
-[src/activity/activity.ts:21](https://github.com/golemfactory/golem-js/blob/0448b6b/src/activity/activity.ts#L21)
+[src/activity/activity.ts:21](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/activity/activity.ts#L21)

@@ -1,7 +1,9 @@
 ---
 title: Requestor
 description: The requestor actor in the Golem
+type: Guide
 ---
+
 # Requestor architecture
 
 Seeing the requestor just as a node with the Yagna service installed is a simplified perspective. 

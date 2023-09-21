@@ -1,6 +1,7 @@
 ---
 description: How to run a .gvmi image locally for the sake of testing and debugging
 title: Testing a Golem image
+type: Tutorial
 ---
 
 # Testing a Golem image

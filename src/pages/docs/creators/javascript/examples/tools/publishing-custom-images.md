@@ -1,6 +1,7 @@
 ---
 title: Publishing an image
 description: Guide on how to publish a Golem image to the registry using gvmkit-build
+type: Instructions
 ---
 
 # Publishing an image in the registry
