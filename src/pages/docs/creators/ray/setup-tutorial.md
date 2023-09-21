@@ -1,66 +1,60 @@
 ---
-description: step-by-step explanation of the quickstart instructions
+description: a step-by-step explanation of the quickstart instructions
 title: Ray on Golem setup tutorial
 type: guide 
 ---
 
 # Ray on Golem setup tutorial 
 
-This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster. 
+This tutorial explains all the steps needed to start, test, and stop a Ray on the Golem cluster. 
 If you have already proceeded through our [Quickstart](/docs/creators/ray/quickstart), you'll find this tutorial familiar. 
-The point is to go through the same actions but now, providing you with more details on each one.
+The point is to go through the same actions but now, provide you with more details on each one.
 
-To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Golem Ray cluster manager.
+To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Ray on Golem cluster manager.
 
-## Install Ray cluster launcher & Golem Ray cluster manager
+## Install Ray cluster launcher & Ray on Golem cluster manager
 
 The Ray cluster launcher is part of the Ray CLI. Use the CLI to start and stop a ray cluster using commands such as `ray up` and `ray down`. 
-You can use pip to install the Ray CLI with cluster launcher support. 
+You can use pip to install the Ray CLI with cluster launcher support (recommended within a clean virtual environment)
 
-Below you can see how to install default ray packages, but if you need more Ray-specific details follow [the Ray installation documentation](https://docs.ray.io/en/latest/ray-overview/installation.html#installation).
+You need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 
-You also need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
+It will install the default ray package as a dependency, but if you want more Ray-specific details follow [the Ray installation documentation](https://docs.ray.io/en/latest/ray-overview/installation.html#installation).
 
 ```bash
-# install ray & ray-on-golem
-pip install -U ray[default] ray-on-golem
+# install ray-on-golem and ray (recommended within a clean virtual environment)
+pip3 install -U ray-on-golem
 ```
 
-{% alert level="info" %}
-Additonally, a tool named websocat is needed to wrap connections between your machine and Ray on Golem cluster.
-You can install websocat using instructions on its website: https://lib.rs/crates/websocat
-{% /alert %}
+Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
+You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
 ## Install yagna (Golem daemon used to schedule work on the Golem Network)
 
-For now, you need to manually install yagna to be able to connect to the Golem network.
+For now, you need to manually install Yagna to be able to connect to the Golem network.
 Later on, we will make the installation happen behind the scenes.
-Please follow the [yagna installation guide from Golem handbook](https://handbook.golem.network/requestor-tutorials/flash-tutorial-of-requestor-development). 
-Stop before running the daemon - `ray-on-golem` will do the rest for you. 
-
-TLDR install yagna:
 
 ```bash
 # install yagna - golem network daemon
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-## Start and initialize `yagna` service
+## Start and initialize yagna service
 
-For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
+For the time being, you need to manually run the `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
 
 ```bash
 yagna service run
 ```
 
-Next (in the separate terminal), you need to initialize testnet payments.
+Leave it running, and in a separate terminal, initialize testnet payments.
 ```bash
 yagna payment fund
 ```
 
-## Start `ray-on-golem` server
+## Start ray-on-golem server
 
-For the time being, you need to manually run `ray-on-golem` server (in a separate terminal)
+For the time being, you need to manually run the `ray-on-golem` server - leave it running in a separate terminal.
 
 ```bash
 ray-on-golem
@@ -68,19 +62,9 @@ ray-on-golem
 
 ## Start Ray with the Ray cluster launcher
 
-Once the packages are installed and `ray-on-golem` cluster manager is running, you can immediately proceed with launching your cluster.
-The provided [example golem cluster config file](https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml) defines a small Golem cluster with one head node 
-that is configured to autoscale to up to 10 worker nodes.
+Once the packages are installed and the `ray-on-golem` cluster manager is running, you can proceed with launching your cluster.
 
-Each Ray cluster consists of one head node and a number of worker nodes. The head node drives the computation, and the worker nodes execute the tasks. The head node also serves as one of the workers.
-
-When you run Ray locally, it starts the head node on your computer - it allows Ray to speed your code out of the box just by running it on all of your CPU cores.
-
-On the other hand, running a Ray cluster allows your computations to scale to an indefinite number of CPUs.
-
-Note that you will get the Golem daemon configured during the first startup of the cluster. 
-
-The example cluster config file contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now)
+All you need is a cluster config file, you can download an example one from our repository.
 
 The command to start the cluster is `ray up`:
 
@@ -89,23 +73,30 @@ The command to start the cluster is `ray up`:
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * yagna starts in the background (if not running)
+# * Yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
 
 ```
 
+The provided example golem cluster config file defines a small Golem cluster with one head node 
+that is configured to autoscale to up to 10 worker nodes.
+
+The example cluster config file also contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
+
+If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
+
 You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
-It will connect to the head node and execute the simplest ray code on the cluster.
+It will connect to the head node and execute the `ray status` command which will print cluster information.
 
 ```bash
-# Check if Ray on Golem cluster is running 
+# Check if Ray on the Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 
 ```
 
-Congrats, you have started a Ray on Golem cluster!
+Congrats, you have started a Ray on the Golem cluster!
 
 
 
@@ -122,12 +113,12 @@ At first, it is recommended to run the app locally (without connecting to the cl
 wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py 
 
 # Execute the app locally by starting a local ray instance on your computer
-python simple-task.py
+python3 simple-task.py
 ```
 
-This particular script shows information about the cluster it is being run on, and also visualizes the number of tasks run on different nodes.
+This particular script shows information about the cluster it is being run on and also visualizes the number of tasks run on different nodes.
 
-Once you ensure the app works, you can feed it to your Ray on Golem cluster
+Once you ensure the app works, you can feed it to your Ray on the Golem cluster
 
 ```bash
 # Run some ray-based code (that knows *nothing** about Golem) - this will either:
@@ -145,9 +136,9 @@ The above shows the usual workflow with Ray apps.
 - You develop them, while at the same time testing them, on your local machine.
 - When you are ready to get more power - you send them to a Ray cluster **without changing a single line** of your application's code.
 
-## Run your own ray app on your golem cluster
+## Run your ray app on your golem cluster
 
-You are now ready to run your own code with `ray submit` \o/.
+You are now ready to run your code with `ray submit` \o/.
 
 If you need help with preparing your ray code you can check out [ray getting started guide](https://docs.ray.io/en/latest/ray-core/walkthrough.html). 
 

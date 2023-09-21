@@ -1,10 +1,10 @@
 ---
-description: quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
+description: quick and easy, copy and run instructions on launching and decommissioning the Ray on the Golem cluster
 title: Ray on Golem QuickStart
-type: guide 
+type: quickstart 
 ---
 
-# Quickstart
+# QuickStart
 
 This quickstart shows you how to set Ray and Ray on Golem up, start your cluster, test it, and then stop it.
 It limits the explanation to the bare minimum - if you are looking for more details jump to [setup tutorial](/docs/creators/ray/setup-tutorial)
@@ -12,11 +12,11 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 
 ## Install software
 
-The first step is installing Ray and Ray on Golem (recommended within a clean virtual environment)
+The first step is installing Ray on Golem (recommended within a clean virtual environment). It will install Ray as a dependency.
 
 ```bash
-# install ray & ray-on-golem
-pip install -U ray[default] ray-on-golem
+# install ray-on-golem & ray (recommended within a clean virtual environment)
+pip3 install -U ray-on-golem
 ```
 
 For now, you also need to download and install Golem node software representing you in the Golem network.
@@ -26,27 +26,25 @@ For now, you also need to download and install Golem node software representing 
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-{% alert level="info" %}
-Additonally, a tool named websocat is needed to wrap connections between your machine and Ray on Golem cluster.
-You can install websocat using instructions on its website: https://lib.rs/crates/websocat
-{% /alert %}
+Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
+You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
-## Start and initialize `yagna` service
+## Start and initialize yagna service
 
-For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
+For the time being, you need to manually run the `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network:
 
 ```bash
 yagna service run
 ```
 
-Next (in the separate terminal), you need to initialize testnet payments.
+Leave it running, and in a separate terminal, initialize testnet payments.
 ```bash
 yagna payment fund
 ```
 
-## Start `ray-on-golem` server
+## Start ray-on-golem server
 
-For the time being you need to manually run `ray-on-golem` server (in a separate terminal)
+For the time being you need to manually run the `ray-on-golem` server - leave it running in a separate terminal.
 
 ```bash
 ray-on-golem
@@ -63,7 +61,7 @@ It will give you a cluster of one node (which will expand when you feed it with 
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * yagna starts in the background (if not running)
+# * Yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
@@ -79,10 +77,10 @@ Download our example Ray app and execute it locally (a Ray instance will be crea
 wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py
 
 # Execute the app locally by starting a local ray instance on your computer
-python simple-task.py
+python3 simple-task.py
 ```
 
-Execute the app on the cluster. Observe how Ray on Golem cluster expands during the computation
+Now that you know that Ray is working, execute the app on the cluster. Observe how Ray on Golem cluster expands during the computation
 
 ```bash
 # Run some ray-based code (that knows *nothing** about Golem) - this will either:
