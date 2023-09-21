@@ -10,16 +10,16 @@ This tutorial explains all the steps needed to start, test, and stop a Ray on Go
 If you have already proceeded through our [Quickstart](/docs/creators/ray/quickstart), you'll find this tutorial familiar. 
 The point is to go through the same actions but now, providing you with more details on each one.
 
-To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Golem Ray cluster manager.
+To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Ray on Golem cluster manager.
 
-## Install Ray cluster launcher & Golem Ray cluster manager
+## Install Ray cluster launcher & Ray on Golem cluster manager
 
 The Ray cluster launcher is part of the Ray CLI. Use the CLI to start and stop a ray cluster using commands such as `ray up` and `ray down`. 
 You can use pip to install the Ray CLI with cluster launcher support (recommended within a clean virtual environment)
 
-Below you can see how to install default ray packages, but if you need more Ray-specific details follow [the Ray installation documentation](https://docs.ray.io/en/latest/ray-overview/installation.html#installation).
+You need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 
-You also need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
+It will install default ray package as a dependency, but if you want more Ray-specific details follow [the Ray installation documentation](https://docs.ray.io/en/latest/ray-overview/installation.html#installation).
 
 ```bash
 # install ray-on-golem and ray (recommended within a clean virtual environment)

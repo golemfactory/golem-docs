@@ -24,8 +24,8 @@ You can learn about Ray Core mechanisms on [Ray docs website](https://docs.ray.i
 
 ## What do you need
 
-In order to use Ray on Golem, you need to install the Ray framework and Golem Ray cluster manager.
-For the time being, you also need yagna - Golem daemon facilitating communication with the Golem network.
+In order to use Ray on Golem, you need to install the Ray framework and Ray on Golem cluster manager.
+For the time being, you also need to download yagna - Golem daemon facilitating communication with the Golem network.
 
 When you have the software installed, you need a cluster configuration yaml file. We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
 
@@ -59,7 +59,7 @@ While `ray start` & `ray stop` are for manual node setup there are also many clu
 - `ray up golem-cluster.yaml` starts up a cluster specified by the yaml
 - `ray down golem-cluster.yaml` terminates the cluster
 - `ray submit golem-cluster.yaml ray-app.py` executes an app on the cluster
-- `ray exec golem-cluster.yaml 'ray status'` show cluster status
+- `ray exec golem-cluster.yaml 'ray status'` shows cluster status
 - `ray exec golem-cluster.yaml 'shell-command-line'` executes shell commands on the head node
 - `ray attach golem-cluster.yaml` gives you shell access to the head node
 
