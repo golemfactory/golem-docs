@@ -54,12 +54,12 @@ You can run the app on your local machine with
 python3 simple-task.py
 ```
 
-Or, you can execute it on Ray on the Golem cluster. Let's have a look at ray usage in the app.
+Or, you can execute it on Ray on the Golem cluster with `ray submit`. Let's have a look at ray usage in the app.
 
 You need to run certain steps:
 - initialize ray, so your code would be able to use ray infrastructure
 - declare the methods that can be run remotely by ray
-- apply ray pattern to execute tasks remote with `remote()` and wait the results with `ray.get()`
+- apply ray pattern to execute tasks remote with `remote()` and await the results with `ray.get()`
 
 
 ## Ray initialization
