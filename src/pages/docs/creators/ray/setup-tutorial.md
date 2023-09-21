@@ -66,7 +66,7 @@ Once the packages are installed and `ray-on-golem` cluster manager is running, y
 
 All you need is a cluster config file, you can download an example one from our repository.
 
-The command to start the cluster is `ray up`:
+The commands to start the cluster is `ray up`:
 
 ```bash
 # Download the example golem-cluster.yaml
