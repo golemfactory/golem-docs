@@ -68,7 +68,7 @@ export function FeedbackButtons({ children, identifier, article = false }) {
       className={`
     ${
       article
-        ? 'my-6 w-full rounded-md bg-lightblue py-12 text-center'
+        ? 'my-6 w-full rounded-md bg-lightblue py-12 text-center dark:bg-darkcontent'
         : '-mt-4'
     }
     `}
@@ -112,7 +112,7 @@ export function FeedbackButtons({ children, identifier, article = false }) {
               {loading ? (
                 <svg
                   aria-hidden="true"
-                  class="mr-2 h-5 w-5 animate-spin fill-primary text-gray-200 dark:text-gray-600"
+                  class="mr-2 h-5 w-5 animate-spin fill-primary text-gray-200 dark:fill-white dark:text-gray-600"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ export function FeedbackButtons({ children, identifier, article = false }) {
               {loading ? (
                 <svg
                   aria-hidden="true"
-                  class=" h-5 w-5 animate-spin fill-primary text-gray-200 dark:text-gray-600"
+                  class=" h-5 w-5 animate-spin fill-primary text-gray-200 dark:fill-white dark:text-gray-600"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +238,7 @@ export const FeedbackModal = ({
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all dark:bg-slate-800 sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all dark:bg-darkcontent sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
                 <div>
                   <div>
                     <Dialog.Title
@@ -256,7 +256,7 @@ export const FeedbackModal = ({
                           id="about"
                           name="about"
                           rows={3}
-                          className="block w-full rounded-md border-0 p-4 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 dark:bg-slate-800 dark:text-white dark:ring-gray-500 sm:text-sm sm:leading-6"
+                          className="block w-full rounded-md border-0 p-4 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 dark:bg-darkcontent dark:text-white dark:ring-gray-500 sm:text-sm sm:leading-6"
                           placeholder="Enter your feedback here"
                           onChange={(e) => setFeedback(e.target.value)}
                         />
