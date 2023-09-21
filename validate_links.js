@@ -12,6 +12,11 @@ const foldersToCheck = [
   'src/markdoc/partials/**/*.md',
 ]
 
+const filesToSkipExternalLinkCheck = [
+  'src/pages/docs/golem/payload-manifest/computation-payload-manifest.schema.md',
+  'src/pages/docs/golem/payload-manifest/index.md',
+]
+
 const isPrivateOrLocalhost = (url) => {
   // Regular expression to match private IP addresses and localhost
   const privateIpPattern =
@@ -70,6 +75,10 @@ foldersToCheck.forEach((folder) => {
 
       renderer.link = async function (href) {
         const dirname = path.dirname(file)
+        if (filesToSkipExternalLinkCheck.includes(file)) {
+          return
+        }
+
         if (href.startsWith('http')) {
           if (
             dirname.startsWith('src/pages/docs/golem-js/reference') ||
