@@ -1,31 +1,51 @@
 import { LikeIcon } from './icons/LikeIcon'
 import { DislikeIcon } from './icons/DislikeIcon'
-export const Feedback = () => {
-  return (
-    <div className="my-6 w-full rounded-md bg-lightblue py-12 text-center">
-      <h1 className="text-2xl font-bold">Was this article helpful?</h1>
-      <div className="mt-6 flex justify-center">
-        <button className="mr-4 flex  items-center rounded-md border border-primary px-4 py-2 text-primary">
-          <LikeIcon className="mr-2 h-5 w-5 fill-primary" />
-          Yes
-        </button>
-        <button className="flex items-center rounded-md border border-primary px-4 py-2 text-primary">
-          <DislikeIcon className="mr-2 h-5 w-5 fill-primary" />
-          No
-        </button>
-      </div>
-    </div>
-  )
+
+const handleFeedback = (
+  url,
+  identifier,
+  feedback,
+  setOpen,
+  setShowThanks,
+  helpful
+) => {
+  if (identifier) {
+    let data = {
+      user: localStorage.getItem('GDocsUUID'),
+      feedback: feedback === 'yes' ? '' : feedback,
+      identifier: identifier,
+      helpful: helpful,
+    }
+    fetch(url, {
+      method: 'POST',
+
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.setItem(identifier, helpful ? 'yes' : 'no')
+        setOpen(false)
+        setShowThanks(true)
+      })
+      .catch((error) => {
+        console.error('Error:', error)
+        setOpen(false)
+      })
+  } else {
+    console.error('No identifier provided for feedback modal')
+  }
 }
 
 import { Dialog, Transition } from '@headlessui/react'
 import { useState, useEffect, Fragment } from 'react'
 
-export function FeedbackButtons({ children, identifier }) {
+export function FeedbackButtons({ children, identifier, article = false }) {
   const [isOpen, setOpen] = useState(false)
-  const [feedback, setFeedback] = useState(false)
+  const [feedback, setFeedback] = useState('')
   const [showThanks, setShowThanks] = useState(false)
-
+  const url = article
+    ? '/api/feedback/article'
+    : '/api/feedback/troubleshooting'
   useEffect(() => {
     if (identifier) {
       const localStorageFeedback = localStorage.getItem(identifier)
@@ -38,34 +58,48 @@ export function FeedbackButtons({ children, identifier }) {
     if (localStorageFeedback) setFeedback(localStorageFeedback)
   }, [])
 
-  const handleClick = (answer) => {
-    setFeedback(answer)
-    localStorage.setItem(identifier, answer)
-    setShowThanks(true)
-    setTimeout(() => {
-      setOpen(false)
-      setShowThanks(false)
-    }, 4000)
-  }
-
   return (
-    <div className="-mt-4">
-      <p className="mr-4 text-center font-semibold text-black dark:text-white">
+    <div
+      className={`
+    ${
+      article
+        ? 'my-6 w-full rounded-md bg-lightblue py-12 text-center'
+        : '-mt-4'
+    }
+    `}
+    >
+      <p
+        className={`
+        mb-4
+        mr-4 text-center font-semibold text-black dark:text-white`}
+      >
         Was this helpful?
       </p>
 
       <div className="flex justify-center text-xs">
         {showThanks ? (
-          <p className="-my-2 pb-4 text-green-500">Thanks for your feedback!</p>
+          <p className="-my-2 prose pb-4 text-green-500">Thanks for your feedback!</p>
         ) : (
           <>
             <button
-              onClick={() => handleClick('yes')}
-              className={`group-peer group mr-4 flex items-center rounded-md border border-primary px-4 py-2 dark:border-darkprimary ${
+              onClick={() =>
+                handleFeedback(
+                  url,
+                  identifier,
+                  feedback,
+                  setOpen,
+                  setShowThanks,
+                  true
+                )
+              }
+              className={`group-peer group prose mr-4 flex items-center rounded-md border border-primary px-4 py-2 dark:border-darkprimary ${
                 feedback === 'yes'
                   ? 'bg-primaryhover text-white dark:bg-darkprimary'
                   : 'text-primary hover:bg-primaryhover hover:text-white dark:text-white dark:hover:bg-darkprimary'
-              }`}
+              }
+              
+              
+              `}
             >
               <LikeIcon
                 className={`mr-2 h-5 w-5 ${
@@ -78,7 +112,7 @@ export function FeedbackButtons({ children, identifier }) {
             </button>
             <button
               onClick={() => setOpen(true)}
-              className={`group-peer group mr-4 flex items-center rounded-md border border-primary px-4 py-2 dark:border-darkprimary ${
+              className={`group-peer group prose mr-4 flex items-center rounded-md border border-primary px-4 py-2 dark:border-darkprimary ${
                 feedback === 'no'
                   ? 'bg-primaryhover text-white dark:bg-darkprimary'
                   : 'text-primary hover:bg-primaryhover hover:text-white dark:text-white dark:hover:bg-darkprimary'
@@ -97,6 +131,7 @@ export function FeedbackButtons({ children, identifier }) {
         )}
       </div>
       <FeedbackModal
+        url={url}
         identifier={identifier}
         open={isOpen}
         setOpen={setOpen}
@@ -110,6 +145,7 @@ export function FeedbackButtons({ children, identifier }) {
 import { useRef } from 'react'
 
 export const FeedbackModal = ({
+  url,
   identifier,
   open,
   setOpen,
@@ -117,16 +153,8 @@ export const FeedbackModal = ({
   setShowThanks,
 }) => {
   const cancelButtonRef = useRef(null)
+  const [feedback, setFeedback] = useState('')
 
-  const handleFeedback = () => {
-    if (identifier) {
-      localStorage.setItem(identifier, 'no')
-      setOpen(false)
-      setShowThanks(true)
-    } else {
-      console.error('No identifier provided for feedback modal')
-    }
-  }
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog
@@ -148,7 +176,7 @@ export const FeedbackModal = ({
         </Transition.Child>
 
         <div className="fixed inset-0 z-50 w-screen overflow-y-auto">
-          <div className="flex lg:min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <div className="flex items-end justify-center p-4 text-center sm:items-center sm:p-0 lg:min-h-full">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -178,6 +206,7 @@ export const FeedbackModal = ({
                           rows={3}
                           className="block w-full rounded-md border-0 p-4 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 dark:bg-slate-800 dark:text-white dark:ring-gray-500 sm:text-sm sm:leading-6"
                           placeholder="Enter your feedback here"
+                          onChange={(e) => setFeedback(e.target.value)}
                         />
                       </div>
                     </div>
@@ -187,7 +216,16 @@ export const FeedbackModal = ({
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md bg-primary px-4 py-2 text-base font-medium text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80 sm:col-start-2"
-                    onClick={() => handleFeedback()}
+                    onClick={() =>
+                      handleFeedback(
+                        url,
+                        identifier,
+                        feedback,
+                        setOpen,
+                        setShowThanks,
+                        false
+                      )
+                    }
                   >
                     Send feedback
                   </button>

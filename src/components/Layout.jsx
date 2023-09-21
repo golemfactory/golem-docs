@@ -190,7 +190,7 @@ import { ForkIcon } from './icons/ForkIcon'
 import { StarIcon } from './icons/StarIcon'
 import { GitIcon } from './icons/GitIcon'
 import { Footer } from './Footer'
-import { Feedback } from './Feedback'
+import { FeedbackButtons } from './Feedback'
 import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { ArticleType } from './ArticleType'
@@ -257,6 +257,7 @@ export function Layout({
             </div>
 
             <Prose>{children}</Prose>
+            <FeedbackButtons article={true} identifier={router.pathname} />
           </article>
         </div>
         {type !== 'design' &&
