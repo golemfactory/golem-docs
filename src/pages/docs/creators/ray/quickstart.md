@@ -1,5 +1,5 @@
 ---
-description: quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
+description: quick and easy, copy and run instructions on launching and decommissioning the Ray on the Golem cluster
 title: Ray on Golem QuickStart
 type: quickstart 
 ---
@@ -26,12 +26,12 @@ For now, you also need to download and install Golem node software representing 
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-Additonally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on Golem cluster.
+Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
 You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
 ## Start and initialize yagna service
 
-For the time being, you need to manually run `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network:
+For the time being, you need to manually run the `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network:
 
 ```bash
 yagna service run
@@ -44,7 +44,7 @@ yagna payment fund
 
 ## Start ray-on-golem server
 
-For the time being you need to manually run `ray-on-golem` server - leave it running in a separate terminal.
+For the time being you need to manually run the `ray-on-golem` server - leave it running in a separate terminal.
 
 ```bash
 ray-on-golem
@@ -61,7 +61,7 @@ It will give you a cluster of one node (which will expand when you feed it with 
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * yagna starts in the background (if not running)
+# * Yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
