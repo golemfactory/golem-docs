@@ -7,50 +7,57 @@ let flag = true
 let errors = []
 const root = path.join(__dirname, 'src/pages')
 
-glob('src/pages/docs/**/*.md', (err, files) => {
-  if (err) throw err
+const foldersToCheck = [
+  'src/pages/docs/**/*.md',
+  'src/markdoc/partials/**/*.md',
+]
 
-  files.forEach((file) => {
-    const data = fs.readFileSync(file, 'utf8')
-    const renderer = new marked.Renderer()
+foldersToCheck.forEach((folder) => {
+  glob(folder, (err, files) => {
+    if (err) throw err
 
-    renderer.link = function (href) {
-      if (!(href.startsWith('http') || href.startsWith('#'))) {
-        const dirname = path.dirname(file)
-        const newHref = path.join(root, `${href.split('#')[0]}.md`)
-        const indexHref = path.join(root, `${href.split('#')[0]}/index.md`)
+    files.forEach((file) => {
+      const data = fs.readFileSync(file, 'utf8')
+      const renderer = new marked.Renderer()
 
-        if (href.endsWith('index') && !href.endsWith('#index')) {
-          errors.push(
-            `Broken link in file ${file}: linking to ${href} --> Links ending with index are not allowed due to Next.js routing. \n`
-          )
-          flag = false
-        }
+      renderer.link = function (href) {
+        if (!(href.startsWith('http') || href.startsWith('#'))) {
+          const dirname = path.dirname(file)
+          const newHref = path.join(root, `${href.split('#')[0]}.md`)
+          const indexHref = path.join(root, `${href.split('#')[0]}/index.md`)
 
-        if (href.startsWith('../')) {
-          const cleanHref = href.split('#')[0]
-          const newHref =
-            path.join(dirname, '..', cleanHref.replace('../', '')) + '.md'
-          if (!fs.existsSync(newHref)) {
-            errors.push(`Broken link in file ${file}: linking to ${href} \n`)
+          if (href.endsWith('index') && !href.endsWith('#index')) {
+            errors.push(
+              `Broken link in file ${file}: linking to ${href} --> Links ending with index are not allowed due to Next.js routing. \n`
+            )
             flag = false
           }
-          return
-        }
 
-        if (!fs.existsSync(newHref) && !fs.existsSync(indexHref)) {
-          // Skip reference links as it machine generated
-          if (dirname.startsWith('src/pages/docs/golem-js/reference')) {
+          if (href.startsWith('../')) {
+            const cleanHref = href.split('#')[0]
+            const newHref =
+              path.join(dirname, '..', cleanHref.replace('../', '')) + '.md'
+            if (!fs.existsSync(newHref)) {
+              errors.push(`Broken link in file ${file}: linking to ${href} \n`)
+              flag = false
+            }
             return
           }
 
-          errors.push(`Broken link in file ${file}: linking to ${href} \n`)
-          flag = false
+          if (!fs.existsSync(newHref) && !fs.existsSync(indexHref)) {
+            // Skip reference links as it machine generated
+            if (dirname.startsWith('src/pages/docs/golem-js/reference')) {
+              return
+            }
+
+            errors.push(`Broken link in file ${file}: linking to ${href} \n`)
+            flag = false
+          }
         }
       }
-    }
 
-    marked.parse(data, { renderer })
+      marked.parse(data, { renderer })
+    })
   })
 })
 
