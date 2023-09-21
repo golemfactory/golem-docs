@@ -166,25 +166,6 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
 You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
-For the time being, you need to manually run the `yagna` service (in a separate terminal) - it is a Golem node representing you in the Golem network
-
-```bash
-yagna service run
-```
-
-Leave it running, and in a separate terminal, initialize testnet payments.
-
-```bash
-yagna payment fund
-```
-
-Next, start the `ray-on-golem` server and also leave it running.
-
-```bash
-# start ray-on-golem server
-ray-on-golem
-```
-
 Now, run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
 ```bash
@@ -320,5 +301,3 @@ When you are done, it is a good practice to stop the cluster. In the default con
 ```python
 ray down golem-cluster.yaml --yes
 ```
-
-For the time being, you also need to stop the `ray-on-golem` server (with `Control-C`).
