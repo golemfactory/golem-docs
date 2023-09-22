@@ -221,10 +221,6 @@ export const navigation = [
             title: 'Docker vs Golem VM diffs',
             href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
           },
-          {
-            title: 'Troubleshooting',
-            href: '/docs/creators/dapps/troubleshooting',
-          },
         ],
       },
       {
@@ -241,10 +237,6 @@ export const navigation = [
           {
             title: 'Provider',
             href: '/docs/troubleshooting/provider',
-          },
-          {
-            title: 'Javascript',
-            href: '/docs/troubleshooting/javascript',
           },
         ],
       },
@@ -282,6 +274,23 @@ export const navigation = [
           {
             title: 'Wallet Restore',
             href: '/docs/providers/maintenance/wallet-restoration',
+          },
+        ],
+      },
+      {
+        title: 'Troubleshooting',
+        children: [
+          {
+            title: 'Requestor',
+            href: '/docs/troubleshooting/requestor',
+          },
+          {
+            title: 'Exit codes',
+            href: '/docs/troubleshooting/requestor/exit-codes',
+          },
+          {
+            title: 'Provider',
+            href: '/docs/troubleshooting/provider',
           },
         ],
       },

@@ -1,13 +1,13 @@
 {% troubleshooting %}
 
-## Error: connect ECONNREFUSED 127.0.0.1:7465.
+## Error: Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.	
 
 {% problem /%}
 
 When trying to execute a requestor script, you may encounter the following error message:
 
 ```
-Error: connect ECONNREFUSED 127.0.0.1:7465.
+Error: Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.	
 ```
 
 {% solution %}
