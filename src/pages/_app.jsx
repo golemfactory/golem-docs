@@ -32,7 +32,7 @@ function collectHeadings(
     if (node.name === 'Heading') {
       let { level, id } = node.attributes
 
-      node.attributes.id = slugify(id)
+      
 
       let title = getNodeText(node)
 
