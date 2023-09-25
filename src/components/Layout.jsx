@@ -37,7 +37,7 @@ function recursiveRender(children, isActive, pageType = 'article') {
   return children.map((node) => (
     <li
       className={`py-1
-      ${pageType === 'troubleshooting' ? 'truncate' : ''}
+      ${pageType === 'troubleshooting' ? 'truncate-2-lines' : ''}
     `}
       key={node.id}
     >
