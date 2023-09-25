@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: Found argument '--api-allow-origin' which wasn't expected, or isn't valid in this context.	
+## Found argument '--api-allow-origin' which wasn't expected, or isn't valid in this context.	
 
 {% problem /%}
 

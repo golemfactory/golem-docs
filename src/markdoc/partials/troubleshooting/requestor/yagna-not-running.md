@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.	
+## Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.	
 
 {% problem /%}
 
@@ -23,7 +23,7 @@ yagna service run
 
 ```js
 yagnaOptions: {
-  basePath: 'http://127.0.0.1:7777'
+  basePath: 'http://127.0.0.1:7645'
 }
 ```
 

@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: Unable to get requestor accounts Invalid application key.
+## Unable to get requestor accounts Invalid application key.
 
 {% problem /%}
 

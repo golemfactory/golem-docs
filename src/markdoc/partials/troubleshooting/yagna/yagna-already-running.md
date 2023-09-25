@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: yagna is already running
+## yagna is already running
 
 {% problem /%}
 

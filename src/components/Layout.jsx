@@ -33,9 +33,14 @@ function Heading({ section, isActive }) {
   )
 }
 
-function recursiveRender(children, isActive) {
+function recursiveRender(children, isActive, pageType = 'article') {
   return children.map((node) => (
-    <li className="py-1" key={node.id}>
+    <li
+      className={`py-1
+      ${pageType === 'troubleshooting' ? 'truncate' : ''}
+    `}
+      key={node.id}
+    >
       <Link
         href={`#${node.id}`}
         className={
@@ -51,7 +56,7 @@ function recursiveRender(children, isActive) {
       </Link>
       {node.children && node.children.length > 0 && (
         <ul role="list" className="  pl-5 text-slate-500 dark:text-slate-400">
-          {recursiveRender(node.children, isActive)}
+          {recursiveRender(node.children, isActive, pageType)}
         </ul>
       )}
     </li>
@@ -223,7 +228,6 @@ export function Layout({
 
   return (
     <>
-      <VersionSwitcher />
       <Header navigation={JSReference} />
 
       {isHomePage && <Hero />}
@@ -282,7 +286,11 @@ export function Layout({
                                 role="list"
                                 className="  pl-5 text-slate-500 dark:text-slate-400"
                               >
-                                {recursiveRender(section.children, isActive)}
+                                {recursiveRender(
+                                  section.children,
+                                  isActive,
+                                  type
+                                )}
                               </ul>
                             )}
                           </li>

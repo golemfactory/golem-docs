@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: deadline has elapsed
+## deadline has elapsed
 
 {% problem /%}
 

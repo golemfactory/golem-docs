@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: Unable to create allocation for driver/network erc20/goerli. There is no requestor account supporting this platform.
+## Unable to create allocation for driver/network erc20/goerli. There is no requestor account supporting this platform.
 
 {% problem /%}
 

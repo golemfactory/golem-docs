@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: ya-provider is already running
+## ya-provider is already running
 
 {% problem /%}
 

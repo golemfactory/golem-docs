@@ -1,6 +1,6 @@
 {% troubleshooting %}
 
-## Error: Could not create new allocation. Insufficient funds to make allocation. Top up your account or release all existing allocations to unlock the funds via yagna payment release-allocations
+## Could not create new allocation. Insufficient funds to make allocation. Top up your account or release all existing allocations to unlock the funds via yagna payment release-allocations
 
 {% problem /%}
 
