@@ -154,10 +154,7 @@ export const navigation = [
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/guides/switching-to-mainnet',
               },
-              {
-                title: 'Troubleshooting',
-                href: '/docs/creators/javascript/guides/troubleshooting',
-              },
+              
             ],
           },
           {
@@ -235,8 +232,8 @@ export const navigation = [
             href: '/docs/troubleshooting/requestor/exit-codes',
           },
           {
-            title: 'Provider',
-            href: '/docs/troubleshooting/provider',
+            title: 'Yagna',
+            href: '/docs/troubleshooting/yagna',
           },
         ],
       },
@@ -252,10 +249,7 @@ export const navigation = [
         href: '/docs/providers/provider-basic-configuration',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-      {
-        title: 'Troubleshooting',
-        href: '/docs/providers/provider-troubleshooting',
-      },
+
       {
         title: 'Yagna CLI reference',
         href: '/docs/providers/yagna-cli-reference',
@@ -281,16 +275,12 @@ export const navigation = [
         title: 'Troubleshooting',
         children: [
           {
-            title: 'Requestor',
-            href: '/docs/troubleshooting/requestor',
-          },
-          {
-            title: 'Exit codes',
-            href: '/docs/troubleshooting/requestor/exit-codes',
-          },
-          {
             title: 'Provider',
             href: '/docs/troubleshooting/provider',
+          },
+          {
+            title: 'Yagna',
+            href: '/docs/troubleshooting/yagna',
           },
         ],
       },

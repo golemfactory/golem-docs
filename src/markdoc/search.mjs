@@ -67,31 +67,42 @@ export default function (nextConfig = {}) {
             this.addContextDependency(pagesDir)
 
             let files = glob.sync('**/*.md', { cwd: pagesDir })
-            let data = files.map((file) => {
-              let url =
-                file === 'index.md'
-                  ? '/'
-                  : `/${file.replace(/\.md$/, '').replace(/\/index$/, '')}`
-              let md = fs.readFileSync(path.join(pagesDir, file), 'utf8')
+            let data = files
+              .map((file) => {
+                if (file.startsWith('docs/templates/')) {
+                  // Dont index templates
+                  console.log('Skipping', file)
+                  return
+                }
+                let url =
+                  file === 'index.md'
+                    ? '/'
+                    : `/${file.replace(/\.md$/, '').replace(/\/index$/, '')}`
+                let md = fs.readFileSync(path.join(pagesDir, file), 'utf8')
 
-              let sections
+                let sections
 
-              if (cache.get(file)?.[0] === md) {
-                sections = cache.get(file)[1]
-              } else {
-                let ast = Markdoc.parse(md)
-                let title =
-                  ast.attributes?.frontmatter?.match(
-                    /^title:\s*(.*?)\s*$/m
-                  )?.[1]
-                sections = [[title, null, []]]
+                if (cache.get(file)?.[0] === md) {
+                  sections = cache.get(file)[1]
+                } else {
+                  let ast = Markdoc.parse(md)
+                  let title =
+                    ast.attributes?.frontmatter?.match(
+                      /^title:\s*(.*?)\s*$/m
+                    )?.[1]
+                  let type = ast.attributes?.frontmatter
+                    ?.match(/^type:\s*(.*?)\s*$/m)?.[1]
+                    .replace('"', '')
+                    .replace('"', '')
+                  sections = [[title, null, [], type]]
 
-                extractSections(ast, sections)
-                cache.set(file, [md, sections])
-              }
+                  extractSections(ast, sections)
+                  cache.set(file, [md, sections])
+                }
 
-              return { url, sections }
-            })
+                return { url, sections }
+              })
+              .filter((item) => item !== undefined)
 
             // When this file is imported within the application
             // the following module is loaded:
@@ -103,7 +114,7 @@ export default function (nextConfig = {}) {
                 document: {
                   id: 'url',
                   index: 'content',
-                  store: ['title', 'pageTitle'],
+                  store: ['title', 'pageTitle', 'type'],
                 },
                 context: {
                   resolution: 9,
@@ -115,12 +126,14 @@ export default function (nextConfig = {}) {
               let data = ${JSON.stringify(data)}
 
               for (let { url, sections } of data) {
+               
                 for (let [title, hash, content] of sections) {
                   sectionIndex.add({
                     url: url + (hash ? ('#' + hash) : ''),
                     title,
                     content: [title, ...content].join('\\n'),
                     pageTitle: hash ? sections[0][0] : undefined,
+                    type: sections[0][3],
                   })
                 }
               }
@@ -137,6 +150,7 @@ export default function (nextConfig = {}) {
                   url: item.id,
                   title: item.doc.title,
                   pageTitle: item.doc.pageTitle,
+                  type: item.doc.type,
                 }))
               }
             `

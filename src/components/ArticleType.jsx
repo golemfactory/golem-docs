@@ -4,7 +4,7 @@ import { ArticleIcon } from './icons/ArticleIcon'
 import { GuideIcon } from './icons/GuideIcon'
 
 export function ArticleType({ type, children }) {
-  if (type.toLowerCase() === 'design') return null
+  if (type.toLowerCase() === 'page') return null
   if (type.toLowerCase() === 'noicon') return null
 
   return (

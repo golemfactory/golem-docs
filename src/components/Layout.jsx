@@ -233,7 +233,7 @@ export function Layout({
       {isHomePage && <Hero />}
 
       <div className="relative mx-auto flex max-w-8xl justify-center ">
-        {type !== 'design' &&
+        {type !== 'page' &&
           (!isHomePage || !is404Page || !is500Page ? (
             <div className="hidden lg:relative lg:block lg:flex-none">
               <div className="absolute inset-y-0 right-0 w-[50vw] bg-lightblue dark:hidden" />
@@ -264,7 +264,7 @@ export function Layout({
             <FeedbackButtons article={true} identifier={router.pathname} />
           </article>
         </div>
-        {type !== 'design' &&
+        {type !== 'page' &&
           (!isHomePage || !is404Page || !is500Page ? (
             <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
               <nav aria-labelledby="on-this-page-title" className="w-56">

@@ -15,4 +15,3 @@ type: troubleshooting
 {% partial file="troubleshooting/requestor/yagna-cors-parameter-not-found.md" /%}
 {% partial file="troubleshooting/requestor/invalid-application-key.md" /%}
 {% partial file="troubleshooting/requestor/yagna-not-running.md" /%}
-{% partial file="troubleshooting/yagna/yagna-already-running.md" /%}

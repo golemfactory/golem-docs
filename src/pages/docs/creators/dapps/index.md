@@ -1,7 +1,7 @@
 ---
 description: Deploying long-running, decentralized services on Golem using no-code tools.
 title: Deploying long-running, decentralized services on Golem using no-code tools.
-Type: Introduction
+type: Introduction
 ---
 
 # Decentralized applications on Golem
