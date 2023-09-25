@@ -33,7 +33,7 @@ type: "reference"
 
 #### Defined in
 
-[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/script/command.ts#L76)
+[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/19d9abe/src/script/command.ts#L76)
 
 ___
 
@@ -43,6 +43,6 @@ ___
 
 #### Defined in
 
-[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/dd5aeae/src/script/command.ts#L80)
+[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/19d9abe/src/script/command.ts#L80)
 
 ___
