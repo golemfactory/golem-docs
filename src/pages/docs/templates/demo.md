@@ -163,6 +163,12 @@ Want to use a YAML-based approach to configure the deployment
 
 [//]: <> ( comment is here )
 
+<!-- comment
+is 
+also 
+here
+-->
+
 (above this line there is a comment: see source)
 
 # Example of code from Github

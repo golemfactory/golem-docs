@@ -14,6 +14,7 @@ import { DiscordIconBlue } from '@/components/icons/DiscordIconBlue'
 import { GithubIcon } from '@/components/icons/GithubIcon'
 import { JSIcon } from '@/components/icons/JSIcon'
 import { PythonIcon } from '@/components/icons/PythonIcon'
+import { RayIcon } from '@/components/icons/RayIcon'
 
 const icons = {
   installation: InstallationIcon,
@@ -29,6 +30,7 @@ const icons = {
   github: GithubIcon,
   javascript: JSIcon,
   python: PythonIcon,
+  ray: RayIcon,
 }
 
 export function Icon({ icon, ...props }) {

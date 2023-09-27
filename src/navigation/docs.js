@@ -16,6 +16,10 @@ export const navigation = [
         href: '/docs/quickstarts/golem-in-a-browser',
       },
       {
+        title: 'Ray on Golem Quickstart',
+        href: '/docs/quickstarts/ray-quickstart',
+      },
+      {
         title: '"no-code" app deployment',
         href: '/docs/quickstarts/no-code-app-deployment',
       },
@@ -198,6 +202,37 @@ export const navigation = [
               },
             ],
           },
+        ],
+      },
+      {
+        title: 'Python with Ray on Golem',
+        children: [
+	  { title: 'Introduction', href: '/docs/creators/ray' },
+	  { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
+	  {
+	    title: 'Concept',
+	    href: '/docs/creators/ray/concept',
+	  },
+	  {
+	    title: 'Setup tutorial',
+	    href: '/docs/creators/ray/setup-tutorial',
+	  },
+	  {
+	    title: 'Basic Ray tasks usage tutorial',
+	    href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
+	  },
+	  {
+	    title: 'Converting a real-life use case to Ray on Golem',
+	    href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
+	  },
+	  {
+	    title: 'Cluster yaml reference',
+	    href: '/docs/creators/ray/cluster-yaml-reference',
+	  },
+	  {
+	    title: 'Supported versions and other limitations',
+	    href: '/docs/creators/ray/supported-versions-and-other-limitations',
+	  },
         ],
       },
       {
