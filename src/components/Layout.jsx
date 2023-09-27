@@ -33,15 +33,20 @@ function Heading({ section, isActive }) {
   )
 }
 
-function recursiveRender(children, isActive) {
+function recursiveRender(children, isActive, pageType = 'article') {
   return children.map((node) => (
-    <li className="py-1" key={node.id}>
+    <li
+      className={`py-1
+      ${pageType === 'troubleshooting' ? 'truncate-2-lines' : ''}
+    `}
+      key={node.id}
+    >
       <Link
         href={`#${node.id}`}
         className={
           isActive(node)
-            ? 'relative text-sm text-primary dark:text-white'
-            : 'text-sm hover:text-slate-600 dark:hover:text-slate-300'
+            ? 'relative break-words text-sm text-primary dark:text-white'
+            : 'break-words text-sm hover:text-slate-600 dark:hover:text-slate-300'
         }
       >
         {isActive(node) && (
@@ -51,7 +56,7 @@ function recursiveRender(children, isActive) {
       </Link>
       {node.children && node.children.length > 0 && (
         <ul role="list" className="  pl-5 text-slate-500 dark:text-slate-400">
-          {recursiveRender(node.children, isActive)}
+          {recursiveRender(node.children, isActive, pageType)}
         </ul>
       )}
     </li>
@@ -190,7 +195,7 @@ import { ForkIcon } from './icons/ForkIcon'
 import { StarIcon } from './icons/StarIcon'
 import { GitIcon } from './icons/GitIcon'
 import { Footer } from './Footer'
-import { Feedback } from './Feedback'
+import { FeedbackButtons } from './Feedback'
 import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { ArticleType } from './ArticleType'
@@ -221,17 +226,14 @@ export function Layout({
     return section.id === currentSection
   }
 
-  console.log(type)
-
   return (
     <>
-      <VersionSwitcher />
       <Header navigation={JSReference} />
 
       {isHomePage && <Hero />}
 
       <div className="relative mx-auto flex max-w-8xl justify-center ">
-        {type !== 'design' &&
+        {type !== 'page' &&
           (!isHomePage || !is404Page || !is500Page ? (
             <div className="hidden lg:relative lg:block lg:flex-none">
               <div className="absolute inset-y-0 right-0 w-[50vw] bg-lightblue dark:hidden" />
@@ -259,9 +261,10 @@ export function Layout({
             </div>
 
             <Prose>{children}</Prose>
+            <FeedbackButtons article={true} identifier={router.pathname} />
           </article>
         </div>
-        {type !== 'design' &&
+        {type !== 'page' &&
           (!isHomePage || !is404Page || !is500Page ? (
             <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
               <nav aria-labelledby="on-this-page-title" className="w-56">
@@ -283,7 +286,11 @@ export function Layout({
                                 role="list"
                                 className="  pl-5 text-slate-500 dark:text-slate-400"
                               >
-                                {recursiveRender(section.children, isActive)}
+                                {recursiveRender(
+                                  section.children,
+                                  isActive,
+                                  type
+                                )}
                               </ul>
                             )}
                           </li>

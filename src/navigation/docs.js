@@ -158,10 +158,6 @@ export const navigation = [
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/guides/switching-to-mainnet',
               },
-              {
-                title: 'Troubleshooting',
-                href: '/docs/creators/javascript/guides/troubleshooting',
-              },
             ],
           },
           {
@@ -256,9 +252,27 @@ export const navigation = [
             title: 'Docker vs Golem VM diffs',
             href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
           },
+        ],
+      },
+      {
+        title: 'Troubleshooting',
+        children: [
           {
-            title: 'Troubleshooting',
-            href: '/docs/creators/dapps/troubleshooting',
+            title: 'JavaScript Requestor',
+            href: '/docs/troubleshooting/js-requestor',
+          },
+          {
+            title: 'Yagna',
+            href: '/docs/troubleshooting/yagna',
+          },
+          {
+            title: 'dApps',
+            href: '/docs/troubleshooting/dapps',
+          },
+
+          {
+            title: 'Exit codes',
+            href: '/docs/troubleshooting/js-requestor/exit-codes',
           },
         ],
       },
@@ -274,10 +288,7 @@ export const navigation = [
         href: '/docs/providers/provider-basic-configuration',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-      {
-        title: 'Troubleshooting',
-        href: '/docs/providers/provider-troubleshooting',
-      },
+
       {
         title: 'Yagna CLI reference',
         href: '/docs/providers/yagna-cli-reference',
@@ -296,6 +307,15 @@ export const navigation = [
           {
             title: 'Wallet Restore',
             href: '/docs/providers/maintenance/wallet-restoration',
+          },
+        ],
+      },
+      {
+        title: 'Troubleshooting',
+        children: [
+          {
+            title: 'Provider',
+            href: '/docs/troubleshooting/provider',
           },
         ],
       },

@@ -17,6 +17,10 @@ import { YoutubeEmbed } from '@/components/YoutubeEmbed'
 import { MarginBottom } from '@/components/MarginBottom'
 import { CustomError } from '../components/CustomError'
 import { GithubCode } from '@/components/GithubCode'
+import { Troubleshooting } from '@/components/Troubleshooting'
+import { Solution } from '@/components/Solution'
+import { Problem } from '../components/Problem'
+import { FeedbackButtons } from '@/components/Feedback'
 const tags = {
   tabs: {
     render: Tabs,
@@ -172,6 +176,30 @@ const tags = {
       errorCode: { type: Number },
       title: { type: String },
       description: { type: String },
+    },
+  },
+  troubleshooting: {
+    render: Troubleshooting,
+    selfClosing: true,
+    attributes: {
+      identifier: { type: String },
+    },
+  },
+  problem: {
+    render: Problem,
+    selfClosing: true,
+    attributes: {},
+  },
+  solution: {
+    render: Solution,
+    selfClosing: true,
+    attributes: {},
+  },
+  feedback: {
+    render: FeedbackButtons,
+    selfClosing: true,
+    attributes: {
+      identifier: { type: String },
     },
   },
   codefromgithub: {
