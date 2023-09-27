@@ -132,3 +132,7 @@ This is important because running a cluster uses up the Golem network nodes. In 
 ray down golem-cluster.yaml --yes
 ```
 
+{% docnavigation title="See also" %}
+- [Ray on Golem docs](/docs/creators/ray/concept)
+- [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)
+{% /docnavigation %}
