@@ -59,7 +59,7 @@ ray up golem-cluster.yaml --yes
 
 ```
 
-The provided example golem cluster config file defines a small Golem cluster with one head node 
+The provided example Golem cluster config file defines a small Golem cluster with one head node 
 that is configured to autoscale to up to 10 worker nodes.
 
 The example cluster config file also contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
@@ -76,8 +76,6 @@ ray exec golem-cluster.yaml 'ray status'
 ```
 
 Congrats, you have started a Ray on the Golem cluster!
-
-
 
 ## Test the cluster with example app
 
