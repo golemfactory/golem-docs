@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "gendocs": "node generateTypedoc.mjs",
-    "build": "next build",
+    "build": "node validate_links.js && next build",
     "export": "next build && next export",
     "postbuild": "next-sitemap",
     "start": "next start",
