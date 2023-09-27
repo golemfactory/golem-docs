@@ -154,7 +154,6 @@ export const navigation = [
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/guides/switching-to-mainnet',
               },
-              
             ],
           },
           {
@@ -224,16 +223,21 @@ export const navigation = [
         title: 'Troubleshooting',
         children: [
           {
-            title: 'Requestor',
-            href: '/docs/troubleshooting/requestor',
-          },
-          {
-            title: 'Exit codes',
-            href: '/docs/troubleshooting/requestor/exit-codes',
+            title: 'Javascript Requestor',
+            href: '/docs/troubleshooting/js-requestor',
           },
           {
             title: 'Yagna',
             href: '/docs/troubleshooting/yagna',
+          },
+          {
+            title: 'dApps',
+            href: '/docs/troubleshooting/dapps',
+          },
+
+          {
+            title: 'Exit codes',
+            href: '/docs/troubleshooting/js-requestor/exit-codes',
           },
         ],
       },
@@ -277,10 +281,6 @@ export const navigation = [
           {
             title: 'Provider',
             href: '/docs/troubleshooting/provider',
-          },
-          {
-            title: 'Yagna',
-            href: '/docs/troubleshooting/yagna',
           },
         ],
       },

@@ -7,7 +7,6 @@ type: troubleshooting
 
 # Requestor troubleshooting
 
-{% partial file="troubleshooting/requestor/deadline-has-elapsed.md" /%}
 {% partial file="troubleshooting/requestor/receiver-is-gone.md" /%}
 {% partial file="troubleshooting/requestor/could-not-create-allocation.md" /%}
 {% partial file="troubleshooting/requestor/unable-to-create-allocation.md" /%}

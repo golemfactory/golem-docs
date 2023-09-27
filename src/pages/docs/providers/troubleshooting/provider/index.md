@@ -14,4 +14,3 @@ type: troubleshooting
 {% partial file="troubleshooting/provider/unsupported-virtualization-xen.md" /%}
 {% partial file="troubleshooting/provider/no-file-descriptors.md" /%}
 {% partial file="troubleshooting/yagna/yagna-already-running.md" /%}
-{% partial file="troubleshooting/provider/not-receiving-any-tasks.md" /%}
