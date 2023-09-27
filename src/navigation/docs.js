@@ -223,7 +223,7 @@ export const navigation = [
         title: 'Troubleshooting',
         children: [
           {
-            title: 'Javascript Requestor',
+            title: 'JavaScript Requestor',
             href: '/docs/troubleshooting/js-requestor',
           },
           {
