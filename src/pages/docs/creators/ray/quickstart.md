@@ -96,4 +96,8 @@ By completing the above quickstart you have successfully:
 
 Congratulations!
 
+{% docnavigation title="See also" %}
+- [Ray on Golem docs](/docs/creators/ray/concept)
+- [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)
+{% /docnavigation %}
 
