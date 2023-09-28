@@ -163,8 +163,7 @@ pip3 install -U ray-on-golem
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
-You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
+{% partial file="ray/websocat-requirement.md" /%}
 
 Now, run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
