@@ -56,7 +56,7 @@ Alternatively, if you can't install it in an easy way, you will do it manually i
 
 {% alert level="info" %}
 
-Should you encounter any problems, please reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/creators/javascript/guides/troubleshooting).
+Should you encounter any problems, please reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/troubleshooting/js-requestor).
 {% /alert %}
 
 #### Start the Yagna service
@@ -114,7 +114,6 @@ Create a file named `requestor.mjs` and copy the following content into it. The 
 
 ```js
 import { TaskExecutor } from '@golem-sdk/golem-js'
-
 ;(async () => {
   const executor = await TaskExecutor.create({
     package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
