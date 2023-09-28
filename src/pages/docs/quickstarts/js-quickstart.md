@@ -17,7 +17,7 @@ This example has been designed to work with the following environments:
 
 - OS X 10.14+, Ubuntu 20.04 or Windows
 - Node.js 16.0.0 or above
-  {% /alert %}
+{% /alert %}
 
 ## Installing and running Yagna
 
@@ -43,8 +43,8 @@ Alternatively, if you can't install it in an easy way, you will do it manually i
 1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
 2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
 3. Copy those files to `C:\Windows\System32`.
-   {% /tab %}
-   {% tab label="Unix Manual installation" %}
+{% /tab %}
+{% tab label="Unix Manual installation" %}
 
 Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
 
@@ -155,8 +155,8 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="Next steps" %}
 
 - [QuickStart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
-  {% /docnavigation %}
-  {% docnavigation title="See also" %}
+{% /docnavigation %}
+{% docnavigation title="See also" %}
 - [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
 - [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
-  {% /docnavigation %}
+{% /docnavigation %}
