@@ -28,6 +28,7 @@
     "focus-visible": "^5.2.0",
     "git-clone": "^0.2.0",
     "isomorphic-git": "^1.24.0",
+    "marked": "^9.0.3",
     "next": "13.4.2",
     "next-sitemap": "^4.1.8",
     "nextjs-google-analytics": "^2.3.3",
