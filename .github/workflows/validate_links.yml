@@ -12,5 +12,4 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm install marked --save
       - run: VERCEL=true node validate_links.js
