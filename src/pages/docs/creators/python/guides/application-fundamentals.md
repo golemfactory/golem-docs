@@ -23,7 +23,7 @@ So far, said orchestration takes the form of one of three types of actions:
 - Running commands on the provider and reading their output streams
 - Getting output files back from the provider
 
-![Orchestartion diagram](../../.gitbook/assets/tutorial-05.jpg)
+![Orchestartion diagram](/tutorial-05.jpg)
 
 Requestor agents may implement additional logic like splitting the computation into several parts for execution on providers and combining them to form the final output once all the parts are processed.
 
@@ -37,11 +37,11 @@ However, Golem's architecture is capable of utilizing custom runtime implementat
 
 {% docnavigation title="See also" %}
 
-  To learn about some additional details on how different parts of Golem work together, please have a look at:
+To learn about some additional details on how different parts of Golem work together, please have a look at:
+
 - [Golem Overview and Requestor/Provider interaction](/docs/golem/overview/)
 
 {% /docnavigation %}
-
 
 # Work generator pattern and WorkContext
 
@@ -92,7 +92,6 @@ Execute an arbitrary statement (with arguments).
 The semantics of the command is specific to a specific runtime, e.g. for the VM runtime, it executes a shell command and returns results from `stdout` and `stderr`.
 {% /alert %}
 
-
 ### `send_*(location, <content>)`
 
 A group of commands responsible for sending content to the runtime. These are utility methods, which conveniently allow for sending eg. local files, binary content or JSON content.
@@ -103,27 +102,6 @@ A group of commands responsible for downloading content from the runtime. As wit
 
 {% docnavigation title="Next steps" %}
 
-- [Task Model](/docs/golem/overview)
+- [Task Model](/docs/creators/python/task-model)
+
 {% /docnavigation %}
-
-
-
-----------------------------------
-
-Add to the provider details:
-
-Golem's execution units are theoretically capable of running any kind of payload.
-it provides ability to execute code inside environments that provide effective isolation of execution from the host
-Other kinds of payloads are possible as long as the app developer is ready to [implement an appropriate runtime](https://github.com/golemfactory/ya-runtime-sdk/) and distribute it to willing providers.
-
-Add to the How requestors and providers interact:
-
-Once agreements with the selected providers are finalized, which happens in the course of an automated negotiation process, the providers are asked to deploy "payload" / load the appropriate image.
-
-{% alert level="info" %}
-If this is a subsequent run of the image, the image could already be cached by some of the providers.
-{% /alert %}
-
-One or more commands are converted into execution scripts, that are executed by the execution unit in the deployed VM. Execution script may include sending or receiving data. This enables passing execution parameters to the providers, and once the task has been executed on a provider node, downloading the output files from the provider.
-
-To receive compensation for their work, providers issue debit notes and invoices. They're scheduled to be paid after they're accepted by the requestor agent. Golem daemon then sends payments for the accepted invoices using the payment platform negotiated during the negotiation stage. The requestor agent does not need to dive into the nuances of payments.

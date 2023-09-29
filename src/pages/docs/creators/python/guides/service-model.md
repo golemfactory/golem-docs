@@ -22,7 +22,7 @@ In the Golem service model, the Requestor Agent application specifies the servic
 
 Golem service follows a certain sequence of states:
 
-![](/Service-State-Diagram.png)
+![Service State Diagram](/Service-State-Diagram.png)
 
 Transitions from one state to another take place as a result of certain events. The events may be triggered by a Requestor (RunService), or Provider (AgreementTerminated), or may be a result of an external phenomenon (like errors of varying nature). Golem SDK's service programming model allows the developer to specify logic that is to be executed in subsequent "active" states of the Service's lifecycle (`Starting`, `Running`, `Stopping`). The HL API controls the transitions between states and hides the "plumbing" of Golem mechanics so that the developer can focus on their service's details.
 

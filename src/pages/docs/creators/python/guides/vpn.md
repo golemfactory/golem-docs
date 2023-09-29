@@ -21,7 +21,7 @@ One of our bundled examples [`http-proxy`](/docs/creators/python/tutorials/servi
 
 {% /alert %}
 
-![](/golem-vpn.png)
+![Golem vpn](/golem-vpn.png)
 
 ### Features
 
@@ -66,30 +66,3 @@ Explore examples that illustrate usage of Golem VPN features in practice:
 - Simple [http proxy](/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy)
 
 {% /docnavigation %}
-
---------
-
-parking zone:
-A Golem VPN requires configuration which defines the mapping of "virtual" IP addresses to nodes. The VPN configuration includes following entries/structures:
-
-- Network
-  - Network id
-- Nodes
-  - Golem node id
-  - Virtual IP address
-
-The configuration is specified via calls to Net API. The nuances of Net API calls are wrapped by Golem High Level APIs to simplify developer's experience.
-
-### Golem VPN setup sequence
-
-A typical VPN setup sequence of activities performed by a Golem application is as follows:
-
-- **Create network** - a logical network record gets created and is ready to accept "virtual" nodes.
-- **Create agreement and start activity** - identify a Provider node and launch an activity.
-- **Add node** to network - once a Provider is identified and contracted, its node id can be added to virtual network under a "virtual" IP.
-- **Exec(DEPLOY)** - send DEPLOY command to the Provider's ExeUnit. At this point the network configuration is passed to the ExeUnit, which can initiate its network intrfaces to connect the ExeUnit (and payload) to the VPN.
-- Run payload...
-- **Remove node** from network - once the Provider node is no longer needed, it gets removed from the VPN network.
-- **Remove network** - once the whole VPN is no longer needed, it may (and should) be removed so as to free the resources on the requestor yagna daemon.
-
-

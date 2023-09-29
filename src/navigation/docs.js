@@ -182,7 +182,6 @@ export const navigation = [
               },
             ],
           },
-         
         ],
       },
       {
@@ -191,17 +190,13 @@ export const navigation = [
           { title: 'Introduction', href: '/docs/creators/python' },
           {
             title: 'QuickStarts',
-            href: '/docs/creators/python/quickstarts',
+            href: '',
             children: [
               {
                 title: 'Task API QuickStart',
                 href: '/docs/creators/python/quickstarts/run-first-task-on-golem',
               },
-              {
-                title: 'Service API QuickStart',
-                href: '/docs/creators/python/quickstarts/run-first-service-on-golem',
-              },
-            ]
+            ],
           },
           {
             title: 'Guides',
@@ -224,10 +219,6 @@ export const navigation = [
                 href: '/docs/creators/python/guides/service-model',
               },
               {
-                title: 'Service Model Dive',
-                href: '/docs/creators/python/guides/service-model-dive',
-              },
-              {
                 title: 'Golem images',
                 href: '/docs/creators/python/guides/golem-images',
               },
@@ -238,10 +229,6 @@ export const navigation = [
               {
                 title: 'Switching to mainnet',
                 href: '/docs/creators/python/guides/switching-to-mainnet',
-              },
-              {
-                title: 'Troubleshooting',
-                href: '/docs/creators/python/guides/troubleshooting',
               },
               {
                 title: 'VPN',
@@ -261,7 +248,7 @@ export const navigation = [
                 href: '/docs/creators/python/tutorials',
               },
               {
-                title: 'Task API - QuickStart explained',
+                title: 'Task API - Hello World',
                 href: '/docs/creators/python/tutorials/task-example-0-hello',
               },
               {
@@ -303,52 +290,6 @@ export const navigation = [
             ],
           },
           {
-            title: 'Python Examples',
-            href: '',
-            children: [
-              {
-                title: 'List of examples',
-                href: '/docs/creators/python/examples',
-              },
-              {
-                title: 'Executing tasks',
-                href: '/docs/creators/python/examples/executing-tasks',
-              },
-              {
-                title: 'Composing tasks',
-                href: '/docs/creators/python/examples/composing-tasks',
-              },
-              {
-                title: 'Transferring data',
-                href: '/docs/creators/python/examples/transferring-data',
-              },
-              {
-                title: 'Working with results',
-                href: '/docs/creators/python/examples/working-with-results',
-              },
-              {
-                title: 'Selecting providers',
-                href: '/docs/creators/python/examples/selecting-providers',
-              },
-              {
-                title: 'Working with images',
-                href: '/docs/creators/python/examples/working-with-images',
-              },
-              {
-                title: 'Using app-keys',
-                href: '/docs/creators/python/examples/using-app-keys',
-              },
-              {
-                title: 'Switching to mainnet',
-                href: '/docs/creators/python/examples/switching-to-mainnet',
-              },
-              {
-                title: 'Enable logging',
-                href: '/docs/creators/python/examples/enable-logging',
-              },
-            ],
-          },
-          {
             title: 'Golem tools examples',
             href: '',
             children: [
@@ -385,7 +326,7 @@ export const navigation = [
                 href: '/docs/creators/python/examples/tools/managing-golem-wallet',
               },
             ],
-          },        
+          },
         ],
       },
       {
@@ -417,8 +358,7 @@ export const navigation = [
       },
       {
         title: 'Common Developer tools',
-        children: [  
-
+        children: [
           {
             title: 'Goth',
             href: '/docs/creators/tools/goth',
@@ -514,7 +454,10 @@ export const navigation = [
       {
         title: 'Payload Manifest',
         children: [
-          { title: 'Payload Manifest explained', href: '/docs/golem/payload-manifest' },
+          {
+            title: 'Payload Manifest explained',
+            href: '/docs/golem/payload-manifest',
+          },
           {
             title: 'Schema',
             href: '/docs/golem/payload-manifest/computation-payload-manifest.schema',
