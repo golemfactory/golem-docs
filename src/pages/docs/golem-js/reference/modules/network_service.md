@@ -19,4 +19,4 @@ type: "reference"
 
 #### Defined in
 
-[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/7df98a2/src/network/service.ts#L6)
+[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/network/service.ts#L6)

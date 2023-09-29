@@ -39,7 +39,7 @@ type: "reference"
 
 #### Defined in
 
-[src/job/storage.ts:10](https://github.com/golemfactory/golem-js/blob/7df98a2/src/job/storage.ts#L10)
+[src/job/storage.ts:10](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/job/storage.ts#L10)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-[src/job/storage.ts:11](https://github.com/golemfactory/golem-js/blob/7df98a2/src/job/storage.ts#L11)
+[src/job/storage.ts:11](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/job/storage.ts#L11)

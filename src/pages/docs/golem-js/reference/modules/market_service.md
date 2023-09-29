@@ -37,4 +37,4 @@ type: "reference"
 
 #### Defined in
 
-[src/market/service.ts:10](https://github.com/golemfactory/golem-js/blob/7df98a2/src/market/service.ts#L10)
+[src/market/service.ts:10](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/market/service.ts#L10)
