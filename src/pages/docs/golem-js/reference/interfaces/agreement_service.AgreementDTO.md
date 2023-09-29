@@ -22,7 +22,7 @@ type: "reference"
 
 #### Defined in
 
-[src/agreement/service.ts:10](https://github.com/golemfactory/golem-js/blob/7df98a2/src/agreement/service.ts#L10)
+[src/agreement/service.ts:10](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/agreement/service.ts#L10)
 
 ___
 
@@ -39,4 +39,4 @@ ___
 
 #### Defined in
 
-[src/agreement/service.ts:11](https://github.com/golemfactory/golem-js/blob/7df98a2/src/agreement/service.ts#L11)
+[src/agreement/service.ts:11](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/agreement/service.ts#L11)

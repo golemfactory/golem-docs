@@ -19,4 +19,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/runtimeContextChecker.ts:6](https://github.com/golemfactory/golem-js/blob/7df98a2/src/utils/runtimeContextChecker.ts#L6)
+[src/utils/runtimeContextChecker.ts:6](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/utils/runtimeContextChecker.ts#L6)

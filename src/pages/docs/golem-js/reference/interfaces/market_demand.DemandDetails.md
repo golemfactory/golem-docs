@@ -22,7 +22,7 @@ type: "reference"
 
 #### Defined in
 
-[src/market/demand.ts:14](https://github.com/golemfactory/golem-js/blob/7df98a2/src/market/demand.ts#L14)
+[src/market/demand.ts:14](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/market/demand.ts#L14)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/7df98a2/src/market/demand.ts#L15)
+[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/market/demand.ts#L15)
