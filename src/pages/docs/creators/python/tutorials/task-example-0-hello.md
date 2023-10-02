@@ -25,21 +25,21 @@ Here are the prerequisites in case you'd like to follow along and/or experiment 
 
 - you have the Python API set up on your machine (see instructions in: [Run first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem#running-the-your-first-task-on-the-golem-network))
 
-{% hint style="info" %}
+{% alert level="info" %}
 Golem's APIs rely heavily on coroutines and asynchronous execution (`async/await`). If you're unfamiliar with these concepts, chances are you'll find some parts of the code examples confusing.
 
 If you'd like to learn more about `async/await`, here's a good introduction to Python's generators and coroutines: [https://mleue.com/posts/yield-to-async-await/](https://mleue.com/posts/yield-to-async-await/)
 
 Although the blog post is focused on Python, most of the concepts presented there are still relevant for other programming languagues which support `async/await`.
-{% /hint %}
+{% /alert %}
 
 ## Requestor agent code
 
 Let's jump straight to the example:
 
-{% hint style="info" %}
+{% alert level="info" %}
 This example uses the standard VM runtime.
-{% /hint %}
+{% /alert %}
 
 ```python
 #!/usr/bin/env python3
@@ -120,9 +120,9 @@ Currently, Golem is using a public repository to store both official and communi
 
 This is what we're making use of here - by using the function `repo` from `vm`, we're getting a payload definition for our providers. The only input we must provide at this point is the image hash. In the case of this example we're using a pre-uploaded, minimal image based on Alpine Linux.
 
-{% hint style="info" %}
+{% alert level="info" %}
 If you'd like to learn about creating and uploading Golem images yourself, take a look at this guide: [Golem images](/docs/creators/python/guides/golem-images)
-{% /hint %}
+{% /alert %}
 
 ### Tasks array
 
@@ -134,9 +134,9 @@ Next comes the array of task fragments to be computed. For simplicity, our `task
 
 In general, each `Task` object refers to a single piece of computation within your app and typically holds some data. For example, in a program which operates on a huge file, a single `Task` could be holding one chunk of that file to be processed by one of many providers involved.
 
-{% hint style="info" %}
+{% alert level="info" %}
 To see a more involved example of this take a look at: [Task Example 1: Simple hash cracker](/docs/creators/python/tutorials/task-example-1-cracker#the-task-fragments) (this links to a section on task fragments)
-{% /hint %}
+{% /alert %}
 
 ### Golem/Executor
 
@@ -159,15 +159,15 @@ async with Golem(budget=1.0, subnet_tag="public") as golem:
     ...
 ```
 
-{% hint style="info" %}
+{% alert level="info" %}
 `Golem/Executor` instances work as asynchronous [context managers](https://docs.python.org/3/reference/datamodel.html#context-managers). Since context managers are a concept native to Python, Golem's `yajsapi` provides a custom implementation in the form of the function `asyncWith`.
 
 Context managers are somewhat similar to `try-catch-finally` blocks. They allow for setup and teardown logic before using some resource. In our case this resource is the `Golem/Executor` instance, while the block of code inside `async with/asyncWith` is the context.
-{% /hint %}
+{% /alert %}
 
 Our context manager needs to be declared asynchronous as its setup and teardown functions are coroutines. This is required since they involve some long running actions such as creating/deleting payment allocations or starting/stopping background services.
 
-{% hint style="info" %}
+{% alert level="info" %}
 **Alternative usage pattern (Python)**
 
 Note that a`Golem` instance can also be used without a context manager, but rather can be started and stopped explicitly:
@@ -181,16 +181,16 @@ await golem.start()
 await golem.stop()
 ```
 
-{% /hint %}
+{% /alert %}
 
 As for the parameters passed to the `Golem/Executor` constructor:
 
 - `budget` specifies our desired budget (in GLM) for the total cost of all tasks computed using this `Golem/Executor` instance.
 - `subnet_tag` specifies the name of a Golem network sub-network we'd like to use for all Golem communication performed by this `Golem/Executor` instance.
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 In the JavaScript API, the current implementation of `Executor` requires `task_package` to be passed in to the constructor. This is likely to change in the future. More on this parameter in the next section.
-{% /hint %}
+{% /alert %}
 
 #### Execution
 
@@ -207,9 +207,9 @@ The function `execute_tasks/submit` is used here, it takes three parameters (two
 - `tasks` is the array of `Task` objects we have created
 - `payload` is the payload definition for providers which we created using the function `vm.repo`
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 In the case of JavaScript API we already provided the `Executor` with a payload definition through the parameter `task_package`.
-{% /hint %}
+{% /alert %}
 
 `execute_tasks/submit` returns an asynchronous iterator of `Task` objects, hence the `async for/for await` statement. Items returned by this iterator are successfully completed tasks in the order they were computed.
 
@@ -228,23 +228,23 @@ async def worker(context: WorkContext, tasks: AsyncIterable[Task]):
 
 The `worker` function is what defines the interaction between our requestor node and each provider computing one or more of our tasks. It's called once per provider node with which our requestor has struck an agreement.
 
-{% hint style="info" %}
+{% alert level="info" %}
 This method follows the "work generator" pattern. If you're unfamiliar with it in the context of Golem you can learn more in this article: [Work generator pattern and WorkContext](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext)
-{% /hint %}
+{% /alert %}
 
 `WorkContext` gives us a simple interface to construct a script that translates directly to commands interacting with the execution unit on provider's end. Using this object we can schedule commands such as transferring files, running programs etc.
 
 The sequence of `Task` objects yields task fragments assigned to this provider. In a more complex scenario each `Task` object would be carrying its own piece of data to be used during computation.
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 Python API uses an updated API which explicitly features a `Script` object which is a representation of a single batch of commands executed on providers. The JS API on the other hand, still uses the old interface where the scripts are an internal feature of the `WorkContext` interface and are constructed implicitly and packed into its final form by the `commit()` call.
-{% /hint %}
+{% /alert %}
 
 In the case of this example our entire script consists of a single command which is the call to `script.run` / `context.run`. This means that, once committed, the provider's exe unit will receive an instruction to make a call to `/bin/sh -c date`.
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 Commands run with `script.run /` `context.run` are not executed in any shell. This means you have to either specify the full binary path or run the command through a shell manually (for example: `/bin/sh -c ...`).
-{% /hint %}
+{% /alert %}
 
 By awaiting on `future_results` after the script has been yielded, we ensure the results are available and unwrap them from the awaitable object.
 

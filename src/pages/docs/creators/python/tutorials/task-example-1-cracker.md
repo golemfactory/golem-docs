@@ -19,24 +19,24 @@ This example illustrates following Golem features & aspects:
 
 _This tutorial is the textual counterpart to a workshop originally prepared by Jakub Mazurek, a Software Developer at Golem Factory and presented during the Hello Decentralization conference in February, 2021._
 
-{% embed url="https://www.youtube.com/watch?v=gWRqu7IvYfk" %}
-Jakub's workshop during Hello Decentralization
-{% /embed %}
+{% youtube link="https://www.youtube.com/watch?v=gWRqu7IvYfk" %}
 
-Now that we've seen how easy it is to [run a Golem requestor agent](../flash-tutorial-of-requestor-development/), then had a look at[ how this stuff works under the hood](../golem-application-fundamentals/) we can put this knowledge to the test and build a simple Golem app that is a bit more realistic than our [Hello World](task-example-0-hello.md).
+{% /youtube %}
 
-{% hint style="info" %}
-If you'd rather like to have a more general introduction on the idea behind Golem or would like to learn what components constitute a Golem node and the Golem network, please have a look at:
+Jakub's workshop during Hello Decentralization.
 
-{% page-ref page="../../introduction/golem-overview.md" /%}
+Now that we've seen how easy it is to [run a Golem requestor agent](/docs/creators/python/quickstarts/run-first-task-on-golem), then had a look at[ how this stuff works under the hood](/docs/creators/python/guides/application-fundamentals) we can put this knowledge to the test and build a simple Golem app that is a bit more realistic than our [Hello World](/docs/creators/python/tutorials/task-example-0-hello).
 
-{% /hint %}
+{% alert level="info" %}
+If you'd rather like to have a more general introduction on the idea behind Golem or would like to learn what components constitute a Golem node and the Golem network, please have a look at [Golem Overview](/docs/golem/overview)
+
+{% /alert %}
 
 ## Step 0. What are we building?
 
 The application we'll build and run on Golem will be a very simple, quick-and-dirty, **distributed hash cracker** implemented purely in Python that will perform a dictionary attack on a specific hash that we'd like to decipher.
 
-{% hint style="info" %}
+{% alert level="info" %}
 For the sake of clarity for those less versed with the terminology, a short explanation is due.
 
 A [**dictionary attack**](https://en.wikipedia.org/wiki/Dictionary_attack) involves running some (usually known) hashing function on each word from some input dictionary in the hope that one of the resulting hashes will match the one that we're matching against. Getting a match means we have found the original plain text string that's hidden behind that hash.
@@ -46,26 +46,22 @@ The string might have been a password or some other secret that's usually stored
 The only way to recover the original password then would be to perform a brute-force attack against such a hash, using _all_ possible character combinations up until some arbitrary character length. The caveat is that such attacks are usually - and by design - prohibitively expensive computation-time-wise.
 
 Hence, an attacker may try a dictionary attack, constructing hashes out of a limited set of words, assuming that the person who defined the password used some regular word from a dictionary.
-{% /hint %}
+{% /alert %}
 
 We'll use this idea mainly because it scales in a very straightforward manner - the input dictionary can be easily sliced and each slice sent to a different provider to be processed simultaneously. That makes it an excellent example of an application that leverages the most fundamental feature of Golem - the ability to distribute computational loads.
 
 We chose it also because we can do it using Python's bundled modules, without depending on any external libraries (apart from `yapapi` - [Golem's high-level API](https://github.com/golemfactory/yapapi) - and its dependencies in the requestor agent, of course).
 
-For your convenience, we're providing some boilerplate code in a Github repository created specifically for the purpose of the original workshop and our piece here:
-
-{% embed url="https://github.com/golemfactory/hash-cracker" /%}
+For your convenience, we're providing some boilerplate code in a Github repository created specifically for the purpose of the original workshop and our piece [here](https://github.com/golemfactory/hash-cracker).
 
 We're going to be using the code from this repository later on in the course of this tutorial.
 
 ### Anatomy of a Golem app
 
-To give you a quick glimpse into what a typical Golem application looks like ([you can read about this topic at length in our more advanced tutorial](task-model-introduction.md#what-is-a-golem-application)), what you need to know for now is that it consists of two distinct components:
+To give you a quick glimpse into what a typical Golem application looks like (you can read about this topic at length in our guides [here](/docs/creators/python/guides/application-fundamentals) and [here](/docs/creators/python/guides/task-model)), what you need to know for now is that it consists of two distinct components:
 
 - the **requestor agent** part that runs on your requestor node and is responsible for preparing the tasks for the providers and processing their output,
 - the **worker** part that runs within VMs on the provider nodes and performs the actual computations.
-
-For convenience, in our example here, both pieces are written in Python but that doesn't have to be the case. For requestor agent part, you can now also utilize [JavaScript, that we support with our other high-level API](https://github.com/golemfactory/yajsapi/), and the worker itself can be written any way you like as long as it can accept input in JSON and can run within a Docker-like VM.
 
 ### Our simple hash cracker
 
@@ -79,9 +75,7 @@ Finally, the requestor agent will present the solution to the user.
 
 #### Docker
 
-Since we're building the whole app from scratch, that includes preparing the worker code and the VM image that includes it. To prepare such image, we'll need Docker:
-
-{% embed url="https://www.docker.com/products/docker-desktop" /%}
+Since we're building the whole app from scratch, that includes preparing the worker code and the VM image that includes it. To prepare such image, we'll need [Docker](https://www.docker.com/products/docker-desktop).
 
 #### Python 3.7+
 
@@ -93,19 +87,20 @@ Let's now install the dependencies that will be used throughout the remainder of
 
 We'll start by cloning the example app's repo and checking out the `workshop` branch:
 
-```
+```bash
 git clone https://github.com/golemfactory/hash-cracker.git
 cd hash-cracker
 git checkout workshop
 ```
 
-{% hint style="info" %}
+{% alert level="info" %}
 The`workshop` branch contains a template for the application with some boilerplate filled in for you. If you'd like to take a look at the finished implementation instead, please use the repo's `master` branch.
-{% /hint %}
+
+{% /alert %}
 
 Next, we'll create the virtual environment and install the project's dependencies. In order to do that, please ensure your Python interpreter is the active one in your shell and then go with:
 
-```
+```bash
 python3 -m venv cracker-venv
 source cracker-venv/bin/activate
 pip install -r requirements.txt
@@ -220,9 +215,9 @@ One last thing - since the code uses the `sha256` function from the `hashlib` li
 from hashlib import sha256
 ```
 
-{% hint style="success" %}
+{% alert level="success" %}
 We're done with our worker code!
-{% /hint %}
+{% /alert %}
 
 ### The test run
 
@@ -230,9 +225,9 @@ As an option, before we bundle that code into the VM image, we may want to run i
 
 Here, we're going to test it with a shorter list of words (`data/words-short.json`), which is also included in our example alongside with a sample hash derived from one of the words in that shorter list (`data/hash-short.json`). The hash should match the word `test` from that list.
 
-{% hint style="info" %}
+{% alert level="info" %}
 The input list of words (`data/words-short.json`) is a JSON file as this is the format which our `worker.py` script expects. It corresponds to a single slice of the original word list.
-{% /hint %}
+{% /alert %}
 
 Before we run our test we need to **temporarily** modify the `worker.py`'s input paths. Let's replace the constants in the beginning of the file to point to our shorter lists:
 
@@ -254,13 +249,13 @@ cat data/out.json
 
 The result should be: `"test"` which matches the expected password as mentioned above.
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 Before we proceed, if you have run the above local test, remember to revert that three-line change of constants which point to the file paths.
-{% /hint %}
+{% /alert %}
 
-{% hint style="success" %}
+{% alert level="success" %}
 Nice! The first step is behind us - we have defined and tested the most basic building block of our first Golem app. :)
-{% /hint %}
+{% /alert %}
 
 ## Step 2. The VM image
 
@@ -303,11 +298,11 @@ VOLUME /golem/input /golem/output
 
 This line defines two volumes in the image: `/golem/input` and `/golem/output`. Volumes are directories that can be shared with the host machine and, more importantly, through which the execution environment supervisor (the process on the provider's host machine) will be able to transfer data to and out of the VM. For a Golem VM, the image must define at least one volume.
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 Contrarily to what you may expect and, notably, differently from Docker's own behavior, the paths within the Docker image associated with volumes **will always mask** any content under those paths in the image itself.
 
 Therefore, be sure to provide different paths for any files already contained in your VM image and for the paths that will be mounted as volumes that are shared with the host environment.
-{% /hint %}
+{% /alert %}
 
 ```
 COPY worker.py /golem/entrypoint/
@@ -315,11 +310,11 @@ COPY worker.py /golem/entrypoint/
 
 This line will copy our `worker.py` script to the path `/golem/entrypoint` within the image. Later on we'll see how the requestor code uses this path to run our script.
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 During development, it may be beneficial not to include the Python script (`worker.py` above) in the image itself. Instead, one can push it to individual providers at runtime using the work context's `.run()` command.
 
 Each update of any content that goes inside the VM image necessitates rebuilding the image, regenerating the GVMI file, re-uploading the file into the repository and finally, updating the image hash that your requestor agent uses.
-{% /hint %}
+{% /alert %}
 
 ```
 WORKDIR /golem/entrypoint
@@ -327,9 +322,10 @@ WORKDIR /golem/entrypoint
 
 Defines `/golem/entrypoint` as the working directory of the image. It will be the default location for commands executed by this image.
 
-{% hint style="info" %}
+{% alert level="info" %}
 Since version **0.2.5** of Golem's VM runtime execution environment - and of the compatible `gvmkit-build` tool - the `WORKDIR` _doesn't_ _need_ to be present, in which case the working directory will be set to `/` and the paths to the binaries run will need to be absolute.
-{% /hint %}
+
+{% /alert %}
 
 ### Important note about Docker's ENTRYPOINT
 
@@ -349,9 +345,10 @@ To make our image available to providers within the Golem network we need to tak
 
 The three steps above translate to the following shell commands.
 
-{% hint style="danger" %}
+{% alert level="danger" %}
 Make sure **Docker** is running on your machine before you execute them. Otherwise you'll get a nasty-looking error message.
-{% /hint %}
+
+{% /alert %}
 
 ```
 docker build . -t hash-cracker
@@ -359,15 +356,17 @@ gvmkit-build hash-cracker:latest
 gvmkit-build hash-cracker:latest --push
 ```
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 The command containing the `--push` option needs to be a discrete step.
-{% /hint %}
+
+{% /alert %}
 
 After that last step completes, make sure to **note down the hash of the image**. It's used in the next step's code to specify the image loaded by the providers.
 
-{% hint style="success" %}
+{% alert level="success" %}
 We have now created and made public the VM image that our providers will utilize when running our computational payload.
-{% /hint %}
+
+{% /alert %}
 
 ## Step 3. The requestor agent
 
@@ -537,9 +536,10 @@ Then we define a few steps that will take place for each task in our list:
 - `.run()` call which is the one that actually executes the `worker.py` script inside the provider's VM, which in turn produces output (as you remember, this may be empty or may contain our solution),
 - then we have `.download_file()` call which transfers that solution file back to a temporary file on the requestor's end,
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 Please keep in mind that any commands specified in the `.run()` call to the VM execution unit must directly refer to a given executable, which usually means specifying their full, absolute path. There's no shell (and hence, no PATH) there to rely upon.
-{% /hint %}
+
+{% /alert %}
 
 With the steps ready, we call `.commit()` on our work context and yield that to the calling code (the processing inside the `Golem` class) which takes our script and orchestrates its execution on provider's end.
 
@@ -561,9 +561,10 @@ package = await vm.repo(
 )
 ```
 
-{% hint style="info" %}
+{% alert level="info" %}
 Later on, when you work on your _own_ app, this is also the place that defines the memory and storage requirements of the provider node's execution environment that your app needs to run successfully.
-{% /hint %}
+
+{% /alert %}
 
 If you have _not_ published your image, for the purpose of this workshop you can just use the one we have made available and the hash of which we have given in our boilerplate code already.
 
@@ -571,9 +572,10 @@ If you have _not_ published your image, for the purpose of this workshop you can
 
 And then, the remaining code is the following and the explanation comes below:
 
-{% hint style="info" %}
+{% alert level="info" %}
 There has been some changes in the Golem's high-level API since Jakub recorded the workshop video. The code below has been updated to reflect those changes and is different from the corresponding code snippet shown in the video. (The following explanation has also been updated accordingly.)
-{% /hint %}
+
+{% /alert %}
 
 ```python
 async with Golem(budget=1, subnet_tag=args.subnet) as golem:
@@ -608,19 +610,21 @@ With `async for` we iterate over tasks computed by `execute_tasks` and check the
 
 Once the loop completes, the `result` should contain our solution and the solution is printed to your console. (Unless of course it happens that the hash we're trying to break is not found within the dictionary that we have initially assumed it would come from - which we assure you is _not_ the case for our example hash ;) ).
 
-{% hint style="success" %}
+{% alert level="success" %}
 Having completed the **requestor agent** part, you now have all the pieces of your first Golem application ready to be run.
-{% /hint %}
+
+{% /alert %}
 
 ## Step 4. The daemon
 
 Now, it's time for the final piece of infrastructure necessary for our requestor node setup - the `yagna` daemon itself.
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 Unless you have actually done it before, you'll need to first install and fund your `yagna`deamon. Please go to:
 
 and proceed with the initial part. You can stop before the "Running the requestor and your first task on the New Golem Network" as we're going to take it from there here.
-{% /hint %}
+
+{% /alert %}
 
 For those who _had_ already initialized their daemon and/or completed the quick primer, just start your daemon:
 
@@ -628,15 +632,10 @@ For those who _had_ already initialized their daemon and/or completed the quick 
 yagna service run
 ```
 
-and - keeping it running - run the following init command in another terminal window:
-
-```
-yagna payment init --sender
-```
-
-{% hint style="success" %}
+{% alert level="success" %}
 Cool, that was quick! Your yagna daemon is now running and ready to serve as the back-end to your requestor agent that we're going to start soon.
-{% /hint %}
+
+{% /alert %}
 
 ## Step 5. The liftoff
 
@@ -658,9 +657,10 @@ This will launch your app on the Golem Network. You should see a lot of messages
 
 In case you wonder, the result should have something to do with the name of the conference this workshop has been first presented on.
 
-{% hint style="success" %}
+{% alert level="success" %}
 You have completed and successfully run your first app on Golem! Welcome to our constantly growing community of app developers! :)
-{% /hint %}
+
+{% /alert %}
 
 ## Final words, next steps
 
@@ -672,14 +672,21 @@ During this workshop we have lead you through all stages of implementation of a 
 - showed you how to **prepare your yagna daemon** to handle the interactions with the rest of the Golem world,
 - and finally how to launch your app to Golem.
 
-Of course, the app was very simple - as it should be for that kind of "Hello World!" example - but we hope it gave you some confidence and some basic knowledge of what to expect when you get to implement _your_ _own_ ideas.
+Of course, the app was very simple - as it should be for that kind of example - but we hope it gave you some confidence and some basic knowledge of what to expect when you get to implement _your_ _own_ ideas.
 
-For next steps, here a couple of leads:
+{% docnavigation title="Next steps" %}
 
-1. A slightly more advanced tutorial on both designing and then implementing your own Golem app:
-2. Our high-level Python API reference to help you on your way:
-3. And in case you get stuck or need help, please reach out to us on our Discord chat and we'll be delighted to help you out :)
+- A slightly more advanced [tutorial](/docscreators/python/tutorials/task-example-2-hashcat)
+- Design and then implement your own Golem app.
 
-{% embed url="https://chat.golem.network/" /%}
+{% /docnavigation %}
+
+{% docnavigation title="See also" %}
+
+- Our high-level [Python API reference](https://yapapi.readthedocs.io/en/latest/api.html) to help you on your way.
+- [Service Model](/docs/creators/python/guides/service-model)
+- And in case you get stuck or need help, please reach out to us on our [Discord chat](https://chat.golem.network/) and we'll be delighted to help you out :)
+
+{% /docnavigation %}
 
 **Have fun with Golem!**

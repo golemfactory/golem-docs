@@ -178,9 +178,9 @@ If everything goes right, after what could be anything from half-a-minute to a f
 `Provider 'odra' computed 6 tasks`\
 `Total cost: 0.218290307253`
 
-{% hint style="success" %}
+{% alert level="success" %}
 **Yay! With this, you have completed your first job as a requestor in the new Golem network!**
-{% /hint %}
+{% /alert %}
 
 #### Output
 

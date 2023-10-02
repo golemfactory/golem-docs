@@ -1,36 +1,39 @@
 ---
-description: List of actions needed to execute the hashcat example.
+description: Task API hashcat Tutorial
+title: Task API hashcat Tutorial
+type: tutorial
 ---
 
 # Task Example 2: Hashcat on Golem
 
+## Introduction
+
 This section contains steps you need to execute in order to run our hashcat password-recovery example. As this tutorial is designed to inspire you to create your own Golem applications, we will explain all the needed details of Golem application implementation.
 
-{% hint style="info" %}
 This example illustrates following Golem features & aspects:
 
-* VM runtime
-* Task execution
-* Parallel task execution on multiple provider
-* Submitting multiple task sequences to a single`Golem` engine
-* Setting timeout for commands run on a provider
-* Reading output from commands run on a provider
-* File transfer to/from provider's exe unit
-{% /hint %}
+- VM runtime
+- Task execution
+- Parallel task execution on multiple provider
+- Submitting multiple task sequences to a single`Golem` engine
+- Setting timeout for commands run on a provider
+- Reading output from commands run on a provider
+- File transfer to/from provider's exe unit
 
 ## What is hashcat?
 
 [_Hashcat_](https://hashcat.net/hashcat/) is a command-line utility that finds unknown passwords from their known hashes.
 
-{% hint style="info" %}
+{% alert level="info" %}
 Hashcat is a very powerful tool. It supports 320 hashing algorithms and 5 different attack types. We will use only the "phpass" algorithm and a simple brute-force attack.
-{% /hint %}
+
+{% /alert %}
 
 First, we need to precisely define the "finding a password" problem. Let's assume we have a hash obtained from processing of an unknown password using the "phpass" algorithm.
 
-{% hint style="info" %}
+{% alert level="info" %}
 Phpass is used as a hashing method by e.g. WordPress and Drupal. Those are free/open-source web frameworks used to run PHP-based websites.
-{% /hint %}
+{% /alert %}
 
 The password hash is stored in `in.hash` file and the hash is:
 
@@ -54,14 +57,14 @@ hashcat -a 3 -m 400 in.hash ?a?a?a
 
 The parameters are:
 
-* `a 3` - use a brute-force attack. There are 5 other types of attacks.
-* `m 400` - password is hashed with the phpass algorithm. There are 320 other alghoritms supported by hashcat.
-* `in.hash` - name of a file containing the hashed password
-* `?a?a?a` - mask to use
+- `a 3` - use a brute-force attack. There are 5 other types of attacks.
+- `m 400` - password is hashed with the phpass algorithm. There are 320 other alghoritms supported by hashcat.
+- `in.hash` - name of a file containing the hashed password
+- `?a?a?a` - mask to use
 
-{% hint style="info" %}
+{% alert level="info" %}
 The complete hashcat arguments reference is available here: [https://hashcat.net/wiki/doku.php?id=hashcat](https://hashcat.net/wiki/doku.php?id=hashcat)
-{% /hint %}
+{% /alert %}
 
 As a result of the above call, the `hashcat.potfile` will be created with the following content:
 
@@ -71,9 +74,9 @@ $P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/:pas
 
 where `pas` is the password which had been unknown to us and was just retrieved by hashcat.
 
-{% hint style="info" %}
+{% alert level="info" %}
 Obviously, for longer passwords, the presented usage of hashcat could be problematic as it would require a lot more processing time (e.g. days or even months) to find a password with such a naive method.
-{% /hint %}
+{% /alert %}
 
 To showcase how a similar problem can be resolved faster, we created the Golem version of hashcat. It uses the computing power of many providers at the same time. Parallelized password recovery can be much quicker - instead of days or months, this Golem version is likely to solve the problem in hours.
 
@@ -89,9 +92,9 @@ As a result, we will receive an answer in the standard output. In our case it is
 
 Now we can divide the `0..9025` space into separate fragments. Assuming we want to allow our app to use up to 3 separate workers (which means up to 3 providers), those parts would be:
 
-* `0..3008`
-* `3009..6016`
-* `6017..9025`
+- `0..3008`
+- `3009..6016`
+- `6017..9025`
 
 To process only the part of the whole `0..9025` space, we use the `--skip` and `--limit` options:
 
@@ -103,11 +106,7 @@ The above call will process the `3009..6016` part. If there is any result in tha
 
 ## Before we begin
 
-In order to develop applications for the Golem network, you need to install yagna daemon on your machine. We're going to assume you're already familiar with the setup of the environment required to run Python high-level API examples. If you're not, please make sure you proceed through our quick primer to get up to speed:
-
-{% content-ref url="../flash-tutorial-of-requestor-development/" %}
-[flash-tutorial-of-requestor-development](../flash-tutorial-of-requestor-development/)
-{% /content-ref %}
+In order to develop applications for the Golem network, you need to install yagna daemon on your machine. We're going to assume you're already familiar with the setup of the environment required to run Python high-level API examples. If you're not, please make sure you proceed through our [QuickStart](/docs/creators/python/quickstarts/run-first-task-on-golem) to get up to speed.
 
 Once you're done with the tutorial above, make sure you're again in yapapi's main directory and move to:
 
@@ -115,26 +114,28 @@ Once you're done with the tutorial above, make sure you're again in yapapi's mai
 cd examples/yacat
 ```
 
-{% hint style="success" %}
+{% alert level="success" %}
+
 So now, we're going to assume that:
 
-* The `yagna` deamon is running in the background.
-* The `YAGNA_APPKEY` environment variable is set to the value of the generated app key.
-* The payment is initialized with `yagna payment init -sender` (please keep in mind that it needs initialization after each launch of `yagna service run`).
-* The virtual python environment for our tutorial is activated.
-* Dependencies are installed and the `yapapi` repository (containing the tutorial examples) is cloned.
-* In your current directory (`examples/yacat`) there are two files that will be used and discussed in this example:
-  * `yacat.Dockerfile` - the Docker file used for the definition of the provider's container images
-  * `yacat.py` - requestor agent's entry point which deals with orchestration of the container runs.
-{% /hint %}
+- The `yagna` deamon is running in the background.
+- The `YAGNA_APPKEY` environment variable is set to the value of the generated app key.
+- The payment is initialized with `yagna payment init -sender` (please keep in mind that it needs initialization after each launch of `yagna service run`).
+- The virtual python environment for our tutorial is activated.
+- Dependencies are installed and the `yapapi` repository (containing the tutorial examples) is cloned.
+- In your current directory (`examples/yacat`) there are two files that will be used and discussed in this example:
+  - `yacat.Dockerfile` - the Docker file used for the definition of the provider's container images
+  - `yacat.py` - requestor agent's entry point which deals with orchestration of the container runs.
+
+{% /alert %}
 
 ## Let's get to work - the Dockerfile
 
 Let's start with the Dockerfile (`yacat.Dockerfile`). Do we always need a dedicated Dockerfile for our own Golem application?
 
-{% hint style="info" %}
+{% alert level="info" %}
 Golem is designed to use existing Docker images, so you can use any existing docker image. There are no Golem-specific conditions that need to be met by the image.
-{% /hint %}
+{% /alert %}
 
 If there is (for example on the [docker hub](https://hub.docker.com/)) no docker image that you need, you will have to create a custom one.
 
@@ -146,6 +147,10 @@ FROM dizcza/docker-hashcat:intel-cpu
 VOLUME /golem/input /golem/output
 WORKDIR /golem/entrypoint
 ```
+
+{% alert level="warning" %}
+As the latest docker image tagged 'dizcza/docker-hashcat:intel-cpu' takes significantly more disk space, you might encounter technical issues with building this Docker image. In such case, please skip this section and use the Golem image hash provided here: '2c17589f1651baff9b82aa431850e296455777be265c2c5446c902e9'.
+{% /alert %}
 
 As Golem does not need any specific elements in the Dockerfile,`yacat.Dockerfile`is more or less a standard Dockerfile.
 
@@ -161,23 +166,23 @@ VOLUME /golem/input /golem/output
 
 This makes `/golem/input` and `/golem/output` locations we will use for our input/output file transfer. For the requestor agent code, which we are going to discuss in the next chapter, we need to know the volume (or volumes) name(s) and use it as a directory for the file transfers.
 
-![](../../.gitbook/assets/requestor-vm-comms.jpg)
+![Requestor to VM communication](/requestor-vm-comms.jpg)
 
-{% hint style="info" %}
+{% alert level="info" %}
 On the provider side, all the content of the VOLUME directories is stored in the provider's os file system.
 
 All the changes in other (non VOLUME mounted) container directories content are kept in RAM. The rest of the VM image file system (not changed, non VOLUME mounted) content is stored as VM image in the provider's os file system.
-{% /hint %}
+{% /alert %}
 
-{% hint style="danger" %}
+{% alert level="danger" %}
 Please mind that tasks within a single worker instance - so effectively part of the same activity on a given provider node - run within the same virtual machine and share the contents of a VOLUME between each other.
 
 That means that as long as the execution takes place on the same provider, and thus, on the same filesystem, files in the VOLUME left over from one task execution will be present in a subsequent run.
-{% /hint %}
+{% /alert %}
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 If your provider-side code creates large temporary files, you should store them in the directory defined as VOLUME. Otherwise, the large files will be stored in RAM. RAM usually has a capacity limit much lower than disk space.
-{% /hint %}
+{% /alert %}
 
 ### Important note about Docker's ENTRYPOINT
 
@@ -207,23 +212,19 @@ The important fact is that the last of the above commands, will provide us with 
 2c17589f1651baff9b82aa431850e296455777be265c2c5446c902e9
 ```
 
-{% hint style="info" %}
+{% alert level="info" %}
 This hash will identify our image when our Golem application is run. Please copy and save it somewhere as in the requestor agent code, we will need to pass it to the `Engine` in order to have providers use the correct image for the container instances.
-{% /hint %}
+{% /alert %}
 
-The details of docker image conversion are described here:
-
-{% content-ref url="../vm-runtime/convert-a-docker-image-into-a-golem-image.md" %}
-[convert-a-docker-image-into-a-golem-image.md](../vm-runtime/convert-a-docker-image-into-a-golem-image.md)
-{% /content-ref %}
+The details of docker image conversion are described [here](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format).
 
 ## The requestor agent code
 
 Let's look at the core of our hashcat example - the requestor agent. Please check the `yacat.py` file below.
 
-{% hint style="info" %}
+{% alert level="info" %}
 The critical fragments of `yacat.py` will be described in the following sections of the tutorial so now, you can just do a quick scan over the big code block below.
-{% /hint %}
+{% /alert %}
 
 ```python
 #!/usr/bin/env python3
@@ -444,21 +445,21 @@ if __name__ == "__main__":
 
 ## So what is happening here?
 
-We start with a high-level overview of the steps performed by the requestor agent. In the [next section](task-example-2-hashcat.md#how-does-the-code-work) we'll dig into the implementation details.
+We start with a high-level overview of the steps performed by the requestor agent. In the [next section](/docs/creators/python/tutorials/task-example-2-hashcat#how-does-the-code-work) we'll dig into the implementation details.
 
 ### Compute keyspace size
 
-The first step in the computation is to **check the keyspace size**. For this we only need to execute `hashcat` with `--keyspace`, as show in the section [Doing things in parallel](task-example-2-hashcat.md#doings-things-in-parallel) and read that command's output.
+The first step in the computation is to **check the keyspace size**. For this we only need to execute `hashcat` with `--keyspace`, as show in the section [Doing things in parallel](/docs/creators/python/tutorials/task-example-2-hashcat#doings-things-in-parallel) and read that command's output.
 
 ### Define the tasks
 
-Knowing the keyspace size we define the list of **tasks** to execute on providers. Recall from the section [Doing things in parallel](task-example-2-hashcat.md#doings-things-in-parallel) that we can run `hashcat` on a fragment of the whole keyspace, using the `--skip` and `--limit` parameters. In this step for each such fragment we define a separate task.
+Knowing the keyspace size we define the list of **tasks** to execute on providers. Recall from the section [Doing things in parallel](/docs/creators/python/tutorials/task-example-2-hashcat#doings-things-in-parallel) that we can run `hashcat` on a fragment of the whole keyspace, using the `--skip` and `--limit` parameters. In this step for each such fragment we define a separate task.
 
 Knowing the number of tasks we can also determine the number of providers required to execute them in parallel. In this example we decided that the number of providers contracted for the work will be equal to the number of tasks divided by two. This does not necessarily mean that every provider will get exactly two tasks, even if the overall number of tasks is even, because:
 
-{% hint style="info" %}
+{% alert level="info" %}
 When a provider is ready to execute a task, it takes up the next task from a common pool of tasks, so a fast provider may end up executing more tasks than a slow one.
-{% /hint %}
+{% /alert %}
 
 ### Perform mask attack
 
@@ -466,11 +467,11 @@ Next, we can start looking for the password using multiple **workers**, executin
 
 In order to look for passwords in the given keyspace range, for each of the workers employed to perform our job, we are executing the following steps:
 
-* Execute`hashcat` with proper `--skip` and `--limit` values on the provider
-* Get the `hashcat_{skip}.potfile` from the provider to the requestor
-* Parse the result from the `.potfile`
+- Execute`hashcat` with proper `--skip` and `--limit` values on the provider
+- Get the `hashcat_{skip}.potfile` from the provider to the requestor
+- Parse the result from the `.potfile`
 
-![](<../../.gitbook/assets/tutorial-03 (1).jpg>)
+![hashcat example communication](/tutorial-03.jpg)
 
 ## How does the code work?
 
@@ -513,9 +514,9 @@ async with Golem(
 
 The arguments are as follows:
 
-* `budget`defines maximal spendings for executing all the tasks with `Golem`
-* `subnet_tag` specifies the providers subnet to be used; it's best to leave the default value in place unless you mean to run your own network of test providers to test the app against,
-* next are the `driver` and `network` parameters that select the Ethereum blockchain and the payment driver for you; for example, you would not use the mainnet network for tests but you'll probably want to run the real-live tasks on the mainnet to be able to use all the providers that participate in the Golem network.
+- `budget`defines maximal spendings for executing all the tasks with `Golem`
+- `subnet_tag` specifies the providers subnet to be used; it's best to leave the default value in place unless you mean to run your own network of test providers to test the app against,
+- next are the `driver` and `network` parameters that select the Ethereum blockchain and the payment driver for you; for example, you would not use the mainnet network for tests but you'll probably want to run the real-live tasks on the mainnet to be able to use all the providers that participate in the Golem network.
 
 #### First call to `execute_tasks`: Computing keyspace size
 
@@ -535,18 +536,18 @@ This call tells `Golem` to execute a single task `Task(data="compute_keyspace")`
 
 The other arguments are:
 
-* the **worker** function that tells `Golem` what steps to perform on a provider in order to execute the tasks (in our case, there's only one task); here we pass the `compute_keyspace` function,
-* the `package` that we defined before,
-* the maximum number of worker instances we'd like to create -- or the maximum number of providers we want the tasks to be distributed to (for executing just one task it makes no sense to request more than one provider, so it's a bit redundant),
-* the total `timeout` for executing all tasks.
+- the **worker** function that tells `Golem` what steps to perform on a provider in order to execute the tasks (in our case, there's only one task); here we pass the `compute_keyspace` function,
+- the `package` that we defined before,
+- the maximum number of worker instances we'd like to create -- or the maximum number of providers we want the tasks to be distributed to (for executing just one task it makes no sense to request more than one provider, so it's a bit redundant),
+- the total `timeout` for executing all tasks.
 
-{% hint style="danger" %}
+{% alert level="danger" %}
 Due to limitations of the current Golem market implementation, please use `timeout` value between 8 minutes and 3 hours.
-{% /hint %}
+{% /alert %}
 
-{% hint style="info" %}
+{% alert level="info" %}
 You can also specify the timeout value for the particular provider-side execution batch that is triggered by `ctx.new_script(timeout=...)`.
-{% /hint %}
+{% /alert %}
 
 The keyspace size can be read from the `result` attribute of the executed task. We use `async for` loop here to iterate over the completed tasks (even though we expect only one task).
 
@@ -593,9 +594,9 @@ Each completed task will contain `hashcat`'s output for the keyspace chunk repre
 
 With the `main` function covered, let's now have a look at the worker functions `compute_keyspace` and `perform_mask_attack`. Recall that worker functions are passed as arguments to `execute_tasks`, and are called once for each provider on which tasks are executed (more precisely, once for each **activity**, but in a typical scenario, including the current example, each provider executes just one activity).
 
-#### compute\_keyspace
+#### compute_keyspace
 
-The first worker is similar to the one that we've seen in [Hello World!](task-example-0-hello.md) example, but the command we need to run on the provider is not `date` but `hashcat` with appropriate options:
+The first worker is similar to the one that we've seen in [Hello World!](/docs/creators/python/tutorials/task-example-0-hello) example, but the command we need to run on the provider is not `date` but `hashcat` with appropriate options:
 
 ```python
 hashcat --keyspace -a {HASHCAT_ATTACK_MODE} -m {args.hash_type} {args.mask}
@@ -615,14 +616,14 @@ This instructs `hashcat` to compute and print the keyspace size. The following c
         result: List[CommandExecuted] = await future_result
         # we take the last item since it's the last command that was executed on the provider
         cmd_result: CommandExecuted = result[-1]
-        
+
         keyspace = int(cmd_result.stdout)
         task.accept_result(result=keyspace)
     except CommandExecutionError as e:
         raise RuntimeError(f"Failed to compute attack keyspace: {e}")
 ```
 
-#### perform\_mask\_attack
+#### perform_mask_attack
 
 The second worker function, `perform_mask_attack` is more interesting. Unlike `compute_keyspace`, we make use of the `data` attribute that each `task` carries and use it to set `--skip` and `--limit`parameters to `hashcat`:
 
@@ -638,9 +639,9 @@ async for task in tasks:
     script.run(f"/bin/sh", "-c", _make_attack_command(skip, limit, worker_output_path))
 ```
 
-{% hint style="warning" %}
+{% alert level="warning" %}
 The commands here are passed to an explicitly referenced `/bin/sh` shell. That's because any commands specified within `script.run()` are not, by themselves, run inside any shell.
-{% /hint %}
+{% /alert %}
 
 The exact command to be run spans multiple lines so we construct it in a separate function `_make_attack_command` to make the worker code easier to follow. Let's take a look!
 
@@ -684,9 +685,9 @@ loop.run_until_complete(task)
 
 which schedules execution of `main(args)` in the event loop. This code resides in the `run_golem_example` function which abstracts some boilerplate necessary to run and handle errors while running the examples but which does little to illustrate interactions with Golem and its high-level API.
 
-{% hint style="success" %}
+{% alert level="success" %}
 Now, as we know how `yacat.py` works, let's run it!
-{% /hint %}
+{% /alert %}
 
 ## Example run
 
@@ -696,18 +697,19 @@ While in the `/examples/yacat` directory, type the following:
 python3 yacat.py  --mask '?a?a?a' --hash '$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/'
 ```
 
-{% hint style="danger" %}
+{% alert level="danger" %}
 Please note that on Windows, you need to:
 
-* use `python` instead of `python3`
-* not use the quote character in the command
+- use `python` instead of `python3`
+- not use the quote character in the command
 
 So the windows version is:
 
 ```python
 python yacat.py ?a?a?a $P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/
 ```
-{% /hint %}
+
+{% /alert %}
 
 The above run should return "pas" as the recovered password.
 
@@ -731,36 +733,27 @@ One of the interesting options is to have log output to a file. This can be achi
 --log-file LOG_FILE_NAME
 ```
 
-## Other languages support
-
-{% hint style="info" %}
-The yacat example is written in Python using Golem's Python High-Level API ([YAPAPI](https://github.com/golemfactory/yapapi)). Golem currently supports writing requestor agents using JavaScript/TypeScript High-Level API ([YAJAPI](https://github.com/golemfactory/yajsapi)) also.
-{% /hint %}
-
 ## Next steps
 
-The complete reference of the Python High-Level API (yapapi) is available here:
+{% docnavigation title="Next steps" %}
 
-[https://yapapi.readthedocs.io/en/stable/](https://yapapi.readthedocs.io/en/stable/)
+- The complete reference of the Python High-Level API (yapapi) is available here: [Python API reference](https://yapapi.readthedocs.io/en/latest/api.html).
 
-You can also have a look at our JavaScript/TypeScript API if you're interested in developing your requestor agent in JS/TS:
+{% /docnavigation %}
 
-[https://github.com/golemfactory/yajsapi](https://github.com/golemfactory/yajsapi)
+{% docnavigation title="See also" %}
+
+- [Service Model](/docs/creators/python/guides/service-model)
+- And in case you get stuck or need help, please reach out to us on our [Discord chat](https://chat.golem.network/) and we'll be delighted to help you out :)
+
+{% /docnavigation %}
 
 ## Closing words
 
-{% hint style="success" %}
+{% alert level="success" %}
 Golem is waiting to serve your applications. Our decentralized - and open to everyone - platform is here (now in alpha).
 
 We did our best to make developing Golem applications super easy.
 
 Now it's time for your move!
-{% /hint %}
-
-And remember:
-
-{% hint style="info" %}
-In case of any doubts or problems, you can always contact us on discord.
-
-[https://chat.golem.network](https://chat.golem.network)
-{% /hint %}
+{% /alert %}
