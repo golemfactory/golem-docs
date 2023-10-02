@@ -1,12 +1,12 @@
 ---
-title: Creating and using images on Golem
-description: Creating and using images on Golem
+title: Tutorial on how to access Internet from Provider
+description: Accessing the Internet from Provider Tutorial
 type: tutorial
 ---
 
 ## Introduction
 
-This article will go through the process of creating a Dockerfile, building a Docker image, then converting it to a Golem image and using it in a requestor script.
+In this tutorial, you will learn how to quickly access the internet when running code on Golem network. You will get familiar with the concept of Golem manifest, outbound and some security policies that are in place to protect the providers from malicious code.
 
 {% alert level="info" %}
 
@@ -16,159 +16,191 @@ This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
 ## Prerequisites
 
-- Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
-- Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
-- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors))
+- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
 
-## Creating the Dockerfile
+## Overview
 
-This is the simple `Dockerfile` we are going to use, using the `Node` base image, creating one volume, and setting the working directory. Simply create a file with the name `Dockerfile`, without any file extension, and paste the following contents:
+In this tutorial you will create a requestor script that will download a code from `github.com` site to a provider. To achive the goal you will use the outbound feature.
 
-```dockerfile
-FROM node:latest
-WORKDIR /golem/work
-VOLUME /golem/work
-COPY Dockerfile /golem/info/description.txt
-COPY Dockerfile /golem/work/info.txt
-```
+The github.com URL was selected as a target URL for the example, as it is included in the default provider’s whitelist. You can check [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist) for other entries. Please note that a provider can choose to add, remove or completely wipe the whitelist.
 
-Note we copy the Dockerfile content into 2 different locations:
+As the requestor needs to list all URLs they want to access in a manifest file, you need to create one and provide it whene when creating a new TaskExecutor. There is a CLI tool that we will use to create this manifest.
 
-- to /golem/info (this folder is not defined as VOLUME)
-- and to /golem/work (this folder is defined as VOLUME)
+You can read more about outbound [here](/docs/creators/javascript/guides/accessing-internet).
 
-## Building the Docker image
+Let’s code.
 
-To build the Docker image from the `Dockerfile`, we can run the following command in the same directory (`.`) as the Dockerfile to build an image tagged `golem-node`:
+## Initialize the project
 
-{% tabs %}
-{% tab label="Linux" %}
+First we need to create project directory and navigate there:
 
 ```bash
-docker build -t golem-node .
+mkdir outbound-example
+cd outbound-example
 ```
 
-{% /tab %}
-{% tab label="macOS" %}
+Then inittialise the projcet and install JS SDK.
 
 ```bash
-docker build --platform linux/amd64 -t golem-node .
-```
-
-{% /tab %}
-{% tab label="Windows" %}
-
-```bash
-docker build -t golem-node .
-```
-
-{% /tab %}
-{% /tabs %}
-
-The output should look like this:
-
-![Terminal output of building a docker image](/image_tutorial_build.png)
-
-{% alert level="info" %}
-
-Note that the image won't be turned into a file in the same directory. The location of the actual Docker image file depends on the Docker and your operating system version. Please consult the Docker manual for additional information.
-
-{% /alert  %}
-
-## Converting from Docker to Golem and uploading it to the registry
-
-Now when you have a Docker image built, we can convert it to a Golem image. To save time, we will also upload it to the registry with the same command. To do this, you need to run the appropriate command that uses `gvmkit-build` to convert and push the image `golem-node` to the registry.
-
-{% alert level="info" %}
-
-If you do not have `gvmkit-build` installed please follow [installation intructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation). You can also use it without installation using `npx` or `pipx` commands.
-
-{% /alert  %}
-
-{% tabs %}
-{% tab label="JavaScript" %}
-
-```bash
-gvmkit-build golem-node --push --nologin
-```
-
-{% /tab %}
-{% tab label="Python" %}
-
-```bash
-gvmkit-build golem-node --push --nologin
-```
-
-{% /tab %}
-{% /tabs %}
-
-After running the command, you will see an output that looks like this:
-
-![Image showing the output of the command](/image_tutorial_upload.png)
-
-The hash is found after the `image link`, which in this case gives us the hash `8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c`. If you ever lose your hash, you can always recover/re-generate it by running the same command again.
-
-## Using the image in a requestor script
-
-Let's use the newly created image in a requestor script and ensure this is the one we have just made.
-
-We need to prepare our environment:
-
-```bash
-mkdir golem-example
-cd golem-example
 npm init
-npm i @golem-sdk/golem-js
+npm install @golem-sdk/golem-js
 ```
 
-We can now create our `index.mjs` requestor file, with the `package: "8b238595..."` matching our image hash.
+We will also install `Golem SDK CLI` - a companion tool that will facilitate manifest creation.
 
-{% tabs %}
-{% tab label="JavaScript" %}
-**`index.mjs`**
+```shell
+npm install -g @golem-sdk/cli
+```
 
-```js
+## Manifest creation
+
+Once you have the project, open a terminal
+
+```bash
+golem-sdk manifest create golem/curl
+```
+
+This will create a basic `manifest.json` file. We wil use it to inform the provider what GVMI image we will be using. Teh manifest contains also our application version, application name and description, read from our `package.json` file (you can edit this information if you want).
+
+### Adding outbound configuration
+
+The next step is to configure our manifest, so we can access a public URL. The CLI also has a handy command that will take care of that for us:
+
+```bash
+golem-sdk manifest net add-outbound https://github.com
+```
+
+We have added https://github.com as the URL we will want to access from the provider node. The command can be run multiple times to add more URLs or you can pass them all at once.
+
+Now our manifest is ready, we can start coding the application.
+
+### Requestor script
+
+Our application will be very simple. We will use `curl` to download a release of Golem SDK from github. While this can be achieved without using Golem, this is just a demonstration of how we can enable and access the internet from the Golem SDK.
+
+Let’s start with a simple boilerplate, copy the following code to a javascript file:
+
+```javascript
 import { TaskExecutor } from '@golem-sdk/golem-js'
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
+import { readFile } from 'fs/promises'
+;(async function main() {
+  const executor = await TaskExecutor.create({})
 
-  const result = await executor.run(async (ctx) => {
-    console.log(
-      'Description.txt: ',
-      (await ctx.run('cat /golem/info/description.txt')).stdout
-    )
-    console.log(
-      '/golem/work content: ',
-      (await ctx.run('ls /golem/work')).stdout
-    )
-  })
-
-  await executor.end()
+  try {
+    // Your code goes here
+  } catch (err) {
+    console.error('The task failed due to', err)
+  } finally {
+    await executor.end()
+  }
 })()
 ```
 
-{% /tab  %}
-{% /tabs %}
+We are using async/await to synchronize asynchronous calls, for simplicity and compatibility, we wrap all the code into an asynchronous main function.
+The next thing to do is to correctly initialize the `TaskExecutor``. For this purpose, we will use the manifest file we’ve just created.
 
-In the script, we specify that our task should use the newly created image (indicated by `hash`: `8b238595...`). We try to run two commands. The first one prints the content of the `decription.txt` file (it is a copy of the Dockerfile used to create the image). The second command should list the content of the /golem/work folder. We copied some files there as well (check the content of the `description.txt` file), but as /golem/work is defined as VOLUME and created as new when VM is started, this folder will be empty.
+At the top of the main function replace the executor initialization with the following:
 
-## Running the script
+```javascript
+// Load the manifest file.
+const manifest = await readFile(`./manifest.json`)
 
-Run the following command after ensuring the Yagna service is running and configured correctly:
+// Create and configure a TaskExecutor instance.
+const executor = await TaskExecutor.create({
+  capabilities: ['inet', 'manifest-support'],
+  yagnaOptions: { apiKey: 'try_golem' },
+  manifest: manifest.toString('base64'),
+})
+```
 
-`node index.mjs`
+This is the most important part.
+First we add to out demand additional requirements:
 
-You have successfully created and used your Golem image in a requestor script!
+- 'inet' - indicates we require outbound service available
+- 'manifest-support' - informs, that we will use manifest to specify depamnd.
 
-![Image showing successfull use of a golem image in a script](/image_tutorial_upload.png)
+Instead of providing an image tag or hash, we are using a manifest file that describes what we will be running on providers.
 
-Note that the content of the `description.txt` file that was created in the /golem/info folder is accessible, while the /golem/work folder is empty.
+Please note the loaded manifest is encoded to base64.
+
+`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
+
+In this example, we will simply fetch a release of Golem SDK from GitHub using curl command, available in our GVMI image. So first let’s save the URL near the top of the file (just after the imports):
+
+```javascript
+import { TaskExecutor } from '@golem-sdk/golem-js'
+import { readFile } from 'fs/promises'
+
+const url =
+  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz'
+```
+
+And finally let’s execute some code on the provider. We will run a single task on the provider, using the TaskExecutor.run() function. To make this work, put the following code in the try/catch block:
+
+```javascript
+await executor.run(async (ctx) => {
+  const result = await ctx.run(`curl ${url} -o /golem/work/golem-js.tar.gz`)
+
+  if (result.result === 'Ok') {
+    console.log('SDK downloaded!')
+  } else {
+    console.error('Failed to download the SDK!', result.stderr)
+  }
+})
+```
+
+And that’s it! Now, make sure you yagna service is running and you can start this script.
+
+This is how the entire file should look like:
+
+```javascript
+import { TaskExecutor } from '@golem-sdk/golem-js'
+import { readFile } from 'fs/promises'
+
+const url =
+  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz'
+
+;(async function main() {
+  // Load the manifest.
+  const manifest = await readFile(`./manifest.json`)
+
+  // Create and configure a TaskExecutor instance.
+  const executor = await TaskExecutor.create({
+    capabilities: ['inet', 'manifest-support'],
+    yagnaOptions: { apiKey: 'try_golem' },
+    manifest: manifest.toString('base64'),
+  })
+
+  try {
+    await executor.run(async (ctx) => {
+      const result = await ctx.run(`curl ${url} -o /golem/work/golem-js.tar.gz`)
+
+      if (result.result === 'Ok') {
+        console.log('SDK downloaded!')
+      } else {
+        console.error('Failed to download the SDK!', result.stderr)
+      }
+    })
+  } catch (err) {
+    console.error('The task failed due to', err)
+  } finally {
+    await executor.end()
+  }
+})()
+```
+
+You can run it now. In the output, you should see “SDK downloaded!” between log lines. That means the code works.
 
 {% docnavigation title="Next steps" %}
 
-- Try your image in one of [examples](/docs/creators/javascript/examples)!
+- Another [outbound example](https://github.com/golemfactory/golem-js/tree/master/examples/external-request)
+
+{% /docnavigation %}
+
+{% docnavigation title="See also" %}
+
+- Default Golem [whitelist](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist)
+
+- More on the [Payload Manifest](/docs/golem/payload-manifest)
 
 {% /docnavigation %}

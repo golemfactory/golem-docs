@@ -36,7 +36,7 @@ After installation, the CLI is ready to be used.
 
 ### Golem Manifest
 
-[Golem Manifest](https://docs.golem.network/docs/golem/payload-manifest) is a JSON document that describes your Golem application. While it is not necessary for simple applications, you will need it if you want to access advanced features of the Golem SDK, like access to the Internet (outbound).
+[Golem Manifest](/docs/golem/payload-manifest) is a JSON document that describes your Golem application. While it is not necessary for simple applications, you will need it if you want to access advanced features of the Golem SDK, like [access to the Internet](/docs/creators/javascript/guides/accessing-internet).
 
 The `golem-sdk` CLI allows users to create and update the manifest file. By default, it assumes the manifest is available in a `manifest.json` file in the current folder. If you want to point to a different file, use the --manifest (or -m) option.
 
@@ -48,7 +48,7 @@ To create a new Golem Manifest with the `golem-sdk` CLI, run:
 golem-sdk manifest create <image> [--image-hash hash]
 ```
 
-The `image` argument should identify the GVMI image used by your application. The tools accept a few formats which are explained in the table below. You can learn more about Golem images [here](https://docs.golem.network/docs/creators/javascript/guides/golem-images).
+The `image` argument should identify the GVMI image used by your application. The tools accept a few formats which are explained in the table below. You can learn more about Golem images [here](/docs/creators/javascript/guides/golem-images).
 
 If you have a `package.json` file in your project, the tool will use the `name`, `version`, and `description` fields from the file to fill in the fields in the manifest. Otherwise, you will need to provide them manually.
 
@@ -88,7 +88,7 @@ You can use this command multiple times to add additional URLs to the manifest o
 This command will update the manifest file with all the URLs provided.
 
 ```shell
-golem-sdk manifest net add-outbound https://golem.network https://github.com https://example.com
+golem-sdk manifest net add-outbound https://golem.network https://github.com
 ```
 
 #### Signing the manifest
@@ -116,15 +116,13 @@ By default, it will use `manifest.pem` as the certificate file and `manifest.sig
 
 On success, it will print the following message:
 
-```
-Manifest matches signature.
-```
+`Manifest matches signature.`
 
 It is important to use this command to make sure the key you are using is compatible with your certificate.
 
 {% docnavigation title="Next steps" %}
 
-- See our tutorial on how to create a manifest and use it in the requestor script to reach the 'github.com' from a provider.
+- See our [tutorial](/docs/creators/javascript/tutorials/accessing-internet) on how to create a manifest and use it in the requestor script to reach the 'github.com' from a provider.
 
 - If you see a feature missing or a possible Golem SDK user experience improvement we could implement, please open an [issue](https://github.com/golemfactory/golem-sdk-cli/issues) or a pull request.
 
