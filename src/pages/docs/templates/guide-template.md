@@ -1,6 +1,7 @@
 ---
 description: Golem Guide template tutorial
 title: This is the page title displayed in a browser tab.
+type: demo
 ---
 
 # Introduction to Golem Network Guides

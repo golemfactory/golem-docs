@@ -1,1 +1,1 @@
-export const latestJSVersion = 'support-new-docs'
+export const latestJSVersion = 'latest'

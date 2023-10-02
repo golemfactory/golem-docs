@@ -1,6 +1,7 @@
 ---
 description: Golem Tutorial template tutorial
 title: This is the page title displayed in a browser tab.
+type: Tutorial
 ---
 
 # Tutorial title 
@@ -16,7 +17,7 @@ This example has been designed to work with the following environments:
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 
 ## Introduction

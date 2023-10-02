@@ -1,9 +1,16 @@
 ---
 description: Golem in browser QuickStart explained
 title: Golem in browser QuickStart explained
+type: Tutorial
 ---
 
 # Golem in browser QuickStart explained
+
+## Introduction
+
+In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window.
+
+In the QuickStart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
 
 {% alert level="info" %}
 
@@ -45,12 +52,6 @@ In this example, we will use `http-server`.
 
 {% /alert  %}
 
-## Introduction
-
-In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window.
-
-In the QuickStart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
-
 ## Setting up the project
 
 ```bash
@@ -76,22 +77,34 @@ Next, we'll create the main `index.html` file with a minimal layout:
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Golem App</title>
+    <title>WebRequestor Task API</title>
   </head>
   <body>
-    <button onclick="run()">Run</button>
+    <h1>WebRequestor - Hello World</h1>
     <div class="container">
-      <div>
-        <p>Results</p>
-        <pre id="results"></pre>
+      <div class="col-6">
+        <h3>Actions</h3>
+        <div class="row vertical">
+          <div>
+            <button id="echo">Echo Hello World</button>
+          </div>
+        </div>
+        <div class="results console">
+          <h3>Results</h3>
+          <ul id="results"></ul>
+        </div>
       </div>
-      <div>
-        <p>Logs</p>
-        <pre id="logs"></pre>
+      <div class="col-6 border-left">
+        <div class="logs console">
+          <h3>Logs</h3>
+          <ul id="logs"></ul>
+        </div>
       </div>
     </div>
+
     <script type="module">
       // replace with script code
+
     </script>
   </body>
 </html>
@@ -99,7 +112,7 @@ Next, we'll create the main `index.html` file with a minimal layout:
 
 In this layout, there are three elements:
 
-- A "Run" button, which executes the script on Golem
+- A "Echo Hello World" button, which executes the script on Golem
 - A "Results" container, which displays the results
 - A "Logs" container, which displays the API logs
 
@@ -117,14 +130,13 @@ First, we will import the `@golem-sdk/golem-js` library:
 
 ### Task Executor
 
-When the user presses the `Run` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, we will end it.
+When the user presses the `Echo Hello World` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, we will end it.
 
 Note that the `create()` method received an additional 3 parameters:
 
 - `package` identifies the image that we want to run on a provider,
 - `apiKey` is the key that enables our script to use the Yagna REST API,
-- `logger` is a function that the SDK will use for logging. We'll define it shortly.
-
+- `logger` is a function that the SDK will use for logging. We'll define it short
 ```html
 <script type="module">
   //
@@ -176,7 +188,7 @@ Now let's create the `appendResults()` function which will put the output of our
 
 ## Getting logs
 
-The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/golem-js/reference/support-new-docs/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
+The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/golem-js/reference/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
 
 ```html
 <script type="module">
@@ -294,7 +306,7 @@ You should see the app available in the browser.
 
 [ Open localhost ](http://localhost:8080/index)
 
-If you click the run button, after a while in the result container, we should get the result of the script: `Hello World`, and in the log container we should see the logs of executed commands.
+If you click the 'Echo Hello World' button, after a while in the result container, we should get the result of the script, and in the log container we should see the logs of executed commands.
 
 ![Output logs](/browser_log.png)
 

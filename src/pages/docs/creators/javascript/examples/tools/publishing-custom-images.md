@@ -1,14 +1,17 @@
 ---
 title: Publishing an image
 description: Guide on how to publish a Golem image to the registry using gvmkit-build
+type: Instructions
 ---
 
 # Publishing an image in the registry
 
+## Introduction
 
+Once your image is built and tested you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
+You can identify your image by a `hash` or by a `tag`.
 
-
-# JS Task API Examples: composing tasks
+If you intend to use your image just for testing, it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
 {% alert level="info" %}
 
@@ -29,14 +32,6 @@ This example has been designed to work with the following environments:
 You can use npx and pipx tools to run gvmkit-build without installation. 
 
 {% /alert %}
-
-
-## Introduction
-
-Once your image is built and tested you can push it to a remote repository so that it becomes available to providers within the Golem Network. Golem manages a freely-accessible repository that everybody can push into without any special requirements. 
-You can identify your image by a `hash` or by a `tag`.
-
-If you intend to use your image just for testing, it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
 
 ## Publishing a custom Golem image to the registry (hash-based)

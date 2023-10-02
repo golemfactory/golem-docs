@@ -5,7 +5,8 @@ const inter = Inter({ subsets: ['latin'] })
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import { Layout } from '@/components/Layout'
-
+import { useEffect } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import 'focus-visible'
 import '@/styles/tailwind.css'
 function getNodeText(node) {
@@ -22,16 +23,18 @@ function getNodeText(node) {
 function collectHeadings(
   nodes,
   slugify = slugifyWithCounter(),
-  lastNodes = []
+  lastNodes = [],
+  idMap = {}
 ) {
   let sections = []
+
   for (let node of nodes) {
-    if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(node.name)) {
+    if (node.name === 'Heading') {
+      let { level, id } = node.attributes
+
       let title = getNodeText(node)
+
       if (title) {
-        let id = slugify(title)
-        node.attributes.id = id
-        let level = parseInt(node.name.slice(1))
         let newNode = { ...node.attributes, title, children: [], level }
         if (lastNodes[level - 2]) {
           lastNodes[level - 2].children.push(newNode)
@@ -42,14 +45,33 @@ function collectHeadings(
         lastNodes.length = level
       }
     }
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes))
+
+    sections.push(
+      ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
+    )
   }
   return sections
 }
 
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
+  if (!title) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a title. Please add a title to the frontmatter.'
+    )
+  }
   let type = pageProps.markdoc?.frontmatter.type
+  if (!type) {
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a type. Please add a type to the frontmatter.'
+    )
+  }
+
   let tags = pageProps.markdoc?.frontmatter.tags
 
   let pageTitle =
@@ -58,9 +80,24 @@ export default function App({ Component, pageProps }) {
 
   let description = pageProps.markdoc?.frontmatter.description
 
+  if (!description) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a description. Please add a description to the frontmatter.'
+    )
+  }
+
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
+
+  useEffect(() => {
+    if (!localStorage.getItem('GDocsUUID')) {
+      localStorage.setItem('GDocsUUID', uuidv4())
+    }
+  }, [])
 
   return (
     <>
@@ -68,10 +105,6 @@ export default function App({ Component, pageProps }) {
 
       <div className={inter.className}>
         <Head>
-          <meta
-            name="google-site-verification"
-            content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
-          />
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
         </Head>

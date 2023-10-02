@@ -1,6 +1,7 @@
 ---
 description: List of examples
 title: JS Examples
+type: ToC
 ---
 
 JS code examples are organized in articles dedicated to specific topics:

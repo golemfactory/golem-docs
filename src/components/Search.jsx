@@ -104,10 +104,9 @@ function SearchResult({ result, autocomplete, collection, query }) {
     )?.title
   }
   let hierarchy = [sectionTitle, result.pageTitle].filter(Boolean)
-
   return (
     <li
-      className="group block cursor-default rounded-lg px-3 py-2 aria-selected:bg-slate-100 dark:aria-selected:bg-slate-700/30"
+      className="group block cursor-default"
       aria-labelledby={`${id}-hierarchy ${id}-title`}
       {...autocomplete.getItemProps({
         item: result,
@@ -117,32 +116,38 @@ function SearchResult({ result, autocomplete, collection, query }) {
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="text-sm text-slate-700 group-aria-selected:text-primary dark:text-white/50 dark:group-aria-selected:text-white/50"
+        className="relative  rounded-lg py-2  pl-3 text-sm text-slate-700 group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/50 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
       >
-        <HighlightQuery text={result.title} query={query} />
-      </div>
-      {hierarchy.length > 0 && (
-        <div
-          id={`${id}-hierarchy`}
-          aria-hidden="true"
-          className="mt-0.5 truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400"
-        >
-          {hierarchy.map((item, itemIndex, items) => (
-            <Fragment key={itemIndex}>
-              <HighlightQuery text={item} query={query} />
-              <span
-                className={
-                  itemIndex === items.length - 1
-                    ? 'sr-only'
-                    : 'mx-2 text-slate-300 dark:text-slate-700'
-                }
-              >
-                /
-              </span>
-            </Fragment>
-          ))}
+        <div className="w-3/5 break-words md:w-3/4">
+          <HighlightQuery text={result.title} query={query} />
         </div>
-      )}
+        <span className="absolute top-1/2 right-0 transform -translate-y-1/2 mr-3 rounded-md bg-gray-50 dark:bg-slate-800 dark:text-white dark:text-opacity-50 px-2 py-1 text-xs font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10">
+          {result.type === "noicon" ? "Page" : result.type}
+        </span>
+
+        {hierarchy.length > 0 && (
+          <div
+            id={`${id}-hierarchy`}
+            aria-hidden="true"
+            className="mt-0.5 w-3/5 md:w-3/4 truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400"
+          >
+            {hierarchy.map((item, itemIndex, items) => (
+              <Fragment key={itemIndex}>
+                <HighlightQuery text={item} query={query} />
+                <span
+                  className={
+                    itemIndex === items.length - 1
+                      ? 'sr-only'
+                      : 'mx-2 text-slate-300 dark:text-slate-700'
+                  }
+                >
+                  /
+                </span>
+              </Fragment>
+            ))}
+          </div>
+        )}
+      </div>
     </li>
   )
 }

@@ -1,455 +1,555 @@
 export const navigation = [
-  {
-    title: 'support-new-docs',
+{
+    title: "latest",
     links: [
-      {
-        title: 'Content overview',
-        href: '/docs/golem-js/reference/support-new-docs/overview',
+{
+        title: "Content overview",
+        href: "/docs/golem-js/reference/overview"
       },
-      {
-        title: 'classes',
+{
+        title: "classes",
         children: [
-          {
-            title: 'AgreementCandidate',
-            href: '/docs/golem-js/reference/support-new-docs/classes/agreement_service.AgreementCandidate',
+{
+            title: "Activity",
+            href: "/docs/golem-js/reference/classes/activity_activity.Activity"
           },
-          {
-            title: 'ActivityCreated',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ActivityCreated',
+{
+            title: "Result",
+            href: "/docs/golem-js/reference/classes/activity_results.Result"
           },
-          {
-            title: 'ActivityDestroyed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ActivityDestroyed',
+{
+            title: "AgreementCandidate",
+            href: "/docs/golem-js/reference/classes/agreement_service.AgreementCandidate"
           },
-          {
-            title: 'ActivityStateChanged',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ActivityStateChanged',
+{
+            title: "ActivityCreated",
+            href: "/docs/golem-js/reference/classes/events_events.ActivityCreated"
           },
-          {
-            title: 'AgreementConfirmed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.AgreementConfirmed',
+{
+            title: "ActivityDestroyed",
+            href: "/docs/golem-js/reference/classes/events_events.ActivityDestroyed"
           },
-          {
-            title: 'AgreementCreated',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.AgreementCreated',
+{
+            title: "ActivityStateChanged",
+            href: "/docs/golem-js/reference/classes/events_events.ActivityStateChanged"
           },
-          {
-            title: 'AgreementRejected',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.AgreementRejected',
+{
+            title: "AgreementConfirmed",
+            href: "/docs/golem-js/reference/classes/events_events.AgreementConfirmed"
           },
-          {
-            title: 'AgreementTerminated',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.AgreementTerminated',
+{
+            title: "AgreementCreated",
+            href: "/docs/golem-js/reference/classes/events_events.AgreementCreated"
           },
-          {
-            title: 'AllocationCreated',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.AllocationCreated',
+{
+            title: "AgreementRejected",
+            href: "/docs/golem-js/reference/classes/events_events.AgreementRejected"
           },
-          {
-            title: 'BaseEvent',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.BaseEvent',
+{
+            title: "AgreementTerminated",
+            href: "/docs/golem-js/reference/classes/events_events.AgreementTerminated"
           },
-          {
-            title: 'CollectFailed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.CollectFailed',
+{
+            title: "AllocationCreated",
+            href: "/docs/golem-js/reference/classes/events_events.AllocationCreated"
           },
-          {
-            title: 'ComputationFailed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ComputationFailed',
+{
+            title: "BaseEvent",
+            href: "/docs/golem-js/reference/classes/events_events.BaseEvent"
           },
-          {
-            title: 'ComputationFinished',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ComputationFinished',
+{
+            title: "CollectFailed",
+            href: "/docs/golem-js/reference/classes/events_events.CollectFailed"
           },
-          {
-            title: 'ComputationStarted',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ComputationStarted',
+{
+            title: "ComputationFailed",
+            href: "/docs/golem-js/reference/classes/events_events.ComputationFailed"
           },
-          {
-            title: 'DebitNoteAccepted',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.DebitNoteAccepted',
+{
+            title: "ComputationFinished",
+            href: "/docs/golem-js/reference/classes/events_events.ComputationFinished"
           },
-          {
-            title: 'DebitNoteReceived',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.DebitNoteReceived',
+{
+            title: "ComputationStarted",
+            href: "/docs/golem-js/reference/classes/events_events.ComputationStarted"
           },
-          {
-            title: 'DemandFailed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.DemandFailed',
+{
+            title: "DebitNoteAccepted",
+            href: "/docs/golem-js/reference/classes/events_events.DebitNoteAccepted"
           },
-          {
-            title: 'DemandSubscribed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.DemandSubscribed',
+{
+            title: "DebitNoteReceived",
+            href: "/docs/golem-js/reference/classes/events_events.DebitNoteReceived"
           },
-          {
-            title: 'DemandUnsubscribed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.DemandUnsubscribed',
+{
+            title: "DemandFailed",
+            href: "/docs/golem-js/reference/classes/events_events.DemandFailed"
           },
-          {
-            title: 'InvoiceReceived',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.InvoiceReceived',
+{
+            title: "DemandSubscribed",
+            href: "/docs/golem-js/reference/classes/events_events.DemandSubscribed"
           },
-          {
-            title: 'PackageCreated',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.PackageCreated',
+{
+            title: "DemandUnsubscribed",
+            href: "/docs/golem-js/reference/classes/events_events.DemandUnsubscribed"
           },
-          {
-            title: 'PaymentAccepted',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.PaymentAccepted',
+{
+            title: "InvoiceReceived",
+            href: "/docs/golem-js/reference/classes/events_events.InvoiceReceived"
           },
-          {
-            title: 'PaymentFailed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.PaymentFailed',
+{
+            title: "PackageCreated",
+            href: "/docs/golem-js/reference/classes/events_events.PackageCreated"
           },
-          {
-            title: 'ProposalConfirmed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ProposalConfirmed',
+{
+            title: "PaymentAccepted",
+            href: "/docs/golem-js/reference/classes/events_events.PaymentAccepted"
           },
-          {
-            title: 'ProposalFailed',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ProposalFailed',
+{
+            title: "PaymentFailed",
+            href: "/docs/golem-js/reference/classes/events_events.PaymentFailed"
           },
-          {
-            title: 'ProposalReceived',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ProposalReceived',
+{
+            title: "ProposalConfirmed",
+            href: "/docs/golem-js/reference/classes/events_events.ProposalConfirmed"
           },
-          {
-            title: 'ProposalRejected',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ProposalRejected',
+{
+            title: "ProposalFailed",
+            href: "/docs/golem-js/reference/classes/events_events.ProposalFailed"
           },
-          {
-            title: 'ProposalResponded',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ProposalResponded',
+{
+            title: "ProposalReceived",
+            href: "/docs/golem-js/reference/classes/events_events.ProposalReceived"
           },
-          {
-            title: 'ScriptExecuted',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ScriptExecuted',
+{
+            title: "ProposalRejected",
+            href: "/docs/golem-js/reference/classes/events_events.ProposalRejected"
           },
-          {
-            title: 'ScriptSent',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.ScriptSent',
+{
+            title: "ProposalResponded",
+            href: "/docs/golem-js/reference/classes/events_events.ProposalResponded"
           },
-          {
-            title: 'TaskFinished',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.TaskFinished',
+{
+            title: "ScriptExecuted",
+            href: "/docs/golem-js/reference/classes/events_events.ScriptExecuted"
           },
-          {
-            title: 'TaskRedone',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.TaskRedone',
+{
+            title: "ScriptSent",
+            href: "/docs/golem-js/reference/classes/events_events.ScriptSent"
           },
-          {
-            title: 'TaskRejected',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.TaskRejected',
+{
+            title: "TaskFinished",
+            href: "/docs/golem-js/reference/classes/events_events.TaskFinished"
           },
-          {
-            title: 'TaskStarted',
-            href: '/docs/golem-js/reference/support-new-docs/classes/events_events.TaskStarted',
+{
+            title: "TaskRedone",
+            href: "/docs/golem-js/reference/classes/events_events.TaskRedone"
           },
-          {
-            title: 'TaskExecutor',
-            href: '/docs/golem-js/reference/support-new-docs/classes/executor_executor.TaskExecutor',
+{
+            title: "TaskRejected",
+            href: "/docs/golem-js/reference/classes/events_events.TaskRejected"
           },
-          {
-            title: 'NetworkError',
-            href: '/docs/golem-js/reference/support-new-docs/classes/network_network.NetworkError',
+{
+            title: "TaskStarted",
+            href: "/docs/golem-js/reference/classes/events_events.TaskStarted"
           },
-          {
-            title: 'NetworkNode',
-            href: '/docs/golem-js/reference/support-new-docs/classes/network_node.NetworkNode',
+{
+            title: "TaskExecutor",
+            href: "/docs/golem-js/reference/classes/executor_executor.TaskExecutor"
           },
-          {
-            title: 'AccountConfig',
-            href: '/docs/golem-js/reference/support-new-docs/classes/payment_config.AccountConfig',
+{
+            title: "GolemNetwork",
+            href: "/docs/golem-js/reference/classes/golem_network_golem_network.GolemNetwork"
           },
-          {
-            title: 'Payments',
-            href: '/docs/golem-js/reference/support-new-docs/classes/payment_payments.Payments',
+{
+            title: "Job",
+            href: "/docs/golem-js/reference/classes/job_job.Job"
           },
-          {
-            title: 'DownloadData',
-            href: '/docs/golem-js/reference/support-new-docs/classes/script_command.DownloadData',
+{
+            title: "InMemoryJobStorage",
+            href: "/docs/golem-js/reference/classes/job_storage.InMemoryJobStorage"
           },
-          {
-            title: 'Terminate',
-            href: '/docs/golem-js/reference/support-new-docs/classes/script_command.Terminate',
+{
+            title: "Proposal",
+            href: "/docs/golem-js/reference/classes/market_proposal.Proposal"
           },
-          {
-            title: 'UploadData',
-            href: '/docs/golem-js/reference/support-new-docs/classes/script_command.UploadData',
+{
+            title: "NetworkError",
+            href: "/docs/golem-js/reference/classes/network_network.NetworkError"
           },
-          {
-            title: 'GftpStorageProvider',
-            href: '/docs/golem-js/reference/support-new-docs/classes/storage_gftp.GftpStorageProvider',
+{
+            title: "NetworkNode",
+            href: "/docs/golem-js/reference/classes/network_node.NetworkNode"
           },
-          {
-            title: 'NullStorageProvider',
-            href: '/docs/golem-js/reference/support-new-docs/classes/storage_null.NullStorageProvider',
+{
+            title: "Package",
+            href: "/docs/golem-js/reference/classes/package_package.Package"
           },
-          {
-            title: 'WebSocketBrowserStorageProvider',
-            href: '/docs/golem-js/reference/support-new-docs/classes/storage_ws_browser.WebSocketBrowserStorageProvider',
+{
+            title: "Payments",
+            href: "/docs/golem-js/reference/classes/payment_payments.Payments"
           },
-          {
-            title: 'Batch',
-            href: '/docs/golem-js/reference/support-new-docs/classes/task_batch.Batch',
+{
+            title: "DownloadData",
+            href: "/docs/golem-js/reference/classes/script_command.DownloadData"
           },
-          {
-            title: 'Task',
-            href: '/docs/golem-js/reference/support-new-docs/classes/task_task.Task',
+{
+            title: "Terminate",
+            href: "/docs/golem-js/reference/classes/script_command.Terminate"
           },
-          {
-            title: 'WorkContext',
-            href: '/docs/golem-js/reference/support-new-docs/classes/task_work.WorkContext',
+{
+            title: "UploadData",
+            href: "/docs/golem-js/reference/classes/script_command.UploadData"
           },
-        ],
+{
+            title: "GftpStorageProvider",
+            href: "/docs/golem-js/reference/classes/storage_gftp.GftpStorageProvider"
+          },
+{
+            title: "NullStorageProvider",
+            href: "/docs/golem-js/reference/classes/storage_null.NullStorageProvider"
+          },
+{
+            title: "WebSocketBrowserStorageProvider",
+            href: "/docs/golem-js/reference/classes/storage_ws_browser.WebSocketBrowserStorageProvider"
+          },
+{
+            title: "Batch",
+            href: "/docs/golem-js/reference/classes/task_batch.Batch"
+          },
+{
+            title: "Task",
+            href: "/docs/golem-js/reference/classes/task_task.Task"
+          },
+{
+            title: "WorkContext",
+            href: "/docs/golem-js/reference/classes/task_work.WorkContext"
+          },
+{
+            title: "RequestorApi",
+            href: "/docs/golem-js/reference/classes/utils_yagna_gsb.RequestorApi"
+          },
+{
+            title: "RequestorApi",
+            href: "/docs/golem-js/reference/classes/utils_yagna_identity.RequestorApi"
+          },
+{
+            title: "Yagna",
+            href: "/docs/golem-js/reference/classes/utils_yagna_yagna.Yagna"
+          }
+        ]
       },
-      {
-        title: 'enums',
+{
+        title: "enums",
         children: [
-          {
-            title: 'ResultState',
-            href: '/docs/golem-js/reference/support-new-docs/enums/activity_results.ResultState',
+{
+            title: "ActivityStateEnum",
+            href: "/docs/golem-js/reference/enums/activity_activity.ActivityStateEnum"
           },
-          {
-            title: 'TaskState',
-            href: '/docs/golem-js/reference/support-new-docs/enums/task_task.TaskState',
+{
+            title: "TaskState",
+            href: "/docs/golem-js/reference/enums/task_task.TaskState"
           },
-          {
-            title: 'LogLevel',
-            href: '/docs/golem-js/reference/support-new-docs/enums/utils_logger_logger.LogLevel',
-          },
-        ],
+{
+            title: "LogLevel",
+            href: "/docs/golem-js/reference/enums/utils_logger_logger.LogLevel"
+          }
+        ]
       },
-      {
-        title: 'interfaces',
+{
+        title: "interfaces",
         children: [
-          {
-            title: 'StreamingBatchEvent',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/activity_results.StreamingBatchEvent',
+{
+            title: "ActivityOptions",
+            href: "/docs/golem-js/reference/interfaces/activity_activity.ActivityOptions"
           },
-          {
-            title: 'AgreementDTO',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/agreement_service.AgreementDTO',
+{
+            title: "ExeScriptRequest",
+            href: "/docs/golem-js/reference/interfaces/activity_activity.ExeScriptRequest"
           },
-          {
-            title: 'AgreementServiceOptions',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/agreement_service.AgreementServiceOptions',
+{
+            title: "ResultData",
+            href: "/docs/golem-js/reference/interfaces/activity_results.ResultData"
           },
-          {
-            title: 'DemandDetails',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/market_demand.DemandDetails',
+{
+            title: "RuntimeEventKind",
+            href: "/docs/golem-js/reference/interfaces/activity_results.RuntimeEventKind"
           },
-          {
-            title: 'ProposalDTO',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/market_proposal.ProposalDTO',
+{
+            title: "StreamingBatchEvent",
+            href: "/docs/golem-js/reference/interfaces/activity_results.StreamingBatchEvent"
           },
-          {
-            title: 'ProposalDetails',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/market_proposal.ProposalDetails',
+{
+            title: "AgreementDTO",
+            href: "/docs/golem-js/reference/interfaces/agreement_service.AgreementDTO"
           },
-          {
-            title: 'NetworkInfo',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/network_network.NetworkInfo',
+{
+            title: "AgreementServiceOptions",
+            href: "/docs/golem-js/reference/interfaces/agreement_service.AgreementServiceOptions"
           },
-          {
-            title: 'PackageDetails',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/package_package.PackageDetails',
+{
+            title: "GolemNetworkConfig",
+            href: "/docs/golem-js/reference/interfaces/golem_network_golem_network.GolemNetworkConfig"
           },
-          {
-            title: 'BasePaymentOptions',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/payment_config.BasePaymentOptions',
+{
+            title: "JobStorage",
+            href: "/docs/golem-js/reference/interfaces/job_storage.JobStorage"
           },
-          {
-            title: 'DebitNoteDTO',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/payment_debit_note.DebitNoteDTO',
+{
+            title: "DemandDetails",
+            href: "/docs/golem-js/reference/interfaces/market_demand.DemandDetails"
           },
-          {
-            title: 'InvoiceDTO',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/payment_invoice.InvoiceDTO',
+{
+            title: "ProposalDetails",
+            href: "/docs/golem-js/reference/interfaces/market_proposal.ProposalDetails"
           },
-          {
-            title: 'PaymentOptions',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/payment_payments.PaymentOptions',
+{
+            title: "MarketOptions",
+            href: "/docs/golem-js/reference/interfaces/market_service.MarketOptions"
           },
-          {
-            title: 'StorageProvider',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/storage_provider.StorageProvider',
+{
+            title: "NetworkInfo",
+            href: "/docs/golem-js/reference/interfaces/network_network.NetworkInfo"
           },
-          {
-            title: 'WebSocketStorageProviderOptions',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/storage_ws_browser.WebSocketStorageProviderOptions',
+{
+            title: "PackageDetails",
+            href: "/docs/golem-js/reference/interfaces/package_package.PackageDetails"
           },
-          {
-            title: 'TaskOptions',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/task_service.TaskOptions',
+{
+            title: "BasePaymentOptions",
+            href: "/docs/golem-js/reference/interfaces/payment_config.BasePaymentOptions"
           },
-          {
-            title: 'WorkOptions',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/task_work.WorkOptions',
+{
+            title: "DebitNoteDTO",
+            href: "/docs/golem-js/reference/interfaces/payment_debit_note.DebitNoteDTO"
           },
-          {
-            title: 'Logger',
-            href: '/docs/golem-js/reference/support-new-docs/interfaces/utils_logger_logger.Logger',
+{
+            title: "InvoiceDTO",
+            href: "/docs/golem-js/reference/interfaces/payment_invoice.InvoiceDTO"
           },
-        ],
+{
+            title: "PaymentOptions",
+            href: "/docs/golem-js/reference/interfaces/payment_payments.PaymentOptions"
+          },
+{
+            title: "PaymentOptions",
+            href: "/docs/golem-js/reference/interfaces/payment_service.PaymentOptions"
+          },
+{
+            title: "StorageProvider",
+            href: "/docs/golem-js/reference/interfaces/storage_provider.StorageProvider"
+          },
+{
+            title: "WebSocketStorageProviderOptions",
+            href: "/docs/golem-js/reference/interfaces/storage_ws_browser.WebSocketStorageProviderOptions"
+          },
+{
+            title: "TaskServiceOptions",
+            href: "/docs/golem-js/reference/interfaces/task_service.TaskServiceOptions"
+          },
+{
+            title: "CommandOptions",
+            href: "/docs/golem-js/reference/interfaces/task_work.CommandOptions"
+          },
+{
+            title: "WorkOptions",
+            href: "/docs/golem-js/reference/interfaces/task_work.WorkOptions"
+          },
+{
+            title: "Logger",
+            href: "/docs/golem-js/reference/interfaces/utils_logger_logger.Logger"
+          },
+{
+            title: "IdentityModel",
+            href: "/docs/golem-js/reference/interfaces/utils_yagna_identity.IdentityModel"
+          }
+        ]
       },
-      {
-        title: 'modules',
+{
+        title: "modules",
         children: [
-          {
-            title: 'Activity_results',
-            href: '/docs/golem-js/reference/support-new-docs/modules/activity_results',
+{
+            title: "Activity_activity",
+            href: "/docs/golem-js/reference/modules/activity_activity"
           },
-          {
-            title: 'Agreement_service',
-            href: '/docs/golem-js/reference/support-new-docs/modules/agreement_service',
+{
+            title: "Activity_results",
+            href: "/docs/golem-js/reference/modules/activity_results"
           },
-          {
-            title: 'Agreement_strategy',
-            href: '/docs/golem-js/reference/support-new-docs/modules/agreement_strategy',
+{
+            title: "Agreement_service",
+            href: "/docs/golem-js/reference/modules/agreement_service"
           },
-          {
-            title: 'Events_events',
-            href: '/docs/golem-js/reference/support-new-docs/modules/events_events',
+{
+            title: "Agreement_strategy",
+            href: "/docs/golem-js/reference/modules/agreement_strategy"
           },
-          {
-            title: 'Executor_executor',
-            href: '/docs/golem-js/reference/support-new-docs/modules/executor_executor',
+{
+            title: "Events_events",
+            href: "/docs/golem-js/reference/modules/events_events"
           },
-          {
-            title: 'Market_demand',
-            href: '/docs/golem-js/reference/support-new-docs/modules/market_demand',
+{
+            title: "Executor_executor",
+            href: "/docs/golem-js/reference/modules/executor_executor"
           },
-          {
-            title: 'Market_proposal',
-            href: '/docs/golem-js/reference/support-new-docs/modules/market_proposal',
+{
+            title: "Golem_network_golem_network",
+            href: "/docs/golem-js/reference/modules/golem_network_golem_network"
           },
-          {
-            title: 'Market_service',
-            href: '/docs/golem-js/reference/support-new-docs/modules/market_service',
+{
+            title: "Job_job",
+            href: "/docs/golem-js/reference/modules/job_job"
           },
-          {
-            title: 'Market_strategy',
-            href: '/docs/golem-js/reference/support-new-docs/modules/market_strategy',
+{
+            title: "Job_storage",
+            href: "/docs/golem-js/reference/modules/job_storage"
           },
-          {
-            title: 'Network_identity',
-            href: '/docs/golem-js/reference/support-new-docs/modules/network_identity',
+{
+            title: "Market_builder",
+            href: "/docs/golem-js/reference/modules/market_builder"
           },
-          {
-            title: 'Network_network',
-            href: '/docs/golem-js/reference/support-new-docs/modules/network_network',
+{
+            title: "Market_demand",
+            href: "/docs/golem-js/reference/modules/market_demand"
           },
-          {
-            title: 'Network_node',
-            href: '/docs/golem-js/reference/support-new-docs/modules/network_node',
+{
+            title: "Market_proposal",
+            href: "/docs/golem-js/reference/modules/market_proposal"
           },
-          {
-            title: 'Package_package',
-            href: '/docs/golem-js/reference/support-new-docs/modules/package_package',
+{
+            title: "Market_service",
+            href: "/docs/golem-js/reference/modules/market_service"
           },
-          {
-            title: 'Package_repo_resolver',
-            href: '/docs/golem-js/reference/support-new-docs/modules/package_repo_resolver',
+{
+            title: "Market_strategy",
+            href: "/docs/golem-js/reference/modules/market_strategy"
           },
-          {
-            title: 'Payment_config',
-            href: '/docs/golem-js/reference/support-new-docs/modules/payment_config',
+{
+            title: "Network_network",
+            href: "/docs/golem-js/reference/modules/network_network"
           },
-          {
-            title: 'Payment_debit_note',
-            href: '/docs/golem-js/reference/support-new-docs/modules/payment_debit_note',
+{
+            title: "Network_node",
+            href: "/docs/golem-js/reference/modules/network_node"
           },
-          {
-            title: 'Payment_invoice',
-            href: '/docs/golem-js/reference/support-new-docs/modules/payment_invoice',
+{
+            title: "Network_service",
+            href: "/docs/golem-js/reference/modules/network_service"
           },
-          {
-            title: 'Payment_payments',
-            href: '/docs/golem-js/reference/support-new-docs/modules/payment_payments',
+{
+            title: "Package_package",
+            href: "/docs/golem-js/reference/modules/package_package"
           },
-          {
-            title: 'Payment_service',
-            href: '/docs/golem-js/reference/support-new-docs/modules/payment_service',
+{
+            title: "Payment_config",
+            href: "/docs/golem-js/reference/modules/payment_config"
           },
-          {
-            title: 'Payment_strategy',
-            href: '/docs/golem-js/reference/support-new-docs/modules/payment_strategy',
+{
+            title: "Payment_debit_note",
+            href: "/docs/golem-js/reference/modules/payment_debit_note"
           },
-          {
-            title: 'Script_command',
-            href: '/docs/golem-js/reference/support-new-docs/modules/script_command',
+{
+            title: "Payment_invoice",
+            href: "/docs/golem-js/reference/modules/payment_invoice"
           },
-          {
-            title: 'Storage_gftp',
-            href: '/docs/golem-js/reference/support-new-docs/modules/storage_gftp',
+{
+            title: "Payment_payments",
+            href: "/docs/golem-js/reference/modules/payment_payments"
           },
-          {
-            title: 'Storage_null',
-            href: '/docs/golem-js/reference/support-new-docs/modules/storage_null',
+{
+            title: "Payment_service",
+            href: "/docs/golem-js/reference/modules/payment_service"
           },
-          {
-            title: 'Storage_provider',
-            href: '/docs/golem-js/reference/support-new-docs/modules/storage_provider',
+{
+            title: "Payment_strategy",
+            href: "/docs/golem-js/reference/modules/payment_strategy"
           },
-          {
-            title: 'Storage_ws_browser',
-            href: '/docs/golem-js/reference/support-new-docs/modules/storage_ws_browser',
+{
+            title: "Script_command",
+            href: "/docs/golem-js/reference/modules/script_command"
           },
-          {
-            title: 'Task_batch',
-            href: '/docs/golem-js/reference/support-new-docs/modules/task_batch',
+{
+            title: "Storage_gftp",
+            href: "/docs/golem-js/reference/modules/storage_gftp"
           },
-          {
-            title: 'Task_service',
-            href: '/docs/golem-js/reference/support-new-docs/modules/task_service',
+{
+            title: "Storage_null",
+            href: "/docs/golem-js/reference/modules/storage_null"
           },
-          {
-            title: 'Task_task',
-            href: '/docs/golem-js/reference/support-new-docs/modules/task_task',
+{
+            title: "Storage_provider",
+            href: "/docs/golem-js/reference/modules/storage_provider"
           },
-          {
-            title: 'Task_work',
-            href: '/docs/golem-js/reference/support-new-docs/modules/task_work',
+{
+            title: "Storage_ws_browser",
+            href: "/docs/golem-js/reference/modules/storage_ws_browser"
           },
-          {
-            title: 'Utils_env',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_env',
+{
+            title: "Task_batch",
+            href: "/docs/golem-js/reference/modules/task_batch"
           },
-          {
-            title: 'Utils_logger_consoleLogger',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_logger_consoleLogger',
+{
+            title: "Task_service",
+            href: "/docs/golem-js/reference/modules/task_service"
           },
-          {
-            title: 'Utils_logger_defaultLogger',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_logger_defaultLogger',
+{
+            title: "Task_task",
+            href: "/docs/golem-js/reference/modules/task_task"
           },
-          {
-            title: 'Utils_logger_jsonLogger',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_logger_jsonLogger',
+{
+            title: "Task_work",
+            href: "/docs/golem-js/reference/modules/task_work"
           },
-          {
-            title: 'Utils_logger_logger',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_logger_logger',
+{
+            title: "Utils_env",
+            href: "/docs/golem-js/reference/modules/utils_env"
           },
-          {
-            title: 'Utils_logger_nullLogger',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_logger_nullLogger',
+{
+            title: "Utils_logger_consoleLogger",
+            href: "/docs/golem-js/reference/modules/utils_logger_consoleLogger"
           },
-          {
-            title: 'Utils_logger_pinoLogger',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_logger_pinoLogger',
+{
+            title: "Utils_logger_defaultLogger",
+            href: "/docs/golem-js/reference/modules/utils_logger_defaultLogger"
           },
-          {
-            title: 'Utils_runtimeContextChecker',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_runtimeContextChecker',
+{
+            title: "Utils_logger_jsonLogger",
+            href: "/docs/golem-js/reference/modules/utils_logger_jsonLogger"
           },
-          {
-            title: 'Utils_types',
-            href: '/docs/golem-js/reference/support-new-docs/modules/utils_types',
+{
+            title: "Utils_logger_logger",
+            href: "/docs/golem-js/reference/modules/utils_logger_logger"
           },
-        ],
-      },
-    ],
-  },
+{
+            title: "Utils_logger_nullLogger",
+            href: "/docs/golem-js/reference/modules/utils_logger_nullLogger"
+          },
+{
+            title: "Utils_logger_pinoLogger",
+            href: "/docs/golem-js/reference/modules/utils_logger_pinoLogger"
+          },
+{
+            title: "Utils_runtimeContextChecker",
+            href: "/docs/golem-js/reference/modules/utils_runtimeContextChecker"
+          },
+{
+            title: "Utils_types",
+            href: "/docs/golem-js/reference/modules/utils_types"
+          },
+{
+            title: "Utils_yagna_gsb",
+            href: "/docs/golem-js/reference/modules/utils_yagna_gsb"
+          },
+{
+            title: "Utils_yagna_identity",
+            href: "/docs/golem-js/reference/modules/utils_yagna_identity"
+          },
+{
+            title: "Utils_yagna_yagna",
+            href: "/docs/golem-js/reference/modules/utils_yagna_yagna"
+          }
+        ]
+      }
+    ]
+  }
 ]

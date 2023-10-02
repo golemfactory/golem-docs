@@ -11,12 +11,12 @@ const nextConfig = {
   distDir: 'dist',
 }
 
-if (!process.env.VERCEL) {
-  nextConfig.output = 'export'
-  nextConfig.images = {
-    unoptimized: true,
-  }
-}
+// if (!process.env.VERCEL) {
+//   nextConfig.output = 'export'
+//   nextConfig.images = {
+//     unoptimized: true,
+//   }
+// }
 
 export default withSearch(
   withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig)

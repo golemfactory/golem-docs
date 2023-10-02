@@ -1,24 +1,10 @@
 ---
 description: Parallel processing on Golem Network - Tutorial
 title: Parallel processing on Golem Network Tutorial
+type: Tutorial
 ---
 
 # Executing tasks in parallel - tutorial
-
-{% alert level="info" %}
-
-This tutorial has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
-## Prerequisites
-
-- Yagna service is installed and running with `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
-- Docker installed and Docker service available.
-
 
 ## Introduction
 
@@ -31,6 +17,20 @@ We will go through the following steps:
 - Create a requestor script
 - Run the tasks in parallel and process the output
 
+{% alert level="info" %}
+
+This tutorial has been designed to work with the following environments:
+
+- OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js 16.0.0 or above
+
+{% /alert %}
+
+## Prerequisites
+
+- Yagna service is installed and running with the `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
+- Docker installed and Docker service available.
+
 ## Define the problem
 
 As a practical example of a problem that is suitable for parallel processing, we selected the task of recovering passwords using the `hashcat` tool. You can apply a similar procedure to utilize Golem Network for other problems that require parallel processing.
@@ -42,7 +42,7 @@ Hashcat supports 320 hashing algorithms and 5 different attack types, but for th
 
 To find the password that matches the given hash and mask, we could run the following command:
 
-```bash 
+```bash
 hashcat -a 3 -m 400 in.hash ?a?a?a
 ```
 
@@ -109,7 +109,7 @@ For our task, we will use an off-the-shelf hashcat image (`dizcza/docker-hashcat
 
 Create a `Dockerfile` file with the following content:
 
-```bash
+```dockerfile
 FROM ubuntu
 WORKDIR /golem/work
 RUN apt update
@@ -170,7 +170,7 @@ Based on the usage of the `hashcat` tool, our algorithm will be straightforward:
 
 - First we will calculate the keyspace, then
 - Split it into several segments and run tasks in parallel on many providers, as defined by the user.
-- Finally we will collect the results and provide the user with the output.
+- Finally, we will collect the results and provide the user with the output.
 
 Note, we could calculate the keyspace locally, but in this example we will also do it on a remote computer, avoiding installing hashcat on our computer.
 
@@ -185,34 +185,36 @@ npm install @golem-sdk/golem-js
 
 Create the `index.mjs` file with the following content:
 
-```bash
-import { TaskExecutor } from "@golem-sdk/golem-js";
-import { program } from "commander";
+```js
+import { TaskExecutor } from '@golem-sdk/golem-js'
+import { program } from 'commander'
 
 async function main(args) {
+  console.log(args)
 
-
-console.log(args);
-
-// todo: Create Executor
-// todo: Calculate keyspace
-// todo: Calculate boundaries for each chunk
-// todo: Run the task on multiple providers in parallel
-// todo: Process and print results
-// todo: End executor
-
+  // todo: Create Executor
+  // todo: Calculate keyspace
+  // todo: Calculate boundaries for each chunk
+  // todo: Run the task on multiple providers in parallel
+  // todo: Process and print results
+  // todo: End executor
 }
 
 program
- .option("--number-of-providers <number_of_providers>", "number of providers", (value) => parseInt(value), 3)
- .option("--mask <mask>")
- .requiredOption("--hash <hash>");
+  .option(
+    '--number-of-providers <number_of_providers>',
+    'number of providers',
+    (value) => parseInt(value),
+    3
+  )
+  .option('--mask <mask>')
+  .requiredOption('--hash <hash>')
 
-program.parse();
+program.parse()
 
-const options = program.opts();
+const options = program.opts()
 
-main(options).catch((e) => console.error(e));
+main(options).catch((e) => console.error(e))
 ```
 
 We use the `commander` library to pass arguments such as --mask and --max-workers. This library will print a nice argument description and an example invocation when we run the requestor script with --help. Note you need to install it with `npm install commander`.
@@ -225,12 +227,12 @@ We do not run anything on Golem yet.
 
 To execute our tasks on the Golem Network, we need to create a TaskExecutor instance.
 
-```bash
+```js
 const executor = await TaskExecutor.create({
-   package: "055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db",
-   maxParallelTasks: args.numberOfProviders,
-   yagnaOptions: { apiKey: `try_golem` }
- });
+  package: '055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db',
+  maxParallelTasks: args.numberOfProviders,
+  yagnaOptions: { apiKey: `try_golem` },
+})
 ```
 
 The package parameter is required and points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
@@ -244,14 +246,14 @@ The other parameters are:
 The first step in the computation is to check the keyspace size. For this, we only need to execute hashcat with --keyspace and read the commands' output.
 With the TaskExecutor instance running, we can now send such a task to one of the providers using the run method:
 
-```bash
+```js
 const keyspace = await executor.run(async (ctx) => {
-  const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`);
-  return parseInt(result.stdout || "");
-});
+  const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`)
+  return parseInt(result.stdout || '')
+})
 
-if (!keyspace) throw new Error(`Cannot calculate keyspace`);
-  console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`);
+if (!keyspace) throw new Error(`Cannot calculate keyspace`)
+console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`)
 ```
 
 This call tells the `executor` to execute a single task defined by the task function `async (ctx) => {}`. The ctx object allows us to run a task consisting of a single or batch of commands on the provider side.
@@ -282,20 +284,27 @@ For each worker, we perform the following steps:
 - Get the hashcat\_{skip}.potfile from the provider to the requestor.
 - Parse the result from the .potfile.
 
-With the range, we use the executor.map method to run the split tasks simultaneously on the Golem Network:
+With the range, we use the `executor.map` method to run the split tasks simultaneously on the Golem Network:
 
 ```js
 const results = executor.map(range, async (ctx, skip = 0) => {
-const results = await ctx
-  .beginBatch()
-  .run(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${Math.min(keyspace-1,step + step-1)} -o pass.potfile`)
-  .run("cat pass.potfile")
-  .end()
-  .catch((err) => console.error(err));
+  const results = await ctx
+    .beginBatch()
+    .run(
+      `hashcat -a 3 -m 400 '${args.hash}' '${
+        args.mask
+      }' --skip=${skip} --limit=${Math.min(
+        keyspace - 1,
+        step + step - 1
+      )} -o pass.potfile`
+    )
+    .run('cat pass.potfile')
+    .end()
+    .catch((err) => console.error(err))
 
-if (!results?.[1]?.stdout) return false;
-return results?.[1]?.stdout.split(":")[1];
-});
+  if (!results?.[1]?.stdout) return false
+  return results?.[1]?.stdout.toString().split(':')[1]
+})
 ```
 
 Note, that we use the `beginBatch()` method to organize together two sequential commands: the first will run the hashcat and the second will print the content of the output file.
@@ -323,31 +332,30 @@ Once we get the password we print it in the console and end executor.
 ### The complete example
 
 ```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-import { program } from "commander";
+import { TaskExecutor } from '@golem-sdk/golem-js'
+import { program } from 'commander'
 
 async function main(args) {
   const executor = await TaskExecutor.create({
-    package: "055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db",
+    package: '055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db',
     maxParallelTasks: args.numberOfProviders,
     yagnaOptions: { apiKey: `try_golem` },
-  });
+  })
 
   const keyspace = await executor.run(async (ctx) => {
-    const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`);
-    return parseInt(result.stdout || "");
-  });
+    const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`)
+    return parseInt(result.stdout || '')
+  })
 
-  if (!keyspace) throw new Error(`Cannot calculate keyspace`);
+  if (!keyspace) throw new Error(`Cannot calculate keyspace`)
 
-  console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`);
-  const step = Math.floor(keyspace / args.numberOfProviders + 1);
+  console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`)
+  const step = Math.floor(keyspace / args.numberOfProviders + 1)
   const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map(
-    (i) => i * step,
-  );
+    (i) => i * step
+  )
 
   const results = executor.map(range, async (ctx, skip = 0) => {
-    //console.log(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${Math.min(keyspace-1,skip + step-1)} -o pass.potfile`);
     const results = await ctx
       .beginBatch()
       .run(
@@ -355,42 +363,41 @@ async function main(args) {
           args.mask
         }' --skip=${skip} --limit=${Math.min(
           keyspace,
-          skip + step,
-        )} -o pass.potfile`,
+          skip + step
+        )} -o pass.potfile`
       )
-      .run("cat pass.potfile")
+      .run('cat pass.potfile')
       .end()
-      .catch((err) => console.error(err));
-    if (!results?.[1]?.stdout) return false;
-    return results?.[1]?.stdout.split(":")[1];
-  });
+      .catch((err) => console.error(err))
+    if (!results?.[1]?.stdout) return false
+    return results?.[1]?.stdout.toString().split(':')[1]
+  })
 
-  let password = "";
+  let password = ''
   for await (const result of results) {
     if (result) {
-      password = result;
-      break;
+      password = result
+      break
     }
   }
 
-  if (!password) console.log("No password found");
-  else console.log(`Password found: ${password}`);
-  await executor.end();
+  if (!password) console.log('No password found')
+  else console.log(`Password found: ${password}`)
+  await executor.end()
 }
 
 program
   .option(
-    "--number-of-providers <number_of_providers>",
-    "number of providers",
+    '--number-of-providers <number_of_providers>',
+    'number of providers',
     (value) => parseInt(value),
-    3,
+    3
   )
-  .option("--mask <mask>")
-  .requiredOption("--hash <hash>");
-program.parse();
-const options = program.opts();
-main(options).catch((e) => console.error(e));
-
+  .option('--mask <mask>')
+  .requiredOption('--hash <hash>')
+program.parse()
+const options = program.opts()
+main(options).catch((e) => console.error(e))
 ```
 
 To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
@@ -399,28 +406,24 @@ To test our script, copy it into the `index.mjs` file. Ensure your Yagna service
 
 {% tab label="Linux/ Mac" %}
 
-```js
+```bash
 node index.mjs  --mask '?a?a?a' --hash '$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/'
 ```
 
 {% /tab  %}  
 {% tab label="Windows" %}
 
-```js
+```bash
 node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 ```
 
 {% /tab  %}  
 {% /tabs %}
 
+You should see an output similar to the one below. Note, that once we obtained the solution, `executor.end()` terminates other tasks, that might not be finished yet, and we observe the errors, due to `.catch((err) => console.error(err));` inside the task function.
 
-You should see an output similar to the one below. Note, that once we obtained the solution, `executor.end()` terminates other tasks, that might not finished yet, and we observe the errors, due to `.catch((err) => console.error(err));` inside the task function.
-
-![](/hashcat_output_1.png)
-![](/hashcat_output_2.png)
-
-
-
+![Output of hashcat](/hashcat_output_1.png)
+![Second output of hashcat](/hashcat_output_2.png)
 
 {% alert level="info" %}
 

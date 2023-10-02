@@ -1,9 +1,23 @@
 ---
 description: Selecting providers
 title: Selecting providers
+type: Example
 ---
 
 # JS Task API Examples: selecting providers
+
+## Introduction
+
+You can select providers using different criteria, i.e. defining requirements in a demand or applying filters on providers' proposals. You can:
+
+- Select a provider based on minimal requirements for remote computer
+  CPU, disk storage, RAM.
+- Select a provider based on the whitelist/blacklist.
+- Select a provider based on the proposed costs using a custom filter.
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -13,10 +27,6 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
-
-## Prerequisites
-
-Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -34,15 +44,6 @@ Copy the code into the `index.mjs` file in the project folder and run:
 ```bash
 node index.mjs
 ```
-
-## Introduction
-
-You can select providers that suit your needs:
-
-- Select a provider based on minimal requirements for remote computer
-  CPU, storage, ram
-- Select a provider based on the whitelist/blacklist
-- Select a provider based on the proposed costs using a custom filter
 
 ## Filtering providers based on minimal requirements:
 
@@ -158,8 +159,8 @@ var costData = [];
 const myFilter = async (proposal) => {
   
    let decision = false; 
-   let usageVecor = proposal.properties['golem.com.usage.vector'];
-   let counterIdx = usageVecor.findIndex((ele) => ele === 'golem.usage.duration_sec');
+   let usageVector = proposal.properties['golem.com.usage.vector'];
+   let counterIdx = usageVector.findIndex((ele) => ele === 'golem.usage.duration_sec');
    let proposedCost = proposal.properties['golem.com.pricing.model.linear.coeffs'][counterIdx];
    costData.push(proposedCost);
   if (costData.length < 11) return false;

@@ -16,8 +16,16 @@ export const navigation = [
         href: '/docs/quickstarts/golem-in-a-browser',
       },
       {
+        title: 'Ray on Golem Quickstart',
+        href: '/docs/quickstarts/ray-quickstart',
+      },
+      {
         title: '"no-code" app deployment',
         href: '/docs/quickstarts/no-code-app-deployment',
+      },
+      {
+        title: 'Retrievable Task',
+        href: '/docs/quickstarts/retrievable-task',
       },
     ],
   },
@@ -40,6 +48,10 @@ export const navigation = [
               {
                 title: 'Golem in a browser',
                 href: '/docs/creators/javascript/quickstarts/golem-in-a-browser',
+              },
+              {
+                title: 'Retrievable Task (Job API)',
+                href: '/docs/creators/javascript/quickstarts/retrievable-task',
               },
             ],
           },
@@ -69,6 +81,10 @@ export const navigation = [
               {
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
+              },
+              {
+                title: 'REST API with Express.js',
+                href: '/docs/creators/javascript/tutorials/rest-api-with-express',
               },
             ],
           },
@@ -127,6 +143,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/guides/task-model',
               },
               {
+                title: 'Retrievable tasks (Job API)',
+                href: '/docs/creators/javascript/guides/retrievable-tasks',
+              },
+              {
                 title: 'Golem images',
                 href: '/docs/creators/javascript/guides/golem-images',
               },
@@ -137,10 +157,6 @@ export const navigation = [
               {
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/guides/switching-to-mainnet',
-              },
-              {
-                title: 'Troubleshooting',
-                href: '/docs/creators/javascript/guides/troubleshooting',
               },
             ],
           },
@@ -182,6 +198,37 @@ export const navigation = [
               },
             ],
           },
+        ],
+      },
+      {
+        title: 'Python with Ray on Golem',
+        children: [
+	  { title: 'Introduction', href: '/docs/creators/ray' },
+	  { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
+	  {
+	    title: 'Concept',
+	    href: '/docs/creators/ray/concept',
+	  },
+	  {
+	    title: 'Setup tutorial',
+	    href: '/docs/creators/ray/setup-tutorial',
+	  },
+	  {
+	    title: 'Basic Ray tasks usage tutorial',
+	    href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
+	  },
+	  {
+	    title: 'Converting a real-life use case to Ray on Golem',
+	    href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
+	  },
+	  {
+	    title: 'Cluster yaml reference',
+	    href: '/docs/creators/ray/cluster-yaml-reference',
+	  },
+	  {
+	    title: 'Supported versions and other limitations',
+	    href: '/docs/creators/ray/supported-versions-and-other-limitations',
+	  },
         ],
       },
       {
@@ -350,9 +397,27 @@ export const navigation = [
             title: 'Docker vs Golem VM diffs',
             href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
           },
+        ],
+      },
+      {
+        title: 'Troubleshooting',
+        children: [
           {
-            title: 'Troubleshooting',
-            href: '/docs/creators/dapps/troubleshooting',
+            title: 'JavaScript Requestor',
+            href: '/docs/troubleshooting/js-requestor',
+          },
+          {
+            title: 'Yagna',
+            href: '/docs/troubleshooting/yagna',
+          },
+          {
+            title: 'dApps',
+            href: '/docs/troubleshooting/dapps',
+          },
+
+          {
+            title: 'Exit codes',
+            href: '/docs/troubleshooting/js-requestor/exit-codes',
           },
         ],
       },
@@ -397,10 +462,7 @@ export const navigation = [
         href: '/docs/providers/provider-basic-configuration',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-      {
-        title: 'Troubleshooting',
-        href: '/docs/providers/provider-troubleshooting',
-      },
+
       {
         title: 'Yagna CLI reference',
         href: '/docs/providers/yagna-cli-reference',
@@ -419,6 +481,15 @@ export const navigation = [
           {
             title: 'Wallet Restore',
             href: '/docs/providers/maintenance/wallet-restoration',
+          },
+        ],
+      },
+      {
+        title: 'Troubleshooting',
+        children: [
+          {
+            title: 'Provider',
+            href: '/docs/troubleshooting/provider',
           },
         ],
       },

@@ -1,0 +1,29 @@
+name: Build API reference and create PR
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        branch: ['master', 'beta', 'alpha']
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ matrix.branch }}
+      - run: npm ci 
+      - run: ./generate-reference.sh ${{ matrix.branch }}
+      - name: create-pull-request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: 'feat: Update golem-js API Reference for branch ${{ matrix.branch }}'
+          title: 'Update ${{ matrix.branch }} branch'
+          branch: patch/${{ matrix.branch }}-golem-js-api-reference
+          reviewers: cryptobench
+          base: ${{ matrix.branch }}
+          delete-branch: true

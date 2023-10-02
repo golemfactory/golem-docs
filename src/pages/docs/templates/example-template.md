@@ -1,9 +1,16 @@
 ---
 description: Template for an example article
 title: This is the page title displayed in a browser tab.
+type: Example
 ---
 
-# Example title
+# Introduction
+
+Explain what will be demonstrated in this article.
+
+## Prerequisites
+
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## Introduction
 
@@ -21,6 +28,9 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
+
+
+
 
 ## How to run examples
 

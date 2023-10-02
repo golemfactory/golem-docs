@@ -1,6 +1,7 @@
 ---
 description: Provider maintenance.
 title: Provider maintenance
+type: Guide
 ---
 
 # Provider maintenance
@@ -32,9 +33,7 @@ The value described as `nodeId` in the output is the Ethereum address of your Go
 
 ## Checking the status of your accounts
 
-Depending on whether you're mainly running a provider node or a requestor one, your default network (blockchain) may be different.
-
-Because of that, when you run `yagna payment status` to verify the state of your payment account and the amount of GLM tokens you have at your disposal, you may need to add the specific `network` and `driver` parameters to point to the network/driver combination that you're interested in.
+When you run `yagna payment status` to verify the state of your payment account and the amount of GLM tokens you have at your disposal, you may need to add the specific `network` and `driver` parameters to point to the network/driver combination that you're interested in.
 
 In the context of running Golem on mainnet, here are the commands for each of the supported mainnet platforms:
 

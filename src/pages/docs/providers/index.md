@@ -1,6 +1,7 @@
 ---
 description: Provider introduction
 title: Provider introduction
+type: introduction
 ---
 
 The Golem Network is a peer-to-peer network of computers. It is being created by a community of people who believe that decentralization is an idea that deserves their support and who want to participate and benefit from the Golem project.

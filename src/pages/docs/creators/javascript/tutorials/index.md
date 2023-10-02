@@ -1,6 +1,7 @@
 ---
 description: Tutorials
 title: JS SDK Tutorials
+type: Toc
 ---
 
 # Golem JS Tutorials
@@ -14,4 +15,5 @@ Here is a list of available tutorials and their content:
 | [Parallel processing](/docs/creators/javascript/tutorials/running-parallel-tasks)  | You will create a tool to recover passwords using the `hashcat` tool used in the password recovery process run in parallel on computers in the network.   | You will learn how to compose complex tasks consisting of several steps and how to run tasks in parallel and process the results. You will also create your custom image.   | easy |
 | [Web example explained](/docs/creators/javascript/tutorials/running-in-browser)  | Create a simple web page that will enable you to trigger tasks on the Golem Network in the browser context and display results and logs.  | How to use the API directly from the browser context. It is useful when incorporating the Golem Network as a computation engine for your web app.  | easy |
 | [Creating custom Golem image](/docs/creators/javascript/tutorials/testing-golem-image)  | You will create your own custom image.   | How to create a Docker image, install the Golem conversion tool, and convert and publish your custom image. | easy, docker service required |
+| [REST API example with Express.js](/docs/creators/javascript/tutorials/rest-api-with-express)  | You will create a simple REST API that will allow you to send some text to the Golem Network and get back a text-to-speech result in the form of a WAV file.  | How to use the Job API in a real-world scenario.  | easy |
 
