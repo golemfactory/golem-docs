@@ -6,7 +6,7 @@ type: tutorial
 
 # Task Example 0: Hello World!
 
-### Introduction
+## Introduction
 
 This example illustrates following Golem features & aspects:
 

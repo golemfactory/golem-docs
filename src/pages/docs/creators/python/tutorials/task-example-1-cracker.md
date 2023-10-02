@@ -1,17 +1,21 @@
+---
+description: Task API Simple hash cracker Tutorial
+title: Task API Simple hash cracker Tutorial
+type: tutorial
+---
+
 # Task Example 1: Simple hash cracker
 
-{% hint style="info" %}
+## Introduction
+
 This example illustrates following Golem features & aspects:
 
-* VM runtime
-* Task execution
-  * Parallel task execution
-  * Low-level work item timeouts
-  * Early exit from task execution
-* File transfer to/from Provider exe unit
-{% /hint %}
-
-## Introduction
+- VM runtime
+- Task execution
+  - Parallel task execution
+  - Low-level work item timeouts
+  - Early exit from task execution
+- File transfer to/from Provider exe unit
 
 _This tutorial is the textual counterpart to a workshop originally prepared by Jakub Mazurek, a Software Developer at Golem Factory and presented during the Hello Decentralization conference in February, 2021._
 
@@ -58,8 +62,8 @@ We're going to be using the code from this repository later on in the course of 
 
 To give you a quick glimpse into what a typical Golem application looks like ([you can read about this topic at length in our more advanced tutorial](task-model-introduction.md#what-is-a-golem-application)), what you need to know for now is that it consists of two distinct components:
 
-* the **requestor agent** part that runs on your requestor node and is responsible for preparing the tasks for the providers and processing their output,
-* the **worker** part that runs within VMs on the provider nodes and performs the actual computations. 
+- the **requestor agent** part that runs on your requestor node and is responsible for preparing the tasks for the providers and processing their output,
+- the **worker** part that runs within VMs on the provider nodes and performs the actual computations.
 
 For convenience, in our example here, both pieces are written in Python but that doesn't have to be the case. For requestor agent part, you can now also utilize [JavaScript, that we support with our other high-level API](https://github.com/golemfactory/yajsapi/), and the worker itself can be written any way you like as long as it can accept input in JSON and can run within a Docker-like VM.
 
@@ -204,11 +208,11 @@ Let's replace it with code that performs the hashing and comparison:
 
 What the above does is:
 
-* it iterates through the lines in input slice of the dictionary,
-* converts each of those lines into a UTF-8-encoded string of bytes (`line_bytes` variable),
-* then, it computes a SHA-256 hash of those bytes and converts that to a hexadecimal string (`line_hash` variable),
-* compares the resultant hex-encoded hash to the hash we're trying to find a match for,
-* and finally, if a match is found it saves the corresponding word as the result and finishes processing.
+- it iterates through the lines in input slice of the dictionary,
+- converts each of those lines into a UTF-8-encoded string of bytes (`line_bytes` variable),
+- then, it computes a SHA-256 hash of those bytes and converts that to a hexadecimal string (`line_hash` variable),
+- compares the resultant hex-encoded hash to the hash we're trying to find a match for,
+- and finally, if a match is found it saves the corresponding word as the result and finishes processing.
 
 One last thing - since the code uses the `sha256` function from the `hashlib` library (bundled with Python), we need to import it by adding a line to our imports at the top of the file:
 
@@ -337,8 +341,8 @@ That means that at present, if you need some initialization to be done, you can 
 
 To make our image available to providers within the Golem network we need to take the following steps:
 
-1. Build a Docker image using our `Dockerfile`. 
-2. Convert the Docker image to a `.gvmi` file using `gvmkit-build`. 
+1. Build a Docker image using our `Dockerfile`.
+2. Convert the Docker image to a `.gvmi` file using `gvmkit-build`.
 3. Push the `.gvmi` file to Golem's image repository.
 
 `gvmkit-build` is included in `requirements.txt`, so it should be installed in the virtual environment used for this example.
@@ -373,8 +377,8 @@ The low-level part of the requestor agent's job - that is - keeping and processi
 
 However, there are two main responsibilities that are too specific for each application to be provided by our high- or low-level APIs or by the daemon itself. Those are:
 
-* **splitting the computation** and wrapping its fragments with `Task` objects that directly represent the singular jobs that are given to provider nodes.
-* **specifying the exe-script** - or in other words - the sequence of operations like sending files or parameters, calling commands within the VM on provider's end, requesting results back, etc - which in their entirety cause the specific task to get successfully executed on provider's end.
+- **splitting the computation** and wrapping its fragments with `Task` objects that directly represent the singular jobs that are given to provider nodes.
+- **specifying the exe-script** - or in other words - the sequence of operations like sending files or parameters, calling commands within the VM on provider's end, requesting results back, etc - which in their entirety cause the specific task to get successfully executed on provider's end.
 
 We will need to supply the code for them as part of our app's **requestor agent** and, fortunately, we already have the perfect place designed for them in our `requestor.py` file.
 
@@ -529,9 +533,9 @@ As you can see, there's one command that's uniform for all tasks - the first `.s
 
 Then we define a few steps that will take place for each task in our list:
 
-* `.send_json()` which tells the exe-unit to store the given subset of words as a JSON-serialized file in another path within the VM that we had defined in `worker.py` (`worker.WORDS_PATH`, note that in this function the destination comes first, followed by an object to be serialized),
-* `.run()` call which is the one that actually executes the `worker.py` script inside the provider's VM, which in turn produces output (as you remember, this may be empty or may contain our solution),
-* then we have `.download_file()` call which transfers that solution file back to a temporary file on the requestor's end,
+- `.send_json()` which tells the exe-unit to store the given subset of words as a JSON-serialized file in another path within the VM that we had defined in `worker.py` (`worker.WORDS_PATH`, note that in this function the destination comes first, followed by an object to be serialized),
+- `.run()` call which is the one that actually executes the `worker.py` script inside the provider's VM, which in turn produces output (as you remember, this may be empty or may contain our solution),
+- then we have `.download_file()` call which transfers that solution file back to a temporary file on the requestor's end,
 
 {% hint style="warning" %}
 Please keep in mind that any commands specified in the `.run()` call to the VM execution unit must directly refer to a given executable, which usually means specifying their full, absolute path. There's no shell (and hence, no PATH) there to rely upon.
@@ -640,9 +644,9 @@ With all pieces ready in their positions, it's now time to set our app to motion
 
 To do that, we need to be sure that:
 
-* our app's VM image has been published and that it matches what we're referring to in `requestor.py` (in the `image_hash` parameter to `vm.repo()`),
-* our `yagna` daemon is running and is properly funded and initialized as a requestor.
-* our Python virtual environment has been properly set-up, activated and requirements of our `hash-cracker` app installed 
+- our app's VM image has been published and that it matches what we're referring to in `requestor.py` (in the `image_hash` parameter to `vm.repo()`),
+- our `yagna` daemon is running and is properly funded and initialized as a requestor.
+- our Python virtual environment has been properly set-up, activated and requirements of our `hash-cracker` app installed
 
 Now for the big moment! Make sure you're in the directory containing the `requestor.py` script within the checked-out repo and run:
 
@@ -662,11 +666,11 @@ You have completed and successfully run your first app on Golem! Welcome to our 
 
 During this workshop we have lead you through all stages of implementation of a typical Golem application:
 
-* we showed you how to prepare the innermost piece of your app - the very **code that runs within the VM** on the provider's end,
-* enabled you to **publish the VM image** containing that code to Golem's image repository,
-* went through the process of writing the **requestor agent** to orchestrate the execution of your computational task,
-* showed you how to **prepare your yagna daemon** to handle the interactions with the rest of the Golem world,
-* and finally how to launch your app to Golem.
+- we showed you how to prepare the innermost piece of your app - the very **code that runs within the VM** on the provider's end,
+- enabled you to **publish the VM image** containing that code to Golem's image repository,
+- went through the process of writing the **requestor agent** to orchestrate the execution of your computational task,
+- showed you how to **prepare your yagna daemon** to handle the interactions with the rest of the Golem world,
+- and finally how to launch your app to Golem.
 
 Of course, the app was very simple - as it should be for that kind of "Hello World!" example - but we hope it gave you some confidence and some basic knowledge of what to expect when you get to implement _your_ _own_ ideas.
 

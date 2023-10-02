@@ -1,5 +1,6 @@
 ---
 description: A minimal example of a Golem requestor agent based on services
+title:
 ---
 
 # Service Example 0: Hello world?
@@ -7,9 +8,10 @@ description: A minimal example of a Golem requestor agent based on services
 {% hint style="info" %}
 This example illustrates following Golem features & aspects:
 
-* VM runtime
-* Service provisioning and execution
-* Retrieving command output from provider's exe unit
+- VM runtime
+- Service provisioning and execution
+- Retrieving command output from provider's exe unit
+
 {% /hint %}
 
 ## Prerequisites
@@ -30,6 +32,7 @@ Please note that as of its current latest version (`0.6.0`) the JS high-level AP
 
 {% tabs %}
 {% tab title="Python" %}
+
 ```python
 #!/usr/bin/env python3
 import asyncio
@@ -99,6 +102,7 @@ if __name__ == "__main__":
     loop.run_until_complete(task)
 
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -113,10 +117,10 @@ Let's now take a closer look at both of the components mentioned above.
 
 In the Golem API, services are implemented by extending the base `Service` class. By overriding certain methods from that class we can define our service's life cycle, as well as its payload. Here's an overview of this interface:
 
-* `get_payload() -> Optional[Payload]` returns the `Payload` object which describes the execution environment we want our service instances to run on. In the case of the VM runtime this will include a hash of the VM image to be deployed. If we choose not to implement this method our payload will need to be specified when running the service through `Golem.run_service`.
-* `start() -> None` called for each service instance when it enters the `starting` state. This should contain the sequence of steps which need to be taken in order for our service to be started.
-* `run() -> None` called for each service instance when it enters the `running` state. This is where the main loop of our service should be implemented.
-* `shutdown() -> None` called for each service instance when it enters the `stopping` state. In case our service requires some cleanup logic to be run before an instance is terminated, this is where it should be placed.
+- `get_payload() -> Optional[Payload]` returns the `Payload` object which describes the execution environment we want our service instances to run on. In the case of the VM runtime this will include a hash of the VM image to be deployed. If we choose not to implement this method our payload will need to be specified when running the service through `Golem.run_service`.
+- `start() -> None` called for each service instance when it enters the `starting` state. This should contain the sequence of steps which need to be taken in order for our service to be started.
+- `run() -> None` called for each service instance when it enters the `running` state. This is where the main loop of our service should be implemented.
+- `shutdown() -> None` called for each service instance when it enters the `stopping` state. In case our service requires some cleanup logic to be run before an instance is terminated, this is where it should be placed.
 
 All three life cycle methods (i.e. `start`, `run` and `shutdown`) are optional, although in most cases a service will require at least `start` to be implemented.
 
@@ -130,6 +134,7 @@ This `WorkContext` instance is provided through the field `self._ctx` of the `Se
 
 {% tabs %}
 {% tab title="Python" %}
+
 ```python
 @staticmethod
 async def get_payload():
@@ -137,6 +142,7 @@ async def get_payload():
         image_hash="d646d7b93083d817846c2ae5c62c72ca0507782385a2e29291a3d376"
     )
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -146,6 +152,7 @@ Our `DateService` uses the same image hash as the [Task Example 0: Hello World!]
 
 {% tabs %}
 {% tab title="Python" %}
+
 ```python
 async def start(self):
     async for script in super().start():
@@ -161,6 +168,7 @@ async def start(self):
     yield script
 
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -168,9 +176,11 @@ Our `start` function is responsible for starting a background process on the pro
 
 {% tabs %}
 {% tab title="Bash" %}
+
 ```bash
 while true; do date > /golem/work/date.txt; sleep 5; done &
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -196,11 +206,13 @@ With the service implementation complete let's now take a look at how we can pro
 
 {% tabs %}
 {% tab title="Python" %}
+
 ```python
 async def main():
     async with Golem(budget=1.0, subnet_tag="public") as golem:
         cluster = await golem.run_service(DateService, num_instances=1)
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -212,8 +224,8 @@ If you are not familiar with the `Golem` class and/or how it's used in these exa
 
 Provisioning our service is done using the method `run_service` which, in our example, is given two parameters:
 
-* `service_class` is the class extending `Service` which will be used as the definition for each of our service instances.
-* `num_instances` is the number of service instances we'd like to create.
+- `service_class` is the class extending `Service` which will be used as the definition for each of our service instances.
+- `num_instances` is the number of service instances we'd like to create.
 
 Awaiting on `run_service` returns a `Cluster` object. This is a wrapper around a collection of `Service` objects, in our case these will be `DateService` objects. Each of these objects represents a single instance of our service provisioned on the Golem network. The `Cluster` can be used to control the state of those service instances (e.g. to stop services if necessary).
 
@@ -221,6 +233,7 @@ Awaiting on `run_service` returns a `Cluster` object. This is a wrapper around a
 
 {% tabs %}
 {% tab title="Python" %}
+
 ```python
 cluster = await golem.run_service(DateService, num_instances=1)
 start_time = datetime.now()
@@ -230,6 +243,7 @@ while datetime.now() < start_time + timedelta(minutes=1):
         print(f"Instance {num} is {instance.state.value} on {instance.provider_name}")
     await asyncio.sleep(REFRESH_INTERVAL_SEC)
 ```
+
 {% /tab %}
 {% /tabs %}
 
