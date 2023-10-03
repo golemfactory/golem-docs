@@ -1,9 +1,3 @@
----
-title: Tutorial on how to access the Internet from the Provider
-description: Accessing the Internet from Provider Tutorial
-type: tutorial
----
-
 ## Introduction
 
 In this tutorial, you will learn how to quickly access the internet when running code on the Golem network. You will get familiar with the concept of Golem manifest, outbound, and some security policies that are in place to protect the providers from malicious code.
@@ -60,7 +54,7 @@ Once you have the project, open a terminal and run:
 golem-sdk manifest create golem/curl
 ```
 
-This will create a basic `manifest.json` file. You will use it to inform the provider what GVMI image we will be using. The manifest contains also your application version, application name, and description, all read from your `package.json` file (you can edit this information if you want).
+This will create a basic `manifest.json` file. You will use it to inform the provider what Golem VM image (GVMI) we will be using. The manifest contains also your application version, application name, and description, all read from your `package.json` file (you can edit this information if you want).
 
 ### Adding outbound configuration
 
@@ -76,7 +70,7 @@ Now our manifest is ready, you can start coding the application.
 
 ### Requestor script
 
-The application will be very simple. It will use `curl` to download a release of Golem SDK from GitHub. While this can be achieved without using Golem, this is just a demonstration of how to enable and access the internet from the Golem SDK.
+The application will be very simple. It will use `curl` to download a release of the Golem SDK from GitHub. While this can be achieved without using Golem, this is just a demonstration of how to enable and access the internet from the Golem SDK.
 
 Let’s start with a simple boilerplate, copy the following code to a javascript file:
 
@@ -117,15 +111,15 @@ This is the most important part.
 First, it is specifying additional requirements to the demand:
 
 - 'inet' - indicates the script requires outbound service
-- 'manifest-support' - informs, that it will use manifest to specify a demand.
+- 'manifest-support' - informs, that it will use a manifest to specify the demand.
 
 Instead of providing an image tag or hash, it uses a manifest file that describes what will be run on providers.
 
 Please note the loaded manifest is encoded to base64.
 
-`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
+`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your own unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
 
-In this example, you will simply fetch a release of Golem SDK from GitHub using the `curl` command, available in our GVMI image. So first let’s save the URL near the top of the file (just after the imports):
+In this example, you will simply fetch a release of the Golem SDK from GitHub using the `curl` command, available in our Golem VM image. So first let’s save the URL near the top of the file (just after the imports):
 
 ```javascript
 import { TaskExecutor } from '@golem-sdk/golem-js'
@@ -189,7 +183,7 @@ const url =
 })()
 ```
 
-You can run it now. In the output, you should see “SDK downloaded!” between log lines. That means the code works.
+You can run it now. In the output, you should see “SDK downloaded!” between the log lines. That means the code works.
 
 {% docnavigation title="Next steps" %}
 

@@ -12,7 +12,7 @@ Golem images define a remote environment where you execute tasks. They are ident
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -42,35 +42,34 @@ node index.mjs
 
 ## Using Golem images
 
-Below you will find an example requestor script used in the [QuickStart](/docs/creators/javascript/quickstarts/quickstart). 
-
+Below you will find an example requestor script used in the [QuickStart](/docs/creators/javascript/quickstarts/quickstart).
 
 ```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
+import { TaskExecutor } from '@golem-sdk/golem-js'
 
-(async () => {
+;(async () => {
+  const executor = await TaskExecutor.create({
+    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
+    yagnaOptions: { apiKey: 'try_golem' },
+  })
 
-    const executor = await TaskExecutor.create({
-            package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-        yagnaOptions: { apiKey: 'try_golem' }});
-    
-    const result = await executor.run(
-        async (ctx) => (await ctx.run("node -v")).stdout);
-    
-    await executor.end();
-    
-    console.log("Task result:", result);
+  const result = await executor.run(
+    async (ctx) => (await ctx.run('node -v')).stdout
+  )
 
-})();
+  await executor.end()
+
+  console.log('Task result:', result)
+})()
 ```
 
 Note the `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4` hash in the line where TaskExecutor is created:
 
-
 ```js
 const executor = await TaskExecutor.create({
-        package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }});
+  package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
+  yagnaOptions: { apiKey: 'try_golem' },
+})
 ```
 
 If you had created your custom Golem image and published it to the repository, you can simply replace the hash (`529 [...] 1106d4`) in the script with the hash generated for your image by gvmkit-build tool or with your own defined tag.
@@ -78,12 +77,12 @@ If you had created your custom Golem image and published it to the repository, y
 ```js
 package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",
 ```
+
 or
 
 ```js
 package: "golem/my_example:latest",
 ```
-
 
 {% docnavigation title="Next steps" %}
 
@@ -91,7 +90,6 @@ package: "golem/my_example:latest",
 
 {% /docnavigation %}
 
- 
 {% docnavigation title="See also" %}
 
 - [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
