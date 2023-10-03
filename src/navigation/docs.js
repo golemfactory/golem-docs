@@ -79,7 +79,7 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/building-custom-image',
               },
               {
-                title: 'Accessing internet from providers',
+                title: 'Using outbound networking to access the internet',
                 href: '/docs/creators/javascript/tutorials/accessing-internet',
               },
               {
@@ -129,7 +129,7 @@ export const navigation = [
                 href: '/docs/creators/javascript/examples/using-app-keys',
               },
               {
-                title: 'Accessing internet',
+                title: 'Using outbound networking to access the internet',
                 href: '/docs/creators/javascript/examples/accessing-internet',
               },
               {
@@ -159,7 +159,7 @@ export const navigation = [
                 href: '/docs/creators/javascript/guides/golem-sdk-cli',
               },
               {
-                title: 'Accessing internet from providers',
+                title: 'Using outbound networking to access the internet',
                 href: '/docs/creators/javascript/guides/accessing-internet',
               },
               {
