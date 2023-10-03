@@ -3,7 +3,7 @@ import Link from 'next/link'
 export const CustomError = ({ errorCode, title, description }) => {
   return (
     <>
-      <main className="grid min-h-full place-items-center bg-white px-6 py-24 dark:bg-darkbg sm:py-32 lg:px-8">
+      <main className="not-prose grid min-h-full place-items-center bg-white px-6 py-24 dark:bg-darkbg sm:py-32 lg:px-8">
         <div className="text-center">
           <p className="text-base font-semibold text-primary dark:text-darkprimary">
             {errorCode}
