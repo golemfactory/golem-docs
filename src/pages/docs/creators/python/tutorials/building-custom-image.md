@@ -1,6 +1,7 @@
 ---
 title: Creating and using images on Golem
 description: Creating and using images on Golem
+type: guide
 ---
 
 # Introduction
@@ -32,9 +33,9 @@ COPY Dockerfile /golem/work/info.txt
 ```
 
 Note we copy Dockerfile content into 2 different locations:
+
 - to /golem/info (this folder is not defined as VOLUME)
 - and to /golem/work (this folder is defied as VOLUME)
-
 
 ## Building the Docker image
 
@@ -97,6 +98,7 @@ gvmkit-build golem-node --push --nologin
 ```bash
 gvmkit-build golem-node --push --nologin
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -126,31 +128,26 @@ We can now create our `index.mjs` requestor file, with the `package: "8b238595..
 **`index.mjs`**
 
 ```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
-(async () => {
+import { TaskExecutor } from '@golem-sdk/golem-js'
+;(async () => {
   const executor = await TaskExecutor.create({
-    package: "8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c",    
-    yagnaOptions: { apiKey: 'try_golem' }
-  });
+    package: '8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c',
+    yagnaOptions: { apiKey: 'try_golem' },
+  })
 
+  const result = await executor.run(async (ctx) => {
+    console.log(
+      'Description.txt: ',
+      (await ctx.run('cat /golem/info/description.txt')).stdout
+    )
+    console.log(
+      '/golem/work content: ',
+      (await ctx.run('ls /golem/work')).stdout
+    )
+  })
 
-  const result = await executor.run(
-        async (ctx) =>  {
-    
-          console.log('Description.txt: ',(await ctx.run("cat /golem/info/description.txt")).stdout);
-          console.log('/golem/work content: ', (await ctx.run("ls /golem/work")).stdout);
-        });
-        
-
-  
-
-
-  await executor.end(); 
-    
-  
-})();
-
+  await executor.end()
+})()
 ```
 
 {% /tab  %}
@@ -168,7 +165,7 @@ You have successfully created and used your Golem image in a requestor script!
 
 ![](/image_tutorial_upload.png)
 
-Note that the content of the `description.txt` file that was created in the  /golem/info folder is accessible, while the /golem/work folder is empty.
+Note that the content of the `description.txt` file that was created in the /golem/info folder is accessible, while the /golem/work folder is empty.
 
 {% docnavigation title="Next steps" %}
 

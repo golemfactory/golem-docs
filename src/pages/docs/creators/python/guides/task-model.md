@@ -8,7 +8,7 @@ type: Guide
 
 This article explains how to use Task API to create task-based applications using Golem.
 
-Task-based API assumes that the developer starts with a problem that requires splitting into fragments in order to parallelize the execution using multiple providers. Therefore your application will run in a kind of a batch mode: it executes certain computations and finish once the results are ready.
+Task-based API assumes that the developer starts with a problem that requires splitting into fragments in order to parallelize the execution using multiple providers. Therefore your application will run in a kind of a batch mode: it executes certain computations and finishes once the results are ready.
 
 ## The task model
 
@@ -27,7 +27,7 @@ It's worth noting here that the number of fragments does not necessarily need to
 
 The requestor agent will use the API provided by the Golem SDK. One of the APIs implemented there is the Task API based on the Task Model.
 
-The Task model is designed to address problems that can be resolved by parallel execution. You will get most advantage if you find a way to divide the whole problem into fragments that can be processed independently from other fragments. 
+The Task model is designed to address problems that can be resolved by parallel execution. You will get most advantage if you find a way to divide the whole problem into fragments that can be processed independently from other fragments.
 
 Each of these fragments is associated with a certain set of data that constitutes individual **tasks**.
 
@@ -35,8 +35,7 @@ Your **tasks** are executed by the `execute_tasks` method of the Golem object. T
 
 The `execute_task` method is responsible for running the **worker** function for each of the **tasks** using the defined **payload**. The payload defines the environment run on the provider machine, where your tasks will be executed. In a simple simplified approach it is a **image**. The particular image is identified by its `tag` or `hash`.
 
-The **worker** function uses the `work generator pattern` explained [here](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext). It is used to define steps required to do tasks like sending data to and from a provider, running specified commands, etc. 
-
+The **worker** function uses the `work generator pattern` explained [here](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext). It is used to define steps required to do tasks like sending data to and from a provider, running specified commands, etc.
 
 {% docnavigation title="Next steps" %}
 

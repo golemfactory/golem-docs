@@ -3,28 +3,31 @@ description: >-
   This example illustrates implementation of a custom usage counter in a service
   - for situations where a developer wants to add their own usage counters to be
   used in the pricing model.
+title: Service API Custom usage counters tutorial
+type: tutorial
 ---
 
 # Service Example 4: Custom usage counters
 
-{% hint style="info" %}
+## Introduction
+
 The example depicts the following features:
 
-* Service execution
-* Dedicated service runtime implemented with [ya-runtime-sdk](https://github.com/golemfactory/ya-runtime-sdk)
-* Custom usage counter
-{% /hint %}
+- Service execution
+- Dedicated service runtime implemented with [ya-runtime-sdk](https://github.com/golemfactory/ya-runtime-sdk)
+- Custom usage counter
 
-{% hint style="info" %}
-Full code of the example is available in the following locations: 
+{% alert level="info" %}
+Full code of the example is available in the following locations:
 
-* The requestor agent \(using yapapi\): [https://github.com/golemfactory/yapapi/tree/b0.7/examples/custom-usage-counter](https://github.com/golemfactory/yapapi/tree/b0.7/examples/custom-usage-counter)
-* The custom runtime implementing a custom usage counter \(using `ya-runtime-sdk`\): [https://github.com/golemfactory/ya-test-runtime-counters](https://github.com/golemfactory/ya-test-runtime-counters)
-{% /hint %}
+- The requestor agent: [https://github.com/golemfactory/yapapi/tree/master/examples/custom-usage-counter](https://github.com/golemfactory/yapapi/tree/master/examples/custom-usage-counter)
+- The custom runtime implementing a custom usage counter (using `ya-runtime-sdk`): [https://github.com/golemfactory/ya-test-runtime-counters](https://github.com/golemfactory/ya-test-runtime-counters)
+
+{% /alert %}
 
 ## Prerequisites
 
-As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](../flash-tutorial-of-requestor-development/) and that you were able to [configure your Python environment](../flash-tutorial-of-requestor-development/run-first-task-on-golem.md) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
+As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/python/examples/tools/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
 
 ## Overview
 
@@ -66,15 +69,16 @@ async fn metric_reporter(mut emitter: EventEmitter) {
 }
 ```
 
-Note how `RuntimeCounter` struct is used to pass the value of a counter using `EventEmitter`'s `counter()` method. The RuntimeCounter instance will be propagated by the ExeUnit to the Provider agent \(for the purposes of pricing and invoicing\) and to Requestor side where it can be fetched by the Requestor agent's code.
+Note how `RuntimeCounter` struct is used to pass the value of a counter using `EventEmitter`'s `counter()` method. The RuntimeCounter instance will be propagated by the ExeUnit to the Provider agent (for the purposes of pricing and invoicing) and to Requestor side where it can be fetched by the Requestor agent's code.
 
 The remaining code includes an implementation of the `ExampleRuntime`, which is fairly simple, as it includes some non-void implementations of `start()` and `run_command()` actions.
 
-{% hint style="info" %}
-In a real-world scenario, the custom counter should probably refer to some other aspect of the execution - e.g. occupied storage space or maybe the number of requests made to the service running on the provider's end. 
+{% alert level="info" %}
+In a real-world scenario, the custom counter should probably refer to some other aspect of the execution - e.g. occupied storage space or maybe the number of requests made to the service running on the provider's end.
 
-That's because we already have two other counters that refer to time spent on execution available out of the box - one based on the wall clock time registering the time elapsed since the activity has been started \(`com.Counter.TIME`\) and another based on the actual CPU execution time \(`com.Counter.CPU`\).
-{% /hint %}
+That's because we already have two other counters that refer to time spent on execution available out of the box - one based on the wall clock time registering the time elapsed since the activity has been started (`com.Counter.TIME`) and another based on the actual CPU execution time (`com.Counter.CPU`).
+
+{% /alert %}
 
 #### `start()`
 
@@ -104,8 +108,8 @@ This is then followed by a one-off, explicit initiation of the `golem.usage.cust
 
 The `run_command()` implements two explicitly named commands which can be triggered by calling a _RUN &lt;command&gt;_ ExeScript call. The commands are:
 
-* `sleep n`- forces the runtime to wait `n` milliseconds.
-* `stop`- causes the runtime shutdown.
+- `sleep n`- forces the runtime to wait `n` milliseconds.
+- `stop`- causes the runtime shutdown.
 
 ```rust
 fn run_command<'a>(
@@ -151,49 +155,50 @@ fn run_command<'a>(
 The example runtime implementation comes complete with `ya-test-runtime-counters.json` config file, which includes metadata for the runtime, required to plug it into a yagna provider service, under the name `test-counters`:
 
 ```javascript
-[
+;[
   {
-    "name": "test-counters",
-    "version": "0.1.0",
-    "supervisor-path": "exe-unit",
-    "runtime-path": "ya-test-runtime-counters/ya-test-runtime-counters",
-    "description": "Yagna runtime supporting custom usage counters. For testing purposes only.",
-    "extra-args": ["--runtime-managed-image"],
-    "config": {
-      "counters": {
-        "golem.usage.custom.counter": {
-          "name": "Custom",
-          "description": "Custom counter",
-          "price": true
-        }
-      }
-    }
-  }
+    name: 'test-counters',
+    version: '0.1.0',
+    'supervisor-path': 'exe-unit',
+    'runtime-path': 'ya-test-runtime-counters/ya-test-runtime-counters',
+    description:
+      'Yagna runtime supporting custom usage counters. For testing purposes only.',
+    'extra-args': ['--runtime-managed-image'],
+    config: {
+      counters: {
+        'golem.usage.custom.counter': {
+          name: 'Custom',
+          description: 'Custom counter',
+          price: true,
+        },
+      },
+    },
+  },
 ]
 ```
 
-Note how `config.counters` structure is used to specify the custom usage counter metadata. 
+Note how `config.counters` structure is used to specify the custom usage counter metadata.
 
 ### Pluging the runtime into `golemsp`
 
 In the `$HOME/.local/lib/yagna/plugins/` directory create:
 
-* file `ya-test-runtime-counters.json` where you describe the plugin:
+- file `ya-test-runtime-counters.json` where you describe the plugin:
 
   ```javascript
-  [
-  {
-    "name": "test-counters",
-    "version": "0.1.0",
-    "supervisor-path": "exe-unit",
-    "runtime-path": "ya-test-runtime-counters/ya-test-runtime-counters",
-    "description": "Custom usage counter example runtime",
-    "extra-args": ["--runtime-managed-image"]
-  }
+  ;[
+    {
+      name: 'test-counters',
+      version: '0.1.0',
+      'supervisor-path': 'exe-unit',
+      'runtime-path': 'ya-test-runtime-counters/ya-test-runtime-counters',
+      description: 'Custom usage counter example runtime',
+      'extra-args': ['--runtime-managed-image'],
+    },
   ]
   ```
 
-* directory `ya-test-runtime-counters` \(compare `runtime-path` in above file\) where `ya-test-runtime-counters` binary along with Erigon binaries are placed.
+- directory `ya-test-runtime-counters` (compare `runtime-path` in above file) where `ya-test-runtime-counters` binary along with Erigon binaries are placed.
 
 New runtime needs also to be enabled in `$HOME/.local/share/ya-provider/presets.json`. Preset object can be copied from other presets. Please note that `exeunit-name` has to match to the `name` property of the plugin above:
 
@@ -217,13 +222,13 @@ New runtime needs also to be enabled in `$HOME/.local/share/ya-provider/presets.
     },
 ```
 
-Note how in the example above the `golem.usage.custom.counter` is to be included in the pricing function \(linear model\) with a coefficient of 0.0003 GLM.
+Note how in the example above the `golem.usage.custom.counter` is to be included in the pricing function (linear model) with a coefficient of 0.0003 GLM.
 
 ## Requestor agent
 
 The requestor agent is a fairly simple implemenation of a Golem service which:
 
-* Requires a `test-counters` runtime as payload:
+- Requires a `test-counters` runtime as payload:
 
 ```python
 @dataclass
@@ -231,7 +236,7 @@ class CustomCounterServicePayload(Payload):
     runtime: str = constraint(inf.INF_RUNTIME_NAME, default="test-counters")
 ```
 
-* In the `run()` handler, it periodically fetches the usage vector as published by the ExeUnit alongside the accumulated cost and displays it in console:
+- In the `run()` handler, it periodically fetches the usage vector as published by the ExeUnit alongside the accumulated cost and displays it in console:
 
 ```python
 async def run(self):
@@ -256,7 +261,7 @@ async with Golem(
         budget=10.0, subnet_tag=subnet_tag, driver=driver, network=network, strategy=strategy
     ) as golem:
         instance_params = [{"running_time_sec": running_time_sec}]
-        
+
 ```
 
 Once created, we use it to instantiate a `CustomCounterService`:
@@ -267,3 +272,8 @@ cluster = await golem.run_service(CustomCounterService, instance_params=instance
 
 And that's all there is to it. Running the example should result with a sequence of messages appearing in console, showing the `golem.usage.custom.counter`counter being periodically incremented.
 
+{% docnavigation title="Next steps" %}
+
+- The next article takes a close look at [webapp](/docs/creators/python/tutorials/service-example-5-webapp) example.
+
+{% /docnavigation %}

@@ -1,20 +1,11 @@
 ---
 description: >-
   Simple web application consisting of an SQL database and a Python/Flask application server, utilizing the local HTTP proxy on the requestor's end.
+title: Service API Simple Web application tutorial
+type: tutorial
 ---
 
 # Service Example 5: Simple Web application
-
-{% hint style="info" %}
-Here, we're presenting you the usage of:
-
-* Golem VPN
-* Local HTTP Proxy
-* Yapapi Services
-
-Full code of the example is available in the yapapi repository: [https://github.com/golemfactory/yapapi/tree/master/examples/webapp](https://github.com/golemfactory/yapapi/tree/master/examples/webapp)
-
-{% /hint %}
 
 ## Introduction
 
@@ -22,27 +13,37 @@ In this article, we'd like to showcase to you a simple web application, represen
 
 Both services here are running on separate provider nodes and are connected to both each other and to the requestor through a VPN.
 
-In case you'd like to experiment yourself, and it's your first contact with Golem app development, you're invited to first have a look at our [requestor development primer]((../flash-tutorial-of-requestor-development/)) which will guide you through the introductory steps.
+Therefore, we're presenting you the usage of:
+
+- Golem VPN
+- Local HTTP Proxy
+- Yapapi Services
+
+Full code of the example is available in the yapapi repository: [https://github.com/golemfactory/yapapi/tree/master/examples/webapp](https://github.com/golemfactory/yapapi/tree/master/examples/webapp)
+
+## Prerequisites
+
+In case you'd like to experiment yourself, and it's your first contact with Golem app development, you're invited to first have a look at our [requestor development primer](/docs/creators/python/examples/tools/yagna-installation-for-requestors) which will guide you through the introductory steps.
 
 ## Application outline
 
-![](../../.gitbook/assets/simple_webapp_diagram.png)
+![Simle webapp diagram](/simple_webapp_diagram.png)
 
 As you see in the above diagram, the application consists of:
 
-* two services running inside VM containers on the provider nodes:
-   * **rqlite database backend** - rqlite is, according to its authors, an "easy-to-use, lightweight, distributed relational database, which uses SQLite as its storage engine". All of these features make it an ideal candidate for a DB back-end of a Golem application. Especially its clustering capabilities sound interesting for a more advanced use case where we replicate the database across several providers to improve its survability and leverage the distributed nature of Golem itself.
-   * **a Flask-based HTTP server** - for the sake of simplicity, we have decided to use Flask. Flask provides an extremely minimalistic interface which allows the developer to build a fully functioning HTTP-based web application using a very small amount of code. Additionally, we added SQLAlchemy as the DB connectivity layer.
-* the **requestor agent** which:
-   * defines a **VPN** using yagna daemon's REST API and adds both the provider nodes and itself to this VPN,
-   * uses yapapi's **Services API** to commission one instance of each of the above services from Golem provider,
-   * exposes the Flask HTTP Server described above to the outside world through a **Local HTTP proxy** - a small HTTP server which accepts connections from a port on the requestor's host machine and routes them to the appropriate service on the provider's end through yagna daemon's websocket API.
+- two services running inside VM containers on the provider nodes:
+  - **rqlite database backend** - rqlite is, according to its authors, an "easy-to-use, lightweight, distributed relational database, which uses SQLite as its storage engine". All of these features make it an ideal candidate for a DB back-end of a Golem application. Especially its clustering capabilities sound interesting for a more advanced use case where we replicate the database across several providers to improve its survability and leverage the distributed nature of Golem itself.
+  - **a Flask-based HTTP server** - for the sake of simplicity, we have decided to use Flask. Flask provides an extremely minimalistic interface which allows the developer to build a fully functioning HTTP-based web application using a very small amount of code. Additionally, we added SQLAlchemy as the DB connectivity layer.
+- the **requestor agent** which:
+  - defines a **VPN** using yagna daemon's REST API and adds both the provider nodes and itself to this VPN,
+  - uses yapapi's **Services API** to commission one instance of each of the above services from Golem provider,
+  - exposes the Flask HTTP Server described above to the outside world through a **Local HTTP proxy** - a small HTTP server which accepts connections from a port on the requestor's host machine and routes them to the appropriate service on the provider's end through yagna daemon's websocket API.
 
 ### The VPN
 
 A VPN, short for a [Virtual Private Network](https://en.wikipedia.org/wiki/Virtual_private_network), is a concept where a private IP network is created in such a way that it spans over other, possibly public networks while giving the all the nodes in this network a semblance of staying within one local area network.
 
-In the context of the Golem Network, the VPN is constructed between the providers and requestors, utilizing the network's transport layer to tunnel IP traffic. The requestor defines the network and a mapping between IP addresses and Golem node identifiers and keeps the involved nodes up to date with the mapping. A specific activity 
+In the context of the Golem Network, the VPN is constructed between the providers and requestors, utilizing the network's transport layer to tunnel IP traffic. The requestor defines the network and a mapping between IP addresses and Golem node identifiers and keeps the involved nodes up to date with the mapping. A specific activity
 on a given provider is attached to the network by issuing an appropriate `deploy` command which adds a network interface bound to the specific IP address to this execution unit.
 
 Within the resultant network, the provider runtimes are able to freely connect between each other as long as their ports are open and there are services listening on them. On the other hand, they cannot directly connect to ports on the requestor address and connections from the requestor to the providers are performed through a websocket API exposed by the yagna daemon as part of its REST API.
@@ -145,23 +146,22 @@ and the template (`templates/index.html`) used to render the views:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Onliner</title>
-</head>
-<body>
+  </head>
+  <body>
     <form method="post">
-        <input type="text" name="message">
-        <input type="submit" value="send">
+      <input type="text" name="message" />
+      <input type="submit" value="send" />
     </form>
-    <hr>
-    {- for msg in messages %} <!-- removed % after { -->
-    <p>
-        {{ msg.message }}
-    </p>
-    {- endfor %}  <!-- remove % after { -->
-
-</body>
+    <hr />
+    {- for msg in messages %}
+    <!-- removed % after { -->
+    <p>{{ msg.message }}</p>
+    {- endfor %}
+    <!-- remove % after { -->
+  </body>
 </html>
 ```
 
@@ -180,14 +180,16 @@ COPY templates/index.html /webapp/templates/index.html
 ```
 
 As you can see, the `app.py` script has two modes of operation:
-* `initdb` which connects to the database and initializes the tables used to store its sole model (`Line`), and
-* `run` which runs Flask's development HTTP server and listens on Flask's default port: `5000`.
+
+- `initdb` which connects to the database and initializes the tables used to store its sole model (`Line`), and
+- `run` which runs Flask's development HTTP server and listens on Flask's default port: `5000`.
 
 Both modes accept an additional pair of parameters - the IP address and port of the database server, which we'll be able to pass from the requestor agent script to connect the two services together.
 
 Apart from that, the script contains the minimum to define our extremely simple application. First, we have the model (`Line`) storing a single line of our chat. And secondly, we have two controller functions:
-* `root_get` - a `GET` handler, which takes a list of `Line`s from the database and displays it using the HTML view along with the form that lets the user add a next entry,
-* `root_post` - takes a `POST` request containing the message from the HTML form and appends it to the `Line`s stored in the DB.
+
+- `root_get` - a `GET` handler, which takes a list of `Line`s from the database and displays it using the HTML view along with the form that lets the user add a next entry,
+- `root_post` - takes a `POST` request containing the message from the HTML form and appends it to the `Line`s stored in the DB.
 
 ### Web-app requestor
 
@@ -224,8 +226,9 @@ class DbService(Service):
 ```
 
 The most important parts here are:
-* the specification of the VPN capability (`vm.VM_CAPS_VPN`) in `get_payload` method which ensures that the container used to run our DB image will have the capability to connect to the VPN network which we'll create:
-* and the run command (`script.run("/bin/run_rqlite.sh")`) which triggers the `rqlite`'s entrypoint in the service's startup handler.
+
+- the specification of the VPN capability (`vm.VM_CAPS_VPN`) in `get_payload` method which ensures that the container used to run our DB image will have the capability to connect to the VPN network which we'll create:
+- and the run command (`script.run("/bin/run_rqlite.sh")`) which triggers the `rqlite`'s entrypoint in the service's startup handler.
 
 We need to call `super().start()` in our service's `start()` to save us from having to issue the appropriate `deploy` and `start` exescript commands ourselves. They ensure our container is properly initialized and ready to run other commands.
 
@@ -433,14 +436,20 @@ Yay! We're live! We can now tune our web browser to `http://localhost:8080` and 
 
 You can now open this address in your browser and you should see a form like this:
 
-![](../../.gitbook/assets/webapp_oneliner_form.png)
+![Webapp oneliner form](/webapp_oneliner_form.png)
 
 And then, after sending a few inputs, you'll see the resultant "chat" below:
 
-![](../../.gitbook/assets/webapp_oneliner_entries.png)
+![Webapp oneliner entries](/webapp_oneliner_entries.png)
 
 That's all folks!
 
 We'll be interested in seeing how for you can go by applying the same template and using our recently-released [Local HTTP Proxy module](https://github.com/golemfactory/yapapi/blob/master/yapapi/contrib/service/http_proxy.py) that's part of yapapi's contrib section.
 
 Feel free to share your own solutions and ask questions on our Discord and Github if your run into issues. Have fun with Golem! :)
+
+{% docnavigation title="Next steps" %}
+
+- The next article takes a close look at [external API request](/docs/creators/python/tutorials/service-example-6-external-api-request) example.
+
+{% /docnavigation %}

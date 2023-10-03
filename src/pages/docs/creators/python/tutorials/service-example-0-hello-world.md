@@ -1,37 +1,27 @@
 ---
 description: A minimal example of a Golem requestor agent based on services
-title:
+title: Service API Hello World Tutorial
+type: tutorial
 ---
 
 # Service Example 0: Hello world?
 
-{% hint style="info" %}
+## Introduction
+
 This example illustrates following Golem features & aspects:
 
 - VM runtime
 - Service provisioning and execution
 - Retrieving command output from provider's exe unit
 
-{% /hint %}
-
 ## Prerequisites
 
 This example shares a number of concepts, as well as parts of its code with the task model "Hello World!". Therefore the below article can be considered a good introduction:
+[QuickStart](/docs/creators/python/quickstarts/run-first-task-on-golem).
 
-{% content-ref url="../task-processing-development/task-example-0-hello.md" %}
-[task-example-0-hello.md](../task-processing-development/task-example-0-hello.md)
-{% /content-ref %}
-
-Also, in case you haven't done so already, it's a good idea to take a look at the [Introduction to the service model](service-model-introduction.md) before proceeding.
-
-{% hint style="warning" %}
-Please note that as of its current latest version (`0.6.0`) the JS high-level API (`yajsapi`) does not yet support the service model. Therefore, this article includes only Python code examples.
-{% /hint %}
+Also, in case you haven't done so already, it's a good idea to take a look at the [Introduction to the service model](/docs/creators/python/guides/service-model) before proceeding.
 
 ## Requestor agent code
-
-{% tabs %}
-{% tab title="Python" %}
 
 ```python
 #!/usr/bin/env python3
@@ -103,9 +93,6 @@ if __name__ == "__main__":
 
 ```
 
-{% /tab %}
-{% /tabs %}
-
 Besides the usual boilerplate in the form of imports and the entry function there are two crucial pieces to this program:
 
 1. `DateService` class, which is the implementation of our example service. It defines how the service should be started and what action it should perform.
@@ -124,16 +111,13 @@ In the Golem API, services are implemented by extending the base `Service` class
 
 All three life cycle methods (i.e. `start`, `run` and `shutdown`) are optional, although in most cases a service will require at least `start` to be implemented.
 
-{% hint style="info" %}
+{% alert level="info" %}
 To control service instances running on remote exe units, all life cycle methods require access to a `WorkContext` object tied to some active instance.
 
 This `WorkContext` instance is provided through the field `self._ctx` of the `Service` class. This means that, behind the scenes, an object of our `Service` subclass is spawned for each service instance running on a provider.
-{% /hint %}
+{% /alert %}
 
 ### payload definition
-
-{% tabs %}
-{% tab title="Python" %}
 
 ```python
 @staticmethod
@@ -143,15 +127,9 @@ async def get_payload():
     )
 ```
 
-{% /tab %}
-{% /tabs %}
-
-Our `DateService` uses the same image hash as the [Task Example 0: Hello World!](../task-processing-development/task-example-0-hello.md). This hash points to a pre-uploaded, minimal image based on Alpine Linux.
+Our `DateService` uses the same image hash as the [Task Example 0: Hello World!](/docs/creators/python/tutorials/task-example-0-hello). This hash points to a pre-uploaded, minimal image based on Alpine Linux.
 
 ### start() function
-
-{% tabs %}
-{% tab title="Python" %}
 
 ```python
 async def start(self):
@@ -169,20 +147,11 @@ async def start(self):
 
 ```
 
-{% /tab %}
-{% /tabs %}
-
 Our `start` function is responsible for starting a background process on the provider's exe unit. In the case of `DateService` this process is going to be the following shell command:
-
-{% tabs %}
-{% tab title="Bash" %}
 
 ```bash
 while true; do date > /golem/work/date.txt; sleep 5; done &
 ```
-
-{% /tab %}
-{% /tabs %}
 
 The above command has its placeholders substituted with their actual default values. When run in the provider's exe unit, this will keep rewriting the file `/golem/work/date.txt` with the output of `date` every 5 seconds.
 
@@ -190,11 +159,22 @@ The file `/golem/work/date.txt` will be our source of data which we'll later on 
 
 ### run() function
 
-{% tabs %}
-{% tab title="Python" %}
+```python
+async def run(self):
+        while True:
+            await asyncio.sleep(REFRESH_INTERVAL_SEC)
+            script = self._ctx.new_script()
+            future_result = script.run(
+                "/bin/sh",
+                "-c",
+                f"cat {DATE_OUTPUT_PATH}",
+            )
 
-{% /tab %}
-{% /tabs %}
+            yield script
+
+            result = (await future_result).stdout
+            print(result.strip() if result else "")
+```
 
 This function is where the requestor agent has a chance to monitor and control each running service instance. In the case of our example we periodically monitor values generated on a service instance by printing them out to the console.
 
@@ -204,23 +184,17 @@ With the service implementation complete let's now take a look at how we can pro
 
 ## Service provisioning
 
-{% tabs %}
-{% tab title="Python" %}
-
 ```python
 async def main():
     async with Golem(budget=1.0, subnet_tag="public") as golem:
         cluster = await golem.run_service(DateService, num_instances=1)
 ```
 
-{% /tab %}
-{% /tabs %}
-
 In the function `main` we start by creating an instance of `Golem`, specifying our budget and target subnet. We then use it as a context manager to run our service.
 
-{% hint style="info" %}
-If you are not familiar with the `Golem` class and/or how it's used in these examples, take a look at [Task Example 0: Hello World!](../task-processing-development/task-example-0-hello.md#golem-executor) (this links to a section about `Golem/Executor` classes).
-{% /hint %}
+{% alert level="info" %}
+If you are not familiar with the `Golem` class and/or how it's used in these examples, take a look at [Task Example 0: Hello World!](/docs/creators/python/tutorials/task-example-0-hello#golem-executor) (this links to a section about `Golem/Executor` classes).
+{% /alert %}
 
 Provisioning our service is done using the method `run_service` which, in our example, is given two parameters:
 
@@ -230,9 +204,6 @@ Provisioning our service is done using the method `run_service` which, in our ex
 Awaiting on `run_service` returns a `Cluster` object. This is a wrapper around a collection of `Service` objects, in our case these will be `DateService` objects. Each of these objects represents a single instance of our service provisioned on the Golem network. The `Cluster` can be used to control the state of those service instances (e.g. to stop services if necessary).
 
 ### Monitoring service state
-
-{% tabs %}
-{% tab title="Python" %}
 
 ```python
 cluster = await golem.run_service(DateService, num_instances=1)
@@ -244,9 +215,6 @@ while datetime.now() < start_time + timedelta(minutes=1):
     await asyncio.sleep(REFRESH_INTERVAL_SEC)
 ```
 
-{% /tab %}
-{% /tabs %}
-
 To monitor our cluster we're going to periodically query the instances' state and print relevant information to the console.
 
 Apart from monitoring itself this part also controls the time for which we want to keep our service running. In our case, the `while` loop will run for a minute, relative to `start_time`. After this time the loop will break and we'll exit `Golem`'s context manager, triggering its cleanup logic.
@@ -257,11 +225,25 @@ Using the `Cluster` object's `instances` field we can iterate over our service i
 
 That's it!
 
-We can now try running our service. Assuming you have a `yagna` node active locally (refer to [Requestor development: a quick primer](../flash-tutorial-of-requestor-development/) in case of any doubts) you can start the example by running the below command from the example's directory:
+We can now try running our service. Assuming you have a `yagna` node active locally (refer to [Yagna installation](/docs/creators/python/examples/tools/yagna-installation-for-requestors) in case of any doubts) and `yapapi` library installed, you can start the example by running the below command from the example's directory:
 
-```
+{% tabs %}
+{% tab label="MacOS / Linux" %}
+
+```bash
 YAGNA_APPKEY={your_appkey_here} ./hello_service.py
 ```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```bash
+set YAGNA_AUTOCONF_APPKEY=try_golem
+python hello_service.py
+```
+
+{% /tab %}
+{% /tabs %}
 
 Once the service gets provisioned on a provider you should see log lines similar to the ones below (some parts are abridged for clarity):
 
@@ -284,4 +266,8 @@ Wed Jun 16 11:42:53 UTC 2021
 
 In the case of our example we run a single instance of the service. Once that instance changes its state to `running` we start seeing output from the `date` command running inside the VM. After our set period of time (i.e. 1 minute) the agreement gets terminated and, after paying for the invoice, our program exits.
 
-The next article takes a close look at a more complete example, including error handling and more complex service control.
+{% docnavigation title="Next steps" %}
+
+- The next article takes a close look at a more complete example, including error handling and more complex [service control](/docs/creators/python/tutorials/service-example-1-simple-service)
+
+{% /docnavigation %}

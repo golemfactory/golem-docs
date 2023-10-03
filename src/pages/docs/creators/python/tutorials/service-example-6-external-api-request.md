@@ -1,20 +1,21 @@
 ---
 description: >-
   Example showing how to make a REST call to an external, public API from a VM running on a Provider node.
+title: Service API External API request tutorial
+type: tutorial
 ---
 
 # Service Example 6: External API request
 
-{% hint style="info" %}
+## Introduction
+
 The example depicts the following features:
 
-* [Outbound Network](../vm-runtime/computation-payload-manifest.md#compmanifestnetinetout--object)
-* [Computation Payload Manifest](../vm-runtime/computation-payload-manifest.md)
-{% /hint %}
+- [Outbound Network and Computation Payload Manifest](/docs/golem/payload-manifest).
 
-{% hint style="info" %}
+{% alert level="info" %}
 The full code of the example is available in the yapapi repository: [https://github.com/golemfactory/yapapi/tree/master/examples/external-api-request](https://github.com/golemfactory/yapapi/tree/master/examples/external-api-request)
-{% /hint %}
+{% /alert %}
 
 ## Prerequisites
 
@@ -73,9 +74,7 @@ Example _Computation Payload Manifest_ must follow a specific [schema](../vm-run
   "compManifest": {
     "version": "0.1.0",
     "script": {
-      "commands": [
-        "run .*curl.*",
-      ],
+      "commands": ["run .*curl.*"],
       "match": "regex"
     },
     "net": {
@@ -97,6 +96,7 @@ Then it needs to be encoded in `base64`:
 ```sh
  base64 --wrap=0 manifest.json > manifest.json.base64
 ```
+
 ### 2. Yapapi example app
 
 Base64-encoded manifest can be configured using [`yapapi.payload.vm.manifest`](https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.manifest) function, resulting in following `external_api_request.py` file:
@@ -141,11 +141,11 @@ async def main():
         await asyncio.sleep(60)
 ```
 
-### 3. Verification of a request with  Computation Payload Manifest
+### 3. Verification of a request with Computation Payload Manifest
 
 _Providers_ verify the incoming request with a _Computation Payload Manifest_ by checking if it arrives with a [signature and _App author's certificate_ signed by a certificate they trust](../vm-runtime/computation-payload-manifest.md#certificates). If there is no signature, they verify if URLs used by _Computation Payload Manifest_ are [whitelisted](../../provider-tutorials/provider-cli.md#domain-whitelist).
 
-There are two ways to make our *local* _Provider_ verify the request:
+There are two ways to make our _local_ _Provider_ verify the request:
 
 - #### Whitelisting of the domain used by the app
 
@@ -176,7 +176,7 @@ There are two ways to make our *local* _Provider_ verify the request:
 
 ### 4. Launching the app
 
-With both _Requestor_  and _Provider_ yagna nodes and `ya-provider` running in the background run:
+With both _Requestor_ and _Provider_ yagna nodes and `ya-provider` running in the background run:
 
 `python external_api_request.py`
 

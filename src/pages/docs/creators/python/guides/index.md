@@ -1,22 +1,24 @@
 ---
-description: Golem JS Guides
-title: Golem JS Guides
+description: Golem Python Guides
+title: Golem Python Guides
 type: Introduction
 ---
 
 Our Services API provides an abstraction over Golem low-level APIs, which is aimed at making the building of service-oriented applications straightforward for a developer. The abstraction is based on a logical concept of a Service, in other words, an entity that implements the logic of a service application, and which, from Requestor's perspective, follows a certain sequence of states:
 
-## High-level API libraries
+## High-level API library
 
 The low-level mechanics of the Golem market are quite complex, and building robust applications directly using the low-level APIs, while possible, may not be the most efficient approach. For this reason, a concept of High-level API libraries has been designed, as "bindings" of specific programming languages with Golem platform.
 
-The purpose of a high-level API is to wrap the intricacies of Golem APIs with more efficient programming models, based on computation models more intuitive than Golem market, activity and payment concepts. A developer using these libraries should have a basic understanding of Golem platform's fundamental concepts \(Demand/Offer market matching, activity execution, payment-related logic\), but all the low-level logic is implemented in a high-level API library.
+The purpose of a high-level API is to wrap the intricacies of Golem APIs with more efficient programming models, based on computation models more intuitive than Golem market, activity and payment concepts. A developer using these libraries should have a basic understanding of Golem platform's fundamental concepts (Demand/Offer market matching, activity execution, payment-related logic), but all the low-level logic is implemented in a high-level [API library](https://yapapi.readthedocs.io/en/latest/api.html).
 
-Following high-level API libraries are supported by Golem Factory:
+## Basic concepts
 
-{% embed url="https://yapapi.readthedocs.io/en/latest/api.html" %}{% /embed %}
+[Golem Appplication Fundamentals](/docs/creators/python/guides/application-fundamentals).
 
-{% page-ref page="../../yajsapi/yajsapi.md" /%}
+[Networking concept](/docs/creators/python/guides/vpn).
+
+[Golem Images](/docs/creators/python/guides/golem-images).
 
 ## Task Model vs Service Model
 
@@ -27,32 +29,13 @@ Two basic computation models are supported by Golem high-level APIs.
 
 Please refer to following sections for a dive into those two Golem programming models:
 
-{% page-ref page="../task-processing-development/" /%}
+[Task Model](/docs/creators/python/guides/task-model)
 
-{% page-ref page="../service-development/" /%}
+[Service Model](/docs/creators/python/guides/service-model)
 
+## Debugging
 
-Task Model
-
-Service Model
-
-Debuging
-
-Application fundamentals
-
-VPN
-
------
-
-
-The Guides section contains articles that explain concepts, introduce terms, and provide a broad overview of particular topics.
-
-|Title                  |   Content  description  |
-|-----------------------|:----------------------------------------|
-|[Introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model) | This is a short introduction to the Golem Network concepts explaining basic terms like `yagna`, `image`, `requestor`, and `provider`. It also clarifies the basic components of applications running on the Golem Network and introduces the Task Model supporting our Task API. You can also find a list of major features provided by TASK API. |
-|[Working with Golem images](/docs/creators/javascript/guides/golem-images)   | This guide explains what are: the Golem image, the process of creating a custom one, and how you refer to the image in your code.    |
-|[Moving your apps to mainnet](/docs/creators/javascript/guides/switching-to-mainnet) | A guide explaining what you need to do, and consider, to switch from testnet to the production network. |
-
+There is also a dedicated to [debugging](/docs/creators/python/guides/debugging) topic.
 
 {% docnavigation title="See also" %}
 

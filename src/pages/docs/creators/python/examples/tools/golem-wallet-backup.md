@@ -1,6 +1,7 @@
 ---
 description: Ensuring the safety of your Golem funds.
 title: Yagna wallet backup
+type: instructions
 ---
 
 # Backing up your Golem wallet
@@ -75,7 +76,6 @@ Notice that `isLocked` is now set to `true`.
 Remember to save your passphrase somewhere safe as losing it will make it impossible to unlock the key later on.
 
 {% /alert %}
-
 
 ### Export the key
 

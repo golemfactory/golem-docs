@@ -260,11 +260,23 @@ To run it on your local machine make sure you have a `yagna` node running and se
 yagna app-key create requestor
 ```
 
-Then (on linux) you can use it like this:
+{% tabs %}
+{% tab label="MacOS / Linux" %}
 
 ```bash
 YAGNA_APPKEY={your_appkey_here} ./hello.py
 ```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```bash
+set YAGNA_AUTOCONF_APPKEY={your_appkey_here}
+python hello.py
+```
+
+{% /tab %}
+{% /tabs %}
 
 This assumes you're in the directory which contains the `hello.py` file. You'll also need to provide your node's actual app key. If everything went fine you should see a log similar to the one below:
 

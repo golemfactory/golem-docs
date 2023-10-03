@@ -3,24 +3,26 @@ description: >-
   In this example, we're showcasing how the VPN functionality can be used to
   enable the local requestor agent to serve as a HTTP proxy for web servers
   running on the provider nodes.
+title: Service API VPN - HTTP proxy tutorial
+type: tutorial
 ---
 
 # Service Example 3: VPN - Minimalistic HTTP proxy
 
-{% hint style="info" %}
+## Introduction
+
 The example depicts the following features:
 
-* Golem VPN
-* Service execution
-{% /hint %}
+- Golem VPN
+- Service execution
 
-{% hint style="info" %}
+{% alert level="info" %}
 Full code of the example is available in the yapapi repository: [https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy](https://github.com/golemfactory/yapapi/tree/master/examples/http-proxy)
-{% /hint %}
+{% /alert %}
 
 ## Prerequisites
 
-As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](../flash-tutorial-of-requestor-development/) and that you were able to [configure your Python environment](../flash-tutorial-of-requestor-development/run-first-task-on-golem.md) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
+As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/python/examples/tools/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
 
 ## The VM image
 
@@ -30,15 +32,13 @@ For the VM image of this example, we're going to use a stock Docker image of the
 FROM nginx:stable-alpine
 ```
 
-In the example code, we're already using a pre-built and pre-uploaded Golem VM image but if you'd like to experiment with other HTTP servers or web-based applications, please follow our guides on the preparation of your own VM images for Golem:
-
-{% page-ref page="../vm-runtime/" /%}
+In the example code, we're already using a pre-built and pre-uploaded Golem VM image but if you'd like to experiment with other HTTP servers or web-based applications, please follow our guides on the preparation of your own VM [images for Golem](/docs/creators/python/tutorials/building-custom-image).
 
 ## The Code
 
-What we'll want to achieve here is threefold - first, we'll want to define our service so that it runs our web content \(here it's just a static, albeit customized, HTML page\) on the provider node. 
+What we'll want to achieve here is threefold - first, we'll want to define our service so that it runs our web content (here it's just a static, albeit customized, HTML page) on the provider node.
 
-Secondly, we'll need a local HTTP server \(based on the `aiohttp` library\) listening to connections on our requestor machine \(the localhost\). 
+Secondly, we'll need a local HTTP server (based on the `aiohttp` library) listening to connections on our requestor machine (the localhost).
 
 And thirdly, we'll show you how to distribute requests from the local HTTP server to the provider nodes.
 
@@ -85,14 +85,14 @@ async def start(self):
     yield script
 ```
 
-The first two lines \(4-5 above\) ensure that the default `start` handler, which sends the `start` and `deploy` commands gets correctly executed and the script it generates sent for execution.
+The first two lines (4-5 above) ensure that the default `start` handler, which sends the `start` and `deploy` commands gets correctly executed and the script it generates sent for execution.
 
 The remainder of the method:
 
-* calls the script \(originally specified in the `ENTRYPOINT` command in the original Dockerfile\) which configures the nginx daemon.
-* sets up the correct permissions on the root directory so that the nginx daemon can access the directory containing the content
-* creates the `index.html` file customized with the name of the provider node on which the server is running
-* and finally, launches the `nginx` HTTP server
+- calls the script (originally specified in the `ENTRYPOINT` command in the original Dockerfile) which configures the nginx daemon.
+- sets up the correct permissions on the root directory so that the nginx daemon can access the directory containing the content
+- creates the `index.html` file customized with the name of the provider node on which the server is running
+- and finally, launches the `nginx` HTTP server
 
 We don't need to specify the contents of the `run` handler for the service, since, after the HTTP daemon is started, there are no more scripts that we'll want to execute on the VM and we'll only need to communicate with the server using regular HTTP requests within our VPN.
 
@@ -119,7 +119,7 @@ async def request_handler(cluster: Cluster, request: web.Request):
     return web.Response(text=response)
 ```
 
-As you can see, it's main job is to select \(in a round-robin fashion\) an instance of our `HttpService` and call its `handle_request` method using the path and the query string of the incoming HTTP request. Once the request is handled by the instance, an `aiohttp.webResponse` is returned.
+As you can see, it's main job is to select (in a round-robin fashion) an instance of our `HttpService` and call its `handle_request` method using the path and the query string of the incoming HTTP request. Once the request is handled by the instance, an `aiohttp.webResponse` is returned.
 
 Secondly, we need to provide a small bit of boilerplate that launches the local TCP server for us:
 
@@ -177,7 +177,7 @@ Next we establish a websocket connection using the aforementioned endpoint and t
 
 Once we receive a response from the remote HTTP server, we generate the response text which our previously-defined request handler will pass as the response of the local HTTP server.
 
-That's all there is to it. What remains now is to run use the `Golem`  engine to start our service.
+That's all there is to it. What remains now is to run use the `Golem` engine to start our service.
 
 ## Launching the service
 
@@ -211,7 +211,7 @@ After the above call, the engine publishes the appropriate demand, signs agreeme
 
 ### Waiting for the service to start
 
-Now we wait... 
+Now we wait...
 
 ```python
 def instances():
@@ -281,3 +281,8 @@ await network.remove()
 
 That's it. We have demonstrated a way to launch services on VM containers running within the provider nodes and to connect them using a VPN.
 
+{% docnavigation title="Next steps" %}
+
+- The next article takes a close look at [custom usage counters](/docs/creators/python/tutorials/service-example-4-custom-usage-counters) example.
+
+{% /docnavigation %}

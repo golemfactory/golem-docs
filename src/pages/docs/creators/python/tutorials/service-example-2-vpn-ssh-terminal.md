@@ -3,25 +3,31 @@ description: >-
   This article presents a Golem service example, which illustrates Golem VPN
   capabilities by enabling SSH connections to a payload running on a VM on a
   Provider node.
+title: Service API VPN - SSH tutorial
+type: tutorial
 ---
 
 # Service Example 2: VPN - SSH terminal
 
-{% hint style="info" %}
+## Introduction
+
 This example illustrates following Golem features & aspects:
 
-* VM runtime image
-* Service execution
-* Golem VPN
-{% /hint %}
+- VM runtime image
+- Service execution
+- Golem VPN
 
-{% hint style="info" %}
-The code and components presented here are included as an example within the yapapi repository: [https://github.com/golemfactory/yapapi/tree/b0.7/examples/ssh](https://github.com/golemfactory/yapapi/tree/master/examples/ssh)
-{% /hint %}
+{% alert level="info" %}
+The code and components presented here are included as an example within the yapapi repository: [https://github.com/golemfactory/yapapi/tree/master/examples/ssh](https://github.com/golemfactory/yapapi/tree/master/examples/ssh)
+{% /alert %}
+
+{% alert level="warning" %}
+Some of the options of the `websocat` tool used in this tutorial are available only in the Linux version of the tool.
+{% /alert %}
 
 ## Prerequisites
 
-If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](../flash-tutorial-of-requestor-development/) and were able to [run your first task on Golem](../flash-tutorial-of-requestor-development/run-first-task-on-golem.md) using the Python part. Those articles describe in detail the steps needed to correctly set up your yagna daemon and your environment.
+If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](/docs/creators/python/examples/tools/yagna-installation-for-requestors) and were able to [run your first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem). Those articles describe in detail the steps needed to correctly set up your yagna daemon and your environment.
 
 ### Websocat
 
@@ -46,17 +52,17 @@ RUN echo "UseDNS no" >> /etc/ssh/sshd_config && \
     echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 ```
 
-If you'd like to experiment with modifying it, please refer to our articles about [preparing your own VM images](../vm-runtime/).
+If you'd like to experiment with modifying it, please refer to our articles about [custom VM images](/docs/creators/python/guides/golem-images).
 
 ## The requestor agent
 
-{% hint style="info" %}
+{% alert level="info" %}
 **This is the part that's run by the requestor (you).**
-{% /hint %}
+{% /alert %}
 
 Now we can move on to the requestor agent, which will create a VPN network, attach the Provider node to it, and allow SSH connections via the Net gate available on the `yagna` daemon.
 
-The full source code of the requestor agent is available in yapapi's github repo: [https://github.com/golemfactory/yapapi/tree/b0.7/examples/ssh/ssh.py](https://github.com/golemfactory/yapapi/blob/b0.7/examples/ssh/ssh.py).
+The full source code of the requestor agent is available in yapapi's github repo: [https://github.com/golemfactory/yapapi/tree/master/examples/ssh/ssh.py](https://github.com/golemfactory/yapapi/tree/master/examples/ssh/ssh.py).
 
 Here, we're going to go through the most important excerpts.
 
@@ -99,7 +105,7 @@ async def get_payload():
     )
 ```
 
-As is the case with most of the examples that we're presenting in the handbook, the payload here is a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image repository](../vm-runtime/convert-a-docker-image-into-a-golem-image.md).
+As is the case with most of the examples that we're presenting in the handbook, the payload here is a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image repository](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format).
 
 Note though, that now the payload constraints also indicate that the Provider is **required to offer the VPN capability** within its VM runtime, which is automatically supported by any providers running `yagna 0.8`and above.
 
@@ -142,7 +148,7 @@ In the `start` stage, the Requestor sends commands to launch the SSH daemon, the
 
 Please note the line 16 above which retrieves the websocket URI that is the gateway that the yagna daemon exposes in its Net API which allows us to connect to any port on the deployed VM.
 
-This websocket is part of the REST API itself and hence the need to also authenticate the connection using the yagna app key (that's the same key that we use to connect to all the other endpoints in the REST API and which we provide to yapapi using YAGNA\_APPKEY environment variable).
+This websocket is part of the REST API itself and hence the need to also authenticate the connection using the yagna app key (that's the same key that we use to connect to all the other endpoints in the REST API and which we provide to yapapi using YAGNA_APPKEY environment variable).
 
 ### Starting our service
 
@@ -152,9 +158,9 @@ cluster = await golem.run_service(SshService, network=network, num_instances=2)
 
 Note how the `network` is passed as a parameter to `run_service()`. The service instances created in the cluster will be added as subsequent nodes in the virtual network, and their addresses will be available in the `network_node` attribute of each `Service` instance.
 
-{% hint style="success" %}
+{% alert level="success" %}
 We have just managed to run a service in a new VPN on Golem!
-{% /hint %}
+{% /alert %}
 
 #### Controlling and monitoring our service
 
@@ -188,12 +194,18 @@ Once the ssh.py is launched and the SSH server is up and running on a Provider, 
 ssh -o ProxyCommand='websocat asyncstdio: localhost:22 --binary -H=Authorization:\"Bearer YAGNA_APP_KEY\"
 ```
 
-{% hint style="info" %}
+{% alert level="info" %}
 Note in your command line you must use a YAGNA App Key as generated during your initial `yagna` service setup.
 
 This is necessary, as the connection to Net gate on a websocket needs to be authenticated!
-{% /hint %}
+{% /alert %}
 
 Once you launch the SSH client and approve the host's SSH key you'll need to use the password generated alongside the connection command above to log in to the provider's VM.
 
 Voila! You should now be logged-in into the VM's shell.
+
+{% docnavigation title="Next steps" %}
+
+- The next article takes a close look at [another networking example](/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy).
+
+{% /docnavigation %}
