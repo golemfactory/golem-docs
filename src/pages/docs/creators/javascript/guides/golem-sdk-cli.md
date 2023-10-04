@@ -34,6 +34,22 @@ After installation, the CLI is ready to be used.
 
 ## Features
 
+### Create a new Golem Application
+
+The fastest way to get started with Golem Network is to use `golem-sdk new` to create a new application from a template.
+
+```shell
+golem-sdk new
+```
+
+You will be asked a series of questions about your application and the CLI will use your answers to generate a new Golem Application.
+
+The first question will be the project name. The CLI will use it to create a new directory for your application in the current directory. You can use the `--path` option to override this behaviour.
+
+Note: The command will abort if the directory already exists.
+
+You can provide all the needed information from command line too. Type `golem-sdk new --help` to see the list of available options.
+
 ### Golem Manifest
 
 [Golem Manifest](/docs/golem/payload-manifest) is a JSON document that describes your Golem application. While it is not necessary for simple applications, you will need it if you want to access advanced features of the Golem SDK, like [access to the Internet](/docs/creators/javascript/guides/accessing-internet).
