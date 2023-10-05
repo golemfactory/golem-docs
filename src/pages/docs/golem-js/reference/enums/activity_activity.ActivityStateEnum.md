@@ -26,7 +26,7 @@ type: "reference"
 
 #### Defined in
 
-[src/activity/activity.ts:12](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/activity/activity.ts#L12)
+[src/activity/activity.ts:12](https://github.com/golemfactory/golem-js/blob/e10a928/src/activity/activity.ts#L12)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:13](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/activity/activity.ts#L13)
+[src/activity/activity.ts:13](https://github.com/golemfactory/golem-js/blob/e10a928/src/activity/activity.ts#L13)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/activity/activity.ts#L14)
+[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/e10a928/src/activity/activity.ts#L14)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:15](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/activity/activity.ts#L15)
+[src/activity/activity.ts:15](https://github.com/golemfactory/golem-js/blob/e10a928/src/activity/activity.ts#L15)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:16](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/activity/activity.ts#L16)
+[src/activity/activity.ts:16](https://github.com/golemfactory/golem-js/blob/e10a928/src/activity/activity.ts#L16)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:17](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/activity/activity.ts#L17)
+[src/activity/activity.ts:17](https://github.com/golemfactory/golem-js/blob/e10a928/src/activity/activity.ts#L17)
