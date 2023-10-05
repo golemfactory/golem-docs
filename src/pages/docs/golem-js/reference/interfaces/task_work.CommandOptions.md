@@ -23,7 +23,7 @@ type: "reference"
 
 #### Defined in
 
-[src/task/work.ts:40](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L40)
+[src/task/work.ts:41](https://github.com/golemfactory/golem-js/blob/f88d138/src/task/work.ts#L41)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:41](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L41)
+[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/f88d138/src/task/work.ts#L42)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L42)
+[src/task/work.ts:43](https://github.com/golemfactory/golem-js/blob/f88d138/src/task/work.ts#L43)
