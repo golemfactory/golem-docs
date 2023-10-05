@@ -1,16 +1,19 @@
 ---
 description: Making use of goth's interactive mode
+title: Running Goth
+type: Tutorial
 ---
 
 # Using Test Harness to test Golem apps
 
-{% hint style="danger" %}
+{% alert level="danger" %}
 What you're going to try is still considered experimental.
 
 We're assuming here that you were able to run both `goth` and a requestor app correctly on your machine earlier and thus, you have all the components up and running without issues.
 
-If you hadn't tried those yet though, please have a look at the earlier parts of our handbook:
-{% /hint %}
+If you hadn't tried those yet though, please have a look at the earlier parts of our handbook: [Running Goth](/docs/creators/tools/goth/running-goth).
+
+{% /alert %}
 
 You're here, excellent! If you successfully ran the tests in the previous step, you probably already guessed that this is what we use internally in our CI process to ensure that our subsequent builds of Golem and its components are working correctly.
 
@@ -30,13 +33,13 @@ poetry poe run interactive
 
 Now, goth is going to:
 
-* if needed, download the latest build of `yagna` from the its repository's main branch, along with other necessary components, such as the VM runtime,
-* build the `yagna` docker image based on the artifacts we downloaded, as well as get some other pre-built docker images,
-* set up and start our local Golem network.
+- if needed, download the latest build of `yagna` from the its repository's main branch, along with other necessary components, such as the VM runtime,
+- build the `yagna` docker image based on the artifacts we downloaded, as well as get some other pre-built docker images,
+- set up and start our local Golem network.
 
 Once it finishes all the preparatory steps, you'll be greeted with a message that encourages you to run your requestor agent along with a piece of a CLI command that assumes you're running our Python API's Blender example:
 
-![](../../.gitbook/assets/goth-interactive-mode-prompt.png)
+![Goth nteractive mode prompt](/goth-interactive-mode-prompt.png)
 
 The important pieces of information there are the **`YAGNA_APPKEY`**, **the URL** and **the port** that you need to use to run your requestor agent within goth's test network.
 
@@ -54,9 +57,9 @@ The real benefit starts when you have a look at the logs each run produces. By d
 
 For each run in the interactive mode, `goth` will create a timestamped directory there, e.g.: `goth_20201221_172759+0000` which will contain all the logs that this run was able to collect from all the components of your local Golem network:
 
-* `runner.log` - the logs for the goth runner itself. This includes the output that goth produces to the console but it also includes a whole lot of additional DEBUG-level logs.
-* `proxy.log` - contains the traffic between the nodes and the agents in the goth's network
-* `test_interactive_vm` - the directory in which the logs for each of the components launched by the runner are stored. You'll be most interested in the following ones:
-  * `provider_N.log` - the debug logs from the provider daemons
-  * `provider_agent_N.log` - the debug logs from the provider agents - including also the logs from each provider's execution units which will be of most interest to you as the developer of the application that's executed there,
-  * `requestor.log` - the debug logs from the requestor daemon you're connecting your requestor agent to
+- `runner.log` - the logs for the goth runner itself. This includes the output that goth produces to the console but it also includes a whole lot of additional DEBUG-level logs.
+- `proxy.log` - contains the traffic between the nodes and the agents in the goth's network
+- `test_interactive_vm` - the directory in which the logs for each of the components launched by the runner are stored. You'll be most interested in the following ones:
+  - `provider_N.log` - the debug logs from the provider daemons
+  - `provider_agent_N.log` - the debug logs from the provider agents - including also the logs from each provider's execution units which will be of most interest to you as the developer of the application that's executed there,
+  - `requestor.log` - the debug logs from the requestor daemon you're connecting your requestor agent to
