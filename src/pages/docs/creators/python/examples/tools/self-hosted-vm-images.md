@@ -1,14 +1,16 @@
 ---
 description: Publishing VM images outside Golem's repository
+title: Publishing VM images outside Golem's repository
+type: Instructions
 ---
 
 # Self-hosted VM images
 
-To streamline the experience for Golem developers, we provide a central repository for the VM images (.gvmi files) which has been [described in the previous article](uploading-a-golem-image.md).
+To streamline the experience for Golem developers, we provide a central repository for the VM images (.gvmi files) which has been [described in the this article](/docs/creators/python/examples/tools/publishing-custom-images).
 
 At the same time, we realize that application developers may choose to publish said images in other, publicly-accessible locations at their discretion.
 
-The process of [preparation](creating-a-docker-image.md) and [conversion](convert-a-docker-image-into-a-golem-image.md) of a self-published GVMI image is mostly the same as for the images uploaded into Golem's central repo. However, once you have the `.gvmi` file ready, there are two additional steps that need to be performed.
+The process of [preparation and conversion](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format) of a self-published GVMI image is mostly the same as for the images uploaded into Golem's central repo. However, once you have the `.gvmi` file ready, there are two additional steps that need to be performed.
 
 ## Obtaining the VM image hash
 
@@ -19,16 +21,19 @@ When you decide not to push the image that way, you need to calculate the SHA3 h
 ### Install sha3sum
 
 {% tabs %}
-{% tab title="Ubuntu" %}
+{% tab label="Ubuntu" %}
+
 ```bash
 apt install sha3sum
 ```
-{% /tab %}
 
-{% tab title="Mac" %}
+{% /tab %}
+{% tab label="Mac" %}
+
 ```bash
 brew install sha3sum
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -60,8 +65,4 @@ package = await vm.repo(
 )
 ```
 
-For full usage, please refer to the relevant part of the API reference:
-
-{% embed url="https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.vm" %}
-`vm.repo()` usage
-{% /embed %}
+For full usage, please refer to the relevant part of the [API reference](https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.vm) for `vm.repo()` usage.
