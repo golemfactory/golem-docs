@@ -14,8 +14,8 @@ In this article, we will present methods that let you access the Internet.
 
 For the requestor to be able to use the outbound feature, (initiate a connection to `target_url`), the following minimal conditions must be met:
 
-- The requestor must request the outbound feature in the demand and include a Computation Manifest there. The manifest must declare the `taget_url`.
-- The provider offers the service at least for the `taget_url`. (So either outbound for unrestricted URLs or the `target_url` is included in the whitelist).
+- The requestor must request the outbound feature in the demand and include a Computation Manifest there. The manifest must declare the `target_url`.
+- The provider offers the service at least for the `target_url`. (So either outbound for unrestricted URLs or the `target_url` is included in the whitelist).
 
 You can find more information about the feature and the manifest in the following articles: [Accessing the Internet](/docs/creators/javascript/guides/accessing-internet) and [Payload Manifes](/docs/golem/payload-manifest).
 
@@ -56,7 +56,7 @@ Next, install `Golem SDK CLI` - a companion tool that will facilitate manifest c
 npm install -g @golem-sdk/cli
 ```
 
-Unless detailed instructions would not advise otherwise, to run the examples provided below, copy the code supplied there into the `index.mjs` file in the project folder and run:
+To run the examples provided below, copy the code into the `index.mjs` file in the project folder and run:
 
 ```bash
 node index.mjs
@@ -80,21 +80,22 @@ The next step is to configure our manifest, so you can access a public URL. The 
 golem-sdk manifest net add-outbound https://github.com
 ```
 
-This has added https://github.com as the URL you want to access from the provider node. The command can be run multiple times to add more URLs or you can pass them all at once.
+This has added `https://github.com` as the URL you want to access from the provider node. The command can be run multiple times to add more URLs or you can pass them all at once.
 
 Your manifest is ready and stored in the `manifest.json` file.
 
-## Defining demand for the Outbound access
+## Defining the demand for the Outbound access
 
-The example below demonstrates how to define a demand that will get access to the Internet.
+The example below demonstrates how to define the demand that will get access to the Internet.
 
 ```javascript
 import { TaskExecutor } from '@golem-sdk/golem-js'
 import { readFile } from 'fs/promises'
 
 const url =
-  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz'
-;(async function main() {
+  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz';
+
+(async function main() {
   // Load the manifest.
   const manifest = await readFile(`./manifest.json`)
 
@@ -140,7 +141,7 @@ const executor = await TaskExecutor.create({
 First, it is specifying additional requirements to the demand:
 
 - 'inet' - indicates the script requires outbound service
-- 'manifest-support' - informs, that it will use manifest to specify demand.
+- 'manifest-support' - indicates, requestor uses a manifest to specify a demand.
 
 Instead of providing an image tag or hash, it uses a manifest file that describes what will be run on providers.
 
