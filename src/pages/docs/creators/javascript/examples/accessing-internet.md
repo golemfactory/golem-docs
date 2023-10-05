@@ -147,9 +147,9 @@ Instead of providing an image tag or hash, it uses a manifest file that describe
 
 Please note the loaded manifest is encoded to base64.
 
-`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
+`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your own unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
 
-Then you can use the applications that reach the `target_urls` specified in the manifest in the standard way:
+Then you can use the applications that connects to the `target_urls` specified in the manifest in the standard way:
 
 ```javascript
 const result = await ctx.run(`curl ${url} -o /golem/work/golem-js.tar.gz`)
