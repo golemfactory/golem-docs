@@ -50,4 +50,4 @@ type: "reference"
 
 #### Defined in
 
-[src/task/work.ts:19](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/task/work.ts#L19)
+[src/task/work.ts:20](https://github.com/golemfactory/golem-js/blob/e10a928/src/task/work.ts#L20)

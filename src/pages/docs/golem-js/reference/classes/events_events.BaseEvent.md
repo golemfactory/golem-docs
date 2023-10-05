@@ -119,7 +119,7 @@ CustomEvent&lt;DataType\&gt;.constructor
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/e10a928/src/events/events.ts#L28)
 
 ## Properties
 
@@ -133,7 +133,7 @@ CustomEvent.detail
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/e10a928/src/events/events.ts#L16)
 
 ___
 
@@ -147,7 +147,7 @@ CustomEvent.name
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/e10a928/src/events/events.ts#L17)
 
 ___
 
@@ -161,4 +161,4 @@ CustomEvent.timestamp
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/4d68c3f/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/e10a928/src/events/events.ts#L18)
