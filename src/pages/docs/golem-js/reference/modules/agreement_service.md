@@ -42,4 +42,4 @@ type: "reference"
 
 #### Defined in
 
-[src/agreement/service.ts:19](https://github.com/golemfactory/golem-js/blob/e10a928/src/agreement/service.ts#L19)
+[src/agreement/service.ts:19](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/agreement/service.ts#L19)

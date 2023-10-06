@@ -23,4 +23,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/golem-js/blob/e10a928/src/utils/logger/nullLogger.ts#L3)
+[src/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/utils/logger/nullLogger.ts#L3)

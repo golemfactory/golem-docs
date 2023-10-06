@@ -38,7 +38,7 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/service.ts:24](https://github.com/golemfactory/golem-js/blob/e10a928/src/payment/service.ts#L24)
+[src/payment/service.ts:24](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/payment/service.ts#L24)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/e10a928/src/payment/service.ts#L25)
+[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/payment/service.ts#L25)
