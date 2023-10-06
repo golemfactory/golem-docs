@@ -199,7 +199,7 @@ export const navigation = [
             ],
           },
           {
-            title: 'React SDK documentation',
+            title: 'React SDK',
             href: '',
             children: [
               {
