@@ -19,18 +19,18 @@ type: reference
 
 This hook accepts two props:
 
-| Name                           | Description                                                                                                                         |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| debitNote (required)           | The id of the debit note to handle (you can get it from the [useDebitNotes](/docs/creators/javascript/react/use-debit-notes) hook). |
-| options (optional)             | see below                                                                                                                           |
-| allocationTimeoutMs (optional) | The timeout for the allocation in milliseconds. Defaults to 60 seconds.                                                             |
+| Name                 | Description                                                                                                                         |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| debitNote (required) | The id of the debit note to handle (you can get it from the [useDebitNotes](/docs/creators/javascript/react/use-debit-notes) hook). |
+| options (optional)   | see below                                                                                                                           |
 
 ### Options
 
-| Name                  | Description                                                                                                                    |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| onAccepted (optional) | A function that will be called when the debit note is accepted. This is a good place to display a success message to the user. |
-| onRejected (optional) | A function that will be called when the debit note is rejected. This is a good place to display an error message to the user.  |
+| Name                           | Description                                                                                                                    |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| onAccepted (optional)          | A function that will be called when the debit note is accepted. This is a good place to display a success message to the user. |
+| onRejected (optional)          | A function that will be called when the debit note is rejected. This is a good place to display an error message to the user.  |
+| allocationTimeoutMs (optional) | The timeout for the allocation in milliseconds. Defaults to 60 seconds.                                                        |
 
 ## Example
 
