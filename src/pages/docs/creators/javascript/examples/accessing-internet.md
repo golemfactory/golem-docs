@@ -67,7 +67,7 @@ node index.mjs
 To create a new manifest run:
 
 ```bash
-golem-sdk manifest create golem/curl
+golem-sdk manifest create golem/examples-outbound:latest
 ```
 
 This will create a basic `manifest.json` file. You will use it to inform the provider what GVMI image we will be using. The manifest contains also your application version, application name, and description, all read from your `package.json` file (you can edit this information if you want).
