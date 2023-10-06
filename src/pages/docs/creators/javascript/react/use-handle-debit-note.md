@@ -19,11 +19,11 @@ type: reference
 
 This hook accepts two props:
 
-| Name                 | Description                                                                                                                         |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| debitNote (required) | The id of the debit note to handle (you can get it from the [useDebitNotes](/docs/creators/javascript/react/use-debit-notes) hook). |
-| options (optional)   | see below                                                                                                                           |
-| allocationTimeoutMs  | The timeout for the allocation in milliseconds. Defaults to 60 seconds.                                                             |
+| Name                           | Description                                                                                                                         |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| debitNote (required)           | The id of the debit note to handle (you can get it from the [useDebitNotes](/docs/creators/javascript/react/use-debit-notes) hook). |
+| options (optional)             | see below                                                                                                                           |
+| allocationTimeoutMs (optional) | The timeout for the allocation in milliseconds. Defaults to 60 seconds.                                                             |
 
 ### Options
 

@@ -37,11 +37,11 @@ type: reference
 
 This hook accepts a single configuration object with the following properties:
 
-| Name      | Description                                                                                                                                                                                  |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| after     | A string representing the timestamp to start fetching invoices from. If not provided, the hook will fetch invoices starting from the earliest invoice known to the connected yagna instance. |
-| limit     | The maximum number of invoices to fetch. Defaults to 10.                                                                                                                                     |
-| swrConfig | [SWR configuration object](https://swr.vercel.app/docs/api#options)                                                                                                                          |
+| Name                 | Description                                                                                                                                                                                  |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| after (optional)     | A string representing the timestamp to start fetching invoices from. If not provided, the hook will fetch invoices starting from the earliest invoice known to the connected yagna instance. |
+| limit (optional)     | The maximum number of invoices to fetch. Defaults to 10.                                                                                                                                     |
+| swrConfig (optional) | [SWR configuration object](https://swr.vercel.app/docs/api#options)                                                                                                                          |
 
 To achieve pagination, pass the `timestamp` of the last invoice in the `after` parameter of the next call.
 

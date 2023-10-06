@@ -19,9 +19,9 @@ type: reference
 
 This hook takes the [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance, initialized by the [useExecutor](/docs/creators/javascript/react/use-executor) hook.
 
-| Name     | Description                                                                                   |
-| -------- | --------------------------------------------------------------------------------------------- |
-| executor | The [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance. |
+| Name                | Description                                                                                   |
+| ------------------- | --------------------------------------------------------------------------------------------- |
+| executor (required) | The [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance. |
 
 ## Example
 

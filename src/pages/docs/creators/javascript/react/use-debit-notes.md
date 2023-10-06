@@ -39,10 +39,10 @@ type: reference
 
 This hook accepts a single configuration object with the following properties:
 
-| Name      | Description                                                         |
-| --------- | ------------------------------------------------------------------- |
-| limit     | The maximum number of debit notes to fetch. Defaults to 10.         |
-| swrConfig | [SWR configuration object](https://swr.vercel.app/docs/api#options) |
+| Name                 | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
+| limit (optional)     | The maximum number of debit notes to fetch. Defaults to 10.         |
+| swrConfig (optional) | [SWR configuration object](https://swr.vercel.app/docs/api#options) |
 
 Please note that the hook doesn't support pagination. The debit notes are always sorted from newest to oldest and to fetch earlier debit notes you need to set the `limit` to a higher value.
 

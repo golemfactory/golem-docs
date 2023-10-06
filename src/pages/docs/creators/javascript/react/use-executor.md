@@ -22,10 +22,16 @@ type: reference
 
 The hook accepts two configuration objects, one for the executor itself (package, demand specification, budget, etc) and one for the extra behavior (e.g. whether to add a `beforeunload` event listener to prevent the user from accidentally closing the tab while the executor is running).
 
-| Name         | Description                                                                                                                                                                                             |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| options      | [ExecutorOptions](/docs/golem-js/reference/modules/executor_executor#executoroptionsmixin)                                                                                                              |
-| extraOptions | - `addBeforeUnloadHandler` - Boolean indicating whether to add a `beforeunload` event listener to prevent the user from accidentally closing the tab while the executor is running. Defaults to `true`. |
+| Name                    | Description                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------ |
+| options (required)      | [ExecutorOptions](/docs/golem-js/reference/modules/executor_executor#executoroptionsmixin) |
+| extraOptions (optional) | See below                                                                                  |
+
+### Extra options
+
+| Name                   | Description                                                                                                                                                   |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| addBeforeUnloadHandler (optional) | Boolean indicating whether to add a `beforeunload` event listener to prevent the user from closing the tab while the executor is running. Defaults to `true`. |
 
 ## Example
 
