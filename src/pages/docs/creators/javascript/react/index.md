@@ -12,12 +12,30 @@ Welcome to the docs page for Golem React SDK. Before you get started, make sure 
 
 To add the SDK to an existing react project simply install it using your favorite package manager:
 
-```
+{% tabs %}
+
+{% tab label="npm" %}
+```bash
 npm install @golem-sdk/react
+```
+{% /tab %}
+{% tab label="yarn" %}
+```bash
 yarn add @golem-sdk/react
+```
+{% /tab %}
+{% tab label="pnpm" %}
+```bash
 pnpm add @golem-sdk/react
+```
+{% /tab %}
+{% tab label="bun" %}
+```bash
 bun add @golem-sdk/react
 ```
+{% /tab %}
+
+{% /tabs %}
 
 Then make sure to wrap your app with the `YagnaProvider` component:
 
