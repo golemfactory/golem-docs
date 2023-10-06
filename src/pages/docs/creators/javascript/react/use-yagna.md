@@ -6,7 +6,7 @@ type: reference
 
 # useYagna
 
-`useYagna` is a hook that provides information about the Yagna connection status. If connection cannot be established the hook will retry using an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) algorithm. It returns an object with the following properties:
+`useYagna` is a hook that provides information about the Yagna connection status. If the connection cannot be established, the hook will retry using an [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) algorithm. It returns an object with the following properties:
 
 | Name        | Description                                                                                  |
 | ----------- | -------------------------------------------------------------------------------------------- |
