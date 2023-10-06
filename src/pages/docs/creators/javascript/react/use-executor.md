@@ -11,7 +11,7 @@ type: reference
 | Name           | Description                                                                                                          |
 | -------------- | -------------------------------------------------------------------------------------------------------------------- |
 | executor       | The [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance.                        |
-| isInitializing | Boolean indicating whether the executor is being initialized. New executor cannot be initialized while this is true. |
+| isInitializing | Boolean indicating whether the executor is being initialized. A new executor cannot be initialized while this is true. |
 | error          | Error object containing information about the error that occurred while initializing the executor.                   |
 | initialize     | A function to initialize a new executor                                                                              |
 | terminate      | A function to terminate the executor (calls `TaskExecutor.end()` under the hood)                                     |
