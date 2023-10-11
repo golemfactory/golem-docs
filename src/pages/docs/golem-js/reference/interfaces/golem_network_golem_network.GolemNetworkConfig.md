@@ -28,7 +28,7 @@ Image that will be uploaded to the provider and used to run the task. Defaults t
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:10](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/golem_network/golem_network.ts#L10)
+[src/golem_network/golem_network.ts:10](https://github.com/golemfactory/golem-js/blob/f41abd4/src/golem_network/golem_network.ts#L10)
 
 ___
 
@@ -40,7 +40,7 @@ Yagna options. See [YagnaOptions](../modules/executor_executor#yagnaoptions) for
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:14](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/golem_network/golem_network.ts#L14)
+[src/golem_network/golem_network.ts:14](https://github.com/golemfactory/golem-js/blob/f41abd4/src/golem_network/golem_network.ts#L14)
 
 ___
 
@@ -57,7 +57,7 @@ Minimum hardware requirements for the provider. The available options are:
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:23](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/golem_network/golem_network.ts#L23)
+[src/golem_network/golem_network.ts:23](https://github.com/golemfactory/golem-js/blob/f41abd4/src/golem_network/golem_network.ts#L23)
 
 ___
 
@@ -69,7 +69,7 @@ If you want to see logs from the Golem node set this to true. Defaults to `false
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:27](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/golem_network/golem_network.ts#L27)
+[src/golem_network/golem_network.ts:27](https://github.com/golemfactory/golem-js/blob/f41abd4/src/golem_network/golem_network.ts#L27)
 
 ___
 
@@ -81,7 +81,7 @@ Function that will be run before each job. You can use it to set up the environm
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:31](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/golem_network/golem_network.ts#L31)
+[src/golem_network/golem_network.ts:31](https://github.com/golemfactory/golem-js/blob/f41abd4/src/golem_network/golem_network.ts#L31)
 
 ___
 
@@ -93,4 +93,4 @@ Job storage. By default Golem Network uses a simple in-memory storage for job st
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:35](https://github.com/golemfactory/golem-js/blob/8dd67e1/src/golem_network/golem_network.ts#L35)
+[src/golem_network/golem_network.ts:35](https://github.com/golemfactory/golem-js/blob/f41abd4/src/golem_network/golem_network.ts#L35)
