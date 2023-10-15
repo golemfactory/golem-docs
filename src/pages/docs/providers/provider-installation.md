@@ -22,7 +22,7 @@ Open your terminal and type:
 curl -sSf https://join.golem.network/as-provider | bash -
 ```
 
-### Setting values
+### Configuring your node
 
 After installing all required components, you will be asked to set up your node, by providing configuration values. If you leave them empty, the default values (presented in brackets) will be applied. Press Enter for each entry to save it.
 
