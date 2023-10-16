@@ -10,7 +10,7 @@ Welcome to the docs page for Golem React SDK. Before you get started, make sure 
 
 ## Who is this SDK for?
 
-The Golem React SDK is for developers who want to build React applications that interact with the Golem Network directly, without having to write any backend code. It is a wrapper around the [Golem JavaScript SDK](/docs/golem-js) that provides React hooks and components for common tasks such as connecting to Yagna, initializing executors, running tasks, etc. It's important to keep in mind that the React SDK is meant to be used with your user's local yagna installation. If you want to build a web app that interacts with the Golem Network without requiring your users to deal with yagna, you should use the [Golem JavaScript SDK](/docs/golem-js) instead.
+The Golem React SDK is for developers who want to build React applications that interact with the Golem Network directly, without having to write any backend code. It is a wrapper around the [Golem JavaScript SDK](/docs/creators/javascript/quickstarts/quickstart) that provides React hooks and components for common tasks such as connecting to Yagna, initializing executors, running tasks, etc. It's important to keep in mind that the React SDK is meant to be used with your user's local yagna installation. If you want to build a web app that interacts with the Golem Network without requiring your users to deal with yagna, you should use the [Golem JavaScript SDK](/docs/creators/javascript/quickstarts/quickstart) instead.
 
 ## What can I build with this SDK?
 
