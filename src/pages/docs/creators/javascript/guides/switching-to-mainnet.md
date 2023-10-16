@@ -1,6 +1,6 @@
 ---
-Description: How to move and ensure the safety of your funds when operating on mainnet
-title: Switching to mainnet
+description: Master the transition from Golem testnet to mainnet with our in-depth guide. Learn all about payment platforms, Ethereum vs Layer-2, wallet security and funds acquisition while enhancing your Mainnet Golem experience.
+title: Using Golem on the mainnet
 type: Guide
 ---
 
@@ -16,21 +16,19 @@ This section is aimed mainly at **requestors** wishing to switch from running si
 
 If you are a requestor:
 
-* You need to configure your requestor agent to negotiate Polygon or Ethereum as a payment platform. You can find a JS example [here](/docs/creators/javascript/examples/switching-to-mainnet).
-* Next, you need to [enable payments](/docs/creators/javascript/examples/tools/managing-golem-wallet) on the platform you choose (Polygon on Ethereum).
+- You need to configure your requestor agent to negotiate Polygon or Ethereum as a payment platform. You can find a JS example [here](/docs/creators/javascript/examples/switching-to-mainnet).
 
 Okay, so while technically we now know how to hand out tasks to providers on paid networks, in the context of running **Golem on the mainnet**, a few important questions remain largely unanswered:
 
-* How to **choose a payment platform** - Ethereum vs Layer-2
-* How to **monitor the status of your wallet**
-* How to **secure access to the funds** in your Golem wallet if things go haywire?
-* How do you **get funds to your requestor** so you can use them to pay for the tasks?
-* How do you **get funds out of a Golem node** if you don't need them there anymore?
-
+- How to **choose a payment platform** - Ethereum vs Layer-2
+- How to **monitor the status of your wallet**
+- How to **secure access to the funds** in your Golem wallet if things go haywire?
+- How do you **get funds to your requestor** so you can use them to pay for the tasks?
+- How do you **get funds out of a Golem node** if you don't need them there anymore?
 
 ## Ethereum vs Layer-2
 
-The most important decision you need to make when it comes to Golem payments (both between Requestors <-> Providers, as well as getting funds in and out of Golem Network) is whether to use Ethereum or its Layer-2 scaling sidechain: Polygon. 
+The most important decision you need to make when it comes to Golem payments (both between Requestors <-> Providers, as well as getting funds in and out of Golem Network) is whether to use Ethereum or its Layer-2 scaling sidechain: Polygon.
 
 While direct, on-chain transactions using ERC-20-based tokens have long become the daily bread for the Ethereum mainnet and constitute a significant part of more than a million transactions passing through the chain each day, current ETH's price and the average gas fees make it extremely hard to use as a mean of exchange. This is because Golem payments will usually be orders of magnitude smaller than the typical transaction fee on Ethereum.
 
@@ -42,15 +40,15 @@ For more information regarding Layer 2 and Polygon, please refer to our introduc
 
 There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you check the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
 
-
 ## Securing your Golem wallet
 
-Golem provides a procedure to backup your wallet in a secure way, as well as to restore it to the new Yagna installation. 
+Golem provides a procedure to backup your wallet in a secure way, as well as to restore it to the new Yagna installation.
 Please follow the instructions provided in [Golem wallet backup](/docs/creators/javascript/examples/tools/golem-wallet-backup) and [Restore Golem wallet](/docs/creators/javascript/examples/tools/restoring-golem-wallet) tutorials.
 
 ## Getting funds to your requestor
 
 Golem Network payments are done on Blockchain with GLM tokens. Consequently, to enable such payments you will need:
+
 - GLM tokens to pay the Provider
 - Native token of the chosen Blockchain to pay for the gas a.k.a. transaction fees
 
@@ -63,6 +61,7 @@ You can top up your wallet with the following command:
 ```bash
 yagna payment fund
 ```
+
 ### On paid network
 
 {% alert level="info" %}
@@ -70,8 +69,6 @@ yagna payment fund
 To facilitate operation on blockchains it is useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to backup and restore your wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
 
 {% /alert %}
-
-
 
 #### Acquiring MATIC directly on Polygon and converting some of them to GLMs
 
@@ -90,18 +87,18 @@ To facilitate operation on blockchains it is useful to export your Golem wallet 
 ### Swapping GLM tokens for MATIC on Polygon
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
+
 1. Select **Proof of Stake** and then **Swap** (in the Wallet Features section)
 2. Connect your wallet
 3. Choose the token you want to get and follow the instructions
-
 
 ## Getting your funds out of the Golem node
 
 You can consider one of the following options:
 
 - swapping GLM tokens to MATIC and selling them directly on a trading platform or
-- bridging them to Ethereum Mainnet 
+- bridging them to Ethereum Mainnet
 
 {% alert level="info" %}
-It is easier to access your ERC-20 tokens by exporting your wallet (in Ethereum wallet v3 format) and then importing it into MetaMask. 
+It is easier to access your ERC-20 tokens by exporting your wallet (in Ethereum wallet v3 format) and then importing it into MetaMask.
 {% /alert %}

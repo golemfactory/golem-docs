@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "gendocs": "node generateTypedoc.mjs",
-    "build": "next build",
+    "build": "node validate_links.js && next build",
     "export": "next build && next export",
     "postbuild": "next-sitemap",
     "start": "next start",
@@ -28,18 +28,22 @@
     "focus-visible": "^5.2.0",
     "git-clone": "^0.2.0",
     "isomorphic-git": "^1.24.0",
+    "marked": "^9.0.3",
     "next": "13.4.2",
     "next-sitemap": "^4.1.8",
     "nextjs-google-analytics": "^2.3.3",
+    "node-fetch": "^3.3.2",
     "postcss-focus-visible": "^6.0.4",
     "postcss-import": "^14.1.0",
     "prism-react-renderer": "^1.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-highlight-words": "^0.20.0",
+    "react-lite-youtube-embed": "^2.3.52",
     "simple-functional-loader": "^1.2.1",
     "swr": "^2.1.5",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "^3.3.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "eslint": "8.26.0",

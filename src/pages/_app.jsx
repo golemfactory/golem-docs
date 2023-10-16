@@ -5,7 +5,8 @@ const inter = Inter({ subsets: ['latin'] })
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import { Layout } from '@/components/Layout'
-
+import { useEffect } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import 'focus-visible'
 import '@/styles/tailwind.css'
 function getNodeText(node) {
@@ -39,8 +40,6 @@ function collectHeadings(
     if (node.name === 'Heading') {
       let { level, id } = node.attributes
 
-      node.attributes.id = slugify(id)
-
       let title = getNodeText(node)
 
       if (title) {
@@ -64,7 +63,23 @@ function collectHeadings(
 
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
+  if (!title) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a title. Please add a title to the frontmatter.'
+    )
+  }
   let type = pageProps.markdoc?.frontmatter.type
+  if (!type) {
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a type. Please add a type to the frontmatter.'
+    )
+  }
+
   let tags = pageProps.markdoc?.frontmatter.tags
 
   let pageTitle =
@@ -72,9 +87,25 @@ export default function App({ Component, pageProps }) {
     `${pageProps.markdoc?.frontmatter.title}`
 
   let description = pageProps.markdoc?.frontmatter.description
+
+  if (!description) {
+    let file = pageProps.markdoc.file.path
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a description. Please add a description to the frontmatter.'
+    )
+  }
+
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
+
+  useEffect(() => {
+    if (!localStorage.getItem('GDocsUUID')) {
+      localStorage.setItem('GDocsUUID', uuidv4())
+    }
+  }, [])
 
   return (
     <>

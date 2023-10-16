@@ -1,8 +1,8 @@
 ---
-title:
-pageTitle: Golem Docs. How do you want to create?
-description:
-type: design
+title: Golem Docs | How do you want to create?
+pageTitle: Golem Docs | How do you want to create?
+description: Dive into Golem's comprehensive software documentation for creators. Whether you're working with JS or prefer a no-code approach, our in-depth user guides provide all the information you need to streamline your development process.
+type: noicon
 ---
 
 # How do you want to create?
@@ -29,6 +29,28 @@ Have a problem that can be split into multiple tasks that can be run in parallel
 {% selectioncontent %}
 
 Need a backend to offload your system?
+
+{% /selectioncontent %}
+
+{% /selectioncard %}
+
+{% selectioncard icon="ray" title="Ray on Golem Docs" buttonText="Read Ray on Golem Docs" href="/docs/creators/ray" %}
+
+{% selectioncontent %}
+
+Have a Python code that can benefit from running on more than just your computer?
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Want to parallelize your code using Ray and run it on a Golem cluster?
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Need to have control over the costs and performance?
 
 {% /selectioncontent %}
 
