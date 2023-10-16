@@ -15,9 +15,9 @@ type: reference
 | isError         | Boolean indicating whether the last attempt to accept the debit note failed. |
 | isAccepted      | Boolean indicating whether the debit note has been accepted.                 |
 
-## Props
+## Parameters
 
-This hook accepts two props:
+This hook accepts two parameters:
 
 | Name                 | Description                                                                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |

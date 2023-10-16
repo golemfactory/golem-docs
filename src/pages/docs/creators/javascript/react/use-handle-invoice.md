@@ -16,9 +16,9 @@ type: reference
 | isAccepted    | Boolean indicating whether the invoice has been accepted.                                             |
 | reset         | A function that resets the state of the hook (sets `isAccepted` to `false` and `isError` to `false`). |
 
-## Props
+## Parameters
 
-This hook accepts two props:
+This hook accepts two parameters:
 
 | Name               | Description                                                                                                                 |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------- |

@@ -15,7 +15,7 @@ type: reference
 | isError   | Boolean indicating whether the task has failed.                                              |
 | result    | The result of the task.                                                                      |
 
-## Props
+## Parameters
 
 This hook takes the [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance, initialized by the [useExecutor](/docs/creators/javascript/react/use-executor) hook.
 
