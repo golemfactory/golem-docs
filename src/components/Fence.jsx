@@ -1,29 +1,29 @@
-import { Fragment } from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import { ClipboardIcon } from "@/components/icons/ClipboardIcon";
-import { useState, useEffect } from "react";
+import { Fragment } from 'react'
+import Highlight, { defaultProps } from 'prism-react-renderer'
+import { ClipboardIcon } from '@/components/icons/ClipboardIcon'
+import { useState, useEffect } from 'react'
 export function Fence({ children, language, content }) {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false)
   const handleClick = () => {
     if (children) {
       navigator.clipboard
         .writeText(children.trimEnd())
         .then(() => setCopied(true))
-        .catch(() => console.error("Could not copy text"));
+        .catch(() => console.error('Could not copy text'))
     } else {
       navigator.clipboard
         .writeText(content)
         .then(() => setCopied(true))
-        .catch(() => console.error("Could not copy text"));
+        .catch(() => console.error('Could not copy text'))
     }
-  };
+  }
 
   useEffect(() => {
     if (copied) {
-      const timer = setTimeout(() => setCopied(false), 2000);
-      return () => clearTimeout(timer);
+      const timer = setTimeout(() => setCopied(false), 2000)
+      return () => clearTimeout(timer)
     }
-  }, [copied]);
+  }, [copied])
   return (
     <Highlight
       {...defaultProps}
@@ -32,8 +32,8 @@ export function Fence({ children, language, content }) {
       theme={undefined}
     >
       {({ className, style, tokens, getTokenProps }) => (
-        <div className="relative rounded-md bg-[#fafafa] pr-12">
-          <div className="absolute right-4 top-3.5 z-30 h-5 w-5">
+        <div className="relative break-words rounded-md bg-[#fafafa] pr-12">
+          <div className="absolute right-4 top-3.5 z-30 h-5 w-5 break-words">
             <button type="button" onClick={handleClick}>
               {copied ? (
                 <svg
@@ -55,16 +55,23 @@ export function Fence({ children, language, content }) {
               )}
             </button>
           </div>
-          <pre className={`${className} relative pr-8`} style={style}>
-            <code className="override-code-styles">
+          <pre
+            className={`${className} relative break-words pr-8`}
+            style={style}
+          >
+            <code className="override-code-styles break-words">
               {tokens.map((line, lineIndex) => (
                 <Fragment key={lineIndex}>
                   {line
                     .filter((token) => !token.empty)
                     .map((token, tokenIndex) => (
-                      <span key={tokenIndex} {...getTokenProps({ token })} />
+                      <span
+                        className="break-words"
+                        key={tokenIndex}
+                        {...getTokenProps({ token })}
+                      />
                     ))}
-                  {"\n"}
+                  {'\n'}
                 </Fragment>
               ))}
             </code>
@@ -72,5 +79,5 @@ export function Fence({ children, language, content }) {
         </div>
       )}
     </Highlight>
-  );
+  )
 }

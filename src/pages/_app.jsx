@@ -5,7 +5,8 @@ const inter = Inter({ subsets: ['latin'] })
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import { Layout } from '@/components/Layout'
-
+import { useEffect } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import 'focus-visible'
 import '@/styles/tailwind.css'
 function getNodeText(node) {
@@ -39,8 +40,6 @@ function collectHeadings(
     if (node.name === 'Heading') {
       let { level, id } = node.attributes
 
-      node.attributes.id = slugify(id)
-
       let title = getNodeText(node)
 
       if (title) {
@@ -73,6 +72,14 @@ export default function App({ Component, pageProps }) {
     )
   }
   let type = pageProps.markdoc?.frontmatter.type
+  if (!type) {
+    throw new Error(
+      'The file ' +
+        file +
+        ' is missing a type. Please add a type to the frontmatter.'
+    )
+  }
+
   let tags = pageProps.markdoc?.frontmatter.tags
 
   let pageTitle =
@@ -93,6 +100,12 @@ export default function App({ Component, pageProps }) {
   let tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
+
+  useEffect(() => {
+    if (!localStorage.getItem('GDocsUUID')) {
+      localStorage.setItem('GDocsUUID', uuidv4())
+    }
+  }, [])
 
   return (
     <>

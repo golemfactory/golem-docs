@@ -10,7 +10,7 @@ type: Example
 
 This section is aimed mainly at **requestors** wishing to switch from running simple test tasks on our `testnet` to launching production payloads utilizing the vast number of providers on the `mainnet`.
 
-By default, the JS SDK will execute your task on the `testnet`. It is a development network with a limited amount of providers and limited amounts of computational resources available. If you would rather need a larger amount of providers to compute on, you should switch to the mainnet.
+By default, the JS SDK will execute tasks on the `testnet`. It is a development network with a limited amount of providers and limited amounts of computational resources available. If you would rather need a larger amount of providers to compute on, you should switch to the mainnet.
 
 In this article, we will show how to run your tasks on Polygon.
 
@@ -53,8 +53,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 
 (async () => {
   const executor = await TaskExecutor.create({
-    subnetTag: "public",  // do we need to show subnet ??
-    payment: { driver: "erc-20", network: "polygon" },
+    payment: { network: "polygon" },
     package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
     yagnaOptions: { apiKey: 'try_golem' }
   });

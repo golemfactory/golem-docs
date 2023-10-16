@@ -109,7 +109,7 @@ See examples [here](/docs/creators/javascript/examples/selecting-providers).
 
 ### Switching to the mainnet
 
-By default, JS SDK will execute your task in testnet. This is a development network where you cannot expect performance and capacit. However, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
+By default, JS SDK will execute your task in testnet. This is a development network where you cannot expect performance and capacity. However, you pay in test GLM. If you would rather utilize the larger pool of providers, you should switch to the main network.
 
 See example [here](/docs/creators/javascript/examples/switching-to-mainnet).    
 

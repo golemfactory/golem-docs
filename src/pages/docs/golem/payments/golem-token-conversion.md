@@ -6,7 +6,7 @@ type: Guide
 
 # Mainnet / Polygon GLM Conversion
 
-Since the Beta.4 release of Golem, the Polygon network became the default platform for payments between Golem requestors and providers.
+Since the Beta.4 release of Golem, the Polygon network became the most common platform for payments between Golem requestors and providers.
 
 While Polygon itself offers countless opportunities in the form of distributed exchanges and other DeFi platforms, one might still want to move their hard-earned GLM tokens to the safety of the Ethereum Mainnet, or conversely, get their mainnet GLMs to Polygon to pay for tasks on Golem.
 
