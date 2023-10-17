@@ -6,6 +6,18 @@ type: Introduction
 
 # Get started with the React SDK
 
+## Prerequisites
+
+Before you get started, make sure you have installed [yagna](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) and [created an app-key](/docs/creators/javascript/examples/using-app-keys#creating-unique-app-keys)
+
+{% alert level="info" %}
+
+The React SDK is designed to work with the yagna version 0.13.0 or above. If you have an older version installed, please update it before proceeding.
+
+{% /alert %}
+
+## Installation
+
 To add the SDK to an existing react project simply install it using your favorite package manager:
 
 {% tabs %}
@@ -41,10 +53,12 @@ bun add @golem-sdk/react
 
 {% /tabs %}
 
+## Configuring the SDK
+
 Then make sure to wrap your app with the `YagnaProvider` component:
 
 ```jsx
-<YagnaProvider config={{ yagnaAppKey: 'myApiKey' }}>
+<YagnaProvider config={{ yagnaAppKey: 'my-app-key' }}>
   <App />
 </YagnaProvider>
 ```
@@ -86,5 +100,7 @@ Add this component to your application and refresh the page. If you have set up 
 {% docnavigation title="Next steps" %}
 
 To learn more about the SDK, check out the [API reference](/docs/creators/javascript/react/api-reference-overview).
+
+If you'd like to see the SDK in action before you start using it, check out the [example application](/docs/creators/javascript/react/#example-application).
 
 {% /docnavigation %}
