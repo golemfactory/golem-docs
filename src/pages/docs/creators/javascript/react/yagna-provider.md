@@ -12,11 +12,11 @@ type: reference
 
 The component accepts a single prop `config` which is an object with the following properties:
 
-| Name          | Description |
-| ------------- | ----------- |
-| yagnaAppkey (required)   | Your 32-character Yagna app-key. If you haven't genereated one already use the command `yagna app-key create <key-name>` to generate one. |
-| yagnaUrl (optional) | The URL of the Yagna service. Defaults to `http://127.0.0.1:7465`. |
-| swrKey (optional) | The key used to prefix all SWR cache keys. Defaults to "golem-sdk" |
+| Name                   | Description                                                                                                                               |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| yagnaAppkey (required) | Your 32-character Yagna app-key. If you haven't genereated one already use the command `yagna app-key create <key-name>` to generate one. |
+| yagnaUrl (optional)    | The URL of the Yagna service. Defaults to `http://127.0.0.1:7465`.                                                                        |
+| swrKey (optional)      | The key used to prefix all SWR cache keys. Defaults to "golem-sdk"                                                                        |
 
 ## Example
 

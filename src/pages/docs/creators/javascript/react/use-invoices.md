@@ -33,7 +33,7 @@ type: reference
 | paymentDueDate  | String                                                                          |
 | status          | One of `ISSUED` `RECEIVED` `ACCEPTED` `REJECTED` `FAILED` `SETTLED` `CANCELLED` |
 
-## Props
+## Parameters
 
 This hook accepts a single configuration object with the following properties:
 
