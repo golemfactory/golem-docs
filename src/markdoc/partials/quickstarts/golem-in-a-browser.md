@@ -141,16 +141,22 @@ document.getElementById('echo').onclick = run
 
 Note the file contains the `run()` function that creates the body of the requestor script (similar to the one we use in Node.js) and a set of helper functions that will let us present the logs and results in the browser window.
 
-Now, if we have:
+Now, ensure you:
 
-- have your Yagna APP key set to `try_golem` and
-- a running Yagna service started with the `--api-allow-origin` properly set to `http://localhost:8080`
+- have your Yagna APP key set to `try_golem` (as shown in the yagna installation instruction) and
+- have a running Yagna service started with the `--api-allow-origin` properly set to `http://localhost:8080`
 
 Launch `http-server` in the project folder.
 
 ```bash
 http-server
 ```
+
+{% alert level="warning" %}
+
+If, instead of using the `try_golem` app key defined by using the `YAGNA_AUTO_CONF` variable, you have created a unique app key, make sure you update the requestor.mjs code and set the proper value there. See [here](/docs/creators/javascript/examples/using-app-keys#js-task-api-examples-using-app-keys) for deails. 
+
+{% /alert %}
 
 We should see our app available in the browser.
 
