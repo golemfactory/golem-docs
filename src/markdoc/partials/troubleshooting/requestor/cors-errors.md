@@ -36,7 +36,7 @@ has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is pres
 GET http://127.0.0.1:7465/me net::ERR_FAILED 401 (Unauthorized)
 ```
 
-In such a case please validate if you provide a valid `api-key` before diagnosing CORS settings.
+In such a case please validate that you're providing a valid `api-key` before diagnosing CORS settings.
 
 {% /alert %}
 
