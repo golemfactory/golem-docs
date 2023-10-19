@@ -31,17 +31,17 @@ SUBCOMMANDS:
 
 ### Settings set
 
-|Value(s)                  |   Value  description  |
-|:----------------------|:----------------------------------------|
-|--node-name|The name of your provider|
-|--cores|The number of threads allocated to the provider service|
-|--memory|The amount of RAM (in bytes) allocated to the provider service (note: prefixes such as GiB are OK)|
-|--disk|The amount of HDD/SDD (in bytes) allocated to the provider service (note: prefixes such as GiB are OK)|
-|--starting-fee|A decimal number of how much GLM you want to start a task/service|
-|--env-per-hour|A decimal number of how much GLM you want for misc. activities such as downloading a Golem image or finalizing a task|
-|--cpu-per-hour|A decimal number of how much GLM you want for every one allocated thread while working (note: this value is multiplied automatically afterwards, 256-thread CPU's can reasonably have the same value as 2-thread CPUs)|
-|--account|Yagna account (Ethereum address) for payments|
-|--payment-network|The network where you want to be paid in, e.g., mainnet or testnet|
+| Value(s)          | Value description                                                                                                                                                                                                      |
+| :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --node-name       | The name of your provider                                                                                                                                                                                              |
+| --cores           | The number of threads allocated to the provider service                                                                                                                                                                |
+| --memory          | The amount of RAM (in bytes) allocated to the provider service (note: prefixes such as GiB are OK)                                                                                                                     |
+| --disk            | The amount of HDD/SDD (in bytes) allocated to the provider service (note: prefixes such as GiB are OK)                                                                                                                 |
+| --starting-fee    | A decimal number of how much GLM you want to start a task/service                                                                                                                                                      |
+| --env-per-hour    | A decimal number of how much GLM you want for misc. activities such as downloading a Golem image or finalizing a task                                                                                                  |
+| --cpu-per-hour    | A decimal number of how much GLM you want for every one allocated thread while working (note: this value is multiplied automatically afterwards, 256-thread CPU's can reasonably have the same value as 2-thread CPUs) |
+| --account         | Yagna account (Ethereum address) for payments                                                                                                                                                                          |
+| --payment-network | The network where you want to be paid in, e.g., mainnet or testnet                                                                                                                                                     |
 
 To change a particular setting (for eg. price settings) type:
 
@@ -55,7 +55,7 @@ You can also combine multiple settings in one command as follows:
 
 `golemsp settings set --account <address>`
 
-and restart your node afterward for it to update. To check if your address has been updated properly, run 
+and restart your node afterward for it to update. To check if your address has been updated properly, run
 
 `golemsp status`
 
@@ -73,12 +73,8 @@ golemsp run --payment-network testnet
 
 {% docnavigation title="See also" %}
 
-[Troubleshooting](/docs/providers/provider-troubleshooting)
+[Troubleshooting](/docs/troubleshooting/provider)
 
 [Provider CLI reference](/docs/providers/yagna-cli-reference)
 
 {% /docnavigation %}
-
-
-
-

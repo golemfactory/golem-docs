@@ -158,10 +158,6 @@ export const navigation = [
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/guides/switching-to-mainnet',
               },
-              {
-                title: 'Troubleshooting',
-                href: '/docs/creators/javascript/guides/troubleshooting',
-              },
             ],
           },
           {
@@ -202,37 +198,93 @@ export const navigation = [
               },
             ],
           },
+          {
+            title: 'React SDK',
+            href: '',
+            children: [
+              {
+                title: 'Introduction',
+                href: '/docs/creators/javascript/react',
+              },
+              {
+                title: 'Getting started',
+                href: '/docs/creators/javascript/react/getting-started',
+              },
+              {
+                title: 'API Reference',
+                href: '',
+                children: [
+                  {
+                    title: 'Overview',
+                    href: '/docs/creators/javascript/react/api-reference-overview',
+                  },
+                  {
+                    title: 'YagnaProvider',
+                    href: '/docs/creators/javascript/react/yagna-provider',
+                  },
+                  {
+                    title: 'useYagna',
+                    href: '/docs/creators/javascript/react/use-yagna',
+                  },
+                  {
+                    title: 'useExecutor',
+                    href: '/docs/creators/javascript/react/use-executor',
+                  },
+                  {
+                    title: 'useTask',
+                    href: '/docs/creators/javascript/react/use-task',
+                  },
+                  {
+                    title: 'useInvoices',
+                    href: '/docs/creators/javascript/react/use-invoices',
+                  },
+                  {
+                    title: 'useDebitNotes',
+                    href: '/docs/creators/javascript/react/use-debit-notes',
+                  },
+                  {
+                    title: 'useHandleInvoice',
+                    href: '/docs/creators/javascript/react/use-handle-invoice',
+                  },
+                  {
+                    title: 'useHandleDebitNote',
+                    href: '/docs/creators/javascript/react/use-handle-debit-note',
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
       {
         title: 'Python with Ray on Golem',
         children: [
-	  { title: 'Introduction', href: '/docs/creators/ray' },
-	  { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
-	  {
-	    title: 'Concept',
-	    href: '/docs/creators/ray/concept',
-	  },
-	  {
-	    title: 'Setup tutorial',
-	    href: '/docs/creators/ray/setup-tutorial',
-	  },
-	  {
-	    title: 'Basic Ray tasks usage tutorial',
-	    href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
-	  },
-	  {
-	    title: 'Converting a real-life use case to Ray on Golem',
-	    href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
-	  },
-	  {
-	    title: 'Cluster yaml reference',
-	    href: '/docs/creators/ray/cluster-yaml-reference',
-	  },
-	  {
-	    title: 'Supported versions and other limitations',
-	    href: '/docs/creators/ray/supported-versions-and-other-limitations',
-	  },
+          { title: 'Introduction', href: '/docs/creators/ray' },
+          { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
+          {
+            title: 'Concept',
+            href: '/docs/creators/ray/concept',
+          },
+          {
+            title: 'Setup tutorial',
+            href: '/docs/creators/ray/setup-tutorial',
+          },
+          {
+            title: 'Basic Ray tasks usage tutorial',
+            href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
+          },
+          {
+            title: 'Converting a real-life use case to Ray on Golem',
+            href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
+          },
+          {
+            title: 'Cluster yaml reference',
+            href: '/docs/creators/ray/cluster-yaml-reference',
+          },
+          {
+            title: 'Supported versions and other limitations',
+            href: '/docs/creators/ray/supported-versions-and-other-limitations',
+          },
         ],
       },
       {
@@ -256,9 +308,27 @@ export const navigation = [
             title: 'Docker vs Golem VM diffs',
             href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
           },
+        ],
+      },
+      {
+        title: 'Troubleshooting',
+        children: [
           {
-            title: 'Troubleshooting',
-            href: '/docs/creators/dapps/troubleshooting',
+            title: 'JavaScript Requestor',
+            href: '/docs/troubleshooting/js-requestor',
+          },
+          {
+            title: 'Yagna',
+            href: '/docs/troubleshooting/yagna',
+          },
+          {
+            title: 'dApps',
+            href: '/docs/troubleshooting/dapps',
+          },
+
+          {
+            title: 'Exit codes',
+            href: '/docs/troubleshooting/js-requestor/exit-codes',
           },
         ],
       },
@@ -274,10 +344,7 @@ export const navigation = [
         href: '/docs/providers/provider-basic-configuration',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-      {
-        title: 'Troubleshooting',
-        href: '/docs/providers/provider-troubleshooting',
-      },
+
       {
         title: 'Yagna CLI reference',
         href: '/docs/providers/yagna-cli-reference',
@@ -296,6 +363,15 @@ export const navigation = [
           {
             title: 'Wallet Restore',
             href: '/docs/providers/maintenance/wallet-restoration',
+          },
+        ],
+      },
+      {
+        title: 'Troubleshooting',
+        children: [
+          {
+            title: 'Provider',
+            href: '/docs/troubleshooting/provider',
           },
         ],
       },

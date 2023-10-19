@@ -4,21 +4,26 @@ import { Fence } from '@/components/Fence'
 import { Heading } from '@/components/Heading'
 import { Tag } from '@markdoc/markdoc'
 
+import { slugifyWithCounter } from '@sindresorhus/slugify'
+
+const slugify = slugifyWithCounter()
+
 function generateID(children, attributes) {
   if (attributes.id && typeof attributes.id === 'string') {
+    console.log('Using existing ID', attributes.id)
     return attributes.id
   }
 
-  return children
+  const content = children
     .map((child) =>
       typeof child === 'object' && child.$$mdtype === 'Tag'
         ? child.children.join(' ')
         : child
     )
     .join(' ')
-    .replace(/[?]/g, '')
-    .replace(/\s+/g, '-')
-    .toLowerCase()
+    .replace(/[?]/g, '') // Remove any question marks
+
+  return slugify(content) // Use slugify for the conversion
 }
 
 const nodes = {

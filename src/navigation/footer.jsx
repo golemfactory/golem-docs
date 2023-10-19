@@ -94,7 +94,7 @@ export const javascript = [
       },
       {
         title: 'Troubleshooting',
-        href: '/docs/creators/javascript/guides/troubleshooting',
+        href: '/docs/troubleshooting/js-requestor',
       },
     ],
   },
@@ -167,12 +167,11 @@ export const dapps = [
       },
       {
         title: 'Troubleshooting',
-        href: '/docs/creators/dapps/troubleshooting',
+        href: '/docs/troubleshooting/dapps',
       },
     ],
   },
 ]
-
 
 export const ray = [
   {

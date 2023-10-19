@@ -26,8 +26,7 @@ It will install the default ray package as a dependency, but if you want more Ra
 pip3 install -U ray-on-golem
 ```
 
-Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
-You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
+{% partial file="ray/websocat-requirement.md" /%}
 
 ## Install yagna (Golem daemon used to schedule work on the Golem Network)
 

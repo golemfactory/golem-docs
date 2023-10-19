@@ -23,4 +23,4 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/debit_note.ts:8](https://github.com/golemfactory/golem-js/blob/19d9abe/src/payment/debit_note.ts#L8)
+[src/payment/debit_note.ts:8](https://github.com/golemfactory/golem-js/blob/7024c70/src/payment/debit_note.ts#L8)
