@@ -69,7 +69,7 @@ ray submit golem-cluster.yaml simple-task.py
 ```
 
 You can see the information about the cluster both before and after running the computations.
-Observe how, at first, the cluster consists of only one node, and how the autoscaler expands it, as the work progresses.
+Note how, at first, the cluster consists of only one node, and how the autoscaler expands it, as the work progresses.
 
 
 You might need to submit the code more than once.
