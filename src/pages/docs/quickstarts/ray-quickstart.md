@@ -50,31 +50,7 @@ ray up golem-cluster.yaml --yes
 
 Download our example Ray app and execute it locally (a Ray instance will be created on your machine)
 
-```bash
-# Download the example Ray app
-wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py
-
-# Execute the app locally by starting a local ray instance on your computer
-python3 simple-task.py
-```
-
-This particular script shows information about the cluster it is being run on 
-and also visualizes the number of tasks run on different nodes.
-
-Once you ensure the app works, you can feed it to your Ray on the Golem cluster
-
-```bash
-# Submit the app to be executed on your cluster
-ray submit golem-cluster.yaml simple-task.py 
-```
-
-You can see the information about the cluster both before and after running the computations.
-Note how, at first, the cluster consists of only one node, and how the autoscaler expands it, as the work progresses.
-
-
-You might need to submit the code more than once.
-It is rather fast and even when Ray orders new nodes 
-it doesn't always manage to finish before the computation is over.
+{% partial file="ray/run-simple-task.md" /%}
 
 ## Stop the cluster
 
