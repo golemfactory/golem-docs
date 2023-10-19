@@ -29,4 +29,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/f88d138/src/utils/logger/pinoLogger.ts#L4)
+[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/7024c70/src/utils/logger/pinoLogger.ts#L4)
