@@ -16,38 +16,59 @@ You can find the examples in [`ray-on-golem` repository](https://github.com/gole
 
 Have a look at the code (but you can find it also in [the repository](https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py):
 ```python
-from collections import Counter
 import socket
 import time
+import argparse
+from collections import Counter
 
 import ray
 ray.init()
 
-print('''This cluster consists of
+
+# output cluster information before the computation
+print(
+    """This cluster consists of
     {} nodes in total
     {} CPU resources in total
-'''.format(len(ray.nodes()), ray.cluster_resources()['CPU']))
+""".format(
+        len(ray.nodes()), ray.cluster_resources()["CPU"]
+    )
+)
 
+# remote function returning ip of the worker (after 0.5 sec of sleep)
 @ray.remote
 def f():
     time.sleep(0.5)
 
-    # Return IP address.
     return socket.gethostbyname(socket.gethostname())
 
-object_ids = [f.remote() for _ in range(1000)]
+# get the number of remote calls from the command line
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "-c", "--count", type=int, default=100, help="number of tasks to perform, default: %(default)s"
+)
+args = parser.parse_args()
+
+# start args.count remote calls
+object_ids = [f.remote() for _ in range(args.count)]
+
+# wait for the results
 ip_addresses = ray.get(object_ids)
 
-print('Tasks executed')
+print("Tasks executed")
 for ip_address, num_tasks in Counter(ip_addresses).items():
-    print('    {} tasks on {}'.format(num_tasks, ip_address))
+    print("    {} tasks on {}".format(num_tasks, ip_address))
 
 
-print('''This cluster consists of
+# output cluster information after the computation
+print(
+    """This cluster consists of
     {} nodes in total
     {} CPU resources in total
-'''.format(len(ray.nodes()), ray.cluster_resources()['CPU']))
-```
+""".format(
+        len(ray.nodes()), ray.cluster_resources()["CPU"]
+    )
+)```
 
 You can run the app on your local machine with
 ```bash
