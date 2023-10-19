@@ -69,38 +69,7 @@ echo console.log("Hello Golem World!"); > worker.mjs
 
 {% /alert  %}
 
-```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-import {createHash} from 'node:crypto';
-import * as fs from 'fs';
-
-
-(async () => {
-  const executor = await TaskExecutor.create({
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }
-  });
-
-const buff = fs.readFileSync('worker.mjs'); 
-const hash = createHash('md5').update(buff).digest('hex');
-
-  const result = await executor.run(async (ctx) => {
-     
-    await ctx.uploadFile("./worker.mjs", "/golem/input/worker.mjs");
-
-    const res  = await ctx.run(`node -e "const crypto = require('node:crypto'); const fs = require('fs'); const buff = fs.readFileSync('/golem/input/worker.mjs'); const hash = crypto.createHash('md5').update(buff).digest('hex'); console.log(hash); "`);
-       
-    return res.stdout;
-       
-  });
-
-  console.log('md5 of the file sent to provider: ',result);
-  console.log('Locally computed  md5: ',hash);
-
-  await executor.end();
- 
-})();
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/transferring-data/upload-file.mjs" language="javascript" /%}
 
 
 ![Uploadfile output log](/uplaodfile_log.png)
@@ -110,73 +79,13 @@ const hash = createHash('md5').update(buff).digest('hex');
 
 In this example, we create a file on a remote computer, list its content to a result object, and finally download it to compare its content with the result obtained remotely.
 
-```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
-(async () => {
-  const executor = await TaskExecutor.create({
-    package: "dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3",    
-    yagnaOptions: { apiKey: 'try_golem' }
-  });
-
-  
-
-
-  const result = await executor.run(async (ctx) => {
-     
-     const res = await ctx
-       .beginBatch()
-       .run("ls -l /golem > /golem/work/output.txt")
-       .run('cat /golem/work/output.txt')
-       .downloadFile("/golem/work/output.txt", "./output.txt")
-       .end()
-       .catch((error) => console.error(error));
-
-       return res[2]?.stdout
-       
-  });
-
-
-
-  console.log(result);
-  await executor.end();
- 
-})();
-
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/transferring-data/download-file.mjs" language="javascript" /%}
 
 ![Downloadfile output log](/downloadFile_log.png)
 
 ## Uploading JSON to provider
 
-```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
-
-(async () => {
-  const executor = await TaskExecutor.create({
-    package: "dcd99a5904bebf7ca655a833b73cc42b67fd40b4a111572e3d2007c3",    
-    yagnaOptions: { apiKey: 'try_golem' }
-  });
-
-  const output = await executor.run(async (ctx) => {
-     
-    // Upload test JSON object
-
-     await ctx.uploadJson({ "input": "Hello World" }, '/golem/work/input.json');
-
-    // Read the content of the JSON object.
-    return await ctx.run('cat /golem/work/input.json');
-    
-   
-  });
-
-  console.log(output.stdout);
-
-  await executor.end();
- 
-})();
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/transferring-data/upload-json.mjs" language="javascript" /%}
 
 ![DownloadJSON output logs](/uploadJSON_log.png)
 

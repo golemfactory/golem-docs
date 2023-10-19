@@ -17,7 +17,7 @@ This example has been designed to work with the following environments:
 
 - OS X 10.14+, Ubuntu 20.04 or Windows
 - Node.js 16.0.0 or above
-{% /alert %}
+  {% /alert %}
 
 ## Installing and running Yagna
 
@@ -43,8 +43,8 @@ Alternatively, if you can't install it in an easy way, you will do it manually i
 1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
 2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
 3. Copy those files to `C:\Windows\System32`.
-{% /tab %}
-{% tab label="Unix Manual installation" %}
+   {% /tab %}
+   {% tab label="Unix Manual installation" %}
 
 Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
 
@@ -112,21 +112,7 @@ npm install @golem-sdk/golem-js
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-  const result = await executor.run(
-    async (ctx) => (await ctx.run('node -v')).stdout
-  )
-  await executor.end()
-
-  console.log('Task result:', result)
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/7024c7041b92e84164f0f50c2fc7d948d60c7ff2/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 
@@ -155,8 +141,8 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="Next steps" %}
 
 - [QuickStart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
-{% /docnavigation %}
-{% docnavigation title="See also" %}
+  {% /docnavigation %}
+  {% docnavigation title="See also" %}
 - [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
 - [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
-{% /docnavigation %}
+  {% /docnavigation %}

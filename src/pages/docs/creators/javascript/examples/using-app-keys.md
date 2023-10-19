@@ -71,20 +71,7 @@ Once you have created an app-key you can use it in your requestor script replaci
 Note that from the `yagna` perspective we are talking about an application accessing its API, therefore `yagna` uses the `app-key` term, while from an application's perspective they obtain the access to REST API, and therefore they have `apiKey` attribute.
 {% /alert %}
 
-```js
-(async () => {
-  const executor = await TaskExecutor.create({
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'insert-your-32-char-app-key-here' }
-    });
-
-const result = await executor.run(
-    async (ctx) => (await ctx.run("node -v")).stdout);
- await executor.end();
-
- console.log("Task result:", result);
-})();
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/using-app-keys/index.mjs" language="javascript" /%}
 
 ### Using app-key from environment variable
 
