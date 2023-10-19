@@ -52,25 +52,7 @@ node index.mjs
 
 Let's look at the simple example: we will run a task that consists of single command and will print the content of the result object:
 
-```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
-(async () => {
-  const executor = await TaskExecutor.create({
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }
-    , isSubprocess: true
-  });
-
-
-  const result = await executor.run(async (ctx) => (await ctx.run("node -v")));
-  console.log("Task result:", result);
-  
-   
-  await executor.end();
-
-})();
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/single-command.mjs" language="javascript" /%}
 
 In this example, our task consists of a single command: `node -v`. `ctx.run()` which returns an object that is then passed to the `result` variable and printed.
 
@@ -123,27 +105,7 @@ In the case of the data transfer method, you will receive a message describing t
 
 Let's see another example:
 
-```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
-(async () => {
-  const executor = await TaskExecutor.create({
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }
-    , isSubprocess: true
-  });
-
-
-  // there is a mistake and instead of 'node -v' we call 'node -w' 
-  const result = await executor.run(async (ctx) => (await ctx.run("node -w")));
-  console.log("Task result:", result);
-  
-   
-  await executor.end();
-
-})();
-
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/single-command-fail.mjs" language="javascript" /%}
 
 ![Single failure output log](/bad_result_log_3.png)
 
