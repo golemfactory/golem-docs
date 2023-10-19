@@ -61,10 +61,10 @@ This will create a basic `manifest.json` file. You will use it to inform the pro
 The next step is to configure our manifest, so you can access a public URL. The CLI also has a handy command that will take care of that for you:
 
 ```bash
-golem-sdk manifest net add-outbound https://github.com
+golem-sdk manifest net add-outbound https://ipfs.io
 ```
 
-This has added https://github.com as the URL you want to access from the provider node. The command can be run multiple times to add more URLs or you can pass them all at once.
+This has added https://ipfs.io as the URL you want to access from the provider node. The command can be run multiple times to add more URLs or you can pass them all at once.
 
 Now our manifest is ready, you can start coding the application.
 
@@ -126,21 +126,22 @@ import { TaskExecutor } from '@golem-sdk/golem-js'
 import { readFile } from 'fs/promises'
 
 const url =
-  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz'
+  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
 ```
 
 And finally, let’s execute some code on the provider. You will run a single task on the provider, using the TaskExecutor.run() function. To make this work, put the following code in the try/catch block:
 
 ```javascript
-await executor.run(async (ctx) => {
-  const result = await ctx.run(`curl ${url} -o /golem/work/golem-js.tar.gz`)
+    await executor.run(async (ctx) => {
+      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
 
-  if (result.result === 'Ok') {
-    console.log('SDK downloaded!')
-  } else {
-    console.error('Failed to download the SDK!', result.stderr)
-  }
-})
+      console.log((await ctx.run("ls -l")).stdout);
+      if (result.result === "Ok") {
+        console.log("File downloaded!");
+      } else {
+        console.error("Failed to download the file!", result.stderr);
+      }
+    }
 ```
 
 And that’s it! Now, make sure your yagna service is running and you can start this script.
@@ -148,42 +149,43 @@ And that’s it! Now, make sure your yagna service is running and you can start 
 This is how the entire file should look like:
 
 ```javascript
-import { TaskExecutor } from '@golem-sdk/golem-js'
-import { readFile } from 'fs/promises'
+import { TaskExecutor } from "@golem-sdk/golem-js";
+import { readFile } from "fs/promises";
 
 const url =
-  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz'
+  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
 
-;(async function main() {
+(async function main() {
   // Load the manifest.
-  const manifest = await readFile(`./manifest.json`)
+  const manifest = await readFile(`./manifest.json`);
 
   // Create and configure a TaskExecutor instance.
   const executor = await TaskExecutor.create({
-    capabilities: ['inet', 'manifest-support'],
-    yagnaOptions: { apiKey: 'try_golem' },
-    manifest: manifest.toString('base64'),
-  })
+    capabilities: ["inet", "manifest-support"],
+    yagnaOptions: { apiKey: "try_golem" },
+    manifest: manifest.toString("base64"),
+  });
 
   try {
     await executor.run(async (ctx) => {
-      const result = await ctx.run(`curl ${url} -o /golem/work/golem-js.tar.gz`)
+      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
 
-      if (result.result === 'Ok') {
-        console.log('SDK downloaded!')
+      console.log((await ctx.run("ls -l")).stdout);
+      if (result.result === "Ok") {
+        console.log("File downloaded!");
       } else {
-        console.error('Failed to download the SDK!', result.stderr)
+        console.error("Failed to download the file!", result.stderr);
       }
-    })
+    });
   } catch (err) {
-    console.error('The task failed due to', err)
+    console.error("The task failed due to", err);
   } finally {
-    await executor.end()
+    await executor.end();
   }
-})()
+})();
 ```
 
-You can run it now. In the output, you should see “SDK downloaded!” between the log lines. That means the code works.
+You can run it now. In the output, you should see “File downloaded!” between the log lines. That means the code works.
 
 {% docnavigation title="Next steps" %}
 
