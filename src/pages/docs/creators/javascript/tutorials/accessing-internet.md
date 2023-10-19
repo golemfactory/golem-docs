@@ -20,13 +20,13 @@ This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
 ## Overview
 
-In this tutorial, you will create a requestor script that will download a code from the `github.com` site to a provider. To achieve the goal you will use the outbound feature.
+In this tutorial, you will create a requestor script that will download a code from the `ipfs.io` site to a provider. To achieve the goal you will use the outbound feature.
 
-The github.com URL was selected as a target URL for the example, as it is included in the default provider’s whitelist. You can check [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist) for other entries. Please note that a provider can choose to add, remove, or completely wipe the whitelist.
+The ipfs.io URL was selected as a target URL for the example, as it is included in the default provider’s whitelist. You can check [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist) for other entries. Please note that a provider can choose to add, remove, or completely wipe the whitelist.
 
 As the requestor needs to list all URLs they want to access in a manifest file, you need to create one and provide it when creating a new TaskExecutor. There is a CLI tool that we will use to create this manifest.
 
-You can read more about outbound [here](/docs/creators/javascript/guides/accessing-internet).
+You can read more about outbound feature [here](/docs/creators/javascript/guides/accessing-internet).
 
 Let’s code.
 
@@ -67,16 +67,16 @@ This will create a basic `manifest.json` file. You will use it to inform the pro
 The next step is to configure our manifest, so you can access a public URL. The CLI also has a handy command that will take care of that for you:
 
 ```bash
-golem-sdk manifest net add-outbound https://github.com
+golem-sdk manifest net add-outbound https://ipfs.io
 ```
 
-This has added https://github.com as the URL you want to access from the provider node. The command can be run multiple times to add more URLs or you can pass them all at once.
+This has added `https://ipfs.io` as the URL you want to access from the provider node. The command can be run multiple times to add more URLs or you can pass them all at once.
 
 Now our manifest is ready, you can start coding the application.
 
 ### Requestor script
 
-The application will be very simple. It will use `curl` to download a release of Golem SDK from GitHub. While this can be achieved without using Golem, this is just a demonstration of how to enable and access the internet from the Golem SDK.
+The application will be very simple. It will use `curl` to download an example image from IPFS to demonstrate how to enable and access the internet from the Golem SDK.
 
 Let’s start with a simple boilerplate, copy the following code to a javascript file:
 
@@ -125,28 +125,29 @@ Please note the loaded manifest is encoded to base64.
 
 `yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
 
-In this example, you will simply fetch a release of Golem SDK from GitHub using the `curl` command, available in our GVMI image. So first let’s save the URL near the top of the file (just after the imports):
+In this example, you will simply fetch an example file from IPFS using the `curl` command, available in our GVMI image. So first let’s save the URL near the top of the file (just after the imports):
 
 ```javascript
 import { TaskExecutor } from '@golem-sdk/golem-js'
 import { readFile } from 'fs/promises'
 
 const url =
-  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz'
+  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
 ```
 
 And finally, let’s execute some code on the provider. You will run a single task on the provider, using the TaskExecutor.run() function. To make this work, put the following code in the try/catch block:
 
 ```javascript
-await executor.run(async (ctx) => {
-  const result = await ctx.run(`curl ${url} -o /golem/work/golem-js.tar.gz`)
+    await executor.run(async (ctx) => {
+      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
 
-  if (result.result === 'Ok') {
-    console.log('SDK downloaded!')
-  } else {
-    console.error('Failed to download the SDK!', result.stderr)
-  }
-})
+      console.log((await ctx.run("ls -l")).stdout);
+      if (result.result === "Ok") {
+        console.log("File downloaded!");
+      } else {
+        console.error("Failed to download the file!", result.stderr);
+      }
+    });
 ```
 
 And that’s it! Now, make sure your yagna service is running and you can start this script.
@@ -154,42 +155,43 @@ And that’s it! Now, make sure your yagna service is running and you can start 
 This is how the entire file should look like:
 
 ```javascript
-import { TaskExecutor } from '@golem-sdk/golem-js'
-import { readFile } from 'fs/promises'
+import { TaskExecutor } from "@golem-sdk/golem-js";
+import { readFile } from "fs/promises";
 
 const url =
-  'https://github.com/golemfactory/golem-js/archive/refs/tags/v0.11.2.tar.gz'
+  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
 
-;(async function main() {
+(async function main() {
   // Load the manifest.
-  const manifest = await readFile(`./manifest.json`)
+  const manifest = await readFile(`./manifest.json`);
 
   // Create and configure a TaskExecutor instance.
   const executor = await TaskExecutor.create({
-    capabilities: ['inet', 'manifest-support'],
-    yagnaOptions: { apiKey: 'try_golem' },
-    manifest: manifest.toString('base64'),
-  })
+    capabilities: ["inet", "manifest-support"],
+    yagnaOptions: { apiKey: "try_golem" },
+    manifest: manifest.toString("base64"),
+  });
 
   try {
     await executor.run(async (ctx) => {
-      const result = await ctx.run(`curl ${url} -o /golem/work/golem-js.tar.gz`)
+      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
 
-      if (result.result === 'Ok') {
-        console.log('SDK downloaded!')
+      console.log((await ctx.run("ls -l")).stdout);
+      if (result.result === "Ok") {
+        console.log("File downloaded!");
       } else {
-        console.error('Failed to download the SDK!', result.stderr)
+        console.error("Failed to download the file!", result.stderr);
       }
-    })
+    });
   } catch (err) {
-    console.error('The task failed due to', err)
+    console.error("The task failed due to", err);
   } finally {
-    await executor.end()
+    await executor.end();
   }
-})()
+})();
 ```
 
-You can run it now. In the output, you should see “SDK downloaded!” between log lines. That means the code works.
+You can run it now. In the output, you should see “File downloaded!” between log lines and the output of the `ls -l` command showing th size of the fole downloaded . That means the code works.
 
 {% docnavigation title="Next steps" %}
 
