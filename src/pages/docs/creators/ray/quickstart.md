@@ -68,12 +68,16 @@ ray submit golem-cluster.yaml simple-task.py
 ```
 
 You can see the information about the cluster both before and after running the computations.
-Note how, at first, the cluster consists of only one node, and how the autoscaler expands it, as the work progresses.
 
+By default, the code executes 100 remote calls.
+It is rather fast and even when Ray orders new nodes it doesn't always manage to finish before the computation is over.
 
-You might need to submit the code more than once.
-It is rather fast and even when Ray orders new nodes 
-it doesn't always manage to finish before the computation is over.
+Submit the code again, requesting more remote calls to see how the autoscaler expands it, as the work progresses.
+
+```bash
+# Submit the app with 400 remote calls
+ray submit golem-cluster.yaml simple-task.py -- --count 400 
+```
 
 ## Stop the cluster
 
