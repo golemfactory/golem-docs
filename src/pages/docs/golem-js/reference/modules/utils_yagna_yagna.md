@@ -38,7 +38,7 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/f88d138/src/utils/yagna/yagna.ts#L12)
+[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/7024c70/src/utils/yagna/yagna.ts#L12)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/f88d138/src/utils/yagna/yagna.ts#L22)
+[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/7024c70/src/utils/yagna/yagna.ts#L22)
