@@ -20,7 +20,7 @@ In this article, the following examples are presented:
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 {% alert level="info" %}
 

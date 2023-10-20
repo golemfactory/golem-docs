@@ -92,3 +92,8 @@ ul {
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
 }
+
+table {
+  display: block;
+  overflow-x: auto;
+}

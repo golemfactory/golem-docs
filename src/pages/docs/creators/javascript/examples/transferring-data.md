@@ -28,7 +28,7 @@ The following commands are currently available:
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -50,7 +50,7 @@ npm init
 npm i @golem-sdk/golem-js
 ```
 
-Unless detailed instructions would not advise otherwise, to run the examples provided below, copy the code supplied there into the `index.mjs` file in the project folder and run:
+To run the examples provided below, copy the code supplied there into the `index.mjs` file in the project folder and run:
 
 ```bash
 node index.mjs

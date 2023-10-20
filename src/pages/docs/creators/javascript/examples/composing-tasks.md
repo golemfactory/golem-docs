@@ -39,7 +39,7 @@ We'll start with a simple example featuring a single `run()` command. Then, we'l
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 {% alert level="info" %}
 

@@ -17,7 +17,7 @@ You can select providers using different criteria, i.e. defining requirements in
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -48,9 +48,10 @@ node index.mjs
 ## Filtering providers based on minimal requirements:
 
 You can define minimal requirements for an environment provided by a node by stating a minimal number of:
-- CPU cores `minCpuCores`, 
-- RAM `minMemGib`, 
-- disk space `minStorageGib` or 
+
+- CPU cores `minCpuCores`,
+- RAM `minMemGib`,
+- disk space `minStorageGib` or
 - CPU threads `minCpuThreads`.
 
 You can do this in the TaskExecutor options:
@@ -61,36 +62,31 @@ You can do this in the TaskExecutor options:
 Be careful, filtering is done internally by Yagna and if your requirements turn out to be too demanding you will not receive any proposals from providers and your requestor script will terminate after the timeout.
 {% /alert %}
 
-
-
 ![Job timeout log](/timeout_log.png)
-
 
 ## Selecting providers based on the whitelist
 
-In some situations, you might need your tasks to be executed on a certain provider or exclude specific providers. If you know providers' IDs or names you can use the `proposalFilter` option and use one of the predefined filters: 
+In some situations, you might need your tasks to be executed on a certain provider or exclude specific providers. If you know providers' IDs or names you can use the `proposalFilter` option and use one of the predefined filters:
+
 - `ProposalFilters.whiteListProposalIdsFilter()`,
-- `ProposalFilters.blackListProposalIdsFilter()`, 
-- `ProposalFilters.whiteListProposalNamesFilter()`. 
+- `ProposalFilters.blackListProposalIdsFilter()`,
+- `ProposalFilters.whiteListProposalNamesFilter()`.
 - `ProposalFilters.blackListProposalNamesFilter()`
 
-All these filters will accept an array with IDs, or names of the providers, which should be accepted or excluded.  
+All these filters will accept an array with IDs, or names of the providers, which should be accepted or excluded.
 
 {% alert level="info" %}
 
-For this example, you might need to update the provider's list in the `whiteListsIds`. 
+For this example, you might need to update the provider's list in the `whiteListsIds`.
 Go to the [Golem Network Stats](https://stats.golem.network/network/providers/online) and scroll the list to find a provider working on `Testnet`. Then click on its name and copy its ID.
 
 {% /alert  %}
-
-
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/selecting-providers/whitelist.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 You can read provider names from `ctx` workContext or from the proposal. We will look into proposals in the next section.
 {% /alert %}
-
 
 ## Selecting providers based on the proposed costs using a custom filter
 
@@ -108,6 +104,6 @@ Our custom function collects pricing data until we have a set of 10 proposals. T
 
 Provider price is calculated as the product of prices defined per specific usage counter.
 
-The counters are defined in `golem.com.usage.vector` property and the prices are defined in `golem.com.pricing.model.linear.coeffs`. The last element in the price coeffs array is a fixed element of the total price (one can consider it the one-time price for deployment). 
+The counters are defined in `golem.com.usage.vector` property and the prices are defined in `golem.com.pricing.model.linear.coeffs`. The last element in the price coeffs array is a fixed element of the total price (one can consider it the one-time price for deployment).
 
-Note that the sequence of the counters is not fixed, therefore we need to find the index of the specific counter. In our examples, we take into account only the price related to the usage of the total environment (as our example task has a very short execution time). 
+Note that the sequence of the counters is not fixed, therefore we need to find the index of the specific counter. In our examples, we take into account only the price related to the usage of the total environment (as our example task has a very short execution time).
