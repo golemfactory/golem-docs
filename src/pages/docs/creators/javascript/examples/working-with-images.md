@@ -8,24 +8,24 @@ type: Example
 
 ## Introduction
 
-Golem images define a remote environment where you execute tasks. They are identified either by their `tags` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
+Golem images defines a remote environment where you execute your tasks inside. They are identified either by their `tag` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Ensure you have the Yagna service installed and running, with `try_golem` as your configured app-key.
 
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
 
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
+- OS like OS X 10.14+, Ubuntu 20.04 or Windows
+- Node.js version 16.0.0 or a newer variant
 
 {% /alert %}
 
-## How to run examples
+## Running the Examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
+Let's create a project folder, start a Node.js project, and add the `@golem-sdk/golem-js` library.
 
 ```bash
 mkdir golem-example
@@ -34,39 +34,38 @@ npm init
 npm install @golem-sdk/golem-js
 ```
 
-Copy the code into the `index.mjs` file in the project folder and run:
+Paste the code in `index.mjs` located in the project folder, then run:
 
 ```bash
 node index.mjs
 ```
 
-## Using Golem images
+## Ways to Use Golem images
 
-Below you will find an example requestor script used in the [QuickStart](/docs/creators/javascript/quickstarts/quickstart). 
+### Using a Hash
 
+A hash, in relation to Golem images, serves as a distinctive identifier formed from the image's content. They are complex, elongated strings and can become cumbersome to handle and recall, particularly in sizable projects housing various images and versions. Without tags, hashes fall short in conveying information relevant to the image's purpose or version. Due to these factors, using tags, which are readable and understandable, is generally the favored approach for dealing with images.
+
+To illustrate the use of a hash, we can take a look at the code from the [QuickStart Example](/docs/creators/javascript/quickstarts/quickstart)
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-images/hash.mjs" language="javascript" /%}
 
-Note the `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4` hash in the line where TaskExecutor is created:
-
+Consider the hash `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4` in the code snippet, showcasing the initialization of the TaskExecutor:
 
 ```js
 const executor = await TaskExecutor.create({
-        package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }});
+  package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
+  yagnaOptions: { apiKey: 'try_golem' },
+})
 ```
 
-If you had created your custom Golem image and pushed it to the registry, you can simply replace the hash (`529 [...] 1106d4`) in the script with the hash generated for your image by gvmkit-build tool or with your own defined tag.
+If you've rolled out a custom Golem image and uploaded it to the registry, you can substitute this hash (`529 [...] 1106d4`) with your image's gvmkit-build-generated hash. If you've tagged it, you can use that tag like in the next example.
 
-```js
-package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",
-```
-or
+### Using a tag
 
-```js
-package: "golem/my_example:latest",
-```
+Tags are helpful for managing different versions of your Golem images. They make specific versions easier to identify, track, and deploy. Instead of dealing with complex hash identifiers, you may use meaningful and understandable tag names. They provide an opportunity for intuitive naming systems, enhancing project structure and promoting effective team collaboration.
 
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-images/tag.mjs" language="javascript" /%}
 
 {% docnavigation title="Next steps" %}
 
@@ -74,7 +73,6 @@ package: "golem/my_example:latest",
 
 {% /docnavigation %}
 
- 
 {% docnavigation title="See also" %}
 
 - [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).

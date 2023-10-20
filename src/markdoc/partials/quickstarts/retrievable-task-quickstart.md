@@ -34,31 +34,7 @@ npm install @golem-sdk/golem-js
 
 Create a new file called `retrievable-task.mjs` and paste the following code into it:
 
-```js
-import { GolemNetwork, JobState } from '@golem-sdk/golem-js'
-
-const golem = new GolemNetwork({
-  yagnaOptions: { apiKey: 'try_golem' },
-})
-await golem.init()
-const job = await golem.createJob(async (ctx) => {
-  const response = await ctx.run("echo 'Hello, Golem!'")
-  return response.stdout
-})
-
-let state = await job.fetchState()
-while (state === JobState.Pending || state === JobState.New) {
-  console.log('Job is still running...')
-  await new Promise((resolve) => setTimeout(resolve, 1000))
-  state = await job.fetchState()
-}
-
-console.log('Job finished with state:', state)
-const result = await job.fetchResults()
-console.log('Job results:', result)
-
-await golem.close()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/retrievable-task/task.mjs" language="javascript" /%}
 
 The code above creates a new Golem Network client, creates a new job, and then waits for the job to finish. When the job is finished, it fetches the results and prints them to the console.
 

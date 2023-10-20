@@ -131,30 +131,6 @@ Once the stream is closed, we can terminate our TaskExecutor instance.
 
 Since closing the chain with `.endStream()` produces ReadableStream, you can also synchronously retrieve the results:
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const result = await executor.run(async (ctx) => {
-    const res = await ctx
-      .beginBatch()
-      .uploadFile('./worker.mjs', '/golem/input/worker.mjs')
-      .run('node /golem/input/worker.mjs > /golem/input/output.txt')
-      .run('cat /golem/input/output.txt')
-      .downloadFile('/golem/input/output.txt', './output.txt')
-      .endStream()
-
-    for await (const chunk of res) {
-      chunk.index == 2 ? console.log(chunk.stdout) : ''
-    }
-  })
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/composing-tasks/alert-code.mjs" language="javascript" /%}
 
 {% /alert %}
