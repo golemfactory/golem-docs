@@ -214,6 +214,62 @@ export const navigation = [
               },
             ],
           },
+          {
+            title: 'React SDK',
+            href: '',
+            children: [
+              {
+                title: 'Introduction',
+                href: '/docs/creators/javascript/react',
+              },
+              {
+                title: 'Getting started',
+                href: '/docs/creators/javascript/react/getting-started',
+              },
+              {
+                title: 'API Reference',
+                href: '',
+                children: [
+                  {
+                    title: 'Overview',
+                    href: '/docs/creators/javascript/react/api-reference-overview',
+                  },
+                  {
+                    title: 'YagnaProvider',
+                    href: '/docs/creators/javascript/react/yagna-provider',
+                  },
+                  {
+                    title: 'useYagna',
+                    href: '/docs/creators/javascript/react/use-yagna',
+                  },
+                  {
+                    title: 'useExecutor',
+                    href: '/docs/creators/javascript/react/use-executor',
+                  },
+                  {
+                    title: 'useTask',
+                    href: '/docs/creators/javascript/react/use-task',
+                  },
+                  {
+                    title: 'useInvoices',
+                    href: '/docs/creators/javascript/react/use-invoices',
+                  },
+                  {
+                    title: 'useDebitNotes',
+                    href: '/docs/creators/javascript/react/use-debit-notes',
+                  },
+                  {
+                    title: 'useHandleInvoice',
+                    href: '/docs/creators/javascript/react/use-handle-invoice',
+                  },
+                  {
+                    title: 'useHandleDebitNote',
+                    href: '/docs/creators/javascript/react/use-handle-debit-note',
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
       {

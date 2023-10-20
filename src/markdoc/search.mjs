@@ -94,6 +94,10 @@ export default function (nextConfig = {}) {
                     ?.match(/^type:\s*(.*?)\s*$/m)?.[1]
                     .replace('"', '')
                     .replace('"', '')
+                  if (type === 'noindex') {
+                    // Dont index noindex pages
+                    return
+                  }
                   sections = [[title, null, [], type]]
 
                   extractSections(ast, sections)

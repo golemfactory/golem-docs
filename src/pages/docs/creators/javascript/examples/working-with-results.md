@@ -54,22 +54,7 @@ node index.mjs
 
 Let's look at the simple example: we will run a task that consists of single command and will print the content of the result object:
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-    isSubprocess: true,
-  })
-
-  const result = await executor.run(async (ctx) => await ctx.run('node -v'))
-  console.log('Task result:', result)
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/single-command.mjs" language="javascript" /%}
 
 In this example, our task consists of a single command: `node -v`. `ctx.run()` which returns an object that is then passed to the `result` variable and printed.
 
@@ -80,34 +65,11 @@ Index refers to the sequential number of a command (we have just one, and counti
 
 ## Multi-command task
 
-When you run your tasks in a batch that is concluded with `.end()`:
-
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const result = await executor.run(async (ctx) => {
-    const res = await ctx
-      .beginBatch()
-      .uploadFile('./worker.mjs', '/golem/input/worker.mjs')
-      .run('node /golem/input/worker.mjs > /golem/input/output.txt')
-      .run('cat /golem/input/output.txt')
-      .downloadFile('/golem/input/output.txt', './output.txt')
-      .end()
-      .catch((error) => console.error(error))
-
-    return res
-  })
-
-  console.log(result)
-  await executor.end()
-})()
-```
+When you run your tasks in a batch that is concluded with `.end()`: 
+  
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/multi-command-end.mjs" language="javascript" /%}
+  
+you will receive an array of result objects:
 
 you will receive an array of result objects:
 
@@ -115,30 +77,7 @@ you will receive an array of result objects:
 
 In case you end your batch with the `endStream()` method:
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const result = await executor.run(async (ctx) => {
-    const res = await ctx
-      .beginBatch()
-      .uploadFile('./worker.mjs', '/golem/input/worker.mjs')
-      .run('node /golem/input/worker.mjs > /golem/input/output.txt')
-      .run('cat /golem/input/output.txt')
-      .downloadFile('/golem/input/output.txt', './output.txt')
-      .endStream()
-
-    res.on('data', (result) => console.log(result))
-    res.on('error', (error) => console.error(error))
-    res.on('close', () => executor.end())
-  })
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/multi-command-endstream.mjs" language="javascript" /%}
 
 Each `data` chunk will contain a result object, in the sequence that the commands were in within the batch:
 
@@ -154,31 +93,7 @@ What will happen in such a case depends on the way your task is composed. Let's 
 In the below case, the user's commands are chained in a batch. An error occurs as the user tries to download the `output.txt` file from `/golem/output/` folder while the file was created in the `golem/input` folder.
 This command will raise an error and the whole task will be terminated. The next command, listing the content of `/golem/` folder, will not be executed at all.
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const result = await executor.run(async (ctx) => {
-    const res = await ctx
-      .beginBatch()
-      .run('cat /golem/input/output.txt > /golem/input/output.txt')
-      .downloadFile('/golem/output/output.txt', './output.txt') // there is no such file in output folder
-      .run('ls -l /golem/')
-      .end()
-      .catch((error) => console.error(error))
-
-    return res
-  })
-
-  console.log(result)
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/multi-command-fail.mjs" language="javascript" /%}
 
 ![Batch failure output log](/bad_result_single_log.png)
 
@@ -190,23 +105,7 @@ In the case of the data transfer method, you will receive a message describing t
 
 Let's see another example:
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-    isSubprocess: true,
-  })
-
-  // there is a mistake and instead of 'node -v' we call 'node -w'
-  const result = await executor.run(async (ctx) => await ctx.run('node -w'))
-  console.log('Task result:', result)
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/single-command-fail.mjs" language="javascript" /%}
 
 ![Single failure output log](/bad_result_log_3.png)
 

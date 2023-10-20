@@ -27,6 +27,7 @@ Work Context
 
 - [before](task_work.WorkContext#before)
 - [run](task_work.WorkContext#run)
+- [transfer](task_work.WorkContext#transfer)
 - [uploadFile](task_work.WorkContext#uploadfile)
 - [uploadJson](task_work.WorkContext#uploadjson)
 - [uploadData](task_work.WorkContext#uploaddata)
@@ -36,6 +37,7 @@ Work Context
 - [beginBatch](task_work.WorkContext#beginbatch)
 - [rejectResult](task_work.WorkContext#rejectresult)
 - [getWebsocketUri](task_work.WorkContext#getwebsocketuri)
+- [getIp](task_work.WorkContext#getip)
 - [getState](task_work.WorkContext#getstate)
 
 ## Constructors
@@ -53,7 +55,7 @@ Work Context
 
 #### Defined in
 
-[src/task/work.ts:60](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L60)
+[src/task/work.ts:61](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L61)
 
 ## Properties
 
@@ -71,7 +73,7 @@ Work Context
 
 #### Defined in
 
-[src/task/work.ts:51](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L51)
+[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L52)
 
 ___
 
@@ -81,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L52)
+[src/task/work.ts:53](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L53)
 
 ___
 
@@ -91,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:53](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L53)
+[src/task/work.ts:54](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L54)
 
 ## Methods
 
@@ -105,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:73](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L73)
+[src/task/work.ts:74](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L74)
 
 ___
 
@@ -128,7 +130,7 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Defined in
 
-[src/task/work.ts:116](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L116)
+[src/task/work.ts:117](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L117)
 
 ▸ **run**(`executable`, `args`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
 
@@ -148,7 +150,31 @@ Execute an executable on provider.
 
 #### Defined in
 
-[src/task/work.ts:125](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L125)
+[src/task/work.ts:126](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L126)
+
+___
+
+### transfer
+
+▸ **transfer**(`from`, `to`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+
+Generic transfer command, requires the user to provide a publicly readable transfer source
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `from` | `string` | publicly available resource for reading. Supported protocols: file, http, ftp or gftp |
+| `to` | `string` | file path |
+| `options?` | [`CommandOptions`](../interfaces/task_work.CommandOptions) | Additional run options. |
+
+#### Returns
+
+`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+
+#### Defined in
+
+[src/task/work.ts:145](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L145)
 
 ___
 
@@ -170,7 +196,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:137](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L137)
+[src/task/work.ts:149](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L149)
 
 ___
 
@@ -192,7 +218,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:142](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L142)
+[src/task/work.ts:154](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L154)
 
 ___
 
@@ -214,7 +240,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:147](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L147)
+[src/task/work.ts:159](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L159)
 
 ___
 
@@ -236,7 +262,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:151](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L151)
+[src/task/work.ts:163](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L163)
 
 ___
 
@@ -257,7 +283,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:155](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L155)
+[src/task/work.ts:167](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L167)
 
 ___
 
@@ -278,7 +304,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:160](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L160)
+[src/task/work.ts:172](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L172)
 
 ___
 
@@ -292,7 +318,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:175](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L175)
+[src/task/work.ts:187](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L187)
 
 ___
 
@@ -316,7 +342,7 @@ This function is only used to throw errors from unit tests. It should be removed
 
 #### Defined in
 
-[src/task/work.ts:182](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L182)
+[src/task/work.ts:194](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L194)
 
 ___
 
@@ -336,7 +362,21 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:186](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L186)
+[src/task/work.ts:198](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L198)
+
+___
+
+### getIp
+
+▸ **getIp**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/task/work.ts:203](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L203)
 
 ___
 
@@ -350,4 +390,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:191](https://github.com/golemfactory/golem-js/blob/c332187/src/task/work.ts#L191)
+[src/task/work.ts:208](https://github.com/golemfactory/golem-js/blob/72269cc/src/task/work.ts#L208)

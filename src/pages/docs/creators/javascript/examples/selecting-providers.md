@@ -56,25 +56,7 @@ You can define minimal requirements for an environment provided by a node by sta
 
 You can do this in the TaskExecutor options:
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async function main() {
-  const executor = await TaskExecutor.create({
-    package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
-    //minCpuCores : 2,
-    //minMemGib : 8,
-    //minStorageGib: 10,
-    minCpuThreads: 1,
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  await executor.run(async (ctx) =>
-    console.log((await ctx.run("echo 'Hello World'")).stdout)
-  )
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/selecting-providers/demand.mjs" language="javascript" /%}
 
 {% alert level="warning" %}
 Be careful, filtering is done internally by Yagna and if your requirements turn out to be too demanding you will not receive any proposals from providers and your requestor script will terminate after the timeout.
@@ -100,40 +82,7 @@ Go to the [Golem Network Stats](https://stats.golem.network/network/providers/on
 
 {% /alert  %}
 
-```js
-import { TaskExecutor, ProposalFilters } from '@golem-sdk/golem-js'
-
-/**
- * Example demonstrating how to use the predefined filter `whiteListProposalIdsFilter`,
- * which only allows offers from a provider whose ID is in the array
- */
-
-const whiteListIds = [
-  '0x3fc1d65ddc5258dc8807df30a29f71028e965e1b',
-  '0x4506550de84d207f3ab90add6336f68119015836',
-]
-console.log('Will accept only proposals from:')
-for (let i = 0; i < whiteListIds.length; i++) {
-  console.log(whiteListIds[i])
-}
-
-;(async function main() {
-  const executor = await TaskExecutor.create({
-    package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
-    proposalFilter: ProposalFilters.whiteListProposalIdsFilter(whiteListIds),
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-  await executor.run(async (ctx) =>
-    console.log(
-      (
-        await ctx.run(`echo "This task is run on ${ctx.provider.id}"`)
-      ).stdout,
-      ctx.provider.id
-    )
-  )
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/selecting-providers/whitelist.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 You can read provider names from `ctx` workContext or from the proposal. We will look into proposals in the next section.
@@ -147,58 +96,7 @@ The whole process begins with requestor demand. The network will respond with pr
 
 Let's see how to use it:
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-/**
- * Example demonstrating how to write a custom proposal filter.
- */
-
-var costData = []
-
-const myFilter = async (proposal) => {
-  let decision = false
-  let usageVector = proposal.properties['golem.com.usage.vector']
-  let counterIdx = usageVector.findIndex(
-    (ele) => ele === 'golem.usage.duration_sec'
-  )
-  let proposedCost =
-    proposal.properties['golem.com.pricing.model.linear.coeffs'][counterIdx]
-  costData.push(proposedCost)
-  if (costData.length < 11) return false
-  else {
-    costData.shift()
-    let averageProposedCost = costData.reduce((part, x) => part + x, 0) / 10
-    if (proposedCost <= averageProposedCost) decision = true
-    if (decision) {
-      console.log(proposedCost, averageProposedCost)
-    }
-  }
-  console.log(costData)
-  console.log(
-    proposal.properties['golem.node.id.name'],
-    proposal.properties['golem.com.pricing.model.linear.coeffs']
-  )
-  return decision
-}
-
-;(async function main() {
-  const executor = await TaskExecutor.create({
-    package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
-    proposalFilter: myFilter,
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-  await executor.run(async (ctx) =>
-    console.log(
-      (
-        await ctx.run(`echo "This task is run on ${ctx.provider.id}"`)
-      ).stdout,
-      ctx.provider.id
-    )
-  )
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/selecting-providers/custom-price.mjs" language="javascript" /%}
 
 Note that `customFilter` is a function that accepts a `proposal` object as its parameter and should return `true` or `false` depending on the decision based on the proposal properties.
 

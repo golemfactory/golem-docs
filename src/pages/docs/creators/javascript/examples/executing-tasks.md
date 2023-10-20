@@ -52,24 +52,7 @@ node index.mjs
 
 If you want to run your tasks in parallel, you can use the `map()` method.
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const data = [1, 2, 3, 4, 5]
-
-  const results = executor.map(data, (ctx, item) => ctx.run(`echo "${item}"`))
-
-  for await (const result of results) console.log(result.stdout)
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/map.mjs" language="javascript" /%}
 
 The method `map()` accepts an array that defines the total number of tasks to be executed and may contain the data used to define a task.
 In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we use these values within the task function to define task steps. For each task, another element from the `data` array is passed as an `item` and then used to customize the argument for the `echo` command.
@@ -88,24 +71,7 @@ Note that even though provider `sharkoon_379_8` was engaged before provider `10h
 
 If you do not need an object to facilitate the processing results of all the tasks, you can use another method that can also execute tasks in parallel. Even if the `forEach()` method does not return an object to iterate through, you can still access the result object for each command within the task function.
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const data = [1, 2, 3, 4, 5]
-
-  await executor.forEach(data, async (ctx, item) => {
-    console.log((await ctx.run(`echo "${item}"`)).stdout)
-  })
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/foreach.mjs" language="javascript" /%}
 
 ## Defining the number of providers used
 
@@ -119,25 +85,7 @@ Note that the actual number of engaged providers might be:
 
 Below, you can see how to define the maximum number of providers to be engaged.
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-    maxParallelTasks: 3, // default is 5
-  })
-
-  const data = [1, 2, 3, 4, 5]
-
-  const results = executor.map(data, (ctx, item) => ctx.run(`echo "${item}"`))
-
-  for await (const result of results) console.log(result.stdout)
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/max-parallel-tasks.mjs" language="javascript" /%}
 
 ## Initialization tasks
 
@@ -151,40 +99,7 @@ echo Action log: > action_log.txt
 
 You can address such a need using the `beforeEach()` method of the TaskExecutor. Here is an example:
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-    maxParallelTasks: 3,
-  })
-
-  executor.beforeEach(async (ctx) => {
-    console.log(ctx.provider.name + ' is downloading action_log file')
-    await ctx.uploadFile('./action_log.txt', '/golem/input/action_log.txt')
-  })
-
-  await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
-    await ctx
-      .beginBatch()
-      .run(
-        `echo ` +
-          `'processing item: ` +
-          item +
-          `' >> /golem/input/action_log.txt`
-      )
-      .downloadFile(
-        '/golem/input/action_log.txt',
-        './output_' + ctx.provider.name + '.txt'
-      )
-      .end()
-  })
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/before-each.mjs" language="javascript" /%}
 
 In the code, we decreased the `maxParallelTasks` value from the default value of 5, to make sure that some of our five tasks will be run on the same provider.
 
@@ -212,24 +127,7 @@ This log once again illustrates that providers offer different performance level
 
 Sometimes you don't need to run tasks in parallel and a single run is sufficient. In such cases, you can use the `run()` method as demonstrated in the example below.
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const result = await executor.run(
-    async (ctx) => (await ctx.run('node -v')).stdout
-  )
-
-  await executor.end()
-
-  console.log('Task result:', result)
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/single-run.mjs" language="javascript" /%}
 
 The requestor script runs a single task defined by a task function: `ctx.run("node -v")`. The output of the command is available through `stdout` of the `result` object returned from the `ctx.run()` function:
 
