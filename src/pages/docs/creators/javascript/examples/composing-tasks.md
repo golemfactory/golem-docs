@@ -77,7 +77,6 @@ echo console.log("Hello Golem World!"); > worker.mjs
 
 Below is an example of a simple script that remotely executes `node -v`.
 
-
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/composing-tasks/single-command.cjs" language="javascript" /%}
 
 Note that `ctx.run()` accepts a string as an argument. This string is a command invocation, executed exactly as one would do in the console. The command will be run in the folder defined by the `WORKDIR` entry in your image definition.
