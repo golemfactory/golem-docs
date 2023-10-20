@@ -83,6 +83,21 @@ Next, we'll create the main `index.html` file with a minimal layout:
     <h1>WebRequestor - Hello World</h1>
     <div class="container">
       <div class="col-6">
+        <h3>Options</h3>
+        <div class="column">
+          <div>
+            <label for="YAGNA_API_BASEPATH">Yagna Api BaseUrl: </label>
+            <input
+              id="YAGNA_API_BASEPATH"
+              type="text"
+              value="http://127.0.0.1:7465"
+            />
+          </div>
+          <div>
+            <label for="SUBNET_TAG">Subnet Tag: </label>
+            <input id="SUBNET_TAG" type="text" value="public" />
+          </div>
+        </div>
         <h3>Actions</h3>
         <div class="row vertical">
           <div>
@@ -104,7 +119,6 @@ Next, we'll create the main `index.html` file with a minimal layout:
 
     <script type="module">
       // replace with script code
-
     </script>
   </body>
 </html>
@@ -137,6 +151,7 @@ Note that the `create()` method received an additional 3 parameters:
 - `package` identifies the image that we want to run on a provider,
 - `apiKey` is the key that enables our script to use the Yagna REST API,
 - `logger` is a function that the SDK will use for logging. We'll define it short
+
 ```html
 <script type="module">
   //
@@ -144,8 +159,12 @@ Note that the `create()` method received an additional 3 parameters:
   //
   async function run() {
     const executor = await TaskExecutor.create({
-      yagnaOptions: { apiKey: 'try_golem' },
       package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
+      yagnaOptions: {
+        apiKey: 'try_golem',
+        basePath: document.getElementById('YAGNA_API_BASEPATH').value,
+      },
+      subnetTag: document.getElementById('SUBNET_TAG').value,
       logger,
     })
     await executor
@@ -155,7 +174,7 @@ Note that the `create()` method received an additional 3 parameters:
       .catch((e) => logger.error(e))
     await executor.end()
   }
-  window.run = run
+  document.getElementById('echo').onclick = run
 </script>
 ```
 
@@ -205,7 +224,7 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
   const logger = {
     log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
     warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
-    debug: (msg) => appendLog(`[${new Date().toISOString()}] [debug] ${msg}`),
+    debug: (msg) => console.log(msg),
     error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
     info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
     table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
@@ -221,79 +240,7 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
 
 Now that we have all the necessary components defined, the code between `<script>` tags should look like this:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>WebRequestor Task API</title>
-  </head>
-  <body>
-    <h1>WebRequestor - Hello World</h1>
-    <div class="container">
-      <div class="col-6">
-        <h3>Actions</h3>
-        <div class="row vertical">
-          <div>
-            <button id="echo">Echo Hello World</button>
-          </div>
-        </div>
-        <div class="results console">
-          <h3>Results</h3>
-          <ul id="results"></ul>
-        </div>
-      </div>
-      <div class="col-6 border-left">
-        <div class="logs console">
-          <h3>Logs</h3>
-          <ul id="logs"></ul>
-        </div>
-      </div>
-    </div>
-
-    <script type="module">
-      import { TaskExecutor } from 'https://unpkg.com/@golem-sdk/golem-js'
-
-      export function appendLog(msg) {
-        const logs_el = document.getElementById('logs')
-        const li = document.createElement('li')
-        li.appendChild(document.createTextNode(msg))
-        logs_el.appendChild(li)
-      }
-      export function appendResults(result) {
-        const results_el = document.getElementById('results')
-        const li = document.createElement('li')
-        li.appendChild(document.createTextNode(result))
-        results_el.appendChild(li)
-      }
-
-      const logger = {
-        log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
-        warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
-        debug: (msg) => console.log(msg),
-        error: (msg) =>
-          appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
-        info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-        table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
-      }
-      async function run() {
-        const executor = await TaskExecutor.create({
-          yagnaOptions: { apiKey: 'try_golem' },
-          package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
-          logger,
-        })
-        await executor
-          .run(async (ctx) =>
-            appendResults((await ctx.run("echo 'Hello World'")).stdout)
-          )
-          .catch((e) => logger.error(e))
-        await executor.end()
-      }
-      document.getElementById('echo').onclick = run
-    </script>
-  </body>
-</html>
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/tutorials/running-from-browser/index.html" language="javascript" /%}
 
 Now if we have:
 

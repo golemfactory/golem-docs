@@ -108,21 +108,7 @@ npm install @golem-sdk/golem-js
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-  const result = await executor.run(
-    async (ctx) => (await ctx.run('node -v')).stdout
-  )
-  await executor.end()
-
-  console.log('Task result:', result)
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/7024c7041b92e84164f0f50c2fc7d948d60c7ff2/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 
