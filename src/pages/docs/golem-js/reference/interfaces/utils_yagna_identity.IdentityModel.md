@@ -23,7 +23,7 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:6](https://github.com/golemfactory/golem-js/blob/7024c70/src/utils/yagna/identity.ts#L6)
+[src/utils/yagna/identity.ts:6](https://github.com/golemfactory/golem-js/blob/72269cc/src/utils/yagna/identity.ts#L6)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:7](https://github.com/golemfactory/golem-js/blob/7024c70/src/utils/yagna/identity.ts#L7)
+[src/utils/yagna/identity.ts:7](https://github.com/golemfactory/golem-js/blob/72269cc/src/utils/yagna/identity.ts#L7)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:8](https://github.com/golemfactory/golem-js/blob/7024c70/src/utils/yagna/identity.ts#L8)
+[src/utils/yagna/identity.ts:8](https://github.com/golemfactory/golem-js/blob/72269cc/src/utils/yagna/identity.ts#L8)
