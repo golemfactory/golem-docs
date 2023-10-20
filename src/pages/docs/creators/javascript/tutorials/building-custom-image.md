@@ -125,7 +125,6 @@ We can now create our `index.mjs` requestor file, with the `package: "8b238595..
 
 {% tabs %}
 {% tab label="JavaScript" %}
-**`index.mjs`**
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/tutorials/building-custom-image/index.mjs" language="javascript" /%}
 
