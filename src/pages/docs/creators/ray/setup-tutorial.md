@@ -88,7 +88,7 @@ At first, it is recommended to run the app locally (without connecting to the cl
 
 ## Run your ray app on your golem cluster
 
-You are now ready to run your code with `ray submit` \o/.
+You are now ready to run your own code with `ray submit` \o/.
 
 If you need help with preparing your ray code you can check out [ray getting started guide](https://docs.ray.io/en/latest/ray-core/walkthrough.html). 
 
