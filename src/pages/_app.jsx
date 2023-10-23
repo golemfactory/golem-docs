@@ -107,6 +107,7 @@ export default function App({ Component, pageProps }) {
         <Head>
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
+          <meta name="google-site-verification" content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc" />
         </Head>
         <Layout
           title={title}
