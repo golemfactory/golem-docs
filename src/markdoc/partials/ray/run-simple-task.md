@@ -1,3 +1,4 @@
+Download our example Ray app and execute it locally (a Ray instance will be created on your machine)
 
 ```bash
 # Download the example Ray app
@@ -8,7 +9,7 @@ python3 simple-task.py
 ```
 
 This particular script shows information about the cluster it is being run on 
-and also visualizes the number of tasks run on different nodes.
+and also visualizes the number of tasks run on different nodes (by default it executes 100 tasks).
 
 Once you ensure the app works, you can feed it to your Ray on the Golem cluster
 
@@ -19,13 +20,10 @@ ray submit golem-cluster.yaml simple-task.py
 
 You can see the information about the cluster both before and after running the computations.
 
-By default, the code executes 100 remote calls.
-It is rather fast and even when Ray orders new nodes it doesn't always manage to finish before the computation is over.
-
-Submit the code again, requesting more remote calls to see how the autoscaler expands it, as the work progresses (give it up to 5 mins).
+Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
 
 ```bash
-# Submit the app with 400 remote calls
+# Submit the app with 400 tasks
 ray submit golem-cluster.yaml simple-task.py -- --count 400 
 ```
 

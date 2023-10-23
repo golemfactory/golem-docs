@@ -58,10 +58,12 @@ ray up golem-cluster.yaml --yes
 
 ```
 
-The provided example Golem cluster config file defines a small Golem cluster with one head node 
+The provided example Golem cluster config file defines a small Golem cluster with three nodes
 that is configured to autoscale to up to 10 worker nodes.
 
 The example cluster config file also contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
+The availability of the testnet machines might cap the size of your cluster.
+
 
 If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
 
@@ -74,6 +76,8 @@ ray exec golem-cluster.yaml 'ray status'
 
 ```
 
+The `ray up` succeeds when the head node is running. The remaining 2 nodes should be launching, but don't have to be fully operational.
+
 Congrats, you have started a Ray on the Golem cluster!
 
 ## Test the cluster with example app
@@ -84,7 +88,49 @@ We have provided a test application that you can use to check if your brand-new 
 
 At first, it is recommended to run the app locally (without connecting to the cluster)
 
-{% partial file="ray/run-simple-task.md" /%}
+```bash
+# Download the example Ray app
+wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py 
+
+# Execute the app locally by starting a local ray instance on your computer
+python3 simple-task.py
+```
+
+This particular script shows information about the cluster it is being run on 
+and also visualizes the number of tasks run on different nodes.
+
+Expect information about 100 tasks being executed on one IP, and the cluster of one node and as many workers as many cores your CPU has.
+
+Once you ensure the app works, you can feed it to your Ray on the Golem cluster
+
+```bash
+# Submit the app to be executed on your cluster
+ray submit golem-cluster.yaml simple-task.py
+```
+
+You can see the information about the cluster both before and after running the computations.
+
+The most important feature of Ray is the autoscaler. When the cluser is busy it starts up more nodes.
+When nodes are idle for some time (5 mins by default), the autoscalers shuts them down.
+
+Node addition is not instantaneous, as machines and workers need to be set up.
+
+If you submit the script immediately afte `ray up`, it will run only on the head node. 
+If you wait longer it will start with up to 3 nodes (the minimum defined in the cluster yaml.
+
+The default 100 tasks of `simple-task.py` is rather fast and even when Ray orders new nodes it doesn't always manage to finish before the computation is over.
+
+Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
+
+```bash
+# Submit the app with 400 tasks
+ray submit golem-cluster.yaml simple-task.py -- --count 400 
+```
+
+The above shows the usual workflow with Ray apps.
+- You develop them, while at the same time testing them, on your local machine.
+- When you are ready to get more power - you send them to a Ray cluster **without changing a single line** of your application's code.
+
 
 ## Run your ray app on your golem cluster
 

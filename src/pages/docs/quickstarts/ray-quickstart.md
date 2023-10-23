@@ -48,8 +48,6 @@ ray up golem-cluster.yaml --yes
 
 ## Execute a Ray application
 
-Download our example Ray app and execute it locally (a Ray instance will be created on your machine)
-
 {% partial file="ray/run-simple-task.md" /%}
 
 ## Stop the cluster
