@@ -99,7 +99,7 @@ python3 simple-task.py
 This particular script shows information about the cluster it is being run on 
 and also visualizes the number of tasks run on different nodes.
 
-Expect information about 100 tasks being executed on one IP, and the cluster of one node and as many workers as many cores your CPU has.
+Expect information about 100 tasks being executed on one IP, and the cluster of one node plus as many workers as many cores your CPU has.
 
 Once you ensure the app works, you can feed it to your Ray on the Golem cluster
 
@@ -110,15 +110,15 @@ ray submit golem-cluster.yaml simple-task.py
 
 You can see the information about the cluster both before and after running the computations.
 
-The most important feature of Ray is the autoscaler. When the cluser is busy it starts up more nodes.
-When nodes are idle for some time (5 mins by default), the autoscalers shuts them down.
+The most important feature of Ray is the autoscaler. When the cluster is busy it starts up more nodes.
+When nodes are idle for some time (5 minutes by default), the autoscaler shuts them down.
 
 Node addition is not instantaneous, as machines and workers need to be set up.
 
-If you submit the script immediately afte `ray up`, it will run only on the head node. 
+If you submit the script immediately after `ray up`, it will run only on the head node. 
 If you wait longer it will start with up to 3 nodes (the minimum defined in the cluster yaml.
 
-The default 100 tasks of `simple-task.py` is rather fast and even when Ray orders new nodes it doesn't always manage to finish before the computation is over.
+The default 100 tasks of `simple-task.py` are rather fast and even when Ray orders new nodes it doesn't always manage to finish before the computation is over.
 
 Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
 
