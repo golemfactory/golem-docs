@@ -5,7 +5,7 @@ type: example
 ---
 
 # Converting a real-life use case to Ray on Golem
-This tutorial explains step-by-step how to parallelize an example app, set Ray on the Golem cluster up, run the script on the cluster and finally stop the cluster.
+This tutorial explains step-by-step how to parallelize an example app, set Ray on the Golem cluster up, run the script on the cluster, and finally stop the cluster.
 
 The parallelization part is also explained in our PoC demo video
 
@@ -241,7 +241,7 @@ shared connection to 192.168.0.3 closed.
 ```
 
 Notice how at first, there is only one node, and after the computation, there is more. This is Ray autoscaler at work. 
-The time needed to add new nodes might be too big for you to notice when you run the dds.py code as it is. If you increase `DEAL_CNT` and/or rerun the app, the difference will be more visible
+The time needed to add new nodes might be too long for you to notice when you run the dds.py code as it is. If you increase `DEAL_CNT` and/or rerun the app, the difference will be more visible
 
 ```bash
 ray submit golem-cluster.yaml dds.py
