@@ -124,7 +124,7 @@ python3 dds.py
 deal count: 50 time: 0:00:04.643217
 ```
 
-### Add cluster info
+### Output cluster info
 
 As the one last touch before proceeding to run our script on a Ray on Golem cluster, we'll add some information about the cluster to the output.
 Add this after `ray.init()` and at the end of the code:
