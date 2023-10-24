@@ -79,6 +79,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/building-custom-image',
               },
               {
+                title: 'Using Outbound',
+                href: '/docs/creators/javascript/tutorials/accessing-internet',
+              },
+              {
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
               },
@@ -125,6 +129,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/examples/using-app-keys',
               },
               {
+                title: 'Accessing the Internet',
+                href: '/docs/creators/javascript/examples/accessing-internet',
+              },
+              {
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/examples/switching-to-mainnet',
               },
@@ -145,6 +153,14 @@ export const navigation = [
               {
                 title: 'Retrievable tasks (Job API)',
                 href: '/docs/creators/javascript/guides/retrievable-tasks',
+              },
+              {
+                title: 'Golem SDK CLI',
+                href: '/docs/creators/javascript/guides/golem-sdk-cli',
+              },
+              {
+                title: 'Accessing the Internet',
+                href: '/docs/creators/javascript/guides/accessing-internet',
               },
               {
                 title: 'Golem images',

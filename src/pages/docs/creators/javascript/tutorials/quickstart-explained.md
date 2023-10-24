@@ -113,23 +113,7 @@ The output of the task function is passed to `executor.run()` and assigned to ta
 Finally, we print it to the console.
 
 
-```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
-(async () => {
-
-    const executor = await TaskExecutor.create({
-        package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-        yagnaOptions: { apiKey: 'try_golem' }});
-    
-    const taskResult = await executor.run(async (ctx) => (await ctx.run("node -v")).stdout);
-    
-    await executor.end();
-    
-    console.log("Task result:", taskResult);
-
-})();
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/7024c7041b92e84164f0f50c2fc7d948d60c7ff2/examples/docs-examples/tutorials/quickstart/index.mjs" language="javascript" /%}
 
 ## Summary
 
