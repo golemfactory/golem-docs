@@ -17,14 +17,14 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 The first step is installing Ray on Golem. It will install Ray as a dependency.
 
 ```bash
-# install ray-on-golem and ray (recommended within a clean virtual environment)
+# install ray-on-golem & ray (recommended within a clean virtual environment)
 pip3 install -U ray-on-golem
 ```
 
 For now, you also need to download and install Golem node software representing you in the Golem network.
 
 ```bash
-# install Yagna - golem network daemon
+# install yagna - golem network daemon
 curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
@@ -32,7 +32,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 ## Set the cluster up
 
-With the packages in place, you can download our sample golem cluster configuration yaml, and feed it to `ray up` to start up the cluster.
+With the packages in place, you can download our sample golem cluster configuration yaml, and use it with `ray up` to start up the cluster.
 It will give you a cluster of one node (which will expand when you feed it with work) on the Golem test network (free, but not very powerful)
 
 

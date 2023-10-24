@@ -1,5 +1,5 @@
 ---
-description: quick and easy, copy and run instructions on launching and decommissioning the Ray on the Golem cluster
+description: quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 title: Ray on Golem QuickStart
 type: quickstart 
 ---
@@ -41,7 +41,7 @@ It will give you a cluster of one node (which will expand when you feed it with 
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * Yagna starts in the background (if not running)
+# * yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
