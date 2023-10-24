@@ -60,14 +60,7 @@ ray up golem-cluster.yaml --yes
 
 ```
 
-The provided example Golem cluster config file defines a small Golem cluster with three nodes
-that is configured to autoscale to up to 10 worker nodes.
-
-The example cluster config file also contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
-The availability of the testnet machines might cap the size of your cluster.
-
-
-If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
+{% partial file="ray/example-cluster-testnet-and-cap.md" /%}
 
 You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
 It will connect to the head node and execute the `ray status` command which will print cluster information.

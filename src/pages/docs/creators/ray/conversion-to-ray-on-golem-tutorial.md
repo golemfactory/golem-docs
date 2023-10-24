@@ -52,11 +52,13 @@ Let's now proceed to parallelization.
 
 We need to install `ray-on-golem`. It will install `ray` as a dependency.
 ```bash
-# Install ray-on-golem and ray
+# Install ray-on-golem & ray (recommended in a clean virtual environment)
 pip3 install -U ray-on-golem 
 ```
 
 ### Ray initialization
+
+We will now modify the original `ddy.py` to make it use Ray.
 
 Ray needs to be imported and initialized. Add the following before `get_deal()` definition:
 ```python
@@ -182,6 +184,9 @@ ray up golem-cluster.yaml --yes
 # Check if Ray on the Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 ```
+
+{% partial file="ray/example-cluster-testnet-and-cap.md" /%}
+
 
 ## Run the app
 
