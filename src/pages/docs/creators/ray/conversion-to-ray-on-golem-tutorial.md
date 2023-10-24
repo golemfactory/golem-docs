@@ -197,7 +197,13 @@ Now that the app will be running on a cluster, we need to inform it that the `en
 Replacing `ray.init()` with the following will do the trick:
 ```python
 # endplay library dependency
-runtime_env = {"pip": ["endplay==0.4.11b0"]}
+runtime_env = {
+    "pip": [
+        "Pillow",  # explicit uppercased "Pillow", as pip complains about mismatched metadata in endplay dependency tree
+        "endplay==0.4.11b0",
+    ]
+}
+
 
 # Use the default ray cluster or start a local one
 # Make sure endplay lib is installed
