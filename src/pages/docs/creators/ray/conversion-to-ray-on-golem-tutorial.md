@@ -240,8 +240,8 @@ deal count: 50 time: 0:00:18.404510
 shared connection to 192.168.0.3 closed.
 ```
 
-Notice how at first, there is only one node, and after the computation, there is more. This is Ray autoscaler at work. If you increase `DEAL_CNT` or rerun the app, the difference will be more visible
-When you resubmit the app to the cluster fast enough, all the nodes will be available right from the beginning.
+Notice how at first, there is only one node, and after the computation, there is more. This is Ray autoscaler at work. 
+The time needed to add new nodes might be too big for you to notice when you run the dds.py code as it is. If you increase `DEAL_CNT` and/or rerun the app, the difference will be more visible
 
 ```bash
 ray submit golem-cluster.yaml dds.py
