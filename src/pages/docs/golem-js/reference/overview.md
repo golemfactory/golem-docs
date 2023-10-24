@@ -105,6 +105,7 @@ type: reference
 	* [job/storage](modules/job_storage)
 	* [market/builder](modules/market_builder)
 	* [market/demand](modules/market_demand)
+	* [market/helpers](modules/market_helpers)
 	* [market/proposal](modules/market_proposal)
 	* [market/service](modules/market_service)
 	* [market/strategy](modules/market_strategy)

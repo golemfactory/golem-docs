@@ -23,4 +23,4 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:7](https://github.com/golemfactory/golem-js/blob/72269cc/src/payment/invoice.ts#L7)
+[src/payment/invoice.ts:7](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/payment/invoice.ts#L7)

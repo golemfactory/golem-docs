@@ -29,4 +29,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/golem-js/blob/72269cc/src/utils/logger/defaultLogger.ts#L3)
+[src/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/utils/logger/defaultLogger.ts#L3)

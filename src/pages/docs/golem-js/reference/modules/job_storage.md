@@ -41,4 +41,4 @@ type: "reference"
 
 #### Defined in
 
-[src/job/storage.ts:3](https://github.com/golemfactory/golem-js/blob/72269cc/src/job/storage.ts#L3)
+[src/job/storage.ts:3](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/job/storage.ts#L3)
