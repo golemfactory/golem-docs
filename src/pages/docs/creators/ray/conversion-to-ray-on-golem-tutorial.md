@@ -14,6 +14,8 @@ The parallelization part is also explained in our PoC demo video
 
 ## The example Double Dummy Solver app
 
+{% partial file="ray/recommend-venv.md" /%}
+
 In our case, the application is a very simple script running a simple bridge (the card game) simulation.
 
 Download our [example bridge script](https://github.com/golemfactory/ray-on-golem/raw/main/examples/dds.py)

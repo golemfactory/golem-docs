@@ -14,8 +14,10 @@ To start a Ray cluster on Golem, you will use the Ray cluster launcher with the 
 
 ## Install Ray cluster launcher & Ray on Golem cluster manager
 
+{% partial file="ray/recommend-venv.md" /%}
+
 The Ray cluster launcher is part of the Ray CLI. Use the CLI to start and stop a ray cluster using commands such as `ray up` and `ray down`. 
-You can use pip to install the Ray CLI with cluster launcher support (recommended within a clean virtual environment)
+You can use pip to install the Ray CLI with cluster launcher support.
 
 You need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 

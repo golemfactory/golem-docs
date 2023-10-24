@@ -12,7 +12,9 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 
 ## Install software
 
-The first step is installing Ray on Golem (recommended within a clean venv). It will install Ray as a dependency.
+{% partial file="ray/recommend-venv.md" /%}
+
+The first step is installing Ray on Golem. It will install Ray as a dependency.
 
 ```bash
 # install ray-on-golem and ray (recommended within a clean virtual environment)
