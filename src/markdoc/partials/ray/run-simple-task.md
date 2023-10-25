@@ -20,7 +20,7 @@ ray submit golem-cluster.yaml simple-task.py
 
 You can see the information about the cluster both before and after running the computations.
 
-Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
+Submit the script again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins):
 
 ```bash
 # Submit the app with 400 tasks
