@@ -15,7 +15,7 @@ Golem VPN feature has been designed to provide such connectivity in a manner tha
 Golem VPN requires specific implementation in the ExeUnit/runtime, which must be capable of providing a standard Unix-socket interface to their payloads and marshaling the logical network traffic through the Golem Net transport layer - thus achieving actual both Virtual and Private networking capabilities.
 
 {% alert level="info" %}
-The Golem VPN mechanism enables node-to-node connectivity, implemented on the back of the Golem Net transport layer. It does not provide node-to-Internet, nor Internet-to-node connectivity directly.
+The Golem VPN mechanism enables node-to-node connectivity, implemented on the back of the Golem Net transport layer. It does not provide node-to-Internet (outbound), nor Internet-to-node (inbound) connectivity directly.
 
 One of our bundled examples [`http-proxy`](/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy) presents (an extremely simplified) way to provide the latter.
 
