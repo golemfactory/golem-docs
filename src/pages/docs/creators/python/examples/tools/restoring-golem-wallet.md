@@ -1,6 +1,6 @@
 ---
 description: Setting up a new Yagna instance to use a saved keystore file.
-title: Restore a Golem wallet
+title: Restoring a Golem wallet from a keystore backup.
 type: instructions
 ---
 
@@ -32,7 +32,7 @@ Now, as usual, leave the service running in the background and proceed with the 
 
 Here you'll need the `key.json` file you had previously backed up. Do whatever you need to restore it - e.g. decrypt it if you previously encrypted it. For the process to work, it must be the same plain-text JSON file that Yagna originally exported.
 
-Be sure that your `key.json` file is in your current working directory and run:
+Ensure that your `key.json` file is in your current working directory and run:
 
 ```bash
 yagna id create --from-keystore ./key.json
@@ -42,7 +42,7 @@ This should create a new identity in Yagna based on your backed-up wallet. If th
 
 On the other hand, if the message reads: `isLocked: false`, it means that you're using an unprotected keystore file.
 
-## Set the new identity as Yagna's default
+## Update yagna to use the new identity as default
 
 **1.** Using the Ethereum address of your backed-up wallet, run:
 
@@ -55,6 +55,8 @@ yagna id update --set-default 0x-the-address
 (Just press Ctrl-C in the console that's running `yagna service run` and wait for the service to exit)
 
 **3.** Remove `yagna`'s accounts configuration file
+
+Depending on your operating system, please use the appropriate command:
 
 {% tabs %}
 
