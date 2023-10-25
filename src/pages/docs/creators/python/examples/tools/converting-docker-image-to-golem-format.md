@@ -71,6 +71,13 @@ docker build . -t golem-example
 The examples below show how to convert the Docker image tagged `golem-example` to a `.gvmi` file in the current directory.
 
 {% tabs %}
+{% tab label="Python" %}
+
+```bash
+gvmkit-build golem-example
+```
+
+{% /tab %}
 {% tab label="JavaScript" %}
 
 ```bash
@@ -84,13 +91,7 @@ npx gvmkit-build golem-example
 ```
 
 {% /tab %}
-{% tab label="Python" %}
 
-```bash
-gvmkit-build golem-example
-```
-
-{% /tab %}
 {% /tabs %}
 
 ## Converting and publishing your image at once (hash-based)
