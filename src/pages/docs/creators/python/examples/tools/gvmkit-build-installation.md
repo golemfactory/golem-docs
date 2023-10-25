@@ -8,7 +8,7 @@ type: instructions
 
 {% alert level="info" %}
 
-This example has been designed to work with the following environments:
+This article has been devised to work with the following environments:
 
 - OS X 10.14+, Ubuntu 20.04 or Windows
 
