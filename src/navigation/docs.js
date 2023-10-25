@@ -334,6 +334,10 @@ export const navigation = [
                 title: 'Service API - External API',
                 href: '/docs/creators/python/tutorials/service-example-6-external-api-request',
               },
+              {
+                title: 'Building custom image',
+                href: '/docs/creators/python/tutorials/building-custom-image',
+              },
             ],
           },
           {
