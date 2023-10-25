@@ -1,18 +1,10 @@
 ---
 description: Your Golem wallet and Yagna setup for Mainnet payments.
-title: Yagna management for requestors
+title: Golem Wallet management for requestors
 type: instructions
 ---
 
 # Yagna management for requestors
-
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-
-{% /alert %}
 
 ## Prerequisites
 
@@ -20,7 +12,7 @@ Yagna service is installed and running.
 
 ## Introduction
 
-In this article, we present commands related to the daily management of your Yagna.
+In this article, we present commands related to the daily management of your Golem wallet.
 
 - Checking the wallet address
 - Enabling mainnet accounts
@@ -32,7 +24,7 @@ In this article, we present commands related to the daily management of your Yag
 
 Golem's wallet is automatically initialized for you the first time you start your `yagna` service and thus, an address associated with it is also generated automatically.
 
-To have any kind of funds transferred to your Golem's wallet, you'll need its address. You may obtain it using the `id` command:
+You'll need that address, to have any kind of funds transferred to your wallet. You may obtain it anytime using the `id` command:
 
 ```bash
 yagna id show
@@ -76,7 +68,7 @@ The initialization must be performed after every restart of the `yagna` service.
 
 ## Checking the status of your accounts
 
-Depending on whether you're mainly running a provider node or a requestor one, your default network (blockchain) may be different.
+Depending on whether you're primarily running a provider or requestor node, your default network (blockchain) may be different.
 
 Because of that, when you run `yagna payment status` to verify the state of your payment account and the amount of GLM tokens you have at your disposal, you may need to add the specific `network` and `driver` parameters to point to the network/driver combination that you're interested in.
 
@@ -104,7 +96,7 @@ yagna payment status --network=mainnet --driver=erc20
 
 You can top up your wallet with test GLMs by running:
 
-```bach
+```bash
 yagna payment fund
 ```
 
@@ -113,7 +105,7 @@ Note, you also need to enable your accounts' sender mode, which is done using `y
 
 ## Generating the app key
 
-With the service running, enter the service's directory using another shell and generate the yagna app key that will be used by your requestor agent to access yagna's REST API.
+While keeping the service running, start another shell or terminal window and generate the yagna app key that will be used by your requestor agent to access yagna's REST API.
 Note that the `requestor` in the command is a tag of the key.
 
 ```bash
