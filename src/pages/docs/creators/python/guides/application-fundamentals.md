@@ -66,7 +66,7 @@ async def worker(context: WorkContext, tasks: AsyncIterable[Task]):
         task.accept_result(result=await future_result)
 ```
 
-A `worker()` function is specified, which will be called by the high-level library engine for each provider, to iterate over the work commands and send the commands to the Provider. This function (representing the task-based execution model) receives:
+A `worker()` function is specified, which will be called by the high-level library engine for each provider, to iterate over the input tasks and send appropriate commands to the Provider. This function (representing the task-based execution model) receives:
 
 - a `WorkContext` object used to construct the commands (common to both the Task API and the Services API),
 - a collection of `Task` objects which specify individual parts of the batch process to be executed (specific to the Task API).
