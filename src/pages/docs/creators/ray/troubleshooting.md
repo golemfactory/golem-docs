@@ -77,6 +77,79 @@ mateusz    18121  0.0  0.0  11744  2688 pts/3    S+   14:44   0:00 grep --color=
 {% feedback identifier="ray-not-stopping-on-ray-down" /%}
 {% /troubleshooting %}
 
+{% troubleshooting %}
+
+## How can I resolve the node not found error?
+ 
+{% problem /%}
+
+Sometimes, `ray up` might timeout with a note saying that there is no node available.
+
+It might look like this:
+```
+ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"error": "Creating activities timeout reached"}
+
+```
+
+{% solution %}
+
+This means, that there is not enough providers on the network. 
+
+If you are running Ray on Golem on the testnet (property `network: "goerli"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
+
+We are preparing a tool to check providers availability.
+Another solution would be to move to mainnet - we are also working on enabling this option.
+
+For now the best course of action would be to report the situation on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
+
+Usually testnet isn't busy for a long time - it might be enought to wait a couple minutes.
+
+{% /solution %}
+{% feedback identifier="ray-node-not-found" /%}
+{% /troubleshooting %}
+
+
+<!--
+{% troubleshooting %}
+
+## Libraries not present on the cluster 
+ 
+
+{% problem /%}
+
+Description
+
+{% solution %}
+
+Solution
+
+{% /solution %}
+{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% /troubleshooting %}
+-->
+
+
+<!--
+{% troubleshooting %}
+
+## Libraries not installing properly on the cluster 
+ 
+
+{% problem /%}
+
+Description
+
+{% solution %}
+
+Solution
+
+{% /solution %}
+{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% /troubleshooting %}
+-->
+
+
+
 <!--
 {% troubleshooting %}
 
