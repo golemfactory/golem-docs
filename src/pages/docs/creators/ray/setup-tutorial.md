@@ -6,7 +6,7 @@ type: guide
 
 # Ray on Golem setup tutorial 
 
-This tutorial explains all the steps needed to start, test, and stop a Ray on the Golem cluster. 
+This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster. 
 If you have already proceeded through our [Quickstart](/docs/creators/ray/quickstart), you'll find this tutorial familiar. 
 The point is to go through the same actions but now, provide you with more details on each one.
 
@@ -58,10 +58,12 @@ ray up golem-cluster.yaml --yes
 
 ```
 
-The provided example golem cluster config file defines a small Golem cluster with one head node 
+The provided example Golem cluster config file defines a small cluster with three nodes
 that is configured to autoscale to up to 10 worker nodes.
 
 The example cluster config file also contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
+The availability of the testnet machines might cap the size of your cluster.
+
 
 If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
 
@@ -69,14 +71,14 @@ You can now verify that your Ray on Golem cluster works, by running the followin
 It will connect to the head node and execute the `ray status` command which will print cluster information.
 
 ```bash
-# Check if Ray on the Golem cluster is running 
+# Check if Ray on Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 
 ```
 
-Congrats, you have started a Ray on the Golem cluster!
+The `ray up` succeeds when the head node is running. The remaining 2 nodes should be launching, but don't have to be fully operational.
 
-
+Congrats, you have started a Ray on Golem cluster!
 
 ## Test the cluster with example app
 
@@ -94,29 +96,45 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.
 python3 simple-task.py
 ```
 
-This particular script shows information about the cluster it is being run on and also visualizes the number of tasks run on different nodes.
+This particular script shows information about the cluster it is being run on 
+and also visualizes the number of tasks run on different nodes.
 
-Once you ensure the app works, you can feed it to your Ray on the Golem cluster
+Expect information about 100 tasks being executed on one IP, and the cluster of one node plus as many workers as many cores your CPU has.
+
+Once you ensure the app works, you can feed it to your Ray on Golem cluster
 
 ```bash
-# Run some ray-based code (that knows *nothing** about Golem) - this will either:
-# A) Run only on the head node, if the autoscaler decides there is no need for a worker node
-# B) Or create worker node(s) on the Golem Network. Worker nodes will be later auto-terminated by the autoscaler
-
 # Submit the app to be executed on your cluster
 ray submit golem-cluster.yaml simple-task.py
 ```
 
 You can see the information about the cluster both before and after running the computations.
-Observe how, at first, the cluster consists of only one node, and how the autoscaler expands it, as the work progresses.
+
+The most important feature of Ray is the autoscaler. When the cluster is busy it starts up more nodes.
+When nodes are idle for some time (5 minutes by default), the autoscaler shuts them down.
+
+Node addition is not instantaneous, as machines and workers need to be set up.
+
+If you submit the script immediately after `ray up`, it will run only on the head node. 
+If you wait longer it will start with up to 3 nodes (the minimum defined in the cluster yaml.
+
+The default 100 tasks of `simple-task.py` are rather fast and even when Ray orders new nodes it doesn't always manage to finish before the computation is over.
+
+Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
+
+```bash
+# Submit the app with 400 tasks
+ray submit golem-cluster.yaml simple-task.py -- --count 400 
+```
 
 The above shows the usual workflow with Ray apps.
 - You develop them, while at the same time testing them, on your local machine.
 - When you are ready to get more power - you send them to a Ray cluster **without changing a single line** of your application's code.
 
+
 ## Run your ray app on your golem cluster
 
-You are now ready to run your code with `ray submit` \o/.
+You are now ready to run your own code with `ray submit` \o/.
 
 If you need help with preparing your ray code you can check out [ray getting started guide](https://docs.ray.io/en/latest/ray-core/walkthrough.html). 
 
@@ -132,3 +150,7 @@ This is important because running a cluster uses up the Golem network nodes. In 
 ray down golem-cluster.yaml --yes
 ```
 
+{% docnavigation title="See also" %}
+- [Ray on Golem concept](/docs/creators/ray/concept)
+- [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)
+{% /docnavigation %}

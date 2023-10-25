@@ -16,37 +16,54 @@ You can find the examples in [`ray-on-golem` repository](https://github.com/gole
 
 Have a look at the code (but you can find it also in [the repository](https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py):
 ```python
-from collections import Counter
 import socket
 import time
+import argparse
+from collections import Counter
 
 import ray
 ray.init()
 
-print('''This cluster consists of
-    {} nodes in total
-    {} CPU resources in total
-'''.format(len(ray.nodes()), ray.cluster_resources()['CPU']))
+def output_cluster_info():
+  print(
+      """This cluster consists of
+      {} nodes in total
+      {} CPU resources in total
+  """.format(
+          len(ray.nodes()), ray.cluster_resources()["CPU"]
+      )
+  )
 
+# cluster information before the computation
+output_cluster_info()
+
+# remote function returning ip of the worker (after 0.5 sec of sleep)
 @ray.remote
 def f():
     time.sleep(0.5)
 
-    # Return IP address.
     return socket.gethostbyname(socket.gethostname())
 
-object_ids = [f.remote() for _ in range(1000)]
+# get the number of remote calls from the command line
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "-c", "--count", type=int, default=100, help="number of tasks to perform, default: %(default)s"
+)
+args = parser.parse_args()
+
+# start args.count remote calls
+object_ids = [f.remote() for _ in range(args.count)]
+
+# wait for the results
 ip_addresses = ray.get(object_ids)
 
-print('Tasks executed')
+print("Tasks executed")
 for ip_address, num_tasks in Counter(ip_addresses).items():
-    print('    {} tasks on {}'.format(num_tasks, ip_address))
+    print("    {} tasks on {}".format(num_tasks, ip_address))
 
 
-print('''This cluster consists of
-    {} nodes in total
-    {} CPU resources in total
-'''.format(len(ray.nodes()), ray.cluster_resources()['CPU']))
+# cluster information after the computation
+output_cluster_info()
 ```
 
 You can run the app on your local machine with
@@ -114,4 +131,7 @@ You can now proceed to run your app on a [Ray on Golem cluster](/docs/creators/r
 
 Read more information about Ray tasks on [Ray Core docs website](https://docs.ray.io/en/latest/ray-core/walkthrough.html)
 
-
+{% docnavigation title="See also" %}
+- [Ray on Golem concept](/docs/creators/ray/concept)
+- [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial)
+{% /docnavigation %}
