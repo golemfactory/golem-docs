@@ -62,11 +62,11 @@ ray down golem-cluster.yaml --yes
 ## Summary
 
 By completing the above quickstart you have successfully:
-- installed ray and ray-on-golem packages
-- downloaded the example golem cluster yaml and the example ray application
-- started up the Ray on Golem cluster
-- run the app on your local computer and then on the cluster
-- stopped the cluster
+- Installed ray and ray-on-golem packages
+- Downloaded the example golem cluster yaml and the example ray application
+- Started up the Ray on Golem cluster
+- Run the app on your local computer and then on the cluster
+- Stopped the cluster
 
 Congratulations!
 
