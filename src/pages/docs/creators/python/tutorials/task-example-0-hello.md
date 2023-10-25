@@ -159,12 +159,6 @@ async with Golem(budget=1.0, subnet_tag="public") as golem:
     ...
 ```
 
-{% alert level="info" %}
-`Golem/Executor` instances work as asynchronous [context managers](https://docs.python.org/3/reference/datamodel.html#context-managers). Since context managers are a concept native to Python, Golem's `yajsapi` provides a custom implementation in the form of the function `asyncWith`.
-
-Context managers are somewhat similar to `try-catch-finally` blocks. They allow for setup and teardown logic before using some resource. In our case this resource is the `Golem/Executor` instance, while the block of code inside `async with/asyncWith` is the context.
-{% /alert %}
-
 Our context manager needs to be declared asynchronous as its setup and teardown functions are coroutines. This is required since they involve some long running actions such as creating/deleting payment allocations or starting/stopping background services.
 
 {% alert level="info" %}
@@ -183,14 +177,10 @@ await golem.stop()
 
 {% /alert %}
 
-As for the parameters passed to the `Golem/Executor` constructor:
+As for the parameters passed to the `Golem` constructor:
 
-- `budget` specifies our desired budget (in GLM) for the total cost of all tasks computed using this `Golem/Executor` instance.
-- `subnet_tag` specifies the name of a Golem network sub-network we'd like to use for all Golem communication performed by this `Golem/Executor` instance.
-
-{% alert level="warning" %}
-In the JavaScript API, the current implementation of `Executor` requires `task_package` to be passed in to the constructor. This is likely to change in the future. More on this parameter in the next section.
-{% /alert %}
+- `budget` specifies our desired budget (in GLM) for the total cost of all tasks computed using this `Golem` instance.
+- `subnet_tag` specifies the name of a Golem network sub-network we'd like to use for all Golem communication performed by this `Golem` instance.
 
 #### Execution
 
@@ -199,19 +189,16 @@ async for completed in golem.execute_tasks(worker, tasks, payload=package):
     print(completed.result.stdout)
 ```
 
-Having a `Golem/Executor` instance initialized we can now request some tasks!
+Having a `Golem` instance initialized we can now request some tasks!
 
-The function `execute_tasks/submit` is used here, it takes three parameters (two in the case of JavaScript's `submit`):
+The `execute_tasks` function used here takes three parameters:
 
 - `worker` is the function which defines the steps that should happen for each provider node in order to process a `Task`
 - `tasks` is the array of `Task` objects we have created
-- `payload` is the payload definition for providers which we created using the function `vm.repo`
+- `payload` is the payload definition for providers which we created using the `vm.repo` function
 
-{% alert level="warning" %}
-In the case of JavaScript API we already provided the `Executor` with a payload definition through the parameter `task_package`.
-{% /alert %}
 
-`execute_tasks/submit` returns an asynchronous iterator of `Task` objects, hence the `async for/for await` statement. Items returned by this iterator are successfully completed tasks in the order they were computed.
+`execute_tasks` returns an asynchronous iterator of `Task` objects, hence the `async for` statement. Items returned by this iterator are successfully completed tasks in the order they were computed.
 
 Having a completed task we can inspect its result. The result's structure will depend on the execution environment we used. In our case it's the VM runtime and so the result contains the output of your executed command in `stdout`.
 
@@ -236,14 +223,10 @@ This method follows the "work generator" pattern. If you're unfamiliar with it i
 
 The sequence of `Task` objects yields task fragments assigned to this provider. In a more complex scenario each `Task` object would be carrying its own piece of data to be used during computation.
 
-{% alert level="warning" %}
-Python API uses an updated API which explicitly features a `Script` object which is a representation of a single batch of commands executed on providers. The JS API on the other hand, still uses the old interface where the scripts are an internal feature of the `WorkContext` interface and are constructed implicitly and packed into its final form by the `commit()` call.
-{% /alert %}
-
 In the case of this example our entire script consists of a single command which is the call to `script.run` / `context.run`. This means that, once committed, the provider's exe unit will receive an instruction to make a call to `/bin/sh -c date`.
 
 {% alert level="warning" %}
-Commands run with `script.run /` `context.run` are not executed in any shell. This means you have to either specify the full binary path or run the command through a shell manually (for example: `/bin/sh -c ...`).
+Commands run with `script.run` are not executed in any shell. This means you have to either specify the full binary path or run the command through a shell manually (for example: `/bin/sh -c ...`).
 {% /alert %}
 
 By awaiting on `future_results` after the script has been yielded, we ensure the results are available and unwrap them from the awaitable object.
