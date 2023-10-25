@@ -35,6 +35,8 @@ ray up golem-cluster.yaml --yes
 
 ```
 
+{% partial file="ray/consult-troubleshooting.md" /%}
+
 ## Execute a Ray application
 
 {% partial file="ray/run-simple-task.md" /%}

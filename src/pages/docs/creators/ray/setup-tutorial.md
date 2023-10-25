@@ -65,6 +65,8 @@ The `ray up` succeeds when the head node is running. The remaining 2 nodes shoul
 
 Congrats, you have started a Ray on Golem cluster!
 
+{% partial file="ray/consult-troubleshooting.md" /%}
+
 ## Test the cluster with example app
 
 You are now ready to run some ray computations. 
@@ -122,7 +124,6 @@ The above shows the usual workflow with Ray apps.
 You are now ready to run your own code with `ray submit` \o/.
 
 If you need help with preparing your ray code you can check out [ray getting started guide](https://docs.ray.io/en/latest/ray-core/walkthrough.html). 
-
 
 ## Stop the cluster
 
