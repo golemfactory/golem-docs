@@ -72,7 +72,7 @@ This will define the default directory to be used in shell commands sent to a re
 
 ### ENTRYPOINT, CMD
 
-Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` statements are effectively ignored. You need to pass the relevant initialization commands as part of the task sent to a remote computer as a part of your task function or use the `beforeEach()` method. See examples.
+Because of how Golem's VM execution unit works, Docker's `ENTRYPOINT` and `CMD` statements are effectively ignored. You need to pass the relevant initialization commands as part of the task sent to a remote computer as a part of your task function. See examples.
 
 ## File system content
 
