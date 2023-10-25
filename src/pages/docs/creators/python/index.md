@@ -8,7 +8,7 @@ type: Toc
 
 Welcome to the docs page for Golem Python SDK.
 
-The core of JS SDK is the **@golem-sdk/yapapi** library that enables interaction with the Golem Network. The `yapapi` library offers:
+The core of the Python SDK is the **@golem-sdk/yapapi** library that enables interaction with the Golem Network. The library offers:
 
 - Task API
 - Service API
