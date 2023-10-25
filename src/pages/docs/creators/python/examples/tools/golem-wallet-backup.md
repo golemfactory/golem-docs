@@ -21,7 +21,7 @@ The resultant `key.json` file in the directory you ran the command from will con
 {% alert level="warning" %}
 Keep in mind that saving your wallet this way results in the creation of an unprotected keystore file.
 
-Whoever enters into possession of your `key.json` file will have complete control over the wallet and any funds therein. Unless you're sure that you want this, use the password-protected export described below.
+Whoever enters into possession of your `key.json` file will have complete control over the wallet and any funds therein. Unless you're sure that you want this, use the password protected export described below.
 
 {% /alert %}
 
