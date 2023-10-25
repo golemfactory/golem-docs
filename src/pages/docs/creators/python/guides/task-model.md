@@ -6,7 +6,7 @@ type: Guide
 
 # Introduction
 
-This article explains how to use Task API to create task-based applications using Golem.
+This article explains how to use the Task API to create task-based applications using Golem.
 
 Task-based API assumes that the developer starts with a problem that requires splitting into fragments in order to parallelize the execution using multiple providers. Therefore your application will run in a kind of a batch mode: it executes certain computations and finishes once the results are ready.
 
