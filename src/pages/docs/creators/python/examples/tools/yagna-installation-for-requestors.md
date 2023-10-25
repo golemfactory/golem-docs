@@ -100,8 +100,8 @@ yagna service run
 
 #### Get some funds
 
-Requesting tasks on the Golem Network requires some credits on the network (GLM tokens).
-As this example will run on a test network, you can get test credits.
+Requesting tasks on the Golem Network requires some funds - GLM tokens - on the network.
+While running on a test network, you can use freely available testnet tokens.
 
 Open another terminal and run the following command to complete the configuration:
 

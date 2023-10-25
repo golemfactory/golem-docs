@@ -14,7 +14,7 @@ The process of [preparation and conversion](/docs/creators/python/examples/tools
 
 ## Obtaining the VM image hash
 
-When you upload and image to Golem's repo, the image hash is calculated and conveniently provided to you after a successful upload.
+When you upload an image to Golem's repo, the image hash is calculated and conveniently provided to you after a successful upload.
 
 When you decide not to push the image that way, you need to calculate the SHA3 hash on your own. Golem's VM images use 224-bit SHA3 hashes and the easiest way to obtain such a hash is to run the `sha3sum` tool on the `.gvmi` file.
 
