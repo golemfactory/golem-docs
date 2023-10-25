@@ -1,6 +1,6 @@
 ---
 description: Ensuring the safety of your Golem funds.
-title: Yagna wallet backup
+title: Golem wallet backup
 type: instructions
 ---
 
