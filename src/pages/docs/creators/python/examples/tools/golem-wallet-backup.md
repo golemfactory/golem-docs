@@ -6,7 +6,7 @@ type: instructions
 
 # Backing up your Golem wallet
 
-As you're probably aware, in the Ethereum universe, your funds are only as secure as the private key for the account that holds them. Because of that, to ensure that you don't lose access to your GLM/ETH tokens stored on your Golem account, you must be able to back up your Golem wallet and store the key in safe storage, separate from the node itself.
+As you're probably aware, in the Ethereum universe, your funds are only as secure as the private key for the account that holds them. To ensure that you don't lose access to your GLM/ETH tokens stored on your Golem account, it's crucial to back up your Golem wallet and store the key in a safe location, separate from the node itself.
 
 ## Simple, unsafe export
 
