@@ -85,22 +85,8 @@ If you do not have `gvmkit-build` installed please follow [installation intructi
 
 {% /alert  %}
 
-{% tabs %}
-{% tab label="JavaScript" %}
-
 ```bash
 gvmkit-build golem-node --push --nologin
-```
-
-{% /tab %}
-{% tab label="Python" %}
-
-```bash
-gvmkit-build golem-node --push --nologin
-```
-
-{% /tab %}
-{% /tabs %}
 
 After running the command, you will see an output that looks like this:
 
