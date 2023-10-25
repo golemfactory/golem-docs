@@ -18,6 +18,8 @@ Sometimes it is not enough.
 
 {% solution %}
 
+TODO logfile names
+
 There are a couple of log files:
 - `/tmp/ray_on_golem/ONE_SUPER_LOG` one log, combining all the information we have.
 - `/tmp/ray_on_golem/webserver.*` - cluster manager logs
@@ -109,24 +111,31 @@ Usually testnet isn't busy for a long time - it might be enought to wait a coupl
 {% /troubleshooting %}
 
 
-<!--
 {% troubleshooting %}
 
-## Libraries not present on the cluster 
+## Additional packages required on the cluster
  
-
 {% problem /%}
 
-Description
+Your app might need non-standard packages to run on the cluster. By default, Ray on Golem image doesn't include anything besides the bare minimum.
+
+It might look like that when you submit an app which such a requirements:
+```
+TODO example output
+```
 
 {% solution %}
 
-Solution
+Note that even if you have the needed libraries installed locally, and your app runs locally, you still need to tell Ray on Golem cluster the packages are needed.
+
+There best way to deal with it is adding proper `pip install` command in the `setup_commands` of cluster yaml. 
+Check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference#initialization-commands) to get more information.
+
+
 
 {% /solution %}
-{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% feedback identifier="ray-additional-packages" /%}
 {% /troubleshooting %}
--->
 
 
 <!--
@@ -148,6 +157,25 @@ Solution
 {% /troubleshooting %}
 -->
 
+
+<!--
+{% troubleshooting %}
+
+## Second `ray up` doesn't work 
+ 
+
+{% problem /%}
+
+Description
+
+{% solution %}
+
+Solution
+
+{% /solution %}
+{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% /troubleshooting %}
+-->
 
 
 <!--
