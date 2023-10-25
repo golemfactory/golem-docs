@@ -16,20 +16,12 @@ The first step is installing Ray on Golem. It will install Ray as a dependency.
 pip3 install -U ray-on-golem
 ```
 
-For now, you also need to download and install Golem node software representing you in the Golem network.
-
-```bash
-# install yagna - golem network daemon
-curl -sSf https://join.golem.network/as-requestor | bash -
-```
-
-{% partial file="ray/websocat-requirement.md" /%}
+As a prerequisite, it also installs yagna - Golem daemon used to schedule work on the Golem Network.
 
 ## Set the cluster up
 
 With the packages in place, you can download our sample golem cluster configuration yaml, and use it with `ray up` to start up the cluster.
 It will give you a cluster of one node (which will expand when you feed it with work) on the Golem test network (free, but not very powerful)
-
 
 ```bash
 # Download the golem-cluster.yaml

@@ -16,7 +16,7 @@ To start a Ray cluster on Golem, you will use the Ray cluster launcher with the 
 
 {% partial file="ray/recommend-venv.md" /%}
 
-The Ray cluster launcher is part of the Ray CLI. Use the CLI to start and stop a ray cluster using commands such as `ray up` and `ray down`. 
+The Ray cluster launcher is part of the Ray CLI. Use the CLI to start and stop a Ray cluster using commands such as `ray up` and `ray down`. 
 You can use pip to install the Ray CLI with cluster launcher support.
 
 You need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
@@ -28,17 +28,7 @@ It will install the default ray package as a dependency, but if you want more Ra
 pip3 install -U ray-on-golem
 ```
 
-{% partial file="ray/websocat-requirement.md" /%}
-
-## Install yagna (Golem daemon used to schedule work on the Golem Network)
-
-For now, you need to manually install Yagna to be able to connect to the Golem network.
-Later on, we will make the installation happen behind the scenes.
-
-```bash
-# install yagna - golem network daemon
-curl -sSf https://join.golem.network/as-requestor | bash -
-```
+As a prerequisite, it also installs yagna - Golem daemon used to schedule work on the Golem Network.
 
 ## Start Ray with the Ray cluster launcher
 
@@ -53,7 +43,7 @@ The command to start the cluster is `ray up`:
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * Yagna starts in the background (if not running)
+# * yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes

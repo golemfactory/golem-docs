@@ -31,7 +31,6 @@ The beauty of the solution is that you can run the app locally, and when you are
 ## What do you need
 
 To use Ray on Golem, you need to install the Ray framework and Ray on Golem cluster manager.
-For the time being, you also need to download Yagna - a Golem daemon facilitating communication with the Golem network.
 
 When you have the software installed, you need a cluster configuration yaml file. We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
 

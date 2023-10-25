@@ -157,17 +157,14 @@ deal count: 50 time: 0:00:04.550863
 
 We will now scale the execution even further - we will use a Ray on Golem cluster.
 
-Run the following to install needed software - Golem node used to communicate with Golem Network.
+Run the following to install needed software:
 
 ```bash
 # install ray-on-golem (just make sure you have it after the previous steps)
 pip3 install -U ray-on-golem
-
-# install yagna - golem network daemon
-curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
-{% partial file="ray/websocat-requirement.md" /%}
+As a prerequisite, it also installs ray package and yagna - Golem daemon used to schedule work on the Golem Network.
 
 Now, run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
@@ -176,7 +173,7 @@ Now, run the following to start a basic cluster, based on our example configurat
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
 # In this command:
-# * Yagna starts in the background (if not running)
+# * yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
