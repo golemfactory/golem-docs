@@ -15,7 +15,7 @@ This example illustrates following Golem features & aspects:
 - VM runtime
 - Task execution
 - Parallel task execution on multiple provider
-- Submitting multiple task sequences to a single`Golem` engine
+- Submitting multiple task sequences to a single `Golem` engine
 - Setting timeout for commands run on a provider
 - Reading output from commands run on a provider
 - File transfer to/from provider's exe unit
