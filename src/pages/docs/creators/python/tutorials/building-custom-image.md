@@ -96,9 +96,19 @@ The hash is found after the `image link`, which in this case gives us the hash `
 
 ## Using the image in a requestor script
 
+
+{% alert level="warning" %}
+
+Note that the section below contains code in Javascript only for this moment. We will update it soon with the Python example.
+
+{% /alert %}
+
 Let's use the newly created image in a requestor script and ensure this is the one we have just made.
 
 We need to prepare our environment:
+
+{% tabs %}
+{% tab label="JavaScript" %}
 
 ```bash
 mkdir golem-example
@@ -107,11 +117,13 @@ npm init
 npm i @golem-sdk/golem-js
 ```
 
+{% /tab  %}
+{% /tabs %}
+
 We can now create our `index.mjs` requestor file, with the `package: "8b238595..."` matching our image hash.
 
 {% tabs %}
 {% tab label="JavaScript" %}
-**`index.mjs`**
 
 ```js
 import { TaskExecutor } from '@golem-sdk/golem-js'
@@ -145,8 +157,13 @@ In the script, we specify that our task should use the newly created image (indi
 
 Run the following command after ensuring the Yagna service is running and configured correctly:
 
+{% tabs %}
+{% tab label="JavaScript" %}
+
 `node index.mjs`
 
+{% /tab  %}
+{% /tabs %}
 You have successfully created and used your Golem image in a requestor script!
 
 ![](/image_tutorial_upload.png)
