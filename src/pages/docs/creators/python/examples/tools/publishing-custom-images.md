@@ -6,15 +6,6 @@ type: instructions
 
 # Publishing an image in the registry
 
-
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 - npm or pip installed
