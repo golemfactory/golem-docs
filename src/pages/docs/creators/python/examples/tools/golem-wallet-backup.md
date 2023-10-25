@@ -106,7 +106,7 @@ Once the file is created, examine its contents and ensure that the `address` pro
 To make it easier, here's a possible check:
 
 ```bash
-$ cat ./key.json | grep address
+cat ./key.json | grep address
 ```
 
 To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/maintenance/wallet-restoration) using this newly created keystore file.
