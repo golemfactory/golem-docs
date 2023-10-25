@@ -25,7 +25,7 @@ Prerequisites:
 This is the simple `Dockerfile` we are going to use, using the `Node` base image, creating one volume, and setting the working directory. Simply create a file with the name `Dockerfile`, without any file extension, and paste the following contents:
 
 ```dockerfile
-FROM node:latest
+FROM python:latest
 WORKDIR /golem/work
 VOLUME /golem/work
 COPY Dockerfile /golem/info/description.txt
