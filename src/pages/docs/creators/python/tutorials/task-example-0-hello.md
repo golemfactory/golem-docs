@@ -223,7 +223,7 @@ This method follows the "work generator" pattern. If you're unfamiliar with it i
 
 The sequence of `Task` objects yields task fragments assigned to this provider. In a more complex scenario each `Task` object would be carrying its own piece of data to be used during computation.
 
-In the case of this example our entire script consists of a single command which is the call to `script.run` / `context.run`. This means that, once committed, the provider's exe unit will receive an instruction to make a call to `/bin/sh -c date`.
+In the case of this example our entire script consists of a single command which is the call to `script.run`. This means that, once yielded, the provider's exe unit will receive an instruction to make a call to `/bin/sh -c date`.
 
 {% alert level="warning" %}
 Commands run with `script.run` are not executed in any shell. This means you have to either specify the full binary path or run the command through a shell manually (for example: `/bin/sh -c ...`).
