@@ -23,19 +23,19 @@ This article has been devised to work with the following environments:
 `gvmkit-build` is a tool that converts Docker images into the GVMI format used by Golem. To install it, please follow the instructions below:
 
 {% tabs %}
-{% tab label="JavaScript/npm" %}
-Ensure npm is already installed.
-
-```bash
-npm install -g @golem-sdk/gvmkit-build
-```
-
-{% /tab %}
 {% tab label="Python/pip" %}
 Ensure you have a Python 3 environment equipped with pip.
 
 ```bash
 pip install gvmkit-build
+```
+
+{% /tab %}
+{% tab label="JavaScript/npm" %}
+Ensure npm is already installed.
+
+```bash
+npm install -g @golem-sdk/gvmkit-build
 ```
 
 {% /tab %}
