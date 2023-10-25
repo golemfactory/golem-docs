@@ -39,7 +39,7 @@ A custom filter that checks every proposal coming from the market
 
 #### Defined in
 
-[src/market/service.ts:13](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/service.ts#L13)
+[src/market/service.ts:13](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/service.ts#L13)
 
 ___
 
@@ -51,7 +51,7 @@ Maximum time for debit note acceptance
 
 #### Defined in
 
-[src/market/service.ts:15](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/service.ts#L15)
+[src/market/service.ts:15](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/service.ts#L15)
 
 ___
 
@@ -65,7 +65,7 @@ DemandOptions.subnetTag
 
 #### Defined in
 
-[src/market/demand.ts:21](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L21)
+[src/market/demand.ts:21](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L21)
 
 ___
 
@@ -79,7 +79,7 @@ DemandOptions.yagnaOptions
 
 #### Defined in
 
-[src/market/demand.ts:22](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L22)
+[src/market/demand.ts:22](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L22)
 
 ___
 
@@ -93,7 +93,7 @@ DemandOptions.marketTimeout
 
 #### Defined in
 
-[src/market/demand.ts:23](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L23)
+[src/market/demand.ts:23](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L23)
 
 ___
 
@@ -107,7 +107,7 @@ DemandOptions.marketOfferExpiration
 
 #### Defined in
 
-[src/market/demand.ts:24](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L24)
+[src/market/demand.ts:24](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L24)
 
 ___
 
@@ -121,7 +121,7 @@ DemandOptions.logger
 
 #### Defined in
 
-[src/market/demand.ts:25](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L25)
+[src/market/demand.ts:25](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L25)
 
 ___
 
@@ -135,7 +135,7 @@ DemandOptions.maxOfferEvents
 
 #### Defined in
 
-[src/market/demand.ts:26](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L26)
+[src/market/demand.ts:26](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L26)
 
 ___
 
@@ -149,7 +149,7 @@ DemandOptions.offerFetchingInterval
 
 #### Defined in
 
-[src/market/demand.ts:27](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L27)
+[src/market/demand.ts:27](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L27)
 
 ___
 
@@ -163,7 +163,7 @@ DemandOptions.proposalTimeout
 
 #### Defined in
 
-[src/market/demand.ts:28](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L28)
+[src/market/demand.ts:28](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L28)
 
 ___
 
@@ -177,4 +177,4 @@ DemandOptions.eventTarget
 
 #### Defined in
 
-[src/market/demand.ts:29](https://github.com/golemfactory/golem-js/blob/9a9dd80/src/market/demand.ts#L29)
+[src/market/demand.ts:29](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/demand.ts#L29)
