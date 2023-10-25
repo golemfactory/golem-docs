@@ -27,7 +27,7 @@ Whoever enters into possession of your `key.json` file will have complete contro
 
 ## Password-protected keystore
 
-Better yet, create a password-encrypted keystore. Yagna service allows it and it fundamentally improves the security of the funds kept in that exported wallet.
+Better yet, create a password encrypted keystore. Yagna service allows it and it fundamentally improves the security of the funds kept in that exported wallet.
 
 ### Verify the currently used key
 
@@ -91,7 +91,9 @@ An arguably positive side effect of locking the key that way is that a `yagna id
 
 ### Reverting to an unprotected key
 
-If for some reason you'd like to revert to an unprotected yagna key, unlock it using your saved passphrase and then lock it again using an empty one, which is run:
+If for some reason you'd like to revert to an unprotected yagna key, unlock it using your saved passphrase and then lock it again using an empty one.
+
+To do that, run:
 
 ```bash
 yagna id lock --new-password
