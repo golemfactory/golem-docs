@@ -55,7 +55,7 @@ It's important to verify that the command shows you `isDefault: true` and `isLoc
 To lock the key using your passphrase, issue the following command:
 
 ```bash
-$ yagna id lock --new-password
+yagna id lock --new-password
 ```
 
 You'll be asked for the passphrase twice and if the entries match, you'll receive a confirmation of the lock operation:
