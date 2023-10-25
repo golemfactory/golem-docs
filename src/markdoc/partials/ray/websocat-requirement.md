@@ -1,4 +1,4 @@
-Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on the Golem cluster.
+Additionally, a tool named [websocat](https://lib.rs/crates/websocat) is needed to wrap connections between your machine and Ray on Golem cluster.
 You can install websocat using [these instructions](https://lindevs.com/install-websocat-on-ubuntu/).
 
 Verify websocat is present:

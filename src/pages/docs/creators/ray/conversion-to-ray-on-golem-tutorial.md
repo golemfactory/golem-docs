@@ -5,7 +5,7 @@ type: example
 ---
 
 # Converting a real-life use case to Ray on Golem
-This tutorial explains step-by-step how to parallelize an example app, set Ray on the Golem cluster up, run the script on the cluster, and finally stop the cluster.
+This tutorial explains step-by-step how to parallelize an example app, set Ray on Golem cluster up, run the script on the cluster, and finally stop the cluster.
 
 The parallelization part is also explained in our PoC demo video
 
@@ -153,9 +153,9 @@ This cluster consists of
 deal count: 50 time: 0:00:04.550863
 ```
 
-## Set up your Ray on the Golem cluster
+## Set up your Ray on Golem cluster
 
-We will now scale the execution even further - we will use a Ray on the Golem cluster.
+We will now scale the execution even further - we will use a Ray on Golem cluster.
 
 Run the following to install needed software - Golem node used to communicate with Golem Network.
 
@@ -181,7 +181,7 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
 
-# Check if Ray on the Golem cluster is running 
+# Check if Ray on Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 ```
 

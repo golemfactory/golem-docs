@@ -11,7 +11,7 @@ python3 simple-task.py
 This particular script shows information about the cluster it is being run on 
 and also visualizes the number of tasks run on different nodes (by default it executes 100 tasks).
 
-Once you ensure the app works, you can feed it to your Ray on the Golem cluster
+Once you ensure the app works, you can feed it to your Ray on Golem cluster:
 
 ```bash
 # Submit the app to be executed on your cluster
@@ -20,7 +20,7 @@ ray submit golem-cluster.yaml simple-task.py
 
 You can see the information about the cluster both before and after running the computations.
 
-Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
+Submit the script again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins):
 
 ```bash
 # Submit the app with 400 tasks

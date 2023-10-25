@@ -24,16 +24,18 @@ from collections import Counter
 import ray
 ray.init()
 
+def output_cluster_info():
+  print(
+      """This cluster consists of
+      {} nodes in total
+      {} CPU resources in total
+  """.format(
+          len(ray.nodes()), ray.cluster_resources()["CPU"]
+      )
+  )
 
-# output cluster information before the computation
-print(
-    """This cluster consists of
-    {} nodes in total
-    {} CPU resources in total
-""".format(
-        len(ray.nodes()), ray.cluster_resources()["CPU"]
-    )
-)
+# cluster information before the computation
+output_cluster_info()
 
 # remote function returning ip of the worker (after 0.5 sec of sleep)
 @ray.remote
@@ -60,22 +62,16 @@ for ip_address, num_tasks in Counter(ip_addresses).items():
     print("    {} tasks on {}".format(num_tasks, ip_address))
 
 
-# output cluster information after the computation
-print(
-    """This cluster consists of
-    {} nodes in total
-    {} CPU resources in total
-""".format(
-        len(ray.nodes()), ray.cluster_resources()["CPU"]
-    )
-)```
+# cluster information after the computation
+output_cluster_info()
+```
 
 You can run the app on your local machine with
 ```bash
 python3 simple-task.py
 ```
 
-Or, you can execute it on Ray on the Golem cluster with `ray submit`. Let's have a look at ray usage in the app.
+Or, you can execute it on Ray on Golem cluster with `ray submit`. Let's have a look at ray usage in the app.
 
 You need to run certain steps:
 - initialize ray, so your code would be able to use ray infrastructure
@@ -96,7 +92,7 @@ This is what Ray initialization looks like. `ray.init()` without parameters tell
 ## Cluster information
 
 The `ray` module exposes methods we use to print the information about the cluster (before and after ray computation).
-When you run the script on a fresh Ray on the Golem cluster, the number of nodes will increase as a result of the computation.
+When you run the script on a fresh Ray on Golem cluster, the number of nodes will increase as a result of the computation.
 This happens because Ray autoscaler monitors the amount of work pending and requests additional nodes as the queues get longer.
 
 It also decommissions the nodes when they start to idle (5 mins in the example config we are providing).

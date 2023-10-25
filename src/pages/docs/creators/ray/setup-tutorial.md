@@ -6,7 +6,7 @@ type: guide
 
 # Ray on Golem setup tutorial 
 
-This tutorial explains all the steps needed to start, test, and stop a Ray on the Golem cluster. 
+This tutorial explains all the steps needed to start, test, and stop a Ray on Golem cluster. 
 If you have already proceeded through our [Quickstart](/docs/creators/ray/quickstart), you'll find this tutorial familiar. 
 The point is to go through the same actions but now, provide you with more details on each one.
 
@@ -66,14 +66,14 @@ You can now verify that your Ray on Golem cluster works, by running the followin
 It will connect to the head node and execute the `ray status` command which will print cluster information.
 
 ```bash
-# Check if Ray on the Golem cluster is running 
+# Check if Ray on Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 
 ```
 
 The `ray up` succeeds when the head node is running. The remaining 2 nodes should be launching, but don't have to be fully operational.
 
-Congrats, you have started a Ray on the Golem cluster!
+Congrats, you have started a Ray on Golem cluster!
 
 ## Test the cluster with example app
 
@@ -96,7 +96,7 @@ and also visualizes the number of tasks run on different nodes.
 
 Expect information about 100 tasks being executed on one IP, and the cluster of one node plus as many workers as many cores your CPU has.
 
-Once you ensure the app works, you can feed it to your Ray on the Golem cluster
+Once you ensure the app works, you can feed it to your Ray on Golem cluster
 
 ```bash
 # Submit the app to be executed on your cluster
