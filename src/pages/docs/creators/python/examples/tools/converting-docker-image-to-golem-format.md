@@ -11,7 +11,6 @@ type: instructions
 These instructions has been designed to work with the following environments:
 
 - OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
 
 {% /alert %}
 
@@ -101,6 +100,13 @@ This example explains how to convert and publish an image that will be identifie
 Note if the image was already converted to `.gvmi` format, it will only be pushed.
 
 {% tabs %}
+{% tab label="Python" %}
+
+```bash
+gvmkit-build golem-example --push --nologin
+```
+
+{% /tab %}
 {% tab label="JavaScript" %}
 
 ```bash
@@ -114,13 +120,7 @@ npx gvmkit-build golem-example --push --nologin
 ```
 
 {% /tab %}
-{% tab label="Python" %}
 
-```bash
-gvmkit-build golem-example --push --nologin
-```
-
-{% /tab %}
 {% /tabs %}
 
 The hash is found in the `image link` line of the console output:
