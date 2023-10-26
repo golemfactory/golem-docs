@@ -164,7 +164,7 @@ async def main():
 
     async with Golem(budget=1.0, subnet_tag="public") as golem:
         async for completed in golem.execute_tasks(worker, tasks, payload=package):
-            print(completed.result)
+            print(completed.result[0].strip(), "\n", completed.result[1].strip())
 
 
 if __name__ == "__main__":
