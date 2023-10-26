@@ -37,7 +37,7 @@ Designates the maximum number of retry attempts for a job if it fails on the pro
 {% /defaultvalue %}
 
 {% defaultvalue title="activityPreparingTimeout" defaultValue="5 * 60 * 1000" %} 
-Timeout for activity preparation, which includes the creation and deployment of commands, in ms. 
+Timeout for activity preparation, which includes the creation and deployment commands, in ms. 
 {% /defaultvalue %}
 
 ## packagePackageOptions
