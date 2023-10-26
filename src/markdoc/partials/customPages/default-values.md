@@ -22,7 +22,11 @@ Defines the log level. Available options: `debug`, `info`, `warn`, `log`, `error
 Enable or disable logging. Set to `false` to turn off all logging, even if a logger module is specified. 
 {% /defaultvalue %}
 
-## yagnaOptions
+{% defaultvalue title="maxTaskRetries" defaultValue="3" %} 
+Designates the maximum number of retry attempts for a job if it fails on the provider's side. 
+{% /defaultvalue %}
+
+## YagnaOptions
 
 {% defaultvalue title="apiKey" defaultValue="as read from 'process.env.YAGNA_APPKEY' for node.js, null for browser" %} 
 The `apiKey` facilitates access to the yagna REST API.
@@ -32,13 +36,7 @@ The `apiKey` facilitates access to the yagna REST API.
 The base URL of the yagna REST API. 
 {% /defaultvalue %}
 
-{% defaultvalue title="maxTaskRetries" defaultValue="3" %} 
-Designates the maximum number of retry attempts for a job if it fails on the provider's side. 
-{% /defaultvalue %}
 
-{% defaultvalue title="activityPreparingTimeout" defaultValue="5 * 60 * 1000" %} 
-Timeout for activity preparation, which includes the creation and deployment commands, in ms. 
-{% /defaultvalue %}
 
 ## packagePackageOptions
 
@@ -82,6 +80,14 @@ This filter determines which proposals to accept, based on their compatibility w
 Sets the maximum number of tasks that can be executed concurrently when the TaskExecutor processes tasks from a list (refer to `map()` and `forEach()` methods).
 {% /defaultvalue %}
 
+{% defaultvalue title="activityPreparingTimeout" defaultValue="5 * 60 * 1000" %} 
+Timeout for activity preparation, which includes the creation and deployment commands, in ms. 
+{% /defaultvalue %}
+
+{% defaultvalue title="activityExecuteTimeout" defaultValue="5*60*1000" %} 
+Sets the maximum execution time for a script, either a single command or a batch, in ms.
+{% /defaultvalue %}
+
 ## PaymentOptions
 
 {% defaultvalue title="network" defaultValue="goerli" %} 
@@ -112,10 +118,4 @@ This filter outlines the rules for invoice acceptance.
 
 {% defaultvalue title="agreementSelector" defaultValue="randomAgreementSelectorWithPriorityForExistingOnes()" %} 
 This selector determines which agreements will be chosen for the next task, provided by the iterator. The pool comprises existing agreements and potential new agreements sourced from available proposals.
-{% /defaultvalue %}
-
-## Activity
-
-{% defaultvalue title="activityExecuteTimeout" defaultValue="5*60*1000" %} 
-Sets the maximum execution time for a script, either a single command or a batch, in ms.
 {% /defaultvalue %}
