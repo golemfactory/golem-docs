@@ -155,7 +155,7 @@ There are two ways to make our _local_ _Provider_ verify the request:
 
 - #### Signing manifest and adding signature with a certificate to the request
 
-  [Generate self signed certificate](/docs/golem/payload-manifestself-signed-certificate-example) and then [ge#nerate manifest signature](/docs/golem/payload-manifest#manifest-signature).
+  [Generate self signed certificate](/docs/golem/payload-manifest#self-signed-certificate-example) and then [ge#nerate manifest signature](/docs/golem/payload-manifest#manifest-signature).
 
   With a generated and `base64`-encoded certificate and a signature, the `get_payload()` function takes the following form:
 

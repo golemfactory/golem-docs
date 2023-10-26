@@ -676,7 +676,7 @@ Of course, the app was very simple - as it should be for that kind of example - 
 
 {% docnavigation title="Next steps" %}
 
-- A slightly more advanced [tutorial](/docscreators/python/tutorials/task-example-2-hashcat)
+- A slightly more advanced [tutorial](/docs/creators/python/tutorials/task-example-2-hashcat)
 - Design and then implement your own Golem app.
 
 {% /docnavigation %}
