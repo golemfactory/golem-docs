@@ -7,115 +7,115 @@ Below is a summary of the default values, their significance, and the associated
 ## executorOptions
 
 {% defaultvalue title="taskTimeout" defaultValue="5 * 60 * 1000" %} 
-Timeout for executing one task in ms. 
+Specifies the timeout for executing a single task, measured in milliseconds (ms). 
 {% /defaultvalue %}
 
 {% defaultvalue title="logger" defaultValue="pinoLogger for Node.js, null for browsers" %} 
-Logger module to handle SDK logs. 
+Determines the logger module responsible for handling SDK logs. 
 {% /defaultvalue %}
 
 {% defaultvalue title="logLevel" defaultValue="info" %} 
-Log level: `debug`, `info`, `warn`, `log`, `error`. 
+Defines the log level. Available options: `debug`, `info`, `warn`, `log`, `error`.
 {% /defaultvalue %}
 
 {% defaultvalue title="enableLogging" defaultValue="true" %} 
-This option enables logging, set to `false` to completely disable logging (even if a logger is provided). 
+Enable or disable logging. Set to `false` to turn off all logging, even if a logger module is specified. 
 {% /defaultvalue %}
 
 ## yagnaOptions
 
 {% defaultvalue title="apiKey" defaultValue="as read from 'process.env.YAGNA_APPKEY' for node.js, null for browser" %} 
-`apiKey` enables access to yagna rest API. 
+The `apiKey` facilitates access to the yagna REST API.
 {% /defaultvalue %}
 
 {% defaultvalue title="basePath" defaultValue="http://127.0.0.1:7465" %} 
-URL of yagna REST API. 
+The base URL of the yagna REST API. 
 {% /defaultvalue %}
 
 {% defaultvalue title="maxTaskRetries" defaultValue="3" %} 
-The maximum number of retries when the job failed on the provider. 
+Designates the maximum number of retry attempts for a job if it fails on the provider's side. 
 {% /defaultvalue %}
 
 {% defaultvalue title="activityPreparingTimeout" defaultValue="5 * 60 * 1000" %} 
-Timeout for preparing activity - creating and deploying commands in ms. 
+Timeout for activity preparation, which includes the creation and deployment of commands, in ms. 
 {% /defaultvalue %}
 
 ## packagePackageOptions
 
 {% defaultvalue title="engine" defaultValue="vm" %} 
-Type of the payload (`vm`, `wasm`). 
+Specifies the type of the payload. Options include: `vm`, `wasm`.
 {% /defaultvalue %}
 
 {% defaultvalue title="minMemGib" defaultValue="0.5" %} 
-Minimum size of RAM in GB. 
+Minimum required RAM size, denoted in gigabytes (GB). 
 {% /defaultvalue %}
 
 {% defaultvalue title="minStorageGib" defaultValue="2" %} 
-Minimum size of storage in GB. 
+Minimum required storage size, denoted in gigabytes (GB).
 {% /defaultvalue %}
 
 {% defaultvalue title="minCpuThreads" defaultValue="1" %} 
-Minimum no of threads. 
+Minimum number of CPU threads required.
 {% /defaultvalue %}
 
 {% defaultvalue title="minCpuCores" defaultValue="1" %} 
-Minimum no of CPU cores. 
+Minimum number of CPU cores required.
 {% /defaultvalue %}
 
 {% defaultvalue title="capabilities" defaultValue="[]" %} 
-Set of capabilities providers offer, see manifest and demand documentation of details. 
+List of capabilities that providers can offer. Refer to the manifest and demand documentation for more details. 
 {% /defaultvalue %}
 
 ## MarketOptions
 
 {% defaultvalue title="debitNotesAcceptanceTimeout" defaultValue="30" %} 
-Minimal time we reserve to accept debit notes, prosales with shorter time will be rejected in min. 
+Sets the minimal time reserved for accepting debit notes. Proposals with shorter times will be rejected, measured in minutes. 
 {% /defaultvalue %}
 
 {% defaultvalue title="proposalFilter" defaultValue="acceptAllProposalFilter()" %} 
-Filter to decide what proposal to accept (from these that match the demand). 
+This filter determines which proposals to accept, based on their compatibility with the demand.
 {% /defaultvalue %}
 
 ## TaskServiceOptions
 
 {% defaultvalue title="maxParallelTasks" defaultValue="5" %} 
-Max no of parallel tasks when the TaskExecutor is running tasks from a list (see `map()` and `forEach()`). 
+Sets the maximum number of tasks that can be executed concurrently when the TaskExecutor processes tasks from a list (refer to `map()` and `forEach()` methods).
 {% /defaultvalue %}
 
 ## PaymentOptions
 
 {% defaultvalue title="network" defaultValue="goerli" %} 
-Defines on that blockchain the payment will be performed, `goerli` is a test network where test GLM is used, `polygon`. 
+Defines the blockchain network for processing payments. The `goerli` option indicates a test network that utilizes test GLM. Other options include `polygon`.
 {% /defaultvalue %}
 
 {% defaultvalue title="budget" defaultValue="1.0" %} 
-The amount that is allocated for all tasks scheduled by an executor in GLM/tGLM. 
+Specifies the total budget allocated for all tasks scheduled by an executor, measured in GLM/tGLM.
 {% /defaultvalue %}
 
 {% defaultvalue title="paymentTimeout" defaultValue="60 * 1000" %} 
-Max time the executor script will await invoices from providers after tasks are complete in ms. 
+Max waiting time for the executor script to receive invoices from providers post task completion, in ms.
 {% /defaultvalue %}
 
-{% defaultvalue title="allocationExpires" defaultValue="60 mins" %} 
-Duration after which allocation expires in msec, valid allocation is required to accept invoices. 
+{% defaultvalue title="allocationExpires" defaultValue="60000 * 60" %} 
+Specifies the duration after which an allocation expires, in milliseconds. A valid allocation is essential for accepting invoices.
 {% /defaultvalue %}
 
 {% defaultvalue title="debitNoteFilter" defaultValue="acceptAllDebitNotesFilter()" %} 
-Filter containing rules for debitNotes acceptance. 
+This filter outlines the rules for debit note acceptance.
 {% /defaultvalue %}
 
 {% defaultvalue title="invoiceFilter" defaultValue="acceptAllInvoicesFilter()" %} 
-Filter containing rules for Invoice acceptance. 
+This filter outlines the rules for invoice acceptance.
 {% /defaultvalue %}
 
 ## AgreementServiceOptions
 
 {% defaultvalue title="agreementSelector" defaultValue="randomAgreementSelectorWithPriorityForExistingOnes()" %} 
-Decide which agreements will be used for the next task provided by the iterator, pool contains existing agreements and potential new agreements from available proposals. 
+This selector determines which agreements will be chosen for the next task, provided by the iterator. The pool comprises existing agreements and potential new agreements sourced from available proposals.
 {% /defaultvalue %}
 
 ## Activity
 
 {% defaultvalue title="activityExecuteTimeout" defaultValue="5*60*1000" %} 
-Execution time for script (one command or batch) in ms. 
+Sets the maximum execution time for a script, either a single command or a batch, in ms.
 {% /defaultvalue %}
