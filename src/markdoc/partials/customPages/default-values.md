@@ -70,7 +70,7 @@ List of capabilities that providers can offer. Refer to the manifest and demand 
 Sets the minimal time reserved for accepting debit notes. Proposals with shorter times will be rejected, measured in minutes. 
 {% /defaultvalue %}
 
-{% defaultvalue title="proposalFilter" defaultValue="acceptAllProposalFilter()" %} 
+{% defaultvalue title="proposalFilter" referenceLink="https://github.com/golemfactory/golem-js/blob/00d03aedd4d1c239d3b6833c6c89b61348ab50af/src/market/strategy.ts#L4" defaultValue="acceptAllProposalFilter()" %} 
 This filter determines which proposals to accept, based on their compatibility with the demand.
 {% /defaultvalue %}
 
@@ -106,16 +106,16 @@ Max waiting time for the executor script to receive invoices from providers post
 Specifies the duration after which an allocation expires, in milliseconds. A valid allocation is essential for accepting invoices.
 {% /defaultvalue %}
 
-{% defaultvalue title="debitNoteFilter" defaultValue="acceptAllDebitNotesFilter()" %} 
+{% defaultvalue title="debitNoteFilter" defaultValue="acceptAllDebitNotesFilter()" referenceLink="https://github.com/golemfactory/golem-js/blob/00d03aedd4d1c239d3b6833c6c89b61348ab50af/src/payment/strategy.ts#L5" %} 
 This filter outlines the rules for debit note acceptance.
 {% /defaultvalue %}
 
-{% defaultvalue title="invoiceFilter" defaultValue="acceptAllInvoicesFilter()" %} 
+{% defaultvalue title="invoiceFilter" defaultValue="acceptAllInvoicesFilter()" referenceLink="https://github.com/golemfactory/golem-js/blob/00d03aedd4d1c239d3b6833c6c89b61348ab50af/src/payment/strategy.ts#L7" %} 
 This filter outlines the rules for invoice acceptance.
 {% /defaultvalue %}
 
 ## AgreementServiceOptions
 
-{% defaultvalue title="agreementSelector" defaultValue="randomAgreementSelectorWithPriorityForExistingOnes()" %} 
+{% defaultvalue title="agreementSelector" defaultValue="randomAgreementSelectorWithPriorityForExistingOnes()" referenceLink="https://github.com/golemfactory/golem-js/blob/00d03aedd4d1c239d3b6833c6c89b61348ab50af/src/agreement/strategy.ts#L8" %} 
 This selector determines which agreements will be chosen for the next task, provided by the iterator. The pool comprises existing agreements and potential new agreements sourced from available proposals.
 {% /defaultvalue %}

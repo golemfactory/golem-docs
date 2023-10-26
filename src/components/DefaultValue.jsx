@@ -1,7 +1,8 @@
 import { slugifyWithCounter } from '@sindresorhus/slugify'
+import Link from 'next/link'
 const slugify = slugifyWithCounter()
 
-function DefaultValue({ title, children, defaultValue, id }) {
+function DefaultValue({ title, children, defaultValue, id, referenceLink = null }) {
   return (
     <div className="mb-6 rounded-lg border border-lightbluedarker bg-white p-6 shadow-sm transition-shadow duration-200 dark:border-none dark:bg-darkcontent">
       <h3
@@ -15,9 +16,18 @@ function DefaultValue({ title, children, defaultValue, id }) {
         <span className="font-medium text-gray-900 dark:text-lightbluedarker">
           Default value:{' '}
         </span>
-        <span className="text-primary dark:text-darkprimary">
+        {referenceLink ? (
+        <Link
+          target='_blank'
+          rel='noopener noreferrer'
+         href={referenceLink} className="text-primary dark:text-darkprimary hover:underline">
+          {defaultValue}
+        </Link>
+        ) : (
+          <span className="text-primary dark:text-darkprimary">
           {defaultValue}
         </span>
+        ) }
       </div>
     </div>
   )

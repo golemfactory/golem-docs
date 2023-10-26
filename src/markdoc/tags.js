@@ -42,6 +42,7 @@ const tags = {
     attributes: {
       title: { type: String },
       defaultValue: { type: String },
+      referenceLink: { type: String },
     },
     transform(node, config) {
       const attributes = node.transformAttributes(config)
