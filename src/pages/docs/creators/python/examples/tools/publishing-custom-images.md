@@ -88,7 +88,7 @@ Your tag `golem/my_example:latest` is ready to use in one of Golem Network APIs
 
 {% docnavigation title="Next steps" %}
 
-- [Using an image in a requestor script](/docs/creators/python/examples/working-with-images) (JS API)
+- [Building a custom iage tutorial](/docs/creators/python/tutorials/building-custom-image).
 
 {% /docnavigation %}
 
