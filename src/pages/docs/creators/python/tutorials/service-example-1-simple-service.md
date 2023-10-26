@@ -75,7 +75,7 @@ Example output of `--stats`:
 
 Example output of `--plot`:
 
-![](/rulkfjiudp.png)
+![example output](/rulkfjiudp.png)
 
 ### Source of data
 

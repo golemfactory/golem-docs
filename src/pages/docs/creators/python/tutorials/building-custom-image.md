@@ -209,6 +209,6 @@ Note that the content of the `description.txt` file that was created in the /gol
 
 {% docnavigation title="Next steps" %}
 
-- Try your image in one of [examples](/docs/creators/python/examples)!
+- Try your image in one of [tutorials](/docs/creators/python/tutorials)!
 
 {% /docnavigation %}
