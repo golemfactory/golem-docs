@@ -164,7 +164,7 @@ Run the following to install needed software:
 pip3 install -U ray-on-golem
 ```
 
-As a prerequisite, it also installs ray package and yagna - Golem daemon used to schedule work on the Golem Network.
+As a prerequisite, it also installs ray package and yagna - the Golem node software which is essential for connecting to the Golem network.
 
 Now, run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 

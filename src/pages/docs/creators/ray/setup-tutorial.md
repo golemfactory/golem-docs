@@ -28,7 +28,7 @@ It will install the default ray package as a dependency, but if you want more Ra
 pip3 install -U ray-on-golem
 ```
 
-As a prerequisite, it also installs yagna - Golem daemon used to schedule work on the Golem Network.
+As a prerequisite, it also installs yagna - the Golem node software which is essential for connecting to the Golem network.
 
 ## Start Ray with the Ray cluster launcher
 
