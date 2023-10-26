@@ -116,7 +116,7 @@ function SearchResult({ result, autocomplete, collection, query }) {
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="relative  rounded-lg py-2  pl-3 text-sm text-slate-700 group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/50 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
+        className="relative hover:cursor-pointer rounded-lg py-2  pl-3 text-sm text-slate-700 group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/50 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
       >
         <div className="w-3/5 break-words md:w-3/4">
           <HighlightQuery text={result.title} query={query} />

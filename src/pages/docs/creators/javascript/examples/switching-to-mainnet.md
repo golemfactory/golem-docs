@@ -16,7 +16,7 @@ In this article, we will show how to run your tasks on Polygon.
 
 ## Prerequisites
 
-Yagna service is installed and running with `try_golem` app-key configured.
+Yagna service is installed and running with the `try_golem` app-key configured.
 
 {% alert level="info" %}
 
@@ -44,27 +44,10 @@ Copy the code into the `index.mjs` file in the project folder and run:
 node index.mjs
 ```
 
-## Running your tasks on the Polygon Network 
+## Running your tasks on the Polygon Network
 
 In this example, we create the TaskExecutor with additional parameters that indicate we intend to run our task on the Polygon platform.
 
-```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
-(async () => {
-  const executor = await TaskExecutor.create({
-    payment: { network: "polygon" },
-    package: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",    
-    yagnaOptions: { apiKey: 'try_golem' }
-  });
-
-  const result = await executor.run(
-    async (ctx) => (await ctx.run("node -v")).stdout);
-  await executor.end();
-
-  console.log("Task result:", result);
-})();
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/switching-to-mainnet/run-on-polygon.mjs" language="javascript" /%}
 
 In the script output, you can see that now the network is a `Polygon`.
-

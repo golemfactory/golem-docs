@@ -16,11 +16,17 @@ Ray on Golem makes it super easy to set up and use Golem Network to run your Ray
 Ray on the other hand is an open-source framework for scaling Python applications. 
 It specializes in tooling for AI/ML applications, but at the same time, it is based on Ray Core which understands every piece of generic Python code.
 
+
+## Why Ray?
+
+The best thing about Ray is that it makes it super easy to parallelize existing Python code even if you are not a distributed programming expert.  
+
 Ray uses concepts of tasks, actors, and objects for building and scaling distributed applications.
 It can be used to parallelize your Python code to use all cores on your computer, but more importantly, it also offers a Ray Cluster interface to run your payload on several, remote machines.
 
-You can learn about Ray Core mechanisms on [Ray docs website](https://docs.ray.io/en/latest/ray-core/walkthrough.html).
+The beauty of the solution is that you can run the app locally, and when you are ready, you can execute the same app on the cluster without changing a single line of your code.
 
+{% partial file="ray/learn-more-about-ray.md" /%}
 
 ## What do you need
 
