@@ -140,16 +140,12 @@ from yapapi.payload import vm
 async def worker(context: WorkContext, tasks: AsyncIterable[Task]):
     async for task in tasks:
         script = context.new_script()
-        future_result = script.run("/bin/sh", "-c", "cat /golem/info/description.txt")
-
+        outputs = list()
+        outputs.append(script.run("/bin/sh", "-c", "cat /golem/info/description.txt"))
+        outputs.append(script.run("/bin/sh", "-c", "ls -l /golem/work"))
         yield script
 
-        res_0 = await future_result
-        script = context.new_script()
-        future_result = script.run("/bin/sh", "-c", "ls -l /golem/work)
-
-        yield script
-        task.accept_result(result=[res_0, await future_result)
+        task.accept_result(result=[(await output).stdout for output in outputs])
 
 
 async def main():
@@ -161,17 +157,15 @@ async def main():
 
     async with Golem(budget=1.0, subnet_tag="public") as golem:
         async for completed in golem.execute_tasks(worker, tasks, payload=package):
-            print(completed.result[0].stdout)
-            print(completed.result[1].stdout)
+            print(completed.result)
 
 
 if __name__ == "__main__":
     enable_default_logger(log_file="hello.log")
 
     loop = asyncio.get_event_loop()
-    task = loop.create_task(main())
-    loop.run_until_complete(task)
-
+    t = loop.create_task(main())
+    loop.run_until_complete(t)
 ```
 
 In the script, we specify that our task should use the newly created image (indicated by `hash`: `7e31861bd912a201...`). We run two commands. The first one prints the content of the `decription.txt` file (it is a copy of the Dockerfile used to create the image). The second command lists the content of the /golem/work folder. We copied some files there as well (check the content of the `description.txt` file), but as /golem/work is defined as VOLUME and created as new when VM is started, this folder will be empty.
