@@ -55,5 +55,5 @@ The **worker** function uses the `work generator pattern` explained [here](/docs
 
 {% alert level="info" %}
 
-You can always reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/creators/troubleshooting/python).
+You can always reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/troubleshooting/python).
 {% /alert %}

@@ -10,7 +10,7 @@ This article explains how to use Service API to create service-based application
 
 The services API assumes the user would like to treat provider nodes as something like service-hosting platforms, where each activity corresponds to a single instance of some service.
 
-Theoretically, one can try using the [task-based model](/docs/creators//python/guides/task-model) to run services and the services model to run tasks as the models and their usage are not entirely disjoint. The reason why we decided to differentiate them is mostly for convenience and ease of use.
+Theoretically, one can try using the [task-based model](/docs/creators/python/guides/task-model) to run services and the services model to run tasks as the models and their usage are not entirely disjoint. The reason why we decided to differentiate them is mostly for convenience and ease of use.
 
 ## The service model
 
@@ -164,5 +164,5 @@ This is all it takes to build a Requestor Agent for a rudimentary VM-based servi
 
 {% alert level="info" %}
 
-You can always reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/creators/troubleshooting/python).
+You can always reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/troubleshooting/python).
 {% /alert %}
