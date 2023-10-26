@@ -5,7 +5,7 @@ type: example
 ---
 
 # Converting a real-life use case to Ray on Golem
-This tutorial explains step-by-step how to parallelize an example app, set Ray on the Golem cluster up, run the script on the cluster and finally stop the cluster.
+This tutorial explains step-by-step how to parallelize an example app, set Ray on Golem cluster up, run the script on the cluster, and finally stop the cluster.
 
 The parallelization part is also explained in our PoC demo video
 
@@ -13,6 +13,8 @@ The parallelization part is also explained in our PoC demo video
 {% /youtube %}
 
 ## The example Double Dummy Solver app
+
+{% partial file="ray/recommend-venv.md" /%}
 
 In our case, the application is a very simple script running a simple bridge (the card game) simulation.
 
@@ -50,11 +52,13 @@ Let's now proceed to parallelization.
 
 We need to install `ray-on-golem`. It will install `ray` as a dependency.
 ```bash
-# Install ray-on-golem and ray
+# Install ray-on-golem & ray (recommended in a clean virtual environment)
 pip3 install -U ray-on-golem 
 ```
 
 ### Ray initialization
+
+We will now modify the original `ddy.py` to make it use Ray.
 
 Ray needs to be imported and initialized. Add the following before `get_deal()` definition:
 ```python
@@ -120,7 +124,7 @@ python3 dds.py
 deal count: 50 time: 0:00:04.643217
 ```
 
-### Add cluster info
+### Output cluster info
 
 As the one last touch before proceeding to run our script on a Ray on Golem cluster, we'll add some information about the cluster to the output.
 Add this after `ray.init()` and at the end of the code:
@@ -149,9 +153,9 @@ This cluster consists of
 deal count: 50 time: 0:00:04.550863
 ```
 
-## Set up your Ray on the Golem cluster
+## Set up your Ray on Golem cluster
 
-We will now scale the execution even further - we will use a Ray on the Golem cluster.
+We will now scale the execution even further - we will use a Ray on Golem cluster.
 
 Run the following to install needed software - Golem node used to communicate with Golem Network.
 
@@ -177,9 +181,12 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
 
-# Check if Ray on the Golem cluster is running 
+# Check if Ray on Golem cluster is running 
 ray exec golem-cluster.yaml 'ray status'
 ```
+
+{% partial file="ray/example-cluster-testnet-and-cap.md" /%}
+
 
 ## Run the app
 
@@ -190,7 +197,13 @@ Now that the app will be running on a cluster, we need to inform it that the `en
 Replacing `ray.init()` with the following will do the trick:
 ```python
 # endplay library dependency
-runtime_env = {"pip": ["endplay==0.4.11b0"]}
+runtime_env = {
+    "pip": [
+        "Pillow",  # explicit uppercased "Pillow", as pip complains about mismatched metadata in endplay dependency tree
+        "endplay==0.4.11b0",
+    ]
+}
+
 
 # Use the default ray cluster or start a local one
 # Make sure endplay lib is installed
@@ -233,8 +246,8 @@ deal count: 50 time: 0:00:18.404510
 shared connection to 192.168.0.3 closed.
 ```
 
-Notice how at first, there is only one node, and after the computation, there is more. This is Ray autoscaler at work. If you increase `DEAL_CNT` or rerun the app, the difference will be more visible
-When you resubmit the app to the cluster fast enough, all the nodes will be available right from the beginning.
+Notice how at first, there is only one node, and after the computation, there is more. This is Ray autoscaler at work. 
+The time needed to add new nodes might be too long for you to notice when you run the dds.py code as it is. If you increase `DEAL_CNT` and/or rerun the app, the difference will be more visible
 
 ```bash
 ray submit golem-cluster.yaml dds.py

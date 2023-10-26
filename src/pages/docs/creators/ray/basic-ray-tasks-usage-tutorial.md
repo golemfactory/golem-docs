@@ -71,7 +71,7 @@ You can run the app on your local machine with
 python3 simple-task.py
 ```
 
-Or, you can execute it on Ray on the Golem cluster with `ray submit`. Let's have a look at ray usage in the app.
+Or, you can execute it on Ray on Golem cluster with `ray submit`. Let's have a look at ray usage in the app.
 
 You need to run certain steps:
 - initialize ray, so your code would be able to use ray infrastructure
@@ -92,7 +92,7 @@ This is what Ray initialization looks like. `ray.init()` without parameters tell
 ## Cluster information
 
 The `ray` module exposes methods we use to print the information about the cluster (before and after ray computation).
-When you run the script on a fresh Ray on the Golem cluster, the number of nodes will increase as a result of the computation.
+When you run the script on a fresh Ray on Golem cluster, the number of nodes will increase as a result of the computation.
 This happens because Ray autoscaler monitors the amount of work pending and requests additional nodes as the queues get longer.
 
 It also decommissions the nodes when they start to idle (5 mins in the example config we are providing).

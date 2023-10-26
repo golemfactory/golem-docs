@@ -14,8 +14,10 @@ To start a Ray cluster on Golem, you will use the Ray cluster launcher with the 
 
 ## Install Ray cluster launcher & Ray on Golem cluster manager
 
+{% partial file="ray/recommend-venv.md" /%}
+
 The Ray cluster launcher is part of the Ray CLI. Use the CLI to start and stop a ray cluster using commands such as `ray up` and `ray down`. 
-You can use pip to install the Ray CLI with cluster launcher support (recommended within a clean virtual environment)
+You can use pip to install the Ray CLI with cluster launcher support.
 
 You need to download the Golem cluster manager, which enables Ray to utilize the Golem network nodes.
 
@@ -58,14 +60,7 @@ ray up golem-cluster.yaml --yes
 
 ```
 
-The provided example Golem cluster config file defines a small cluster with three nodes
-that is configured to autoscale to up to 10 worker nodes.
-
-The example cluster config file also contains payment information. As a default it runs for free on Golem testnet - it should be enough to try it out (which is all we are supporting for now).
-The availability of the testnet machines might cap the size of your cluster.
-
-
-If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
+{% partial file="ray/example-cluster-testnet-and-cap.md" /%}
 
 You can now verify that your Ray on Golem cluster works, by running the following command on your local machine. 
 It will connect to the head node and execute the `ray status` command which will print cluster information.

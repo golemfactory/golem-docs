@@ -26,7 +26,7 @@ It can be used to parallelize your Python code to use all cores on your computer
 
 The beauty of the solution is that you can run the app locally, and when you are ready, you can execute the same app on the cluster without changing a single line of your code.
 
-You can learn about Ray Core mechanisms on [Ray docs website](https://docs.ray.io/en/latest/ray-core/walkthrough.html).
+{% partial file="ray/learn-more-about-ray.md" /%}
 
 ## What do you need
 
