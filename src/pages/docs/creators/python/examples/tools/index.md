@@ -1,6 +1,6 @@
 ---
 description: List of examples
-title: JS SDK tool instructions
+title: Golem SDK tool instructions
 type: Toc
 ---
 
