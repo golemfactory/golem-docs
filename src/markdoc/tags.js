@@ -41,7 +41,6 @@ const tags = {
     render: DefaultValue,
     attributes: {
       title: { type: String },
-      description: { type: String },
       defaultValue: { type: String },
     },
     transform(node, config) {
