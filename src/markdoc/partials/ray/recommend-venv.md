@@ -1,6 +1,5 @@
 {% alert level="info" %}
 
-It is recommended to create a new directory and a clean virtual environment to play with the following.
-It will let you avoid cluttering your system's Python installation with unnecessary packages.
+We recommend creating a new directory and a clean Python virtual environment before you proceed. This avoids cluttering your system installation with unnecessary packages.
 
 {% /alert %}

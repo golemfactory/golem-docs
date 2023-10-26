@@ -15,8 +15,7 @@ The first step is installing Ray on Golem. It will install Ray as a dependency.
 # install ray-on-golem & ray (recommended within a clean virtual environment)
 pip3 install -U ray-on-golem
 ```
-
-As a prerequisite, it also installs yagna - Golem daemon used to schedule work on the Golem Network.
+As a prerequisite, it also installs yagna - the Golem node software which is essential for connecting to the Golem network.
 
 ## Set the cluster up
 
