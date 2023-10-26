@@ -16,7 +16,7 @@ The first step is installing Ray on Golem. It will install Ray as a dependency.
 pip3 install -U ray-on-golem
 ```
 
-For now, you also need to download and install Golem node software representing you in the Golem network.
+For now, you also need to download and install the Golem node software which is essential for connecting to the Golem network.
 
 ```bash
 # install yagna - golem network daemon
