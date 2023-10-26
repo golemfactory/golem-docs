@@ -28,9 +28,6 @@ function extractSections(node, sections, isRoot = true) {
   }
 
   if (node.type === 'tag' && node.tag === 'partial' && node.attributes.file) {
-    if (node.tag === 'partial') {
-      console.log(node)
-    }
     const fileContent = fs.readFileSync(
       `./src/markdoc/partials/${node.attributes.file}`,
       'utf8'
