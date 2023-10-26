@@ -99,7 +99,7 @@ export const NavigationItem = ({ item, isActive }) =>
     </Link>
   ) : (
     <span
-      className={clsx('py-0.5 text-sm', {
+      className={clsx('py-0.5 text-sm text-left', {
         'text-primary dark:text-darkprimary': isActive,
       })}
     >

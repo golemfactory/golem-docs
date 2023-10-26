@@ -125,30 +125,8 @@ We can now create our `index.mjs` requestor file, with the `package: "8b238595..
 
 {% tabs %}
 {% tab label="JavaScript" %}
-**`index.mjs`**
 
-```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
-;(async () => {
-  const executor = await TaskExecutor.create({
-    package: '8b238595299444d0733b41095f27fadd819a71d29002b614c665b27c',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
-
-  const result = await executor.run(async (ctx) => {
-    console.log(
-      'Description.txt: ',
-      (await ctx.run('cat /golem/info/description.txt')).stdout
-    )
-    console.log(
-      '/golem/work content: ',
-      (await ctx.run('ls /golem/work')).stdout
-    )
-  })
-
-  await executor.end()
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/tutorials/building-custom-image/index.mjs" language="javascript" /%}
 
 {% /tab  %}
 {% /tabs %}
