@@ -125,6 +125,13 @@ python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\image-python-tutorial
 {% /tab  %}
 {% /tabs %}
 
+Install the dependencies:
+
+```
+pip install -U pip
+pip install yapapi
+```
+
 We can now create our `requestor.py` requestor file, with the `package: "7e31861bd912a201..."` matching our image hash.
 
 ```python
