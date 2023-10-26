@@ -20,37 +20,38 @@ function getNodeText(node) {
   return text
 }
 
-function collectHeadings(
-  nodes,
-  slugify = slugifyWithCounter(),
-  lastNodes = [],
-  idMap = {}
-) {
-  let sections = []
+function collectHeadings(nodes, slugify = slugifyWithCounter(), lastNodes = [], idMap = {}) {
+  let sections = [];
 
   for (let node of nodes) {
-    if (node.name === 'Heading' || (node.name === 'Defaultvalue' && node.attributes && node.attributes.title)) {
-      let level = node.name === 'Defaultvalue' ? 3 : node.attributes.level
-      let title = node.name === 'Defaultvalue' ? node.attributes.title : getNodeText(node)
-
-      if (title) {
-        
-        let id = node.attributes?.id ?? slugify(title)
-        let newNode = { ...node.attributes, id, title, children: [], level }
-        if (lastNodes[level - 2]) {
-          lastNodes[level - 2].children.push(newNode)
-        } else {
-          sections.push(newNode)
-        }
-        lastNodes[level - 1] = newNode
-        lastNodes.length = level
-      }
+    if (Array.isArray(node)) {
+      sections.push(...collectHeadings(node, slugify, lastNodes, idMap));
     }
-
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes, idMap))
+    else {
+      if (node.name === 'Heading' || (node.name === 'Defaultvalue' && node.attributes && node.attributes.title)) {
+        let level = node.name === 'Defaultvalue' ? 3 : node.attributes.level;
+        let title = node.name === 'Defaultvalue' ? node.attributes.title : getNodeText(node);
+  
+        if (title) {
+          let id = node.attributes?.id ?? slugify(title);
+          let newNode = { ...node.attributes, id, title, children: [], level };
+          if (lastNodes[level - 2]) {
+            lastNodes[level - 2].children.push(newNode);
+          } else {
+            sections.push(newNode);
+          }
+          lastNodes[level - 1] = newNode;
+          lastNodes.length = level;
+        }
+      }
+    
+      sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes, idMap));
+    }
   }
-  return sections
+  
+  return sections;
 }
+
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
   if (!title) {
