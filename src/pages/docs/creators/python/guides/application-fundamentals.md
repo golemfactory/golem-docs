@@ -102,6 +102,6 @@ A group of commands responsible for downloading content from the runtime. As wit
 
 {% docnavigation title="Next steps" %}
 
-- [Task Model](/docs/creators/python/task-model)
+- [Task Model](/docs/creators/python/guides/task-model)
 
 {% /docnavigation %}
