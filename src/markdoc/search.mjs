@@ -28,26 +28,34 @@ function extractSections(node, sections, isRoot = true) {
   }
 
   if (node.type === 'tag' && node.tag === 'partial' && node.attributes.file) {
-    const file = fs.readFileSync(
+    if (node.tag === 'partial') {
+      console.log(node)
+    }
+    const fileContent = fs.readFileSync(
       `./src/markdoc/partials/${node.attributes.file}`,
       'utf8'
     )
-    const partialAst = Markdoc.parse(file)
-    partialAst.children.forEach((child) =>
+    const partialAst = Markdoc.parse(fileContent)
+    for (const child of partialAst.children) {
       extractSections(child, sections, false)
-    )
+    }
   }
 
-  if (node.type === 'heading' || node.type === 'paragraph') {
+  if (node.type === 'tag' && node.tag === 'defaultvalue') {
+    let content = node.attributes.title
+    let hash = node.attributes?.id ?? slugify(content)
+    sections.push([content, hash, []])
+  } else if (node.type === 'heading' || node.type === 'paragraph') {
     let content = toString(node).trim()
-
     if (node.type === 'heading' && node.attributes.level <= 2) {
       let hash = node.attributes?.id ?? slugify(content)
       sections.push([content, hash, []])
     } else {
       sections.at(-1)[2].push(content)
     }
-  } else if ('children' in node) {
+  }
+
+  if ('children' in node) {
     for (let child of node.children) {
       extractSections(child, sections, false)
     }

@@ -21,6 +21,7 @@ import { Troubleshooting } from '@/components/Troubleshooting'
 import { Solution } from '@/components/Solution'
 import { Problem } from '../components/Problem'
 import { FeedbackButtons } from '@/components/Feedback'
+import DefaultValue from '../components/DefaultValue'
 const tags = {
   tabs: {
     render: Tabs,
@@ -32,6 +33,14 @@ const tags = {
         .map(tab => typeof tab === 'object' ? tab.attributes.label : null);
   
       return new Tag(this.render, { labels }, children);
+    },
+  },
+  defaultvalue: {
+    render: DefaultValue,
+    attributes: {
+      title: { type: String },
+      description: { type: String },
+      defaultValue: { type: String },
     },
   },
   padding: {

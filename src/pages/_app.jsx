@@ -29,13 +29,13 @@ function collectHeadings(
   let sections = []
 
   for (let node of nodes) {
-    if (node.name === 'Heading') {
-      let { level, id } = node.attributes
-
-      let title = getNodeText(node)
+    if (node.name === 'Heading' || (node.name === 'Defaultvalue' && node.attributes && node.attributes.title)) {
+      let level = node.name === 'Defaultvalue' ? 3 : node.attributes.level
+      let title = node.name === 'Defaultvalue' ? node.attributes.title : getNodeText(node)
 
       if (title) {
-        let newNode = { ...node.attributes, title, children: [], level }
+        let id = node.attributes?.id ?? slugify(title)
+        let newNode = { ...node.attributes, id, title, children: [], level }
         if (lastNodes[level - 2]) {
           lastNodes[level - 2].children.push(newNode)
         } else {
@@ -46,13 +46,10 @@ function collectHeadings(
       }
     }
 
-    sections.push(
-      ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
-    )
+    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes, idMap))
   }
   return sections
 }
-
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
   if (!title) {

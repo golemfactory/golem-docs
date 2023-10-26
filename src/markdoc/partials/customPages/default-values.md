@@ -1,171 +1,71 @@
-# Introduction
+# Default Values in the JS SDK
 
-To simplify the requestor code, JS SDK uses default values for some of the options. These values are sufficient to run typical use cases, however, in some cases, a user needs to override them to complete his tasks. Here is the list of defaults that are used, their meaning, and the names of related parameters.
+The JS SDK is designed to streamline the experience for developers by providing default values for various options. These default settings cater to the majority of typical use cases. However, understanding that there may be unique scenarios where you might need to tweak these settings, the SDK allows for customization.
 
-## executorOptions
+Below is a summary of the default values, their significance, and the associated parameters that can be adjusted as per your requirements:
 
-### taskTimeout
+{% defaultvalue title="executorOptions" description="Timeout for executing one task in ms." defaultValue="5 * 60 * 1000 = 5 min." /%}
 
-    **Meaning:** Timeout for executing one task in ms.
+{% defaultvalue title="taskTimeout" description="Timeout for executing one task in ms." defaultValue="5 * 60 * 1000 = 5 min." /%}
 
-    **Default value:** 5 * 60 * 1000 = 5 min.
+{% defaultvalue title="logger" description="Logger module to handle SDK logs." defaultValue="pinoLogger for Node.js, null for browsers." /%}
 
-### logger
+{% defaultvalue title="logLevel" description="Log level: `debug`, `info`, `warn`, `log`, `error`." defaultValue="'info'." /%}
 
-    Logger module to handle SDK logs.
-
-    **Default value:** pinoLogger for Node.js, null for browsers.
-
-### logLevel
-
-    Log level: `debug`, `info`, `warn`, `log`, `error`.
-
-    **Default value:** 'info'.
-
-### enableLogging
-
-    This option enables logging, set to `false` to completely disable logging (even if a logger is provided).
-
-    **Default value:** `true`.
+{% defaultvalue title="enableLogging" description="This option enables logging, set to `false` to completely disable logging (even if a logger is provided)." defaultValue="`true`." /%}
 
 ## yagnaOptions
 
-### apiKey
+{% defaultvalue title="apiKey" description="`apiKey` enables access to yagna rest API." defaultValue="as read from 'process.env.YAGNA_APPKEY' for node.js, null for browser." /%}
 
-    `apiKey` enables access to yagna rest API.
+{% defaultvalue title="basePath" description="URL of yagna REST API." defaultValue="`http://127.0.0.1:7465`." /%}
 
-    **Default value:** as read from 'process.env.YAGNA_APPKEY' for node.js, null for browser.
+{% defaultvalue title="maxTaskRetries" description="The maximum number of retries when the job failed on the provider." defaultValue="3." /%}
 
-### basePath
-
-    URL of yagna REST API.
-
-    **Default value:** `http://127.0.0.1:7465`.
-
-### maxTaskRetries
-
-    The maximum number of retries when the job failed on the provider.
-
-    **Default value:** 3.
-
-### activityPreparingTimeout
-
-    Timeout for preparing activity - creating and deploying commands in ms.
-
-    **Default value:** 5 * 60 * 1000 = 5 min.
+{% defaultvalue title="activityPreparingTimeout" description="Timeout for preparing activity - creating and deploying commands in ms." defaultValue="5 * 60 * 1000 = 5 min." /%}
 
 ## packagePackageOptions
 
-### engine
+{% defaultvalue title="engine" description="Type of the payload (`vm`, `wasm`)." defaultValue="`vm`," /%}
 
-    Type of the payload (`vm`, `wasm`).
+{% defaultvalue title="minMemGib" description="Minimum size of RAM in GB." defaultValue="0.5." /%}
 
-    **Default value:** `vm`,
+{% defaultvalue title="minStorageGib" description="Minimum size of storage in GB." defaultValue="2," /%}
 
-### minMemGib
+{% defaultvalue title="minCpuThreads" description="Minimum no of threads." defaultValue="1." /%}
 
-    Minimum size of RAM in GB.
+{% defaultvalue title="minCpuCores" description="Minimum no of CPU cores." defaultValue="1." /%}
 
-    **Default value:** : 0.5.
-
-### minStorageGib:
-
-    Minimum size of storage in GB.
-
-    **Default value:** 2,
-
-### minCpuThreads:
-
-    Minimum no of threads.
-
-    **Default value:** 1.
-
-### minCpuCores:
-
-    Minimum no of CPU cores.
-
-    **Default value:** 1.
-
-### capabilities:
-
-    Set of capabilities providers offer, see manifest and demand documentation of details.
-
-    **Default** value [].
+{% defaultvalue title="capabilities" description="Set of capabilities providers offer, see manifest and demand documentation of details." defaultValue="[]" /%}
 
 ## MarketOptions
 
-### debitNotesAcceptanceTimeout
+{% defaultvalue title="debitNotesAcceptanceTimeout" description="Minimal time we reserve to accept debit notes, prosales with shorter time will be rejected in min." defaultValue="30." /%}
 
-    Minimal time we reserve to accept debit notes, prosales with shorter time will be rejected in min.
-
-    **Default value:** 30.
-
-### proposalFilter:
-
-    Filter to decide what proposal to accept (from these that match the demand).
-
-    **Default value:** `acceptAllProposalFilter()`.
+{% defaultvalue title="proposalFilter" description="Filter to decide what proposal to accept (from these that match the demand)." defaultValue="acceptAllProposalFilter()." /%}
 
 ## TaskServiceOptions
 
-### maxParallelTasks
-
-    Max no of parallel tasks when the TaskExecutor is running tasks from a list (see `map()` and `forEach()`).
-
-    **Default value:** 5.
+{% defaultvalue title="maxParallelTasks" description="Max no of parallel tasks when the TaskExecutor is running tasks from a list (see `map()` and `forEach()`)." defaultValue="5." /%}
 
 ## PaymentOptions
 
-### payment
+{% defaultvalue title="network" description="Defines on that blockchain the payment will be performed, `goerli` is a test network where test GLM is used, `polygon`." defaultValue="`goerli`." /%}
 
-#### network
+{% defaultvalue title="budget" description="The amount that is allocated for all tasks scheduled by an executor in GLM/tGLM." defaultValue="1.0." /%}
 
-    Defines on that blockchain the payment will be performed, `goerli` is a test network where test GLM is used, `polygon`.
+{% defaultvalue title="paymentTimeout" description="Max time the executor script will await invoices from providers after tasks are complete in ms." defaultValue="60 * 1000 = 1 min." /%}
 
-    **Default value**: `goerli`.
+{% defaultvalue title="allocationExpires" description="Duration after which allocation expires in msec, valid allocation is required to accept invoices." defaultValue="60 mins." /%}
 
-### budget:
+{% defaultvalue title="debitNoteFilter" description="Filter containing rules for debitNotes acceptance." defaultValue="acceptAllDebitNotesFilter()." /%}
 
-    The amount that is allocated for all tasks scheduled by an executor in GLM/tGLM.
-
-    **Default value:** 1.0.
-
-### paymentTimeout
-
-    Max time the executor script will await invoices from providers after tasks are complete in ms.
-
-    **Default value:** 60 * 1000 = 1 min.
-
-### allocationExpires
-
-    Duration after which allocation expires in msec, valid allocation is required to accept invoices.
-
-    **Default value:** 60 mins.
-
-### debitNoteFilter
-
-    Filter containing rules for debitNotes acceptance.
-
-    **Default value:** acceptAllDebitNotesFilter().
-
-### invoiceFilter
-
-    Filter containing rules for Invoice acceptance.
-
-    **Default value:** acceptAllInvoicesFilter().
+{% defaultvalue title="invoiceFilter" description="Filter containing rules for Invoice acceptance." defaultValue="acceptAllInvoicesFilter()." /%}
 
 ## AgreementServiceOptions
 
-### agreementSelector
-
-    Decide which agreements will be used for the next task provided by the iterator, pool contains existing agreements and potential new agreements from available proposals.
-
-    **Default value:** `randomAgreementSelectorWithPriorityForExistingOnes()`,
+{% defaultvalue title="agreementSelector" description="Decide which agreements will be used for the next task provided by the iterator, pool contains existing agreements and potential new agreements from available proposals." defaultValue="randomAgreementSelectorWithPriorityForExistingOnes()." /%}
 
 ## Activity
 
-### activityExecuteTimeout:
-
-    Execution time for script (one command or batch) in ms.
-
-    **Default value:** 5*60*1000 = 5 min.
+{% defaultvalue title="activityExecuteTimeout" description="Execution time for script (one command or batch) in ms." defaultValue="5*60*1000 = 5 min." /%}
