@@ -45,8 +45,8 @@ The installation can be verified by running the following command: `gvmkit-build
 
 {% docnavigation title="Next steps" %}
 
-- [Converting an image to Golem format](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format)
-- [Custom Golem image Step by step Tutorial](/docs/creators/javascript/tutorials/building-custom-image)
+- [Converting an image to Golem format](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format)
+- [Custom Golem image Step by step Tutorial](/docs/creators/python/tutorials/building-custom-image)
 
 {% /docnavigation %}
 

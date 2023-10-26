@@ -3,7 +3,7 @@ description: How to run a .gvmi image locally for the sake of testing and debugg
 title: Testing a Golem image
 ---
 
-# 
+#
 
 {% alert level="info" %}
 
@@ -14,7 +14,6 @@ This tutorial assumes that you're already familiar with Docker and the basics of
 ## Introduction
 
 In this tutorial, we're going to explore `ya-runtime-dbg`, a tool built specifically for debugging user-built images.
-
 
 ## Installation
 
@@ -49,7 +48,7 @@ Later on we're going to see how to specify the runtime to be used by the debugge
 ## Running the debugger
 
 {% alert level="info" %}
-This section assumes you already have a `.gvmi` file ready on your machine. If you don't, then follow the [Creating a custom image](/docs/creators/javascript/tutorials/building-custom-image) tutorial or [Converting an image from Docker to Golem](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format) example.
+This section assumes you already have a `.gvmi` file ready on your machine. If you don't, then follow the [Creating a custom image](/docs/creators/python/tutorials/building-custom-image) tutorial or [Converting an image from Docker to Golem](/docs/creator/python/examples/tools/converting-docker-image-to-golem-format) example.
 {% /alert %}
 
 Let's now see how we can use `ya-runtime-dbg` together with our image. We can learn about the program's required arguments by calling `ya-runtime-dbg --help`:
@@ -149,7 +148,7 @@ Success! Our input data is there and can be read by the VM.
 
 Once you're done debugging or want to restart the VM, press `Ctrl+D` while in the debugger prompt.
 
-Having issues? Make sure to take a look at our: [VM runtime FAQ](/docs/creators/javascript/guides/golem-images-faq).
+Having issues? Make sure to take a look at our: [VM runtime FAQ](/docs/creators/python/guides/golem-images-faq).
 
 ## Summary
 

@@ -81,7 +81,7 @@ Now when you have a Docker image built, we can convert it to a Golem image. To s
 
 {% alert level="info" %}
 
-If you do not have `gvmkit-build` installed please follow [installation intructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation). You can also use it without installation using `pipx` commands.
+If you do not have `gvmkit-build` installed please follow [installation intructions](/docs/creators/python/examples/tools/gvmkit-build-installation). You can also use it without installation using `pipx` commands.
 
 {% /alert  %}
 

@@ -15,8 +15,6 @@ This section is aimed mainly at **requestors** wishing to switch from running si
 If you are a requestor:
 
 - You need to configure your requestor agent to negotiate Polygon or Ethereum as a payment platform.
-<!-- You can find a JS example [here](/docs/creators/javascript/examples/switching-to-mainnet).  - need to create a snippet
-- Next, you need to [enable payments](/docs/creators/javascript/examples/tools/managing-golem-wallet) on the platform you choose (Polygon on Ethereum). not true anymore -->
 
 Okay, so while technically we now know how to hand out tasks to providers on paid networks, in the context of running **Golem on the mainnet**, a few important questions remain largely unanswered:
 

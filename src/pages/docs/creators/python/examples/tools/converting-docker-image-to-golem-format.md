@@ -17,7 +17,7 @@ These instructions has been designed to work with the following environments:
 ## Prerequisites
 
 - Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
-- Gvmkit-build installed ([see instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation))
+- Gvmkit-build installed ([see instructions](/docs/creators/python/examples/tools/gvmkit-build-installation))
 
 {% alert level="info" %}
 
@@ -132,7 +132,7 @@ The hash is found in the `image link` line of the console output:
 
 {% docnavigation title="Next steps" %}
 
-- [Publishing an image in the registry](/docs/creators/javascript/examples/tools/publishing-custom-images)
+- [Publishing an image in the registry](/docs/creators/python/examples/tools/publishing-custom-images)
 
 {% /docnavigation %}
 

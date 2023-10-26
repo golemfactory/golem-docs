@@ -123,6 +123,6 @@ Likewise, consider encrypting or password-protecting the keystore file so that s
 
 {% docnavigation title="Next steps" %}
 
-- Restoring [Golem wallet](/docs/creators/javascript/examples/tools/restoring-golem-wallet)
+- Restoring [Golem wallet](/docs/creators/python/examples/tools/restoring-golem-wallet)
 
 {% /docnavigation %}

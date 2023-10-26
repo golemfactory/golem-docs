@@ -9,8 +9,8 @@ type: instructions
 ## Prerequisites
 
 - npm or pip installed
-- gvmkit-build installed [instructions](/docs/creators/javascript/examples/tools/gvmkit-build-installation)
-- a Docker image build [see instructions](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format#building-your-docker-image)
+- gvmkit-build installed [instructions](/docs/creators/python/examples/tools/gvmkit-build-installation)
+- a Docker image build [see instructions](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format#building-your-docker-image)
 
 {% alert level="info" %}
 
@@ -48,9 +48,10 @@ gvmkit-build docker-image-name --push --nologin
 ## Publishing a custom Golem image to the registry (tag-based)
 
 Golem image tags have a format of `username/repository_name:tag`, where:
-* `username` is your login to the registry portal,
-* `repository_name` is the name of your repository, 
-* and `tag` is the text that you chose to describe the content/version of the image. The `tag` can be `latest` to constantly keep the latest version, or you can use a versioning system and e.g. make it `v0.0.1` and so on.
+
+- `username` is your login to the registry portal,
+- `repository_name` is the name of your repository,
+- and `tag` is the text that you chose to describe the content/version of the image. The `tag` can be `latest` to constantly keep the latest version, or you can use a versioning system and e.g. make it `v0.0.1` and so on.
 
 Let's assume for this example your username is `golem`, your Docker image is tagged `golem-example`, your repository name is `my_example` and the version is `latest`.
 
@@ -87,7 +88,7 @@ Your tag `golem/my_example:latest` is ready to use in one of Golem Network APIs
 
 {% docnavigation title="Next steps" %}
 
-- [Using an image in a requestor script](/docs/creators/javascript/examples/working-with-images) (JS API)
+- [Using an image in a requestor script](/docs/creators/python/examples/working-with-images) (JS API)
 
 {% /docnavigation %}
 
