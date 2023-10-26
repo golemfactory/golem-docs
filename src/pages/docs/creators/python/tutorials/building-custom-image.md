@@ -67,7 +67,7 @@ docker build -t python-example .
 
 The output should look like this:
 
-![](/image_tutorial_build.png)
+![Docker Image Build log](/image_tutorial_build.png)
 
 {% alert level="info" %}
 
@@ -91,7 +91,7 @@ gvmkit-build python-example --push --nologin
 
 After running the command, you will see an output that looks like this:
 
-![](/image_tutorial_upload.png)
+![Golem Image upload log](/image_tutorial_upload.png)
 
 The hash is found after the `image link`, which in this case gives us the hash `7e31861bd912a201f363cb6bdddcc5a00e069cec1c3ecc5afee292bc`. If you ever lose your hash, you can always recover/re-generate it by running the same command again.
 
@@ -203,7 +203,7 @@ Run the following command after ensuring the Yagna service is running and config
 
 You have successfully created and used your Golem image in a requestor script!
 
-![](/image_tutorial_upload.png)
+![Golem Image upload log](/image_tutorial_upload.png)
 
 Note that the content of the `description.txt` file that was created in the /golem/info folder is accessible, while the /golem/work folder is empty.
 
