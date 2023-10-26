@@ -29,11 +29,18 @@ function collectHeadings(
   let sections = []
 
   for (let node of nodes) {
-    if (node.name === 'Heading' || (node.name === 'Defaultvalue' && node.attributes && node.attributes.title)) {
+    if (
+      node.name === 'Heading' ||
+      (node.name === 'Defaultvalue' && node.attributes && node.attributes.title)
+    ) {
       let level = node.name === 'Defaultvalue' ? 3 : node.attributes.level
-      let title = node.name === 'Defaultvalue' ? node.attributes.title : getNodeText(node)
+      let title =
+        node.name === 'Defaultvalue' ? node.attributes.title : getNodeText(node)
 
       if (title) {
+        if (node.name === 'Defaultvalue') {
+          console.log(node)
+        }
         let id = node.attributes?.id ?? slugify(title)
         let newNode = { ...node.attributes, id, title, children: [], level }
         if (lastNodes[level - 2]) {
@@ -46,7 +53,9 @@ function collectHeadings(
       }
     }
 
-    sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes, idMap))
+    sections.push(
+      ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
+    )
   }
   return sections
 }
