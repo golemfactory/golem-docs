@@ -4,7 +4,7 @@ The JS SDK is designed to streamline the experience for developers by providing 
 
 Below is a summary of the default values, their significance, and the associated parameters that can be adjusted as per your requirements:
 
-## executorOptions
+## ExecutorOptions
 
 {% defaultvalue title="taskTimeout" defaultValue="5 * 60 * 1000" %} 
 Specifies the timeout for executing a single task, measured in milliseconds (ms). 
