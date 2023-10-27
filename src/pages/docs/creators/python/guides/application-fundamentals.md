@@ -13,7 +13,7 @@ A Golem application is any kind of software that utilizes Golem Network's resour
 It usually consists of two counterparts: a requestor agent and a provider component, which work together to deliver the functionality that the requestor needs.
 
 In the simplest case, the provider component is a docker-like image (sometimes referred-to as "payload") running on the provider's machine.
-The image is run is a way that assures effective isolation of execution from the host. A single Golem application can utilize multiple such components.
+The image is run in a way that assures effective isolation of execution from the host. A single Golem application can utilize multiple such components.
 
 The provider payloads are orchestrated by the requestor agent, which is a piece of code talking directly to `yagna` via its REST API on the requestor's end.
 
@@ -51,7 +51,7 @@ Golem applications using `yapapi` follow a pattern where a requestor agent issue
 The responses from those commands are fed back to the requestor agent, and may be processed further, according to the application logic.
 
 In all cases where execution of those commands is required, this is instrumented using a _work generator pattern_, a variation of the Command design pattern.
-Actions to be performed are wrapped under `Script` objects, which are marshaled by the high-level API library. Requestor agent programmer is expected to develop code which composes those scripts and returns them via an asynchronous generator.
+Actions to be performed are wrapped under `Script` objects, which are marshaled by the high-level API library. The requestor agent programmer is expected to develop code which composes those scripts and returns them via an asynchronous generator.
 
 ## Basic example
 
@@ -73,7 +73,7 @@ A `worker()` function is specified, which will be called by the high-level libra
 
 For each set of commands that we'd like to execute on the provider's end, the `new_script()` is called on the `WorkContext` instance to create a `Script` object to hold our execution script.
 
-Then, a `run()` method is called on the `Script` instance to build a command which issues a `bash` statement on the remote VM. This call builds a RUN command. Note that we're saving a handle to its future result (which is an async awaitable that will be filled with the actual result later on).
+Then, a `run()` method is called on the `Script` instance to build a command which issues a `bash` statement on the remote VM. This call builds a `RUN` command. Note that we're saving a handle to its future result (which is an async awaitable that will be filled with the actual result later on).
 
 A subsequent `yield` statement then sends the prepared script to the caller of the `worker()` method, which effectively passes it for execution by the provider.
 
