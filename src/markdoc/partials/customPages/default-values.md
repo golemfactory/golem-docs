@@ -38,7 +38,7 @@ The base URL of the yagna REST API.
 
 
 
-## packagePackageOptions
+## PackageOptions
 
 {% defaultvalue title="engine" defaultValue="vm" %} 
 Specifies the type of the payload. Options include: `vm`, `wasm`.
@@ -92,6 +92,7 @@ Sets the maximum execution time for a script, either a single command or a batch
 
 {% defaultvalue title="network" defaultValue="goerli" %} 
 Defines the blockchain network for processing payments. The `goerli` option indicates a test network that utilizes test GLM. Other options include `polygon`.
+Important: the `nework` is a property of payment object: `payment: { network: "goerli", driver: "erc20" }`.
 {% /defaultvalue %}
 
 {% defaultvalue title="budget" defaultValue="1.0" %} 
