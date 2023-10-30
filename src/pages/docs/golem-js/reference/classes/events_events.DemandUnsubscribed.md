@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new DemandUnsubscribed**(`data?`)
+• **new DemandUnsubscribed**(`data?`): [`DemandUnsubscribed`](events_events.DemandUnsubscribed)
 
 #### Parameters
 
@@ -37,6 +37,10 @@ type: "reference"
 | :------ | :------ |
 | `data?` | `Object` |
 | `data.id` | `string` |
+
+#### Returns
+
+[`DemandUnsubscribed`](events_events.DemandUnsubscribed)
 
 #### Inherited from
 

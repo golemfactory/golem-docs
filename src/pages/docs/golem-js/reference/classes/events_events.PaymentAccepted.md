@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new PaymentAccepted**(`data?`)
+• **new PaymentAccepted**(`data?`): [`PaymentAccepted`](events_events.PaymentAccepted)
 
 #### Parameters
 
@@ -40,6 +40,10 @@ type: "reference"
 | `data.providerId` | `string` |
 | `data.agreementId` | `string` |
 | `data.amount` | `string` |
+
+#### Returns
+
+[`PaymentAccepted`](events_events.PaymentAccepted)
 
 #### Inherited from
 

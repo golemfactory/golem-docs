@@ -45,7 +45,7 @@ Proposal module - an object representing an offer in the state of a proposal fro
 
 ### constructor
 
-• **new Proposal**(`subscriptionId`, `parentId`, `setCounteringProposalReference`, `api`, `model`, `demandRequest`, `eventTarget?`)
+• **new Proposal**(`subscriptionId`, `parentId`, `setCounteringProposalReference`, `api`, `model`, `demandRequest`, `eventTarget?`): [`Proposal`](market_proposal.Proposal)
 
 Create proposal for given subscription ID
 
@@ -60,6 +60,10 @@ Create proposal for given subscription ID
 | `model` | `Proposal` | ProposalModel |
 | `demandRequest` | `DemandOfferBase` | DemandOfferBase |
 | `eventTarget?` | `EventTarget` | EventTarget |
+
+#### Returns
+
+[`Proposal`](market_proposal.Proposal)
 
 #### Defined in
 
@@ -174,7 +178,7 @@ ___
 
 ### validate
 
-▸ `Protected` **validate**(): `void`
+▸ **validate**(): `void`
 
 Validates if the proposal satisfies basic business rules, is complete and thus safe to interact with
 

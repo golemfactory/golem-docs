@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new AgreementCreated**(`data?`)
+• **new AgreementCreated**(`data?`): [`AgreementCreated`](events_events.AgreementCreated)
 
 #### Parameters
 
@@ -41,6 +41,10 @@ type: "reference"
 | `data.providerName` | `string` |
 | `data.proposalId` | `string` |
 | `data.validTo?` | `string` |
+
+#### Returns
+
+[`AgreementCreated`](events_events.AgreementCreated)
 
 #### Inherited from
 

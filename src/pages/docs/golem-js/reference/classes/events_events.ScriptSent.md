@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ScriptSent**(`data?`)
+• **new ScriptSent**(`data?`): [`ScriptSent`](events_events.ScriptSent)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.activityId` | `string` |
 | `data.agreementId` | `string` |
+
+#### Returns
+
+[`ScriptSent`](events_events.ScriptSent)
 
 #### Inherited from
 

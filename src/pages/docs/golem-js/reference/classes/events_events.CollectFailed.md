@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new CollectFailed**(`data?`)
+• **new CollectFailed**(`data?`): [`CollectFailed`](events_events.CollectFailed)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`CollectFailed`](events_events.CollectFailed)
 
 #### Inherited from
 

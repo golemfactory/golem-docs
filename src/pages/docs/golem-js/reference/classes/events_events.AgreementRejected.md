@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new AgreementRejected**(`data?`)
+• **new AgreementRejected**(`data?`): [`AgreementRejected`](events_events.AgreementRejected)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ type: "reference"
 | `data.id` | `string` |
 | `data.providerId` | `string` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`AgreementRejected`](events_events.AgreementRejected)
 
 #### Inherited from
 

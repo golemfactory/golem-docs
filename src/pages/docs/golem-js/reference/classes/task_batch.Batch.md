@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new Batch**(`activity`, `storageProvider`, `logger?`)
+• **new Batch**(`activity`, `storageProvider`, `logger?`): [`Batch`](task_batch.Batch)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ type: "reference"
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
 | `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
+#### Returns
+
+[`Batch`](task_batch.Batch)
+
 #### Defined in
 
 [src/task/batch.ts:15](https://github.com/golemfactory/golem-js/blob/552d481/src/task/batch.ts#L15)
@@ -47,7 +51,7 @@ type: "reference"
 
 ### create
 
-▸ `Static` **create**(`activity`, `storageProvider`, `logger?`): [`Batch`](task_batch.Batch)
+▸ **create**(`activity`, `storageProvider`, `logger?`): [`Batch`](task_batch.Batch)
 
 #### Parameters
 

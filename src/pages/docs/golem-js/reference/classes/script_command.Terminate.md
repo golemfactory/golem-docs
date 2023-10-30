@@ -34,13 +34,17 @@ type: "reference"
 
 ### constructor
 
-• **new Terminate**(`args?`)
+• **new Terminate**(`args?`): [`Terminate`](script_command.Terminate)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `args?` | `object` |
+
+#### Returns
+
+[`Terminate`](script_command.Terminate)
 
 #### Overrides
 

@@ -157,7 +157,7 @@ ___
 
 ### table
 
-▸ `Optional` **table**(`object`): `any`
+▸ **table**(`object`): `any`
 
 Produce a table representation of the supplied data.
 This is currently used to display cost summary.

@@ -58,7 +58,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 ### constructor
 
-• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `options?`)
+• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `options?`): [`Task`](task_task.Task)<`InputType`, `OutputType`\>
 
 #### Type parameters
 
@@ -76,6 +76,10 @@ Represents one computation unit that will be run on the one provider machine (e.
 | `data?` | `InputType` |
 | `initWorker?` | [`Worker`](../modules/task_work#worker)<`undefined`\> |
 | `options?` | [`TaskOptions`](../modules/task_task#taskoptions) |
+
+#### Returns
+
+[`Task`](task_task.Task)<`InputType`, `OutputType`\>
 
 #### Defined in
 

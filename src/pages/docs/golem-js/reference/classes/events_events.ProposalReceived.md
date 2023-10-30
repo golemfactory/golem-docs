@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ProposalReceived**(`data?`)
+• **new ProposalReceived**(`data?`): [`ProposalReceived`](events_events.ProposalReceived)
 
 #### Parameters
 
@@ -40,6 +40,10 @@ type: "reference"
 | `data.providerId` | `string` |
 | `data.parentId` | ``null`` \| `string` |
 | `data.details` | [`ProposalDetails`](../interfaces/market_proposal.ProposalDetails) |
+
+#### Returns
+
+[`ProposalReceived`](events_events.ProposalReceived)
 
 #### Inherited from
 

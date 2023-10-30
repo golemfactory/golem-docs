@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ScriptExecuted**(`data?`)
+• **new ScriptExecuted**(`data?`): [`ScriptExecuted`](events_events.ScriptExecuted)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ type: "reference"
 | `data.activityId` | `string` |
 | `data.agreementId` | `string` |
 | `data.success` | `boolean` |
+
+#### Returns
+
+[`ScriptExecuted`](events_events.ScriptExecuted)
 
 #### Inherited from
 

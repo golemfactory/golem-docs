@@ -29,7 +29,7 @@ A high-level module for defining and executing tasks in the golem network
 
 ### create
 
-▸ `Static` **create**(`options`): `Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
+▸ **create**(`options`): `Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 Create a new Task Executor
 

@@ -79,7 +79,7 @@ ___
 
 ### create
 
-▸ `Static` **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`<[`Activity`](activity_activity.Activity)\>
+▸ **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`<[`Activity`](activity_activity.Activity)\>
 
 Create activity for given agreement ID
 
@@ -170,7 +170,7 @@ ___
 
 ### send
 
-▸ `Protected` **send**(`script`): `Promise`<`string`\>
+▸ **send**(`script`): `Promise`<`string`\>
 
 #### Parameters
 

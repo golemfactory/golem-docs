@@ -22,13 +22,17 @@ type: "reference"
 
 ### constructor
 
-• **new AgreementCandidate**(`proposal`)
+• **new AgreementCandidate**(`proposal`): [`AgreementCandidate`](agreement_service.AgreementCandidate)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `proposal` | [`Proposal`](market_proposal.Proposal) |
+
+#### Returns
+
+[`AgreementCandidate`](agreement_service.AgreementCandidate)
 
 #### Defined in
 
