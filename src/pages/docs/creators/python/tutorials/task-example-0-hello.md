@@ -8,7 +8,7 @@ type: tutorial
 
 ## Introduction
 
-This example illustrates following Golem features & aspects:
+This example illustrates tfollowing Golem features & aspects:
 
 - VM runtime
 - Task execution
@@ -180,7 +180,7 @@ await golem.stop()
 As for the parameters passed to the `Golem` constructor:
 
 - `budget` specifies our desired budget (in GLM) for the total cost of all tasks computed using this `Golem` instance.
-- `subnet_tag` specifies the name of a Golem network sub-network we'd like to use for all Golem communication performed by this `Golem` instance.
+- `subnet_tag` specifies the name of a Golem network subnet we'd like to use for all Golem communication performed by this `Golem` instance.
 
 #### Execution
 
