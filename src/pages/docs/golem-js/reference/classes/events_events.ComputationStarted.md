@@ -29,13 +29,17 @@ type: "reference"
 
 ### constructor
 
-• **new ComputationStarted**(`data?`)
+• **new ComputationStarted**(`data?`): [`ComputationStarted`](events_events.ComputationStarted)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `data?` | `undefined` |
+
+#### Returns
+
+[`ComputationStarted`](events_events.ComputationStarted)
 
 #### Inherited from
 

@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new DemandFailed**(`data?`)
+• **new DemandFailed**(`data?`): [`DemandFailed`](events_events.DemandFailed)
 
 #### Parameters
 
@@ -37,6 +37,10 @@ type: "reference"
 | :------ | :------ |
 | `data?` | `Object` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`DemandFailed`](events_events.DemandFailed)
 
 #### Inherited from
 

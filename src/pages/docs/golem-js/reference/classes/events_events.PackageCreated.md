@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new PackageCreated**(`data?`)
+• **new PackageCreated**(`data?`): [`PackageCreated`](events_events.PackageCreated)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
 | `data.details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
+
+#### Returns
+
+[`PackageCreated`](events_events.PackageCreated)
 
 #### Inherited from
 

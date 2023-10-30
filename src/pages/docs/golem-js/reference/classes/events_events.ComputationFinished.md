@@ -29,13 +29,17 @@ type: "reference"
 
 ### constructor
 
-• **new ComputationFinished**(`data?`)
+• **new ComputationFinished**(`data?`): [`ComputationFinished`](events_events.ComputationFinished)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `data?` | `undefined` |
+
+#### Returns
+
+[`ComputationFinished`](events_events.ComputationFinished)
 
 #### Inherited from
 

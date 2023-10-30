@@ -40,7 +40,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 ### create
 
-▸ `Static` **create**(`options`): [`Package`](package_package.Package)
+▸ **create**(`options`): [`Package`](package_package.Package)
 
 #### Parameters
 
@@ -60,7 +60,7 @@ ___
 
 ### getImageIdentifier
 
-▸ `Static` **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
+▸ **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
 
 #### Parameters
 
@@ -80,7 +80,7 @@ ___
 
 ### GetHashFromTag
 
-▸ `Static` **GetHashFromTag**(`tag`): `string`
+▸ **GetHashFromTag**(`tag`): `string`
 
 #### Parameters
 

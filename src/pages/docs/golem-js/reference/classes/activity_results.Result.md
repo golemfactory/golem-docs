@@ -42,7 +42,7 @@ type: "reference"
 
 ### constructor
 
-• **new Result**<`TData`\>(`props`)
+• **new Result**<`TData`\>(`props`): [`Result`](activity_results.Result)<`TData`\>
 
 #### Type parameters
 
@@ -55,6 +55,10 @@ type: "reference"
 | Name | Type |
 | :------ | :------ |
 | `props` | [`ResultData`](../interfaces/activity_results.ResultData)<`any`\> |
+
+#### Returns
+
+[`Result`](activity_results.Result)<`TData`\>
 
 #### Defined in
 

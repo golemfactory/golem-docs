@@ -32,13 +32,17 @@ type: "reference"
 
 ### constructor
 
-• **new GftpStorageProvider**(`logger?`)
+• **new GftpStorageProvider**(`logger?`): [`GftpStorageProvider`](storage_gftp.GftpStorageProvider)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
+
+#### Returns
+
+[`GftpStorageProvider`](storage_gftp.GftpStorageProvider)
 
 #### Defined in
 

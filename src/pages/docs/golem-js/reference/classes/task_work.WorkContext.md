@@ -44,7 +44,7 @@ Work Context
 
 ### constructor
 
-• **new WorkContext**(`activity`, `options?`)
+• **new WorkContext**(`activity`, `options?`): [`WorkContext`](task_work.WorkContext)
 
 #### Parameters
 
@@ -52,6 +52,10 @@ Work Context
 | :------ | :------ |
 | `activity` | [`Activity`](activity_activity.Activity) |
 | `options?` | [`WorkOptions`](../interfaces/task_work.WorkOptions) |
+
+#### Returns
+
+[`WorkContext`](task_work.WorkContext)
 
 #### Defined in
 

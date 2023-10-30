@@ -23,13 +23,17 @@ type: "reference"
 
 ### constructor
 
-• **new NetworkError**(`message?`)
+• **new NetworkError**(`message?`): [`NetworkError`](network_network.NetworkError)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `message?` | `string` |
+
+#### Returns
+
+[`NetworkError`](network_network.NetworkError)
 
 #### Inherited from
 
@@ -39,7 +43,7 @@ Error.constructor
 
 node_modules/typescript/lib/lib.es5.d.ts:1073
 
-• **new NetworkError**(`message?`, `options?`)
+• **new NetworkError**(`message?`, `options?`): [`NetworkError`](network_network.NetworkError)
 
 #### Parameters
 
@@ -47,6 +51,10 @@ node_modules/typescript/lib/lib.es5.d.ts:1073
 | :------ | :------ |
 | `message?` | `string` |
 | `options?` | `ErrorOptions` |
+
+#### Returns
+
+[`NetworkError`](network_network.NetworkError)
 
 #### Inherited from
 

@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new AgreementConfirmed**(`data?`)
+• **new AgreementConfirmed**(`data?`): [`AgreementConfirmed`](events_events.AgreementConfirmed)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.providerId` | `string` |
+
+#### Returns
+
+[`AgreementConfirmed`](events_events.AgreementConfirmed)
 
 #### Inherited from
 

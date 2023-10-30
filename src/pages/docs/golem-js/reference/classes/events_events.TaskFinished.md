@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new TaskFinished**(`data?`)
+• **new TaskFinished**(`data?`): [`TaskFinished`](events_events.TaskFinished)
 
 #### Parameters
 
@@ -37,6 +37,10 @@ type: "reference"
 | :------ | :------ |
 | `data?` | `Object` |
 | `data.id` | `string` |
+
+#### Returns
+
+[`TaskFinished`](events_events.TaskFinished)
 
 #### Inherited from
 

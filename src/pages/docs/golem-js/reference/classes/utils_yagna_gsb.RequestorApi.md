@@ -32,7 +32,7 @@ type: "reference"
 
 ### constructor
 
-• **new RequestorApi**(`configuration?`, `basePath?`, `axios?`)
+• **new RequestorApi**(`configuration?`, `basePath?`, `axios?`): [`RequestorApi`](utils_yagna_gsb.RequestorApi)
 
 #### Parameters
 
@@ -41,6 +41,10 @@ type: "reference"
 | `configuration?` | `Configuration` |
 | `basePath?` | `string` |
 | `axios?` | `AxiosInstance` |
+
+#### Returns
+
+[`RequestorApi`](utils_yagna_gsb.RequestorApi)
 
 #### Inherited from
 

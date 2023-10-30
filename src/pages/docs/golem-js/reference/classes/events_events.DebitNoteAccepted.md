@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new DebitNoteAccepted**(`data?`)
+• **new DebitNoteAccepted**(`data?`): [`DebitNoteAccepted`](events_events.DebitNoteAccepted)
 
 #### Parameters
 
@@ -40,6 +40,10 @@ type: "reference"
 | `data.providerId` | `string` |
 | `data.agreementId` | `string` |
 | `data.amount` | `string` |
+
+#### Returns
+
+[`DebitNoteAccepted`](events_events.DebitNoteAccepted)
 
 #### Inherited from
 

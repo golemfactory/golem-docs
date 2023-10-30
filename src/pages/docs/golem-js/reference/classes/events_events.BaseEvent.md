@@ -99,7 +99,7 @@ type: "reference"
 
 ### constructor
 
-• **new BaseEvent**<`DataType`\>(`data?`)
+• **new BaseEvent**<`DataType`\>(`data?`): [`BaseEvent`](events_events.BaseEvent)<`DataType`\>
 
 #### Type parameters
 
@@ -112,6 +112,10 @@ type: "reference"
 | Name | Type |
 | :------ | :------ |
 | `data?` | `DataType` |
+
+#### Returns
+
+[`BaseEvent`](events_events.BaseEvent)<`DataType`\>
 
 #### Overrides
 

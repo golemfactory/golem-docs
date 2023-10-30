@@ -36,7 +36,7 @@ type: "reference"
 
 ### constructor
 
-• **new DownloadData**(`storageProvider`, `srcPath`)
+• **new DownloadData**(`storageProvider`, `srcPath`): [`DownloadData`](script_command.DownloadData)
 
 #### Parameters
 
@@ -44,6 +44,10 @@ type: "reference"
 | :------ | :------ |
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
 | `srcPath` | `string` |
+
+#### Returns
+
+[`DownloadData`](script_command.DownloadData)
 
 #### Overrides
 
