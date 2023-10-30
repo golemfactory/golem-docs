@@ -1,13 +1,12 @@
 ---
-description: Tutorials
+description: Browse the table of python tutorials for the Golem Python SDK
 title: Python SDK Tutorials
 type: Toc
 ---
 
 # Golem Python Tutorials
 
-Python tutorials are designed for developers who want to learn Golem concepts by a practical realization of proposed project challenges.
-Here is a list of available tutorials:
+These Python tutorials are for developers who want to understand Golem concepts through hands-on project challenges.
 
 [Task API Hello World](/docs/creators/python/tutorials/task-example-0-hello)
 
