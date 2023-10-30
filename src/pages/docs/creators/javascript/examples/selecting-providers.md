@@ -100,7 +100,7 @@ Let's see how to use it:
 
 Note that `customFilter` is a function that accepts a `proposal` object as its parameter and should return `true` or `false` depending on the decision based on the proposal properties.
 
-Our custom function collects pricing data until we have a set of 10 proposals. Then it accepts proposals only if the price is lower than average from the last ten proposals.
+Our custom function collects pricing data until we have a set of 5 proposals. Then it accepts proposals only if the price is lower than average from the last five proposals.
 
 Provider price is calculated as the product of prices defined per specific usage counter.
 

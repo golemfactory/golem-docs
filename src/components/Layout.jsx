@@ -261,7 +261,9 @@ export function Layout({
             </div>
 
             <Prose>{children}</Prose>
-            <FeedbackButtons article={true} identifier={router.pathname} />
+            {type == 'page' || isHomePage || is404Page || is500Page ? (
+              null
+            ) : <FeedbackButtons article={true} identifier={router.pathname} /> }
           </article>
         </div>
         {type !== 'page' &&
