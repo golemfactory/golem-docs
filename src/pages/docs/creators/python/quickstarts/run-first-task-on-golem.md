@@ -1,16 +1,16 @@
 ---
-description: Run first Python task on Golem
+description: Run your first Python task on Golem
 title: Golem Python TASK API QuickStart
 type: Quickstart
 ---
 
 # Introduction
 
-In this article, we'll show you how to run a simple task on the Golem Network usgin Python SDK.
+In this article, we'll show you how to run a simple task on the Golem Network using the Python SDK.
 
-We perform a simple tasks for QuickStart: will render six scenes in parallel on rented providers.
+We will perform a simple task for the quickstart, which will render six scenes in parallel on rented providers.
 
-It should take just a few minutes to complete, and you will see generated output files which are `PNG` images in your folder.
+It should take just a few minutes to complete, and you will see the generated output files which are `PNG` images in your folder.
 
 {% alert level="info" %}
 This example has been designed to work with the following environments:
@@ -23,7 +23,7 @@ This example has been designed to work with the following environments:
 
 ## Installing and running Yagna
 
-Yagna is a service that aims to communicate and perform operations on the Golem Network. Let's get started by installing it.
+Yagna is a service that communicates and perform operations on the Golem Network. Let's get started by installing it.
 
 ### Install Yagna
 
@@ -40,9 +40,9 @@ You might be asked to modify your PATH afterward.
 {% /tab %}
 {% tab label="Windows Manual installation" %}
 
-Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
+There's no easy installer for Windows, thus you must install it manually yourself using the instructions below.
 
-1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+1. Download the latest requestor package `golem-requestor-windows-.....` from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
 2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
 3. Copy those files to `C:\Windows\System32`.
 
