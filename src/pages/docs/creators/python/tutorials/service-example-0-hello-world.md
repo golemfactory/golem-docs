@@ -8,11 +8,11 @@ type: tutorial
 
 ## Introduction
 
-This example illustrates following Golem features & aspects:
+This example illustrates the following Golem features & aspects:
 
 - VM runtime
 - Service provisioning and execution
-- Retrieving command output from provider's exe unit
+- Retrieving command output from the provider's ExeUnit
 
 ## Prerequisites
 
@@ -112,7 +112,7 @@ In the Golem API, services are implemented by extending the base `Service` class
 All three life cycle methods (i.e. `start`, `run` and `shutdown`) are optional, although in most cases a service will require at least `start` to be implemented.
 
 {% alert level="info" %}
-To control service instances running on remote exe units, all life cycle methods require access to a `WorkContext` object tied to some active instance.
+To control service instances running on remote ExeUnits, all life cycle methods require access to a `WorkContext` object tied to some active instance.
 
 This `WorkContext` instance is provided through the field `self._ctx` of the `Service` class. This means that, behind the scenes, an object of our `Service` subclass is spawned for each service instance running on a provider.
 {% /alert %}
@@ -147,13 +147,13 @@ async def start(self):
 
 ```
 
-Our `start` function is responsible for starting a background process on the provider's exe unit. In the case of `DateService` this process is going to be the following shell command:
+Our `start` function is responsible for starting a background process on the provider's ExeUnit. In the case of `DateService` this process is going to be the following shell command:
 
 ```bash
 while true; do date > /golem/work/date.txt; sleep 5; done &
 ```
 
-The above command has its placeholders substituted with their actual default values. When run in the provider's exe unit, this will keep rewriting the file `/golem/work/date.txt` with the output of `date` every 5 seconds.
+The above command has its placeholders substituted with their actual default values. When run in the provider's ExeUnit, this will keep rewriting the file `/golem/work/date.txt` with the output of `date` every 5 seconds.
 
 The file `/golem/work/date.txt` will be our source of data which we'll later on read in our service's `run` function.
 
@@ -178,7 +178,7 @@ async def run(self):
 
 This function is where the requestor agent has a chance to monitor and control each running service instance. In the case of our example we periodically monitor values generated on a service instance by printing them out to the console.
 
-To retrieve the last sample we run the shell command `cat /golem/work/date.txt` in the provider's exe unit and then retrieve its output by awaiting on `future_results`. This gives us an array of objects containing command results which we can use to get the output we need.
+To retrieve the last sample we run the shell command `cat /golem/work/date.txt` in the provider's ExeUnit and then retrieve its output by awaiting on `future_results`. This gives us an array of objects containing command results which we can use to get the output we need.
 
 With the service implementation complete let's now take a look at how we can provision instances of this service.
 
@@ -193,7 +193,7 @@ async def main():
 In the function `main` we start by creating an instance of `Golem`, specifying our budget and target subnet. We then use it as a context manager to run our service.
 
 {% alert level="info" %}
-If you are not familiar with the `Golem` class and/or how it's used in these examples, take a look at [Task Example 0: Hello World!](/docs/creators/python/tutorials/task-example-0-hello#golem-executor) (this links to a section about `Golem/Executor` classes).
+If you are not familiar with the `Golem` class and/or how it's used in these examples, take a look at [Task Example 0: Hello World!](/docs/creators/python/tutorials/task-example-0-hello#golem-executor) (this links to a section about the `Golem/Executor` classes).
 {% /alert %}
 
 Provisioning our service is done using the method `run_service` which, in our example, is given two parameters:
@@ -225,7 +225,7 @@ Using the `Cluster` object's `instances` field we can iterate over our service i
 
 That's it!
 
-We can now try running our service. Assuming you have a `yagna` node active locally (refer to [Yagna installation](/docs/creators/python/examples/tools/yagna-installation-for-requestors) in case of any doubts) and `yapapi` library installed, you can start the example by running the below command from the example's directory:
+We can now try running our service. Assuming you have a `yagna` node active locally (refer to the [Yagna installation](/docs/creators/python/examples/tools/yagna-installation-for-requestors) in case of any doubts) and `yapapi` library installed, you can start the example by running the below command from the example's directory:
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}
