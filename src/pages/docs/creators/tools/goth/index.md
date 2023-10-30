@@ -44,7 +44,7 @@ So, now that you know what `goth` is and how it can help you as the developer, l
 
 {% alert level="warning" %}
 
-Word of caution though - currently, Golem provider nodes require actual Linux machines to run.
+Word of caution though - currently, Golem provider nodes requires Linux with access to the KVM module, in order to run.
 
 Because of that, while it may be possible to utilize a subset of our integration testing framework on Mac or Windows, for the time being, local end-to-end testing of Golem applications is only fully supported on Linux.
 
