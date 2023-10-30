@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ActivityDestroyed**(`data?`)
+• **new ActivityDestroyed**(`data?`): [`ActivityDestroyed`](events_events.ActivityDestroyed)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.agreementId` | `string` |
+
+#### Returns
+
+[`ActivityDestroyed`](events_events.ActivityDestroyed)
 
 #### Inherited from
 

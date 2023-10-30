@@ -33,13 +33,17 @@ type: "reference"
 
 ### constructor
 
-• **new Yagna**(`options?`)
+• **new Yagna**(`options?`): [`Yagna`](utils_yagna_yagna.Yagna)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `options?` | [`YagnaOptions`](../modules/utils_yagna_yagna#yagnaoptions) |
+
+#### Returns
+
+[`Yagna`](utils_yagna_yagna.Yagna)
 
 #### Defined in
 
@@ -111,7 +115,7 @@ ___
 
 ### createApi
 
-▸ `Protected` **createApi**(): [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
+▸ **createApi**(): [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
 
 #### Returns
 
@@ -125,7 +129,7 @@ ___
 
 ### getApiConfig
 
-▸ `Protected` **getApiConfig**(): `Configuration`
+▸ **getApiConfig**(): `Configuration`
 
 #### Returns
 
@@ -139,7 +143,7 @@ ___
 
 ### getApiUrl
 
-▸ `Protected` **getApiUrl**(`apiName?`): `string`
+▸ **getApiUrl**(`apiName?`): `string`
 
 #### Parameters
 
@@ -159,7 +163,7 @@ ___
 
 ### errorHandler
 
-▸ `Protected` **errorHandler**(`error`): `Promise`<`AxiosError`<`unknown`, `any`\>\>
+▸ **errorHandler**(`error`): `Promise`<`AxiosError`<`unknown`, `any`\>\>
 
 #### Parameters
 
@@ -179,7 +183,7 @@ ___
 
 ### addErrorHandler
 
-▸ `Protected` **addErrorHandler**(`api`): `void`
+▸ **addErrorHandler**(`api`): `void`
 
 #### Parameters
 

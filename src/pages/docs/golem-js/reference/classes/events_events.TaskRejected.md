@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new TaskRejected**(`data?`)
+• **new TaskRejected**(`data?`): [`TaskRejected`](events_events.TaskRejected)
 
 #### Parameters
 
@@ -42,6 +42,10 @@ type: "reference"
 | `data.providerId` | `string` |
 | `data.providerName` | `string` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`TaskRejected`](events_events.TaskRejected)
 
 #### Inherited from
 

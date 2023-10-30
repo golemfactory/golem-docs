@@ -47,13 +47,17 @@ network.init().then(() => {
 
 ### constructor
 
-• **new GolemNetwork**(`config`)
+• **new GolemNetwork**(`config`): [`GolemNetwork`](golem_network_golem_network.GolemNetwork)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `config` | [`GolemNetworkConfig`](../interfaces/golem_network_golem_network.GolemNetworkConfig) |
+
+#### Returns
+
+[`GolemNetwork`](golem_network_golem_network.GolemNetwork)
 
 #### Defined in
 

@@ -29,7 +29,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 ### constructor
 
-• **new NetworkNode**(`id`, `ip`, `getNetworkInfo`, `apiUrl`)
+• **new NetworkNode**(`id`, `ip`, `getNetworkInfo`, `apiUrl`): [`NetworkNode`](network_node.NetworkNode)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 | `ip` | `IPv4` |
 | `getNetworkInfo` | () => [`NetworkInfo`](../interfaces/network_network.NetworkInfo) |
 | `apiUrl` | `string` |
+
+#### Returns
+
+[`NetworkNode`](network_node.NetworkNode)
 
 #### Defined in
 

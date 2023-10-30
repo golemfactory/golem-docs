@@ -28,7 +28,7 @@ type: "reference"
 
 ### constructor
 
-• **new Payments**(`yagnaApi`, `options?`)
+• **new Payments**(`yagnaApi`, `options?`): [`Payments`](payment_payments.Payments)
 
 #### Parameters
 
@@ -36,6 +36,10 @@ type: "reference"
 | :------ | :------ |
 | `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
+
+#### Returns
+
+[`Payments`](payment_payments.Payments)
 
 #### Overrides
 
@@ -49,7 +53,7 @@ EventTarget.constructor
 
 ### create
 
-▸ `Static` **create**(`yagnaApi`, `options?`): `Promise`<[`Payments`](payment_payments.Payments)\>
+▸ **create**(`yagnaApi`, `options?`): `Promise`<[`Payments`](payment_payments.Payments)\>
 
 #### Parameters
 

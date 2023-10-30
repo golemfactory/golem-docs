@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ProposalConfirmed**(`data?`)
+• **new ProposalConfirmed**(`data?`): [`ProposalConfirmed`](events_events.ProposalConfirmed)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.providerId` | `string` |
+
+#### Returns
+
+[`ProposalConfirmed`](events_events.ProposalConfirmed)
 
 #### Inherited from
 

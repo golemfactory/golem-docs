@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new AgreementTerminated**(`data?`)
+• **new AgreementTerminated**(`data?`): [`AgreementTerminated`](events_events.AgreementTerminated)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ type: "reference"
 | `data.id` | `string` |
 | `data.providerId` | `string` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`AgreementTerminated`](events_events.AgreementTerminated)
 
 #### Inherited from
 

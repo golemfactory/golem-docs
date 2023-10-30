@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ComputationFailed**(`data?`)
+• **new ComputationFailed**(`data?`): [`ComputationFailed`](events_events.ComputationFailed)
 
 #### Parameters
 
@@ -37,6 +37,10 @@ type: "reference"
 | :------ | :------ |
 | `data?` | `Object` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`ComputationFailed`](events_events.ComputationFailed)
 
 #### Inherited from
 

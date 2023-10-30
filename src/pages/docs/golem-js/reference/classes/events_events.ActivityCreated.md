@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ActivityCreated**(`data?`)
+• **new ActivityCreated**(`data?`): [`ActivityCreated`](events_events.ActivityCreated)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.agreementId` | `string` |
+
+#### Returns
+
+[`ActivityCreated`](events_events.ActivityCreated)
 
 #### Inherited from
 

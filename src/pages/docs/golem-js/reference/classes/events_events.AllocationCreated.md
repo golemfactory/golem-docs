@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new AllocationCreated**(`data?`)
+• **new AllocationCreated**(`data?`): [`AllocationCreated`](events_events.AllocationCreated)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ type: "reference"
 | `data.id` | `string` |
 | `data.amount` | `number` |
 | `data.platform?` | `string` |
+
+#### Returns
+
+[`AllocationCreated`](events_events.AllocationCreated)
 
 #### Inherited from
 
