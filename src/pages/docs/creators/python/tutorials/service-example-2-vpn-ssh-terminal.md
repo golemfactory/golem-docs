@@ -11,7 +11,7 @@ type: tutorial
 
 ## Introduction
 
-This example illustrates following Golem features & aspects:
+This example illustrates the following Golem features & aspects:
 
 - VM runtime image
 - Service execution
@@ -60,7 +60,7 @@ If you'd like to experiment with modifying it, please refer to our articles abou
 **This is the part that's run by the requestor (you).**
 {% /alert %}
 
-Now we can move on to the requestor agent, which will create a VPN network, attach the Provider node to it, and allow SSH connections via the Net gate available on the `yagna` daemon.
+Now we can move on to the requestor agent, which will create a VPN, attach the Provider node to it, and allow SSH connections via the Net gate available on the `yagna` daemon.
 
 The full source code of the requestor agent is available in yapapi's github repo: [https://github.com/golemfactory/yapapi/tree/master/examples/ssh/ssh.py](https://github.com/golemfactory/yapapi/tree/master/examples/ssh/ssh.py).
 
@@ -105,7 +105,7 @@ async def get_payload():
     )
 ```
 
-As is the case with most of the examples that we're presenting in the handbook, the payload here is a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image repository](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format).
+As is the case with most of the examples that we're presenting in the handbook, the payload here is a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image registry](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format).
 
 Note though, that now the payload constraints also indicate that the Provider is **required to offer the VPN capability** within its VM runtime, which is automatically supported by any providers running `yagna 0.8`and above.
 
@@ -195,9 +195,9 @@ ssh -o ProxyCommand='websocat asyncstdio: localhost:22 --binary -H=Authorization
 ```
 
 {% alert level="info" %}
-Note in your command line you must use a YAGNA App Key as generated during your initial `yagna` service setup.
+Note in your command-line you must use a Yagna App Key as generated during your initial `yagna` service setup.
 
-This is necessary, as the connection to Net gate on a websocket needs to be authenticated!
+This is necessary, as the connection to the Net gate on a websocket needs to be authenticated!
 {% /alert %}
 
 Once you launch the SSH client and approve the host's SSH key you'll need to use the password generated alongside the connection command above to log in to the provider's VM.
