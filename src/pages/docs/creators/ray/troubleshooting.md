@@ -18,8 +18,6 @@ Sometimes it is not enough.
 
 {% solution %}
 
-TODO logfile names
-
 There are a couple of log files:
 - `/tmp/ray_on_golem/webserver_debug.log` one log, combining all the information we have.
 - `/tmp/ray_on_golem/webserver.log` - cluster manager logs
