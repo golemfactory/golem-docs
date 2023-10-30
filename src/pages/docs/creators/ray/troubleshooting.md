@@ -21,14 +21,13 @@ Sometimes it is not enough.
 TODO logfile names
 
 There are a couple of log files:
-- `/tmp/ray_on_golem/ONE_SUPER_LOG` one log, combining all the information we have.
-- `/tmp/ray_on_golem/webserver.*` - cluster manager logs
-- `~/.local/share/yagna/yagna_rCURRENT.log` - golem node (yagna) logs
-- `/tmp/ray/*` - ray logs
+- `/tmp/ray_on_golem/webserver_debug.log` one log, combining all the information we have.
+- `/tmp/ray_on_golem/webserver.log` - cluster manager logs
+- `/tmp/ray_on_golem/yagna.log` - golem node (yagna) logs
 
 Now you can:
-- Look at the ONE_SUPER_LOG log yourself
-- Share the ONE_SUPER_LOG log with us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
+- Look at the `webserver_debug.log` yourself
+- Share the `webserver_debug.log` with us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
 
 
 {% /solution %}
