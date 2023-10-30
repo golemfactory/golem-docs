@@ -20,7 +20,7 @@ In the Golem service model, the Requestor Agent application specifies the servic
 
 ## Service lifecycle
 
-Golem service follows a certain sequence of states:
+Golem services follows a certain sequence of states:
 
 ![Service State Diagram](/Service-State-Diagram.png)
 
@@ -51,7 +51,7 @@ class SimpleService(Service):
     ...
 ```
 
-An HL API library controls all aspects of the acquisition of suitable Providers, negotiations, and instantiation of Activities. The app needs to indicate the actions to be executed in subsequent "active" states of the Service's lifecycle.
+A HL API library controls all aspects of the acquisition of suitable Providers, negotiations, and instantiation of Activities. The app needs to indicate the actions to be executed in subsequent "active" states of the Service's lifecycle.
 
 ### Define Starting logic
 
