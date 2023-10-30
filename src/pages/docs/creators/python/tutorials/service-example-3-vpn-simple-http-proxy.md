@@ -98,7 +98,7 @@ We don't need to specify the contents of the `run` handler for the service, sinc
 
 ### Running the local HTTP server
 
-Okay, now we have taken care of the provider-end, we need to provide the code which runs the local server.
+Okay, now that we have taken care of the provider-end, we need to provide the code which runs the local server.
 
 We're using the `aiohttp` library to define a very simple TCP server which will listen to requests coming to a port on our localhost.
 
