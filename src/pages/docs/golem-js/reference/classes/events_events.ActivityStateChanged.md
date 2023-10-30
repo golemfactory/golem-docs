@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ActivityStateChanged**(`data?`)
+• **new ActivityStateChanged**(`data?`): [`ActivityStateChanged`](events_events.ActivityStateChanged)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.state` | `string` |
+
+#### Returns
+
+[`ActivityStateChanged`](events_events.ActivityStateChanged)
 
 #### Inherited from
 

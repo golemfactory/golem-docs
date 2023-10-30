@@ -38,7 +38,11 @@ for the platform the SDK is running on.
 
 ### constructor
 
-• **new NullStorageProvider**()
+• **new NullStorageProvider**(): [`NullStorageProvider`](storage_null.NullStorageProvider)
+
+#### Returns
+
+[`NullStorageProvider`](storage_null.NullStorageProvider)
 
 ## Methods
 

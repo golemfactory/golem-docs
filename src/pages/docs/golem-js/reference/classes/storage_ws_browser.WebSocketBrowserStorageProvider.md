@@ -33,7 +33,7 @@ Storage provider that uses GFTP over WebSockets.
 
 ### constructor
 
-• **new WebSocketBrowserStorageProvider**(`yagnaApi`, `options`)
+• **new WebSocketBrowserStorageProvider**(`yagnaApi`, `options`): [`WebSocketBrowserStorageProvider`](storage_ws_browser.WebSocketBrowserStorageProvider)
 
 #### Parameters
 
@@ -41,6 +41,10 @@ Storage provider that uses GFTP over WebSockets.
 | :------ | :------ |
 | `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
 | `options` | [`WebSocketStorageProviderOptions`](../interfaces/storage_ws_browser.WebSocketStorageProviderOptions) |
+
+#### Returns
+
+[`WebSocketBrowserStorageProvider`](storage_ws_browser.WebSocketBrowserStorageProvider)
 
 #### Defined in
 

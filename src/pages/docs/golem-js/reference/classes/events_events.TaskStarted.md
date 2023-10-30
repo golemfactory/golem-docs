@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new TaskStarted**(`data?`)
+• **new TaskStarted**(`data?`): [`TaskStarted`](events_events.TaskStarted)
 
 #### Parameters
 
@@ -41,6 +41,10 @@ type: "reference"
 | `data.activityId` | `string` |
 | `data.providerId` | `string` |
 | `data.providerName` | `string` |
+
+#### Returns
+
+[`TaskStarted`](events_events.TaskStarted)
 
 #### Inherited from
 

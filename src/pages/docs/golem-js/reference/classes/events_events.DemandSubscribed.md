@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new DemandSubscribed**(`data?`)
+• **new DemandSubscribed**(`data?`): [`DemandSubscribed`](events_events.DemandSubscribed)
 
 #### Parameters
 
@@ -38,6 +38,10 @@ type: "reference"
 | `data?` | `Object` |
 | `data.id` | `string` |
 | `data.details` | [`DemandDetails`](../interfaces/market_demand.DemandDetails) |
+
+#### Returns
+
+[`DemandSubscribed`](events_events.DemandSubscribed)
 
 #### Inherited from
 
