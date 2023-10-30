@@ -179,7 +179,7 @@ The example runtime implementation comes complete with `ya-test-runtime-counters
 
 Note how `config.counters` structure is used to specify the custom usage counter metadata.
 
-### Pluging the runtime into `golemsp`
+### Plugging the runtime into `golemsp`
 
 In the `$HOME/.local/lib/yagna/plugins/` directory create:
 
@@ -200,7 +200,7 @@ In the `$HOME/.local/lib/yagna/plugins/` directory create:
 
 - directory `ya-test-runtime-counters` (compare `runtime-path` in above file) where `ya-test-runtime-counters` binary along with Erigon binaries are placed.
 
-New runtime needs also to be enabled in `$HOME/.local/share/ya-provider/presets.json`. Preset object can be copied from other presets. Please note that `exeunit-name` has to match to the `name` property of the plugin above:
+The new runtime also needs  to be enabled in `$HOME/.local/share/ya-provider/presets.json`. The preset object can be copied from other presets. Please note that `exeunit-name` has to match to the `name` property of the plugin above:
 
 ```javascript
 {
