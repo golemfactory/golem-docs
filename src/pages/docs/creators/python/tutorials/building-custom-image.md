@@ -10,13 +10,13 @@ This article will go through the process of creating a Dockerfile, building a Do
 
 {% alert level="info" %}
 
-This the tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
 
 Prerequisites:
 
-- Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
-- Gvmkit-build installed ([see instructions](/docs/creators/python/examples/tools/gvmkit-build-installation))
-- Yagna service installed and running with `try_golem` app-key configured ([see instructions](/docs/creators/python/examples/tools/yagna-installation-for-requestors))
+- Docker. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
+- Gvmkit-build. ([Installation instructions](/docs/creators/python/examples/tools/gvmkit-build-installation))
+- Yagna running with `try_golem` app-key configured ([see instructions](/docs/creators/python/examples/tools/yagna-installation-for-requestors))
 
 {% /alert %}
 
@@ -32,10 +32,10 @@ COPY Dockerfile /golem/info/description.txt
 COPY Dockerfile /golem/work/info.txt
 ```
 
-Note we copy Dockerfile content into 2 different locations:
+Note we copy the Dockerfile content into 2 different locations:
 
 - to /golem/info (this folder is not defined as VOLUME)
-- and to /golem/work (this folder is defied as VOLUME)
+- and to /golem/work (this folder is defined as VOLUME)
 
 ## Building the Docker image
 
@@ -81,7 +81,7 @@ Now when you have a Docker image built, we can convert it to a Golem image. To s
 
 {% alert level="info" %}
 
-If you do not have `gvmkit-build` installed please follow [installation intructions](/docs/creators/python/examples/tools/gvmkit-build-installation). You can also use it without installation using `pipx` commands.
+If you do not have `gvmkit-build` installed, please follow the [installation intructions](/docs/creators/python/examples/tools/gvmkit-build-installation). You can also use it without installation, by using `pipx`.
 
 {% /alert  %}
 
