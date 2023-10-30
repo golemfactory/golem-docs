@@ -23,7 +23,7 @@ Your requestor script will have to:
 - Execute the tasks (it might require sending data to and from providers)
 - Combine the individual outputs into the final solution of the problem at hand.
 
-It's worth noting here that the number of fragments does not necessarily need to depend on the number of provider nodes commissioned to perform our tasks. You can specify the maximum number of providers by the `max_workers` parameter of `execute_tasks` and the high-level API will spawn activities such number of providers as long as there are enough providers available to be engaged you have enough tasks to execute. If the eventual number of fragments is higher than the number of workers, the API will take care of distributing those fragments against the available nodes in an optimal way.
+It's worth noting here that the number of fragments does not necessarily need to depend on the number of provider nodes commissioned to perform our tasks. You can specify the maximum number of providers by the `max_workers` parameter of `execute_tasks` and the high-level API will spawn activities equal to that, as long as there are enough providers available to be engaged. If the eventual number of fragments is higher than the number of workers, the API will take care of distributing those fragments against the available nodes in an optimal way.
 
 The requestor agent will use the API provided by the Golem SDK. One of the APIs implemented there is the Task API based on the Task Model.
 
@@ -35,11 +35,11 @@ Your **tasks** are executed by the `execute_tasks` method of the Golem object. T
 
 The `execute_task` method is responsible for running the **worker** function for each of the **tasks** using the defined **payload**. The payload defines the environment run on the provider machine, where your tasks will be executed. In a simple simplified approach it is a **image**. The particular image is identified by its `tag` or `hash`.
 
-The **worker** function uses the `work generator pattern` explained [here](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext). It is used to define steps required to do tasks like sending data to and from a provider, running specified commands, etc.
+The **worker** function uses the `work generator pattern` explained [here](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext). It is used to define the steps required to do tasks like sending data to and from a provider, running specified commands, etc.
 
 {% docnavigation title="Next steps" %}
 
-- We explain the mechanics of task-based requestor development, with a simple example in [Hello World tutorial](/docs/creators/python/tutorials/task-example-0-hello).
+- We explain the mechanics of task-based requestor development, with a simple example in the [Hello World tutorial](/docs/creators/python/tutorials/task-example-0-hello).
 
 - Try a more complicated thing with a proof-of-concept [hash cracker](/docs/creators/python/tutorials/task-example-1-cracker).
 
@@ -49,7 +49,7 @@ The **worker** function uses the `work generator pattern` explained [here](/docs
 
 {% docnavigation title="See also" %}
 
-- Introduction to [Service Model](/docs/creators/python/guides/service-model) that allows you to launch and control interactive services.
+- Introduction to the [Service Model](/docs/creators/python/guides/service-model) that allows you to launch and control interactive services.
 
 {% /docnavigation %}
 
