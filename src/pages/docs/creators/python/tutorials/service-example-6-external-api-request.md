@@ -89,7 +89,7 @@ Example _Computation Payload Manifest_ must follow a specific [schema](/docs/gol
 }
 ```
 
-Created file should be [verified using JSON schema](/docs/golem/payload-manifest#schema-verification).
+The created file should be [verified using the JSON schema](/docs/golem/payload-manifest#schema-verification).
 
 Then it needs to be encoded in `base64`:
 
@@ -99,7 +99,7 @@ Then it needs to be encoded in `base64`:
 
 ### 2. Yapapi example app
 
-Base64-encoded manifest can be configured using [`yapapi.payload.vm.manifest`](https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.manifest) function, resulting in following `external_api_request.py` file:
+A base64-encoded manifest can be configured using the [`yapapi.payload.vm.manifest`](https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.manifest) function, resulting in following `external_api_request.py` file:
 
 ```py
 import asyncio
