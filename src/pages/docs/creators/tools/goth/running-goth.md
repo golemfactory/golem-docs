@@ -56,7 +56,7 @@ pip install goth
 ```
 
 {% alert level="info" %}
-It is recommended that you use a Python virtual environment for this installation to avoid potential conflicts with your sysem-wide Python packages.
+It is recommended that you use a Python virtual environment for this installation to avoid potential conflicts with your system-wide Python packages.
 
 There is a number of possible solutions to managing Python virtual environments, we recommend: [`pyenv`](https://github.com/pyenv/pyenv), [`poetry`](https://python-poetry.org/) and [`virtualenvwrapper`](https://virtualenvwrapper.readthedocs.io/en/latest/).
 
