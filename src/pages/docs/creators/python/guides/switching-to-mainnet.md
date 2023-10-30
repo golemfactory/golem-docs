@@ -8,7 +8,7 @@ type: Guide
 
 {% alert level="warning" %}
 
-This section is aimed mainly at **requestors** wishing to switch from running simple test tasks on our development subnet (testnet) to launching production payloads utilizing the vast number of providers on the public subnet.
+This section is aimed mainly at **requestors** wanting to switch from running simple test tasks on the testnet to launching production payloads utilizing the vast number of providers on the mainnet.
 
 {% /alert %}
 
@@ -52,7 +52,7 @@ Golem Network payments are performed on blockchain using GLM tokens. Consequentl
 
 Ethereum's native token is ETH, whereas Polygon Network has MATIC.
 
-### On test network
+### On testnet
 
 You can top up your wallet with the following command:
 
@@ -60,7 +60,7 @@ You can top up your wallet with the following command:
 yagna payment fund
 ```
 
-### On paid network
+### On mainnet
 
 {% alert level="info" %}
 
