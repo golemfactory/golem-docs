@@ -10,7 +10,7 @@ type: Guide
 
 The Golem ecosystem allows for building distributed applications, where multiple Provider nodes are instantiated and coordinated by a central Requestor. Such applications may include payloads that require connectivity **between Provider nodes**.
 
-Golem VPN feature has been designed to provide such connectivity in a manner that is as close as possible to standard network connectivity mechanisms. From the perspective of a VM, the connectivity is conducted using regular IP connections to assigned addresses and ports within the private network so payloads may be ignorant of the fact that the Provider host is embedded in the Golem network and all network traffic happens in the Golem network itself.
+The Golem VPN feature has been designed to provide such connectivity in a manner that is as close as possible to standard network connectivity mechanisms. From the perspective of a VM, the connectivity is conducted using regular IP connections to assigned addresses and ports within the private network so payloads may be ignorant of the fact that the Provider host is embedded in the Golem network and all network traffic happens in the Golem network itself.
 
 Golem VPN requires specific implementation in the ExeUnit/runtime, which must be capable of providing a standard Unix-socket interface to their payloads and marshaling the logical network traffic through the Golem Net transport layer - thus achieving actual both Virtual and Private networking capabilities.
 
@@ -45,7 +45,7 @@ A typical VPN setup sequence of activities performed by a Golem application is a
 - **Remove node from network** - once the Provider node is no longer needed, it gets removed from the VPN network.
 - **Remove network** - once the whole VPN is no longer needed, it may (and should) be removed to free the resources on the requestor yagna daemon.
 
-The configuration is specified via calls to Yagna Net API. The nuances of Net API calls are wrapped by Golem SDK to simplify the developer's experience. Please refer to the examples listed at the bottom of the page to get examples for specific SDKs.
+The configuration is specified via calls to Yagna Net API. The nuances of Net API calls are wrapped by the Golem SDK to simplify the developer's experience. Please refer to the examples listed at the bottom of the page to get examples for specific SDKs.
 
 ### Caveats
 
