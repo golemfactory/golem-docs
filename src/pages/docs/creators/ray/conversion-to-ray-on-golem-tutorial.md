@@ -61,6 +61,8 @@ We need to install `ray-on-golem`. It will install `ray` as a dependency.
 pip3 install -U ray-on-golem
 ```
 
+{% partial file="ray/installation-alert.md" /%}
+
 ### Ray initialization
 
 We will now modify the original `ddy.py` to make it use Ray.
@@ -169,14 +171,12 @@ deal count: 50 time: 0:00:04.550863
 
 We will now scale the execution even further - we will use a Ray on Golem cluster.
 
-Run the following to install needed software:
+Run the following to make sure the needed software is installed:
 
 ```bash
 # install ray-on-golem (just make sure you have it after the previous steps)
 pip3 install -U ray-on-golem
 ```
-
-{% partial file="ray/installation-alert.md" /%}
 
 Now, run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
