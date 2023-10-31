@@ -118,7 +118,23 @@ Your app might need non-standard packages to run on the cluster. By default, Ray
 
 It might look like that when you submit an app which such a requirements:
 ```
-TODO example output
+Traceback (most recent call last):
+  File "/root/dds-with-ray.py", line 49, in <module>
+    results = get_lots_of_deals()
+  File "/root/dds-with-ray.py", line 42, in get_lots_of_deals
+    results = ray.get(result_ids)
+  File "/usr/local/lib/python3.10/site-packages/ray/_private/auto_init_hook.py", line 24, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/ray/_private/worker.py", line 2547, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ModuleNotFoundError): ray::get_deal() (pid=871, ip=192.168.0.3)
+  File "/root/dds-with-ray.py", line 30, in get_deal
+    from endplay.dds import calc_dd_table
+ModuleNotFoundError: No module named 'endplay'
+Shared connection to 192.168.0.3 closed.
+Error: Command failed:
 ```
 
 {% solution %}
