@@ -5,6 +5,8 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 
 ## Install software
 
+{% partial file="ray/recommend-venv.md" /%}
+
 The first step is installing Ray on Golem. It will install Ray as a dependency.
 
 ```bash
