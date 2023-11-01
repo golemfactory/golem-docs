@@ -36,7 +36,7 @@ type: "reference"
 
 ### constructor
 
-• **new UploadData**(`storageProvider`, `src`, `dstPath`)
+• **new UploadData**(`storageProvider`, `src`, `dstPath`): [`UploadData`](script_command.UploadData)
 
 #### Parameters
 
@@ -45,6 +45,10 @@ type: "reference"
 | `storageProvider` | [`StorageProvider`](../interfaces/storage_provider.StorageProvider) |
 | `src` | `Uint8Array` |
 | `dstPath` | `string` |
+
+#### Returns
+
+[`UploadData`](script_command.UploadData)
 
 #### Overrides
 

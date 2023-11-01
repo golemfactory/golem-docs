@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ProposalRejected**(`data?`)
+• **new ProposalRejected**(`data?`): [`ProposalRejected`](events_events.ProposalRejected)
 
 #### Parameters
 
@@ -40,6 +40,10 @@ type: "reference"
 | `data.providerId?` | `string` |
 | `data.reason?` | `string` |
 | `data.parentId` | ``null`` \| `string` |
+
+#### Returns
+
+[`ProposalRejected`](events_events.ProposalRejected)
 
 #### Inherited from
 

@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new PaymentFailed**(`data?`)
+• **new PaymentFailed**(`data?`): [`PaymentFailed`](events_events.PaymentFailed)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ type: "reference"
 | `data.id` | `string` |
 | `data.agreementId` | `string` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`PaymentFailed`](events_events.PaymentFailed)
 
 #### Inherited from
 

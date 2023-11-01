@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new ProposalResponded**(`data?`)
+• **new ProposalResponded**(`data?`): [`ProposalResponded`](events_events.ProposalResponded)
 
 #### Parameters
 
@@ -39,6 +39,10 @@ type: "reference"
 | `data.id` | `string` |
 | `data.providerId` | `string` |
 | `data.counteringProposalId` | `string` |
+
+#### Returns
+
+[`ProposalResponded`](events_events.ProposalResponded)
 
 #### Inherited from
 

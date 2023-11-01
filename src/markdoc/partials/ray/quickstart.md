@@ -1,9 +1,7 @@
-
 # QuickStart
 
 This quickstart shows you how to set Ray and Ray on Golem up, start your cluster, test it, and then stop it.
 It limits the explanation to the bare minimum - if you are looking for more details jump to [setup tutorial](/docs/creators/ray/setup-tutorial)
-
 
 ## Install software
 
@@ -16,7 +14,7 @@ The first step is installing Ray on Golem. It will install Ray as a dependency.
 pip3 install -U ray-on-golem
 ```
 
-As a prerequisite, it also installs yagna - Golem daemon used to schedule work on the Golem Network.
+{% partial file="ray/installation-alert.md" /%}
 
 ## Set the cluster up
 
@@ -53,6 +51,7 @@ ray down golem-cluster.yaml --yes
 ## Summary
 
 By completing the above quickstart you have successfully:
+
 - Installed ray and ray-on-golem packages
 - Downloaded the example golem cluster yaml and the example ray application
 - Started up the Ray on Golem cluster
@@ -60,4 +59,3 @@ By completing the above quickstart you have successfully:
 - Stopped the cluster
 
 Congratulations!
-

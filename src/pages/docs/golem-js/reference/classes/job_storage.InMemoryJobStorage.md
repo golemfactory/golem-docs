@@ -26,7 +26,11 @@ type: "reference"
 
 ### constructor
 
-• **new InMemoryJobStorage**()
+• **new InMemoryJobStorage**(): [`InMemoryJobStorage`](job_storage.InMemoryJobStorage)
+
+#### Returns
+
+[`InMemoryJobStorage`](job_storage.InMemoryJobStorage)
 
 ## Methods
 

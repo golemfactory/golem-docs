@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new TaskRedone**(`data?`)
+• **new TaskRedone**(`data?`): [`TaskRedone`](events_events.TaskRedone)
 
 #### Parameters
 
@@ -43,6 +43,10 @@ type: "reference"
 | `data.providerName` | `string` |
 | `data.retriesCount` | `number` |
 | `data.reason?` | `string` |
+
+#### Returns
+
+[`TaskRedone`](events_events.TaskRedone)
 
 #### Inherited from
 

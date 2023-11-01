@@ -29,7 +29,7 @@ type: "reference"
 
 ### constructor
 
-• **new InvoiceReceived**(`data?`)
+• **new InvoiceReceived**(`data?`): [`InvoiceReceived`](events_events.InvoiceReceived)
 
 #### Parameters
 
@@ -40,6 +40,10 @@ type: "reference"
 | `data.providerId` | `string` |
 | `data.agreementId` | `string` |
 | `data.amount` | `string` |
+
+#### Returns
+
+[`InvoiceReceived`](events_events.InvoiceReceived)
 
 #### Inherited from
 

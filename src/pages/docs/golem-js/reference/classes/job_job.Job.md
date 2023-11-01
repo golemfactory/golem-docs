@@ -41,7 +41,7 @@ Represents the state of some computation unit. The purpose of this class is to p
 
 ### constructor
 
-• **new Job**<`Output`\>(`id`, `jobStorage`)
+• **new Job**<`Output`\>(`id`, `jobStorage`): [`Job`](job_job.Job)<`Output`\>
 
 #### Type parameters
 
@@ -55,6 +55,10 @@ Represents the state of some computation unit. The purpose of this class is to p
 | :------ | :------ |
 | `id` | `string` |
 | `jobStorage` | [`JobStorage`](../interfaces/job_storage.JobStorage) |
+
+#### Returns
+
+[`Job`](job_job.Job)<`Output`\>
 
 #### Defined in
 
