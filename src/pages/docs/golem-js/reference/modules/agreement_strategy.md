@@ -17,7 +17,7 @@ type: "reference"
 
 ### randomAgreementSelector
 
-▸ **randomAgreementSelector**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ **randomAgreementSelector**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Default selector that selects a random provider from the pool
 
@@ -25,7 +25,7 @@ Default selector that selects a random provider from the pool
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -35,17 +35,17 @@ Default selector that selects a random provider from the pool
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
-[src/agreement/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/00d03ae/src/agreement/strategy.ts#L4)
+[src/agreement/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/agreement/strategy.ts#L4)
 
 ___
 
 ### randomAgreementSelectorWithPriorityForExistingOnes
 
-▸ **randomAgreementSelectorWithPriorityForExistingOnes**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ **randomAgreementSelectorWithPriorityForExistingOnes**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Selector selecting a random provider from the pool, but giving priority to those who already have a confirmed agreement and deployed activity
 
@@ -53,7 +53,7 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -63,17 +63,17 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
-[src/agreement/strategy.ts:8](https://github.com/golemfactory/golem-js/blob/00d03ae/src/agreement/strategy.ts#L8)
+[src/agreement/strategy.ts:8](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/agreement/strategy.ts#L8)
 
 ___
 
 ### bestAgreementSelector
 
-▸ **bestAgreementSelector**(`scores`): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ **bestAgreementSelector**(`scores`): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Selector selecting the provider according to the provided list of scores
 
@@ -87,7 +87,7 @@ Selector selecting the provider according to the provided list of scores
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -97,8 +97,8 @@ Selector selecting the provider according to the provided list of scores
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
-[src/agreement/strategy.ts:17](https://github.com/golemfactory/golem-js/blob/00d03ae/src/agreement/strategy.ts#L17)
+[src/agreement/strategy.ts:17](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/agreement/strategy.ts#L17)

@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails)  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails)  }\>
 
   ↳ **`PackageCreated`**
 
@@ -36,7 +36,7 @@ type: "reference"
 | Name | Type |
 | :------ | :------ |
 | `data?` | `Object` |
-| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
+| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
 | `data.details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
 
 #### Returns
@@ -49,7 +49,7 @@ type: "reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L28)
 
 ## Properties
 
@@ -61,7 +61,7 @@ type: "reference"
 
 | Name | Type |
 | :------ | :------ |
-| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
+| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
 | `details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
 
 #### Inherited from
@@ -70,7 +70,7 @@ type: "reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L16)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L17)
 
 ___
 
@@ -98,4 +98,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L18)

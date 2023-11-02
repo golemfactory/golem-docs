@@ -57,11 +57,11 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 ### getIdentity
 
-▸ **getIdentity**(): `Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
+▸ **getIdentity**(): `Promise`\<`AxiosResponse`\<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
 
 #### Implementation of
 
@@ -69,4 +69,4 @@ IdentityRequestorApi.getIdentity
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:16](https://github.com/golemfactory/golem-js/blob/00d03ae/src/utils/yagna/identity.ts#L16)
+[src/utils/yagna/identity.ts:16](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/utils/yagna/identity.ts#L16)

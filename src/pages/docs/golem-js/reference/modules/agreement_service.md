@@ -24,11 +24,11 @@ type: "reference"
 
 ### AgreementSelector
 
-Ƭ **AgreementSelector**: (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+Ƭ **AgreementSelector**: (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Type declaration
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -38,8 +38,8 @@ type: "reference"
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
-[src/agreement/service.ts:19](https://github.com/golemfactory/golem-js/blob/00d03ae/src/agreement/service.ts#L19)
+[src/agreement/service.ts:19](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/agreement/service.ts#L19)

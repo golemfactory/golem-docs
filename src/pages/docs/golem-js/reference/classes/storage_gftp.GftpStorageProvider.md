@@ -46,19 +46,19 @@ type: "reference"
 
 #### Defined in
 
-[src/storage/gftp.ts:24](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L24)
+[src/storage/gftp.ts:24](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L24)
 
 ## Methods
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 Initialize storage provider.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Implementation of
 
@@ -66,7 +66,7 @@ Initialize storage provider.
 
 #### Defined in
 
-[src/storage/gftp.ts:30](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L30)
+[src/storage/gftp.ts:30](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L30)
 
 ___
 
@@ -80,13 +80,13 @@ ___
 
 #### Defined in
 
-[src/storage/gftp.ts:63](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L63)
+[src/storage/gftp.ts:63](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L63)
 
 ___
 
 ### receiveFile
 
-▸ **receiveFile**(`path`): `Promise`<`string`\>
+▸ **receiveFile**(`path`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be downloaded.
 
@@ -98,7 +98,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -106,19 +106,19 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:75](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L75)
+[src/storage/gftp.ts:75](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L75)
 
 ___
 
 ### receiveData
 
-▸ **receiveData**(): `Promise`<`string`\>
+▸ **receiveData**(): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -126,13 +126,13 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:80](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L80)
+[src/storage/gftp.ts:80](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L80)
 
 ___
 
 ### publishFile
 
-▸ **publishFile**(`src`): `Promise`<`string`\>
+▸ **publishFile**(`src`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be uploaded.
 
@@ -144,7 +144,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -152,13 +152,13 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:84](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L84)
+[src/storage/gftp.ts:84](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L84)
 
 ___
 
 ### publishData
 
-▸ **publishData**(`src`): `Promise`<`string`\>
+▸ **publishData**(`src`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of data to be uploaded.
 
@@ -170,7 +170,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -178,19 +178,19 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Defined in
 
-[src/storage/gftp.ts:90](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L90)
+[src/storage/gftp.ts:90](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L90)
 
 ___
 
 ### release
 
-▸ **release**(): `Promise`<`void`\>
+▸ **release**(): `Promise`\<`void`\>
 
 Release previously allocated resource URL from Yagna.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Implementation of
 
@@ -198,19 +198,19 @@ Release previously allocated resource URL from Yagna.
 
 #### Defined in
 
-[src/storage/gftp.ts:102](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L102)
+[src/storage/gftp.ts:102](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L102)
 
 ___
 
 ### close
 
-▸ **close**(): `Promise`<`void`\>
+▸ **close**(): `Promise`\<`void`\>
 
 Close storage provider and release all resources.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Implementation of
 
@@ -218,4 +218,4 @@ Close storage provider and release all resources.
 
 #### Defined in
 
-[src/storage/gftp.ts:116](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/gftp.ts#L116)
+[src/storage/gftp.ts:116](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/gftp.ts#L116)

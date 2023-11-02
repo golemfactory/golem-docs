@@ -38,13 +38,13 @@ type: "reference"
 
 #### Defined in
 
-[src/market/strategy.ts:30](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L30)
+[src/market/strategy.ts:30](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L30)
 
 ## Functions
 
 ### acceptAllProposalFilter
 
-▸ **acceptAllProposalFilter**(): () => `Promise`<`boolean`\>
+▸ **acceptAllProposalFilter**(): () => `Promise`\<`boolean`\>
 
 Default Proposal filter that accept all proposal coming from the market
 
@@ -52,21 +52,21 @@ Default Proposal filter that accept all proposal coming from the market
 
 `fn`
 
-▸ (): `Promise`<`boolean`\>
+▸ (): `Promise`\<`boolean`\>
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L4)
+[src/market/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L4)
 
 ___
 
 ### blackListProposalIdsFilter
 
-▸ **blackListProposalIdsFilter**(`blackListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **blackListProposalIdsFilter**(`blackListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose id is in the array
 
@@ -80,7 +80,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -90,17 +90,17 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L7)
+[src/market/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L7)
 
 ___
 
 ### blackListProposalNamesFilter
 
-▸ **blackListProposalNamesFilter**(`blackListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **blackListProposalNamesFilter**(`blackListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose name is in the array
 
@@ -114,7 +114,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -124,17 +124,17 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:11](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L11)
+[src/market/strategy.ts:11](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L11)
 
 ___
 
 ### blackListProposalRegexpFilter
 
-▸ **blackListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **blackListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose name match to the regexp
 
@@ -148,7 +148,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -158,17 +158,17 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:15](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L15)
+[src/market/strategy.ts:15](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L15)
 
 ___
 
 ### whiteListProposalIdsFilter
 
-▸ **whiteListProposalIdsFilter**(`whiteListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **whiteListProposalIdsFilter**(`whiteListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose id is in the array
 
@@ -182,7 +182,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -192,17 +192,17 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:19](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L19)
+[src/market/strategy.ts:19](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L19)
 
 ___
 
 ### whiteListProposalNamesFilter
 
-▸ **whiteListProposalNamesFilter**(`whiteListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **whiteListProposalNamesFilter**(`whiteListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose name is in the array
 
@@ -216,7 +216,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -226,17 +226,17 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:23](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L23)
+[src/market/strategy.ts:23](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L23)
 
 ___
 
 ### whiteListProposalRegexpFilter
 
-▸ **whiteListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **whiteListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose name match to the regexp
 
@@ -250,7 +250,7 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -260,17 +260,17 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:27](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L27)
+[src/market/strategy.ts:27](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L27)
 
 ___
 
 ### limitPriceFilter
 
-▸ **limitPriceFilter**(`priceLimits`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **limitPriceFilter**(`priceLimits`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter only allowing offers that do not exceed the defined usage
 
@@ -284,7 +284,7 @@ Proposal filter only allowing offers that do not exceed the defined usage
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -294,8 +294,8 @@ Proposal filter only allowing offers that do not exceed the defined usage
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
-[src/market/strategy.ts:43](https://github.com/golemfactory/golem-js/blob/00d03ae/src/market/strategy.ts#L43)
+[src/market/strategy.ts:43](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/market/strategy.ts#L43)

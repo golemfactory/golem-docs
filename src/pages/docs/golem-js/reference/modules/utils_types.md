@@ -15,7 +15,7 @@ type: "reference"
 
 ### RequireAtLeastOne
 
-Ƭ **RequireAtLeastOne**<`T`, `Keys`\>: `Pick`<`T`, `Exclude`<keyof `T`, `Keys`\>\> & { [K in Keys]-?: Required<Pick<T, K\>\> & Partial<Pick<T, Exclude<Keys, K\>\>\> }[`Keys`]
+Ƭ **RequireAtLeastOne**\<`T`, `Keys`\>: `Pick`\<`T`, `Exclude`\<keyof `T`, `Keys`\>\> & \{ [K in Keys]-?: Required\<Pick\<T, K\>\> & Partial\<Pick\<T, Exclude\<Keys, K\>\>\> }[`Keys`]
 
 #### Type parameters
 
@@ -26,4 +26,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/00d03ae/src/utils/types.ts#L12)
+[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/utils/types.ts#L12)

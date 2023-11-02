@@ -29,39 +29,39 @@ type: "reference"
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 Initialize storage provider.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/storage/provider.ts:7](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/provider.ts#L7)
+[src/storage/provider.ts:7](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/provider.ts#L7)
 
 ___
 
 ### close
 
-▸ **close**(): `Promise`<`void`\>
+▸ **close**(): `Promise`\<`void`\>
 
 Close storage provider and release all resources.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/storage/provider.ts:12](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/provider.ts#L12)
+[src/storage/provider.ts:12](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/provider.ts#L12)
 
 ___
 
 ### receiveFile
 
-▸ **receiveFile**(`destPath`): `Promise`<`string`\>
+▸ **receiveFile**(`destPath`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be downloaded.
 
@@ -73,17 +73,17 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
-[src/storage/provider.ts:17](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/provider.ts#L17)
+[src/storage/provider.ts:17](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/provider.ts#L17)
 
 ___
 
 ### receiveData
 
-▸ **receiveData**(`callback`): `Promise`<`string`\>
+▸ **receiveData**(`callback`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be downloaded.
 
@@ -95,17 +95,17 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
-[src/storage/provider.ts:22](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/provider.ts#L22)
+[src/storage/provider.ts:22](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/provider.ts#L22)
 
 ___
 
 ### publishFile
 
-▸ **publishFile**(`srcPath`): `Promise`<`string`\>
+▸ **publishFile**(`srcPath`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be uploaded.
 
@@ -117,17 +117,17 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
-[src/storage/provider.ts:28](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/provider.ts#L28)
+[src/storage/provider.ts:28](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/provider.ts#L28)
 
 ___
 
 ### publishData
 
-▸ **publishData**(`data`): `Promise`<`string`\>
+▸ **publishData**(`data`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of data to be uploaded.
 
@@ -139,17 +139,17 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
-[src/storage/provider.ts:34](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/provider.ts#L34)
+[src/storage/provider.ts:34](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/provider.ts#L34)
 
 ___
 
 ### release
 
-▸ **release**(`urls`): `Promise`<`void`\>
+▸ **release**(`urls`): `Promise`\<`void`\>
 
 Release previously allocated resource URL from Yagna.
 
@@ -161,8 +161,8 @@ Release previously allocated resource URL from Yagna.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/storage/provider.ts:40](https://github.com/golemfactory/golem-js/blob/00d03ae/src/storage/provider.ts#L40)
+[src/storage/provider.ts:40](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/provider.ts#L40)

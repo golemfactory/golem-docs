@@ -29,7 +29,7 @@ A high-level module for defining and executing tasks in the golem network
 
 ### create
 
-▸ **create**(`options`): `Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
+▸ **create**(`options`): `Promise`\<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 Create a new Task Executor
 
@@ -41,7 +41,7 @@ Create a new Task Executor
 
 #### Returns
 
-`Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
+`Promise`\<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 TaskExecutor
 
@@ -78,19 +78,19 @@ const executor = await TaskExecutor.create({
 
 #### Defined in
 
-[src/executor/executor.ts:147](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L147)
+[src/executor/executor.ts:158](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L158)
 
 ___
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 Initialize executor
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Description`**
 
@@ -98,23 +98,25 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[src/executor/executor.ts:198](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L198)
+[src/executor/executor.ts:209](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L209)
 
 ___
 
 ### end
 
-▸ **end**(): `Promise`<`void`\>
+▸ **end**(): `Promise`\<`void`\>
 
-Stop all executor services and shut down executor instance
+Stop all executor services and shut down executor instance.
+
+You can call this method multiple times, it will resolve only once the executor is shutdown.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/executor/executor.ts:248](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L248)
+[src/executor/executor.ts:261](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L261)
 
 ___
 
@@ -132,7 +134,7 @@ array
 
 #### Defined in
 
-[src/executor/executor.ts:269](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L269)
+[src/executor/executor.ts:293](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L293)
 
 ___
 
@@ -170,13 +172,13 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 #### Defined in
 
-[src/executor/executor.ts:292](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L292)
+[src/executor/executor.ts:316](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L316)
 
 ___
 
 ### run
 
-▸ **run**<`OutputType`\>(`worker`, `options?`): `Promise`<`undefined` \| `OutputType`\>
+▸ **run**\<`OutputType`\>(`worker`, `options?`): `Promise`\<`undefined` \| `OutputType`\>
 
 Run task - allows to execute a single worker function on the Golem network with a single provider.
 
@@ -184,18 +186,18 @@ Run task - allows to execute a single worker function on the Golem network with 
 
 | Name | Type |
 | :------ | :------ |
-| `OutputType` | [`Result`](activity_results.Result)<`any`\> |
+| `OutputType` | [`Result`](activity_results.Result)\<`any`\> |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)<`undefined`, `OutputType`\> | function that run task |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`undefined`, `OutputType`\> | function that run task |
 | `options?` | [`TaskOptions`](../modules/task_task#taskoptions) | task options |
 
 #### Returns
 
-`Promise`<`undefined` \| `OutputType`\>
+`Promise`\<`undefined` \| `OutputType`\>
 
 result of task computation
 
@@ -207,13 +209,13 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 #### Defined in
 
-[src/executor/executor.ts:307](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L307)
+[src/executor/executor.ts:331](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L331)
 
 ___
 
 ### map
 
-▸ **map**<`InputType`, `OutputType`\>(`data`, `worker`): `AsyncIterable`<`undefined` \| `OutputType`\>
+▸ **map**\<`InputType`, `OutputType`\>(`data`, `worker`): `AsyncIterable`\<`undefined` \| `OutputType`\>
 
 Map iterable data to worker function and return computed Task result as AsyncIterable
 
@@ -228,12 +230,12 @@ Map iterable data to worker function and return computed Task result as AsyncIte
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | worker function |
+| `data` | `Iterable`\<`InputType`\> | Iterable data |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | worker function |
 
 #### Returns
 
-`AsyncIterable`<`undefined` \| `OutputType`\>
+`AsyncIterable`\<`undefined` \| `OutputType`\>
 
 AsyncIterable with results of computed tasks
 
@@ -247,13 +249,13 @@ for await (const result of results) console.log(result.stdout);
 
 #### Defined in
 
-[src/executor/executor.ts:330](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L330)
+[src/executor/executor.ts:354](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L354)
 
 ___
 
 ### forEach
 
-▸ **forEach**<`InputType`, `OutputType`\>(`data`, `worker`): `Promise`<`void`\>
+▸ **forEach**\<`InputType`, `OutputType`\>(`data`, `worker`): `Promise`\<`void`\>
 
 Iterates over given data and execute task using worker function
 
@@ -268,12 +270,12 @@ Iterates over given data and execute task using worker function
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | Worker function |
+| `data` | `Iterable`\<`InputType`\> | Iterable data |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | Worker function |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Example`**
 
@@ -286,13 +288,13 @@ await executor.forEach(data, async (ctx, item) => {
 
 #### Defined in
 
-[src/executor/executor.ts:378](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L378)
+[src/executor/executor.ts:402](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L402)
 
 ___
 
 ### createJob
 
-▸ **createJob**<`InputType`, `OutputType`\>(`worker`): `Promise`<[`Job`](job_job.Job)<`OutputType`\>\>
+▸ **createJob**\<`InputType`, `OutputType`\>(`worker`): `Promise`\<[`Job`](job_job.Job)\<`OutputType`\>\>
 
 Start a new job without waiting for the result. The job can be retrieved later using [TaskExecutor.getJobById](executor_executor.TaskExecutor#getjobbyid). The job's status is stored in the [JobStorage](../interfaces/job_storage.JobStorage) provided in the [ExecutorOptions](../modules/executor_executor#executoroptions) (in-memory by default). For distributed environments, it is recommended to use a form of storage that is accessible from all nodes (e.g. a database).
 
@@ -307,11 +309,11 @@ Start a new job without waiting for the result. The job can be retrieved later u
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | Worker function to be executed |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | Worker function to be executed |
 
 #### Returns
 
-`Promise`<[`Job`](job_job.Job)<`OutputType`\>\>
+`Promise`\<[`Job`](job_job.Job)\<`OutputType`\>\>
 
 Job object
 
@@ -333,13 +335,13 @@ const error = await job.fetchError();
 
 #### Defined in
 
-[src/executor/executor.ts:440](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L440)
+[src/executor/executor.ts:464](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L464)
 
 ___
 
 ### getJobById
 
-▸ **getJobById**(`jobId`): [`Job`](job_job.Job)<`unknown`\>
+▸ **getJobById**(`jobId`): [`Job`](job_job.Job)\<`unknown`\>
 
 Retrieve a job by its ID. The job's status is stored in the [JobStorage](../interfaces/job_storage.JobStorage) provided in the [ExecutorOptions](../modules/executor_executor#executoroptions) (in-memory by default). Use [Job.fetchState](job_job.Job#fetchstate), [Job.fetchResults](job_job.Job#fetchresults) and [Job.fetchError](job_job.Job#fetcherror) to get the job's status.
 
@@ -351,19 +353,19 @@ Retrieve a job by its ID. The job's status is stored in the [JobStorage](../inte
 
 #### Returns
 
-[`Job`](job_job.Job)<`unknown`\>
+[`Job`](job_job.Job)\<`unknown`\>
 
 Job object.
 
 #### Defined in
 
-[src/executor/executor.ts:465](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L465)
+[src/executor/executor.ts:489](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L489)
 
 ___
 
 ### cancel
 
-▸ **cancel**(`reason?`): `Promise`<`void`\>
+▸ **cancel**(`reason?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -373,8 +375,8 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/executor/executor.ts:490](https://github.com/golemfactory/golem-js/blob/00d03ae/src/executor/executor.ts#L490)
+[src/executor/executor.ts:514](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L514)

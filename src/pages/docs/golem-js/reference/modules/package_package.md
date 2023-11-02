@@ -23,8 +23,8 @@ type: "reference"
 
 ### PackageOptions
 
-Ƭ **PackageOptions**: [`RequireAtLeastOne`](utils_types#requireatleastone)<{ `engine?`: `string` ; `minMemGib?`: `number` ; `minStorageGib?`: `number` ; `minCpuThreads?`: `number` ; `minCpuCores?`: `number` ; `capabilities?`: `string`[] ; `imageHash?`: `string` ; `imageTag?`: `string` ; `manifest?`: `string` ; `manifestSig?`: `string` ; `manifestSigAlgorithm?`: `string` ; `manifestCert?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger)  }, ``"imageHash"`` \| ``"imageTag"`` \| ``"manifest"``\>
+Ƭ **PackageOptions**: [`RequireAtLeastOne`](utils_types#requireatleastone)\<\{ `engine?`: `string` ; `minMemGib?`: `number` ; `minStorageGib?`: `number` ; `minCpuThreads?`: `number` ; `minCpuCores?`: `number` ; `capabilities?`: `string`[] ; `imageHash?`: `string` ; `imageTag?`: `string` ; `manifest?`: `string` ; `manifestSig?`: `string` ; `manifestSigAlgorithm?`: `string` ; `manifestCert?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger)  }, ``"imageHash"`` \| ``"imageTag"`` \| ``"manifest"``\>
 
 #### Defined in
 
-[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/00d03ae/src/package/package.ts#L7)
+[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/package/package.ts#L7)

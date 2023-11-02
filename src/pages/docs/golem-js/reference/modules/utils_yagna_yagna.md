@@ -27,7 +27,7 @@ type: "reference"
 | Name | Type |
 | :------ | :------ |
 | `market` | `MarketRequestorApi` |
-| `activity` | { `control`: `RequestorControlApi` ; `state`: `RequestorStateApi`  } |
+| `activity` | \{ `control`: `RequestorControlApi` ; `state`: `RequestorStateApi`  } |
 | `activity.control` | `RequestorControlApi` |
 | `activity.state` | `RequestorStateApi` |
 | `net` | `NetworkRequestorApi` |
@@ -38,7 +38,7 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/00d03ae/src/utils/yagna/yagna.ts#L12)
+[src/utils/yagna/yagna.ts:12](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/utils/yagna/yagna.ts#L12)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/00d03ae/src/utils/yagna/yagna.ts#L22)
+[src/utils/yagna/yagna.ts:22](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/utils/yagna/yagna.ts#L22)
