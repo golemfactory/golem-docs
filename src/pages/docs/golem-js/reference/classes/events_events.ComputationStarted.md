@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<`undefined`\>
+- [`BaseEvent`](events_events.BaseEvent)\<`undefined`\>
 
   ↳ **`ComputationStarted`**
 

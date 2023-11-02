@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails)  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `packageReference`: [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> ; `details`: [`PackageDetails`](../interfaces/package_package.PackageDetails)  }\>
 
   ↳ **`PackageCreated`**
 
@@ -36,7 +36,7 @@ type: "reference"
 | Name | Type |
 | :------ | :------ |
 | `data?` | `Object` |
-| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
+| `data.packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
 | `data.details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
 
 #### Returns
@@ -61,7 +61,7 @@ type: "reference"
 
 | Name | Type |
 | :------ | :------ |
-| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
+| `packageReference` | [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string` ; `manifest`: `string`  }\> |
 | `details` | [`PackageDetails`](../interfaces/package_package.PackageDetails) |
 
 #### Inherited from

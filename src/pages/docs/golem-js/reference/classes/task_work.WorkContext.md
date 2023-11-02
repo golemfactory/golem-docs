@@ -103,11 +103,11 @@ ___
 
 ### before
 
-▸ **before**(): `Promise`<`void` \| [`Result`](activity_results.Result)<`any`\>[]\>
+▸ **before**(): `Promise`\<`void` \| [`Result`](activity_results.Result)\<`any`\>[]\>
 
 #### Returns
 
-`Promise`<`void` \| [`Result`](activity_results.Result)<`any`\>[]\>
+`Promise`\<`void` \| [`Result`](activity_results.Result)\<`any`\>[]\>
 
 #### Defined in
 
@@ -117,7 +117,7 @@ ___
 
 ### run
 
-▸ **run**(`commandLine`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **run**(`commandLine`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 Execute a command on provider using a shell (/bin/sh).
 
@@ -130,13 +130,13 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
 [src/task/work.ts:117](https://github.com/golemfactory/golem-js/blob/552d481/src/task/work.ts#L117)
 
-▸ **run**(`executable`, `args`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **run**(`executable`, `args`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 Execute an executable on provider.
 
@@ -150,7 +150,7 @@ Execute an executable on provider.
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
@@ -160,7 +160,7 @@ ___
 
 ### transfer
 
-▸ **transfer**(`from`, `to`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **transfer**(`from`, `to`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 Generic transfer command, requires the user to provide a publicly readable transfer source
 
@@ -174,7 +174,7 @@ Generic transfer command, requires the user to provide a publicly readable trans
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
@@ -184,7 +184,7 @@ ___
 
 ### uploadFile
 
-▸ **uploadFile**(`src`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **uploadFile**(`src`, `dst`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Parameters
 
@@ -196,7 +196,7 @@ ___
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
@@ -206,7 +206,7 @@ ___
 
 ### uploadJson
 
-▸ **uploadJson**(`json`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **uploadJson**(`json`, `dst`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Parameters
 
@@ -218,7 +218,7 @@ ___
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
@@ -228,7 +228,7 @@ ___
 
 ### uploadData
 
-▸ **uploadData**(`data`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **uploadData**(`data`, `dst`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Parameters
 
@@ -240,7 +240,7 @@ ___
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
@@ -250,7 +250,7 @@ ___
 
 ### downloadFile
 
-▸ **downloadFile**(`src`, `dst`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **downloadFile**(`src`, `dst`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Parameters
 
@@ -262,7 +262,7 @@ ___
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
@@ -272,7 +272,7 @@ ___
 
 ### downloadData
 
-▸ **downloadData**(`src`, `options?`): `Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
+▸ **downloadData**(`src`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`Uint8Array`\>\>
 
 #### Parameters
 
@@ -283,7 +283,7 @@ ___
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`Uint8Array`\>\>
 
 #### Defined in
 
@@ -293,7 +293,7 @@ ___
 
 ### downloadJson
 
-▸ **downloadJson**(`src`, `options?`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **downloadJson**(`src`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Parameters
 
@@ -304,7 +304,7 @@ ___
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Defined in
 
@@ -386,11 +386,11 @@ ___
 
 ### getState
 
-▸ **getState**(): `Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
+▸ **getState**(): `Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 #### Returns
 
-`Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
+`Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 #### Defined in
 

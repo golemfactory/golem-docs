@@ -15,7 +15,7 @@ type: "reference"
 
 ### NetworkServiceOptions
 
-Ƭ **NetworkServiceOptions**: `Omit`<`NetworkOptions`, ``"networkOwnerId"``\>
+Ƭ **NetworkServiceOptions**: `Omit`\<`NetworkOptions`, ``"networkOwnerId"``\>
 
 #### Defined in
 

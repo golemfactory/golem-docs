@@ -104,11 +104,11 @@ Transfer.args
 
 ### before
 
-▸ **before**(): `Promise`<`void`\>
+▸ **before**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Overrides
 
@@ -122,17 +122,17 @@ ___
 
 ### after
 
-▸ **after**(`result`): `Promise`<[`Result`](activity_results.Result)<`any`\>\>
+▸ **after**(`result`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `result` | [`Result`](activity_results.Result)<`any`\> |
+| `result` | [`Result`](activity_results.Result)\<`any`\> |
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
 #### Overrides
 

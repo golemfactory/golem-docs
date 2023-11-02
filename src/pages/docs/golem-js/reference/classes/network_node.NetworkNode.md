@@ -84,7 +84,7 @@ on the provider's end.
 
 | Name | Type |
 | :------ | :------ |
-| `net` | { `nodeIp`: `string` ; `id`: `string` ; `ip`: `string` ; `mask`: `string` ; `nodes`: { `[ip: string]`: `string`;  }  }[] |
+| `net` | \{ `nodeIp`: `string` ; `id`: `string` ; `ip`: `string` ; `mask`: `string` ; `nodes`: \{ `[ip: string]`: `string`;  }  }[] |
 
 #### Defined in
 

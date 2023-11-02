@@ -58,7 +58,7 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 ### createService
 
-▸ **createService**(`fileInfo`, `components`): `Promise`<`AxiosResponse`<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
+▸ **createService**(`fileInfo`, `components`): `Promise`\<`AxiosResponse`\<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
 
 #### Parameters
 
@@ -69,7 +69,7 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
 
 #### Implementation of
 
@@ -83,7 +83,7 @@ ___
 
 ### deleteService
 
-▸ **deleteService**(`id`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteService**(`id`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 #### Parameters
 
@@ -93,7 +93,7 @@ ___
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 #### Implementation of
 

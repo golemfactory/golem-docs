@@ -18,7 +18,7 @@ type: "reference"
 
 ### properties
 
-• **properties**: { `key`: `string` ; `value`: `string` \| `number` \| `boolean`  }[]
+• **properties**: \{ `key`: `string` ; `value`: `string` \| `number` \| `boolean`  }[]
 
 #### Defined in
 

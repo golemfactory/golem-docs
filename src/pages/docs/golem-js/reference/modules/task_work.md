@@ -24,7 +24,7 @@ type: "reference"
 
 ### Worker
 
-Ƭ **Worker**<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`<`OutputType`\>
+Ƭ **Worker**\<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`\<`OutputType`\>
 
 #### Type parameters
 
@@ -35,7 +35,7 @@ type: "reference"
 
 #### Type declaration
 
-▸ (`ctx`, `data?`): `Promise`<`OutputType`\>
+▸ (`ctx`, `data?`): `Promise`\<`OutputType`\>
 
 ##### Parameters
 
@@ -46,7 +46,7 @@ type: "reference"
 
 ##### Returns
 
-`Promise`<`OutputType`\>
+`Promise`\<`OutputType`\>
 
 #### Defined in
 

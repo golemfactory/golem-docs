@@ -3,7 +3,7 @@ title: "Class BaseEvent - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class BaseEvent within the golem-js SDK for the Golem Network."
 type: "reference"
 ---
-# Class: BaseEvent<DataType\>
+# Class: BaseEvent\<DataType\>
 
 [events/events](../modules/events_events).BaseEvent
 
@@ -15,7 +15,7 @@ type: "reference"
 
 ## Hierarchy
 
-- `CustomEvent`<`DataType`\>
+- `CustomEvent`\<`DataType`\>
 
   ↳ **`BaseEvent`**
 
@@ -99,7 +99,7 @@ type: "reference"
 
 ### constructor
 
-• **new BaseEvent**<`DataType`\>(`data?`): [`BaseEvent`](events_events.BaseEvent)<`DataType`\>
+• **new BaseEvent**\<`DataType`\>(`data?`): [`BaseEvent`](events_events.BaseEvent)\<`DataType`\>
 
 #### Type parameters
 
@@ -115,11 +115,11 @@ type: "reference"
 
 #### Returns
 
-[`BaseEvent`](events_events.BaseEvent)<`DataType`\>
+[`BaseEvent`](events_events.BaseEvent)\<`DataType`\>
 
 #### Overrides
 
-CustomEvent&lt;DataType\&gt;.constructor
+CustomEvent\&lt;DataType\&gt;.constructor
 
 #### Defined in
 

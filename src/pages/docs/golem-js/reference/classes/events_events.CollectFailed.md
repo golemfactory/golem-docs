@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `reason?`: `string`  }\>
 
   ↳ **`CollectFailed`**
 

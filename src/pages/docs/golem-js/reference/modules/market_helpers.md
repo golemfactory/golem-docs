@@ -15,7 +15,7 @@ type: "reference"
 
 ### getHealthyProvidersWhiteList
 
-▸ **getHealthyProvidersWhiteList**(): `Promise`<`string`[]\>
+▸ **getHealthyProvidersWhiteList**(): `Promise`\<`string`[]\>
 
 Helps to obtain a whitelist of providers which were health-tested.
 
@@ -23,7 +23,7 @@ Important: This helper requires internet access to function properly.
 
 #### Returns
 
-`Promise`<`string`[]\>
+`Promise`\<`string`[]\>
 
 An array with Golem Node IDs of the whitelisted providers.
 

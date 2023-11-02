@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `details`: [`DemandDetails`](../interfaces/market_demand.DemandDetails)  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `details`: [`DemandDetails`](../interfaces/market_demand.DemandDetails)  }\>
 
   ↳ **`DemandSubscribed`**
 

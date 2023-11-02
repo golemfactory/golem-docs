@@ -20,11 +20,11 @@ type: "reference"
 
 ### DebitNoteFilter
 
-Ƭ **DebitNoteFilter**: (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`<`boolean`\>
+Ƭ **DebitNoteFilter**: (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`\<`boolean`\>
 
 #### Type declaration
 
-▸ (`debitNote`): `Promise`<`boolean`\>
+▸ (`debitNote`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -34,7 +34,7 @@ type: "reference"
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -44,11 +44,11 @@ ___
 
 ### InvoiceFilter
 
-Ƭ **InvoiceFilter**: (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`<`boolean`\>
+Ƭ **InvoiceFilter**: (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`\<`boolean`\>
 
 #### Type declaration
 
-▸ (`invoice`): `Promise`<`boolean`\>
+▸ (`invoice`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -58,7 +58,7 @@ ___
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 

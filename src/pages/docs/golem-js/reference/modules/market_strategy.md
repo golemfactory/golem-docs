@@ -44,7 +44,7 @@ type: "reference"
 
 ### acceptAllProposalFilter
 
-▸ **acceptAllProposalFilter**(): () => `Promise`<`boolean`\>
+▸ **acceptAllProposalFilter**(): () => `Promise`\<`boolean`\>
 
 Default Proposal filter that accept all proposal coming from the market
 
@@ -52,11 +52,11 @@ Default Proposal filter that accept all proposal coming from the market
 
 `fn`
 
-▸ (): `Promise`<`boolean`\>
+▸ (): `Promise`\<`boolean`\>
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -66,7 +66,7 @@ ___
 
 ### blackListProposalIdsFilter
 
-▸ **blackListProposalIdsFilter**(`blackListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **blackListProposalIdsFilter**(`blackListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose id is in the array
 
@@ -80,7 +80,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -90,7 +90,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -100,7 +100,7 @@ ___
 
 ### blackListProposalNamesFilter
 
-▸ **blackListProposalNamesFilter**(`blackListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **blackListProposalNamesFilter**(`blackListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose name is in the array
 
@@ -114,7 +114,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -124,7 +124,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -134,7 +134,7 @@ ___
 
 ### blackListProposalRegexpFilter
 
-▸ **blackListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **blackListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose name match to the regexp
 
@@ -148,7 +148,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -158,7 +158,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -168,7 +168,7 @@ ___
 
 ### whiteListProposalIdsFilter
 
-▸ **whiteListProposalIdsFilter**(`whiteListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **whiteListProposalIdsFilter**(`whiteListIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose id is in the array
 
@@ -182,7 +182,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -192,7 +192,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -202,7 +202,7 @@ ___
 
 ### whiteListProposalNamesFilter
 
-▸ **whiteListProposalNamesFilter**(`whiteListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **whiteListProposalNamesFilter**(`whiteListNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose name is in the array
 
@@ -216,7 +216,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -226,7 +226,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -236,7 +236,7 @@ ___
 
 ### whiteListProposalRegexpFilter
 
-▸ **whiteListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **whiteListProposalRegexpFilter**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose name match to the regexp
 
@@ -250,7 +250,7 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -260,7 +260,7 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -270,7 +270,7 @@ ___
 
 ### limitPriceFilter
 
-▸ **limitPriceFilter**(`priceLimits`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\>
+▸ **limitPriceFilter**(`priceLimits`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\>
 
 Proposal filter only allowing offers that do not exceed the defined usage
 
@@ -284,7 +284,7 @@ Proposal filter only allowing offers that do not exceed the defined usage
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -294,7 +294,7 @@ Proposal filter only allowing offers that do not exceed the defined usage
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 

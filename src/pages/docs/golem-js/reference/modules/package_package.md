@@ -23,7 +23,7 @@ type: "reference"
 
 ### PackageOptions
 
-Ƭ **PackageOptions**: [`RequireAtLeastOne`](utils_types#requireatleastone)<{ `engine?`: `string` ; `minMemGib?`: `number` ; `minStorageGib?`: `number` ; `minCpuThreads?`: `number` ; `minCpuCores?`: `number` ; `capabilities?`: `string`[] ; `imageHash?`: `string` ; `imageTag?`: `string` ; `manifest?`: `string` ; `manifestSig?`: `string` ; `manifestSigAlgorithm?`: `string` ; `manifestCert?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger)  }, ``"imageHash"`` \| ``"imageTag"`` \| ``"manifest"``\>
+Ƭ **PackageOptions**: [`RequireAtLeastOne`](utils_types#requireatleastone)\<\{ `engine?`: `string` ; `minMemGib?`: `number` ; `minStorageGib?`: `number` ; `minCpuThreads?`: `number` ; `minCpuCores?`: `number` ; `capabilities?`: `string`[] ; `imageHash?`: `string` ; `imageTag?`: `string` ; `manifest?`: `string` ; `manifestSig?`: `string` ; `manifestSigAlgorithm?`: `string` ; `manifestCert?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger)  }, ``"imageHash"`` \| ``"imageTag"`` \| ``"manifest"``\>
 
 #### Defined in
 

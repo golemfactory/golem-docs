@@ -252,7 +252,7 @@ ___
 
 ### reject
 
-▸ **reject**(`reason?`): `Promise`<`void`\>
+▸ **reject**(`reason?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -262,7 +262,7 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
@@ -272,7 +272,7 @@ ___
 
 ### respond
 
-▸ **respond**(`chosenPlatform`): `Promise`<`string`\>
+▸ **respond**(`chosenPlatform`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -282,7 +282,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 

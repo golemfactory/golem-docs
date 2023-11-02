@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `amount`: `number` ; `platform?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `amount`: `number` ; `platform?`: `string`  }\>
 
   ↳ **`AllocationCreated`**
 

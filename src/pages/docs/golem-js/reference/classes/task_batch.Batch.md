@@ -219,7 +219,7 @@ ___
 
 ### end
 
-▸ **end**(): `Promise`<[`Result`](activity_results.Result)<`any`\>[]\>
+▸ **end**(): `Promise`\<[`Result`](activity_results.Result)\<`any`\>[]\>
 
 Executes the batch of commands added via [run](task_batch.Batch#run) returning result for each of the steps.
 
@@ -227,7 +227,7 @@ In case any of the commands will fail, the execution of the batch will be interr
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`any`\>[]\>
+`Promise`\<[`Result`](activity_results.Result)\<`any`\>[]\>
 
 #### Defined in
 
@@ -237,11 +237,11 @@ ___
 
 ### endStream
 
-▸ **endStream**(): `Promise`<`Readable`\>
+▸ **endStream**(): `Promise`\<`Readable`\>
 
 #### Returns
 
-`Promise`<`Readable`\>
+`Promise`\<`Readable`\>
 
 #### Defined in
 

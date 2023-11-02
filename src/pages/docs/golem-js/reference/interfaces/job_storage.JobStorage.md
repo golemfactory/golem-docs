@@ -22,7 +22,7 @@ type: "reference"
 
 ### setJob
 
-▸ **setJob**(`jobId`, `state`, `results?`, `error?`): `Promise`<`void`\>
+▸ **setJob**(`jobId`, `state`, `results?`, `error?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -35,7 +35,7 @@ type: "reference"
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### getJob
 
-▸ **getJob**(`jobId`): `Promise`<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)<`unknown`\>\>
+▸ **getJob**(`jobId`): `Promise`\<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)\<`unknown`\>\>
 
 #### Parameters
 
@@ -55,7 +55,7 @@ ___
 
 #### Returns
 
-`Promise`<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)<`unknown`\>\>
+`Promise`\<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)\<`unknown`\>\>
 
 #### Defined in
 

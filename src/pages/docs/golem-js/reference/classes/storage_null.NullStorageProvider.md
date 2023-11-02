@@ -48,13 +48,13 @@ for the platform the SDK is running on.
 
 ### close
 
-▸ **close**(): `Promise`<`void`\>
+▸ **close**(): `Promise`\<`void`\>
 
 Close storage provider and release all resources.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Implementation of
 
@@ -68,13 +68,13 @@ ___
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 Initialize storage provider.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Implementation of
 
@@ -88,7 +88,7 @@ ___
 
 ### publishData
 
-▸ **publishData**(`src`): `Promise`<`string`\>
+▸ **publishData**(`src`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of data to be uploaded.
 
@@ -100,7 +100,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -114,7 +114,7 @@ ___
 
 ### publishFile
 
-▸ **publishFile**(`src`): `Promise`<`string`\>
+▸ **publishFile**(`src`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be uploaded.
 
@@ -126,7 +126,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -140,7 +140,7 @@ ___
 
 ### receiveFile
 
-▸ **receiveFile**(`path`): `Promise`<`string`\>
+▸ **receiveFile**(`path`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be downloaded.
 
@@ -152,7 +152,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -166,7 +166,7 @@ ___
 
 ### receiveData
 
-▸ **receiveData**(`callback`): `Promise`<`string`\>
+▸ **receiveData**(`callback`): `Promise`\<`string`\>
 
 Return allocated resource URL from Yagna of a file to be downloaded.
 
@@ -178,7 +178,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Implementation of
 
@@ -192,7 +192,7 @@ ___
 
 ### release
 
-▸ **release**(`urls`): `Promise`<`void`\>
+▸ **release**(`urls`): `Promise`\<`void`\>
 
 Release previously allocated resource URL from Yagna.
 
@@ -204,7 +204,7 @@ Release previously allocated resource URL from Yagna.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Implementation of
 

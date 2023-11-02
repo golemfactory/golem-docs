@@ -108,13 +108,13 @@ ___
 
 ### before
 
-▸ **before**(): `Promise`<`void`\>
+▸ **before**(): `Promise`\<`void`\>
 
 Setup local environment for executing this command.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -128,7 +128,7 @@ ___
 
 ### after
 
-▸ **after**(`result?`): `Promise`<[`Result`](activity_results.Result)<`unknown`\>\>
+▸ **after**(`result?`): `Promise`\<[`Result`](activity_results.Result)\<`unknown`\>\>
 
 Cleanup local setup that was needed for the command to run.
 
@@ -142,11 +142,11 @@ error result.
 
 | Name | Type |
 | :------ | :------ |
-| `result?` | [`Result`](activity_results.Result)<`unknown`\> |
+| `result?` | [`Result`](activity_results.Result)\<`unknown`\> |
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`unknown`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`unknown`\>\>
 
 #### Inherited from
 

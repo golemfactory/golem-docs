@@ -46,7 +46,7 @@ ___
 
 ### demand
 
-• `Optional` **demand**: `Pick`<[`PackageOptions`](../modules/package_package#packageoptions), ``"minMemGib"`` \| ``"minStorageGib"`` \| ``"minCpuThreads"`` \| ``"minCpuCores"`` \| ``"capabilities"``\>
+• `Optional` **demand**: `Pick`\<[`PackageOptions`](../modules/package_package#packageoptions), ``"minMemGib"`` \| ``"minStorageGib"`` \| ``"minCpuThreads"`` \| ``"minCpuCores"`` \| ``"capabilities"``\>
 
 Minimum hardware requirements for the provider. The available options are:
 - `minMemGib` - minimum required RAM in GiB
@@ -75,7 +75,7 @@ ___
 
 ### beforeEachJob
 
-• `Optional` **beforeEachJob**: [`Worker`](../modules/task_work#worker)<`unknown`, `unknown`\>
+• `Optional` **beforeEachJob**: [`Worker`](../modules/task_work#worker)\<`unknown`, `unknown`\>
 
 Function that will be run before each job. You can use it to set up the environment for your job. For example, you can upload a file to the provider.
 

@@ -39,7 +39,7 @@ ___
 
 ### CaptureMode
 
-Ƭ **CaptureMode**: { `atEnd`: { `part?`: `CapturePart` ; `format?`: `CaptureFormat`  }  } \| { `stream`: { `limit?`: `number` ; `format?`: `CaptureFormat`  }  }
+Ƭ **CaptureMode**: \{ `atEnd`: \{ `part?`: `CapturePart` ; `format?`: `CaptureFormat`  }  } \| \{ `stream`: \{ `limit?`: `number` ; `format?`: `CaptureFormat`  }  }
 
 #### Defined in
 
