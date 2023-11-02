@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- `Transfer`<`Uint8Array`\>
+- `Transfer`\<`Uint8Array`\>
 
   ↳ **`DownloadData`**
 
@@ -51,7 +51,7 @@ type: "reference"
 
 #### Overrides
 
-Transfer&lt;Uint8Array\&gt;.constructor
+Transfer\&lt;Uint8Array\&gt;.constructor
 
 #### Defined in
 
@@ -103,11 +103,11 @@ Transfer.args
 
 ### before
 
-▸ **before**(): `Promise`<`void`\>
+▸ **before**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Overrides
 
@@ -121,17 +121,17 @@ ___
 
 ### after
 
-▸ **after**(`result`): `Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
+▸ **after**(`result`): `Promise`\<[`Result`](activity_results.Result)\<`Uint8Array`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `result` | [`Result`](activity_results.Result)<`any`\> |
+| `result` | [`Result`](activity_results.Result)\<`any`\> |
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`Uint8Array`\>\>
 
 #### Overrides
 

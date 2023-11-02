@@ -57,11 +57,11 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 ### getIdentity
 
-▸ **getIdentity**(): `Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
+▸ **getIdentity**(): `Promise`\<`AxiosResponse`\<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`IdentityModel`](../interfaces/utils_yagna_identity.IdentityModel), `any`\>\>
 
 #### Implementation of
 

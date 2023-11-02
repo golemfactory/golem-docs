@@ -87,11 +87,11 @@ ___
 
 ### connect
 
-▸ **connect**(): `Promise`<`void`\>
+▸ **connect**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
@@ -101,11 +101,11 @@ ___
 
 ### end
 
-▸ **end**(): `Promise`<`void`\>
+▸ **end**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
@@ -163,17 +163,17 @@ ___
 
 ### errorHandler
 
-▸ **errorHandler**(`error`): `Promise`<`AxiosError`<`unknown`, `any`\>\>
+▸ **errorHandler**(`error`): `Promise`\<`AxiosError`\<`unknown`, `any`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `error` | `AxiosError`<`unknown`, `any`\> |
+| `error` | `AxiosError`\<`unknown`, `any`\> |
 
 #### Returns
 
-`Promise`<`AxiosError`<`unknown`, `any`\>\>
+`Promise`\<`AxiosError`\<`unknown`, `any`\>\>
 
 #### Defined in
 

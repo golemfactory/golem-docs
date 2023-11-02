@@ -18,7 +18,7 @@ type: "reference"
 
 ### acceptAllDebitNotesFilter
 
-▸ **acceptAllDebitNotesFilter**(): () => `Promise`<`boolean`\>
+▸ **acceptAllDebitNotesFilter**(): () => `Promise`\<`boolean`\>
 
 Default DebitNotes filter that accept all debit notes without any validation
 
@@ -26,11 +26,11 @@ Default DebitNotes filter that accept all debit notes without any validation
 
 `fn`
 
-▸ (): `Promise`<`boolean`\>
+▸ (): `Promise`\<`boolean`\>
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -40,7 +40,7 @@ ___
 
 ### acceptAllInvoicesFilter
 
-▸ **acceptAllInvoicesFilter**(): () => `Promise`<`boolean`\>
+▸ **acceptAllInvoicesFilter**(): () => `Promise`\<`boolean`\>
 
 Default Invoices filter that accept all invoices without any validation
 
@@ -48,11 +48,11 @@ Default Invoices filter that accept all invoices without any validation
 
 `fn`
 
-▸ (): `Promise`<`boolean`\>
+▸ (): `Promise`\<`boolean`\>
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -62,7 +62,7 @@ ___
 
 ### acceptMaxAmountDebitNoteFilter
 
-▸ **acceptMaxAmountDebitNoteFilter**(`maxAmount`): (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`<`boolean`\>
+▸ **acceptMaxAmountDebitNoteFilter**(`maxAmount`): (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`\<`boolean`\>
 
 A custom filter that only accepts debit notes below a given value
 
@@ -76,7 +76,7 @@ A custom filter that only accepts debit notes below a given value
 
 `fn`
 
-▸ (`debitNote`): `Promise`<`boolean`\>
+▸ (`debitNote`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -86,7 +86,7 @@ A custom filter that only accepts debit notes below a given value
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -96,7 +96,7 @@ ___
 
 ### acceptMaxAmountInvoiceFilter
 
-▸ **acceptMaxAmountInvoiceFilter**(`maxAmount`): (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`<`boolean`\>
+▸ **acceptMaxAmountInvoiceFilter**(`maxAmount`): (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`\<`boolean`\>
 
 A custom filter that only accepts invoices below a given value
 
@@ -110,7 +110,7 @@ A custom filter that only accepts invoices below a given value
 
 `fn`
 
-▸ (`invoice`): `Promise`<`boolean`\>
+▸ (`invoice`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -120,7 +120,7 @@ A custom filter that only accepts invoices below a given value
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 

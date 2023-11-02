@@ -23,7 +23,7 @@ type: "reference"
 
 ### SerializedJob
 
-Ƭ **SerializedJob**<`OutputType`\>: `Object`
+Ƭ **SerializedJob**\<`OutputType`\>: `Object`
 
 #### Type parameters
 

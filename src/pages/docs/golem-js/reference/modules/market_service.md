@@ -19,11 +19,11 @@ type: "reference"
 
 ### ProposalFilter
 
-Ƭ **ProposalFilter**: (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`<`boolean`\> \| `boolean`
+Ƭ **ProposalFilter**: (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\> \| `boolean`
 
 #### Type declaration
 
-▸ (`proposal`): `Promise`<`boolean`\> \| `boolean`
+▸ (`proposal`): `Promise`\<`boolean`\> \| `boolean`
 
 ##### Parameters
 
@@ -33,7 +33,7 @@ type: "reference"
 
 ##### Returns
 
-`Promise`<`boolean`\> \| `boolean`
+`Promise`\<`boolean`\> \| `boolean`
 
 #### Defined in
 

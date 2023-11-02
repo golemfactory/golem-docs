@@ -81,11 +81,11 @@ ___
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
@@ -95,7 +95,7 @@ ___
 
 ### createJob
 
-▸ **createJob**<`Output`\>(`worker`): `Promise`<[`Job`](job_job.Job)<`Output`\>\>
+▸ **createJob**\<`Output`\>(`worker`): `Promise`\<[`Job`](job_job.Job)\<`Output`\>\>
 
 Create a job on Golem Network.
 
@@ -109,11 +109,11 @@ Create a job on Golem Network.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)<`unknown`, `Output`\> | Worker function to run |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`unknown`, `Output`\> | Worker function to run |
 
 #### Returns
 
-`Promise`<[`Job`](job_job.Job)<`Output`\>\>
+`Promise`\<[`Job`](job_job.Job)\<`Output`\>\>
 
 Job object
 
@@ -141,7 +141,7 @@ ___
 
 ### getJobById
 
-▸ **getJobById**(`id`): [`Job`](job_job.Job)<`unknown`\>
+▸ **getJobById**(`id`): [`Job`](job_job.Job)\<`unknown`\>
 
 #### Parameters
 
@@ -151,7 +151,7 @@ ___
 
 #### Returns
 
-[`Job`](job_job.Job)<`unknown`\>
+[`Job`](job_job.Job)\<`unknown`\>
 
 #### Defined in
 
@@ -161,7 +161,7 @@ ___
 
 ### runTask
 
-▸ **runTask**<`Output`\>(`worker`): `Promise`<`undefined` \| `Output`\>
+▸ **runTask**\<`Output`\>(`worker`): `Promise`\<`undefined` \| `Output`\>
 
 Run a task on Golem Network.
 
@@ -175,11 +175,11 @@ Run a task on Golem Network.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)<`undefined`, `Output`\> | Worker function to run |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`undefined`, `Output`\> | Worker function to run |
 
 #### Returns
 
-`Promise`<`undefined` \| `Output`\>
+`Promise`\<`undefined` \| `Output`\>
 
 Worker function result
 
@@ -195,11 +195,11 @@ ___
 
 ### close
 
-▸ **close**(): `Promise`<`void`\>
+▸ **close**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 

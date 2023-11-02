@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId?`: `string` ; `reason?`: `string` ; `parentId`: `string` \| ``null``  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `providerId?`: `string` ; `reason?`: `string` ; `parentId`: `string` \| ``null``  }\>
 
   ↳ **`ProposalRejected`**
 

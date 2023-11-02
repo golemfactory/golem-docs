@@ -27,7 +27,7 @@ type: "reference"
 | Name | Type |
 | :------ | :------ |
 | `market` | `MarketRequestorApi` |
-| `activity` | { `control`: `RequestorControlApi` ; `state`: `RequestorStateApi`  } |
+| `activity` | \{ `control`: `RequestorControlApi` ; `state`: `RequestorStateApi`  } |
 | `activity.control` | `RequestorControlApi` |
 | `activity.state` | `RequestorStateApi` |
 | `net` | `NetworkRequestorApi` |

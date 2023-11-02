@@ -3,7 +3,7 @@ title: "Interface ResultData - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Interface ResultData within the golem-js SDK for the Golem Network."
 type: "reference"
 ---
-# Interface: ResultData<T\>
+# Interface: ResultData\<T\>
 
 [activity/results](../modules/activity_results).ResultData
 

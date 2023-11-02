@@ -79,7 +79,7 @@ ___
 
 ### create
 
-▸ **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`<[`Activity`](activity_activity.Activity)\>
+▸ **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`\<[`Activity`](activity_activity.Activity)\>
 
 Create activity for given agreement ID
 
@@ -94,7 +94,7 @@ Create activity for given agreement ID
 
 #### Returns
 
-`Promise`<[`Activity`](activity_activity.Activity)\>
+`Promise`\<[`Activity`](activity_activity.Activity)\>
 
 Activity
 
@@ -106,7 +106,7 @@ ___
 
 ### execute
 
-▸ **execute**(`script`, `stream?`, `timeout?`): `Promise`<`Readable`\>
+▸ **execute**(`script`, `stream?`, `timeout?`): `Promise`\<`Readable`\>
 
 Execute script
 
@@ -120,7 +120,7 @@ Execute script
 
 #### Returns
 
-`Promise`<`Readable`\>
+`Promise`\<`Readable`\>
 
 #### Defined in
 
@@ -130,13 +130,13 @@ ___
 
 ### stop
 
-▸ **stop**(): `Promise`<`boolean`\>
+▸ **stop**(): `Promise`\<`boolean`\>
 
 Stop and destroy activity
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 boolean
 
@@ -148,13 +148,13 @@ ___
 
 ### getState
 
-▸ **getState**(): `Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
+▸ **getState**(): `Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 Getting current state of activity
 
 #### Returns
 
-`Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
+`Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 state
 
@@ -170,7 +170,7 @@ ___
 
 ### send
 
-▸ **send**(`script`): `Promise`<`string`\>
+▸ **send**(`script`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -180,7 +180,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 

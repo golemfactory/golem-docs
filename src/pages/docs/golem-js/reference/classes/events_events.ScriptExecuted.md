@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `activityId`: `string` ; `agreementId`: `string` ; `success`: `boolean`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `activityId`: `string` ; `agreementId`: `string` ; `success`: `boolean`  }\>
 
   ↳ **`ScriptExecuted`**
 

@@ -60,7 +60,7 @@ ___
 
 ### getImageIdentifier
 
-▸ **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
+▸ **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
 
 #### Parameters
 
@@ -70,7 +70,7 @@ ___
 
 #### Returns
 
-[`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
+[`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
 
 #### Defined in
 
@@ -100,11 +100,11 @@ ___
 
 ### getDemandDecoration
 
-▸ **getDemandDecoration**(): `Promise`<[`MarketDecoration`](../modules/market_builder#marketdecoration)\>
+▸ **getDemandDecoration**(): `Promise`\<[`MarketDecoration`](../modules/market_builder#marketdecoration)\>
 
 #### Returns
 
-`Promise`<[`MarketDecoration`](../modules/market_builder#marketdecoration)\>
+`Promise`\<[`MarketDecoration`](../modules/market_builder#marketdecoration)\>
 
 #### Defined in
 

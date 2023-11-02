@@ -3,7 +3,7 @@ title: "Class Task - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class Task within the golem-js SDK for the Golem Network."
 type: "reference"
 ---
-# Class: Task<InputType, OutputType\>
+# Class: Task\<InputType, OutputType\>
 
 [task/task](../modules/task_task).Task
 
@@ -58,7 +58,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 ### constructor
 
-• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `options?`): [`Task`](task_task.Task)<`InputType`, `OutputType`\>
+• **new Task**\<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `options?`): [`Task`](task_task.Task)\<`InputType`, `OutputType`\>
 
 #### Type parameters
 
@@ -72,14 +72,14 @@ Represents one computation unit that will be run on the one provider machine (e.
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> |
 | `data?` | `InputType` |
-| `initWorker?` | [`Worker`](../modules/task_work#worker)<`undefined`\> |
+| `initWorker?` | [`Worker`](../modules/task_work#worker)\<`undefined`\> |
 | `options?` | [`TaskOptions`](../modules/task_task#taskoptions) |
 
 #### Returns
 
-[`Task`](task_task.Task)<`InputType`, `OutputType`\>
+[`Task`](task_task.Task)\<`InputType`, `OutputType`\>
 
 #### Defined in
 
@@ -299,11 +299,11 @@ ___
 
 ### getWorker
 
-▸ **getWorker**(): [`Worker`](../modules/task_work#worker)<`InputType`\>
+▸ **getWorker**(): [`Worker`](../modules/task_work#worker)\<`InputType`\>
 
 #### Returns
 
-[`Worker`](../modules/task_work#worker)<`InputType`\>
+[`Worker`](../modules/task_work#worker)\<`InputType`\>
 
 #### Defined in
 
@@ -313,11 +313,11 @@ ___
 
 ### getInitWorker
 
-▸ **getInitWorker**(): `undefined` \| [`Worker`](../modules/task_work#worker)<`undefined`\>
+▸ **getInitWorker**(): `undefined` \| [`Worker`](../modules/task_work#worker)\<`undefined`\>
 
 #### Returns
 
-`undefined` \| [`Worker`](../modules/task_work#worker)<`undefined`\>
+`undefined` \| [`Worker`](../modules/task_work#worker)\<`undefined`\>
 
 #### Defined in
 

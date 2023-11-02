@@ -3,7 +3,7 @@ title: "Class Result - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class Result within the golem-js SDK for the Golem Network."
 type: "reference"
 ---
-# Class: Result<TData\>
+# Class: Result\<TData\>
 
 [activity/results](../modules/activity_results).Result
 
@@ -15,7 +15,7 @@ type: "reference"
 
 ## Implements
 
-- [`ResultData`](../interfaces/activity_results.ResultData)<`TData`\>
+- [`ResultData`](../interfaces/activity_results.ResultData)\<`TData`\>
 
 ## Table of contents
 
@@ -42,7 +42,7 @@ type: "reference"
 
 ### constructor
 
-• **new Result**<`TData`\>(`props`): [`Result`](activity_results.Result)<`TData`\>
+• **new Result**\<`TData`\>(`props`): [`Result`](activity_results.Result)\<`TData`\>
 
 #### Type parameters
 
@@ -54,11 +54,11 @@ type: "reference"
 
 | Name | Type |
 | :------ | :------ |
-| `props` | [`ResultData`](../interfaces/activity_results.ResultData)<`any`\> |
+| `props` | [`ResultData`](../interfaces/activity_results.ResultData)\<`any`\> |
 
 #### Returns
 
-[`Result`](activity_results.Result)<`TData`\>
+[`Result`](activity_results.Result)\<`TData`\>
 
 #### Defined in
 
@@ -196,7 +196,7 @@ In case the command was related to upload or download, this will contain the tra
 
 ### getOutputAsJson
 
-▸ **getOutputAsJson**<`Output`\>(): `Output`
+▸ **getOutputAsJson**\<`Output`\>(): `Output`
 
 Helper method making JSON-like output results more accessible
 

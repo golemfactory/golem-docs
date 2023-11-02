@@ -23,7 +23,7 @@ Properties and constraints to be added to a market object (i.e. a demand or an o
 
 | Name | Type |
 | :------ | :------ |
-| `properties` | { `key`: `string` ; `value`: `string` \| `number` \| `boolean`  }[] |
+| `properties` | \{ `key`: `string` ; `value`: `string` \| `number` \| `boolean`  }[] |
 | `constraints` | `string`[] |
 
 #### Defined in

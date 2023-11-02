@@ -29,7 +29,7 @@ A high-level module for defining and executing tasks in the golem network
 
 ### create
 
-▸ **create**(`options`): `Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
+▸ **create**(`options`): `Promise`\<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 Create a new Task Executor
 
@@ -41,7 +41,7 @@ Create a new Task Executor
 
 #### Returns
 
-`Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
+`Promise`\<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 TaskExecutor
 
@@ -84,13 +84,13 @@ ___
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 Initialize executor
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Description`**
 
@@ -104,7 +104,7 @@ ___
 
 ### end
 
-▸ **end**(): `Promise`<`void`\>
+▸ **end**(): `Promise`\<`void`\>
 
 Stop all executor services and shut down executor instance.
 
@@ -112,7 +112,7 @@ You can call this method multiple times, it will resolve only once the executor 
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
@@ -178,7 +178,7 @@ ___
 
 ### run
 
-▸ **run**<`OutputType`\>(`worker`, `options?`): `Promise`<`undefined` \| `OutputType`\>
+▸ **run**\<`OutputType`\>(`worker`, `options?`): `Promise`\<`undefined` \| `OutputType`\>
 
 Run task - allows to execute a single worker function on the Golem network with a single provider.
 
@@ -186,18 +186,18 @@ Run task - allows to execute a single worker function on the Golem network with 
 
 | Name | Type |
 | :------ | :------ |
-| `OutputType` | [`Result`](activity_results.Result)<`any`\> |
+| `OutputType` | [`Result`](activity_results.Result)\<`any`\> |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)<`undefined`, `OutputType`\> | function that run task |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`undefined`, `OutputType`\> | function that run task |
 | `options?` | [`TaskOptions`](../modules/task_task#taskoptions) | task options |
 
 #### Returns
 
-`Promise`<`undefined` \| `OutputType`\>
+`Promise`\<`undefined` \| `OutputType`\>
 
 result of task computation
 
@@ -215,7 +215,7 @@ ___
 
 ### map
 
-▸ **map**<`InputType`, `OutputType`\>(`data`, `worker`): `AsyncIterable`<`undefined` \| `OutputType`\>
+▸ **map**\<`InputType`, `OutputType`\>(`data`, `worker`): `AsyncIterable`\<`undefined` \| `OutputType`\>
 
 Map iterable data to worker function and return computed Task result as AsyncIterable
 
@@ -230,12 +230,12 @@ Map iterable data to worker function and return computed Task result as AsyncIte
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | worker function |
+| `data` | `Iterable`\<`InputType`\> | Iterable data |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | worker function |
 
 #### Returns
 
-`AsyncIterable`<`undefined` \| `OutputType`\>
+`AsyncIterable`\<`undefined` \| `OutputType`\>
 
 AsyncIterable with results of computed tasks
 
@@ -255,7 +255,7 @@ ___
 
 ### forEach
 
-▸ **forEach**<`InputType`, `OutputType`\>(`data`, `worker`): `Promise`<`void`\>
+▸ **forEach**\<`InputType`, `OutputType`\>(`data`, `worker`): `Promise`\<`void`\>
 
 Iterates over given data and execute task using worker function
 
@@ -270,12 +270,12 @@ Iterates over given data and execute task using worker function
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | Worker function |
+| `data` | `Iterable`\<`InputType`\> | Iterable data |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | Worker function |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Example`**
 
@@ -294,7 +294,7 @@ ___
 
 ### createJob
 
-▸ **createJob**<`InputType`, `OutputType`\>(`worker`): `Promise`<[`Job`](job_job.Job)<`OutputType`\>\>
+▸ **createJob**\<`InputType`, `OutputType`\>(`worker`): `Promise`\<[`Job`](job_job.Job)\<`OutputType`\>\>
 
 Start a new job without waiting for the result. The job can be retrieved later using [TaskExecutor.getJobById](executor_executor.TaskExecutor#getjobbyid). The job's status is stored in the [JobStorage](../interfaces/job_storage.JobStorage) provided in the [ExecutorOptions](../modules/executor_executor#executoroptions) (in-memory by default). For distributed environments, it is recommended to use a form of storage that is accessible from all nodes (e.g. a database).
 
@@ -309,11 +309,11 @@ Start a new job without waiting for the result. The job can be retrieved later u
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | Worker function to be executed |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | Worker function to be executed |
 
 #### Returns
 
-`Promise`<[`Job`](job_job.Job)<`OutputType`\>\>
+`Promise`\<[`Job`](job_job.Job)\<`OutputType`\>\>
 
 Job object
 
@@ -341,7 +341,7 @@ ___
 
 ### getJobById
 
-▸ **getJobById**(`jobId`): [`Job`](job_job.Job)<`unknown`\>
+▸ **getJobById**(`jobId`): [`Job`](job_job.Job)\<`unknown`\>
 
 Retrieve a job by its ID. The job's status is stored in the [JobStorage](../interfaces/job_storage.JobStorage) provided in the [ExecutorOptions](../modules/executor_executor#executoroptions) (in-memory by default). Use [Job.fetchState](job_job.Job#fetchstate), [Job.fetchResults](job_job.Job#fetchresults) and [Job.fetchError](job_job.Job#fetcherror) to get the job's status.
 
@@ -353,7 +353,7 @@ Retrieve a job by its ID. The job's status is stored in the [JobStorage](../inte
 
 #### Returns
 
-[`Job`](job_job.Job)<`unknown`\>
+[`Job`](job_job.Job)\<`unknown`\>
 
 Job object.
 
@@ -365,7 +365,7 @@ ___
 
 ### cancel
 
-▸ **cancel**(`reason?`): `Promise`<`void`\>
+▸ **cancel**(`reason?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -375,7 +375,7 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
