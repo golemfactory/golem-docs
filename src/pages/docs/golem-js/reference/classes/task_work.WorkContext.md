@@ -92,11 +92,11 @@ ___
 
 ### before
 
-▸ **before**(): `Promise`<`void` \| `Result`<`unknown`\>[]\>
+▸ **before**(): `Promise`\<`void` \| `Result`\<`unknown`\>[]\>
 
 #### Returns
 
-`Promise`<`void` \| `Result`<`unknown`\>[]\>
+`Promise`\<`void` \| `Result`\<`unknown`\>[]\>
 
 #### Defined in
 
@@ -106,7 +106,7 @@ ___
 
 ### run
 
-▸ **run**(`commandLine`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **run**(`commandLine`, `options?`): `Promise`\<`Result`\<`unknown`\>\>
 
 Execute a command on provider using a shell (/bin/sh).
 
@@ -119,13 +119,13 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Defined in
 
 [src/task/work.ts:117](https://github.com/golemfactory/golem-js/blob/614ea72/src/task/work.ts#L117)
 
-▸ **run**(`executable`, `args`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **run**(`executable`, `args`, `options?`): `Promise`\<`Result`\<`unknown`\>\>
 
 Execute an executable on provider.
 
@@ -139,7 +139,7 @@ Execute an executable on provider.
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Defined in
 
@@ -149,7 +149,7 @@ ___
 
 ### uploadFile
 
-▸ **uploadFile**(`src`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **uploadFile**(`src`, `dst`, `options?`): `Promise`\<`Result`\<`unknown`\>\>
 
 #### Parameters
 
@@ -161,7 +161,7 @@ ___
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Defined in
 
@@ -171,7 +171,7 @@ ___
 
 ### uploadJson
 
-▸ **uploadJson**(`json`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **uploadJson**(`json`, `dst`, `options?`): `Promise`\<`Result`\<`unknown`\>\>
 
 #### Parameters
 
@@ -183,7 +183,7 @@ ___
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Defined in
 
@@ -193,7 +193,7 @@ ___
 
 ### uploadData
 
-▸ **uploadData**(`data`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **uploadData**(`data`, `dst`, `options?`): `Promise`\<`Result`\<`unknown`\>\>
 
 #### Parameters
 
@@ -205,7 +205,7 @@ ___
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Defined in
 
@@ -215,7 +215,7 @@ ___
 
 ### downloadFile
 
-▸ **downloadFile**(`src`, `dst`, `options?`): `Promise`<`Result`<`unknown`\>\>
+▸ **downloadFile**(`src`, `dst`, `options?`): `Promise`\<`Result`\<`unknown`\>\>
 
 #### Parameters
 
@@ -227,7 +227,7 @@ ___
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Defined in
 
@@ -237,7 +237,7 @@ ___
 
 ### downloadData
 
-▸ **downloadData**(`src`, `options?`): `Promise`<`Result`<`Uint8Array`\>\>
+▸ **downloadData**(`src`, `options?`): `Promise`\<`Result`\<`Uint8Array`\>\>
 
 #### Parameters
 
@@ -248,7 +248,7 @@ ___
 
 #### Returns
 
-`Promise`<`Result`<`Uint8Array`\>\>
+`Promise`\<`Result`\<`Uint8Array`\>\>
 
 #### Defined in
 
@@ -258,7 +258,7 @@ ___
 
 ### downloadJson
 
-▸ **downloadJson**(`src`, `options?`): `Promise`<`Result`<`any`\>\>
+▸ **downloadJson**(`src`, `options?`): `Promise`\<`Result`\<`any`\>\>
 
 #### Parameters
 
@@ -269,7 +269,7 @@ ___
 
 #### Returns
 
-`Promise`<`Result`<`any`\>\>
+`Promise`\<`Result`\<`any`\>\>
 
 #### Defined in
 
@@ -337,11 +337,11 @@ ___
 
 ### getState
 
-▸ **getState**(): `Promise`<`ActivityStateEnum`\>
+▸ **getState**(): `Promise`\<`ActivityStateEnum`\>
 
 #### Returns
 
-`Promise`<`ActivityStateEnum`\>
+`Promise`\<`ActivityStateEnum`\>
 
 #### Defined in
 

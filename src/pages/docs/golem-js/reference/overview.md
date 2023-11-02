@@ -9,7 +9,7 @@
 	* [AgreementRejected](classes/events_events.AgreementRejected)
 	* [AgreementTerminated](classes/events_events.AgreementTerminated)
 	* [AllocationCreated](classes/events_events.AllocationCreated)
-	* [BaseEvent<DataType\>](classes/events_events.BaseEvent)
+	* [BaseEvent\<DataType\>](classes/events_events.BaseEvent)
 	* [CollectFailed](classes/events_events.CollectFailed)
 	* [ComputationFailed](classes/events_events.ComputationFailed)
 	* [ComputationFinished](classes/events_events.ComputationFinished)
@@ -47,7 +47,7 @@
 	* [NullStorageProvider](classes/storage_null.NullStorageProvider)
 	* [WebSocketBrowserStorageProvider](classes/storage_ws_browser.WebSocketBrowserStorageProvider)
 	* [Batch](classes/task_batch.Batch)
-	* [Task<InputType, OutputType\>](classes/task_task.Task)
+	* [Task\<InputType, OutputType\>](classes/task_task.Task)
 	* [WorkContext](classes/task_work.WorkContext)
 * Enums
 	* [ResultState](enums/activity_results.ResultState)

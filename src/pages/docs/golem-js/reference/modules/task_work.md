@@ -18,7 +18,7 @@
 
 ### Worker
 
-Ƭ **Worker**<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`<`OutputType`\>
+Ƭ **Worker**\<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`\<`OutputType`\>
 
 #### Type parameters
 
@@ -29,7 +29,7 @@
 
 #### Type declaration
 
-▸ (`ctx`, `data?`): `Promise`<`OutputType`\>
+▸ (`ctx`, `data?`): `Promise`\<`OutputType`\>
 
 ##### Parameters
 
@@ -40,7 +40,7 @@
 
 ##### Returns
 
-`Promise`<`OutputType`\>
+`Promise`\<`OutputType`\>
 
 #### Defined in
 
