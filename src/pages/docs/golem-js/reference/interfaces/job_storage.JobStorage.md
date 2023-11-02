@@ -22,7 +22,7 @@ type: "reference"
 
 ### setJob
 
-▸ **setJob**(`jobId`, `state`, `results?`, `error?`): `Promise`<`void`\>
+▸ **setJob**(`jobId`, `state`, `results?`, `error?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -35,17 +35,17 @@ type: "reference"
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/job/storage.ts:10](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/storage.ts#L10)
+[src/job/storage.ts:10](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/storage.ts#L10)
 
 ___
 
 ### getJob
 
-▸ **getJob**(`jobId`): `Promise`<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)<`unknown`\>\>
+▸ **getJob**(`jobId`): `Promise`\<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)\<`unknown`\>\>
 
 #### Parameters
 
@@ -55,8 +55,8 @@ ___
 
 #### Returns
 
-`Promise`<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)<`unknown`\>\>
+`Promise`\<``null`` \| [`SerializedJob`](../modules/job_storage#serializedjob)\<`unknown`\>\>
 
 #### Defined in
 
-[src/job/storage.ts:11](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/storage.ts#L11)
+[src/job/storage.ts:11](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/storage.ts#L11)

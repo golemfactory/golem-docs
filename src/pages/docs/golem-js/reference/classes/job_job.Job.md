@@ -3,7 +3,7 @@ title: "Class Job - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class Job within the golem-js SDK for the Golem Network."
 type: "reference"
 ---
-# Class: Job<Output\>
+# Class: Job\<Output\>
 
 [job/job](../modules/job_job).Job
 
@@ -41,7 +41,7 @@ Represents the state of some computation unit. The purpose of this class is to p
 
 ### constructor
 
-• **new Job**<`Output`\>(`id`, `jobStorage`): [`Job`](job_job.Job)<`Output`\>
+• **new Job**\<`Output`\>(`id`, `jobStorage`): [`Job`](job_job.Job)\<`Output`\>
 
 #### Type parameters
 
@@ -58,11 +58,11 @@ Represents the state of some computation unit. The purpose of this class is to p
 
 #### Returns
 
-[`Job`](job_job.Job)<`Output`\>
+[`Job`](job_job.Job)\<`Output`\>
 
 #### Defined in
 
-[src/job/job.ts:10](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/job.ts#L10)
+[src/job/job.ts:10](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/job.ts#L10)
 
 ## Properties
 
@@ -72,27 +72,27 @@ Represents the state of some computation unit. The purpose of this class is to p
 
 #### Defined in
 
-[src/job/job.ts:11](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/job.ts#L11)
+[src/job/job.ts:11](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/job.ts#L11)
 
 ## Methods
 
 ### saveInitialState
 
-▸ **saveInitialState**(): `Promise`<`void`\>
+▸ **saveInitialState**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/job/job.ts:15](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/job.ts#L15)
+[src/job/job.ts:15](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/job.ts#L15)
 
 ___
 
 ### saveState
 
-▸ **saveState**(`state`, `results?`, `error?`): `Promise`<`void`\>
+▸ **saveState**(`state`, `results?`, `error?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -104,50 +104,50 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/job/job.ts:19](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/job.ts#L19)
+[src/job/job.ts:19](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/job.ts#L19)
 
 ___
 
 ### fetchState
 
-▸ **fetchState**(): `Promise`<[`TaskState`](../enums/task_task.TaskState)\>
+▸ **fetchState**(): `Promise`\<[`TaskState`](../enums/task_task.TaskState)\>
 
 #### Returns
 
-`Promise`<[`TaskState`](../enums/task_task.TaskState)\>
+`Promise`\<[`TaskState`](../enums/task_task.TaskState)\>
 
 #### Defined in
 
-[src/job/job.ts:31](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/job.ts#L31)
+[src/job/job.ts:31](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/job.ts#L31)
 
 ___
 
 ### fetchResults
 
-▸ **fetchResults**(): `Promise`<`undefined` \| `Output`\>
+▸ **fetchResults**(): `Promise`\<`undefined` \| `Output`\>
 
 #### Returns
 
-`Promise`<`undefined` \| `Output`\>
+`Promise`\<`undefined` \| `Output`\>
 
 #### Defined in
 
-[src/job/job.ts:35](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/job.ts#L35)
+[src/job/job.ts:35](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/job.ts#L35)
 
 ___
 
 ### fetchError
 
-▸ **fetchError**(): `Promise`<`undefined` \| `Error`\>
+▸ **fetchError**(): `Promise`\<`undefined` \| `Error`\>
 
 #### Returns
 
-`Promise`<`undefined` \| `Error`\>
+`Promise`\<`undefined` \| `Error`\>
 
 #### Defined in
 
-[src/job/job.ts:39](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/job.ts#L39)
+[src/job/job.ts:39](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/job.ts#L39)

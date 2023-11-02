@@ -15,8 +15,8 @@ type: "reference"
 
 ### NetworkServiceOptions
 
-Ƭ **NetworkServiceOptions**: `Omit`<`NetworkOptions`, ``"networkOwnerId"``\>
+Ƭ **NetworkServiceOptions**: `Omit`\<`NetworkOptions`, ``"networkOwnerId"``\>
 
 #### Defined in
 
-[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/00d03ae/src/network/service.ts#L6)
+[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/network/service.ts#L6)

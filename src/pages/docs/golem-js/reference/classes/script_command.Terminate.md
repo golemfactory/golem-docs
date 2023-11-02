@@ -52,7 +52,7 @@ Command.constructor
 
 #### Defined in
 
-[src/script/command.ts:106](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L106)
+[src/script/command.ts:106](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L106)
 
 ## Properties
 
@@ -66,7 +66,7 @@ Command.args
 
 #### Defined in
 
-[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L16)
+[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L16)
 
 ## Methods
 
@@ -84,7 +84,7 @@ Command.toJson
 
 #### Defined in
 
-[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L25)
+[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L25)
 
 ___
 
@@ -102,19 +102,19 @@ Command.toExeScriptRequest
 
 #### Defined in
 
-[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L31)
+[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L31)
 
 ___
 
 ### before
 
-▸ **before**(): `Promise`<`void`\>
+▸ **before**(): `Promise`\<`void`\>
 
 Setup local environment for executing this command.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -122,13 +122,13 @@ Command.before
 
 #### Defined in
 
-[src/script/command.ts:38](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L38)
+[src/script/command.ts:38](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L38)
 
 ___
 
 ### after
 
-▸ **after**(`result?`): `Promise`<[`Result`](activity_results.Result)<`unknown`\>\>
+▸ **after**(`result?`): `Promise`\<[`Result`](activity_results.Result)\<`unknown`\>\>
 
 Cleanup local setup that was needed for the command to run.
 
@@ -142,11 +142,11 @@ error result.
 
 | Name | Type |
 | :------ | :------ |
-| `result?` | [`Result`](activity_results.Result)<`unknown`\> |
+| `result?` | [`Result`](activity_results.Result)\<`unknown`\> |
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`unknown`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`unknown`\>\>
 
 #### Inherited from
 
@@ -154,4 +154,4 @@ Command.after
 
 #### Defined in
 
-[src/script/command.ts:53](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L53)
+[src/script/command.ts:53](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L53)
