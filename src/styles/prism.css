@@ -413,9 +413,7 @@ pre[id].linkable-line-numbers.linkable-line-numbers
   color: #60aeee;
 }
 
-.dark .token.plain {
-  color: #deba79;
-}
+
 
 .rainbow-braces .token.token.punctuation.brace-level-4,
 .rainbow-braces .token.token.punctuation.brace-level-8,
