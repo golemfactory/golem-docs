@@ -92,14 +92,14 @@ export const NavigationItem = ({ item, isActive }) =>
       href={item.href}
       aria-current={isActive ? 'page' : undefined}
       className={`break-words py-0.5
-      ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/50'}
+      ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/70'}
       `}
     >
       {item.title}
     </Link>
   ) : (
     <span
-      className={clsx('py-0.5 text-sm text-left', {
+      className={clsx('py-0.5 text-left text-sm', {
         'text-primary dark:text-darkprimary': isActive,
       })}
     >
@@ -119,7 +119,7 @@ export const Dropdown = ({ children, isActive }) => {
   return (
     <div>
       <button
-        className="flex items-center gap-x-2 dark:text-white/50"
+        className="flex items-center gap-x-2 dark:text-white/70"
         onClick={btnClick}
         aria-expanded={isOpen}
       >

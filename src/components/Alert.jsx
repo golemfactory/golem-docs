@@ -15,25 +15,25 @@ export function Alert({ children, level }) {
     >
       <div
         className={`rounded-t-md text-dark dark:text-white
-      ${level === 'info' ? '  bg-info dark:bg-opacity-50' : ''}
-      ${level === 'warning' ? '  bg-warning dark:bg-opacity-80' : ''}
-      ${level === 'success' ? '  bg-success dark:bg-opacity-50' : ''}
-      ${level === 'danger' ? ' border-red-300 bg-red-100 dark:bg-opacity-50 dark:bg-red-200' : ''}
+      ${level === 'info' ? '  bg-info dark:bg-darkprimary ' : ''}
+      ${level === 'warning' ? '  bg-warning dark:bg-[#df9606]' : ''}
+      ${level === 'success' ? '  bg-success dark:bg-[#208047]' : ''}
+      ${level === 'danger' ? ' border-red-300 bg-red-100  dark:bg-[#c01616]' : ''}
        py-3`}
       >
         <span className="flex items-center px-4 font-semibold capitalize dark:text-white">
           {level === 'info' && (
-            <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#678AAA] ">
+            <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#678AAA] dark:bg-[#3e678e] ">
               <InfoIcon className="h-3 w-3 fill-[#ADDDEC]" />
             </div>
           )}
           {level === 'warning' && (
-            <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#C9885C] ">
+            <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#C9885C] dark:bg-[#b9784d] ">
               <WarningIcon className="h-3 w-3 fill-[#FFD9BE]" />
             </div>
           )}
           {level === 'danger' && (
-            <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#92344A] ">
+            <div className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#92344A] dark:bg-[#823144] ">
               <DangerIcon className="h-3 w-3 fill-[#FFC1CE]" />
             </div>
           )}

@@ -116,20 +116,20 @@ function SearchResult({ result, autocomplete, collection, query }) {
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="relative hover:cursor-pointer rounded-lg py-2  pl-3 text-sm text-slate-700 group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/50 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
+        className="relative rounded-lg py-2 pl-3  text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
       >
         <div className="w-3/5 break-words md:w-3/4">
           <HighlightQuery text={result.title} query={query} />
         </div>
-        <span className="absolute top-1/2 right-0 transform -translate-y-1/2 mr-3 rounded-md bg-gray-50 dark:bg-slate-800 dark:text-white dark:text-opacity-50 px-2 py-1 text-xs font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          {result.type === "noicon" ? "Page" : result.type}
+        <span className="absolute right-0 top-1/2 mr-3 -translate-y-1/2 transform rounded-md bg-gray-50 px-2 py-1 text-xs font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-slate-800 dark:text-white dark:text-opacity-50">
+          {result.type === 'noicon' ? 'Page' : result.type}
         </span>
 
         {hierarchy.length > 0 && (
           <div
             id={`${id}-hierarchy`}
             aria-hidden="true"
-            className="mt-0.5 w-3/5 md:w-3/4 truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400"
+            className="mt-0.5 w-3/5 truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400 md:w-3/4"
           >
             {hierarchy.map((item, itemIndex, items) => (
               <Fragment key={itemIndex}>
@@ -353,11 +353,11 @@ export function Search() {
         {...buttonProps}
       >
         <SearchIcon className="h-4 w-4 flex-none fill-lightgray dark:fill-white/50  " />
-        <span className="sr-only md:not-sr-only md:ml-2 md:text-lightgray md:dark:text-white/50">
+        <span className="sr-only md:not-sr-only md:ml-2 md:text-lightgray md:dark:text-white/70">
           Search
         </span>
         {modifierKey && (
-          <kbd className="ml-auto hidden gap-x-2 text-xs  font-medium text-lightgray  dark:text-white/50 md:flex">
+          <kbd className="ml-auto hidden gap-x-2 text-xs  font-medium text-lightgray  dark:text-white/70 md:flex">
             <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-500 dark:border-white/50">
               {modifierKey}
             </kbd>

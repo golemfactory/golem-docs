@@ -50,7 +50,7 @@ const LinkSection = ({ title, links }) => (
         <li key={href + title}>
           <Link
             href={href}
-            className="text-sm font-medium leading-6 text-primary dark:text-[#858CA2]"
+            className="text-sm font-medium leading-6 text-primary dark:text-[#858CA2] dark:hover:text-white"
           >
             {title}
           </Link>
@@ -81,7 +81,7 @@ const DocSection = ({ title, description, link, data }) => (
 const DocHeader = ({ title, description, link, classes }) => (
   <>
     <h5 className={`${classes}  font-semibold dark:text-white`}>{title}</h5>
-    <p className="text-sm text-gray-500 dark:text-white/50">{description}</p>
+    <p className="text-sm text-gray-500 dark:text-white/70">{description}</p>
     <NavLink link={link} />
   </>
 )
@@ -90,17 +90,20 @@ const NavLink = ({ link }) => (
   <Link
     href={link}
     aria-label="Overview"
-    className="flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-[#858CA2]"
+    className="group" // Define a group for hover state
   >
-    Overview{' '}
-    <ArrowRightIcon className="h-3 w-3 fill-primary dark:fill-[#858CA2]" />
+    <div className="flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-[#858CA2] dark:hover:text-white">
+      Overview{' '}
+      <ArrowRightIcon className="h-3 w-3 fill-primary dark:fill-[#858CA2] group-hover:fill-white" />
+    </div>
   </Link>
-)
+);
+
 
 export const Footer = () => (
   <footer className="bg-white pt-8 dark:bg-transparent">
     <div className="mb-4 border-y border-y-lightbluedarker bg-lightblue dark:bg-darkbg">
-      <div className="sm:pt-18 mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 pb-8 pt-16 lg:px-8">
+      <div className="sm:pt-18 mx-auto grid max-w-7xl grid-cols-1 px-6 pb-8 pt-16 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
         <DocSection
           title="JS Docs"
           data={javascript}
@@ -149,11 +152,11 @@ const FooterNav = () => (
       <Link
         key={item.name + index}
         href={item.href}
-        className="text-gray-400 hover:text-gray-500"
+        className="text-gray-400 hover:text-gray-500 "
       >
         <span className="sr-only">{item.name}</span>
         <item.icon
-          className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-50"
+          className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-50 dark:hover:opacity-100"
           aria-hidden="true"
         />
       </Link>

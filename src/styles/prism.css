@@ -94,6 +94,11 @@ pre[class*='language-'] {
 .token.entity {
   color: hsl(230, 8%, 24%);
 }
+.dark .token.doctype,
+.dark .token.punctuation,
+.dark .token.entity {
+  color: hsl(230deg 14.83% 63.86%);
+}
 
 .token.attr-name,
 .token.class-name,
@@ -103,10 +108,23 @@ pre[class*='language-'] {
 .token.atrule {
   color: hsl(35, 99%, 36%);
 }
+.dark .token.attr-name,
+.dark .token.class-name,
+.dark .token.boolean,
+.dark .token.constant,
+.dark .token.number,
+.dark .token.atrule {
+  color: hsl(35deg 100% 50%);
+}
 
 .token.keyword {
   color: hsl(301, 63%, 40%);
 }
+.dark .token.keyword {
+  color: hsl(301, 63%, 49%);
+}
+
+
 
 .token.property,
 .token.tag,
@@ -169,6 +187,10 @@ pre[class*='language-'] {
 /* JS overrides */
 .language-javascript .token.operator {
   color: hsl(301, 63%, 40%);
+}
+
+.dark .language-javascript .token.operator {
+  color: hsl(301, 63%, 49%);
 }
 
 .language-javascript

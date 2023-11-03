@@ -32,7 +32,7 @@ export function Fence({ children, language, content }) {
       theme={undefined}
     >
       {({ className, style, tokens, getTokenProps }) => (
-        <div className="relative break-words rounded-md bg-[#fafafa] dark:bg-darkcontent pr-12">
+        <div className="relative break-words rounded-md bg-[#fafafa] dark:bg-[#24242a] pr-12">
           <div className="absolute right-4 top-3.5 z-30 h-5 w-5 break-words">
             <button type="button" onClick={handleClick}>
               {copied ? (
