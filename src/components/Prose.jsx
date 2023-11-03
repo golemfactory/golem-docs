@@ -11,7 +11,7 @@ export function Prose({ as: Component = 'div', className, ...props }) {
         // lead
         'prose-lead:text-primary dark:prose-lead:text-slate-400',
         // links
-        "after:mt-2 prose-a:mr-3.5 prose-a:font-semibold  prose-a:after:content-['_↗'] hover:prose-a:text-primaryhover dark:prose-a:text-darkprimary dark:hover:prose-a:text-darkprimary/80",
+        "after:mt-2 prose-a:mr-3.5 prose-a:font-semibold  prose-a:after:content-['_↗'] hover:prose-a:text-primaryhover dark:prose-a:text-[#3961fb] dark:hover:prose-a:text-darkprimary/80",
         // link underline
         'prose-a:text-primary prose-a:no-underline',
         // pre
