@@ -92,7 +92,7 @@ export const NavigationItem = ({ item, isActive }) =>
       href={item.href}
       aria-current={isActive ? 'page' : undefined}
       className={`break-words py-0.5
-      ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/70'}
+      ${isActive ? 'text-primary dark:text-[#3961fb] ' : 'dark:text-white/70'}
       `}
     >
       {item.title}
@@ -100,7 +100,7 @@ export const NavigationItem = ({ item, isActive }) =>
   ) : (
     <span
       className={clsx('py-0.5 text-left text-sm', {
-        'text-primary dark:text-darkprimary': isActive,
+        'text-primary dark:text-[#3961fb]': isActive,
       })}
     >
       {item.title}

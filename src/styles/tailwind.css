@@ -55,6 +55,10 @@ ul {
   @apply px-1;
 }
 
+.prose :where(code):not(:where([class~=not-prose] *)):after {
+  content: "";
+}
+
 .override-code-styles {
   background-color: transparent !important;
   @apply px-0;
