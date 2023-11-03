@@ -76,7 +76,7 @@ module.exports = {
         lightblue: '#F5F8FC',
         dark: '#242534',
         secondary: '#F1F4F9',
-        darkcontent: '#101f36',
+        darkcontent: '#171f2e',
         lightgray: '#A3A3A3',
         normalgray: '#6A6A6A',
         lightergray: '#D4D4D4',
