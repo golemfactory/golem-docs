@@ -11,7 +11,7 @@ export const CustomError = ({ errorCode, title, description }) => {
           <h1 className="sm:text-5xl mt-4 text-3xl font-bold tracking-tight dark:text-white">
             {title}
           </h1>
-          <p className="mt-6 text-base leading-7 dark:text-white dark:text-opacity-50">
+          <p className="mt-6 text-base leading-7 dark:text-white dark:text-opacity-70">
             {description}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -25,7 +25,7 @@ export const CustomError = ({ errorCode, title, description }) => {
               href="https://chat.golem.network"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-gray-900 dark:text-white dark:text-opacity-50"
+              className="text-sm font-semibold text-gray-900 dark:text-white dark:text-opacity-70"
             >
               Contact on Discord
             </Link>

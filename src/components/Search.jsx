@@ -121,7 +121,7 @@ function SearchResult({ result, autocomplete, collection, query }) {
         <div className="w-3/5 break-words md:w-3/4">
           <HighlightQuery text={result.title} query={query} />
         </div>
-        <span className="absolute right-0 top-1/2 mr-3 -translate-y-1/2 transform rounded-md bg-gray-50 px-2 py-1 text-xs font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-slate-800 dark:text-white dark:text-opacity-50">
+        <span className="absolute right-0 top-1/2 mr-3 -translate-y-1/2 transform rounded-md bg-gray-50 px-2 py-1 text-xs font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-slate-800 dark:text-white dark:text-opacity-70">
           {result.type === 'noicon' ? 'Page' : result.type}
         </span>
 
