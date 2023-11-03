@@ -30,9 +30,7 @@ html {
   content: '';
 }
 
-.prose :where(code):not(:where([class~='not-prose'] *))::after {
-  content: '';
-}
+
 
 .prose :where(li):not(:where([class~='not-prose'] *)) {
   margin-bottom: 6px;
@@ -47,6 +45,12 @@ ul {
 .prose :where(code):not(:where([class~='not-prose'] *)) {
   background-color: #f5f5f5;
   color: #36464e;
+  font-weight: 400;
+  @apply px-1;
+}
+.dark .prose :where(code):not(:where([class~='not-prose'] *)) {
+  color: hsl(227, 25%, 85%) ;
+  background: #24242a ;
   font-weight: 400;
   @apply px-1;
 }
