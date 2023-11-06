@@ -454,6 +454,10 @@ export const navigation = [
               },
             ],
           },
+          {
+            title: 'Python API Reference',
+            href: 'https://yapapi.readthedocs.io/en/latest/api.html',
+          },
         ],
       },
       {
