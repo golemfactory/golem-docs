@@ -135,7 +135,7 @@ def write_keyspace_check_script(mask):
 After saving the corrected `yacat.py` file and executing with the same command as above:
 
 ```python
-python3 yacat.py '?a?a?a' '$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/' --log-file log.txt
+python yacat.py '?a?a?a' '$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/' --log-file log.txt
 ```
 
 ```
