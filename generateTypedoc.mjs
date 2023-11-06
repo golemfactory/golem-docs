@@ -34,7 +34,7 @@ async function main() {
   )
 
   // Move default-values.md to the correct location, so we don't overwrite it with reference generation
-  const sourcePath = `${__dirname}/ `
+  const sourcePath = `${__dirname}/src/navigation/customPages/default-values.md`
   const destPath = `${__dirname}/src/pages/docs/golem-js/reference/default-values.md`
   await fs.promises.copyFile(sourcePath, destPath)
 }
