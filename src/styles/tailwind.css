@@ -52,7 +52,7 @@ ul {
   color: hsl(227, 25%, 85%) ;
   background: #24242a ;
   font-weight: 400;
-  @apply px-1;
+  
 }
 
 .prose :where(code):not(:where([class~=not-prose] *)):after {
