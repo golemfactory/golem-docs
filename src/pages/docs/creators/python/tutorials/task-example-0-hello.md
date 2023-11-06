@@ -254,7 +254,7 @@ YAGNA_APPKEY={your_appkey_here} ./hello.py
 {% tab label="Windows" %}
 
 ```bash
-set YAGNA_AUTOCONF_APPKEY={your_appkey_here}
+set YAGNA_APPKEY={your_appkey_here}
 python hello.py
 ```
 
