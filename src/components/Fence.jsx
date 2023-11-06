@@ -71,7 +71,7 @@ export function Fence({ children, language, content }) {
                         {...getTokenProps({ token })}
                       />
                     ))}
-                  {'\n'}
+                    {lineIndex < tokens.length - 1 && '\n'}
                 </Fragment>
               ))}
             </code>

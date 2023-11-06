@@ -69,7 +69,7 @@ module.exports = {
       },
       colors: {
         primary: '#1C00A9',
-        darkprimary: '#3961fb',
+        darkprimary: '#294ac7',
         primaryhover: '#190580',
         lightbluedarker: '#EBECFF',
         disabledgray: '#7D7F8A',
