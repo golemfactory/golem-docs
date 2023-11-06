@@ -24,6 +24,8 @@ export const MenuBar = ({ navigation }) => {
           <Link
             className="text-base text-primary dark:text-lightergray"
             key={item.title}
+            target={item.links[0].href.startsWith('http') ? '_blank' : '_self'}
+            rel={item.links[0].href.startsWith('http') ? 'noopener noreferrer' : ''}
             href={item.links[0].href}
           >
             {item.title}
@@ -91,6 +93,8 @@ export const NavigationItem = ({ item, isActive }) =>
     <Link
       href={item.href}
       aria-current={isActive ? 'page' : undefined}
+      target={item.href.startsWith('http') ? '_blank' : '_self'}
+      rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
       className={`break-words py-0.5
       ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/50'}
       `}
