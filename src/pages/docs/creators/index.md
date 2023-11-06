@@ -78,4 +78,26 @@ Glad to use a YAML-based approach to configure the deployment?
 
 {% /selectioncard %}
 
+{% selectioncard icon="python" title="Python Docs" buttonText="Read Python Docs" href="/docs/creators/python" %}
+
+{% selectioncontent %}
+
+Prefer to code in Python?
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Have a problem that can be split into multiple tasks that can be run in parallel?
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Need a backend to offload your system?
+
+{% /selectioncontent %}
+
+{% /selectioncard %}
+
 {% /grid %}
