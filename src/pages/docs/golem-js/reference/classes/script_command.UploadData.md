@@ -95,11 +95,11 @@ Transfer.args
 
 ### before
 
-▸ **before**(): `Promise`<`void`\>
+▸ **before**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Overrides
 
@@ -113,17 +113,17 @@ ___
 
 ### after
 
-▸ **after**(`result`): `Promise`<`Result`<`unknown`\>\>
+▸ **after**(`result`): `Promise`\<`Result`\<`unknown`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `result` | `Result`<`unknown`\> |
+| `result` | `Result`\<`unknown`\> |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Overrides
 

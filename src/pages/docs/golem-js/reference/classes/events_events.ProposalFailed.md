@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `parentId`: `string` \| ``null`` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `providerId`: `string` ; `parentId`: `string` \| ``null`` ; `reason?`: `string`  }\>
 
   ↳ **`ProposalFailed`**
 

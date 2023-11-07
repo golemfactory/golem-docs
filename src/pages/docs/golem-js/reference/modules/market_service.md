@@ -14,11 +14,11 @@
 
 ### ProposalFilter
 
-Ƭ **ProposalFilter**: (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+Ƭ **ProposalFilter**: (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`\<`boolean`\>
 
 #### Type declaration
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -28,7 +28,7 @@
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
