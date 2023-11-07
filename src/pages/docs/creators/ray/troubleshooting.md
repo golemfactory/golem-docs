@@ -12,20 +12,20 @@ type: troubleshooting
  
 {% problem /%}
 
-When something goes wrong with `ray up` or any other ray commands we display an error message and a few last lines of the log file.
+When something goes wrong with `ray up` or any other ray commands we display an error message and a few last lines of the logs.
 
 Sometimes it is not enough.
 
 {% solution %}
 
 There are a couple of log files:
-- `/tmp/ray_on_golem/webserver_debug.log` one log, combining all the information we have.
-- `/tmp/ray_on_golem/webserver.log` - cluster manager logs
-- `/tmp/ray_on_golem/yagna.log` - golem node (yagna) logs
+- `/tmp/ray_on_golem/webserver.log` - cluster manager log - contains basic Ray on Golem logs.
+- `/tmp/ray_on_golem/webserver_debug.log` cluster manager debug log - contains more detailed Ray on Golem logs.
+- `/tmp/ray_on_golem/yagna.log` - golem node (yagna) logs.
 
 Now you can:
-- Look at the `webserver_debug.log` yourself
-- Share the `webserver_debug.log` with us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
+- Look at the `webserver.log` yourself - the aim is to have basic troubles diagnozable here.
+- Share the `webserver_debug.log` and `yagna.log` with us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
 
 
 {% /solution %}
