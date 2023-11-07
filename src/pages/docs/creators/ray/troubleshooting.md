@@ -1,6 +1,6 @@
 ---
 title: Ray on Golem troubleshooting
-description: This is the troubleshooting section for Ray on Golem.
+description: Suggested solutions to issues with Ray on Golem.
 type: troubleshooting
 ---
 
@@ -8,23 +8,27 @@ type: troubleshooting
 
 {% troubleshooting %}
 
-## When something goes wrong
+## Ray on Golem's log files
  
 {% problem /%}
 
-When something goes wrong with `ray up` or any other ray commands we display an error message and a few last lines of the logs.
+When you encounter issues while running one of the various Ray commands that utilize Ray on Golem,
+it may not always be immediately obvious what the problem is from the output of the command itself.
 
-Sometimes it is not enough.
+Where possible, we try to display a meaningful error message - e.g. when `ray up` fails to start up
+the Ray on Golem's webserver, we display a few last lines of the logs.
+
+If that's not enough to suggest a way to fix an issue, investigation of logs may prove more useful. 
 
 {% solution %}
 
-There are a couple of log files:
+The log files that Ray on Golem produces are stored in the following files:
 - `/tmp/ray_on_golem/webserver.log` - cluster manager log - contains basic Ray on Golem logs.
 - `/tmp/ray_on_golem/webserver_debug.log` cluster manager debug log - contains more detailed Ray on Golem logs.
-- `/tmp/ray_on_golem/yagna.log` - golem node (yagna) logs.
+- `/tmp/ray_on_golem/yagna.log` - Golem node (yagna) logs.
 
-Now you can:
-- Look at the `webserver.log` yourself - the aim is to have basic troubles diagnosable here.
+Given these, you can either:
+- Look at the `webserver.log` yourself - our aim is for you to be able to diagnose and resolve the most straightforward issues on your own.
 - Share the `webserver_debug.log` and `yagna.log` with us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
 
 
@@ -35,42 +39,39 @@ Now you can:
 
 {% troubleshooting %}
 
-## Not stopping everything clean with ray down
+## Lack of a complete cleanup on shutdown
 
 {% problem /%}
 
-Sometimes `ray down` doesn't clean up all the components. Sometimes it is not a problem with consecutive `ray up` but sometimes it is.
+It may happen that some of Ray on Golem's components are still up after successful completion of `ray down`.
+While it's usually not a problem in itself, you might wish to start with a clean slate on consecutive `ray up` runs.
 
 {% solution %}
 
-First of all, let's check if there are any orphaned components indeed:
+To perform a cleanup, let's first check if there are any orphaned components indeed:
 ```bash
-ps axu | grep -E 'yagna|ray-on-golem'
+ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
 
 It produces an output like this:
 ```
-mateusz     6427  3.3  0.2 339416 91284 ?        Ssl  08:12  13:08 /home/mateusz/.envs/ray-on-golem-test-0.1.3-2/bin/python3 /home/mateusz/.envs/ray-on-golem-test-0.1.3-2/bin/ray-on-golem -p 4578 --self-shutdown --log-level info
-mateusz     6428  3.2  0.5 595272 178088 ?       Sl   08:12  12:36 yagna service run
-mateusz    18021  0.0  0.0  11744  2816 pts/3    S+   14:40   0:00 grep --color=auto -E yagna|ray-on-golem
+  71257 ?        Ssl    0:02 ray-on-golem
+  71258 ?        Sl     2:35 yagna
 ```
 
-The above shows running `ray-on-golem` and `yagna` services (the last line resulting from our peeking).
+The above shows `ray-on-golem` webserver and the `yagna` daemon running.
 
-The surest way to stop them is killing them (using PID numbers as shown in the second column):
+The surest way to stop them is to kill them (using the PID numbers as shown in the first column):
 ```bash
-kill -9 6427 6428
+kill -9 71257 71258
 ```
 
-After it is done, there should be no more hanging process:
+After it is done, the above command should show no more hanging processes:
 ```bash
-ps axu | grep -E 'yagna|ray-on-golem'
+ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
 ```
-mateusz    18121  0.0  0.0  11744  2688 pts/3    S+   14:44   0:00 grep --color=auto -E yagna|ray-on-golem
 ```
-
-
 
 {% /solution %}
 {% feedback identifier="ray-not-stopping-on-ray-down" /%}
@@ -82,7 +83,7 @@ mateusz    18121  0.0  0.0  11744  2688 pts/3    S+   14:44   0:00 grep --color=
  
 {% problem /%}
 
-Sometimes, `ray up` might timeout with a note saying that there is no node available.
+Sometimes, `ray up` might time out with a note saying that there is no node available.
 
 It might look like this:
 ```
@@ -99,7 +100,7 @@ If you are running Ray on Golem on the testnet (property `network: "goerli"` in 
 We are preparing a tool to check providers' availability.
 Another solution would be to move to mainnet - we are also working on enabling this option.
 
-For now, the best course of action would be to report the situation on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
+For now, the best course of action would be to report the situation on [`#Ray on Golem` discord channel](https://chat.golem.network/).
 
 Usually, the testnet isn't busy for a long time - it might be enough to wait a couple of minutes.
 
@@ -114,9 +115,10 @@ Usually, the testnet isn't busy for a long time - it might be enough to wait a c
  
 {% problem /%}
 
-Your app might need non-standard packages to run on the cluster. By default, Ray on Golem image includes nothing besides the bare minimum.
+Your app might need non-standard packages to run on a Ray on Golem cluster.
+The default VM image includes nothing besides the bare minimum.
 
-It might look like that when you submit an app with such requirements:
+In such a case, the output for `ray submit` may look like this:
 ```
 Traceback (most recent call last):
   File "/root/dds-with-ray.py", line 49, in <module>
@@ -139,9 +141,9 @@ Error: Command failed:
 
 {% solution %}
 
-Note that even if you have the needed libraries installed locally, and your app runs locally, you still need to tell Ray on Golem cluster the packages are needed.
+Note that even if you have the needed dependencies installed, and your app runs on your local environment, you still need to tell Ray on Golem cluster the packages are needed.
 
-There best way to deal with it is adding a proper `pip install` command in the `setup_commands` of cluster yaml. 
+The best way to do it is by adding an appropriate `pip install` command to `setup_commands` in the cluster yaml file. 
 Check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference#initialization-commands) to get more information.
 
 
