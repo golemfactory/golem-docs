@@ -532,40 +532,27 @@ export const navigation = [
       { title: 'Introduction', href: '/docs/providers' },
       { title: 'Installation', href: '/docs/providers/provider-installation' },
       {
-        title: 'Basic Configuration',
-        href: '/docs/providers/provider-basic-configuration',
+        title: 'Configuring your provider',
+        href: '/docs/providers/provider-configuration',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
 
       {
-        title: 'Yagna CLI reference',
-        href: '/docs/providers/yagna-cli-reference',
-      },
-      {
-        title: 'Maintenance',
+        title: 'Managing your wallet',
         children: [
           {
-            title: 'Maintenance',
-            href: '/docs/providers/maintenance/provider-maintenance',
-          },
-          {
-            title: 'Wallet Backup',
+            title: 'Backing up your wallet',
             href: '/docs/providers/maintenance/wallet-backup',
           },
           {
-            title: 'Wallet Restore',
+            title: 'Restoring a wallet',
             href: '/docs/providers/maintenance/wallet-restoration',
           },
         ],
       },
       {
         title: 'Troubleshooting',
-        children: [
-          {
-            title: 'Provider',
-            href: '/docs/troubleshooting/provider',
-          },
-        ],
+        href: '/docs/troubleshooting/provider',
       },
     ],
   },

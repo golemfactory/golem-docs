@@ -14,8 +14,8 @@ A manifest can be configured in yapapi.
 
 The provider node operator controls what computations can be performed by:
 
-- [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/yagna-cli-reference#keystore) (which allows the provider agent to verify _manifest_ signatures)
-- Adding domain patterns to Provider's [domain whitelist](/docs/providers/yagna-cli-reference#domain-whitelist) (which makes the manifest [signature] optional).
+- [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/provider-configuration#managing-your-keystore) (which allows the provider agent to verify _manifest_ signatures)
+- Adding domain patterns to Provider's [domain whitelist](/docs/providers/provider-configuration#listing-outbound-rules) (which makes the manifest [signature] optional).
 
 ## Configuration
 
@@ -270,6 +270,6 @@ Finally, generate _App author's certificate_ using CSR and CA certificate:
 
 #### 3. Importing application author's certificates
 
-To import the certificate into the keystore, use a [`ya-provider keystore add`](/docs/providers/yagna-cli-reference#keystore) command:
+To import the certificate into the keystore, use a [`ya-provider keystore add`](/docs/providers/provider-configuration#managing-your-keystore) command:
 
 `ya-provider keystore add ca.crt.pem`
