@@ -252,7 +252,7 @@ export function Layout({
               {tags &&
                 tags.split(',').map((tag, index, array) => (
                   <div
-                    className="block text-sm text-normalgray dark:text-white/50"
+                    className="block text-sm text-normalgray dark:text-white/70"
                     key={tag}
                   >
                     {tag}
@@ -261,9 +261,9 @@ export function Layout({
             </div>
 
             <Prose>{children}</Prose>
-            {type == 'page' || isHomePage || is404Page || is500Page ? (
-              null
-            ) : <FeedbackButtons article={true} identifier={router.pathname} /> }
+            {type == 'page' || isHomePage || is404Page || is500Page ? null : (
+              <FeedbackButtons article={true} identifier={router.pathname} />
+            )}
           </article>
         </div>
         {type !== 'page' &&

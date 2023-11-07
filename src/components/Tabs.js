@@ -14,8 +14,8 @@ export function Tabs({ labels, children }) {
             onClick={() => setCurrentTab(label)}
             className={
               currentTab === label
-                ? ' rounded-md border-lightbluedarker bg-lightbluedarker px-3 py-2 text-center text-sm font-medium text-primary'
-                : 'rounded-md border border-lightbluedarker px-3 py-2 text-center  text-sm'
+                ? ' rounded-md border-lightbluedarker bg-lightbluedarker px-3 py-2 text-center text-sm font-medium text-primary dark:bg-darkcontent dark:text-white'
+                : 'rounded-md border border-lightbluedarker px-3 py-2 text-center  text-sm dark:border-gray-800'
             }
             aria-current={currentTab === label ? 'page' : undefined}
           >
@@ -23,7 +23,7 @@ export function Tabs({ labels, children }) {
           </button>
         ))}
       </nav>
-      <div className="mt-4 mb-12 border border-lightbluedarker px-3 rounded-md">{children}</div>
+      <div className="mt-4 mb-12 rounded-md">{children}</div>
     </TabContext.Provider>
   )
 }

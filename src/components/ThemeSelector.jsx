@@ -67,7 +67,7 @@ export function ThemeToggler() {
       <span
         aria-hidden="true"
         className={classNames(
-          enabled ? 'bg-[#DDDEE8]' : 'bg-[#525369]',
+          enabled ? 'bg-[#DDDEE8]' : 'bg-darkcontent',
           'pointer-events-none absolute mx-auto h-4 w-9 rounded-full transition-colors duration-200 ease-in-out'
         )}
       />

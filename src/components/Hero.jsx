@@ -9,7 +9,7 @@ export function Hero() {
       <div className="relative w-full rounded-lg bg-lightblue px-4 pb-20 pt-16 text-center dark:bg-darkcontent md:flex md:flex-wrap md:justify-start md:text-left lg:px-16">
         <div className="z-40 flex flex-col md:w-2/3 md:pr-4 lg:w-1/3">
           <h1 className="pb-6 text-4xl font-semibold dark:text-white">
-            <span className="text-primary dark:text-white">Golem</span>{' '}
+            <span className="text-primary dark:text-[#3961fb]">Golem</span>{' '}
             developer resources
           </h1>
           <p className=" text-lg text-gray-600 dark:text-gray-400">
