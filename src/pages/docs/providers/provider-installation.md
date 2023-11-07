@@ -13,7 +13,7 @@ Welcome to the Golem Provider installation guide. This guide provides step-by-st
 ### Prerequisites
 To follow this tutorial, you will need the following:
 
-- A x86-64 linux machine
+- A linux machine with the x86-64 architecture
 - Nested virtualization enabled in your BIOS
 
 ### Install the provider

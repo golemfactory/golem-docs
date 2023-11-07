@@ -67,7 +67,7 @@ The requestor has the flexibility to select providers based on any set of criter
 
 There's no strict requirements for running a provider node except for the following:
 
-- A x86-64 Linux machine
+- A linux machine with the x86-64 architecture
 - Nested virtulization enabled in the BIOS
 
 ### Does Golem automatically remove task data?
