@@ -24,7 +24,7 @@ There are a couple of log files:
 - `/tmp/ray_on_golem/yagna.log` - golem node (yagna) logs.
 
 Now you can:
-- Look at the `webserver.log` yourself - the aim is to have basic troubles diagnozable here.
+- Look at the `webserver.log` yourself - the aim is to have basic troubles diagnosable here.
 - Share the `webserver_debug.log` and `yagna.log` with us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
 
 
@@ -43,7 +43,7 @@ Sometimes `ray down` doesn't clean up all the components. Sometimes it is not a 
 
 {% solution %}
 
-First of all, let check if indeed there are any orphaned components:
+First of all, let's check if there are any orphaned components indeed:
 ```bash
 ps axu | grep -E 'yagna|ray-on-golem'
 ```
@@ -57,7 +57,7 @@ mateusz    18021  0.0  0.0  11744  2816 pts/3    S+   14:40   0:00 grep --color=
 
 The above shows running `ray-on-golem` and `yagna` services (the last line resulting from our peeking).
 
-The surest way to stop them is killing them (using pid numbers as shown in the second column):
+The surest way to stop them is killing them (using PID numbers as shown in the second column):
 ```bash
 kill -9 6427 6428
 ```
@@ -92,16 +92,16 @@ ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"er
 
 {% solution %}
 
-This means, that there is not enough providers on the network. 
+This means, that there are not enough providers on the network. 
 
 If you are running Ray on Golem on the testnet (property `network: "goerli"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
 
-We are preparing a tool to check providers availability.
+We are preparing a tool to check providers' availability.
 Another solution would be to move to mainnet - we are also working on enabling this option.
 
-For now the best course of action would be to report the situation on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
+For now, the best course of action would be to report the situation on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
 
-Usually testnet isn't busy for a long time - it might be enought to wait a couple minutes.
+Usually, the testnet isn't busy for a long time - it might be enough to wait a couple of minutes.
 
 {% /solution %}
 {% feedback identifier="ray-node-not-found" /%}
@@ -114,9 +114,9 @@ Usually testnet isn't busy for a long time - it might be enought to wait a coupl
  
 {% problem /%}
 
-Your app might need non-standard packages to run on the cluster. By default, Ray on Golem image doesn't include anything besides the bare minimum.
+Your app might need non-standard packages to run on the cluster. By default, Ray on Golem image includes nothing besides the bare minimum.
 
-It might look like that when you submit an app which such a requirements:
+It might look like that when you submit an app with such requirements:
 ```
 Traceback (most recent call last):
   File "/root/dds-with-ray.py", line 49, in <module>
@@ -141,7 +141,7 @@ Error: Command failed:
 
 Note that even if you have the needed libraries installed locally, and your app runs locally, you still need to tell Ray on Golem cluster the packages are needed.
 
-There best way to deal with it is adding proper `pip install` command in the `setup_commands` of cluster yaml. 
+There best way to deal with it is adding a proper `pip install` command in the `setup_commands` of cluster yaml. 
 Check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference#initialization-commands) to get more information.
 
 
