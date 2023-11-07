@@ -4,9 +4,9 @@ title: Yagna installation for providers
 type: Instructions
 ---
 
-# Golem Provider Node Setup Guide
+# Golem Provider installation guide
 
-Welcome to the Golem Provider Node Setup Guide. This guide provides step-by-step instructions on how to become a provider in the Golem Network and earn GLM tokens.
+Welcome to the Golem Provider installation guide. This guide provides step-by-step instructions on how to become a provider in the Golem Network and earn GLM tokens.
 
 ## Getting Started
 
