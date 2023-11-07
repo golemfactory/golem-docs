@@ -1,6 +1,6 @@
 ---
 description: Step-by-step configuration process for Providers on Golem Network
-title: Comprehensive Setup Guide for Golem Provider Nodes
+title: Comprehensive configuration guide for Golem Provider Nodes
 type: Instructions
 ---
 
