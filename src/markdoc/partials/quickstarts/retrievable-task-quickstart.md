@@ -1,6 +1,6 @@
 # Introduction
 
-In the previous QuickStart, we showed you how to run a simple task on the Golem Network. In real applications, you will often want to run tasks that take a significant amount of time to complete. For such cases, it is useful to be able to check the status of the task and retrieve the results or errors after the task has completed. In this QuickStart, we will show you how to do just that.
+In the previous Quickstart, we showed you how to run a simple task on the Golem Network. In real applications, you will often want to run tasks that take a significant amount of time to complete. For such cases, it is useful to be able to check the status of the task and retrieve the results or errors after the task has completed. In this Quickstart, we will show you how to do just that.
 
 We will run a simple task (just running a basic shell command on a rented provider) and then check the status of the task and retrieve the results at the end
 
@@ -20,7 +20,7 @@ This example assumes that you have already installed Yagna and have it running i
 
 # Setting up the project
 
-If you have already completed the [previous QuickStart](/docs/quickstarts/js-quickstart), you can skip this step.
+If you have already completed the [previous Quickstart](/docs/quickstarts/js-quickstart), you can skip this step.
 First, create a new directory for your project and initialize a new Node.js project in it:
 
 ```bash

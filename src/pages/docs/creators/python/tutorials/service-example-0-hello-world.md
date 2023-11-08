@@ -17,7 +17,7 @@ This example illustrates the following Golem features & aspects:
 ## Prerequisites
 
 This example shares a number of concepts, as well as parts of its code with the task model "Hello World!". Therefore the below article can be considered a good introduction:
-[QuickStart](/docs/creators/python/quickstarts/run-first-task-on-golem).
+[Quickstart](/docs/creators/python/quickstarts/run-first-task-on-golem).
 
 Also, in case you haven't done so already, it's a good idea to take a look at the [Introduction to the service model](/docs/creators/python/guides/service-model) before proceeding.
 

@@ -42,12 +42,11 @@ node index.mjs
 
 ## Ways to Use Golem images
 
-
 ### Using a Hash
 
 A hash, in relation to Golem images, serves as a distinctive identifier formed from the image's content. They are complex, elongated strings and can become cumbersome to handle and recall, particularly in sizable projects housing various images and versions. Without tags, hashes fall short in conveying information relevant to the image's purpose or version. Due to these factors, using tags, which are readable and understandable, is generally the favored approach for dealing with images.
 
-To illustrate the use of a hash, we can take a look at the code from the [QuickStart Example](/docs/creators/javascript/quickstarts/quickstart)
+To illustrate the use of a hash, we can take a look at the code from the [Quickstart Example](/docs/creators/javascript/quickstarts/quickstart)
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-images/hash.mjs" language="javascript" /%}
 
