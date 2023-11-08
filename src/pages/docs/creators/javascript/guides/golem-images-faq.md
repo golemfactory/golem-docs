@@ -16,7 +16,7 @@ But why do we need this? Most importantly, to reduce the setup time for provider
 
 ## Are there any requirements when preparing a Dockerfile for Golem's VM runtime?
 
-There is only one strict requirement: **at least one volume** directory must be specified using the `VOLUME` command.
+If you intend to transfer files to and from the provider, there is one strict requirement: **at least one volume** directory must be specified using the `VOLUME` command.
 
 Besides the above, a number of commands are currently **not supported** by `gvmkit-build` converter. These are:
 
@@ -29,7 +29,7 @@ Besides the above, a number of commands are currently **not supported** by `gvmk
 
 When a `.gvmi` image is started by the VM runtime, an **empty host directory is mounted** under each of its directories declared as **volumes** (`VOLUME` command in the `Dockerfile`).
 
-If there was anything stored in the image under the volume directory it gets "shadowed" by the mounted host directory.
+If there is anything stored in the image under the volume directory it gets "shadowed" by the mounted host directory.
 
 ## My VM has run out of storage space while running, why is that?
 

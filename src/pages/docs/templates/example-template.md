@@ -12,6 +12,14 @@ Explain what will be demonstrated in this article.
 
 Yagna service is installed and running with the `try_golem` app-key configured.
 
+## Introduction
+
+In this article we will present tha basic structure for an examples article.
+
+## Prerequisites
+
+Yagna service is installed and running with `try_golem` app-key configured.
+
 {% alert level="info" %}
 
 This example has been designed to work with the following environments:
@@ -20,6 +28,8 @@ This example has been designed to work with the following environments:
 - Node.js 16.0.0 or above
 
 {% /alert %}
+
+
 
 
 ## How to run examples

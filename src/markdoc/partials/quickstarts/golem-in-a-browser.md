@@ -48,7 +48,7 @@ This will install the `http-server` utility to host our web page, where we will 
 
 Next, we'll create the main `index.html` file with the following content:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/web-quickstart/index.html" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/web-quickstart/index.html" language="html" /%}
 
 In this layout, there are three elements:
 

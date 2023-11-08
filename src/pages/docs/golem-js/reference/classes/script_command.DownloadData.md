@@ -9,7 +9,7 @@ type: "reference"
 
 ## Hierarchy
 
-- `Transfer`<`Uint8Array`\>
+- `Transfer`\<`Uint8Array`\>
 
   ↳ **`DownloadData`**
 
@@ -51,11 +51,11 @@ type: "reference"
 
 #### Overrides
 
-Transfer&lt;Uint8Array\&gt;.constructor
+Transfer\&lt;Uint8Array\&gt;.constructor
 
 #### Defined in
 
-[src/script/command.ts:199](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L199)
+[src/script/command.ts:199](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L199)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Transfer.from
 
 #### Defined in
 
-[src/script/command.ts:116](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L116)
+[src/script/command.ts:116](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L116)
 
 ___
 
@@ -83,7 +83,7 @@ Transfer.to
 
 #### Defined in
 
-[src/script/command.ts:117](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L117)
+[src/script/command.ts:117](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L117)
 
 ___
 
@@ -97,17 +97,17 @@ Transfer.args
 
 #### Defined in
 
-[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L16)
+[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L16)
 
 ## Methods
 
 ### before
 
-▸ **before**(): `Promise`<`void`\>
+▸ **before**(): `Promise`\<`void`\>
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Overrides
 
@@ -115,23 +115,23 @@ Transfer.before
 
 #### Defined in
 
-[src/script/command.ts:207](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L207)
+[src/script/command.ts:207](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L207)
 
 ___
 
 ### after
 
-▸ **after**(`result`): `Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
+▸ **after**(`result`): `Promise`\<[`Result`](activity_results.Result)\<`Uint8Array`\>\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `result` | [`Result`](activity_results.Result)<`any`\> |
+| `result` | [`Result`](activity_results.Result)\<`any`\> |
 
 #### Returns
 
-`Promise`<[`Result`](activity_results.Result)<`Uint8Array`\>\>
+`Promise`\<[`Result`](activity_results.Result)\<`Uint8Array`\>\>
 
 #### Overrides
 
@@ -139,7 +139,7 @@ Transfer.after
 
 #### Defined in
 
-[src/script/command.ts:214](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L214)
+[src/script/command.ts:214](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L214)
 
 ___
 
@@ -157,7 +157,7 @@ Transfer.toJson
 
 #### Defined in
 
-[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L25)
+[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L25)
 
 ___
 
@@ -175,4 +175,4 @@ Transfer.toExeScriptRequest
 
 #### Defined in
 
-[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L31)
+[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L31)

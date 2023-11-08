@@ -4,7 +4,7 @@ title: Ray on Golem Introduction
 type: article
 ---
 
-# Run you Python code on Golem with Ray on Golem
+# Run your Python code on Golem with Ray on Golem
 
 This documentation is designed for developers wanting to run their Python code on Golem.
 We will use Ray to parallelize the code and Ray on Golem to execute it.

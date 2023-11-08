@@ -3,7 +3,7 @@ title: "Class BaseEvent - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class BaseEvent within the golem-js SDK for the Golem Network."
 type: "reference"
 ---
-# Class: BaseEvent<DataType\>
+# Class: BaseEvent\<DataType\>
 
 [events/events](../modules/events_events).BaseEvent
 
@@ -15,7 +15,7 @@ type: "reference"
 
 ## Hierarchy
 
-- `CustomEvent`<`DataType`\>
+- `CustomEvent`\<`DataType`\>
 
   ↳ **`BaseEvent`**
 
@@ -99,7 +99,7 @@ type: "reference"
 
 ### constructor
 
-• **new BaseEvent**<`DataType`\>(`data?`): [`BaseEvent`](events_events.BaseEvent)<`DataType`\>
+• **new BaseEvent**\<`DataType`\>(`data?`): [`BaseEvent`](events_events.BaseEvent)\<`DataType`\>
 
 #### Type parameters
 
@@ -115,15 +115,15 @@ type: "reference"
 
 #### Returns
 
-[`BaseEvent`](events_events.BaseEvent)<`DataType`\>
+[`BaseEvent`](events_events.BaseEvent)\<`DataType`\>
 
 #### Overrides
 
-CustomEvent&lt;DataType\&gt;.constructor
+CustomEvent\&lt;DataType\&gt;.constructor
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L28)
 
 ## Properties
 
@@ -137,7 +137,7 @@ CustomEvent.detail
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L16)
 
 ___
 
@@ -151,7 +151,7 @@ CustomEvent.name
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L17)
 
 ___
 
@@ -165,4 +165,4 @@ CustomEvent.timestamp
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/00d03ae/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/events/events.ts#L18)

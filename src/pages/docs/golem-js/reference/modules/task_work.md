@@ -24,7 +24,7 @@ type: "reference"
 
 ### Worker
 
-Ƭ **Worker**<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`<`OutputType`\>
+Ƭ **Worker**\<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`\<`OutputType`\>
 
 #### Type parameters
 
@@ -35,7 +35,7 @@ type: "reference"
 
 #### Type declaration
 
-▸ (`ctx`, `data?`): `Promise`<`OutputType`\>
+▸ (`ctx`, `data?`): `Promise`\<`OutputType`\>
 
 ##### Parameters
 
@@ -46,8 +46,8 @@ type: "reference"
 
 ##### Returns
 
-`Promise`<`OutputType`\>
+`Promise`\<`OutputType`\>
 
 #### Defined in
 
-[src/task/work.ts:20](https://github.com/golemfactory/golem-js/blob/00d03ae/src/task/work.ts#L20)
+[src/task/work.ts:20](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L20)

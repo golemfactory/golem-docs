@@ -37,7 +37,7 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:54](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L54)
+[src/activity/activity.ts:54](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L54)
 
 ___
 
@@ -49,7 +49,7 @@ agreement ID
 
 #### Defined in
 
-[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L55)
+[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L55)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L56)
+[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L56)
 
 ___
 
@@ -73,13 +73,13 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L57)
+[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L57)
 
 ## Methods
 
 ### create
 
-▸ **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`<[`Activity`](activity_activity.Activity)\>
+▸ **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`\<[`Activity`](activity_activity.Activity)\>
 
 Create activity for given agreement ID
 
@@ -94,19 +94,19 @@ Create activity for given agreement ID
 
 #### Returns
 
-`Promise`<[`Activity`](activity_activity.Activity)\>
+`Promise`\<[`Activity`](activity_activity.Activity)\>
 
 Activity
 
 #### Defined in
 
-[src/activity/activity.ts:71](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L71)
+[src/activity/activity.ts:71](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L71)
 
 ___
 
 ### execute
 
-▸ **execute**(`script`, `stream?`, `timeout?`): `Promise`<`Readable`\>
+▸ **execute**(`script`, `stream?`, `timeout?`): `Promise`\<`Readable`\>
 
 Execute script
 
@@ -120,41 +120,41 @@ Execute script
 
 #### Returns
 
-`Promise`<`Readable`\>
+`Promise`\<`Readable`\>
 
 #### Defined in
 
-[src/activity/activity.ts:88](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L88)
+[src/activity/activity.ts:88](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L88)
 
 ___
 
 ### stop
 
-▸ **stop**(): `Promise`<`boolean`\>
+▸ **stop**(): `Promise`\<`boolean`\>
 
 Stop and destroy activity
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 boolean
 
 #### Defined in
 
-[src/activity/activity.ts:113](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L113)
+[src/activity/activity.ts:113](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L113)
 
 ___
 
 ### getState
 
-▸ **getState**(): `Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
+▸ **getState**(): `Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 Getting current state of activity
 
 #### Returns
 
-`Promise`<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
+`Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
 
 state
 
@@ -164,13 +164,13 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:125](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L125)
+[src/activity/activity.ts:125](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L125)
 
 ___
 
 ### send
 
-▸ **send**(`script`): `Promise`<`string`\>
+▸ **send**(`script`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -180,8 +180,8 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
-[src/activity/activity.ts:142](https://github.com/golemfactory/golem-js/blob/00d03ae/src/activity/activity.ts#L142)
+[src/activity/activity.ts:142](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/activity/activity.ts#L142)

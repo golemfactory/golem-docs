@@ -47,13 +47,13 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/00d03ae/src/payment/payments.ts#L26)
+[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/payment/payments.ts#L26)
 
 ## Methods
 
 ### create
 
-▸ **create**(`yagnaApi`, `options?`): `Promise`<[`Payments`](payment_payments.Payments)\>
+▸ **create**(`yagnaApi`, `options?`): `Promise`\<[`Payments`](payment_payments.Payments)\>
 
 #### Parameters
 
@@ -64,24 +64,24 @@ EventTarget.constructor
 
 #### Returns
 
-`Promise`<[`Payments`](payment_payments.Payments)\>
+`Promise`\<[`Payments`](payment_payments.Payments)\>
 
 #### Defined in
 
-[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/00d03ae/src/payment/payments.ts#L22)
+[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/payment/payments.ts#L22)
 
 ___
 
 ### unsubscribe
 
-▸ **unsubscribe**(): `Promise`<`void`\>
+▸ **unsubscribe**(): `Promise`\<`void`\>
 
 Unsubscribe demand from the market
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/00d03ae/src/payment/payments.ts#L39)
+[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/payment/payments.ts#L39)

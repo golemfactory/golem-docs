@@ -23,7 +23,7 @@ type: "reference"
 
 ### SerializedJob
 
-Ƭ **SerializedJob**<`OutputType`\>: `Object`
+Ƭ **SerializedJob**\<`OutputType`\>: `Object`
 
 #### Type parameters
 
@@ -41,4 +41,4 @@ type: "reference"
 
 #### Defined in
 
-[src/job/storage.ts:3](https://github.com/golemfactory/golem-js/blob/00d03ae/src/job/storage.ts#L3)
+[src/job/storage.ts:3](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/job/storage.ts#L3)

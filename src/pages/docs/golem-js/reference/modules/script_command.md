@@ -33,16 +33,16 @@ type: "reference"
 
 #### Defined in
 
-[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L76)
+[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L76)
 
 ___
 
 ### CaptureMode
 
-Ƭ **CaptureMode**: { `atEnd`: { `part?`: `CapturePart` ; `format?`: `CaptureFormat`  }  } \| { `stream`: { `limit?`: `number` ; `format?`: `CaptureFormat`  }  }
+Ƭ **CaptureMode**: \{ `atEnd`: \{ `part?`: `CapturePart` ; `format?`: `CaptureFormat`  }  } \| \{ `stream`: \{ `limit?`: `number` ; `format?`: `CaptureFormat`  }  }
 
 #### Defined in
 
-[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/00d03ae/src/script/command.ts#L80)
+[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/script/command.ts#L80)
 
 ___
