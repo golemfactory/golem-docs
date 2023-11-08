@@ -34,7 +34,7 @@ Need a backend to offload your system?
 
 {% /selectioncard %}
 
-{% selectioncard icon="ray" title="Ray on Golem Docs" buttonText="Read Ray on Golem Docs" href="/docs/creators/ray" %}
+{% selectioncard icon="ray" title="Python with Ray on Golem" buttonText="Read Ray on Golem Docs" href="/docs/creators/ray" %}
 
 {% selectioncontent %}
 
