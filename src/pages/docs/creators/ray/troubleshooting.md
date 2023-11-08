@@ -18,7 +18,7 @@ it may not always be immediately obvious what the problem is from the output of 
 Where possible, we try to display a meaningful error message - e.g. when `ray up` fails to start up
 the Ray on Golem's webserver, we display a few last lines of the logs.
 
-If that's not enough to suggest a way to fix an issue, investigation of logs may prove more useful. 
+If that's not enough to suggest a way to fix the issue, an investigation of logs may prove more useful. 
 
 {% solution %}
 
@@ -43,7 +43,7 @@ Given these, you can either:
 
 {% problem /%}
 
-It may happen that some of Ray on Golem's components are still up after successful completion of `ray down`.
+It may happen that some of Ray on Golem's components are still up after the successful completion of `ray down`.
 While it's usually not a problem in itself, you might wish to start with a clean slate on consecutive `ray up` runs.
 
 {% solution %}
