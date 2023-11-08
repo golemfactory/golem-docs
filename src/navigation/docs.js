@@ -301,10 +301,6 @@ export const navigation = [
             title: 'Supported versions and other limitations',
             href: '/docs/creators/ray/supported-versions-and-other-limitations',
           },
-          {
-            title: 'Troubleshooting',
-            href: '/docs/creators/ray/troubleshooting',
-          },
         ],
       },
       {
@@ -493,6 +489,10 @@ export const navigation = [
           {
             title: 'JavaScript Requestor',
             href: '/docs/troubleshooting/js-requestor',
+          },
+          {
+            title: 'Ray on Golem',
+            href: '/docs/creators/ray/troubleshooting',
           },
           {
             title: 'Yagna',
