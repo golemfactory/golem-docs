@@ -23,8 +23,8 @@ If that's not enough to suggest a way to fix an issue, investigation of logs may
 {% solution %}
 
 The log files that Ray on Golem produces are stored in the following files:
-- `/tmp/ray_on_golem/webserver.log` - cluster manager log - contains basic Ray on Golem logs.
-- `/tmp/ray_on_golem/webserver_debug.log` cluster manager debug log - contains more detailed Ray on Golem logs.
+- `/tmp/ray_on_golem/webserver.log` - cluster manager log - basic Ray on Golem logs.
+- `/tmp/ray_on_golem/webserver_debug.log` cluster manager debug log - more detailed Ray on Golem logs.
 - `/tmp/ray_on_golem/yagna.log` - Golem node (yagna) logs.
 
 Given these, you can either:
