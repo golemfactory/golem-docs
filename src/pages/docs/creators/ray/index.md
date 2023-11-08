@@ -16,6 +16,7 @@ We will use Ray to parallelize the code and Ray on Golem to execute it.
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
 - [Cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) - details of every configuration option of Ray on Golem cluster yaml
 - [Supported versions & other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python & ray versions, and other known issues
+- [Troubleshooting](/docs/creators/ray/troubleshooting) - hopefully helpful tips on what to do when something goes wrong
 
 
 {% partial file="ray/learn-more-about-ray.md" /%}

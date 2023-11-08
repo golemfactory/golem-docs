@@ -491,6 +491,10 @@ export const navigation = [
             href: '/docs/troubleshooting/js-requestor',
           },
           {
+            title: 'Ray on Golem',
+            href: '/docs/creators/ray/troubleshooting',
+          },
+          {
             title: 'Yagna',
             href: '/docs/troubleshooting/yagna',
           },

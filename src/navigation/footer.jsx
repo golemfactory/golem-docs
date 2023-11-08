@@ -211,6 +211,10 @@ export const ray = [
         title: 'Supported versions and other limitations',
         href: '/docs/creators/ray/supported-versions-and-other-limitations',
       },
+      {
+        title: 'Troubleshooting',
+        href: '/docs/creators/ray/troubleshooting',
+      },
     ],
   },
 ]

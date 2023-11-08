@@ -196,6 +196,8 @@ ray exec golem-cluster.yaml 'ray status'
 
 {% partial file="ray/example-cluster-testnet-and-cap.md" /%}
 
+{% partial file="ray/consult-troubleshooting.md" /%}
+
 ## Run the app
 
 ### Pass endplay library requirement to Ray
