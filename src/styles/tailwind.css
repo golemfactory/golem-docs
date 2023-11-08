@@ -105,3 +105,14 @@ table {
   display: block;
   overflow-x: auto;
 }
+
+
+/* This will initially hide the span */
+.group [group-aria-selected="true"] .absolute {
+  display: none;
+}
+
+/* This will make the span visible when its parent is hovered */
+.group:hover [group-aria-selected="true"] .absolute {
+  display: inline;
+}

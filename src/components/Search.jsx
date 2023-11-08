@@ -86,14 +86,14 @@ function LoadingIcon(props) {
 function HighlightQuery({ text, query }) {
   return (
     <Highlighter
-      highlightClassName="group-aria-selected:underline bg-transparent text-primary dark:text-darkprimary"
+      highlightClassName="group-aria-selected:underline bg-transparent text-primary dark:text-darkprimary font-medium"
       searchWords={[query]}
       autoEscape={true}
       textToHighlight={text}
     />
   )
 }
-
+import { ArticleType } from './ArticleType'
 function SearchResult({ result, autocomplete, collection, query }) {
   let id = useId()
 
@@ -106,7 +106,7 @@ function SearchResult({ result, autocomplete, collection, query }) {
   let hierarchy = [sectionTitle, result.pageTitle].filter(Boolean)
   return (
     <li
-      className="group block cursor-default"
+      className="group-result group block cursor-default"
       aria-labelledby={`${id}-hierarchy ${id}-title`}
       {...autocomplete.getItemProps({
         item: result,
@@ -118,65 +118,122 @@ function SearchResult({ result, autocomplete, collection, query }) {
         aria-hidden="true"
         className="relative rounded-lg py-2 pl-3  text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
       >
-        <div className="w-3/5 break-words md:w-3/4">
-          <HighlightQuery text={result.title} query={query} />
-        </div>
-        <span className="absolute right-0 top-1/2 mr-3 -translate-y-1/2 transform rounded-md bg-gray-50 px-2 py-1 text-xs font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-slate-800 dark:text-white dark:text-opacity-70">
-          {result.type === 'noicon' ? 'Page' : result.type}
-        </span>
-
-        {hierarchy.length > 0 && (
-          <div
-            id={`${id}-hierarchy`}
-            aria-hidden="true"
-            className="mt-0.5 w-3/5 truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400 md:w-3/4"
-          >
-            {hierarchy.map((item, itemIndex, items) => (
-              <Fragment key={itemIndex}>
-                <HighlightQuery text={item} query={query} />
-                <span
-                  className={
-                    itemIndex === items.length - 1
-                      ? 'sr-only'
-                      : 'mx-2 text-slate-300 dark:text-slate-700'
-                  }
-                >
-                  /
-                </span>
-              </Fragment>
-            ))}
+        <div className="flex w-3/5 items-center gap-x-2 break-words md:w-3/4">
+          <ArticleType onlyIcon={true} type={result.type} />
+          <div>
+            <HighlightQuery text={result.title} query={query} />
+            {hierarchy.length > 0 && (
+              <div
+                id={`${id}-hierarchy`}
+                aria-hidden="true"
+                className="mt-0.5  truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400 "
+              >
+                {hierarchy.map((item, itemIndex, items) => (
+                  <Fragment key={itemIndex}>
+                    <HighlightQuery text={item} query={query} />
+                    <span
+                      className={
+                        itemIndex === items.length - 1
+                          ? 'sr-only'
+                          : 'mx-2 text-slate-300 dark:text-slate-700'
+                      }
+                    >
+                      /
+                    </span>
+                  </Fragment>
+                ))}
+              </div>
+            )}
           </div>
-        )}
+          <span className="absolute right-0 top-1/2 mr-3 -translate-y-1/2 transform rounded-md px-2 py-1 text-xs font-medium capitalize text-primary dark:text-darkprimary">
+            ↗
+          </span>
+        </div>
       </div>
     </li>
   )
 }
 
-function SearchResults({ autocomplete, query, collection }) {
-  if (collection.items.length === 0) {
+function SearchResults({ autocomplete, query, collection, filter }) {
+  // If there is no collection, return null
+  if (!collection) return null
+
+  // Group results by type
+  const groupedResults = collection.items.reduce((acc, result) => {
+    const { type } = result
+    // Initialize the array if this type hasn't been added to acc yet
+    if (!acc[type]) acc[type] = []
+    // Push the result onto its type array
+    acc[type].push(result)
+    return acc
+  }, {})
+
+  const filteredResults =
+    filter.length === 0
+      ? groupedResults
+      : Object.keys(groupedResults)
+          .filter((type) => {
+            // Keep 'type' here because you're iterating over the keys of groupedResults which are types
+            return groupedResults[type].some((item) =>
+              filter.includes(item.articleFor)
+            )
+          })
+          .reduce((acc, type) => {
+            // Filter the individual items based on 'articleFor' now
+            acc[type] = groupedResults[type].filter((item) =>
+              filter.includes(item.articleFor)
+            )
+            return acc
+          }, {})
+
+  // Apply the filters to the groupedResults
+
+  useEffect(() => {
+    console.log(filter)
+  }, [filter])
+
+  // If there are no results after filtering
+  if (Object.keys(filteredResults).length === 0) {
     return (
       <p className="px-4 py-8 text-center text-sm text-slate-700 dark:text-slate-400">
         No results for &ldquo;
         <span className="break-words text-primary dark:text-darkprimary">
           {query}
         </span>
-        &rdquo;
+        &rdquo; with filters &ldquo;
+        <span className="capitalize text-primary dark:text-darkprimary">
+          {filter.join(', ')}
+        </span>
+        &rdquo;.
       </p>
     )
   }
 
+  // Return the filtered results
   return (
-    <ul role="list" {...autocomplete.getListProps()}>
-      {collection.items.map((result) => (
-        <SearchResult
-          key={result.url}
-          result={result}
-          autocomplete={autocomplete}
-          collection={collection}
-          query={query}
-        />
+    <>
+      {Object.entries(filteredResults).map(([type, results]) => (
+        <section
+          className="border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
+          key={type}
+        >
+          <h2 className="text-sm font-semibold capitalize text-slate-500 dark:text-white/50">
+            {type}
+          </h2>
+          <ul role="list" className="px-2" {...autocomplete.getListProps()}>
+            {results.map((result) => (
+              <SearchResult
+                key={result.url}
+                result={result}
+                autocomplete={autocomplete}
+                collection={collection}
+                query={query}
+              />
+            ))}
+          </ul>
+        </section>
       ))}
-    </ul>
+    </>
   )
 }
 
@@ -221,12 +278,60 @@ const SearchInput = forwardRef(function SearchInput(
   )
 })
 
+function FilterButton({ label, isActive, onClick }) {
+  // Add additional styling as needed to match the design
+  return (
+    <button
+      className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 ${
+        isActive ? 'bg-gray-100 dark:bg-slate-600' : '  dark:bg-slate-800'
+      }`}
+      onClick={() => onClick(label.toLowerCase())}
+    >
+      {label}
+    </button>
+  )
+}
+
 function SearchDialog({ open, setOpen, className }) {
   let router = useRouter()
   let formRef = useRef()
   let panelRef = useRef()
   let inputRef = useRef()
   let { autocomplete, autocompleteState } = useAutocomplete()
+  const [filter, setFilter] = useState([]) // Filter state is now an empty array by default
+
+  const toggleFilter = (f) => {
+    setFilter((prev) => {
+      let newFilter
+
+      if (prev.length === 0 && f !== 'none') {
+        // If no filters are selected and 'none' is not the selected filter,
+        // start with just the selected filter
+        newFilter = [f]
+      } else {
+        // If there are already filters selected or 'none' is the selected filter,
+        // toggle the current filter
+        if (prev.includes(f)) {
+          // Remove the selected filter if it's already in the array
+          newFilter = prev.filter((value) => value !== f)
+        } else {
+          // Add the selected filter if it's not already in the array
+          newFilter = [...prev, f]
+        }
+
+        // If the 'none' filter is selected, clear all filters
+        if (f === 'none') {
+          newFilter = []
+        }
+      }
+
+      // After state is updated, set the query to trigger a search with the new filter state
+      setTimeout(() => autocomplete.setQuery(autocompleteState.query), 0)
+
+      // Return the new filter state
+      return newFilter
+    })
+  }
 
   useEffect(() => {
     if (!open) {
@@ -277,7 +382,7 @@ function SearchDialog({ open, setOpen, className }) {
       <div className="fixed inset-0 bg-slate-900/50 backdrop-blur" />
 
       <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
-        <Dialog.Panel className="mx-auto overflow-hidden rounded-xl bg-white shadow-xl dark:bg-slate-800 dark:ring-1 dark:ring-slate-700 sm:max-w-xl">
+        <Dialog.Panel className="mx-auto overflow-hidden rounded-xl bg-white shadow-xl dark:bg-slate-800 dark:ring-1 dark:ring-slate-700 sm:max-w-2xl">
           <div {...autocomplete.getRootProps({})}>
             <form
               ref={formRef}
@@ -291,16 +396,30 @@ function SearchDialog({ open, setOpen, className }) {
                 autocompleteState={autocompleteState}
                 onClose={() => setOpen(false)}
               />
-              <div
-                ref={panelRef}
-                className="border-t border-slate-200 bg-white px-2 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
-                {...autocomplete.getPanelProps({})}
-              >
-                {autocompleteState.isOpen && (
+              <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
+                <span className="mr-4 text-sm font-semibold text-slate-500 dark:text-white/50">
+                  Filter by
+                </span>
+                <div className="flex gap-x-2">
+                  <FilterButton
+                    label="Requestor"
+                    isActive={filter.includes('Requestor')}
+                    onClick={() => toggleFilter('Requestor')}
+                  />
+                  <FilterButton
+                    label="Provider"
+                    isActive={filter.includes('Provider')}
+                    onClick={() => toggleFilter('Provider')}
+                  />
+                </div>
+              </div>
+              <div ref={panelRef} {...autocomplete.getPanelProps({})}>
+                {autocompleteState.collections && (
                   <SearchResults
                     autocomplete={autocomplete}
                     query={autocompleteState.query}
                     collection={autocompleteState.collections[0]}
+                    filter={filter} // Pass the filter state down as a prop
                   />
                 )}
               </div>
@@ -311,7 +430,6 @@ function SearchDialog({ open, setOpen, className }) {
     </Dialog>
   )
 }
-
 function useSearchProps() {
   let buttonRef = useRef()
   let [open, setOpen] = useState(false)
