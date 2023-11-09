@@ -10,7 +10,7 @@ It limits the explanation to the bare minimum - if you are looking for more deta
 The first step is installing Ray on Golem. It will install Ray as a dependency.
 
 ```bash
-# install ray-on-golem & ray (recommended within a clean virtual environment)
+# install ray-on-golem and ray (recommended within a clean virtual environment)
 pip3 install -U ray-on-golem
 ```
 

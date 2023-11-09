@@ -53,14 +53,14 @@ The basic flow of working with Ray and Ray on Golem consists of:
 - Executing your app on Ray on Golem cluster, which automatically scales up and down to accommodate your app's needs
 - Stopping down your Ray on Golem cluster to free resources and to limit the cost
 
-## Ray on Golem cluster configuration yaml & Ray CLI
+## Ray on Golem cluster configuration yaml and Ray CLI
 
 Ray uses a configuration yaml file to define the characteristics of the cluster.
 There are provider-specific pieces of information (node definitions, payment platforms, etc.) and cluster-wide ones (number of nodes, autoscaling parameters, cluster name, etc.).
 
 Ray also exposes a command line interface to manage the cluster (and nodes).
 
-While `ray start` & `ray stop` are for manual node setup there are also many cluster commands
+While `ray start` and `ray stop` are for manual node setup there are also many cluster commands
 - `ray up golem-cluster.yaml` starts up a cluster specified by the yaml
 - `ray down golem-cluster.yaml` terminates the cluster
 - `ray submit golem-cluster.yaml ray-app.py` executes an app on the cluster

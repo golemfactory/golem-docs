@@ -57,7 +57,7 @@ Let's now proceed to parallelization.
 We need to install `ray-on-golem`. It will install `ray` as a dependency.
 
 ```bash
-# Install ray-on-golem & ray (recommended in a clean virtual environment)
+# Install ray-on-golem and ray (recommended in a clean virtual environment)
 pip3 install -U ray-on-golem
 ```
 
@@ -223,7 +223,7 @@ ray.init(runtime_env=runtime_env)
 
 When you run the code, it takes a bit longer than previously, as Ray needs to create a virtual environment before the execution.
 
-### Submit the code to cluster & observe the autoscaling
+### Submit the code to cluster and observe the autoscaling
 
 With the cluster up and running, with Ray notified about endplay lib dependency, executing our app is as simple as:
 
