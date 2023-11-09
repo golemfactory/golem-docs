@@ -507,7 +507,7 @@ function SearchDialog({ open, setOpen, className }) {
                 )}
               </div>
             </form>
-            <div className="flex items-center border-t px-4 py-4 text-sm font-semibold text-gray-400">
+            <div className="flex items-center border-t border-slate-200 dark:border-slate-400/10 px-4 py-4 text-sm font-semibold text-gray-400">
               <div className="flex flex-col gap-y-2">Keyboard Controls</div>
               <div className=" ml-auto flex items-center gap-x-2">
                 <div className=" flex items-center gap-x-1">
