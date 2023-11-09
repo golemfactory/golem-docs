@@ -20,12 +20,9 @@ The magic starts when a provider runs a piece of code known as a provider agent,
 
 Providers play a crucial role in the network's ecosystem by sharing their processing power. In return, they receive compensation in the form of GLM, the native token of the Golem Network, thus creating a decentralized marketplace for computational power​​.
 
-
 {% docnavigation title="Next steps" %}
 
 - [Install the Golem Provider](/docs/providers/provider-installation).
-- [Configuring your provider](/docs/providers/provider-configuration)
+- [Configuring your provider](/docs/providers/configuration/general)
 
 {% /docnavigation %}
-
-

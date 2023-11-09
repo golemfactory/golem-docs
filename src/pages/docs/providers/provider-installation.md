@@ -158,7 +158,7 @@ sudo yum install screen
    ```bash
    golemsp run
    ```
-Your Golem provider is now running within a Screen session.
+   Your Golem provider is now running within a Screen session.
 
 ### Detaching from Screen
 
@@ -191,7 +191,7 @@ To verify if port forwarding is correctly configured, check [CanYouSeeMe.org](ht
 
 {% docnavigation title="Next steps" %}
 
-- [Configuring your provider](/docs/providers/provider-configuration)
+- [Configuring your provider](/docs/providers/configuration/general)
 
 {% /docnavigation %}
 
