@@ -1,16 +1,16 @@
 ---
-description: Golem in browser QuickStart explained
-title: Golem in browser QuickStart explained
+description: Golem in browser Quickstart explained
+title: Golem in browser Quickstart explained
 type: Tutorial
 ---
 
-# Golem in browser QuickStart explained
+# Golem in browser Quickstart explained
 
 ## Introduction
 
 In this tutorial, you will create a simple web page that will trigger your requestor script and display the results and output logs in the browser window.
 
-In the QuickStart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
+In the Quickstart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
 
 {% alert level="info" %}
 

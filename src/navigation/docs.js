@@ -4,11 +4,11 @@ export const navigation = [
     links: [{ title: 'index', href: '/' }],
   },
   {
-    title: 'QuickStarts',
+    title: 'Quickstarts',
     links: [
       { title: 'Introduction', href: '/docs/quickstarts' },
       {
-        title: 'JS QuickStart (node.js)',
+        title: 'JS Quickstart (node.js)',
         href: '/docs/quickstarts/js-quickstart',
       },
       {
@@ -22,6 +22,10 @@ export const navigation = [
       {
         title: '"no-code" app deployment',
         href: '/docs/quickstarts/no-code-app-deployment',
+      },
+      {
+        title: 'Python Quickstart ',
+        href: '/docs/quickstarts/python-quickstart',
       },
       {
         title: 'Retrievable Task',
@@ -38,7 +42,7 @@ export const navigation = [
         children: [
           { title: 'Introduction', href: '/docs/creators/javascript' },
           {
-            title: 'QuickStarts',
+            title: 'Quickstarts',
             href: '/docs/creators/javascript/quickstarts',
             children: [
               {
@@ -63,7 +67,7 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials',
               },
               {
-                title: 'QuickStart Explained',
+                title: 'Quickstart Explained',
                 href: '/docs/creators/javascript/tutorials/quickstart-explained',
               },
               {
@@ -308,11 +312,11 @@ export const navigation = [
         children: [
           { title: 'Introduction', href: '/docs/creators/python' },
           {
-            title: 'QuickStarts',
+            title: 'Quickstart',
             href: '',
             children: [
               {
-                title: 'Task API QuickStart',
+                title: 'Task API Quickstart',
                 href: '/docs/creators/python/quickstarts/run-first-task-on-golem',
               },
             ],
@@ -536,40 +540,38 @@ export const navigation = [
       { title: 'Introduction', href: '/docs/providers' },
       { title: 'Installation', href: '/docs/providers/provider-installation' },
       {
-        title: 'Basic Configuration',
-        href: '/docs/providers/provider-basic-configuration',
+        title: 'Configuring your provider',
+        children: [
+          {
+            title: 'General settings',
+            href: '/docs/providers/configuration/general',
+          },
+          {
+            title: 'Outbound networking',
+            href: '/docs/providers/configuration/outbound',
+          },
+        ],
       },
+
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
 
       {
-        title: 'Yagna CLI reference',
-        href: '/docs/providers/yagna-cli-reference',
-      },
-      {
-        title: 'Maintenance',
+        title: 'Managing your wallet',
         children: [
           {
-            title: 'Maintenance',
-            href: '/docs/providers/maintenance/provider-maintenance',
+            title: 'Backing up your wallet',
+            href: '/docs/providers/wallet/backup',
           },
           {
-            title: 'Wallet Backup',
-            href: '/docs/providers/maintenance/wallet-backup',
-          },
-          {
-            title: 'Wallet Restore',
-            href: '/docs/providers/maintenance/wallet-restoration',
+            title: 'Restoring a wallet',
+            href: '/docs/providers/wallet/restoration',
           },
         ],
       },
+      { title: 'Maintenance', href: '/docs/providers/maintenance' },
       {
         title: 'Troubleshooting',
-        children: [
-          {
-            title: 'Provider',
-            href: '/docs/troubleshooting/provider',
-          },
-        ],
+        href: '/docs/troubleshooting/provider',
       },
     ],
   },
