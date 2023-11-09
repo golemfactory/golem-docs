@@ -1,9 +1,9 @@
 ---
 description: Create your own JavaScript application on Golem
-title: Golem Node.js QuickStart
+title: Golem Node.js Quickstart
 type: Quickstart
 ---
 
-# Golem JS QuickStart
+# Golem JS Quickstart
 
 {% partial file="quickstarts/js-quickstart.md" /%}

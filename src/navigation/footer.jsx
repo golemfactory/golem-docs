@@ -48,7 +48,7 @@ export const javascript = [
         href: '/docs/creators/javascript/tutorials',
       },
       {
-        title: 'QuickStart Explained',
+        title: 'Quickstart Explained',
         href: '/docs/creators/javascript/tutorials/quickstart-explained',
       },
       {

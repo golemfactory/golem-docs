@@ -4,11 +4,11 @@ export const navigation = [
     links: [{ title: 'index', href: '/' }],
   },
   {
-    title: 'QuickStarts',
+    title: 'Quickstarts',
     links: [
       { title: 'Introduction', href: '/docs/quickstarts' },
       {
-        title: 'JS QuickStart (node.js)',
+        title: 'JS Quickstart (node.js)',
         href: '/docs/quickstarts/js-quickstart',
       },
       {
@@ -22,6 +22,10 @@ export const navigation = [
       {
         title: '"no-code" app deployment',
         href: '/docs/quickstarts/no-code-app-deployment',
+      },
+      {
+        title: 'Python Quickstart ',
+        href: '/docs/quickstarts/python-quickstart',
       },
       {
         title: 'Retrievable Task',
@@ -38,7 +42,7 @@ export const navigation = [
         children: [
           { title: 'Introduction', href: '/docs/creators/javascript' },
           {
-            title: 'QuickStarts',
+            title: 'Quickstarts',
             href: '/docs/creators/javascript/quickstarts',
             children: [
               {
@@ -63,7 +67,7 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials',
               },
               {
-                title: 'QuickStart Explained',
+                title: 'Quickstart Explained',
                 href: '/docs/creators/javascript/tutorials/quickstart-explained',
               },
               {
@@ -308,11 +312,11 @@ export const navigation = [
         children: [
           { title: 'Introduction', href: '/docs/creators/python' },
           {
-            title: 'QuickStarts',
+            title: 'Quickstart',
             href: '',
             children: [
               {
-                title: 'Task API QuickStart',
+                title: 'Task API Quickstart',
                 href: '/docs/creators/python/quickstarts/run-first-task-on-golem',
               },
             ],

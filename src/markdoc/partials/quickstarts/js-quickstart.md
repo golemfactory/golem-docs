@@ -2,7 +2,7 @@
 
 In this article, we'll show you how to run a simple task on the Golem Network.
 
-As a QuickStart, we will perform a simple task: running a basic shell command on a rented provider.
+As a Quickstart, we will perform a simple task: running a basic shell command on a rented provider.
 
 It should take just a few minutes to complete, and you will see the command output printed in your terminal.
 
@@ -137,9 +137,9 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 
 {% docnavigation title="Next steps" %}
 
-- [QuickStart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
-{% /docnavigation %}
-{% docnavigation title="See also" %}
+- [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
+  {% /docnavigation %}
+  {% docnavigation title="See also" %}
 - [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
 - [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
-{% /docnavigation %}
+  {% /docnavigation %}

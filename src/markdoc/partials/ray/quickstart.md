@@ -1,4 +1,4 @@
-# QuickStart
+# Quickstart
 
 This quickstart shows you how to set Ray and Ray on Golem up, start your cluster, test it, and then stop it.
 It limits the explanation to the bare minimum - if you are looking for more details jump to [setup tutorial](/docs/creators/ray/setup-tutorial)
