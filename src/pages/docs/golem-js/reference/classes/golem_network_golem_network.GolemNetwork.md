@@ -5,7 +5,7 @@ type: "reference"
 ---
 # Class: GolemNetwork
 
-[golem_network/golem_network](../modules/golem_network_golem_network).GolemNetwork
+[golem\_network/golem\_network](../modules/golem_network_golem_network).GolemNetwork
 
 The starting point for using Golem Network.
 

@@ -5,7 +5,7 @@ type: "reference"
 ---
 # Interface: DebitNoteDTO
 
-[payment/debit_note](../modules/payment_debit_note).DebitNoteDTO
+[payment/debit\_note](../modules/payment_debit_note).DebitNoteDTO
 
 ## Table of contents
 
