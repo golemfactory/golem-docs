@@ -1,7 +1,7 @@
 ---
 description: List of examples
 title: JS Examples
-type: ToC
+type: Table of Contents
 ---
 
 JS code examples are organized in articles dedicated to specific topics:
@@ -12,11 +12,11 @@ JS code examples are organized in articles dedicated to specific topics:
 | [Defining tasks](/docs/creators/javascript/examples/composing-tasks)            | Shows how to build tasks from commands, especially how commands can be chained.                                              |
 | [Sending data](/docs/creators/javascript/examples/transferring-data)            | Shows how to use specific commands dedicated to sending data in the network.                                                 |
 | [Working with results](/docs/creators/javascript/examples/working-with-results) | Presents the structure of the results depending on the way tasks are defined and explains how to handle failures.            |
-| [Selecting providers](/docs/creators/javascript/examples/selecting-providers)   | Shows how to select providers based on filters, whitelists or blacklists.                                                                                        |
+| [Selecting providers](/docs/creators/javascript/examples/selecting-providers)   | Shows how to select providers based on filters, whitelists or blacklists.                                                    |
 | [Using images](/docs/creators/javascript/examples/working-with-images)          | Shows how you can define your custom image.                                                                                  |
-| [Accessing the Internet](/docs/creators/javascript/examples/accessing-internet) | Instructions on how to prepare a manifest and specify a demand, so you can reach the internet from the provider node.          |
-| [Using app-keys](/docs/creators/javascript/examples/using-app-keys)             | Shows how to create and use a unique app-key to manage access to Yagna.                                    |
-| [Switching to mainnet](/docs/creators/javascript/examples/switching-to-mainnet) | Instructions that will help you run your app on mainnet.                                                                  |
+| [Accessing the Internet](/docs/creators/javascript/examples/accessing-internet) | Instructions on how to prepare a manifest and specify a demand, so you can reach the internet from the provider node.        |
+| [Using app-keys](/docs/creators/javascript/examples/using-app-keys)             | Shows how to create and use a unique app-key to manage access to Yagna.                                                      |
+| [Switching to mainnet](/docs/creators/javascript/examples/switching-to-mainnet) | Instructions that will help you run your app on mainnet.                                                                     |
 
 Instructions on how to use Golem tools are available here:
 

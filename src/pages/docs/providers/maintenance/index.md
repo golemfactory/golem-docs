@@ -1,7 +1,7 @@
 ---
 description: ToC for maintenance topics
 title: Provider maintenance ToC
-type: Toc
+type: Table of Contents
 ---
 
 In this section, we present maintenance procedures.

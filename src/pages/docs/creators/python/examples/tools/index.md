@@ -1,7 +1,7 @@
 ---
 description: List of examples
 title: Golem SDK tool instructions
-type: Toc
+type: Table of Contents
 ---
 
 Instructions on how to use Golem tools:

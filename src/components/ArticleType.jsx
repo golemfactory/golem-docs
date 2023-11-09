@@ -45,7 +45,7 @@ export function ArticleType({ type, onlyIcon = false, children }) {
   }
 
   return (
-    <div className="inline-flex items-center gap-x-2 rounded-md bg-lightbluedarker px-1.5 py-1 font-medium dark:bg-darkcontent dark:text-white">
+    <div className="inline-flex items-center gap-x-2 rounded-md  px-1.5 py-1 font-medium bg-lightbluedarker dark:bg-darkcontent dark:text-white">
       {IconComponent}
       {!onlyIcon && (
         <span className="text-sm capitalize text-dark dark:text-white">

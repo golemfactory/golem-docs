@@ -5,6 +5,7 @@ import { Dialog } from '@headlessui/react'
 import clsx from 'clsx'
 import Highlighter from 'react-highlight-words'
 import { navigation } from '@/components/Layout'
+import { ArrowSmallUpIcon, ArrowSmallDownIcon } from '@heroicons/react/24/solid'
 
 function SearchIcon(props) {
   return (
@@ -94,7 +95,7 @@ function HighlightQuery({ text, query }) {
   )
 }
 import { ArticleType } from './ArticleType'
-function SearchResult({ result, autocomplete, collection, query }) {
+function SearchResult({ result, autocomplete, collection, query, filter }) {
   let id = useId()
 
   let sectionTitle
@@ -118,36 +119,49 @@ function SearchResult({ result, autocomplete, collection, query }) {
         aria-hidden="true"
         className="relative rounded-lg py-2 pl-3  text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
       >
-        <div className="flex w-3/5 items-center gap-x-2 break-words md:w-3/4">
-          <ArticleType onlyIcon={true} type={result.type} />
-          <div>
-            <HighlightQuery text={result.title} query={query} />
-            {hierarchy.length > 0 && (
-              <div
-                id={`${id}-hierarchy`}
-                aria-hidden="true"
-                className="mt-0.5  truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400 "
-              >
-                {hierarchy.map((item, itemIndex, items) => (
-                  <Fragment key={itemIndex}>
-                    <HighlightQuery text={item} query={query} />
-                    <span
-                      className={
-                        itemIndex === items.length - 1
-                          ? 'sr-only'
-                          : 'mx-2 text-slate-300 dark:text-slate-700'
-                      }
-                    >
-                      /
-                    </span>
-                  </Fragment>
-                ))}
-              </div>
-            )}
+        <div className="flex items-center gap-x-2 break-words">
+          <div className="flex items-center gap-x-2">
+            <div>
+              <ArticleType onlyIcon={true} type={result.type} />
+            </div>
+            <div>
+              <HighlightQuery text={result.title} query={query} />
+              {hierarchy.length > 0 && (
+                <div
+                  id={`${id}-hierarchy`}
+                  aria-hidden="true"
+                  className="mt-0.5  truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400 "
+                >
+                  {hierarchy.map((item, itemIndex, items) => (
+                    <Fragment key={itemIndex}>
+                      <HighlightQuery text={item} query={query} />
+                      <span
+                        className={
+                          itemIndex === items.length - 1
+                            ? 'sr-only'
+                            : 'mx-2 text-slate-300 dark:text-slate-700'
+                        }
+                      >
+                        /
+                      </span>
+                    </Fragment>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-          <span className="absolute right-0 top-1/2 mr-3 -translate-y-1/2 transform rounded-md px-2 py-1 text-xs font-medium capitalize text-primary dark:text-darkprimary">
-            ↗
-          </span>
+          <div className="ml-auto mr-4 flex items-center">
+            {filter.length > 1 && (
+              <span
+                className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 `}
+              >
+                {result.articleFor}
+              </span>
+            )}
+            <span className="px-2 text-xs font-medium capitalize text-primary dark:text-darkprimary">
+              ↗
+            </span>
+          </div>
         </div>
       </div>
     </li>
@@ -192,6 +206,10 @@ function SearchResults({ autocomplete, query, collection, filter }) {
     console.log(filter)
   }, [filter])
 
+  if (Object.keys(filteredResults).length === 0 && filter.length === 0) {
+    return null
+  }
+
   // If there are no results after filtering
   if (Object.keys(filteredResults).length === 0) {
     return (
@@ -220,7 +238,7 @@ function SearchResults({ autocomplete, query, collection, filter }) {
           <h2 className="text-sm font-semibold capitalize text-slate-500 dark:text-white/50">
             {type}
           </h2>
-          <ul role="list"  {...autocomplete.getListProps()}>
+          <ul role="list" {...autocomplete.getListProps()}>
             {results.map((result) => (
               <SearchResult
                 key={result.url}
@@ -228,6 +246,7 @@ function SearchResults({ autocomplete, query, collection, filter }) {
                 autocomplete={autocomplete}
                 collection={collection}
                 query={query}
+                filter={filter}
               />
             ))}
           </ul>
@@ -299,6 +318,13 @@ function SearchDialog({ open, setOpen, className }) {
   let inputRef = useRef()
   let { autocomplete, autocompleteState } = useAutocomplete()
   const [filter, setFilter] = useState([]) // Filter state is now an empty array by default
+  let [modifierKey, setModifierKey] = useState()
+
+  useEffect(() => {
+    setModifierKey(
+      /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform) ? '⌘' : 'Ctrl '
+    )
+  }, [])
 
   const toggleFilter = (f) => {
     setFilter((prev) => {
@@ -352,14 +378,12 @@ function SearchDialog({ open, setOpen, className }) {
   }, [open, setOpen, router])
 
   useEffect(() => {
-    if (open) {
-      return
-    }
-
     function onKeyDown(event) {
+      // Check if 'k' is pressed along with the metaKey or ctrlKey
       if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
         event.preventDefault()
-        setOpen(true)
+        // Toggle the dialog open state
+        setOpen((prevOpen) => !prevOpen)
       }
     }
 
@@ -368,7 +392,7 @@ function SearchDialog({ open, setOpen, className }) {
     return () => {
       window.removeEventListener('keydown', onKeyDown)
     }
-  }, [open, setOpen])
+  }, [setOpen])
 
   return (
     <Dialog
@@ -424,6 +448,62 @@ function SearchDialog({ open, setOpen, className }) {
                 )}
               </div>
             </form>
+            <div className="flex items-center border-t px-4 py-4 text-sm font-semibold text-gray-400">
+              <div className="flex flex-col gap-y-2">Controls</div>
+              <div className=" ml-auto flex items-center gap-x-2">
+                <div className=" flex items-center gap-x-1">
+                  <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
+                    <ArrowSmallUpIcon className="h-4 w-4" />
+                  </div>
+                  <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
+                    <ArrowSmallDownIcon className="h-4 w-4" />
+                  </div>
+                  <span className="ml-1.5">Move</span>
+                </div>
+                <div className="flex gap-x-4  px-4 text-sm font-semibold text-gray-400">
+                  <div className=" flex items-center gap-x-1">
+                    <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        version="1.1"
+                        className="h-4 w-4 opacity-70"
+                      >
+                        <g
+                          id="🔍-System-Icons"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <g
+                            id="ic_fluent_arrow_enter_24_regular"
+                            fill="#212121"
+                            fill-rule="nonzero"
+                          >
+                            <path
+                              d="M21.25,4 C21.6642136,4 22,4.33578644 22,4.75 L22,4.75 L22,11.25 C22,13.3210678 20.3210678,15 18.25,15 L18.25,15 L4.58583574,15 L8.30516583,18.7196699 C8.57143239,18.9859365 8.59563844,19.4026002 8.37778398,19.6962117 L8.30516583,19.7803301 C8.03889927,20.0465966 7.62223558,20.0708027 7.32862409,19.8529482 L7.24450566,19.7803301 L2.24450566,14.7803301 C1.97823909,14.5140635 1.95403304,14.0973998 2.1718875,13.8037883 L2.24450566,13.7196699 L7.24450566,8.71966991 C7.53739888,8.4267767 8.01227261,8.4267767 8.30516583,8.71966991 C8.57143239,8.98593648 8.59563844,9.40260016 8.37778398,9.69621165 L8.30516583,9.78033009 L4.58583574,13.5 L18.25,13.5 C19.440864,13.5 20.4156449,12.5748384 20.4948092,11.4040488 L20.5,11.25 L20.5,4.75 C20.5,4.33578644 20.8357864,4 21.25,4 Z"
+                              id="🎨-Color"
+                            ></path>
+                          </g>
+                        </g>
+                        <script xmlns="" />
+                      </svg>
+                    </div>
+                    <span className="ml-1.5">Select</span>
+                  </div>
+                  <div className=" flex items-center gap-x-1 ">
+                    <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
+                      {modifierKey}
+                    </div>
+                    <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
+                      K
+                    </div>
+                    <span className="ml-1.5">Quit</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Dialog.Panel>
       </div>
