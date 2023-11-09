@@ -8,6 +8,26 @@ type: Instructions
 
 This article outlines the process of configuring the settings for your Golem provider node. Whether you're setting up a new node or modifying an existing one, the following instructions will help you configure various aspects of your node, such as resource allocation and pricing
 
+## Showing Node Settings
+
+To see the settings of your provider node, use the `golemsp settings show` command in the terminal:
+
+```bash
+➜  ~ golemsp settings show
+node name: "future-argument"
+Shared resources:
+	cores:	3
+	memory:	42.87843778729439 GiB
+	disk:	294.8792449951172 GiB
+
+
+Pricing for preset "wasmtime":
+
+	0.025000000000000001 GLM per cpu hour
+	0.005000000000000000 GLM per hour
+	0.000000000000000000 GLM for start
+```
+
 ## Accessing Node Settings
 
 To begin configuring your node, use the `golemsp settings` command in your terminal:
@@ -92,22 +112,49 @@ golemsp run --payment-network testnet
 
 ```
 
-# Managing Outbound Traffic Rules for Golem Provider Nodes
+# Outbound Networking
 
-As a Golem provider, it’s essential to manage the traffic that flows through your node. This section guides you through listing, modifying, and removing outbound traffic rules, ensuring your node communicates only with approved domains.
+As a Golem provider, it’s essential to manage the traffic that flows through your node. This section guides you through listing, modifying, and removing whitelisted domains, ensuring your node communicates only with approved domains.
 
+## Managing the general outbound settings
 
-## Managing your keystore
+By default a provider will automatically have outbound networking enabled, but only towards domains that's included in the [default whitelist](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist). It's a whitelist maintained by the Golem Factory which has strict requirements to ensure the safety of providers.
 
-The provider has an embedded certificate keystore which is used to validate any additional permissions for the payload launched by the requestors.
+### Enabling outbound networking for everything
 
-By default, it contains only Golem Factory's public certificate which allows executing examples in tutorials and apps from trusted by Golem creators.
+{% alert level="danger" %}
+Enabling unrestricted access to everything on the internet can be considered dangerous! Enabling this setting pose the same risk as running an exit node on Tor. Please make sure you know what you're doing before enabling unrestricted access for everyone.
+{% /alert %}
+As a provider you have the option to enable all outbound traffic from your node, which might result in an increase of tasks received by your node. You can enable outbound traffic towards **anything** using:
 
-Run `ya-provider keystore --help` to see possible subcommands
+```bash
+ya-provider rule set outbound everyone --mode all
+```
 
-## Listing Outbound Rules
+### Enabling outbound traffic for whitelisted domains
 
-Your node comes pre-configured to permit outbound traffic to domains whitelisted by Golem Factory, viewable [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist). To view the current outbound rules:
+As a provider you have the option to only enable outbound networking for the whitelisted domains that you decide. This way of providing outbound traffic allows you to be in charge of the situation. You can enable outbound traffic for whitelisted domains only, using the command:
+
+```bash
+ya-provider rule set outbound everyone --mode whitelist
+```
+
+### Disabling all outbound traffic
+
+As a provider you have the option to completely disable all outbound traffic from your provider. Please be aware that completely disabling this might result in your provider receiving less tasks.
+
+To disable outbound completely, run the following command:
+
+```bash
+ya-provider rule set outbound everyone --mode none
+```
+
+## Managing your outbound whitelist
+If you're using the whitelist mode for outbound networking, it's handy knowing how to manage the list of domains in it. Below you will find the commands to view, add and delete domains in it.
+
+### Listing whitelisted domains
+
+Your node comes pre-configured to permit outbound traffic to domains whitelisted by Golem Factory, viewable [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist). To view the current whitelist, run the command below:
 
 ```bash
 ➜  ~ ya-provider whitelist list
@@ -140,23 +187,10 @@ Your node comes pre-configured to permit outbound traffic to domains whitelisted
 └────────────┴───────────────────────────────────┴──────────┘
 ```
 
-## Removing an Outbound Rule
 
-To remove an outbound rule, you must reference the rule's `ID`:
+### Whitelisting a specific Domain
 
-```bash
-➜  ~ ya-provider whitelist remove "76d0c6c5"
-Removed patterns:
-┌────────────┬──────────────────┬──────────┐
-│  ID        │  Pattern         │  Type    │
-├────────────┼──────────────────┼──────────┤
-│  76d0c6c5  │  hub.docker.com  │  strict  │
-└────────────┴──────────────────┴──────────┘
-```
-
-## Whitelisting a Strict Domain
-
-Strict domain rules allow your node to communicate with specific domains. You can add a strict domain to your whitelist with the following command:
+Whitelisting a specific domain using the `strict` type allows your node to communicate with specific domain. You can add a strict domain to your whitelist with the following command:
 
 ```bash
 ➜  ~ ya-provider whitelist add -p coinmarket.cap -t strict
@@ -170,21 +204,42 @@ Added patterns:
 
 When you add a domain as `strict`, the node's outbound traffic is permitted exclusively to that exact domain, ensuring a precise control over the node's interactions.
 
-## Adding Regex Domain Rules
+### Whitelisting multiple domains using Regex
 
-Regex (regular expression) rules provide a flexible way of defining which domains your node can access. They are especially useful when you want to allow communication with a range of domains following a certain pattern. To add a regex rule to your whitelist, use the -t regex option:
+The Regex (regular expression) pattern provide a flexible way of defining which domains your node can access. They are especially useful when you want to allow communication with a range of domains following a certain pattern. To add a regex pattern to your whitelist, use the -t regex option:
 
 ```bash
 ya-provider whitelist add -p '.*\.dev\.golem\.network$' -t regex
 ```
 
-Using regex patterns can significantly enhance your node's operability by allowing a set of domains that share a common naming convention without adding each one individually. However, it requires careful consideration to avoid overly broad rules that could expose your node to unwanted traffic.
+Using regex patterns can significantly enhance your node's operability by allowing a set of domains that share a common naming convention without adding each one individually. However, it requires careful consideration to avoid overly broad patterns that could expose your node to unwanted traffic.
 
-By employing strict and regex domain rules appropriately, you can ensure that your Golem provider node maintains an optimal balance between connectivity and security.
+By employing strict and regex domain patterns appropriately, you can ensure that your Golem provider node maintains an optimal balance between connectivity and security.
+
+### Removing a whitelisted domain
+
+To remove a whitelisted domain, you must reference the pattern's `ID`:
+
+```bash
+➜  ~ ya-provider whitelist remove "76d0c6c5"
+Removed patterns:
+┌────────────┬──────────────────┬──────────┐
+│  ID        │  Pattern         │  Type    │
+├────────────┼──────────────────┼──────────┤
+│  76d0c6c5  │  hub.docker.com  │  strict  │
+└────────────┴──────────────────┴──────────┘
+```
+
+## Managing your keystore
+
+The provider has an embedded certificate keystore which is used to validate any additional permissions for the payload launched by the requestors.
+
+By default, it contains only Golem Factory's public certificate which allows executing examples in tutorials and apps from trusted by Golem creators.
+
+Run `ya-provider keystore --help` to see possible subcommands
 
 {% docnavigation title="See also" %}
 
 - [Golem Provider Troubleshooting](/docs/troubleshooting/provider)
-
 
 {% /docnavigation %}

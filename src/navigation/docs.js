@@ -542,14 +542,15 @@ export const navigation = [
         children: [
           {
             title: 'Backing up your wallet',
-            href: '/docs/providers/maintenance/wallet-backup',
+            href: '/docs/providers/wallet/backup',
           },
           {
             title: 'Restoring a wallet',
-            href: '/docs/providers/maintenance/wallet-restoration',
+            href: '/docs/providers/wallet/restoration',
           },
         ],
       },
+      {title: 'Maintenance', href: '/docs/providers/maintenance'},
       {
         title: 'Troubleshooting',
         href: '/docs/troubleshooting/provider',

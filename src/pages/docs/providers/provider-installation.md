@@ -11,6 +11,7 @@ Welcome to the Golem Provider installation guide. This guide provides step-by-st
 ## Getting Started
 
 ### Prerequisites
+
 To follow this tutorial, you will need the following:
 
 - A linux machine with the x86-64 architecture
@@ -28,13 +29,11 @@ curl -sSf https://join.golem.network/as-provider | bash -
 
 After installing all required components, you will be asked to set up your node, by providing configuration values. If you leave them empty, the default values (presented in brackets) will be applied. Press Enter for each entry to save it.
 
-|                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| :-------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Node name (default=generated-name)`                | Type in the name of your new node. If you leave this space empty, a random auto-generated name will be used.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `Ethereum wallet address (default=internal wallet)` | Paste your own Ethereum address to which you have private keys stored. If you leave this space empty, an address will be created for you on your local system.                                                                                                                                                                                                                                                                                                                                                              |
+|                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| :-------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Node name (default=generated-name)`                | Type in the name of your new node. If you leave this space empty, a random auto-generated name will be used.                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `Ethereum wallet address (default=internal wallet)` | Paste your own Ethereum address to which you have private keys stored. If you leave this space empty, an address will be created for you on your local system.                                                                                                                                                                                                                                                                                                                                                           |
 | `price GLM per hour (default=0.1)`                  | When configuring your pricing, consider the current market conditions. The initial default rate is set at 0.1 GLM per hour, per thread, which might be high given the current market rates. To ensure your pricing is competitive, you can refer to the list of online providers and their earnings on the [Golem Network Stats page](https://stats.golem.network/network/providers/online). The table of providers is automatically sorted by earnings, which can help you gauge and set a more market-aligned pricing. |
-
-
 
 ### Modifying your PATH
 
@@ -72,10 +71,9 @@ source ~/.zshrc
 
 {% /tab %}
 
-
 {% /tabs %}
 
-## Running the provider
+### Running the provider
 
 To run the Golem provider on the mainnet, type the following command into the terminal:
 
@@ -83,7 +81,7 @@ To run the Golem provider on the mainnet, type the following command into the te
 golemsp run
 ```
 
-## Verifying node status
+### Verifying node status
 
 To check your node's status and see if it is active and computing tasks from the network, open a new terminal window and type:
 
@@ -118,6 +116,69 @@ $ golemsp status
 └─────────────────────────┴──────────────────────────────────────────────┴─────────────────────────────┘
 ```
 
+## How to keep the provider running when closing the terminal
+
+Screen is a utility that lets you run commands or programs in the background of your terminal. It's like having a separate workspace that keeps going even if you close the terminal window. This is handy for keeping `golemsp run` active at all times.
+
+**Why Screen?** Normally, if you close the terminal, any running commands stop. With Screen, your `golemsp run` command will keep on working in its own space, uninterrupted, no matter if you log out or lose connection.
+
+### Install Screen
+
+To install Screen on your system, use the package manager:
+
+{% tabs %}
+{% tab label="Debian/Ubuntu" %}
+
+```bash
+sudo apt-get install screen
+```
+
+{% /tab %}
+{% tab label="Fedora" %}
+
+```bash
+sudo dnf install screen
+```
+
+{% /tab %}
+{% tab label="CentOS/RHEL" %}
+
+```bash
+sudo yum install screen
+```
+
+{% /tab %}
+{% /tabs %}
+
+### Starting golemsp in Screen
+
+1. Open your terminal.
+2. Enter `screen -S provider` to begin a new named session `provider`.
+3. Start the Golem provider:
+   ```bash
+   golemsp run
+   ```
+Your Golem provider is now running within a Screen session.
+
+### Detaching from Screen
+
+To detach and leave `golemsp run` running in the background:
+
+Press `Ctrl-A` followed by `D`.
+
+### Attaching to Screen
+
+To reattach to the session:
+
+1. Open a terminal.
+2. Type `screen -r provider` and press Enter.
+
+### Stopping `golemsp run`
+
+1. Reattach to your Screen session as above.
+2. Stop `golemsp run` by pressing `Ctrl-C`.
+3. Exit Screen by typing `exit` or pressing `Ctrl-D`.
+
 ## Port forwarding
 
 The Yagna service utilizes UDP protocol on port 11500 to facilitate communication. While the Golem Network can relay data through nodes without direct port forwarding, configuring your node to have a public IP address significantly strengthens the network's resilience and stability. Nodes with a public IP can provide better performance and are generally more desirable to Requestors.
@@ -133,3 +194,7 @@ To verify if port forwarding is correctly configured, check [CanYouSeeMe.org](ht
 - [Configuring your provider](/docs/providers/provider-configuration)
 
 {% /docnavigation %}
+
+```
+
+```
