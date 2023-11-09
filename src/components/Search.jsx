@@ -205,6 +205,7 @@ function SearchResults({
       Object.entries(acc).filter(([_, results]) => results.length > 0)
     )
   }, {})
+  
 
   // If there are no results after filtering
   if (Object.keys(groupedResults).length === 0 && query !== '') {
@@ -508,7 +509,7 @@ function SearchDialog({ open, setOpen, className }) {
               </div>
             </form>
             <div className="flex items-center border-t border-slate-200 dark:border-slate-400/10 px-4 py-4 text-sm font-semibold text-gray-400">
-              <div className="flex flex-col gap-y-2">Keyboard Controls</div>
+              <div className="flex flex-col gap-y-2 font-semibold text-slate-500">Keyboard Controls</div>
               <div className=" ml-auto flex items-center gap-x-2">
                 <div className=" flex items-center gap-x-1">
                   <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
@@ -517,7 +518,7 @@ function SearchDialog({ open, setOpen, className }) {
                   <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
                     <ArrowSmallDownIcon className="h-4 w-4" />
                   </div>
-                  <span className="ml-1.5">Move</span>
+                  <span className="ml-1.5 font-semibold text-slate-500">Move</span>
                 </div>
                 <div className="flex gap-x-4  px-4 text-sm font-semibold text-gray-400">
                   <div className=" flex items-center gap-x-1">
@@ -526,7 +527,7 @@ function SearchDialog({ open, setOpen, className }) {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         version="1.1"
-                        className="h-4 w-4 opacity-70 dark:opacity-100 dark:fill-white dark:text-white"
+                        className="h-4 w-4 opacity-50 dark:opacity-100 dark:fill-white dark:text-white"
                       >
                         <g
                           id="🔍-System-Icons"
@@ -547,7 +548,7 @@ function SearchDialog({ open, setOpen, className }) {
                         <script xmlns="" />
                       </svg>
                     </div>
-                    <span className="ml-1.5">Select</span>
+                    <span className="ml-1.5 font-semibold text-slate-500">Select</span>
                   </div>
                   <div className=" flex items-center gap-x-1 ">
                     <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
@@ -556,7 +557,7 @@ function SearchDialog({ open, setOpen, className }) {
                     <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
                       K
                     </div>
-                    <span className="ml-1.5">Quit</span>
+                    <span className="ml-1.5 font-semibold text-slate-500">Quit</span>
                   </div>
                 </div>
               </div>
