@@ -119,38 +119,38 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
         aria-hidden="true"
         className="relative rounded-lg py-2 pl-3  text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
       >
-        <div className="flex items-center gap-x-2 break-words">
-          <div className="flex items-center gap-x-2">
+        <div className="grid items-center gap-x-2 break-words md:grid-cols-3">
+          <div className="flex items-center gap-x-2 break-words md:col-span-2">
             <div>
               <ArticleType onlyIcon={true} type={result.type} />
             </div>
-            <div>
+            <div className="md:truncate">
               <HighlightQuery text={result.title} query={query} />
               {hierarchy.length > 0 && (
                 <div
                   id={`${id}-hierarchy`}
                   aria-hidden="true"
-                  className="mt-0.5  truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400 "
+                  className="mt-0.5  text-xs text-slate-500 dark:text-slate-400 md:truncate md:whitespace-nowrap "
                 >
                   {hierarchy.map((item, itemIndex, items) => (
-                    <Fragment key={itemIndex}>
+                    <span className="break-words" key={itemIndex}>
                       <HighlightQuery text={item} query={query} />
                       <span
                         className={
                           itemIndex === items.length - 1
                             ? 'sr-only'
-                            : 'mx-2 text-slate-300 dark:text-slate-700'
+                            : 'mx-2 block break-words text-slate-300 dark:text-slate-700'
                         }
                       >
                         /
                       </span>
-                    </Fragment>
+                    </span>
                   ))}
                 </div>
               )}
             </div>
           </div>
-          <div className="ml-auto mr-4 flex items-center">
+          <div className="mr-4 mt-4 flex items-center md:ml-auto md:mt-0">
             {filter.length > 1 && (
               <span
                 className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 `}
@@ -205,8 +205,6 @@ function SearchResults({
       Object.entries(acc).filter(([_, results]) => results.length > 0)
     )
   }, {})
-
-
 
   // If there are no results after filtering
   if (Object.keys(groupedResults).length === 0 && query !== '') {
@@ -470,13 +468,11 @@ function SearchDialog({ open, setOpen, className }) {
                   />
                 </div>
               </div>
-              <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
+              <div className="flex flex-wrap  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
                 <span className="mr-4 text-sm font-semibold text-slate-500 dark:text-white/50">
                   Type
                 </span>
                 <div className="flex gap-x-2">
-                 
-                  
                   <FilterButton
                     label="Example"
                     isActive={typefilter.includes('example')}
