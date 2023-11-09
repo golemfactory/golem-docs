@@ -10,4 +10,4 @@ type: quickstart
 
 - [Ray on Golem concept](/docs/creators/ray/concept)
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)
-  {% /docnavigation %}
+{% /docnavigation %}
