@@ -220,7 +220,7 @@ function SearchResults({ autocomplete, query, collection, filter }) {
           <h2 className="text-sm font-semibold capitalize text-slate-500 dark:text-white/50">
             {type}
           </h2>
-          <ul role="list" className="px-2" {...autocomplete.getListProps()}>
+          <ul role="list"  {...autocomplete.getListProps()}>
             {results.map((result) => (
               <SearchResult
                 key={result.url}

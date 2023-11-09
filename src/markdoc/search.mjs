@@ -100,7 +100,11 @@ export default function (nextConfig = {}) {
                     .replace('"', '')
                     .replace('"', '')
                     .toLowerCase()
-                  if (type === 'noindex' || type === 'page' || type === 'noicon') {
+                  if (
+                    type === 'noindex' ||
+                    type === 'page' ||
+                    type === 'noicon'
+                  ) {
                     // Dont index these pages
                     return
                   }
@@ -149,6 +153,7 @@ export default function (nextConfig = {}) {
               for (let { url, sections } of data) {
                
                 for (let [title, hash, content] of sections) {
+                  if (title === [title, ...content].join('\\n')) continue
                   sectionIndex.add({
                     url: url + (hash ? ('#' + hash) : ''),
                     title,
