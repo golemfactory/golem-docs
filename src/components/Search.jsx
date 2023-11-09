@@ -153,12 +153,12 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
           <div className="mr-4 mt-4 flex items-center md:ml-auto md:mt-0">
             {filter.length > 1 && (
               <span
-                className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 `}
+                className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:ring-gray-500/50 dark:text-white dark:text-opacity-70 `}
               >
                 {result.articleFor}
               </span>
             )}
-            <span className="px-2 text-xs font-medium capitalize text-primary dark:text-darkprimary">
+            <span className="px-2 text-xs font-medium capitalize text-primary dark:text-white">
               ↗
             </span>
           </div>
@@ -293,8 +293,8 @@ function FilterButton({ label, isActive, onClick }) {
   // Add additional styling as needed to match the design
   return (
     <button
-      className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 ${
-        isActive ? 'bg-gray-100 dark:bg-slate-600' : '  dark:bg-slate-800'
+      className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:ring-gray-500/50 dark:text-white dark:text-opacity-70 ${
+        isActive ? 'bg-lightbluedarker dark:bg-slate-600' : '  dark:bg-slate-800'
       }`}
       onClick={() => onClick(label.toLowerCase())}
     >
@@ -526,18 +526,16 @@ function SearchDialog({ open, setOpen, className }) {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         version="1.1"
-                        className="h-4 w-4 opacity-70"
+                        className="h-4 w-4 opacity-70 dark:opacity-100 dark:fill-white dark:text-white"
                       >
                         <g
                           id="🔍-System-Icons"
                           stroke="none"
                           stroke-width="1"
-                          fill="none"
                           fill-rule="evenodd"
                         >
                           <g
                             id="ic_fluent_arrow_enter_24_regular"
-                            fill="#212121"
                             fill-rule="nonzero"
                           >
                             <path
