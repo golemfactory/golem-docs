@@ -153,7 +153,7 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
           <div className="mr-4 mt-4 flex items-center md:ml-auto md:mt-0">
             {filter.length > 1 && (
               <span
-                className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:ring-gray-500/50 dark:text-white dark:text-opacity-70 `}
+                className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 dark:ring-gray-500/50 `}
               >
                 {result.articleFor}
               </span>
@@ -205,7 +205,6 @@ function SearchResults({
       Object.entries(acc).filter(([_, results]) => results.length > 0)
     )
   }, {})
-  
 
   // If there are no results after filtering
   if (Object.keys(groupedResults).length === 0 && query !== '') {
@@ -294,8 +293,10 @@ function FilterButton({ label, isActive, onClick }) {
   // Add additional styling as needed to match the design
   return (
     <button
-      className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:ring-gray-500/50 dark:text-white dark:text-opacity-70 ${
-        isActive ? 'bg-lightbluedarker dark:bg-slate-600' : '  dark:bg-slate-800'
+      className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 dark:ring-gray-500/50 ${
+        isActive
+          ? 'bg-lightbluedarker dark:bg-slate-600'
+          : '  dark:bg-slate-800'
       }`}
       onClick={() => onClick(label.toLowerCase())}
     >
@@ -313,11 +314,6 @@ function SearchDialog({ open, setOpen, className }) {
   const [roleFilter, setRoleFilter] = useState([])
   const [typefilter, setTypeFilter] = useState([])
   let [modifierKey, setModifierKey] = useState()
-
-  // Store all unique keys of .type of autocompleteState.collections[0] items
-  if (autocompleteState.collections) {
-    console.log(autocompleteState.collections[0])
-  }
 
   useEffect(() => {
     setModifierKey(
@@ -508,8 +504,10 @@ function SearchDialog({ open, setOpen, className }) {
                 )}
               </div>
             </form>
-            <div className="flex items-center border-t border-slate-200 dark:border-slate-400/10 px-4 py-4 text-sm font-semibold text-gray-400">
-              <div className="flex flex-col gap-y-2 font-semibold text-slate-500">Keyboard Controls</div>
+            <div className="flex items-center border-t border-slate-200 px-4 py-4 text-sm font-semibold text-gray-400 dark:border-slate-400/10">
+              <div className="flex flex-col gap-y-2 font-semibold text-slate-500">
+                Keyboard Controls
+              </div>
               <div className=" ml-auto flex items-center gap-x-2">
                 <div className=" flex items-center gap-x-1">
                   <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
@@ -518,7 +516,9 @@ function SearchDialog({ open, setOpen, className }) {
                   <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
                     <ArrowSmallDownIcon className="h-4 w-4" />
                   </div>
-                  <span className="ml-1.5 font-semibold text-slate-500">Move</span>
+                  <span className="ml-1.5 font-semibold text-slate-500">
+                    Move
+                  </span>
                 </div>
                 <div className="flex gap-x-4  px-4 text-sm font-semibold text-gray-400">
                   <div className=" flex items-center gap-x-1">
@@ -527,17 +527,17 @@ function SearchDialog({ open, setOpen, className }) {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         version="1.1"
-                        className="h-4 w-4 opacity-50 dark:opacity-100 dark:fill-white dark:text-white"
+                        className="h-4 w-4 opacity-50 dark:fill-white dark:text-white dark:opacity-100"
                       >
                         <g
                           id="🔍-System-Icons"
                           stroke="none"
-                          stroke-width="1"
-                          fill-rule="evenodd"
+                          strokeWidth="1"
+                          fillRule="evenodd"
                         >
                           <g
                             id="ic_fluent_arrow_enter_24_regular"
-                            fill-rule="nonzero"
+                            fillRule="nonzero"
                           >
                             <path
                               d="M21.25,4 C21.6642136,4 22,4.33578644 22,4.75 L22,4.75 L22,11.25 C22,13.3210678 20.3210678,15 18.25,15 L18.25,15 L4.58583574,15 L8.30516583,18.7196699 C8.57143239,18.9859365 8.59563844,19.4026002 8.37778398,19.6962117 L8.30516583,19.7803301 C8.03889927,20.0465966 7.62223558,20.0708027 7.32862409,19.8529482 L7.24450566,19.7803301 L2.24450566,14.7803301 C1.97823909,14.5140635 1.95403304,14.0973998 2.1718875,13.8037883 L2.24450566,13.7196699 L7.24450566,8.71966991 C7.53739888,8.4267767 8.01227261,8.4267767 8.30516583,8.71966991 C8.57143239,8.98593648 8.59563844,9.40260016 8.37778398,9.69621165 L8.30516583,9.78033009 L4.58583574,13.5 L18.25,13.5 C19.440864,13.5 20.4156449,12.5748384 20.4948092,11.4040488 L20.5,11.25 L20.5,4.75 C20.5,4.33578644 20.8357864,4 21.25,4 Z"
@@ -548,7 +548,9 @@ function SearchDialog({ open, setOpen, className }) {
                         <script xmlns="" />
                       </svg>
                     </div>
-                    <span className="ml-1.5 font-semibold text-slate-500">Select</span>
+                    <span className="ml-1.5 font-semibold text-slate-500">
+                      Select
+                    </span>
                   </div>
                   <div className=" flex items-center gap-x-1 ">
                     <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
@@ -557,7 +559,9 @@ function SearchDialog({ open, setOpen, className }) {
                     <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
                       K
                     </div>
-                    <span className="ml-1.5 font-semibold text-slate-500">Quit</span>
+                    <span className="ml-1.5 font-semibold text-slate-500">
+                      Quit
+                    </span>
                   </div>
                 </div>
               </div>
