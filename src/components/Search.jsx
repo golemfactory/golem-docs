@@ -168,61 +168,55 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
   )
 }
 
-function SearchResults({ autocomplete, query, collection, filter }) {
+function SearchResults({
+  autocomplete,
+  query,
+  collection,
+  roleFilter,
+  typeFilter,
+}) {
   // If there is no collection, return null
   if (!collection) return null
 
   // Group results by type
   const groupedResults = collection.items.reduce((acc, result) => {
-    const { type } = result
-    // Initialize the array if this type hasn't been added to acc yet
-    if (!acc[type]) acc[type] = []
-    // Push the result onto its type array
-    acc[type].push(result)
-    return acc
+    if (roleFilter.length === 0 && typeFilter.length === 0) {
+      // If no filters are selected, don't filter results
+      if (!acc[result.type]) {
+        acc[result.type] = []
+      }
+      acc[result.type].push(result)
+      return acc
+    }
+
+    const { type, articleFor } = result
+    const rolePass = !roleFilter.length || roleFilter.includes(articleFor)
+    const typePass = !typeFilter.length || typeFilter.includes(type)
+
+    if (rolePass && typePass) {
+      if (!acc[type]) {
+        acc[type] = []
+      }
+      acc[type].push(result)
+    }
+
+    // Filter out types that have empty arrays after all insertions are done
+    return Object.fromEntries(
+      Object.entries(acc).filter(([_, results]) => results.length > 0)
+    )
   }, {})
 
-  const filteredResults =
-    filter.length === 0
-      ? groupedResults
-      : Object.keys(groupedResults)
-          .filter((type) => {
-            // Keep 'type' here because you're iterating over the keys of groupedResults which are types
-            return groupedResults[type].some((item) =>
-              filter.includes(item.articleFor)
-            )
-          })
-          .reduce((acc, type) => {
-            // Filter the individual items based on 'articleFor' now
-            acc[type] = groupedResults[type].filter((item) =>
-              filter.includes(item.articleFor)
-            )
-            return acc
-          }, {})
 
-  // Apply the filters to the groupedResults
-
-  useEffect(() => {
-    console.log(filter)
-  }, [filter])
-
-  if (Object.keys(filteredResults).length === 0 && filter.length === 0) {
-    return null
-  }
 
   // If there are no results after filtering
-  if (Object.keys(filteredResults).length === 0) {
+  if (Object.keys(groupedResults).length === 0 && query !== '') {
     return (
       <p className="px-4 py-8 text-center text-sm text-slate-700 dark:text-slate-400">
         No results for &ldquo;
         <span className="break-words text-primary dark:text-darkprimary">
           {query}
         </span>
-        &rdquo; with filters &ldquo;
-        <span className="capitalize text-primary dark:text-darkprimary">
-          {filter.join(', ')}
-        </span>
-        &rdquo;.
+        &rdquo; with selected filters.
       </p>
     )
   }
@@ -230,7 +224,7 @@ function SearchResults({ autocomplete, query, collection, filter }) {
   // Return the filtered results
   return (
     <>
-      {Object.entries(filteredResults).map(([type, results]) => (
+      {Object.entries(groupedResults).map(([type, results]) => (
         <section
           className="border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
           key={type}
@@ -246,7 +240,7 @@ function SearchResults({ autocomplete, query, collection, filter }) {
                 autocomplete={autocomplete}
                 collection={collection}
                 query={query}
-                filter={filter}
+                filter={roleFilter}
               />
             ))}
           </ul>
@@ -317,8 +311,14 @@ function SearchDialog({ open, setOpen, className }) {
   let panelRef = useRef()
   let inputRef = useRef()
   let { autocomplete, autocompleteState } = useAutocomplete()
-  const [filter, setFilter] = useState([]) // Filter state is now an empty array by default
+  const [roleFilter, setRoleFilter] = useState([])
+  const [typefilter, setTypeFilter] = useState([])
   let [modifierKey, setModifierKey] = useState()
+
+  // Store all unique keys of .type of autocompleteState.collections[0] items
+  if (autocompleteState.collections) {
+    console.log(autocompleteState.collections[0])
+  }
 
   useEffect(() => {
     setModifierKey(
@@ -326,37 +326,70 @@ function SearchDialog({ open, setOpen, className }) {
     )
   }, [])
 
-  const toggleFilter = (f) => {
-    setFilter((prev) => {
-      let newFilter
+  const toggleFilter = (f, filterType) => {
+    if (filterType === 'role') {
+      setRoleFilter((prev) => {
+        let newFilter
 
-      if (prev.length === 0 && f !== 'none') {
-        // If no filters are selected and 'none' is not the selected filter,
-        // start with just the selected filter
-        newFilter = [f]
-      } else {
-        // If there are already filters selected or 'none' is the selected filter,
-        // toggle the current filter
-        if (prev.includes(f)) {
-          // Remove the selected filter if it's already in the array
-          newFilter = prev.filter((value) => value !== f)
+        if (prev.length === 0 && f !== 'none') {
+          // If no filters are selected and 'none' is not the selected filter,
+          // start with just the selected filter
+          newFilter = [f]
         } else {
-          // Add the selected filter if it's not already in the array
-          newFilter = [...prev, f]
+          // If there are already filters selected or 'none' is the selected filter,
+          // toggle the current filter
+          if (prev.includes(f)) {
+            // Remove the selected filter if it's already in the array
+            newFilter = prev.filter((value) => value !== f)
+          } else {
+            // Add the selected filter if it's not already in the array
+            newFilter = [...prev, f]
+          }
+
+          // If the 'none' filter is selected, clear all filters
+          if (f === 'none') {
+            newFilter = []
+          }
         }
 
-        // If the 'none' filter is selected, clear all filters
-        if (f === 'none') {
-          newFilter = []
+        // After state is updated, set the query to trigger a search with the new filter state
+        setTimeout(() => autocomplete.setQuery(autocompleteState.query), 0)
+
+        // Return the new filter state
+        return newFilter
+      })
+    } else if (filterType === 'type') {
+      setTypeFilter((prev) => {
+        let newFilter
+
+        if (prev.length === 0 && f !== 'none') {
+          // If no filters are selected and 'none' is not the selected filter,
+          // start with just the selected filter
+          newFilter = [f]
+        } else {
+          // If there are already filters selected or 'none' is the selected filter,
+          // toggle the current filter
+          if (prev.includes(f)) {
+            // Remove the selected filter if it's already in the array
+            newFilter = prev.filter((value) => value !== f)
+          } else {
+            // Add the selected filter if it's not already in the array
+            newFilter = [...prev, f]
+          }
+
+          // If the 'none' filter is selected, clear all filters
+          if (f === 'none') {
+            newFilter = []
+          }
         }
-      }
 
-      // After state is updated, set the query to trigger a search with the new filter state
-      setTimeout(() => autocomplete.setQuery(autocompleteState.query), 0)
+        // After state is updated, set the query to trigger a search with the new filter state
+        setTimeout(() => autocomplete.setQuery(autocompleteState.query), 0)
 
-      // Return the new filter state
-      return newFilter
-    })
+        // Return the new filter state
+        return newFilter
+      })
+    }
   }
 
   useEffect(() => {
@@ -422,18 +455,47 @@ function SearchDialog({ open, setOpen, className }) {
               />
               <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
                 <span className="mr-4 text-sm font-semibold text-slate-500 dark:text-white/50">
-                  Filter by
+                  Role
                 </span>
                 <div className="flex gap-x-2">
                   <FilterButton
                     label="Requestor"
-                    isActive={filter.includes('Requestor')}
-                    onClick={() => toggleFilter('Requestor')}
+                    isActive={roleFilter.includes('Requestor')}
+                    onClick={() => toggleFilter('Requestor', 'role')}
                   />
                   <FilterButton
                     label="Provider"
-                    isActive={filter.includes('Provider')}
-                    onClick={() => toggleFilter('Provider')}
+                    isActive={roleFilter.includes('Provider')}
+                    onClick={() => toggleFilter('Provider', 'role')}
+                  />
+                </div>
+              </div>
+              <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
+                <span className="mr-4 text-sm font-semibold text-slate-500 dark:text-white/50">
+                  Type
+                </span>
+                <div className="flex gap-x-2">
+                 
+                  
+                  <FilterButton
+                    label="Example"
+                    isActive={typefilter.includes('example')}
+                    onClick={() => toggleFilter('example', 'type')}
+                  />
+                  <FilterButton
+                    label="Guide"
+                    isActive={typefilter.includes('guide')}
+                    onClick={() => toggleFilter('guide', 'type')}
+                  />
+                  <FilterButton
+                    label="Tutorial"
+                    isActive={typefilter.includes('tutorial')}
+                    onClick={() => toggleFilter('tutorial', 'type')}
+                  />
+                  <FilterButton
+                    label="API Reference"
+                    isActive={typefilter.includes('reference')}
+                    onClick={() => toggleFilter('reference', 'type')}
                   />
                 </div>
               </div>
@@ -443,13 +505,14 @@ function SearchDialog({ open, setOpen, className }) {
                     autocomplete={autocomplete}
                     query={autocompleteState.query}
                     collection={autocompleteState.collections[0]}
-                    filter={filter} // Pass the filter state down as a prop
+                    roleFilter={roleFilter}
+                    typeFilter={typefilter}
                   />
                 )}
               </div>
             </form>
             <div className="flex items-center border-t px-4 py-4 text-sm font-semibold text-gray-400">
-              <div className="flex flex-col gap-y-2">Controls</div>
+              <div className="flex flex-col gap-y-2">Keyboard Controls</div>
               <div className=" ml-auto flex items-center gap-x-2">
                 <div className=" flex items-center gap-x-1">
                   <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
