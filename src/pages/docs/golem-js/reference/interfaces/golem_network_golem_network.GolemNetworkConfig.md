@@ -5,7 +5,7 @@ type: "reference"
 ---
 # Interface: GolemNetworkConfig
 
-[golem_network/golem_network](../modules/golem_network_golem_network).GolemNetworkConfig
+[golem\_network/golem\_network](../modules/golem_network_golem_network).GolemNetworkConfig
 
 ## Table of contents
 
