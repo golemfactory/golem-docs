@@ -9,4 +9,5 @@ type: quickstart
 {% docnavigation title="See also" %}
 
 - [Ray on Golem docs](/docs/creators/ray)
-  {% /docnavigation %}
+
+{% /docnavigation %}
