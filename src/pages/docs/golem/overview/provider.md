@@ -5,7 +5,7 @@ type: Guide
 ---
 
 {% alert level="warning" %}
-Provider node can be run on a 64-bit x86-64 CPU computer with Ubuntu only.
+A provider node can only run on a Linux machine with the x86-64 architecture and nested virtualization enabled in the BIOS.
 {% /alert %}
 
 ## Provider architecture

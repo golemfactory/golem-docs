@@ -26,8 +26,8 @@ This example involves [Computation Payload Manifest](/docs/golem/payload-manifes
 _Computation Payload Manifest_ making use of _Outbound Network_ requires either:
 
 1. Requestor [certificate](/docs/golem/payload-manifest#certificates) that's trusted by the Providers
-2. an instance of a Provider with the particular domain this example uses added to its [domain whitelist](/docs/providers/yagna-cli-reference#domain-whitelist)
-3. an instance of a Provider with the requestor's self-signed Certificate imported into its [keystore](/docs/providers/yagna-cli-reference#keystore)
+2. an instance of a Provider with the particular domain this example uses added to its [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains)
+3. an instance of a Provider with the requestor's self-signed Certificate imported into its [keystore](/docs/providers/configuration/outbound#managing-your-keystore)
 
 The following example will show cases 2. and 3. so it will be necessary to start a [local instance of a Provider](/docs/providers/provider-installation).
 
@@ -143,13 +143,13 @@ async def main():
 
 ### 3. Verification of a request with Computation Payload Manifest
 
-_Providers_ verify the incoming request with a _Computation Payload Manifest_ by checking if it arrives with a [signature and _App author's certificate_ signed by a certificate they trust](/docs/golem/payload-manifest#certificates). If there is no signature, they verify if URLs used by _Computation Payload Manifest_ are [whitelisted](/docs/providers/yagna-cli-reference#domain-whitelist).
+_Providers_ verify the incoming request with a _Computation Payload Manifest_ by checking if it arrives with a [signature and _App author's certificate_ signed by a certificate they trust](/docs/golem/payload-manifest#certificates). If there is no signature, they verify if URLs used by _Computation Payload Manifest_ are [whitelisted](/docs/providers/configuration/outbound#listing-whitelisted-domains).
 
 There are two ways to make our _local_ _Provider_ verify the request:
 
 - #### Whitelisting of the domain used by the app
 
-  Add `api.coingecko.com` to Provider's [domain whitelist](/docs/providers/yagna-cli-reference#domain-whitelist):
+  Add `api.coingecko.com` to Provider's [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains):
 
   `ya-provider whitelist add --patterns api.coingecko.com --type strict`
 

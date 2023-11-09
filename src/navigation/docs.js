@@ -540,40 +540,38 @@ export const navigation = [
       { title: 'Introduction', href: '/docs/providers' },
       { title: 'Installation', href: '/docs/providers/provider-installation' },
       {
-        title: 'Basic Configuration',
-        href: '/docs/providers/provider-basic-configuration',
+        title: 'Configuring your provider',
+        children: [
+          {
+            title: 'General settings',
+            href: '/docs/providers/configuration/general',
+          },
+          {
+            title: 'Outbound networking',
+            href: '/docs/providers/configuration/outbound',
+          },
+        ],
       },
+
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
 
       {
-        title: 'Yagna CLI reference',
-        href: '/docs/providers/yagna-cli-reference',
-      },
-      {
-        title: 'Maintenance',
+        title: 'Managing your wallet',
         children: [
           {
-            title: 'Maintenance',
-            href: '/docs/providers/maintenance/provider-maintenance',
+            title: 'Backing up your wallet',
+            href: '/docs/providers/wallet/backup',
           },
           {
-            title: 'Wallet Backup',
-            href: '/docs/providers/maintenance/wallet-backup',
-          },
-          {
-            title: 'Wallet Restore',
-            href: '/docs/providers/maintenance/wallet-restoration',
+            title: 'Restoring a wallet',
+            href: '/docs/providers/wallet/restoration',
           },
         ],
       },
+      { title: 'Maintenance', href: '/docs/providers/maintenance' },
       {
         title: 'Troubleshooting',
-        children: [
-          {
-            title: 'Provider',
-            href: '/docs/troubleshooting/provider',
-          },
-        ],
+        href: '/docs/troubleshooting/provider',
       },
     ],
   },

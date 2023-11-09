@@ -93,7 +93,7 @@ For a complete list of those locations, please refer to:
 
 Each provider can freely add new addresses and patterns to the whitelist. For documentation on how to do that, please refer to:
 
-[Yagna CLI](/docs/providers/yagna-cli-reference)
+[Provider outbound configuration](/docs/providers/configuration/outbound)
 
 If the application wishes to access a URL which matches one of the entries on a whitelist, it only needs to supply that address within the manifest file.
 
