@@ -486,6 +486,11 @@ function SearchDialog({ open, setOpen, className }) {
                     onClick={() => toggleFilter('tutorial', 'type')}
                   />
                   <FilterButton
+                    label="Instructions"
+                    isActive={typefilter.includes('instructions')}
+                    onClick={() => toggleFilter('instructions', 'type')}
+                  />
+                  <FilterButton
                     label="API Reference"
                     isActive={typefilter.includes('reference')}
                     onClick={() => toggleFilter('reference', 'type')}
@@ -545,7 +550,6 @@ function SearchDialog({ open, setOpen, className }) {
                             ></path>
                           </g>
                         </g>
-                        <script xmlns="" />
                       </svg>
                     </div>
                     <span className="ml-1.5 font-semibold text-slate-500">
