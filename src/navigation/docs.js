@@ -533,8 +533,18 @@ export const navigation = [
       { title: 'Installation', href: '/docs/providers/provider-installation' },
       {
         title: 'Configuring your provider',
-        href: '/docs/providers/provider-configuration',
+        children: [
+          {
+            title: 'General settings',
+            href: '/docs/providers/configuration/general',
+          },
+          {
+            title: 'Outbound networking',
+            href: '/docs/providers/configuration/outbound',
+          },
+        ],
       },
+
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
 
       {
@@ -550,7 +560,7 @@ export const navigation = [
           },
         ],
       },
-      {title: 'Maintenance', href: '/docs/providers/maintenance'},
+      { title: 'Maintenance', href: '/docs/providers/maintenance' },
       {
         title: 'Troubleshooting',
         href: '/docs/troubleshooting/provider',
