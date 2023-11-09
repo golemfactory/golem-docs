@@ -1,7 +1,7 @@
 ---
 description: Create Python applications on Golem
 title: Python SDK Introduction
-type: Toc
+type: Table of Contents
 ---
 
 # Create your task application using Python

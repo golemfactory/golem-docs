@@ -99,11 +99,27 @@ export default function (nextConfig = {}) {
                     ?.match(/^type:\s*(.*?)\s*$/m)?.[1]
                     .replace('"', '')
                     .replace('"', '')
-                  if (type === 'noindex') {
-                    // Dont index noindex pages
+                    .toLowerCase()
+                  if (
+                    type === 'noindex' ||
+                    type === 'page' ||
+                    type === 'noicon'
+                  ) {
+                    // Dont index these pages
                     return
                   }
-                  sections = [[title, null, [], type]]
+
+                  const articleFor = file.startsWith('docs/creators/')
+                    ? 'Requestor'
+                    : file.startsWith('docs/providers/')
+                    ? 'Provider'
+                    : file.startsWith('docs/quickstarts/')
+                    ? 'Requestor'
+                    : file.startsWith('docs/golem-js/')
+                    ? 'Requestor'
+                    : 'General'
+
+                  sections = [[title, null, [], type, articleFor]]
 
                   extractSections(ast, sections)
                   cache.set(file, [md, sections])
@@ -123,7 +139,7 @@ export default function (nextConfig = {}) {
                 document: {
                   id: 'url',
                   index: 'content',
-                  store: ['title', 'pageTitle', 'type'],
+                  store: ['title', 'pageTitle', 'type', 'articleFor'],
                 },
                 context: {
                   resolution: 9,
@@ -137,12 +153,14 @@ export default function (nextConfig = {}) {
               for (let { url, sections } of data) {
                
                 for (let [title, hash, content] of sections) {
+                  if (title === [title, ...content].join('\\n')) continue
                   sectionIndex.add({
                     url: url + (hash ? ('#' + hash) : ''),
                     title,
                     content: [title, ...content].join('\\n'),
                     pageTitle: hash ? sections[0][0] : undefined,
                     type: sections[0][3],
+                    articleFor: sections[0][4],
                   })
                 }
               }
@@ -160,6 +178,7 @@ export default function (nextConfig = {}) {
                   title: item.doc.title,
                   pageTitle: item.doc.pageTitle,
                   type: item.doc.type,
+                  articleFor: item.doc.articleFor,
                 }))
               }
             `

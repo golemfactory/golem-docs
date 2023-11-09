@@ -138,8 +138,9 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="Next steps" %}
 
 - [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
-  {% /docnavigation %}
-  {% docnavigation title="See also" %}
+{% /docnavigation %}
+
+{% docnavigation title="See also" %}
 - [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
 - [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
-  {% /docnavigation %}
+{% /docnavigation %}

@@ -1,7 +1,7 @@
 ---
 description: Tutorials
 title: JS SDK Tutorials
-type: Toc
+type: Table of Contents
 ---
 
 # Golem JS Tutorials
