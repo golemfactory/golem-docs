@@ -2,7 +2,6 @@
 title: Golem Requestor Troubleshooting - Exit Code Meanings 
 description: Comprehensive guide to understanding Linux exit codes encountered as a requestor on the Golem Network for effective debugging. 
 pageTitle: Troubleshoot Golem Requestor Issues - Exit Code Reference Guide 
-description: Decode Linux system-level exit codes for Golem Network requestors to swiftly troubleshoot and resolve script execution errors.
 type: troubleshooting
 ---
 
