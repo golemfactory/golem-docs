@@ -27,7 +27,7 @@ type: "reference"
 
 #### Defined in
 
-[src/task/work.ts:31](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L31)
+[src/task/work.ts:31](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/task/work.ts#L31)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:32](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L32)
+[src/task/work.ts:32](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/task/work.ts#L32)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:33](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L33)
+[src/task/work.ts:33](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/task/work.ts#L33)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:34](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L34)
+[src/task/work.ts:34](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/task/work.ts#L34)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:35](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L35)
+[src/task/work.ts:35](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/task/work.ts#L35)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:36](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L36)
+[src/task/work.ts:36](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/task/work.ts#L36)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:37](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/task/work.ts#L37)
+[src/task/work.ts:37](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/task/work.ts#L37)
