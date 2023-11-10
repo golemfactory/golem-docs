@@ -26,4 +26,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/2d598a3/src/utils/types.ts#L12)
+[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/types.ts#L12)

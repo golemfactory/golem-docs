@@ -30,7 +30,7 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/2d598a3/src/utils/yagna/gsb.ts#L5)
+[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/yagna/gsb.ts#L5)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/2d598a3/src/utils/yagna/gsb.ts#L9)
+[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/yagna/gsb.ts#L9)
