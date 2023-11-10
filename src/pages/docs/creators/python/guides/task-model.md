@@ -1,6 +1,7 @@
 ---
-description: Introduction to Golem Network and Task model
-title: Introduction to the Task model
+title: Task API Guide for Building on Golem Network 
+pageTitle: Optimize Batch Computing with Golem's Task API - Developer Guide 
+description: Learn how to parallelize computational tasks using Golem's Task API. Discover how splitting problems into fragments enhances batch execution across multiple nodes.
 type: Guide
 ---
 
@@ -55,5 +56,5 @@ The **worker** function uses the `work generator pattern` explained [here](/docs
 
 {% alert level="info" %}
 
-You can always reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/troubleshooting/python).
+You can always reach out to us via our [Discord channel](https://chat.golem.network/)
 {% /alert %}

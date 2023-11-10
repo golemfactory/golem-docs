@@ -1,6 +1,7 @@
 ---
-description: Learn how to configure the general settings of your provider.
-title: Configuring your providers general settings
+title: Configuring the basics of your Golem Provider Node
+description: Step-by-step instructions for configuring settings on a Golem provider node, including resource allocation and pricing strategies.
+pageTitle: How to Configure Golem Provider Node Settings - A Comprehensive Guide
 type: Instructions
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Golem Quickstarts
+description: Table of contents for the Golem Quickstarts
 title: Golem Quickstarts
 type: Table of Contents
 ---

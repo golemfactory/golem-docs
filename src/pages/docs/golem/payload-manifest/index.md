@@ -1,6 +1,6 @@
 ---
-title: Payload Manifest Introduction
-description: Computation Payload Manifest description, its schema, and configuration guide
+title: A Guide to Computation Payload Manifest on the Golem Network
+description: Master the use of Golem's Computation Payload Manifest for efficient computation tasks on provider nodes, including configuration, schema, and certificates.
 type: Guide
 ---
 

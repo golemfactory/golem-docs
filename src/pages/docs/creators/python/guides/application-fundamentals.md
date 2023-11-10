@@ -1,6 +1,7 @@
 ---
-description: Golem application fundamentals
-title: Golem application fundamentals
+title: Understanding Golem Network Applications 
+pageTitle: Golem Applications Guide - Utilize Decentralized Computing Resources 
+description: A detailed look into Golem applications, highlighting their components, orchestration, custom environments, and the work generator pattern for decentralized task execution.
 type: guide
 tag: application
 ---

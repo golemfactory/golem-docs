@@ -1,6 +1,7 @@
 ---
-description: details of every configuration option of Ray on Golem cluster yaml
 title: Ray on Golem cluster yaml reference 
+pageTitle: Ray on Golem Cluster YAML Configuration - In-Depth Guide
+description: Explore the nuances of configuring Ray clusters on Golem Network, including worker nodes, idle timeout, and provider settings.
 type: article 
 ---
 

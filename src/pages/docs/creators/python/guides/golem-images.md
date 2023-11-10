@@ -1,6 +1,7 @@
 ---
-description: Learn what a Golem VM image is and how to create and use one
-title: Golem images explained
+title: Understanding Golem Virtual Machine Images 
+description: This guide offers a comprehensive overview of Golem VM images, their creation, usage, and best practices for integration with Golem Network's decentralized computational resource sharing platform. 
+pageTitle: Golem VM Images - Creation, Publishing & Best Practices for Developers
 type: Guide
 ---
 

@@ -1,7 +1,6 @@
 ---
-description: >-
-  Simple web application consisting of an SQL database and a Python/Flask application server, utilizing the local HTTP proxy on the requestor's end.
-title: Service API Simple Web application tutorial
+title: Web Application Development on Golem Network Using Python and Flask 
+description: A tutorial showcasing how to develop and deploy a simple web application with an SQL database backend using Python, Flask, and the Golem Network's VPN and HTTP Proxy functionalities.
 type: tutorial
 ---
 

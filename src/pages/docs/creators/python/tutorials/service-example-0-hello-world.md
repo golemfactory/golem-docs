@@ -1,6 +1,7 @@
 ---
-description: A minimal example of a Golem requestor agent based on services
-title: Service API Hello World Tutorial
+title: Golem Service Model Tutorial - Running DateService on the Network 
+pageTitle: Run a Service on Golem Network - DateService Example Tutorial | Golem SDK Docs 
+description: Learn to run a custom DateService using the Golem Service Model with this step-by-step tutorial, showcasing service life cycle, payload, and VM execution.
 type: tutorial
 ---
 

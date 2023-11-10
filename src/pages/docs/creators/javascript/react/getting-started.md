@@ -1,6 +1,6 @@
 ---
-title: Get started with the React SDK
-description: Get started with the React SDK
+title: React SDK Guide - Installation, Configuration, and Usage
+description: Comprehensive guide to installing and configuring the React SDK for Golem, including prerequisites, installation steps, and a practical example to connect with Yagna.
 type: Introduction
 ---
 

@@ -1,6 +1,7 @@
 ---
-description: Your Golem wallet and Yagna setup for Mainnet payments.
-title: Golem Wallet management for requestors
+title: Managing Your Golem Wallet and Yagna for Mainnet 
+description: Guide to managing Golem wallet and Yagna for receiving and sending mainnet payments, configuring networks, and generating app-keys. 
+pageTitle: Golem Wallet & Yagna Mainnet Management - Payment Setup Guide
 type: instructions
 ---
 

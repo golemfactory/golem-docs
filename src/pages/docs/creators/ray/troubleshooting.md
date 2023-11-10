@@ -1,6 +1,8 @@
 ---
 title: Ray on Golem troubleshooting
-description: Suggested solutions to issues with Ray on Golem.
+description: Comprehensive guide for resolving common Ray on Golem issues, including log file analysis and problem solving techniques.
+pageTitle: Ray on Golem Troubleshooting Guide - Identify and Resolve Common Issues
+
 type: troubleshooting
 ---
 

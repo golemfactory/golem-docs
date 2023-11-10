@@ -1,6 +1,6 @@
 ---
-title: Creating and using images on Golem
-description: Creating and using images on Golem
+title: Docker to Golem Image Conversion and Usage Guide
+description: Step-by-step tutorial on creating a Docker image, converting it to a Golem-compatible format (GVMI, .gvmi), and integrating it into a requestor script.
 type: tutorial
 ---
 

@@ -1,6 +1,7 @@
 ---
-description: Switching to mainnet
-title: Switching to mainnet
+title: JS Task API Guide - Switching from Testnet to Mainnet on Golem Network
+description: Learn how to switch from testnet to mainnet for executing tasks on the Golem Network using the JS SDK, with a focus on requestors and the use of Polygon.
+pageTitle: Transition to Golem Mainnet for Enhanced Task Execution - A Guide for JS SDK Users
 type: Example
 ---
 

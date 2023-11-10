@@ -1,6 +1,7 @@
 ---
-description: Development and deployment of a Golem requestor agent (service model)
-title: Introduction to the Service model
+title: Guide to Service Model on Golem Network 
+pageTitle: Golem Network Service Model - Interactive Application Deployment Guide 
+description: Learn to launch and manage interactive services on Golem Network using the python Service API, a model that treats provider nodes as service hosts for Requestor's processes.
 type: Guide
 ---
 
@@ -164,5 +165,5 @@ This is all it takes to build a Requestor Agent for a rudimentary VM-based servi
 
 {% alert level="info" %}
 
-You can always reach out to us via our [Discord channel](https://chat.golem.network/) or consult the following resource for [troubleshooting](/docs/troubleshooting/python).
+You can always reach out to us via our [Discord channel](https://chat.golem.network/)
 {% /alert %}

@@ -1,6 +1,7 @@
 ---
-description: Running Goth
-title: Running Goth
+title: Setup Guide for Goth Test Runner 
+pageTitle: Goth Test Runner Setup - Golem Network Integration Testing
+description: Step-by-step guide to setting up Goth, the integration test runner for Yagna nodes in the Golem Network, including Python and Docker prerequisites.
 type: Instructions
 ---
 

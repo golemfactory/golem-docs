@@ -1,6 +1,6 @@
 ---
-description: Yagna installation for providers
-title: Yagna installation for providers
+title: Earn GLM as a Golem Network Provider - Complete Setup Guide
+description: Step-by-step guide to set up a Linux-based Golem provider. Learn installation, configuration, and running tips to earn GLM tokens efficiently.
 type: Instructions
 ---
 
@@ -194,7 +194,3 @@ To verify if port forwarding is correctly configured, check [CanYouSeeMe.org](ht
 - [Configuring your provider](/docs/providers/configuration/general)
 
 {% /docnavigation %}
-
-```
-
-```

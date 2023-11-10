@@ -1,6 +1,6 @@
 ---
-title: Provider 
-description: The provider actor in the Golem
+title: Golem Provider Guide - Optimize Computing Resources for Decentralized Networks
+description: Discover how to configure a Linux-based provider node for the Golem network, harnessing exe-units for VM and WASM runtimes to contribute computing power.
 type: Guide
 ---
 

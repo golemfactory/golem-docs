@@ -1,6 +1,7 @@
 ---
-description: Golem VPN networking concept
-title: Golem VPN networking concept
+title: Guide to Golem VPN for Provider Node Connectivity 
+pageTitle: Golem VPN Networking - Enhancing Provider Node Interaction | Guide 
+description: Discover how Golem VPN facilitates secure Provider node-to-node connections within the Golem network, offering a seamless virtual networking experience for distributed applications.
 type: Guide
 ---
 

@@ -1,6 +1,8 @@
 ---
-description: Executing task
-title: Executing task
+title: Executing Tasks - Examples and Methods
+pageTitle: Guide to Executing Tasks with Golem's JavaScript API
+description: Discover how to execute tasks on Golem JS API with practical examples. Learn to run tasks in parallel, initialize providers, and handle single task executions efficiently. Ideal for Node.js developers using Golem network.
+
 type: Example
 ---
 

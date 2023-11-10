@@ -1,6 +1,7 @@
 ---
-description: Parallel processing on Golem Network - Tutorial
-title: Parallel processing on Golem Network Tutorial
+title: Parallel Task Execution Tutorial on Golem Network
+pageTitle: Step-by-Step Guide to Parallel Processing Using Golem Network
+description: Learn how to execute tasks in parallel on the Golem Network with this comprehensive tutorial. Perfect for developers interested in distributed computing and parallel processing.
 type: Tutorial
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: List of examples
-title: Golem SDK tool instructions
+description: Table of contents for the Golem Python SDK tools
+title: Golem Python SDK tool instructions
 type: Table of Contents
 ---
 

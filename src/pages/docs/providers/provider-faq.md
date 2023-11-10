@@ -1,6 +1,9 @@
 ---
-description: Provider FAQ
-title: Provider FAQ
+title: Golem Provider FAQ Guide 
+description: Discover answers to common questions on becoming a provider on the Golem network, covering setup, pricing, and operations. 
+pageTitle: Golem Network Provider FAQ - Comprehensive Guide and Tips
+
+
 type: Guide
 ---
 

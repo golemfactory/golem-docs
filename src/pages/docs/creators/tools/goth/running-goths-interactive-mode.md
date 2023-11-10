@@ -1,6 +1,7 @@
 ---
-description: Making use of goth's interactive mode
-title: Running Goth
+title: Interactive Testing with Goth
+description: Learn how to use Goth's interactive mode for testing Golem applications, ensuring compatibility within the Golem network, and troubleshooting with detailed logs. 
+pageTitle: Goth Interactive Mode Tutorial for Golem Application Testing
 type: Tutorial
 ---
 

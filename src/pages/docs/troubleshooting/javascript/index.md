@@ -1,6 +1,6 @@
 ---
-title: Javascript troubleshooting
-description: This is the troubleshooting section for all javascript related errors on Golem.
+title: Golem JavaScript SDK Troubleshooting Guide 
+description: A guide to resolve common JavaScript errors encountered with the Golem SDK, including connection issues and image upload solutions. 
 type: troubleshooting
 ---
 

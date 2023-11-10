@@ -1,6 +1,8 @@
 ---
-description: Ray on Golem Introduction 
 title: Ray on Golem Introduction
+pageTitle: Scale Python code on Golem Network Using Ray - Developer's Guide
+description: Explore how to use Ray with Golem for scaleable Python code execution. Quickstarts, tutorials, and troubleshooting tips included for developers.
+
 type: article
 ---
 

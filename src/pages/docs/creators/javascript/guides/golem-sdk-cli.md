@@ -1,6 +1,7 @@
 ---
-description: Learn what a Golem JS SDK CLI is and how to use it
-title: Golem JS SDK CLI
+description: Comprehensive guide on Golem JS SDK CLI, covering installation, features, Golem Manifest creation, and internet access configuration.
+title: Comprehensive Guide to Golem JS SDK CLI
+pageTitle: Golem JS SDK CLI - Installation, Features, and Configuration
 type: Guide
 ---
 

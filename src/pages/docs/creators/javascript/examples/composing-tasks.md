@@ -1,6 +1,7 @@
 ---
-description: Composing tasks
-title: Composing tasks
+description: Learn to compose tasks using JS Task API, featuring methods for sequential and batch command execution with practical examples.
+title: Composing and Executing Tasks
+pageTitle: Master Task Composition with JS Task API - Sequential & Batch Command Execution
 type: Example
 ---
 

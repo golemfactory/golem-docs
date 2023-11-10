@@ -1,6 +1,7 @@
 ---
-description: a step-by-step explanation of the quickstart instructions
 title: Ray on Golem setup tutorial
+pageTitle: Step-by-Step Tutorial for Ray Cluster Setup on Golem Network
+description: Learn how to install, start, and test a Ray cluster on the Golem Network with detailed instructions and example applications.
 type: guide 
 ---
 
