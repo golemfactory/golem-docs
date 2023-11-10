@@ -25,4 +25,4 @@ Helper function implements simple logger prints all messages to console
 
 #### Defined in
 
-[src/utils/logger/consoleLogger.ts:5](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/utils/logger/consoleLogger.ts#L5)
+[src/utils/logger/consoleLogger.ts:5](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/utils/logger/consoleLogger.ts#L5)

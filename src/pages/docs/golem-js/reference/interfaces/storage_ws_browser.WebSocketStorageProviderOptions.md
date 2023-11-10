@@ -21,4 +21,4 @@ type: "reference"
 
 #### Defined in
 
-[src/storage/ws-browser.ts:8](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/storage/ws-browser.ts#L8)
+[src/storage/ws-browser.ts:8](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/storage/ws-browser.ts#L8)

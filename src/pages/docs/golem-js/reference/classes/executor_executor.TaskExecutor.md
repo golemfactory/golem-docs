@@ -78,7 +78,7 @@ const executor = await TaskExecutor.create({
 
 #### Defined in
 
-[src/executor/executor.ts:158](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L158)
+[src/executor/executor.ts:158](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L158)
 
 ___
 
@@ -98,7 +98,7 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[src/executor/executor.ts:209](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L209)
+[src/executor/executor.ts:209](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L209)
 
 ___
 
@@ -116,7 +116,7 @@ You can call this method multiple times, it will resolve only once the executor 
 
 #### Defined in
 
-[src/executor/executor.ts:261](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L261)
+[src/executor/executor.ts:261](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L261)
 
 ___
 
@@ -134,7 +134,7 @@ array
 
 #### Defined in
 
-[src/executor/executor.ts:293](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L293)
+[src/executor/executor.ts:293](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L293)
 
 ___
 
@@ -172,7 +172,7 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 #### Defined in
 
-[src/executor/executor.ts:316](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L316)
+[src/executor/executor.ts:316](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L316)
 
 ___
 
@@ -209,7 +209,7 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 #### Defined in
 
-[src/executor/executor.ts:331](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L331)
+[src/executor/executor.ts:331](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L331)
 
 ___
 
@@ -249,7 +249,7 @@ for await (const result of results) console.log(result.stdout);
 
 #### Defined in
 
-[src/executor/executor.ts:354](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L354)
+[src/executor/executor.ts:354](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L354)
 
 ___
 
@@ -288,7 +288,7 @@ await executor.forEach(data, async (ctx, item) => {
 
 #### Defined in
 
-[src/executor/executor.ts:402](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L402)
+[src/executor/executor.ts:402](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L402)
 
 ___
 
@@ -335,7 +335,7 @@ const error = await job.fetchError();
 
 #### Defined in
 
-[src/executor/executor.ts:464](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L464)
+[src/executor/executor.ts:464](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L464)
 
 ___
 
@@ -359,7 +359,7 @@ Job object.
 
 #### Defined in
 
-[src/executor/executor.ts:489](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L489)
+[src/executor/executor.ts:489](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L489)
 
 ___
 
@@ -379,4 +379,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:514](https://github.com/golemfactory/golem-js/blob/fd7ccbc/src/executor/executor.ts#L514)
+[src/executor/executor.ts:514](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/executor/executor.ts#L514)
