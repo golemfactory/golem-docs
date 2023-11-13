@@ -1,5 +1,5 @@
 ---
-title: Golem JS Task API - Internet Access via Outbound Feature
+title: Golem JS Task API - Internet Access
 description: Learn to access the internet using Golem's JS Task API. Includes steps for manifest creation, demand definition, and running Node.js examples.
 pageTitle: Utilize Golem's JS Task API for Internet Connectivity - Complete Guide
 type: Example
