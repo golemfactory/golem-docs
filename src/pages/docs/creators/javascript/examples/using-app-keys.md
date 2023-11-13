@@ -1,7 +1,7 @@
 ---
 description: Guide on using app-keys with JS Task API in Yagna REST API, including creating, listing, and integrating unique keys for secure access.
 title: Using app-keys 
-pageTitle: Secure Your Yagna REST API Access - JS Task API App-Key Integration Guide
+pageTitle: Secure Your Yagna REST API Access - JS Task API App-Key Integration Examples
 type: Example
 ---
 
