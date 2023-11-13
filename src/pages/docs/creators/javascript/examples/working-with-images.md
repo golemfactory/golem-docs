@@ -1,5 +1,5 @@
 ---
-title: Guide to Utilizing Custom Golem Images in Requestor Scripts
+title: Utilizing Custom Golem Images in Requestor Scripts
 description: Learn to integrate custom Golem images into requestor scripts with practical examples, covering hash and tag usage for requestor scripts.
 pageTitle: Integrate Custom Golem Images in Your Scripts - Practical Examples and Tips
 type: Example
