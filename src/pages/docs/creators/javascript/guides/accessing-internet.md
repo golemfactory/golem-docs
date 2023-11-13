@@ -1,5 +1,5 @@
 ---
-title: Guide to Outbound Networking in Golem
+title: Guide to accessing the Internet from Golem providers
 description: Explore outbound networking in Golem, enabling internet access from providers. Learn about whitelists, certificates, and setting up computation manifests for efficient task execution.
 pageTitle: Outbound Networking in Golem - Internet Access for Providers
 type: Guide
