@@ -1,6 +1,6 @@
 ---
 title: Golem Python SDK Documentation 
-pageTitle: Golem Python SDK Guide - Decentralized App Development on Golem Network 
+pageTitle: Golem Python SDK Introduction - Decentralized App Development on Golem Network 
 description: A comprehensive guide for creating decentralized applications with Golem's Python SDK, featuring Task and Service APIs, quickstarts, tutorials, and tools.
 
 
