@@ -1,5 +1,5 @@
 ---
-description: Step-by-step guide on integrating Golem network with a browser, covering installation, setup, and script execution.
+description: Step-by-step tutorial on integrating Golem network with a browser, covering installation, setup, and script execution.
 title: Golem in browser Quickstart explained
 type: Tutorial
 ---
