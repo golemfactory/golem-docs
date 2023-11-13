@@ -1,7 +1,7 @@
 ---
 title: Creating a Text-to-Speech API with Express.js and Golem Network
 pageTitle: Build a REST API for Text-to-Speech Conversion Using Express.js and Golem Network - Step-by-Step Tutorial
-description: Learn to build a REST API with Express.js utilizing the Golem Network for text-to-speech processing. A practical guide with code examples.
+description: Learn to build a REST API with Express.js utilizing the Golem Network for text-to-speech processing. A practical tutorial.
 type: Tutorial
 ---
 
