@@ -1,6 +1,6 @@
 ---
 title: Node.js Application Development on Golem Network
-description: Learn to create a JavaScript application using the Golem Network with our comprehensive guide, featuring hands-on steps for setting up Node.js projects and utilizing Task Executors.
+description: Learn to create a JavaScript application using the Golem Network with our tutorial where we explain the Quickstart example and steps for setting up Node.js projects and utilizing Task Executors.
 pageTitle: Mastering Node.js on Golem Network - Interactive Tutorial for Developers
 type: Tutorial
 ---
