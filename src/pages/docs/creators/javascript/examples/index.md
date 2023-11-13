@@ -1,5 +1,5 @@
 ---
-description: Comprehensive guide to JavaScript code examples for Golem Network tasks, data transfer, provider selection, and more.
+description: Comprehensive list of JavaScript code examples for Golem Network tasks, data transfer, provider selection, and more.
 title: JavaScript Code Examples for Golem Network
 pageTitle: In-Depth JavaScript Examples for Efficient Golem Network Usage
 type: Table of Contents
