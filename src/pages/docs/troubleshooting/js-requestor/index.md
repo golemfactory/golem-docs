@@ -1,7 +1,7 @@
 ---
 title: Resolve Requestor Issues in Golem Network 
 pageTitle: Solving Golem Requestor Issues - Step-by-Step Troubleshooting Guide 
-description: Find solutions for common requestor problems in the Golem Network with our detailed troubleshooting guide. Overcome allocation, CORS, and yagna-related issues.
+description: Find solutions for common requestor problems in the Golem Network with our detailed troubleshooting section. Overcome allocation, CORS, and yagna-related issues.
 type: troubleshooting
 ---
 
