@@ -1,5 +1,5 @@
 ---
-title: Golem Network Yagna Troubleshooting Guide 
+title: Golem Network Yagna Troubleshooting 
 description: Essential tips and solutions for resolving Yagna issues on the Golem Network. 
 pageTitle: Resolve Golem Yagna Issues - Troubleshooting Steps & Fixes
 type: troubleshooting
