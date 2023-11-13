@@ -1,5 +1,5 @@
 ---
-description: Table of contents of Golem JS Quickstarts
+description: List of Golem JS Quickstarts
 title: Golem JS Quickstarts
 type: Table of Contents
 ---
