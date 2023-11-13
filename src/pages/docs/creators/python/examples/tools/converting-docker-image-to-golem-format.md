@@ -1,5 +1,5 @@
 ---
-title: Docker to Golem Image Conversion Guide 
+title: Docker to Golem Image Conversion Example 
 description: Step-by-step guide for converting Docker images to Golem format using gvmkit-build, with prerequisites and examples included. 
 pageTitle: Convert Docker Images to Golem with gvmkit-build - Step-by-Step Guide
 type: instructions
