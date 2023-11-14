@@ -183,7 +183,7 @@ root@192.168.0.3's password:
 
 In this example `-n` stands for cluster name, which we don't support yet - hence the unexpected request for the SSH password.
 
-The solution is to precede your arguments with `--`:
+The solution is to precede your arguments with the double-dash symbol (`--`):
 ```bash
 ray submit golem-cluster.yaml examples/simple-task.py -- -n 20
 ```
