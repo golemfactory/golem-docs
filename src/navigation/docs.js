@@ -282,10 +282,6 @@ export const navigation = [
           { title: 'Introduction', href: '/docs/creators/ray' },
           { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
           {
-            title: 'Concept',
-            href: '/docs/creators/ray/concept',
-          },
-          {
             title: 'Setup tutorial',
             href: '/docs/creators/ray/setup-tutorial',
           },
