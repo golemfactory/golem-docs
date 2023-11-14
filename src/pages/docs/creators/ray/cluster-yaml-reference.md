@@ -50,7 +50,8 @@ Additionally, this is the lowest number of nodes that Ray will automatically sca
 Idle timeout controls how fast Ray decommisions the nodes that are not busy. It will always leave at least `min_workers` workers, though.
 
 ```yaml
-# The number of minutes that need to pass before an idle worker node is removed by the Autoscaler
+# The number of minutes that need to pass before an idle worker node 
+# is removed by the Autoscaler
 idle_timeout_minutes: 5
 ```
 
