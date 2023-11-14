@@ -8,12 +8,12 @@ type: reference
 
 `useHandleDebitNote` is a hook that allows you to handle (accept) a single debit note. It returns an object with the following properties:
 
-| Name            | Description                                                                  |
-| --------------- | ---------------------------------------------------------------------------- |
-| acceptDebitNote | A function that accepts the debit note.                                      |
-| isLoading       | Boolean indicating whether the debit note is being accepted.                 |
-| isError         | Boolean indicating whether the last attempt to accept the debit note failed. |
-| isAccepted      | Boolean indicating whether the debit note has been accepted.                 |
+| Name            | Description                                                                |
+|-----------------|----------------------------------------------------------------------------|
+| acceptDebitNote | A function that accepts the debit note.                                    |
+| isLoading       | Boolean indicating whether the debit note is being accepted.               |
+| error           | The error explaining why the last attempt to accept the debit note failed. |
+| isAccepted      | Boolean indicating whether the debit note has been accepted.               |
 
 ## Parameters
 
