@@ -110,6 +110,8 @@ The default 100 tasks of `simple-task.py` are rather fast and even when Ray orde
 
 Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
 
+Note `--` separating the application arguments from `ray submit` arguments.
+
 ```bash
 # Submit the app with 400 tasks
 ray submit golem-cluster.yaml simple-task.py -- --count 400 

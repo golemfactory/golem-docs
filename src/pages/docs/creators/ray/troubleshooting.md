@@ -155,24 +155,43 @@ Check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference
 {% /troubleshooting %}
 
 
-<!--
 {% troubleshooting %}
 
-## Libraries not installing properly on the cluster 
- 
+## Passing arguments to your Ray script fails 
 
 {% problem /%}
 
-Description
+Often you need to pass arguments to the Ray script you are submitting to:
+
+```bash
+ray submit golem-cluster.yaml examples/simple-task.py -n 20
+```
+
+While it looks natural sometimes it doesn't work.
+
+For example this particular command produces:
+```
+Checking External environment settings
+Ray On Golem webserver
+  Not starting webserver, as it's already running
+Fetched IP: 192.168.0.3
+root@192.168.0.3's password: 
+``` 
 
 {% solution %}
 
-Solution
+`ray submit` has its own arguments. If, by any chance, your script arguments are named the same, Ray will get confused.
+
+In this example `-n` stands for cluster name, which we don't support yet - hence random asking for ssh password.
+
+The solution is to precede your arguments with `--`:
+```bash
+ray submit golem-cluster.yaml examples/simple-task.py -- -n 20
+```
 
 {% /solution %}
-{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% feedback identifier="ray-passing-arguments-to-your-ray-script-fails" /%}
 {% /troubleshooting %}
--->
 
 
 <!--
