@@ -16,7 +16,8 @@ Run the following to get a feeling of how Ray on Golem works.
 ```bash
 # Install ray-on-golem & ray (recommended within a clean virtual environment)
 pip3 install -U ray-on-golem
-
+```
+```bash
 # Download the golem-cluster.yaml
 wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 
@@ -25,16 +26,19 @@ wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
 ray up golem-cluster.yaml --yes
-
+```
+```bash
 # Download the example Ray app
 wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/simple-task.py 
 
 # Execute the app locally by starting a local ray instance on your computer
 python3 simple-task.py
-
+```
+```bash
 # Submit the app to be executed on your cluster
 ray submit golem-cluster.yaml simple-task.py
-
+```
+```bash
 # Tear down the cluster
 ray down golem-cluster.yaml --yes
 
