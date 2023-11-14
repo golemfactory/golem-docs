@@ -161,15 +161,14 @@ Check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference
 
 {% problem /%}
 
-Often you need to pass arguments to the Ray script you are submitting to:
+Often, you need to pass arguments to the Ray script you are submitting:
 
 ```bash
 ray submit golem-cluster.yaml examples/simple-task.py -n 20
 ```
 
-While it looks natural sometimes it doesn't work.
+While it looks correct, in this particular case it won't have the intended effect of passing the parameter to the `simple-stask.py` script. Instead, it will cause ray to, seemingly, suddenly require a password for the node, i.e.:
 
-For example, this particular command produces:
 ```
 Checking External environment settings
 Ray On Golem webserver
@@ -180,15 +179,15 @@ root@192.168.0.3's password:
 
 {% solution %}
 
-`ray submit` has its own arguments. If your script arguments are named the same, Ray will get confused.
+`ray submit` and other ray commands have its own arguments. If your script arguments are named the same, Ray will get confused.
 
-In this example `-n` stands for cluster name, which we don't support yet - hence random asking for SSH password.
+In this example `-n` stands for cluster name, which we don't support yet - hence the unexpected request for the SSH password.
 
 The solution is to precede your arguments with `--`:
 ```bash
 ray submit golem-cluster.yaml examples/simple-task.py -- -n 20
 ```
-
+This informs Ray that everything after the double dash is not to be interpreted, but instead passed as-is to the executed script.
 {% /solution %}
 {% feedback identifier="ray-passing-arguments-to-your-ray-script-fails" /%}
 {% /troubleshooting %}
