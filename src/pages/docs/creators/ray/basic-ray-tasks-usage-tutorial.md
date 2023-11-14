@@ -132,6 +132,6 @@ You can now proceed to run your app on a [Ray on Golem cluster](/docs/creators/r
 Read more information about Ray tasks on [Ray Core docs website](https://docs.ray.io/en/latest/ray-core/walkthrough.html)
 
 {% docnavigation title="See also" %}
-- [Ray on Golem introduction](/docs/creators/ray/index)
+- [Ray on Golem introduction](/docs/creators/ray)
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial)
 {% /docnavigation %}
