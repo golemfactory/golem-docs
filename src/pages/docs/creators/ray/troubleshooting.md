@@ -169,7 +169,7 @@ ray submit golem-cluster.yaml examples/simple-task.py -n 20
 
 While it looks natural sometimes it doesn't work.
 
-For example this particular command produces:
+For example, this particular command produces:
 ```
 Checking External environment settings
 Ray On Golem webserver
@@ -180,9 +180,9 @@ root@192.168.0.3's password:
 
 {% solution %}
 
-`ray submit` has its own arguments. If, by any chance, your script arguments are named the same, Ray will get confused.
+`ray submit` has its own arguments. If your script arguments are named the same, Ray will get confused.
 
-In this example `-n` stands for cluster name, which we don't support yet - hence random asking for ssh password.
+In this example `-n` stands for cluster name, which we don't support yet - hence random asking for SSH password.
 
 The solution is to precede your arguments with `--`:
 ```bash
