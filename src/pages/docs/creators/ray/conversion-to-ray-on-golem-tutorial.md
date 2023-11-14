@@ -1,6 +1,6 @@
 ---
-description: example of a little bit more sophisticated Ray on Golem usage
 title: Converting a real-life use case to Ray on Golem
+description: Learn how to parallelize an app with Ray on Golem, from setting up the cluster to running the script. Ideal for developers seeking efficient computing solutions.
 type: example
 ---
 

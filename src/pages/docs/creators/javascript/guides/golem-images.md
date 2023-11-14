@@ -1,6 +1,6 @@
 ---
-description: Learn what a Golem VM image is and how to create and use one
-title: Golem images explained
+title: Comprehensive Guide to Golem VM Images
+description: A detailed guide on Golem VM images, covering their creation, conversion, and usage within the Golem Network, with insights on Docker integration and best practices.
 type: Guide
 ---
 

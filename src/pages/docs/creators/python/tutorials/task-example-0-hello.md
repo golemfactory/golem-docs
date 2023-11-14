@@ -1,6 +1,7 @@
 ---
-description: A minimal example of a functional Golem requestor agent
-title: Task API Hello World Tutorial
+title: Golem Network Task API - Hello World Example 
+description: Learn to execute tasks on Golem Network with a Hello World VM runtime example, ideal for beginners in decentralized computing. 
+pageTitle: Golem Task API Guide - Execute Hello World in Decentralized Environments | Golem Network
 type: tutorial
 ---
 

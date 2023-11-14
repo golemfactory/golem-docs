@@ -1,6 +1,7 @@
 ---
-description: Publishing VM images outside Golem's repository
-title: Publishing VM images outside Golem's repository
+title: Guide to Self-Hosting VM Images for Golem Developers 
+pageTitle: How to Self-Host and Distribute Golem VM Images – A Developer's Tutorial 
+description: Learn to self-host and distribute Golem VM images with this tutorial on calculating SHA3 hashes for .gvmi files and using custom URLs in your Golem apps.
 type: Instructions
 ---
 

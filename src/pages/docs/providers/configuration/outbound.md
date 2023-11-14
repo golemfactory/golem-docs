@@ -1,6 +1,6 @@
 ---
-description: Learn all about configuring outbound networking for your Golem network provider node. Learn how to view, enable and disable rules for outbound networking.
-title: Provider outbound networking
+title: Configuring Provider Outbound Network Settings on Golem
+description: Key guide for Golem network providers to configure and manage outbound traffic settings, ensuring secure and efficient node communication.
 type: Instructions
 ---
 

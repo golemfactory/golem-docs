@@ -1,6 +1,7 @@
 ---
-description: Ensuring the safety of your Golem funds.
-title: Golem wallet backup
+title: Golem Wallet Backup Instructions 
+description: Step-by-step instructions on how to securely back up your Golem wallet, ensuring the safety and accessibility of your GLM/ETH tokens. 
+pageTitle: Secure Your Golem Cryptocurrency - Wallet Backup Instructions
 type: instructions
 ---
 

@@ -1,6 +1,7 @@
 ---
-description: Answers to popular questions about Golem's VM runtime and how to create images for it
-title: Golem Images - frequently asked questions
+title: Golem VM Conversion and Image FAQ 
+description: Dive into why Golem uses .gvmi over Docker images, the converting benefits, Dockerfile requirements for Golem VM, and solutions to common issues. 
+pageTitle: Golem Network VM Image Guide - FAQs, Tips and Best Practices
 type: Article
 ---
 

@@ -1,6 +1,7 @@
 ---
-description: A proof-of-concept service running within a VM-based runtime
-title: Service API Simple service tutorial
+title: Golem Simple Service API Tutorial 
+description: Learn to create VM-based services on Golem Network with this simplified tutorial. 
+pageTitle: Golem Network - Simple Service API Tutorial for VM-based Execution
 type: tutorial
 ---
 

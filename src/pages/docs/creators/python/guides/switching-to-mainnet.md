@@ -1,6 +1,9 @@
 ---
-description: How to move and ensure the safety of your funds when operating on mainnet
-title: Switching to mainnet
+title: Using golem on mainnet
+description: Explore the step-by-step guide on moving requestor operations to Golem’s mainnet, including payment platform selection, wallet monitoring, and fund security.
+pageTitle: Golem Mainnet Transition Guide - Polygon & Ethereum Payments
+
+
 type: Guide
 ---
 

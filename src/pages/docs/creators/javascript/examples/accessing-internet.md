@@ -1,6 +1,7 @@
 ---
-description: Accessing the Internet
-title: Accessing the Internet
+title: Golem JS Task API - Internet Access
+description: Learn to access the internet using Golem's JS Task API. Discusses the Outbound feature and includes steps for manifest creation, demand definition, and running Node.js examples.
+pageTitle: Utilize Golem's JS Task API for Internet Connectivity - Complete Guide
 type: Example
 ---
 
@@ -89,40 +90,40 @@ Your manifest is ready and stored in the `manifest.json` file.
 The example below demonstrates how to define the demand that will get access to the Internet.
 
 ```javascript
-import { TaskExecutor } from "@golem-sdk/golem-js";
-import { readFile } from "fs/promises";
+import { TaskExecutor } from '@golem-sdk/golem-js'
+import { readFile } from 'fs/promises'
 
 const url =
-  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
+  'https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly'
 
-(async function main() {
+;(async function main() {
   // Load the manifest.
-  const manifest = await readFile(`./manifest.json`);
+  const manifest = await readFile(`./manifest.json`)
 
   // Create and configure a TaskExecutor instance.
   const executor = await TaskExecutor.create({
-    capabilities: ["inet", "manifest-support"],
-    yagnaOptions: { apiKey: "try_golem" },
-    manifest: manifest.toString("base64"),
-  });
+    capabilities: ['inet', 'manifest-support'],
+    yagnaOptions: { apiKey: 'try_golem' },
+    manifest: manifest.toString('base64'),
+  })
 
   try {
     await executor.run(async (ctx) => {
-      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
+      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 
-      console.log((await ctx.run("ls -l")).stdout);
-      if (result.result === "Ok") {
-        console.log("File downloaded!");
+      console.log((await ctx.run('ls -l')).stdout)
+      if (result.result === 'Ok') {
+        console.log('File downloaded!')
       } else {
-        console.error("Failed to download the file!", result.stderr);
+        console.error('Failed to download the file!', result.stderr)
       }
-    });
+    })
   } catch (err) {
-    console.error("The task failed due to", err);
+    console.error('The task failed due to', err)
   } finally {
-    await executor.end();
+    await executor.end()
   }
-})();
+})()
 ```
 
 Note the most important part:
@@ -153,5 +154,5 @@ Please note the loaded manifest is encoded to base64.
 Then you can use the applications that connects to the `target_urls` specified in the manifest in the standard way:
 
 ```javascript
-    const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
+const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 ```

@@ -1,6 +1,7 @@
 ---
-description: Working with results
-title: Working with results
+title: Managing Task Results
+description: Learn to manage task results in various scenarios using the Golem SDK JavaScript API, including handling single and multi-command tasks, and dealing with command failures.
+pageTitle: Mastering Task Result Management in Golem SDK JavaScript API
 type: Example
 ---
 

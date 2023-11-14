@@ -1,6 +1,8 @@
 ---
-description: Provider introduction
-title: Provider introduction
+title: Introduction to Providers on the Golem Network
+pageTitle: Understanding a Providers Role in the Golem Network - Peer-to-Peer Computing 
+description: Explore how joining as a provider on the Golem Network lets you share compute resources in exchange for GLM tokens in a decentralized marketplace.
+
 type: introduction
 ---
 

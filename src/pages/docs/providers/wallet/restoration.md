@@ -1,6 +1,6 @@
 ---
-description: Setting up a new Yagna instance to use a saved keystore file.
-title: Provider wallet restoration
+title: Comprehensive Guide to Restoring Golem Wallets Using Yagna
+description: Learn to restore your Golem wallet from a keystore backup in Yagna with this step-by-step guide, covering installation, key retrieval, and wallet setup.
 type: Guide
 ---
 

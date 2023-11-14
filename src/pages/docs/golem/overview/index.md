@@ -1,6 +1,7 @@
 ---
-description: Solution architecture and details.
-title: Golem Overview
+description: Explore the Golem Network - A decentralized platform for sharing computer resources, featuring provider and requestor roles, and GLM token payments.
+title: Golem Network Guide - Resource Sharing and Token Payments
+
 type: Guide
 ---
 
@@ -8,18 +9,17 @@ type: Guide
 
 Golem is a network of nodes that implement the Golem Network protocol. We provide the default implementation of such a node in the form of the Golem service, called [Yagna](https://github.com/golemfactory/yagna).
 
-The nodes in the network can act as __providers__ or __requestors__. Both the requestor and the provider share the same implementation of the Golem service.
+The nodes in the network can act as **providers** or **requestors**. Both the requestor and the provider share the same implementation of the Golem service.
 
 [//]: <> (The diagram above shows the architecture of the network. For the sake of simplicity, it shows just one requestor and one provider.)
 
-
 ### Provider
 
-__Provider__ is a node that is sharing its temporarily unused computer resources for Requestors within the Golem Network in return for GLM tokens.
+**Provider** is a node that is sharing its temporarily unused computer resources for Requestors within the Golem Network in return for GLM tokens.
 
 In general, almost any computer might act as a provider. It can be a laptop, desktop, or server machine. The particular resource details (for example, the number of CPUs or their memory limit) that are subject to sharing can be configured by the hardware owner.
 
-Resources can be utilized in different scenarios: it might be a computation requiring heavy lifting right away but it could also be getting a service up and running and ready to serve requests coming from requestors whenever they come. 
+Resources can be utilized in different scenarios: it might be a computation requiring heavy lifting right away but it could also be getting a service up and running and ready to serve requests coming from requestors whenever they come.
 
 In exchange for the resource sharing, you will receive payment in GLM, and the payment is most commonly executed through [Polygon](https://polygon.technology/).
 
@@ -32,7 +32,7 @@ Providers are recommended to upgrade their nodes to the latest package version a
 
 ### Requestor
 
-__Requestor__ is a node that wants to use hardware resources that are available in the Golem Network, shared by its providers.
+**Requestor** is a node that wants to use hardware resources that are available in the Golem Network, shared by its providers.
 
 The main or most typical benefit for the requestor is to have instant access to a very large pool of hardware. Instead of using local hardware, the requestor can use the IT resources available on the decentralized market. What's more, one requestor can use the hardware from many providers at the same time and run its tasks in prallel.
 
@@ -46,15 +46,13 @@ It is a simplified description of the process, provided to illustrate the relati
 
 {% /alert %}
 
-
-1. The Provider announces the availability of its resources in the Golem market. This is called an __Offer__.
-2. Requestor defines his needs in a form of a __Demand__ and publishes it on the Golem market.
-2. The Golem market performs the matching between the provider side \(Offers\) and the requestor side  \(Demands\).
-3. If a Requestor is willing to use the Provider's resources, the Agreement is signed.
-4. The resources are used by the Requestor \(for example by transferring input/output files and running a particular Golem VM Image, which is derived from the Docker image, on the Provider's hardware\).
-5. The Provider bills the Requestor in GLM tokens.
-6. The Requestor sends a Polygon payment for resource usage.
-
+1. The Provider announces the availability of its resources in the Golem market. This is called an **Offer**.
+2. Requestor defines his needs in a form of a **Demand** and publishes it on the Golem market.
+3. The Golem market performs the matching between the provider side \(Offers\) and the requestor side \(Demands\).
+4. If a Requestor is willing to use the Provider's resources, the Agreement is signed.
+5. The resources are used by the Requestor \(for example by transferring input/output files and running a particular Golem VM Image, which is derived from the Docker image, on the Provider's hardware\).
+6. The Provider bills the Requestor in GLM tokens.
+7. The Requestor sends a Polygon payment for resource usage.
 
 ### Payments
 
@@ -67,5 +65,3 @@ More on the payment process you can find: [here](/docs/golem/payments).
 As a Provider, you will probably tend to operate in networks where payments are done in real GLM tokens. Your provider's Yagna by default is configured to work in these networks and use Polygon and Ethereum Mainnet as payment platforms.
 
 If you are a requestor, you would rather start in a development environment - the JS SDK default configuration assumes the Goerli network as a payment network. Thus you work in the testnet. You pay there in test GLM tokens that are available from a faucet. It is free, but you cannot expect capacity and performance. Once you have tested your application you should consider switching to mainnet.
-
-

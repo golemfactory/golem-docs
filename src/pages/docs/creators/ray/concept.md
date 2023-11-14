@@ -1,6 +1,7 @@
 ---
-description: A guide on what Ray and Ray on Golem is, listing all pieces needed to use them 
 title: Ray on Golem Concept
+pageTitle: Ray on Golem - Harnessing Decentralized Computing Power for Python Applications
+description: Learn how Ray integrates with Golem for easy parallel computing in Python. Discover setup, scalability, and payment with GLM and MATIC tokens.
 type: article
 ---
 
