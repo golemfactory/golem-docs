@@ -279,27 +279,45 @@ export const navigation = [
       {
         title: 'Python with Ray on Golem',
         children: [
-          { title: 'Introduction', href: '/docs/creators/ray' },
-          { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
           {
-            title: 'Setup tutorial',
-            href: '/docs/creators/ray/setup-tutorial',
+            title: 'Getting Started',
+            href: '',
+            children: [
+	      { title: 'Introduction', href: '/docs/creators/ray' },
+              { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
+              {
+                title: 'Setup tutorial',
+                href: '/docs/creators/ray/setup-tutorial',
+              },
+              {
+                title: 'Supported versions and other limitations',
+                href: '/docs/creators/ray/supported-versions-and-other-limitations',
+              },
+	    ],
           },
           {
-            title: 'Basic Ray tasks usage tutorial',
-            href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
+            title: 'Tutorials',
+            href: '',
+            children: [
+              {
+                title: 'Basic Ray tasks usage tutorial',
+                href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
+              },
+              {
+                title: 'Converting a real-life use case to Ray on Golem',
+                href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
+              },
+	    ],
           },
           {
-            title: 'Converting a real-life use case to Ray on Golem',
-            href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
-          },
-          {
-            title: 'Cluster yaml reference',
-            href: '/docs/creators/ray/cluster-yaml-reference',
-          },
-          {
-            title: 'Supported versions and other limitations',
-            href: '/docs/creators/ray/supported-versions-and-other-limitations',
+            title: 'Ray on Golem tools',
+            href: '',
+            children: [
+              {
+                title: 'Cluster yaml reference',
+                href: '/docs/creators/ray/cluster-yaml-reference',
+              },
+	    ],
           },
         ],
       },
