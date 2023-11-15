@@ -284,27 +284,24 @@ For each worker, we perform the following steps:
 - Get the hashcat\_{skip}.potfile from the provider to the requestor.
 - Parse the result from the .potfile.
 
-With the range, we use the `executor.map` method to run the split tasks simultaneously on the Golem Network:
+We can map each chunk of the keyspace to a separate task and run them in parallel by calling `executor.run()` multiple times: 
 
 ```js
-const results = executor.map(range, async (ctx, skip = 0) => {
-  const results = await ctx
-    .beginBatch()
-    .run(
-      `hashcat -a 3 -m 400 '${args.hash}' '${
-        args.mask
-      }' --skip=${skip} --limit=${Math.min(
-        keyspace - 1,
-        step + step - 1
-      )} -o pass.potfile`
-    )
-    .run('cat pass.potfile')
-    .end()
-    .catch((err) => console.error(err))
-
-  if (!results?.[1]?.stdout) return false
-  return results?.[1]?.stdout.toString().split(':')[1]
-})
+const futureResults = range.map((skip) =>
+  executor.run(async (ctx) => {
+    const results = await ctx
+      .beginBatch()
+      .run(
+        `hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${
+          skip! + step
+        } -o pass.potfile || true`,
+      )
+      .run("cat pass.potfile || true")
+      .end();
+    if (!results?.[1]?.stdout) return false;
+    return results?.[1]?.stdout.toString().trim().split(":")[1];
+  }),
+);
 ```
 
 Note, that we use the `beginBatch()` method to organize together two sequential commands: the first will run the hashcat and the second will print the content of the output file.
@@ -312,10 +309,11 @@ As we conclude the batch with the `end()` method the task function will return a
 
 ### Processing the results
 
-The results object returned by `map()` is of the type of AsyncIterable, that can be iterated with the for await statement:
+The `futureResults` variable holds an array of promises that will be resolved once the tasks are completed. We can use the `Promise.all()` method to wait for all the tasks to finish.
 
 ```js
-for await (const result of results) {
+const results = await Promise.all(futureResults);
+for (const result of results) {
   if (result) {
     password = result
     break
@@ -353,7 +351,7 @@ node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 {% /tab  %}  
 {% /tabs %}
 
-You should see an output similar to the one below. Note, that once we obtained the solution, `executor.end()` terminates other tasks, that might not be finished yet, and we observe the errors, due to `.catch((err) => console.error(err));` inside the task function.
+You should see an output similar to the one below.
 
 ![Output of hashcat](/hashcat_output_1.png)
 ![Second output of hashcat](/hashcat_output_2.png)
