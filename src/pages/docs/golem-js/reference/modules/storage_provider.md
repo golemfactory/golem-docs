@@ -37,4 +37,4 @@ type: "reference"
 
 #### Defined in
 
-[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/storage/provider.ts#L1)
+[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/effec9a/src/storage/provider.ts#L1)

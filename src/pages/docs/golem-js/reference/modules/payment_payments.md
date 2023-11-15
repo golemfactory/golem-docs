@@ -27,4 +27,4 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/payment/payments.ts#L14)
+[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/effec9a/src/payment/payments.ts#L14)
