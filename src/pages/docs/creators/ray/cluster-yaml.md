@@ -99,7 +99,7 @@ network: "goerli"
 
 Image tag and image hash properties refer to the virtual machine images that Golem provider nodes will start to host the Ray on Golem software.
 
-Ray on Golem by default uses preprepared images including [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) Python and Ray versions.
+By default, Ray on Golem uses prepackaged VM images including [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) Python and Ray versions.
 
 However, you can use these properties to override the detection and request a specific image. 
 Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
