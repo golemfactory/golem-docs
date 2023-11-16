@@ -1,6 +1,7 @@
 ---
-description: a step-by-step explanation of the quickstart instructions
 title: Ray on Golem setup tutorial
+pageTitle: Step-by-Step Tutorial for Ray Cluster Setup on Golem Network
+description: Learn how to install, start, and test a Ray cluster on the Golem Network with detailed instructions and example applications.
 type: guide 
 ---
 
@@ -108,6 +109,8 @@ If you wait longer it will start with up to 3 nodes (the minimum defined in the 
 The default 100 tasks of `simple-task.py` are rather fast and even when Ray orders new nodes it doesn't always manage to finish before the computation is over.
 
 Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
+
+Note the double-dash symbol (`--`) separating the application arguments from `ray submit` arguments.
 
 ```bash
 # Submit the app with 400 tasks

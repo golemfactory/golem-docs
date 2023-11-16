@@ -1,6 +1,6 @@
 ---
-description: Requestor FAQ
-title: Requestor FAQ
+description: Discover how Golem enables running services like web servers and Node.js, understand CPU/h pricing, blockchain layers, and GLM currency in this comprehensive guide.
+title: Running Services and Pricing on Golem - An In-depth Guide
 type: Guide
 ---
 

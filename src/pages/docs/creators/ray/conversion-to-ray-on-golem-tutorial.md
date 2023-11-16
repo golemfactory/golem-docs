@@ -1,6 +1,6 @@
 ---
-description: example of a little bit more sophisticated Ray on Golem usage
 title: Converting a real-life use case to Ray on Golem
+description: Learn how to parallelize an app with Ray on Golem, from setting up the cluster to running the script. Ideal for developers seeking efficient computing solutions.
 type: example
 ---
 
@@ -135,7 +135,7 @@ python3 dds.py
 deal count: 50 time: 0:00:04.643217
 ```
 
-### Output cluster info
+### Output cluster information
 
 As the one last touch before proceeding to run our script on a Ray on Golem cluster, we'll add some information about the cluster to the output.
 Add this after `ray.init()` and at the end of the code:
@@ -291,6 +291,9 @@ deal count: 100 time: 0:00:14.398623
 shared connection to 192.168.0.3 closed.
 
 ```
+
+It is worth noting that if you want to pass arguments to the submitted script you need to use the double-dash symbol (`--`). 
+It allows Ray to distinguish `submit` arguments from the script ones ([more details](/docs/creators/ray/troubleshooting#passing-arguments-to-your-ray-script-fails)).
 
 ### Scale up
 

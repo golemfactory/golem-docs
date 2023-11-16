@@ -1,6 +1,8 @@
 ---
 title: Ray on Golem troubleshooting
-description: Suggested solutions to issues with Ray on Golem.
+description: Comprehensive guide for resolving common Ray on Golem issues, including log file analysis and problem solving techniques.
+pageTitle: Ray on Golem Troubleshooting Guide - Identify and Resolve Common Issues
+
 type: troubleshooting
 ---
 
@@ -59,7 +61,7 @@ It produces an output like this:
   71258 ?        Sl     2:35 yagna
 ```
 
-The above shows `ray-on-golem` webserver and the `yagna` daemon running.
+The above shows `ray-on-golem` webserver and the `yagna` daemon are running.
 
 The surest way to stop them is to kill them (using the PID numbers as shown in the first column):
 ```bash
@@ -71,6 +73,11 @@ After it is done, the above command should show no more hanging processes:
 ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
 ```
+```
+
+It might also be a good idea to clean up Ray's configuration cache files:
+```bash
+rm /tmp/ray-config-*
 ```
 
 {% /solution %}
@@ -153,24 +160,42 @@ Check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference
 {% /troubleshooting %}
 
 
-<!--
 {% troubleshooting %}
 
-## Libraries not installing properly on the cluster 
- 
+## Passing arguments to your Ray script fails 
 
 {% problem /%}
 
-Description
+Often, you need to pass arguments to the Ray script you are submitting:
+
+```bash
+ray submit golem-cluster.yaml examples/simple-task.py -n 20
+```
+
+While it looks correct, in this particular case it won't have the intended effect of passing the parameter to the `simple-stask.py` script. Instead, it will cause Ray to, seemingly, suddenly require a password for the node, i.e.:
+
+```
+Checking External environment settings
+Ray On Golem webserver
+  Not starting webserver, as it's already running
+Fetched IP: 192.168.0.3
+root@192.168.0.3's password: 
+``` 
 
 {% solution %}
 
-Solution
+`ray submit` and other ray commands have their own arguments. If your script arguments are named the same, Ray will get confused.
 
+In this example `-n` stands for cluster name, which we don't support yet - hence the unexpected request for the SSH password.
+
+The solution is to precede your arguments with the double-dash symbol (`--`):
+```bash
+ray submit golem-cluster.yaml examples/simple-task.py -- -n 20
+```
+This informs Ray that everything after the double dash is not to be interpreted, but instead passed as-is to the executed script.
 {% /solution %}
-{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% feedback identifier="ray-passing-arguments-to-your-ray-script-fails" /%}
 {% /troubleshooting %}
--->
 
 
 <!--

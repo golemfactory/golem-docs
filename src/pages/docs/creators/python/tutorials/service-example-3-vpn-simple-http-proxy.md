@@ -1,9 +1,7 @@
 ---
-description: >-
-  In this example, we're showcasing how the VPN functionality can be used to
-  enable the local requestor agent to serve as a HTTP proxy for web servers
-  running on the provider nodes.
-title: Service API VPN - HTTP proxy tutorial
+title: Golem Network VPN & HTTP Proxy Service Tutorial 
+description: Learn to create a minimalistic HTTP proxy using Golem Network VPN functionality, enabling a local agent to route web server requests via provider nodes.
+pageTitle: Implement a Minimalistic HTTP Proxy on Golem Network | VPN Service Tutorial
 type: tutorial
 ---
 

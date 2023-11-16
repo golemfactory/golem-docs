@@ -1,7 +1,7 @@
 ---
-description: >-
-  Example showing how to make a REST call to an external, public API from a VM running on a Provider node.
-title: Service API External API request tutorial
+title: Golem External API Request Tutorial 
+description: Step-by-step tutorial on making external API calls via Golem network's provider nodes using yapapi. 
+pageTitle: How to Make External API Requests with Golem Network | Developer Guide
 type: tutorial
 ---
 

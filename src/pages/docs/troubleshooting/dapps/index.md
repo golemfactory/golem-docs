@@ -1,7 +1,7 @@
 ---
-title: Golem Dapps troubleshooting
-pageTitle: Dapps troubleshooting
-description: This is the troubleshooting section for dapps on golem.
+title: Troubleshooting Golem Decentralized Apps (DApps) 
+pageTitle: Effective Troubleshooting for Golem Network DApps - Overcoming Common Issues 
+description: Navigate common Golem Network DApps challenges with our comprehensive troubleshooting guide. Solve configuration and connectivity problems swiftly.
 type: troubleshooting
 ---
 

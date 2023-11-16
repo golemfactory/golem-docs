@@ -1,9 +1,7 @@
 ---
-description: >-
-  This example illustrates implementation of a custom usage counter in a service
-  - for situations where a developer wants to add their own usage counters to be
-  used in the pricing model.
-title: Service API Custom usage counters tutorial
+title: Implementing Custom Usage Counters with Golem's Service API 
+pageTitle: Custom Usage Counter Integration Guide for Golem's Service API
+description: Learn how to implement and integrate custom usage counters in Golem's Service API using ya-runtime-sdk, with a practical tutorial and sample code for developers.
 type: tutorial
 ---
 

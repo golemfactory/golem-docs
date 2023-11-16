@@ -62,7 +62,7 @@ type: "reference"
 
 #### Defined in
 
-[src/activity/results.ts:39](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L39)
+[src/activity/results.ts:39](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L39)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Index of script command
 
 #### Defined in
 
-[src/activity/results.ts:30](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L30)
+[src/activity/results.ts:30](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L30)
 
 ___
 
@@ -94,7 +94,7 @@ The datetime of the event on which the result was received
 
 #### Defined in
 
-[src/activity/results.ts:31](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L31)
+[src/activity/results.ts:31](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L31)
 
 ___
 
@@ -110,7 +110,7 @@ If is success
 
 #### Defined in
 
-[src/activity/results.ts:32](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L32)
+[src/activity/results.ts:32](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L32)
 
 ___
 
@@ -126,7 +126,7 @@ stdout of script command
 
 #### Defined in
 
-[src/activity/results.ts:33](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L33)
+[src/activity/results.ts:33](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L33)
 
 ___
 
@@ -142,7 +142,7 @@ stderr of script command
 
 #### Defined in
 
-[src/activity/results.ts:34](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L34)
+[src/activity/results.ts:34](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L34)
 
 ___
 
@@ -158,7 +158,7 @@ an error message if the result is not successful
 
 #### Defined in
 
-[src/activity/results.ts:35](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L35)
+[src/activity/results.ts:35](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L35)
 
 ___
 
@@ -174,7 +174,7 @@ Is batch of already finished
 
 #### Defined in
 
-[src/activity/results.ts:36](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L36)
+[src/activity/results.ts:36](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L36)
 
 ___
 
@@ -190,7 +190,7 @@ In case the command was related to upload or download, this will contain the tra
 
 #### Defined in
 
-[src/activity/results.ts:37](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L37)
+[src/activity/results.ts:37](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L37)
 
 ## Methods
 
@@ -212,4 +212,4 @@ Helper method making JSON-like output results more accessible
 
 #### Defined in
 
-[src/activity/results.ts:53](https://github.com/golemfactory/golem-js/blob/a3b94ca/src/activity/results.ts#L53)
+[src/activity/results.ts:53](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L53)

@@ -1,5 +1,5 @@
 ---
-description: Tutorials
+description: List of the Golem JS SDK tutorials.
 title: JS SDK Tutorials
 type: Table of Contents
 ---

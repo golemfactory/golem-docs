@@ -1,6 +1,7 @@
 ---
-description: Selecting providers
-title: Selecting providers
+title: JS Task API - Provider Selection Example
+pageTitle: Provider Selection in Golem JS Task API - Best Practices and Examples
+description: Learn to select providers in Golem's JS Task API with criteria like hardware requirements, whitelist/blacklist, and cost-effective filters, including practical Node.js examples.
 type: Example
 ---
 

@@ -1,6 +1,9 @@
 ---
-description: Yagna service installation
-title: Yagna installation for requestors
+title: Guide to Installing Yagna for Golem Network Interaction 
+pageTitle: Install Yagna - Connect with the Golem Network - Requestor Setup Instructions 
+description: Step-by-step instructions for installing Yagna to enable applications to interact with the Golem Network, tailored for OS X, Ubuntu, and Windows users.
+
+
 type: Instructions
 ---
 

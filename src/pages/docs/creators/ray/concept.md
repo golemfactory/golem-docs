@@ -1,24 +1,12 @@
 ---
-title: Ray on Golem Introduction
-pageTitle: Scale Python code on Golem Network Using Ray - Developer's Guide
-description: Explore how to use Ray with Golem for scaleable Python code execution. Quickstarts, tutorials, and troubleshooting tips included for developers.
-
+title: Ray on Golem Concept
+pageTitle: Ray on Golem - Harnessing Decentralized Computing Power for Python Applications
+description: Learn how Ray integrates with Golem for easy parallel computing in Python. Discover setup, scalability, and payment with GLM and MATIC tokens.
 type: article
 ---
 
-# Run Python code on Ray on Golem
-
-This documentation is designed for developers wanting to run their **Python code** on Golem.
-We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
-
-- [Quickstart](/docs/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
-- [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
-- [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
-- [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
-- [Cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) - details of every configuration option of Ray on Golem cluster yaml
-- [Supported versions & other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python & ray versions, and other known issues
-- [Troubleshooting](/docs/creators/ray/troubleshooting) - hopefully helpful tips on what to do when something goes wrong
-
+# About Golem, Ray, and Ray on Golem
+This doc explains Golem, Ray, and Ray on Golem basic concepts.
 
 ## Introduction
 
@@ -43,9 +31,7 @@ The beauty of the solution is that you can run the app locally, and when you are
 
 ## What do you need
 
-To use Ray on Golem, you need to install the Ray framework and Ray on Golem cluster manager. 
-
-Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
+To use Ray on Golem, you need to install the Ray framework and Ray on Golem cluster manager.
 
 When you have the software installed, you need a cluster configuration yaml file. We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
 
@@ -67,7 +53,6 @@ The basic flow of working with Ray and Ray on Golem consists of:
 - Starting up a Ray on Golem cluster initially consisting of only one node
 - Executing your app on Ray on Golem cluster, which automatically scales up and down to accommodate your app's needs
 - Stopping down your Ray on Golem cluster to free resources and to limit the cost
-
 
 ## Ray on Golem cluster configuration yaml & Ray CLI
 
@@ -91,7 +76,9 @@ You can also use [our example apps](https://github.com/golemfactory/golem-ray/tr
 
 You can also check out a more detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
 
+
 If you have any questions, comments, insights, praises, or doubts about these docs and Ray on Golem in general please don't hesitate to reach out to us either on
 - [`#Ray on Golem` discord channel](https://chat.golem.network/) 
 - [Ray on Golem general feedback form](https://qkjx8blh5hm.typeform.com/to/GtaCVz0b)
+
 

@@ -1,6 +1,7 @@
 ---
-description: Transferring data
-title: Transferring data
+title: JS Task API - Data Transfer Methods in Golem Network
+description: Explore methods for file and JSON data transfer between providers and remote computers using the Golem Network's JS Task API, with practical examples and environment-specific commands.
+pageTitle: Data Transfer Techniques in Golem Network - JS Task API Examples
 type: Example
 ---
 

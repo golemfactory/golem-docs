@@ -1,6 +1,8 @@
 ---
-description: Provider maintenance.
-title: Provider maintenance
+title: Golem Provider Maintenance Guide 
+description: A practical guide on managing and updating your Golem Network provider, including wallet monitoring and node updates. 
+
+
 type: Guide
 ---
 
@@ -10,7 +12,7 @@ type: Guide
 
 Managing your provider efficiently is vital for optimal performance and profitability in the Golem Network. This guide covers essential management tasks such as:
 
-- Verifying your wallet address
+- Checking your wallet address
 - Monitoring your wallet's status
 - Updating to the latest provider version
 

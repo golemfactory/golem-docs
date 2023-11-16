@@ -1,6 +1,7 @@
 ---
-description: anatomy of Ray application based on a simple code showcasing Ray tasks
-title: Basic Ray tasks usage tutorial 
+title: Basic Ray tasks usage tutorial
+description: Discover how to run and manage Ray tasks in a distributed environment with this hands-on guide, featuring code examples and essential Ray functionalities.
+pageTitle: Practical Tutorial on Ray Task Execution on Golem Network
 type: example 
 ---
 
