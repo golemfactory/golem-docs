@@ -73,10 +73,10 @@ The basic flow of working with Ray and Ray on Golem consists of:
 
 ## How to start
 
-You need a piece of code to execute on Golem. Once you have a Ray app, you can immediately proceed to [launching it on Golem](/docs/creators/ray/setup-tutorial).
-You can also use [our example apps](https://github.com/golemfactory/golem-ray/tree/main/examples) to play with Ray on Golem. 
+You'll need a piece of code to execute on Golem. If you already have some Ray application, you can immediately proceed to [launching it on Golem](/docs/creators/ray/setup-tutorial).
+Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/golem-ray/tree/main/examples). 
 
-You can also check out a more detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
+Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
 
 If you have any questions, comments, insights, praises, or doubts about these docs and Ray on Golem in general please don't hesitate to reach out to us either on
 - [`#Ray on Golem` discord channel](https://chat.golem.network/) 
