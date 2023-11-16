@@ -1,14 +1,37 @@
 ---
-description: Configuration examples for Yagna
-title: Basic provider configuration
+title: Configuring the basics of your Golem Provider Node
+description: Step-by-step instructions for configuring settings on a Golem provider node, including resource allocation and pricing strategies.
+pageTitle: How to Configure Golem Provider Node Settings - A Comprehensive Guide
 type: Instructions
 ---
 
-# Configuration examples for yagna
+# Configuring Your Provider
 
-This article will show how to configure basic `yagna` options, such as changing settings and running the provider node in different ways.
+This article outlines the process of configuring the settings for your Golem provider node. Whether you're setting up a new node or modifying an existing one, the following instructions will help you configure various aspects of your node, such as resource allocation and pricing
 
-## Settings
+## Showing Node Settings
+
+To see the settings of your provider node, use the `golemsp settings show` command in the terminal:
+
+```bash
+➜  ~ golemsp settings show
+node name: "future-argument"
+Shared resources:
+	cores:	3
+	memory:	42.87843778729439 GiB
+	disk:	294.8792449951172 GiB
+
+
+Pricing for preset "wasmtime":
+
+	0.025000000000000001 GLM per cpu hour
+	0.005000000000000000 GLM per hour
+	0.000000000000000000 GLM for start
+```
+
+## Accessing Node Settings
+
+To begin configuring your node, use the `golemsp settings` command in your terminal:
 
 ```bash
 $ golemsp settings
@@ -29,7 +52,17 @@ SUBCOMMANDS:
 
 ```
 
-### Settings set
+## Adjusting Settings
+
+You can adjust your provider node's settings using the `set` subcommand:
+
+```bash
+golemsp settings set [OPTIONS]
+```
+
+### Configurable Parameters
+
+The table below lists the parameters you can configure:
 
 | Value(s)          | Value description                                                                                                                                                                                                      |
 | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,38 +76,40 @@ SUBCOMMANDS:
 | --account         | Yagna account (Ethereum address) for payments                                                                                                                                                                          |
 | --payment-network | The network where you want to be paid in, e.g., mainnet or testnet                                                                                                                                                     |
 
-To change a particular setting (for eg. price settings) type:
+### Important notice
 
-`golemsp settings set --cpu-per-hour 3`
+Please remember to restart your node after making changes to settings for them to take effect.
 
-You can also combine multiple settings in one command as follows:
+### Resource Allocation
 
-`golemsp settings set --cpu-per-hour 3 --cores 7` which will change your GLM per hour to "3" and adjust the numbers of shared CPU cores to "7".
+To allocate threads (cores), memory, and disk space:
 
-**To change the default Ethereum address that was created for you during the initial setup process type:**
+```bash
+golemsp settings set --cores <number> --memory <amount> --disk <amount>
+```
 
-`golemsp settings set --account <address>`
+### Pricing Strategy
 
-and restart your node afterward for it to update. To check if your address has been updated properly, run
+To configure the pricing of your provider:
 
-`golemsp status`
+```bash
+golemsp settings set --starting-fee <amount> --env-per-hour <amount> --cpu-per-hour <amount>
+```
 
-### Settings show
+### Changing Ethereum Wallet
 
-`golemsp settings show` - Show current settings.
+To update your payment account address:
 
-## Running Golem on testnet
+```bash
+golemsp settings set --account <address>
+```
 
-To run the Golem provider on the test network, type the following command into the terminal:
+### Running on the Testnet
+
+To operate your provider node on the testnet:
 
 ```bash
 golemsp run --payment-network testnet
+
 ```
 
-{% docnavigation title="See also" %}
-
-[Troubleshooting](/docs/troubleshooting/provider)
-
-[Provider CLI reference](/docs/providers/yagna-cli-reference)
-
-{% /docnavigation %}

@@ -9,10 +9,10 @@ type: reference
 `useTask` is a hook that manages a single task on the Golem Network. It returns an object with the following properties:
 
 | Name      | Description                                                                                  |
-| --------- | -------------------------------------------------------------------------------------------- |
+|-----------|----------------------------------------------------------------------------------------------|
 | run       | The [worker function](/docs/golem-js/reference/modules/task_work#worker) that runs the task. |
 | isRunning | Boolean indicating whether the task is running.                                              |
-| isError   | Boolean indicating whether the task has failed.                                              |
+| error     | The error which caused the task to fail.                                                     |
 | result    | The result of the task.                                                                      |
 
 ## Parameters
@@ -27,7 +27,7 @@ This hook takes the [TaskExecutor](/docs/golem-js/reference/classes/executor_exe
 
 ```jsx
 function MyComponent({ executor }) {
-  const { isRunning, isError, result, run } = useTask(executor)
+  const { isRunning, error, result, run } = useTask(executor)
   const onClick = () =>
     run(async (ctx) => {
       return (await ctx.run('echo', ['Hello world!'])).stdout
@@ -38,7 +38,7 @@ function MyComponent({ executor }) {
         Run task
       </button>
       {isRunning && <div>Task is running...</div>}
-      {isError && <div>Task failed</div>}
+      {error && <div>Task failed due to {error.toString()}</div>}
       {result && <div>Task result: {result}</div>}
     </div>
   )

@@ -1,6 +1,7 @@
 ---
-description: Parallel processing on Golem Network - Tutorial
-title: Parallel processing on Golem Network Tutorial
+title: Parallel Task Execution Tutorial on Golem Network
+pageTitle: Step-by-Step Tutorial on Parallel Processing Using Golem Network
+description: Learn how to execute tasks in parallel on the Golem Network with this comprehensive tutorial. Perfect for developers interested in distributed computing and parallel processing.
 type: Tutorial
 ---
 
@@ -99,7 +100,7 @@ cd parallel-example
 You can skip this section if you do not have Docker installed and use the image hash provided in the example.
 {% /alert %}
 
-The tasks that we send to the remote computer are executed in the context of the specified software package - the image. When we create the Task Executor we provide the `hash` of the image that will be used during processing. In the QuickStart example, we used an image that contained Node.js.
+The tasks that we send to the remote computer are executed in the context of the specified software package - the image. When we create the Task Executor we provide the `hash` of the image that will be used during processing. In the Quickstart example, we used an image that contained Node.js.
 
 In our case, we need to prepare a custom image containing `hashcat` software that we will use on the provider’s machines.
 Golem images are converted from Docker images, so we can start with any existing Docker image that meets your needs and modify it to create a custom one.

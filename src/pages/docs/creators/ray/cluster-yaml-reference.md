@@ -1,6 +1,7 @@
 ---
-description: details of every configuration option of Ray on Golem cluster yaml
 title: Ray on Golem cluster yaml reference 
+pageTitle: Ray on Golem Cluster YAML Configuration - In-Depth Guide
+description: Explore the nuances of configuring Ray clusters on Golem Network, including worker nodes, idle timeout, and provider settings.
 type: article 
 ---
 
@@ -50,7 +51,8 @@ Additionally, this is the lowest number of nodes that Ray will automatically sca
 Idle timeout controls how fast Ray decommisions the nodes that are not busy. It will always leave at least `min_workers` workers, though.
 
 ```yaml
-# The number of minutes that need to pass before an idle worker node is removed by the Autoscaler
+# The number of minutes that need to pass before an idle worker node 
+# is removed by the Autoscaler
 idle_timeout_minutes: 5
 ```
 
@@ -92,6 +94,6 @@ network: "goerli"
 
 Image tag and image hash properties refer to the virtual machine images that Golem provider nodes will start to host ray software.
 
-Ray on Golem automatically detects your local configuration and starts images with matching Python and Ray versions.
+Ray on Golem by default uses preprepared images including [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) Python and Ray versions.
 
 However, you can use these properties to override the detection and request a specific image. Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).

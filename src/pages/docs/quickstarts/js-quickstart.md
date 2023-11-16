@@ -1,9 +1,10 @@
 ---
-description: Create your own JavaScript application on Golem
-title: Golem Node.js QuickStart
+title: Node.js Development on Golem Network
+pageTitle: Easily Build JavaScript Apps Using Golem Network - Node.js Quickstart Guide
+description: Learn to build JavaScript applications with this quickstart guide for the Golem Network, featuring installation steps, code examples, and easy integration.
 type: Quickstart
 ---
 
-# Golem JS QuickStart
+# Golem JS Quickstart
 
 {% partial file="quickstarts/js-quickstart.md" /%}

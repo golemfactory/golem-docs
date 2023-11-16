@@ -1,6 +1,7 @@
 ---
-description: Introducing log files as a tool to identify and fix issues in your requestor applications.
-title: Debugging with the use of log files
+title: Golem Debugging - Leveraging Logs for Effective Troubleshooting 
+description: Learn how to debug Golem apps effectively by tapping into detailed logs for pinpointing issues in provider-hosted containers. 
+pageTitle: Master Golem Debugging - Utilize Logs to Troubleshoot Requestor Apps
 type: Guide
 ---
 

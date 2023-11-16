@@ -8,13 +8,13 @@ type: reference
 
 `useHandleInvoice` is a hook that allows you to handle (accept) a single invoice. It returns an object with the following properties:
 
-| Name          | Description                                                                                           |
-| ------------- | ----------------------------------------------------------------------------------------------------- |
-| acceptInvoice | A function that accepts the invoice.                                                                  |
-| isLoading     | Boolean indicating whether the invoice is being accepted.                                             |
-| isError       | Boolean indicating whether the last attempt to accept the invoice failed.                             |
-| isAccepted    | Boolean indicating whether the invoice has been accepted.                                             |
-| reset         | A function that resets the state of the hook (sets `isAccepted` to `false` and `isError` to `false`). |
+| Name          | Description                                                                                             |
+|---------------|---------------------------------------------------------------------------------------------------------|
+| acceptInvoice | A function that accepts the invoice.                                                                    |
+| isLoading     | Boolean indicating whether the invoice is being accepted.                                               |
+| error         | The error explaining why the last attempt to accept the invoice failed.                                 |
+| isAccepted    | Boolean indicating whether the invoice has been accepted.                                               |
+| reset         | A function that resets the state of the hook (sets `isAccepted` to `false` and `error` to `undefined`). |
 
 ## Parameters
 

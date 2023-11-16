@@ -1,6 +1,9 @@
 ---
-title: Installing gvmkit-build
-description: Guide on how to install gvmkit-build
+title: Gvmkit-build Installation Guide
+description: Step-by-step instructions for installing gvmkit-build to convert Docker images for Golem's GVMI format.
+pageTitle: Install gvmkit-build - Convert Docker to GVMI for Golem Network
+
+
 type: instructions
 ---
 

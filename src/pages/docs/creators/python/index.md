@@ -1,7 +1,10 @@
 ---
-description: Create Python applications on Golem
-title: Python SDK Introduction
-type: Toc
+title: Golem Python SDK Documentation 
+pageTitle: Golem Python SDK Introduction - Decentralized App Development on Golem Network 
+description: An introduction to creating decentralized applications with Golem's Python SDK, featuring Task and Service APIs, quickstarts, tutorials, and tools.
+
+
+type: Table of Contents
 ---
 
 # Create your task application using Python
@@ -19,10 +22,10 @@ The services API assumes the user would like to treat provider nodes as somethin
 
 You can start your journey with Golem and create great decentralized apps the way that suits your style and preference:
 
-| Title          | Description                                                                                                                                                                                                                                                                                                                                      |
-| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| QuickStarts    | If you like to start with something quick and simple - go to the [Python QuickStart](/docs/creators/python/quickstarts/run-first-task-on-golem).                                                                                                                                                                                                     |
-| Tutorials      | If you prefer to learn how to write apps on Golem through practical use cases - try one of our [tutorials](/docs/creators/python/tutorials).                                                                                                                                                                                                     |
-| Guides         | If you prefer to begin by understanding the Golem Application Fundamentals and Network concepts or have an overview of the Task API and Service API models - check out the [Guides](/docs/creators/python/guides) section. You can also find an explanation of Golem images and how to create custom ones.                                       |
+| Title          | Description                                                                                                                                                                                                                                                                                                                                                  |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Quickstarts    | If you like to start with something quick and simple - go to the [Python Quickstart](/docs/creators/python/quickstarts/run-first-task-on-golem).                                                                                                                                                                                                             |
+| Tutorials      | If you prefer to learn how to write apps on Golem through practical use cases - try one of our [tutorials](/docs/creators/python/tutorials).                                                                                                                                                                                                                 |
+| Guides         | If you prefer to begin by understanding the Golem Application Fundamentals and Network concepts or have an overview of the Task API and Service API models - check out the [Guides](/docs/creators/python/guides) section. You can also find an explanation of Golem images and how to create custom ones.                                                   |
 | Tools examples | [Golem tools examples](/docs/creators/python/examples/tools) contains instructions on how to install and use tools such as the Yagna (this is the software responsible for connecting with the Golem Network), `gvmkit-build` (a tool that allows you to create your custom Golem images) and other important components of building and running Golem apps. |
-| API Reference  | We also provide a reference where you can explore details of the [API](https://yapapi.readthedocs.io).                                                                                                                                                                                                                                           |
+| API Reference  | We also provide a reference where you can explore details of the [API](https://yapapi.readthedocs.io).                                                                                                                                                                                                                                                       |

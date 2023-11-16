@@ -1,6 +1,7 @@
 ---
-title: Requestor exit codes
-description: Find all exit codes that may occur as a requestor on the golem network
+title: Golem Requestor Troubleshooting - Exit Code Meanings 
+description: Comprehensive guide to understanding Linux exit codes encountered as a requestor on the Golem Network for effective debugging. 
+pageTitle: Troubleshoot Golem Requestor Issues - Exit Code Reference Guide 
 type: troubleshooting
 ---
 

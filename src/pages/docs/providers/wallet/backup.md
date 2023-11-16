@@ -1,6 +1,6 @@
 ---
-description: Ensuring the safety of your Golem funds.
-title: Provider wallet backup
+title: Golem Wallet Backup and Security Tutorial description
+description: This comprehensive tutorial provides step-by-step instructions for backing up and securing your Golem wallet, including simple exports and password protection for your GLM and ETH tokens. 
 type: Guide
 ---
 
@@ -77,7 +77,6 @@ Remember to save your passphrase somewhere safe as losing it will make it imposs
 
 {% /alert %}
 
-
 ### Export the key
 
 Now, issue the same export command that you'd use for an unprotected keystore:
@@ -110,7 +109,7 @@ To make it easier, here's a possible check:
 $ cat ./key.json | grep address
 ```
 
-To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/maintenance/wallet-restoration) using this newly created keystore file.
+To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/wallet/restoration) using this newly created keystore file.
 
 {% alert level="warning" %}
 
@@ -122,6 +121,6 @@ Likewise, consider encrypting or password-protecting the keystore file so that s
 
 {% docnavigation title="Next steps" %}
 
-- Restoring [Golem wallet](/docs/providers/maintenance/wallet-restoration)
+- Restoring [Golem wallet](/docs/providers/wallet/restoration)
 
 {% /docnavigation %}

@@ -1,6 +1,7 @@
 ---
-title: Creating and using images on Golem
-description: Creating and using images on Golem
+title: Guide to Docker and Golem Image Creation and Usage 
+description: Learn how to create Docker images, convert them to Golem format, and deploy in a Golem network requestor script. 
+pageTitle: Docker to Golem Image Conversion & Requestor Deployment | Golem Network Tutorial
 type: tutorial
 ---
 

@@ -1,6 +1,7 @@
 ---
-description: Task API hashcat Tutorial
-title: Task API hashcat Tutorial
+title: Running Hashcat on Golem Network - Password Recovery Tutorial
+pageTitle: Golem Task API Tutorial - Secure Password Recovery with Hashcat
+description: Discover how to use Hashcat for effective password recovery by leveraging Golem's parallel task execution capabilities in this comprehensive tutorial.
 type: tutorial
 ---
 
@@ -106,7 +107,7 @@ The above call will process the `3009..6016` part. If there is any result in tha
 
 ## Before we begin
 
-In order to develop applications for the Golem network, you need to install yagna daemon on your machine. We're going to assume you're already familiar with the setup of the environment required to run Python high-level API examples. If you're not, please make sure you proceed through our [QuickStart](/docs/creators/python/quickstarts/run-first-task-on-golem) to get up to speed.
+In order to develop applications for the Golem network, you need to install yagna daemon on your machine. We're going to assume you're already familiar with the setup of the environment required to run Python high-level API examples. If you're not, please make sure you proceed through our [Quickstart](/docs/creators/python/quickstarts/run-first-task-on-golem) to get up to speed.
 
 Once you're done with the tutorial above, make sure you're again in yapapi's main directory and move to:
 

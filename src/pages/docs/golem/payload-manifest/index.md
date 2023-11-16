@@ -1,6 +1,6 @@
 ---
-title: Payload Manifest Introduction
-description: Computation Payload Manifest description, its schema, and configuration guide
+title: A Guide to Computation Payload Manifest on the Golem Network
+description: Master the use of Golem's Computation Payload Manifest for efficient computation tasks on provider nodes, including configuration, schema, and certificates.
 type: Guide
 ---
 
@@ -14,8 +14,8 @@ A manifest can be configured in yapapi.
 
 The provider node operator controls what computations can be performed by:
 
-- [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/yagna-cli-reference#keystore) (which allows the provider agent to verify _manifest_ signatures)
-- Adding domain patterns to Provider's [domain whitelist](/docs/providers/yagna-cli-reference#domain-whitelist) (which makes the manifest [signature] optional).
+- [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/configuration/outbound#managing-your-keystore) (which allows the provider agent to verify _manifest_ signatures)
+- Adding domain patterns to Provider's [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains) (which makes the manifest [signature] optional).
 
 ## Configuration
 
@@ -270,6 +270,6 @@ Finally, generate _App author's certificate_ using CSR and CA certificate:
 
 #### 3. Importing application author's certificates
 
-To import the certificate into the keystore, use a [`ya-provider keystore add`](/docs/providers/yagna-cli-reference#keystore) command:
+To import the certificate into the keystore, use a [`ya-provider keystore add`](/docs/providers/configuration/outbound#managing-your-keystore) command:
 
 `ya-provider keystore add ca.crt.pem`

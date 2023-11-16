@@ -1,6 +1,7 @@
 ---
-description: a step-by-step explanation of the quickstart instructions
 title: Ray on Golem setup tutorial
+pageTitle: Step-by-Step Tutorial for Ray Cluster Setup on Golem Network
+description: Learn how to install, start, and test a Ray cluster on the Golem Network with detailed instructions and example applications.
 type: guide 
 ---
 
@@ -109,6 +110,8 @@ The default 100 tasks of `simple-task.py` are rather fast and even when Ray orde
 
 Submit the code again, requesting more tasks to see how the autoscaler expands the cluster, as the work progresses (give it up to 5 mins).
 
+Note the double-dash symbol (`--`) separating the application arguments from `ray submit` arguments.
+
 ```bash
 # Submit the app with 400 tasks
 ray submit golem-cluster.yaml simple-task.py -- --count 400 
@@ -137,6 +140,6 @@ ray down golem-cluster.yaml --yes
 ```
 
 {% docnavigation title="See also" %}
-- [Ray on Golem concept](/docs/creators/ray/concept)
+- [Ray on Golem introduction](/docs/creators/ray)
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)
 {% /docnavigation %}

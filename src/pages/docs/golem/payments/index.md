@@ -1,6 +1,6 @@
 ---
-title: Golem payments introduction
-description: How payments are made between the providers and requestors within the Golem Network.
+title: Optimizing Transactions in Golem - Payment Mechanisms Explained
+description: Explore the efficient "pay as you go" and mid-agreement payment systems in the Golem Network, emphasizing ERC-20 token transactions and strategies to minimize costs.
 type: Guide
 ---
 

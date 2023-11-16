@@ -1,6 +1,7 @@
 ---
-description: Transferring data
-title: Transferring data
+title: JS Task API - Data Transfer Methods in Golem Network
+description: Explore methods for file and JSON data transfer between providers and remote computers using the Golem Network's JS Task API, with practical examples and environment-specific commands.
+pageTitle: Data Transfer Techniques in Golem Network - JS Task API Examples
 type: Example
 ---
 
@@ -102,7 +103,7 @@ The example utilizes a basic HTML boilerplate that defines UI components:
 {% alert level="warning" %}
 
 To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter.
-The example code should be saved as the `index.html` file and served by i.e. `http-server`. See [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
+The example code should be saved as the `index.html` file and served by i.e. `http-server`. See [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
 
 {% /alert  %}
 
@@ -112,7 +113,7 @@ The `.uploadData(fileData, inputImage)` method is used to copy the user-provided
 
 The `.downloadData(outputImage)` method downloads the data which is accessible in the `data` attribute of the respective result object. The `setResponse()` function is used to update the `src` attribute of the dom element devised to display the output.
 
-Other functions are explained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+Other functions are explained in the [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
 
 ## Uploading JSON to and from the provider (in a browser)
 
@@ -126,10 +127,10 @@ The example utilizes a basic HTML boilerplate that defines UI components:
 
 {% alert level="warning" %}
 
-To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. See [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
+To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter. See [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
 
 {% /alert  %}
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/transferring-data/upload-json-in-browser.html" language="javascript" /%}
 
-All other functions are explained in the [Web QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+All other functions are explained in the [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.

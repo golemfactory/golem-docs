@@ -1,6 +1,7 @@
 ---
-description: A minimal example of a Golem requestor agent based on services
-title: Service API Hello World Tutorial
+title: Golem Service Model Tutorial - Running DateService on the Network 
+pageTitle: Run a Service on Golem Network - DateService Example Tutorial | Golem SDK Docs 
+description: Learn to run a custom DateService using the Golem Service Model with this step-by-step tutorial, showcasing service life cycle, payload, and VM execution.
 type: tutorial
 ---
 
@@ -17,7 +18,7 @@ This example illustrates the following Golem features & aspects:
 ## Prerequisites
 
 This example shares a number of concepts, as well as parts of its code with the task model "Hello World!". Therefore the below article can be considered a good introduction:
-[QuickStart](/docs/creators/python/quickstarts/run-first-task-on-golem).
+[Quickstart](/docs/creators/python/quickstarts/run-first-task-on-golem).
 
 Also, in case you haven't done so already, it's a good idea to take a look at the [Introduction to the service model](/docs/creators/python/guides/service-model) before proceeding.
 

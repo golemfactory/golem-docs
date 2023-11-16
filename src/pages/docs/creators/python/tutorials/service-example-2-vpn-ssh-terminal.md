@@ -1,9 +1,7 @@
 ---
-description: >-
-  This article presents a Golem service example, which illustrates Golem VPN
-  capabilities by enabling SSH connections to a payload running on a VM on a
-  Provider node.
-title: Service API VPN - SSH tutorial
+title: Service API VPN - SSH Connection Tutorial 
+description: Discover how to establish SSH connections via VPN on the Golem Network, using the provided example to interact with VMs on provider nodes. 
+pageTitle: Golem Network Tutorial - Secure SSH Access Through VPN | Golem SDK
 type: tutorial
 ---
 

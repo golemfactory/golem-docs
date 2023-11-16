@@ -1,6 +1,7 @@
 ---
-description: Ensuring the safety of your Golem funds.
-title: Golem wallet backup
+title: Golem Wallet Backup Instructions 
+description: Step-by-step instructions on how to securely back up your Golem wallet, ensuring the safety and accessibility of your GLM/ETH tokens. 
+pageTitle: Secure Your Golem Cryptocurrency - Wallet Backup Instructions
 type: instructions
 ---
 
@@ -111,7 +112,7 @@ To make it easier, here's a possible check:
 cat ./key.json | grep address
 ```
 
-To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/maintenance/wallet-restoration) using this newly created keystore file.
+To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/wallet/restoration) using this newly created keystore file.
 
 {% alert level="warning" %}
 

@@ -48,7 +48,7 @@ export const javascript = [
         href: '/docs/creators/javascript/tutorials',
       },
       {
-        title: 'QuickStart Explained',
+        title: 'Quickstart Explained',
         href: '/docs/creators/javascript/tutorials/quickstart-explained',
       },
       {
@@ -175,26 +175,23 @@ export const dapps = [
 
 export const ray = [
   {
-    type: 'Examples',
-    links: [],
-  },
-  {
-    type: 'Tutorials',
-    links: [],
-  },
-  {
-    type: 'Guides',
+    type: 'Getting Started',
     links: [
       { title: 'Introduction', href: '/docs/creators/ray' },
       { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
       {
-        title: 'Concept',
-        href: '/docs/creators/ray/concept',
-      },
-      {
         title: 'Setup tutorial',
         href: '/docs/creators/ray/setup-tutorial',
       },
+      {
+        title: 'Supported versions and other limitations',
+        href: '/docs/creators/ray/supported-versions-and-other-limitations',
+      },
+    ],
+  },
+  {
+    type: 'Tutorials',
+    links: [
       {
         title: 'Basic Ray tasks usage tutorial',
         href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
@@ -203,14 +200,20 @@ export const ray = [
         title: 'Converting a real-life use case to Ray on Golem',
         href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
       },
+    ],
+  },
+  {
+    type: 'Ray on Golem tools',
+    links: [
       {
         title: 'Cluster yaml reference',
         href: '/docs/creators/ray/cluster-yaml-reference',
       },
-      {
-        title: 'Supported versions and other limitations',
-        href: '/docs/creators/ray/supported-versions-and-other-limitations',
-      },
+    ],
+  },
+  {
+    type: 'Troubleshooting',
+    links: [
       {
         title: 'Troubleshooting',
         href: '/docs/creators/ray/troubleshooting',

@@ -1,6 +1,7 @@
 ---
-description: Answers to popular questions about Golem's VM runtime and how to create images for it
-title: Golem Images - frequently asked questions
+description: FAQs on converting Docker images to .gvmi for Golem, including volume handling, storage limitations, and file management in Golem's VM runtime.
+title: Golem VM Runtime - Docker Image Conversion FAQs
+pageTitle: Golem VM Runtime - FAQs on Docker Image Conversion and Management
 type: Guide
 ---
 

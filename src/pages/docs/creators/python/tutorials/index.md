@@ -1,7 +1,7 @@
 ---
 description: Browse the table of python tutorials for the Golem Python SDK
 title: Python SDK Tutorials
-type: Toc
+type: Table of Contents
 ---
 
 # Golem Python Tutorials
