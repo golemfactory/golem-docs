@@ -13,10 +13,11 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 
 - [Quickstart](/docs/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 - [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
+- [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python and ray versions, and other known issues
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
 - [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
-- [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python and ray versions, and other known issues
+- [Ray CLI](/docs/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
 - [Troubleshooting](/docs/creators/ray/troubleshooting) - hopefully helpful tips on what to do when something goes wrong
 
 
@@ -67,22 +68,6 @@ The basic flow of working with Ray and Ray on Golem consists of:
 - Starting up a Ray on Golem cluster initially consisting of only one node
 - Executing your app on Ray on Golem cluster, which automatically scales up and down to accommodate your app's needs
 - Stopping down your Ray on Golem cluster to free resources and to limit the cost
-
-
-## Ray on Golem cluster configuration yaml & Ray CLI
-
-Ray uses a configuration yaml file to define the characteristics of the cluster.
-There are provider-specific pieces of information (node definitions, payment platforms, etc.) and cluster-wide ones (number of nodes, autoscaling parameters, cluster name, etc.).
-
-Ray also exposes a command line interface to manage the cluster (and nodes).
-
-While `ray start` & `ray stop` are for manual node setup there are also many cluster commands
-- `ray up golem-cluster.yaml` starts up a cluster specified by the yaml
-- `ray down golem-cluster.yaml` terminates the cluster
-- `ray submit golem-cluster.yaml ray-app.py` executes an app on the cluster
-- `ray exec golem-cluster.yaml 'ray status'` shows cluster status
-- `ray exec golem-cluster.yaml 'shell-command-line'` executes shell commands on the head node
-- `ray attach golem-cluster.yaml` gives you shell access to the head node
 
 ## How to start
 

@@ -7,7 +7,12 @@ type: article
 
 # Ray on Golem cluster yaml 
 
-This article explains the options available in the configuration yaml file when setting up a Ray on Golem cluster.
+Ray uses a configuration yaml file to define the characteristics of the cluster.
+There are provider-specific pieces of information (node definitions, payment platforms, etc.) and cluster-wide ones (number of nodes, autoscaling parameters, cluster name, etc.).
+
+This article explains the options available when setting up a Ray on Golem cluster.
+
+For more details check out the [Ray Cluster YAML Configuration Options](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html) reference.
 
 ## Example Ray on Golem cluster configuration
 

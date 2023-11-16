@@ -209,6 +209,10 @@ export const ray = [
         title: 'Cluster yaml',
         href: '/docs/creators/ray/cluster-yaml',
       },
+      {
+        title: 'Ray CLI',
+        href: '/docs/creators/ray/ray-cli',
+      },
     ],
   },
   {
