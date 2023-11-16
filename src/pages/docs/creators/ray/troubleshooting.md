@@ -75,6 +75,11 @@ ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
 ```
 
+It might also be  a good idea to clean also Ray configuration cache files:
+```bash
+rm /tmp/ray-config-*
+```
+
 {% /solution %}
 {% feedback identifier="ray-not-stopping-on-ray-down" /%}
 {% /troubleshooting %}
