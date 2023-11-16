@@ -33,7 +33,7 @@ It specializes in tooling for AI/ML applications, but at the same time, it is ba
 
 ## Why Ray?
 
-The best thing about Ray is that it makes it super easy to parallelize existing Python code even if you are not a distributed programming expert.  
+The best thing about Ray is that it makes it straightforward to parallelize existing Python code even if you are not an expert in distributed programming.
 
 Ray uses concepts of tasks, actors, and objects for building and scaling distributed applications.
 It can be used to parallelize your Python code to use all cores on your computer, but more importantly, it also offers a Ray Cluster interface to run your payload on several, remote machines.
