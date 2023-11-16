@@ -292,6 +292,13 @@ shared connection to 192.168.0.3 closed.
 
 ```
 
+It is worth to note that if you want to pass arguments to the submitted script 
+you need use the double-dash symbol (`--`). 
+It allows Ray to distinguish `submit` arguments from script ones ([more details](/docs/creators/ray/troubleshooting#passing-arguments-to-your-ray-script-fails)).
+
+
+
+
 ### Scale up
 
 Our DDS script computes 50 bridge deals by default - a rather small number - so that the execution time does not get in the way of your following this tutorial.
