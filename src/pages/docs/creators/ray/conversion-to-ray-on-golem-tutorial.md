@@ -135,7 +135,7 @@ python3 dds.py
 deal count: 50 time: 0:00:04.643217
 ```
 
-### Output cluster info
+### Output cluster information
 
 As the one last touch before proceeding to run our script on a Ray on Golem cluster, we'll add some information about the cluster to the output.
 Add this after `ray.init()` and at the end of the code:
@@ -292,12 +292,8 @@ shared connection to 192.168.0.3 closed.
 
 ```
 
-It is worth to note that if you want to pass arguments to the submitted script 
-you need use the double-dash symbol (`--`). 
-It allows Ray to distinguish `submit` arguments from script ones ([more details](/docs/creators/ray/troubleshooting#passing-arguments-to-your-ray-script-fails)).
-
-
-
+It is worth noting that if you want to pass arguments to the submitted script you need to use the double-dash symbol (`--`). 
+It allows Ray to distinguish `submit` arguments from the script ones ([more details](/docs/creators/ray/troubleshooting#passing-arguments-to-your-ray-script-fails)).
 
 ### Scale up
 
