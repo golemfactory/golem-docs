@@ -61,7 +61,7 @@ It produces an output like this:
   71258 ?        Sl     2:35 yagna
 ```
 
-The above shows `ray-on-golem` webserver and the `yagna` daemon running.
+The above shows `ray-on-golem` webserver and the `yagna` daemon are running.
 
 The surest way to stop them is to kill them (using the PID numbers as shown in the first column):
 ```bash
@@ -75,7 +75,7 @@ ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
 ```
 
-It might also be  a good idea to clean also Ray configuration cache files:
+It might also be a good idea to clean up Ray's configuration cache files:
 ```bash
 rm /tmp/ray-config-*
 ```
