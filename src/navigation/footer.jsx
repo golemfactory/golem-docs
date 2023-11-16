@@ -206,8 +206,8 @@ export const ray = [
     type: 'Ray on Golem tools',
     links: [
       {
-        title: 'Cluster yaml reference',
-        href: '/docs/creators/ray/cluster-yaml-reference',
+        title: 'Cluster yaml',
+        href: '/docs/creators/ray/cluster-yaml',
       },
     ],
   },

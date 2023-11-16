@@ -314,8 +314,8 @@ export const navigation = [
             href: '',
             children: [
               {
-                title: 'Cluster yaml reference',
-                href: '/docs/creators/ray/cluster-yaml-reference',
+                title: 'Cluster yaml',
+                href: '/docs/creators/ray/cluster-yaml',
               },
 	    ],
           },
