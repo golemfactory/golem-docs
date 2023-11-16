@@ -33,7 +33,7 @@ We have tested Ray on Golem on Ubuntu and WSL, but it should work on other Linux
 Ray on Golem image contains only the basic Python libraries.
 
 If you need any dependencies in your Ray app,
-you can use `pip` via [cluster yaml `initialization_commands`](/docs/creators/ray/cluster-yaml-reference#initializationcommands)
+you can use `pip` via [cluster yaml `initialization_commands`](/docs/creators/ray/cluster-yaml#initializationcommands)
 
 You can also instruct Ray on Golem to use the needed libraries during execution by passing the `runtime_env` parameter to `ray.init()`.
 It is demonstrated for example in [this tutorial](/docs/creators/ray/conversion-to-ray-on-golem-tutorial#passendplaylibraryrequirementtoray).
