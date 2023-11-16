@@ -27,7 +27,7 @@ When you find a property we don't support yet, please [let us know (on `#Ray on 
 
 ## Most important properties
 
-Let's have a look at most important properties (including the ones specific for Ray on Golem clusters)
+Let's have a look at the most important properties (including the ones specific for Ray on Golem clusters)
 
 ### Max workers
 
@@ -42,7 +42,7 @@ max_workers: 10
 
 ### Min workers
 
-Minimum number of workers can be specified per node type, and influences how many such nodes are started with `ray up`.
+The minimum number of workers can be specified per node type, and influences how many such nodes are started with `ray up`.
 Additionally, this is the lowest number of nodes that Ray will automatically scale down to.
 
 ```yaml
@@ -80,13 +80,13 @@ Some of these properties interact with how Ray on Golem works in general, so be 
 
 #### Webserver port
 
-Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to / from your cluster.
+Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to / from your cluster.
 
 #### Network
 
 Ray on Golem uses the GLM token on the Ethereum blockchain to pay for the hosting of ray nodes.
-Currently, while we support only Golem testnet, the payments use the `goerli` test blockchain.
-When you move to mainnet, the `network` property needs to be changed to `polygon`
+Currently, while we support only the Golem testnet, the payments use the `goerli` test blockchain.
+When you move to the mainnet, the `network` property needs to be changed to `polygon`
 
 ```yaml
 # Blockchain used for payments. 
