@@ -54,7 +54,7 @@ Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-
 
 When your application is ready, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
 
-Payments within the Golem Network happen on a blockchain called [Polygon](https://polygon.technology), you need tokens named GLM (to pay the providers) and MATIC (for payment transaction fees).
+Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and MATIC (for payment transaction fees).
 Please read more about [mainnet payments and funding your Ray on Golem](/docs/creators/javascript/guides/switching-to-mainnet) (it is called Requestor on Golem Network)
 
 When you have the tokens you need to configure `network: "polygon"` in cluster yaml ([more details](/docs/creators/ray/cluster-yaml#network))
