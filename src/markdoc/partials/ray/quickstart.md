@@ -8,7 +8,7 @@ Run the following to get a feeling of how Ray on Golem works.
 {% partial file="ray/recommend-venv.md" /%}
 
 ```bash
-# Install ray-on-golem & ray (recommended within a clean virtual environment)
+# Install ray-on-golem and ray (recommended within a clean virtual environment)
 pip3 install -U ray-on-golem
 ```
 ```bash

@@ -1,5 +1,5 @@
 ---
-description: list of supported Python & ray versions, and other known issues
+description: list of supported Python and ray versions, and other known issues
 title: Ray on Golem Supported versions and other limitations 
 type: article
 pageTitle: Ray on Golem Compatibility - Python and Ray Versions, Platform Support, and Limitations

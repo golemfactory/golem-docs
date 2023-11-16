@@ -11,9 +11,9 @@ This tutorial explains all the steps needed to start, test, and stop a Ray on Go
 If you have already proceeded through our [Quickstart](/docs/creators/ray/quickstart), you'll find this tutorial familiar. 
 The point is to go through the same actions but now, provide you with more details on each one.
 
-To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client & Ray on Golem cluster manager.
+To start a Ray cluster on Golem, you will use the Ray cluster launcher with the Golem Network client and Ray on Golem cluster manager.
 
-## Install Ray cluster launcher & Ray on Golem cluster manager
+## Install Ray cluster launcher and Ray on Golem cluster manager
 
 {% partial file="ray/recommend-venv.md" /%}
 
