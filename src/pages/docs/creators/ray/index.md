@@ -35,7 +35,7 @@ It specializes in tooling for AI/ML applications, but at the same time, it is ba
 
 The best thing about Ray is that it makes it straightforward to parallelize existing Python code even if you are not an expert in distributed programming.
 
-Ray uses concepts of tasks, actors, and objects for building and scaling distributed applications.
+Ray uses concepts of tasks, actors, and objects to enable efficient building and scaling distributed applications.
 It can be used to parallelize your Python code to use all cores on your computer, but more importantly, it also offers a Ray Cluster interface to run your payload on several, remote machines.
 
 The beauty of the solution is that you can run the app locally, and when you are ready, you can execute the same app on the cluster without changing a single line of your code.
