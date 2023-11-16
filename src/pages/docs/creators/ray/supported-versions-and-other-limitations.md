@@ -18,11 +18,6 @@ It should work with any combination of local Ray and Python versions.
 
 Please let us know if you have any troubles because of that (on [`#Ray on Golem` discord channel](https://chat.golem.network/))
 
-
-<!--To override this automatic image selection, you can edit the `image_tag` property in your cluster yaml file.
-We are preparing the tools for users to build and upload their images, but for now - please [let us know on `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with a version combination we haven't prepared it yet. We will be happy to help you.
--->
-
 ## Platforms
 
 We have tested Ray on Golem on Ubuntu and WSL, but it should work on other Linux distributions. For now, we don't support MacOS or bare Windows.
