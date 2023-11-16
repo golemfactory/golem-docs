@@ -32,6 +32,15 @@ python3 simple-task.py
 # Submit the app to be executed on your cluster
 ray submit golem-cluster.yaml simple-task.py
 ```
+
+The above shows the usual workflow with Ray apps.
+
+You develop them, while at the same time testing them, on your local machine.
+When you are ready to get more power - you send them to a Ray cluster **without changing a single line** of your application's code.
+
+Now, you can stop your cluster until you need it again.
+
+
 ```bash
 # Tear down the cluster
 ray down golem-cluster.yaml --yes
