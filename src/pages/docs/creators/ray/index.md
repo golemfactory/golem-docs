@@ -48,7 +48,9 @@ To use Ray on Golem, you need to install the Ray framework and Ray on Golem clus
 
 Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
 
-When you have the software installed, you need a cluster configuration yaml file. We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
+When you have the software installed, you need a cluster configuration yaml file. 
+We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
+Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-yaml) and [Ray CLI](/docs/creators/ray/ray-cli) used to manage the cluster.
 
 When your application is ready, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
 
