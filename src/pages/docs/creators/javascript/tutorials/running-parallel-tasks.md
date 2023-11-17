@@ -284,52 +284,54 @@ For each worker, we perform the following steps:
 - Get the hashcat\_{skip}.potfile from the provider to the requestor.
 - Parse the result from the .potfile.
 
-We can map each chunk of the keyspace to a separate task and run them in parallel by calling `executor.run()` multiple times: 
+Let's first create a function that will look for the password in a given range of the keyspace.
 
 ```js
-const futureResults = range.map((skip) =>
-  executor.run(async (ctx) => {
-    const results = await ctx
+const findPasswordInRange = async (skip) => {
+  const password = await executor.run(async (ctx) => {
+    const [, potfileResult] = await ctx
       .beginBatch()
       .run(
-        `hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${
-          skip! + step
-        } -o pass.potfile || true`,
+        `hashcat -a 3 -m 400 '${args.hash}' '${
+          args.mask
+        }' --skip=${skip} --limit=${skip + step} -o pass.potfile || true`
       )
-      .run("cat pass.potfile || true")
-      .end();
-    if (!results?.[1]?.stdout) return false;
-    return results?.[1]?.stdout.toString().trim().split(":")[1];
-  }),
-);
+      .run('cat pass.potfile || true')
+      .end()
+    if (!potfileResult.stdout) return false
+    // potfile format is: hash:password
+    return potfileResult.stdout.toString().trim().split(':')[1]
+  })
+  if (!password) {
+    throw new Error(`Cannot find password in range ${skip} - ${skip + step}`)
+  }
+  return password
+}
 ```
 
 Note, that we use the `beginBatch()` method to organize together two sequential commands: the first will run the hashcat and the second will print the content of the output file.
-As we conclude the batch with the `end()` method the task function will return an array of results objects. As the `cat pass.potfile` is run as a second command its result will be at index 1. Keep in mind that tasks executed on a single worker instance run within the same virtual machine and share the contents of a VOLUME. It means that files in the VOLUME left over from one task execution will be present in a subsequent run as long as the execution takes place on the same provider and thus, the same file system.
+As we conclude the batch with the `end()` method the task function will return an array of results objects. As the `cat pass.potfile` is run as a second command its result will be at index 1 so we can use array destructuring to grab only that result. Keep in mind that tasks executed on a single worker instance run within the same virtual machine and share the contents of a VOLUME. It means that files in the VOLUME left over from one task execution will be present in a subsequent run as long as the execution takes place on the same provider and thus, the same file system.
 
 ### Processing the results
 
-The `futureResults` variable holds an array of promises that will be resolved once the tasks are completed. We can use the `Promise.all()` method to wait for all the tasks to finish.
+Let's run our function for each of the ranges. We only need to wait for the first successful result so we can use the `Promise.any` method.
 
 ```js
-const results = await Promise.all(futureResults);
-for (const result of results) {
-  if (result) {
-    password = result
-    break
-  }
+try {
+  const password = await Promise.any(range.map(findPasswordInRange))
+  console.log(`Password found: ${password}`)
+} catch (err) {
+  console.log(`Password not found`)
+} finally {
+  await executor.end()
 }
-if (!password) console.log('No password found')
-else console.log(`Password found: ${password}`)
-
-await executor.end()
 ```
 
 Once we get the password we print it in the console and end executor.
 
 ### The complete example
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/7024c7041b92e84164f0f50c2fc7d948d60c7ff2/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
 
 To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
 
