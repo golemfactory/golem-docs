@@ -35,7 +35,7 @@ const links = [
 
 export const CustomError = ({ errorCode, title, description }) => {
   return (
-    <div className="grid min-h-screen grid-cols-2">
+    <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
       <div className="bg-white dark:bg-darkbg ">
         <main className="mx-auto w-full max-w-2xl px-6 pt-10  lg:pl-12">
           <div className="mx-auto max-w-2xl text-center ">
@@ -105,7 +105,7 @@ export const CustomError = ({ errorCode, title, description }) => {
           </div>
         </main>
       </div>
-      <div className="hidden max-h-screen lg:relative lg:col-start-2 lg:row-start-1 lg:row-end-4 lg:block">
+      <div className="hidden lg:relative lg:col-start-2 lg:row-start-1 lg:row-end-4 lg:block lg:max-h-screen">
         <img
           src="https://images.unsplash.com/photo-1470847355775-e0e3c35a9a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1825&q=80"
           alt=""
