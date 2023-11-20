@@ -115,11 +115,18 @@ It defines the maximum amount of GLMs paid for the whole cluster operations - fr
 
 At the moment, when the spending reaches the limit, Ray on Golem will stop spending, effectively terminating the cluster nodes.
 
+```yaml
+provider:
+  parameters:
+
+    # Maximum amount of GLMs that's going to be spent for the whole cluster
+    budget: 2
+```
+
 ### Avoiding too-expensive providers
 
 You can use `provider.parameters.node_config.cost_management` section to define the limits on providers' prices.
 Ray on Golem won't work with providers who exceed any of the following price settings.
-
 
 #### Maximum provider prices
 
@@ -135,6 +142,25 @@ The following properties allow you to reject providers with any of the prices ex
 - `max_cpu_sec_price` (recommended value `0.0005`)
 - `max_duration_sec_price` (recommended value `0.0005`)
 
+```yaml
+provider:
+  parameters:
+    node_config:
+      cost_management:
+
+        # Amount of GLMs for worker initiation 
+        # causing Golem provider offer to be rejected
+        max_initial_price: 0.5
+
+        # Amount of GLMs for CPU utilisation per second 
+        # causing Golem provider offer to be rejected
+        max_cpu_sec_price: 0.0005
+
+        # Amount of GLMs for each second that worker runs 
+        # causing Golem provider offer to be rejected
+        max_duration_sec_price: 0.0005
+```
+
 #### Maximum average usage cost
 
 To combine all three prices into one value, have a look at the properties:
@@ -145,3 +171,21 @@ To combine all three prices into one value, have a look at the properties:
 Using those if you plan to use your cluster for 20 minutes, and keep it busy for 80% of the time, you will reject providers that would cost you more than `1.5` GLMs in total.
 
 
+```yaml
+provider:
+  parameters:
+    node_config:
+      cost_management:
+
+        # Estimated average load and duration for worker 
+        # allowing the picking of the least expensive Golem providers' offers first.
+        # If not provided, offers will be picked at random.
+        # Both values need to be defined or undefined together.
+        average_cpu_load: 0.8
+        average_duration_minutes: 20
+
+        # Amount of GLMs for average usage 
+        # causing Golem provider offer to be rejected
+        # Requires both `average_cpu_load` and `average_duration_minutes`
+        max_average_usage_cost: 1.5
+```
