@@ -110,30 +110,38 @@ Please [let us know on `#Ray on Golem` discord channel)](https://chat.golem.netw
 
 ### Spending hard limit
 
-Within `provider.parameters` section there is `budget` option.
+Within `provider.parameters` section there is `budget` property.
 It defines the maximum amount of GLMs paid for the whole cluster operations - since `ray up` and until `ray down`.
 
 At the moment, when the spending reach the limit, Ray on Golem will stop spending, effectively terminating the cluster nodes.
 
-<!--
-cost_management:  # TODO: Consider more suitable parameter name
-# Estimated average load and duration for worker that tells cost management to pick the least expensive Golem provider offers first.
-# If not provided, offers will be picked at random.
-# Both values need to be defined or undefined together.
-average_cpu_load: 0.8
-average_duration_minutes: 20
+### Avoiding too expensive providers
 
-# Amount of GLMs for average usage which Golem provider offer will be rejected if exceeded.
-# Requires "average_cpu_load" and "average_duration_minutes" parameters to take effect.
-max_average_usage_cost: 1.5
+You can use `provider.parameters.node_config.cost_management` section to define the limits on providers prices.
+Ray on Golem won't work with providers which exceed any of the following price settings.
 
-# Amount of GLMs for worker initiation which Golem provider offer will be rejected if exceeded.
-max_initial_price: 0.5
 
-# Amount of GLMs for CPU utilisation per second which Golem provider offer will be rejected if exceeded.
-max_cpu_sec_price: 0.0005
+#### Maximum provider prices
 
-# Amount of GLMs for each second that worker runs which Golem provider offer will be rejected if exceeded.
-max_duration_sec_price: 0.0005
+Golem providers charge in three ways. They charge:
+- initial price at start of deployment,
+- cpu usage price for the total time (in seconds) their CPUs spent computing,
+- duration price for the total time (in seconds) they spent up and running,
+
+So for example, if you rented a 3 CPU node for 15 minutes and utilized all three cores for 10 minutes you will be charged `initial_price + duration_price * 15*60 + cpu_usage_price * 3 * 10*60`.
+
+The following properties allow you to reject providers with any of the prices exceeding your limits.
+- `max_initial_price` (recommended value `0.5`)
+- `max_cpu_sec_price` (recommended value `0.0005`)
+- `max_duration_sec_price` (recommended value `0.0005`)
+
+#### Maximum average usage cost
+
+In order to combine, all three prices into one value, have a look at the properties:
+- `average_cpu_load` (recommended value `0.8`)
+- `average_duration_minutes` (recommended value `20`)
+- `max_average_usage_cost` (recommended value `1.5`)
+
+Using those if you plan to use your cluster for 20 minutes, and keep it busy for 80% of the time, you will reject providers that would cost you more than `1.5` GLMs in total.
 
 
