@@ -117,4 +117,3 @@ In the case of the failure in the `run()` method, we receive the result object w
 - `stderr: 'node: bad option: -w\n',` - the command output
 - `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
 
-Final note: If you run your tasks using the `map()` or `forEach()` methods, TaskExecutor will stop the whole Job and will not continue after failure of any Task.
