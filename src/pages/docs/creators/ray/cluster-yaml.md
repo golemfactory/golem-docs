@@ -163,14 +163,14 @@ provider:
 
 #### Choosing the cheapest providers - maximum average usage cost
 
-In order to work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
+To work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
 
 Have a look at the properties:
 - `average_cpu_load`
 - `average_duration_minutes`
 - `max_average_usage_cost`
 
-Using those if you plan to use your cluster for `average_duration_minutes` minutes, and keep it busy for `average_cpu_load` of the time, you will reject providers that would cost you more than `max_average_usage_cost` GLMs in total.
+Using those if you plan to use your cluster for `average_duration_minutes`, and keep it busy for `average_cpu_load` of the time, you will reject providers that would cost you more than `max_average_usage_cost` GLMs in total.
 
 All providers' offers are sorted by estimated average usage cost, allowing Ray on Golem to negotiate with the cheapest nodes first.
 In this way, it is beneficial even if you miss-estimate the average CPU load and average duration.
