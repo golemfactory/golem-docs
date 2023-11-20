@@ -90,8 +90,8 @@ When you move to the mainnet, the `network` property needs to be changed to `pol
 
 ```yaml
 # Blockchain used for payments. 
-# Goerli means running free nodes on testnet, 
-# Polygon is for mainnet operations.
+# "goerli" means running free nodes on testnet, 
+# "polygon" is for mainnet operations.
 network: "goerli"
 ```
 
@@ -105,3 +105,31 @@ However, you can use these properties to override the detection and request a sp
 Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
 
 Please [let us know on `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
+
+<!--
+## Budget management properties
+
+    budget: 2
+
+cost_management:  # TODO: Consider more suitable parameter name
+# Estimated average load and duration for worker that tells cost management to pick the least expensive Golem provider offers first.
+# If not provided, offers will be picked at random.
+# Both values need to be defined or undefined together.
+average_cpu_load: 0.8
+average_duration_minutes: 20
+
+# Amount of GLMs for average usage which Golem provider offer will be rejected if exceeded.
+# Requires "average_cpu_load" and "average_duration_minutes" parameters to take effect.
+max_average_usage_cost: 1.5
+
+# Amount of GLMs for worker initiation which Golem provider offer will be rejected if exceeded.
+max_initial_price: 0.5
+
+# Amount of GLMs for CPU utilisation per second which Golem provider offer will be rejected if exceeded.
+max_cpu_sec_price: 0.0005
+
+# Amount of GLMs for each second that worker runs which Golem provider offer will be rejected if exceeded.
+max_duration_sec_price: 0.0005
+
+
+-->
