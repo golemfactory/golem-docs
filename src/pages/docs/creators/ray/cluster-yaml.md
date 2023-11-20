@@ -161,9 +161,11 @@ provider:
         max_duration_sec_price: 0.0005
 ```
 
-#### Maximum average usage cost
+#### Choosing the cheapest providers - maximum average usage cost
 
-To combine all three prices into one value, have a look at the properties:
+In order to work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
+
+Have a look at the properties:
 - `average_cpu_load`
 - `average_duration_minutes`
 - `max_average_usage_cost`
