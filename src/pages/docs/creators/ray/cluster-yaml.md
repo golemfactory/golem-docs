@@ -135,7 +135,7 @@ Golem providers charge in three ways. They charge:
 - CPU usage price for the total time (in seconds) their CPUs spent computing,
 - duration price for the total time (in seconds) they spent up and running,
 
-So for example, if you rent a 3 CPU node for 15 minutes and utilized each core in 80% of the time you will be charged `initial_price + duration_price * 15*60 + cpu_usage_price * 3 * 0.8 * 15*60`.
+So for example, if you rent a 3 CPU node for 15 minutes and utilize each core 80% of the time you will be charged `initial_price + duration_price * 15*60 + cpu_usage_price * 3 * 0.8 * 15*60`.
 
 The following properties allow you to reject providers with any of the prices exceeding your limits.
 - `max_initial_price`
@@ -152,7 +152,7 @@ provider:
         # causing Golem provider offer to be rejected
         max_initial_price: 0.5
 
-        # Amount of GLMs for CPU utilisation per second 
+        # Amount of GLMs for CPU utilization per second 
         # causing Golem provider offer to be rejected
         max_cpu_sec_price: 0.0005
 
