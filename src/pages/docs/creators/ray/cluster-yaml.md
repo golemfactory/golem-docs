@@ -106,11 +106,16 @@ Supported tags are available on [Golem registry](https://registry.golem.network/
 
 Please [let us know on `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 
-<!--
 ## Budget management properties
 
-    budget: 2
+### Spending hard limit
 
+Within `provider.parameters` section there is `budget` option.
+It defines the maximum amount of GLMs paid for the whole cluster operations - since `ray up` and until `ray down`.
+
+At the moment, when the spending reach the limit, Ray on Golem will stop spending, effectively terminating the cluster nodes.
+
+<!--
 cost_management:  # TODO: Consider more suitable parameter name
 # Estimated average load and duration for worker that tells cost management to pick the least expensive Golem provider offers first.
 # If not provided, offers will be picked at random.
@@ -132,4 +137,3 @@ max_cpu_sec_price: 0.0005
 max_duration_sec_price: 0.0005
 
 
--->
