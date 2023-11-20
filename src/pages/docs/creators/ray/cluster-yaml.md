@@ -75,8 +75,8 @@ initialization_commands: []
 
 ### Provider section
 
-The whole "provider" section describes quite a lot of Golem node provider internals. 
-Some of these properties interact with how Ray on Golem works in general, so be careful with those that you're unfamiliar with as changing them may render your cluster unusable.
+The whole "provider" section describes many Golem node provider internals. 
+Some of these properties interact with how Ray on Golem works in general, so be careful with those you're unfamiliar with as changing them may render your cluster unusable.
 
 #### Webserver port
 
@@ -104,28 +104,28 @@ By default, Ray on Golem uses prepackaged VM images including [relatively fresh]
 However, you can use these properties to override the detection and request a specific image. 
 Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
 
-Please [let us know on `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
+Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 
 ## Budget management properties
 
 ### Spending hard limit
 
-Within `provider.parameters` section there is `budget` property.
-It defines the maximum amount of GLMs paid for the whole cluster operations - since `ray up` and until `ray down`.
+Within `provider.parameters` section there is the `budget` property.
+It defines the maximum amount of GLMs paid for the whole cluster operations - from `ray up` until `ray down`.
 
-At the moment, when the spending reach the limit, Ray on Golem will stop spending, effectively terminating the cluster nodes.
+At the moment, when the spending reaches the limit, Ray on Golem will stop spending, effectively terminating the cluster nodes.
 
-### Avoiding too expensive providers
+### Avoiding too-expensive providers
 
-You can use `provider.parameters.node_config.cost_management` section to define the limits on providers prices.
-Ray on Golem won't work with providers which exceed any of the following price settings.
+You can use `provider.parameters.node_config.cost_management` section to define the limits on providers' prices.
+Ray on Golem won't work with providers who exceed any of the following price settings.
 
 
 #### Maximum provider prices
 
 Golem providers charge in three ways. They charge:
-- initial price at start of image deployment,
-- cpu usage price for the total time (in seconds) their CPUs spent computing,
+- the initial price at the start of image deployment,
+- CPU usage price for the total time (in seconds) their CPUs spent computing,
 - duration price for the total time (in seconds) they spent up and running,
 
 So for example, if you rented a 3 CPU node for 15 minutes and utilized all three cores for 10 minutes you will be charged `initial_price + duration_price * 15*60 + cpu_usage_price * 3 * 10*60`.
@@ -137,7 +137,7 @@ The following properties allow you to reject providers with any of the prices ex
 
 #### Maximum average usage cost
 
-In order to combine all three prices into one value, have a look at the properties:
+To combine all three prices into one value, have a look at the properties:
 - `average_cpu_load` (recommended value `0.8`)
 - `average_duration_minutes` (recommended value `20`)
 - `max_average_usage_cost` (recommended value `1.5`)
