@@ -1,13 +1,18 @@
 ---
-title: Ray on Golem cluster yaml reference 
+title: Ray on Golem cluster yaml 
 pageTitle: Ray on Golem Cluster YAML Configuration - In-Depth Guide
 description: Explore the nuances of configuring Ray clusters on Golem Network, including worker nodes, idle timeout, and provider settings.
 type: article 
 ---
 
-# Ray on Golem cluster yaml reference
+# Ray on Golem cluster yaml 
 
-This article explains the options available in the configuration yaml file when setting up a Ray on Golem cluster.
+Ray uses a configuration yaml file to define the characteristics of the cluster.
+There are provider-specific pieces of information (node definitions, payment platforms, etc.) and cluster-wide ones (number of nodes, autoscaling parameters, cluster name, etc.).
+
+This article explains the options available when setting up a Ray on Golem cluster.
+
+For more details check out the [Ray Cluster YAML Configuration Options](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html) reference.
 
 ## Example Ray on Golem cluster configuration
 
@@ -22,7 +27,7 @@ When you find a property we don't support yet, please [let us know (on `#Ray on 
 
 ## Most important properties
 
-Let's have a look at most important properties (including the ones specific for Ray on Golem clusters)
+Let's have a look at the most important properties (including the ones specific for Ray on Golem clusters)
 
 ### Max workers
 
@@ -37,7 +42,7 @@ max_workers: 10
 
 ### Min workers
 
-Minimum number of workers can be specified per node type, and influences how many such nodes are started with `ray up`.
+The minimum number of workers can be specified per node type, and influences how many such nodes are started with `ray up`.
 Additionally, this is the lowest number of nodes that Ray will automatically scale down to.
 
 ```yaml
@@ -51,7 +56,8 @@ Additionally, this is the lowest number of nodes that Ray will automatically sca
 Idle timeout controls how fast Ray decommisions the nodes that are not busy. It will always leave at least `min_workers` workers, though.
 
 ```yaml
-# The number of minutes that need to pass before an idle worker node is removed by the Autoscaler
+# The number of minutes that need to pass before an idle worker node 
+# is removed by the Autoscaler
 idle_timeout_minutes: 5
 ```
 
@@ -74,13 +80,13 @@ Some of these properties interact with how Ray on Golem works in general, so be 
 
 #### Webserver port
 
-Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to / from your cluster.
+Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to / from your cluster.
 
 #### Network
 
 Ray on Golem uses the GLM token on the Ethereum blockchain to pay for the hosting of ray nodes.
-Currently, while we support only Golem testnet, the payments use the `goerli` test blockchain.
-When you move to mainnet, the `network` property needs to be changed to `polygon`
+Currently, while we support only the Golem testnet, the payments use the `goerli` test blockchain.
+When you move to the mainnet, the `network` property needs to be changed to `polygon`
 
 ```yaml
 # Blockchain used for payments. 
@@ -91,8 +97,11 @@ network: "goerli"
 
 #### Image tag and image hash
 
-Image tag and image hash properties refer to the virtual machine images that Golem provider nodes will start to host ray software.
+Image tag and image hash properties refer to the virtual machine images that Golem provider nodes will start to host the Ray on Golem software.
 
-Ray on Golem automatically detects your local configuration and starts images with matching Python and Ray versions.
+By default, Ray on Golem uses prepackaged VM images including [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) Python and Ray versions.
 
-However, you can use these properties to override the detection and request a specific image. Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
+However, you can use these properties to override the detection and request a specific image. 
+Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
+
+Please [let us know on `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.

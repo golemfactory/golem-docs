@@ -5,4 +5,4 @@ The provided example Golem cluster config file defines a small cluster with thre
 that is configured to autoscale up to 10 worker nodes.
 The availability of the testnet machines might cap the size of your cluster.
 
-If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference) article.
+If you want more details about the config file, check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml).

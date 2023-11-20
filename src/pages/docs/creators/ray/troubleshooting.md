@@ -151,7 +151,7 @@ Error: Command failed:
 Note that even if you have the needed dependencies installed, and your app runs on your local environment, you still need to tell Ray on Golem cluster the packages are needed.
 
 The best way to do it is by adding an appropriate `pip install` command to `setup_commands` in the cluster yaml file. 
-Check out the [cluster yaml reference](/docs/creators/ray/cluster-yaml-reference#initialization-commands) to get more information.
+Check out the [cluster yaml](/docs/creators/ray/cluster-yaml#initialization-commands) article to get more information.
 
 
 
