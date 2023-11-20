@@ -168,8 +168,9 @@ To combine all three prices into one value, have a look at the properties:
 - `average_duration_minutes`
 - `max_average_usage_cost`
 
-Using those if you plan to use your cluster for 20 minutes, and keep it busy for 80% of the time, you will reject providers that would cost you more than `1.5` GLMs in total.
+Using those if you plan to use your cluster for `average_duration_minutes` minutes, and keep it busy for `average_cpu_load` of the time, you will reject providers that would cost you more than `max_average_usage_cost` GLMs in total.
 
+As an added bonus, all offers will be sorted by computed average usage cost - Ray on Golem will negotiate with the cheapest ones first.
 
 ```yaml
 provider:
