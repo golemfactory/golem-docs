@@ -124,7 +124,7 @@ Ray on Golem won't work with providers which exceed any of the following price s
 #### Maximum provider prices
 
 Golem providers charge in three ways. They charge:
-- initial price at start of deployment,
+- initial price at start of image deployment,
 - cpu usage price for the total time (in seconds) their CPUs spent computing,
 - duration price for the total time (in seconds) they spent up and running,
 
@@ -137,7 +137,7 @@ The following properties allow you to reject providers with any of the prices ex
 
 #### Maximum average usage cost
 
-In order to combine, all three prices into one value, have a look at the properties:
+In order to combine all three prices into one value, have a look at the properties:
 - `average_cpu_load` (recommended value `0.8`)
 - `average_duration_minutes` (recommended value `20`)
 - `max_average_usage_cost` (recommended value `1.5`)
