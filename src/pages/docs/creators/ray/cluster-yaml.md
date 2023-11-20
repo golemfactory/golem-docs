@@ -170,8 +170,8 @@ To combine all three prices into one value, have a look at the properties:
 
 Using those if you plan to use your cluster for `average_duration_minutes` minutes, and keep it busy for `average_cpu_load` of the time, you will reject providers that would cost you more than `max_average_usage_cost` GLMs in total.
 
-As an added bonus, all offers will be sorted by estimated average usage cost. 
-Ray on Golem will negotiate with the cheapest ones first - this way setting those is beneficial even if you miss-estimate the average CPU load and average duration.
+All providers' offers will be sorted by estimated average usage cost, allowing Ray on Golem will negotiate with the cheapest ones first.
+In this way, it is beneficial even if you miss-estimate the average CPU load and average duration.
 
 ```yaml
 provider:
