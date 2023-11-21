@@ -63,7 +63,10 @@ It produces an output like this:
 
 The above shows `ray-on-golem` webserver and the `yagna` daemon are running.
 
-The surest way to stop them is to kill them (using the PID numbers as shown in the first column):
+Note that Ray on Golem leaves `yagna` daemon running by purpose - it stays connected to the Golem network maintaining current information about the providers so that when you decide to start up your cluster again the nodes are found quicker. 
+With that in mind we recommend killing only `ray-on-golem` and leaving `yagna` running. 
+
+The surest way to stop these services is to kill them (using the PID numbers as shown in the first column):
 ```bash
 kill -9 71257 71258
 ```

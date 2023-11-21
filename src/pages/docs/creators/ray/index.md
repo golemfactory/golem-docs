@@ -16,6 +16,7 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 - [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python and ray versions, and other known issues
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
+- [Running on the mainnet](/docs/creators/ray/mainnet) - all that you need to run your cluster on the mainnet
 - [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
 - [Ray CLI](/docs/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
 - [Ray on Golem CLI](/docs/creators/ray/ray-on-golem-cli) - details of Ray on Golem command line options
@@ -54,6 +55,7 @@ We provide an example yaml, which contains everything needed to start up a small
 Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-yaml) and [Ray CLI](/docs/creators/ray/ray-cli) used to manage the cluster.
 
 When your application is ready, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
+Feel free to read the [running on the mainnet](/docs/creators/ray/mainnet) guide to get a full overview.
 
 Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and MATIC (for payment transaction fees).
 Feel free to learn more about [mainnet payments and funding your Ray on Golem](/docs/creators/javascript/guides/switching-to-mainnet).
