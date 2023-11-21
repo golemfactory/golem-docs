@@ -110,7 +110,7 @@ Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.
 
 ### Spending hard limit
 
-Within `provider.parameters` section there is the `budget` property.
+Within `provider.parameters` section there is the `budget_limit` property.
 It defines the maximum amount of GLMs paid for the whole cluster operations - from `ray up` until `ray down`.
 
 At the moment, when the spending reaches the limit, Ray on Golem will stop spending, effectively terminating the cluster nodes.
@@ -120,12 +120,12 @@ provider:
   parameters:
 
     # Maximum amount of GLMs that's going to be spent for the whole cluster
-    budget: 2
+    budget_limit: 2
 ```
 
 ### Avoiding too-expensive providers
 
-You can use `provider.parameters.node_config.cost_management` section to define the limits on providers' prices.
+You can use `provider.parameters.node_config.budget_control` section to define the limits on providers' prices.
 Ray on Golem won't work with providers who exceed any of the following price settings.
 
 #### Maximum provider prices
@@ -146,7 +146,7 @@ The following properties allow you to reject providers with any of the prices ex
 provider:
   parameters:
     node_config:
-      cost_management:
+      budget_control:
 
         # Amount of GLMs for worker initiation 
         # causing Golem provider offer to be rejected
@@ -161,31 +161,31 @@ provider:
         max_duration_sec_price: 0.0005
 ```
 
-#### Choosing the cheapest providers - maximum average usage cost
+#### Choosing the cheapest providers - maximum expected usage cost
 
 To work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
 
-Estimate the rough time your cluster will be up, and the average CPU load during that time. Set `average_duration_minutes` and `average_cpu_load` properties to compute each provider's expected average usage cost.
+Estimate the rough time your cluster will be up, and the expected CPU load during that time. Set `expected_duration_minutes` and `expected_cpu_load` properties to compute each provider's expected usage cost.
 
-All providers' offers will be sorted by estimated average usage cost, allowing Ray on Golem to negotiate with the cheapest nodes first.
+All providers' offers will be sorted by estimated expected usage cost, allowing Ray on Golem to negotiate with the cheapest nodes first.
 
-You might also use `max_average_usage_cost` to unconditionally cut off providers with too big an average usage cost (in GLMs).
+You might also use `max_expected_usage_cost` to unconditionally cut off providers with too big an expected usage cost (in GLMs).
 
 ```yaml
 provider:
   parameters:
     node_config:
-      cost_management:
+      budget_control:
 
-        # Estimated average load and duration for worker 
+        # Estimated expected load and duration for worker 
         # allowing the picking of the least expensive Golem providers' offers first.
         # If not provided, offers will be picked at random.
         # Both values need to be defined or undefined together.
-        average_cpu_load: 0.8
-        average_duration_minutes: 20
+        expected_cpu_load: 0.8
+        expected_duration_minutes: 20
 
-        # Amount of GLMs for average usage 
+        # Amount of GLMs for expected usage 
         # causing Golem provider offer to be rejected
-        # Requires both `average_cpu_load` and `average_duration_minutes`
-        max_average_usage_cost: 1.5
+        # Requires both `expected_cpu_load` and `expected_duration_minutes`
+        max_expected_usage_cost: 1.5
 ```
