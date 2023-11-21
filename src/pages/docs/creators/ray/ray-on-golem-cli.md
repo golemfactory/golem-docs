@@ -13,13 +13,13 @@ This article explains the commands available, which are useful when working with
 
 ## Commands Overview
 
-Ray on Golem supports the followig commands
+Ray on Golem supports the following commands
 - `ray-on-golem network-stats golem-cluster.yaml` scans the network and offers information about available providers ([details](#network-stats))
 - `ray-on-golem webserver` starts Golem requestor service controlling the providers used by the cluster
 
 ## Network stats
 
-The tool scans the network and gives you overview of the availability of the providers.
+The tool scans the network and gives you an overview of the availability of the providers.
 It allows you to test the settings of your [cluster yaml](/docs/creators/ray/cluster-yaml) file. 
 
 You can use it to test different [budget control](/docs/creators/ray/cluster-yaml#avoiding-too-expensive-providers) settings, both on [the testnet and the mainnet](/docs/creators/ray/cluster-yaml#network).
@@ -54,14 +54,14 @@ Failed to send proposal response! 500: {"message":"Failed to send response for P
 
 Golem Network is peer-to-peer, which means that providers' proposals are not always available at first. They get broadcasted from time to time.
 
-Negotiating with a provider also takes up some time.
+Negotiating with a provider also takes some time.
 
-Use `--duration` parameter to set how long you want to be scanning the network. It gives time for gathering proposals and negotiating them
+Use the `--duration` parameter to set how long you want to be scanning the network. It gives time for gathering proposals and negotiating them
 
 ### Output
 
 - `Initial` proposals found during the scan (there might be more than one proposal per provider)
-- `Not blacklisted` - proposals comming from non-blacklisted providers (we blacklist providers with a history of misbehaving)
+- `Not blacklisted` - proposals coming from non-blacklisted providers (we blacklist providers with a history of misbehaving)
 - `Passed Reject if max_expected_usage_cost exceeds` - proposals not exceeding your [`max_expected_usage_cost` setting](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost)
 - `Passed Reject if price_initial exceeds` - proposals not exceeding your [`price_initial` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Passed Reject if price_cpu_sec exceeds` - proposals not exceeding your [`price_cpu_sec` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
@@ -69,12 +69,12 @@ Use `--duration` parameter to set how long you want to be scanning the network. 
 - `Negotiation initialized` - proposals passing all the above limitations
 - `Negotiated successfully` - providers ready to deploy Ray on Golem image
 
-At the end of the output you can see the reasons of failing negotiations. 
-The most interesting are the reasons around providers' outbound settings, but for now we don't offer any actionable follow up.
+At the end of the output, you can see the reasons for failing negotiations. 
+The most interesting are the reasons around providers' outbound settings, but for now, we don't offer any actionable follow-up.
 
 ### Nodes availability
 
 The scanning ends with the successful negotiations - the `Negotiated successfully` line shows you the potential size of your cluster.
-Notice that the availability is dynamic - providers might be hired by someone else, more providers might become available, and also more providers might get discovered while your cluster is alive.
+Notice that the availability is dynamic - providers might be hired by someone else, more providers might become available, and more providers might get discovered while your cluster is alive.
 
-The last thing is the image deployment. When starting the actual cluster (with `ray up`) the providers might also fail to start Ray on Golem image. This might decrease the maximum size of your cluster too.
+The last thing is the image deployment. When starting the actual cluster (with `ray up`) the providers might also fail to start the Ray on Golem image. This might decrease the maximum size of your cluster too.
