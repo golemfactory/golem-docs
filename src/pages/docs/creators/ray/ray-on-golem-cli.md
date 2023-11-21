@@ -36,7 +36,7 @@ Gathering stats data done
 Proposals count:
 Initial: 48
 Not blacklisted: 48
-Passed Reject if max_average_usage_cost exceeds 1.5: 48
+Passed Reject if max_expected_usage_cost exceeds 1.5: 48
 Passed Reject if price_initial exceeds 0.5: 48
 Passed Reject if price_cpu_sec exceeds 0.0005: 48
 Passed Reject if price_duration_sec exceeds 0.0005: 48
@@ -62,7 +62,7 @@ Use `--duration` parameter to set how long you want to be scanning the network. 
 
 - `Initial` proposals found during the scan (there might be more than one proposal per provider)
 - `Not blacklisted` - proposals comming from non-blacklisted providers (we blacklist providers with a history of misbehaving)
-- `Passed Reject if max_expected_usage_cost exceeds` - proposals not exceeding your [`max_expected_usage_cost` setting](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-average-usage-cost)
+- `Passed Reject if max_expected_usage_cost exceeds` - proposals not exceeding your [`max_expected_usage_cost` setting](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost)
 - `Passed Reject if price_initial exceeds` - proposals not exceeding your [`price_initial` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Passed Reject if price_cpu_sec exceeds` - proposals not exceeding your [`price_cpu_sec` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Passed Reject if price_duration_sec exceeds` - proposals not exceeding your [`price_duration_sec` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
