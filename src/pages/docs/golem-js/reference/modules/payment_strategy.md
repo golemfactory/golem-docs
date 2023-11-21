@@ -34,7 +34,7 @@ Default DebitNotes filter that accept all debit notes without any validation
 
 #### Defined in
 
-[src/payment/strategy.ts:5](https://github.com/golemfactory/golem-js/blob/effec9a/src/payment/strategy.ts#L5)
+[src/payment/strategy.ts:5](https://github.com/golemfactory/golem-js/blob/2240307/src/payment/strategy.ts#L5)
 
 ___
 
@@ -56,7 +56,7 @@ Default Invoices filter that accept all invoices without any validation
 
 #### Defined in
 
-[src/payment/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/effec9a/src/payment/strategy.ts#L7)
+[src/payment/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/2240307/src/payment/strategy.ts#L7)
 
 ___
 
@@ -90,7 +90,7 @@ A custom filter that only accepts debit notes below a given value
 
 #### Defined in
 
-[src/payment/strategy.ts:10](https://github.com/golemfactory/golem-js/blob/effec9a/src/payment/strategy.ts#L10)
+[src/payment/strategy.ts:10](https://github.com/golemfactory/golem-js/blob/2240307/src/payment/strategy.ts#L10)
 
 ___
 
@@ -124,4 +124,4 @@ A custom filter that only accepts invoices below a given value
 
 #### Defined in
 
-[src/payment/strategy.ts:14](https://github.com/golemfactory/golem-js/blob/effec9a/src/payment/strategy.ts#L14)
+[src/payment/strategy.ts:14](https://github.com/golemfactory/golem-js/blob/2240307/src/payment/strategy.ts#L14)
