@@ -106,7 +106,7 @@ Supported tags are available on [Golem registry](https://registry.golem.network/
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 
-## Budget management properties
+## Budget control
 
 ### Spending hard limit
 

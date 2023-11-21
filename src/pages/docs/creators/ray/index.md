@@ -18,6 +18,7 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
 - [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
 - [Ray CLI](/docs/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
+- [Ray on Golem CLI](/docs/creators/ray/ray-on-golem-cli) - details of Ray on Golem command line options
 - [Troubleshooting](/docs/creators/ray/troubleshooting) - hopefully helpful tips on what to do when something goes wrong
 
 
