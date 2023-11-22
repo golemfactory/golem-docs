@@ -1,7 +1,8 @@
 ---
-title: "Module utils/logger/jsonLogger - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module utils/logger/jsonLogger within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module utils/logger/jsonLogger
+pageTitle: Module utils/logger/jsonLogger - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module utils/logger/jsonLogger within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: utils/logger/jsonLogger
 
@@ -31,4 +32,4 @@ Create a logger that writes a JSON object for every log line.
 
 #### Defined in
 
-[src/utils/logger/jsonLogger.ts:8](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/logger/jsonLogger.ts#L8)
+[src/utils/logger/jsonLogger.ts:8](https://github.com/golemfactory/golem-js/blob/49297d9/src/utils/logger/jsonLogger.ts#L8)

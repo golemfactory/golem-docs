@@ -1,7 +1,8 @@
 ---
-title: "Interface CommandOptions - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Interface CommandOptions within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Interface CommandOptions
+pageTitle: Interface CommandOptions - golem-js API Reference
+description: Explore the detailed API reference documentation for the Interface CommandOptions within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Interface: CommandOptions
 
@@ -23,7 +24,7 @@ type: "reference"
 
 #### Defined in
 
-[src/task/work.ts:41](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/work.ts#L41)
+[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/49297d9/src/task/work.ts#L42)
 
 ___
 
@@ -33,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/work.ts#L42)
+[src/task/work.ts:43](https://github.com/golemfactory/golem-js/blob/49297d9/src/task/work.ts#L43)
 
 ___
 
@@ -43,4 +44,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:43](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/work.ts#L43)
+[src/task/work.ts:44](https://github.com/golemfactory/golem-js/blob/49297d9/src/task/work.ts#L44)

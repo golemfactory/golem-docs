@@ -1,7 +1,8 @@
 ---
-title: "Module events/events - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module events/events within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module events/events
+pageTitle: Module events/events - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module events/events within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: events/events
 
@@ -57,4 +58,4 @@ Global Event Type with which all API events will be emitted. It should be used o
 
 #### Defined in
 
-[src/events/events.ts:9](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/events/events.ts#L9)
+[src/events/events.ts:9](https://github.com/golemfactory/golem-js/blob/49297d9/src/events/events.ts#L9)

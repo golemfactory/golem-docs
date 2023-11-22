@@ -1,7 +1,8 @@
 ---
-title: "Module storage/provider - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module storage/provider within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module storage/provider
+pageTitle: Module storage/provider - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module storage/provider within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: storage/provider
 
@@ -37,4 +38,4 @@ type: "reference"
 
 #### Defined in
 
-[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/storage/provider.ts#L1)
+[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/49297d9/src/storage/provider.ts#L1)

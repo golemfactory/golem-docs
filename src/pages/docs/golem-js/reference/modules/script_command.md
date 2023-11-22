@@ -1,7 +1,8 @@
 ---
-title: "Module script/command - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module script/command within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module script/command
+pageTitle: Module script/command - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module script/command within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: script/command
 
@@ -33,7 +34,7 @@ type: "reference"
 
 #### Defined in
 
-[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/script/command.ts#L76)
+[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/49297d9/src/script/command.ts#L76)
 
 ___
 
@@ -43,6 +44,6 @@ ___
 
 #### Defined in
 
-[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/script/command.ts#L80)
+[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/49297d9/src/script/command.ts#L80)
 
 ___

@@ -1,7 +1,8 @@
 ---
-title: "Module executor/executor - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module executor/executor within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module executor/executor
+pageTitle: Module executor/executor - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module executor/executor within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: executor/executor
 
@@ -25,7 +26,7 @@ type: "reference"
 
 #### Defined in
 
-[src/executor/executor.ts:24](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L24)
+[src/executor/executor.ts:26](https://github.com/golemfactory/golem-js/blob/49297d9/src/executor/executor.ts#L26)
 
 ___
 
@@ -37,7 +38,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[src/executor/executor.ts:93](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L93)
+[src/executor/executor.ts:95](https://github.com/golemfactory/golem-js/blob/49297d9/src/executor/executor.ts#L95)
 
 ___
 
@@ -54,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:95](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L95)
+[src/executor/executor.ts:97](https://github.com/golemfactory/golem-js/blob/49297d9/src/executor/executor.ts#L97)

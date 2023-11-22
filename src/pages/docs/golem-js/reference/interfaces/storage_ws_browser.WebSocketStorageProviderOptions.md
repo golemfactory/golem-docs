@@ -1,7 +1,8 @@
 ---
-title: "Interface WebSocketStorageProviderOptions - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Interface WebSocketStorageProviderOptions within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Interface WebSocketStorageProviderOptions
+pageTitle: Interface WebSocketStorageProviderOptions - golem-js API Reference
+description: Explore the detailed API reference documentation for the Interface WebSocketStorageProviderOptions within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Interface: WebSocketStorageProviderOptions
 
@@ -21,4 +22,4 @@ type: "reference"
 
 #### Defined in
 
-[src/storage/ws-browser.ts:8](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/storage/ws-browser.ts#L8)
+[src/storage/ws-browser.ts:8](https://github.com/golemfactory/golem-js/blob/49297d9/src/storage/ws-browser.ts#L8)

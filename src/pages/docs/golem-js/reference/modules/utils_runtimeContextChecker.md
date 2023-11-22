@@ -1,7 +1,8 @@
 ---
-title: "Module utils/runtimeContextChecker - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module utils/runtimeContextChecker within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module utils/runtimeContextChecker
+pageTitle: Module utils/runtimeContextChecker - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module utils/runtimeContextChecker within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: utils/runtimeContextChecker
 
@@ -19,4 +20,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/runtimeContextChecker.ts:6](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/runtimeContextChecker.ts#L6)
+[src/utils/runtimeContextChecker.ts:6](https://github.com/golemfactory/golem-js/blob/49297d9/src/utils/runtimeContextChecker.ts#L6)

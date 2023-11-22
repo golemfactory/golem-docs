@@ -1,7 +1,8 @@
 ---
-title: "Module market/helpers - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module market/helpers within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module market/helpers
+pageTitle: Module market/helpers - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module market/helpers within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: market/helpers
 
@@ -29,4 +30,4 @@ An array with Golem Node IDs of the whitelisted providers.
 
 #### Defined in
 
-[src/market/helpers.ts:8](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/helpers.ts#L8)
+[src/market/helpers.ts:8](https://github.com/golemfactory/golem-js/blob/49297d9/src/market/helpers.ts#L8)

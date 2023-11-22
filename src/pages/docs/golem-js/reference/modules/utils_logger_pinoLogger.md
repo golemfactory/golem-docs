@@ -1,7 +1,8 @@
 ---
-title: "Module utils/logger/pinoLogger - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module utils/logger/pinoLogger within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module utils/logger/pinoLogger
+pageTitle: Module utils/logger/pinoLogger - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module utils/logger/pinoLogger within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: utils/logger/pinoLogger
 
@@ -29,4 +30,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/logger/pinoLogger.ts#L4)
+[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/49297d9/src/utils/logger/pinoLogger.ts#L4)

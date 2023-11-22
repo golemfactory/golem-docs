@@ -1,7 +1,8 @@
 ---
-title: "Module payment/invoice - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module payment/invoice within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module payment/invoice
+pageTitle: Module payment/invoice - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module payment/invoice within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: payment/invoice
 
@@ -23,4 +24,4 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:7](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/invoice.ts#L7)
+[src/payment/invoice.ts:7](https://github.com/golemfactory/golem-js/blob/49297d9/src/payment/invoice.ts#L7)

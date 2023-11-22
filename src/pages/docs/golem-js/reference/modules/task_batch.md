@@ -1,7 +1,8 @@
 ---
-title: "Module task/batch - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module task/batch within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module task/batch
+pageTitle: Module task/batch - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module task/batch within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: task/batch
 
