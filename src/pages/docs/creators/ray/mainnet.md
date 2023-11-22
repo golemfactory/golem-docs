@@ -70,7 +70,7 @@ Of course, if you already have your own Ethereum wallet with GLM and MATIC token
 When handling real funds, it is generally a good idea to [back up your Ray on Golem wallet](/docs/providers/wallet/backup). 
 Note that Ray on Golem doesn't directly support password-locked wallets yet. Therefore, we recommend operating with low amounts of funds for the time being.
 
-To proceed with the above instructions you will need to access the Golem node service `yagna`. 
+To proceed with the above instructions you will need to access the Golem node service (`yagna`). 
 It should be running in the background after the first successful `ray up`, but if it is not, you can always start it up with `yagna service run` command.
 
 Note that, if you lock your wallet (its private key actually), you will need to unlock it every time you start the Golem node (`ray up` starts it up if it is not running). 
