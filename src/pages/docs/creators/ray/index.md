@@ -16,6 +16,7 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 - [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python and ray versions, and other known issues
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
+- [Accessing the Internet tutorial](/docs/creators/ray/outbound) - enabling your Ray app to use the Internet (from within the cluster nodes)
 - [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
 - [Ray CLI](/docs/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
 - [Ray on Golem CLI](/docs/creators/ray/ray-on-golem-cli) - details of Ray on Golem command line options
