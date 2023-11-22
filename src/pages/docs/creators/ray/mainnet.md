@@ -40,7 +40,7 @@ Please consider using [budget control](#budget-control) mechanisms to manage you
 
 Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and MATIC (for payment transaction fees).
 
-Feel free to learn more about general [mainnet payments and funding your Golem node](/docs/creators/javascript/guides/switching-to-mainnet).
+Feel free to learn more about [mainnet payments and funding your Golem node](/docs/creators/javascript/guides/switching-to-mainnet).
 
 Note that the funds you spend on your Ray on Golem cluster don't go to Golem Factory. The GLMs go directly to providers you rent the nodes from and the MATICs go directly to Polygon blockchain validators who enable your payments.
 
