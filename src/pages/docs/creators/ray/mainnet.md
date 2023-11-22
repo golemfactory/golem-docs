@@ -9,7 +9,7 @@ type: guide
 
 The most common way of starting your adventure with Ray on Golem is by trying it out on the Golem testnet.
 The testnet nodes are not very powerful and there are not many of them. 
-It is enough to see how everything works and test your Ray application on.
+At the same time, it provides a sufficient environment to see how everything works and to test your Ray applications on.
 
 When your application is getting more complex, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
 
