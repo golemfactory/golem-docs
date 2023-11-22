@@ -55,7 +55,7 @@ ray up golem-cluster.yaml --yes
 (todo: ray up output with link to onboarding portal)
 ```
 
-The onboarding link is also printed in case you have the mainnet funds (it won't cause `ray up` to fail in this case) - so you can always top up your wallet.
+Even if you do have the required funds, `ray up` will nevertheless print the onboarding link as a reminder, in case you'd like to top up your wallet.
 
 The onboarding process is a convenient and effortless way of providing your Ray on Golem node with funds allowing it to run on mainnet.
 
