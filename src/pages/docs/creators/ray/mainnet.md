@@ -32,7 +32,7 @@ Switching to the mainnet is as easy as changing the `provider.parameters.network
 
 That is the only change required to start your Ray on Golem cluster on the mainnet.
 
-If you don't have any funds, `ray up` will fail and direct you to the onboarding portal which will guide you to getting them.
+If you don't have any funds, `ray up` will fail and direct you to our onboarding portal which will guide you through obtaining them.
 
 Please consider using [budget control](#budget-control) mechanisms to manage your spending.
 
