@@ -78,7 +78,7 @@ Note that, if you lock your wallet (its private key actually), you will need to 
 ## Budget control
 
 Ray on Golem provides a couple of mechanisms to give you control over your spending:
-- [hard limit](/docs/creators/ray/cluster-yaml#spending-hard-limit) of spending of each Ray on Golem cluster "session" (from `ray up` to `ray down`)
+- [hard limit](/docs/creators/ray/cluster-yaml#spending-hard-limit) of spending on each Ray on Golem cluster (from `ray up` to `ray down`)
 - [limit of provider prices](/docs/creators/ray/cluster-yaml#maximum-provider-prices) accepted by Ray on Golem
 - [choosing the cheapest providers](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost) based on your expected cluster life duration and average load
 - [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats) helping you to set price limits reasonably
