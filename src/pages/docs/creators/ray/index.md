@@ -50,7 +50,7 @@ You only need to install Ray on Golem, as it also installs the Golem daemon and 
 
 Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
 
-When the software is installed, you need a cluster configuration yaml file. 
+Once the software is installed, you need a cluster configuration yaml file. 
 We provide an example yaml, which contains everything needed to start a small, free cluster running on the Golem test network.
 Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-yaml) and [Ray CLI](/docs/creators/ray/ray-cli) used to manage the cluster.
 
