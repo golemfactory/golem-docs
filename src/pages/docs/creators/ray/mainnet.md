@@ -73,7 +73,7 @@ Note that Ray on Golem doesn't directly support password-locked wallets yet. The
 To proceed with the above instructions you will need to access the Golem node service (`yagna`). 
 Normally, it should be running in the background after the first successful `ray up`. Other than that, you can always start it manually with `yagna service run` command.
 
-Note that, if you lock your wallet (its private key actually), you will need to unlock it every time you start the Golem node (`ray up` starts it up if it is not running). 
+Note that, if you lock your wallet with a password, you will need `yagna` to unlock it every time it starts. Also, remember that `ray up` starts the `yagna` service if it doesn't find it running.
 
 ## Budget control
 
