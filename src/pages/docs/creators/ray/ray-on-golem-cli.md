@@ -22,7 +22,7 @@ Ray on Golem supports the following commands
 The tool scans the network and gives you an overview of the availability of the providers.
 It allows you to test the settings of your [cluster yaml](/docs/creators/ray/cluster-yaml) file. 
 
-You can use it to test different [budget control](/docs/creators/ray/cluster-yaml#avoiding-too-expensive-providers) settings, both on [the testnet and the mainnet](/docs/creators/ray/cluster-yaml#network).
+You can use it to verify and fine-tune different [budget control](/docs/creators/ray/cluster-yaml#avoiding-too-expensive-providers) parameters, both on [the testnet and the mainnet](/docs/creators/ray/cluster-yaml#network).
 
 ### Example usage
 
@@ -52,11 +52,12 @@ Failed to send proposal response! 500: {"message":"Failed to send response for P
 
 ### Duration
 
-Golem Network is peer-to-peer, which means that providers' proposals are not always available at first. They get broadcasted from time to time.
+Golem Network is peer-to-peer, which means there is no central registry of providers offers. Therefore, 
+providers proposals are not immediately available to a newly-connected requestor. They get re-broadcasted at a certain interval and accumulate over time.
 
-Negotiating with a provider also takes some time.
+Additionally, negotiating with individual providers also takes some time.
 
-Use the `--duration` parameter to set how long you want to be scanning the network. It gives time for gathering proposals and negotiating them
+Use the `--duration` parameter to set how long you want your network scan to last. It allows time to gather and negotiate the incoming proposals
 
 ### Output
 

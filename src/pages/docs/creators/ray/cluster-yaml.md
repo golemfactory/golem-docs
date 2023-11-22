@@ -165,11 +165,11 @@ provider:
 
 To work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
 
-Estimate the rough time your cluster will be up, and the expected CPU load during that time. Set `expected_duration_minutes` and `expected_cpu_load` properties to compute each provider's expected usage cost.
+Please estimate the approximate time your application will require the cluster to operate, and the expected CPU load during that time. Then, set the respective `expected_duration_minutes` and `expected_cpu_load` properties to allow Ray on Golem to compute each provider's expected usage cost.
 
-All providers' offers will be sorted by estimated expected usage cost, allowing Ray on Golem to negotiate with the cheapest nodes first.
+All providers' offers are internally sorted by estimated cost, allowing Ray on Golem to negotiate and sign agreements with the cheapest nodes first.
 
-You might also use `max_expected_usage_cost` to unconditionally cut off providers with too big an expected usage cost (in GLMs).
+You may also use `max_expected_usage_cost` to unconditionally cut off providers with too high an expected usage cost (in GLMs).
 
 ```yaml
 provider:
