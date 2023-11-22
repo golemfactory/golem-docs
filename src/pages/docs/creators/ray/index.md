@@ -46,7 +46,7 @@ The beauty of the solution is that you can run the app locally, and when you are
 
 ## What do you need
 
-You only need to install Ray on Golem - by default, it also installs the Golem daemon and the Ray framework as dependencies.
+You only need to install Ray on Golem, as it also installs the Golem daemon and the Ray framework as dependencies.
 
 Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
 
