@@ -59,15 +59,13 @@ ray up golem-cluster.yaml --yes
 
 The onboarding link is also printed in case you have the mainnet funds (it won't cause `ray up` to fail in this case) - so you can always top up your wallet.
 
-The idea behind the onboarding is that when you first start Ray on Golem it generates a fresh (but empty) wallet for you. 
-This wallet is then used for both testnet and mainnet funds
-When you run on the testnet, Ray on Golem transparently gets the testnet funds for you from our testnet faucet.
+The onboarding process is a convenient and effortless way of providing your Ray on Golem node with funds allowing it to run on mainnet.
 
-The onboarding portal guides you through the creation of a web-browser wallet of your choice, getting funds there, and finally transferring GLMs and MATICs to the wallet used by Ray on Golem.
+Initially, your Ray on Golem node generates and later manages its own Ethereum wallet that is uses to perform transactions. This wallet starts empty and Ray on Golem is able to transparently obtain testnet tokens when you run it on testnet. 
 
-Of course, if you have a wallet you don't have to create it, if you have funds there, you don't have to get new ones. 
+To fill it with mainnet funds, the onboarding portal guides you through the creation of a separate, web-browser wallet, getting GLM and MATIC tokens there, and finally transferring them to the wallet used by Ray on Golem.
 
-The ultimate goal is to have funds inside Ray on Golem.
+Of course, if you already have your own Ethereum wallet with GLM and MATIC tokens, you don't have to get new ones. Just connect your own wallet and transfer enough of them to Ray on Golem. 
 
 ## Funds safety
 
