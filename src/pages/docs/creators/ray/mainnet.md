@@ -46,9 +46,7 @@ Note that the funds you spend on your Ray on Golem cluster don't go to Golem Fac
 
 ## Mainnet funds onboarding
 
-When your cluster yaml sports `network: "polygon"` your `ray up` attempts to run the cluster on the Golem mainnet.
-
-If you don't have the mainnet funds, it will fail and print a link to our onboarding portal.
+In case you try to start a mainnet cluster without sufficient funds, `ray up` will fail and print a link to our onboarding portal.
 
 ```bash
 ray up golem-cluster.yaml --yes
