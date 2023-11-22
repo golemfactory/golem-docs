@@ -14,7 +14,7 @@ At the same time, it provides a sufficient environment to see how everything wor
 As your application gets more complex and you need more power, you should move to the mainnet. There are more providers, and the machines they run on are more powerful. However, you have to pay to use them.
 
 There are a couple of considerations when entering the mainnet:
-- [Mainnet in the cluster yaml](#mainnet-in-the-cluster-yaml) - switching to the mainnet is as simple as changing on property in the cluster yaml (besides getting funds)
+- [Mainnet in the cluster yaml](#mainnet-in-the-cluster-yaml) - switching your Ray on Golem cluster to use the mainnet
 - [Payments](#mainnet-payments) - operating on the mainnet might be cheap, but you still need to pay the providers running your Ray on Golem cluster
 - [Funds onboarding](#mainnet-funds-onboarding) - when you don't have mainnet funds, Ray on Golem will guide you to get them
 - [Budget Control](#budget-control) - Ray on Golem provides a couple of mechanisms to let you control how much you spend
