@@ -30,7 +30,7 @@ Switching to the mainnet is as easy as changing the `provider.parameters.network
 - `network: "goerli"` stands for the testnet
 - `network: "polygon"` stands for the mainnet
 
-If you have funds this is the only change you are required to make to start your Ray on Golem cluster on the mainnet - the `ray up` will know what to do.
+That is the only change required to start your Ray on Golem cluster on the mainnet.
 
 If you don't have any funds, `ray up` will fail and direct you to the onboarding portal which will guide you to getting them.
 
