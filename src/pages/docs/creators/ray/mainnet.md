@@ -67,7 +67,7 @@ Of course, if you already have your own Ethereum wallet with GLM and MATIC token
 
 ## Funds safety
 
-When handling real funds it is generally a good idea to [back up your Ray on Golem wallet](/docs/providers/wallet/backup). 
+When handling real funds, it is generally a good idea to [back up your Ray on Golem wallet](/docs/providers/wallet/backup). 
 Note that Ray on Golem doesn't fully support the flows around this yet. Consider operating with low amounts of money for the time being.
 
 To proceed with the above instructions you will need to access the Golem node service `yagna`. 
