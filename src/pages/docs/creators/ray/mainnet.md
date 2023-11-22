@@ -65,7 +65,7 @@ To fill it with mainnet funds, the onboarding portal guides you through the crea
 
 Of course, if you already have your own Ethereum wallet with GLM and MATIC tokens, you don't have to get new ones. Just connect your own wallet and transfer enough of them to Ray on Golem. 
 
-## Funds safety
+### Funds safety
 
 When handling real funds, it is generally a good idea to [back up your Ray on Golem wallet](/docs/providers/wallet/backup). 
 Note that Ray on Golem doesn't directly support password-locked wallets yet. Therefore, we recommend operating with low amounts of funds for the time being.
