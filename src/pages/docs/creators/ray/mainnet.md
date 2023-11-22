@@ -11,7 +11,7 @@ The most common way of starting your adventure with Ray on Golem is by trying it
 The testnet nodes are not very powerful and there are not many of them. 
 At the same time, it provides a sufficient environment to see how everything works and to test your Ray applications on.
 
-When your application is getting more complex, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
+As your application gets more complex and you need more power, you should move to the mainnet. There are more providers, and the machines they run on are more powerful. However, you have to pay to use them.
 
 There are a couple of considerations when entering the mainnet:
 - [Mainnet in the cluster yaml](#mainnet-in-the-cluster-yaml) - switching to the mainnet is as simple as changing on property in the cluster yaml (besides getting funds)
