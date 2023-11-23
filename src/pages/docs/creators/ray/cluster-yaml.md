@@ -106,6 +106,15 @@ Supported tags are available on [Golem registry](https://registry.golem.network/
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 
+#### Accessing the Internet (outbound)
+
+The optional `outbound_urls` lists URL domains accessible from the Ray on Golem cluster.
+
+Ray on Golem accepts URLs prefixed with either `http://` or `https://`.
+
+tbc
+
+
 ## Budget control
 
 ### Spending hard limit
