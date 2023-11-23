@@ -75,8 +75,12 @@ initialization_commands: []
 
 ### Provider section
 
-The whole "provider" section describes many Golem node provider internals. 
-Some of these properties interact with how Ray on Golem works in general, so be careful with those you're unfamiliar with as changing them may render your cluster unusable.
+The whole "provider" section describes various Golem node provider internal parameters. 
+
+Some of these properties influence how Ray on Golem works in general, but we still encourage you to experiment with various settings. 
+The worst that will happen is that you'll need to start your cluster anew. 
+
+We're eager to hear your feedback on the understandability, usability, or interesting usage of those parameters (on the [`#Ray on Golem` discord channel](https://chat.golem.network/))
 
 #### Webserver port
 
