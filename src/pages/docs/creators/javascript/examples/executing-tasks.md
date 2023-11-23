@@ -23,15 +23,6 @@ In this article, the following examples are presented:
 
 Yagna service is installed and running with the `try_golem` app-key configured.
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
 ## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.

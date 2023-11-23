@@ -15,15 +15,6 @@ Golem images defines a remote environment where you execute your tasks inside. T
 
 Ensure you have the Yagna service installed and running, with `try_golem` as your configured app-key.
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS like OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js version 16.0.0 or a newer variant
-
-{% /alert %}
-
 ## Running the Examples
 
 Let's create a project folder, start a Node.js project, and add the `@golem-sdk/golem-js` library.

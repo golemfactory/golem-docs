@@ -18,15 +18,6 @@ We will go through the following steps:
 - Create a requestor script
 - Run the tasks in parallel and process the output
 
-{% alert level="info" %}
-
-This tutorial has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
 ## Prerequisites
 
 - Yagna service is installed and running with the `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
