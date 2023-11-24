@@ -6,19 +6,13 @@ As a Quickstart, we will perform a simple task: running a basic shell command on
 
 It should take just a few minutes to complete, and you will see the command output printed in your terminal.
 
-{% alert level="info" %}
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
 ## Installing and running Yagna
 
 Yagna is a service that communicates and performs operations on the Golem Network. Let's get started by installing it.
 
 ### Install Yagna
+
+Yagna runs on OS X 10.14+, Ubuntu 20.04+ or Windows.
 
 {% tabs %}
 {% tab label="Easy installation" %}
@@ -105,6 +99,8 @@ cd try_golem
 npm init
 npm install @golem-sdk/golem-js
 ```
+
+Please note: This application requires Node.js version 18.0.0 or higher.
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 

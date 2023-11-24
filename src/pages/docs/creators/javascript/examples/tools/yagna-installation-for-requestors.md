@@ -10,21 +10,13 @@ type: Instructions
 
 In this article, we'll show you how to install and configure Yagna in case you want to enable your applications to connect to the network.     
 
-{% alert level="info" %}
-
-**These instructions are designed for the environments:**
-
-* OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
-* Node.js version above 16.0.0
-
-{% /alert %}
-
 ## Installing and running Yagna 
 
 Yagna is a service that will let you communicate with the Golem Network and perform operations on it. Let's install it.
 
 #### Install Yagna
 
+Yagna runs on OS X 10.14+, Ubuntu 20.04+ or Windows.
 
 {% tabs %}
 {% tab label="Easy installation" %}    
