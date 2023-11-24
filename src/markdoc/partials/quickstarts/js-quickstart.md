@@ -100,7 +100,7 @@ npm init
 npm install @golem-sdk/golem-js
 ```
 
-Please not that minimum node version required is `18.0.0`.
+Please note: This application requires Node.js version 18.0.0 or higher.
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 
