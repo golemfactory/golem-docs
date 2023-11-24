@@ -27,4 +27,4 @@ type: "reference"
 
 #### Defined in
 
-[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/effec9a/src/package/package.ts#L7)
+[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/5c570c3/src/package/package.ts#L7)

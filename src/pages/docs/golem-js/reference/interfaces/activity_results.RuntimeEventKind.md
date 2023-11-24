@@ -24,7 +24,7 @@ type: "reference"
 
 #### Defined in
 
-[src/activity/results.ts:74](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L74)
+[src/activity/results.ts:74](https://github.com/golemfactory/golem-js/blob/5c570c3/src/activity/results.ts#L74)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:75](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L75)
+[src/activity/results.ts:75](https://github.com/golemfactory/golem-js/blob/5c570c3/src/activity/results.ts#L75)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:76](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L76)
+[src/activity/results.ts:76](https://github.com/golemfactory/golem-js/blob/5c570c3/src/activity/results.ts#L76)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:77](https://github.com/golemfactory/golem-js/blob/effec9a/src/activity/results.ts#L77)
+[src/activity/results.ts:77](https://github.com/golemfactory/golem-js/blob/5c570c3/src/activity/results.ts#L77)

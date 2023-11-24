@@ -23,7 +23,7 @@ type: "reference"
 
 #### Defined in
 
-[src/task/work.ts:41](https://github.com/golemfactory/golem-js/blob/effec9a/src/task/work.ts#L41)
+[src/task/work.ts:41](https://github.com/golemfactory/golem-js/blob/5c570c3/src/task/work.ts#L41)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/effec9a/src/task/work.ts#L42)
+[src/task/work.ts:42](https://github.com/golemfactory/golem-js/blob/5c570c3/src/task/work.ts#L42)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:43](https://github.com/golemfactory/golem-js/blob/effec9a/src/task/work.ts#L43)
+[src/task/work.ts:43](https://github.com/golemfactory/golem-js/blob/5c570c3/src/task/work.ts#L43)
