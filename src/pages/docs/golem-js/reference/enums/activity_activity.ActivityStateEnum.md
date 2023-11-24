@@ -1,7 +1,8 @@
 ---
-title: "Enum ActivityStateEnum - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Enum ActivityStateEnum within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Enum ActivityStateEnum
+pageTitle: Enum ActivityStateEnum - golem-js API Reference
+description: Explore the detailed API reference documentation for the Enum ActivityStateEnum within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Enumeration: ActivityStateEnum
 
@@ -26,7 +27,7 @@ type: "reference"
 
 #### Defined in
 
-[src/activity/activity.ts:12](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L12)
+[src/activity/activity.ts:12](https://github.com/golemfactory/golem-js/blob/8487362/src/activity/activity.ts#L12)
 
 ___
 
@@ -36,7 +37,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:13](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L13)
+[src/activity/activity.ts:13](https://github.com/golemfactory/golem-js/blob/8487362/src/activity/activity.ts#L13)
 
 ___
 
@@ -46,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L14)
+[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/8487362/src/activity/activity.ts#L14)
 
 ___
 
@@ -56,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:15](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L15)
+[src/activity/activity.ts:15](https://github.com/golemfactory/golem-js/blob/8487362/src/activity/activity.ts#L15)
 
 ___
 
@@ -66,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:16](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L16)
+[src/activity/activity.ts:16](https://github.com/golemfactory/golem-js/blob/8487362/src/activity/activity.ts#L16)
 
 ___
 
@@ -76,4 +77,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:17](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L17)
+[src/activity/activity.ts:17](https://github.com/golemfactory/golem-js/blob/8487362/src/activity/activity.ts#L17)

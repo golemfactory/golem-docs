@@ -1,7 +1,8 @@
 ---
-title: "Interface PackageDetails - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Interface PackageDetails within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Interface PackageDetails
+pageTitle: Interface PackageDetails - golem-js API Reference
+description: Explore the detailed API reference documentation for the Interface PackageDetails within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Interface: PackageDetails
 
@@ -27,7 +28,7 @@ type: "reference"
 
 #### Defined in
 
-[src/package/package.ts:38](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L38)
+[src/package/package.ts:38](https://github.com/golemfactory/golem-js/blob/8487362/src/package/package.ts#L38)
 
 ___
 
@@ -37,7 +38,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:39](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L39)
+[src/package/package.ts:39](https://github.com/golemfactory/golem-js/blob/8487362/src/package/package.ts#L39)
 
 ___
 
@@ -47,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:40](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L40)
+[src/package/package.ts:40](https://github.com/golemfactory/golem-js/blob/8487362/src/package/package.ts#L40)
 
 ___
 
@@ -57,7 +58,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:41](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L41)
+[src/package/package.ts:41](https://github.com/golemfactory/golem-js/blob/8487362/src/package/package.ts#L41)
 
 ___
 
@@ -67,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:42](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L42)
+[src/package/package.ts:42](https://github.com/golemfactory/golem-js/blob/8487362/src/package/package.ts#L42)
 
 ___
 
@@ -77,7 +78,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:43](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L43)
+[src/package/package.ts:43](https://github.com/golemfactory/golem-js/blob/8487362/src/package/package.ts#L43)
 
 ___
 
@@ -87,4 +88,4 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:44](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L44)
+[src/package/package.ts:44](https://github.com/golemfactory/golem-js/blob/8487362/src/package/package.ts#L44)

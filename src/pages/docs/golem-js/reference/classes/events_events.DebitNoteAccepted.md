@@ -1,7 +1,8 @@
 ---
-title: "Class DebitNoteAccepted - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Class DebitNoteAccepted within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Class DebitNoteAccepted
+pageTitle: Class DebitNoteAccepted - golem-js API Reference
+description: Explore the detailed API reference documentation for the Class DebitNoteAccepted within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Class: DebitNoteAccepted
 
@@ -51,7 +52,7 @@ type: "reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/8487362/src/events/events.ts#L28)
 
 ## Properties
 
@@ -74,7 +75,7 @@ type: "reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/8487362/src/events/events.ts#L16)
 
 ___
 
@@ -88,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/8487362/src/events/events.ts#L17)
 
 ___
 
@@ -102,4 +103,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/8487362/src/events/events.ts#L18)

@@ -1,7 +1,8 @@
 ---
-title: "Module activity/results - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module activity/results within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module activity/results
+pageTitle: Module activity/results - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module activity/results within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: activity/results
 

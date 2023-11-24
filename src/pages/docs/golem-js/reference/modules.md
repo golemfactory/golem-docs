@@ -1,7 +1,8 @@
 ---
-title: "Project JavaScript API reference - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Project JavaScript API reference within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Project JavaScript API reference
+pageTitle: Project JavaScript API reference - golem-js API Reference
+description: Explore the detailed API reference documentation for the Project JavaScript API reference within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # JavaScript API reference
 
@@ -14,6 +15,7 @@ type: "reference"
 - [agreement/service](modules/agreement_service)
 - [agreement/strategy](modules/agreement_strategy)
 - [events/events](modules/events_events)
+- [executor/events](modules/executor_events)
 - [executor/executor](modules/executor_executor)
 - [golem\_network/golem\_network](modules/golem_network_golem_network)
 - [job/job](modules/job_job)
@@ -40,6 +42,7 @@ type: "reference"
 - [storage/provider](modules/storage_provider)
 - [storage/ws-browser](modules/storage_ws_browser)
 - [task/batch](modules/task_batch)
+- [task/process](modules/task_process)
 - [task/service](modules/task_service)
 - [task/task](modules/task_task)
 - [task/work](modules/task_work)

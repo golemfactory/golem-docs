@@ -1,7 +1,8 @@
 ---
-title: "Module network/service - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module network/service within the golem-js SDK for the Golem Network."
-type: "reference"
+title: Module network/service
+pageTitle: Module network/service - golem-js API Reference
+description: Explore the detailed API reference documentation for the Module network/service within the golem-js SDK for the Golem Network.
+type: JS API Reference
 ---
 # Module: network/service
 
@@ -19,4 +20,4 @@ type: "reference"
 
 #### Defined in
 
-[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/network/service.ts#L6)
+[src/network/service.ts:6](https://github.com/golemfactory/golem-js/blob/8487362/src/network/service.ts#L6)
