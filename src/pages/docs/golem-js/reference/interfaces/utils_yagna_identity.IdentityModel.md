@@ -1,7 +1,8 @@
 ---
-title: "Interface IdentityModel - golem-js API Reference"
+title: "Interface IdentityModel"
+pageTitle: "Interface IdentityModel - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Interface IdentityModel within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Interface: IdentityModel
 
@@ -23,7 +24,7 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:6](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/yagna/identity.ts#L6)
+[src/utils/yagna/identity.ts:6](https://github.com/golemfactory/golem-js/blob/69e0610/src/utils/yagna/identity.ts#L6)
 
 ___
 
@@ -33,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:7](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/yagna/identity.ts#L7)
+[src/utils/yagna/identity.ts:7](https://github.com/golemfactory/golem-js/blob/69e0610/src/utils/yagna/identity.ts#L7)
 
 ___
 
@@ -43,4 +44,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:8](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/yagna/identity.ts#L8)
+[src/utils/yagna/identity.ts:8](https://github.com/golemfactory/golem-js/blob/69e0610/src/utils/yagna/identity.ts#L8)

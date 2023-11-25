@@ -1,7 +1,8 @@
 ---
-title: "Module payment/service - golem-js API Reference"
+title: "Module payment/service"
+pageTitle: "Module payment/service - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module payment/service within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: payment/service
 
@@ -38,7 +39,7 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/service.ts:24](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/service.ts#L24)
+[src/payment/service.ts:24](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/service.ts#L24)
 
 ___
 
@@ -62,4 +63,4 @@ ___
 
 #### Defined in
 
-[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/service.ts#L25)
+[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/service.ts#L25)

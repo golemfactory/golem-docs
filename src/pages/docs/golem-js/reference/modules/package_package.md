@@ -1,7 +1,8 @@
 ---
-title: "Module package/package - golem-js API Reference"
+title: "Module package/package"
+pageTitle: "Module package/package - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module package/package within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: package/package
 
@@ -27,4 +28,4 @@ type: "reference"
 
 #### Defined in
 
-[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L7)
+[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/69e0610/src/package/package.ts#L7)

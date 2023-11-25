@@ -1,7 +1,7 @@
 ---
 title: golem-js API reference overview
 description: Dive into the content overview of the Golem-JS API reference.
-type: reference
+type: JS API Reference
 ---
 
 * Classes
@@ -57,6 +57,7 @@ type: reference
 	* [NullStorageProvider](classes/storage_null.NullStorageProvider)
 	* [WebSocketBrowserStorageProvider](classes/storage_ws_browser.WebSocketBrowserStorageProvider)
 	* [Batch](classes/task_batch.Batch)
+	* [RemoteProcess](classes/task_process.RemoteProcess)
 	* [Task](classes/task_task.Task)
 	* [WorkContext](classes/task_work.WorkContext)
 	* [RequestorApi](classes/utils_yagna_gsb.RequestorApi)
@@ -74,6 +75,7 @@ type: reference
 	* [StreamingBatchEvent](interfaces/activity_results.StreamingBatchEvent)
 	* [AgreementDTO](interfaces/agreement_service.AgreementDTO)
 	* [AgreementServiceOptions](interfaces/agreement_service.AgreementServiceOptions)
+	* [TaskExecutorEventsDict](interfaces/executor_events.TaskExecutorEventsDict)
 	* [GolemNetworkConfig](interfaces/golem_network_golem_network.GolemNetworkConfig)
 	* [JobStorage](interfaces/job_storage.JobStorage)
 	* [DemandDetails](interfaces/market_demand.DemandDetails)
@@ -99,6 +101,7 @@ type: reference
 	* [agreement/service](modules/agreement_service)
 	* [agreement/strategy](modules/agreement_strategy)
 	* [events/events](modules/events_events)
+	* [executor/events](modules/executor_events)
 	* [executor/executor](modules/executor_executor)
 	* [golem_network/golem_network](modules/golem_network_golem_network)
 	* [job/job](modules/job_job)
@@ -125,6 +128,7 @@ type: reference
 	* [storage/provider](modules/storage_provider)
 	* [storage/ws-browser](modules/storage_ws_browser)
 	* [task/batch](modules/task_batch)
+	* [task/process](modules/task_process)
 	* [task/service](modules/task_service)
 	* [task/task](modules/task_task)
 	* [task/work](modules/task_work)

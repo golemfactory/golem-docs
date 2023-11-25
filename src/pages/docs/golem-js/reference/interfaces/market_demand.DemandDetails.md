@@ -1,7 +1,8 @@
 ---
-title: "Interface DemandDetails - golem-js API Reference"
+title: "Interface DemandDetails"
+pageTitle: "Interface DemandDetails - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Interface DemandDetails within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Interface: DemandDetails
 
@@ -22,7 +23,7 @@ type: "reference"
 
 #### Defined in
 
-[src/market/demand.ts:14](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/demand.ts#L14)
+[src/market/demand.ts:14](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/demand.ts#L14)
 
 ___
 
@@ -32,4 +33,4 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/demand.ts#L15)
+[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/demand.ts#L15)

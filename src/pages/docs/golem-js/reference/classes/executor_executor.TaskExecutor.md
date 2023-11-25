@@ -1,7 +1,8 @@
 ---
-title: "Class TaskExecutor - golem-js API Reference"
+title: "Class TaskExecutor"
+pageTitle: "Class TaskExecutor - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class TaskExecutor within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: TaskExecutor
 
@@ -11,19 +12,39 @@ A high-level module for defining and executing tasks in the golem network
 
 ## Table of contents
 
+### Properties
+
+- [events](executor_executor.TaskExecutor#events)
+
 ### Methods
 
 - [create](executor_executor.TaskExecutor#create)
 - [init](executor_executor.TaskExecutor#init)
 - [end](executor_executor.TaskExecutor#end)
+- [shutdown](executor_executor.TaskExecutor#shutdown)
 - [getStats](executor_executor.TaskExecutor#getstats)
 - [beforeEach](executor_executor.TaskExecutor#beforeeach)
+- [onActivityReady](executor_executor.TaskExecutor#onactivityready)
 - [run](executor_executor.TaskExecutor#run)
-- [map](executor_executor.TaskExecutor#map)
-- [forEach](executor_executor.TaskExecutor#foreach)
 - [createJob](executor_executor.TaskExecutor#createjob)
 - [getJobById](executor_executor.TaskExecutor#getjobbyid)
 - [cancel](executor_executor.TaskExecutor#cancel)
+
+## Properties
+
+### events
+
+• `Readonly` **events**: `EventEmitter`\<[`TaskExecutorEventsDict`](../interfaces/executor_events.TaskExecutorEventsDict), `any`\>
+
+EventEmitter (EventEmitter3) instance emitting TaskExecutor events.
+
+**`See`**
+
+TaskExecutorEventsDict for available events.
+
+#### Defined in
+
+[src/executor/executor.ts:109](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L109)
 
 ## Methods
 
@@ -78,7 +99,7 @@ const executor = await TaskExecutor.create({
 
 #### Defined in
 
-[src/executor/executor.ts:165](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L165)
+[src/executor/executor.ts:172](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L172)
 
 ___
 
@@ -98,7 +119,7 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[src/executor/executor.ts:216](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L216)
+[src/executor/executor.ts:223](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L223)
 
 ___
 
@@ -114,9 +135,35 @@ You can call this method multiple times, it will resolve only once the executor 
 
 `Promise`\<`void`\>
 
+**`Deprecated`**
+
+Use TaskExecutor.shutdown() instead.
+
 #### Defined in
 
-[src/executor/executor.ts:268](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L268)
+[src/executor/executor.ts:278](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L278)
+
+___
+
+### shutdown
+
+▸ **shutdown**(): `Promise`\<`void`\>
+
+Stop all executor services and shut down executor instance.
+
+You can call this method multiple times, it will resolve only once the executor is shutdown.
+
+When shutdown() is initially called, a beforeEnd event is emitted.
+
+Once the executor is fully stopped, an end event is emitted.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[src/executor/executor.ts:291](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L291)
 
 ___
 
@@ -134,7 +181,7 @@ array
 
 #### Defined in
 
-[src/executor/executor.ts:300](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L300)
+[src/executor/executor.ts:328](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L328)
 
 ___
 
@@ -142,17 +189,21 @@ ___
 
 ▸ **beforeEach**(`worker`): `void`
 
-Define worker function that will be runs before every each computation Task, within the same activity.
-
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker) | worker function - task |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`unknown`\> | worker function - task |
 
 #### Returns
 
 `void`
+
+**`Deprecated`**
+
+Use [TaskExecutor.onActivityReady](executor_executor.TaskExecutor#onactivityready) instead.
+
+Define worker function that will be runs before every each computation Task, within the same activity.
 
 **`Example`**
 
@@ -172,32 +223,72 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 #### Defined in
 
-[src/executor/executor.ts:323](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L323)
+[src/executor/executor.ts:354](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L354)
 
 ___
 
-### run
+### onActivityReady
 
-▸ **run**\<`OutputType`\>(`worker`, `options?`): `Promise`\<`undefined` \| `OutputType`\>
+▸ **onActivityReady**(`worker`): `void`
 
-Run task - allows to execute a single worker function on the Golem network with a single provider.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `OutputType` | [`Result`](activity_results.Result)\<`any`\> |
+Registers a worker function that will be run when an activity is ready.
+This is the perfect place to run setup functions that need to be run only once per
+activity, for example uploading files that will be used by all tasks in the activity.
+This function can be called multiple times, each worker will be run in the order
+they were registered.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`undefined`, `OutputType`\> | function that run task |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`unknown`\> | worker function that will be run when an activity is ready |
+
+#### Returns
+
+`void`
+
+**`Example`**
+
+```ts
+const uploadFile1 = async (ctx) => ctx.uploadFile("./file1.txt", "/file1.txt");
+const uploadFile2 = async (ctx) => ctx.uploadFile("./file2.txt", "/file2.txt");
+
+executor.onActivityReady(uploadFile1);
+executor.onActivityReady(uploadFile2);
+
+await executor.run(async (ctx) => {
+ await ctx.run("cat /file1.txt /file2.txt");
+});
+```
+
+#### Defined in
+
+[src/executor/executor.ts:379](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L379)
+
+___
+
+### run
+
+▸ **run**\<`OutputType`\>(`worker`, `options?`): `Promise`\<`OutputType`\>
+
+Run task - allows to execute a single worker function on the Golem network with a single provider.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `OutputType` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`OutputType`\> | function that run task |
 | `options?` | [`TaskOptions`](../modules/task_task#taskoptions) | task options |
 
 #### Returns
 
-`Promise`\<`undefined` \| `OutputType`\>
+`Promise`\<`OutputType`\>
 
 result of task computation
 
@@ -209,107 +300,27 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 #### Defined in
 
-[src/executor/executor.ts:338](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L338)
-
-___
-
-### map
-
-▸ **map**\<`InputType`, `OutputType`\>(`data`, `worker`): `AsyncIterable`\<`undefined` \| `OutputType`\>
-
-Map iterable data to worker function and return computed Task result as AsyncIterable
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `InputType` |
-| `OutputType` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `data` | `Iterable`\<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | worker function |
-
-#### Returns
-
-`AsyncIterable`\<`undefined` \| `OutputType`\>
-
-AsyncIterable with results of computed tasks
-
-**`Example`**
-
-```typescript
-const data = [1, 2, 3, 4, 5];
-const results = executor.map(data, (ctx, item) => ctx.run(`echo "${item}"`));
-for await (const result of results) console.log(result.stdout);
-```
-
-#### Defined in
-
-[src/executor/executor.ts:358](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L358)
-
-___
-
-### forEach
-
-▸ **forEach**\<`InputType`, `OutputType`\>(`data`, `worker`): `Promise`\<`void`\>
-
-Iterates over given data and execute task using worker function
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `InputType` |
-| `OutputType` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `data` | `Iterable`\<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | Worker function |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-**`Example`**
-
-```typescript
-const data = [1, 2, 3, 4, 5];
-await executor.forEach(data, async (ctx, item) => {
-    console.log((await ctx.run(`echo "${item}"`)).stdout);
-});
-```
-
-#### Defined in
-
-[src/executor/executor.ts:406](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L406)
+[src/executor/executor.ts:394](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L394)
 
 ___
 
 ### createJob
 
-▸ **createJob**\<`InputType`, `OutputType`\>(`worker`): `Promise`\<[`Job`](job_job.Job)\<`OutputType`\>\>
+▸ **createJob**\<`OutputType`\>(`worker`): `Promise`\<[`Job`](job_job.Job)\<`OutputType`\>\>
 
 Start a new job without waiting for the result. The job can be retrieved later using [TaskExecutor.getJobById](executor_executor.TaskExecutor#getjobbyid). The job's status is stored in the [JobStorage](../interfaces/job_storage.JobStorage) provided in the [ExecutorOptions](../modules/executor_executor#executoroptions) (in-memory by default). For distributed environments, it is recommended to use a form of storage that is accessible from all nodes (e.g. a database).
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `InputType` | `unknown` |
-| `OutputType` | `unknown` |
+| Name |
+| :------ |
+| `OutputType` |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | Worker function to be executed |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`OutputType`\> | Worker function to be executed |
 
 #### Returns
 
@@ -335,7 +346,7 @@ const error = await job.fetchError();
 
 #### Defined in
 
-[src/executor/executor.ts:468](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L468)
+[src/executor/executor.ts:449](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L449)
 
 ___
 
@@ -359,7 +370,7 @@ Job object.
 
 #### Defined in
 
-[src/executor/executor.ts:493](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L493)
+[src/executor/executor.ts:473](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L473)
 
 ___
 
@@ -379,4 +390,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:518](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/executor/executor.ts#L518)
+[src/executor/executor.ts:496](https://github.com/golemfactory/golem-js/blob/69e0610/src/executor/executor.ts#L496)

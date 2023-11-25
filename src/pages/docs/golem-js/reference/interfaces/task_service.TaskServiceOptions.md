@@ -1,7 +1,8 @@
 ---
-title: "Interface TaskServiceOptions - golem-js API Reference"
+title: "Interface TaskServiceOptions"
+pageTitle: "Interface TaskServiceOptions - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Interface TaskServiceOptions within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Interface: TaskServiceOptions
 
@@ -26,7 +27,7 @@ type: "reference"
 - [storageProvider](task_service.TaskServiceOptions#storageprovider)
 - [activityRequestTimeout](task_service.TaskServiceOptions#activityrequesttimeout)
 - [activityExecuteTimeout](task_service.TaskServiceOptions#activityexecutetimeout)
-- [activityExeBatchResultsFetchInterval](task_service.TaskServiceOptions#activityexebatchresultsfetchinterval)
+- [activityExeBatchResultPollIntervalSeconds](task_service.TaskServiceOptions#activityexebatchresultpollintervalseconds)
 - [eventTarget](task_service.TaskServiceOptions#eventtarget)
 
 ## Properties
@@ -39,7 +40,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 #### Defined in
 
-[src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/service.ts#L15)
+[src/task/service.ts:15](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/service.ts#L15)
 
 ___
 
@@ -49,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/service.ts#L16)
+[src/task/service.ts:16](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/service.ts#L16)
 
 ___
 
@@ -59,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/service.ts#L17)
+[src/task/service.ts:17](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/service.ts#L17)
 
 ___
 
@@ -69,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/service.ts#L18)
+[src/task/service.ts:18](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/service.ts#L18)
 
 ___
 
@@ -79,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/service.ts#L19)
+[src/task/service.ts:19](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/service.ts#L19)
 
 ___
 
@@ -95,7 +96,7 @@ Logger module
 
 #### Defined in
 
-[src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/service.ts#L20)
+[src/task/service.ts:20](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/service.ts#L20)
 
 ___
 
@@ -105,7 +106,7 @@ ___
 
 #### Defined in
 
-[src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/service.ts#L21)
+[src/task/service.ts:21](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/service.ts#L21)
 
 ___
 
@@ -121,7 +122,7 @@ timeout for sending and creating batch
 
 #### Defined in
 
-[src/activity/activity.ts:26](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L26)
+[src/activity/activity.ts:26](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/activity.ts#L26)
 
 ___
 
@@ -137,23 +138,23 @@ timeout for executing batch
 
 #### Defined in
 
-[src/activity/activity.ts:28](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L28)
+[src/activity/activity.ts:28](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/activity.ts#L28)
 
 ___
 
-### activityExeBatchResultsFetchInterval
+### activityExeBatchResultPollIntervalSeconds
 
-• `Optional` **activityExeBatchResultsFetchInterval**: `number`
+• `Optional` **activityExeBatchResultPollIntervalSeconds**: `number`
 
 interval for fetching batch results while polling
 
 #### Inherited from
 
-[ActivityOptions](activity_activity.ActivityOptions).[activityExeBatchResultsFetchInterval](activity_activity.ActivityOptions#activityexebatchresultsfetchinterval)
+[ActivityOptions](activity_activity.ActivityOptions).[activityExeBatchResultPollIntervalSeconds](activity_activity.ActivityOptions#activityexebatchresultpollintervalseconds)
 
 #### Defined in
 
-[src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L30)
+[src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/activity.ts#L30)
 
 ___
 
@@ -169,4 +170,4 @@ Event Bus implements EventTarget
 
 #### Defined in
 
-[src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/activity.ts#L34)
+[src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/activity.ts#L34)

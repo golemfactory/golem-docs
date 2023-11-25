@@ -1,7 +1,8 @@
 ---
-title: "Module utils/yagna/gsb - golem-js API Reference"
+title: "Module utils/yagna/gsb"
+pageTitle: "Module utils/yagna/gsb - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module utils/yagna/gsb within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: utils/yagna/gsb
 
@@ -30,7 +31,7 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/yagna/gsb.ts#L5)
+[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/69e0610/src/utils/yagna/gsb.ts#L5)
 
 ___
 
@@ -47,4 +48,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/utils/yagna/gsb.ts#L9)
+[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/69e0610/src/utils/yagna/gsb.ts#L9)

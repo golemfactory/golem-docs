@@ -1,7 +1,8 @@
 ---
-title: "Module market/strategy - golem-js API Reference"
+title: "Module market/strategy"
+pageTitle: "Module market/strategy - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module market/strategy within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: market/strategy
 
@@ -38,7 +39,7 @@ type: "reference"
 
 #### Defined in
 
-[src/market/strategy.ts:30](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L30)
+[src/market/strategy.ts:30](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L30)
 
 ## Functions
 
@@ -60,7 +61,7 @@ Default Proposal filter that accept all proposal coming from the market
 
 #### Defined in
 
-[src/market/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L4)
+[src/market/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L4)
 
 ___
 
@@ -94,7 +95,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 #### Defined in
 
-[src/market/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L7)
+[src/market/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L7)
 
 ___
 
@@ -128,7 +129,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 #### Defined in
 
-[src/market/strategy.ts:11](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L11)
+[src/market/strategy.ts:11](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L11)
 
 ___
 
@@ -162,7 +163,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 #### Defined in
 
-[src/market/strategy.ts:15](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L15)
+[src/market/strategy.ts:15](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L15)
 
 ___
 
@@ -196,7 +197,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 #### Defined in
 
-[src/market/strategy.ts:19](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L19)
+[src/market/strategy.ts:19](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L19)
 
 ___
 
@@ -230,7 +231,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 #### Defined in
 
-[src/market/strategy.ts:23](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L23)
+[src/market/strategy.ts:23](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L23)
 
 ___
 
@@ -264,7 +265,7 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 #### Defined in
 
-[src/market/strategy.ts:27](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L27)
+[src/market/strategy.ts:27](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L27)
 
 ___
 
@@ -298,4 +299,4 @@ Proposal filter only allowing offers that do not exceed the defined usage
 
 #### Defined in
 
-[src/market/strategy.ts:43](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/market/strategy.ts#L43)
+[src/market/strategy.ts:43](https://github.com/golemfactory/golem-js/blob/69e0610/src/market/strategy.ts#L43)

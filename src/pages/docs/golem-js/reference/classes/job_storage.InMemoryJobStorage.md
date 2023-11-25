@@ -1,7 +1,8 @@
 ---
-title: "Class InMemoryJobStorage - golem-js API Reference"
+title: "Class InMemoryJobStorage"
+pageTitle: "Class InMemoryJobStorage - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class InMemoryJobStorage within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: InMemoryJobStorage
 
@@ -57,7 +58,7 @@ type: "reference"
 
 #### Defined in
 
-[src/job/storage.ts:17](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/job/storage.ts#L17)
+[src/job/storage.ts:17](https://github.com/golemfactory/golem-js/blob/69e0610/src/job/storage.ts#L17)
 
 ___
 
@@ -81,4 +82,4 @@ ___
 
 #### Defined in
 
-[src/job/storage.ts:21](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/job/storage.ts#L21)
+[src/job/storage.ts:21](https://github.com/golemfactory/golem-js/blob/69e0610/src/job/storage.ts#L21)

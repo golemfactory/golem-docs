@@ -1,7 +1,8 @@
 ---
-title: "Interface StreamingBatchEvent - golem-js API Reference"
+title: "Interface StreamingBatchEvent"
+pageTitle: "Interface StreamingBatchEvent - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Interface StreamingBatchEvent within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Interface: StreamingBatchEvent
 
@@ -24,7 +25,7 @@ type: "reference"
 
 #### Defined in
 
-[src/activity/results.ts:67](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/results.ts#L67)
+[src/activity/results.ts:67](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/results.ts#L67)
 
 ___
 
@@ -34,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:68](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/results.ts#L68)
+[src/activity/results.ts:68](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/results.ts#L68)
 
 ___
 
@@ -44,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:69](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/results.ts#L69)
+[src/activity/results.ts:69](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/results.ts#L69)
 
 ___
 
@@ -54,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:70](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/activity/results.ts#L70)
+[src/activity/results.ts:70](https://github.com/golemfactory/golem-js/blob/69e0610/src/activity/results.ts#L70)
