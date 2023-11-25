@@ -41,16 +41,17 @@ Given these, you can either:
 
 {% troubleshooting %}
 
-## Lack of a complete cleanup on shutdown
+## Starting over with a clean slate 
 
 {% problem /%}
 
-It may happen that some of Ray on Golem's components are still up after the successful completion of `ray down`.
-While it's usually not a problem in itself, you might wish to start with a clean slate on consecutive `ray up` runs.
+It may happen that something goes wrong and you might wish to start over with a clean slate. 
 
 {% solution %}
 
-To perform a cleanup, let's first check if there are any orphaned components indeed:
+The first thing to do is `ray down` - it should be enough to clear the situation, sadly it isn't always the case. 
+
+Let's first check if there are any orphaned components:
 ```bash
 ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
@@ -63,7 +64,10 @@ It produces an output like this:
 
 The above shows `ray-on-golem` webserver and the `yagna` daemon are running.
 
-The surest way to stop them is to kill them (using the PID numbers as shown in the first column):
+Note that Ray on Golem leaves `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you decide to start up your cluster again the nodes are found quicker. 
+With that in mind, we recommend killing only `ray-on-golem` and leaving `yagna` running. 
+
+The surest way to stop these services is to kill them (using the PID numbers as shown in the first column):
 ```bash
 kill -9 71257 71258
 ```
