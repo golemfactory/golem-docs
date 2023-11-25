@@ -31,6 +31,11 @@ ray exec golem-cluster.yaml 'ray status'
 todo
 ```
 
+Ray dashboard visualises the nodes and what happens on them. 
+
+Run `ray dashboard golem-cluster.yaml` to forward your cluster's dashboard to [http://localhost:8265](http://localhost:8265).
+
+For an in debt description of the dashboard's amazing secrets check out the [Ray docs](https://docs.ray.io/en/latest/ray-observability/getting-started.html).
 
 {% /solution %}
 {% feedback identifier="what-is-going-on-with-my-cluster" /%}
