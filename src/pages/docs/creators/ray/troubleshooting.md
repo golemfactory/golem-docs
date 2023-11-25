@@ -10,6 +10,35 @@ type: troubleshooting
 
 {% troubleshooting %}
 
+## What is going on with my cluster - status and dashboard 
+ 
+
+{% problem /%}
+
+Often you will find yourself wondering "How is my cluster doing?"
+
+{% solution %}
+
+Ray offers two tools to inspect the cluster state: the status and the dashboard.
+
+Ray status shows information about nodes constituting the cluster, the total resources of the cluster and their current usage.
+
+The `ray status` command needs to be executed on the head node:
+```bash
+ray exec golem-cluster.yaml 'ray status'
+```
+```
+todo
+```
+
+
+{% /solution %}
+{% feedback identifier="what-is-going-on-with-my-cluster" /%}
+{% /troubleshooting %}
+
+
+{% troubleshooting %}
+
 ## Ray on Golem's log files
  
 {% problem /%}
@@ -201,27 +230,6 @@ This informs Ray that everything after the double dash is not to be interpreted,
 {% /solution %}
 {% feedback identifier="ray-passing-arguments-to-your-ray-script-fails" /%}
 {% /troubleshooting %}
-
-
-<!--
-{% troubleshooting %}
-
-## Second `ray up` doesn't work 
- 
-
-{% problem /%}
-
-Description
-
-{% solution %}
-
-Solution
-
-{% /solution %}
-{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
-{% /troubleshooting %}
--->
-
 
 <!--
 {% troubleshooting %}
