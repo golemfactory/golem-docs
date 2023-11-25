@@ -1,7 +1,8 @@
 ---
-title: "Module task/task - golem-js API Reference"
+title: "Module task/task"
+pageTitle: "Module task/task - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module task/task within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: task/task
 
@@ -31,7 +32,8 @@ type: "reference"
 | :------ | :------ | :------ |
 | `maxRetries?` | `number` | maximum number of retries if task failed due to provider reason, default = 5 |
 | `timeout?` | `number` | timeout in ms for task execution, including retries, default = 300_000 (5min) |
+| `activityReadySetupFunctions?` | [`Worker`](task_work#worker)\<`unknown`\>[] | array of setup functions to run on each activity |
 
 #### Defined in
 
-[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/task/task.ts#L12)
+[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/69e0610/src/task/task.ts#L12)

@@ -1,7 +1,8 @@
 ---
-title: "Interface BasePaymentOptions - golem-js API Reference"
+title: "Interface BasePaymentOptions"
+pageTitle: "Interface BasePaymentOptions - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Interface BasePaymentOptions within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Interface: BasePaymentOptions
 
@@ -35,7 +36,7 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/config.ts#L23)
+[src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/config.ts#L23)
 
 ___
 
@@ -45,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/config.ts#L24)
+[src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/config.ts#L24)
 
 ___
 
@@ -62,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/config.ts#L25)
+[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/config.ts#L25)
 
 ___
 
@@ -72,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/config.ts#L26)
+[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/config.ts#L26)
 
 ___
 
@@ -82,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/config.ts#L27)
+[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/config.ts#L27)
 
 ___
 
@@ -92,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/config.ts#L28)
+[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/config.ts#L28)
 
 ___
 
@@ -102,4 +103,4 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/payment/config.ts#L29)
+[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/69e0610/src/payment/config.ts#L29)

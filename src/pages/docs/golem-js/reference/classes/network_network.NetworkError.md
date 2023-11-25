@@ -1,7 +1,8 @@
 ---
-title: "Class NetworkError - golem-js API Reference"
+title: "Class NetworkError"
+pageTitle: "Class NetworkError - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class NetworkError within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: NetworkError
 

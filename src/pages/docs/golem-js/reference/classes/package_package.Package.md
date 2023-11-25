@@ -1,7 +1,8 @@
 ---
-title: "Class Package - golem-js API Reference"
+title: "Class Package"
+pageTitle: "Class Package - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class Package within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: Package
 
@@ -34,7 +35,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:137](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L137)
+[src/package/package.ts:137](https://github.com/golemfactory/golem-js/blob/69e0610/src/package/package.ts#L137)
 
 ## Methods
 
@@ -54,7 +55,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:57](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L57)
+[src/package/package.ts:57](https://github.com/golemfactory/golem-js/blob/69e0610/src/package/package.ts#L57)
 
 ___
 
@@ -74,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:63](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L63)
+[src/package/package.ts:63](https://github.com/golemfactory/golem-js/blob/69e0610/src/package/package.ts#L63)
 
 ___
 
@@ -94,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:78](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L78)
+[src/package/package.ts:78](https://github.com/golemfactory/golem-js/blob/69e0610/src/package/package.ts#L78)
 
 ___
 
@@ -108,4 +109,4 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:82](https://github.com/golemfactory/golem-js/blob/8f6d57f/src/package/package.ts#L82)
+[src/package/package.ts:82](https://github.com/golemfactory/golem-js/blob/69e0610/src/package/package.ts#L82)

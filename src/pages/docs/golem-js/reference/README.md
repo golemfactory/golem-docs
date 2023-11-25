@@ -1,7 +1,8 @@
 ---
-title: "Project JavaScript API reference - golem-js API Reference"
+title: "Project JavaScript API reference"
+pageTitle: "Project JavaScript API reference - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Project JavaScript API reference within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Golem JavaScript API
 
@@ -90,7 +91,7 @@ import { TaskExecutor } from "@golem-sdk/golem-js";
 (async function main() {
   const executor = await TaskExecutor.create("9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae");
   await executor.run(async (ctx) => console.log(await ctx.run("echo 'Hello World'")).stdout);
-  await executor.end();
+  await executor.shutdown();
 })();
 ```
 
