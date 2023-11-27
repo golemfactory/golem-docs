@@ -29,7 +29,7 @@ Yagna is a service that will let you communicate with the Golem Network and perf
 #### Install Yagna
 
 {% tabs %}
-{% tab label="Easy installation" %}
+{% tab label="Linux/Mac" %}
 
 On Linux/ MacOS you can install it using our helper script like this:
 
@@ -42,7 +42,7 @@ You might be asked to modify your PATH afterward.
 {% /tab %}
 {% tab label="Windows Manual installation" %}
 
-Alternatively, if you can't install it easily, you can do it manually in the following way:
+There's no easy installer for Windows, thus you must install it manually yourself using the instructions below.
 
 1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
 2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.

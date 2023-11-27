@@ -21,7 +21,7 @@ Yagna is a service that communicates and performs operations on the Golem Networ
 ### Install Yagna
 
 {% tabs %}
-{% tab label="Easy installation" %}
+{% tab label="Linux/Mac" %}
 
 On Linux/ MacOS, you can install it using our installation script like this:
 
@@ -31,7 +31,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 You might be asked to modify your PATH afterward.
 {% /tab %}
-{% tab label="Windows Manual installation" %}
+{% tab label="Windows" %}
 
 Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
 
