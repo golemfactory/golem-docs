@@ -42,7 +42,7 @@ export const CustomError = ({ errorCode, title, description }) => {
             <p className="text-base font-semibold leading-8 text-primary dark:text-[#3961fb]">
               {errorCode}
             </p>
-            <h1 className="sm:text-5xl text-2xl mt-4 font-bold tracking-tight dark:text-white xl:text-3xl">
+            <h1 className="sm:text-5xl mt-4 text-2xl font-bold tracking-tight dark:text-white">
               {title}
             </h1>
             <p className="mt-4 text-base text-gray-600 dark:text-white/70  sm:mt-6">
