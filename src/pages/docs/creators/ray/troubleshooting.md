@@ -28,12 +28,37 @@ The `ray status` command needs to be executed on the head node:
 ray exec golem-cluster.yaml 'ray status'
 ```
 ```
-todo
+Ray On Golem webserver
+  Not starting webserver, as it's already running
+Fetched IP: 192.168.0.3
+======== Autoscaler status: 2023-11-28 08:09:48.391906 ========
+Node status
+---------------------------------------------------------------
+Healthy:
+ 1 ray.head.default
+ 1 ray.worker.default
+Pending:
+ ray.worker.default, 5 launching
+Recent failures:
+ (no failures)
+
+Resources
+---------------------------------------------------------------
+Usage:
+ 2.0/2.0 CPU
+ 0B/5.34GiB memory
+ 0B/2.61GiB object_store_memory
+
+Demands:
+ {'CPU': 1.0}: 385+ pending tasks/actors
+Shared connection to 192.168.0.3 closed.
+
 ```
 
 The Ray dashboard visualizes the nodes and what happens to them. 
 
 Run `ray dashboard golem-cluster.yaml` to forward your cluster's dashboard to [http://localhost:8265](http://localhost:8265).
+Keep it on to keep the tunnel active.
 
 For an in-debt description of the dashboard's amazing secrets check out the [Ray docs](https://docs.ray.io/en/latest/ray-observability/getting-started.html).
 
@@ -235,6 +260,33 @@ This informs Ray that everything after the double dash is not to be interpreted,
 {% /solution %}
 {% feedback identifier="ray-passing-arguments-to-your-ray-script-fails" /%}
 {% /troubleshooting %}
+
+
+{% troubleshooting %}
+
+## Head node not found
+
+{% problem /%}
+
+Sometimes, you might get `RuntimeError: Head node of cluster (golem-cluster) not found!` error message when attempting to run a ray cli command.
+
+{% solution %}
+
+This means, that you are trying to run a command that requires a cluster to be up (like `ray submit`), but the cluster is not alive.
+
+The simplest reason might be that you didn't successfully run `ray up`.
+Checkout [the logs](/docs/creators/ray/troubleshooting#ray-on-golem-s-log-files) to see what happened.
+
+Another explanation might be that the cluster was running, but it stopped - please share the logs with us to help us prevent this from happening in the future.
+
+If you see nothing interesting in the logs, you might want to [start over](/docs/creators/ray/troubleshooting#starting-over-with-a-clean-slate).
+
+Feel free to reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
+
+{% /solution %}
+{% feedback identifier="head-node-not-found" /%}
+{% /troubleshooting %}
+
 
 <!--
 {% troubleshooting %}
