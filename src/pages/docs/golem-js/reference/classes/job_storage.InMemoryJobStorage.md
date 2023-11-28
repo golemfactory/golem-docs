@@ -58,7 +58,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/job/storage.ts:17](https://github.com/golemfactory/golem-js/blob/69e0610/src/job/storage.ts#L17)
+[src/job/storage.ts:17](https://github.com/golemfactory/golem-js/blob/627e370/src/job/storage.ts#L17)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[src/job/storage.ts:21](https://github.com/golemfactory/golem-js/blob/69e0610/src/job/storage.ts#L21)
+[src/job/storage.ts:21](https://github.com/golemfactory/golem-js/blob/627e370/src/job/storage.ts#L21)
