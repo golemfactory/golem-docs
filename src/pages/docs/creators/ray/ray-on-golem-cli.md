@@ -22,7 +22,8 @@ Ray on Golem supports the following commands
 The tool scans the network and gives you an overview of the availability of the providers.
 It allows you to test the settings of your [cluster yaml](/docs/creators/ray/cluster-yaml) file. 
 
-You can use it to verify and fine-tune different [budget control](/docs/creators/ray/cluster-yaml#avoiding-too-expensive-providers) parameters, both on [the testnet and the mainnet](/docs/creators/ray/cluster-yaml#network).
+You can use it to verify and fine-tune different [budget control](/docs/creators/ray/cluster-yaml#avoiding-too-expensive-providers) parameters, 
+both on [the testnet and the mainnet](/docs/creators/ray/cluster-yaml#network).
 
 ### Example usage
 
@@ -38,8 +39,8 @@ Initial: 48
 Not blacklisted: 48
 Passed Reject if max_expected_usage_cost exceeds 1.5: 48
 Passed Reject if price_initial exceeds 0.5: 48
-Passed Reject if price_cpu_sec exceeds 0.0005: 48
-Passed Reject if price_duration_sec exceeds 0.0005: 48
+Passed Reject if price_cpu_hour exceeds 0.5: 48
+Passed Reject if price_duration_hour exceeds 0.5: 48
 Negotiation initialized: 48 
 Negotiated successfully: 37
 
@@ -65,8 +66,8 @@ Use the `--duration` parameter to set how long you want your network scan to las
 - `Not blacklisted` - proposals coming from non-blacklisted providers (we blacklist providers with a history of misbehaving)
 - `Passed Reject if max_expected_usage_cost exceeds` - proposals not exceeding your [`max_expected_usage_cost` setting](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost)
 - `Passed Reject if price_initial exceeds` - proposals not exceeding your [`price_initial` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
-- `Passed Reject if price_cpu_sec exceeds` - proposals not exceeding your [`price_cpu_sec` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
-- `Passed Reject if price_duration_sec exceeds` - proposals not exceeding your [`price_duration_sec` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if price_cpu_hour exceeds` - proposals not exceeding your [`price_cpu_hour` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if price_duration_hour exceeds` - proposals not exceeding your [`price_duration_hour` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Negotiation initialized` - proposals passing all the above limitations
 - `Negotiated successfully` - providers ready to deploy Ray on Golem image
 
