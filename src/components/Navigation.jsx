@@ -80,9 +80,9 @@ export const SideBar = ({ navigation }) => {
 
   return currentSection ? (
     <nav>
-      <h1 className="mb-2 text-base font-semibold dark:text-white">
+      <h4 className="mb-2 text-base font-semibold dark:text-white">
         {currentSection.title}
-      </h1>
+      </h4>
       <ul role="list">{renderNavItems(currentSection.links)}</ul>
     </nav>
   ) : null
