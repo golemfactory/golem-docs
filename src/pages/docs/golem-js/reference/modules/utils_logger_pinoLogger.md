@@ -30,4 +30,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/69e0610/src/utils/logger/pinoLogger.ts#L4)
+[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/627e370/src/utils/logger/pinoLogger.ts#L4)

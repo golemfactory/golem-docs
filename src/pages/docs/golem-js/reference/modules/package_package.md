@@ -28,4 +28,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/69e0610/src/package/package.ts#L7)
+[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/627e370/src/package/package.ts#L7)

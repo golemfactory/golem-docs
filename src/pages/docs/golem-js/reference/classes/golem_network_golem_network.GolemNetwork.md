@@ -62,7 +62,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:58](https://github.com/golemfactory/golem-js/blob/69e0610/src/golem_network/golem_network.ts#L58)
+[src/golem_network/golem_network.ts:58](https://github.com/golemfactory/golem-js/blob/627e370/src/golem_network/golem_network.ts#L58)
 
 ## Methods
 
@@ -76,7 +76,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:67](https://github.com/golemfactory/golem-js/blob/69e0610/src/golem_network/golem_network.ts#L67)
+[src/golem_network/golem_network.ts:67](https://github.com/golemfactory/golem-js/blob/627e370/src/golem_network/golem_network.ts#L67)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:71](https://github.com/golemfactory/golem-js/blob/69e0610/src/golem_network/golem_network.ts#L71)
+[src/golem_network/golem_network.ts:71](https://github.com/golemfactory/golem-js/blob/627e370/src/golem_network/golem_network.ts#L71)
 
 ___
 
@@ -136,7 +136,7 @@ console.log(status);
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:101](https://github.com/golemfactory/golem-js/blob/69e0610/src/golem_network/golem_network.ts#L101)
+[src/golem_network/golem_network.ts:101](https://github.com/golemfactory/golem-js/blob/627e370/src/golem_network/golem_network.ts#L101)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:105](https://github.com/golemfactory/golem-js/blob/69e0610/src/golem_network/golem_network.ts#L105)
+[src/golem_network/golem_network.ts:105](https://github.com/golemfactory/golem-js/blob/627e370/src/golem_network/golem_network.ts#L105)
 
 ___
 
@@ -190,7 +190,7 @@ The runTask method is the simplest way to run some code on Golem Network. Simply
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:116](https://github.com/golemfactory/golem-js/blob/69e0610/src/golem_network/golem_network.ts#L116)
+[src/golem_network/golem_network.ts:116](https://github.com/golemfactory/golem-js/blob/627e370/src/golem_network/golem_network.ts#L116)
 
 ___
 
@@ -204,4 +204,4 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:120](https://github.com/golemfactory/golem-js/blob/69e0610/src/golem_network/golem_network.ts#L120)
+[src/golem_network/golem_network.ts:120](https://github.com/golemfactory/golem-js/blob/627e370/src/golem_network/golem_network.ts#L120)
