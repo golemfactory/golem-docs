@@ -188,8 +188,8 @@ provider:
           # allowing the picking of the least expensive Golem providers' offers first.
           # If not provided, offers will be picked at random.
           # Both values need to be defined or undefined together.
-          expected_cpu_load: 0.8
-          expected_duration_minutes: 20
+          cpu_load: 0.8
+          duration_hours: 20
 
           # Amount of GLMs for expected usage 
           # causing Golem provider offer to be rejected
