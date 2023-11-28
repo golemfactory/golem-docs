@@ -135,9 +135,9 @@ Ray on Golem won't work with providers who exceed any of the following price set
 #### Maximum provider prices
 
 Golem providers charge in three ways. They charge:
-- the initial price at the start of image deployment - we divide it by number of CPUs to work with price per CPU,
+- the initial price at the start of image deployment - we divide it by the number of CPUs to work with price per CPU,
 - CPU usage price for the total time (in hours) their CPUs spent computing,
-- duration price for the total time (in hours) they spent up and running - we divide it by number of CPUs to work with price per CPU,
+- duration price for the total time (in hours) they spent up and running - we divide it by the number of CPUs to work with price per CPU,
 
 So for example, if you rent a 3-CPU node for half an hour and the average load is 0.8 per CPU you will be charged 
 `3 * initial_price_per_cpu + 3 * duration_price_per_cpu * 0.5 + 3 * cpu_usage_price * 0.8 * 0.5`.
@@ -161,7 +161,7 @@ provider:
         # causing Golem provider offer to be rejected
         max_cpu_hour_price: 0.5 
 
-        # Amount of GLMs for each CPU for each hour that worker runs 
+        # Amount of GLMs for each CPU for each hour that the worker runs 
         # causing Golem provider offer to be rejected
         max_duration_hour_price: 0.5
 ```
