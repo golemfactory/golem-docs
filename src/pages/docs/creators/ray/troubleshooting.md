@@ -1,6 +1,6 @@
 ---
 title: Ray on Golem troubleshooting
-description: Comprehensive guide for resolving common Ray on Golem issues, including log file analysis and problem solving techniques.
+description: Comprehensive guide for resolving common Ray on Golem issues, including log file analysis and problem-solving techniques.
 pageTitle: Ray on Golem Troubleshooting Guide - Identify and Resolve Common Issues
 
 type: troubleshooting
@@ -21,7 +21,7 @@ Often you will find yourself wondering "How is my cluster doing?"
 
 Ray offers two tools to inspect the cluster state: the status and the dashboard.
 
-Ray status shows information about nodes constituting the cluster, the total resources of the cluster and their current usage.
+Ray status shows information about nodes constituting the cluster, the total resources of the cluster, and their current usage.
 
 The `ray status` command needs to be executed on the head node:
 ```bash
@@ -31,11 +31,11 @@ ray exec golem-cluster.yaml 'ray status'
 todo
 ```
 
-Ray dashboard visualises the nodes and what happens on them. 
+The Ray dashboard visualizes the nodes and what happens to them. 
 
 Run `ray dashboard golem-cluster.yaml` to forward your cluster's dashboard to [http://localhost:8265](http://localhost:8265).
 
-For an in debt description of the dashboard's amazing secrets check out the [Ray docs](https://docs.ray.io/en/latest/ray-observability/getting-started.html).
+For an in-debt description of the dashboard's amazing secrets check out the [Ray docs](https://docs.ray.io/en/latest/ray-observability/getting-started.html).
 
 {% /solution %}
 {% feedback identifier="what-is-going-on-with-my-cluster" /%}
@@ -54,7 +54,7 @@ it may not always be immediately obvious what the problem is from the output of 
 Where possible, we try to display a meaningful error message - e.g. when `ray up` fails to start up
 the Ray on Golem's webserver, we display a few last lines of the logs.
 
-If that's not enough to suggest a way to fix the issue, an investigation of logs may prove more useful. 
+If that's not enough to suggest a way to fix the issue investigating logs may prove more useful.
 
 {% solution %}
 
@@ -83,7 +83,7 @@ It may happen that something goes wrong and you wish to start over with a clean 
 
 {% solution %}
 
-The first thing to do is `ray down` - it should be enough to clear the situation, sadly it isn't always the case. 
+The first thing to do is `ray down` - it should be enough to clear the situation, but sadly it isn't always the case. 
 
 Let's first check if there are any orphaned components:
 ```bash
@@ -96,9 +96,9 @@ It produces an output like this:
   71258 ?        Sl     2:35 yagna
 ```
 
-The above shows `ray-on-golem` webserver and the `yagna` daemon are running.
+The above shows the `ray-on-golem` webserver and the `yagna` daemon are running.
 
-Note that Ray on Golem leaves `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you decide to start up your cluster again the nodes are found quicker. 
+Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again the nodes are found quicker. 
 
 With that in mind, we recommend killing only `ray-on-golem` and leaving `yagna` running. 
 
