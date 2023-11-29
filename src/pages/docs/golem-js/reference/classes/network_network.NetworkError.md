@@ -41,7 +41,7 @@ Error.constructor
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1073
+node_modules/typescript/lib/lib.es5.d.ts:1081
 
 • **new NetworkError**(`message?`, `options?`): [`NetworkError`](network_network.NetworkError)
 

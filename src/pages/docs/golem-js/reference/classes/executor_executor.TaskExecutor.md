@@ -51,8 +51,6 @@ Factory Method that create and initialize an instance of the TaskExecutor
 
 **`Example`**
 
-**Simple usage of Task Executor**
-
 The executor can be created by passing appropriate initial parameters such as package, budget, subnet tag, payment driver, payment network etc.
 One required parameter is a package. This can be done in two ways. First by passing only package image hash or image tag, e.g.
 ```js
@@ -64,8 +62,6 @@ const executor = await TaskExecutor.create("golem/alpine:3.18.2");
 ```
 
 **`Example`**
-
-**Usage of Task Executor with custom parameters**
 
 Or by passing some optional parameters, e.g.
 ```js
@@ -352,7 +348,6 @@ Job object
 
 **`Example`**
 
-**Simple usage of createJob**
 ```typescript
 const job = executor.createJob(async (ctx) => {
  return (await ctx.run("echo 'Hello World'")).stdout;
