@@ -123,7 +123,7 @@ It produces an output like this:
 
 The above shows the `ray-on-golem` webserver and the `yagna` daemon are running.
 
-Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again the nodes are found quicker. 
+Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again the nodes are found more quickly. 
 
 With that in mind, we recommend killing only `ray-on-golem` and leaving `yagna` running. 
 
