@@ -135,7 +135,7 @@ Ray on Golem won't work with providers who exceed any of the following price set
 #### Maximum provider prices
 
 Golem providers charge in three ways. They charge:
-- the initial price at the start of image deployment - we divide it by the number of CPUs to work with price per CPU,
+- the initial price at the start of image deployment - we divide it by the number of CPUs so that the price is representative of the actual computing power that you pay for,
 - CPU usage price for the total time (in hours) their CPUs spent computing,
 - duration price for the total time (in hours) they spent up and running - we divide it by the number of CPUs to work with price per CPU,
 
