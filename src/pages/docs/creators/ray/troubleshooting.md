@@ -60,7 +60,7 @@ Ray dashboard visualizes the nodes and various other aspects of a running cluste
 Run `ray dashboard golem-cluster.yaml` to forward your cluster's dashboard to [http://localhost:8265](http://localhost:8265).
 Keep it running in the background so that the tunnel stays active as long as you need it.
 
-For an in-debt description of the dashboard's amazing secrets check out the [Ray docs](https://docs.ray.io/en/latest/ray-observability/getting-started.html).
+For a more thorough description of the dashboard's amazing secrets, check out the [Ray docs](https://docs.ray.io/en/latest/ray-observability/getting-started.html).
 
 {% /solution %}
 {% feedback identifier="what-is-going-on-with-my-cluster" /%}
