@@ -274,7 +274,7 @@ Sometimes, you might get `RuntimeError: Head node of cluster (golem-cluster) not
 
 This means, that you are trying to run a command that requires a cluster to be up (like `ray submit`), but the cluster is not alive.
 
-The simplest reason might be that you didn't successfully run `ray up`.
+The simplest reason might be that you hadn't successfully run `ray up`.
 Checkout [the logs](/docs/creators/ray/troubleshooting#ray-on-golem-s-log-files) to see what happened.
 
 Another explanation might be that the cluster was running, but it stopped - please share the logs with us to help us prevent this from happening in the future.
