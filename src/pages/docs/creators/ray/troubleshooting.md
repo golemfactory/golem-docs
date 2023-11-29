@@ -79,7 +79,7 @@ it may not always be immediately obvious what the problem is from the output of 
 Where possible, we try to display a meaningful error message - e.g. when `ray up` fails to start up
 the Ray on Golem's webserver, we display a few last lines of the logs.
 
-If that's not enough to suggest a way to fix the issue investigating logs may prove more useful.
+If that's not enough to suggest a way to fix the issue, investigating the logs may provide the required details.
 
 {% solution %}
 
