@@ -25,7 +25,7 @@ type: "reference"
 
 #### Defined in
 
-[src/executor/executor.ts:24](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/executor/executor.ts#L24)
+[src/executor/executor.ts:24](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L24)
 
 ___
 
@@ -37,7 +37,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[src/executor/executor.ts:93](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/executor/executor.ts#L93)
+[src/executor/executor.ts:93](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L93)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:95](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/executor/executor.ts#L95)
+[src/executor/executor.ts:95](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L95)

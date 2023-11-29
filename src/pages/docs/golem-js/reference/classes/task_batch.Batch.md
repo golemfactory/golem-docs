@@ -45,7 +45,7 @@ type: "reference"
 
 #### Defined in
 
-[src/task/batch.ts:15](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L15)
+[src/task/batch.ts:15](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L15)
 
 ## Methods
 
@@ -67,7 +67,7 @@ type: "reference"
 
 #### Defined in
 
-[src/task/batch.ts:11](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L11)
+[src/task/batch.ts:11](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L11)
 
 ___
 
@@ -89,7 +89,7 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Defined in
 
-[src/task/batch.ts:28](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L28)
+[src/task/batch.ts:28](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L28)
 
 ▸ **run**(`executable`, `args`): [`Batch`](task_batch.Batch)
 
@@ -108,7 +108,7 @@ Execute an executable on provider.
 
 #### Defined in
 
-[src/task/batch.ts:36](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L36)
+[src/task/batch.ts:36](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L36)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:47](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L47)
+[src/task/batch.ts:47](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L47)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:52](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L52)
+[src/task/batch.ts:52](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L52)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:57](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L57)
+[src/task/batch.ts:57](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L57)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:63](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L63)
+[src/task/batch.ts:63](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L63)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:68](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L68)
+[src/task/batch.ts:68](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L68)
 
 ___
 
@@ -229,7 +229,7 @@ Executes the batch of commands added via [run](task_batch.Batch#run) returning r
 
 #### Defined in
 
-[src/task/batch.ts:76](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L76)
+[src/task/batch.ts:76](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L76)
 
 ___
 
@@ -243,4 +243,4 @@ ___
 
 #### Defined in
 
-[src/task/batch.ts:120](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/task/batch.ts#L120)
+[src/task/batch.ts:120](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/batch.ts#L120)

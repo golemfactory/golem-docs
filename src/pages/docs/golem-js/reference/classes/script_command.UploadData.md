@@ -56,7 +56,7 @@ Transfer.constructor
 
 #### Defined in
 
-[src/script/command.ts:151](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L151)
+[src/script/command.ts:151](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L151)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Transfer.from
 
 #### Defined in
 
-[src/script/command.ts:116](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L116)
+[src/script/command.ts:116](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L116)
 
 ___
 
@@ -84,7 +84,7 @@ Transfer.to
 
 #### Defined in
 
-[src/script/command.ts:117](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L117)
+[src/script/command.ts:117](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L117)
 
 ___
 
@@ -98,7 +98,7 @@ Transfer.args
 
 #### Defined in
 
-[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L16)
+[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L16)
 
 ## Methods
 
@@ -116,7 +116,7 @@ Transfer.before
 
 #### Defined in
 
-[src/script/command.ts:160](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L160)
+[src/script/command.ts:160](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L160)
 
 ___
 
@@ -140,7 +140,7 @@ Transfer.after
 
 #### Defined in
 
-[src/script/command.ts:164](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L164)
+[src/script/command.ts:164](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L164)
 
 ___
 
@@ -158,7 +158,7 @@ Transfer.toJson
 
 #### Defined in
 
-[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L25)
+[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L25)
 
 ___
 
@@ -176,4 +176,4 @@ Transfer.toExeScriptRequest
 
 #### Defined in
 
-[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/script/command.ts#L31)
+[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L31)

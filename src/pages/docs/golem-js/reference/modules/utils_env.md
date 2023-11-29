@@ -30,4 +30,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/utils/env.ts#L3)
+[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/cd3b295/src/utils/env.ts#L3)
