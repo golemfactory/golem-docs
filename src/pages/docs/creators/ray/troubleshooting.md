@@ -55,7 +55,7 @@ Shared connection to 192.168.0.3 closed.
 
 ```
 
-The Ray dashboard visualizes the nodes and what happens to them. 
+Ray dashboard visualizes the nodes and various other aspects of a running cluster, like specific jobs and function calls that get executed by each node.
 
 Run `ray dashboard golem-cluster.yaml` to forward your cluster's dashboard to [http://localhost:8265](http://localhost:8265).
 Keep it on to keep the tunnel active.
