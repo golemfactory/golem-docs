@@ -124,7 +124,7 @@ provider:
   parameters:
 
     # Maximum amount of GLMs that's going to be spent for the whole cluster
-    total_budget: 2
+    total_budget: 5
 ```
 
 ### Avoiding too-expensive providers
@@ -189,7 +189,7 @@ provider:
           # If not provided, offers will be picked at random.
           # Both values need to be defined or undefined together.
           cpu_load: 0.8
-          duration_hours: 20
+          duration_hours: 0.5
 
           # Amount of GLMs for expected usage 
           # causing Golem provider offer to be rejected
