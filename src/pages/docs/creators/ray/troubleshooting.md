@@ -125,7 +125,8 @@ The above shows the `ray-on-golem` webserver and the `yagna` daemon are running.
 
 Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again the nodes are found more quickly. 
 
-With that in mind, we recommend stopping only `ray-on-golem` and leaving `yagna` running. 
+With that in mind, when starting over we recommend stopping `ray-on-golem` and leaving `yagna` running 
+(but to get a truely clean slate you might want to stop `yagna` too). 
 
 The surest way to stop these services is to kill them (using the PID numbers as shown in the first column):
 ```bash
