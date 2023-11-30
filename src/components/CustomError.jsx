@@ -35,14 +35,14 @@ const links = [
 
 export const CustomError = ({ errorCode, title, description }) => {
   return (
-    <div className="grid max-h-screen grid-cols-1 lg:grid-cols-2">
+    <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
       <div className="bg-white dark:bg-darkbg ">
         <main className="mx-auto w-full max-w-2xl px-6 pt-10  lg:pl-12">
           <div className="mx-auto max-w-2xl text-center ">
             <p className="text-base font-semibold leading-8 text-primary dark:text-[#3961fb]">
               {errorCode}
             </p>
-            <h1 className="sm:text-5xl mt-4 text-2xl font-bold tracking-tight dark:text-white">
+            <h1 className="sm:text-5xl mt-4 text-3xl font-bold tracking-tight dark:text-white">
               {title}
             </h1>
             <p className="mt-4 text-base text-gray-600 dark:text-white/70  sm:mt-6">
