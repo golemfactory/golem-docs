@@ -21,7 +21,7 @@ Often you will find yourself wondering "How is my cluster doing?"
 
 Ray offers two tools to inspect the cluster state: the status and the dashboard.
 
-Ray status shows information about nodes constituting the cluster, the total resources of the cluster, and their current usage.
+Ray status shows information about the nodes that make up the cluster, the total resources of the cluster, and their current usage.
 
 The `ray status` command needs to be executed on the head node:
 ```bash
@@ -123,7 +123,7 @@ It produces an output like this:
 
 The above shows the `ray-on-golem` webserver and the `yagna` daemon are running.
 
-Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again the nodes are found more quickly. 
+Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again, the nodes are found more quickly. 
 
 With that in mind, when starting over, we recommend stopping `ray-on-golem` and leaving `yagna` running 
 (but to get a truly clean slate you might want to stop `yagna` too). 
@@ -136,8 +136,6 @@ kill -9 71257 71258
 After it is done, the above command should show no more hanging processes:
 ```bash
 ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
-```
-```
 ```
 
 It might also be a good idea to clean up Ray's configuration cache files:
