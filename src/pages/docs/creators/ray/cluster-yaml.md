@@ -18,7 +18,7 @@ For more details check out the [Ray Cluster YAML Configuration Options](https://
 
 The basic `golem-cluster.yaml` is [available on github](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml).
 
-It allows you to start a cluster on our testnet with one head node and three worker nodes. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
+It allows you to start a cluster on our testnet with one head node and one worker node. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
 
 The details of all the properties that are generally supported by Ray, can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
 
@@ -75,8 +75,12 @@ initialization_commands: []
 
 ### Provider section
 
-The whole "provider" section describes many Golem node provider internals. 
-Some of these properties interact with how Ray on Golem works in general, so be careful with those you're unfamiliar with as changing them may render your cluster unusable.
+The whole "provider" section describes various Golem node provider internal parameters. 
+
+Some of these properties influence how Ray on Golem works in general, but we still encourage you to experiment with different settings. 
+The worst that may happen is that you'll need to revert to a previous working setup and start your cluster anew. 
+
+We're eager to hear your feedback on the clarity, usability, or interesting usage of those parameters (on the [`#Ray on Golem` discord channel](https://chat.golem.network/))
 
 #### Webserver port
 
@@ -86,13 +90,13 @@ Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. T
 
 Ray on Golem uses the GLM token on the Ethereum blockchain to pay for the hosting of ray nodes.
 Currently, while we support only the Golem testnet, the payments use the `goerli` test blockchain.
-When you move to the mainnet, the `network` property needs to be changed to `polygon`
+When you move to the mainnet, the `payment_network` property needs to be changed to `polygon`
 
 ```yaml
 # Blockchain used for payments. 
 # "goerli" means running free nodes on testnet, 
 # "polygon" is for mainnet operations.
-network: "goerli"
+payment_network: "goerli"
 ```
 
 #### Image tag and image hash
@@ -110,7 +114,7 @@ Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.
 
 ### Spending hard limit
 
-Within `provider.parameters` section there is the `budget_limit` property.
+Within `provider.parameters` section there is the `total_budget` property.
 It defines the maximum amount of GLMs paid for the whole cluster operations - from `ray up` until `ray down`.
 
 At the moment, when the spending reaches the limit, Ray on Golem will stop spending, effectively terminating the cluster nodes.
@@ -120,72 +124,75 @@ provider:
   parameters:
 
     # Maximum amount of GLMs that's going to be spent for the whole cluster
-    budget_limit: 2
+    total_budget: 5
 ```
 
 ### Avoiding too-expensive providers
 
-You can use `provider.parameters.node_config.budget_control` section to define the limits on providers' prices.
+You can use `provider.parameters.node_config.per_cpu_budget` section to define the limits on providers' prices.
 Ray on Golem won't work with providers who exceed any of the following price settings.
 
 #### Maximum provider prices
 
 Golem providers charge in three ways. They charge:
-- the initial price at the start of image deployment,
-- CPU usage price for the total time (in seconds) their CPUs spent computing,
-- duration price for the total time (in seconds) they spent up and running,
+- the initial price at the start of image deployment - we divide it by the number of CPUs so that the price is representative of the actual computing power that you pay for,
+- CPU usage price for the total time (in hours) their CPUs spent computing,
+- duration price for the total time (in hours) they spent up and running - again, we divide it by the number of CPUs to get a fair comparison,
 
-So for example, if you rent a 3 CPU node for 15 minutes and the average load is 80% you will be charged `initial_price + duration_price * 15*60 + cpu_usage_price * 3 * 0.8 * 15*60`.
+So for example, if you rent a 3-CPU node for half an hour and the average load is 0.8 per CPU you will be charged 
+`3 * initial_price_per_cpu + 3 * duration_price_per_cpu * 0.5 + 3 * cpu_usage_price * 0.8 * 0.5`.
 
 The following properties allow you to reject providers with any of the prices exceeding your limits.
 - `max_initial_price`
-- `max_cpu_sec_price`
-- `max_duration_sec_price`
+- `max_cpu_hour_price`
+- `max_duration_hour_price`
 
 ```yaml
 provider:
   parameters:
     node_config:
-      budget_control:
+      per_cpu_budget:
 
         # Amount of GLMs for worker initiation 
         # causing Golem provider offer to be rejected
         max_initial_price: 0.5
 
-        # Amount of GLMs for CPU utilization per second 
+        # Amount of GLMs for CPU utilization per hour 
         # causing Golem provider offer to be rejected
-        max_cpu_sec_price: 0.0005
+        max_cpu_hour_price: 0.5 
 
-        # Amount of GLMs for each second that worker runs 
+        # Amount of GLMs for each CPU for each hour that the worker runs 
         # causing Golem provider offer to be rejected
-        max_duration_sec_price: 0.0005
+        max_duration_hour_price: 0.5
 ```
 
 #### Choosing the cheapest providers - maximum expected usage cost
 
 To work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
 
-Estimate the rough time your cluster will be up, and the expected CPU load during that time. Set `expected_duration_minutes` and `expected_cpu_load` properties to compute each provider's expected usage cost.
+Please estimate the approximate time your application will require the cluster to operate, and the expected CPU load during that time. 
+Then, set the respective `duration_hours` and `cpu_load` properties to allow Ray on Golem to compute each provider's expected usage cost.
 
-All providers' offers will be sorted by estimated expected usage cost, allowing Ray on Golem to negotiate with the cheapest nodes first.
+All providers' offers are internally sorted by estimated cost, allowing Ray on Golem to negotiate and sign agreements with the cheapest nodes first.
 
-You might also use `max_expected_usage_cost` to unconditionally cut off providers with too big an expected usage cost (in GLMs).
+You may also use `max_cost` to unconditionally cut off providers with too high an expected usage cost (in GLMs).
 
 ```yaml
 provider:
   parameters:
     node_config:
-      budget_control:
+      per_cpu_budget:
+        expected_usage:
 
-        # Estimated expected load and duration for worker 
-        # allowing the picking of the least expensive Golem providers' offers first.
-        # If not provided, offers will be picked at random.
-        # Both values need to be defined or undefined together.
-        expected_cpu_load: 0.8
-        expected_duration_minutes: 20
+          # Estimated expected load and duration per CPU for worker 
+          # allowing the picking of the least expensive Golem providers' offers first.
+          # If not provided, offers will be picked at random.
+          # Both values need to be defined or undefined together.
+          cpu_load: 0.8
+          duration_hours: 0.5
 
-        # Amount of GLMs for expected usage 
-        # causing Golem provider offer to be rejected
-        # Requires both `expected_cpu_load` and `expected_duration_minutes`
-        max_expected_usage_cost: 1.5
+          # Amount of GLMs for expected usage 
+          # causing Golem provider offer to be rejected
+          # Requires both `cpu_load` and `duration_hours`
+          max_cost: 1.5
 ```
