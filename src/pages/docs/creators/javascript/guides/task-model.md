@@ -51,11 +51,9 @@ Click on the links to go to the usage examples.
 
 Task executor may run:
 
-* a single task on a single provider (`.run()` method). 
-* multiple tasks on available providers (`.map()` and `.forEach()` methods). The maximum number of concurrently engaged providers is defined by the user; providers can be engaged more than once until all tasks are executed.
+* a single task on a single provider (`.run()` method).
+* a batch of tasks on multiple providers (call `.run()` method multiple times). The maximum number of concurrently engaged providers is defined by the user; providers can be engaged more than once until all tasks are executed. 
 * An initializing command runs once per engaged provider (`.beforeEach()`). It allows for the preparation of workers before processing the main batch of tasks.
-
-Users can also define the maximum number of concurrently engaged providers (`maxParallelTasks` parameter).
 
 See examples [here](/docs/creators/javascript/examples/executing-tasks).
 

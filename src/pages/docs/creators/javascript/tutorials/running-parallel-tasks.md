@@ -18,15 +18,6 @@ We will go through the following steps:
 - Create a requestor script
 - Run the tasks in parallel and process the output
 
-{% alert level="info" %}
-
-This tutorial has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
 ## Prerequisites
 
 - Yagna service is installed and running with the `try_golem` app-key configured ([instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
@@ -285,54 +276,54 @@ For each worker, we perform the following steps:
 - Get the hashcat\_{skip}.potfile from the provider to the requestor.
 - Parse the result from the .potfile.
 
-With the range, we use the `executor.map` method to run the split tasks simultaneously on the Golem Network:
+Let's first create a function that will look for the password in a given range of the keyspace.
 
 ```js
-const results = executor.map(range, async (ctx, skip = 0) => {
-  const results = await ctx
-    .beginBatch()
-    .run(
-      `hashcat -a 3 -m 400 '${args.hash}' '${
-        args.mask
-      }' --skip=${skip} --limit=${Math.min(
-        keyspace - 1,
-        step + step - 1
-      )} -o pass.potfile`
-    )
-    .run('cat pass.potfile')
-    .end()
-    .catch((err) => console.error(err))
-
-  if (!results?.[1]?.stdout) return false
-  return results?.[1]?.stdout.toString().split(':')[1]
-})
+const findPasswordInRange = async (skip) => {
+  const password = await executor.run(async (ctx) => {
+    const [, potfileResult] = await ctx
+      .beginBatch()
+      .run(
+        `hashcat -a 3 -m 400 '${args.hash}' '${
+          args.mask
+        }' --skip=${skip} --limit=${skip + step} -o pass.potfile || true`
+      )
+      .run('cat pass.potfile || true')
+      .end()
+    if (!potfileResult.stdout) return false
+    // potfile format is: hash:password
+    return potfileResult.stdout.toString().trim().split(':')[1]
+  })
+  if (!password) {
+    throw new Error(`Cannot find password in range ${skip} - ${skip + step}`)
+  }
+  return password
+}
 ```
 
 Note, that we use the `beginBatch()` method to organize together two sequential commands: the first will run the hashcat and the second will print the content of the output file.
-As we conclude the batch with the `end()` method the task function will return an array of results objects. As the `cat pass.potfile` is run as a second command its result will be at index 1. Keep in mind that tasks executed on a single worker instance run within the same virtual machine and share the contents of a VOLUME. It means that files in the VOLUME left over from one task execution will be present in a subsequent run as long as the execution takes place on the same provider and thus, the same file system.
+As we conclude the batch with the `end()` method the task function will return an array of results objects. As the `cat pass.potfile` is run as a second command its result will be at index 1 so we can use array destructuring to grab only that result. Keep in mind that tasks executed on a single worker instance run within the same virtual machine and share the contents of a VOLUME. It means that files in the VOLUME left over from one task execution will be present in a subsequent run as long as the execution takes place on the same provider and thus, the same file system.
 
 ### Processing the results
 
-The results object returned by `map()` is of the type of AsyncIterable, that can be iterated with the for await statement:
+Let's run our function for each of the ranges. We only need to wait for the first successful result so we can use the `Promise.any` method.
 
 ```js
-for await (const result of results) {
-  if (result) {
-    password = result
-    break
-  }
+try {
+  const password = await Promise.any(range.map(findPasswordInRange))
+  console.log(`Password found: ${password}`)
+} catch (err) {
+  console.log(`Password not found`)
+} finally {
+  await executor.end()
 }
-if (!password) console.log('No password found')
-else console.log(`Password found: ${password}`)
-
-await executor.end()
 ```
 
 Once we get the password we print it in the console and end executor.
 
 ### The complete example
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/7024c7041b92e84164f0f50c2fc7d948d60c7ff2/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
 
 To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
 
@@ -354,7 +345,7 @@ node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 {% /tab  %}  
 {% /tabs %}
 
-You should see an output similar to the one below. Note, that once we obtained the solution, `executor.end()` terminates other tasks, that might not be finished yet, and we observe the errors, due to `.catch((err) => console.error(err));` inside the task function.
+You should see an output similar to the one below.
 
 ![Output of hashcat](/hashcat_output_1.png)
 ![Second output of hashcat](/hashcat_output_2.png)

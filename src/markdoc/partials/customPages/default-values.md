@@ -77,7 +77,7 @@ This filter determines which proposals to accept, based on their compatibility w
 ## TaskServiceOptions
 
 {% defaultvalue title="maxParallelTasks" defaultValue="5" %} 
-Sets the maximum number of tasks that can be executed concurrently when the TaskExecutor processes tasks from a list (refer to `map()` and `forEach()` methods).
+Sets the maximum number of tasks that can be executed concurrently when the TaskExecutor processes more than one task at a time.
 {% /defaultvalue %}
 
 {% defaultvalue title="activityPreparingTimeout" defaultValue="5 * 60 * 1000" %} 

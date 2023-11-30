@@ -14,8 +14,7 @@ With Golem JS Task API you can execute just a single task on a single provider o
 
 In this article, the following examples are presented:
 
-- Running tasks in parallel (map())
-- Running tasks in parallel (forEach())
+- Running tasks in parallel
 - Defining the number of providers working in parallel
 - Initializing providers
 - Running a single task
@@ -23,15 +22,6 @@ In this article, the following examples are presented:
 ## Prerequisites
 
 Yagna service is installed and running with the `try_golem` app-key configured.
-
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
 
 ## How to run examples
 
@@ -50,16 +40,13 @@ Copy the code into the `index.mjs` file in the project folder and run:
 node index.mjs
 ```
 
-## Running tasks in parallel using the map() method
+## Running tasks in parallel
 
-If you want to run your tasks in parallel, you can use the `map()` method.
+If you want to run your tasks in parallel, you can call `.run()` multiple times on the same `TaskExecutor` object. The maximum number of concurrently engaged providers is defined by the `maxParallelTasks` parameter. Providers can be engaged more than once until all tasks are executed. 
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/map.mjs" language="javascript" /%}
 
-The method `map()` accepts an array that defines the total number of tasks to be executed and may contain the data used to define a task.
-In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we use these values within the task function to define task steps. For each task, another element from the `data` array is passed as an `item` and then used to customize the argument for the `echo` command.
-
-Note that the result of the executor `map()` is an asynchronous iterable object with each element accessible with the `for await` statement.
+In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we `map` over each value to define a separate step for each element in the array. Each step is a command that prints the value of the element to the console. 
 
 ![Multiple run map](/map_log.png)
 
@@ -68,12 +55,6 @@ In the output logs, you can have some interesting observations:
 The provider `sharkoon_379_6` was engaged first. When he had finished his first task he was still the only available provider and he received another task to execute. In the meantime, other providers were successfully engaged and the next tasks were dispatched to them.
 
 Note that even though provider `sharkoon_379_8` was engaged before provider `10hx4r2_2.h`, the latter completed its task before the former. In the network, different nodes offer varying performance.
-
-## Running multiple tasks in parallel using the forEach() method
-
-If you do not need an object to facilitate the processing results of all the tasks, you can use another method that can also execute tasks in parallel. Even if the `forEach()` method does not return an object to iterate through, you can still access the result object for each command within the task function.
-
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/foreach.mjs" language="javascript" /%}
 
 ## Defining the number of providers used
 
@@ -109,7 +90,7 @@ The `beforeEach()` method is used to upload a file to a remote computer that wil
 
 Note how we utilized the `ctx` worker context to get the provider name using the `provider.name` property.
 
-In the task function used in the `forEach()` method, we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
+Inside each task function we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
 
 ![BeforeEach](/before_log.png)
 

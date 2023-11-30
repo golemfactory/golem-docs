@@ -1,7 +1,7 @@
 ---
 title: Ray CLI 
-pageTitle: Ray CLI In-Depth Guide
-description: Explore the nuances of running Ray command-line tools 
+pageTitle: Guide to Ray CLI on Golem Network
+description: Dive deep into managing Golem clusters using Ray CLI with commands for starting, stopping, executing apps, and accessing dashboards.
 type: article 
 ---
 

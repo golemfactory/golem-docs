@@ -51,8 +51,6 @@ Factory Method that create and initialize an instance of the TaskExecutor
 
 **`Example`**
 
-**Simple usage of Task Executor**
-
 The executor can be created by passing appropriate initial parameters such as package, budget, subnet tag, payment driver, payment network etc.
 One required parameter is a package. This can be done in two ways. First by passing only package image hash or image tag, e.g.
 ```js
@@ -65,8 +63,6 @@ const executor = await TaskExecutor.create("golem/alpine:3.18.2");
 
 **`Example`**
 
-**Usage of Task Executor with custom parameters**
-
 Or by passing some optional parameters, e.g.
 ```js
 const executor = await TaskExecutor.create({
@@ -78,7 +74,7 @@ const executor = await TaskExecutor.create({
 
 #### Defined in
 
-[src/executor/executor.ts:158](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L158)
+[src/executor/executor.ts:165](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L165)
 
 ___
 
@@ -98,7 +94,7 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[src/executor/executor.ts:209](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L209)
+[src/executor/executor.ts:216](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L216)
 
 ___
 
@@ -116,7 +112,7 @@ You can call this method multiple times, it will resolve only once the executor 
 
 #### Defined in
 
-[src/executor/executor.ts:261](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L261)
+[src/executor/executor.ts:268](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L268)
 
 ___
 
@@ -134,7 +130,7 @@ array
 
 #### Defined in
 
-[src/executor/executor.ts:293](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L293)
+[src/executor/executor.ts:300](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L300)
 
 ___
 
@@ -172,7 +168,7 @@ await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
 
 #### Defined in
 
-[src/executor/executor.ts:316](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L316)
+[src/executor/executor.ts:323](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L323)
 
 ___
 
@@ -209,7 +205,7 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 #### Defined in
 
-[src/executor/executor.ts:331](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L331)
+[src/executor/executor.ts:338](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L338)
 
 ___
 
@@ -265,7 +261,7 @@ for await (const result of results) console.log(result.stdout);
 
 #### Defined in
 
-[src/executor/executor.ts:366](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L366)
+[src/executor/executor.ts:373](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L373)
 
 ___
 
@@ -321,7 +317,7 @@ await executor.forEach(data, async (ctx, item) => {
 
 #### Defined in
 
-[src/executor/executor.ts:427](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L427)
+[src/executor/executor.ts:434](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L434)
 
 ___
 
@@ -352,7 +348,6 @@ Job object
 
 **`Example`**
 
-**Simple usage of createJob**
 ```typescript
 const job = executor.createJob(async (ctx) => {
  return (await ctx.run("echo 'Hello World'")).stdout;
@@ -368,7 +363,7 @@ const error = await job.fetchError();
 
 #### Defined in
 
-[src/executor/executor.ts:489](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L489)
+[src/executor/executor.ts:496](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L496)
 
 ___
 
@@ -392,7 +387,7 @@ Job object.
 
 #### Defined in
 
-[src/executor/executor.ts:514](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L514)
+[src/executor/executor.ts:521](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L521)
 
 ___
 
@@ -412,4 +407,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:539](https://github.com/golemfactory/golem-js/blob/effec9a/src/executor/executor.ts#L539)
+[src/executor/executor.ts:544](https://github.com/golemfactory/golem-js/blob/cd3b295/src/executor/executor.ts#L544)
