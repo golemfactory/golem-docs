@@ -69,7 +69,7 @@ Use the `--duration` parameter to set how long you want your network scan to las
 - `Passed Reject if price_cpu_hour exceeds` - proposals not exceeding your [`price_cpu_hour` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Passed Reject if price_duration_hour exceeds` - proposals not exceeding your [`price_duration_hour` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Negotiation initialized` - proposals passing all the above limitations
-- `Negotiated successfully` - providers ready to deploy Ray on Golem image
+- `Negotiated successfully` - providers ready to deploy the Ray on Golem image
 
 At the end of the output, you can see the reasons for failing negotiations. 
 The most interesting are the reasons around providers' outbound settings, but for now, we don't offer any actionable follow-up.
