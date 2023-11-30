@@ -61,7 +61,7 @@ Work Context
 
 #### Defined in
 
-[src/task/work.ts:59](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L59)
+[src/task/work.ts:59](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L59)
 
 ## Properties
 
@@ -79,7 +79,7 @@ Work Context
 
 #### Defined in
 
-[src/task/work.ts:50](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L50)
+[src/task/work.ts:50](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L50)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:51](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L51)
+[src/task/work.ts:51](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L51)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L52)
+[src/task/work.ts:52](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L52)
 
 ## Methods
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:72](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L72)
+[src/task/work.ts:72](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L72)
 
 ___
 
@@ -136,7 +136,7 @@ Execute a command on provider using a shell (/bin/sh).
 
 #### Defined in
 
-[src/task/work.ts:124](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L124)
+[src/task/work.ts:124](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L124)
 
 ▸ **run**(`executable`, `args`, `options?`): `Promise`\<[`Result`](activity_results.Result)\<`any`\>\>
 
@@ -156,7 +156,7 @@ Execute an executable on provider.
 
 #### Defined in
 
-[src/task/work.ts:133](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L133)
+[src/task/work.ts:133](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L133)
 
 ___
 
@@ -180,7 +180,7 @@ that contain stdout and stderr as Readable
 
 #### Defined in
 
-[src/task/work.ts:158](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L158)
+[src/task/work.ts:158](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L158)
 
 ▸ **spawn**(`executable`, `args`, `options?`): `Promise`\<[`RemoteProcess`](task_process.RemoteProcess)\>
 
@@ -198,7 +198,7 @@ that contain stdout and stderr as Readable
 
 #### Defined in
 
-[src/task/work.ts:164](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L164)
+[src/task/work.ts:164](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L164)
 
 ___
 
@@ -222,7 +222,7 @@ Generic transfer command, requires the user to provide a publicly readable trans
 
 #### Defined in
 
-[src/task/work.ts:200](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L200)
+[src/task/work.ts:200](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L200)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:205](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L205)
+[src/task/work.ts:205](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L205)
 
 ___
 
@@ -266,7 +266,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:211](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L211)
+[src/task/work.ts:211](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L211)
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:217](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L217)
+[src/task/work.ts:217](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L217)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:222](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L222)
+[src/task/work.ts:222](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L222)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:227](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L227)
+[src/task/work.ts:227](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L227)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:233](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L233)
+[src/task/work.ts:233](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L233)
 
 ___
 
@@ -366,7 +366,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:249](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L249)
+[src/task/work.ts:249](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L249)
 
 ___
 
@@ -390,7 +390,7 @@ This function is only used to throw errors from unit tests. It should be removed
 
 #### Defined in
 
-[src/task/work.ts:256](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L256)
+[src/task/work.ts:256](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L256)
 
 ___
 
@@ -410,7 +410,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:260](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L260)
+[src/task/work.ts:260](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L260)
 
 ___
 
@@ -424,7 +424,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:265](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L265)
+[src/task/work.ts:265](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L265)
 
 ___
 
@@ -438,4 +438,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:270](https://github.com/golemfactory/golem-js/blob/627e370/src/task/work.ts#L270)
+[src/task/work.ts:270](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/task/work.ts#L270)

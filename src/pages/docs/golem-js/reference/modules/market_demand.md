@@ -11,3 +11,4 @@ type: "JS API Reference"
 ### Interfaces
 
 - [DemandDetails](../interfaces/market_demand.DemandDetails)
+- [DemandOptions](../interfaces/market_demand.DemandOptions)
