@@ -213,6 +213,10 @@ export const ray = [
         title: 'Ray CLI',
         href: '/docs/creators/ray/ray-cli',
       },
+      {
+        title: 'Ray on Golem CLI',
+        href: '/docs/creators/ray/ray-on-golem-cli',
+      },
     ],
   },
   {
