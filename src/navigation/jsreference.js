@@ -308,6 +308,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/market_demand.DemandDetails"
           },
 {
+            title: "DemandOptions",
+            href: "/docs/golem-js/reference/interfaces/market_demand.DemandOptions"
+          },
+{
             title: "ProposalDetails",
             href: "/docs/golem-js/reference/interfaces/market_proposal.ProposalDetails"
           },

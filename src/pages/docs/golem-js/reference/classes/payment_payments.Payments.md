@@ -48,7 +48,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/627e370/src/payment/payments.ts#L26)
+[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/payments.ts#L26)
 
 ## Methods
 
@@ -69,7 +69,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/627e370/src/payment/payments.ts#L22)
+[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/payments.ts#L22)
 
 ___
 
@@ -85,4 +85,4 @@ Unsubscribe demand from the market
 
 #### Defined in
 
-[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/627e370/src/payment/payments.ts#L39)
+[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/payments.ts#L39)

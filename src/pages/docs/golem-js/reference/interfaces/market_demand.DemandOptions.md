@@ -1,56 +1,39 @@
 ---
-title: "Interface MarketOptions"
-pageTitle: "Interface MarketOptions - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Interface MarketOptions within the golem-js SDK for the Golem Network."
+title: "Interface DemandOptions"
+pageTitle: "Interface DemandOptions - golem-js API Reference"
+description: "Explore the detailed API reference documentation for the Interface DemandOptions within the golem-js SDK for the Golem Network."
 type: "JS API Reference"
 ---
-# Interface: MarketOptions
+# Interface: DemandOptions
 
-[market/service](../modules/market_service).MarketOptions
+[market/demand](../modules/market_demand).DemandOptions
 
 ## Hierarchy
 
-- [`DemandOptions`](market_demand.DemandOptions)
+- **`DemandOptions`**
 
-  ↳ **`MarketOptions`**
+  ↳ [`MarketOptions`](market_service.MarketOptions)
 
 ## Table of contents
 
 ### Properties
 
-- [proposalFilter](market_service.MarketOptions#proposalfilter)
-- [subnetTag](market_service.MarketOptions#subnettag)
-- [yagnaOptions](market_service.MarketOptions#yagnaoptions)
-- [expirationSec](market_service.MarketOptions#expirationsec)
-- [logger](market_service.MarketOptions#logger)
-- [maxOfferEvents](market_service.MarketOptions#maxofferevents)
-- [offerFetchingIntervalSec](market_service.MarketOptions#offerfetchingintervalsec)
-- [proposalTimeout](market_service.MarketOptions#proposaltimeout)
-- [eventTarget](market_service.MarketOptions#eventtarget)
-- [debitNotesAcceptanceTimeoutSec](market_service.MarketOptions#debitnotesacceptancetimeoutsec)
-- [midAgreementPaymentTimeoutSec](market_service.MarketOptions#midagreementpaymenttimeoutsec)
+- [subnetTag](market_demand.DemandOptions#subnettag)
+- [yagnaOptions](market_demand.DemandOptions#yagnaoptions)
+- [expirationSec](market_demand.DemandOptions#expirationsec)
+- [logger](market_demand.DemandOptions#logger)
+- [maxOfferEvents](market_demand.DemandOptions#maxofferevents)
+- [offerFetchingIntervalSec](market_demand.DemandOptions#offerfetchingintervalsec)
+- [proposalTimeout](market_demand.DemandOptions#proposaltimeout)
+- [eventTarget](market_demand.DemandOptions#eventtarget)
+- [debitNotesAcceptanceTimeoutSec](market_demand.DemandOptions#debitnotesacceptancetimeoutsec)
+- [midAgreementPaymentTimeoutSec](market_demand.DemandOptions#midagreementpaymenttimeoutsec)
 
 ## Properties
-
-### proposalFilter
-
-• `Optional` **proposalFilter**: [`ProposalFilter`](../modules/market_service#proposalfilter)
-
-A custom filter that checks every proposal coming from the market
-
-#### Defined in
-
-[src/market/service.ts:13](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/market/service.ts#L13)
-
-___
 
 ### subnetTag
 
 • `Optional` **subnetTag**: `string`
-
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[subnetTag](market_demand.DemandOptions#subnettag)
 
 #### Defined in
 
@@ -61,10 +44,6 @@ ___
 ### yagnaOptions
 
 • `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor#yagnaoptions)
-
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[yagnaOptions](market_demand.DemandOptions#yagnaoptions)
 
 #### Defined in
 
@@ -96,10 +75,6 @@ If your activity is about to operate for 30min-10h, [debitNotesAcceptanceTimeout
 
 If your activity is about to operate longer than 10h, you need set both [debitNotesAcceptanceTimeoutSec](market_demand.DemandOptions#debitnotesacceptancetimeoutsec) and [midAgreementPaymentTimeoutSec](market_demand.DemandOptions#midagreementpaymenttimeoutsec).
 
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[expirationSec](market_demand.DemandOptions#expirationsec)
-
 #### Defined in
 
 [src/market/demand.ts:43](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/market/demand.ts#L43)
@@ -109,10 +84,6 @@ ___
 ### logger
 
 • `Optional` **logger**: [`Logger`](utils_logger_logger.Logger)
-
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[logger](market_demand.DemandOptions#logger)
 
 #### Defined in
 
@@ -124,10 +95,6 @@ ___
 
 • `Optional` **maxOfferEvents**: `number`
 
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[maxOfferEvents](market_demand.DemandOptions#maxofferevents)
-
 #### Defined in
 
 [src/market/demand.ts:46](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/market/demand.ts#L46)
@@ -137,10 +104,6 @@ ___
 ### offerFetchingIntervalSec
 
 • `Optional` **offerFetchingIntervalSec**: `number`
-
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[offerFetchingIntervalSec](market_demand.DemandOptions#offerfetchingintervalsec)
 
 #### Defined in
 
@@ -152,10 +115,6 @@ ___
 
 • `Optional` **proposalTimeout**: `number`
 
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[proposalTimeout](market_demand.DemandOptions#proposaltimeout)
-
 #### Defined in
 
 [src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/market/demand.ts#L50)
@@ -165,10 +124,6 @@ ___
 ### eventTarget
 
 • `Optional` **eventTarget**: `EventTarget`
-
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[eventTarget](market_demand.DemandOptions#eventtarget)
 
 #### Defined in
 
@@ -189,10 +144,6 @@ that are not using mid-agreement payments.
 _Accepting debit notes during a long activity is considered a good practice in Golem Network._
 The SDK will accept debit notes each 2 minutes.
 
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[debitNotesAcceptanceTimeoutSec](market_demand.DemandOptions#debitnotesacceptancetimeoutsec)
-
 #### Defined in
 
 [src/market/demand.ts:64](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/market/demand.ts#L64)
@@ -212,10 +163,6 @@ market expectations.
 
 _Paying in regular intervals for the computation resources is considered a good practice in Golem Network._
 The SDK will issue payments each 12h by default, and you can control this with this setting.
-
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[midAgreementPaymentTimeoutSec](market_demand.DemandOptions#midagreementpaymenttimeoutsec)
 
 #### Defined in
 

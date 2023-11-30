@@ -79,6 +79,7 @@ type: JS API Reference
 	* [GolemNetworkConfig](interfaces/golem_network_golem_network.GolemNetworkConfig)
 	* [JobStorage](interfaces/job_storage.JobStorage)
 	* [DemandDetails](interfaces/market_demand.DemandDetails)
+	* [DemandOptions](interfaces/market_demand.DemandOptions)
 	* [ProposalDetails](interfaces/market_proposal.ProposalDetails)
 	* [MarketOptions](interfaces/market_service.MarketOptions)
 	* [NetworkInfo](interfaces/network_network.NetworkInfo)
