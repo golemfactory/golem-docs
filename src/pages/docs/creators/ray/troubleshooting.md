@@ -104,7 +104,7 @@ Given these, you can either:
 
 {% problem /%}
 
-It may happen that something goes wrong and you wish to start over with a clean slate. 
+It may happen that something goes wrong and you wish to start over with a clean slate (or simply stop every Ray on Golem component). 
 
 {% solution %}
 
