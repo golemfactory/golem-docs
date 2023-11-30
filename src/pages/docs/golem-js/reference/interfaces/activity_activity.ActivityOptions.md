@@ -33,7 +33,7 @@ timeout for sending and creating batch
 
 #### Defined in
 
-[src/activity/activity.ts:27](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L27)
+[src/activity/activity.ts:27](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L27)
 
 ___
 
@@ -45,7 +45,7 @@ timeout for executing batch
 
 #### Defined in
 
-[src/activity/activity.ts:29](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L29)
+[src/activity/activity.ts:29](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L29)
 
 ___
 
@@ -57,7 +57,7 @@ interval for fetching batch results while polling
 
 #### Defined in
 
-[src/activity/activity.ts:31](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L31)
+[src/activity/activity.ts:31](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L31)
 
 ___
 
@@ -69,7 +69,7 @@ Logger module
 
 #### Defined in
 
-[src/activity/activity.ts:33](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L33)
+[src/activity/activity.ts:33](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L33)
 
 ___
 
@@ -81,4 +81,4 @@ Event Bus implements EventTarget
 
 #### Defined in
 
-[src/activity/activity.ts:35](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L35)
+[src/activity/activity.ts:35](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L35)

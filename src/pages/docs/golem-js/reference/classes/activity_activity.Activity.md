@@ -37,7 +37,7 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L55)
+[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L55)
 
 ___
 
@@ -49,7 +49,7 @@ agreement ID
 
 #### Defined in
 
-[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L56)
+[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L56)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L57)
+[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L57)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L58)
+[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L58)
 
 ## Methods
 
@@ -100,7 +100,7 @@ Activity
 
 #### Defined in
 
-[src/activity/activity.ts:72](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L72)
+[src/activity/activity.ts:72](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L72)
 
 ___
 
@@ -124,7 +124,7 @@ Execute script
 
 #### Defined in
 
-[src/activity/activity.ts:89](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L89)
+[src/activity/activity.ts:89](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L89)
 
 ___
 
@@ -142,7 +142,7 @@ boolean
 
 #### Defined in
 
-[src/activity/activity.ts:118](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L118)
+[src/activity/activity.ts:118](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L118)
 
 ___
 
@@ -164,7 +164,7 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:130](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L130)
+[src/activity/activity.ts:130](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L130)
 
 ___
 
@@ -184,4 +184,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:147](https://github.com/golemfactory/golem-js/blob/cfdb64d/src/activity/activity.ts#L147)
+[src/activity/activity.ts:147](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L147)
