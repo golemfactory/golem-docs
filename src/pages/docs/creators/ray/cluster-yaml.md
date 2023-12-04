@@ -147,6 +147,8 @@ The following properties allow you to reject providers with any of the prices ex
 - `max_cpu_per_hour_price`
 - `max_env_per_hour_price`
 
+Have a look at the list of [online providers](https://stats.golem.network/network/providers/online) to get a feeling of the prices on the market.
+
 ```yaml
 provider:
   parameters:
