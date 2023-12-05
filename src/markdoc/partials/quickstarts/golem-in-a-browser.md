@@ -77,7 +77,7 @@ http-server
 
 {% alert level="warning" %}
 
-If, instead of using the `try_golem` app key defined by using the `YAGNA_AUTO_CONF` variable, you have created a unique app key, make sure you update the requestor.mjs code and set the proper value there. See [here](/docs/creators/javascript/examples/using-app-keys#js-task-api-examples-using-app-keys) for deails. 
+If, instead of using the `try_golem` app key defined by using the `YAGNA_AUTOCONF_APPKEY` variable, you have created a unique app key, make sure you update the requestor.mjs code and set the proper value there. See [here](/docs/creators/javascript/examples/using-app-keys#js-task-api-examples-using-app-keys) for deails.
 
 {% /alert %}
 
