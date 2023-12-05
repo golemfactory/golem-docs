@@ -42,11 +42,11 @@ node index.mjs
 
 ## Running tasks in parallel
 
-If you want to run your tasks in parallel, you can call `.run()` multiple times on the same `TaskExecutor` object. The maximum number of concurrently engaged providers is defined by the `maxParallelTasks` parameter. Providers can be engaged more than once until all tasks are executed. 
+If you want to run your tasks in parallel, you can call `.run()` multiple times on the same `TaskExecutor` object. The maximum number of concurrently engaged providers is defined by the `maxParallelTasks` parameter. Providers can be engaged more than once until all tasks are executed.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/map.mjs" language="javascript" /%}
 
-In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we `map` over each value to define a separate step for each element in the array. Each step is a command that prints the value of the element to the console. 
+In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we `map` over each value to define a separate step for each element in the array. Each step is a command that prints the value of the element to the console.
 
 ![Multiple run map](/map_log.png)
 
@@ -80,31 +80,31 @@ This example requires an `action_log.txt` file that can be created with the foll
 echo Action log: > action_log.txt
 ```
 
-You can address such a need using the `beforeEach()` method of the TaskExecutor. Here is an example:
+You can address such a need using the `onActivityReady()` method of the TaskExecutor. Here is an example:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/before-each.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/executing-tasks/on-activity-ready.mjs" language="javascript" /%}
 
 In the code, we decreased the `maxParallelTasks` value from the default value of 5, to make sure that some of our five tasks will be run on the same provider.
 
-The `beforeEach()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The task function used in the `beforeEach()` method contains an additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `beforeEach()` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
+The `onActivityReady()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The code used in the `onActivityReady()` method contains an additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `onActivityReady()` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
 
 Note how we utilized the `ctx` worker context to get the provider name using the `provider.name` property.
 
 Inside each task function we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
 
-![BeforeEach](/before_log.png)
+![OnActivityReady](/onactivityready.png)
 
-The log from this example shows that even if the provider `imapp1019_2.h` was eventually
-used to execute 3 tasks, it uploaded the log only once. Its output file - downloaded after the last task was executed - contained the following:
+The log from this example shows that even if the provider `imapp1019_0.h` was eventually
+used to execute 4 tasks, it uploaded the log only once. Its output file - downloaded after the last task was executed - contained the following:
 
 ```
----------------------------
-processing item: 1
+some action log
+processing item: 3
 processing item: 4
 processing item: 5
 ```
 
-This log once again illustrates that providers offer different performance levels. Even though `fractal_01_1.h` and `fractal_01_3.h` signed agreements before Task 1 was computed on `imapp1019_2.h`, this provider managed to complete Tasks 4 and Task 5 before they downloaded the `action_log` file and completed their first task.
+This log once again illustrates that providers offer different performance levels. Even though `SBG5-1.h` and `WAW1-16.h` signed agreements before Task 3 was computed on `imapp1019_0.h`, this provider managed to complete task 3, 4 and 5 before the others downloaded the `action_log` file and completed their first task.
 
 ## Single run
 
