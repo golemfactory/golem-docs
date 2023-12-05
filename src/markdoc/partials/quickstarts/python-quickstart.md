@@ -9,8 +9,8 @@ It should take just a few minutes to complete, and you will see the generated ou
 {% alert level="info" %}
 This example has been designed to work with the following environments:
 
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Python >= 3.7 or above with `venv` module installed
+- OS X, Ubuntu or Windows
+- Python >= 3.8 or above with `venv` module installed
 - `git` installed
 
 {% /alert %}

@@ -16,7 +16,7 @@ In the Quickstart, the js script is in an external file. In this tutorial we wil
 
 This tutorial has been designed to work with the following environments:
 
-- OS X 10.14+, Ubuntu 20.04 or Windows
+- OS X, Ubuntu or Windows
 - Chrome
 
 {% /alert %}

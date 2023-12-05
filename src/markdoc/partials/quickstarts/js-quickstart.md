@@ -12,7 +12,7 @@ Yagna is a service that communicates and performs operations on the Golem Networ
 
 ### Install Yagna
 
-Yagna runs on OS X 10.14+, Ubuntu 20.04+ or Windows.
+Yagna runs on OS X, Ubuntu or Windows.
 
 {% tabs %}
 {% tab label="Linux/Mac" %}

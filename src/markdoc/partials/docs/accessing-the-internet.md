@@ -4,7 +4,7 @@ In this tutorial, you will learn how to quickly access the internet when running
 
 {% alert level="info" %}
 
-This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+This tutorial is designed for: OS X, Ubuntu, and Windows.
 
 {% /alert %}
 

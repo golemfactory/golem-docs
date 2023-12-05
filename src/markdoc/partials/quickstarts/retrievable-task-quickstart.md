@@ -9,7 +9,7 @@ It should take just a few minutes to complete, and you will see the command outp
 {% alert level="info" %}
 This example has been designed to work with the following environments:
 
-- OS X 10.14+, Ubuntu 20.04 or Windows
+- OS X, Ubuntu or Windows
 - Node.js 18.0.0 or above
 
 {% /alert %}

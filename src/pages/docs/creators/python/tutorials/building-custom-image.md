@@ -1,6 +1,6 @@
 ---
-title: Guide to Docker and Golem Image Creation and Usage 
-description: Learn how to create Docker images, convert them to Golem format, and deploy in a Golem network requestor script. 
+title: Guide to Docker and Golem Image Creation and Usage
+description: Learn how to create Docker images, convert them to Golem format, and deploy in a Golem network requestor script.
 pageTitle: Docker to Golem Image Conversion & Requestor Deployment | Golem Network Tutorial
 type: tutorial
 ---
@@ -11,7 +11,7 @@ This article will go through the process of creating a Dockerfile, building a Do
 
 {% alert level="info" %}
 
-This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
+This tutorial is designed for: OS X, Ubuntu, and Windows.
 
 Prerequisites:
 
