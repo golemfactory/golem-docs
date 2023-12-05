@@ -130,7 +130,7 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
                 <div
                   id={`${id}-hierarchy`}
                   aria-hidden="true"
-                  className="mt-0.5  text-xs text-slate-500 dark:text-slate-400 md:truncate md:whitespace-nowrap "
+                  className="mt-0.5  text-xs text-slate-800 dark:text-slate-400 md:truncate md:whitespace-nowrap "
                 >
                   {hierarchy.map((item, itemIndex, items) => (
                     <span className="break-words" key={itemIndex}>
@@ -227,7 +227,7 @@ function SearchResults({
           className="border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
           key={type}
         >
-          <h2 className="text-sm font-semibold capitalize text-slate-500 dark:text-white/50">
+          <h2 className="text-sm font-semibold capitalize text-slate-800 dark:text-white/50">
             {type}
           </h2>
           <ul role="list" {...autocomplete.getListProps()}>
@@ -256,7 +256,7 @@ const SearchInput = forwardRef(function SearchInput(
 
   return (
     <div className="group relative flex h-12">
-      <SearchIcon className="pointer-events-none absolute left-4 top-0 h-full w-5 fill-slate-400 dark:fill-slate-500" />
+      <SearchIcon className="pointer-events-none absolute left-4 top-0 h-full w-5 fill-slate-400 dark:fill-white/70" />
       <input
         ref={inputRef}
         className={clsx(
@@ -282,7 +282,7 @@ const SearchInput = forwardRef(function SearchInput(
       />
       {autocompleteState.status === 'stalled' && (
         <div className="absolute inset-y-0 right-3 flex items-center">
-          <LoadingIcon className="h-6 w-6 animate-spin stroke-slate-200 text-slate-400 dark:stroke-slate-700 dark:text-slate-500" />
+          <LoadingIcon className="h-6 w-6 animate-spin stroke-slate-200 text-slate-400 dark:stroke-slate-700 dark:text-slate-800" />
         </div>
       )}
     </div>
@@ -449,7 +449,7 @@ function SearchDialog({ open, setOpen, className }) {
                 onClose={() => setOpen(false)}
               />
               <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
-                <span className="mr-4 text-sm font-semibold text-slate-500 dark:text-white/50">
+                <span className="mr-4 text-sm font-semibold text-slate-800 dark:text-white/50">
                   Role
                 </span>
                 <div className="flex gap-x-2">
@@ -466,7 +466,7 @@ function SearchDialog({ open, setOpen, className }) {
                 </div>
               </div>
               <div className="flex flex-wrap  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
-                <span className="mr-4 text-sm font-semibold text-slate-500 dark:text-white/50">
+                <span className="mr-4 text-sm font-semibold text-slate-800 dark:text-white/50">
                   Type
                 </span>
                 <div className="flex gap-x-2">
@@ -510,7 +510,7 @@ function SearchDialog({ open, setOpen, className }) {
               </div>
             </form>
             <div className="flex items-center border-t border-slate-200 px-4 py-4 text-sm font-semibold text-gray-400 dark:border-slate-400/10">
-              <div className="flex flex-col gap-y-2 font-semibold text-slate-500">
+              <div className="flex flex-col gap-y-2 font-semibold text-slate-800 dark:text-white/70">
                 Keyboard Controls
               </div>
               <div className=" ml-auto flex items-center gap-x-2">
@@ -521,7 +521,7 @@ function SearchDialog({ open, setOpen, className }) {
                   <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
                     <ArrowSmallDownIcon className="h-4 w-4" />
                   </div>
-                  <span className="ml-1.5 font-semibold text-slate-500">
+                  <span className="ml-1.5 font-semibold text-slate-800 dark:text-white/70">
                     Move
                   </span>
                 </div>
@@ -552,7 +552,7 @@ function SearchDialog({ open, setOpen, className }) {
                         </g>
                       </svg>
                     </div>
-                    <span className="ml-1.5 font-semibold text-slate-500">
+                    <span className="ml-1.5 font-semibold text-slate-800 dark:text-white/70">
                       Select
                     </span>
                   </div>
@@ -563,7 +563,7 @@ function SearchDialog({ open, setOpen, className }) {
                     <div className="rounded-md   bg-lightbluedarker px-2 py-1 text-gray-500 dark:bg-darkcontent dark:text-white">
                       K
                     </div>
-                    <span className="ml-1.5 font-semibold text-slate-500">
+                    <span className="ml-1.5 font-semibold text-slate-800 dark:text-white/70">
                       Quit
                     </span>
                   </div>
@@ -599,7 +599,7 @@ function useSearchProps() {
   }
 }
 
-export function Search() {
+export function Search({ fullWidth = false }) {
   let [modifierKey, setModifierKey] = useState()
   let { buttonProps, dialogProps } = useSearchProps()
 
@@ -613,7 +613,9 @@ export function Search() {
     <>
       <button
         type="button"
-        className="group flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-80 md:flex-none md:rounded md:py-1.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-lightgray md:hover:ring-primaryhover dark:md:ring-inset dark:md:ring-white/50 dark:md:hover:ring-slate-500 lg:w-64"
+        className={`
+        ${fullWidth ? 'w-full' : 'md:w-80 lg:w-64'}
+        group flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:flex-none md:rounded md:py-1.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-lightgray md:hover:ring-primaryhover dark:md:ring-inset dark:md:ring-slate-800 dark:md:hover:ring-white/50`}
         {...buttonProps}
       >
         <SearchIcon className="h-4 w-4 flex-none fill-lightgray dark:fill-white/50  " />
@@ -622,10 +624,10 @@ export function Search() {
         </span>
         {modifierKey && (
           <kbd className="ml-auto hidden gap-x-2 text-xs  font-medium text-lightgray  dark:text-white/70 md:flex">
-            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-500 dark:border-white/50">
+            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-800 ">
               {modifierKey}
             </kbd>
-            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-500 dark:border-white/50">
+            <kbd className="rounded border border-lightgray px-2 py-0.5 font-sans dark:border-slate-800">
               K
             </kbd>
           </kbd>

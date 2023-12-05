@@ -9,15 +9,6 @@ type: Instructions
 
 # Yagna installation for requestors
 
-{% alert level="info" %}
-
-**These instructions are designed for the environments:**
-
-- OS X 10.14+, Ubuntu 18.04 or 20.04 or Windows
-- Node.js version above 16.0.0
-
-{% /alert %}
-
 ## Introduction
 
 In this article, we'll show you how to install and configure Yagna in case you want to enable your applications to connect to the network.
@@ -28,8 +19,10 @@ Yagna is a service that will let you communicate with the Golem Network and perf
 
 #### Install Yagna
 
+Yagna runs on OS X 10.14+, Ubuntu 20.04+ or Windows.
+
 {% tabs %}
-{% tab label="Easy installation" %}
+{% tab label="Linux/Mac" %}
 
 On Linux/ MacOS you can install it using our helper script like this:
 
@@ -42,7 +35,7 @@ You might be asked to modify your PATH afterward.
 {% /tab %}
 {% tab label="Windows Manual installation" %}
 
-Alternatively, if you can't install it easily, you can do it manually in the following way:
+There's no easy installer for Windows, thus you must install it manually yourself using the instructions below.
 
 1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
 2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.

@@ -15,15 +15,6 @@ This example will show you how the task result can be managed by code in differe
 
 Yagna service is installed and running with the `try_golem` app-key configured.
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
-
 ## How to run examples
 
 Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
@@ -117,4 +108,3 @@ In the case of the failure in the `run()` method, we receive the result object w
 - `stderr: 'node: bad option: -w\n',` - the command output
 - `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
 
-Final note: If you run your tasks using the `map()` or `forEach()` methods, TaskExecutor will stop the whole Job and will not continue after failure of any Task.
