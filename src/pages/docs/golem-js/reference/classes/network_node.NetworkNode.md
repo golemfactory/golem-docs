@@ -1,7 +1,8 @@
 ---
-title: "Class NetworkNode - golem-js API Reference"
+title: "Class NetworkNode"
+pageTitle: "Class NetworkNode - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class NetworkNode within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: NetworkNode
 
@@ -46,7 +47,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[src/network/node.ts:8](https://github.com/golemfactory/golem-js/blob/cd3b295/src/network/node.ts#L8)
+[src/network/node.ts:8](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/node.ts#L8)
 
 ## Properties
 
@@ -56,7 +57,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[src/network/node.ts:9](https://github.com/golemfactory/golem-js/blob/cd3b295/src/network/node.ts#L9)
+[src/network/node.ts:9](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/node.ts#L9)
 
 ___
 
@@ -66,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/network/node.ts:10](https://github.com/golemfactory/golem-js/blob/cd3b295/src/network/node.ts#L10)
+[src/network/node.ts:10](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/node.ts#L10)
 
 ## Methods
 
@@ -88,7 +89,7 @@ on the provider's end.
 
 #### Defined in
 
-[src/network/node.ts:20](https://github.com/golemfactory/golem-js/blob/cd3b295/src/network/node.ts#L20)
+[src/network/node.ts:20](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/node.ts#L20)
 
 ___
 
@@ -112,4 +113,4 @@ the url
 
 #### Defined in
 
-[src/network/node.ts:36](https://github.com/golemfactory/golem-js/blob/cd3b295/src/network/node.ts#L36)
+[src/network/node.ts:36](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/node.ts#L36)

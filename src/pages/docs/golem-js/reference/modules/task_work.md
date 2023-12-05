@@ -1,7 +1,8 @@
 ---
-title: "Module task/work - golem-js API Reference"
+title: "Module task/work"
+pageTitle: "Module task/work - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module task/work within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: task/work
 
@@ -24,25 +25,23 @@ type: "reference"
 
 ### Worker
 
-Ƭ **Worker**\<`InputType`, `OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext), `data?`: `InputType`) => `Promise`\<`OutputType`\>
+Ƭ **Worker**\<`OutputType`\>: (`ctx`: [`WorkContext`](../classes/task_work.WorkContext)) => `Promise`\<`OutputType`\>
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `InputType` | `unknown` |
-| `OutputType` | `unknown` |
+| Name |
+| :------ |
+| `OutputType` |
 
 #### Type declaration
 
-▸ (`ctx`, `data?`): `Promise`\<`OutputType`\>
+▸ (`ctx`): `Promise`\<`OutputType`\>
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `ctx` | [`WorkContext`](../classes/task_work.WorkContext) |
-| `data?` | `InputType` |
 
 ##### Returns
 
@@ -50,4 +49,4 @@ type: "reference"
 
 #### Defined in
 
-[src/task/work.ts:20](https://github.com/golemfactory/golem-js/blob/cd3b295/src/task/work.ts#L20)
+[src/task/work.ts:21](https://github.com/golemfactory/golem-js/blob/c827e77/src/task/work.ts#L21)

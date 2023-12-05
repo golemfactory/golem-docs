@@ -1,7 +1,8 @@
 ---
-title: "Class AgreementCandidate - golem-js API Reference"
+title: "Class AgreementCandidate"
+pageTitle: "Class AgreementCandidate - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class AgreementCandidate within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: AgreementCandidate
 
@@ -36,7 +37,7 @@ type: "reference"
 
 #### Defined in
 
-[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/cd3b295/src/agreement/service.ts#L16)
+[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L16)
 
 ## Properties
 
@@ -46,7 +47,7 @@ type: "reference"
 
 #### Defined in
 
-[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/cd3b295/src/agreement/service.ts#L15)
+[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L15)
 
 ___
 
@@ -56,4 +57,4 @@ ___
 
 #### Defined in
 
-[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/cd3b295/src/agreement/service.ts#L16)
+[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L16)

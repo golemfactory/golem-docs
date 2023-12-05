@@ -1,15 +1,18 @@
 ---
-title: "Class TaskRedone - golem-js API Reference"
+title: "Class TaskRedone"
+pageTitle: "Class TaskRedone - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class TaskRedone within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: TaskRedone
 
 [events/events](../modules/events_events).TaskRedone
 
+Represents the situation in which running the task failed for some reason, but it will be retried
+
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `retriesCount`: `number` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `retriesCount`: `number` ; `activityId?`: `string` ; `reason?`: `string`  }\>
 
   ↳ **`TaskRedone`**
 
@@ -33,16 +36,16 @@ type: "reference"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data?` | `Object` |
-| `data.id` | `string` |
-| `data.agreementId` | `string` |
-| `data.activityId` | `string` |
-| `data.providerId` | `string` |
-| `data.providerName` | `string` |
-| `data.retriesCount` | `number` |
-| `data.reason?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data?` | `Object` | - |
+| `data.id` | `string` | - |
+| `data.agreementId` | `string` | - |
+| `data.providerId` | `string` | - |
+| `data.providerName` | `string` | - |
+| `data.retriesCount` | `number` | - |
+| `data.activityId?` | `string` | The activity that was involved This might be not set when there was an issue with starting the activity on the provider |
+| `data.reason?` | `string` | - |
 
 #### Returns
 
@@ -54,7 +57,7 @@ type: "reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/cd3b295/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/c827e77/src/events/events.ts#L28)
 
 ## Properties
 
@@ -64,15 +67,15 @@ type: "reference"
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `agreementId` | `string` |
-| `activityId` | `string` |
-| `providerId` | `string` |
-| `providerName` | `string` |
-| `retriesCount` | `number` |
-| `reason?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `string` | - |
+| `agreementId` | `string` | - |
+| `providerId` | `string` | - |
+| `providerName` | `string` | - |
+| `retriesCount` | `number` | - |
+| `activityId?` | `string` | The activity that was involved This might be not set when there was an issue with starting the activity on the provider |
+| `reason?` | `string` | - |
 
 #### Inherited from
 
@@ -80,7 +83,7 @@ type: "reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/cd3b295/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c827e77/src/events/events.ts#L16)
 
 ___
 
@@ -94,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/cd3b295/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c827e77/src/events/events.ts#L17)
 
 ___
 
@@ -108,4 +111,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/cd3b295/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/c827e77/src/events/events.ts#L18)

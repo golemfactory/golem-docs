@@ -1,7 +1,8 @@
 ---
-title: "Module market/builder - golem-js API Reference"
+title: "Module market/builder"
+pageTitle: "Module market/builder - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module market/builder within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: market/builder
 
@@ -28,4 +29,4 @@ Properties and constraints to be added to a market object (i.e. a demand or an o
 
 #### Defined in
 
-[src/market/builder.ts:7](https://github.com/golemfactory/golem-js/blob/cd3b295/src/market/builder.ts#L7)
+[src/market/builder.ts:7](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/builder.ts#L7)
