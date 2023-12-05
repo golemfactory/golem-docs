@@ -124,7 +124,7 @@ The output of the script should look very similar to the one below:
 
 ![Output logs](/js-tutorial-05.gif)
 
-You can find information regarding the `node.js` version used on the remote computer - `v.16.14.0` - at the end of the script's logs. This version is incorporated into the current standard Golem image used to execute the task.
+You can find information regarding the `node.js` version used on the remote computer - `v.16.14.0` - at the end of the script's logs.
 
 ### Summary
 
@@ -134,9 +134,12 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="Next steps" %}
 
 - [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
+
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
+
 - [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
 - [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
+
 {% /docnavigation %}
