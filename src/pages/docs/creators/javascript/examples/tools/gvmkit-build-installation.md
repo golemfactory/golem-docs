@@ -22,21 +22,18 @@ This example has been designed to work with the following environments:
 
 - npm or pip installed
 
-
 {% tabs %}
 {% tab label="JavaScript/npm" %}
 Note that npm must be installed.
-    
+
 ```bash
 npm install -g @golem-sdk/gvmkit-build
 ```
 
-
-
 {% /tab %}
 {% tab label="Python/pip" %}
 Note that python3/python with a pip installer is required.
-    
+
 ```bash
 pip install gvmkit-build
 ```
@@ -45,7 +42,6 @@ pip install gvmkit-build
 {% /tabs %}
 
 The installation can be verified by running the following command: `gvmkit-build --version`
-
 
 {% docnavigation title="Next steps" %}
 
@@ -59,5 +55,3 @@ The installation can be verified by running the following command: `gvmkit-build
 More information can be found in the: [golemfactory/gvmkit-build-rs repository](https://github.com/golemfactory/gvmkit-build-rs).
 
 {% /docnavigation %}
-
- 

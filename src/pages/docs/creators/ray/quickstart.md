@@ -3,7 +3,7 @@ description: Streamline Ray cluster setup on Golem Network with this quickstart 
 title: Ray on Golem Quickstart
 pageTitle: Simplify Ray Cluster Setup on Golem Network - Quickstart Tutorial
 
-type: quickstart
+type: Quickstart
 ---
 
 {% partial file="ray/quickstart.md" /%}
@@ -12,4 +12,4 @@ type: quickstart
 
 - [Ray on Golem introduction](/docs/creators/ray)
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)
-{% /docnavigation %}
+  {% /docnavigation %}

@@ -1,7 +1,7 @@
 ---
 title: useTask
 description: React hook for managing a single Task on the Golem Network
-type: reference
+type: React API Reference
 ---
 
 # useTask
@@ -9,7 +9,7 @@ type: reference
 `useTask` is a hook that manages a single task on the Golem Network. It returns an object with the following properties:
 
 | Name      | Description                                                                                  |
-|-----------|----------------------------------------------------------------------------------------------|
+| --------- | -------------------------------------------------------------------------------------------- |
 | run       | The [worker function](/docs/golem-js/reference/modules/task_work#worker) that runs the task. |
 | isRunning | Boolean indicating whether the task is running.                                              |
 | error     | The error which caused the task to fail.                                                     |

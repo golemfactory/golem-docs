@@ -32,7 +32,6 @@ The basic structure of the script:
 
 ```js
 import { TaskExecutor } from '@golem-sdk/golem-js'
-
 ;(async () => {
   //... Function body in here
 })()

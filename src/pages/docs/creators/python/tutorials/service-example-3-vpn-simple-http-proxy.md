@@ -1,8 +1,8 @@
 ---
-title: Golem Network VPN & HTTP Proxy Service Tutorial 
+title: Golem Network VPN & HTTP Proxy Service Tutorial
 description: Learn to create a minimalistic HTTP proxy using Golem Network VPN functionality, enabling a local agent to route web server requests via provider nodes.
 pageTitle: Implement a Minimalistic HTTP Proxy on Golem Network | VPN Service Tutorial
-type: tutorial
+type: Tutorial
 ---
 
 # Service Example 3: VPN - Minimalistic HTTP proxy

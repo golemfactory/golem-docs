@@ -2,7 +2,7 @@
 title: Enabling Internet Access for Requestor Tasks on Golem Network
 description: Step-by-step tutorial for Golem requestors to enable internet access in tasks, detailing manifest creation and provider security.
 pageTitle: Golem Requestors' Tutorial on how to access Internet for Tasks
-type: tutorial
+type: Tutorial
 ---
 
 ## Introduction
@@ -133,22 +133,22 @@ import { TaskExecutor } from '@golem-sdk/golem-js'
 import { readFile } from 'fs/promises'
 
 const url =
-  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
+  'https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly'
 ```
 
 And finally, let’s execute some code on the provider. You will run a single task on the provider, using the TaskExecutor.run() function. To make this work, put the following code in the try/catch block:
 
 ```javascript
-    await executor.run(async (ctx) => {
-      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
+await executor.run(async (ctx) => {
+  const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 
-      console.log((await ctx.run("ls -l")).stdout);
-      if (result.result === "Ok") {
-        console.log("File downloaded!");
-      } else {
-        console.error("Failed to download the file!", result.stderr);
-      }
-    });
+  console.log((await ctx.run('ls -l')).stdout)
+  if (result.result === 'Ok') {
+    console.log('File downloaded!')
+  } else {
+    console.error('Failed to download the file!', result.stderr)
+  }
+})
 ```
 
 And that’s it! Now, make sure your yagna service is running and you can start this script.
@@ -156,40 +156,40 @@ And that’s it! Now, make sure your yagna service is running and you can start 
 This is how the entire file should look like:
 
 ```javascript
-import { TaskExecutor } from "@golem-sdk/golem-js";
-import { readFile } from "fs/promises";
+import { TaskExecutor } from '@golem-sdk/golem-js'
+import { readFile } from 'fs/promises'
 
 const url =
-  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
+  'https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly'
 
-(async function main() {
+;(async function main() {
   // Load the manifest.
-  const manifest = await readFile(`./manifest.json`);
+  const manifest = await readFile(`./manifest.json`)
 
   // Create and configure a TaskExecutor instance.
   const executor = await TaskExecutor.create({
-    capabilities: ["inet", "manifest-support"],
-    yagnaOptions: { apiKey: "try_golem" },
-    manifest: manifest.toString("base64"),
-  });
+    capabilities: ['inet', 'manifest-support'],
+    yagnaOptions: { apiKey: 'try_golem' },
+    manifest: manifest.toString('base64'),
+  })
 
   try {
     await executor.run(async (ctx) => {
-      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
+      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 
-      console.log((await ctx.run("ls -l")).stdout);
-      if (result.result === "Ok") {
-        console.log("File downloaded!");
+      console.log((await ctx.run('ls -l')).stdout)
+      if (result.result === 'Ok') {
+        console.log('File downloaded!')
       } else {
-        console.error("Failed to download the file!", result.stderr);
+        console.error('Failed to download the file!', result.stderr)
       }
-    });
+    })
   } catch (err) {
-    console.error("The task failed due to", err);
+    console.error('The task failed due to', err)
   } finally {
-    await executor.end();
+    await executor.end()
   }
-})();
+})()
 ```
 
 You can run it now. In the output, you should see “File downloaded!” between log lines and the output of the `ls -l` command showing th size of the fole downloaded . That means the code works.

@@ -1,6 +1,6 @@
 ---
 title: Golem Test Harness (goth) Overview
-description: Explore Golem's integration testing framework, goth, for local simulation of Golem network interactions, debugging, and end-to-end testing of applications. 
+description: Explore Golem's integration testing framework, goth, for local simulation of Golem network interactions, debugging, and end-to-end testing of applications.
 pageTitle: Golem's Integration Testing Framework - Simulate & Debug with goth
 
 type: Introduction

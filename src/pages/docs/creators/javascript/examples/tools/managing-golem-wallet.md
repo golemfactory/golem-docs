@@ -27,7 +27,6 @@ This example has been designed to work with the following environments:
 
 Yagna service is installed and running.
 
-
 ## Your Golem wallet address
 
 Golem's wallet is automatically initialized for you the first time you start your `yagna` service and thus, an address associated with it is also generated automatically.
@@ -49,17 +48,20 @@ In the context of running Golem on mainnet, here are the commands for each of th
 {% tabs %}
 
 {% tab label="Polygon" %}
+
 ```bash
 yagna payment status --network=polygon --driver=erc20
 ```
+
 {% /tab %}
 {% tab label="Ethereum mainnet" %}
+
 ```bash
 yagna payment status --network=mainnet --driver=erc20
 ```
+
 {% /tab %}
 {% /tabs %}
-
 
 ## Sending test funds to your account
 

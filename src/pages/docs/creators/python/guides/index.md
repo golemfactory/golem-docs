@@ -1,6 +1,6 @@
 ---
-title: Golem Network Python API Overview 
-pageTitle: Master Golem's Python SDK - Build Decentralized Applications with Ease 
+title: Golem Network Python API Overview
+pageTitle: Master Golem's Python SDK - Build Decentralized Applications with Ease
 description: Explore the high-level Python API for the Golem Network, simplifying service-oriented app development for the decentralized web.
 type: Introduction
 ---

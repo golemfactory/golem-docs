@@ -1,7 +1,7 @@
 ---
 title: useYagna
 description: React hook for connecting to Yagna
-type: reference
+type: React API Reference
 ---
 
 # useYagna
