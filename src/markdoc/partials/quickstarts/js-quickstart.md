@@ -122,7 +122,7 @@ The output of the script should look very similar to the one below:
 
 ![Output logs](/js-tutorial-05.gif)
 
-You can find information regarding the `node.js` version used on the remote computer - `v.16.14.0` - at the end of the script's logs.
+The information about the `node.js` version included in the image that our script deploys on the remote computer, can be found at the end of the script's logs.
 
 ### Summary
 
