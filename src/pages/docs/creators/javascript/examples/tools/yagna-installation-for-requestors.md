@@ -53,7 +53,7 @@ Note: the link will lead you to the latest stable release, you can go to: [https
 
 {% alert level="info" %}
 
-    If you have encountered problems, contact us on: [Discord channel](https://chat.golem.network/):
+If you have encountered problems, contact us on: [Discord channel](https://chat.golem.network/):
 
 {% /alert  %}
 
