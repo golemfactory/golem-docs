@@ -15,14 +15,6 @@ In this article, we present commands related to the daily management of your Yag
 - Getting test funds
 - Generating the unique app-keys
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X, Ubuntu or Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 Yagna service is installed and running.
