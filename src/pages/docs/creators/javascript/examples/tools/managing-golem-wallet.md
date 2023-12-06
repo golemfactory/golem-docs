@@ -15,18 +15,9 @@ In this article, we present commands related to the daily management of your Yag
 - Getting test funds
 - Generating the unique app-keys
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 Yagna service is installed and running.
-
 
 ## Your Golem wallet address
 
@@ -49,17 +40,20 @@ In the context of running Golem on mainnet, here are the commands for each of th
 {% tabs %}
 
 {% tab label="Polygon" %}
+
 ```bash
 yagna payment status --network=polygon --driver=erc20
 ```
+
 {% /tab %}
 {% tab label="Ethereum mainnet" %}
+
 ```bash
 yagna payment status --network=mainnet --driver=erc20
 ```
+
 {% /tab %}
 {% /tabs %}
-
 
 ## Sending test funds to your account
 

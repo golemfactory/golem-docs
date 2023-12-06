@@ -1,6 +1,6 @@
 ---
 description: Guide on using app-keys with JS Task API in Yagna REST API, including creating, listing, and integrating unique keys for secure access.
-title: Using app-keys 
+title: Using app-keys
 pageTitle: Secure Your Yagna REST API Access - JS Task API App-Key Integration Examples
 type: Example
 ---
@@ -97,23 +97,23 @@ yagnaOptions: {
 }
 ```
 
-### Using YAGNA_AUTO_CONF environment variable
+### Using YAGNA_AUTOCONF_APPKEY environment variable
 
-When the Yagna service starts, if the environment variable `YAGNA_AUTO_CONF` has been set, its value will be used to create an autoconfigured app-key. However, this app-key isn't permanent; it will vanish upon restarting the service unless the `YAGNA_AUTO_CONF` variable is set again. While this approach is handy for tutorials and demonstrations, for regular use it's recommended to have a distinct app-key. This provides better management over access to your Yagna REST API.
+When the Yagna service starts, if the environment variable `YAGNA_AUTOCONF_APPKEY` has been set, its value will be used to create an autoconfigured app-key. However, this app-key isn't permanent; it will vanish upon restarting the service unless the `YAGNA_AUTOCONF_APPKEY` variable is set again. While this approach is handy for tutorials and demonstrations, for regular use it's recommended to have a distinct app-key. This provides better management over access to your Yagna REST API.
 
 {% tabs %}
 
 {% tab label="linux / macOS" %}
 
 ```bash
-export YAGNA_AUTO_CONF=insert-your-desired-app-key-here
+export YAGNA_AUTOCONF_APPKEY=insert-your-desired-app-key-here
 ```
 
 {% /tab %}
 {% tab label="Windows" %}
 
 ```bash
-set YAGNA_AUTO_CONF=insert-your-desired-app-key-here
+set YAGNA_AUTOCONF_APPKEY=insert-your-desired-app-key-here
 ```
 
 {% /tab %}
