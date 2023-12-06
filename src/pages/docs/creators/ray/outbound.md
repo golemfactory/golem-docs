@@ -142,7 +142,7 @@ Now that we have the app ready, we need to start the cluster to execute it.
 The first step is adding the `"https://ipfs.io"` to `outbound_urls` property in the cluster yaml.
 
 You can either update your cluster yaml or download one from [the repository](https://github.com/golemfactory/golem-ray/blob/main/examples/ipfs-golem-cluster.yaml).
-The linked config is a version of the example Ray on Golem cluster yaml with:
+The linked config is a version of the [example Ray on Golem cluster yaml](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml) with:
 ```yaml
 outbound_urls: ["https://pypi.dev.golem.network", "https://ipfs.io"]
 ```
