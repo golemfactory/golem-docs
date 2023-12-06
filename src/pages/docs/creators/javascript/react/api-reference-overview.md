@@ -1,7 +1,7 @@
 ---
 title: React SDK API Overview
 description: Overview of the Golem React SDK
-type: React API Reference
+type: React Reference
 ---
 
 # React SDK API Overview

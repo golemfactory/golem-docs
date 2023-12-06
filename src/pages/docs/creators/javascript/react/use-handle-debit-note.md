@@ -1,7 +1,7 @@
 ---
 title: useHandleDebitNote
 description: React hook for handling a single debit note
-type: React API Reference
+type: React Reference
 ---
 
 # useHandleDebitNote

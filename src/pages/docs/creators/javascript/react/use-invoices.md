@@ -1,7 +1,7 @@
 ---
 title: useInvoices
 description: React hook for fetching all invoices
-type: React API Reference
+type: React Reference
 ---
 
 # useInvoices

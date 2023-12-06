@@ -1,7 +1,7 @@
 ---
 title: useTask
 description: React hook for managing a single Task on the Golem Network
-type: React API Reference
+type: React Reference
 ---
 
 # useTask

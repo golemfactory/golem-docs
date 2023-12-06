@@ -1,7 +1,7 @@
 ---
 title: YagnaProvider
 description: React component that provides context for the Golem React SDK
-type: React API Reference
+type: React Reference
 ---
 
 # YagnaProvider

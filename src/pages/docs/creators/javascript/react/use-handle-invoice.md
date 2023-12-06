@@ -1,7 +1,7 @@
 ---
 title: useHandleInvoice
 description: React hook for handling a single invoice
-type: React API Reference
+type: React Reference
 ---
 
 # useHandleInvoice

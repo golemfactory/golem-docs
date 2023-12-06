@@ -1,7 +1,7 @@
 ---
 title: useExecutor
 description: React hook for managing a single TaskExecutor
-type: React API Reference
+type: React Reference
 ---
 
 # useExecutor
