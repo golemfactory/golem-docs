@@ -13,14 +13,6 @@ You can identify your image by a `hash` or by a `tag`.
 
 If you intend to use your image just for testing, it is enough to use image hash and upload them anonymously to the registry. If you intend to work on a more complex project where you would like to use several different versions of your image or collaborate with other users - you should consider creating an account in the registry and using tags to describe your images. Both cases are illustrated in our examples.
 
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X, Ubuntu or Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 - npm or pip installed
