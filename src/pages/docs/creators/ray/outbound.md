@@ -60,7 +60,7 @@ The example re-tries the calls for a while.
 
 ### Example code
 
-Consider the following code (you can find it also in [the repository](https://github.com/golemfactory/golem-ray/blob/mateusz/outbound-docs/examples/simple-outbound-ipfs.py).
+Consider the following code (you can find it also in [the repository](https://github.com/golemfactory/golem-ray/blob/mateusz/outbound-docs/examples/simple-outbound-ipfs.py)).
 
 ```python
 import requests
@@ -200,7 +200,7 @@ We are also very interested in learning about your use cases, and willing to hel
 {% docnavigation title="See also" %}
 - [Ray on Golem cluster yaml details](/docs/creators/ray/cluster-yaml)
 - [Ray on Golem network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats)
-<!-- - [Running Ray on Golem on the mainnet](/docs/creators/ray/mainnet) -->
 - [Ray on Golem general introduction](/docs/creators/ray)
 - [Ray on Golem setup tutorial](/docs/creators/ray/setup-tutorial)
+<!-- - [Running Ray on Golem on the mainnet](/docs/creators/ray/mainnet) -->
 {% /docnavigation %}
