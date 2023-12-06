@@ -16,8 +16,6 @@ Yagna is a service that will let you communicate with the Golem Network and perf
 
 #### Install Yagna
 
-Yagna runs on OS X, Ubuntu or Windows.
-
 {% tabs %}
 {% tab label="Linux/Mac" %}
 
