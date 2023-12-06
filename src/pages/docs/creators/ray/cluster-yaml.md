@@ -64,7 +64,7 @@ idle_timeout_minutes: 5
 ### Initialization commands
 
 You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies. 
-Note that using `pip` requires its URL to be present in [`outbound_urls`](#accessing-the-internet-outbound).
+Note that using `pip` requires its domain to be present in [`outbound_urls`](#accessing-the-internet-outbound).
 
 ```yaml
 # List of commands that will be run to initialize the nodes (before `setup_commands`)
@@ -115,7 +115,7 @@ Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.
 
 The optional `outbound_urls` lists the domains you want to access from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
 
-Ray on Golem accepts URLs prefixed with either `http://` or `https://`.
+Ray on Golem accepts domains prefixed with either `http://` or `https://`.
 
 By default, this property includes `https://pypi.dev.golem.network` which allows [downloading additional packages with pip](#initialization-commands). 
 If you don't require any additional packages, removing the domain from `outbound_urls` is recommended so that your cluster finds more available providers.
