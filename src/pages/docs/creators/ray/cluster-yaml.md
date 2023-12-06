@@ -112,12 +112,21 @@ Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.
 
 #### Accessing the Internet (outbound)
 
-The optional `outbound_urls` lists URL domains accessible from the Ray on Golem cluster.
+The optional `outbound_urls` lists domains accessible from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
 
 Ray on Golem accepts URLs prefixed with either `http://` or `https://`.
 
-tbc
+By default this property has `https://pypi.dev.golem.network` which allows [downloading additional packages with pip](#initialization-commands). 
+If you don't require any additional packages it is recommended to remove the domain from `outbound_urls`, so that your cluster finds more available providers.
 
+You can test the availability of providers allowing your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
+
+```yaml
+# List of urls which will be added to the Computation Manifest
+# Requires protocol to be defined in all URLs
+# If not provided demand will not use Computation Manifest
+outbound_urls: ["https://pypi.dev.golem.network"]
+```
 
 ## Budget control
 
