@@ -8,14 +8,6 @@ type: instructions
 
 # Gvmkit-build installation
 
-{% alert level="info" %}
-
-This article has been devised to work with the following environments:
-
-- OS X, Ubuntu or Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 - npm or pip installed
