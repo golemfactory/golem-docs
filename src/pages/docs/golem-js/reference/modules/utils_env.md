@@ -1,7 +1,8 @@
 ---
-title: "Module utils/env - golem-js API Reference"
+title: "Module utils/env"
+pageTitle: "Module utils/env - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module utils/env within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: utils/env
 
@@ -30,4 +31,4 @@ type: "reference"
 
 #### Defined in
 
-[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/cd3b295/src/utils/env.ts#L3)
+[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/c827e77/src/utils/env.ts#L3)

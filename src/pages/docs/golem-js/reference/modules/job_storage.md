@@ -1,7 +1,8 @@
 ---
-title: "Module job/storage - golem-js API Reference"
+title: "Module job/storage"
+pageTitle: "Module job/storage - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module job/storage within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: job/storage
 
@@ -41,4 +42,4 @@ type: "reference"
 
 #### Defined in
 
-[src/job/storage.ts:3](https://github.com/golemfactory/golem-js/blob/cd3b295/src/job/storage.ts#L3)
+[src/job/storage.ts:3](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/storage.ts#L3)
