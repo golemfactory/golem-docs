@@ -12,15 +12,6 @@ In this tutorial, you will create a simple web page that will trigger your reque
 
 In the Quickstart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
 
-{% alert level="info" %}
-
-This tutorial has been designed to work with the following environments:
-
-- OS X, Ubuntu or Windows
-- Chrome
-
-{% /alert %}
-
 ## Prerequisites
 
 Before proceeding, you'll need to install and launch the Yagna service, version 0.13.0 or later. Note that this version is available as a **release candidate**. Installation instructions can be found through the manual Yagna installation guide available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
