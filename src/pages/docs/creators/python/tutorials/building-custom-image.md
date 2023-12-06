@@ -11,8 +11,6 @@ This article will go through the process of creating a Dockerfile, building a Do
 
 {% alert level="info" %}
 
-This tutorial is designed for: OS X, Ubuntu, and Windows.
-
 Prerequisites:
 
 - Docker. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
