@@ -7,14 +7,6 @@ type: instructions
 
 # Converting an image
 
-{% alert level="info" %}
-
-These instructions has been designed to work with the following environments:
-
-- OS X, Ubuntu or Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 - Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
