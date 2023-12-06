@@ -113,17 +113,17 @@ Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.
 
 #### Accessing the Internet (outbound)
 
-The optional `outbound_urls` lists domains accessible from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
+The optional `outbound_urls` lists the domains you want to access from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
 
 Ray on Golem accepts URLs prefixed with either `http://` or `https://`.
 
-By default this property has `https://pypi.dev.golem.network` which allows [downloading additional packages with pip](#initialization-commands). 
-If you don't require any additional packages it is recommended to remove the domain from `outbound_urls`, so that your cluster finds more available providers.
+By default, this property includes `https://pypi.dev.golem.network` which allows [downloading additional packages with pip](#initialization-commands). 
+If you don't require any additional packages, removing the domain from `outbound_urls` is recommended so that your cluster finds more available providers.
 
 You can test the availability of providers allowing your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
 
 ```yaml
-# List of urls which will be added to the Computation Manifest
+# List of URLs which will be added to the Computation Manifest
 # Requires protocol to be defined in all URLs
 # If not provided demand will not use Computation Manifest
 outbound_urls: ["https://pypi.dev.golem.network"]
@@ -149,7 +149,7 @@ provider:
 ### Avoiding too-expensive providers
 
 You can use `provider.parameters.node_config.per_cpu_budget` section to define the limits on providers' prices.
-Ray on Golem won't work with providers who exceed any of the following price settings.
+Ray on Golem won't work with providers exceeding the following price settings.
 
 #### Maximum provider prices
 

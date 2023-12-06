@@ -11,14 +11,14 @@ The purpose of this article is to show you an example of a Ray app accessing the
 
 ## Outbound introduction
 
-Providers security is very important topic within the Golem network. 
+Providers' security is a very important topic within the Golem network. 
 They are protected by restricting the usage of the Internet from within the images they deploy on their machines.
 
-The most popular tool providers use to protect themselves is allowing outgoing connection to whitelisted hosts only.
+The most popular tool providers use to protect themselves is allowing outgoing connections to whitelisted hosts only.
 The default whitelist is curated by Golem Factory and is kept on [GitHub](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist).
 
 Providers might edit the whitelist, or disable it to accept all outgoing traffic. 
-Another option, not really supported by Ray on Golem, is to allow outgoing traffic for images signed by a trusted entity (e.g. Golem Factory)
+Another option, not yet supported by Ray on Golem, is to allow outgoing traffic for images signed by a trusted entity (e.g. Golem Factory)
 
 Feel free to check out the general [Accessing the Internet from Golem providers](/docs/creators/javascript/guides/accessing-internet) guide to get more context not related to Ray on Golem.
 
@@ -29,14 +29,14 @@ Please reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.n
 Please have a look at the [default whitelist](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist) yourself.
 
 Among the entries you can find `dl.dropboxusercontent.com`, `ipfs.io` - they should allow a certain level of possibility when designing Ray on Golem applications. 
-You can upload the data your computation needs to dropbox or IPFS and then use it in your remote tasks. This is demonstrated in the [example below](#simple-outbound-example)
+You can upload the data your computation needs to Dropbox or IPFS and then use it in your remote tasks. This is demonstrated in the [example below](#simple-outbound-example)
 
 Ray on Golem uses the whitelist to allow installing [additional packages](/docs/creators/ray/cluster-yaml#initialization-commands) with pip. 
 Golem Factory is proxying `pypi.org` via `pypi.dev.golem.network` to make it possible.
 
 When you need to access a non-whitelisted URL the recommended way is to advertise your need on [`#providers` discord channel](https://chat.golem.network/).
 This way every provider will be able to assess the URLs you need and decide 
-if the possiblity of extra earning (you will be paying the providers that whitelist your URLs) is more tempting to them, than the security risk your URLs might pose.
+if the possibility of extra earnings (you will be paying the providers that whitelist your URLs) is more tempting to them than the security risk your URLs might pose.
 
 Please reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.network/) to discuss the options and help us define the best way to support your outbound needs.
 
@@ -53,7 +53,7 @@ The [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats) come
 ## Simple outbound example
 
 The following section describes an example Ray app accessing the Internet. 
-It downloads a couple files hosted on [IPFS](https://ipfs.io), and prints the concatenated content.
+It downloads a couple of files hosted on [IPFS](https://ipfs.io) and prints the concatenated content.
 
 The nature of Golem's support for outbound is rather early stage - it happens that a connection fails. 
 The example re-tries the calls for a while.
@@ -141,7 +141,7 @@ Now that we have the app ready, we need to start the cluster to execute it.
 
 The first step is adding the `"https://ipfs.io"` to `outbound_urls` property in the cluster yaml.
 
-You can either update your cluster yaml, or download one from [the repository](https://github.com/golemfactory/golem-ray/blob/main/examples/ipfs-golem-cluster.yaml).
+You can either update your cluster yaml or download one from [the repository](https://github.com/golemfactory/golem-ray/blob/main/examples/ipfs-golem-cluster.yaml).
 The linked config is a version of the example Ray on Golem cluster yaml with:
 ```yaml
 outbound_urls: ["https://pypi.dev.golem.network", "https://ipfs.io"]
@@ -176,11 +176,11 @@ Shared connection to 192.168.0.3 closed.
 
 Failing outbound calls would get logged to the console and retried. 
 Note that it may happen that one or more calls would hang for a couple of minutes eventually displaying `[Errno -3] Temporary failure in name resolution)`. 
-These are know issues, we hope they get resolved soon.
+These are known issues, hopefully they will be resolved soon.
 
 ### Congratulations!
 
-You have now run the simple outbound example, and hopefully seen the expected outcome - `Ray on Golem rocks!` line which is constructed from contents of 12 files hosted on IPFS.
+You have now run the simple outbound example, and hopefully seen the expected outcome - `Ray on Golem rocks!` line which is constructed from the contents of 12 files hosted on IPFS.
 
 Now is the time to stop the cluster with `ray down ipfs-golem-cluster.yaml`, and that is it.
 

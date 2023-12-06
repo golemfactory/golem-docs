@@ -13,7 +13,7 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 
 - [Quickstart](/docs/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 - [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
-- [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported python and ray versions, and other known issues
+- [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported Python and Ray versions, and other known issues
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
 - [Accessing the Internet tutorial](/docs/creators/ray/outbound) - enabling your Ray app to use the Internet (from within the cluster nodes)
@@ -46,7 +46,7 @@ The beauty of the solution is that you can run the app locally, and when you are
 
 ## What do you need
 
-You only need to install Ray on Golem - by default it also installs the Golem daemon and the Ray framework as dependencies.
+You only need to install Ray on Golem - by default, it also installs the Golem daemon and the Ray framework as dependencies.
 
 Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
 
