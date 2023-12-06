@@ -184,6 +184,7 @@ You have now run the simple outbound example, and hopefully seen the expected ou
 
 Now is the time to stop the cluster with `ray down ipfs-golem-cluster.yaml`, and that is it.
 
+Well done!
 
 ## Conclussion
 
