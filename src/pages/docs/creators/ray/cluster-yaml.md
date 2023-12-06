@@ -148,69 +148,71 @@ provider:
 
 ### Avoiding too-expensive providers
 
-You can use `provider.parameters.node_config.per_cpu_budget` section to define the limits on providers' prices.
+You can use `provider.parameters.node_config.budget_control` section to define the limits on providers' prices.
 Ray on Golem won't work with providers exceeding the following price settings.
 
 #### Maximum provider prices
 
 Golem providers charge in three ways. They charge:
-- the initial price at the start of image deployment - we divide it by the number of CPUs so that the price is representative of the actual computing power that you pay for,
-- CPU usage price for the total time (in hours) their CPUs spent computing,
-- duration price for the total time (in hours) they spent up and running - again, we divide it by the number of CPUs to get a fair comparison,
+- start price at the beginning of image deployment,
+- CPU per hour price for the total time their CPUs spent computing,
+- environment per hour price for the total time they spent up and running,
 
 So for example, if you rent a 3-CPU node for half an hour and the average load is 0.8 per CPU you will be charged 
-`3 * initial_price_per_cpu + 3 * duration_price_per_cpu * 0.5 + 3 * cpu_usage_price * 0.8 * 0.5`.
+`start_price +  env_per_hour_price * 0.5 + 3 * cpu_per_hour_price * 0.8 * 0.5`.
 
 The following properties allow you to reject providers with any of the prices exceeding your limits.
-- `max_initial_price`
-- `max_cpu_hour_price`
-- `max_duration_hour_price`
+- `max_start_price`
+- `max_cpu_per_hour_price`
+- `max_env_per_hour_price`
+
+Have a look at the list of [online providers](https://stats.golem.network/network/providers/online) to get a feeling of the prices on the market.
 
 ```yaml
 provider:
   parameters:
     node_config:
-      per_cpu_budget:
+      budget_control:
 
-        # Amount of GLMs for worker initiation 
+        # Amount of GLMs for worker starting 
         # causing Golem provider offer to be rejected
-        max_initial_price: 0.5
+        max_start_price: 0.5
 
         # Amount of GLMs for CPU utilization per hour 
         # causing Golem provider offer to be rejected
-        max_cpu_hour_price: 0.5 
+        max_cpu_per_hour_price: 0.5 
 
         # Amount of GLMs for each CPU for each hour that the worker runs 
         # causing Golem provider offer to be rejected
-        max_duration_hour_price: 0.5
+        max_env_per_hour_price: 0.5
 ```
 
-#### Choosing the cheapest providers - maximum expected usage cost
+#### Choosing the cheapest providers - maximum expected usage cost (per CPU)
 
 To work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
 
 Please estimate the approximate time your application will require the cluster to operate, and the expected CPU load during that time. 
 Then, set the respective `duration_hours` and `cpu_load` properties to allow Ray on Golem to compute each provider's expected usage cost.
 
-All providers' offers are internally sorted by estimated cost, allowing Ray on Golem to negotiate and sign agreements with the cheapest nodes first.
+All providers' offers are internally sorted by estimated cost (per CPU), allowing Ray on Golem to negotiate and sign agreements with the cheapest nodes first.
 
-You may also use `max_cost` to unconditionally cut off providers with too high an expected usage cost (in GLMs).
+You may also use `max_cost` to unconditionally cut off providers with too high an expected usage per CPU cost (in GLMs).
 
 ```yaml
 provider:
   parameters:
     node_config:
-      per_cpu_budget:
-        expected_usage:
+      budget_control:
+        per_cpu_expected_usage:
 
-          # Estimated expected load and duration per CPU for worker 
-          # allowing the picking of the least expensive Golem providers' offers first.
+          # Estimated expected load and duration for worker 
+          # allowing the picking of the least expensive Golem providers' offers first (per CPU).
           # If not provided, offers will be picked at random.
           # Both values need to be defined or undefined together.
           cpu_load: 0.8
           duration_hours: 0.5
 
-          # Amount of GLMs for expected usage 
+          # Amount of GLMs for expected usage per CPU 
           # causing Golem provider offer to be rejected
           # Requires both `cpu_load` and `duration_hours`
           max_cost: 1.5

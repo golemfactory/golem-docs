@@ -1,7 +1,8 @@
 ---
-title: "Class Terminate - golem-js API Reference"
+title: "Class Terminate"
+pageTitle: "Class Terminate - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class Terminate within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: Terminate
 
@@ -52,7 +53,7 @@ Command.constructor
 
 #### Defined in
 
-[src/script/command.ts:106](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L106)
+[src/script/command.ts:106](https://github.com/golemfactory/golem-js/blob/c827e77/src/script/command.ts#L106)
 
 ## Properties
 
@@ -66,7 +67,7 @@ Command.args
 
 #### Defined in
 
-[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L16)
+[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/c827e77/src/script/command.ts#L16)
 
 ## Methods
 
@@ -84,7 +85,7 @@ Command.toJson
 
 #### Defined in
 
-[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L25)
+[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/c827e77/src/script/command.ts#L25)
 
 ___
 
@@ -102,7 +103,7 @@ Command.toExeScriptRequest
 
 #### Defined in
 
-[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L31)
+[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/c827e77/src/script/command.ts#L31)
 
 ___
 
@@ -122,7 +123,7 @@ Command.before
 
 #### Defined in
 
-[src/script/command.ts:38](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L38)
+[src/script/command.ts:38](https://github.com/golemfactory/golem-js/blob/c827e77/src/script/command.ts#L38)
 
 ___
 
@@ -154,4 +155,4 @@ Command.after
 
 #### Defined in
 
-[src/script/command.ts:53](https://github.com/golemfactory/golem-js/blob/cd3b295/src/script/command.ts#L53)
+[src/script/command.ts:53](https://github.com/golemfactory/golem-js/blob/c827e77/src/script/command.ts#L53)
