@@ -63,7 +63,8 @@ idle_timeout_minutes: 5
 
 ### Initialization commands
 
-You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies.
+You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies. 
+Note that using `pip` requires its URL to be present in [`outbound_urls`](#accessing-the-internet-outbound).
 
 ```yaml
 # List of commands that will be run to initialize the nodes (before `setup_commands`)
