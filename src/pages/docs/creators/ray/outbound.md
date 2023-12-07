@@ -45,7 +45,7 @@ Please reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.n
 Cluster configuration yaml needs to contain information about the addresses (and protocols) you want to access with your Ray app.
 Checkout the [`outbound_urls` property description](/docs/creators/ray/cluster-yaml#accessing-the-internet-outbound) for the details.
 
-Whenever you change the list of these locations, you need to stop the cluster (`ray down`) and start it again (`ray stop`) to ensure that only those provider nodes that accept all the URLs are selected to form the new cluster.
+Whenever you change the list of these locations, you need to stop the cluster (`ray down`) and start it again (`ray up`) to ensure that only those provider nodes that accept all the URLs are selected to form the new cluster.
 
 The [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats) comes in handy when checking the availability of providers allowing your outbounds URLs.
 
