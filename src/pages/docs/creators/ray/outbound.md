@@ -111,7 +111,7 @@ for (url, text) in results:
     print(url, "->", text)
     aggregate_text += text
 
-print(aggregate_text)
+print(colorful.purple(f"\n{aggregate_text}"))
 ```
 
 You can run the code locally to see that it is working:
