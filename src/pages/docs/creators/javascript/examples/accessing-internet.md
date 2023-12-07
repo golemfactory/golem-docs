@@ -112,7 +112,7 @@ const url =
   } catch (err) {
     console.error('The task failed due to', err)
   } finally {
-    await executor.end()
+    await executor.shutdown()
   }
 })()
 ```
