@@ -118,7 +118,8 @@ The optional `outbound_urls` lists the addresses you want to access from the Ray
 Ray on Golem only accepts addresses prefixed with either the `http://` or `https://` scheme.
 
 Our default cluster definition specifies `https://pypi.dev.golem.network` as a required outbound address which allows [downloading additional packages with pip](#initialization-commands). 
-If you don't need to install any additional Python packages, removing that URL from `outbound_urls` is recommended, which potentially allows more providers to participate in your cluster.
+If you don't need to install any additional Python packages, removing that URL from `outbound_urls` is recommended. 
+It potentially allows more providers to participate in your cluster.
 
 You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
 
