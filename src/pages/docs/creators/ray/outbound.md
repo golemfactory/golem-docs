@@ -93,6 +93,7 @@ def get_url(url):
             response = requests.get(url, timeout=10)
             if response.status_code == 200:
                 text = response.content.decode()
+                print(url, "->", text)
                 return (url, text)
             else:
                 print(url, "failure #"+str(attempt), response.status_code)
@@ -108,7 +109,6 @@ results = ray.get(refs)
 aggregate_text = ""
 
 for (url, text) in results:
-    print(url, "->", text)
     aggregate_text += text
 
 print(colorful.purple(f"\n{aggregate_text}"))
@@ -120,20 +120,21 @@ python3 outbound.py
 ```
 ```
 2023-12-06 13:15:57,228	INFO worker.py:1664 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
-https://ipfs.io/ipfs/bafkreiemev2isidd7gk7352wxtqh6rwbuumt4vgnkkbx5wi6giaizt2bvq -> R
-https://ipfs.io/ipfs/bafkreigks6arfsq3xxfpvqrrwonchxcnu6do76auprhhfomao6c273sixm -> a
-https://ipfs.io/ipfs/bafkreifb7tsdmocu76eiz72lrz4hlvqayjuchecbfkgppgzx2cyrcsfq7i -> y
-https://ipfs.io/ipfs/bafkreiaplag3id7ckuzs6eiwca3skuheddup7p7espat5omqv6r7m2byhi ->  on
-https://ipfs.io/ipfs/bafkreibthyfb4j4blugo5zk4i476hxet2vwghy564kz3jlxi53lnoamrum -> G
-https://ipfs.io/ipfs/bafkreidfy5gbljugdb53no7zswhust6gxaagqa2kmwnjvvcjsgyiywhs2i -> o
-https://ipfs.io/ipfs/bafkreifmvsdmbzqjzkig6yzlbyw2ztfsw56sfmdcd4qox3hbusbvxe7w6a -> l
-https://ipfs.io/ipfs/bafkreib7pg5xwq23auzbmuo257jxjtogqhoan6vgly3u4obtpoemubdn5i -> e
-https://ipfs.io/ipfs/bafkreidcyzvhuxoxbqyumymampbujzjr43kllhrxtaeeiphjmkz2xvr4li -> m
-https://ipfs.io/ipfs/bafkreibwvht7dsk3ql73tf2d4dc4jtuv3a6juqykvrm7qtxtzp5lmfcqna ->
-https://ipfs.io/ipfs/bafkreihwavxppciktfeuynevdal4f3kp2nqivbei54fon4vpvsj625ufjy -> rocks
-https://ipfs.io/ipfs/bafkreif3oielzg25pqcpci3kqkqasos6gp2aii6vxkguezxxbewdxjb3mi -> !
+(get_url pid=166612) https://ipfs.io/ipfs/bafkreibthyfb4j4blugo5zk4i476hxet2vwghy564kz3jlxi53lnoamrum -> G
+(get_url pid=166614) https://ipfs.io/ipfs/bafkreiemev2isidd7gk7352wxtqh6rwbuumt4vgnkkbx5wi6giaizt2bvq -> R
+(get_url pid=166611) https://ipfs.io/ipfs/bafkreigks6arfsq3xxfpvqrrwonchxcnu6do76auprhhfomao6c273sixm -> a
+(get_url pid=166615) https://ipfs.io/ipfs/bafkreib7pg5xwq23auzbmuo257jxjtogqhoan6vgly3u4obtpoemubdn5i -> e
+(get_url pid=166613) https://ipfs.io/ipfs/bafkreifmvsdmbzqjzkig6yzlbyw2ztfsw56sfmdcd4qox3hbusbvxe7w6a -> l
+(get_url pid=166610) https://ipfs.io/ipfs/bafkreiaplag3id7ckuzs6eiwca3skuheddup7p7espat5omqv6r7m2byhi ->  on
+(get_url pid=166608) https://ipfs.io/ipfs/bafkreifb7tsdmocu76eiz72lrz4hlvqayjuchecbfkgppgzx2cyrcsfq7i -> y
+(get_url pid=166612) https://ipfs.io/ipfs/bafkreihwavxppciktfeuynevdal4f3kp2nqivbei54fon4vpvsj625ufjy -> rocks
+(get_url pid=166614) https://ipfs.io/ipfs/bafkreidcyzvhuxoxbqyumymampbujzjr43kllhrxtaeeiphjmkz2xvr4li -> m
+(get_url pid=166611) https://ipfs.io/ipfs/bafkreibwvht7dsk3ql73tf2d4dc4jtuv3a6juqykvrm7qtxtzp5lmfcqna ->
+(get_url pid=166615) https://ipfs.io/ipfs/bafkreif3oielzg25pqcpci3kqkqasos6gp2aii6vxkguezxxbewdxjb3mi -> !
 
 Ray on Golem rocks!
+(get_url pid=166609) https://ipfs.io/ipfs/bafkreidfy5gbljugdb53no7zswhust6gxaagqa2kmwnjvvcjsgyiywhs2i -> o
+
 ```
 
 ### Running the example on Ray on Golem cluster
@@ -165,19 +166,20 @@ Fetched IP: 192.168.0.3
 Fetched IP: 192.168.0.3
 2023-12-06 12:02:30,637	INFO worker.py:1458 -- Connecting to existing Ray cluster at address: 192.168.0.3:6379...
 2023-12-06 12:02:30,667	INFO worker.py:1633 -- Connected to Ray cluster. View the dashboard at 192.168.0.3:8265
-https://ipfs.io/ipfs/bafkreiemev2isidd7gk7352wxtqh6rwbuumt4vgnkkbx5wi6giaizt2bvq -> R
-https://ipfs.io/ipfs/bafkreigks6arfsq3xxfpvqrrwonchxcnu6do76auprhhfomao6c273sixm -> a
-https://ipfs.io/ipfs/bafkreifb7tsdmocu76eiz72lrz4hlvqayjuchecbfkgppgzx2cyrcsfq7i -> y
-https://ipfs.io/ipfs/bafkreiaplag3id7ckuzs6eiwca3skuheddup7p7espat5omqv6r7m2byhi ->  on
-https://ipfs.io/ipfs/bafkreibthyfb4j4blugo5zk4i476hxet2vwghy564kz3jlxi53lnoamrum -> G
-https://ipfs.io/ipfs/bafkreidfy5gbljugdb53no7zswhust6gxaagqa2kmwnjvvcjsgyiywhs2i -> o
-https://ipfs.io/ipfs/bafkreifmvsdmbzqjzkig6yzlbyw2ztfsw56sfmdcd4qox3hbusbvxe7w6a -> l
-https://ipfs.io/ipfs/bafkreib7pg5xwq23auzbmuo257jxjtogqhoan6vgly3u4obtpoemubdn5i -> e
-https://ipfs.io/ipfs/bafkreidcyzvhuxoxbqyumymampbujzjr43kllhrxtaeeiphjmkz2xvr4li -> m
-https://ipfs.io/ipfs/bafkreibwvht7dsk3ql73tf2d4dc4jtuv3a6juqykvrm7qtxtzp5lmfcqna ->
-https://ipfs.io/ipfs/bafkreihwavxppciktfeuynevdal4f3kp2nqivbei54fon4vpvsj625ufjy -> rocks
-https://ipfs.io/ipfs/bafkreif3oielzg25pqcpci3kqkqasos6gp2aii6vxkguezxxbewdxjb3mi -> !
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreigks6arfsq3xxfpvqrrwonchxcnu6do76auprhhfomao6c273sixm -> a
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreifb7tsdmocu76eiz72lrz4hlvqayjuchecbfkgppgzx2cyrcsfq7i -> y
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreiaplag3id7ckuzs6eiwca3skuheddup7p7espat5omqv6r7m2byhi ->  on
+(get_url pid=885, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreiemev2isidd7gk7352wxtqh6rwbuumt4vgnkkbx5wi6giaizt2bvq -> R
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreibthyfb4j4blugo5zk4i476hxet2vwghy564kz3jlxi53lnoamrum -> G
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreifmvsdmbzqjzkig6yzlbyw2ztfsw56sfmdcd4qox3hbusbvxe7w6a -> l
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreib7pg5xwq23auzbmuo257jxjtogqhoan6vgly3u4obtpoemubdn5i -> e
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreidcyzvhuxoxbqyumymampbujzjr43kllhrxtaeeiphjmkz2xvr4li -> m
+(get_url pid=930, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreidfy5gbljugdb53no7zswhust6gxaagqa2kmwnjvvcjsgyiywhs2i -> o
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreibwvht7dsk3ql73tf2d4dc4jtuv3a6juqykvrm7qtxtzp5lmfcqna ->
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreihwavxppciktfeuynevdal4f3kp2nqivbei54fon4vpvsj625ufjy -> rocks
+
 Ray on Golem rocks!
+(get_url pid=1069, ip=10.42.42.2) https://ipfs.io/ipfs/bafkreif3oielzg25pqcpci3kqkqasos6gp2aii6vxkguezxxbewdxjb3mi -> !
 Shared connection to 192.168.0.3 closed.
 ```
 
