@@ -10,12 +10,12 @@ type: example
 The purpose of this article is to show you an example of a Ray app. It shows how Ray tasks are executed on different machines.
 
 We have also prepared a couple of other example Ray apps to make it easier for you to play with Ray on Golem and to help you see the power of Ray.
-You can find the examples in [`ray-on-golem` repository](https://github.com/golemfactory/golem-ray/tree/main/examples).
+You can find the examples in [`ray-on-golem` repository](https://github.com/golemfactory/ray-on-golem/tree/main/examples).
 
 
 ## The app
 
-Have a look at the code (but you can find it also in [the repository](https://github.com/golemfactory/golem-ray/blob/main/examples/simple-task.py):
+Have a look at the code (but you can find it also in [the repository](https://github.com/golemfactory/ray-on-golem/blob/main/examples/simple-task.py):
 ```python
 import socket
 import time
