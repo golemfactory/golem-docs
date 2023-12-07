@@ -64,7 +64,7 @@ idle_timeout_minutes: 5
 ### Initialization commands
 
 You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies. 
-Note that using `pip` requires its domain to be present in [`outbound_urls`](#accessing-the-internet-outbound).
+Note that using `pip` requires its index URL to be present in [`outbound_urls`](#accessing-the-internet-outbound).
 
 ```yaml
 # List of commands that will be run to initialize the nodes (before `setup_commands`)
@@ -113,14 +113,14 @@ Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.
 
 #### Accessing the Internet (outbound)
 
-The optional `outbound_urls` lists the domains you want to access from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
+The optional `outbound_urls` lists the addresses you want to access from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
 
-Ray on Golem accepts domains prefixed with either `http://` or `https://`.
+Ray on Golem only accepts addresses prefixed with either the `http://` or `https://` scheme.
 
-By default, this property includes `https://pypi.dev.golem.network` which allows [downloading additional packages with pip](#initialization-commands). 
-If you don't require any additional packages, removing the domain from `outbound_urls` is recommended so that your cluster finds more available providers.
+Our default cluster definition specifies `https://pypi.dev.golem.network` as a required outbound address which allows [downloading additional packages with pip](#initialization-commands). 
+If you don't need to install any additional Python packages, removing that URL from `outbound_urls` is recommended, which potentially allows more providers to participate in your cluster.
 
-You can test the availability of providers allowing your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
+You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
 
 ```yaml
 # List of URLs which will be added to the Computation Manifest
@@ -149,7 +149,7 @@ provider:
 ### Avoiding too-expensive providers
 
 You can use `provider.parameters.node_config.budget_control` section to define the limits on providers' prices.
-Ray on Golem won't work with providers exceeding the following price settings.
+Ray on Golem will reject providers exceeding the following price settings.
 
 #### Maximum provider prices
 

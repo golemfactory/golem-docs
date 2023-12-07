@@ -7,18 +7,18 @@ type: tutorial
 
 # Accessing the Internet (outbound)
 
-The purpose of this article is to show you an example of a Ray app accessing the Internet and explain surrounding nuances of running it with Ray on Golem.
+The purpose of this article is to show you an example of a Ray app accessing the Internet and to explain the  nuances of running it with Ray on Golem.
 
 ## Outbound introduction
 
-Providers' security is a very important topic within the Golem network. 
-They are protected by restricting the usage of the Internet from within the images they deploy on their machines.
+Ensuring providers' security is a very important topic within the Golem network. 
+One of the implemented security measures is the ability to restrict the usage of outgoing Internet connections from within the VM images the providers deploy on their computers.
 
-The most popular tool providers use to protect themselves is allowing outgoing connections to whitelisted hosts only.
+The simplest way to do this is by allowing outgoing connections only to the select few whitelisted addresses.
 The default whitelist is curated by Golem Factory and is kept on [GitHub](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist).
 
-Providers might edit the whitelist, or disable it to accept all outgoing traffic. 
-Another option, not yet supported by Ray on Golem, is to allow outgoing traffic for images signed by a trusted entity (e.g. Golem Factory)
+Providers may edit the whitelist, or disable it altogether to accept all outgoing traffic. 
+In the future, we will add support for allowing outgoing traffic from within images signed by trusted entities (e.g. Golem Factory)
 
 Feel free to check out the general [Accessing the Internet from Golem providers](/docs/creators/javascript/guides/accessing-internet) guide to get more context not related to Ray on Golem.
 
@@ -28,24 +28,24 @@ Please reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.n
 
 Please have a look at the [default whitelist](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist) yourself.
 
-Among the entries you can find `dl.dropboxusercontent.com`, `ipfs.io` - they should allow a certain level of possibility when designing Ray on Golem applications. 
+Among the listed entries you can find `dl.dropboxusercontent.com`, `ipfs.io` - they should allow a certain level of freedom when storing artifacts needed by your Ray on Golem applications.
 You can upload the data your computation needs to Dropbox or IPFS and then use it in your remote tasks. This is demonstrated in the [example below](#simple-outbound-example)
 
-Ray on Golem uses the whitelist to allow installing [additional packages](/docs/creators/ray/cluster-yaml#initialization-commands) with pip. 
-Golem Factory is proxying `pypi.org` via `pypi.dev.golem.network` to make it possible.
+One of the ways that Ray on Golem uses the whitelist is to enable installation of [additional packages](/docs/creators/ray/cluster-yaml#initialization-commands) with pip. 
+Golem Factory runs a custom proxy to `pypi.org` via `pypi.dev.golem.network` to make it possible.
 
-When you need to access a non-whitelisted URL the recommended way is to advertise your need on [`#providers` discord channel](https://chat.golem.network/).
-This way every provider will be able to assess the URLs you need and decide 
+When your application requires access to a non-whitelisted URL, the recommended way is to advertise your need on [`#providers` discord channel](https://chat.golem.network/).
+This allows the provider operators to assess the URLs you wish to connect to, and to decide 
 if the possibility of extra earnings (you will be paying the providers that whitelist your URLs) is more tempting to them than the security risk your URLs might pose.
 
 Please reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.network/) to discuss the options and help us define the best way to support your outbound needs.
 
 ## Configuring outbound
 
-Cluster configuration yaml needs to contain information about domains (and protocols) you want to access with your Ray app.
+Cluster configuration yaml needs to contain information about the addresses (and protocols) you want to access with your Ray app.
 Checkout the [`outbound_urls` property description](/docs/creators/ray/cluster-yaml#accessing-the-internet-outbound) for the details.
 
-This means that you need to stop the cluster and start it again when you change the configuration.
+Whenever you change the list of these locations, you need to stop the cluster (`ray down`) and start it again (`ray stop`) to ensure that only those provider nodes that accept all the URLs are selected to form the new cluster.
 
 The [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats) comes in handy when checking the availability of providers allowing your outbounds URLs.
 
@@ -55,14 +55,14 @@ The [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats) come
 The following section describes an example Ray app accessing the Internet. 
 It downloads a couple of files hosted on [IPFS](https://ipfs.io) and prints the concatenated content.
 
-The nature of Golem's support for outbound is rather early stage - it happens that a connection fails. 
-The example re-tries the calls for a while.
+Outbound connectivity in Golem is still considered an experimental feature and we're continually working on fine-tuning and improving its stability. It may happen that your connections fail and need to be retried. The following example addresses this scenario.
 
 ### Example code
 
 Consider the following code (you can find it also in [the repository](https://github.com/golemfactory/golem-ray/blob/mateusz/outbound-docs/examples/simple-outbound-ipfs.py)).
 
 ```python
+import colorful
 import requests
 
 urls = [
@@ -132,12 +132,13 @@ https://ipfs.io/ipfs/bafkreidcyzvhuxoxbqyumymampbujzjr43kllhrxtaeeiphjmkz2xvr4li
 https://ipfs.io/ipfs/bafkreibwvht7dsk3ql73tf2d4dc4jtuv3a6juqykvrm7qtxtzp5lmfcqna ->
 https://ipfs.io/ipfs/bafkreihwavxppciktfeuynevdal4f3kp2nqivbei54fon4vpvsj625ufjy -> rocks
 https://ipfs.io/ipfs/bafkreif3oielzg25pqcpci3kqkqasos6gp2aii6vxkguezxxbewdxjb3mi -> !
+
 Ray on Golem rocks!
 ```
 
 ### Running the example on Ray on Golem cluster
 
-Now that we have the app ready, we need to start the cluster to execute it.
+Let's now spin up a Ray on Golem cluster to launch our newly-hatched application.
 
 The first step is adding the `"https://ipfs.io"` to `outbound_urls` property in the cluster yaml.
 
@@ -147,9 +148,13 @@ The linked config is a version of the [example Ray on Golem cluster yaml](https:
 outbound_urls: ["https://pypi.dev.golem.network", "https://ipfs.io"]
 ```
 
-The second step is `ray up ipfs-golem-cluster.yaml`, followed by the execution of the script:
-```bash
-ray submit golem-cluster.yaml simple-outbound-ipfs.py
+The second step is actually starting the cluster.
+
+`ray up ipfs-golem-cluster.yaml`
+
+With that done, you can submit the script to run it:
+
+`ray submit golem-cluster.yaml simple-outbound-ipfs.py`
 ```
 ```
 Ray On Golem
@@ -175,7 +180,7 @@ Shared connection to 192.168.0.3 closed.
 ```
 
 Failing outbound calls would get logged to the console and retried. 
-Note that it may happen that one or more calls would hang for a couple of minutes eventually displaying `[Errno -3] Temporary failure in name resolution)`. 
+Note that it may sometimes happen that one or more requests hangs for a couple of minutes, eventually displaying `[Errno -3] Temporary failure in name resolution)`.
 These are known issues, hopefully they will be resolved soon.
 
 ### Congratulations!
@@ -189,11 +194,11 @@ Well done!
 ## Conclussion
 
 In this article you:
-- learned about the theory of accessing the Internet with Ray on Golem
-- learned that by default we allow whitelisted domains
+- learned the basics of accessing arbitrary external URLs with Ray on Golem
+- learned about the domain whitelists used by the providers
 - experimented with an example showing how to access files hosted on IPFS.
 
-In case of any questions or pieces of feedback please don't hesitate to reach out to us (on [`#Ray on Golem` discord channel](https://chat.golem.network/)).
+Should you have any questions or feedback please don't hesitate to reach out to us (on [`#Ray on Golem` discord channel](https://chat.golem.network/)).
 
 We are also very interested in learning about your use cases, and willing to help you get the needed domains whitelisted.
 
