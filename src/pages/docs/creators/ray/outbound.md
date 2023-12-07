@@ -116,7 +116,7 @@ print(colorful.purple(f"\n{aggregate_text}"))
 
 You can run the code locally to see that it is working:
 ```bash
-python3 examples/outbound.py
+python3 outbound.py
 ```
 ```
 2023-12-06 13:15:57,228	INFO worker.py:1664 -- Started a local Ray instance. View the dashboard at 127.0.0.1:8265
