@@ -149,12 +149,14 @@ outbound_urls: ["https://pypi.dev.golem.network", "https://ipfs.io"]
 ```
 
 The second step is actually starting the cluster.
-
-`ray up ipfs-golem-cluster.yaml`
+```bash
+ray up ipfs-golem-cluster.yaml
+```
 
 With that done, you can submit the script to run it:
 
-`ray submit golem-cluster.yaml simple-outbound-ipfs.py`
+```bash
+ray submit golem-cluster.yaml simple-outbound-ipfs.py
 ```
 ```
 Ray On Golem
