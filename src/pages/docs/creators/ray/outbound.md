@@ -34,9 +34,12 @@ You can upload the data your computation needs to Dropbox or IPFS and then use i
 One of the ways that Ray on Golem uses the whitelist is to enable installation of [additional packages](/docs/creators/ray/cluster-yaml#initialization-commands) with pip. 
 Golem Factory runs a custom proxy to `pypi.org` via `pypi.dev.golem.network` to make it possible.
 
-When your application requires access to a non-whitelisted URL, the recommended way is to advertise your need on [`#providers` discord channel](https://chat.golem.network/).
+When your application requires access to a non-whitelisted URL, 
+the recommended way is to advertise your need on [`#providers` discord channel](https://chat.golem.network/).
 This allows the provider operators to assess the URLs you wish to connect to, and to decide 
-if the possibility of extra earnings (you will be paying the providers that whitelist your URLs) is more tempting to them than the security risk your URLs might pose.
+if the possibility of extra earnings (you will be paying the providers that whitelist your URLs) 
+is more tempting to them than the security risk your URLs might pose.
+Feel free to check out how it looks from the [providers' side](/docs/providers/configuration/outbound#whitelisting-a-specific-domain).
 
 Please reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.network/) to discuss the options and help us define the best way to support your outbound needs.
 
