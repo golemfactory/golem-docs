@@ -222,6 +222,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/task_batch.Batch"
           },
 {
+            title: "RemoteProcess",
+            href: "/docs/golem-js/reference/classes/task_process.RemoteProcess"
+          },
+{
             title: "Task",
             href: "/docs/golem-js/reference/classes/task_task.Task"
           },
@@ -292,6 +296,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/agreement_service.AgreementServiceOptions"
           },
 {
+            title: "TaskExecutorEventsDict",
+            href: "/docs/golem-js/reference/interfaces/executor_events.TaskExecutorEventsDict"
+          },
+{
             title: "GolemNetworkConfig",
             href: "/docs/golem-js/reference/interfaces/golem_network_golem_network.GolemNetworkConfig"
           },
@@ -302,6 +310,10 @@ export const navigation = [
 {
             title: "DemandDetails",
             href: "/docs/golem-js/reference/interfaces/market_demand.DemandDetails"
+          },
+{
+            title: "DemandOptions",
+            href: "/docs/golem-js/reference/interfaces/market_demand.DemandOptions"
           },
 {
             title: "ProposalDetails",
@@ -391,6 +403,10 @@ export const navigation = [
 {
             title: "Events_events",
             href: "/docs/golem-js/reference/modules/events_events"
+          },
+{
+            title: "Executor_events",
+            href: "/docs/golem-js/reference/modules/executor_events"
           },
 {
             title: "Executor_executor",
@@ -495,6 +511,10 @@ export const navigation = [
 {
             title: "Task_batch",
             href: "/docs/golem-js/reference/modules/task_batch"
+          },
+{
+            title: "Task_process",
+            href: "/docs/golem-js/reference/modules/task_process"
           },
 {
             title: "Task_service",

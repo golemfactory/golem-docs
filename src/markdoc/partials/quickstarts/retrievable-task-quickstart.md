@@ -6,14 +6,6 @@ We will run a simple task (just running a basic shell command on a rented provid
 
 It should take just a few minutes to complete, and you will see the command output printed in your terminal.
 
-{% alert level="info" %}
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 18.0.0 or above
-
-{% /alert %}
-
 ## Prerequisites
 
 This example assumes that you have already installed Yagna and have it running in the background. If you haven't done so yet, please follow the instructions in [this tutorial](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) before proceeding.

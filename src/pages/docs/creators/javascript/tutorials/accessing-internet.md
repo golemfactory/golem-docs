@@ -9,12 +9,6 @@ type: tutorial
 
 In this tutorial, you will learn how to quickly access the internet when running code on the Golem network. You will get familiar with the concept of Golem manifest, outbound, and some security policies that are in place to protect the providers from malicious code.
 
-{% alert level="info" %}
-
-This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 - Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
@@ -92,7 +86,7 @@ import { readFile } from 'fs/promises'
   } catch (err) {
     console.error('The task failed due to', err)
   } finally {
-    await executor.end()
+    await executor.shutdown()
   }
 })()
 ```
@@ -133,22 +127,22 @@ import { TaskExecutor } from '@golem-sdk/golem-js'
 import { readFile } from 'fs/promises'
 
 const url =
-  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
+  'https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly'
 ```
 
 And finally, let’s execute some code on the provider. You will run a single task on the provider, using the TaskExecutor.run() function. To make this work, put the following code in the try/catch block:
 
 ```javascript
-    await executor.run(async (ctx) => {
-      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
+await executor.run(async (ctx) => {
+  const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 
-      console.log((await ctx.run("ls -l")).stdout);
-      if (result.result === "Ok") {
-        console.log("File downloaded!");
-      } else {
-        console.error("Failed to download the file!", result.stderr);
-      }
-    });
+  console.log((await ctx.run('ls -l')).stdout)
+  if (result.result === 'Ok') {
+    console.log('File downloaded!')
+  } else {
+    console.error('Failed to download the file!', result.stderr)
+  }
+})
 ```
 
 And that’s it! Now, make sure your yagna service is running and you can start this script.
@@ -156,40 +150,40 @@ And that’s it! Now, make sure your yagna service is running and you can start 
 This is how the entire file should look like:
 
 ```javascript
-import { TaskExecutor } from "@golem-sdk/golem-js";
-import { readFile } from "fs/promises";
+import { TaskExecutor } from '@golem-sdk/golem-js'
+import { readFile } from 'fs/promises'
 
 const url =
-  "https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly";
+  'https://ipfs.io/ipfs/bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly'
 
-(async function main() {
+;(async function main() {
   // Load the manifest.
-  const manifest = await readFile(`./manifest.json`);
+  const manifest = await readFile(`./manifest.json`)
 
   // Create and configure a TaskExecutor instance.
   const executor = await TaskExecutor.create({
-    capabilities: ["inet", "manifest-support"],
-    yagnaOptions: { apiKey: "try_golem" },
-    manifest: manifest.toString("base64"),
-  });
+    capabilities: ['inet', 'manifest-support'],
+    yagnaOptions: { apiKey: 'try_golem' },
+    manifest: manifest.toString('base64'),
+  })
 
   try {
     await executor.run(async (ctx) => {
-      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`);
+      const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 
-      console.log((await ctx.run("ls -l")).stdout);
-      if (result.result === "Ok") {
-        console.log("File downloaded!");
+      console.log((await ctx.run('ls -l')).stdout)
+      if (result.result === 'Ok') {
+        console.log('File downloaded!')
       } else {
-        console.error("Failed to download the file!", result.stderr);
+        console.error('Failed to download the file!', result.stderr)
       }
-    });
+    })
   } catch (err) {
-    console.error("The task failed due to", err);
+    console.error('The task failed due to', err)
   } finally {
-    await executor.end();
+    await executor.shutdown()
   }
-})();
+})()
 ```
 
 You can run it now. In the output, you should see “File downloaded!” between log lines and the output of the `ls -l` command showing th size of the fole downloaded . That means the code works.

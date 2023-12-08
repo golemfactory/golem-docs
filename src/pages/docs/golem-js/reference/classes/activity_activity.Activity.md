@@ -1,7 +1,8 @@
 ---
-title: "Class Activity - golem-js API Reference"
+title: "Class Activity"
+pageTitle: "Class Activity - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class Activity within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: Activity
 
@@ -15,7 +16,7 @@ As part of a given activity, it is possible to execute exe script commands and c
 ### Properties
 
 - [id](activity_activity.Activity#id)
-- [agreementId](activity_activity.Activity#agreementid)
+- [agreement](activity_activity.Activity#agreement)
 - [yagnaApi](activity_activity.Activity#yagnaapi)
 - [options](activity_activity.Activity#options)
 
@@ -37,19 +38,19 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L55)
+[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L56)
 
 ___
 
-### agreementId
+### agreement
 
-• `Readonly` **agreementId**: `string`
+• `Readonly` **agreement**: `Agreement`
 
-agreement ID
+Agreement
 
 #### Defined in
 
-[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L56)
+[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L57)
 
 ___
 
@@ -61,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L57)
+[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L58)
 
 ___
 
@@ -73,13 +74,13 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L58)
+[src/activity/activity.ts:59](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L59)
 
 ## Methods
 
 ### create
 
-▸ **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`\<[`Activity`](activity_activity.Activity)\>
+▸ **create**(`agreement`, `yagnaApi`, `options?`, `secure?`): `Promise`\<[`Activity`](activity_activity.Activity)\>
 
 Create activity for given agreement ID
 
@@ -87,7 +88,7 @@ Create activity for given agreement ID
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `agreementId` | `string` | `undefined` |  |
+| `agreement` | `Agreement` | `undefined` |  |
 | `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) | `undefined` |  |
 | `options?` | [`ActivityOptions`](../interfaces/activity_activity.ActivityOptions) | `undefined` | [ActivityOptions](../interfaces/activity_activity.ActivityOptions) |
 | `secure` | `boolean` | `false` | defines if activity will be secure type |
@@ -100,7 +101,7 @@ Activity
 
 #### Defined in
 
-[src/activity/activity.ts:72](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L72)
+[src/activity/activity.ts:73](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L73)
 
 ___
 
@@ -124,7 +125,7 @@ Execute script
 
 #### Defined in
 
-[src/activity/activity.ts:89](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L89)
+[src/activity/activity.ts:90](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L90)
 
 ___
 
@@ -142,7 +143,7 @@ boolean
 
 #### Defined in
 
-[src/activity/activity.ts:118](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L118)
+[src/activity/activity.ts:119](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L119)
 
 ___
 
@@ -164,7 +165,7 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:130](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L130)
+[src/activity/activity.ts:131](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L131)
 
 ___
 
@@ -184,4 +185,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:147](https://github.com/golemfactory/golem-js/blob/cd3b295/src/activity/activity.ts#L147)
+[src/activity/activity.ts:148](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L148)

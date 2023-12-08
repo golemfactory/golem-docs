@@ -78,9 +78,9 @@ Finally, the requestor agent will present the solution to the user.
 
 Since we're building the whole app from scratch, that includes preparing the worker code and the VM image that includes it. To prepare such image, we'll need [Docker](https://www.docker.com/products/docker-desktop).
 
-#### Python 3.7+
+#### Python 3.8+
 
-Our example requires Python 3.7 or higher. You may use [pyenv](https://github.com/pyenv/pyenv) (preferably using [pyenv-installer](https://github.com/pyenv/pyenv-installer)) to install an appropriate Python version without affecting your system.
+Our example requires Python 3.8 or higher. You may use [pyenv](https://github.com/pyenv/pyenv) (preferably using [pyenv-installer](https://github.com/pyenv/pyenv-installer)) to install an appropriate Python version without affecting your system.
 
 #### Dependencies
 

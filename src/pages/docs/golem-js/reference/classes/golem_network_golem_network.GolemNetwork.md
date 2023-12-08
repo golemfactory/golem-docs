@@ -1,7 +1,8 @@
 ---
-title: "Class GolemNetwork - golem-js API Reference"
+title: "Class GolemNetwork"
+pageTitle: "Class GolemNetwork - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Class GolemNetwork within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Class: GolemNetwork
 
@@ -61,7 +62,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:58](https://github.com/golemfactory/golem-js/blob/cd3b295/src/golem_network/golem_network.ts#L58)
+[src/golem_network/golem_network.ts:58](https://github.com/golemfactory/golem-js/blob/c827e77/src/golem_network/golem_network.ts#L58)
 
 ## Methods
 
@@ -75,7 +76,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:67](https://github.com/golemfactory/golem-js/blob/cd3b295/src/golem_network/golem_network.ts#L67)
+[src/golem_network/golem_network.ts:67](https://github.com/golemfactory/golem-js/blob/c827e77/src/golem_network/golem_network.ts#L67)
 
 ___
 
@@ -89,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:71](https://github.com/golemfactory/golem-js/blob/cd3b295/src/golem_network/golem_network.ts#L71)
+[src/golem_network/golem_network.ts:71](https://github.com/golemfactory/golem-js/blob/c827e77/src/golem_network/golem_network.ts#L71)
 
 ___
 
@@ -101,15 +102,15 @@ Create a job on Golem Network.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Output` | `unknown` |
+| Name |
+| :------ |
+| `Output` |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`unknown`, `Output`\> | Worker function to run |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`Output`\> | Worker function to run |
 
 #### Returns
 
@@ -135,7 +136,7 @@ console.log(status);
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:101](https://github.com/golemfactory/golem-js/blob/cd3b295/src/golem_network/golem_network.ts#L101)
+[src/golem_network/golem_network.ts:101](https://github.com/golemfactory/golem-js/blob/c827e77/src/golem_network/golem_network.ts#L101)
 
 ___
 
@@ -155,31 +156,31 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:105](https://github.com/golemfactory/golem-js/blob/cd3b295/src/golem_network/golem_network.ts#L105)
+[src/golem_network/golem_network.ts:105](https://github.com/golemfactory/golem-js/blob/c827e77/src/golem_network/golem_network.ts#L105)
 
 ___
 
 ### runTask
 
-▸ **runTask**\<`Output`\>(`worker`): `Promise`\<`undefined` \| `Output`\>
+▸ **runTask**\<`Output`\>(`worker`): `Promise`\<`Output`\>
 
 Run a task on Golem Network.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Output` | `unknown` |
+| Name |
+| :------ |
+| `Output` |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`undefined`, `Output`\> | Worker function to run |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`Output`\> | Worker function to run |
 
 #### Returns
 
-`Promise`\<`undefined` \| `Output`\>
+`Promise`\<`Output`\>
 
 Worker function result
 
@@ -189,7 +190,7 @@ The runTask method is the simplest way to run some code on Golem Network. Simply
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:116](https://github.com/golemfactory/golem-js/blob/cd3b295/src/golem_network/golem_network.ts#L116)
+[src/golem_network/golem_network.ts:116](https://github.com/golemfactory/golem-js/blob/c827e77/src/golem_network/golem_network.ts#L116)
 
 ___
 
@@ -203,4 +204,4 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:120](https://github.com/golemfactory/golem-js/blob/cd3b295/src/golem_network/golem_network.ts#L120)
+[src/golem_network/golem_network.ts:120](https://github.com/golemfactory/golem-js/blob/c827e77/src/golem_network/golem_network.ts#L120)

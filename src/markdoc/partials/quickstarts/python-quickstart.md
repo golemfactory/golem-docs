@@ -6,15 +6,6 @@ We will perform a simple task for the quickstart, which will render six scenes i
 
 It should take just a few minutes to complete, and you will see the generated output files which are `PNG` images in your folder.
 
-{% alert level="info" %}
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Python >= 3.7 or above with `venv` module installed
-- `git` installed
-
-{% /alert %}
-
 ### Installing and running Yagna
 
 Yagna is a service that communicates and perform operations on the Golem Network. Let's get started by installing it.

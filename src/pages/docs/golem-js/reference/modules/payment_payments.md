@@ -1,7 +1,8 @@
 ---
-title: "Module payment/payments - golem-js API Reference"
+title: "Module payment/payments"
+pageTitle: "Module payment/payments - golem-js API Reference"
 description: "Explore the detailed API reference documentation for the Module payment/payments within the golem-js SDK for the Golem Network."
-type: "reference"
+type: "JS API Reference"
 ---
 # Module: payment/payments
 
@@ -27,4 +28,4 @@ type: "reference"
 
 #### Defined in
 
-[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/cd3b295/src/payment/payments.ts#L14)
+[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/payments.ts#L14)

@@ -1,8 +1,7 @@
 ---
-title: Guide to Installing Yagna for Golem Network Interaction 
-pageTitle: Install Yagna - Connect with the Golem Network - Requestor Setup Instructions 
+title: Guide to Installing Yagna for Golem Network Interaction
+pageTitle: Install Yagna - Connect with the Golem Network - Requestor Setup Instructions
 description: Step-by-step instructions for installing Yagna to enable applications to interact with the Golem Network, tailored for OS X, Ubuntu, and Windows users.
-
 
 type: Instructions
 ---
@@ -18,8 +17,6 @@ In this article, we'll show you how to install and configure Yagna in case you w
 Yagna is a service that will let you communicate with the Golem Network and perform operations on it. Let's install it.
 
 #### Install Yagna
-
-Yagna runs on OS X 10.14+, Ubuntu 20.04+ or Windows.
 
 {% tabs %}
 {% tab label="Linux/Mac" %}
