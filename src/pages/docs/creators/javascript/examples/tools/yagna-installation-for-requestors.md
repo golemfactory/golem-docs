@@ -16,8 +16,6 @@ Yagna is a service that will let you communicate with the Golem Network and perf
 
 #### Install Yagna
 
-Yagna runs on OS X 10.14+, Ubuntu 20.04+ or Windows.
-
 {% tabs %}
 {% tab label="Linux/Mac" %}
 
@@ -55,7 +53,7 @@ Note: the link will lead you to the latest stable release, you can go to: [https
 
 {% alert level="info" %}
 
-    If you have encountered problems, contact us on: [Discord channel](https://chat.golem.network/):
+If you have encountered problems, contact us on: [Discord channel](https://chat.golem.network/):
 
 {% /alert  %}
 

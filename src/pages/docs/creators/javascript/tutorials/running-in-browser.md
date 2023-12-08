@@ -12,15 +12,6 @@ In this tutorial, you will create a simple web page that will trigger your reque
 
 In the Quickstart, the js script is in an external file. In this tutorial we will keep both HTML and js script in the same file.
 
-{% alert level="info" %}
-
-This tutorial has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Chrome
-
-{% /alert %}
-
 ## Prerequisites
 
 Before proceeding, you'll need to install and launch the Yagna service, version 0.13.0 or later. Note that this version is available as a **release candidate**. Installation instructions can be found through the manual Yagna installation guide available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
@@ -172,7 +163,7 @@ Note that the `create()` method received an additional 3 parameters:
         appendResults((await ctx.run("echo 'Hello World'")).stdout)
       )
       .catch((e) => logger.error(e))
-    await executor.end()
+    await executor.shutdown()
   }
   document.getElementById('echo').onclick = run
 </script>
@@ -227,7 +218,6 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
     debug: (msg) => console.log(msg),
     error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
     info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-    table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
   }
 
   //

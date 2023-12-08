@@ -8,12 +8,6 @@ type: Tutorial
 
 This article will go through the process of creating a Dockerfile, building a Docker image, then converting it to a Golem image and using it in a requestor script.
 
-{% alert level="info" %}
-
-This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 - Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)

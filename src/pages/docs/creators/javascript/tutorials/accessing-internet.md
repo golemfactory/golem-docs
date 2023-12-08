@@ -9,12 +9,6 @@ type: Tutorial
 
 In this tutorial, you will learn how to quickly access the internet when running code on the Golem network. You will get familiar with the concept of Golem manifest, outbound, and some security policies that are in place to protect the providers from malicious code.
 
-{% alert level="info" %}
-
-This tutorial is designed for: OS X 10.14+, Ubuntu 18.04 or 20.04, and Windows
-
-{% /alert %}
-
 ## Prerequisites
 
 - Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
@@ -92,7 +86,7 @@ import { readFile } from 'fs/promises'
   } catch (err) {
     console.error('The task failed due to', err)
   } finally {
-    await executor.end()
+    await executor.shutdown()
   }
 })()
 ```
@@ -187,7 +181,7 @@ const url =
   } catch (err) {
     console.error('The task failed due to', err)
   } finally {
-    await executor.end()
+    await executor.shutdown()
   }
 })()
 ```
