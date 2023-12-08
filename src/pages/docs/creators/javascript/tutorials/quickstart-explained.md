@@ -81,7 +81,7 @@ const executor = await TaskExecutor.create({
 })
 ```
 
-Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in `result` variable.
+Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in the `result` variable.
 
 There are other methods that allow you to execute tasks. They are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
 
