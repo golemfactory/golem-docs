@@ -185,7 +185,7 @@ Shared connection to 192.168.0.3 closed.
 
 Failing outbound calls would get logged to the console and retried. 
 Note that it may sometimes happen that one or more requests hangs for a couple of minutes, eventually displaying `[Errno -3] Temporary failure in name resolution)`.
-These are known issues, hopefully they will be resolved soon.
+These are known issues, they will be resolved soon.
 
 ### Congratulations!
 
