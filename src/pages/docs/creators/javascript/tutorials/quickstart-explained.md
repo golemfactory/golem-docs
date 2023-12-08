@@ -32,7 +32,6 @@ The basic structure of the script:
 
 ```js
 import { TaskExecutor } from '@golem-sdk/golem-js'
-
 ;(async () => {
   //... Function body in here
 })()
@@ -56,12 +55,17 @@ import { TaskExecutor } from '@golem-sdk/golem-js'
     yagnaOptions: { apiKey: 'try_golem' },
   })
 
-  // 2. Run the task
-  const taskResult =
-    await executor.run(/*taskToRunOnProvider to be provided here */)
-
-  // 3. Finish Task Executor
-  await executor.end()
+  try {
+    // 2. Run the task
+    const result =
+      await executor.run(/*taskToRunOnProvider to be provided here */)
+    console.log('Task result:', result)
+  } catch (err) {
+    console.error('An error occurred:', err)
+  } finally {
+    // 3. Finish Task Executor
+    await executor.shutdown()
+  }
 
   console.log('Task result:', taskResult)
 })()
@@ -77,18 +81,18 @@ const executor = await TaskExecutor.create({
 })
 ```
 
-Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in taskResult variable.
+Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in the `result` variable.
 
 There are other methods that allow you to execute tasks. They are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
 
 ```js
-const taskResult = await executor.run(taskToRunOnProvider)
+const result = await executor.run(taskToRunOnProvider)
 ```
 
 Finally (3) we gracefully finish task executor:
 
 ```js
-await executor.end()
+await executor.shutdown()
 ```
 
 ## Defining task function
@@ -110,7 +114,7 @@ const taskToRunOnProvider = async (ctx) => (await ctx.run('node -v')).stdout
 The output of the task function is passed to `executor.run()` and assigned to taskResult.
 Finally, we print it to the console.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/7024c7041b92e84164f0f50c2fc7d948d60c7ff2/examples/docs-examples/tutorials/quickstart/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 ## Summary
 

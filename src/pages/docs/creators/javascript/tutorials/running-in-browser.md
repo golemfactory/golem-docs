@@ -163,7 +163,7 @@ Note that the `create()` method received an additional 3 parameters:
         appendResults((await ctx.run("echo 'Hello World'")).stdout)
       )
       .catch((e) => logger.error(e))
-    await executor.end()
+    await executor.shutdown()
   }
   document.getElementById('echo').onclick = run
 </script>
@@ -218,7 +218,6 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
     debug: (msg) => console.log(msg),
     error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
     info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-    table: (msg) => appendLog(JSON.stringify(msg, null, '\t')),
   }
 
   //
