@@ -227,7 +227,7 @@ function SearchResults({
           className="border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
           key={type}
         >
-          <h2 className="text-sm font-semibold capitalize text-slate-800 dark:text-white/50">
+          <h2 className="text-sm font-semibold  text-slate-800 dark:text-white/50">
             {type}
           </h2>
           <ul role="list" {...autocomplete.getListProps()}>
@@ -298,7 +298,7 @@ function FilterButton({ label, isActive, onClick }) {
           ? 'bg-lightbluedarker dark:bg-slate-600'
           : '  dark:bg-slate-800'
       }`}
-      onClick={() => onClick(label.toLowerCase())}
+      onClick={() => onClick(label)}
     >
       {label}
     </button>
@@ -472,28 +472,28 @@ function SearchDialog({ open, setOpen, className }) {
                 <div className="flex gap-x-2">
                   <FilterButton
                     label="Example"
-                    isActive={typefilter.includes('example')}
-                    onClick={() => toggleFilter('example', 'type')}
+                    isActive={typefilter.includes('Example')}
+                    onClick={() => toggleFilter('Example', 'type')}
                   />
                   <FilterButton
                     label="Guide"
-                    isActive={typefilter.includes('guide')}
-                    onClick={() => toggleFilter('guide', 'type')}
+                    isActive={typefilter.includes('Guide')}
+                    onClick={() => toggleFilter('Guide', 'type')}
                   />
                   <FilterButton
                     label="Tutorial"
-                    isActive={typefilter.includes('tutorial')}
-                    onClick={() => toggleFilter('tutorial', 'type')}
+                    isActive={typefilter.includes('Tutorial')}
+                    onClick={() => toggleFilter('Tutorial', 'type')}
                   />
                   <FilterButton
                     label="Instructions"
-                    isActive={typefilter.includes('instructions')}
-                    onClick={() => toggleFilter('instructions', 'type')}
+                    isActive={typefilter.includes('Instructions')}
+                    onClick={() => toggleFilter('Instructions', 'type')}
                   />
                   <FilterButton
-                    label="API Reference"
-                    isActive={typefilter.includes('reference')}
-                    onClick={() => toggleFilter('reference', 'type')}
+                    label="JS API Reference"
+                    isActive={typefilter.includes('JS API Reference')}
+                    onClick={() => toggleFilter('JS API Reference', 'type')}
                   />
                 </div>
               </div>

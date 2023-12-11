@@ -3,7 +3,7 @@ title: Ray on Golem Introduction
 pageTitle: Scale Python code on Golem Network Using Ray - Developer's Guide
 description: Explore how to use Ray with Golem for scaleable Python code execution. Quickstarts, tutorials, and troubleshooting tips included for developers.
 
-type: article
+type: Article
 ---
 
 # Run Python code on Ray on Golem
@@ -22,16 +22,14 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 - [Ray on Golem CLI](/docs/creators/ray/ray-on-golem-cli) - details of Ray on Golem command line options
 - [Troubleshooting](/docs/creators/ray/troubleshooting) - hopefully helpful tips on what to do when something goes wrong
 
-
 ## Introduction
 
 Golem is a decentralized marketplace for computing power, where the providers let the requestors use their machines for a small fee.
 
 Ray on Golem makes it super easy to set up and use Golem Network to run your Ray application.
 
-Ray on the other hand is an open-source framework for scaling Python applications. 
+Ray on the other hand is an open-source framework for scaling Python applications.
 It specializes in tooling for AI/ML applications, but at the same time, it is based on Ray Core which understands every piece of generic Python code.
-
 
 ## Why Ray?
 
@@ -50,7 +48,7 @@ You only need to install Ray on Golem - by default, it also installs the Golem d
 
 Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
 
-When you have the software installed, you need a cluster configuration yaml file. 
+When you have the software installed, you need a cluster configuration yaml file.
 We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
 Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-yaml) and [Ray CLI](/docs/creators/ray/ray-cli) used to manage the cluster.
 
@@ -78,9 +76,10 @@ The basic flow of working with Ray and Ray on Golem consists of:
 You'll need a piece of code to execute on Golem. If you already have some Ray application, you can immediately proceed to [launching it on Golem](/docs/creators/ray/setup-tutorial).
 Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/ray-on-golem/tree/main/examples). 
 
+
 Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
 
 If you have any questions, comments, insights, praises, or doubts about these docs and Ray on Golem in general please don't hesitate to reach out to us either on
-- [`#Ray on Golem` discord channel](https://chat.golem.network/) 
-- [Ray on Golem general feedback form](https://qkjx8blh5hm.typeform.com/to/GtaCVz0b)
 
+- [`#Ray on Golem` discord channel](https://chat.golem.network/)
+- [Ray on Golem general feedback form](https://qkjx8blh5hm.typeform.com/to/GtaCVz0b)

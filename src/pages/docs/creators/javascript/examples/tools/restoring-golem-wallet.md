@@ -1,6 +1,6 @@
 ---
 description: Setting up a new Yagna instance to use a saved keystore file.
-title: Restore a Golem wallet 
+title: Restore a Golem wallet
 type: Instructions
 ---
 
@@ -21,7 +21,6 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 The above line assumes you're a requestor on a Unix-like platform (Linux or Mac). If that's not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) or the [analogous instructions for providers](/docs/providers/provider-installation).
 
 {% /alert %}
-
 
 Once Yagna is installed, run it with:
 
@@ -59,26 +58,30 @@ yagna id update --set-default 0x-the-address
 
 **3.** Remove `yagna`'s accounts configuration file
 
-
 {% tabs %}
 
 {% tab label="Linux" %}
+
 ```bash
 rm $HOME/.local/share/yagna/accounts.json
 ```
+
 {% /tab %}
 {% tab label="macOS X" %}
+
 ```bash
 rm $HOME/Library/Application\ Support/GolemFactory.yagna/accounts.json
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```bash
 del %APPDATA%\GolemFactory\yagna\data\accounts.json
 ```
+
 {% /tab %}
 {% /tabs %}
-
 
 **4. Start your yagna service again** (as usual, do it in a separate command line terminal and allow it to run in the background)
 
@@ -115,7 +118,6 @@ This will unlock your key and `yagna` will be able to use it for outgoing paymen
 `isLocked: false`
 
 You'll need to unlock your key each time you start your Yagna service because, for security reasons, Yagna does not save your passphrase anywhere.
-
 
 ## Make sure your Yagna application key is bound to the correct account
 

@@ -1,8 +1,8 @@
 ---
-title: Golem Simple Service API Tutorial 
-description: Learn to create VM-based services on Golem Network with this simplified tutorial. 
+title: Golem Simple Service API Tutorial
+description: Learn to create VM-based services on Golem Network with this simplified tutorial.
 pageTitle: Golem Network - Simple Service API Tutorial for VM-based Execution
-type: tutorial
+type: Tutorial
 ---
 
 # Service Example 1: Simple service

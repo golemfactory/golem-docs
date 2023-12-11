@@ -1,8 +1,8 @@
 ---
-title: Golem Network Task API - Hello World Example 
-description: Learn to execute tasks on Golem Network with a Hello World VM runtime example, ideal for beginners in decentralized computing. 
+title: Golem Network Task API - Hello World Example
+description: Learn to execute tasks on Golem Network with a Hello World VM runtime example, ideal for beginners in decentralized computing.
 pageTitle: Golem Task API Guide - Execute Hello World in Decentralized Environments | Golem Network
-type: tutorial
+type: Tutorial
 ---
 
 # Task Example 0: Hello World!
@@ -197,7 +197,6 @@ The `execute_tasks` function used here takes three parameters:
 - `worker` is the function which defines the steps that should happen for each provider node in order to process a `Task`
 - `tasks` is the array of `Task` objects we have created
 - `payload` is the payload definition for providers which we created using the `vm.repo` function
-
 
 `execute_tasks` returns an asynchronous iterator of `Task` objects, hence the `async for` statement. Items returned by this iterator are successfully completed tasks in the order they were computed.
 

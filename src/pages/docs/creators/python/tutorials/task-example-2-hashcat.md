@@ -2,7 +2,7 @@
 title: Running Hashcat on Golem Network - Password Recovery Tutorial
 pageTitle: Golem Task API Tutorial - Secure Password Recovery with Hashcat
 description: Discover how to use Hashcat for effective password recovery by leveraging Golem's parallel task execution capabilities in this comprehensive tutorial.
-type: tutorial
+type: Tutorial
 ---
 
 # Task Example 2: Hashcat on Golem

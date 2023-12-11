@@ -1,7 +1,7 @@
 ---
 title: useExecutor
 description: React hook for managing a single TaskExecutor
-type: reference
+type: React Reference
 ---
 
 # useExecutor
@@ -9,7 +9,7 @@ type: reference
 `useExecutor` is a hook that manages a single [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor). Use this hook to initialize and later terminate an executor. To run tasks you should use the [useTask](/docs/creators/javascript/react/use-task) hook. It returns an object with the following properties:
 
 | Name           | Description                                                                                                            |
-|----------------|------------------------------------------------------------------------------------------------------------------------|
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | executor       | The [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance.                          |
 | isInitializing | Boolean indicating whether the executor is being initialized. A new executor cannot be initialized while this is true. |
 | error          | Error object containing information about the error that occurred while initializing the executor.                     |

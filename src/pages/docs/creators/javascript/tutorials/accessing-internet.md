@@ -2,7 +2,7 @@
 title: Enabling Internet Access for Requestor Tasks on Golem Network
 description: Step-by-step tutorial for Golem requestors to enable internet access in tasks, detailing manifest creation and provider security.
 pageTitle: Golem Requestors' Tutorial on how to access Internet for Tasks
-type: tutorial
+type: Tutorial
 ---
 
 ## Introduction

@@ -1,8 +1,8 @@
 ---
-title: Service API VPN - SSH Connection Tutorial 
-description: Discover how to establish SSH connections via VPN on the Golem Network, using the provided example to interact with VMs on provider nodes. 
+title: Service API VPN - SSH Connection Tutorial
+description: Discover how to establish SSH connections via VPN on the Golem Network, using the provided example to interact with VMs on provider nodes.
 pageTitle: Golem Network Tutorial - Secure SSH Access Through VPN | Golem SDK
-type: tutorial
+type: Tutorial
 ---
 
 # Service Example 2: VPN - SSH terminal

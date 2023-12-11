@@ -57,10 +57,10 @@ Index refers to the sequential number of a command (we have just one, and counti
 
 ## Multi-command task
 
-When you run your tasks in a batch that is concluded with `.end()`: 
-  
+When you run your tasks in a batch that is concluded with `.end()`:
+
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/multi-command-end.mjs" language="javascript" /%}
-  
+
 you will receive an array of result objects:
 
 you will receive an array of result objects:
@@ -107,4 +107,3 @@ In the case of the failure in the `run()` method, we receive the result object w
 - `stdout: null`,
 - `stderr: 'node: bad option: -w\n',` - the command output
 - `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
-

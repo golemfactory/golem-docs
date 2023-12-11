@@ -1,8 +1,8 @@
 ---
-title: Implementing Custom Usage Counters with Golem's Service API 
+title: Implementing Custom Usage Counters with Golem's Service API
 pageTitle: Custom Usage Counter Integration Guide for Golem's Service API
 description: Learn how to implement and integrate custom usage counters in Golem's Service API using ya-runtime-sdk, with a practical tutorial and sample code for developers.
-type: tutorial
+type: Tutorial
 ---
 
 # Service Example 4: Custom usage counters
@@ -198,7 +198,7 @@ In the `$HOME/.local/lib/yagna/plugins/` directory create:
 
 - directory `ya-test-runtime-counters` (compare `runtime-path` in above file) where `ya-test-runtime-counters` binary along with Erigon binaries are placed.
 
-The new runtime also needs  to be enabled in `$HOME/.local/share/ya-provider/presets.json`. The preset object can be copied from other presets. Please note that `exeunit-name` has to match to the `name` property of the plugin above:
+The new runtime also needs to be enabled in `$HOME/.local/share/ya-provider/presets.json`. The preset object can be copied from other presets. Please note that `exeunit-name` has to match to the `name` property of the plugin above:
 
 ```javascript
 {
