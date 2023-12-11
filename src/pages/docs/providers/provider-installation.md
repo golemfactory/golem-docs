@@ -105,14 +105,16 @@ $ golemsp status
 │  Status                 │  Wallet                                      │  Tasks                      │
 │                         │  0x2a14f8ae0272bd4c38ed1b40c66e88ed719dab69  │                             │
 │  Service    is running  │                                              │  last 1h processed     0    │
-│  Version    0.12.2      │  network               mainnet               │  last 1h in progress   0    │
-│  Commit     37060503    │  amount (total)        0 GLM                 │  total processed       509  │
-│  Date       2023-06-06  │      (on-chain)        0 GLM                 │  (including failures)       │
-│  Build      296         │      (polygon)         0 GLM                 │                             │
-│                         │      (zksync)          0 GLM                 │                             │
-│  Node Name  lato        │                                              │                             │
-│  Subnet     public      │  pending               0 GLM (0)             │                             │
-│  VM         valid       │  issued                0 GLM (0)             │                             │
+│  Version    0.14.0      │  network               mainnet               │  last 1h in progress   0    │
+│  Commit     9f9be57b    │  amount (total)        0 GLM                 │  total processed       509  │
+│  Date       2023-12-07  │      (on-chain)        0 GLM                 │  (including failures)       │
+│  Build      365         │      (polygon)         0 GLM                 │                             │
+│                         │                                              │                             │
+│  Node Name  lato        │  pending               0 GLM (0)             │                             │
+│  Subnet     public      │  issued                0 GLM (0)             │                             │
+│  VM         valid       │                                              │                             │
+│                         │                                              │                             │
+│  Driver     Ok          │                                              │                             │
 └─────────────────────────┴──────────────────────────────────────────────┴─────────────────────────────┘
 ```
 
