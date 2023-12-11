@@ -311,6 +311,10 @@ export const navigation = [
                 title: 'Running on the mainnet',
                 href: '/docs/creators/ray/mainnet',
               },
+              {
+                title: 'Accessing the Internet (outbound) tutorial',
+                href: '/docs/creators/ray/outbound',
+              },
 	    ],
           },
           {

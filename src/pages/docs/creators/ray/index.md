@@ -17,6 +17,7 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
 - [Running on the mainnet](/docs/creators/ray/mainnet) - all you need to run your cluster on the mainnet
+- [Accessing the Internet tutorial](/docs/creators/ray/outbound) - enabling your Ray app to use the Internet (from within the cluster nodes)
 - [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
 - [Ray CLI](/docs/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
 - [Ray on Golem CLI](/docs/creators/ray/ray-on-golem-cli) - details of Ray on Golem command line options
@@ -46,7 +47,7 @@ The beauty of the solution is that you can run the app locally, and when you are
 
 ## What do you need
 
-You only need to install Ray on Golem, as it also installs the Golem daemon and the Ray framework as dependencies.
+You only need to install Ray on Golem - by default, it also installs the Golem daemon and the Ray framework as dependencies.
 
 Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
 
@@ -77,7 +78,7 @@ The basic flow of working with Ray and Ray on Golem consists of:
 ## How to start
 
 You'll need a piece of code to execute on Golem. If you already have some Ray application, you can immediately proceed to [launching it on Golem](/docs/creators/ray/setup-tutorial).
-Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/golem-ray/tree/main/examples). 
+Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/ray-on-golem/tree/main/examples). 
 
 Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
 
