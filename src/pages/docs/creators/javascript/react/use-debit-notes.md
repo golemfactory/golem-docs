@@ -1,7 +1,7 @@
 ---
 title: useDebitNotes
 description: React hook for fetching all debit notes
-type: reference
+type: React Reference
 ---
 
 # useDebitNotes

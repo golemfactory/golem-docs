@@ -1,11 +1,11 @@
 ---
-title: Ray CLI 
+title: Ray CLI
 pageTitle: Guide to Ray CLI on Golem Network
 description: Dive deep into managing Golem clusters using Ray CLI with commands for starting, stopping, executing apps, and accessing dashboards.
-type: article 
+type: Article
 ---
 
-# Ray CLI 
+# Ray CLI
 
 Ray exposes a command line interface to manage the cluster (and nodes).
 
@@ -16,6 +16,7 @@ For more details check out the [Ray Cluster Management CLI](https://docs.ray.io/
 ## Commands Overview
 
 While `ray start` & `ray stop` are for manual node setup there are also many cluster commands
+
 - `ray up golem-cluster.yaml` starts up a cluster specified by the yaml
 - `ray down golem-cluster.yaml` terminates the cluster
 - `ray submit golem-cluster.yaml ray-app.py` executes an app on the cluster

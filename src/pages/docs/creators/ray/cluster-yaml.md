@@ -1,11 +1,11 @@
 ---
-title: Ray on Golem cluster yaml 
+title: Ray on Golem cluster yaml
 pageTitle: Ray on Golem Cluster YAML Configuration - In-Depth Guide
 description: Explore the nuances of configuring Ray clusters on Golem Network, including worker nodes, idle timeout, and provider settings.
-type: article 
+type: Article
 ---
 
-# Ray on Golem cluster yaml 
+# Ray on Golem cluster yaml
 
 Ray uses a configuration yaml file to define the characteristics of the cluster.
 There are provider-specific pieces of information (node definitions, payment platforms, etc.) and cluster-wide ones (number of nodes, autoscaling parameters, cluster name, etc.).
@@ -22,7 +22,7 @@ It allows you to start a cluster on our testnet with one head node and one worke
 
 The details of all the properties that are generally supported by Ray, can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
 
-Ray on Golem strives to support all configuration possibilities available for general Ray cluster managers. 
+Ray on Golem strives to support all configuration possibilities available for general Ray cluster managers.
 When you find a property we don't support yet, please [let us know (on `#Ray on Golem` discord channel)](https://chat.golem.network/).
 
 ## Most important properties
@@ -33,7 +33,6 @@ Let's have a look at the most important properties (including the ones specific 
 
 The "Max workers" setting defines the size of the cluster that the Ray autoscaler may scale up to, including the head node.
 There is a limited number of providers on the testnet, so when you need more workers you should consider moving to the mainnet.
-
 
 ```yaml
 # The maximum number of workers the cluster will have at any given time
@@ -46,17 +45,16 @@ The minimum number of workers can be specified per node type, and influences how
 Additionally, this is the lowest number of nodes that Ray will automatically scale down to.
 
 ```yaml
-  ray.worker.default:
-     min_workers: 3
+ray.worker.default:
+  min_workers: 3
 ```
 
-
-### Idle timeout 
+### Idle timeout
 
 Idle timeout controls how fast Ray decommisions the nodes that are not busy. It will always leave at least `min_workers` workers, though.
 
 ```yaml
-# The number of minutes that need to pass before an idle worker node 
+# The number of minutes that need to pass before an idle worker node
 # is removed by the Autoscaler
 idle_timeout_minutes: 5
 ```
@@ -68,17 +66,17 @@ You can use initialization commands to properly set up your nodes - e.g. install
 ```yaml
 # List of commands that will be run to initialize the nodes (before `setup_commands`)
 #initialization_commands: [
-#   "pip install endplay", 
+#   "pip install endplay",
 #]
 initialization_commands: []
 ```
 
 ### Provider section
 
-The whole "provider" section describes various Golem node provider internal parameters. 
+The whole "provider" section describes various Golem node provider internal parameters.
 
-Some of these properties influence how Ray on Golem works in general, but we still encourage you to experiment with different settings. 
-The worst that may happen is that you'll need to revert to a previous working setup and start your cluster anew. 
+Some of these properties influence how Ray on Golem works in general, but we still encourage you to experiment with different settings.
+The worst that may happen is that you'll need to revert to a previous working setup and start your cluster anew.
 
 We're eager to hear your feedback on the clarity, usability, or interesting usage of those parameters (on the [`#Ray on Golem` discord channel](https://chat.golem.network/))
 
@@ -93,10 +91,10 @@ Currently, while we support only the Golem testnet, the payments use the `goerli
 When you move to the mainnet, the `payment_network` property needs to be changed to `polygon`
 
 ```yaml
-# Blockchain used for payments. 
-# "goerli" means running free nodes on testnet, 
+# Blockchain used for payments.
+# "goerli" means running free nodes on testnet,
 # "polygon" is for mainnet operations.
-payment_network: "goerli"
+payment_network: 'goerli'
 ```
 
 #### Image tag and image hash
@@ -105,7 +103,7 @@ Image tag and image hash properties refer to the virtual machine images that Gol
 
 By default, Ray on Golem uses prepackaged VM images including [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) Python and Ray versions.
 
-However, you can use these properties to override the detection and request a specific image. 
+However, you can use these properties to override the detection and request a specific image.
 Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
@@ -122,7 +120,6 @@ At the moment, when the spending reaches the limit, Ray on Golem will stop spend
 ```yaml
 provider:
   parameters:
-
     # Maximum amount of GLMs that's going to be spent for the whole cluster
     total_budget: 5
 ```
@@ -159,11 +156,11 @@ provider:
         # causing Golem provider offer to be rejected
         max_start_price: 0.5
 
-        # Amount of GLMs for CPU utilization per hour 
+        # Amount of GLMs for CPU utilization per hour
         # causing Golem provider offer to be rejected
         max_cpu_per_hour_price: 0.5 
 
-        # Amount of GLMs for each CPU for each hour that the worker runs 
+        # Amount of GLMs for each CPU for each hour that the worker runs
         # causing Golem provider offer to be rejected
         max_env_per_hour_price: 0.5
 ```
@@ -172,7 +169,7 @@ provider:
 
 To work with the cheapest provider, we combine all [three prices](#maximum-provider-prices) into one value.
 
-Please estimate the approximate time your application will require the cluster to operate, and the expected CPU load during that time. 
+Please estimate the approximate time your application will require the cluster to operate, and the expected CPU load during that time.
 Then, set the respective `duration_hours` and `cpu_load` properties to allow Ray on Golem to compute each provider's expected usage cost.
 
 All providers' offers are internally sorted by estimated cost (per CPU), allowing Ray on Golem to negotiate and sign agreements with the cheapest nodes first.

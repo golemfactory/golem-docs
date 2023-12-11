@@ -1,14 +1,13 @@
 ---
-title: Golem Requestor Troubleshooting - Exit Code Meanings 
-description: Comprehensive guide to understanding Linux exit codes encountered as a requestor on the Golem Network for effective debugging. 
-pageTitle: Troubleshoot Golem Requestor Issues - Exit Code Reference Guide 
-type: troubleshooting
+title: Golem Requestor Troubleshooting - Exit Code Meanings
+description: Comprehensive guide to understanding Linux exit codes encountered as a requestor on the Golem Network for effective debugging.
+pageTitle: Troubleshoot Golem Requestor Issues - Exit Code Reference Guide
+type: Troubleshooting
 ---
 
 # Debugging exit codes
 
 When executing requestor scripts, it's typical to encounter failures that produce specific exit codes. These codes are standard in Linux environments and are indicative of potential system-level issues. The table provided below offers a detailed breakdown of these system-level exit codes for troubleshooting purposes. If your application is generating exit codes that are unique to that particular application, you should consult the application's documentation or error code list to understand them.
-
 
 | Exit Code | Description                                       |
 | --------- | ------------------------------------------------- |

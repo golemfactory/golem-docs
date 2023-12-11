@@ -112,4 +112,3 @@ To operate your provider node on the testnet:
 golemsp run --payment-network testnet
 
 ```
-
