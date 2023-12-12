@@ -8,9 +8,11 @@ type: "JS API Reference"
 
 [network/network](../modules/network_network).NetworkError
 
+Base class for all errors directly thrown by Golem SDK.
+
 ## Hierarchy
 
-- `Error`
+- [`GolemError`](error_golem_error.GolemError)
 
   ↳ **`NetworkError`**
 
@@ -38,7 +40,7 @@ type: "JS API Reference"
 
 #### Inherited from
 
-Error.constructor
+[GolemError](error_golem_error.GolemError).[constructor](error_golem_error.GolemError#constructor)
 
 #### Defined in
 
@@ -59,7 +61,7 @@ node_modules/typescript/lib/lib.es5.d.ts:1081
 
 #### Inherited from
 
-Error.constructor
+[GolemError](error_golem_error.GolemError).[constructor](error_golem_error.GolemError#constructor)
 
 #### Defined in
 

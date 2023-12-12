@@ -8,9 +8,12 @@ type: "JS API Reference"
 
 [events/events](../modules/events_events).TaskRejected
 
+Represents the situation where all attempts to execute the task have been unsuccessful and no further processing
+will be conducted.
+
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `activityId?`: `string` ; `reason?`: `string`  }\>
 
   ↳ **`TaskRejected`**
 
@@ -34,15 +37,15 @@ type: "JS API Reference"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data?` | `Object` |
-| `data.id` | `string` |
-| `data.agreementId` | `string` |
-| `data.activityId` | `string` |
-| `data.providerId` | `string` |
-| `data.providerName` | `string` |
-| `data.reason?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data?` | `Object` | - |
+| `data.id` | `string` | - |
+| `data.agreementId` | `string` | - |
+| `data.providerId` | `string` | - |
+| `data.providerName` | `string` | - |
+| `data.activityId?` | `string` | The activity that was involved when the rejection took place This might be not set when there was an issue with starting the activity on the provider |
+| `data.reason?` | `string` | - |
 
 #### Returns
 
@@ -54,7 +57,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L28)
 
 ## Properties
 
@@ -64,14 +67,14 @@ type: "JS API Reference"
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `agreementId` | `string` |
-| `activityId` | `string` |
-| `providerId` | `string` |
-| `providerName` | `string` |
-| `reason?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `string` | - |
+| `agreementId` | `string` | - |
+| `providerId` | `string` | - |
+| `providerName` | `string` | - |
+| `activityId?` | `string` | The activity that was involved when the rejection took place This might be not set when there was an issue with starting the activity on the provider |
+| `reason?` | `string` | - |
 
 #### Inherited from
 
@@ -79,7 +82,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L16)
 
 ___
 
@@ -93,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L17)
 
 ___
 
@@ -107,4 +110,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L18)

@@ -35,7 +35,7 @@ The selector used when choosing a provider from a pool of existing offers (from 
 
 #### Defined in
 
-[src/agreement/service.ts:23](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/agreement/service.ts#L23)
+[src/agreement/service.ts:24](https://github.com/golemfactory/golem-js/blob/c2379e3/src/agreement/service.ts#L24)
 
 ___
 
@@ -51,7 +51,7 @@ AgreementOptions.yagnaOptions
 
 #### Defined in
 
-[src/agreement/agreement.ts:35](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/agreement/agreement.ts#L35)
+[src/agreement/agreement.ts:36](https://github.com/golemfactory/golem-js/blob/c2379e3/src/agreement/agreement.ts#L36)
 
 ___
 
@@ -67,7 +67,7 @@ AgreementOptions.agreementRequestTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:37](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/agreement/agreement.ts#L37)
+[src/agreement/agreement.ts:38](https://github.com/golemfactory/golem-js/blob/c2379e3/src/agreement/agreement.ts#L38)
 
 ___
 
@@ -83,7 +83,7 @@ AgreementOptions.agreementWaitingForApprovalTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:39](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/agreement/agreement.ts#L39)
+[src/agreement/agreement.ts:40](https://github.com/golemfactory/golem-js/blob/c2379e3/src/agreement/agreement.ts#L40)
 
 ___
 
@@ -99,7 +99,7 @@ AgreementOptions.logger
 
 #### Defined in
 
-[src/agreement/agreement.ts:41](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/agreement/agreement.ts#L41)
+[src/agreement/agreement.ts:42](https://github.com/golemfactory/golem-js/blob/c2379e3/src/agreement/agreement.ts#L42)
 
 ___
 
@@ -115,4 +115,4 @@ AgreementOptions.eventTarget
 
 #### Defined in
 
-[src/agreement/agreement.ts:43](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/agreement/agreement.ts#L43)
+[src/agreement/agreement.ts:44](https://github.com/golemfactory/golem-js/blob/c2379e3/src/agreement/agreement.ts#L44)

@@ -49,7 +49,7 @@ Storage provider that uses GFTP over WebSockets.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:61](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L61)
+[src/storage/ws-browser.ts:62](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L62)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Close storage provider and release all resources.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:68](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L68)
+[src/storage/ws-browser.ts:69](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L69)
 
 ___
 
@@ -89,7 +89,7 @@ Initialize storage provider.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:72](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L72)
+[src/storage/ws-browser.ts:73](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L73)
 
 ___
 
@@ -115,7 +115,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:76](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L76)
+[src/storage/ws-browser.ts:77](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L77)
 
 ___
 
@@ -135,7 +135,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:101](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L101)
+[src/storage/ws-browser.ts:102](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L102)
 
 ___
 
@@ -161,7 +161,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:105](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L105)
+[src/storage/ws-browser.ts:106](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L106)
 
 ___
 
@@ -181,7 +181,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:131](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L131)
+[src/storage/ws-browser.ts:132](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L132)
 
 ___
 
@@ -207,4 +207,4 @@ Release previously allocated resource URL from Yagna.
 
 #### Defined in
 
-[src/storage/ws-browser.ts:135](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/storage/ws-browser.ts#L135)
+[src/storage/ws-browser.ts:136](https://github.com/golemfactory/golem-js/blob/c2379e3/src/storage/ws-browser.ts#L136)

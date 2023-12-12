@@ -31,7 +31,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/yagna/gsb.ts#L5)
+[src/utils/yagna/gsb.ts:5](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/yagna/gsb.ts#L5)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/yagna/gsb.ts#L9)
+[src/utils/yagna/gsb.ts:9](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/yagna/gsb.ts#L9)

@@ -22,6 +22,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/agreement_service.AgreementCandidate"
           },
 {
+            title: "GolemError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemError"
+          },
+{
             title: "ActivityCreated",
             href: "/docs/golem-js/reference/classes/events_events.ActivityCreated"
           },
@@ -166,10 +170,6 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/job_job.Job"
           },
 {
-            title: "InMemoryJobStorage",
-            href: "/docs/golem-js/reference/classes/job_storage.InMemoryJobStorage"
-          },
-{
             title: "Proposal",
             href: "/docs/golem-js/reference/classes/market_proposal.Proposal"
           },
@@ -296,12 +296,8 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/executor_events.TaskExecutorEventsDict"
           },
 {
-            title: "GolemNetworkConfig",
-            href: "/docs/golem-js/reference/interfaces/golem_network_golem_network.GolemNetworkConfig"
-          },
-{
-            title: "JobStorage",
-            href: "/docs/golem-js/reference/interfaces/job_storage.JobStorage"
+            title: "JobEventsDict",
+            href: "/docs/golem-js/reference/interfaces/job_job.JobEventsDict"
           },
 {
             title: "DemandDetails",
@@ -397,6 +393,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/agreement_strategy"
           },
 {
+            title: "Error_golem_error",
+            href: "/docs/golem-js/reference/modules/error_golem_error"
+          },
+{
             title: "Events_events",
             href: "/docs/golem-js/reference/modules/events_events"
           },
@@ -415,10 +415,6 @@ export const navigation = [
 {
             title: "Job_job",
             href: "/docs/golem-js/reference/modules/job_job"
-          },
-{
-            title: "Job_storage",
-            href: "/docs/golem-js/reference/modules/job_storage"
           },
 {
             title: "Market_builder",
