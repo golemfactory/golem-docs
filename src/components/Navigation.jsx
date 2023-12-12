@@ -24,6 +24,8 @@ export const MenuBar = ({ navigation }) => {
           <Link
             className="text-base text-primary dark:text-lightergray"
             key={item.title}
+            target={item.links[0].href.startsWith('http') ? '_blank' : '_self'}
+            rel={item.links[0].href.startsWith('http') ? 'noopener noreferrer' : ''}
             href={item.links[0].href}
           >
             {item.title}
@@ -78,9 +80,9 @@ export const SideBar = ({ navigation }) => {
 
   return currentSection ? (
     <nav>
-      <h1 className="mb-2 text-base font-semibold dark:text-white">
+      <h4 className="mb-2 text-base font-semibold dark:text-white">
         {currentSection.title}
-      </h1>
+      </h4>
       <ul role="list">{renderNavItems(currentSection.links)}</ul>
     </nav>
   ) : null
@@ -91,16 +93,18 @@ export const NavigationItem = ({ item, isActive }) =>
     <Link
       href={item.href}
       aria-current={isActive ? 'page' : undefined}
+      target={item.href.startsWith('http') ? '_blank' : '_self'}
+      rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
       className={`break-words py-0.5
-      ${isActive ? 'text-primary dark:text-darkprimary ' : 'dark:text-white/50'}
+      ${isActive ? 'text-primary dark:text-[#3961fb] ' : 'dark:text-white/70'}
       `}
     >
       {item.title}
     </Link>
   ) : (
     <span
-      className={clsx('py-0.5 text-sm text-left', {
-        'text-primary dark:text-darkprimary': isActive,
+      className={clsx('py-0.5 text-left text-sm', {
+        'text-primary dark:text-[#3961fb]': isActive,
       })}
     >
       {item.title}
@@ -119,7 +123,7 @@ export const Dropdown = ({ children, isActive }) => {
   return (
     <div>
       <button
-        className="flex items-center gap-x-2 dark:text-white/50"
+        className="flex items-center gap-x-2 dark:text-white/70"
         onClick={btnClick}
         aria-expanded={isOpen}
       >

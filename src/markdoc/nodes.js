@@ -10,7 +10,6 @@ const slugify = slugifyWithCounter()
 
 function generateID(children, attributes) {
   if (attributes.id && typeof attributes.id === 'string') {
-    console.log('Using existing ID', attributes.id)
     return attributes.id
   }
 

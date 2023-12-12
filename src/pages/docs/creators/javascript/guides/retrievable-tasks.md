@@ -1,6 +1,8 @@
 ---
-description: Introduction to retrievable tasks on Golem Network
 title: Retrievable tasks (Job API)
+description: Explore the Job API on Golem Network, offering enhanced control over task states, results, and error messages, ideal for complex tasks needing persistent data handling.
+pageTitle: Job API in Golem Network - Advanced Task Control and State Management
+
 type: Guide
 ---
 

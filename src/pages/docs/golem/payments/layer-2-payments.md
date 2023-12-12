@@ -1,6 +1,7 @@
 ---
-title: Layer 2 payment solution
-description: Better solution for computation cost reimbursements
+title: Implementing Polygon Payments in Golem Network 
+description: Guide to using Polygon for cost-efficient transactions in the Golem Network, bypassing Ethereum mainnet fees. 
+pageTitle: Golem Network's Polygon Integration - Efficient Layer 2 Payments Guide
 type: Guide
 ---
 

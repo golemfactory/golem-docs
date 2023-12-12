@@ -1,7 +1,7 @@
 ---
 title: useYagna
 description: React hook for connecting to Yagna
-type: reference
+type: React Reference
 ---
 
 # useYagna
@@ -15,9 +15,9 @@ type: reference
 | error       | Error object containing information about the error that occurred while connecting to Yagna. |
 | reconnect   | A function that can be used to reconnect to Yagna.                                           |
 
-## Props
+## Parameters
 
-This hook doesn't accept any props.
+This hook doesn't accept any parameters.
 
 ## Example
 

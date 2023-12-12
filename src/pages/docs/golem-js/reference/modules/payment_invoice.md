@@ -24,4 +24,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:7](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L7)
+[src/payment/invoice.ts:8](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L8)

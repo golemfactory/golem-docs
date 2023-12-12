@@ -1,11 +1,11 @@
 ---
-title: Provider 
-description: The provider actor in the Golem
+title: Golem Provider Guide - Optimize Computing Resources for Decentralized Networks
+description: Discover how to configure a Linux-based provider node for the Golem network, harnessing exe-units for VM and WASM runtimes to contribute computing power.
 type: Guide
 ---
 
 {% alert level="warning" %}
-Provider node can be run on a 64-bit x86-64 CPU computer with Ubuntu only.
+A provider node can only run on a Linux machine with the x86-64 architecture and nested virtualization enabled in the BIOS.
 {% /alert %}
 
 ## Provider architecture

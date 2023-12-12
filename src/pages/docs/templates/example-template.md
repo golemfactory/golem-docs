@@ -12,15 +12,13 @@ Explain what will be demonstrated in this article.
 
 Yagna service is installed and running with the `try_golem` app-key configured.
 
-{% alert level="info" %}
+## Introduction
 
-This example has been designed to work with the following environments:
+In this article we will present tha basic structure for an examples article.
 
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
+## Prerequisites
 
-{% /alert %}
-
+Yagna service is installed and running with `try_golem` app-key configured.
 
 ## How to run examples
 
@@ -43,22 +41,21 @@ node index.mjs
 
 Examples should be simple and short with each code snippet ready to copy and run.
 
-Examples should focus on single aspects and show how to use a given feature. 
+Examples should focus on single aspects and show how to use a given feature.
 
 If you have more than one example, list them.
 
 If there is a need to compare different points, use a table.
 
-
-| Command     | Available in node.js| Available in web browser |
-| ----------- | :------------------:|:------------------------:| 
-| `run()` | yes | yes|
-| `uploadFile()` | yes | no |
-| `uploadJSON()` | yes | no |
-| `downloadFile()` | yes | no |
+| Command          | Available in node.js | Available in web browser |
+| ---------------- | :------------------: | :----------------------: |
+| `run()`          |         yes          |           yes            |
+| `uploadFile()`   |         yes          |            no            |
+| `uploadJSON()`   |         yes          |            no            |
+| `downloadFile()` |         yes          |            no            |
 
 {% alert level="info" %}
-You can notify readers about some important topics. 
+You can notify readers about some important topics.
 {% /alert %}
 
 If all examples in the article follow a specific scenario, you can explain it here.
@@ -68,25 +65,21 @@ If all examples in the article follow a specific scenario, you can explain it he
 Example titles should tell what is the outcome of the example.
 
 ```js
-import { TaskExecutor } from "@golem-sdk/golem-js";
-
+import { TaskExecutor } from '@golem-sdk/golem-js'
 ```
 
 ![replacement text for an image](/github-icon.png)
 
-
-
 Images should be placed in /public folder.
-
 
 ## Another example
 
 In the example, explain:
+
 - Why readers might use it
 - How they should use it
 - Point to outcomes
-- Point to interesting things that can tell readers more about the network 
-
+- Point to interesting things that can tell readers more about the network
 
 ## Showing variants
 
@@ -112,6 +105,6 @@ Variant 2 body here
 
 {% docnavigation title="See also" %}
 
-- [Title](https://github.com) of other related sections: i.e. Tutorials, Guides. 
+- [Title](https://github.com) of other related sections: i.e. Tutorials, Guides.
 
 {% /docnavigation %}

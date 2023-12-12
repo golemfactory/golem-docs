@@ -1,7 +1,7 @@
 ---
 title: useTask
 description: React hook for managing a single Task on the Golem Network
-type: reference
+type: React Reference
 ---
 
 # useTask
@@ -12,10 +12,10 @@ type: reference
 | --------- | -------------------------------------------------------------------------------------------- |
 | run       | The [worker function](/docs/golem-js/reference/modules/task_work#worker) that runs the task. |
 | isRunning | Boolean indicating whether the task is running.                                              |
-| isError   | Boolean indicating whether the task has failed.                                              |
+| error     | The error which caused the task to fail.                                                     |
 | result    | The result of the task.                                                                      |
 
-## Props
+## Parameters
 
 This hook takes the [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance, initialized by the [useExecutor](/docs/creators/javascript/react/use-executor) hook.
 
@@ -27,7 +27,7 @@ This hook takes the [TaskExecutor](/docs/golem-js/reference/classes/executor_exe
 
 ```jsx
 function MyComponent({ executor }) {
-  const { isRunning, isError, result, run } = useTask(executor)
+  const { isRunning, error, result, run } = useTask(executor)
   const onClick = () =>
     run(async (ctx) => {
       return (await ctx.run('echo', ['Hello world!'])).stdout
@@ -38,7 +38,7 @@ function MyComponent({ executor }) {
         Run task
       </button>
       {isRunning && <div>Task is running...</div>}
-      {isError && <div>Task failed</div>}
+      {error && <div>Task failed due to {error.toString()}</div>}
       {result && <div>Task result: {result}</div>}
     </div>
   )

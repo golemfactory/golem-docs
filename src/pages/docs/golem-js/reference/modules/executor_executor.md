@@ -22,11 +22,11 @@ type: "JS API Reference"
 
 ### ExecutorOptions
 
-Ƭ **ExecutorOptions**: \{ `package?`: `string` \| [`Package`](../classes/package_package.Package) ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger) ; `logLevel?`: [`LogLevel`](../enums/utils_logger_logger.LogLevel) \| `string` ; `enableLogging?`: `boolean` ; `yagnaOptions?`: [`YagnaOptions`](executor_executor#yagnaoptions) ; `eventTarget?`: `EventTarget` ; `maxTaskRetries?`: `number` ; `storageProvider?`: [`StorageProvider`](../interfaces/storage_provider.StorageProvider) ; `isSubprocess?`: `boolean` ; `activityPreparingTimeout?`: `number` ; `jobStorage?`: [`JobStorage`](../interfaces/job_storage.JobStorage) ; `skipProcessSignals?`: `boolean` ; `startupTimeout?`: `number` ; `exitOnNoProposals?`: `boolean`  } & `Omit`\<[`PackageOptions`](package_package#packageoptions), ``"imageHash"`` \| ``"imageTag"``\> & [`MarketOptions`](../interfaces/market_service.MarketOptions) & [`TaskServiceOptions`](../interfaces/task_service.TaskServiceOptions) & [`PaymentOptions`](../interfaces/payment_service.PaymentOptions) & [`NetworkServiceOptions`](network_service#networkserviceoptions) & [`AgreementServiceOptions`](../interfaces/agreement_service.AgreementServiceOptions) & `Omit`\<[`WorkOptions`](../interfaces/task_work.WorkOptions), ``"isRunning"``\>
+Ƭ **ExecutorOptions**: \{ `package?`: `string` \| [`Package`](../classes/package_package.Package) ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: [`Logger`](../interfaces/utils_logger_logger.Logger) ; `logLevel?`: [`LogLevel`](../enums/utils_logger_logger.LogLevel) \| `string` ; `enableLogging?`: `boolean` ; `yagnaOptions?`: [`YagnaOptions`](executor_executor#yagnaoptions) ; `eventTarget?`: `EventTarget` ; `maxTaskRetries?`: `number` ; `storageProvider?`: [`StorageProvider`](../interfaces/storage_provider.StorageProvider) ; `isSubprocess?`: `boolean` ; `activityPreparingTimeout?`: `number` ; `skipProcessSignals?`: `boolean` ; `startupTimeout?`: `number` ; `exitOnNoProposals?`: `boolean`  } & `Omit`\<[`PackageOptions`](package_package#packageoptions), ``"imageHash"`` \| ``"imageTag"``\> & [`MarketOptions`](../interfaces/market_service.MarketOptions) & [`TaskServiceOptions`](../interfaces/task_service.TaskServiceOptions) & [`PaymentOptions`](../interfaces/payment_service.PaymentOptions) & [`NetworkServiceOptions`](network_service#networkserviceoptions) & [`AgreementServiceOptions`](../interfaces/agreement_service.AgreementServiceOptions) & `Omit`\<[`WorkOptions`](../interfaces/task_work.WorkOptions), ``"isRunning"``\>
 
 #### Defined in
 
-[src/executor/executor.ts:25](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/executor/executor.ts#L25)
+[src/executor/executor.ts:24](https://github.com/golemfactory/golem-js/blob/c2379e3/src/executor/executor.ts#L24)
 
 ___
 
@@ -38,7 +38,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[src/executor/executor.ts:94](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/executor/executor.ts#L94)
+[src/executor/executor.ts:88](https://github.com/golemfactory/golem-js/blob/c2379e3/src/executor/executor.ts#L88)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:96](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/executor/executor.ts#L96)
+[src/executor/executor.ts:90](https://github.com/golemfactory/golem-js/blob/c2379e3/src/executor/executor.ts#L90)

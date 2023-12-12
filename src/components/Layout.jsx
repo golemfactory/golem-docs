@@ -167,7 +167,7 @@ function useTableOfContents(tableOfContents) {
     if (tableOfContents.length === 0) return
     let headings = getHeadings(tableOfContents)
     function onScroll() {
-      let top = window.scrollY
+      let top = window.scrollY + 20
       let current = headings[0].id
       for (let heading of headings) {
         if (top >= heading.top) {
@@ -199,6 +199,7 @@ import { FeedbackButtons } from './Feedback'
 import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { ArticleType } from './ArticleType'
+import { CustomError } from './CustomError'
 
 export function Layout({
   children,
@@ -208,33 +209,75 @@ export function Layout({
   type = 'guide',
 }) {
   let router = useRouter()
-  let isHomePage = router.pathname === '/'
-  let is404Page = router.pathname === '/404'
-  let is500Page = router.pathname === '/500'
+  const pathExceptions = ['/', '/404', '/500']
+  const isExceptionPage = pathExceptions.includes(router.pathname)
+  const hasFromHandbook = 'fromhandbook' in router.query
+
   let allLinks = normalNavLinks.flatMap((section) => section.links)
   let LinkIndex = allLinks.findIndex((link) => link.href === router.pathname)
-
   let previousPage = allLinks[LinkIndex - 1]
   let nextPage = allLinks[LinkIndex + 1]
 
   let section = normalNavLinks.find((section) =>
     section.links.find((link) => link.href === router.pathname)
   )
-  const currentSection = useTableOfContents(isHomePage ? [] : tableOfContents)
+  const currentSection = useTableOfContents(
+    isExceptionPage ? [] : tableOfContents
+  )
 
   function isActive(section) {
     return section.id === currentSection
+  }
+
+  if (router.pathname === '/404') {
+    return (
+      <>
+        {hasFromHandbook ? (
+          <CustomError
+            errorCode={'404 - Not Found'}
+            title="New system, New and Improved Content!"
+            description="
+         The handbook you knew has evolved! We've upgraded to a more
+              comprehensive and user-friendly documentation platform. Though the
+              page you're seeking seems to be missing, don't worry. Explore our helpful links below or use the search bar to easily find the documentation you need.
+        "
+          />
+        ) : (
+          <CustomError
+            errorCode={'404'}
+            title="Page not found"
+            description="
+         We couldn't find the page you're looking for. The page may have been moved or deleted, but we're here to help. You can use the search bar to find the documentation you need, or choose from the links below.
+        "
+          />
+        )}
+      </>
+    )
+  }
+
+  if (router.pathname === '/500') {
+    return (
+      <>
+        <CustomError
+          errorCode={'500'}
+          title="Something went wrong"
+          description="
+       We apologize for the inconvenience. Something went wrong on our end. Please try reloading the page. If the issue persists, utilize the search bar or refer to the links provided below to locate the documentation you need.
+    "
+        />
+      </>
+    )
   }
 
   return (
     <>
       <Header navigation={JSReference} />
 
-      {isHomePage && <Hero />}
+      {type === 'home' && <Hero />}
 
       <div className="relative mx-auto flex max-w-8xl justify-center ">
         {type !== 'page' &&
-          (!isHomePage || !is404Page || !is500Page ? (
+          (isExceptionPage ? null : (
             <div className="hidden lg:relative lg:block lg:flex-none">
               <div className="absolute inset-y-0 right-0 w-[50vw] bg-lightblue dark:hidden" />
               <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
@@ -243,65 +286,68 @@ export function Layout({
                 <SideBar navigation={mergednavs} />
               </div>
             </div>
-          ) : null)}
+          ))}
 
         <div className="min-w-0 max-w-5xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
           <article>
-            <div className="flex items-center gap-x-4 pb-4">
-              {type && <ArticleType type={type} />}
-              {tags &&
-                tags.split(',').map((tag, index, array) => (
-                  <div
-                    className="block text-sm text-normalgray dark:text-white/50"
-                    key={tag}
-                  >
-                    {tag}
-                  </div>
-                ))}
-            </div>
+            {isExceptionPage ? null : (
+              <div className="flex items-center gap-x-4 pb-4">
+                {type && <ArticleType type={type} />}
+                {tags &&
+                  tags.split(',').map((tag, index, array) => (
+                    <div
+                      className="block text-sm text-normalgray dark:text-white/70"
+                      key={tag}
+                    >
+                      {tag}
+                    </div>
+                  ))}
+              </div>
+            )}
 
             <Prose>{children}</Prose>
-            <FeedbackButtons article={true} identifier={router.pathname} />
+            {isExceptionPage ? null : (
+              <FeedbackButtons article={true} identifier={router.pathname} />
+            )}
           </article>
         </div>
-        {type !== 'page' &&
-          (!isHomePage || !is404Page || !is500Page ? (
-            <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
-              <nav aria-labelledby="on-this-page-title" className="w-56">
-                {tableOfContents.length > 0 && (
-                  <>
-                    <h2
-                      id="on-this-page-title"
-                      className="font-display pl-4 text-sm font-medium text-slate-900 dark:text-white"
-                    >
-                      On this page
-                    </h2>
-                    <ol role="list" className="mt-4  pl-4 text-sm">
-                      <div className="border-l">
-                        {tableOfContents.map((section) => (
-                          <li className="py-0.5 pl-4" key={section.id}>
-                            <Heading section={section} isActive={isActive} />
-                            {section.children.length > 0 && (
-                              <ul
-                                role="list"
-                                className="  pl-5 text-slate-500 dark:text-slate-400"
-                              >
-                                {recursiveRender(
-                                  section.children,
-                                  isActive,
-                                  type
-                                )}
-                              </ul>
-                            )}
-                          </li>
-                        ))}
-                      </div>
-                    </ol>
-                  </>
-                )}
-              </nav>
-            </div>
-          ) : null)}
+        {isExceptionPage ? null : (
+          <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+            <nav aria-labelledby="on-this-page-title" className="w-56">
+              {tableOfContents.length > 0 && (
+                <>
+                  <h2
+                    id="on-this-page-title"
+                    className="font-display pl-4 text-sm font-medium text-slate-900 dark:text-white"
+                  >
+                    On this page
+                  </h2>
+                  <ol role="list" className="mt-4  pl-4 text-sm">
+                    <div className="border-l">
+                      {tableOfContents.map((section) => (
+                        <li className="py-0.5 pl-4" key={section.id}>
+                          <Heading section={section} isActive={isActive} />
+                          {section.children.length > 0 && (
+                            <ul
+                              role="list"
+                              className="  pl-5 text-slate-500 dark:text-slate-400"
+                            >
+                              {recursiveRender(
+                                section.children,
+                                isActive,
+                                type
+                              )}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </div>
+                  </ol>
+                </>
+              )}
+            </nav>
+          </div>
+        )}
       </div>
       <Footer />
     </>

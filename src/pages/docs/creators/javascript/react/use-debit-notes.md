@@ -1,7 +1,7 @@
 ---
 title: useDebitNotes
 description: React hook for fetching all debit notes
-type: reference
+type: React Reference
 ---
 
 # useDebitNotes
@@ -35,7 +35,7 @@ type: reference
 | paymentDueDate      | String                                                                          |
 | status              | One of `ISSUED` `RECEIVED` `ACCEPTED` `REJECTED` `FAILED` `SETTLED` `CANCELLED` |
 
-## Props
+## Parameters
 
 This hook accepts a single configuration object with the following properties:
 

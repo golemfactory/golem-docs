@@ -4,11 +4,11 @@ export const navigation = [
     links: [{ title: 'index', href: '/' }],
   },
   {
-    title: 'QuickStarts',
+    title: 'Quickstarts',
     links: [
       { title: 'Introduction', href: '/docs/quickstarts' },
       {
-        title: 'JS QuickStart (node.js)',
+        title: 'JS Quickstart (node.js)',
         href: '/docs/quickstarts/js-quickstart',
       },
       {
@@ -22,6 +22,10 @@ export const navigation = [
       {
         title: '"no-code" app deployment',
         href: '/docs/quickstarts/no-code-app-deployment',
+      },
+      {
+        title: 'Python Quickstart ',
+        href: '/docs/quickstarts/python-quickstart',
       },
       {
         title: 'Retrievable Task',
@@ -38,7 +42,7 @@ export const navigation = [
         children: [
           { title: 'Introduction', href: '/docs/creators/javascript' },
           {
-            title: 'QuickStarts',
+            title: 'Quickstarts',
             href: '/docs/creators/javascript/quickstarts',
             children: [
               {
@@ -63,7 +67,7 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials',
               },
               {
-                title: 'QuickStart Explained',
+                title: 'Quickstart Explained',
                 href: '/docs/creators/javascript/tutorials/quickstart-explained',
               },
               {
@@ -77,6 +81,10 @@ export const navigation = [
               {
                 title: 'Building custom image',
                 href: '/docs/creators/javascript/tutorials/building-custom-image',
+              },
+              {
+                title: 'Using Outbound',
+                href: '/docs/creators/javascript/tutorials/accessing-internet',
               },
               {
                 title: 'Testing Golem Images',
@@ -125,6 +133,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/examples/using-app-keys',
               },
               {
+                title: 'Accessing the Internet',
+                href: '/docs/creators/javascript/examples/accessing-internet',
+              },
+              {
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/examples/switching-to-mainnet',
               },
@@ -145,6 +157,14 @@ export const navigation = [
               {
                 title: 'Retrievable tasks (Job API)',
                 href: '/docs/creators/javascript/guides/retrievable-tasks',
+              },
+              {
+                title: 'Golem SDK CLI',
+                href: '/docs/creators/javascript/guides/golem-sdk-cli',
+              },
+              {
+                title: 'Accessing the Internet',
+                href: '/docs/creators/javascript/guides/accessing-internet',
               },
               {
                 title: 'Golem images',
@@ -207,36 +227,50 @@ export const navigation = [
                 href: '/docs/creators/javascript/react',
               },
               {
-                title: 'YagnaProvider',
-                href: '/docs/creators/javascript/react/yagna-provider',
+                title: 'Getting started',
+                href: '/docs/creators/javascript/react/getting-started',
               },
               {
-                title: 'useYagna',
-                href: '/docs/creators/javascript/react/use-yagna',
-              },
-              {
-                title: 'useExecutor',
-                href: '/docs/creators/javascript/react/use-executor',
-              },
-              {
-                title: 'useTask',
-                href: '/docs/creators/javascript/react/use-task',
-              },
-              {
-                title: 'useInvoices',
-                href: '/docs/creators/javascript/react/use-invoices',
-              },
-              {
-                title: 'useDebitNotes',
-                href: '/docs/creators/javascript/react/use-debit-notes',
-              },
-              {
-                title: 'useHandleInvoice',
-                href: '/docs/creators/javascript/react/use-handle-invoice',
-              },
-              {
-                title: 'useHandleDebitNote',
-                href: '/docs/creators/javascript/react/use-handle-debit-note',
+                title: 'API Reference',
+                href: '',
+                children: [
+                  {
+                    title: 'Overview',
+                    href: '/docs/creators/javascript/react/api-reference-overview',
+                  },
+                  {
+                    title: 'YagnaProvider',
+                    href: '/docs/creators/javascript/react/yagna-provider',
+                  },
+                  {
+                    title: 'useYagna',
+                    href: '/docs/creators/javascript/react/use-yagna',
+                  },
+                  {
+                    title: 'useExecutor',
+                    href: '/docs/creators/javascript/react/use-executor',
+                  },
+                  {
+                    title: 'useTask',
+                    href: '/docs/creators/javascript/react/use-task',
+                  },
+                  {
+                    title: 'useInvoices',
+                    href: '/docs/creators/javascript/react/use-invoices',
+                  },
+                  {
+                    title: 'useDebitNotes',
+                    href: '/docs/creators/javascript/react/use-debit-notes',
+                  },
+                  {
+                    title: 'useHandleInvoice',
+                    href: '/docs/creators/javascript/react/use-handle-invoice',
+                  },
+                  {
+                    title: 'useHandleDebitNote',
+                    href: '/docs/creators/javascript/react/use-handle-debit-note',
+                  },
+                ],
               },
             ],
           },
@@ -245,31 +279,214 @@ export const navigation = [
       {
         title: 'Python with Ray on Golem',
         children: [
-          { title: 'Introduction', href: '/docs/creators/ray' },
-          { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
           {
-            title: 'Concept',
-            href: '/docs/creators/ray/concept',
+            title: 'Getting Started',
+            href: '',
+            children: [
+	      { title: 'Introduction', href: '/docs/creators/ray' },
+              { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
+              {
+                title: 'Setup tutorial',
+                href: '/docs/creators/ray/setup-tutorial',
+              },
+              {
+                title: 'Supported versions and other limitations',
+                href: '/docs/creators/ray/supported-versions-and-other-limitations',
+              },
+	    ],
           },
           {
-            title: 'Setup tutorial',
-            href: '/docs/creators/ray/setup-tutorial',
+            title: 'Tutorials',
+            href: '',
+            children: [
+              {
+                title: 'Basic Ray tasks usage tutorial',
+                href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
+              },
+              {
+                title: 'Converting a real-life use case to Ray on Golem',
+                href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
+              },
+              {
+                title: 'Accessing the Internet (outbound) tutorial',
+                href: '/docs/creators/ray/outbound',
+              },
+	    ],
           },
           {
-            title: 'Basic Ray tasks usage tutorial',
-            href: '/docs/creators/ray/basic-ray-tasks-usage-tutorial',
+            title: 'Ray on Golem tools',
+            href: '',
+            children: [
+              {
+                title: 'Cluster yaml',
+                href: '/docs/creators/ray/cluster-yaml',
+              },
+              {
+                title: 'Ray CLI',
+                href: '/docs/creators/ray/ray-cli',
+              },
+              {
+                title: 'Ray on Golem CLI',
+                href: '/docs/creators/ray/ray-on-golem-cli',
+              },
+	    ],
+          },
+        ],
+      },
+      {
+        title: 'Python',
+        children: [
+          { title: 'Introduction', href: '/docs/creators/python' },
+          {
+            title: 'Quickstart',
+            href: '',
+            children: [
+              {
+                title: 'Task API Quickstart',
+                href: '/docs/creators/python/quickstarts/run-first-task-on-golem',
+              },
+            ],
           },
           {
-            title: 'Converting a real-life use case to Ray on Golem',
-            href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
+            title: 'Guides',
+            href: '',
+            children: [
+              {
+                title: 'List of guides',
+                href: '/docs/creators/python/guides',
+              },
+              {
+                title: 'Application fundamentals',
+                href: '/docs/creators/python/guides/application-fundamentals',
+              },
+              {
+                title: 'Task Model',
+                href: '/docs/creators/python/guides/task-model',
+              },
+              {
+                title: 'Service Model',
+                href: '/docs/creators/python/guides/service-model',
+              },
+              {
+                title: 'Golem images',
+                href: '/docs/creators/python/guides/golem-images',
+              },
+              {
+                title: 'Golem images FAQ',
+                href: '/docs/creators/python/guides/golem-images-faq',
+              },
+              {
+                title: 'Switching to mainnet',
+                href: '/docs/creators/python/guides/switching-to-mainnet',
+              },
+              {
+                title: 'VPN',
+                href: '/docs/creators/python/guides/vpn',
+              },
+              {
+                title: 'Debugging',
+                href: '/docs/creators/python/guides/debugging',
+              },
+            ],
           },
           {
-            title: 'Cluster yaml reference',
-            href: '/docs/creators/ray/cluster-yaml-reference',
+            title: 'Tutorials',
+            children: [
+              {
+                title: 'List of tutorials',
+                href: '/docs/creators/python/tutorials',
+              },
+              {
+                title: 'Task API - Hello World',
+                href: '/docs/creators/python/tutorials/task-example-0-hello',
+              },
+              {
+                title: 'Task API - Cracker',
+                href: '/docs/creators/python/tutorials/task-example-1-cracker',
+              },
+              {
+                title: 'Task API - Hashcat',
+                href: '/docs/creators/python/tutorials/task-example-2-hashcat',
+              },
+              {
+                title: 'Service API - Hello World',
+                href: '/docs/creators/python/tutorials/service-example-0-hello-world',
+              },
+              {
+                title: 'Service API - Simple',
+                href: '/docs/creators/python/tutorials/service-example-1-simple-service',
+              },
+              {
+                title: 'Service API - SSH',
+                href: '/docs/creators/python/tutorials/service-example-2-vpn-ssh-terminal',
+              },
+              {
+                title: 'Service API - Proxy',
+                href: '/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy',
+              },
+              {
+                title: 'Service API - Counter',
+                href: '/docs/creators/python/tutorials/service-example-4-custom-usage-counters',
+              },
+              {
+                title: 'Service API - Web app',
+                href: '/docs/creators/python/tutorials/service-example-5-webapp',
+              },
+              {
+                title: 'Service API - External API',
+                href: '/docs/creators/python/tutorials/service-example-6-external-api-request',
+              },
+              {
+                title: 'Building custom image',
+                href: '/docs/creators/python/tutorials/building-custom-image',
+              },
+            ],
           },
           {
-            title: 'Supported versions and other limitations',
-            href: '/docs/creators/ray/supported-versions-and-other-limitations',
+            title: 'Golem tools examples',
+            href: '',
+            children: [
+              {
+                title: 'List of instructions',
+                href: '/docs/creators/python/examples/tools',
+              },
+              {
+                title: 'Yagna installation',
+                href: '/docs/creators/python/examples/tools/yagna-installation-for-requestors',
+              },
+              {
+                title: 'Converting images',
+                href: '/docs/creators/python/examples/tools/converting-docker-image-to-golem-format',
+              },
+              {
+                title: 'Gvmkit-build installation',
+                href: '/docs/creators/python/examples/tools/gvmkit-build-installation',
+              },
+              {
+                title: 'Publishing custom images',
+                href: '/docs/creators/python/examples/tools/publishing-custom-images',
+              },
+              {
+                title: 'Self-hosted VM images',
+                href: '/docs/creators/python/examples/tools/self-hosted-vm-images',
+              },
+              {
+                title: 'Golem wallet backup',
+                href: '/docs/creators/python/examples/tools/golem-wallet-backup',
+              },
+              {
+                title: 'Restoring Golem wallet',
+                href: '/docs/creators/python/examples/tools/restoring-golem-wallet',
+              },
+              {
+                title: 'Managing Golem wallet',
+                href: '/docs/creators/python/examples/tools/managing-golem-wallet',
+              },
+            ],
+          },
+          {
+            title: 'Python API Reference',
+            href: 'https://yapapi.readthedocs.io/en/latest/api.html',
           },
         ],
       },
@@ -304,6 +521,10 @@ export const navigation = [
             href: '/docs/troubleshooting/js-requestor',
           },
           {
+            title: 'Ray on Golem',
+            href: '/docs/creators/ray/troubleshooting',
+          },
+          {
             title: 'Yagna',
             href: '/docs/troubleshooting/yagna',
           },
@@ -318,6 +539,25 @@ export const navigation = [
           },
         ],
       },
+      {
+        title: 'Common Developer tools',
+        children: [
+          {
+            title: 'Goth',
+            href: '/docs/creators/tools/goth',
+            children: [
+              {
+                title: 'Goth Tutorial',
+                href: '/docs/creators/tools/goth/running-goth',
+              },
+              {
+                title: 'Goth in interactive mode',
+                href: '/docs/creators/tools/goth/running-goths-interactive-mode',
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -326,40 +566,38 @@ export const navigation = [
       { title: 'Introduction', href: '/docs/providers' },
       { title: 'Installation', href: '/docs/providers/provider-installation' },
       {
-        title: 'Basic Configuration',
-        href: '/docs/providers/provider-basic-configuration',
+        title: 'Configuring your provider',
+        children: [
+          {
+            title: 'General settings',
+            href: '/docs/providers/configuration/general',
+          },
+          {
+            title: 'Outbound networking',
+            href: '/docs/providers/configuration/outbound',
+          },
+        ],
       },
+
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
 
       {
-        title: 'Yagna CLI reference',
-        href: '/docs/providers/yagna-cli-reference',
-      },
-      {
-        title: 'Maintenance',
+        title: 'Managing your wallet',
         children: [
           {
-            title: 'Maintenance',
-            href: '/docs/providers/maintenance/provider-maintenance',
+            title: 'Backing up your wallet',
+            href: '/docs/providers/wallet/backup',
           },
           {
-            title: 'Wallet Backup',
-            href: '/docs/providers/maintenance/wallet-backup',
-          },
-          {
-            title: 'Wallet Restore',
-            href: '/docs/providers/maintenance/wallet-restoration',
+            title: 'Restoring a wallet',
+            href: '/docs/providers/wallet/restoration',
           },
         ],
       },
+      { title: 'Maintenance', href: '/docs/providers/maintenance' },
       {
         title: 'Troubleshooting',
-        children: [
-          {
-            title: 'Provider',
-            href: '/docs/troubleshooting/provider',
-          },
-        ],
+        href: '/docs/troubleshooting/provider',
       },
     ],
   },

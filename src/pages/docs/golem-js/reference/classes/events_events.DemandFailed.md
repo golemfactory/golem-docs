@@ -49,7 +49,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L28)
 
 ## Properties
 
@@ -69,7 +69,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L16)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L17)
 
 ___
 
@@ -97,4 +97,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L18)

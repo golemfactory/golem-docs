@@ -34,7 +34,7 @@ Need a backend to offload your system?
 
 {% /selectioncard %}
 
-{% selectioncard icon="ray" title="Ray on Golem Docs" buttonText="Read Ray on Golem Docs" href="/docs/creators/ray" %}
+{% selectioncard icon="ray" title="Python with Ray on Golem" buttonText="Read Ray on Golem Docs" href="/docs/creators/ray" %}
 
 {% selectioncontent %}
 
@@ -73,6 +73,28 @@ Want to deploy an application on Golem that consists of a service(s) that run co
 {% selectioncontent %}
 
 Glad to use a YAML-based approach to configure the deployment?
+
+{% /selectioncontent %}
+
+{% /selectioncard %}
+
+{% selectioncard icon="python" title="Python Docs" buttonText="Read Python Docs" href="/docs/creators/python" %}
+
+{% selectioncontent %}
+
+Prefer to code in Python?
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Have a problem that can be split into multiple tasks that can be run in parallel?
+
+{% /selectioncontent %}
+
+{% selectioncontent %}
+
+Need a backend to offload your system?
 
 {% /selectioncontent %}
 

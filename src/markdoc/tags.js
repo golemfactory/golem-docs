@@ -21,18 +21,35 @@ import { Troubleshooting } from '@/components/Troubleshooting'
 import { Solution } from '@/components/Solution'
 import { Problem } from '../components/Problem'
 import { FeedbackButtons } from '@/components/Feedback'
+import DefaultValue from '../components/DefaultValue'
+import { slugifyWithCounter } from '@sindresorhus/slugify'
+const slugify = slugifyWithCounter()
 const tags = {
   tabs: {
     render: Tabs,
     attributes: {},
-    transform(node, config) {
-      const labels = node
-        .transformChildren(config)
-        .filter((child) => child && child.name === 'Tab')
-        .map((tab) => (typeof tab === 'object' ? tab.attributes.label : null))
-
-      return new Tag(this.render, { labels }, node.transformChildren(config))
+    async transform(node, config) {
+      const children = await Promise.resolve(node.transformChildren(config));
+      const labels = children
+        .filter(child => child && child.name === 'Tab')
+        .map(tab => typeof tab === 'object' ? tab.attributes.label : null);
+  
+      return new Tag(this.render, { labels }, children);
     },
+  },
+  defaultvalue: {
+    render: DefaultValue,
+    attributes: {
+      title: { type: String },
+      defaultValue: { type: String },
+      referenceLink: { type: String },
+    },
+    transform(node, config) {
+      const attributes = node.transformAttributes(config)
+      attributes.id = slugify(attributes.title)
+      const children = node.transformChildren(config)
+      return new Tag(this.render, attributes, children)
+    }
   },
   padding: {
     render: Padding,

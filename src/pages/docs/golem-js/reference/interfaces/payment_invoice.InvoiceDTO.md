@@ -32,7 +32,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:10](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L10)
+[src/payment/invoice.ts:11](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L11)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:11](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L11)
+[src/payment/invoice.ts:12](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L12)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:12](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L12)
+[src/payment/invoice.ts:13](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L13)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:13](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L13)
+[src/payment/invoice.ts:14](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L14)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:14](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L14)
+[src/payment/invoice.ts:15](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L15)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:15](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L15)
+[src/payment/invoice.ts:16](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L16)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:16](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L16)
+[src/payment/invoice.ts:17](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L17)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:17](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L17)
+[src/payment/invoice.ts:18](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L18)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:18](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L18)
+[src/payment/invoice.ts:19](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L19)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:19](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L19)
+[src/payment/invoice.ts:20](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L20)
 
 ___
 
@@ -132,4 +132,4 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:20](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/payment/invoice.ts#L20)
+[src/payment/invoice.ts:21](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/invoice.ts#L21)

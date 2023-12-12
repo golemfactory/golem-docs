@@ -42,7 +42,7 @@ const navigation = [
 
 const LinkSection = ({ title, links }) => (
   <section className="ml-4 mt-6">
-    <h2 className="-ml-4 text-base font-medium text-primary dark:text-darkprimary">
+    <h2 className="-ml-4 text-base font-medium text-primary dark:text-white">
       {title}
     </h2>
     <ul role="list" className="list-disc">
@@ -50,7 +50,7 @@ const LinkSection = ({ title, links }) => (
         <li key={href + title}>
           <Link
             href={href}
-            className="text-sm font-medium leading-6 text-primary dark:text-darkprimary"
+            className="text-sm font-medium leading-6 text-primary dark:text-[#858CA2] dark:hover:text-white"
           >
             {title}
           </Link>
@@ -80,8 +80,8 @@ const DocSection = ({ title, description, link, data }) => (
 
 const DocHeader = ({ title, description, link, classes }) => (
   <>
-    <h5 className={`${classes}  font-semibold dark:text-white/50`}>{title}</h5>
-    <p className="text-sm text-gray-500 dark:text-white/50">{description}</p>
+    <h5 className={`${classes}  font-semibold dark:text-white`}>{title}</h5>
+    <p className="text-sm text-gray-500 dark:text-white/70">{description}</p>
     <NavLink link={link} />
   </>
 )
@@ -90,17 +90,19 @@ const NavLink = ({ link }) => (
   <Link
     href={link}
     aria-label="Overview"
-    className="flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-darkprimary"
+    className="group" // Define a group for hover state
   >
-    Overview{' '}
-    <ArrowRightIcon className="h-3 w-3 fill-primary dark:fill-darkprimary" />
+    <div className="relative flex items-center gap-x-1 text-base font-medium leading-6 text-primary dark:text-[#858CA2] dark:hover:text-white">
+      Overview{' '}
+      <ArrowRightIcon className="h-3 w-3 transform fill-primary transition-transform duration-300 ease-in-out group-hover:translate-x-1 dark:group-hover:fill-white dark:fill-[#858CA2]" />
+    </div>
   </Link>
 )
 
 export const Footer = () => (
   <footer className="bg-white pt-8 dark:bg-transparent">
-    <div className="mb-4 border-y border-y-lightbluedarker bg-lightblue dark:bg-darkbg">
-      <div className="sm:pt-18 mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 pb-8 pt-16 lg:px-8">
+    <div className="mb-4 border-y border-y-lightbluedarker bg-lightblue dark:border-y-slate-800 dark:bg-darkbg">
+      <div className="sm:pt-18 mx-auto grid max-w-7xl grid-cols-1 px-6 pb-8 pt-16 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
         <DocSection
           title="JS Docs"
           data={javascript}
@@ -130,30 +132,30 @@ export const Footer = () => (
 const LowerFooter = () => (
   <div>
     <div className="relative mx-auto ">
-      <div className="mx-auto flex max-w-8xl justify-between  px-8 lg:px-8 xl:px-20">
+      <div className="mx-auto flex max-w-8xl flex-wrap justify-center  gap-x-12 gap-y-12 px-8  pb-6 pt-2 md:justify-between lg:px-8 xl:px-20">
         <FooterNav />
-        <GolemIcon className="-ml-4 h-12 fill-primary text-primary dark:fill-darkprimary dark:text-darkprimary" />
+        <div className="flex flex-wrap items-center justify-center md:justify-normal">
+          <GolemIcon className="-ml-2 h-12 dark:fill-white fill-primary" />
+          <span className=" -mt-2 text-sm text-normalgray dark:text-white dark:opacity-50">
+            Copyright © 2023 Golem Factory GmbH
+          </span>
+        </div>
       </div>
-    </div>
-    <div className=" mx-auto mb-2 max-w-7xl border-t text-center dark:border-t-gray-800">
-      <span className="my-4 block text-sm text-normalgray dark:text-white dark:opacity-50">
-        Copyright © 2023 Golem Factory GmbH
-      </span>
     </div>
   </div>
 )
 
 const FooterNav = () => (
-  <div className="flex justify-center space-x-6 md:order-2">
+  <div className="flex items-center justify-center space-x-6 md:order-2">
     {navigation.map((item, index) => (
       <Link
         key={item.name + index}
         href={item.href}
-        className="text-gray-400 hover:text-gray-500"
+        className="text-gray-400 hover:text-gray-500 "
       >
         <span className="sr-only">{item.name}</span>
         <item.icon
-          className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-50"
+          className="h-6 w-6 fill-primary text-primary dark:fill-white dark:text-white dark:opacity-70 dark:hover:opacity-100"
           aria-hidden="true"
         />
       </Link>

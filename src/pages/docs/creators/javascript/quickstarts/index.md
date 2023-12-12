@@ -1,18 +1,13 @@
 ---
-description:  Golem JS QuickStarts
-title: Golem JS QuickStarts
-type: Toc
+description: List of Golem JS Quickstarts
+title: Golem JS Quickstarts
+type: Table of Contents
 ---
 
+We provide some Quickstart examples to help you start your journey with Golem:
 
-We provide some QuickStart examples to help you start your journey with Golem:
-
-|Title                  |   Content  description  |
-|-----------------------|:----------------------------------------|
-|[Golem JS QuickStart](/docs/creators/javascript/quickstarts/quickstart) | If you're looking to quickly get started with Golem using node.js, check out the JS QuickStart which will take you through the setup steps and have you running your first app in less than 10 minutes. Just click on the link provided to give it a try. This is a simple example yet a good starting point for exploring Golem features or building your more advanced scripts aimed at executing tasks on the Golem Network. |
-|[Golem in browser QuickStart](/docs/creators/javascript/quickstarts/golem-in-a-browser)   | Will guide you on how to operate a requestor agent through your web browser.    |
-| [Retrievable task (Job API)](/docs/creators/javascript/quickstarts/retrievable-task) | In this guide, you will learn how to use the Job API to retrieve the status and results of a task after it has been started. |
-
-
-
-
+| Title                                                                                   | Content description                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Golem JS Quickstart](/docs/creators/javascript/quickstarts/quickstart)                 | If you're looking to quickly get started with Golem using node.js, check out the JS Quickstart which will take you through the setup steps and have you running your first app in less than 10 minutes. Just click on the link provided to give it a try. This is a simple example yet a good starting point for exploring Golem features or building your more advanced scripts aimed at executing tasks on the Golem Network. |
+| [Golem in browser Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) | Will guide you on how to operate a requestor agent through your web browser.                                                                                                                                                                                                                                                                                                                                                    |
+| [Retrievable task (Job API)](/docs/creators/javascript/quickstarts/retrievable-task)    | In this guide, you will learn how to use the Job API to retrieve the status and results of a task after it has been started.                                                                                                                                                                                                                                                                                                    |

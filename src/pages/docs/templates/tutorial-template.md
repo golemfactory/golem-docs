@@ -4,25 +4,15 @@ title: This is the page title displayed in a browser tab.
 type: Tutorial
 ---
 
-# Tutorial title 
-
-{% alert level="info" %}
-
-This example has been designed to work with the following environments:
-
-- OS X 10.14+, Ubuntu 20.04 or Windows
-- Node.js 16.0.0 or above
-
-{% /alert %}
+# Tutorial title
 
 ## Prerequisites
 
 Yagna service is installed and running with the `try_golem` app-key configured.
 
-
 ## Introduction
 
-This tutorial will lead you through the steps required to create a tutorial on the Golem Network. 
+This tutorial will lead you through the steps required to create a tutorial on the Golem Network.
 
 We will go through the following steps:
 
@@ -31,14 +21,14 @@ We will go through the following steps:
 - Add some other points
 
 As the "good pattern" aspect is important, tutorials should also illustrate the practical aspect - how to organize things and how to overcome common challenges.
- 
+
 In this section, we should also explain to users how they can benefit from doing this tutorial, and, if we know, how much time it should take to complete.
 
 Lastly, what the readers should do when they have a problem.
 
-### What is in for me/What will I gain? 
-  
-You can create such a subsection. 
+### What is in for me/What will I gain?
+
+You can create such a subsection.
 
 ## Explain the aim of the tutorial
 
@@ -56,7 +46,6 @@ For more information on this topic, see the complete [reference](https://github.
 {% /alert %}
 
 ## Tell readers more about the tutorial structure.
-
 
 {% alert level="info" %}
 
@@ -77,15 +66,15 @@ If you get lost, you can copy the final solution from here:
 console.log('solution')
 ```
 
-of from our [github pages](https://github.com) 
+of from our [github pages](https://github.com)
 
 ## Add some other points
 
-Tutorials should not focus on showing the alternatives but rather focus on the right sequence and good practice on a successful path. 
+Tutorials should not focus on showing the alternatives but rather focus on the right sequence and good practice on a successful path.
 You can use tutorials to explain the reasons for decisions taken and the consequences.
 
 {% alert level="info" %}
-  Note that we will improve the content of this tutorial based on the authors' input.
+Note that we will improve the content of this tutorial based on the authors' input.
 {% /alert %}
 
 {% alert level="warning" %}
@@ -95,13 +84,12 @@ If a user can make an error, or a command creates a risk, you can use warning or
 
 ## Run the code and show the output
 
-Note that this point is not on the agenda, and this is __not__ a good practice.
+Note that this point is not on the agenda, and this is **not** a good practice.
 
 Before running make sure:
-  Remind the readers about the prerequisites:
-  What services should be running
-  What has been created so far
-
+Remind the readers about the prerequisites:
+What services should be running
+What has been created so far
 
 ## Summary
 
@@ -110,7 +98,6 @@ In this tutorial, the reader what he has done and what he achieved:
 - Explain the aim of the tutorial
 - Tell a little about the structure
 - Add some other points
-
 
 {% docnavigation title="Next steps" %}
 
@@ -123,6 +110,3 @@ In this tutorial, the reader what he has done and what he achieved:
 - [Title](https://github.com) of other related sections: i.e. Tutorials, Guides.
 
 {% /docnavigation %}
-
-
-

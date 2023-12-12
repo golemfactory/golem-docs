@@ -28,26 +28,31 @@ function extractSections(node, sections, isRoot = true) {
   }
 
   if (node.type === 'tag' && node.tag === 'partial' && node.attributes.file) {
-    const file = fs.readFileSync(
+    const fileContent = fs.readFileSync(
       `./src/markdoc/partials/${node.attributes.file}`,
       'utf8'
     )
-    const partialAst = Markdoc.parse(file)
-    partialAst.children.forEach((child) =>
+    const partialAst = Markdoc.parse(fileContent)
+    for (const child of partialAst.children) {
       extractSections(child, sections, false)
-    )
+    }
   }
 
-  if (node.type === 'heading' || node.type === 'paragraph') {
+  if (node.type === 'tag' && node.tag === 'defaultvalue') {
+    let content = node.attributes.title
+    let hash = node.attributes?.id ?? slugify(content)
+    sections.push([content, hash, []])
+  } else if (node.type === 'heading' || node.type === 'paragraph') {
     let content = toString(node).trim()
-
     if (node.type === 'heading' && node.attributes.level <= 2) {
       let hash = node.attributes?.id ?? slugify(content)
       sections.push([content, hash, []])
     } else {
       sections.at(-1)[2].push(content)
     }
-  } else if ('children' in node) {
+  }
+
+  if ('children' in node) {
     for (let child of node.children) {
       extractSections(child, sections, false)
     }
@@ -94,7 +99,27 @@ export default function (nextConfig = {}) {
                     ?.match(/^type:\s*(.*?)\s*$/m)?.[1]
                     .replace('"', '')
                     .replace('"', '')
-                  sections = [[title, null, [], type]]
+
+                  if (
+                    type.toLowerCase() === 'noindex' ||
+                    type.toLowerCase() === 'page' ||
+                    type.toLowerCase() === 'noicon'
+                  ) {
+                    // Dont index these pages
+                    return
+                  }
+
+                  const articleFor = file.startsWith('docs/creators/')
+                    ? 'Requestor'
+                    : file.startsWith('docs/providers/')
+                    ? 'Provider'
+                    : file.startsWith('docs/quickstarts/')
+                    ? 'Requestor'
+                    : file.startsWith('docs/golem-js/')
+                    ? 'Requestor'
+                    : 'General'
+
+                  sections = [[title, null, [], type, articleFor]]
 
                   extractSections(ast, sections)
                   cache.set(file, [md, sections])
@@ -114,7 +139,7 @@ export default function (nextConfig = {}) {
                 document: {
                   id: 'url',
                   index: 'content',
-                  store: ['title', 'pageTitle', 'type'],
+                  store: ['title', 'pageTitle', 'type', 'articleFor'],
                 },
                 context: {
                   resolution: 9,
@@ -128,12 +153,14 @@ export default function (nextConfig = {}) {
               for (let { url, sections } of data) {
                
                 for (let [title, hash, content] of sections) {
+                  if (title === [title, ...content].join('\\n')) continue
                   sectionIndex.add({
                     url: url + (hash ? ('#' + hash) : ''),
                     title,
                     content: [title, ...content].join('\\n'),
                     pageTitle: hash ? sections[0][0] : undefined,
                     type: sections[0][3],
+                    articleFor: sections[0][4],
                   })
                 }
               }
@@ -151,6 +178,7 @@ export default function (nextConfig = {}) {
                   title: item.doc.title,
                   pageTitle: item.doc.pageTitle,
                   type: item.doc.type,
+                  articleFor: item.doc.articleFor,
                 }))
               }
             `

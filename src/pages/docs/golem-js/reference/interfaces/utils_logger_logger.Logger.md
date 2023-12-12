@@ -31,7 +31,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/logger/logger.ts#L9)
+[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/logger.ts#L9)
 
 ## Methods
 
@@ -51,7 +51,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/logger/logger.ts#L10)
+[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/logger.ts#L10)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:11](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/logger/logger.ts#L11)
+[src/utils/logger/logger.ts:11](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/logger.ts#L11)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:12](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/logger/logger.ts#L12)
+[src/utils/logger/logger.ts:12](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/logger.ts#L12)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:13](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/logger/logger.ts#L13)
+[src/utils/logger/logger.ts:13](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/logger.ts#L13)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:14](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/logger/logger.ts#L14)
+[src/utils/logger/logger.ts:14](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/logger.ts#L14)
 
 ___
 
@@ -151,4 +151,4 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:15](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/utils/logger/logger.ts#L15)
+[src/utils/logger/logger.ts:15](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/logger.ts#L15)

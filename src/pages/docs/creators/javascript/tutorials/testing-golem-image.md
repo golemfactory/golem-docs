@@ -1,6 +1,6 @@
 ---
-description: How to run a .gvmi image locally for the sake of testing and debugging
-title: Testing a Golem image
+title: Debugging Golem Images Locally with ya-runtime-dbg
+description: Learn to debug and test Golem images locally using ya-runtime-dbg
 type: Tutorial
 ---
 

@@ -35,7 +35,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:137](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/package/package.ts#L137)
+[src/package/package.ts:137](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L137)
 
 ## Methods
 
@@ -55,7 +55,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:57](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/package/package.ts#L57)
+[src/package/package.ts:57](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L57)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:63](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/package/package.ts#L63)
+[src/package/package.ts:63](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L63)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:78](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/package/package.ts#L78)
+[src/package/package.ts:78](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L78)
 
 ___
 
@@ -109,4 +109,4 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:82](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/package/package.ts#L82)
+[src/package/package.ts:82](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L82)

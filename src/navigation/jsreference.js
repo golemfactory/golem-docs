@@ -7,6 +7,10 @@ export const navigation = [
         href: "/docs/golem-js/reference/overview"
       },
 {
+        title: "Default values",
+        href: "/docs/golem-js/reference/default-values"
+      },
+{
         title: "classes",
         children: [
 {

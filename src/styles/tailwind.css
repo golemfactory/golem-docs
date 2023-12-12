@@ -30,9 +30,7 @@ html {
   content: '';
 }
 
-.prose :where(code):not(:where([class~='not-prose'] *))::after {
-  content: '';
-}
+
 
 .prose :where(li):not(:where([class~='not-prose'] *)) {
   margin-bottom: 6px;
@@ -49,6 +47,16 @@ ul {
   color: #36464e;
   font-weight: 400;
   @apply px-1;
+}
+.dark .prose :where(code):not(:where([class~='not-prose'] *)) {
+  color: hsl(227, 25%, 85%) ;
+  background: #24242a ;
+  font-weight: 400;
+  
+}
+
+.prose :where(code):not(:where([class~=not-prose] *)):after {
+  content: "";
 }
 
 .override-code-styles {
@@ -91,4 +99,20 @@ ul {
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+}
+
+
+/* This will initially hide the span */
+.group [group-aria-selected="true"] .absolute {
+  display: none;
+}
+
+/* This will make the span visible when its parent is hovered */
+.group:hover [group-aria-selected="true"] .absolute {
+  display: inline;
 }

@@ -1,8 +1,9 @@
 ---
-title: Golem Provider troubleshooting
-pageTitle: Provider troubleshooting
-description: This is the troubleshooting section for providers on Golem.
-type: troubleshooting
+title: Golem Network Provider Troubleshooting
+pageTitle: Resolve Issues with Golem Provider - Step-by-Step Troubleshooting
+description: Quick solutions for Golem Network providers facing common issues, including KVM setup, virtualization problems, and task handling.
+
+type: Troubleshooting
 ---
 
 # Provider troubleshooting

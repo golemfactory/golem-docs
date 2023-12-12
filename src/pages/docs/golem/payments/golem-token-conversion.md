@@ -1,6 +1,6 @@
 ---
-title: Bridging the GLM token
-description: Bridging GLM from the Ethereum Mainnet to Polygon and back.
+title: Convert GLM Tokens - Ethereum Mainnet to Polygon Guide
+description: Learn to transfer GLM tokens between Ethereum Mainnet and Polygon. Simple steps for safe and efficient bridging.
 type: Guide
 ---
 

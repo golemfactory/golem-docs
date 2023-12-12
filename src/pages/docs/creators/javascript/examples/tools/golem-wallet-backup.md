@@ -79,7 +79,6 @@ Remember to save your passphrase somewhere safe as losing it will make it imposs
 
 {% /alert %}
 
-
 ### Export the key
 
 Now, issue the same export command that you'd use for an unprotected keystore:
@@ -112,7 +111,7 @@ To make it easier, here's a possible check:
 $ cat ./key.json | grep address
 ```
 
-To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/maintenance/wallet-restoration) using this newly created keystore file.
+To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/wallet/restoration) using this newly created keystore file.
 
 {% alert level="warning" %}
 

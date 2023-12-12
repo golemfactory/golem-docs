@@ -4,7 +4,7 @@ import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { CheckIcon } from '@/components/icons/CheckIcon'
 export function SelectionCard({ children, icon, title, buttonText, href }) {
   return (
-    <div className="not-prose flex min-h-full flex-col justify-between rounded-md border border-lightbluedarker dark:border-none bg-lightblue dark:bg-darkcontent">
+    <div className="not-prose flex min-h-full flex-col justify-between rounded-md border border-lightbluedarker bg-lightblue dark:border-none dark:bg-darkcontent">
       <div>
         <div className="font-medium">
           <div className="flex items-center gap-x-4 p-6">
@@ -21,7 +21,7 @@ export function SelectionCard({ children, icon, title, buttonText, href }) {
           {children.map((child, index) => (
             <div key={index} className="not-prose flex items-start gap-x-2">
               <CheckIcon className="mt-1.5 h-4 w-4 flex-shrink-0 fill-dark dark:fill-white dark:opacity-50" />
-              <div className="text-base text-dark dark:text-white dark:text-opacity-50">
+              <div className="text-base text-dark dark:text-white dark:text-opacity-70">
                 {child}
               </div>
             </div>

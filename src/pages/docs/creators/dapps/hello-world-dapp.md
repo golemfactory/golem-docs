@@ -25,59 +25,62 @@ This step-by-step tutorial will be easier for you to follow if you previously ha
 
 {% /alert %}
 
-
 ## Choice of tools
 
 The example that we're going to show you here, uses a very simple Python HTTP server.
 
 On the other hand, if you're more acquainted with any other language or platform that enables you to easily create a simple HTTP server and pack it into a Docker image, go for it.
 
-Just as well - if the setup and construction of such a simple app is obvious to you, feel free to jump to __Converting the image to Golem__
+Just as well - if the setup and construction of such a simple app is obvious to you, feel free to jump to **Converting the image to Golem**
 
 ## Environment preparation
 
 For the sake of completeness, we're including the steps that prepare our Python environment. Again, you're free to do it your way and skip to [Hello World dApp](#hello-world-app):
 
-
 ### Create and activate the virtual environment
-
 
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 python3 -m venv ~/.envs/hello-dapps
 source ~/.envs/hello-dapps/bin/activate
 pip install -U pip poetry
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```shell
 python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps
 %HOMEDRIVE%%HOMEPATH%\.envs\hello-dapps\Scripts\activate.bat
 ```
+
 {% /tab %}
 {% /tabs %}
-
-
 
 ### Initialize the project
 
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```shell
 mkdir -p hello_golem/server_app
 cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```shell
 mkdir "hello_golem\server_app"
 cd hello_golem/server_app/
 poetry init --no-interaction --python="^3.9"
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -95,10 +98,10 @@ There, we're ready to start coding our app.
 
 {% alert level="info" %}
 
-If you're lost at any moment, feel free to consult our source of the "Hello World" application available at: [https://github.com/golemfactory/dapp-experiments/tree/main/05\_hello\_world](https://github.com/golemfactory/dapp-experiments/tree/main/05\_hello\_world)
-    
+If you're lost at any moment, feel free to consult our source of the "Hello World" application available at: [https://github.com/golemfactory/dapp-experiments/tree/main/05_hello_world](https://github.com/golemfactory/dapp-experiments/tree/main/05_hello_world)
+
 Similarly, instead of coding along, you may just check out the whole thing from the repository:
-    
+
 ```shell
 git clone https://github.com/golemfactory/dapp-experiments.git
 cd dapp-experiments/05_hello_world
@@ -258,18 +261,19 @@ Here's what it looks like:
 ```yaml
 payloads:
   hello:
-    runtime: "vm"
+    runtime: 'vm'
     params:
-      image_hash: "3032b6e97914eb5ee87d71188180d271f04eb9472b6da0d308943b2f"
+      image_hash: '3032b6e97914eb5ee87d71188180d271f04eb9472b6da0d308943b2f'
 nodes:
   hello:
-    payload: "hello"
+    payload: 'hello'
     init:
       - run:
-          args: ["/bin/sh", "-c", "poetry run python hello_golem.py > /dev/null &"]
+          args:
+            ['/bin/sh', '-c', 'poetry run python hello_golem.py > /dev/null &']
     http_proxy:
       ports:
-        - "5000"
+        - '5000'
 ```
 
 Let's add it as `hello_golem.yaml` in the `hello_golem` directory.
@@ -285,9 +289,9 @@ In this case, it's just the reference to the VM image we just uploaded.
 ```yaml
 payloads:
   hello:
-    runtime: "vm"
+    runtime: 'vm'
     params:
-      image_hash: "3032b6e97914eb5ee87d71188180d271f04eb9472b6da0d308943b2f"
+      image_hash: '3032b6e97914eb5ee87d71188180d271f04eb9472b6da0d308943b2f'
 ```
 
 ### The node definition
@@ -297,13 +301,14 @@ A `node` entry defines the parameters of the specific instances of services that
 ```yaml
 nodes:
   hello:
-    payload: "hello"
+    payload: 'hello'
     init:
       - run:
-          args: ["/bin/sh", "-c", "poetry run python hello_golem.py > /dev/null &"]
+          args:
+            ['/bin/sh', '-c', 'poetry run python hello_golem.py > /dev/null &']
     http_proxy:
       ports:
-        - "5000"
+        - '5000'
 ```
 
 A couple of important details here.
@@ -341,8 +346,6 @@ yagna service run
 If you haven't set-up your yagna service before, please refer to our [Yagna installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
 {% /alert %}
 
-
-
 ### Obtain the application key
 
 Please, run:
@@ -350,6 +353,7 @@ Please, run:
 ```shell
 yagna app-key list
 ```
+
 and copy the value listed in the `key` column.
 
 If the above command doesn't give you any 32-char keys, just create your app key:
@@ -363,37 +367,42 @@ and copy the value output by this command.
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 export YAGNA_APPKEY=<your key>
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```bash
 set YAGNA_APPKEY=<your key>
 ```
+
 {% /tab %}
 {% /tabs %}
-
-
-
 
 ### Install the `dapp-runner`
 
 {% tabs %}
 
 {% tab label="Linux / MacOS" %}
+
 ```bash
 python3 -m venv --clear ~/.envs/dapp-runner
 source ~/.envs/dapp-runner/bin/activate
 pip install dapp-runner
 ```
+
 {% /tab %}
 {% tab label="Windows" %}
+
 ```shell
 python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapp-runner
 %HOMEDRIVE%%HOMEPATH%\.envs\dapp-runner\Scripts\activate.bat
 pip install dapp-runner
 ```
+
 {% /tab %}
 {% /tabs %}
 

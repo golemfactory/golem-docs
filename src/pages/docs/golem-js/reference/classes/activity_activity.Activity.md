@@ -16,7 +16,7 @@ As part of a given activity, it is possible to execute exe script commands and c
 ### Properties
 
 - [id](activity_activity.Activity#id)
-- [agreementId](activity_activity.Activity#agreementid)
+- [agreement](activity_activity.Activity#agreement)
 - [yagnaApi](activity_activity.Activity#yagnaapi)
 - [options](activity_activity.Activity#options)
 
@@ -38,19 +38,19 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:55](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L55)
+[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L57)
 
 ___
 
-### agreementId
+### agreement
 
-• `Readonly` **agreementId**: `string`
+• `Readonly` **agreement**: `Agreement`
 
-agreement ID
+Agreement
 
 #### Defined in
 
-[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L56)
+[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L58)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L57)
+[src/activity/activity.ts:59](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L59)
 
 ___
 
@@ -74,13 +74,13 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L58)
+[src/activity/activity.ts:60](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L60)
 
 ## Methods
 
 ### create
 
-▸ **create**(`agreementId`, `yagnaApi`, `options?`, `secure?`): `Promise`\<[`Activity`](activity_activity.Activity)\>
+▸ **create**(`agreement`, `yagnaApi`, `options?`, `secure?`): `Promise`\<[`Activity`](activity_activity.Activity)\>
 
 Create activity for given agreement ID
 
@@ -88,7 +88,7 @@ Create activity for given agreement ID
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `agreementId` | `string` | `undefined` |  |
+| `agreement` | `Agreement` | `undefined` |  |
 | `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) | `undefined` |  |
 | `options?` | [`ActivityOptions`](../interfaces/activity_activity.ActivityOptions) | `undefined` | [ActivityOptions](../interfaces/activity_activity.ActivityOptions) |
 | `secure` | `boolean` | `false` | defines if activity will be secure type |
@@ -101,7 +101,7 @@ Activity
 
 #### Defined in
 
-[src/activity/activity.ts:72](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L72)
+[src/activity/activity.ts:74](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L74)
 
 ___
 
@@ -125,7 +125,7 @@ Execute script
 
 #### Defined in
 
-[src/activity/activity.ts:89](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L89)
+[src/activity/activity.ts:91](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L91)
 
 ___
 
@@ -143,7 +143,7 @@ boolean
 
 #### Defined in
 
-[src/activity/activity.ts:118](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L118)
+[src/activity/activity.ts:120](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L120)
 
 ___
 
@@ -165,7 +165,7 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:130](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L130)
+[src/activity/activity.ts:132](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L132)
 
 ___
 
@@ -185,4 +185,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:147](https://github.com/golemfactory/golem-js/blob/d4f6a75/src/activity/activity.ts#L147)
+[src/activity/activity.ts:149](https://github.com/golemfactory/golem-js/blob/c2379e3/src/activity/activity.ts#L149)
