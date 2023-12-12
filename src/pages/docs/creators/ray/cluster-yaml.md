@@ -16,7 +16,7 @@ For more details check out the [Ray Cluster YAML Configuration Options](https://
 
 ## Example Ray on Golem cluster configuration
 
-The basic `golem-cluster.yaml` is [available on github](https://github.com/golemfactory/golem-ray/blob/main/golem-cluster.yaml).
+The basic `golem-cluster.yaml` is [available on github](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluster.yaml).
 
 It allows you to start a cluster on our testnet with one head node and one worker node. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
 
@@ -61,7 +61,8 @@ idle_timeout_minutes: 5
 
 ### Initialization commands
 
-You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies.
+You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies. 
+Note that using `pip` requires its index URL to be present in [`outbound_urls`](#accessing-the-internet-outbound).
 
 ```yaml
 # List of commands that will be run to initialize the nodes (before `setup_commands`)
@@ -108,6 +109,25 @@ Supported tags are available on [Golem registry](https://registry.golem.network/
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 
+#### Accessing the Internet (outbound)
+
+The optional `outbound_urls` lists the addresses you want to access from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
+
+Ray on Golem only accepts addresses prefixed with either the `http://` or `https://` scheme.
+
+Our default cluster definition specifies `https://pypi.dev.golem.network` as a required outbound address which allows [downloading additional packages with pip](#initialization-commands). 
+If you don't need to install any additional Python packages, removing that URL from `outbound_urls` is recommended. 
+It potentially allows more providers to participate in your cluster.
+
+You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
+
+```yaml
+# List of URLs which will be added to the Computation Manifest
+# Requires protocol to be defined in all URLs
+# If not provided demand will not use Computation Manifest
+outbound_urls: ["https://pypi.dev.golem.network"]
+```
+
 ## Budget control
 
 ### Spending hard limit
@@ -127,7 +147,7 @@ provider:
 ### Avoiding too-expensive providers
 
 You can use `provider.parameters.node_config.budget_control` section to define the limits on providers' prices.
-Ray on Golem won't work with providers who exceed any of the following price settings.
+Ray on Golem will reject providers exceeding the following price settings.
 
 #### Maximum provider prices
 
