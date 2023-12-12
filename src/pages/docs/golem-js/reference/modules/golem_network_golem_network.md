@@ -11,7 +11,3 @@ type: "JS API Reference"
 ### Classes
 
 - [GolemNetwork](../classes/golem_network_golem_network.GolemNetwork)
-
-### Interfaces
-
-- [GolemNetworkConfig](../interfaces/golem_network_golem_network.GolemNetworkConfig)
