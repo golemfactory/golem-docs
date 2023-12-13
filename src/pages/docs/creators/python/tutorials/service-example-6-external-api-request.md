@@ -1,8 +1,8 @@
 ---
-title: Golem External API Request Tutorial 
-description: Step-by-step tutorial on making external API calls via Golem network's provider nodes using yapapi. 
+title: Golem External API Request Tutorial
+description: Step-by-step tutorial on making external API calls via Golem network's provider nodes using yapapi.
 pageTitle: How to Make External API Requests with Golem Network | Developer Guide
-type: tutorial
+type: Tutorial
 ---
 
 # Service Example 6: External API request

@@ -99,11 +99,11 @@ export default function (nextConfig = {}) {
                     ?.match(/^type:\s*(.*?)\s*$/m)?.[1]
                     .replace('"', '')
                     .replace('"', '')
-                    .toLowerCase()
+
                   if (
-                    type === 'noindex' ||
-                    type === 'page' ||
-                    type === 'noicon'
+                    type.toLowerCase() === 'noindex' ||
+                    type.toLowerCase() === 'page' ||
+                    type.toLowerCase() === 'noicon'
                   ) {
                     // Dont index these pages
                     return

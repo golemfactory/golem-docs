@@ -1,7 +1,7 @@
 ---
 title: Converting a real-life use case to Ray on Golem
 description: Learn how to parallelize an app with Ray on Golem, from setting up the cluster to running the script. Ideal for developers seeking efficient computing solutions.
-type: example
+type: Example
 ---
 
 # Converting a real-life use case to Ray on Golem
@@ -292,7 +292,7 @@ shared connection to 192.168.0.3 closed.
 
 ```
 
-It is worth noting that if you want to pass arguments to the submitted script you need to use the double-dash symbol (`--`). 
+It is worth noting that if you want to pass arguments to the submitted script you need to use the double-dash symbol (`--`).
 It allows Ray to distinguish `submit` arguments from the script ones ([more details](/docs/creators/ray/troubleshooting#passing-arguments-to-your-ray-script-fails)).
 
 ### Scale up

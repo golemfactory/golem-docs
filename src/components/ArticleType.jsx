@@ -47,7 +47,7 @@ export function ArticleType({ type, onlyIcon = false, children }) {
       {IconComponent}
       {!onlyIcon && (
         <span className="text-sm capitalize text-dark dark:text-white">
-          {type.toLowerCase()}
+          {type}
         </span>
       )}
     </div>

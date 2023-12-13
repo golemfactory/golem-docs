@@ -1,10 +1,9 @@
 ---
-title: Debug Golem Images Locally with ya-runtime-dbg 
-description: Step-by-step guide on using ya-runtime-dbg to debug .gvmi images for Golem applications on Linux, ensuring accurate testing in a provider-like environment. 
+title: Debug Golem Images Locally with ya-runtime-dbg
+description: Step-by-step guide on using ya-runtime-dbg to debug .gvmi images for Golem applications on Linux, ensuring accurate testing in a provider-like environment.
 pageTitle: Debug Golem VM Images Locally | ya-runtime-dbg Tutorial
-type: tutorial
+type: Tutorial
 ---
-
 
 ## Introduction
 

@@ -2,7 +2,7 @@
 title: Golem Network - Decentralized Hash Cracking Tutorial
 pageTitle: Build a Distributed Hash Cracker on Golem Network - A Step-By-Step Guide
 description: Master the Golem Network with this tutorial to build a simple, decentralized hash cracker leveraging parallel task execution and VM runtime for efficient dictionary attacks.
-type: tutorial
+type: Tutorial
 ---
 
 # Task Example 1: Simple hash cracker

@@ -1,7 +1,7 @@
 ---
-title: Web Application Development on Golem Network Using Python and Flask 
+title: Web Application Development on Golem Network Using Python and Flask
 description: A tutorial showcasing how to develop and deploy a simple web application with an SQL database backend using Python, Flask, and the Golem Network's VPN and HTTP Proxy functionalities.
-type: tutorial
+type: Tutorial
 ---
 
 # Service Example 5: Simple Web application

@@ -1,7 +1,7 @@
 ---
-title: Golem JavaScript SDK Troubleshooting Guide 
-description: A guide to resolve common JavaScript errors encountered with the Golem SDK, including connection issues and image upload solutions. 
-type: troubleshooting
+title: Golem JavaScript SDK Troubleshooting Guide
+description: A guide to resolve common JavaScript errors encountered with the Golem SDK, including connection issues and image upload solutions.
+type: Troubleshooting
 ---
 
 # Troubleshooting Golem JS SDK

@@ -3,15 +3,14 @@ title: Ray on Golem troubleshooting
 description: Comprehensive guide for resolving common Ray on Golem issues, including log file analysis and problem-solving techniques.
 pageTitle: Ray on Golem Troubleshooting Guide - Identify and Resolve Common Issues
 
-type: troubleshooting
+type: Troubleshooting
 ---
 
 # Ray on Golem troubleshooting
 
 {% troubleshooting %}
 
-## What is going on with my cluster - status and dashboard 
- 
+## What is going on with my cluster - status and dashboard
 
 {% problem /%}
 
@@ -24,9 +23,11 @@ Ray offers two tools to inspect the cluster state: the status and the dashboard.
 Ray status shows information about the nodes that make up the cluster, the total resources of the cluster, and their current usage.
 
 The `ray status` command needs to be executed on the head node:
+
 ```bash
 ray exec golem-cluster.yaml 'ray status'
 ```
+
 ```
 Ray On Golem webserver
   Not starting webserver, as it's already running
@@ -66,11 +67,10 @@ For a more thorough description of the dashboard's amazing secrets, check out th
 {% feedback identifier="what-is-going-on-with-my-cluster" /%}
 {% /troubleshooting %}
 
-
 {% troubleshooting %}
 
 ## Ray on Golem's log files
- 
+
 {% problem /%}
 
 When you encounter issues while running one of the various Ray commands that utilize Ray on Golem,
@@ -84,38 +84,40 @@ If that's not enough to suggest a way to fix the issue, investigating the logs m
 {% solution %}
 
 The log files that Ray on Golem produces are stored in the following files:
+
 - `/tmp/ray_on_golem/webserver.log` - cluster manager log - basic Ray on Golem logs.
 - `/tmp/ray_on_golem/webserver_debug.log` cluster manager debug log - more detailed Ray on Golem logs.
 - `/tmp/ray_on_golem/yagna.log` - Golem node (yagna) logs.
 
 Given these, you can either:
+
 - Look at the `webserver.log` yourself - our aim is for you to be able to diagnose and resolve the most straightforward issues on your own.
 - Share the `webserver_debug.log` and `yagna.log` with us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
-
 
 {% /solution %}
 {% feedback identifier="ray-when-something-goes-wrong" /%}
 {% /troubleshooting %}
 
-
 {% troubleshooting %}
 
-## Starting over with a clean slate 
+## Starting over with a clean slate
 
 {% problem /%}
 
-It may happen that something goes wrong and you wish to start over with a clean slate (or simply stop every Ray on Golem component). 
+It may happen that something goes wrong and you wish to start over with a clean slate.
 
 {% solution %}
 
-The first thing to do is `ray down` - it should be enough to clear the situation, but sadly it isn't always the case. 
+The first thing to do is `ray down` - it should be enough to clear the situation, but sadly it isn't always the case.
 
 Let's first check if there are any orphaned components:
+
 ```bash
 ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
 
 It produces an output like this:
+
 ```
   71257 ?        Ssl    0:02 ray-on-golem
   71258 ?        Sl     2:35 yagna
@@ -123,22 +125,25 @@ It produces an output like this:
 
 The above shows the `ray-on-golem` webserver and the `yagna` daemon are running.
 
-Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again, the nodes are found more quickly. 
+Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again, the nodes are found more quickly.
 
-With that in mind, when starting over, we recommend stopping `ray-on-golem` and leaving `yagna` running 
-(but to get a truly clean slate you might want to stop `yagna` too). 
+With that in mind, when starting over, we recommend stopping `ray-on-golem` and leaving `yagna` running
+(but to get a truly clean slate you might want to stop `yagna` too).
 
 The surest way to stop these services is to kill them (using the PID numbers as shown in the first column):
+
 ```bash
 kill -9 71257 71258
 ```
 
 After it is done, the above command should show no more hanging processes:
+
 ```bash
 ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
 ```
 
 It might also be a good idea to clean up Ray's configuration cache files:
+
 ```bash
 rm /tmp/ray-config-*
 ```
@@ -150,12 +155,13 @@ rm /tmp/ray-config-*
 {% troubleshooting %}
 
 ## How can I resolve the node not found error?
- 
+
 {% problem /%}
 
 Sometimes, `ray up` might time out with a note saying that there is no node available.
 
 It might look like this:
+
 ```
 ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"error": "Creating activities timeout reached"}
 
@@ -163,7 +169,7 @@ ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"er
 
 {% solution %}
 
-This means, that there are not enough providers on the network. 
+This means, that there are not enough providers on the network.
 
 If you are running Ray on Golem on the testnet (property `payment_network: "goerli"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
 
@@ -178,17 +184,17 @@ Usually, the testnet isn't busy for a long time - it might be enough to wait a c
 {% feedback identifier="ray-node-not-found" /%}
 {% /troubleshooting %}
 
-
 {% troubleshooting %}
 
 ## Additional packages required on the cluster
- 
+
 {% problem /%}
 
 Your app might need non-standard packages to run on a Ray on Golem cluster.
 The default VM image includes nothing besides the bare minimum.
 
 In such a case, the output for `ray submit` may look like this:
+
 ```
 Traceback (most recent call last):
   File "/root/dds-with-ray.py", line 49, in <module>
@@ -213,19 +219,16 @@ Error: Command failed:
 
 Note that even if you have the needed dependencies installed, and your app runs on your local environment, you still need to tell Ray on Golem cluster the packages are needed.
 
-The best way to do it is by adding an appropriate `pip install` command to `setup_commands` in the cluster yaml file. 
+The best way to do it is by adding an appropriate `pip install` command to `setup_commands` in the cluster yaml file.
 Check out the [cluster yaml](/docs/creators/ray/cluster-yaml#initialization-commands) article to get more information.
-
-
 
 {% /solution %}
 {% feedback identifier="ray-additional-packages" /%}
 {% /troubleshooting %}
 
-
 {% troubleshooting %}
 
-## Passing arguments to your Ray script fails 
+## Passing arguments to your Ray script fails
 
 {% problem /%}
 
@@ -242,8 +245,8 @@ Checking External environment settings
 Ray On Golem webserver
   Not starting webserver, as it's already running
 Fetched IP: 192.168.0.3
-root@192.168.0.3's password: 
-``` 
+root@192.168.0.3's password:
+```
 
 {% solution %}
 
@@ -252,14 +255,15 @@ root@192.168.0.3's password:
 In this example `-n` stands for cluster name, which we don't support yet - hence the unexpected request for the SSH password.
 
 The solution is to precede your arguments with the double-dash symbol (`--`):
+
 ```bash
 ray submit golem-cluster.yaml examples/simple-task.py -- -n 20
 ```
+
 This informs Ray that everything after the double dash is not to be interpreted, but instead passed as-is to the executed script.
 {% /solution %}
 {% feedback identifier="ray-passing-arguments-to-your-ray-script-fails" /%}
 {% /troubleshooting %}
-
 
 {% troubleshooting %}
 
@@ -286,12 +290,11 @@ Feel free to reach out to us on [`#Ray on Golem` discord channel](https://chat.g
 {% feedback identifier="head-node-not-found" /%}
 {% /troubleshooting %}
 
-
 <!--
 {% troubleshooting %}
 
 ## Topic
- 
+
 
 {% problem /%}
 

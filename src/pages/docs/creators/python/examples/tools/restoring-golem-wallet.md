@@ -1,8 +1,8 @@
 ---
-title: Wallet Recovery via Keystore in Yagna 
-description: Learn how to restore your Golem wallet using a keystore file with this comprehensive guide on wallet recovery in Yagna. 
+title: Wallet Recovery via Keystore in Yagna
+description: Learn how to restore your Golem wallet using a keystore file with this comprehensive guide on wallet recovery in Yagna.
 pageTitle: Recover Your Golem Wallet - Keystore Restoration Instructions for Yagna
-type: instructions
+type: Instructions
 ---
 
 # Restoring a backed-up wallet
