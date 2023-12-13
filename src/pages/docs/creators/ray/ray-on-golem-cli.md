@@ -37,10 +37,10 @@ Gathering stats data done
 Proposals count:
 Initial: 48
 Not blacklisted: 48
-Passed Reject if max_expected_usage_cost exceeds 1.5: 48
-Passed Reject if price_initial exceeds 0.5: 48
-Passed Reject if price_cpu_hour exceeds 0.5: 48
-Passed Reject if price_duration_hour exceeds 0.5: 48
+Passed Reject if per cpu expected cost exceeds 1.5: 48
+Passed Reject if start_price exceeds 0.5: 48
+Passed Reject if cpu_per_hour_price exceeds 0.5: 48
+Passed Reject if env_per_hour_price exceeds 0.5: 48
 Negotiation initialized: 48 
 Negotiated successfully: 37
 
@@ -64,10 +64,10 @@ Use the `--duration` parameter to set how long you want your network scan to las
 
 - `Initial` proposals found during the scan (there might be more than one proposal per provider)
 - `Not blacklisted` - proposals coming from non-blacklisted providers (we blacklist providers with a history of misbehaving)
-- `Passed Reject if max_expected_usage_cost exceeds` - proposals not exceeding your [`max_expected_usage_cost` setting](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost)
-- `Passed Reject if price_initial exceeds` - proposals not exceeding your [`price_initial` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
-- `Passed Reject if price_cpu_hour exceeds` - proposals not exceeding your [`price_cpu_hour` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
-- `Passed Reject if price_duration_hour exceeds` - proposals not exceeding your [`price_duration_hour` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if per cpu expected cost exceeds` - proposals not exceeding your [`max_cost` setting](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost)
+- `Passed Reject if start_price exceeds` - proposals not exceeding your [`max_start_price` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if cpu_per_hour_price exceeds` - proposals not exceeding your [`max_cpu_per_hour_price` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if env_per_hour_price exceeds` - proposals not exceeding your [`max_env_per_hour_price` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Negotiation initialized` - proposals passing all the above limitations
 - `Negotiated successfully` - providers ready to deploy the Ray on Golem image
 
