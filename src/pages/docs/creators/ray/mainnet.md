@@ -43,7 +43,30 @@ In case you try to start a mainnet cluster without sufficient funds, `ray up` wi
 ray up golem-cluster.yaml --yes
 ```
 ```
-(todo: ray up output with link to onboarding portal)
+Cluster: golem-cluster
+
+Ray On Golem
+  Starting webserver with deadline up to `0:05:00`...
+  Webserver is not yet running, waiting additional `2` seconds...
+  Starting webserver done
+
+  Running Ray on Golem on the mainnet requires GLM and MATIC tokens on the Polygon blockchain (see: https://docs.golem.network/docs/creators/ray/mainnet).
+  Your wallet:
+    
+    Status for account: 0xae5d43485a341bc4f167f6a4fda0749f1d7f3e11
+    
+    ┌────────────────────┬────────────────┬────────────┬─────────────┬────────────┬────────────┬───────────┐
+    │  platform          │  total amount  │  reserved  │  amount     │  incoming  │  outgoing  │  gas      │
+    ├────────────────────┼────────────────┼────────────┼─────────────┼────────────┼────────────┼───────────┤
+    │  driver: erc20     │  0 GLM         │  0 GLM     │  accepted   │  0 GLM     │  0 GLM     │  0 MATIC  │
+    │  network: polygon  │                │            │  confirmed  │  0 GLM     │  0 GLM     │           │
+    │  token: GLM        │                │            │  requested  │  0 GLM     │  0 GLM     │           │
+    └────────────────────┴────────────────┴────────────┴─────────────┴────────────┴────────────┴───────────┘
+  
+  You can use the Golem Onboarding portal to top up: https://golemfactory.github.io/onboarding_production/?yagnaAddress=0xae5d43485a341bc4f167f6a4fda0749f1d7f3e11
+  
+You don't seem to have any GLM tokens on your Golem wallet.
+
 ```
 
 Even if you do have the required funds, `ray up` will nevertheless print the onboarding link as a reminder, in case you'd like to top up your wallet.
