@@ -183,7 +183,7 @@ provider:
         # causing Golem provider offer to be rejected
         max_cpu_per_hour_price: 0.5 
 
-        # Amount of GLMs for each CPU for each hour that the worker runs 
+        # Amount of GLMs for each hour that the worker runs 
         # causing Golem provider offer to be rejected
         max_env_per_hour_price: 0.5
 ```
