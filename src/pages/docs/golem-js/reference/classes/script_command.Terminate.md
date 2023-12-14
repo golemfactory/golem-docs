@@ -99,13 +99,13 @@ ___
 
 ### before
 
-▸ **before**(): `Promise`<`void`\>
+▸ **before**(): `Promise`\<`void`\>
 
 Setup local environment for executing this command.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Inherited from
 
@@ -119,7 +119,7 @@ ___
 
 ### after
 
-▸ **after**(`result?`): `Promise`<`Result`<`unknown`\>\>
+▸ **after**(`result?`): `Promise`\<`Result`\<`unknown`\>\>
 
 Cleanup local setup that was needed for the command to run.
 
@@ -133,11 +133,11 @@ error result.
 
 | Name | Type |
 | :------ | :------ |
-| `result?` | `Result`<`unknown`\> |
+| `result?` | `Result`\<`unknown`\> |
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>\>
+`Promise`\<`Result`\<`unknown`\>\>
 
 #### Inherited from
 

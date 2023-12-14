@@ -16,7 +16,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `optionsOrStream?` | `LoggerOptions` \| `DestinationStream` |
+| `optionsOrStream?` | `LoggerOptions`\<`never`\> \| `DestinationStream` |
 
 #### Returns
 

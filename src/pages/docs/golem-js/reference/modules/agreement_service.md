@@ -19,11 +19,11 @@
 
 ### AgreementSelector
 
-Ƭ **AgreementSelector**: (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+Ƭ **AgreementSelector**: (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Type declaration
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -33,7 +33,7 @@
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 

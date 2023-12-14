@@ -12,7 +12,7 @@
 
 ### randomAgreementSelector
 
-▸ **randomAgreementSelector**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ **randomAgreementSelector**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Default selector that selects a random provider from the pool
 
@@ -20,7 +20,7 @@ Default selector that selects a random provider from the pool
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -30,7 +30,7 @@ Default selector that selects a random provider from the pool
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
@@ -40,7 +40,7 @@ ___
 
 ### randomAgreementSelectorWithPriorityForExistingOnes
 
-▸ **randomAgreementSelectorWithPriorityForExistingOnes**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ **randomAgreementSelectorWithPriorityForExistingOnes**(): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Selector selecting a random provider from the pool, but giving priority to those who already have a confirmed agreement and deployed activity
 
@@ -48,7 +48,7 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -58,7 +58,7 @@ Selector selecting a random provider from the pool, but giving priority to those
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 
@@ -68,7 +68,7 @@ ___
 
 ### bestAgreementSelector
 
-▸ **bestAgreementSelector**(`scores`): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ **bestAgreementSelector**(`scores`): (`candidates`: [`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)[]) => `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 Selector selecting the provider according to the provided list of scores
 
@@ -82,7 +82,7 @@ Selector selecting the provider according to the provided list of scores
 
 `fn`
 
-▸ (`candidates`): `Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+▸ (`candidates`): `Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 ##### Parameters
 
@@ -92,7 +92,7 @@ Selector selecting the provider according to the provided list of scores
 
 ##### Returns
 
-`Promise`<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
+`Promise`\<[`AgreementCandidate`](../classes/agreement_service.AgreementCandidate)\>
 
 #### Defined in
 

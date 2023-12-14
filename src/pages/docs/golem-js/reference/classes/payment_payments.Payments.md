@@ -43,7 +43,7 @@ EventTarget.constructor
 
 ### create
 
-▸ `Static` **create**(`options?`): `Promise`<[`Payments`](payment_payments.Payments)\>
+▸ `Static` **create**(`options?`): `Promise`\<[`Payments`](payment_payments.Payments)\>
 
 #### Parameters
 
@@ -53,7 +53,7 @@ EventTarget.constructor
 
 #### Returns
 
-`Promise`<[`Payments`](payment_payments.Payments)\>
+`Promise`\<[`Payments`](payment_payments.Payments)\>
 
 #### Defined in
 
@@ -63,13 +63,13 @@ ___
 
 ### unsubscribe
 
-▸ **unsubscribe**(): `Promise`<`void`\>
+▸ **unsubscribe**(): `Promise`\<`void`\>
 
 Unsubscribe demand from the market
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 

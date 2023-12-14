@@ -10,7 +10,7 @@
 
 ### getIdentity
 
-▸ **getIdentity**(`options?`): `Promise`<`string`\>
+▸ **getIdentity**(`options?`): `Promise`\<`string`\>
 
 A helper function to get the requestor's ID
 
@@ -23,7 +23,7 @@ A helper function to get the requestor's ID
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 requestorId
 

@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string`  }\>
 
   ↳ **`DemandUnsubscribed`**
 
