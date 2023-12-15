@@ -188,7 +188,7 @@ ___
 
 ### end
 
-▸ **end**(): `Promise`<`Result`<`unknown`\>[]\>
+▸ **end**(): `Promise`\<`Result`\<`unknown`\>[]\>
 
 Executes the batch of commands added via [run](task_batch.Batch#run) returning result for each of the steps.
 
@@ -196,7 +196,7 @@ In case any of the commands will fail, the execution of the batch will be interr
 
 #### Returns
 
-`Promise`<`Result`<`unknown`\>[]\>
+`Promise`\<`Result`\<`unknown`\>[]\>
 
 #### Defined in
 
@@ -206,11 +206,11 @@ ___
 
 ### endStream
 
-▸ **endStream**(): `Promise`<`Readable`\>
+▸ **endStream**(): `Promise`\<`Readable`\>
 
 #### Returns
 
-`Promise`<`Readable`\>
+`Promise`\<`Readable`\>
 
 #### Defined in
 

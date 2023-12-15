@@ -22,7 +22,7 @@ A high-level module for defining and executing tasks in the golem network
 
 ### create
 
-▸ `Static` **create**(`options`): `Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
+▸ `Static` **create**(`options`): `Promise`\<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 Create a new Task Executor
 
@@ -34,7 +34,7 @@ Create a new Task Executor
 
 #### Returns
 
-`Promise`<[`TaskExecutor`](executor_executor.TaskExecutor)\>
+`Promise`\<[`TaskExecutor`](executor_executor.TaskExecutor)\>
 
 TaskExecutor
 
@@ -77,13 +77,13 @@ ___
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 Initialize executor
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Description`**
 
@@ -97,13 +97,13 @@ ___
 
 ### end
 
-▸ **end**(): `Promise`<`void`\>
+▸ **end**(): `Promise`\<`void`\>
 
 Stop all executor services and shut down executor instance
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
@@ -169,7 +169,7 @@ ___
 
 ### run
 
-▸ **run**<`OutputType`\>(`worker`): `Promise`<`undefined` \| `OutputType`\>
+▸ **run**\<`OutputType`\>(`worker`): `Promise`\<`undefined` \| `OutputType`\>
 
 Run task - allows to execute a single worker function on the Golem network with a single provider.
 
@@ -177,17 +177,17 @@ Run task - allows to execute a single worker function on the Golem network with 
 
 | Name | Type |
 | :------ | :------ |
-| `OutputType` | `Result`<`unknown`\> |
+| `OutputType` | `Result`\<`unknown`\> |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)<`undefined`, `OutputType`\> | function that run task |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`undefined`, `OutputType`\> | function that run task |
 
 #### Returns
 
-`Promise`<`undefined` \| `OutputType`\>
+`Promise`\<`undefined` \| `OutputType`\>
 
 result of task computation
 
@@ -205,7 +205,7 @@ ___
 
 ### map
 
-▸ **map**<`InputType`, `OutputType`\>(`data`, `worker`): `AsyncIterable`<`undefined` \| `OutputType`\>
+▸ **map**\<`InputType`, `OutputType`\>(`data`, `worker`): `AsyncIterable`\<`undefined` \| `OutputType`\>
 
 Map iterable data to worker function and return computed Task result as AsyncIterable
 
@@ -220,12 +220,12 @@ Map iterable data to worker function and return computed Task result as AsyncIte
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | worker function |
+| `data` | `Iterable`\<`InputType`\> | Iterable data |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | worker function |
 
 #### Returns
 
-`AsyncIterable`<`undefined` \| `OutputType`\>
+`AsyncIterable`\<`undefined` \| `OutputType`\>
 
 AsyncIterable with results of computed tasks
 
@@ -245,7 +245,7 @@ ___
 
 ### forEach
 
-▸ **forEach**<`InputType`, `OutputType`\>(`data`, `worker`): `Promise`<`void`\>
+▸ **forEach**\<`InputType`, `OutputType`\>(`data`, `worker`): `Promise`\<`void`\>
 
 Iterates over given data and execute task using worker function
 
@@ -260,12 +260,12 @@ Iterates over given data and execute task using worker function
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `Iterable`<`InputType`\> | Iterable data |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | Worker function |
+| `data` | `Iterable`\<`InputType`\> | Iterable data |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | Worker function |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 **`Example`**
 
@@ -284,7 +284,7 @@ ___
 
 ### cancel
 
-▸ **cancel**(`reason?`): `Promise`<`void`\>
+▸ **cancel**(`reason?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -294,7 +294,7 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 

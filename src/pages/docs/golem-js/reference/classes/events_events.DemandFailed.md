@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `reason?`: `string`  }\>
 
   ↳ **`DemandFailed`**
 

@@ -1,4 +1,4 @@
-# Class: Task<InputType, OutputType\>
+# Class: Task\<InputType, OutputType\>
 
 [task/task](../modules/task_task).Task
 
@@ -51,7 +51,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 ### constructor
 
-• **new Task**<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `maxTaskRetries?`)
+• **new Task**\<`InputType`, `OutputType`\>(`id`, `worker`, `data?`, `initWorker?`, `maxTaskRetries?`)
 
 #### Type parameters
 
@@ -65,9 +65,9 @@ Represents one computation unit that will be run on the one provider machine (e.
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `id` | `string` | `undefined` |
-| `worker` | [`Worker`](../modules/task_work#worker)<`InputType`, `OutputType`\> | `undefined` |
+| `worker` | [`Worker`](../modules/task_work#worker)\<`InputType`, `OutputType`\> | `undefined` |
 | `data?` | `InputType` | `undefined` |
-| `initWorker?` | [`Worker`](../modules/task_work#worker)<`undefined`\> | `undefined` |
+| `initWorker?` | [`Worker`](../modules/task_work#worker)\<`undefined`\> | `undefined` |
 | `maxTaskRetries` | `number` | `MAX_RETRIES` |
 
 #### Defined in
@@ -254,11 +254,11 @@ ___
 
 ### getWorker
 
-▸ **getWorker**(): [`Worker`](../modules/task_work#worker)<`InputType`\>
+▸ **getWorker**(): [`Worker`](../modules/task_work#worker)\<`InputType`\>
 
 #### Returns
 
-[`Worker`](../modules/task_work#worker)<`InputType`\>
+[`Worker`](../modules/task_work#worker)\<`InputType`\>
 
 #### Defined in
 
@@ -268,11 +268,11 @@ ___
 
 ### getInitWorker
 
-▸ **getInitWorker**(): `undefined` \| [`Worker`](../modules/task_work#worker)<`undefined`\>
+▸ **getInitWorker**(): `undefined` \| [`Worker`](../modules/task_work#worker)\<`undefined`\>
 
 #### Returns
 
-`undefined` \| [`Worker`](../modules/task_work#worker)<`undefined`\>
+`undefined` \| [`Worker`](../modules/task_work#worker)\<`undefined`\>
 
 #### Defined in
 

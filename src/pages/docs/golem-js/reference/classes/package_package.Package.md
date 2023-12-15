@@ -55,7 +55,7 @@ ___
 
 ### getImageIdentifier
 
-▸ `Static` **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
+▸ `Static` **getImageIdentifier**(`str`): [`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
 
 #### Parameters
 
@@ -65,7 +65,7 @@ ___
 
 #### Returns
 
-[`RequireAtLeastOne`](../modules/utils_types#requireatleastone)<{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
+[`RequireAtLeastOne`](../modules/utils_types#requireatleastone)\<\{ `imageHash`: `string` ; `imageTag`: `string`  }, ``"imageHash"`` \| ``"imageTag"``\>
 
 #### Defined in
 
@@ -95,11 +95,11 @@ ___
 
 ### getDemandDecoration
 
-▸ **getDemandDecoration**(): `Promise`<`MarketDecoration`\>
+▸ **getDemandDecoration**(): `Promise`\<`MarketDecoration`\>
 
 #### Returns
 
-`Promise`<`MarketDecoration`\>
+`Promise`\<`MarketDecoration`\>
 
 #### Defined in
 

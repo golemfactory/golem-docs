@@ -16,7 +16,7 @@
 
 ### acceptAllProposalFilter
 
-▸ **acceptAllProposalFilter**(): () => `Promise`<`boolean`\>
+▸ **acceptAllProposalFilter**(): () => `Promise`\<`boolean`\>
 
 Default Proposal filter that accept all proposal coming from the market
 
@@ -24,11 +24,11 @@ Default Proposal filter that accept all proposal coming from the market
 
 `fn`
 
-▸ (): `Promise`<`boolean`\>
+▸ (): `Promise`\<`boolean`\>
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -38,7 +38,7 @@ ___
 
 ### blackListProposalIdsFilter
 
-▸ **blackListProposalIdsFilter**(`blackListIds`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+▸ **blackListProposalIdsFilter**(`blackListIds`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose id is in the array
 
@@ -52,7 +52,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -62,7 +62,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -72,7 +72,7 @@ ___
 
 ### blackListProposalNamesFilter
 
-▸ **blackListProposalNamesFilter**(`blackListNames`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+▸ **blackListProposalNamesFilter**(`blackListNames`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose name is in the array
 
@@ -86,7 +86,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -96,7 +96,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -106,7 +106,7 @@ ___
 
 ### blackListProposalRegexpFilter
 
-▸ **blackListProposalRegexpFilter**(`regexp`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+▸ **blackListProposalRegexpFilter**(`regexp`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`\<`boolean`\>
 
 Proposal filter blocking every offer coming from a provider whose name match to the regexp
 
@@ -120,7 +120,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -130,7 +130,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -140,7 +140,7 @@ ___
 
 ### whiteListProposalIdsFilter
 
-▸ **whiteListProposalIdsFilter**(`whiteListIds`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+▸ **whiteListProposalIdsFilter**(`whiteListIds`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose id is in the array
 
@@ -154,7 +154,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -164,7 +164,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -174,7 +174,7 @@ ___
 
 ### whiteListProposalNamesFilter
 
-▸ **whiteListProposalNamesFilter**(`whiteListNames`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+▸ **whiteListProposalNamesFilter**(`whiteListNames`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose name is in the array
 
@@ -188,7 +188,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -198,7 +198,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 
@@ -208,7 +208,7 @@ ___
 
 ### whiteListProposalRegexpFilter
 
-▸ **whiteListProposalRegexpFilter**(`regexp`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`<`boolean`\>
+▸ **whiteListProposalRegexpFilter**(`regexp`): (`proposal`: [`ProposalDTO`](../interfaces/market_proposal.ProposalDTO)) => `Promise`\<`boolean`\>
 
 Proposal filter that only allows offers from a provider whose name match to the regexp
 
@@ -222,7 +222,7 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 `fn`
 
-▸ (`proposal`): `Promise`<`boolean`\>
+▸ (`proposal`): `Promise`\<`boolean`\>
 
 ##### Parameters
 
@@ -232,7 +232,7 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 ##### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Defined in
 

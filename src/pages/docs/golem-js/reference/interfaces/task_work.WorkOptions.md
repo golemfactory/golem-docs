@@ -87,7 +87,7 @@ ___
 
 ### initWorker
 
-• `Optional` **initWorker**: [`Worker`](../modules/task_work#worker)<`undefined`, `unknown`\>
+• `Optional` **initWorker**: [`Worker`](../modules/task_work#worker)\<`undefined`, `unknown`\>
 
 #### Defined in
 

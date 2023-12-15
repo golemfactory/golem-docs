@@ -1,4 +1,4 @@
-# Class: BaseEvent<DataType\>
+# Class: BaseEvent\<DataType\>
 
 [events/events](../modules/events_events).BaseEvent
 
@@ -10,7 +10,7 @@
 
 ## Hierarchy
 
-- `CustomEvent`<`DataType`\>
+- `CustomEvent`\<`DataType`\>
 
   ↳ **`BaseEvent`**
 
@@ -94,7 +94,7 @@
 
 ### constructor
 
-• **new BaseEvent**<`DataType`\>(`data?`)
+• **new BaseEvent**\<`DataType`\>(`data?`)
 
 #### Type parameters
 
@@ -110,7 +110,7 @@
 
 #### Overrides
 
-CustomEvent&lt;DataType\&gt;.constructor
+CustomEvent\&lt;DataType\&gt;.constructor
 
 #### Defined in
 

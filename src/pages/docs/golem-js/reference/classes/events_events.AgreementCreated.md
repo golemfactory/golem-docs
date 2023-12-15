@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)<{ `id`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `proposalId`: `string` ; `validTo?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `proposalId`: `string` ; `validTo?`: `string`  }\>
 
   ↳ **`AgreementCreated`**
 
