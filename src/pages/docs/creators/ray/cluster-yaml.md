@@ -72,6 +72,25 @@ Note that using `pip` requires its index URL to be present in [`outbound_urls`](
 initialization_commands: []
 ```
 
+### File mounts
+
+You can use file mounts to copy directories and files to the head node and the worker nodes.
+The file mounts are synced during the initialization, so they are available when your application is executed.
+
+You can attach to your head node to examine its file system with `ray attach golem-cluster.yaml`.
+
+```yaml
+# The files or directories to copy to the head and worker nodes
+# Remote workdir is /root/
+file_mounts: {
+  # <remote_path>: <local_path>
+  # "/absolute/path/dir/": ".",
+  # "./relative/path/dir/": ".",
+  # "./relative/path/file.txt": "./file.txt"
+}
+```
+
+
 ### Provider section
 
 The whole "provider" section describes various Golem node provider internal parameters.
