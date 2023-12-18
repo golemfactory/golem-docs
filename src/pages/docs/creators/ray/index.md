@@ -1,7 +1,7 @@
 ---
 title: Ray on Golem Introduction
 pageTitle: Scale Python code on Golem Network Using Ray - Developer's Guide
-description: Explore how to use Ray with Golem for scaleable Python code execution. Quickstarts, tutorials, and troubleshooting tips included for developers.
+description: Explore how to use Ray with Golem for scaleable Python code execution. Quickstarts, tutorials, and troubleshooting tips for developers.
 
 type: Article
 ---
@@ -16,6 +16,7 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 - [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported Python and Ray versions, and other known issues
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
 - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
+- [Running on the mainnet](/docs/creators/ray/mainnet) - all you need to run your cluster on the mainnet
 - [Accessing the Internet tutorial](/docs/creators/ray/outbound) - enabling your Ray app to use the Internet (from within the cluster nodes)
 - [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
 - [Ray CLI](/docs/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
@@ -35,7 +36,7 @@ It specializes in tooling for AI/ML applications, but at the same time, it is ba
 
 The best thing about Ray is that it makes it straightforward to parallelize existing Python code even if you are not an expert in distributed programming.
 
-Ray uses concepts of tasks, actors, and objects to enable efficient building and scaling distributed applications.
+Ray uses concepts of tasks, actors, and objects to enable efficient building and scaling of distributed applications.
 It can be used to parallelize your Python code to use all cores on your computer, but more importantly, it also offers a Ray Cluster interface to run your payload on several, remote machines.
 
 The beauty of the solution is that you can run the app locally, and when you are ready, you can execute the same app on the cluster without changing a single line of your code.
@@ -53,9 +54,10 @@ We provide an example yaml, which contains everything needed to start up a small
 Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-yaml) and [Ray CLI](/docs/creators/ray/ray-cli) used to manage the cluster.
 
 When your application is ready, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
+Check out the [Running on the mainnet](/docs/creators/ray/mainnet) guide to get a full overview.
 
 Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and MATIC (for payment transaction fees).
-Feel free to learn more about [mainnet payments and funding your Ray on Golem](/docs/creators/javascript/guides/switching-to-mainnet).
+We encourage you to learn more about [mainnet payments and funding your Ray on Golem](/docs/creators/javascript/guides/switching-to-mainnet).
 
 When you have the tokens you need to configure `payment_network: "polygon"` in the cluster yaml file ([more details](/docs/creators/ray/cluster-yaml#network))
 

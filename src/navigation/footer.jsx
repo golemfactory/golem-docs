@@ -201,6 +201,10 @@ export const ray = [
         href: '/docs/creators/ray/conversion-to-ray-on-golem-tutorial',
       },
       {
+        title: 'Running on the mainnet',
+        href: '/docs/creators/ray/mainnet',
+      },
+      {
         title: 'Accessing the Internet (outbound) tutorial',
         href: '/docs/creators/ray/outbound',
       },
