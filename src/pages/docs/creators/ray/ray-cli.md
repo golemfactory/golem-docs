@@ -24,3 +24,5 @@ While `ray start` & `ray stop` are for manual node setup there are also many clu
 - `ray exec golem-cluster.yaml 'shell-command-line'` executes shell commands on the head node
 - `ray attach golem-cluster.yaml` gives you shell access to the head node
 - `ray dashboard golem-cluster.yaml` tunnels the Ray dashboard to `http://localhost:8265`
+- `ray rsync_up golem-cluster.yaml /local/path /path/on/cluster` uploads files to the head node
+- `ray rsync_down golem-cluster.yaml /path/on/cluster /local/path` downloads  files from the head node
