@@ -1,7 +1,6 @@
 ---
-title: Golem Provider Maintenance Guide 
-description: A practical guide on managing and updating your Golem Network provider, including wallet monitoring and node updates. 
-
+title: Golem Provider Maintenance Guide
+description: A practical guide on managing and updating your Golem Network provider, including wallet monitoring and node updates.
 
 type: Guide
 ---
@@ -44,7 +43,7 @@ With the ongoing development of the Golem Network, new and improved versions of 
 After successfully stopping the provider, proceed with the update by executing the installation command below, which will automatically fetch and apply the latest version of the software.
 
 ```bash
-curl -ksSf https://join.golem.network/as-provider | bash -
+curl -sSf https://join.golem.network/as-provider | bash -
 ```
 
 {% docnavigation title="See also" %}
