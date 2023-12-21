@@ -62,7 +62,7 @@ Outbound connectivity in Golem is still considered an experimental feature and w
 
 ### Example code
 
-Consider the following code (you can find it also in [the repository](https://github.com/golemfactory/ray-on-golem/blob/develop/examples/outbound.py)).
+Consider the following code (you can find it also in [the repository](https://github.com/golemfactory/ray-on-golem/blob/main/examples/outbound.py)).
 
 ```python
 import colorful
@@ -146,7 +146,7 @@ Let's now spin up a Ray on Golem cluster to launch our newly-hatched application
 
 The first step is adding the `"https://ipfs.io"` to `outbound_urls` property in the cluster yaml.
 
-You can either update your cluster yaml or download one from [the repository](https://github.com/golemfactory/ray-on-golem/blob/develop/examples/outbound.yaml).
+You can either update your cluster yaml or download one from [the repository](https://github.com/golemfactory/ray-on-golem/blob/main/examples/outbound.yaml).
 The linked config is a version of the [example Ray on Golem cluster yaml](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluster.yaml) with:
 ```yaml
 outbound_urls: ["https://ipfs.io"]
