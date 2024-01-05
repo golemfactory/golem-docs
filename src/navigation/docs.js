@@ -175,6 +175,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/guides/golem-images-faq',
               },
               {
+                title: 'Error handling',
+                href: '/docs/creators/javascript/guides/error-handling'
+              },
+              {
                 title: 'Switching to mainnet',
                 href: '/docs/creators/javascript/guides/switching-to-mainnet',
               },
