@@ -20,7 +20,6 @@ Package module - an object for descriptions of the payload required by the reque
 
 - [create](package_package.Package#create)
 - [getImageIdentifier](package_package.Package#getimageidentifier)
-- [GetHashFromTag](package_package.Package#gethashfromtag)
 - [getDemandDecoration](package_package.Package#getdemanddecoration)
 
 ## Accessors
@@ -35,7 +34,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:137](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L137)
+[src/package/package.ts:139](https://github.com/golemfactory/golem-js/blob/9137662/src/package/package.ts#L139)
 
 ## Methods
 
@@ -55,7 +54,7 @@ Package module - an object for descriptions of the payload required by the reque
 
 #### Defined in
 
-[src/package/package.ts:57](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L57)
+[src/package/package.ts:56](https://github.com/golemfactory/golem-js/blob/9137662/src/package/package.ts#L56)
 
 ___
 
@@ -75,27 +74,7 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:63](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L63)
-
-___
-
-### GetHashFromTag
-
-▸ **GetHashFromTag**(`tag`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `tag` | `string` |
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[src/package/package.ts:78](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L78)
+[src/package/package.ts:62](https://github.com/golemfactory/golem-js/blob/9137662/src/package/package.ts#L62)
 
 ___
 
@@ -109,4 +88,4 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:82](https://github.com/golemfactory/golem-js/blob/c2379e3/src/package/package.ts#L82)
+[src/package/package.ts:77](https://github.com/golemfactory/golem-js/blob/9137662/src/package/package.ts#L77)

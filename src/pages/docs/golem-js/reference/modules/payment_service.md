@@ -21,11 +21,11 @@ type: "JS API Reference"
 
 ### DebitNoteFilter
 
-Ƭ **DebitNoteFilter**: (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`\<`boolean`\>
+Ƭ **DebitNoteFilter**: (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`\<`boolean`\> \| `boolean`
 
 #### Type declaration
 
-▸ (`debitNote`): `Promise`\<`boolean`\>
+▸ (`debitNote`): `Promise`\<`boolean`\> \| `boolean`
 
 ##### Parameters
 
@@ -35,21 +35,21 @@ type: "JS API Reference"
 
 ##### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<`boolean`\> \| `boolean`
 
 #### Defined in
 
-[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/service.ts#L25)
+[src/payment/service.ts:26](https://github.com/golemfactory/golem-js/blob/9137662/src/payment/service.ts#L26)
 
 ___
 
 ### InvoiceFilter
 
-Ƭ **InvoiceFilter**: (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`\<`boolean`\>
+Ƭ **InvoiceFilter**: (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`\<`boolean`\> \| `boolean`
 
 #### Type declaration
 
-▸ (`invoice`): `Promise`\<`boolean`\>
+▸ (`invoice`): `Promise`\<`boolean`\> \| `boolean`
 
 ##### Parameters
 
@@ -59,8 +59,8 @@ ___
 
 ##### Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<`boolean`\> \| `boolean`
 
 #### Defined in
 
-[src/payment/service.ts:26](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/service.ts#L26)
+[src/payment/service.ts:27](https://github.com/golemfactory/golem-js/blob/9137662/src/payment/service.ts#L27)

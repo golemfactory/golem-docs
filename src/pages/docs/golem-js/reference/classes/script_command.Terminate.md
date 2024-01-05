@@ -41,7 +41,7 @@ type: "JS API Reference"
 
 | Name | Type |
 | :------ | :------ |
-| `args?` | `object` |
+| `args?` | `Record`\<`string`, `unknown`\> |
 
 #### Returns
 
@@ -53,13 +53,13 @@ Command.constructor
 
 #### Defined in
 
-[src/script/command.ts:106](https://github.com/golemfactory/golem-js/blob/c2379e3/src/script/command.ts#L106)
+[src/script/command.ts:106](https://github.com/golemfactory/golem-js/blob/9137662/src/script/command.ts#L106)
 
 ## Properties
 
 ### args
 
-• `Protected` **args**: `object`
+• `Protected` **args**: `Record`\<`string`, `unknown`\>
 
 #### Inherited from
 
@@ -67,7 +67,7 @@ Command.args
 
 #### Defined in
 
-[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/c2379e3/src/script/command.ts#L16)
+[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/9137662/src/script/command.ts#L16)
 
 ## Methods
 
@@ -85,7 +85,7 @@ Command.toJson
 
 #### Defined in
 
-[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/c2379e3/src/script/command.ts#L25)
+[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/9137662/src/script/command.ts#L25)
 
 ___
 
@@ -103,7 +103,7 @@ Command.toExeScriptRequest
 
 #### Defined in
 
-[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/c2379e3/src/script/command.ts#L31)
+[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/9137662/src/script/command.ts#L31)
 
 ___
 
@@ -123,7 +123,7 @@ Command.before
 
 #### Defined in
 
-[src/script/command.ts:38](https://github.com/golemfactory/golem-js/blob/c2379e3/src/script/command.ts#L38)
+[src/script/command.ts:38](https://github.com/golemfactory/golem-js/blob/9137662/src/script/command.ts#L38)
 
 ___
 
@@ -155,4 +155,4 @@ Command.after
 
 #### Defined in
 
-[src/script/command.ts:53](https://github.com/golemfactory/golem-js/blob/c2379e3/src/script/command.ts#L53)
+[src/script/command.ts:53](https://github.com/golemfactory/golem-js/blob/9137662/src/script/command.ts#L53)

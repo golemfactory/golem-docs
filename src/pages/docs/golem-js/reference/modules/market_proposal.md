@@ -37,7 +37,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/proposal.ts:7](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L7)
+[src/market/proposal.ts:7](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L7)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:13](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L13)
+[src/market/proposal.ts:14](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L14)

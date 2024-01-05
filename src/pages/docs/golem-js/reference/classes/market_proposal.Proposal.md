@@ -68,7 +68,7 @@ Create proposal for given subscription ID
 
 #### Defined in
 
-[src/market/proposal.ts:92](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L92)
+[src/market/proposal.ts:93](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L93)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Create proposal for given subscription ID
 
 #### Defined in
 
-[src/market/proposal.ts:71](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L71)
+[src/market/proposal.ts:72](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L72)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:72](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L72)
+[src/market/proposal.ts:73](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L73)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:73](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L73)
+[src/market/proposal.ts:74](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L74)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:74](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L74)
+[src/market/proposal.ts:75](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L75)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:75](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L75)
+[src/market/proposal.ts:76](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L76)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:76](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L76)
+[src/market/proposal.ts:77](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L77)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:77](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L77)
+[src/market/proposal.ts:78](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L78)
 
 ## Accessors
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:115](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L115)
+[src/market/proposal.ts:116](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L116)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:132](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L132)
+[src/market/proposal.ts:133](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L133)
 
 ## Methods
 
@@ -191,7 +191,7 @@ Use this method before executing any important logic, to ensure that you're work
 
 #### Defined in
 
-[src/market/proposal.ts:155](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L155)
+[src/market/proposal.ts:156](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L156)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:182](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L182)
+[src/market/proposal.ts:183](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L183)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:186](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L186)
+[src/market/proposal.ts:187](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L187)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:190](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L190)
+[src/market/proposal.ts:191](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L191)
 
 ___
 
@@ -247,7 +247,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:194](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L194)
+[src/market/proposal.ts:195](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L195)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:198](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L198)
+[src/market/proposal.ts:199](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L199)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:213](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L213)
+[src/market/proposal.ts:214](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L214)
 
 ___
 
@@ -307,4 +307,4 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:243](https://github.com/golemfactory/golem-js/blob/c2379e3/src/market/proposal.ts#L243)
+[src/market/proposal.ts:244](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L244)

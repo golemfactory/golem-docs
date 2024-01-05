@@ -46,16 +46,16 @@ type: "JS API Reference"
 
 ### Variables
 
-- [EventType](events_events#eventtype)
+- [EVENT\_TYPE](events_events#event_type)
 
 ## Variables
 
-### EventType
+### EVENT\_TYPE
 
-• `Const` **EventType**: ``"GolemEvent"``
+• `Const` **EVENT\_TYPE**: ``"GolemEvent"``
 
 Global Event Type with which all API events will be emitted. It should be used on all listeners that would like to handle events.
 
 #### Defined in
 
-[src/events/events.ts:9](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L9)
+[src/events/events.ts:9](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L9)

@@ -32,12 +32,9 @@ It also provides an event emitter that can be used to listen for state changes.
 - [state](job_job.Job#state)
 - [id](job_job.Job#id)
 
-### Accessors
-
-- [isRunning](job_job.Job#isrunning)
-
 ### Methods
 
+- [isRunning](job_job.Job#isrunning)
 - [startWork](job_job.Job#startwork)
 - [cancel](job_job.Job#cancel)
 - [waitForResult](job_job.Job#waitforresult)
@@ -70,7 +67,7 @@ Create a new Job instance. It is recommended to use GolemNetwork to create jobs 
 
 #### Defined in
 
-[src/job/job.ts:74](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L74)
+[src/job/job.ts:75](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L75)
 
 ## Properties
 
@@ -80,7 +77,7 @@ Create a new Job instance. It is recommended to use GolemNetwork to create jobs 
 
 #### Defined in
 
-[src/job/job.ts:60](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L60)
+[src/job/job.ts:61](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L61)
 
 ___
 
@@ -90,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:63](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L63)
+[src/job/job.ts:64](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L64)
 
 ___
 
@@ -100,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:64](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L64)
+[src/job/job.ts:65](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L65)
 
 ___
 
@@ -110,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:65](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L65)
+[src/job/job.ts:66](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L66)
 
 ___
 
@@ -120,13 +117,13 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:75](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L75)
+[src/job/job.ts:76](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L76)
 
-## Accessors
+## Methods
 
 ### isRunning
 
-• `get` **isRunning**(): `boolean`
+▸ **isRunning**(): `boolean`
 
 #### Returns
 
@@ -134,9 +131,9 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:82](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L82)
+[src/job/job.ts:81](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L81)
 
-## Methods
+___
 
 ### startWork
 
@@ -161,7 +158,7 @@ If you want to run multiple jobs in parallel, you can use GolemNetwork.createJob
 
 #### Defined in
 
-[src/job/job.ts:96](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L96)
+[src/job/job.ts:97](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L97)
 
 ___
 
@@ -178,7 +175,7 @@ Throws an error if the job is not running.
 
 #### Defined in
 
-[src/job/job.ts:235](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L235)
+[src/job/job.ts:236](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L236)
 
 ___
 
@@ -195,4 +192,4 @@ Throws an error if the job was not started.
 
 #### Defined in
 
-[src/job/job.ts:249](https://github.com/golemfactory/golem-js/blob/c2379e3/src/job/job.ts#L249)
+[src/job/job.ts:250](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L250)

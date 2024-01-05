@@ -22,7 +22,7 @@ type: "JS API Reference"
 
 | Name | Type |
 | :------ | :------ |
-| `optionsOrStream?` | `LoggerOptions` \| `DestinationStream` |
+| `optionsOrStream?` | `LoggerOptions`\<`never`\> \| `DestinationStream` |
 
 #### Returns
 
@@ -30,4 +30,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/logger/pinoLogger.ts#L4)
+[src/utils/logger/pinoLogger.ts:4](https://github.com/golemfactory/golem-js/blob/9137662/src/utils/logger/pinoLogger.ts#L4)

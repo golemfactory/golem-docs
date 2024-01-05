@@ -30,25 +30,19 @@ type: "JS API Reference"
 
 ### constructor
 
-• **new ComputationStarted**(`data?`): [`ComputationStarted`](events_events.ComputationStarted)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data?` | `undefined` |
+• **new ComputationStarted**(): [`ComputationStarted`](events_events.ComputationStarted)
 
 #### Returns
 
 [`ComputationStarted`](events_events.ComputationStarted)
 
-#### Inherited from
+#### Overrides
 
 [BaseEvent](events_events.BaseEvent).[constructor](events_events.BaseEvent#constructor)
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L28)
+[src/events/events.ts:34](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L34)
 
 ## Properties
 
@@ -62,7 +56,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L16)
 
 ___
 
@@ -76,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L17)
 
 ___
 
@@ -90,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L18)
