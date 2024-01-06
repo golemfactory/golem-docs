@@ -42,7 +42,7 @@ Interval for checking new invoices
 
 #### Defined in
 
-[src/payment/service.ts:11](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/service.ts#L11)
+[src/payment/service.ts:12](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/service.ts#L12)
 
 ___
 
@@ -54,7 +54,7 @@ Interval for checking new debit notes
 
 #### Defined in
 
-[src/payment/service.ts:13](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/service.ts#L13)
+[src/payment/service.ts:14](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/service.ts#L14)
 
 ___
 
@@ -66,7 +66,7 @@ Maximum number of invoice events per one fetching
 
 #### Defined in
 
-[src/payment/service.ts:15](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/service.ts#L15)
+[src/payment/service.ts:16](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/service.ts#L16)
 
 ___
 
@@ -78,7 +78,7 @@ Maximum number of debit notes events per one fetching
 
 #### Defined in
 
-[src/payment/service.ts:17](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/service.ts#L17)
+[src/payment/service.ts:18](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/service.ts#L18)
 
 ___
 
@@ -90,7 +90,7 @@ A custom filter that checks every debit notes coming from providers
 
 #### Defined in
 
-[src/payment/service.ts:19](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/service.ts#L19)
+[src/payment/service.ts:20](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/service.ts#L20)
 
 ___
 
@@ -102,7 +102,7 @@ A custom filter that checks every invoices coming from providers
 
 #### Defined in
 
-[src/payment/service.ts:21](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/service.ts#L21)
+[src/payment/service.ts:22](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/service.ts#L22)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/config.ts#L23)
+[src/payment/config.ts:23](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/config.ts#L23)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/config.ts#L24)
+[src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/config.ts#L24)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/config.ts#L25)
+[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/config.ts#L25)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/config.ts#L26)
+[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/config.ts#L26)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/config.ts#L27)
+[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/config.ts#L27)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/config.ts#L28)
+[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/config.ts#L28)
 
 ___
 
@@ -207,4 +207,4 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/config.ts#L29)
+[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/config.ts#L29)

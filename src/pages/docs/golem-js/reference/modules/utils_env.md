@@ -31,4 +31,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/c827e77/src/utils/env.ts#L3)
+[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/env.ts#L3)

@@ -37,7 +37,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/demand.ts:19](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L19)
+[src/market/demand.ts:19](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L19)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:20](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L20)
+[src/market/demand.ts:20](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L20)
 
 ___
 
@@ -77,7 +77,7 @@ If your activity is about to operate longer than 10h, you need set both [debitNo
 
 #### Defined in
 
-[src/market/demand.ts:43](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L43)
+[src/market/demand.ts:43](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L43)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:45](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L45)
+[src/market/demand.ts:45](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L45)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:46](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L46)
+[src/market/demand.ts:46](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L46)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:48](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L48)
+[src/market/demand.ts:48](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L48)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L50)
+[src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L50)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:52](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L52)
+[src/market/demand.ts:52](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L52)
 
 ___
 
@@ -146,7 +146,7 @@ The SDK will accept debit notes each 2 minutes.
 
 #### Defined in
 
-[src/market/demand.ts:64](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L64)
+[src/market/demand.ts:64](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L64)
 
 ___
 
@@ -166,4 +166,4 @@ The SDK will issue payments each 12h by default, and you can control this with t
 
 #### Defined in
 
-[src/market/demand.ts:77](https://github.com/golemfactory/golem-js/blob/c827e77/src/market/demand.ts#L77)
+[src/market/demand.ts:77](https://github.com/golemfactory/golem-js/blob/9c218b4/src/market/demand.ts#L77)

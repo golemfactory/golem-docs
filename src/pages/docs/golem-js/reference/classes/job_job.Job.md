@@ -63,7 +63,7 @@ Represents the state of some computation unit. The purpose of this class is to p
 
 #### Defined in
 
-[src/job/job.ts:10](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/job.ts#L10)
+[src/job/job.ts:10](https://github.com/golemfactory/golem-js/blob/9c218b4/src/job/job.ts#L10)
 
 ## Properties
 
@@ -73,7 +73,7 @@ Represents the state of some computation unit. The purpose of this class is to p
 
 #### Defined in
 
-[src/job/job.ts:11](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/job.ts#L11)
+[src/job/job.ts:11](https://github.com/golemfactory/golem-js/blob/9c218b4/src/job/job.ts#L11)
 
 ## Methods
 
@@ -87,7 +87,7 @@ Represents the state of some computation unit. The purpose of this class is to p
 
 #### Defined in
 
-[src/job/job.ts:15](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/job.ts#L15)
+[src/job/job.ts:15](https://github.com/golemfactory/golem-js/blob/9c218b4/src/job/job.ts#L15)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:19](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/job.ts#L19)
+[src/job/job.ts:19](https://github.com/golemfactory/golem-js/blob/9c218b4/src/job/job.ts#L19)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:31](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/job.ts#L31)
+[src/job/job.ts:31](https://github.com/golemfactory/golem-js/blob/9c218b4/src/job/job.ts#L31)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:35](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/job.ts#L35)
+[src/job/job.ts:35](https://github.com/golemfactory/golem-js/blob/9c218b4/src/job/job.ts#L35)
 
 ___
 
@@ -151,4 +151,4 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:39](https://github.com/golemfactory/golem-js/blob/c827e77/src/job/job.ts#L39)
+[src/job/job.ts:39](https://github.com/golemfactory/golem-js/blob/9c218b4/src/job/job.ts#L39)

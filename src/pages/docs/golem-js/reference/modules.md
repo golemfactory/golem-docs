@@ -30,6 +30,7 @@ type: "JS API Reference"
 - [network/node](modules/network_node)
 - [network/service](modules/network_service)
 - [package/package](modules/package_package)
+- [payment/agreement\_payment\_process](modules/payment_agreement_payment_process)
 - [payment/config](modules/payment_config)
 - [payment/debit\_note](modules/payment_debit_note)
 - [payment/invoice](modules/payment_invoice)

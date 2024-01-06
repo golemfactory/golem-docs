@@ -26,7 +26,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/executor/executor.ts:25](https://github.com/golemfactory/golem-js/blob/c827e77/src/executor/executor.ts#L25)
+[src/executor/executor.ts:25](https://github.com/golemfactory/golem-js/blob/9c218b4/src/executor/executor.ts#L25)
 
 ___
 
@@ -38,7 +38,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[src/executor/executor.ts:94](https://github.com/golemfactory/golem-js/blob/c827e77/src/executor/executor.ts#L94)
+[src/executor/executor.ts:94](https://github.com/golemfactory/golem-js/blob/9c218b4/src/executor/executor.ts#L94)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:96](https://github.com/golemfactory/golem-js/blob/c827e77/src/executor/executor.ts#L96)
+[src/executor/executor.ts:96](https://github.com/golemfactory/golem-js/blob/9c218b4/src/executor/executor.ts#L96)

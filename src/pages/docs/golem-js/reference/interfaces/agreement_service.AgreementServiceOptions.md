@@ -19,6 +19,8 @@ type: "JS API Reference"
 ### Properties
 
 - [agreementSelector](agreement_service.AgreementServiceOptions#agreementselector)
+- [agreementMaxEvents](agreement_service.AgreementServiceOptions#agreementmaxevents)
+- [agreementEventsFetchingIntervalSec](agreement_service.AgreementServiceOptions#agreementeventsfetchingintervalsec)
 - [yagnaOptions](agreement_service.AgreementServiceOptions#yagnaoptions)
 - [agreementRequestTimeout](agreement_service.AgreementServiceOptions#agreementrequesttimeout)
 - [agreementWaitingForApprovalTimeout](agreement_service.AgreementServiceOptions#agreementwaitingforapprovaltimeout)
@@ -35,7 +37,31 @@ The selector used when choosing a provider from a pool of existing offers (from 
 
 #### Defined in
 
-[src/agreement/service.ts:23](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L23)
+[src/agreement/service.ts:22](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/service.ts#L22)
+
+___
+
+### agreementMaxEvents
+
+• `Optional` **agreementMaxEvents**: `number`
+
+The maximum number of events fetched in one request call
+
+#### Defined in
+
+[src/agreement/service.ts:24](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/service.ts#L24)
+
+___
+
+### agreementEventsFetchingIntervalSec
+
+• `Optional` **agreementEventsFetchingIntervalSec**: `number`
+
+interval for fetching agreement events
+
+#### Defined in
+
+[src/agreement/service.ts:26](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/service.ts#L26)
 
 ___
 
@@ -51,7 +77,7 @@ AgreementOptions.yagnaOptions
 
 #### Defined in
 
-[src/agreement/agreement.ts:35](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/agreement.ts#L35)
+[src/agreement/agreement.ts:35](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/agreement.ts#L35)
 
 ___
 
@@ -67,7 +93,7 @@ AgreementOptions.agreementRequestTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:37](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/agreement.ts#L37)
+[src/agreement/agreement.ts:37](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/agreement.ts#L37)
 
 ___
 
@@ -83,7 +109,7 @@ AgreementOptions.agreementWaitingForApprovalTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:39](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/agreement.ts#L39)
+[src/agreement/agreement.ts:39](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/agreement.ts#L39)
 
 ___
 
@@ -99,7 +125,7 @@ AgreementOptions.logger
 
 #### Defined in
 
-[src/agreement/agreement.ts:41](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/agreement.ts#L41)
+[src/agreement/agreement.ts:41](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/agreement.ts#L41)
 
 ___
 
@@ -115,4 +141,4 @@ AgreementOptions.eventTarget
 
 #### Defined in
 
-[src/agreement/agreement.ts:43](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/agreement.ts#L43)
+[src/agreement/agreement.ts:43](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/agreement.ts#L43)
