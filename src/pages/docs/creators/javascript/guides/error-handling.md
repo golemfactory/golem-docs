@@ -1,11 +1,11 @@
 ---
-description: A brief introduction to error handing in Golem JS SDK for application developers.
-title: Error handing in Golem JS SDK
+description: A brief introduction to error handling in Golem JS SDK for application developers.
+title: Error handling in Golem JS SDK
 type: Guide
 ---
 
 
-# Error handing in Golem JS SDK
+# Error Handling in the Golem JS SDK
 
 ## Introduction
 
@@ -13,11 +13,9 @@ This article will explain the basics of error handling in Golem JS SDK.
 
 ## Golem Network
 
-Golem Network is a P2P distributed network, and as such, you need to consider many situations ahead of time.
+When engaging with the Golem Network, it's critical to anticipate and plan for various scenarios. Errors can occur at any stage, from initializing your application to executing tasks and eventually cleaning up. Understanding these potential pitfalls is key to building robust applications on Golem.
 
-Errors can occur at any stage of the process, from the moment you start your application, through the process of connecting to the network, to the moment you clean up your code.
-
-Bellow we'll discuss a few of the most common errors you may encounter and how to handle them.
+Below we'll discuss a few of the most common errors you may encounter and how to handle them.
 
 ## Basic Error Handling structure
 
@@ -28,7 +26,7 @@ A typical application will consist of a few parts:
 
 Each of these parts can throw an error, and you should handle them accordingly.
 
-If your application is a simple script, you can use a `try/catch` block to handle errors, like it is visibile in most of the examples:
+If your application is a simple script, you can use a `try/catch` block to handle errors, similarly to how its done in most of the examples:
 
 ```javascript
 import { TaskExecutor } from "@golem-sdk/golem-js";
@@ -63,10 +61,10 @@ As you can see, we use a `try/catch` block to handle errors that may occur durin
 We also use a `finally` block to make sure that the executor is shut down properly.
 
 The shutdown process releases all the resources used by the executor, terminates all the running tasks and waits for all transactions to be finalized.
-This is really important, especially during development when your code might be unstable.
+This is really important, especially during development where your code might be unstable.
 If your code fails, and you don't pay for the resources you used, you will be banned from executing tasks on Golem.
 
-You can also notice the `TaskExecutor.create()` is outside the `try/catch` block.
+You might also notice the `TaskExecutor.create()` is outside the `try/catch` block.
 This is because the create process won't allocate any resources on Golem, so there won't be any consequences if your application quits at this point.
 However, it is good practice to handle errors here as well.
 Depending on your use-case, you may want to handle some specific exception situations in a try/catch block
@@ -93,11 +91,11 @@ async function worker(ctx: WorkContext) {
 ```
 
 If you are performing operations that can throw an error, you should wrap them in a `try/catch` block,
-or you will trigger a retry of the task (see below).
+else you'll trigger a retry of the task (see below).
 
 ### Error propagation from run
 
-Exceptions thrown from within a task worker functions will be intercepted by task executor.
+Exceptions thrown from within a task worker function will be intercepted by the task executor.
 
 By default, a retry mechanism will relaunch the task on a different provider.
 This is done to ensure that the task is executed, even if the first provider fails.
@@ -118,7 +116,7 @@ When a signal is received, the SDK will try to gracefully shut down the executor
 > This is normal behaviour.
 
 If you want to handle signals yourself, you can disable the default behaviour by setting the `skipProcessSignals` option to `false` when creating the executor.
-If you do so, you will be responsible for shutting down the executor when a terminating signal is received.
+If you do so, you will be responsible for shutting down the executor when a termination signal is received.
 
 ```typescript
   const executor = await TaskExecutor.create({
