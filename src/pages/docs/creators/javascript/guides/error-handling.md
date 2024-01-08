@@ -20,9 +20,9 @@ Below we'll discuss a few of the most common errors you may encounter and how to
 ## Basic Error Handling structure
 
 A typical application will consist of a few parts:
-- setting up the SDK
-- executing work on Golem
-- cleaning up
+- Setting up the SDK
+- Executing work on Golem
+- Cleaning up
 
 Each of these parts can throw an error, and you should handle them accordingly.
 
@@ -112,8 +112,9 @@ This can happen for example when you press `Ctrl+C` in your terminal.
 By default, the SDK takes over handling `SIGINT` (`Ctrl+C`), `SIGTERM`, `SIGBREAK` and `SIGHUP` signals.
 When a signal is received, the SDK will try to gracefully shut down the executor.
 
-> **Note:** During that time, the TaskExecutor will likely log warnings and errors about activities being interrupted.
-> This is normal behaviour.
+{% alert level="info" %}
+During that time, the TaskExecutor will likely log warnings and errors about activities being interrupted. This is normal behaviour.
+{% /alert %}
 
 If you want to handle signals yourself, you can disable the default behaviour by setting the `skipProcessSignals` option to `false` when creating the executor.
 If you do so, you will be responsible for shutting down the executor when a termination signal is received.
