@@ -18,14 +18,14 @@ type: "JS API Reference"
 
 ### Variables
 
-- [PaymentEventType](payment_payments#paymenteventtype)
+- [PAYMENT\_EVENT\_TYPE](payment_payments#payment_event_type)
 
 ## Variables
 
-### PaymentEventType
+### PAYMENT\_EVENT\_TYPE
 
-• `Const` **PaymentEventType**: ``"PaymentReceived"``
+• `Const` **PAYMENT\_EVENT\_TYPE**: ``"PaymentReceived"``
 
 #### Defined in
 
-[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/c2379e3/src/payment/payments.ts#L14)
+[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/9137662/src/payment/payments.ts#L14)

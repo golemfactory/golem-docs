@@ -59,7 +59,7 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 ### createService
 
-▸ **createService**(`fileInfo`, `components`): `Promise`\<`AxiosResponse`\<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
+▸ **createService**(`fileInfo`, `components`): `Promise`\<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel)\>
 
 #### Parameters
 
@@ -70,7 +70,7 @@ node_modules/ya-ts-client/dist/ya-net/base.d.ts:43
 
 #### Returns
 
-`Promise`\<`AxiosResponse`\<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel), `any`\>\>
+`Promise`\<[`ServiceModel`](../modules/utils_yagna_gsb#servicemodel)\>
 
 #### Implementation of
 
@@ -78,13 +78,13 @@ GsbRequestorApi.createService
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:20](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/yagna/gsb.ts#L20)
+[src/utils/yagna/gsb.ts:21](https://github.com/golemfactory/golem-js/blob/9137662/src/utils/yagna/gsb.ts#L21)
 
 ___
 
 ### deleteService
 
-▸ **deleteService**(`id`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+▸ **deleteService**(`id`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -94,7 +94,7 @@ ___
 
 #### Returns
 
-`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+`Promise`\<`void`\>
 
 #### Implementation of
 
@@ -102,4 +102,4 @@ GsbRequestorApi.deleteService
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:35](https://github.com/golemfactory/golem-js/blob/c2379e3/src/utils/yagna/gsb.ts#L35)
+[src/utils/yagna/gsb.ts:45](https://github.com/golemfactory/golem-js/blob/9137662/src/utils/yagna/gsb.ts#L45)

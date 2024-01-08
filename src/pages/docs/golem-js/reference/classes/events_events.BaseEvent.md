@@ -100,7 +100,7 @@ type: "JS API Reference"
 
 ### constructor
 
-• **new BaseEvent**\<`DataType`\>(`data?`): [`BaseEvent`](events_events.BaseEvent)\<`DataType`\>
+• **new BaseEvent**\<`DataType`\>(`data`): [`BaseEvent`](events_events.BaseEvent)\<`DataType`\>
 
 #### Type parameters
 
@@ -112,7 +112,7 @@ type: "JS API Reference"
 
 | Name | Type |
 | :------ | :------ |
-| `data?` | `DataType` |
+| `data` | `DataType` |
 
 #### Returns
 
@@ -124,7 +124,7 @@ CustomEvent\&lt;DataType\&gt;.constructor
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L28)
+[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L28)
 
 ## Properties
 
@@ -138,7 +138,7 @@ CustomEvent.detail
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L16)
+[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L16)
 
 ___
 
@@ -152,7 +152,7 @@ CustomEvent.name
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L17)
 
 ___
 
@@ -166,4 +166,4 @@ CustomEvent.timestamp
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/c2379e3/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L18)
