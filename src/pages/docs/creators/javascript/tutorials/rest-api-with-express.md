@@ -59,38 +59,42 @@ So far, so good! Stop the app by pressing `Ctrl+C` and let's move on to the next
 
 ## Connecting to the Golem Network
 
-Now let's connect to the Golem Network. First, import the `GolemNetwork` class from `@golem-sdk/golem-js` and create a new instance of it. If you're feeling adventurous, [you can create your own image](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format#building-your-docker-image) and install [espeak](https://espeak.sourceforge.net/) on it, but to save time we will use the image `severyn/espeak:latest` provided by one of our community members.
+Now let's connect to the Golem Network. First, import the `GolemNetwork` class from `@golem-sdk/golem-js` and create a new instance of it.
 
 ```js
 import { GolemNetwork } from '@golem-sdk/golem-js'
 
-const golem = new GolemNetwork({
-  image: 'severyn/espeak:latest',
-  yagnaOptions: { apiKey: 'try_golem' },
+const golemClient = new GolemNetwork({
+  yagna: {
+    apiKey: 'try_golem',
+  },
 })
-golem
+await golemClient
   .init()
   .then(() => {
     console.log('Connected to the Golem Network!')
   })
-  .catch((err) => {
-    console.error('Error connecting to the Golem Network:', err)
+  .catch((error) => {
+    console.error('Failed to connect to the Golem Network:', error)
     process.exit(1)
   })
 ```
 
-Let's also add a handler for the `SIGINT` signal so that we can close the connection to the Golem Network when the app is stopped.
+Let's also add a handler for the `SIGINT` signal so that we can close the connection to the Golem Network and cancel all running jobs when the user presses `Ctrl+C`:
 
 ```js
 process.on('SIGINT', async () => {
-  await golem.close()
+  // cancel and cleanup all running jobs
+  await golemClient.close()
   process.exit(0)
 })
 ```
 
 ## Creating a retrievable task
 
-Let's add a new endpoint to our API that will take some text from the request body and create a new task on the Golem Network. To do that, we will use the `createJob()` method. This method will give us a `Job` object that we can use to get the state of the job and its results later. On the provider side, we will run the `espeak` command to convert the text to speech, save it to a `.wav` file and download that file to your local file system with the `downloadFile()` method. We will give the file a random name to avoid collisions.
+Now it's time for the fun part! Let's add a new endpoint to our API that will take some text from the request body and create a new job on the Golem Network. To do that, we will use the `createJob()` method. This method will give us a `Job` object that we can use to get the state of the job and its results later. On the provider side, we will run the `espeak` command to convert the text to speech, save it to a `.wav` file and download that file to your local file system with the `downloadFile()` method. We will give the file a random name to avoid collisions.
+
+The image we will use is `severyn/espeak:latest`, provided by one of our community members. It contains the `espeak` command, which we will use to convert the text to speech. If you're feeling adventurous, [you can create your own image](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format#building-your-docker-image) and install [espeak](https://espeak.sourceforge.net/) on it.
 
 ```js
 app.post('/tts', async (req, res) => {
@@ -98,7 +102,53 @@ app.post('/tts', async (req, res) => {
     res.status(400).send('Missing text parameter')
     return
   }
-  const job = await golem.createJob(async (ctx) => {
+  const job = golemClient.createJob({
+    package: {
+      imageTag: 'severyn/espeak:latest',
+    },
+  })
+
+  job.startWork(async (ctx) => {
+    const fileName = `${Math.random().toString(36).slice(2)}.wav`
+    await ctx
+      .beginBatch()
+      .run(`espeak "${req.body}" -w /golem/output/output.wav`)
+      .downloadFile('/golem/output/output.wav', `public/${fileName}`)
+      .end()
+    return fileName
+  })
+  res.send(`Job started! ID: ${job.id}`)
+})
+```
+
+The `Job` api makes it easy to react to events that happen during the execution of the job. Let's update our code and add some event handlers to log the events to the console:
+
+```js
+app.post('/tts', async (req, res) => {
+  if (!req.body) {
+    res.status(400).send('Missing text parameter')
+    return
+  }
+  const job = golemClient.createJob({
+    package: {
+      imageTag: 'severyn/espeak:latest',
+    },
+  })
+
+  job.events.on('created', () => {
+    console.log('Job created')
+  })
+  job.events.on('started', () => {
+    console.log('Job started')
+  })
+  job.events.on('error', () => {
+    console.log('Job failed', job.error)
+  })
+  job.events.on('success', () => {
+    console.log('Job succeeded', job.results)
+  })
+
+  job.startWork(async (ctx) => {
     const fileName = `${Math.random().toString(36).slice(2)}.wav`
     await ctx
       .beginBatch()
@@ -113,38 +163,43 @@ app.post('/tts', async (req, res) => {
 
 ## Getting the job state
 
-Now let's add another endpoint that will allow us to get the state of the job. We will use the `fetchState()` method of the `Job` object to get the state of the job and return it to the user.
+Now let's add another endpoint that will allow us to get the state of the job. We can get the job by its ID with the `getJobById()` method. Then we can simply return the state of the job to the user.
 
 ```js
 app.get('/tts/:id', async (req, res) => {
-  const job = golem.getJobById(req.params.id)
-  try {
-    const state = await job.fetchState()
-    res.send(state)
-  } catch (err) {
+  const job = golemClient.getJobById(req.params.id)
+  if (!job) {
     res.status(404).send('Job not found')
+    return
   }
+  res.send("Job's state is: " + job.state)
 })
 ```
 
 ## Getting the job results
 
-Finally, let's add an endpoint that will allow us to get the results of the job. We will use the `fetchResults()` method of the `Job` object to get the results of the job, and return them to the user. We will also serve the files from the `/public` directory, so that the user can easily listen to the results in a browser.
+Finally, let's add an endpoint that will allow us to get the results of the job. Here we will use the `getJobById()` method again to get the job by its ID. In case the job is still running, we will wait for it to finish with the `waitForResult()` method. Then we will get the results of the job with the `results` property and return them to the user.
+
+Let's also serve the files in the `/public` directory so that the user can access them. We will use the `express.static()` method for that.
 
 ```js
 // serve files in the /public directory
 app.use('/results', express.static('public'))
 
 app.get('/tts/:id/results', async (req, res) => {
-  const job = golem.getJobById(req.params.id)
-  try {
-    const results = await job.fetchResults()
-    res.send(
-      `Job completed successfully! Open the following link in your browser to listen to the result: http://localhost:${port}/results/${results}`
-    )
-  } catch (err) {
+  const job = golemClient.getJobById(req.params.id)
+  if (!job) {
     res.status(404).send('Job not found')
+    return
   }
+  if (job.state !== JobState.Done) {
+    await job.waitForResult()
+  }
+
+  const results = await job.results
+  res.send(
+    `Job completed successfully! Open the following link in your browser to listen to the result: http://localhost:${port}/results/${results}`
+  )
 })
 ```
 
@@ -222,24 +277,26 @@ Here's the full code of the `index.mjs` file:
 
 ```js
 import express from 'express'
-import { GolemNetwork } from '@golem-sdk/golem-js'
+import { GolemNetwork, JobState } from '@golem-sdk/golem-js'
 
 const app = express()
 const port = 3000
 
 app.use(express.text())
 
-const golem = new GolemNetwork({
-  image: 'severyn/espeak:latest',
-  yagnaOptions: { apiKey: 'try_golem' },
+const golemClient = new GolemNetwork({
+  yagna: {
+    apiKey: 'try_golem',
+  },
 })
-golem
+
+await golemClient
   .init()
   .then(() => {
     console.log('Connected to the Golem Network!')
   })
-  .catch((err) => {
-    console.error('Error connecting to the Golem Network:', err)
+  .catch((error) => {
+    console.error('Failed to connect to the Golem Network:', error)
     process.exit(1)
   })
 
@@ -248,7 +305,26 @@ app.post('/tts', async (req, res) => {
     res.status(400).send('Missing text parameter')
     return
   }
-  const job = await golem.createJob(async (ctx) => {
+  const job = golemClient.createJob({
+    package: {
+      imageTag: 'severyn/espeak:latest',
+    },
+  })
+
+  job.events.on('created', () => {
+    console.log('Job created')
+  })
+  job.events.on('started', () => {
+    console.log('Job started')
+  })
+  job.events.on('error', () => {
+    console.log('Job failed', job.error)
+  })
+  job.events.on('success', () => {
+    console.log('Job succeeded', job.results)
+  })
+
+  job.startWork(async (ctx) => {
     const fileName = `${Math.random().toString(36).slice(2)}.wav`
     await ctx
       .beginBatch()
@@ -261,28 +337,31 @@ app.post('/tts', async (req, res) => {
 })
 
 app.get('/tts/:id', async (req, res) => {
-  const job = golem.getJobById(req.params.id)
-  try {
-    const state = await job.fetchState()
-    res.send(state)
-  } catch (err) {
+  const job = golemClient.getJobById(req.params.id)
+  if (!job) {
     res.status(404).send('Job not found')
+    return
   }
+  res.send("Job's state is: " + job.state)
 })
 
 // serve files in the /public directory
 app.use('/results', express.static('public'))
 
 app.get('/tts/:id/results', async (req, res) => {
-  const job = golem.getJobById(req.params.id)
-  try {
-    const results = await job.fetchResults()
-    res.send(
-      `Job completed successfully! Open the following link in your browser to listen to the result: http://localhost:${port}/results/${results}`
-    )
-  } catch (err) {
+  const job = golemClient.getJobById(req.params.id)
+  if (!job) {
     res.status(404).send('Job not found')
+    return
   }
+  if (job.state !== JobState.Done) {
+    await job.waitForResult()
+  }
+
+  const results = await job.results
+  res.send(
+    `Job completed successfully! Open the following link in your browser to listen to the result: http://localhost:${port}/results/${results}`
+  )
 })
 
 app.listen(port, () => {
@@ -290,7 +369,8 @@ app.listen(port, () => {
 })
 
 process.on('SIGINT', async () => {
-  await golem.close()
+  // cancel and cleanup all running jobs
+  await golemClient.close()
   process.exit(0)
 })
 ```
