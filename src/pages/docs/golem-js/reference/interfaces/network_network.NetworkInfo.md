@@ -25,7 +25,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/network/network.ts:29](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/network.ts#L29)
+[src/network/network.ts:29](https://github.com/golemfactory/golem-js/blob/9c218b4/src/network/network.ts#L29)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:30](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/network.ts#L30)
+[src/network/network.ts:30](https://github.com/golemfactory/golem-js/blob/9c218b4/src/network/network.ts#L30)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:31](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/network.ts#L31)
+[src/network/network.ts:31](https://github.com/golemfactory/golem-js/blob/9c218b4/src/network/network.ts#L31)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:32](https://github.com/golemfactory/golem-js/blob/c827e77/src/network/network.ts#L32)
+[src/network/network.ts:32](https://github.com/golemfactory/golem-js/blob/9c218b4/src/network/network.ts#L32)

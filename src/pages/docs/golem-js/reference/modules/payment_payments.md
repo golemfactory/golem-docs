@@ -28,4 +28,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/c827e77/src/payment/payments.ts#L14)
+[src/payment/payments.ts:14](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/payments.ts#L14)

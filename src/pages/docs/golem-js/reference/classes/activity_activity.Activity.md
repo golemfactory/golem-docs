@@ -38,7 +38,7 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L56)
+[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L56)
 
 ___
 
@@ -50,7 +50,7 @@ Agreement
 
 #### Defined in
 
-[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L57)
+[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L57)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L58)
+[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L58)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:59](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L59)
+[src/activity/activity.ts:59](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L59)
 
 ## Methods
 
@@ -101,7 +101,7 @@ Activity
 
 #### Defined in
 
-[src/activity/activity.ts:73](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L73)
+[src/activity/activity.ts:73](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L73)
 
 ___
 
@@ -125,7 +125,7 @@ Execute script
 
 #### Defined in
 
-[src/activity/activity.ts:90](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L90)
+[src/activity/activity.ts:90](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L90)
 
 ___
 
@@ -143,7 +143,7 @@ boolean
 
 #### Defined in
 
-[src/activity/activity.ts:119](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L119)
+[src/activity/activity.ts:119](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L119)
 
 ___
 
@@ -165,7 +165,7 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:131](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L131)
+[src/activity/activity.ts:131](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L131)
 
 ___
 
@@ -185,4 +185,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:148](https://github.com/golemfactory/golem-js/blob/c827e77/src/activity/activity.ts#L148)
+[src/activity/activity.ts:148](https://github.com/golemfactory/golem-js/blob/9c218b4/src/activity/activity.ts#L148)

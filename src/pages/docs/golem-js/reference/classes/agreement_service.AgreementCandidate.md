@@ -37,7 +37,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L16)
+[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/service.ts#L15)
 
 ## Properties
 
@@ -47,7 +47,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L15)
+[src/agreement/service.ts:14](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/service.ts#L14)
 
 ___
 
@@ -57,4 +57,4 @@ ___
 
 #### Defined in
 
-[src/agreement/service.ts:16](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L16)
+[src/agreement/service.ts:15](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/service.ts#L15)

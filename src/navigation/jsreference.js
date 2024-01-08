@@ -190,6 +190,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/package_package.Package"
           },
 {
+            title: "AgreementPaymentProcess",
+            href: "/docs/golem-js/reference/classes/payment_agreement_payment_process.AgreementPaymentProcess"
+          },
+{
             title: "Payments",
             href: "/docs/golem-js/reference/classes/payment_payments.Payments"
           },
@@ -463,6 +467,10 @@ export const navigation = [
 {
             title: "Package_package",
             href: "/docs/golem-js/reference/modules/package_package"
+          },
+{
+            title: "Payment_agreement_payment_process",
+            href: "/docs/golem-js/reference/modules/payment_agreement_payment_process"
           },
 {
             title: "Payment_config",

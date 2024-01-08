@@ -43,4 +43,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/agreement/service.ts:19](https://github.com/golemfactory/golem-js/blob/c827e77/src/agreement/service.ts#L19)
+[src/agreement/service.ts:18](https://github.com/golemfactory/golem-js/blob/9c218b4/src/agreement/service.ts#L18)
