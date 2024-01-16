@@ -54,9 +54,9 @@ gunzip golem-gpu-live-latest.img.xz
 
 Done! The unzipped file should take up about 8.6 GB.
 
-## 2. Record image to SSD
+## 2. Flash image to SSD
 
-In the second step, you need to burn the unzipped `gpu-golem-live` image to an external SSD. To do this, you can use free software (such as balenaEtcher) or a command in the terminal.
+In the second step, you need to flash the unzipped `gpu-golem-live` image to an external SSD. To do this, you can use free software (such as balenaEtcher) or a command in the terminal.
 
 You can use dd to save the extracted image to the SSD. Connect the SSD to your computer and then check its path on your system using `sudo fdisk -l` (Linux) or `diskutil list` (macOS). Assuming the SSD is referred to on the system as `/dev/disk4`, and the image file (named `golem-gpu-live-latest.img`) is in the `/Downloads` directory you can use:
 
@@ -76,7 +76,7 @@ Download the appropriate software version for your system and run the wizard.
     ![Select target 1](/gpu/balena_2.png)
     ![Select target 2](/gpu/balena_3.png)
 
-3.  **Record the image!** - Click on the `Flash!` button to start the recording process
+3.  **Flash the image!** - Click on the `Flash!` button to start the flashing process
 
     ![Flash!](/gpu/balena_4.png)
 
@@ -84,17 +84,17 @@ Download the appropriate software version for your system and run the wizard.
 
     ![Yes, I'm sure](/gpu/balena_5.png)
 
-4.  **Recording** - in the last step you need to be patient. Recording the video, depending on the speed of the SSD, will take from 5 to 10 minutes. While recording, you will be able to watch the progression in real time.
+4.  **Flashing** - in the last step you need to be patient. Flashing the video, depending on the speed of the SSD, will take from 5 to 10 minutes. While flashing, you will be able to watch the progression in real time.
 
-    ![Recording 1](/gpu/balena_6.png)
+    ![Flashing 1](/gpu/balena_6.png)
 
-    ![Recording 2](/gpu/balena_7.png)
+    ![Flashing 2](/gpu/balena_7.png)
 
-    ![Recording 3](/gpu/balena_8.png)
+    ![Flashing 3](/gpu/balena_8.png)
 
-    ![Recording 4](/gpu/balena_9.png)
+    ![Flashing 4](/gpu/balena_9.png)
 
-    ![Recording 5](/gpu/balena_10.png)
+    ![Flashing 5](/gpu/balena_10.png)
 
 Done! Go to the next step.
 
@@ -169,7 +169,7 @@ In the next step you will learn how to configure the `gpu-golem-live` provider. 
 
     ![Setup GPU Golem Live 7](/gpu/setup_7.png)
 
-    _GLM init price means how much GLM you will receive for taking the order. It is recommended to set this value to 0, due to billing for rental time._
+    _The init price refers to the amount of GLM you will receive when you accept an order. It's advisable to set this value to 0, due to billing for rental time._
 
     ![Setup GPU Golem Live 8](/gpu/setup_8.png)
 
@@ -208,7 +208,7 @@ Find your provider online:
 
 ![Golem Network Stats 1](/gpu/monitoring_1.png)
 
-And monitor your salary:
+And monitor your earnings:
 
 ![Golem Network Stats 2](/gpu/monitoring_2.png)
 
