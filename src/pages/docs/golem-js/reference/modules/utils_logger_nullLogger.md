@@ -24,4 +24,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/logger/nullLogger.ts#L3)
+[src/utils/logger/nullLogger.ts:3](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/nullLogger.ts#L3)

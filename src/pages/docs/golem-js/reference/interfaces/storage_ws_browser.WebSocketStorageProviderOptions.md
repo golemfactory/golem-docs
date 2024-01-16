@@ -22,4 +22,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/storage/ws-browser.ts:8](https://github.com/golemfactory/golem-js/blob/9c218b4/src/storage/ws-browser.ts#L8)
+[src/storage/ws-browser.ts:8](https://github.com/golemfactory/golem-js/blob/a42794e/src/storage/ws-browser.ts#L8)
