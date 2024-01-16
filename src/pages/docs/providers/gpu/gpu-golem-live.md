@@ -3,7 +3,7 @@ title: Installation instructions - gpu-golem-live
 hide:
   - navigation
 description: gpu-golem-live project documentation
-type: Instructions
+type: noindex
 ---
 
 # ⚙️ Installation instructions - gpu-golem-live
