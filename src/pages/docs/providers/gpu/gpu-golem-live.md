@@ -32,7 +32,7 @@ In the first step, download and unzip the `gpu-golem-live` provider image.
 
 To do this, click on the link below or copy the address and paste it in your web browser. The download will begin.
 
-[Download image](https://mirror.notset.fr/golem/golem-gpu-live-231215T091610Z.img.xz)
+[Download image](https://gpu-provider.dev.golem.network/golem-gpu-live-latest.img.xz)
 
 ```bash
 https://gpu-provider.dev.golem.network/golem-gpu-live-latest.img.xz
