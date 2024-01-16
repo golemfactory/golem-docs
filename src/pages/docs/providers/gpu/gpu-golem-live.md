@@ -133,7 +133,7 @@ In the BIOS settings (for the MSI motherboard as an example), set the boot order
 
 ## 4. GPU provider configuration
 
-In the next step you will learn how to configure the `gpu-golem-live` provider. Remember that the configuration process is done only once, at the beginning and you can make any modifications later (see [FAQ](#frequently-asked-questions)).
+In the next step you will learn how to configure the `gpu-golem-live` provider. Remember that the configuration process is done only once, at the beginning and you can make any modifications later (see [FAQ](#frequently-asked-questions-3)).
 
 1.  **Select OS** - click `Enter` to confirm the selection **GOLEM GPU Live**
 
