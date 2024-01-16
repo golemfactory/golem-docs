@@ -79,6 +79,13 @@ Thanks to this arrangement, the requestor doesn't have to pay the transaction fe
 
 It also partially protects against dishonest requestors who would have the provider do some work for them and just choose not to pay - through a software error or a conscious decision.
 
+## Payment batching
+
+The payment driver built into Yagna supports batching payments to lower the number of blockchain transactions, thus saving on gas fees. To do so, modify
+your `.env` file or explicitly set the ENV variable `ERC20NEXT_SENDOUT_INTERVAL_SECS` to a desired duration, e.g. `ERC20NEXT_SENDOUT_INTERVAL_SECS=3600` to send payments every hour. Please note that this interval is the maximum duration; if an earlier payment is required due to a deadline negotiated with a provider, it will be prioritized and sent accordingly.
+
+For other options, refer to the [erc20next driver README.md](https://github.com/golemfactory/yagna/blob/master/core/payment-driver/erc20next/Readme.md).
+
 {% docnavigation title="Next steps" %}
 
 - [Layer 2 payments](/docs/golem/payments/layer-2-payments)
