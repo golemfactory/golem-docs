@@ -36,7 +36,7 @@ Fires when task executor is initialized and ready to be used.
 
 #### Defined in
 
-[src/executor/events.ts:8](https://github.com/golemfactory/golem-js/blob/9c218b4/src/executor/events.ts#L8)
+[src/executor/events.ts:8](https://github.com/golemfactory/golem-js/blob/a42794e/src/executor/events.ts#L8)
 
 ___
 
@@ -56,7 +56,7 @@ Fires when task executor is about to shut down, immediately after TaskExecutor.s
 
 #### Defined in
 
-[src/executor/events.ts:14](https://github.com/golemfactory/golem-js/blob/9c218b4/src/executor/events.ts#L14)
+[src/executor/events.ts:14](https://github.com/golemfactory/golem-js/blob/a42794e/src/executor/events.ts#L14)
 
 ___
 
@@ -76,4 +76,4 @@ Fires when task executor is completely terminated.
 
 #### Defined in
 
-[src/executor/events.ts:19](https://github.com/golemfactory/golem-js/blob/9c218b4/src/executor/events.ts#L19)
+[src/executor/events.ts:19](https://github.com/golemfactory/golem-js/blob/a42794e/src/executor/events.ts#L19)

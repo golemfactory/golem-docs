@@ -52,7 +52,7 @@ Process manager that controls the logic behind processing events related to an a
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:25](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L25)
+[src/payment/agreement_payment_process.ts:25](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L25)
 
 ## Properties
 
@@ -62,7 +62,7 @@ Process manager that controls the logic behind processing events related to an a
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:26](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L26)
+[src/payment/agreement_payment_process.ts:26](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L26)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:27](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L27)
+[src/payment/agreement_payment_process.ts:27](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L27)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:28](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L28)
+[src/payment/agreement_payment_process.ts:28](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L28)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:32](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L32)
+[src/payment/agreement_payment_process.ts:32](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L32)
 
 ## Methods
 
@@ -121,7 +121,7 @@ Adds the debit note to the process avoiding race conditions
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:38](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L38)
+[src/payment/agreement_payment_process.ts:38](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L38)
 
 ___
 
@@ -143,7 +143,7 @@ Adds the invoice to the process avoiding race conditions
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:45](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L45)
+[src/payment/agreement_payment_process.ts:45](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L45)
 
 ___
 
@@ -159,4 +159,4 @@ Tells if the process reached a point in which we can consider it as "finished"
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:52](https://github.com/golemfactory/golem-js/blob/9c218b4/src/payment/agreement_payment_process.ts#L52)
+[src/payment/agreement_payment_process.ts:52](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/agreement_payment_process.ts#L52)

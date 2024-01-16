@@ -48,7 +48,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:37](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L37)
+[src/utils/yagna/yagna.ts:37](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L37)
 
 ## Properties
 
@@ -58,7 +58,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:34](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L34)
+[src/utils/yagna/yagna.ts:34](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L34)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:35](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L35)
+[src/utils/yagna/yagna.ts:35](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L35)
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:46](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L46)
+[src/utils/yagna/yagna.ts:46](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L46)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:50](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L50)
+[src/utils/yagna/yagna.ts:50](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L50)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:54](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L54)
+[src/utils/yagna/yagna.ts:54](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L54)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:59](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L59)
+[src/utils/yagna/yagna.ts:59](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L59)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:81](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L81)
+[src/utils/yagna/yagna.ts:81](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L81)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:92](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L92)
+[src/utils/yagna/yagna.ts:92](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L92)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:96](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L96)
+[src/utils/yagna/yagna.ts:96](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L96)
 
 ___
 
@@ -198,4 +198,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:105](https://github.com/golemfactory/golem-js/blob/9c218b4/src/utils/yagna/yagna.ts#L105)
+[src/utils/yagna/yagna.ts:105](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L105)
