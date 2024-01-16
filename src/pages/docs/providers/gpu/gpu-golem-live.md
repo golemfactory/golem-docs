@@ -222,7 +222,7 @@ To connect to your own `gpu-golem-live` provider you can use SSH. To do this use
 ssh golem@ip
 ```
 
-_for example: ssh golem@10.92.1.32_
+For example: `ssh golem@10.92.1.32`.
 
 As IP, use the address that was displayed in the 6th step during the configuration of the provider. For authorization, use the password that was generated in step 5 during configuration.
 
