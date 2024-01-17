@@ -292,7 +292,7 @@ export function Layout({
           <article>
             {isExceptionPage ? null : (
               <div className="flex items-center gap-x-4 pb-4">
-                {type && <ArticleType type={type} />}
+                {type !== 'noindex' && <ArticleType type={type} />}
                 {tags &&
                   tags.split(',').map((tag, index, array) => (
                     <div
