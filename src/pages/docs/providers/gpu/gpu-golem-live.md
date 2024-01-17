@@ -48,9 +48,24 @@ The file takes about 2 GB and should download in about 3 minutes (on a 100 Mbps 
 
 Once the download is complete, unzip the file with any tool (such as the default archiving tool, The Unarchiver or 7-Zip) or use the command prompt:
 
+{% tabs %}
+{% tab label="Linux" %}
+```bash
+xz --decompress golem-gpu-live-latest.img.xz
 ```
+{% /tab %}
+{% tab label="Mac" %}
+```bash
 gunzip golem-gpu-live-latest.img.xz
 ```
+{% /tab %}
+{% tab label="Windows" %}
+```bash
+gunzip golem-gpu-live-latest.img.xz
+```
+{% /tab %}
+{% /tabs %}
+
 
 Done! The unzipped file should take up about 8.6 GB.
 
