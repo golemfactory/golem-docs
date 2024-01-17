@@ -59,11 +59,6 @@ xz --decompress golem-gpu-live-latest.img.xz
 gunzip golem-gpu-live-latest.img.xz
 ```
 {% /tab %}
-{% tab label="Windows" %}
-```bash
-gunzip golem-gpu-live-latest.img.xz
-```
-{% /tab %}
 {% /tabs %}
 
 
