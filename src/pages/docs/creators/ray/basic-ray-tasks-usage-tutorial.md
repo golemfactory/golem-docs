@@ -123,7 +123,7 @@ ip_addresses = ray.get(object_ids)
 
 The future(s) can be awaited with `ray.get`. It returns only when all the remote tasks are executed.
 
-## Conclussion
+## Conclusion
 
 And that's it - the code parallelization with Ray is done by choosing which parts of code can be executed remotely, decorating them with `@ray.remote`, then changing their execution to `.remote()`, and finally waiting for the results with `ray.get()`. Of course, remote Ray tasks can call other Ray remote tasks.
 
