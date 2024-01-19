@@ -20,6 +20,7 @@ To properly use the service as a provider in `gpu-golem-live`, it is necessary t
 - SSD with a minimum capacity of 64 GB, connected via fast USB (USB 3.2 recommended). Alternatively, you can use a high-speed USB Flash Drive (although this is not recommended).
 - A stable Internet connection with a minimum of 100 Mbps. (for both downloading and uploading data), via an RJ45-type network cable (Ethernet).
 - Own ETH wallet
+- VT-d (CPU-related) function enabled in BIOS
 
 By joining `gpu-golem-live`, you support AI infrastructure and manage your hardware resources flexibly, while getting the benefits of GLM tokens. If you have all of the above, you are welcome to join the project and work together for the development of artificial intelligence.
 
