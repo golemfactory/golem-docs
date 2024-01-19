@@ -173,15 +173,11 @@ In the next step you will learn how to configure the `gpu-golem-live` provider. 
 
     ![Setup GPU Golem Live 6](/gpu/setup_6.png)
 
-8.  **Set your prices** - in the following steps, set the hourly rate (in GLM) and the initial price (in GLM). These values are necessary to participate in the Golem Network and set prices for sharing resources.
+8.  **Set your price** - in the following step, set the hourly rate (in GLM). This value is necessary for participation in the Golem network and set prices for sharing resources.
 
-    _GLM per hour means how much GLM you will receive for a full hour of calculations._
+    _GLM per hour means how much GLM you will receive for a full hour of the HW usage._
 
     ![Setup GPU Golem Live 7](/gpu/setup_7.png)
-
-    _The init price refers to the amount of GLM you will receive when you accept an order. It's advisable to set this value to 0, due to billing for rental time._
-
-    ![Setup GPU Golem Live 8](/gpu/setup_8.png)
 
 9.  **GPU Selection and Configuration** - in the next step, the wizard will identify GPUs and allow you to select one of them. The selected GPU will be configured to share resources on the Golem network.
 
