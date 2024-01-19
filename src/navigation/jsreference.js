@@ -178,6 +178,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/market_proposal.Proposal"
           },
 {
+            title: "ProposalsBatch",
+            href: "/docs/golem-js/reference/classes/market_proposals_batch.ProposalsBatch"
+          },
+{
             title: "NetworkError",
             href: "/docs/golem-js/reference/classes/network_network.NetworkError"
           },
@@ -261,10 +265,6 @@ export const navigation = [
 {
             title: "TaskState",
             href: "/docs/golem-js/reference/enums/task_task.TaskState"
-          },
-{
-            title: "LogLevel",
-            href: "/docs/golem-js/reference/enums/utils_logger_logger.LogLevel"
           }
         ]
       },
@@ -290,6 +290,10 @@ export const navigation = [
 {
             title: "StreamingBatchEvent",
             href: "/docs/golem-js/reference/interfaces/activity_results.StreamingBatchEvent"
+          },
+{
+            title: "ProviderInfo",
+            href: "/docs/golem-js/reference/interfaces/agreement_agreement.ProviderInfo"
           },
 {
             title: "AgreementDTO",
@@ -393,6 +397,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/activity_results"
           },
 {
+            title: "Agreement_agreement",
+            href: "/docs/golem-js/reference/modules/agreement_agreement"
+          },
+{
             title: "Agreement_service",
             href: "/docs/golem-js/reference/modules/agreement_service"
           },
@@ -439,6 +447,10 @@ export const navigation = [
 {
             title: "Market_proposal",
             href: "/docs/golem-js/reference/modules/market_proposal"
+          },
+{
+            title: "Market_proposals_batch",
+            href: "/docs/golem-js/reference/modules/market_proposals_batch"
           },
 {
             title: "Market_service",
@@ -535,10 +547,6 @@ export const navigation = [
 {
             title: "Utils_env",
             href: "/docs/golem-js/reference/modules/utils_env"
-          },
-{
-            title: "Utils_logger_consoleLogger",
-            href: "/docs/golem-js/reference/modules/utils_logger_consoleLogger"
           },
 {
             title: "Utils_logger_defaultLogger",

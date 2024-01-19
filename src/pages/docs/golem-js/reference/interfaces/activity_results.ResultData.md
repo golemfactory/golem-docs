@@ -41,7 +41,7 @@ Index of script command
 
 #### Defined in
 
-[src/activity/results.ts:10](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L10)
+[src/activity/results.ts:10](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L10)
 
 ___
 
@@ -53,7 +53,7 @@ The datetime of the event on which the result was received
 
 #### Defined in
 
-[src/activity/results.ts:12](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L12)
+[src/activity/results.ts:12](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L12)
 
 ___
 
@@ -65,7 +65,7 @@ If is success
 
 #### Defined in
 
-[src/activity/results.ts:14](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L14)
+[src/activity/results.ts:14](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L14)
 
 ___
 
@@ -77,7 +77,7 @@ stdout of script command
 
 #### Defined in
 
-[src/activity/results.ts:16](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L16)
+[src/activity/results.ts:16](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L16)
 
 ___
 
@@ -89,7 +89,7 @@ stderr of script command
 
 #### Defined in
 
-[src/activity/results.ts:18](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L18)
+[src/activity/results.ts:18](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L18)
 
 ___
 
@@ -101,7 +101,7 @@ an error message if the result is not successful
 
 #### Defined in
 
-[src/activity/results.ts:20](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L20)
+[src/activity/results.ts:20](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L20)
 
 ___
 
@@ -113,7 +113,7 @@ Is batch of already finished
 
 #### Defined in
 
-[src/activity/results.ts:22](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L22)
+[src/activity/results.ts:22](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L22)
 
 ___
 
@@ -125,4 +125,4 @@ In case the command was related to upload or download, this will contain the tra
 
 #### Defined in
 
-[src/activity/results.ts:25](https://github.com/golemfactory/golem-js/blob/9137662/src/activity/results.ts#L25)
+[src/activity/results.ts:25](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/activity/results.ts#L25)

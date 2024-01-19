@@ -42,7 +42,7 @@ The Golem Network class provides a high-level API for running jobs on the Golem 
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:22](https://github.com/golemfactory/golem-js/blob/9137662/src/golem_network/golem_network.ts#L22)
+[src/golem_network/golem_network.ts:22](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/golem_network/golem_network.ts#L22)
 
 ## Methods
 
@@ -56,7 +56,7 @@ The Golem Network class provides a high-level API for running jobs on the Golem 
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:26](https://github.com/golemfactory/golem-js/blob/9137662/src/golem_network/golem_network.ts#L26)
+[src/golem_network/golem_network.ts:26](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/golem_network/golem_network.ts#L26)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:30](https://github.com/golemfactory/golem-js/blob/9137662/src/golem_network/golem_network.ts#L30)
+[src/golem_network/golem_network.ts:30](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/golem_network/golem_network.ts#L30)
 
 ___
 
@@ -99,7 +99,7 @@ This method does not start any work on the network, use [Job.startWork](job_job.
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:41](https://github.com/golemfactory/golem-js/blob/9137662/src/golem_network/golem_network.ts#L41)
+[src/golem_network/golem_network.ts:41](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/golem_network/golem_network.ts#L41)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:51](https://github.com/golemfactory/golem-js/blob/9137662/src/golem_network/golem_network.ts#L51)
+[src/golem_network/golem_network.ts:51](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/golem_network/golem_network.ts#L51)
 
 ___
 
@@ -135,4 +135,4 @@ Close the connection to the Yagna service and cancel all running jobs.
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:60](https://github.com/golemfactory/golem-js/blob/9137662/src/golem_network/golem_network.ts#L60)
+[src/golem_network/golem_network.ts:60](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/golem_network/golem_network.ts#L60)
