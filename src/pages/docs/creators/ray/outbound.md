@@ -198,7 +198,7 @@ Now is the time to stop the cluster with `ray down outbound.yaml`, and that is i
 
 Well done!
 
-## Conclussion
+## Conclusion
 
 In this article you:
 - learned the basics of accessing arbitrary external URLs with Ray on Golem
