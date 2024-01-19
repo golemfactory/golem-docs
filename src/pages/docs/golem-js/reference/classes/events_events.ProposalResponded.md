@@ -10,7 +10,7 @@ type: "JS API Reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `providerId`: `string` ; `counteringProposalId`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `provider`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) ; `counteringProposalId`: `string`  }\>
 
   ↳ **`ProposalResponded`**
 
@@ -38,7 +38,7 @@ type: "JS API Reference"
 | :------ | :------ |
 | `data` | `Object` |
 | `data.id` | `string` |
-| `data.providerId` | `string` |
+| `data.provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 | `data.counteringProposalId` | `string` |
 
 #### Returns
@@ -51,7 +51,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L28)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L29)
 
 ## Properties
 
@@ -64,7 +64,7 @@ type: "JS API Reference"
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
-| `providerId` | `string` |
+| `provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 | `counteringProposalId` | `string` |
 
 #### Inherited from
@@ -73,7 +73,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L16)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L17)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L17)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L18)
 
 ___
 
@@ -101,4 +101,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/9137662/src/events/events.ts#L18)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L19)

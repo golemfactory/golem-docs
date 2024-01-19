@@ -37,7 +37,7 @@ The selector used when choosing a provider from a pool of existing offers (from 
 
 #### Defined in
 
-[src/agreement/service.ts:23](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/service.ts#L23)
+[src/agreement/service.ts:23](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/service.ts#L23)
 
 ___
 
@@ -49,7 +49,7 @@ The maximum number of events fetched in one request call
 
 #### Defined in
 
-[src/agreement/service.ts:25](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/service.ts#L25)
+[src/agreement/service.ts:25](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/service.ts#L25)
 
 ___
 
@@ -61,7 +61,7 @@ interval for fetching agreement events
 
 #### Defined in
 
-[src/agreement/service.ts:27](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/service.ts#L27)
+[src/agreement/service.ts:27](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/service.ts#L27)
 
 ___
 
@@ -77,7 +77,7 @@ AgreementOptions.yagnaOptions
 
 #### Defined in
 
-[src/agreement/agreement.ts:36](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/agreement.ts#L36)
+[src/agreement/agreement.ts:33](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/agreement.ts#L33)
 
 ___
 
@@ -93,7 +93,7 @@ AgreementOptions.agreementRequestTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:38](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/agreement.ts#L38)
+[src/agreement/agreement.ts:35](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/agreement.ts#L35)
 
 ___
 
@@ -109,7 +109,7 @@ AgreementOptions.agreementWaitingForApprovalTimeout
 
 #### Defined in
 
-[src/agreement/agreement.ts:40](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/agreement.ts#L40)
+[src/agreement/agreement.ts:37](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/agreement.ts#L37)
 
 ___
 
@@ -125,7 +125,7 @@ AgreementOptions.logger
 
 #### Defined in
 
-[src/agreement/agreement.ts:42](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/agreement.ts#L42)
+[src/agreement/agreement.ts:39](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/agreement.ts#L39)
 
 ___
 
@@ -141,4 +141,4 @@ AgreementOptions.eventTarget
 
 #### Defined in
 
-[src/agreement/agreement.ts:44](https://github.com/golemfactory/golem-js/blob/9137662/src/agreement/agreement.ts#L44)
+[src/agreement/agreement.ts:41](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/agreement/agreement.ts#L41)

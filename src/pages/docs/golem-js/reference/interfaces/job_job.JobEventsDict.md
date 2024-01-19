@@ -37,7 +37,7 @@ Emitted immediately after the job is created and initialization begins.
 
 #### Defined in
 
-[src/job/job.ts:32](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L32)
+[src/job/job.ts:32](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/job/job.ts#L32)
 
 ___
 
@@ -57,7 +57,7 @@ Emitted when the job finishes initialization and work begins.
 
 #### Defined in
 
-[src/job/job.ts:36](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L36)
+[src/job/job.ts:36](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/job/job.ts#L36)
 
 ___
 
@@ -77,7 +77,7 @@ Emitted when the job completes successfully and cleanup begins.
 
 #### Defined in
 
-[src/job/job.ts:40](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L40)
+[src/job/job.ts:40](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/job/job.ts#L40)
 
 ___
 
@@ -103,7 +103,7 @@ Emitted when the job fails and cleanup begins.
 
 #### Defined in
 
-[src/job/job.ts:44](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L44)
+[src/job/job.ts:44](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/job/job.ts#L44)
 
 ___
 
@@ -123,7 +123,7 @@ Emitted when the job is canceled by the user.
 
 #### Defined in
 
-[src/job/job.ts:48](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L48)
+[src/job/job.ts:48](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/job/job.ts#L48)
 
 ___
 
@@ -143,4 +143,4 @@ Emitted when the job finishes cleanup after success, error or cancelation.
 
 #### Defined in
 
-[src/job/job.ts:52](https://github.com/golemfactory/golem-js/blob/9137662/src/job/job.ts#L52)
+[src/job/job.ts:52](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/job/job.ts#L52)

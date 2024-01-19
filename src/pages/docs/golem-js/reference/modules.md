@@ -12,6 +12,7 @@ type: "JS API Reference"
 
 - [activity/activity](modules/activity_activity)
 - [activity/results](modules/activity_results)
+- [agreement/agreement](modules/agreement_agreement)
 - [agreement/service](modules/agreement_service)
 - [agreement/strategy](modules/agreement_strategy)
 - [error/golem-error](modules/error_golem_error)
@@ -24,6 +25,7 @@ type: "JS API Reference"
 - [market/demand](modules/market_demand)
 - [market/helpers](modules/market_helpers)
 - [market/proposal](modules/market_proposal)
+- [market/proposals\_batch](modules/market_proposals_batch)
 - [market/service](modules/market_service)
 - [market/strategy](modules/market_strategy)
 - [network/network](modules/network_network)
@@ -48,7 +50,6 @@ type: "JS API Reference"
 - [task/task](modules/task_task)
 - [task/work](modules/task_work)
 - [utils/env](modules/utils_env)
-- [utils/logger/consoleLogger](modules/utils_logger_consoleLogger)
 - [utils/logger/defaultLogger](modules/utils_logger_defaultLogger)
 - [utils/logger/jsonLogger](modules/utils_logger_jsonLogger)
 - [utils/logger/logger](modules/utils_logger_logger)

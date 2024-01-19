@@ -24,4 +24,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/debit_note.ts:9](https://github.com/golemfactory/golem-js/blob/9137662/src/payment/debit_note.ts#L9)
+[src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/payment/debit_note.ts#L11)

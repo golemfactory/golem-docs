@@ -41,12 +41,13 @@ Proposal module - an object representing an offer in the state of a proposal fro
 - [reject](market_proposal.Proposal#reject)
 - [respond](market_proposal.Proposal#respond)
 - [hasPaymentPlatform](market_proposal.Proposal#haspaymentplatform)
+- [getEstimatedCost](market_proposal.Proposal#getestimatedcost)
 
 ## Constructors
 
 ### constructor
 
-• **new Proposal**(`subscriptionId`, `parentId`, `setCounteringProposalReference`, `api`, `model`, `demandRequest`, `eventTarget?`): [`Proposal`](market_proposal.Proposal)
+• **new Proposal**(`subscriptionId`, `parentId`, `setCounteringProposalReference`, `api`, `model`, `demandRequest`, `paymentPlatform`, `eventTarget?`): [`Proposal`](market_proposal.Proposal)
 
 Create proposal for given subscription ID
 
@@ -60,6 +61,7 @@ Create proposal for given subscription ID
 | `api` | `RequestorApi` | RequestorApi |
 | `model` | `Proposal` | ProposalModel |
 | `demandRequest` | `DemandOfferBase` | DemandOfferBase |
+| `paymentPlatform` | `string` |  |
 | `eventTarget?` | `EventTarget` | EventTarget |
 
 #### Returns
@@ -68,7 +70,7 @@ Create proposal for given subscription ID
 
 #### Defined in
 
-[src/market/proposal.ts:93](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L93)
+[src/market/proposal.ts:94](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L94)
 
 ## Properties
 
@@ -78,7 +80,7 @@ Create proposal for given subscription ID
 
 #### Defined in
 
-[src/market/proposal.ts:72](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L72)
+[src/market/proposal.ts:72](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L72)
 
 ___
 
@@ -88,24 +90,17 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:73](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L73)
+[src/market/proposal.ts:73](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L73)
 
 ___
 
 ### provider
 
-• `Readonly` **provider**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `name` | `string` |
+• `Readonly` **provider**: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
 
 #### Defined in
 
-[src/market/proposal.ts:74](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L74)
+[src/market/proposal.ts:74](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L74)
 
 ___
 
@@ -115,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:75](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L75)
+[src/market/proposal.ts:75](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L75)
 
 ___
 
@@ -125,7 +120,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:76](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L76)
+[src/market/proposal.ts:76](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L76)
 
 ___
 
@@ -135,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:77](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L77)
+[src/market/proposal.ts:77](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L77)
 
 ___
 
@@ -145,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:78](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L78)
+[src/market/proposal.ts:78](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L78)
 
 ## Accessors
 
@@ -159,7 +154,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:116](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L116)
+[src/market/proposal.ts:118](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L118)
 
 ___
 
@@ -173,7 +168,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:133](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L133)
+[src/market/proposal.ts:134](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L134)
 
 ## Methods
 
@@ -191,7 +186,7 @@ Use this method before executing any important logic, to ensure that you're work
 
 #### Defined in
 
-[src/market/proposal.ts:156](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L156)
+[src/market/proposal.ts:157](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L157)
 
 ___
 
@@ -205,7 +200,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:183](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L183)
+[src/market/proposal.ts:184](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L184)
 
 ___
 
@@ -219,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:187](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L187)
+[src/market/proposal.ts:188](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L188)
 
 ___
 
@@ -233,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:191](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L191)
+[src/market/proposal.ts:192](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L192)
 
 ___
 
@@ -247,7 +242,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:195](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L195)
+[src/market/proposal.ts:196](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L196)
 
 ___
 
@@ -267,7 +262,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:199](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L199)
+[src/market/proposal.ts:200](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L200)
 
 ___
 
@@ -287,7 +282,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:214](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L214)
+[src/market/proposal.ts:215](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L215)
 
 ___
 
@@ -307,4 +302,20 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:244](https://github.com/golemfactory/golem-js/blob/9137662/src/market/proposal.ts#L244)
+[src/market/proposal.ts:245](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L245)
+
+___
+
+### getEstimatedCost
+
+▸ **getEstimatedCost**(): `number`
+
+Proposal cost estimation based on CPU, Env and startup costs
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[src/market/proposal.ts:252](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposal.ts#L252)

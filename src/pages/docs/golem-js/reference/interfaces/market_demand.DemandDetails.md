@@ -23,7 +23,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/9137662/src/market/demand.ts#L15)
+[src/market/demand.ts:15](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L15)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:16](https://github.com/golemfactory/golem-js/blob/9137662/src/market/demand.ts#L16)
+[src/market/demand.ts:16](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L16)

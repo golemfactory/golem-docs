@@ -16,18 +16,30 @@ type: "JS API Reference"
 
 ### defaultLogger
 
-▸ **defaultLogger**(`filename?`): [`Logger`](../interfaces/utils_logger_logger.Logger)
+▸ **defaultLogger**(`namespace`): `Object`
+
+Creates a logger that uses the debug library. This logger is used by default by all entities in the SDK.
+If the namespace is not prefixed with `golem-js:`, it will be prefixed automatically.
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `filename?` | `string` |
+| `namespace` | `string` |
 
 #### Returns
 
-[`Logger`](../interfaces/utils_logger_logger.Logger)
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `child` | (`childNamespace`: `string`) => \{ child: (childNamespace: string) =\> ...; info: (msg: string) =\> void; error: (msg: string) =\> void; warn: (msg: string) =\> void; debug: (msg: string) =\> void; log: (msg: string, ctx?: Error \| Record\<...\> \| undefined) =\> void; } |
+| `info` | (`msg`: `string`) => `void` |
+| `error` | (`msg`: `string`) => `void` |
+| `warn` | (`msg`: `string`) => `void` |
+| `debug` | (`msg`: `string`) => `void` |
+| `log` | (`msg`: `string`, `ctx?`: `Error` \| `Record`\<`string`, `unknown`\>) => `void` |
 
 #### Defined in
 
-[src/utils/logger/defaultLogger.ts:3](https://github.com/golemfactory/golem-js/blob/9137662/src/utils/logger/defaultLogger.ts#L3)
+[src/utils/logger/defaultLogger.ts:7](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/utils/logger/defaultLogger.ts#L7)
