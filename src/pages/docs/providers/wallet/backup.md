@@ -1,6 +1,6 @@
 ---
-title: Golem Wallet Backup and Security Tutorial description
-description: This comprehensive tutorial provides step-by-step instructions for backing up and securing your Golem wallet, including simple exports and password protection for your GLM and ETH tokens. 
+title: How to backup your Golem wallet
+description: This tutorial provides step-by-step instructions for backing up and securing your Golem wallet, including simple exports and password protection for your GLM and ETH tokens. 
 type: Guide
 ---
 
