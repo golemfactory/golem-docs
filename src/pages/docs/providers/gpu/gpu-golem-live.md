@@ -296,7 +296,7 @@ Do you have additional questions? Join [➜ https://discord.gg/golem](https://di
 
 **How to download logs from the provider?**
 
-First, open terminal (don't connect to ssh) and use the command bellow:
+First, open your terminal (don't connect to ssh) and run the commands below:
 
 ```bash
 scp golem@[your provider's ip]:/home/golem/golemwz.log golemwz.log
