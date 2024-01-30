@@ -15,7 +15,7 @@ When payments are performed directly on Ethereum, each payment must be executed 
 
 ## Enter layer 2
 
-[Migration of our token to a new, ERC-20-compliant contract](https://glm.golem.network/) enabled us to not only leverage decentralized exchanges and other DeFi platforms on Ethereum but most importantly, made it possible to utilize a variety of Layer 2 solutions popping up within the Ethereum ecosystem.
+[Migration of our token to a new, ERC-20-compliant contract](https://migration-tracker.golem.network/) enabled us to not only leverage decentralized exchanges and other DeFi platforms on Ethereum but most importantly, made it possible to utilize a variety of Layer 2 solutions popping up within the Ethereum ecosystem.
 
 The common feature of all the platforms gathered under the "Layer 2" umbrella is that they move most of the transactions to their side chains while maintaining a varying degree of synchronization with the base Ethereum chain. 
 
