@@ -292,4 +292,20 @@ ya-provider preset activate vm-nvidia
 
 ---
 
+**How to download logs from the provider?**
+
+First, open your terminal (don't connect to ssh) and run the commands below:
+
+```bash
+scp golem@[your provider's ip]:/home/golem/golemwz.log golemwz.log
+scp golem@[your provider's ip]:/home/golem/.local/share/yagna/yagna_rCURRENT.log yagna_rCURRENT.log
+```
+
+For example: `scp golem@10.92.1.32:/home/golem/golemwz.log golemwz.log`.
+
+To download the logs, you will need to provide a password. The files will download to the path where you currently are.
+
+---
+
 Do you have additional questions? Join [➜ https://discord.gg/golem](https://discord.gg/golem)
+
