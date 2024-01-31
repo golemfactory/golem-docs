@@ -135,6 +135,14 @@ yagna id export --file-path=./key.json
 
 The resultant key.json file in the directory you ran the command from will contain the private key for your Golem wallet.
 
+#### Flushing your payments to providers
+
+[Philip noticed that development work will result in potential requestor termination before payments are accepted, causing annoyance amongst providers. Maybe we can:
+
+- provide intructions how to accept outstanding payments
+- advise participants to thank the community to support their hackathon efforts and flush the payments at the end of the event (possible with a script that would do it automatically)
+  ]
+
 ### Running a Quickstart
 
 Create a new Node.js project and install the Golem SDK by entering the following commands in your terminal:
