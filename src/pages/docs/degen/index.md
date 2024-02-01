@@ -24,7 +24,7 @@ For the resources consumed on the Golem Network, you pay in **GLMs**. GLM is an 
 
 Degen hackathon participants do not need to fund their activities on the Golem Network during the event. They can apply for funds using the following process:
 
-1. Validate legitigibility.
+1. Validate eligibility.
 2. Create a metamask wallet for your team.
 3. Apply for funds from the Golme factory using this [link]()
 4. Split the funds to Yagna wallets used by team members.
