@@ -258,7 +258,7 @@ The JS SDK consists of the following components:
 
 ### JS SDK example projects
 
-**tesseract-ocr-golem** is a golem-js based library for running Tesseract OCR jobs on the Golem Network.
+**tesseract-ocr-golem** - a golem-js based library for running Tesseract OCR jobs on the Golem Network.
 
 [GitHub Repo](https://github.com/golemfactory/tesseract-ocr-golem)
 
@@ -268,9 +268,9 @@ The JS SDK consists of the following components:
 
 ## Golem tools:
 
-**Yagna** is the foundational service that allows users to connect with and interact with the Golem Network.
+**Yagna** - the foundational service that allows users to connect with and interact with the Golem Network.
 
-**Gvmkit-build** is a tool designed to create custom images for virtual machines on provider nodes within the Golem Network. It specifically converts Dockerfiles into Golem-compatible VM images, known as GVMI.
+**Gvmkit-build** - a tool designed to create custom images for virtual machines on provider nodes within the Golem Network. It specifically converts Dockerfiles into Golem-compatible VM images, known as GVMI.
 
 You find a list of available instructions for Golem tools [here](https://docs.golem.network/docs/creators/javascript/examples/tools).
 
