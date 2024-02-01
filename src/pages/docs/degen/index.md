@@ -214,7 +214,7 @@ node requestor.mjs
 
 You can find an explanation of the structure of the above requestor script [here](/docs/creators/javascript/tutorials/quickstart-explained).
 
-This standard quickstart example includes several modifications:
+The standard quickstart example has been altered with the following modifications:
 
 * acceptablePrice filter sets the upper price limit for providers.
 * The verifiedProviders filter is specifically designed to connect with the most trustworthy and reliable providers in the network. This feature is particularly beneficial during events like hackathons, where it's essential to focus on coding without unnecessary interruptions. By selecting only the most reliable providers, you significantly reduce the likelihood of encountering network-related issues or disruptions that could arise from less dependable providers, thus streamlining your development and troubleshooting process.
