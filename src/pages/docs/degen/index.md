@@ -8,25 +8,25 @@ type: noindex
 
 # Golem Network Manual for DeGen Hackhaton participants.
 
-{% alert level="warning" %}
-This section contains an extract from Golem Network documentation for Degen Hackathon participants.
+{% alert level="info" %}
+This section contains an extract from the Golem Network documentation for Degen Hackathon participants.
 
 Should you encounter any problems, please reach out to us via our [Degen Discord channel](https://chat.golem.network/) or consult the Golem representative present on-site during the event.
 {% /alert %}
 
 ## Intro to Golem Network and JS API.
 
-**Golem Network** is a P2P network that consists of many nodes. Each node is a system with a `Yagna` service running on it. The nodes that offer their resources to others are called **providers**. The nodes that hire resources are called **requestors**.
+**Golem Network** is a P2P network that consists of many nodes. Each node is a system with a `Yagna` service running on it. The nodes that offer their resources to others are called **providers**. The nodes that rents resources are called **requestors**.
 
-**Yagna** is a service that enables the user to interact with the network. In practice, the user creates a `requestor script` utilizing one of the Golem SDKs. The script is used to define what resources are needed, and what should be run on the provider's node and to orchestrate all activities.
+**Yagna** is a service that enables the user to interact with the network. In practice, the user creates a **requestor script** utilizing one of the available Golem SDK's. The script is used to define what resources are needed, and what should be run on the provider's node and to orchestrate all activities.
 
-For the resources consumed on the Golem Network, you pay in **GLMs**. GLM is an ERC-20 utility token. When you run Yagna for the first time on your computer, it will create a wallet for you.
+For the resources consumed on the Golem Network, you pay in **GLM**. GLM is an ERC-20 utility token. When you run Yagna for the first time on your computer, it will create a wallet for you.
 
 Degen hackathon participants do not need to fund their activities on the Golem Network during the event. They can apply for funds using the following process:
 
-1. Validate legitigibility.
+1. Validate eligibility.
 2. Create a metamask wallet for your team.
-3. Apply for funds from the Golme factory using this [link]()
+3. Apply for funds from the Golem factory using this [link]()
 4. Split the funds to Yagna wallets used by team members.
 
 ## Getting started:
@@ -46,20 +46,19 @@ You might be asked to modify your PATH afterward.
 {% /tab %}
 {% tab label="Windows" %}
 
-Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
+For Windows, follow these steps for manual installation:
 
-1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
-2. Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
-3. Copy those files to `C:\Windows\System32`.
-
+Visit the [latest release page](https://github.com/golemfactory/yagna/releases) on GitHub and download the package named **golem-requestor** for Windows.
+Extract the downloaded archive to retrieve yagna.exe and gftp.exe.
+Copy these files to `C:\Windows\System32` to complete the installation.
+Note: Windows installation is manual as there is no package manager integration.
 {% /tab %}
 {% tab label="Unix Manual installation" %}
 
-Alternatively, if you can't install it in an easy way, you will do it manually in the following way:
+If you prefer manual installation on Unix-like systems:
 
-1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
-2. Unpack `yagna` and `gftp` binaries and put them somewhere in your PATH (e.g. copy them to /usr/local/bin on Unix-like systems) or add the directory you placed the binaries into your PATH.
-
+Download the [golem-requestor](https://github.com/golemfactory/yagna/releases) package suitable for your platform from the latest releases on GitHub.
+Unpack the yagna and gftp binaries and place them in your PATH, for example, in `/usr/local/bin`, or alternatively add the directory containing these binaries to your `PATH`.
 {% /tab %}
 {% /tabs %}
 
@@ -73,18 +72,18 @@ yagna service run
 
 ### A few additional useful steps and yagna commands
 
-The steps below are not part of installation process, however they will be useful at later stages:
+The steps below are not part of the installation process, however they will be useful at later stages:
 
-#### Creation of unique api-key
+#### Creating a unique app-key
 
-The api-key will let your requestor script use the Yagna API.
+The app-key purpose is to allow your requestor script to securely access and interact with the Yagna API
 Open a terminal (command line window) and create the app-key named `requestor`:
 
 ```bash
-shell yagna app-key create requestor
+yagna app-key create requestor
 ```
 
-Copy the value output of this command and use it to set up YAGNA_APPKEY variable.
+After running this command, make sure to copy its output. This output is your app-key, which you will need to use for setting up the `YAGNA_APPKEY` environment variable.
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}
@@ -103,29 +102,31 @@ set YAGNA_APPKEY==<32-char>
 {% /tab %}
 {% /tabs %}
 
-Note: you can check you key value any time by using:
+Note: If you need to find your key value again at any time, you can retrieve it using the following command:
 
 ```bash
 yagna app-key list
 ```
 
-and copy the value listed in the key column.
+and locate the desired value in the 'key' column for copying.
 
 #### Getting the address of your address wallet
 
-This may be useful to know where to transfer funds to supply your Yagna wallet:
+To find out where to transfer funds for your Yagna wallet, you can easily obtain the address of your wallet with this command:
 
 ```bash
 yagna id show
 ```
 
-#### Checking the status of your account
+This command is not only used to find your wallet address, but it also serves as the unique identifier of your node within the network.
+
+#### Verifying Your Wallet's Balance
 
 ```bash
 yagna payment status --network=polygon --driver=erc20
 ```
 
-#### Securing the Yagna Wallet
+#### Backing Up Your Golem Wallet
 
 To create a backup of your Golem wallet, export the keystore with:
 
@@ -133,7 +134,7 @@ To create a backup of your Golem wallet, export the keystore with:
 yagna id export --file-path=./key.json
 ```
 
-The resultant key.json file in the directory you ran the command from will contain the private key for your Golem wallet.
+This will generate a file named `key.json` in the directory where the command was run. This file contains the private key of your Golem wallet.
 
 #### Flushing your payments to providers
 
@@ -154,7 +155,7 @@ npm init
 npm install @golem-sdk/golem-js
 ```
 
-Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
+Next, create a file named requestor.mjs and paste the following content into it. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
 
 ```js
 import {
@@ -178,7 +179,7 @@ const whiteList = ProposalFilters.whiteListProposalIdsFilter(verifiedProviders)
 
 ;(async function main() {
   const executor = await TaskExecutor.create({
-    // What do you want to run
+    // The image you'd like to run on the provider(s)
     package: 'golem/node:latest',
 
     // How much you wish to spend
@@ -186,10 +187,9 @@ const whiteList = ProposalFilters.whiteListProposalIdsFilter(verifiedProviders)
     proposalFilter: async (proposal) =>
       (await acceptablePrice(proposal)) && (await whiteList(proposal)),
 
-    // Where you want to spend
+    // Which network you want to spend GLM on
     payment: {
       network: 'polygon',
-      //network: 'holesky', - to be removed
     },
   })
 
@@ -206,7 +206,7 @@ const whiteList = ProposalFilters.whiteListProposalIdsFilter(verifiedProviders)
 })()
 ```
 
-Run the command:
+To execute the script, run:
 
 ```bash
 node requestor.mjs
@@ -214,37 +214,39 @@ node requestor.mjs
 
 You can find an explanation of the structure of the above requestor script [here](/docs/creators/javascript/tutorials/quickstart-explained).
 
-The standard quickstart example has been modified by the following elements:
+This standard quickstart example includes several modifications:
 
-The `acceptablePrice` filter is defined to set the upper limit for the provider prices.
+* acceptablePrice filter sets the upper price limit for providers.
+* The verifiedProviders filter is specifically designed to connect with the most trustworthy and reliable providers in the network. This feature is particularly beneficial during events like hackathons, where it's essential to focus on coding without unnecessary interruptions. By selecting only the most reliable providers, you significantly reduce the likelihood of encountering network-related issues or disruptions that could arise from less dependable providers, thus streamlining your development and troubleshooting process.
+* payment: { network: 'polygon' } indicates that we would like to run the task on the mainnet.
 
-The `verifiedProviders` filter is used to engage only the most reliable providers. That can be useful during hackathon, as it lets you minimize the effort of troubleshooting your code for potential issues caused by events on the network caused by less reliable providers.
-
-`payment: { network: 'polygon', }` - informs Yagna that you want to run your tasks on the `mainnet``.
 
 {% alert level="info" %}
 
-The standard examples on the Golem Documentation portal are designed to use autoconfigured APP-KEY and to run on the test network. All these axamples can be modified according to changes specified above to run on the mainnet.
+Please note that the default examples provided in the Golem Documentation are set up to use an automatically configured APP-KEY and are intended to run on the testnet. However, you can adapt these examples to run on the mainnet by implementing the modifications outlined above.
 
 {% /alert %}
 
 ## Golem JS SDK:
 
-### Components of JS SDK
+### Components of the JS SDK
 
-JS SDK consists of the following components:
+The JS SDK consists of the following components:
 
 **@golem-sdk/golem-js** - a JavaScript API for developers allowing them to connect to their Golem nodes and manage their distributed, computational loads through Golem Network.
 
-[GitHub Repo](https://github.com/golemfactory/golem-js) [Documentation](https://docs.golem.network/docs/creators/javascript)
+[GitHub Repo](https://github.com/golemfactory/golem-js)
+[Documentation](https://docs.golem.network/docs/creators/javascript)
 
-**@golem-sdk/cli** - a companion tool for the Golem SDK. It facilitates a fast start with Golem Network by creating a new template for a new application, assisting with manifest creation, and letting you interactively test your custom image.
+**@golem-sdk/cli** - a companion tool for the Golem SDK. It facilitates a fast start with Golem Network by creating a new template for new applications, assisting with manifest creation for outbound networking, and lets you interactively test your custom image in the fastest way possible all without coding.
 
-[GitHub Repo](https://github.com/golemfactory/golem-sdk-cli) [Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
+[GitHub Repo](https://github.com/golemfactory/golem-sdk-cli)
+[Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
 
 **@golem-sdk/react** - a set of React hooks for working with the Golem Network.
 
-[GitHub Repo](https://github.com/golemfactory/golem-sdk-react) [Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
+[GitHub Repo](https://github.com/golemfactory/golem-sdk-react)
+[Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
 
 ### JS API documentation including examples and API Reference:
 
@@ -256,7 +258,7 @@ JS SDK consists of the following components:
 
 ### JS SDK example projects
 
-**tesseract-ocr-golem** - a golem-js based library allowing running Tesseract OCR jobs on top of Golem Network.
+**tesseract-ocr-golem** is a golem-js based library for running Tesseract OCR jobs on the Golem Network.
 
 [GitHub Repo](https://github.com/golemfactory/tesseract-ocr-golem)
 
@@ -266,9 +268,9 @@ JS SDK consists of the following components:
 
 ## Golem tools:
 
-**Yagna** - this is a core service that enables the user to connect and interact with the network.
+**Yagna** is the foundational service that allows users to connect with and interact with the Golem Network.
 
-**Gvmkit-build** - a tool that allows you to create custom images (used to build a vm on the provider's node).
+**Gvmkit-build** is a tool designed to create custom images for virtual machines on provider nodes within the Golem Network. It specifically converts Dockerfiles into Golem-compatible VM images, known as GVMI.
 
 You find a list of available instructions for Golem tools [here](https://docs.golem.network/docs/creators/javascript/examples/tools).
 
