@@ -266,7 +266,7 @@ The JS SDK consists of the following components:
 
 [GitHub Repo](https://github.com/golemfactory/react-image-classifier)
 
-## Golem tools:
+## Golem tools
 
 **Yagna** - the foundational service that allows users to connect with and interact with the Golem Network.
 
