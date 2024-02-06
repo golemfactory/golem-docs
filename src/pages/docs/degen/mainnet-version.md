@@ -6,7 +6,7 @@ description: Materials for hackathon participants
 type: noindex
 ---
 
-# Golem Network Manual for DeGen Hackhaton participants.
+# Golem Network manual for DeGen Hackathon participants.
 
 {% alert level="info" %}
 This section contains an extract from the Golem Network documentation for Degen Hackathon participants.
@@ -89,14 +89,14 @@ After running this command, make sure to copy its output. This output is your ap
 {% tab label="MacOS / Linux" %}
 
 ```bash
-export YAGNA_APPKEY==<32-char>
+export YAGNA_APPKEY=<32-char>
 ```
 
 {% /tab %}
 {% tab label="Windows" %}
 
 ```shell
-set YAGNA_APPKEY==<32-char>
+set YAGNA_APPKEY=<32-char>
 ```
 
 {% /tab %}
@@ -110,7 +110,7 @@ yagna app-key list
 
 and locate the desired value in the 'key' column for copying.
 
-#### Getting the address of your address wallet
+#### Getting the address of your wallet
 
 To find out where to transfer funds for your Yagna wallet, you can easily obtain the address of your wallet with this command:
 
@@ -120,7 +120,7 @@ yagna id show
 
 This command is not only used to find your wallet address, but it also serves as the unique identifier of your node within the network.
 
-#### Verifying Your Wallet's Balance
+#### Verifying your wallet's balance
 
 ```bash
 yagna payment status --network=polygon --driver=erc20
@@ -216,10 +216,9 @@ You can find an explanation of the structure of the above requestor script [here
 
 The standard quickstart example has been altered with the following modifications:
 
-* acceptablePrice filter sets the upper price limit for providers.
-* The verifiedProviders filter is specifically designed to connect with the most trustworthy and reliable providers in the network. This feature is particularly beneficial during events like hackathons, where it's essential to focus on coding without unnecessary interruptions. By selecting only the most reliable providers, you significantly reduce the likelihood of encountering network-related issues or disruptions that could arise from less dependable providers, thus streamlining your development and troubleshooting process.
-* payment: { network: 'polygon' } indicates that we would like to run the task on the mainnet.
-
+- acceptablePrice filter sets the upper price limit for providers.
+- The verifiedProviders filter is specifically designed to connect with the most trustworthy and reliable providers in the network. This feature is particularly beneficial during events like hackathons, where it's essential to focus on coding without unnecessary interruptions. By selecting only the most reliable providers, you significantly reduce the likelihood of encountering network-related issues or disruptions that could arise from less dependable providers, thus streamlining your development and troubleshooting process.
+- payment: { network: 'polygon' } indicates that we would like to run the task on the `mainnet`.
 
 {% alert level="info" %}
 
