@@ -153,7 +153,7 @@ npm init
 npm install @golem-sdk/golem-js
 ```
 
-Make sure you have created an app-key and exported its valua as [`YAGNA_APPKEY``](http://localhost:3000/docs/degen#creating-a-unique-app-key).
+Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY``](http://localhost:3000/docs/degen#creating-a-unique-app-key).
 
 Next, create a file named requestor.mjs and paste the following content into it. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
 
