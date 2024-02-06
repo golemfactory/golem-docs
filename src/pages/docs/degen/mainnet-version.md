@@ -9,7 +9,7 @@ type: noindex
 # Golem Network Manual for DeGen Hackhaton participants.
 
 {% alert level="info" %}
-This section contains an extract from the Golem Network documentation for Degen Hackathon participants. The full version is available on the [Golem Docs portal](https://docs.golem.network/) and specifically JS related documentation can be found [here](https://docs.golem.network/docs/creators/javascript.)
+This section contains an extract from the Golem Network documentation for Degen Hackathon participants.
 
 Should you encounter any problems, please reach out to us via our [Degen Discord channel](https://chat.golem.network/) or consult the Golem representative present on-site during the event.
 {% /alert %}
@@ -22,7 +22,12 @@ Should you encounter any problems, please reach out to us via our [Degen Discord
 
 For the resources consumed on the Golem Network, you pay in **GLM**. GLM is an ERC-20 utility token. When you run Yagna for the first time on your computer, it will create a wallet for you.
 
-For developing yor code on the Golem Network you do not need to necessary acquire GLM tokens. You can use `testnet` network, that while offering providers of some limited performance allows you to pay in tGLM available for free.
+Degen hackathon participants do not need to fund their activities on the Golem Network during the event. They can apply for funds using the following process:
+
+1. Validate eligibility.
+2. Create a metamask wallet for your team.
+3. Apply for funds from the Golem factory using this [link]()
+4. Split the funds to Yagna wallets used by team members.
 
 ## Getting started:
 
@@ -34,7 +39,7 @@ For developing yor code on the Golem Network you do not need to necessary acquir
 On Linux/ MacOS, you can install it using our installation script like this:
 
 ```bash
-curl -sSf https://join.golem.network/as-requestor | YA_INSTALLER_CORE=v0.13.2 bash -
+curl -sSf https://join.golem.network/as-requestor | bash -
 ```
 
 You might be asked to modify your PATH afterward.
@@ -43,7 +48,7 @@ You might be asked to modify your PATH afterward.
 
 For Windows, follow these steps for manual installation:
 
-Visit the [release page](https://github.com/golemfactory/yagna/releases) on GitHub, find a release [v0.13.2](https://github.com/golemfactory/yagna/releases/tag/v0.13.2) and download the package named **golem-requestor** for Windows.
+Visit the [latest release page](https://github.com/golemfactory/yagna/releases) on GitHub and download the package named **golem-requestor** for Windows.
 Extract the downloaded archive to retrieve yagna.exe and gftp.exe.
 Copy these files to `C:\Windows\System32` to complete the installation.
 Note: Windows installation is manual as there is no package manager integration.
@@ -52,7 +57,7 @@ Note: Windows installation is manual as there is no package manager integration.
 
 If you prefer manual installation on Unix-like systems:
 
-Download the [golem-requestor](https://github.com/golemfactory/yagna/releases/tag/v0.13.2) package suitable for your platform from the latest releases on GitHub.
+Download the [golem-requestor](https://github.com/golemfactory/yagna/releases) package suitable for your platform from the latest releases on GitHub.
 Unpack the yagna and gftp binaries and place them in your PATH, for example, in `/usr/local/bin`, or alternatively add the directory containing these binaries to your `PATH`.
 {% /tab %}
 {% /tabs %}
@@ -211,9 +216,10 @@ You can find an explanation of the structure of the above requestor script [here
 
 The standard quickstart example has been altered with the following modifications:
 
-- acceptablePrice filter sets the upper price limit for providers.
-- The verifiedProviders filter is specifically designed to connect with the most trustworthy and reliable providers in the network. This feature is particularly beneficial during events like hackathons, where it's essential to focus on coding without unnecessary interruptions. By selecting only the most reliable providers, you significantly reduce the likelihood of encountering network-related issues or disruptions that could arise from less dependable providers, thus streamlining your development and troubleshooting process.
-- payment: { network: 'polygon' } indicates that we would like to run the task on the mainnet.
+* acceptablePrice filter sets the upper price limit for providers.
+* The verifiedProviders filter is specifically designed to connect with the most trustworthy and reliable providers in the network. This feature is particularly beneficial during events like hackathons, where it's essential to focus on coding without unnecessary interruptions. By selecting only the most reliable providers, you significantly reduce the likelihood of encountering network-related issues or disruptions that could arise from less dependable providers, thus streamlining your development and troubleshooting process.
+* payment: { network: 'polygon' } indicates that we would like to run the task on the mainnet.
+
 
 {% alert level="info" %}
 
