@@ -205,7 +205,7 @@ The standard quickstart example has been altered with the following modification
 
 {% alert level="info" %}
 
-Please note that the default examples provided in the Golem Documentation are set up to use an automatically configured APP-KEY and are intended to run on the testnet. However, you can adapt these examples to run on the mainnet by implementing the modifications outlined above.
+Please note that the default examples provided in the Golem Documentation are set up to use an automatically configured APP-KEY and are also intended to run on the `testnet`. You can adapt these examples to run on the `mainnet` by changing the `payment.network` option to `polygon`.
 
 {% /alert %}
 
