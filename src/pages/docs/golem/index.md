@@ -10,4 +10,4 @@ In this section you will find:
 
 - Explanations of how the [Payments](/docs/golem/payments) are made, why we recommend using Layer 2 solutions as a payment platform, and instructions on how to convert GLM between Ethereum Mainnet and Polygon Network.
 
-- Information on the Terms, User Interaction Guidelines, and Privacy and Cookies Policies - [Terms](/docs/golem/terms)
+- Information on the Disclaimer, User Interaction Guidelines and links to Privacy and Cookie Policies - [Terms](/docs/golem/terms).

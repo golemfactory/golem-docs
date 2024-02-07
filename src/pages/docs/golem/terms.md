@@ -113,6 +113,6 @@ The processing of the information, by storing the Internal Statistics on the int
 
 The current version of the [Privacy Policy](https://assets-global.website-files.com/62446d07873fde065cbcb8d5/65bb9912c2080fd98aee4fbc_2023%2012%2005_Privacy%20Policy.pdf).
 
-## Cookies Policy
+## Cookie Policy
 
-The current version of the [Cookies Policy](https://assets-global.website-files.com/62446d07873fde065cbcb8d5/65bb9911024dd10363e0b3f8_Cookie%20Policy.pdf).
+The current version of the [Cookie Policy](https://assets-global.website-files.com/62446d07873fde065cbcb8d5/65bb9911024dd10363e0b3f8_Cookie%20Policy.pdf).
