@@ -176,7 +176,7 @@ export const navigation = [
               },
               {
                 title: 'Error handling',
-                href: '/docs/creators/javascript/guides/error-handling'
+                href: '/docs/creators/javascript/guides/error-handling',
               },
               {
                 title: 'Switching to mainnet',
@@ -287,7 +287,7 @@ export const navigation = [
             title: 'Getting Started',
             href: '',
             children: [
-	      { title: 'Introduction', href: '/docs/creators/ray' },
+              { title: 'Introduction', href: '/docs/creators/ray' },
               { title: 'Quickstart', href: '/docs/creators/ray/quickstart' },
               {
                 title: 'Setup tutorial',
@@ -297,7 +297,7 @@ export const navigation = [
                 title: 'Supported versions and other limitations',
                 href: '/docs/creators/ray/supported-versions-and-other-limitations',
               },
-	    ],
+            ],
           },
           {
             title: 'Tutorials',
@@ -319,7 +319,7 @@ export const navigation = [
                 title: 'Accessing the Internet (outbound) tutorial',
                 href: '/docs/creators/ray/outbound',
               },
-	    ],
+            ],
           },
           {
             title: 'Ray on Golem tools',
@@ -337,7 +337,7 @@ export const navigation = [
                 title: 'Ray on Golem CLI',
                 href: '/docs/creators/ray/ray-on-golem-cli',
               },
-	    ],
+            ],
           },
         ],
       },
@@ -613,7 +613,6 @@ export const navigation = [
     title: 'General Info',
     links: [
       { title: 'Contents', href: '/docs/golem' },
-      { title: 'Terms', href: '/docs/golem/terms' },
       {
         title: 'Golem Overview',
         children: [
@@ -636,6 +635,7 @@ export const navigation = [
           },
         ],
       },
+      { title: 'Terms', href: '/docs/golem/terms' },
       {
         title: 'Payload Manifest',
         children: [

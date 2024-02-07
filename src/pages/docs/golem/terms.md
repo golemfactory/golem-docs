@@ -111,4 +111,8 @@ The processing of the information, by storing the Internal Statistics on the int
 
 ## Privacy Policy
 
-The current version of the Privacy Policy is available at [https://golem.network/privacy](https://golem.network/privacy).
+The current version of the [Privacy Policy](https://www.golem.network/privacy).
+
+## Cookie Policy
+
+The current version of the [Cookie Policy](https://www.golem.network/cookie-policy).
