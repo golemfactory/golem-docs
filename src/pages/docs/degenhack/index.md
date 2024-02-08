@@ -158,11 +158,8 @@ Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY``
 Next, create a file named requestor.mjs and paste the following content into it. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
 
 ```js
-import {
-  TaskExecutor
-} from '@golem-sdk/golem-js';
-
-(async function main() {
+import { TaskExecutor } from '@golem-sdk/golem-js'
+;(async function main() {
   const executor = await TaskExecutor.create({
     // The image you'd like to run on the provider(s)
     package: 'golem/node:latest',
@@ -172,7 +169,8 @@ import {
 
     // Which network you want to spend GLM on
     payment: {
-      network: 'goerli', driver: 'erc20',
+      network: 'goerli',
+      driver: 'erc20',
     },
   })
 
@@ -202,6 +200,8 @@ The standard quickstart example has been altered with the following modification
 - payment: {
   network: 'goerli', driver: 'erc20',
   }, indicates that we would like to run the task on the `testnet`.
+
+- it also utilizes a unique app-key stored in the `YAGNA_APPKEY` variable.
 
 {% alert level="info" %}
 
