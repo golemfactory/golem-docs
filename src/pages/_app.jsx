@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import 'focus-visible'
 import '@/styles/tailwind.css'
+import { AnalyticsEnabler } from '@/components/Analytics/AnalyticsEnabled'
 function getNodeText(node) {
   let text = ''
   for (let child of node.children ?? []) {
@@ -20,36 +21,50 @@ function getNodeText(node) {
   return text
 }
 
-function collectHeadings(nodes, slugify = slugifyWithCounter(), lastNodes = [], idMap = {}) {
-  let sections = [];
+function collectHeadings(
+  nodes,
+  slugify = slugifyWithCounter(),
+  lastNodes = [],
+  idMap = {}
+) {
+  let sections = []
 
   for (let node of nodes) {
     if (Array.isArray(node)) {
-      sections.push(...collectHeadings(node, slugify, lastNodes, idMap));
-    }
-    else {
-      if (node.name === 'Heading' || (node.name === 'Defaultvalue' && node.attributes && node.attributes.title)) {
-        let level = node.name === 'Defaultvalue' ? 3 : node.attributes.level;
-        let title = node.name === 'Defaultvalue' ? node.attributes.title : getNodeText(node);
-  
+      sections.push(...collectHeadings(node, slugify, lastNodes, idMap))
+    } else {
+      if (
+        node.name === 'Heading' ||
+        (node.name === 'Defaultvalue' &&
+          node.attributes &&
+          node.attributes.title)
+      ) {
+        let level = node.name === 'Defaultvalue' ? 3 : node.attributes.level
+        let title =
+          node.name === 'Defaultvalue'
+            ? node.attributes.title
+            : getNodeText(node)
+
         if (title) {
-          let id = node.attributes?.id ?? slugify(title);
-          let newNode = { ...node.attributes, id, title, children: [], level };
+          let id = node.attributes?.id ?? slugify(title)
+          let newNode = { ...node.attributes, id, title, children: [], level }
           if (lastNodes[level - 2]) {
-            lastNodes[level - 2].children.push(newNode);
+            lastNodes[level - 2].children.push(newNode)
           } else {
-            sections.push(newNode);
+            sections.push(newNode)
           }
-          lastNodes[level - 1] = newNode;
-          lastNodes.length = level;
+          lastNodes[level - 1] = newNode
+          lastNodes.length = level
         }
       }
-    
-      sections.push(...collectHeadings(node.children ?? [], slugify, lastNodes, idMap));
+
+      sections.push(
+        ...collectHeadings(node.children ?? [], slugify, lastNodes, idMap)
+      )
     }
   }
-  
-  return sections;
+
+  return sections
 }
 
 export default function App({ Component, pageProps }) {
@@ -100,13 +115,18 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <GoogleAnalytics trackPageViews />
+      <AnalyticsEnabler>
+        <GoogleAnalytics trackPageViews />
+      </AnalyticsEnabler>
 
       <div className={inter.className}>
         <Head>
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
-          <meta name="google-site-verification" content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc" />
+          <meta
+            name="google-site-verification"
+            content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
+          />
         </Head>
         <Layout
           title={title}
