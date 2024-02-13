@@ -121,7 +121,7 @@ and locate the desired value in the 'key' column for copying.
 To find out where to transfer funds for your Yagna wallet, you can easily obtain the address of your wallet with this command:
 
 ```bash
-yagna id show
+yagna payment accounts
 ```
 
 This command is not only used to find your wallet address, but it also serves as the unique identifier of your node within the network.
@@ -142,45 +142,62 @@ yagna id export --file-path=./key.json
 
 This will generate a file named `key.json` in the directory where the command was run. This file contains the private key of your Golem wallet.
 
+{% alert level="warning" %}
+Please store the key in a secure location and not share it with anyone as it gives full control over your Golem wallet and funds.
+{% /alert %}
+
 ### Running a Quickstart
 
 Create a new Node.js project and install the Golem SDK by entering the following commands in your terminal:
 
 ```bash
-mkdir my_project
-cd my_project
-npm init
-npm install @golem-sdk/golem-js
+npm init @golem-sdk/golem-app@latest my-golem-app
 ```
 
 Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY``](http://localhost:3000/docs/degen#creating-a-unique-app-key).
 
-Next, create a file named requestor.mjs and paste the following content into it. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
+In `src` folder you will find a reaquestor script. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
 
 ```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
+import * as dotenv from 'dotenv'
+import { LogLevel, ProposalFilters, TaskExecutor } from '@golem-sdk/golem-js'
+
+dotenv.config()
+
 ;(async function main() {
   const executor = await TaskExecutor.create({
-    // The image you'd like to run on the provider(s)
-    package: 'golem/node:latest',
+    // What do you want to run
+    package: 'golem/node:20-alpine',
 
     // How much you wish to spend
     budget: 0.5,
 
-    // Which network you want to spend GLM on
+    // How do you want to select market proposals
+    proposalFilter: ProposalFilters.limitPriceFilter({
+      start: 0.1,
+      cpuPerSec: 0.1 / 3600,
+      envPerSec: 0.1 / 3600,
+    }),
+
+    // Where you want to spend
     payment: {
       network: 'goerli',
-      driver: 'erc20',
     },
+
+    // Control the execution of tasks
+    maxTaskRetries: 0,
+
+    // Useful for debugging
+    logLevel: LogLevel.Info,
+    taskTimeout: 5 * 60 * 1000,
   })
 
   try {
-    const result = await executor.run(
-      async (ctx) => (await ctx.run('node -v')).stdout
-    )
-    console.log('Task result:', result)
+    // Your code goes here
+    const result = await executor.run((ctx) => ctx.run('node -v'))
+    console.log('Version of NodeJS on Provider:', result.stdout.trim())
   } catch (err) {
-    console.error('An error occurred:', err)
+    console.error('Running the task on Golem failed due to', err)
   } finally {
     await executor.shutdown()
   }
@@ -190,7 +207,7 @@ import { TaskExecutor } from '@golem-sdk/golem-js'
 To execute the script, run:
 
 ```bash
-node requestor.mjs
+npm start
 ```
 
 You can find an explanation of the structure of the above requestor script [here](/docs/creators/javascript/tutorials/quickstart-explained).
@@ -198,14 +215,14 @@ You can find an explanation of the structure of the above requestor script [here
 The standard quickstart example has been altered with the following modifications:
 
 - payment: {
-  network: 'goerli', driver: 'erc20',
+  network: 'goerli',
   }, indicates that we would like to run the task on the `testnet`.
 
 - it also utilizes a unique app-key stored in the `YAGNA_APPKEY` variable.
 
 {% alert level="info" %}
 
-Please note that the default examples provided in the Golem Documentation are set up to use an automatically configured APP-KEY and are also intended to run on the `testnet`. You can adapt these examples to run on the `mainnet` by changing the `payment.network` option to `polygon`.
+Please note that the default examples provided in the Golem Documentation are set up to use an automatically configured APP-KEY and are also intended to run on the `testnet`. You can adapt these examples to run on the `mainnet` by changing value of the `payment.network` option to `polygon`.
 
 {% /alert %}
 
