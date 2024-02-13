@@ -1,17 +1,17 @@
 ---
-title: Golem Network manual for Degen Hackathon - List of Content
+title: Golem Network manual for Degen Hack hackathon - List of Content
 hide:
   - navigation
 description: Materials for hackathon participants
 type: noindex
 ---
 
-# Golem Network manual for DeGen Hackathon participants.
+# Golem Network manual for Degen Hack hackathon participants.
 
 {% alert level="info" %}
-This section contains an extract from the Golem Network documentation for Degen Hackathon participants. The full version is available on the [Golem Docs portal](https://docs.golem.network/) and specifically JS related documentation can be found [here](https://docs.golem.network/docs/creators/javascript).
+This section contains an extract from the Golem Network documentation for Degen Hack hackathon participants. The full version is available on the [Golem Docs portal](https://docs.golem.network/) and specifically JS related documentation can be found [here](https://docs.golem.network/docs/creators/javascript).
 
-Should you encounter any problems, please reach out to us via our [Degen Discord channel](https://chat.golem.network/) or consult the Golem representative present on-site during the event.
+Should you encounter any problems, please reach out to us via our [Degen Hack hackathon Discord channel](https://chat.golem.network/#degen-hack) or consult the Golem representative present on-site during the event.
 {% /alert %}
 
 ## Intro to Golem Network and JS API.
@@ -20,7 +20,7 @@ Should you encounter any problems, please reach out to us via our [Degen Discord
 
 **Yagna** is a service that enables the user to interact with the network. In practice, the user creates a **requestor script** utilizing one of the available Golem SDKs. The script is used to define what resources are needed and what should be run on the provider's node, and to orchestrate all activities.
 
-For the resources consumed on the Golem Network, you pay in **GLM**. GLM is an ERC-20 utility token. When you run Yagna for the first time on your computer, it will create a wallet for you.
+For the resources consumed on the Golem Network, you pay in **GLM**. GLM is an ERC-20 utility token. When you run Yagna for the first time on your computer, it will create a wallet for you. It will have an address on supported blockchains and you can export the wallet address to an external application.
 
 When developing your code on the Golem Network you do not necessarily need to acquire GLM tokens. You can use the `testnet` network, which while consisting of providers of some limited performance allows you to pay in tGLM available for free. Once your code is ready for production, you switch to `mainnet`, where you need true GLM.
 
