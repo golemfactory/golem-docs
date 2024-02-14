@@ -635,7 +635,6 @@ export const navigation = [
           },
         ],
       },
-      { title: 'Terms', href: '/docs/golem/terms' },
       {
         title: 'Payload Manifest',
         children: [
@@ -649,6 +648,7 @@ export const navigation = [
           },
         ],
       },
+      { title: 'Terms', href: '/docs/golem/terms' },
     ],
   },
 ]
