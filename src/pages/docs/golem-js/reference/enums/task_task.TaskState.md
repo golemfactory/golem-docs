@@ -13,9 +13,10 @@ type: "JS API Reference"
 ### Enumeration Members
 
 - [New](task_task.TaskState#new)
-- [Retry](task_task.TaskState#retry)
+- [Queued](task_task.TaskState#queued)
 - [Pending](task_task.TaskState#pending)
 - [Done](task_task.TaskState#done)
+- [Retry](task_task.TaskState#retry)
 - [Rejected](task_task.TaskState#rejected)
 
 ## Enumeration Members
@@ -26,17 +27,17 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/task/task.ts:6](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/task/task.ts#L6)
+[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/7cee55b/src/task/task.ts#L8)
 
 ___
 
-### Retry
+### Queued
 
-• **Retry** = ``"retry"``
+• **Queued** = ``"queued"``
 
 #### Defined in
 
-[src/task/task.ts:7](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/task/task.ts#L7)
+[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/7cee55b/src/task/task.ts#L9)
 
 ___
 
@@ -46,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/task/task.ts#L8)
+[src/task/task.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/task/task.ts#L10)
 
 ___
 
@@ -56,7 +57,17 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/task/task.ts#L9)
+[src/task/task.ts:11](https://github.com/golemfactory/golem-js/blob/7cee55b/src/task/task.ts#L11)
+
+___
+
+### Retry
+
+• **Retry** = ``"retry"``
+
+#### Defined in
+
+[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/7cee55b/src/task/task.ts#L12)
 
 ___
 
@@ -66,4 +77,4 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:10](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/task/task.ts#L10)
+[src/task/task.ts:13](https://github.com/golemfactory/golem-js/blob/7cee55b/src/task/task.ts#L13)

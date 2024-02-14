@@ -44,7 +44,7 @@ Duplicate proposals from one provider are reduced to the cheapest one.
 
 #### Defined in
 
-[src/market/service.ts:18](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/service.ts#L18)
+[src/market/service.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/service.ts#L18)
 
 ___
 
@@ -56,7 +56,7 @@ The minimum number of proposals after which the batch of proposal will be proces
 
 #### Defined in
 
-[src/market/service.ts:20](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/service.ts#L20)
+[src/market/service.ts:20](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/service.ts#L20)
 
 ___
 
@@ -68,7 +68,7 @@ The maximum waiting time for proposals to be batched in order to avoid duplicate
 
 #### Defined in
 
-[src/market/service.ts:22](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/service.ts#L22)
+[src/market/service.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/service.ts#L22)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:20](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L20)
+[src/market/demand.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L21)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:21](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L21)
+[src/market/demand.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L22)
 
 ___
 
@@ -130,7 +130,7 @@ If your activity is about to operate longer than 10h, you need set both [debitNo
 
 #### Defined in
 
-[src/market/demand.ts:44](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L44)
+[src/market/demand.ts:45](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L45)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:46](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L46)
+[src/market/demand.ts:47](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L47)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:47](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L47)
+[src/market/demand.ts:48](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L48)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:49](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L49)
+[src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L50)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:51](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L51)
+[src/market/demand.ts:52](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L52)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:53](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L53)
+[src/market/demand.ts:54](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L54)
 
 ___
 
@@ -223,7 +223,7 @@ The SDK will accept debit notes each 2 minutes by default.
 
 #### Defined in
 
-[src/market/demand.ts:65](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L65)
+[src/market/demand.ts:66](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L66)
 
 ___
 
@@ -249,7 +249,7 @@ The SDK will accept debit notes each 2 minutes by default.
 
 #### Defined in
 
-[src/market/demand.ts:80](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L80)
+[src/market/demand.ts:81](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L81)
 
 ___
 
@@ -273,4 +273,4 @@ The SDK will issue payments each 12h by default, and you can control this with t
 
 #### Defined in
 
-[src/market/demand.ts:93](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/demand.ts#L93)
+[src/market/demand.ts:94](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L94)

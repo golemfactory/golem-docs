@@ -70,4 +70,4 @@ IdentityRequestorApi.getIdentity
 
 #### Defined in
 
-[src/utils/yagna/identity.ts:17](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/utils/yagna/identity.ts#L17)
+[src/utils/yagna/identity.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/utils/yagna/identity.ts#L17)

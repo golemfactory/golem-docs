@@ -16,7 +16,15 @@ Base class for all errors directly thrown by Golem SDK.
 
   ↳ **`GolemError`**
 
-  ↳↳ [`NetworkError`](network_network.NetworkError)
+  ↳↳ [`GolemUserError`](error_golem_error.GolemUserError)
+
+  ↳↳ [`GolemInternalError`](error_golem_error.GolemInternalError)
+
+  ↳↳ [`GolemPlatformError`](error_golem_error.GolemPlatformError)
+
+  ↳↳ [`GolemTimeoutError`](error_golem_error.GolemTimeoutError)
+
+  ↳↳ [`GolemModuleError`](error_golem_error.GolemModuleError)
 
 ## Table of contents
 
@@ -24,47 +32,43 @@ Base class for all errors directly thrown by Golem SDK.
 
 - [constructor](error_golem_error.GolemError#constructor)
 
+### Properties
+
+- [previous](error_golem_error.GolemError#previous)
+
 ## Constructors
 
 ### constructor
 
-• **new GolemError**(`message?`): [`GolemError`](error_golem_error.GolemError)
+• **new GolemError**(`message`, `previous?`): [`GolemError`](error_golem_error.GolemError)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `message` | `string` | - |
+| `previous?` | `Error` | The previous error, if any, that led to this error. |
 
 #### Returns
 
 [`GolemError`](error_golem_error.GolemError)
 
-#### Inherited from
+#### Overrides
 
 Error.constructor
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1081
+[src/error/golem-error.ts:5](https://github.com/golemfactory/golem-js/blob/7cee55b/src/error/golem-error.ts#L5)
 
-• **new GolemError**(`message?`, `options?`): [`GolemError`](error_golem_error.GolemError)
+## Properties
 
-#### Parameters
+### previous
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
-| `options?` | `ErrorOptions` |
+• `Optional` `Readonly` **previous**: `Error`
 
-#### Returns
-
-[`GolemError`](error_golem_error.GolemError)
-
-#### Inherited from
-
-Error.constructor
+The previous error, if any, that led to this error.
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2022.error.d.ts:28
+[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/error/golem-error.ts#L10)
