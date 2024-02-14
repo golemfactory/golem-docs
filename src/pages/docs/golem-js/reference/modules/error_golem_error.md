@@ -11,3 +11,10 @@ type: "JS API Reference"
 ### Classes
 
 - [GolemError](../classes/error_golem_error.GolemError)
+- [GolemUserError](../classes/error_golem_error.GolemUserError)
+- [GolemAbortError](../classes/error_golem_error.GolemAbortError)
+- [GolemConfigError](../classes/error_golem_error.GolemConfigError)
+- [GolemInternalError](../classes/error_golem_error.GolemInternalError)
+- [GolemPlatformError](../classes/error_golem_error.GolemPlatformError)
+- [GolemTimeoutError](../classes/error_golem_error.GolemTimeoutError)
+- [GolemModuleError](../classes/error_golem_error.GolemModuleError)

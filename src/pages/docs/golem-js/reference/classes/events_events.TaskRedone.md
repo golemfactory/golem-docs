@@ -12,7 +12,7 @@ Represents the situation in which running the task failed for some reason, but i
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `provider`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) ; `retriesCount`: `number` ; `activityId?`: `string` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId?`: `string` ; `provider?`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) ; `retriesCount`: `number` ; `activityId?`: `string` ; `reason?`: `string`  }\>
 
   ↳ **`TaskRedone`**
 
@@ -40,8 +40,8 @@ Represents the situation in which running the task failed for some reason, but i
 | :------ | :------ | :------ |
 | `data` | `Object` | - |
 | `data.id` | `string` | - |
-| `data.agreementId` | `string` | - |
-| `data.provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
+| `data.agreementId?` | `string` | - |
+| `data.provider?` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
 | `data.retriesCount` | `number` | - |
 | `data.activityId?` | `string` | The activity that was involved This might be not set when there was an issue with starting the activity on the provider |
 | `data.reason?` | `string` | - |
@@ -56,7 +56,7 @@ Represents the situation in which running the task failed for some reason, but i
 
 #### Defined in
 
-[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L29)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L29)
 
 ## Properties
 
@@ -69,8 +69,8 @@ Represents the situation in which running the task failed for some reason, but i
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | - |
-| `agreementId` | `string` | - |
-| `provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
+| `agreementId?` | `string` | - |
+| `provider?` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
 | `retriesCount` | `number` | - |
 | `activityId?` | `string` | The activity that was involved This might be not set when there was an issue with starting the activity on the provider |
 | `reason?` | `string` | - |
@@ -81,7 +81,7 @@ Represents the situation in which running the task failed for some reason, but i
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L17)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L18)
 
 ___
 
@@ -109,4 +109,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L19)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L19)

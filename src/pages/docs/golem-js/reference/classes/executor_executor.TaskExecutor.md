@@ -24,10 +24,8 @@ A high-level module for defining and executing tasks in the golem network
 
 - [create](executor_executor.TaskExecutor#create)
 - [init](executor_executor.TaskExecutor#init)
-- [end](executor_executor.TaskExecutor#end)
 - [shutdown](executor_executor.TaskExecutor#shutdown)
 - [getStats](executor_executor.TaskExecutor#getstats)
-- [beforeEach](executor_executor.TaskExecutor#beforeeach)
 - [onActivityReady](executor_executor.TaskExecutor#onactivityready)
 - [run](executor_executor.TaskExecutor#run)
 - [cancel](executor_executor.TaskExecutor#cancel)
@@ -52,7 +50,7 @@ Create a new TaskExecutor object.
 
 #### Defined in
 
-[src/executor/executor.ts:176](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L176)
+[src/executor/executor.ts:169](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L169)
 
 ## Properties
 
@@ -68,7 +66,7 @@ TaskExecutorEventsDict for available events.
 
 #### Defined in
 
-[src/executor/executor.ts:101](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L101)
+[src/executor/executor.ts:94](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L94)
 
 ## Methods
 
@@ -119,7 +117,7 @@ const executor = await TaskExecutor.create({
 
 #### Defined in
 
-[src/executor/executor.ts:165](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L165)
+[src/executor/executor.ts:158](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L158)
 
 ___
 
@@ -139,29 +137,7 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[src/executor/executor.ts:229](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L229)
-
-___
-
-### end
-
-▸ **end**(): `Promise`\<`void`\>
-
-Stop all executor services and shut down executor instance.
-
-You can call this method multiple times, it will resolve only once the executor is shutdown.
-
-#### Returns
-
-`Promise`\<`void`\>
-
-**`Deprecated`**
-
-Use TaskExecutor.shutdown() instead.
-
-#### Defined in
-
-[src/executor/executor.ts:286](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L286)
+[src/executor/executor.ts:222](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L222)
 
 ___
 
@@ -183,7 +159,7 @@ Once the executor is fully stopped, an end event is emitted.
 
 #### Defined in
 
-[src/executor/executor.ts:299](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L299)
+[src/executor/executor.ts:286](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L286)
 
 ___
 
@@ -201,49 +177,7 @@ array
 
 #### Defined in
 
-[src/executor/executor.ts:336](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L336)
-
-___
-
-### beforeEach
-
-▸ **beforeEach**(`worker`): `void`
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`unknown`\> | worker function - task |
-
-#### Returns
-
-`void`
-
-**`Deprecated`**
-
-Use [TaskExecutor.onActivityReady](executor_executor.TaskExecutor#onactivityready) instead.
-
-Define worker function that will be runs before every each computation Task, within the same activity.
-
-**`Example`**
-
-```typescript
-executor.beforeEach(async (ctx) => {
-  await ctx.uploadFile("./params.txt", "/params.txt");
-});
-
-await executor.forEach([1, 2, 3, 4, 5], async (ctx, item) => {
-   await ctx
-     .beginBatch()
-     .run(`/run_some_command.sh --input ${item} --params /input_params.txt --output /output.txt`)
-     .downloadFile("/output.txt", "./output.txt")
-     .end();
-});
-```
-
-#### Defined in
-
-[src/executor/executor.ts:362](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L362)
+[src/executor/executor.ts:323](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L323)
 
 ___
 
@@ -283,7 +217,7 @@ await executor.run(async (ctx) => {
 
 #### Defined in
 
-[src/executor/executor.ts:387](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L387)
+[src/executor/executor.ts:348](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L348)
 
 ___
 
@@ -320,19 +254,19 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 #### Defined in
 
-[src/executor/executor.ts:402](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L402)
+[src/executor/executor.ts:363](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L363)
 
 ___
 
 ### cancel
 
-▸ **cancel**(`reason?`): `Promise`\<`void`\>
+▸ **cancel**(`reason`): `Promise`\<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `reason?` | `string` |
+| `reason` | `string` |
 
 #### Returns
 
@@ -340,4 +274,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:457](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/executor.ts#L457)
+[src/executor/executor.ts:414](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/executor.ts#L414)

@@ -13,7 +13,7 @@ will be conducted.
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `provider`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) ; `activityId?`: `string` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId?`: `string` ; `provider?`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) ; `activityId?`: `string` ; `reason?`: `string`  }\>
 
   ↳ **`TaskRejected`**
 
@@ -41,8 +41,8 @@ will be conducted.
 | :------ | :------ | :------ |
 | `data` | `Object` | - |
 | `data.id` | `string` | - |
-| `data.agreementId` | `string` | - |
-| `data.provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
+| `data.agreementId?` | `string` | - |
+| `data.provider?` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
 | `data.activityId?` | `string` | The activity that was involved when the rejection took place This might be not set when there was an issue with starting the activity on the provider |
 | `data.reason?` | `string` | - |
 
@@ -56,7 +56,7 @@ will be conducted.
 
 #### Defined in
 
-[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L29)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L29)
 
 ## Properties
 
@@ -69,8 +69,8 @@ will be conducted.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | - |
-| `agreementId` | `string` | - |
-| `provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
+| `agreementId?` | `string` | - |
+| `provider?` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
 | `activityId?` | `string` | The activity that was involved when the rejection took place This might be not set when there was an issue with starting the activity on the provider |
 | `reason?` | `string` | - |
 
@@ -80,7 +80,7 @@ will be conducted.
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L17)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L18)
 
 ___
 
@@ -108,4 +108,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/events/events.ts#L19)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L19)

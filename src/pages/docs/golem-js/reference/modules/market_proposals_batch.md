@@ -31,4 +31,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/proposals_batch.ts:4](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/market/proposals_batch.ts#L4)
+[src/market/proposals_batch.ts:4](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposals_batch.ts#L4)

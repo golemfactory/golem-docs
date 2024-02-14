@@ -24,6 +24,8 @@ This interface describes events emitted by `TaskExecutor` through `TaskExecutor.
 
 • **ready**: () => `void`
 
+Fires when task executor is initialized and ready to be used.
+
 #### Type declaration
 
 ▸ (): `void`
@@ -36,13 +38,15 @@ Fires when task executor is initialized and ready to be used.
 
 #### Defined in
 
-[src/executor/events.ts:8](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/events.ts#L8)
+[src/executor/events.ts:8](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/events.ts#L8)
 
 ___
 
 ### beforeEnd
 
 • **beforeEnd**: () => `void`
+
+Fires when task executor is about to shut down, immediately after TaskExecutor.shutdown() is called.
 
 #### Type declaration
 
@@ -56,13 +60,15 @@ Fires when task executor is about to shut down, immediately after TaskExecutor.s
 
 #### Defined in
 
-[src/executor/events.ts:14](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/events.ts#L14)
+[src/executor/events.ts:14](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/events.ts#L14)
 
 ___
 
 ### end
 
 • **end**: () => `void`
+
+Fires when task executor is completely terminated.
 
 #### Type declaration
 
@@ -76,4 +82,4 @@ Fires when task executor is completely terminated.
 
 #### Defined in
 
-[src/executor/events.ts:19](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/executor/events.ts#L19)
+[src/executor/events.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/executor/events.ts#L19)

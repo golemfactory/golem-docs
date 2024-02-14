@@ -39,7 +39,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/service.ts:26](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/payment/service.ts#L26)
+[src/payment/service.ts:37](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L37)
 
 ___
 
@@ -63,4 +63,4 @@ ___
 
 #### Defined in
 
-[src/payment/service.ts:27](https://github.com/golemfactory/golem-js/blob/e7b6d14/src/payment/service.ts#L27)
+[src/payment/service.ts:38](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L38)
