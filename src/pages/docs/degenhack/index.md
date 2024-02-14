@@ -154,7 +154,7 @@ Create a new Node.js project and install the Golem SDK by entering the following
 npm init @golem-sdk/golem-app@latest my-golem-app
 ```
 
-Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY``](http://localhost:3000/docs/degen#creating-a-unique-app-key).
+Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY`](http://localhost:3000/docs/degen#creating-a-unique-app-key).
 
 In `src` folder you will find a reaquestor script. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
 
@@ -163,7 +163,6 @@ import * as dotenv from 'dotenv'
 import { LogLevel, ProposalFilters, TaskExecutor } from '@golem-sdk/golem-js'
 
 dotenv.config()
-
 ;(async function main() {
   const executor = await TaskExecutor.create({
     // What do you want to run
