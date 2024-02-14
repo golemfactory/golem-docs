@@ -30,7 +30,7 @@ _Computation Payload Manifest_ must follow a specific [JSON Schema](https://gith
 Manifests can be verified using `jsonschema` library:
 
 ```sh
-wget https://docs.golem.network/golem/payload-manifest/computation-payload-manifest.schema.json
+wget https://github.com/golemfactory/yagna-docs/blob/master/requestor-tutorials/vm-runtime/computation-payload-manifest.schema.json
 pip install jsonschema
 jsonschema --instance manifest.json computation-payload-manifest.schema.json
 ```
