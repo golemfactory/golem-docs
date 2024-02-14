@@ -196,6 +196,10 @@ base64 manifest.json.base64.sign.sha256 --wrap=0 > manifest.json.base64.sign.sha
 base64 author.crt.pem --wrap=0 > author.crt.pem.base64
 ```
 
+{% alert level="info" %}
+JS SDK users can utilize the [SDK CLI tool](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli) to create and sign manifests.
+{% /alert %}
+
 ### Self signed certificate example
 
 A basic example showing the generation of a self-signed root CA certificate to then sign the App author's certificate, and afterwards importing a generated root CA certificate into the Provider's keystore.
@@ -240,7 +244,9 @@ echo '1000' > serial.txt
 
 Then generate the CA certificate and key pair:
 
-`openssl req -new -newkey rsa:2048 -days 360 -nodes -x509 -sha256 -keyout ca.key.pem -out ca.crt.pem -config openssl-ca.conf`
+```bash
+openssl req -new -newkey rsa:2048 -days 360 -nodes -x509 -sha256 -keyout ca.key.pem -out ca.crt.pem -config openssl-ca.conf
+```
 
 #### 2. Generating Requestor certificate
 
@@ -262,14 +268,20 @@ basicConstraints = CA:true
 
 Then generate _App author's certificate_ Signing Request (use same `organizationName`):
 
-`openssl req -new -newkey rsa:2048 -days 360 -sha256 -keyout author.key.pem -out author.csr.pem -config openssl.conf`
+```bash
+openssl req -new -newkey rsa:2048 -sha256 -keyout author.key.pem -out author.csr.pem -config openssl.conf
+```
 
 Finally, generate _App author's certificate_ using CSR and CA certificate:
 
-`openssl x509 -req -in author.csr.pem -CA ca.crt.pem -CAkey ca.key.pem -CAcreateserial -out author.crt.pem`
+```bash
+openssl x509 -req -in author.csr.pem -CA ca.crt.pem -CAkey ca.key.pem -CAcreateserial -out author.crt.pem
+```
 
 #### 3. Importing application author's certificates
 
-To import the certificate into the keystore, use a [`ya-provider keystore add`](/docs/providers/configuration/outbound#managing-your-keystore) command:
+To set the rule to accept payloads with unrestricted outbound access signed by authors who holds certs from a trusted ca, use a the following command:
 
-`ya-provider keystore add ca.crt.pem`
+```bash
+ya-provider rule set outbound audited-payload import-cert ca.crt.pem --mode all
+```
