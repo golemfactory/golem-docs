@@ -13,14 +13,13 @@ type: "JS API Reference"
 ### Properties
 
 - [id](payment_invoice.InvoiceDTO#id)
-- [providerId](payment_invoice.InvoiceDTO#providerid)
 - [timestamp](payment_invoice.InvoiceDTO#timestamp)
 - [activityIds](payment_invoice.InvoiceDTO#activityids)
 - [agreementId](payment_invoice.InvoiceDTO#agreementid)
 - [paymentDueDate](payment_invoice.InvoiceDTO#paymentduedate)
 - [status](payment_invoice.InvoiceDTO#status)
-- [payeeAddr](payment_invoice.InvoiceDTO#payeeaddr)
-- [payerAddr](payment_invoice.InvoiceDTO#payeraddr)
+- [requestorWalletAddress](payment_invoice.InvoiceDTO#requestorwalletaddress)
+- [provider](payment_invoice.InvoiceDTO#provider)
 - [paymentPlatform](payment_invoice.InvoiceDTO#paymentplatform)
 - [amount](payment_invoice.InvoiceDTO#amount)
 
@@ -32,17 +31,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:10](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L10)
-
-___
-
-### providerId
-
-• **providerId**: `string`
-
-#### Defined in
-
-[src/payment/invoice.ts:11](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L11)
+[src/payment/invoice.ts:13](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L13)
 
 ___
 
@@ -52,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:12](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L12)
+[src/payment/invoice.ts:14](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L14)
 
 ___
 
@@ -62,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:13](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L13)
+[src/payment/invoice.ts:15](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L15)
 
 ___
 
@@ -72,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:14](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L14)
+[src/payment/invoice.ts:16](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L16)
 
 ___
 
@@ -82,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:15](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L15)
+[src/payment/invoice.ts:17](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L17)
 
 ___
 
@@ -92,27 +81,27 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:16](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L16)
+[src/payment/invoice.ts:18](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L18)
 
 ___
 
-### payeeAddr
+### requestorWalletAddress
 
-• **payeeAddr**: `string`
+• **requestorWalletAddress**: `string`
 
 #### Defined in
 
-[src/payment/invoice.ts:17](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L17)
+[src/payment/invoice.ts:19](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L19)
 
 ___
 
-### payerAddr
+### provider
 
-• **payerAddr**: `string`
+• **provider**: [`ProviderInfo`](agreement_agreement.ProviderInfo)
 
 #### Defined in
 
-[src/payment/invoice.ts:18](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L18)
+[src/payment/invoice.ts:20](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L20)
 
 ___
 
@@ -122,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:19](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L19)
+[src/payment/invoice.ts:21](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L21)
 
 ___
 
@@ -132,4 +121,4 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:20](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/invoice.ts#L20)
+[src/payment/invoice.ts:22](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/invoice.ts#L22)

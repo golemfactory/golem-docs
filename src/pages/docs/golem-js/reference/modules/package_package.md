@@ -47,7 +47,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/a42794e/src/package/package.ts#L7)
+[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/package/package.ts#L7)
 
 ___
 
@@ -57,4 +57,4 @@ ___
 
 #### Defined in
 
-[src/package/package.ts:34](https://github.com/golemfactory/golem-js/blob/a42794e/src/package/package.ts#L34)
+[src/package/package.ts:34](https://github.com/golemfactory/golem-js/blob/22da85c/src/package/package.ts#L34)

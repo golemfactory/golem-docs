@@ -38,4 +38,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/a42794e/src/storage/provider.ts#L1)
+[src/storage/provider.ts:1](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/provider.ts#L1)

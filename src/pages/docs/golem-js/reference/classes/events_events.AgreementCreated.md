@@ -10,7 +10,7 @@ type: "JS API Reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `proposalId`: `string` ; `validTo?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `provider`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) ; `proposalId`: `string` ; `validTo?`: `string`  }\>
 
   ↳ **`AgreementCreated`**
 
@@ -30,16 +30,15 @@ type: "JS API Reference"
 
 ### constructor
 
-• **new AgreementCreated**(`data?`): [`AgreementCreated`](events_events.AgreementCreated)
+• **new AgreementCreated**(`data`): [`AgreementCreated`](events_events.AgreementCreated)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data?` | `Object` |
+| `data` | `Object` |
 | `data.id` | `string` |
-| `data.providerId` | `string` |
-| `data.providerName` | `string` |
+| `data.provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 | `data.proposalId` | `string` |
 | `data.validTo?` | `string` |
 
@@ -53,7 +52,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L28)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L29)
 
 ## Properties
 
@@ -66,8 +65,7 @@ type: "JS API Reference"
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
-| `providerId` | `string` |
-| `providerName` | `string` |
+| `provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 | `proposalId` | `string` |
 | `validTo?` | `string` |
 
@@ -77,7 +75,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L16)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L17)
 
 ___
 
@@ -91,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L17)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L18)
 
 ___
 
@@ -105,4 +103,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L18)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L19)

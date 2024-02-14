@@ -49,4 +49,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/task/work.ts:21](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L21)
+[src/task/work.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/work.ts#L24)

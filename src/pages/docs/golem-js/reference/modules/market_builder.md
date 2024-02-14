@@ -29,4 +29,4 @@ Properties and constraints to be added to a market object (i.e. a demand or an o
 
 #### Defined in
 
-[src/market/builder.ts:7](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/builder.ts#L7)
+[src/market/builder.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/builder.ts#L8)

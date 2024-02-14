@@ -14,7 +14,6 @@ type: "JS API Reference"
 
 - [activityPreparingTimeout](task_work.WorkOptions#activitypreparingtimeout)
 - [activityStateCheckingInterval](task_work.WorkOptions#activitystatecheckinginterval)
-- [provider](task_work.WorkOptions#provider)
 - [storageProvider](task_work.WorkOptions#storageprovider)
 - [networkNode](task_work.WorkOptions#networknode)
 - [logger](task_work.WorkOptions#logger)
@@ -28,7 +27,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/task/work.ts:29](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L29)
+[src/task/work.ts:32](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/work.ts#L32)
 
 ___
 
@@ -38,25 +37,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:30](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L30)
-
-___
-
-### provider
-
-• `Optional` **provider**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `id` | `string` |
-| `networkConfig?` | `object` |
-
-#### Defined in
-
-[src/task/work.ts:31](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L31)
+[src/task/work.ts:33](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/work.ts#L33)
 
 ___
 
@@ -66,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:32](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L32)
+[src/task/work.ts:34](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/work.ts#L34)
 
 ___
 
@@ -76,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:33](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L33)
+[src/task/work.ts:35](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/work.ts#L35)
 
 ___
 
@@ -86,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:34](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L34)
+[src/task/work.ts:36](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/work.ts#L36)
 
 ___
 
@@ -96,4 +77,4 @@ ___
 
 #### Defined in
 
-[src/task/work.ts:35](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/work.ts#L35)
+[src/task/work.ts:37](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/work.ts#L37)

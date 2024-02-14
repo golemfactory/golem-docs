@@ -29,13 +29,14 @@ RemoteProcess class representing the process spawned on the provider by WorkCont
 
 ### constructor
 
-• **new RemoteProcess**(`streamOfActivityResults`): [`RemoteProcess`](task_process.RemoteProcess)
+• **new RemoteProcess**(`streamOfActivityResults`, `activity`): [`RemoteProcess`](task_process.RemoteProcess)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `streamOfActivityResults` | `Readable` |
+| `activity` | [`Activity`](activity_activity.Activity) |
 
 #### Returns
 
@@ -43,7 +44,7 @@ RemoteProcess class representing the process spawned on the provider by WorkCont
 
 #### Defined in
 
-[src/task/process.ts:21](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/process.ts#L21)
+[src/task/process.ts:23](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L23)
 
 ## Properties
 
@@ -55,7 +56,7 @@ Stream connected to stdout from provider process
 
 #### Defined in
 
-[src/task/process.ts:14](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/process.ts#L14)
+[src/task/process.ts:16](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L16)
 
 ___
 
@@ -67,7 +68,7 @@ Stream connected to stderr from provider process
 
 #### Defined in
 
-[src/task/process.ts:18](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/process.ts#L18)
+[src/task/process.ts:20](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L20)
 
 ## Methods
 
@@ -90,4 +91,4 @@ If the timeout is reached, the return promise will be rejected.
 
 #### Defined in
 
-[src/task/process.ts:34](https://github.com/golemfactory/golem-js/blob/a42794e/src/task/process.ts#L34)
+[src/task/process.ts:39](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L39)

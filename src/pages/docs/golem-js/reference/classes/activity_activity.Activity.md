@@ -23,6 +23,7 @@ As part of a given activity, it is possible to execute exe script commands and c
 ### Methods
 
 - [create](activity_activity.Activity#create)
+- [getProviderInfo](activity_activity.Activity#getproviderinfo)
 - [execute](activity_activity.Activity#execute)
 - [stop](activity_activity.Activity#stop)
 - [getState](activity_activity.Activity#getstate)
@@ -38,7 +39,7 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:56](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L56)
+[src/activity/activity.ts:62](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L62)
 
 ___
 
@@ -50,7 +51,7 @@ Agreement
 
 #### Defined in
 
-[src/activity/activity.ts:57](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L57)
+[src/activity/activity.ts:63](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L63)
 
 ___
 
@@ -62,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:58](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L58)
+[src/activity/activity.ts:64](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L64)
 
 ___
 
@@ -74,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:59](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L59)
+[src/activity/activity.ts:65](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L65)
 
 ## Methods
 
@@ -101,7 +102,21 @@ Activity
 
 #### Defined in
 
-[src/activity/activity.ts:73](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L73)
+[src/activity/activity.ts:79](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L79)
+
+___
+
+### getProviderInfo
+
+▸ **getProviderInfo**(): [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
+
+#### Returns
+
+[`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
+
+#### Defined in
+
+[src/activity/activity.ts:89](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L89)
 
 ___
 
@@ -125,7 +140,7 @@ Execute script
 
 #### Defined in
 
-[src/activity/activity.ts:90](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L90)
+[src/activity/activity.ts:100](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L100)
 
 ___
 
@@ -143,7 +158,7 @@ boolean
 
 #### Defined in
 
-[src/activity/activity.ts:119](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L119)
+[src/activity/activity.ts:138](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L138)
 
 ___
 
@@ -165,7 +180,7 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:131](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L131)
+[src/activity/activity.ts:150](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L150)
 
 ___
 
@@ -185,4 +200,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:148](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L148)
+[src/activity/activity.ts:176](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L176)
