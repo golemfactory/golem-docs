@@ -22,4 +22,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/activity/activity.ts:22](https://github.com/golemfactory/golem-js/blob/a42794e/src/activity/activity.ts#L22)
+[src/activity/activity.ts:23](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/activity.ts#L23)

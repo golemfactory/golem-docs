@@ -12,6 +12,16 @@ type: "JS API Reference"
 
 - [GolemNetwork](../classes/golem_network_golem_network.GolemNetwork)
 
-### Interfaces
+### Type Aliases
 
-- [GolemNetworkConfig](../interfaces/golem_network_golem_network.GolemNetworkConfig)
+- [GolemNetworkConfig](golem_network_golem_network#golemnetworkconfig)
+
+## Type Aliases
+
+### GolemNetworkConfig
+
+Ƭ **GolemNetworkConfig**: `Partial`\<[`RunJobOptions`](job_job#runjoboptions)\> & \{ `yagna?`: [`YagnaOptions`](executor_executor#yagnaoptions)  }
+
+#### Defined in
+
+[src/golem_network/golem_network.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L8)

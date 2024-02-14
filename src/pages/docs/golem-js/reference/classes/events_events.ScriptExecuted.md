@@ -30,13 +30,13 @@ type: "JS API Reference"
 
 ### constructor
 
-• **new ScriptExecuted**(`data?`): [`ScriptExecuted`](events_events.ScriptExecuted)
+• **new ScriptExecuted**(`data`): [`ScriptExecuted`](events_events.ScriptExecuted)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data?` | `Object` |
+| `data` | `Object` |
 | `data.activityId` | `string` |
 | `data.agreementId` | `string` |
 | `data.success` | `boolean` |
@@ -51,7 +51,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L28)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L29)
 
 ## Properties
 
@@ -73,7 +73,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L16)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L17)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L17)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L18)
 
 ___
 
@@ -101,4 +101,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L18)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L19)

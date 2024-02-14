@@ -10,145 +10,178 @@ type: "JS API Reference"
 
 ## Table of contents
 
-### Properties
-
-- [level](utils_logger_logger.Logger#level)
-
 ### Methods
 
-- [setLevel](utils_logger_logger.Logger#setlevel)
-- [log](utils_logger_logger.Logger#log)
+- [child](utils_logger_logger.Logger#child)
+- [debug](utils_logger_logger.Logger#debug)
 - [info](utils_logger_logger.Logger#info)
 - [warn](utils_logger_logger.Logger#warn)
 - [error](utils_logger_logger.Logger#error)
-- [debug](utils_logger_logger.Logger#debug)
-
-## Properties
-
-### level
-
-• **level**: `string`
-
-#### Defined in
-
-[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/logger.ts#L9)
 
 ## Methods
 
-### setLevel
+### child
 
-▸ **setLevel**(`level`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `level` | `string` |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/logger.ts#L10)
-
-___
-
-### log
-
-▸ **log**(`msg`): `any`
+▸ **child**(`namespace`): [`Logger`](utils_logger_logger.Logger)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `msg` | `any` |
+| `namespace` | `string` |
 
 #### Returns
 
-`any`
+[`Logger`](utils_logger_logger.Logger)
 
 #### Defined in
 
-[src/utils/logger/logger.ts:11](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/logger.ts#L11)
-
-___
-
-### info
-
-▸ **info**(`msg`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `msg` | `any` |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[src/utils/logger/logger.ts:12](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/logger.ts#L12)
-
-___
-
-### warn
-
-▸ **warn**(`msg`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `msg` | `any` |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[src/utils/logger/logger.ts:13](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/logger.ts#L13)
-
-___
-
-### error
-
-▸ **error**(`msg`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `msg` | `any` |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[src/utils/logger/logger.ts:14](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/logger.ts#L14)
+[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L2)
 
 ___
 
 ### debug
 
-▸ **debug**(`msg`): `any`
+▸ **debug**(`msg`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `msg` | `any` |
+| `msg` | `string` |
 
 #### Returns
 
-`any`
+`void`
 
 #### Defined in
 
-[src/utils/logger/logger.ts:15](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/logger/logger.ts#L15)
+[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L3)
+
+▸ **debug**(`msg`, `ctx`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` |
+| `ctx` | `Error` \| `Record`\<`string`, `unknown`\> |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L4)
+
+___
+
+### info
+
+▸ **info**(`msg`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L5)
+
+▸ **info**(`msg`, `ctx`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` |
+| `ctx` | `Error` \| `Record`\<`string`, `unknown`\> |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L6)
+
+___
+
+### warn
+
+▸ **warn**(`msg`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/utils/logger/logger.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L7)
+
+▸ **warn**(`msg`, `ctx`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` |
+| `ctx` | `Error` \| `Record`\<`string`, `unknown`\> |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/utils/logger/logger.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L8)
+
+___
+
+### error
+
+▸ **error**(`msg`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L9)
+
+▸ **error**(`msg`, `ctx`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` |
+| `ctx` | `Error` \| `Record`\<`string`, `unknown`\> |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L10)

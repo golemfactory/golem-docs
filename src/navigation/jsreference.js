@@ -26,6 +26,38 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/agreement_service.AgreementCandidate"
           },
 {
+            title: "GolemAbortError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemAbortError"
+          },
+{
+            title: "GolemConfigError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemConfigError"
+          },
+{
+            title: "GolemError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemError"
+          },
+{
+            title: "GolemInternalError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemInternalError"
+          },
+{
+            title: "GolemModuleError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemModuleError"
+          },
+{
+            title: "GolemPlatformError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemPlatformError"
+          },
+{
+            title: "GolemTimeoutError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemTimeoutError"
+          },
+{
+            title: "GolemUserError",
+            href: "/docs/golem-js/reference/classes/error_golem_error.GolemUserError"
+          },
+{
             title: "ActivityCreated",
             href: "/docs/golem-js/reference/classes/events_events.ActivityCreated"
           },
@@ -170,16 +202,20 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/job_job.Job"
           },
 {
-            title: "InMemoryJobStorage",
-            href: "/docs/golem-js/reference/classes/job_storage.InMemoryJobStorage"
+            title: "GolemMarketError",
+            href: "/docs/golem-js/reference/classes/market_error.GolemMarketError"
           },
 {
             title: "Proposal",
             href: "/docs/golem-js/reference/classes/market_proposal.Proposal"
           },
 {
-            title: "NetworkError",
-            href: "/docs/golem-js/reference/classes/network_network.NetworkError"
+            title: "ProposalsBatch",
+            href: "/docs/golem-js/reference/classes/market_proposals_batch.ProposalsBatch"
+          },
+{
+            title: "GolemNetworkError",
+            href: "/docs/golem-js/reference/classes/network_error.GolemNetworkError"
           },
 {
             title: "NetworkNode",
@@ -190,8 +226,16 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/package_package.Package"
           },
 {
+            title: "InvoiceProcessor",
+            href: "/docs/golem-js/reference/classes/payment_InvoiceProcessor.InvoiceProcessor"
+          },
+{
             title: "AgreementPaymentProcess",
             href: "/docs/golem-js/reference/classes/payment_agreement_payment_process.AgreementPaymentProcess"
+          },
+{
+            title: "GolemPaymentError",
+            href: "/docs/golem-js/reference/classes/payment_error.GolemPaymentError"
           },
 {
             title: "Payments",
@@ -226,6 +270,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/classes/task_batch.Batch"
           },
 {
+            title: "GolemWorkError",
+            href: "/docs/golem-js/reference/classes/task_error.GolemWorkError"
+          },
+{
             title: "RemoteProcess",
             href: "/docs/golem-js/reference/classes/task_process.RemoteProcess"
           },
@@ -236,6 +284,10 @@ export const navigation = [
 {
             title: "WorkContext",
             href: "/docs/golem-js/reference/classes/task_work.WorkContext"
+          },
+{
+            title: "RequestorApi",
+            href: "/docs/golem-js/reference/classes/utils_yagna_activity.RequestorApi"
           },
 {
             title: "RequestorApi",
@@ -259,12 +311,24 @@ export const navigation = [
             href: "/docs/golem-js/reference/enums/activity_activity.ActivityStateEnum"
           },
 {
-            title: "TaskState",
-            href: "/docs/golem-js/reference/enums/task_task.TaskState"
+            title: "MarketErrorCode",
+            href: "/docs/golem-js/reference/enums/market_error.MarketErrorCode"
           },
 {
-            title: "LogLevel",
-            href: "/docs/golem-js/reference/enums/utils_logger_logger.LogLevel"
+            title: "NetworkErrorCode",
+            href: "/docs/golem-js/reference/enums/network_error.NetworkErrorCode"
+          },
+{
+            title: "PaymentErrorCode",
+            href: "/docs/golem-js/reference/enums/payment_error.PaymentErrorCode"
+          },
+{
+            title: "WorkErrorCode",
+            href: "/docs/golem-js/reference/enums/task_error.WorkErrorCode"
+          },
+{
+            title: "TaskState",
+            href: "/docs/golem-js/reference/enums/task_task.TaskState"
           }
         ]
       },
@@ -292,6 +356,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/activity_results.StreamingBatchEvent"
           },
 {
+            title: "ProviderInfo",
+            href: "/docs/golem-js/reference/interfaces/agreement_agreement.ProviderInfo"
+          },
+{
             title: "AgreementDTO",
             href: "/docs/golem-js/reference/interfaces/agreement_service.AgreementDTO"
           },
@@ -304,12 +372,8 @@ export const navigation = [
             href: "/docs/golem-js/reference/interfaces/executor_events.TaskExecutorEventsDict"
           },
 {
-            title: "GolemNetworkConfig",
-            href: "/docs/golem-js/reference/interfaces/golem_network_golem_network.GolemNetworkConfig"
-          },
-{
-            title: "JobStorage",
-            href: "/docs/golem-js/reference/interfaces/job_storage.JobStorage"
+            title: "JobEventsDict",
+            href: "/docs/golem-js/reference/interfaces/job_job.JobEventsDict"
           },
 {
             title: "DemandDetails",
@@ -397,12 +461,20 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/activity_results"
           },
 {
+            title: "Agreement_agreement",
+            href: "/docs/golem-js/reference/modules/agreement_agreement"
+          },
+{
             title: "Agreement_service",
             href: "/docs/golem-js/reference/modules/agreement_service"
           },
 {
             title: "Agreement_strategy",
             href: "/docs/golem-js/reference/modules/agreement_strategy"
+          },
+{
+            title: "Error_golem_error",
+            href: "/docs/golem-js/reference/modules/error_golem_error"
           },
 {
             title: "Events_events",
@@ -425,16 +497,16 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/job_job"
           },
 {
-            title: "Job_storage",
-            href: "/docs/golem-js/reference/modules/job_storage"
-          },
-{
             title: "Market_builder",
             href: "/docs/golem-js/reference/modules/market_builder"
           },
 {
             title: "Market_demand",
             href: "/docs/golem-js/reference/modules/market_demand"
+          },
+{
+            title: "Market_error",
+            href: "/docs/golem-js/reference/modules/market_error"
           },
 {
             title: "Market_helpers",
@@ -445,12 +517,20 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/market_proposal"
           },
 {
+            title: "Market_proposals_batch",
+            href: "/docs/golem-js/reference/modules/market_proposals_batch"
+          },
+{
             title: "Market_service",
             href: "/docs/golem-js/reference/modules/market_service"
           },
 {
             title: "Market_strategy",
             href: "/docs/golem-js/reference/modules/market_strategy"
+          },
+{
+            title: "Network_error",
+            href: "/docs/golem-js/reference/modules/network_error"
           },
 {
             title: "Network_network",
@@ -469,6 +549,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/package_package"
           },
 {
+            title: "Payment_InvoiceProcessor",
+            href: "/docs/golem-js/reference/modules/payment_InvoiceProcessor"
+          },
+{
             title: "Payment_agreement_payment_process",
             href: "/docs/golem-js/reference/modules/payment_agreement_payment_process"
           },
@@ -479,6 +563,10 @@ export const navigation = [
 {
             title: "Payment_debit_note",
             href: "/docs/golem-js/reference/modules/payment_debit_note"
+          },
+{
+            title: "Payment_error",
+            href: "/docs/golem-js/reference/modules/payment_error"
           },
 {
             title: "Payment_invoice",
@@ -521,6 +609,10 @@ export const navigation = [
             href: "/docs/golem-js/reference/modules/task_batch"
           },
 {
+            title: "Task_error",
+            href: "/docs/golem-js/reference/modules/task_error"
+          },
+{
             title: "Task_process",
             href: "/docs/golem-js/reference/modules/task_process"
           },
@@ -539,10 +631,6 @@ export const navigation = [
 {
             title: "Utils_env",
             href: "/docs/golem-js/reference/modules/utils_env"
-          },
-{
-            title: "Utils_logger_consoleLogger",
-            href: "/docs/golem-js/reference/modules/utils_logger_consoleLogger"
           },
 {
             title: "Utils_logger_defaultLogger",
@@ -571,6 +659,10 @@ export const navigation = [
 {
             title: "Utils_types",
             href: "/docs/golem-js/reference/modules/utils_types"
+          },
+{
+            title: "Utils_yagna_activity",
+            href: "/docs/golem-js/reference/modules/utils_yagna_activity"
           },
 {
             title: "Utils_yagna_gsb",
