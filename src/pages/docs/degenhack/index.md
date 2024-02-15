@@ -154,55 +154,13 @@ Create a new Node.js project and install the Golem SDK by entering the following
 npm init @golem-sdk/golem-app@latest my-golem-app
 ```
 
-Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY``](http://localhost:3000/docs/degen#creating-a-unique-app-key).
+Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY`](http://localhost:3000/docs/degen#creating-a-unique-app-key).
 
 In `src` folder you will find a reaquestor script. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
 
-```js
-import * as dotenv from 'dotenv'
-import { LogLevel, ProposalFilters, TaskExecutor } from '@golem-sdk/golem-js'
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-cli/master/data/project-templates/ts-node/src/index.ts" language="typescript" %}
 
-dotenv.config()
-
-;(async function main() {
-  const executor = await TaskExecutor.create({
-    // What do you want to run
-    package: 'golem/node:20-alpine',
-
-    // How much you wish to spend
-    budget: 0.5,
-
-    // How do you want to select market proposals
-    proposalFilter: ProposalFilters.limitPriceFilter({
-      start: 0.1,
-      cpuPerSec: 0.1 / 3600,
-      envPerSec: 0.1 / 3600,
-    }),
-
-    // Where you want to spend
-    payment: {
-      network: 'goerli',
-    },
-
-    // Control the execution of tasks
-    maxTaskRetries: 0,
-
-    // Useful for debugging
-    logLevel: LogLevel.Info,
-    taskTimeout: 5 * 60 * 1000,
-  })
-
-  try {
-    // Your code goes here
-    const result = await executor.run((ctx) => ctx.run('node -v'))
-    console.log('Version of NodeJS on Provider:', result.stdout.trim())
-  } catch (err) {
-    console.error('Running the task on Golem failed due to', err)
-  } finally {
-    await executor.shutdown()
-  }
-})()
-```
+{% /codefromgithub %}
 
 To execute the script, run:
 
@@ -210,7 +168,7 @@ To execute the script, run:
 npm start
 ```
 
-You can find an explanation of the structure of the above requestor script [here](/docs/creators/javascript/tutorials/quickstart-explained).
+You can find an explanation of the structure of the typical requestor script [here](/docs/creators/javascript/tutorials/quickstart-explained).
 
 The standard quickstart example has been altered with the following modifications:
 
