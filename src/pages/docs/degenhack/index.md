@@ -223,6 +223,10 @@ The JS SDK consists of the following components:
 
 [GitHub Repo](https://github.com/golemfactory/react-image-classifier)
 
+**music-on-golem** - a reference implementation of a next.js app that uses Golem to generate music. The project contains everything you'd find in a typical full-stack application, including a database, design system, authentication, and more.
+
+[GitHub Repo](https://github.com/golemfactory/music-on-golem)
+
 ## Golem tools
 
 **Yagna** - the foundational service that allows users to connect with and interact with the Golem Network.
