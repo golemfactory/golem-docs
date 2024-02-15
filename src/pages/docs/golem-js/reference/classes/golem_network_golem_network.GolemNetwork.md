@@ -8,26 +8,9 @@ type: "JS API Reference"
 
 [golem\_network/golem\_network](../modules/golem_network_golem_network).GolemNetwork
 
-The starting point for using Golem Network.
+This API is experimental and subject to change. Use at your own risk.
 
-**`Description`**
-
-The GolemNetwork class is the best way to get started with developing on Golem Network. It provides a simple interface for creating jobs and running tasks.
-
-**`Example`**
-
-```typescript
-import { GolemNetwork } from "@golem-sdk/golem-js";
-const network = new GolemNetwork();
-network.init().then(() => {
- // network is ready to use
- const result = await network.runTask(async (ctx) => {
-  // do some work
-  return (await ctx.run("echo 'Hello from Golem'")).stdout;
- });
- console.log(result);
-});
-```
+The Golem Network class provides a high-level API for running jobs on the Golem Network.
 
 ## Table of contents
 
@@ -41,7 +24,6 @@ network.init().then(() => {
 - [init](golem_network_golem_network.GolemNetwork#init)
 - [createJob](golem_network_golem_network.GolemNetwork#createjob)
 - [getJobById](golem_network_golem_network.GolemNetwork#getjobbyid)
-- [runTask](golem_network_golem_network.GolemNetwork#runtask)
 - [close](golem_network_golem_network.GolemNetwork#close)
 
 ## Constructors
@@ -52,9 +34,9 @@ network.init().then(() => {
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `config` | [`GolemNetworkConfig`](../interfaces/golem_network_golem_network.GolemNetworkConfig) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`GolemNetworkConfig`](../modules/golem_network_golem_network#golemnetworkconfig) | Configuration options that will be passed to all jobs created by this instance. |
 
 #### Returns
 
@@ -62,7 +44,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:58](https://github.com/golemfactory/golem-js/blob/a42794e/src/golem_network/golem_network.ts#L58)
+[src/golem_network/golem_network.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L24)
 
 ## Methods
 
@@ -76,7 +58,7 @@ network.init().then(() => {
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:67](https://github.com/golemfactory/golem-js/blob/a42794e/src/golem_network/golem_network.ts#L67)
+[src/golem_network/golem_network.ts:28](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L28)
 
 ___
 
@@ -90,59 +72,42 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:71](https://github.com/golemfactory/golem-js/blob/a42794e/src/golem_network/golem_network.ts#L71)
+[src/golem_network/golem_network.ts:32](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L32)
 
 ___
 
 ### createJob
 
-▸ **createJob**\<`Output`\>(`worker`): `Promise`\<[`Job`](job_job.Job)\<`Output`\>\>
+▸ **createJob**\<`Output`\>(`options?`): [`Job`](job_job.Job)\<`Output`\>
 
-Create a job on Golem Network.
+Create a new job and add it to the list of jobs managed by this instance.
+This method does not start any work on the network, use [Job.startWork](job_job.Job#startwork) for that.
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `Output` |
+| Name | Type |
+| :------ | :------ |
+| `Output` | `unknown` |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`Output`\> | Worker function to run |
+| `options` | [`RunJobOptions`](../modules/job_job#runjoboptions) | Configuration options for the job. These options will be merged with the options passed to the constructor. |
 
 #### Returns
 
-`Promise`\<[`Job`](job_job.Job)\<`Output`\>\>
-
-Job object
-
-**`Description`**
-
-Create a job on Golem Network. You can use the job object to fetch the job status, results and errors. For more information see Job.
-
-**`Example`**
-
-```typescript
-const job = await network.createJob(async (ctx) => {
-// do some work
-return (await ctx.run("echo 'Hello from Golem'")).stdout;
-});
-console.log(job.id);
-const status = await job.fetchState();
-console.log(status);
-```
+[`Job`](job_job.Job)\<`Output`\>
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:101](https://github.com/golemfactory/golem-js/blob/a42794e/src/golem_network/golem_network.ts#L101)
+[src/golem_network/golem_network.ts:43](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L43)
 
 ___
 
 ### getJobById
 
-▸ **getJobById**(`id`): [`Job`](job_job.Job)\<`unknown`\>
+▸ **getJobById**(`id`): `undefined` \| [`Job`](job_job.Job)\<`unknown`\>
 
 #### Parameters
 
@@ -152,45 +117,11 @@ ___
 
 #### Returns
 
-[`Job`](job_job.Job)\<`unknown`\>
+`undefined` \| [`Job`](job_job.Job)\<`unknown`\>
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:105](https://github.com/golemfactory/golem-js/blob/a42794e/src/golem_network/golem_network.ts#L105)
-
-___
-
-### runTask
-
-▸ **runTask**\<`Output`\>(`worker`): `Promise`\<`Output`\>
-
-Run a task on Golem Network.
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `Output` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `worker` | [`Worker`](../modules/task_work#worker)\<`Output`\> | Worker function to run |
-
-#### Returns
-
-`Promise`\<`Output`\>
-
-Worker function result
-
-**`Description`**
-
-The runTask method is the simplest way to run some code on Golem Network. Simply call `runTask` and await the promise to get your result.
-
-#### Defined in
-
-[src/golem_network/golem_network.ts:116](https://github.com/golemfactory/golem-js/blob/a42794e/src/golem_network/golem_network.ts#L116)
+[src/golem_network/golem_network.ts:53](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L53)
 
 ___
 
@@ -198,10 +129,12 @@ ___
 
 ▸ **close**(): `Promise`\<`void`\>
 
+Close the connection to the Yagna service and cancel all running jobs.
+
 #### Returns
 
 `Promise`\<`void`\>
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:120](https://github.com/golemfactory/golem-js/blob/a42794e/src/golem_network/golem_network.ts#L120)
+[src/golem_network/golem_network.ts:62](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L62)

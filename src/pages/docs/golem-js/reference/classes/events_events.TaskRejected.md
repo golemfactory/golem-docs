@@ -13,7 +13,7 @@ will be conducted.
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `providerId`: `string` ; `providerName`: `string` ; `activityId?`: `string` ; `reason?`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId?`: `string` ; `provider?`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) ; `activityId?`: `string` ; `reason?`: `string`  }\>
 
   ↳ **`TaskRejected`**
 
@@ -33,17 +33,16 @@ will be conducted.
 
 ### constructor
 
-• **new TaskRejected**(`data?`): [`TaskRejected`](events_events.TaskRejected)
+• **new TaskRejected**(`data`): [`TaskRejected`](events_events.TaskRejected)
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data?` | `Object` | - |
+| `data` | `Object` | - |
 | `data.id` | `string` | - |
-| `data.agreementId` | `string` | - |
-| `data.providerId` | `string` | - |
-| `data.providerName` | `string` | - |
+| `data.agreementId?` | `string` | - |
+| `data.provider?` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
 | `data.activityId?` | `string` | The activity that was involved when the rejection took place This might be not set when there was an issue with starting the activity on the provider |
 | `data.reason?` | `string` | - |
 
@@ -57,7 +56,7 @@ will be conducted.
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L28)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L29)
 
 ## Properties
 
@@ -70,9 +69,8 @@ will be conducted.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | - |
-| `agreementId` | `string` | - |
-| `providerId` | `string` | - |
-| `providerName` | `string` | - |
+| `agreementId?` | `string` | - |
+| `provider?` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) | - |
 | `activityId?` | `string` | The activity that was involved when the rejection took place This might be not set when there was an issue with starting the activity on the provider |
 | `reason?` | `string` | - |
 
@@ -82,7 +80,7 @@ will be conducted.
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L16)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L17)
 
 ___
 
@@ -96,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L17)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L18)
 
 ___
 
@@ -110,4 +108,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L18)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L19)

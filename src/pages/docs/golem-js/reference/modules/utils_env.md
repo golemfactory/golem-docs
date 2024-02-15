@@ -8,27 +8,95 @@ type: "JS API Reference"
 
 ## Table of contents
 
-### Variables
+### Functions
 
-- [EnvUtils](utils_env#envutils)
+- [getYagnaApiUrl](utils_env#getyagnaapiurl)
+- [getYagnaAppKey](utils_env#getyagnaappkey)
+- [getYagnaSubnet](utils_env#getyagnasubnet)
+- [getRepoUrl](utils_env#getrepourl)
+- [getPaymentNetwork](utils_env#getpaymentnetwork)
+- [isDevMode](utils_env#isdevmode)
 
-## Variables
+## Functions
 
-### EnvUtils
+### getYagnaApiUrl
 
-• `Const` **EnvUtils**: `Object`
+▸ **getYagnaApiUrl**(): `string`
 
-#### Type declaration
+#### Returns
 
-| Name | Type |
-| :------ | :------ |
-| `getYagnaApiUrl` | () => `string` |
-| `getYagnaAppKey` | () => `string` |
-| `getYagnaSubnet` | () => `string` |
-| `getRepoUrl` | () => `string` |
-| `getPaymentNetwork` | () => `string` |
-| `isDevMode` | () => `boolean` |
+`string`
 
 #### Defined in
 
-[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/env.ts#L3)
+[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L3)
+
+___
+
+### getYagnaAppKey
+
+▸ **getYagnaAppKey**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/utils/env.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L7)
+
+___
+
+### getYagnaSubnet
+
+▸ **getYagnaSubnet**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/utils/env.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L11)
+
+___
+
+### getRepoUrl
+
+▸ **getRepoUrl**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/utils/env.ts:15](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L15)
+
+___
+
+### getPaymentNetwork
+
+▸ **getPaymentNetwork**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/utils/env.ts:21](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L21)
+
+___
+
+### isDevMode
+
+▸ **isDevMode**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/utils/env.ts:25](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L25)

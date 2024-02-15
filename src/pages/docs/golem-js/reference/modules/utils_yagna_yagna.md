@@ -17,6 +17,10 @@ type: "JS API Reference"
 - [YagnaApi](utils_yagna_yagna#yagnaapi)
 - [YagnaOptions](utils_yagna_yagna#yagnaoptions)
 
+### Variables
+
+- [MIN\_SUPPORTED\_YAGNA](utils_yagna_yagna#min_supported_yagna)
+
 ## Type Aliases
 
 ### YagnaApi
@@ -28,9 +32,9 @@ type: "JS API Reference"
 | Name | Type |
 | :------ | :------ |
 | `market` | `MarketRequestorApi` |
-| `activity` | \{ `control`: `RequestorControlApi` ; `state`: `RequestorStateApi`  } |
+| `activity` | \{ `control`: `RequestorControlApi` ; `state`: [`RequestorApi`](../classes/utils_yagna_activity.RequestorApi)  } |
 | `activity.control` | `RequestorControlApi` |
-| `activity.state` | `RequestorStateApi` |
+| `activity.state` | [`RequestorApi`](../classes/utils_yagna_activity.RequestorApi) |
 | `net` | `NetworkRequestorApi` |
 | `payment` | `PaymentRequestorApi` |
 | `identity` | [`RequestorApi`](../classes/utils_yagna_identity.RequestorApi) |
@@ -40,7 +44,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:13](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L13)
+[src/utils/yagna/yagna.ts:16](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/yagna.ts#L16)
 
 ___
 
@@ -54,7 +58,18 @@ ___
 | :------ | :------ |
 | `apiKey?` | `string` |
 | `basePath?` | `string` |
+| `abortController?` | `AbortController` |
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:24](https://github.com/golemfactory/golem-js/blob/a42794e/src/utils/yagna/yagna.ts#L24)
+[src/utils/yagna/yagna.ts:27](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/yagna.ts#L27)
+
+## Variables
+
+### MIN\_SUPPORTED\_YAGNA
+
+• `Const` **MIN\_SUPPORTED\_YAGNA**: ``"0.13.2"``
+
+#### Defined in
+
+[src/utils/yagna/yagna.ts:52](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/yagna.ts#L52)

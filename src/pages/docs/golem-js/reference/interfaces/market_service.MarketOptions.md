@@ -19,6 +19,8 @@ type: "JS API Reference"
 ### Properties
 
 - [proposalFilter](market_service.MarketOptions#proposalfilter)
+- [minProposalsBatchSize](market_service.MarketOptions#minproposalsbatchsize)
+- [proposalsBatchReleaseTimeoutMs](market_service.MarketOptions#proposalsbatchreleasetimeoutms)
 - [subnetTag](market_service.MarketOptions#subnettag)
 - [yagnaOptions](market_service.MarketOptions#yagnaoptions)
 - [expirationSec](market_service.MarketOptions#expirationsec)
@@ -28,6 +30,7 @@ type: "JS API Reference"
 - [proposalTimeout](market_service.MarketOptions#proposaltimeout)
 - [eventTarget](market_service.MarketOptions#eventtarget)
 - [debitNotesAcceptanceTimeoutSec](market_service.MarketOptions#debitnotesacceptancetimeoutsec)
+- [midAgreementDebitNoteIntervalSec](market_service.MarketOptions#midagreementdebitnoteintervalsec)
 - [midAgreementPaymentTimeoutSec](market_service.MarketOptions#midagreementpaymenttimeoutsec)
 
 ## Properties
@@ -36,11 +39,36 @@ type: "JS API Reference"
 
 • `Optional` **proposalFilter**: [`ProposalFilter`](../modules/market_service#proposalfilter)
 
-A custom filter that checks every proposal coming from the market
+A custom filter checking the proposal from the market for each provider and its hardware configuration.
+Duplicate proposals from one provider are reduced to the cheapest one.
 
 #### Defined in
 
-[src/market/service.ts:13](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/service.ts#L13)
+[src/market/service.ts:18](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/service.ts#L18)
+
+___
+
+### minProposalsBatchSize
+
+• `Optional` **minProposalsBatchSize**: `number`
+
+The minimum number of proposals after which the batch of proposal will be processed in order to avoid duplicates
+
+#### Defined in
+
+[src/market/service.ts:20](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/service.ts#L20)
+
+___
+
+### proposalsBatchReleaseTimeoutMs
+
+• `Optional` **proposalsBatchReleaseTimeoutMs**: `number`
+
+The maximum waiting time for proposals to be batched in order to avoid duplicates
+
+#### Defined in
+
+[src/market/service.ts:22](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/service.ts#L22)
 
 ___
 
@@ -54,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:19](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L19)
+[src/market/demand.ts:21](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L21)
 
 ___
 
@@ -68,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:20](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L20)
+[src/market/demand.ts:22](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L22)
 
 ___
 
@@ -102,7 +130,7 @@ If your activity is about to operate longer than 10h, you need set both [debitNo
 
 #### Defined in
 
-[src/market/demand.ts:43](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L43)
+[src/market/demand.ts:45](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L45)
 
 ___
 
@@ -116,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:45](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L45)
+[src/market/demand.ts:47](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L47)
 
 ___
 
@@ -130,7 +158,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:46](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L46)
+[src/market/demand.ts:48](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L48)
 
 ___
 
@@ -144,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:48](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L48)
+[src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L50)
 
 ___
 
@@ -158,7 +186,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L50)
+[src/market/demand.ts:52](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L52)
 
 ___
 
@@ -172,7 +200,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:52](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L52)
+[src/market/demand.ts:54](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L54)
 
 ___
 
@@ -180,14 +208,14 @@ ___
 
 • `Optional` **debitNotesAcceptanceTimeoutSec**: `number`
 
-Maximum time for debit note acceptance (in seconds)
+Maximum time for allowed provider-sent debit note acceptance (in seconds)
 
-If it would not be defined, the activities created for your demand would
-probably live only 30 minutes, as that's the default value that the providers use to control engagements
-that are not using mid-agreement payments.
+Accepting debit notes from the provider is used as a health-check of the agreement between these parties.
+Failing to accept several debit notes in a row will be considered as a valida reason to terminate the agreement earlier
+than [expirationSec](market_demand.DemandOptions#expirationsec) defines.
 
 _Accepting debit notes during a long activity is considered a good practice in Golem Network._
-The SDK will accept debit notes each 2 minutes.
+The SDK will accept debit notes each 2 minutes by default.
 
 #### Inherited from
 
@@ -195,7 +223,33 @@ The SDK will accept debit notes each 2 minutes.
 
 #### Defined in
 
-[src/market/demand.ts:64](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L64)
+[src/market/demand.ts:66](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L66)
+
+___
+
+### midAgreementDebitNoteIntervalSec
+
+• `Optional` **midAgreementDebitNoteIntervalSec**: `number`
+
+The interval between provider sent debit notes to negotiate.
+
+If it would not be defined, the activities created for your demand would
+probably live only 30 minutes, as that's the default value that the providers use to control engagements
+that are not using mid-agreement payments.
+
+As a requestor, you don't have to specify it, as the provider will propose a value that the SDK will simply
+accept without negotiations.
+
+_Accepting payable debit notes during a long activity is considered a good practice in Golem Network._
+The SDK will accept debit notes each 2 minutes by default.
+
+#### Inherited from
+
+[DemandOptions](market_demand.DemandOptions).[midAgreementDebitNoteIntervalSec](market_demand.DemandOptions#midagreementdebitnoteintervalsec)
+
+#### Defined in
+
+[src/market/demand.ts:81](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L81)
 
 ___
 
@@ -219,4 +273,4 @@ The SDK will issue payments each 12h by default, and you can control this with t
 
 #### Defined in
 
-[src/market/demand.ts:77](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/demand.ts#L77)
+[src/market/demand.ts:94](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/demand.ts#L94)

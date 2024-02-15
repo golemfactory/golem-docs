@@ -41,9 +41,6 @@ node retrievable-task.mjs
 You should see the following output:
 
 ```
-Job is still running...
-Job is still running...
-Job is still running...
 Job finished with state: done
 Job results: Hello, Golem!
 ```

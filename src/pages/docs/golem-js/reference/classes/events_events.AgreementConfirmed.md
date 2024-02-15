@@ -10,7 +10,7 @@ type: "JS API Reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `providerId`: `string`  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `provider`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)  }\>
 
   ↳ **`AgreementConfirmed`**
 
@@ -30,15 +30,15 @@ type: "JS API Reference"
 
 ### constructor
 
-• **new AgreementConfirmed**(`data?`): [`AgreementConfirmed`](events_events.AgreementConfirmed)
+• **new AgreementConfirmed**(`data`): [`AgreementConfirmed`](events_events.AgreementConfirmed)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data?` | `Object` |
+| `data` | `Object` |
 | `data.id` | `string` |
-| `data.providerId` | `string` |
+| `data.provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 
 #### Returns
 
@@ -50,7 +50,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:28](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L28)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L29)
 
 ## Properties
 
@@ -63,7 +63,7 @@ type: "JS API Reference"
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
-| `providerId` | `string` |
+| `provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 
 #### Inherited from
 
@@ -71,7 +71,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:16](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L16)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L17)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L17)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L18)
 
 ___
 
@@ -99,4 +99,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/a42794e/src/events/events.ts#L18)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L19)

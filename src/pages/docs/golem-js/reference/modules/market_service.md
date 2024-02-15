@@ -20,11 +20,11 @@ type: "JS API Reference"
 
 ### ProposalFilter
 
-Ƭ **ProposalFilter**: (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `Promise`\<`boolean`\> \| `boolean`
+Ƭ **ProposalFilter**: (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
 
 #### Type declaration
 
-▸ (`proposal`): `Promise`\<`boolean`\> \| `boolean`
+▸ (`proposal`): `boolean`
 
 ##### Parameters
 
@@ -34,8 +34,8 @@ type: "JS API Reference"
 
 ##### Returns
 
-`Promise`\<`boolean`\> \| `boolean`
+`boolean`
 
 #### Defined in
 
-[src/market/service.ts:9](https://github.com/golemfactory/golem-js/blob/a42794e/src/market/service.ts#L9)
+[src/market/service.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/service.ts#L11)

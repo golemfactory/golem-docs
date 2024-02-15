@@ -48,7 +48,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:26](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/payments.ts#L26)
+[src/payment/payments.ts:28](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L28)
 
 ## Methods
 
@@ -69,20 +69,21 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:22](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/payments.ts#L22)
+[src/payment/payments.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L24)
 
 ___
 
 ### unsubscribe
 
-▸ **unsubscribe**(): `Promise`\<`void`\>
+▸ **unsubscribe**(): `Promise`\<`unknown`\>
 
-Unsubscribe demand from the market
+Unsubscribe from collecting payment events.
+An error will be thrown when the unsubscribe timeout expires.
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<`unknown`\>
 
 #### Defined in
 
-[src/payment/payments.ts:39](https://github.com/golemfactory/golem-js/blob/a42794e/src/payment/payments.ts#L39)
+[src/payment/payments.ts:42](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L42)
