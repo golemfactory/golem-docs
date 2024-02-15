@@ -75,12 +75,12 @@ The manifest needs to contain the image URL pointing to the GVMI download locati
 To facilitate the process of creating a manifest, `golem-sdk` accepts multiple forms of image argument, where some of them will automatically resolve the URL and/or hash.
 Please consult the table below for more details:
 
-| Argument format                    | Example                                                                                       | Is `--image-hash` required?                 | Notes                                                                                      |
-| ---------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Image tag                          | `golem/node:latest`                                                                           | No, it will be automatically resolved.      | Image hash is fetched from [https://registry.golem.network]. It is the recommended method. |
-| Image hash                         | `3d6c48bb4c192708168d53cee4f36876b263b7745c3a3c239c6749cd`                                    | No, it is resolved from the image argument. | Image URL will point to [https://registry.golem.network]                                   |
-| URL to registry.golem.network      | `https://registry.golem.network/v1/image/download?tag=golem-examples/blender:2.80&https=true` | No, it is automatically resolved.           |                                                                                            |
-| URL to arbitrary download location | `https://example.com/my-image`                                                                | Yes, image-hash is required.                | Image is calculated by the gvmkit-build conversion tool.                                   |
+| Argument format                    | Example                                                                           | Is `--image-hash` required?                 | Notes                                                                                      |
+| ---------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Image tag                          | `golem/node:latest`                                                               | No, it will be automatically resolved.      | Image hash is fetched from [https://registry.golem.network]. It is the recommended method. |
+| Image hash                         | `3d6c48bb4c192708168d53cee4f36876b263b7745c3a3c239c6749cd`                        | No, it is resolved from the image argument. | Image URL will point to [https://registry.golem.network]                                   |
+| URL to registry.golem.network      | `http://registry.golem.network/v1/image/download?tag=golem-examples/blender:2.80` | No, it is automatically resolved.           |                                                                                            |
+| URL to arbitrary download location | `https://example.com/my-image`                                                    | Yes, image-hash is required.                | Image is calculated by the gvmkit-build conversion tool.                                   |
 
 If the hash is not provided or resolved, you will get a warning that the manifest will not be usable until you provide it manually.
 
