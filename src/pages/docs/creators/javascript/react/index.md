@@ -19,7 +19,6 @@ The Golem React SDK provides a set of React hooks and components that make it ea
 - Connecting to Yagna - use the [useYagna](/docs/creators/javascript/react/use-yagna) hook to connect display the connection status and reconnect to Yagna if the connection is lost.
 - Running tasks on the network - use the [useExecutor](/docs/creators/javascript/react/use-executor) hook to initialize and terminate executors and the [useTask](/docs/creators/javascript/react/use-task) hook to run tasks on the network.
 - Listing and handling invoices - use the [useInvoices](/docs/creators/javascript/react/use-invoices) hook to list invoices and the [useHandleInvoice](/docs/creators/javascript/react/use-handle-invoice) hook to handle invoices.
-- Listing and handling debit notes - use the [useDebitNotes](/docs/creators/javascript/react/use-debit-notes) hook to list debit notes and the [useHandleDebitNote](/docs/creators/javascript/react/use-handle-debit-note) hook to handle debit notes.
 
 {% docnavigation title="API reference" %}
 
@@ -30,6 +29,8 @@ If you want to learn more about each of the hooks and components provided by the
 ## Example application
 
 To help you get started we have created an example application that uses every hook and component provided by the SDK. You can find the source code for the example app on [GitHub](https://github.com/golemfactory/golem-sdk-react/tree/master/examples/react-with-vite). Feel free to clone the repository and play around with the code. Follow the instructions in the README to run the app locally.
+
+To see the example app in action, you can also visit the [live demo](https://golem-react-showcase.vercel.app/).
 
 ## GitHub repository
 
