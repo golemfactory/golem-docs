@@ -58,7 +58,7 @@ bun add @golem-sdk/react
 Then make sure to wrap your app with the `YagnaProvider` component:
 
 ```jsx
-<YagnaProvider config={{ yagnaAppKey: 'my-app-key' }}>
+<YagnaProvider>
   <App />
 </YagnaProvider>
 ```
@@ -79,23 +79,26 @@ Now that you have the SDK installed and configured, you can start using it in yo
 
 ```jsx
 function YagnaStatus() {
-  const { isConnected, reconnect, isLoading, error } = useYagna()
-  if (isLoading) {
-    return <div>Loading...</div>
+  const { isConnected, setYagnaOptions } = useYagna()
+  const inputRef = useRef(null)
+  if (isConnected) {
+    return <span>Connected to Yagna!</span>
   }
   return (
     <div>
-      <div>Yagna is {isConnected ? 'connected' : 'disconnected'}</div>
-      <button onClick={reconnect} disabled={isConnected}>
-        Reconnect
+      <div>Enter your app key to connect to Yagna</div>
+      <input ref={inputRef} />
+      <button
+        onClick={() => setYagnaOptions({ apiKey: inputRef.current.value })}
+      >
+        Set app key
       </button>
-      {error && <div>Error: {error.toString()}</div>}
     </div>
   )
 }
 ```
 
-Add this component to your application and refresh the page. If you have set up everything correctly you should see "Yagna is connected"
+Add this component to your application and refresh the page. Enter your app-key and if you have set up everything correctly you should see "Connected to Yagna!".
 
 {% docnavigation title="Next steps" %}
 
