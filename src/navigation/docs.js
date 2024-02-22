@@ -1,3 +1,7 @@
+import { navigation as taskExecutorReference } from './golem-sdk-task-executor-jsreference'
+import { navigation as golemJsReference } from './golem-js-jsreference'
+import { parseReference } from './parseReference'
+
 export const navigation = [
   {
     title: 'Home',
@@ -97,52 +101,6 @@ export const navigation = [
             ],
           },
           {
-            title: 'JS Task API Examples',
-            href: '',
-            children: [
-              {
-                title: 'List of examples',
-                href: '/docs/creators/javascript/examples',
-              },
-              {
-                title: 'Executing tasks',
-                href: '/docs/creators/javascript/examples/executing-tasks',
-              },
-              {
-                title: 'Composing tasks',
-                href: '/docs/creators/javascript/examples/composing-tasks',
-              },
-              {
-                title: 'Transferring data',
-                href: '/docs/creators/javascript/examples/transferring-data',
-              },
-              {
-                title: 'Working with results',
-                href: '/docs/creators/javascript/examples/working-with-results',
-              },
-              {
-                title: 'Selecting providers',
-                href: '/docs/creators/javascript/examples/selecting-providers',
-              },
-              {
-                title: 'Working with images',
-                href: '/docs/creators/javascript/examples/working-with-images',
-              },
-              {
-                title: 'Using app-keys',
-                href: '/docs/creators/javascript/examples/using-app-keys',
-              },
-              {
-                title: 'Accessing the Internet',
-                href: '/docs/creators/javascript/examples/accessing-internet',
-              },
-              {
-                title: 'Switching to mainnet',
-                href: '/docs/creators/javascript/examples/switching-to-mainnet',
-              },
-            ],
-          },
-          {
             title: 'Guides',
             href: '',
             children: [
@@ -223,6 +181,59 @@ export const navigation = [
             ],
           },
           {
+            title: 'JS Task API',
+            href: '',
+            children: [
+              {
+                title: 'JS Task API Examples',
+                href: '',
+                children: [
+                  {
+                    title: 'List of examples',
+                    href: '/docs/creators/javascript/examples',
+                  },
+                  {
+                    title: 'Executing tasks',
+                    href: '/docs/creators/javascript/examples/executing-tasks',
+                  },
+                  {
+                    title: 'Composing tasks',
+                    href: '/docs/creators/javascript/examples/composing-tasks',
+                  },
+                  {
+                    title: 'Transferring data',
+                    href: '/docs/creators/javascript/examples/transferring-data',
+                  },
+                  {
+                    title: 'Working with results',
+                    href: '/docs/creators/javascript/examples/working-with-results',
+                  },
+                  {
+                    title: 'Selecting providers',
+                    href: '/docs/creators/javascript/examples/selecting-providers',
+                  },
+                  {
+                    title: 'Working with images',
+                    href: '/docs/creators/javascript/examples/working-with-images',
+                  },
+                  {
+                    title: 'Using app-keys',
+                    href: '/docs/creators/javascript/examples/using-app-keys',
+                  },
+                  {
+                    title: 'Accessing the Internet',
+                    href: '/docs/creators/javascript/examples/accessing-internet',
+                  },
+                  {
+                    title: 'Switching to mainnet',
+                    href: '/docs/creators/javascript/examples/switching-to-mainnet',
+                  },
+                ],
+              },
+              parseReference('JS Task API Reference', taskExecutorReference),
+            ],
+          },
+          {
             title: 'React SDK',
             href: '',
             children: [
@@ -278,6 +289,7 @@ export const navigation = [
               },
             ],
           },
+          parseReference('Golem JS API Reference', golemJsReference),
         ],
       },
       {

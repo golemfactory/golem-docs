@@ -42,4 +42,4 @@ If the namespace is not prefixed with `golem-js:`, it will be prefixed automatic
 
 #### Defined in
 
-[src/utils/logger/defaultLogger.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/defaultLogger.ts#L7)
+[src/utils/logger/defaultLogger.ts:7](https://github.com/golemfactory/golem-js/blob/4182943/src/utils/logger/defaultLogger.ts#L7)

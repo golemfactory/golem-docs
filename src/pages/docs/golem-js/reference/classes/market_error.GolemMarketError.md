@@ -55,7 +55,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/market/error.ts:18](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L18)
+[src/market/error.ts:18](https://github.com/golemfactory/golem-js/blob/4182943/src/market/error.ts#L18)
 
 ## Properties
 
@@ -69,7 +69,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/market/error.ts:20](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L20)
+[src/market/error.ts:20](https://github.com/golemfactory/golem-js/blob/4182943/src/market/error.ts#L20)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:21](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L21)
+[src/market/error.ts:21](https://github.com/golemfactory/golem-js/blob/4182943/src/market/error.ts#L21)
 
 ___
 
@@ -95,4 +95,4 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/market/error.ts:22](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L22)
+[src/market/error.ts:22](https://github.com/golemfactory/golem-js/blob/4182943/src/market/error.ts#L22)

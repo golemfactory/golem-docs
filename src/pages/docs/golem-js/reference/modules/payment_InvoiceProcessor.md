@@ -24,4 +24,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/InvoiceProcessor.ts:6](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/InvoiceProcessor.ts#L6)
+[src/payment/InvoiceProcessor.ts:6](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/InvoiceProcessor.ts#L6)

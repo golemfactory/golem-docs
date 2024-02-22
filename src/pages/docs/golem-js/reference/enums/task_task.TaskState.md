@@ -27,7 +27,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/task.ts#L8)
+[src/task/task.ts:8](https://github.com/golemfactory/golem-js/blob/4182943/src/task/task.ts#L8)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/task.ts#L9)
+[src/task/task.ts:9](https://github.com/golemfactory/golem-js/blob/4182943/src/task/task.ts#L9)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/task.ts#L10)
+[src/task/task.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/task/task.ts#L10)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/task.ts#L11)
+[src/task/task.ts:11](https://github.com/golemfactory/golem-js/blob/4182943/src/task/task.ts#L11)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/task.ts#L12)
+[src/task/task.ts:12](https://github.com/golemfactory/golem-js/blob/4182943/src/task/task.ts#L12)
 
 ___
 
@@ -77,4 +77,4 @@ ___
 
 #### Defined in
 
-[src/task/task.ts:13](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/task.ts#L13)
+[src/task/task.ts:13](https://github.com/golemfactory/golem-js/blob/4182943/src/task/task.ts#L13)

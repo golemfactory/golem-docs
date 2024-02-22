@@ -40,7 +40,7 @@ to avoid duplicate offers issued by the provider.
 
 #### Defined in
 
-[src/market/proposals_batch.ts:27](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/proposals_batch.ts#L27)
+[src/market/proposals_batch.ts:27](https://github.com/golemfactory/golem-js/blob/4182943/src/market/proposals_batch.ts#L27)
 
 ## Methods
 
@@ -63,7 +63,7 @@ which consist of providerId, cores, threads, mem and storage
 
 #### Defined in
 
-[src/market/proposals_batch.ts:38](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/proposals_batch.ts#L38)
+[src/market/proposals_batch.ts:38](https://github.com/golemfactory/golem-js/blob/4182943/src/market/proposals_batch.ts#L38)
 
 ___
 
@@ -80,4 +80,4 @@ or their size reached the `minBatchSize` value
 
 #### Defined in
 
-[src/market/proposals_batch.ts:54](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/proposals_batch.ts#L54)
+[src/market/proposals_batch.ts:54](https://github.com/golemfactory/golem-js/blob/4182943/src/market/proposals_batch.ts#L54)

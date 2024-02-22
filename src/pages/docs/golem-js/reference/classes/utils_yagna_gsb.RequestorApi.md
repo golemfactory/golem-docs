@@ -78,7 +78,7 @@ GsbRequestorApi.createService
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:21](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/gsb.ts#L21)
+[src/utils/yagna/gsb.ts:21](https://github.com/golemfactory/golem-js/blob/4182943/src/utils/yagna/gsb.ts#L21)
 
 ___
 
@@ -102,4 +102,4 @@ GsbRequestorApi.deleteService
 
 #### Defined in
 
-[src/utils/yagna/gsb.ts:45](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/gsb.ts#L45)
+[src/utils/yagna/gsb.ts:45](https://github.com/golemfactory/golem-js/blob/4182943/src/utils/yagna/gsb.ts#L45)
