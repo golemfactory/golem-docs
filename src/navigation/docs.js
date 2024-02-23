@@ -143,44 +143,6 @@ export const navigation = [
             ],
           },
           {
-            title: 'Golem tools examples',
-            href: '',
-            children: [
-              {
-                title: 'List of instructions',
-                href: '/docs/creators/javascript/examples/tools',
-              },
-              {
-                title: 'Yagna installation',
-                href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
-              },
-              {
-                title: 'Converting images',
-                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
-              },
-              {
-                title: 'Gvmkit-build installation',
-                href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
-              },
-              {
-                title: 'Publishing custom images',
-                href: '/docs/creators/javascript/examples/tools/publishing-custom-images',
-              },
-              {
-                title: 'Golem wallet backup',
-                href: '/docs/creators/javascript/examples/tools/golem-wallet-backup',
-              },
-              {
-                title: 'Restoring Golem wallet',
-                href: '/docs/creators/javascript/examples/tools/restoring-golem-wallet',
-              },
-              {
-                title: 'Managing Golem wallet',
-                href: '/docs/creators/javascript/examples/tools/managing-golem-wallet',
-              },
-            ],
-          },
-          {
             title: 'JS Task API',
             href: '',
             children: [
@@ -231,6 +193,44 @@ export const navigation = [
                 ],
               },
               parseReference('Task API Reference', taskExecutorReference),
+            ],
+          },
+          {
+            title: 'Golem tools examples',
+            href: '',
+            children: [
+              {
+                title: 'List of instructions',
+                href: '/docs/creators/javascript/examples/tools',
+              },
+              {
+                title: 'Yagna installation',
+                href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
+              },
+              {
+                title: 'Converting images',
+                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
+              },
+              {
+                title: 'Gvmkit-build installation',
+                href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
+              },
+              {
+                title: 'Publishing custom images',
+                href: '/docs/creators/javascript/examples/tools/publishing-custom-images',
+              },
+              {
+                title: 'Golem wallet backup',
+                href: '/docs/creators/javascript/examples/tools/golem-wallet-backup',
+              },
+              {
+                title: 'Restoring Golem wallet',
+                href: '/docs/creators/javascript/examples/tools/restoring-golem-wallet',
+              },
+              {
+                title: 'Managing Golem wallet',
+                href: '/docs/creators/javascript/examples/tools/managing-golem-wallet',
+              },
             ],
           },
           {
