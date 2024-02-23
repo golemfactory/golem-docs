@@ -230,7 +230,7 @@ export const navigation = [
                   },
                 ],
               },
-              parseReference('JS Task API Reference', taskExecutorReference),
+              parseReference('Task API Reference', taskExecutorReference),
             ],
           },
           {
