@@ -185,7 +185,7 @@ export const navigation = [
             href: '',
             children: [
               {
-                title: 'JS Task API Examples',
+                title: 'Task API Examples',
                 href: '',
                 children: [
                   {
