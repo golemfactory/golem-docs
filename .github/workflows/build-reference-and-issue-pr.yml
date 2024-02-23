@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: ['master', 'main', 'beta', 'alpha']
+        branch: ['master', 'beta', 'alpha']
         repo: ['golem-js', 'golem-sdk-task-executor']
     runs-on: ubuntu-latest
     steps:
