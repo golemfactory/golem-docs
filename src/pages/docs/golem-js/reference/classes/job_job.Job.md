@@ -69,7 +69,7 @@ Create a new Job instance. It is recommended to use GolemNetwork to create jobs 
 
 #### Defined in
 
-[src/job/job.ts:76](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L76)
+[src/job/job.ts:76](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L76)
 
 ## Properties
 
@@ -79,7 +79,7 @@ Create a new Job instance. It is recommended to use GolemNetwork to create jobs 
 
 #### Defined in
 
-[src/job/job.ts:62](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L62)
+[src/job/job.ts:62](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L62)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:65](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L65)
+[src/job/job.ts:65](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L65)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:66](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L66)
+[src/job/job.ts:66](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L66)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:67](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L67)
+[src/job/job.ts:67](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L67)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:77](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L77)
+[src/job/job.ts:77](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L77)
 
 ## Methods
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/job/job.ts:82](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L82)
+[src/job/job.ts:82](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L82)
 
 ___
 
@@ -160,7 +160,7 @@ If you want to run multiple jobs in parallel, you can use GolemNetwork.createJob
 
 #### Defined in
 
-[src/job/job.ts:98](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L98)
+[src/job/job.ts:98](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L98)
 
 ___
 
@@ -177,7 +177,7 @@ Throws an error if the job is not running.
 
 #### Defined in
 
-[src/job/job.ts:235](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L235)
+[src/job/job.ts:235](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L235)
 
 ___
 
@@ -194,4 +194,4 @@ Throws an error if the job was not started.
 
 #### Defined in
 
-[src/job/job.ts:249](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L249)
+[src/job/job.ts:249](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L249)

@@ -36,7 +36,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L2)
+[src/utils/logger/logger.ts:2](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L2)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L3)
+[src/utils/logger/logger.ts:3](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L3)
 
 ▸ **debug**(`msg`, `ctx`): `void`
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L4)
+[src/utils/logger/logger.ts:4](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L4)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L5)
+[src/utils/logger/logger.ts:5](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L5)
 
 ▸ **info**(`msg`, `ctx`): `void`
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L6)
+[src/utils/logger/logger.ts:6](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L6)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L7)
+[src/utils/logger/logger.ts:7](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L7)
 
 ▸ **warn**(`msg`, `ctx`): `void`
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L8)
+[src/utils/logger/logger.ts:8](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L8)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L9)
+[src/utils/logger/logger.ts:9](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L9)
 
 ▸ **error**(`msg`, `ctx`): `void`
 
@@ -184,4 +184,4 @@ ___
 
 #### Defined in
 
-[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/logger.ts#L10)
+[src/utils/logger/logger.ts:10](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/logger.ts#L10)

@@ -25,7 +25,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/activity/results.ts:79](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/results.ts#L79)
+[src/activity/results.ts:79](https://github.com/golemfactory/golem-js/blob/9789a95/src/activity/results.ts#L79)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:80](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/results.ts#L80)
+[src/activity/results.ts:80](https://github.com/golemfactory/golem-js/blob/9789a95/src/activity/results.ts#L80)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:81](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/results.ts#L81)
+[src/activity/results.ts:81](https://github.com/golemfactory/golem-js/blob/9789a95/src/activity/results.ts#L81)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:82](https://github.com/golemfactory/golem-js/blob/22da85c/src/activity/results.ts#L82)
+[src/activity/results.ts:82](https://github.com/golemfactory/golem-js/blob/9789a95/src/activity/results.ts#L82)

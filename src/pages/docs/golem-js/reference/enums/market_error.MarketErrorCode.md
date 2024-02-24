@@ -31,7 +31,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/error.ts:5](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L5)
+[src/market/error.ts:5](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L5)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:6](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L6)
+[src/market/error.ts:6](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L6)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L7)
+[src/market/error.ts:7](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L7)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L8)
+[src/market/error.ts:8](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L8)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:9](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L9)
+[src/market/error.ts:9](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L9)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L10)
+[src/market/error.ts:10](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L10)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L11)
+[src/market/error.ts:11](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L11)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:12](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L12)
+[src/market/error.ts:12](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L12)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:13](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L13)
+[src/market/error.ts:13](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L13)
 
 ___
 
@@ -121,4 +121,4 @@ ___
 
 #### Defined in
 
-[src/market/error.ts:14](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/error.ts#L14)
+[src/market/error.ts:14](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/error.ts#L14)

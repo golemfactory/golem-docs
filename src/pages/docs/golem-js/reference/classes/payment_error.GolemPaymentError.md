@@ -57,7 +57,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/payment/error.ts:19](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/error.ts#L19)
+[src/payment/error.ts:19](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/error.ts#L19)
 
 ## Properties
 
@@ -71,7 +71,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/payment/error.ts:21](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/error.ts#L21)
+[src/payment/error.ts:21](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/error.ts#L21)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/payment/error.ts:22](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/error.ts#L22)
+[src/payment/error.ts:22](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/error.ts#L22)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/payment/error.ts:23](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/error.ts#L23)
+[src/payment/error.ts:23](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/error.ts#L23)
 
 ___
 
@@ -107,4 +107,4 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/payment/error.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/error.ts#L24)
+[src/payment/error.ts:24](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/error.ts#L24)

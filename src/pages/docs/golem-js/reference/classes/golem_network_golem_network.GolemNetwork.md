@@ -44,7 +44,7 @@ The Golem Network class provides a high-level API for running jobs on the Golem 
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L24)
+[src/golem_network/golem_network.ts:24](https://github.com/golemfactory/golem-js/blob/9789a95/src/golem_network/golem_network.ts#L24)
 
 ## Methods
 
@@ -58,7 +58,7 @@ The Golem Network class provides a high-level API for running jobs on the Golem 
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:28](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L28)
+[src/golem_network/golem_network.ts:28](https://github.com/golemfactory/golem-js/blob/9789a95/src/golem_network/golem_network.ts#L28)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:32](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L32)
+[src/golem_network/golem_network.ts:32](https://github.com/golemfactory/golem-js/blob/9789a95/src/golem_network/golem_network.ts#L32)
 
 ___
 
@@ -101,7 +101,7 @@ This method does not start any work on the network, use [Job.startWork](job_job.
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:43](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L43)
+[src/golem_network/golem_network.ts:43](https://github.com/golemfactory/golem-js/blob/9789a95/src/golem_network/golem_network.ts#L43)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:53](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L53)
+[src/golem_network/golem_network.ts:53](https://github.com/golemfactory/golem-js/blob/9789a95/src/golem_network/golem_network.ts#L53)
 
 ___
 
@@ -137,4 +137,4 @@ Close the connection to the Yagna service and cancel all running jobs.
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:62](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L62)
+[src/golem_network/golem_network.ts:62](https://github.com/golemfactory/golem-js/blob/9789a95/src/golem_network/golem_network.ts#L62)

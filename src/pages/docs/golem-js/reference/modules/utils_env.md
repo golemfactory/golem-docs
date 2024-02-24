@@ -29,7 +29,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L3)
+[src/utils/env.ts:3](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/env.ts#L3)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/utils/env.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L7)
+[src/utils/env.ts:7](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/env.ts#L7)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/utils/env.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L11)
+[src/utils/env.ts:11](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/env.ts#L11)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/utils/env.ts:15](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L15)
+[src/utils/env.ts:15](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/env.ts#L15)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/utils/env.ts:21](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L21)
+[src/utils/env.ts:21](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/env.ts#L21)
 
 ___
 
@@ -99,4 +99,4 @@ ___
 
 #### Defined in
 
-[src/utils/env.ts:25](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/env.ts#L25)
+[src/utils/env.ts:25](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/env.ts#L25)

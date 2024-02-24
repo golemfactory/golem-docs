@@ -63,7 +63,7 @@ Close storage provider and release all resources.
 
 #### Defined in
 
-[src/storage/null.ts:15](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/null.ts#L15)
+[src/storage/null.ts:15](https://github.com/golemfactory/golem-js/blob/9789a95/src/storage/null.ts#L15)
 
 ___
 
@@ -83,7 +83,7 @@ Initialize storage provider.
 
 #### Defined in
 
-[src/storage/null.ts:19](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/null.ts#L19)
+[src/storage/null.ts:19](https://github.com/golemfactory/golem-js/blob/9789a95/src/storage/null.ts#L19)
 
 ___
 
@@ -109,7 +109,7 @@ Return allocated resource URL from Yagna of data to be uploaded.
 
 #### Defined in
 
-[src/storage/null.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/null.ts#L24)
+[src/storage/null.ts:24](https://github.com/golemfactory/golem-js/blob/9789a95/src/storage/null.ts#L24)
 
 ___
 
@@ -135,7 +135,7 @@ Return allocated resource URL from Yagna of a file to be uploaded.
 
 #### Defined in
 
-[src/storage/null.ts:29](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/null.ts#L29)
+[src/storage/null.ts:29](https://github.com/golemfactory/golem-js/blob/9789a95/src/storage/null.ts#L29)
 
 ___
 
@@ -161,7 +161,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/null.ts:34](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/null.ts#L34)
+[src/storage/null.ts:34](https://github.com/golemfactory/golem-js/blob/9789a95/src/storage/null.ts#L34)
 
 ___
 
@@ -187,7 +187,7 @@ Return allocated resource URL from Yagna of a file to be downloaded.
 
 #### Defined in
 
-[src/storage/null.ts:39](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/null.ts#L39)
+[src/storage/null.ts:39](https://github.com/golemfactory/golem-js/blob/9789a95/src/storage/null.ts#L39)
 
 ___
 
@@ -213,4 +213,4 @@ Release previously allocated resource URL from Yagna.
 
 #### Defined in
 
-[src/storage/null.ts:44](https://github.com/golemfactory/golem-js/blob/22da85c/src/storage/null.ts#L44)
+[src/storage/null.ts:44](https://github.com/golemfactory/golem-js/blob/9789a95/src/storage/null.ts#L44)

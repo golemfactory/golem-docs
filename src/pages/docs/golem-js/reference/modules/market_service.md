@@ -38,4 +38,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/service.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/market/service.ts#L11)
+[src/market/service.ts:11](https://github.com/golemfactory/golem-js/blob/9789a95/src/market/service.ts#L11)
