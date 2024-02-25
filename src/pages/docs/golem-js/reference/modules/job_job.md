@@ -40,4 +40,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/job/job.ts:17](https://github.com/golemfactory/golem-js/blob/22da85c/src/job/job.ts#L17)
+[src/job/job.ts:17](https://github.com/golemfactory/golem-js/blob/9789a95/src/job/job.ts#L17)

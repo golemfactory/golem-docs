@@ -50,7 +50,7 @@ Create a new TaskExecutor object.
 
 #### Defined in
 
-[src/executor/executor.ts:169](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L169)
+[src/executor/executor.ts:169](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L169)
 
 ## Properties
 
@@ -66,7 +66,7 @@ TaskExecutorEventsDict for available events.
 
 #### Defined in
 
-[src/executor/executor.ts:94](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L94)
+[src/executor/executor.ts:94](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L94)
 
 ## Methods
 
@@ -117,7 +117,7 @@ const executor = await TaskExecutor.create({
 
 #### Defined in
 
-[src/executor/executor.ts:158](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L158)
+[src/executor/executor.ts:158](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L158)
 
 ___
 
@@ -137,7 +137,7 @@ Method responsible initialize all executor services.
 
 #### Defined in
 
-[src/executor/executor.ts:222](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L222)
+[src/executor/executor.ts:222](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L222)
 
 ___
 
@@ -159,7 +159,7 @@ Once the executor is fully stopped, an end event is emitted.
 
 #### Defined in
 
-[src/executor/executor.ts:286](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L286)
+[src/executor/executor.ts:286](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L286)
 
 ___
 
@@ -177,7 +177,7 @@ array
 
 #### Defined in
 
-[src/executor/executor.ts:323](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L323)
+[src/executor/executor.ts:323](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L323)
 
 ___
 
@@ -217,7 +217,7 @@ await executor.run(async (ctx) => {
 
 #### Defined in
 
-[src/executor/executor.ts:348](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L348)
+[src/executor/executor.ts:348](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L348)
 
 ___
 
@@ -254,7 +254,7 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 #### Defined in
 
-[src/executor/executor.ts:363](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L363)
+[src/executor/executor.ts:363](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L363)
 
 ___
 
@@ -274,4 +274,4 @@ ___
 
 #### Defined in
 
-[src/executor/executor.ts:414](https://github.com/golemfactory/golem-js/blob/22da85c/src/executor/executor.ts#L414)
+[src/executor/executor.ts:414](https://github.com/golemfactory/golem-js/blob/9789a95/src/executor/executor.ts#L414)

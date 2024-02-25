@@ -44,7 +44,7 @@ RemoteProcess class representing the process spawned on the provider by WorkCont
 
 #### Defined in
 
-[src/task/process.ts:23](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L23)
+[src/task/process.ts:23](https://github.com/golemfactory/golem-js/blob/9789a95/src/task/process.ts#L23)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Stream connected to stdout from provider process
 
 #### Defined in
 
-[src/task/process.ts:16](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L16)
+[src/task/process.ts:16](https://github.com/golemfactory/golem-js/blob/9789a95/src/task/process.ts#L16)
 
 ___
 
@@ -68,7 +68,7 @@ Stream connected to stderr from provider process
 
 #### Defined in
 
-[src/task/process.ts:20](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L20)
+[src/task/process.ts:20](https://github.com/golemfactory/golem-js/blob/9789a95/src/task/process.ts#L20)
 
 ## Methods
 
@@ -91,4 +91,4 @@ If the timeout is reached, the return promise will be rejected.
 
 #### Defined in
 
-[src/task/process.ts:39](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/process.ts#L39)
+[src/task/process.ts:39](https://github.com/golemfactory/golem-js/blob/9789a95/src/task/process.ts#L39)

@@ -55,7 +55,7 @@ Api key not defined
 
 #### Defined in
 
-[src/error/golem-error.ts:5](https://github.com/golemfactory/golem-js/blob/22da85c/src/error/golem-error.ts#L5)
+[src/error/golem-error.ts:5](https://github.com/golemfactory/golem-js/blob/9789a95/src/error/golem-error.ts#L5)
 
 ## Properties
 
@@ -71,4 +71,4 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/error/golem-error.ts#L10)
+[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/9789a95/src/error/golem-error.ts#L10)

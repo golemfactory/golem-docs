@@ -58,4 +58,4 @@ Global Event Type with which all API events will be emitted. It should be used o
 
 #### Defined in
 
-[src/events/events.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/events/events.ts#L10)
+[src/events/events.ts:10](https://github.com/golemfactory/golem-js/blob/9789a95/src/events/events.ts#L10)

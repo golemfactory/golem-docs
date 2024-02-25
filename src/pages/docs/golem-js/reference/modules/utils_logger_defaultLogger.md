@@ -16,16 +16,18 @@ type: "JS API Reference"
 
 ### defaultLogger
 
-▸ **defaultLogger**(`namespace`): `Object`
+▸ **defaultLogger**(`namespace`, `opts?`): `Object`
 
 Creates a logger that uses the debug library. This logger is used by default by all entities in the SDK.
-If the namespace is not prefixed with `golem-js:`, it will be prefixed automatically.
+
+If the namespace is not prefixed with `golem-js:`, it will be prefixed automatically - this can be controlled by `disableAutoPrefix` options.
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `namespace` | `string` |
+| `opts` | `DefaultLoggerOptions` |
 
 #### Returns
 
@@ -42,4 +44,4 @@ If the namespace is not prefixed with `golem-js:`, it will be prefixed automatic
 
 #### Defined in
 
-[src/utils/logger/defaultLogger.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/logger/defaultLogger.ts#L7)
+[src/utils/logger/defaultLogger.ts:25](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/logger/defaultLogger.ts#L25)

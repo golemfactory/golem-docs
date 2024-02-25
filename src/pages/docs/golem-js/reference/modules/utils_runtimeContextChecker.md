@@ -20,4 +20,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/runtimeContextChecker.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/runtimeContextChecker.ts#L8)
+[src/utils/runtimeContextChecker.ts:8](https://github.com/golemfactory/golem-js/blob/9789a95/src/utils/runtimeContextChecker.ts#L8)

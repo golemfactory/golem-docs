@@ -39,7 +39,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/payments.ts:9](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L9)
+[src/payment/payments.ts:9](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/payments.ts#L9)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/payment/payments.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L10)
+[src/payment/payments.ts:10](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/payments.ts#L10)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/payment/payments.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L11)
+[src/payment/payments.ts:11](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/payments.ts#L11)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/payment/payments.ts:12](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L12)
+[src/payment/payments.ts:12](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/payments.ts#L12)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L25)
+[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L25)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L26)
+[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L26)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L27)
+[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L27)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L28)
+[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L28)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L29)
+[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L29)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:30](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L30)
+[src/payment/config.ts:30](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L30)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:31](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L31)
+[src/payment/config.ts:31](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L31)
 
 ___
 
@@ -188,4 +188,4 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:32](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/config.ts#L32)
+[src/payment/config.ts:32](https://github.com/golemfactory/golem-js/blob/9789a95/src/payment/config.ts#L32)
