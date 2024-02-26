@@ -22,6 +22,13 @@ To properly use the service as a provider in `gpu-golem-live`, it is necessary t
 - Own ETH wallet
 - VT-d (CPU-related) function enabled in BIOS
 
+⚠️ **Important**!
+
+-  To improve the quality of P2P connections, it is recommended to open UDP port 11500.
+-  It is necessary to enable in the BIOS: VT/VT-d (Intel) and SVM (AMD). If these options are active and the wizard still doesn't detect the card, you can try moving the card to another PCIe slot.
+-  The GPU may not be in use all the time, but it is sufficient if the provider is connected and already earning. The GPU will operate when tasks are assigned. During beta testing, a fixed price is applicable. After the software is launched for all users, everyone will be able to determine their own pricing for services.
+-  Currently, we only support the configuration of one provider + one GPU. In the future, we plan to support multiple GPUs. Any combinations users want to try for running on multiple GPUs are at their own risk.
+
 By joining `gpu-golem-live`, you support AI infrastructure and manage your hardware resources flexibly, while getting the benefits of GLM tokens. If you have all of the above, you are welcome to join the project and work together for the development of artificial intelligence.
 
 Learn more at:
@@ -52,7 +59,7 @@ Once the download is complete, unzip the file with any tool (such as the default
 {% tabs %}
 {% tab label="Linux" %}
 ```bash
-xz --decompress golem-gpu-live-latest.img.xz
+xz -d golem-gpu-live-latest.img.xz
 ```
 {% /tab %}
 {% tab label="Mac" %}
@@ -77,6 +84,8 @@ sudo dd if=Downloads/golem-gpu-live-latest.img of=/dev/disk4
 
 Alternatively, you can use the previously mentioned [balenaEtcher](https://etcher.balena.io/#download-etcher) tool.
 Download the appropriate software version for your system and run the wizard.
+
+⚠️ **Important**! Before recording the image, it is necessary to delete all partitions that were previously on the disk.
 
 1.  **Select a file from disk** - click on the `Flash from file` button to select a previously unzipped `gpu-golem-live` image file.
 
