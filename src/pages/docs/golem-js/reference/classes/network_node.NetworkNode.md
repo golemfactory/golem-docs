@@ -47,7 +47,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[src/network/node.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/network/node.ts#L8)
+[src/network/node.ts:8](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L8)
 
 ## Properties
 
@@ -57,7 +57,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[src/network/node.ts:9](https://github.com/golemfactory/golem-js/blob/22da85c/src/network/node.ts#L9)
+[src/network/node.ts:9](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L9)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[src/network/node.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/network/node.ts#L10)
+[src/network/node.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L10)
 
 ## Methods
 
@@ -89,7 +89,7 @@ on the provider's end.
 
 #### Defined in
 
-[src/network/node.ts:20](https://github.com/golemfactory/golem-js/blob/22da85c/src/network/node.ts#L20)
+[src/network/node.ts:20](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L20)
 
 ___
 
@@ -113,4 +113,4 @@ the url
 
 #### Defined in
 
-[src/network/node.ts:36](https://github.com/golemfactory/golem-js/blob/22da85c/src/network/node.ts#L36)
+[src/network/node.ts:36](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L36)

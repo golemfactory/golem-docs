@@ -44,7 +44,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:16](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/yagna.ts#L16)
+[src/utils/yagna/yagna.ts:17](https://github.com/golemfactory/golem-js/blob/4182943/src/utils/yagna/yagna.ts#L17)
 
 ___
 
@@ -59,10 +59,11 @@ ___
 | `apiKey?` | `string` |
 | `basePath?` | `string` |
 | `abortController?` | `AbortController` |
+| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:27](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/yagna.ts#L27)
+[src/utils/yagna/yagna.ts:28](https://github.com/golemfactory/golem-js/blob/4182943/src/utils/yagna/yagna.ts#L28)
 
 ## Variables
 
@@ -72,4 +73,4 @@ ___
 
 #### Defined in
 
-[src/utils/yagna/yagna.ts:52](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/yagna.ts#L52)
+[src/utils/yagna/yagna.ts:54](https://github.com/golemfactory/golem-js/blob/4182943/src/utils/yagna/yagna.ts#L54)

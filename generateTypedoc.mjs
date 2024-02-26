@@ -5,9 +5,9 @@ import * as path from 'path'
 import { createRequire } from 'module' // built-in module
 const require = createRequire(import.meta.url) // construct the require function for this ES module
 
-const docsPath = path.resolve('./src/pages/docs/golem-js/reference')
-
 const branchPrefix = process.argv[2]
+
+const repoName = process.argv[3]
 
 import { dirname } from 'path' // Importing dirname
 
@@ -21,6 +21,13 @@ if (!branchPrefix) {
   process.exit(1)
 }
 
+if (!repoName) {
+  console.error('Please provide repo name as argument.')
+  process.exit(1)
+}
+
+const docsPath = path.resolve(`./src/pages/docs/${repoName}/reference`)
+
 async function main() {
   console.log(`Switching to branch ${branchPrefix} ...`)
 
@@ -29,13 +36,13 @@ async function main() {
 
   const navigation = await generateNavigation([branchPrefix])
   await fs.promises.writeFile(
-    './src/navigation/jsreference.js',
+    `./src/navigation/${repoName}-jsreference.js`,
     'export const navigation = ' + navigation
   )
 
   // Move default-values.md to the correct location, so we don't overwrite it with reference generation
   const sourcePath = `${__dirname}/src/navigation/customPages/default-values.md`
-  const destPath = `${__dirname}/src/pages/docs/golem-js/reference/default-values.md`
+  const destPath = `${__dirname}/src/pages/docs/${repoName}/reference/default-values.md`
   await fs.promises.copyFile(sourcePath, destPath)
 }
 
@@ -43,7 +50,7 @@ const util = require('util')
 const glob = util.promisify(require('glob'))
 
 async function generateTypedoc(branchPrefix) {
-  const outputPath = './src/pages/docs/golem-js/reference'
+  const outputPath = `./src/pages/docs/${repoName}/reference`
 
   // Once typedoc is done, start looking for .md files and remove ".md" mentions.
   const files = await glob(outputPath + '/**/*.md')
@@ -68,14 +75,14 @@ async function generateNavigation(versions) {
         const links = await Promise.all([
           {
             title: 'Content overview',
-            href: `/docs/golem-js/reference/overview`,
+            href: `/docs/${repoName}/reference/overview`,
           },
           {
             title: 'Default values',
-            href: `/docs/golem-js/reference/default-values`,
+            href: `/docs/${repoName}/reference/default-values`,
           },
           ...childrenDirs.map(async (item) => {
-            const hrefPrefix = `/docs/golem-js/reference/${item}`
+            const hrefPrefix = `/docs/${repoName}/reference/${item}`
 
             return {
               title: item,

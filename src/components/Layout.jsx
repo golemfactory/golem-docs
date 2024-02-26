@@ -188,8 +188,7 @@ function useTableOfContents(tableOfContents) {
   return currentSection
 }
 import { navigation as normalNavLinks } from '@/navigation/docs'
-import { mergednavs } from '@/navigation/mergeNavigation'
-import { navigation as JSReference } from '@/navigation/jsreference'
+import { navigation as GolemJSReference } from '@/navigation/golem-js-jsreference'
 import { Navigation, MenuBar, SideBar } from './Navigation'
 import { ForkIcon } from './icons/ForkIcon'
 import { StarIcon } from './icons/StarIcon'
@@ -271,7 +270,7 @@ export function Layout({
 
   return (
     <>
-      <Header navigation={JSReference} />
+      <Header navigation={GolemJSReference} />
 
       {type === 'home' && <Hero />}
 
@@ -283,7 +282,7 @@ export function Layout({
               <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
               <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
               <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64">
-                <SideBar navigation={mergednavs} />
+                <SideBar navigation={normalNavLinks} />
               </div>
             </div>
           ))}

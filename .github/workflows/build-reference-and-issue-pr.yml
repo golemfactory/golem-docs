@@ -10,20 +10,24 @@ jobs:
       fail-fast: false
       matrix:
         branch: ['master', 'beta', 'alpha']
+        repo: ['golem-js', 'golem-sdk-task-executor']
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
         with:
           ref: ${{ matrix.branch }}
-      - run: npm ci 
-      - run: ./generate-reference.sh ${{ matrix.branch }}
+      - run: npm ci
+      - name: generate ${{ matrix.repo }}  reference ${{ matrix.branch }}
+        run: ./generate-reference.sh ${{ matrix.branch }} ${{ matrix.repo }}
+      - name: generate ${{ matrix.repo }}  reference ${{ matrix.branch }}
+        run: ./generate-reference.sh ${{ matrix.branch }} ${{ matrix.repo }}
       - name: create-pull-request
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: 'feat: Update golem-js API Reference for branch ${{ matrix.branch }}'
-          title: 'Update ${{ matrix.branch }} branch'
-          branch: patch/${{ matrix.branch }}-golem-js-api-reference
+          title: 'Update ${{ matrix.repo }} ${{ matrix.branch }} branch'
+          branch: patch/${{ matrix.branch }}-${{ matrix.repo }}-api-reference
           reviewers: cryptobench
           base: ${{ matrix.branch }}
           delete-branch: true

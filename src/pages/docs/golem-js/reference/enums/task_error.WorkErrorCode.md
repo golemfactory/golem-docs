@@ -33,7 +33,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/task/error.ts:6](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L6)
+[src/task/error.ts:6](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L6)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:7](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L7)
+[src/task/error.ts:7](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L7)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L8)
+[src/task/error.ts:8](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L8)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:9](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L9)
+[src/task/error.ts:9](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L9)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L10)
+[src/task/error.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L10)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:11](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L11)
+[src/task/error.ts:11](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L11)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:12](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L12)
+[src/task/error.ts:12](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L12)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:13](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L13)
+[src/task/error.ts:13](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L13)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:14](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L14)
+[src/task/error.ts:14](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L14)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:15](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L15)
+[src/task/error.ts:15](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L15)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:16](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L16)
+[src/task/error.ts:16](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L16)
 
 ___
 
@@ -143,4 +143,4 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:17](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L17)
+[src/task/error.ts:17](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L17)
