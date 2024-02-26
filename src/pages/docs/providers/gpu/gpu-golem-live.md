@@ -285,7 +285,7 @@ After the `--account` value, enter the address of your wallet.
 First, log in via SSH to your provider and use the command in the terminal:
 
 ```bash
-ya-provider preset update --name vm-nvidia --price cpu=0.00003
+ya-provider preset update --name vm-nvidia --price duration=0.00003
 ```
 
 Go through the wizard, where you select `vm-nvidia` and linear and set the appropriate rates. Note that the value here is expressed in seconds. To convert to GLM / h simply multiply the value times 3600. For example:
