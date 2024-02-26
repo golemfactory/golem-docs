@@ -50,7 +50,10 @@ If you're using the whitelist mode for outbound networking, it's handy knowing h
 Your node comes pre-configured to permit outbound traffic to domains whitelisted by Golem Factory, viewable [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist). To view the current whitelist, run the command below:
 
 ```bash
-➜  ~ ya-provider whitelist list
+ya-provider whitelist list
+```
+Example output:
+```
 ┌────────────┬───────────────────────────────────┬──────────┐
 │  ID        │  Pattern                          │  Type    │
 ├────────────┼───────────────────────────────────┼──────────┤
@@ -82,10 +85,13 @@ Your node comes pre-configured to permit outbound traffic to domains whitelisted
 
 ### Whitelisting a specific Domain
 
-Whitelisting a specific domain using the `strict` type allows your node to communicate with specific domain. You can add a strict domain to your whitelist with the following command:
+Whitelisting a specific domain using the `strict` type allows your node to communicate with specific domain. You can add a strict domain, e.g. coinmarket.cap, to your whitelist with the following command:
 
 ```bash
-➜  ~ ya-provider whitelist add -p coinmarket.cap -t strict
+ya-provider whitelist add -p coinmarket.cap -t strict
+```
+Example output:
+```
 Added patterns:
 ┌────────────┬──────────────────┬──────────┐
 │  ID        │  Pattern         │  Type    │
@@ -98,10 +104,19 @@ When you add a domain as `strict`, the node's outbound traffic is permitted excl
 
 ### Whitelisting multiple domains using Regex
 
-The Regex (regular expression) pattern provide a flexible way of defining which domains your node can access. They are especially useful when you want to allow communication with a range of domains following a certain pattern. To add a regex pattern to your whitelist, use the -t regex option:
+The Regex (regular expression) pattern provide a flexible way of defining which domains your node can access. They are especially useful when you want to allow communication with a range of domains following a certain pattern. To add a regex pattern to your whitelist, use the -t regex option. For example:
 
 ```bash
-ya-provider whitelist add -p '.*\.dev\.golem\.network$' -t regex
+$ ya-provider whitelist add -p '.*\.dev\.golem\.network$' -t regex
+```
+Example output:
+```
+Added patterns:
+┌────────────┬────────────────────────────┬─────────┐
+│  ID        │  Pattern                   │  Type   │
+├────────────┼────────────────────────────┼─────────┤
+│  fe19499a  │  .*\.dev\.golem\.network$  │  regex  │
+└────────────┴────────────────────────────┴─────────┘
 ```
 
 Using regex patterns can significantly enhance your node's operability by allowing a set of domains that share a common naming convention without adding each one individually. However, it requires careful consideration to avoid overly broad patterns that could expose your node to unwanted traffic.
@@ -113,7 +128,10 @@ By employing strict and regex domain patterns appropriately, you can ensure that
 To remove a whitelisted domain, you must reference the pattern's `ID`:
 
 ```bash
-➜  ~ ya-provider whitelist remove "76d0c6c5"
+$ ya-provider whitelist remove "76d0c6c5"
+```
+Example output:
+```
 Removed patterns:
 ┌────────────┬──────────────────┬──────────┐
 │  ID        │  Pattern         │  Type    │
