@@ -171,7 +171,7 @@ ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"er
 
 This means, that there are not enough providers on the network.
 
-If you are running Ray on Golem on the testnet (property `payment_network: "goerli"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
+If you are running Ray on Golem on the testnet (property `payment_network: "holesky"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
 
 We are preparing a tool to check providers' availability.
 Another solution would be to move to mainnet - we are also working on enabling this option.
