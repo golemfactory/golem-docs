@@ -11,19 +11,6 @@ type: Tutorial
 
 Discover how the Reputation System can optimize your applications on the Golem Network by filtering providers. This tutorial outlines the transition from testnet to mainnet, where the selection of providers are important to increase the probability of a successful run.
 
-## Prerequisites
-
-{% alert level="warning" %}
-The experimental Reputation feature discussed in this tutorial is currently **only** available in the beta version of the Golem SDK. Make sure to install the beta version for this tutorial to work!
-
-```bash
-npm i @golem-sdk/golem-js@beta
-```
-
-{% /alert %}
-
-Ensure the Yagna service is installed, running, and configured with the `try_golem` app-key.
-
 ## Understanding the Reputation System
 
 The Reputation System on the Golem Network is designed to aid requestors in increasing their chances of successful outcomes when using Golem Network. It continually assesses providers, utilizing key performance metrics such as task success rates and uptime.
@@ -50,7 +37,7 @@ mkdir golem-reputation-example
 cd golem-reputation-example
 touch index.mjs
 npm init
-npm i @golem-sdk/golem-js@beta
+npm i @golem-sdk/golem-js
 
 ```
 
@@ -62,7 +49,7 @@ mkdir golem-reputation-example
 cd golem-reputation-example
 type nul > index.mjs
 npm init
-npm i @golem-sdk/golem-js@beta
+npm i @golem-sdk/golem-js
 
 ```
 
@@ -75,7 +62,7 @@ First, import the Reputation System into your project's script and create an ins
 
 To implement the Reputation System, open your project's index.mjs file and incorporate a ReputationSystem instance into the TaskExecutor. The following example script demonstrates this process:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/9fed1b73d60b0c1720e1c37e39c308a9991c945b/examples/experimental/reputation/basic.ts" language="typescript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/experimental/reputation/basic.ts" language="typescript" /%}
 
 This script starts by noting that it will run on the Polygon network, which involves real transaction costs. After a brief pause, it initializes the Reputation System and sets up a TaskExecutor that uses a reputation-based filter for provider selection.
 
