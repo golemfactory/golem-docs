@@ -38,6 +38,9 @@ Let's integrate the Reputation System into a simple Node.js project. This proces
 
 Begin by setting up your project folder and installing the necessary package:
 
+{% tabs %}
+{% tab label="Linux/MacOS" %}
+
 ```bash
 mkdir golem-reputation-example
 cd golem-reputation-example
@@ -46,6 +49,21 @@ npm init
 npm i @golem-sdk/golem-js@beta
 
 ```
+
+{% /tab  %}
+{% tab label="Windows" %}
+
+```bash
+mkdir golem-reputation-example
+cd golem-reputation-example
+type nul > index.mjs
+npm init
+npm i @golem-sdk/golem-js@beta
+
+```
+
+{% /tab %}
+{% /tabs %}
 
 ### Implementing the Reputation System into Your Script
 
