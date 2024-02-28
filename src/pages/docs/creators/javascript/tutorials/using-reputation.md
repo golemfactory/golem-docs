@@ -9,7 +9,7 @@ type: Tutorial
 
 ## Introduction
 
-Discover how the Reputation System can optimize your applications on the Golem Network by filtering providers. This tutorial outlines the transition from testnet to mainnet, where the selection of providers are important to increase the probability of a successful run.
+Discover how the Reputation System can optimize your applications on the Golem Network by filtering providers. This tutorial outlines the transition from testnet to mainnet, where the selection of providers is important to increase the probability of a successful run.
 
 ## Understanding the Reputation System
 
