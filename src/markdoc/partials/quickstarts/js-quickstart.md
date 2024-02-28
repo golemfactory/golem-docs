@@ -95,7 +95,7 @@ Create a new Node.js project and install the Golem SDK by entering the following
 mkdir try_golem
 cd try_golem
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Please note: This application requires Node.js version 18.0.0 or higher.

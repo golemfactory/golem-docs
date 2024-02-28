@@ -4,7 +4,6 @@ title: Error handling in Golem JS SDK
 type: Guide
 ---
 
-
 # Error Handling in the Golem JS SDK
 
 ## Introduction
@@ -20,6 +19,7 @@ Below we'll discuss a few of the most common errors you may encounter and how to
 ## Basic Error Handling structure
 
 A typical application will consist of a few parts:
+
 - Setting up the SDK
 - Executing work on Golem
 - Cleaning up
@@ -29,32 +29,32 @@ Each of these parts can throw an error, and you should handle them accordingly.
 If your application is a simple script, you can use a `try/catch` block to handle errors, similarly to how its done in most of the examples:
 
 ```javascript
-import { TaskExecutor } from "@golem-sdk/golem-js";
+import { TaskExecutor } from '@golem-sdk/task-executor'
 
 async function main() {
   const executor = await TaskExecutor.create({
-    package: "golem/alpine:latest",
+    package: 'golem/alpine:latest',
     midAgreementPaymentTimeoutSec: 10,
     debitNotesAcceptanceTimeoutSec: 10,
-  });
+  })
 
   try {
     const results = await executor.run(async (ctx) => {
-      const res1 = await ctx.run('echo "Hello"');
-      const res2 = await ctx.run('echo "World"');
-      return `${res1.stdout}${res2.stdout}`;
-    });
-    console.log(results);
+      const res1 = await ctx.run('echo "Hello"')
+      const res2 = await ctx.run('echo "World"')
+      return `${res1.stdout}${res2.stdout}`
+    })
+    console.log(results)
   } catch (err) {
-    console.error("An error occurred during execution:", err);
+    console.error('An error occurred during execution:', err)
   } finally {
-    await executor.shutdown();
+    await executor.shutdown()
   }
-};
+}
 
 main().catch((err) => {
-  console.error("An error occurred during execution:", err);
-});
+  console.error('An error occurred during execution:', err)
+})
 ```
 
 As you can see, we use a `try/catch` block to handle errors that may occur during the execution of the `run` method.
@@ -70,7 +70,6 @@ However, it is good practice to handle errors here as well.
 Depending on your use-case, you may want to handle some specific exception situations in a try/catch block
 or as it is the case here, handle the error higher up in the call chain.
 
-
 ## Error handling in tasks
 
 Context commands, like `run()` will not throw on error.
@@ -81,12 +80,12 @@ Example:
 
 ```typescript
 async function worker(ctx: WorkContext) {
-    const result = await ctx.run('commmand-that-does-not-exist "Hello"');
-    if (result.result === ResultState.Ok) {
-        console.log('Command executed successfully');
-    } else {
-        console.error('Command failed:', result.stderr);
-    }
+  const result = await ctx.run('commmand-that-does-not-exist "Hello"')
+  if (result.result === ResultState.Ok) {
+    console.log('Command executed successfully')
+  } else {
+    console.error('Command failed:', result.stderr)
+  }
 }
 ```
 
@@ -102,7 +101,6 @@ This is done to ensure that the task is executed, even if the first provider fai
 
 If you run out of retries (the number is configurable), the exception will be rethrown from the `run` method,
 and you will have the opportunity to handle it.
-
 
 ## Signal handling
 
@@ -120,10 +118,9 @@ If you want to handle signals yourself, you can disable the default behaviour by
 If you do so, you will be responsible for shutting down the executor when a termination signal is received.
 
 ```typescript
-  const executor = await TaskExecutor.create({
-    skipProcessSignals: true,
-  });
+const executor = await TaskExecutor.create({
+  skipProcessSignals: true,
+})
 ```
-
 
 ---

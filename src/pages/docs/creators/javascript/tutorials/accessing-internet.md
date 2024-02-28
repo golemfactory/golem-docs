@@ -38,7 +38,7 @@ Then initialise the project and install JS SDK.
 
 ```bash
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Next, install `Golem SDK CLI` - a companion tool that will facilitate manifest creation.
