@@ -12,8 +12,7 @@ Error: Unable to create allocation for driver/network erc20/goerli. There is no 
 
 {% solution %}
 
-The payment driver is not initialized for the network you're trying to use in the requestor script. Run `yagna payment init` or update the JS SDK to `@golem-sdk/golem-js`.
-
+The payment driver is not initialized for the network you're trying to use in the requestor script. Run `yagna payment init` or update the JS SDK to `@golem-sdk/task-executor`.
 
 {% /solution %}
 {% feedback identifier="js-sdk-could-not-create-allocation" /%}

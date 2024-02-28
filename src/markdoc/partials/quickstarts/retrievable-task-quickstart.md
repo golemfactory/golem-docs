@@ -19,7 +19,7 @@ First, create a new directory for your project and initialize a new Node.js proj
 mkdir golem-quickstart
 cd golem-quickstart
 npm init -y
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 # Creating a retrievable task

@@ -17,13 +17,13 @@ Ensure you have the Yagna service installed and running, with `try_golem` as you
 
 ## Running the Examples
 
-Let's create a project folder, start a Node.js project, and add the `@golem-sdk/golem-js` library.
+Let's create a project folder, start a Node.js project, and add the `@golem-sdk/task-executor` library.
 
 ```bash
 mkdir golem-example
 cd golem-example
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Paste the code in `index.mjs` located in the project folder, then run:
