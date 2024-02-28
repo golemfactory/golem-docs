@@ -117,6 +117,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/quickstart-explained',
               },
               {
+                title: 'Selecting providers based on reputation',
+                href: '/docs/creators/javascript/tutorials/using-reputation',
+              },
+              {
                 title: 'Running parallel tasks',
                 href: '/docs/creators/javascript/tutorials/running-parallel-tasks',
               },
