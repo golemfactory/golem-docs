@@ -28,9 +28,13 @@ Ensure the Yagna service is installed, running, and configured with the `try_gol
 
 The Reputation System on the Golem Network is designed to aid requestors in increasing their chances of successful outcomes when using Golem Network. It continually assesses providers, utilizing key performance metrics such as task success rates and uptime.
 
-These metrics are analyzed on a regular basis, permitting the system to generate normalized scores, which range from anything between 0 to 1.
+Given the vast range of providers, the Reputation System employs a neutral criterion to decide which providers are included in its dataset. This decision is based on the provider's pricing, which must be within the market standards to qualify for assessment. We establish this by comparing the provider's pricing against a similar AWS instance type, with an allowance for a 20% price buffer.
 
-The Reputation System becomes particularly beneficial when transitioning projects from testnet to mainnet, as the mainnet could potentially contain providers with irregular configurations, leading to unexpected errors. By allowing users to adjust the significance of these metrics according to their project needs, the Reputation System helps mitigate such risks.
+This criterion is not designed to label any provider as 'expensive' or 'cheap'. Instead, it serves as a safeguard to prevent potential misuse of the reputation system by charging excessive prices. It is a vital strategy to uphold the objectivity and integrity of the system.
+
+Once a provider is included in the dataset, the Reputation System then regularly evaluates them based on key performance metrics such as task success rates and uptime. These metrics contribute to a normalized score, ranging between 0 to 1, which provides an objective assessment of the provider.
+
+The use of the Reputation System becomes particularly beneficial when transitioning projects from testnet to mainnet. It aids in filtering out providers with irregular configurations or prices that might lead to unexpected errors. By allowing users to adjust the significance of these metrics according to their project needs, the Reputation System helps mitigate such risks.
 
 ## Adding the Reputation System in Your Project
 
@@ -88,7 +92,7 @@ reputation.setProposalWeights({
 
 In the example provided, the uptime metric is given a higher weight (0.7) than the success rate (0.3). This means that the system will favor providers with better uptime. These weights are flexible and can be adjusted according to the specific needs of your project. By experimenting with these weights, you can find the optimal balance and select providers that best meet your project's requirements.
 
-## The Benefits of fine-tuning Weights
+## The benefits of fine-tuning reputation weights
 
 Fine-tuning the weights for provider selection enables you to focus on what's important for your project, whether it's constant availability or ensuring every task is accomplished without errors. Changing these weights gives you more control over choosing providers, aiming for the best match for your project's success.
 
