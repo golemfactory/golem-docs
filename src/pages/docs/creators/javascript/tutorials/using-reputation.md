@@ -25,7 +25,7 @@ The use of the Reputation System becomes particularly beneficial when transition
 
 ## Adding the Reputation System in Your Project
 
-Let's integrate the Reputation System into a simple Node.js project. This process requires minimal changes and effectively improves the selection of trustworthy providers.
+Let's integrate the Reputation System into a simple Node.js project. This process requires minimal modifications to pre-existing projects.
 
 Begin by setting up your project folder and installing the necessary package:
 
