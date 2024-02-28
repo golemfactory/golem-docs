@@ -48,7 +48,7 @@ This will install the `http-server` utility to host our web page, where we will 
 
 Next, we'll create the main `index.html` file with the following content:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/web-quickstart/index.html" language="html" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/quickstarts/web-quickstart/index.html" language="html" /%}
 
 In this layout, there are three elements:
 
@@ -60,7 +60,7 @@ In this layout, there are three elements:
 
 Next, we'll create a `requestor.mjs` file with the following content:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/web-quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/quickstarts/web-quickstart/requestor.mjs" language="javascript" /%}
 
 Note the file contains the `run()` function that creates the body of the requestor script (similar to the one we use in Node.js) and a set of helper functions that will let us present the logs and results in the browser window.
 

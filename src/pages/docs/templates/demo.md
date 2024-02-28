@@ -173,7 +173,7 @@ here
 
 # Example of code from Github
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/blender/blender.ts" language="typescript" %}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/blender/blender.ts" language="typescript" %}
 
 {% /codefromgithub %}
 
