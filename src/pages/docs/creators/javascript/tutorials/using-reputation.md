@@ -1,7 +1,6 @@
 ---
-title: Enhancing Golem Network Projects with the Reputation System
-description: Discover how to leverage the Reputation System package in your Node.js projects on the Golem Network to filter high-quality providers, optimizing the performance and reliability of your tasks.
-pageTitle: Optimize Your Golem Network Projects with the Reputation System - Developer Tutorial
+title: Using the Reputation System
+description: A guide to using the Reputation System in Node.js projects on the Golem Network for improved provider selection.high-quality providers, optimizing the performance and reliability of your tasks.
 type: Tutorial
 ---
 
@@ -9,11 +8,11 @@ type: Tutorial
 
 ## Introduction
 
-Discover how the Reputation System can optimize your applications on the Golem Network by filtering providers. This tutorial outlines the transition from testnet to mainnet, where the selection of providers are important to increase the probability of a successful run.
+Discover how the Reputation System can optimize your applications on the Golem Network by filtering providers. This tutorial outlines the transition from testnet to mainnet, where the selection of providers is important to increase the probability of a successful run.
 
 ## Understanding the Reputation System
 
-The Reputation System on the Golem Network is designed to aid requestors in increasing their chances of successful outcomes when using Golem Network. It continually assesses providers, utilizing key performance metrics such as task success rates and uptime.
+The Reputation System on the Golem Network is designed to aid requestors in increasing their chances of successful outcomes when using the Golem Network. It continually assesses providers, utilizing key performance metrics such as task success rates and uptime.
 
 Given the vast range of providers, the Reputation System employs a neutral criterion to decide which providers are included in its dataset. This decision is based on the provider's pricing, which must be within the market standards to qualify for assessment. We establish this by comparing the provider's pricing against a similar AWS instance type, with an allowance for a 20% price buffer.
 
@@ -23,7 +22,7 @@ Once a provider is included in the dataset, the Reputation System then regularly
 
 The use of the Reputation System becomes particularly beneficial when transitioning projects from testnet to mainnet. It aids in filtering out providers with irregular configurations or prices that might lead to unexpected errors. By allowing users to adjust the significance of these metrics according to their project needs, the Reputation System helps mitigate such risks.
 
-## Adding the Reputation System in Your Project
+## Adding the Reputation System to Your Project
 
 Let's integrate the Reputation System into a simple Node.js project. This process requires minimal modifications to pre-existing projects.
 
