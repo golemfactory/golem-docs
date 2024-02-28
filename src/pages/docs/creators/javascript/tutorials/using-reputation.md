@@ -75,9 +75,9 @@ To implement the Reputation System, open your project's index.mjs file and incor
 
 This script starts by noting that it will run on the Polygon network, which involves real transaction costs. After a brief pause, it initializes the Reputation System and sets up a TaskExecutor that uses a reputation-based filter for provider selection.
 
-### Customizing Provider Selection with Weight Adjustments
+### Fine-tuning Provider Selection with Weight Adjustments
 
-The Reputation System allows for customization of provider selection criteria through weight adjustments. This means you can prioritize certain aspects of a provider's behavior, such as their success rate or uptime, to better match your project's needs. Here's how you can adjust these weights:
+The Reputation System allows for fine-tuning of provider selection criteria through weight adjustments. This means you can prioritize certain aspects of a provider's behavior, such as their success rate or uptime, to better match your project's needs. Here's how you can adjust these weights:
 
 ```js
 reputation.setProposalWeights({
@@ -88,9 +88,9 @@ reputation.setProposalWeights({
 
 In the example provided, the uptime metric is given a higher weight (0.7) than the success rate (0.3). This means that the system will favor providers with better uptime. These weights are flexible and can be adjusted according to the specific needs of your project. By experimenting with these weights, you can find the optimal balance and select providers that best meet your project's requirements.
 
-## The Benefits of Adjusting Weights
+## The Benefits of fine-tuning Weights
 
-Adjusting the weights for provider selection enables you to focus on what's important for your project, whether it's constant availability or ensuring every task is accomplished without errors. Changing these weights gives you more control over choosing providers, aiming for the best match for your project's success.
+Fine-tuning the weights for provider selection enables you to focus on what's important for your project, whether it's constant availability or ensuring every task is accomplished without errors. Changing these weights gives you more control over choosing providers, aiming for the best match for your project's success.
 
 For instance, if your project needs constant availability, you might value uptime more. The Reputation System then looks for providers that are rarely offline, increasing your project's reliability in long-running tasks. If you prioritize tasks being done without errors, focusing on success rate might be your preference.
 
