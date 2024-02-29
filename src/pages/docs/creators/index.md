@@ -5,6 +5,33 @@ description: Dive into Golem's comprehensive software documentation for creators
 type: noicon
 ---
 
+## Welcome to Golem: Power Your Creations
+
+Rhe Golem Network is place where your innovative ideas transform into reality on a decentralized computing platform. Here, you'll harness the collective power of global computing resources to build, deploy, and manage applications, services or models with unparalleled efficiency and scale.
+
+Whether you're coding in JavaScript, Python, or leveraging no-code solutions, Golem facilitates your access to a vast, decentralized computational network.
+
+## Getting Started with $GLM
+
+To bring your creations to life on the Golem Network, you'll need some $GLM tokens. These tokens are the backbone of our ecosystem, enabling you to utilize and contribute to the computing power shared across the network.
+
+### Why $GLM?
+
+$GLM tokens facilitate transactions within the Golem Network, allowing you to:
+
+- Deploy and Run Applications: Whether you're coding in JS, Python, or deploying without code, $GLM tokens are required to execute your projects on the network.
+- Share Computing Power: Earn $GLM by sharing your unused computing resources with those in need of extra computational power.
+- Access a Decentralized Marketplace: Engage with a global community where computing power is traded without the need for centralized cloud computing providers.
+
+### How to Acquire $GLM
+
+- Test Network for Developers: For those new to Golem or testing their projects, our test network provides "dam tokens," a simulated version of $GLM for experimentation and development purposes.
+- Onboarding Portal: Visit our onboarding portal for a guided experience in purchasing $GLM tokens.
+  C- ryptocurrency Exchanges: $GLM is available on leading exchanges, including Binance, Coinbase, Crypto.com, OKX, Gate.io, KuCoin, HTX, and Vithumb. For those preferring decentralized exchanges, check out Uniswap and Quick Swap.
+
+{% marginbottom amount="4" %}
+{% /marginbottom %}
+
 # How do you want to create?
 
 {% marginbottom amount="4" %}
@@ -102,32 +129,5 @@ Need a backend to offload your system?
 
 {% /grid %}
 
-{% marginbottom amount="4" %}
-{% /marginbottom %}
-
-## Welcome to Golem: Power Your Creations
-
-Rhe Golem Network is place where your innovative ideas transform into reality on a decentralized computing platform. Here, you'll harness the collective power of global computing resources to build, deploy, and manage applications, services or models with unparalleled efficiency and scale.
-
-Whether you're coding in JavaScript, Python, or leveraging no-code solutions, Golem facilitates your access to a vast, decentralized computational network.
-
-## Getting Started with $GLM
-
-To bring your creations to life on the Golem Network, you'll need some $GLM tokens. These tokens are the backbone of our ecosystem, enabling you to utilize and contribute to the computing power shared across the network.
-
-### Why $GLM?
-
-$GLM tokens facilitate transactions within the Golem Network, allowing you to:
-
-- Deploy and Run Applications: Whether you're coding in JS, Python, or deploying without code, $GLM tokens are required to execute your projects on the network.
-- Share Computing Power: Earn $GLM by sharing your unused computing resources with those in need of extra computational power.
-- Access a Decentralized Marketplace: Engage with a global community where computing power is traded without the need for centralized cloud computing providers.
-
-### How to Acquire $GLM
-
-- Test Network for Developers: For those new to Golem or testing their projects, our test network provides "dam tokens," a simulated version of $GLM for experimentation and development purposes.
-- Onboarding Portal: Visit our onboarding portal for a guided experience in purchasing $GLM tokens.
-  C- ryptocurrency Exchanges: $GLM is available on leading exchanges, including Binance, Coinbase, Crypto.com, OKX, Gate.io, KuCoin, HTX, and Vithumb. For those preferring decentralized exchanges, check out Uniswap and Quick Swap.
-
-{% marginbottom amount="4" %}
+{% marginbottom amount="8" %}
 {% /marginbottom %}
