@@ -26,7 +26,7 @@ $GLM tokens facilitate transactions within the Golem Network, allowing you to:
 ### How to Acquire $GLM
 
 - **Test Network for Developers**: For those new to Golem or testing their projects, our test network provides "dam tokens," a simulated version of $GLM for experimentation and development purposes.
-- **Onboarding Portal**: Visit our [onboarding portal](https://golem.network/token/) for a guided experience in purchasing $GLM tokens.
+- **Onboarding Portal**: Visit our [onboarding portal](https://glm.golem.network/) for a guided experience in purchasing $GLM tokens.
 - **Cryptocurrency Exchanges**: $GLM is available on several leading exchanges. Here are the links to these platforms:
   - [Binance](https://www.binance.com/)
   - [Coinbase](https://www.coinbase.com/)
