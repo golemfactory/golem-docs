@@ -7,7 +7,7 @@ type: noicon
 
 ## Welcome to Golem: Power Your Creations
 
-Rhe Golem Network is place where your innovative ideas transform into reality on a decentralized computing platform. Here, you'll harness the collective power of global computing resources to build, deploy, and manage applications, services or models with unparalleled efficiency and scale.
+The Golem Network is place where your innovative ideas transform into reality on a decentralized computing platform. Here, you'll harness the collective power of global computing resources to build, deploy, and manage applications, services or models with unparalleled efficiency and scale.
 
 Whether you're coding in JavaScript, Python, or leveraging no-code solutions, Golem facilitates your access to a vast, decentralized computational network.
 
