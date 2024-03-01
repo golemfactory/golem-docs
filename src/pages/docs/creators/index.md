@@ -25,7 +25,7 @@ $GLM tokens facilitate transactions within the Golem Network, allowing you to:
 
 ### How to Acquire $GLM
 
-- **Test Network for Developers**: For those new to Golem or testing their projects, our test network provides "dam tokens," a simulated version of $GLM for experimentation and development purposes.
+- **Test Network for Developers**: Specifically designed for new participants in the Golem network and developers experimenting with their projects, this test network introduces "tGLM," a testnet token. tGLM is a simulated version of the Golem token (GLM) used exclusively within the Golem testnet. It's important to note that tGLM holds no real-world value, serving solely for development and testing purposes within the Golem Network.
 - **Onboarding Portal**: Visit our [onboarding portal](https://glm.golem.network/) for a guided experience in purchasing $GLM tokens.
 - **Cryptocurrency Exchanges**: $GLM is available on several leading exchanges. Here are the links to these platforms:
   - [Binance](https://www.binance.com/)
