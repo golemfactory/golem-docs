@@ -25,9 +25,20 @@ $GLM tokens facilitate transactions within the Golem Network, allowing you to:
 
 ### How to Acquire $GLM
 
-- Test Network for Developers: For those new to Golem or testing their projects, our test network provides "dam tokens," a simulated version of $GLM for experimentation and development purposes.
-- Onboarding Portal: Visit our onboarding portal for a guided experience in purchasing $GLM tokens.
-  C- ryptocurrency Exchanges: $GLM is available on leading exchanges, including Binance, Coinbase, Crypto.com, OKX, Gate.io, KuCoin, HTX, and Vithumb. For those preferring decentralized exchanges, check out Uniswap and Quick Swap.
+- **Test Network for Developers**: For those new to Golem or testing their projects, our test network provides "dam tokens," a simulated version of $GLM for experimentation and development purposes.
+- **Onboarding Portal**: Visit our [onboarding portal](https://golem.network/token/) for a guided experience in purchasing $GLM tokens.
+- **Cryptocurrency Exchanges**: $GLM is available on several leading exchanges. Here are the links to these platforms:
+  - [Binance](https://www.binance.com/)
+  - [Coinbase](https://www.coinbase.com/)
+  - [Crypto.com](https://crypto.com/)
+  - [OKX](https://www.okx.com/)
+  - [Gate.io](https://www.gate.io/)
+  - [KuCoin](https://www.kucoin.com/)
+  - [HTX](https://www.htx.com/)
+  - [Bithumb](https://www.bithumb.com/)
+  - For those preferring decentralized exchanges, $GLM can also be found on:
+    - [Uniswap](https://uniswap.org/)
+    - [Quick Swap](https://quickswap.exchange/)
 
 {% marginbottom amount="4" %}
 {% /marginbottom %}
