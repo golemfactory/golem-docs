@@ -17,11 +17,11 @@ type: React Reference
 
 ## Parameters
 
-This hook takes the [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance, initialized by the [useExecutor](/docs/creators/javascript/react/use-executor) hook.
+This hook takes the [TaskExecutor](/docs/golem-sdk-task-executor/reference/modules/executor#executoroptions) instance, initialized by the [useExecutor](/docs/creators/javascript/react/use-executor) hook.
 
-| Name                | Description                                                                                   |
-| ------------------- | --------------------------------------------------------------------------------------------- |
-| executor (required) | The [TaskExecutor](/docs/golem-js/reference/classes/executor_executor.TaskExecutor) instance. |
+| Name                | Description                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------ |
+| executor (required) | The [TaskExecutor](/docs/golem-sdk-task-executor/reference/modules/executor#executoroptions) instance. |
 
 ## Example
 
