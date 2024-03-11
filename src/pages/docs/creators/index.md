@@ -43,6 +43,8 @@ The Golem Network is place where your innovative ideas transform into reality. H
 
 ## How to Acquire GLM
 
+To bring your creations to life on the Golem Network, you'll need some GLM tokens. These tokens are the backbone of our ecosystem, allowing you to utilize and contribute to the computing power shared across the network. You can obtain our tokens in several ways:
+
 - **Test Network for Developers**: Specifically designed for new participants in the Golem network and developers experimenting with their projects, this test network introduces "tGLM," a testnet token. tGLM is a simulated version of the Golem token (GLM) used exclusively within the Golem testnet. It's important to note that tGLM holds no real-world value, serving solely for development and testing purposes within the Golem Network.
 - **Onboarding Portal**: Visit our [onboarding portal](https://glm.golem.network/) for a guided experience in purchasing GLM tokens.
 - **Cryptocurrency Exchanges**: GLM is available on several leading exchanges. Here are the links to these platforms:
