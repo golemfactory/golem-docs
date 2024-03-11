@@ -5,7 +5,13 @@ description: Dive into Golem's comprehensive software documentation for creators
 type: noicon
 ---
 
-# How do you want to create?
+# Welcome to Golem: Power Your Creations
+
+The Golem Network is place where your innovative ideas transform into reality on a decentralized computing platform. Here, you'll harness the collective power of global computing resources to build, deploy, and manage applications, services or models with unparalleled efficiency and scale.
+
+Whether you're coding in JavaScript, Python or leveraging no-code solutions, Golem facilitates your access to a vast, decentralized computational network.
+
+## How do you want to create?
 
 {% marginbottom amount="4" %}
 {% /marginbottom %}
@@ -37,18 +43,6 @@ type: noicon
 
 ---
 
-### Examples
-
-Dive into real-world applications and discover how Golem's versatile platform can empower your development journey. Our examples span various use cases, illustrating the flexibility and power of Golem in different scenarios.
-
-- **Machine Learning Models**: Learn how to deploy and train machine learning models efficiently using Golem's distributed computing power. These examples guide you through the process, from setting up your environment to executing large-scale training sessions.
-
-- **Data Processing and Analysis**: Discover how to leverage Golem for intensive data processing tasks. Our examples showcase how to handle large datasets, perform complex computations, and analyze results effectively, all distributed across multiple nodes.
-
-- **Web Hosting on Golem**: Explore the innovative approach of hosting websites and web services on Golem. These examples provide insights into setting up decentralized hosting.
-
----
-
 ### How to Acquire $GLM
 
 - **Test Network for Developers**: Specifically designed for new participants in the Golem network and developers experimenting with their projects, this test network introduces "tGLM," a testnet token. tGLM is a simulated version of the Golem token (GLM) used exclusively within the Golem testnet. It's important to note that tGLM holds no real-world value, serving solely for development and testing purposes within the Golem Network.
@@ -65,3 +59,11 @@ Dive into real-world applications and discover how Golem's versatile platform ca
   - For those preferring decentralized exchanges, $GLM can also be found on:
     - [Uniswap](https://uniswap.org/)
     - [Quick Swap](https://quickswap.exchange/)
+
+---
+
+## Get inspired
+
+Dive into real-world applications and discover how Golem's versatile platform can empower your development journey. Our examples span various use cases, illustrating the flexibility and power of Golem in different scenarios
+
+Visit the [Awesome Golem repository](https://github.com/golemfactory/awesome-golem) to see a range of projects that bring these capabilities to life.
