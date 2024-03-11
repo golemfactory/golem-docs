@@ -7,9 +7,7 @@ type: noicon
 
 # Welcome to Golem: Power Your Creations
 
-The Golem Network is place where your innovative ideas transform into reality on a decentralized computing platform. Here, you'll harness the collective power of global computing resources to build, deploy, and manage applications, services or models with unparalleled efficiency and scale.
-
-Whether you're coding in JavaScript, Python or leveraging no-code solutions, Golem facilitates your access to a vast, decentralized computational network.
+The Golem Network is place where your innovative ideas transform into reality. Here, you'll harness the collective power of global computing resources.
 
 ## How do you want to create?
 
@@ -18,7 +16,7 @@ Whether you're coding in JavaScript, Python or leveraging no-code solutions, Gol
 
 {% grid %}
 
-{% selectioncard icon="javascript" title="JS Docs" buttonText="Read JS Docs" href="/docs/creators/javascript" %}
+{% selectioncard icon="javascript" title="JS SDK" buttonText="Read JS Docs" href="/docs/creators/javascript" %}
 
 {% /selectioncard %}
 
@@ -32,7 +30,7 @@ Whether you're coding in JavaScript, Python or leveraging no-code solutions, Gol
 
 {% /selectioncard %}
 
-{% selectioncard icon="python" title="Python Docs" buttonText="Read Python Docs" href="/docs/creators/python" %}
+{% selectioncard icon="python" title="Python SDK" buttonText="Read Python Docs" href="/docs/creators/python" %}
 
 {% /selectioncard %}
 
@@ -43,11 +41,11 @@ Whether you're coding in JavaScript, Python or leveraging no-code solutions, Gol
 
 ---
 
-## How to Acquire $GLM
+## How to Acquire GLM
 
 - **Test Network for Developers**: Specifically designed for new participants in the Golem network and developers experimenting with their projects, this test network introduces "tGLM," a testnet token. tGLM is a simulated version of the Golem token (GLM) used exclusively within the Golem testnet. It's important to note that tGLM holds no real-world value, serving solely for development and testing purposes within the Golem Network.
-- **Onboarding Portal**: Visit our [onboarding portal](https://glm.golem.network/) for a guided experience in purchasing $GLM tokens.
-- **Cryptocurrency Exchanges**: $GLM is available on several leading exchanges. Here are the links to these platforms:
+- **Onboarding Portal**: Visit our [onboarding portal](https://glm.golem.network/) for a guided experience in purchasing GLM tokens.
+- **Cryptocurrency Exchanges**: GLM is available on several leading exchanges. Here are the links to these platforms:
   - [Binance](https://www.binance.com/)
   - [Coinbase](https://www.coinbase.com/)
   - [Crypto.com](https://crypto.com/)
@@ -56,7 +54,7 @@ Whether you're coding in JavaScript, Python or leveraging no-code solutions, Gol
   - [KuCoin](https://www.kucoin.com/)
   - [HTX](https://www.htx.com/)
   - [Bithumb](https://www.bithumb.com/)
-  - For those preferring decentralized exchanges, $GLM can also be found on:
+  - For those preferring decentralized exchanges, GLM can also be found on:
     - [Uniswap](https://uniswap.org/)
     - [Quick Swap](https://quickswap.exchange/)
 
