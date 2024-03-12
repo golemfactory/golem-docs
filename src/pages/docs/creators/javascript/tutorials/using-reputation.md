@@ -96,7 +96,7 @@ This setting influences the number of high-ranking providers included in the fin
 
 - **topPoolSize set to 1:** Choosing only the single highest-ranked provider might guarantee exceptional results, but it limits your options. For instance, if you have multiple tasks running concurrently, you might end up using the same provider repeatedly, overlooking other well-suited providers.
 
-- **topPoolSize set to a higher number (like 5 or 8):** With a larger pool, you have more flexibility. However, an excessively high number can weaken the selection process, especially when dealing with a vast number of providers. In such cases, the impact of your custom filter's weights might diminish, and the selection might become more random. A larger pool size is only advantageous when there's a significantly larger pool of qualified providers compared to the final selection pool size.
+- **topPoolSize set to a higher number (like 5 or 8):** With a larger pool, you have more flexibility. However, an excessively high number can weaken the selection process, especially when dealing with a vast number of providers. In such cases, the impact our `proposalFilter` weights might diminish, and the selection might become more random. A larger pool size is only advantageous when there's a significantly larger pool of qualified providers compared to the final selection pool size.
 
 - **The default setting of 2:** This default strikes a good balance between picking the best providers and maintaining some variety. It introduces a touch of randomness, which can be beneficial. This allows you to leverage a wider range of providers and avoid relying solely on the same ones.
   Using the Agreement Selector
