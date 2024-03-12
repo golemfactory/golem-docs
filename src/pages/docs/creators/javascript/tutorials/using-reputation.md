@@ -94,7 +94,7 @@ The agreement selector doesn't just pick the provider with the highest overall s
 
 This setting influences the number of high-ranking providers included in the final selection pool. Here's a breakdown of the impact of different topPoolSize values:
 
-- **topPoolSize set to 1:** Choosing only the single highest-ranked provider might guarantee exceptional results, but it limits your options. This could be problematic if your tasks require diverse provider capabilities. For instance, if you have multiple tasks running concurrently, you might end up using the same provider repeatedly, overlooking other well-suited providers.
+- **topPoolSize set to 1:** Choosing only the single highest-ranked provider might guarantee exceptional results, but it limits your options. For instance, if you have multiple tasks running concurrently, you might end up using the same provider repeatedly, overlooking other well-suited providers.
 
 - **topPoolSize set to a higher number (like 5 or 8):** With a larger pool, you have more flexibility. However, an excessively high number can weaken the selection process, especially when dealing with a vast number of providers. In such cases, the impact of your custom filter's weights might diminish, and the selection might become more random. A larger pool size is only advantageous when there's a significantly larger pool of qualified providers compared to the final selection pool size.
 
