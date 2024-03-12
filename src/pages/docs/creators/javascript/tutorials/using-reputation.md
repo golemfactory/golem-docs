@@ -80,15 +80,15 @@ In the example provided, the uptime metric is given a higher weight (0.7) than t
 
 ### Maximizing Performance with the Agreement Selector
 
-The agreement selector is an additional filter that helps you choose the best providers for your tasks. It works in tandem with our proposal filter, to achieve optimal performance.
+The agreement selector is an strategy that helps you choose the best providers for your tasks. It works in tandem with our proposal filter, to achieve optimal performance.
 
 - **Targeted Filtering:** Our `ProposalFilter` acts as the initial screening tool. It closely examines all available providers, evaluating them against the weights you've defined. Providers that don't meet your weights are eliminated, leaving behind a list of qualified candidates.
 
-- **Precision Selection:** The `agreementSelector` takes over from there. It focuses on the list of providers vetted by our `proposalFilter`. By closely analyzing their performance data, which includes historical single- and multithread CPU benchmark scores, the agreement selector identifies the absolute best fit for your task.
+- **Precision Selection:** The `agreementSelector` takes over by focusing on the list of providers pre-sorted by our `proposalFilter` based on weighted scores. Then, independently, it examines their historical single- and multithread CPU benchmark scores, choosing one of the providers with the highest performance in these metrics to ensure the best fit for your task.
 
 Imagine the proposal filter as a sieve. It sorts through all the available providers, leaving only those that meet your requirements. Then, the agreement selector steps in. It acts like a magnifying glass, examining the remaining good providers closely to find the absolute best fit for your specific task.
 
-The agreement selector doesn't just pick the provider with the highest overall score. Instead, it considers a smaller group of top performers, chosen based on a setting called `topPoolSize`.
+The agreement selector operates by first identifying a group of the highest scoring providers. It then utilizes the `topPoolSize` setting to randomly select one from these top candidates.
 
 #### Why topPoolSize Matters
 
@@ -96,11 +96,23 @@ This setting influences the number of high-ranking providers included in the fin
 
 - **topPoolSize set to 1:** Choosing only the single highest-ranked provider might guarantee exceptional results, but it limits your options. For instance, if you have multiple tasks running concurrently, you might end up using the same provider repeatedly, overlooking other well-suited providers.
 
-- **topPoolSize set to a higher number (like 5 or 8):** With a larger pool, you have more flexibility. However, an excessively high number can weaken the selection process, especially when dealing with a vast number of providers. In such cases, the impact our `proposalFilter` weights might diminish, and the selection might become more random. A larger pool size is only advantageous when there's a significantly larger pool of qualified providers compared to the final selection pool size.
+- **topPoolSize set to a higher number (like 5 or 8):**
+  With a larger pool, there is more flexibility in the selection process. However, contrary to what might be expected, an excessively high topPoolSize relative to the available candidate pool can actually be more effective. This effectiveness decreases when the topPoolSize to availableCandidate ratio is lower. The impact of `proposalFilter` weights becomes more pronounced in these scenarios, leading to a more deliberate selection rather than randomness. This approach is particularly advantageous when the score distribution among providers varies significantly. Consider the impact of different topPool sizes in the following scenarios:
+
+  - **Case 1 (scores: 10, 5, 2, 1, 1, 1, 1, 0, 0, 0):**
+
+    - With a topPool size of 2, the candidates are likely to be those with scores of 10 and 5.
+    - With a topPool size of 4, the candidates would include scores of 10, 5, 2, and 1.
+    - With a topPool size of 6, the candidates would extend to include multiple providers with a score of 1.
+
+  - **Case 2 (scores: 10, 9, 9, 8, 7, 7, 6, 4, 4, 4):**
+    - With a topPool size of 2, the candidates are likely to be those with scores of 10 and 9.
+    - With a topPool size of 4, this would include scores of 10, 9, 9, and 8.
+    - With a topPool size of 6, the candidates would extend to include scores down to 7.
+
+  In these examples, the effectiveness of the `topPoolSize` is clearly dependent on the score distribution. In Case 1, a smaller `topPoolsize` seems more appropriate due to the significant drop in scores after the top two candidates. In contrast, Case 2 with a more gradual score decrease benefits from a larger `topPool size`.
 
 - **The default setting of 2:** This default strikes a good balance between picking the best providers and maintaining some variety. It introduces a touch of randomness, which can be beneficial. This allows you to leverage a wider range of providers and avoid relying solely on the same ones.
-
-#### Using the Agreement Selector
 
 By including the agreementSelector, you enable the system to automatically select the most suitable provider for your tasks based on your filter's criteria and the provider's performance data. This feature can significantly enhance your project's efficiency by ensuring your tasks are assigned to reliable and high-performing providers.
 
