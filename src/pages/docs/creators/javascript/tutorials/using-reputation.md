@@ -96,23 +96,11 @@ This setting influences the number of high-ranking providers included in the fin
 
 - **topPoolSize set to 1:** Choosing only the single highest-ranked provider might guarantee exceptional results, but it limits your options. For instance, if you have multiple tasks running concurrently, you might end up using the same provider repeatedly, overlooking other well-suited providers.
 
-- **topPoolSize set to a higher number (like 5 or 8):**
-  With a larger pool, there is more flexibility in the selection process. However, contrary to what might be expected, an excessively high topPoolSize relative to the available candidate pool can actually be more effective. This effectiveness decreases when the topPoolSize to availableCandidate ratio is lower. The impact of `proposalFilter` weights becomes more pronounced in these scenarios, leading to a more deliberate selection rather than randomness. This approach is particularly advantageous when the score distribution among providers varies significantly. Consider the impact of different topPool sizes in the following scenarios:
-
-  - **Case 1 (scores: 10, 5, 2, 1, 1, 1, 1, 0, 0, 0):**
-
-    - With a topPool size of 2, the candidates are likely to be those with scores of 10 and 5.
-    - With a topPool size of 4, the candidates would include scores of 10, 5, 2, and 1.
-    - With a topPool size of 6, the candidates would extend to include multiple providers with a score of 1.
-
-  - **Case 2 (scores: 10, 9, 9, 8, 7, 7, 6, 4, 4, 4):**
-    - With a topPool size of 2, the candidates are likely to be those with scores of 10 and 9.
-    - With a topPool size of 4, this would include scores of 10, 9, 9, and 8.
-    - With a topPool size of 6, the candidates would extend to include scores down to 7.
-
-  In these examples, the effectiveness of the `topPoolSize` is clearly dependent on the score distribution. In Case 1, a smaller `topPoolsize` seems more appropriate due to the significant drop in scores after the top two candidates. In contrast, Case 2 with a more gradual score decrease benefits from a larger `topPool size`.
+- **topPoolSize set to a higher number (like 5 or 8):** With a larger pool, you have more flexibility. However, an excessively high number can weaken the selection process. In such cases, the impact our `proposalFilter` weights might diminish, and the selection might become more random. A larger pool size is only advantageous when there's a significantly larger pool of qualified providers compared to the final selection pool size.
 
 - **The default setting of 2:** This default strikes a good balance between picking the best providers and maintaining some variety. It introduces a touch of randomness, which can be beneficial. This allows you to leverage a wider range of providers and avoid relying solely on the same ones.
+
+#### Using the Agreement Selector
 
 By including the agreementSelector, you enable the system to automatically select the most suitable provider for your tasks based on your filter's criteria and the provider's performance data. This feature can significantly enhance your project's efficiency by ensuring your tasks are assigned to reliable and high-performing providers.
 
