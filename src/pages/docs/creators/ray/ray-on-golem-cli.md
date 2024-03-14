@@ -22,6 +22,27 @@ Ray on Golem supports the following commands
 - `ray-on-golem network-stats golem-cluster.yaml` scans the network and offers information about available providers ([details](#network-stats))
 - `ray-on-golem webserver` starts Golem requestor service controlling the providers used by the cluster (it is run internally, most probably you don't want to run it manually)
 
+### `ray-on-golem [start|stop]`
+
+Ray on Golem consists of two services running on user's computer:
+- `yagna` daemon acts as a gateway to Golem Network 
+- `ray-on-golem` webserver controls Ray cluster, reacts to Ray autoscaler's commands (spin up new nodes, stop old nodes) 
+
+When you do `ray up`, it makes sure the two services are up (starting them if needed). `ray down` however doesn't stop them. The rationale being that when they run they keep getting updates from Golem Network about available nodes.
+It speeds up the process of finding suitable nodes for the subsequent `ray up`.
+
+They are supposed to be light and normally we don't recommend stopping them.
+However, you might want to do that, for example:
+- if you are done with Ray for a while
+- if you really want to 
+- if you want to clear Ray on Golem's state and start a fresh (if you feel this need please let us know, probably something is wrong and we would love to fix it)
+
+You might also want to start the two services even before the first `ray up` - to warm them up so that the actual `ray up` has more knowledge about the network already.
+
+The `ray-on-golem start` command starts the two services 
+The `ray-on-golem stop` command stops the two services.
+
+
 ## Network stats
 
 The tool scans the network and gives you an overview of the availability of the providers.
