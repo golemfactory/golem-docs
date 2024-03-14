@@ -33,13 +33,13 @@ Yagna service is installed and running with `try_golem` app-key configured.
 
 ### How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
 
 ```bash
 mkdir golem-example
 cd golem-example
 npm init
-npm i @golem-sdk/golem-js
+npm i @golem-sdk/task-executor
 ```
 
 Next, install `Golem SDK CLI` - a companion tool that will facilitate manifest creation.

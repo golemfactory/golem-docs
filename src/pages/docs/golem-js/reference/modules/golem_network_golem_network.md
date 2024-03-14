@@ -24,4 +24,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/golem_network/golem_network.ts:8](https://github.com/golemfactory/golem-js/blob/22da85c/src/golem_network/golem_network.ts#L8)
+[src/golem_network/golem_network.ts:8](https://github.com/golemfactory/golem-js/blob/4182943/src/golem_network/golem_network.ts#L8)

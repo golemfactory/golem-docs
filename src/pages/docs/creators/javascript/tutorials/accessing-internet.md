@@ -38,7 +38,7 @@ Then initialise the project and install JS SDK.
 
 ```bash
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Next, install `Golem SDK CLI` - a companion tool that will facilitate manifest creation.
@@ -76,7 +76,7 @@ The application will be very simple. It will use `curl` to download an example i
 Let’s start with a simple boilerplate, copy the following code to a javascript file:
 
 ```javascript
-import { TaskExecutor } from '@golem-sdk/golem-js'
+import { TaskExecutor } from '@golem-sdk/task-executor'
 import { readFile } from 'fs/promises'
 ;(async function main() {
   const executor = await TaskExecutor.create({})
@@ -123,7 +123,7 @@ Please note the loaded manifest is encoded to base64.
 In this example, you will simply fetch an example file from IPFS using the `curl` command, available in our GVMI image. So first let’s save the URL near the top of the file (just after the imports):
 
 ```javascript
-import { TaskExecutor } from '@golem-sdk/golem-js'
+import { TaskExecutor } from '@golem-sdk/task-executor'
 import { readFile } from 'fs/promises'
 
 const url =
@@ -150,7 +150,7 @@ And that’s it! Now, make sure your yagna service is running and you can start 
 This is how the entire file should look like:
 
 ```javascript
-import { TaskExecutor } from '@golem-sdk/golem-js'
+import { TaskExecutor } from '@golem-sdk/task-executor'
 import { readFile } from 'fs/promises'
 
 const url =

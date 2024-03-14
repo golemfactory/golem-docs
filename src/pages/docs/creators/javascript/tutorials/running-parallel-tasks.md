@@ -168,17 +168,17 @@ Note, we could calculate the keyspace locally, but in this example we will also 
 
 ### JS project setup
 
-Now initialize the project, and install the `@golem-sdk/golem-js` library.
+Now initialize the project, and install the `@golem-sdk/task-executor` library.
 
 ```bash
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Create the `index.mjs` file with the following content:
 
 ```js
-import { TaskExecutor } from '@golem-sdk/golem-js'
+import { TaskExecutor } from '@golem-sdk/task-executor'
 import { program } from 'commander'
 
 async function main(args) {
@@ -323,7 +323,7 @@ Once we get the password we print it in the console and end executor.
 
 ### The complete example
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
 
 To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
 
@@ -352,7 +352,7 @@ You should see an output similar to the one below.
 
 {% alert level="info" %}
 
-You can clone the @golem-sdk/golem-js repository and find the complete project in the `examples/hashcat` folder.
+You can clone the @golem-sdk/task-executor repository and find the complete project in the `examples/hashcat` folder.
 {% /alert  %}
 
 ## Summary

@@ -48,7 +48,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:28](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L28)
+[src/payment/payments.ts:28](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/payments.ts#L28)
 
 ## Methods
 
@@ -69,7 +69,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L24)
+[src/payment/payments.ts:24](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/payments.ts#L24)
 
 ___
 
@@ -86,4 +86,4 @@ An error will be thrown when the unsubscribe timeout expires.
 
 #### Defined in
 
-[src/payment/payments.ts:42](https://github.com/golemfactory/golem-js/blob/22da85c/src/payment/payments.ts#L42)
+[src/payment/payments.ts:42](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/payments.ts#L42)

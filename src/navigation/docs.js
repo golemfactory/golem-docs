@@ -1,3 +1,7 @@
+import { navigation as taskExecutorReference } from './golem-sdk-task-executor-jsreference'
+import { navigation as golemJsReference } from './golem-js-jsreference'
+import { parseReference } from './parseReference'
+
 export const navigation = [
   {
     title: 'Home',
@@ -60,89 +64,6 @@ export const navigation = [
             ],
           },
           {
-            title: 'Tutorials',
-            children: [
-              {
-                title: 'List of tutorials',
-                href: '/docs/creators/javascript/tutorials',
-              },
-              {
-                title: 'Quickstart Explained',
-                href: '/docs/creators/javascript/tutorials/quickstart-explained',
-              },
-              {
-                title: 'Running parallel tasks',
-                href: '/docs/creators/javascript/tutorials/running-parallel-tasks',
-              },
-              {
-                title: 'Golem in a Browser',
-                href: '/docs/creators/javascript/tutorials/running-in-browser',
-              },
-              {
-                title: 'Building custom image',
-                href: '/docs/creators/javascript/tutorials/building-custom-image',
-              },
-              {
-                title: 'Using Outbound',
-                href: '/docs/creators/javascript/tutorials/accessing-internet',
-              },
-              {
-                title: 'Testing Golem Images',
-                href: '/docs/creators/javascript/tutorials/testing-golem-image',
-              },
-              {
-                title: 'REST API with Express.js',
-                href: '/docs/creators/javascript/tutorials/rest-api-with-express',
-              },
-            ],
-          },
-          {
-            title: 'JS Task API Examples',
-            href: '',
-            children: [
-              {
-                title: 'List of examples',
-                href: '/docs/creators/javascript/examples',
-              },
-              {
-                title: 'Executing tasks',
-                href: '/docs/creators/javascript/examples/executing-tasks',
-              },
-              {
-                title: 'Composing tasks',
-                href: '/docs/creators/javascript/examples/composing-tasks',
-              },
-              {
-                title: 'Transferring data',
-                href: '/docs/creators/javascript/examples/transferring-data',
-              },
-              {
-                title: 'Working with results',
-                href: '/docs/creators/javascript/examples/working-with-results',
-              },
-              {
-                title: 'Selecting providers',
-                href: '/docs/creators/javascript/examples/selecting-providers',
-              },
-              {
-                title: 'Working with images',
-                href: '/docs/creators/javascript/examples/working-with-images',
-              },
-              {
-                title: 'Using app-keys',
-                href: '/docs/creators/javascript/examples/using-app-keys',
-              },
-              {
-                title: 'Accessing the Internet',
-                href: '/docs/creators/javascript/examples/accessing-internet',
-              },
-              {
-                title: 'Switching to mainnet',
-                href: '/docs/creators/javascript/examples/switching-to-mainnet',
-              },
-            ],
-          },
-          {
             title: 'Guides',
             href: '',
             children: [
@@ -185,41 +106,97 @@ export const navigation = [
             ],
           },
           {
-            title: 'Golem tools examples',
+            title: 'Tutorials',
+            children: [
+              {
+                title: 'List of tutorials',
+                href: '/docs/creators/javascript/tutorials',
+              },
+              {
+                title: 'Quickstart Explained',
+                href: '/docs/creators/javascript/tutorials/quickstart-explained',
+              },
+              {
+                title: 'Selecting providers based on reputation',
+                href: '/docs/creators/javascript/tutorials/using-reputation',
+              },
+              {
+                title: 'Running parallel tasks',
+                href: '/docs/creators/javascript/tutorials/running-parallel-tasks',
+              },
+              {
+                title: 'Golem in a Browser',
+                href: '/docs/creators/javascript/tutorials/running-in-browser',
+              },
+              {
+                title: 'Building custom image',
+                href: '/docs/creators/javascript/tutorials/building-custom-image',
+              },
+              {
+                title: 'Using Outbound',
+                href: '/docs/creators/javascript/tutorials/accessing-internet',
+              },
+              {
+                title: 'Testing Golem Images',
+                href: '/docs/creators/javascript/tutorials/testing-golem-image',
+              },
+              {
+                title: 'REST API with Express.js',
+                href: '/docs/creators/javascript/tutorials/rest-api-with-express',
+              },
+            ],
+          },
+          {
+            title: 'JS Task API',
             href: '',
             children: [
               {
-                title: 'List of instructions',
-                href: '/docs/creators/javascript/examples/tools',
+                title: 'Task API Examples',
+                href: '',
+                children: [
+                  {
+                    title: 'List of examples',
+                    href: '/docs/creators/javascript/examples',
+                  },
+                  {
+                    title: 'Executing tasks',
+                    href: '/docs/creators/javascript/examples/executing-tasks',
+                  },
+                  {
+                    title: 'Composing tasks',
+                    href: '/docs/creators/javascript/examples/composing-tasks',
+                  },
+                  {
+                    title: 'Transferring data',
+                    href: '/docs/creators/javascript/examples/transferring-data',
+                  },
+                  {
+                    title: 'Working with results',
+                    href: '/docs/creators/javascript/examples/working-with-results',
+                  },
+                  {
+                    title: 'Selecting providers',
+                    href: '/docs/creators/javascript/examples/selecting-providers',
+                  },
+                  {
+                    title: 'Working with images',
+                    href: '/docs/creators/javascript/examples/working-with-images',
+                  },
+                  {
+                    title: 'Using app-keys',
+                    href: '/docs/creators/javascript/examples/using-app-keys',
+                  },
+                  {
+                    title: 'Accessing the Internet',
+                    href: '/docs/creators/javascript/examples/accessing-internet',
+                  },
+                  {
+                    title: 'Switching to mainnet',
+                    href: '/docs/creators/javascript/examples/switching-to-mainnet',
+                  },
+                ],
               },
-              {
-                title: 'Yagna installation',
-                href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
-              },
-              {
-                title: 'Converting images',
-                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
-              },
-              {
-                title: 'Gvmkit-build installation',
-                href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
-              },
-              {
-                title: 'Publishing custom images',
-                href: '/docs/creators/javascript/examples/tools/publishing-custom-images',
-              },
-              {
-                title: 'Golem wallet backup',
-                href: '/docs/creators/javascript/examples/tools/golem-wallet-backup',
-              },
-              {
-                title: 'Restoring Golem wallet',
-                href: '/docs/creators/javascript/examples/tools/restoring-golem-wallet',
-              },
-              {
-                title: 'Managing Golem wallet',
-                href: '/docs/creators/javascript/examples/tools/managing-golem-wallet',
-              },
+              parseReference('Task API Reference', taskExecutorReference),
             ],
           },
           {
@@ -275,6 +252,45 @@ export const navigation = [
                     href: '/docs/creators/javascript/react/use-handle-debit-note',
                   },
                 ],
+              },
+            ],
+          },
+          parseReference('Golem JS API Reference', golemJsReference),
+          {
+            title: 'Golem tools examples',
+            href: '',
+            children: [
+              {
+                title: 'List of instructions',
+                href: '/docs/creators/javascript/examples/tools',
+              },
+              {
+                title: 'Yagna installation',
+                href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
+              },
+              {
+                title: 'Converting images',
+                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
+              },
+              {
+                title: 'Gvmkit-build installation',
+                href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
+              },
+              {
+                title: 'Publishing custom images',
+                href: '/docs/creators/javascript/examples/tools/publishing-custom-images',
+              },
+              {
+                title: 'Golem wallet backup',
+                href: '/docs/creators/javascript/examples/tools/golem-wallet-backup',
+              },
+              {
+                title: 'Restoring Golem wallet',
+                href: '/docs/creators/javascript/examples/tools/restoring-golem-wallet',
+              },
+              {
+                title: 'Managing Golem wallet',
+                href: '/docs/creators/javascript/examples/tools/managing-golem-wallet',
               },
             ],
           },

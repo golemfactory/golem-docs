@@ -2,11 +2,12 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 
 # Variable Definitions
-REPO_URL='https://github.com/golemfactory/golem-js.git'
 TEMP_PATH='./temp'
-OUTPUT_PATH='../src/pages/docs/golem-js/reference'
 TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-frontmatter-theme.cjs --hideBreadcrumbs true'
 BRANCH_NAME=$1
+REPO_NAME=$2
+OUTPUT_PATH="../src/pages/docs/$REPO_NAME/reference"
+REPO_URL="git@github.com:golemfactory/$REPO_NAME.git"
 
 # Cloning Repository to Temporary Path
 if [ -d "$TEMP_PATH" ]; then rm -Rf $TEMP_PATH; fi
@@ -18,8 +19,8 @@ cd $TEMP_PATH
 # Switching to Desired Branch
 git checkout $BRANCH_NAME
 
-# If Branch is Master, then change it to latest
-[ $BRANCH_NAME = "master" ] && BRANCH_NAME="latest"
+# If Branch is Master or Main, then change it to latest
+[ $BRANCH_NAME = "master" ] || [ "$BRANCH_NAME" = "main" ] && BRANCH_NAME="latest"
 
 # Installing Necessary Dependencies
 npm install --force
@@ -43,7 +44,7 @@ node .docs/summary-generator.cjs $OUTPUT_PATH $OUTPUT_PATH
 cd ..
 
 # Generate Typedoc
-node generateTypedoc.mjs ${BRANCH_NAME}
+node generateTypedoc.mjs ${BRANCH_NAME} ${REPO_NAME}
 
 # File and Content Definition for Meta.js
 file="src/navigation/meta.js"

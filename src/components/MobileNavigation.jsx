@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Dialog } from '@headlessui/react'
-import { mergednavs } from '@/navigation/mergeNavigation'
+import { navigation } from '@/navigation/docs'
 import { Logomark } from '@/components/Logo'
 import { SideBar } from './Navigation'
 
@@ -86,7 +86,7 @@ export function MobileNavigation({}) {
             </Link>
           </div>
 
-          {mergednavs.map((section) => (
+          {navigation.map((section) => (
             <div className="mb-4" key={section.title}>
               <Link
                 href={section.links[0].href}
@@ -97,7 +97,7 @@ export function MobileNavigation({}) {
             </div>
           ))}
           <div className="pt-10">
-            <SideBar navigation={mergednavs} className="mt-5 px-1" />
+            <SideBar navigation={navigation} className="mt-5 px-1" />
           </div>
           {/* <div className="pt-10">
             <ReferenceNavigation

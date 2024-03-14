@@ -61,7 +61,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/error/golem-error.ts:64](https://github.com/golemfactory/golem-js/blob/22da85c/src/error/golem-error.ts#L64)
+[src/error/golem-error.ts:64](https://github.com/golemfactory/golem-js/blob/4182943/src/error/golem-error.ts#L64)
 
 ## Properties
 
@@ -71,7 +71,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/error/golem-error.ts:66](https://github.com/golemfactory/golem-js/blob/22da85c/src/error/golem-error.ts#L66)
+[src/error/golem-error.ts:66](https://github.com/golemfactory/golem-js/blob/4182943/src/error/golem-error.ts#L66)
 
 ___
 
@@ -87,4 +87,4 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/22da85c/src/error/golem-error.ts#L10)
+[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/error/golem-error.ts#L10)

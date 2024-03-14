@@ -17,13 +17,13 @@ Ensure you have the Yagna service installed and running, with `try_golem` as you
 
 ## Running the Examples
 
-Let's create a project folder, start a Node.js project, and add the `@golem-sdk/golem-js` library.
+Let's create a project folder, start a Node.js project, and add the `@golem-sdk/task-executor` library.
 
 ```bash
 mkdir golem-example
 cd golem-example
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Paste the code in `index.mjs` located in the project folder, then run:
@@ -40,7 +40,7 @@ A hash, in relation to Golem images, serves as a distinctive identifier formed f
 
 To illustrate the use of a hash, we can take a look at the code from the [Quickstart Example](/docs/creators/javascript/quickstarts/quickstart)
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-images/hash.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-images/hash.mjs" language="javascript" /%}
 
 Consider the hash `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4` in the code snippet, showcasing the initialization of the TaskExecutor:
 
@@ -57,7 +57,7 @@ If you've rolled out a custom Golem image and uploaded it to the registry, you c
 
 Tags are helpful for managing different versions of your Golem images. They make specific versions easier to identify, track, and deploy. Instead of dealing with complex hash identifiers, you may use meaningful and understandable tag names. They provide an opportunity for intuitive naming systems, enhancing project structure and promoting effective team collaboration.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-images/tag.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-images/tag.mjs" language="javascript" /%}
 
 {% docnavigation title="Next steps" %}
 

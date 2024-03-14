@@ -59,7 +59,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/task/error.ts:20](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L20)
+[src/task/error.ts:20](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L20)
 
 ## Properties
 
@@ -73,7 +73,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/task/error.ts:22](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L22)
+[src/task/error.ts:22](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L22)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:23](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L23)
+[src/task/error.ts:23](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L23)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:24](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L24)
+[src/task/error.ts:24](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L24)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/task/error.ts:25](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L25)
+[src/task/error.ts:25](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L25)
 
 ___
 
@@ -119,4 +119,4 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/task/error.ts:26](https://github.com/golemfactory/golem-js/blob/22da85c/src/task/error.ts#L26)
+[src/task/error.ts:26](https://github.com/golemfactory/golem-js/blob/4182943/src/task/error.ts#L26)

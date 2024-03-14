@@ -17,13 +17,13 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
 
 ```bash
 mkdir golem-example
 cd golem-example
 npm init
-npm i @golem-sdk/golem-js
+npm i @golem-sdk/task-executor
 ```
 
 {% alert level="info" %}
@@ -46,7 +46,7 @@ node index.mjs
 
 Let's look at the simple example: we will run a task that consists of single command and will print the content of the result object:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/single-command.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/single-command.mjs" language="javascript" /%}
 
 In this example, our task consists of a single command: `node -v`. `ctx.run()` which returns an object that is then passed to the `result` variable and printed.
 
@@ -59,7 +59,7 @@ Index refers to the sequential number of a command (we have just one, and counti
 
 When you run your tasks in a batch that is concluded with `.end()`:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/multi-command-end.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/multi-command-end.mjs" language="javascript" /%}
 
 you will receive an array of result objects:
 
@@ -69,7 +69,7 @@ you will receive an array of result objects:
 
 In case you end your batch with the `endStream()` method:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/multi-command-endstream.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/multi-command-endstream.mjs" language="javascript" /%}
 
 Each `data` chunk will contain a result object, in the sequence that the commands were in within the batch:
 
@@ -85,7 +85,7 @@ What will happen in such a case depends on the way your task is composed. Let's 
 In the below case, the user's commands are chained in a batch. An error occurs as the user tries to download the `output.txt` file from `/golem/output/` folder while the file was created in the `golem/input` folder.
 This command will raise an error and the whole task will be terminated. The next command, listing the content of `/golem/` folder, will not be executed at all.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/multi-command-fail.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/multi-command-fail.mjs" language="javascript" /%}
 
 ![Batch failure output log](/bad_result_single_log.png)
 
@@ -97,7 +97,7 @@ In the case of the data transfer method, you will receive a message describing t
 
 Let's see another example:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/working-with-results/single-command-fail.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/single-command-fail.mjs" language="javascript" /%}
 
 ![Single failure output log](/bad_result_log_3.png)
 

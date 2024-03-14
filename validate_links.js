@@ -83,6 +83,9 @@ foldersToCheck.forEach((folder) => {
 
         if (href.startsWith('http')) {
           if (
+            dirname.startsWith(
+              'src/pages/docs/golem-sdk-task-executor/reference'
+            ) ||
             dirname.startsWith('src/pages/docs/golem-js/reference') ||
             dirname.startsWith('src/pages/docs/templates')
           ) {
@@ -112,7 +115,12 @@ foldersToCheck.forEach((folder) => {
           }
 
           if (!fs.existsSync(newHref) && !fs.existsSync(indexHref)) {
-            if (dirname.startsWith('src/pages/docs/golem-js/reference')) {
+            if (
+              dirname.startsWith('src/pages/docs/golem-js/reference') ||
+              dirname.startsWith(
+                'src/pages/docs/golem-sdk-task-executor/reference'
+              )
+            ) {
               return
             }
 

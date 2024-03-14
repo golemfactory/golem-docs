@@ -152,7 +152,7 @@ Create a new Node.js project and install the Golem SDK by entering the following
 mkdir my_project
 cd my_project
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Next, create a file named requestor.mjs and paste the following content into it. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.

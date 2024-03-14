@@ -112,7 +112,7 @@ We need to prepare our environment:
 mkdir golem-example
 cd golem-example
 npm init
-npm i @golem-sdk/golem-js
+npm i @golem-sdk/task-executor
 ```
 
 We can now create our `index.mjs` requestor file, with the `package: "8b238595..."` matching our image hash.
@@ -120,7 +120,7 @@ We can now create our `index.mjs` requestor file, with the `package: "8b238595..
 {% tabs %}
 {% tab label="JavaScript" %}
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/tutorials/building-custom-image/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/tutorials/building-custom-image/index.mjs" language="javascript" /%}
 
 {% /tab  %}
 {% /tabs %}

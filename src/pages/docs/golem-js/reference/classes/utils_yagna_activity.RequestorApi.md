@@ -68,4 +68,4 @@ node_modules/ya-ts-client/dist/ya-activity/base.d.ts:43
 
 #### Defined in
 
-[src/utils/yagna/activity.ts:6](https://github.com/golemfactory/golem-js/blob/22da85c/src/utils/yagna/activity.ts#L6)
+[src/utils/yagna/activity.ts:6](https://github.com/golemfactory/golem-js/blob/4182943/src/utils/yagna/activity.ts#L6)

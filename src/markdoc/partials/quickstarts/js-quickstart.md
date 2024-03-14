@@ -95,14 +95,14 @@ Create a new Node.js project and install the Golem SDK by entering the following
 mkdir try_golem
 cd try_golem
 npm init
-npm install @golem-sdk/golem-js
+npm install @golem-sdk/task-executor
 ```
 
 Please note: This application requires Node.js version 18.0.0 or higher.
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 

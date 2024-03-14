@@ -20,13 +20,13 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/golem-js` library.
+Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
 
 ```bash
 mkdir golem-example
 cd golem-example
 npm init
-npm i @golem-sdk/golem-js
+npm i @golem-sdk/task-executor
 ```
 
 Copy the code into the `index.mjs` file in the project folder and run:
@@ -63,7 +63,7 @@ Once you have created an app-key you can use it in your requestor script replaci
 Note that from the `yagna` perspective we are talking about an application accessing its API, therefore `yagna` uses the `app-key` term, while from an application's perspective they obtain the access to REST API, and therefore they have `apiKey` attribute.
 {% /alert %}
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/examples/using-app-keys/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/using-app-keys/index.mjs" language="javascript" /%}
 
 ### Using app-key from environment variable
 
