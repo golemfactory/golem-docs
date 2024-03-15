@@ -90,9 +90,9 @@ Sets the maximum execution time for a script, either a single command or a batch
 
 ## PaymentOptions
 
-{% defaultvalue title="network" defaultValue="goerli" %} 
-Defines the blockchain network for processing payments. The `goerli` option indicates a test network that utilizes test GLM. Other options include `polygon`.
-Important: the `nework` is a property of payment object: `payment: { network: "goerli", driver: "erc20" }`.
+{% defaultvalue title="network" defaultValue="holesky" %} 
+Defines the blockchain network for processing payments. The `holesky` option indicates a test network that utilizes test GLM. Other options include `polygon`.
+Important: the `nework` is a property of payment object: `payment: { network: "holesky", driver: "erc20" }`.
 {% /defaultvalue %}
 
 {% defaultvalue title="budget" defaultValue="1.0" %} 

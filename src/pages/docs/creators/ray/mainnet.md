@@ -18,7 +18,7 @@ Check out [the online providers](https://stats.golem.network/network/providers/o
 ## Mainnet in the cluster yaml
 
 Switching to the mainnet is as easy as changing the `provider.parameters.payment_network` property in your [cluster yaml](/docs/creators/ray/cluster-yaml):
-- `payment_network: "goerli"` stands for the testnet
+- `payment_network: "holesky"` stands for the testnet
 - `payment_network: "polygon"` stands for the mainnet
 
 That is the only change required to start your Ray on Golem cluster on the mainnet.
