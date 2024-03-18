@@ -83,11 +83,11 @@ If that's not enough to suggest a way to fix the issue, investigating the logs m
 
 {% solution %}
 
-The log files that Ray on Golem produces are stored in the following files:
+The log files that Ray on Golem produces are stored in the following files (in a default, platform-dependent application directory):
 
-- `/tmp/ray_on_golem/webserver.log` - cluster manager log - basic Ray on Golem logs.
-- `/tmp/ray_on_golem/webserver_debug.log` cluster manager debug log - more detailed Ray on Golem logs.
-- `/tmp/ray_on_golem/yagna.log` - Golem node (yagna) logs.
+- `~/.local/share/ray_on_golem/webserver.log` - cluster manager log - basic Ray on Golem logs.
+- `~/.local/share/ray_on_golem/webserver_debug.log` cluster manager debug log - more detailed Ray on Golem logs.
+- `~/.local/share/ray_on_golem/yagna.log` - Golem node (yagna) logs.
 
 Given these, you can either:
 
@@ -108,39 +108,12 @@ It may happen that something goes wrong and you wish to start over with a clean 
 
 {% solution %}
 
-The first thing to do is `ray down` - it should be enough to clear the situation, but sadly it isn't always the case.
+The first thing to do is `ray down` - it should be enough to clear the situation, 
+but sadly it isn't always the case.
 
-Let's first check if there are any orphaned components:
-
-```bash
-ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
-```
-
-It produces an output like this:
-
-```
-  71257 ?        Ssl    0:02 ray-on-golem
-  71258 ?        Sl     2:35 yagna
-```
-
-The above shows the `ray-on-golem` webserver and the `yagna` daemon are running.
-
-Note that Ray on Golem leaves the `yagna` daemon running on purpose - it stays connected to the Golem network maintaining current information about the providers so that when you start up your cluster again, the nodes are found more quickly.
-
-With that in mind, when starting over, we recommend stopping `ray-on-golem` and leaving `yagna` running
-(but to get a truly clean slate you might want to stop `yagna` too).
-
-The surest way to stop these services is to kill them (using the PID numbers as shown in the first column):
-
-```bash
-kill -9 71257 71258
-```
-
-After it is done, the above command should show no more hanging processes:
-
-```bash
-ps axc | grep -v grep | grep -E 'yagna|ray-on-golem'
-```
+You can use `ray-on-golem stop` to ultimately stop all Ray on Golem components.
+The next `ray up` will start them again in a totally fresh state. 
+Check out more details about Ray on Golem [stoping and starting](/docs/creatora/ray/ray-on-golem-cli#ray-on-golem-start-stop).
 
 It might also be a good idea to clean up Ray's configuration cache files:
 
@@ -150,38 +123,6 @@ rm /tmp/ray-config-*
 
 {% /solution %}
 {% feedback identifier="ray-not-stopping-on-ray-down" /%}
-{% /troubleshooting %}
-
-{% troubleshooting %}
-
-## How can I resolve the node not found error?
-
-{% problem /%}
-
-Sometimes, `ray up` might time out with a note saying that there is no node available.
-
-It might look like this:
-
-```
-ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"error": "Creating activities timeout reached"}
-
-```
-
-{% solution %}
-
-This means, that there are not enough providers on the network.
-
-If you are running Ray on Golem on the testnet (property `payment_network: "goerli"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
-
-We are preparing a tool to check providers' availability.
-Another solution would be to move to mainnet - we are also working on enabling this option.
-
-For now, the best course of action would be to report the situation on [`#Ray on Golem` discord channel](https://chat.golem.network/).
-
-Usually, the testnet isn't busy for a long time - it might be enough to wait a couple of minutes.
-
-{% /solution %}
-{% feedback identifier="ray-node-not-found" /%}
 {% /troubleshooting %}
 
 {% troubleshooting %}
