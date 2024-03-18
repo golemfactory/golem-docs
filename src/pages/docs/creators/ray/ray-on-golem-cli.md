@@ -15,8 +15,8 @@ This article explains the commands available, which are useful when working with
 
 Ray on Golem supports the following commands
 
-- `ray-on-golem start` starts `ray-on-golem` webserver and `yagna` daemon, so that when you run `ray up` the cluster can be started faster
-- `ray-on-golem stop` stops `ray-on-golem` webserver and `yagna` daemon, use it when you are done with using ray for a while
+- `ray-on-golem start` starts `ray-on-golem` webserver and `yagna` daemon, so that when you run `ray up` the cluster can be started faster ([details](#ray-on-golem-start-stop))
+- `ray-on-golem stop` stops `ray-on-golem` webserver and `yagna` daemon, use it when you are done with using ray for a while ([details](#ray-on-golem-start-stop)) 
 - `ray-on-golem status` prints `ray-on-golem` webserver's status
 - `ray-on-golem version` prints `ray-on-golem` package information, use it when reporting problems
 - `ray-on-golem network-stats golem-cluster.yaml` scans the network and offers information about available providers ([details](#network-stats))
