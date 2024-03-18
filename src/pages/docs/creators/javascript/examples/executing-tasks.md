@@ -118,6 +118,6 @@ Below, you can see the script logs:
 
 ![Single run](/run_log.png 'Requestor script output logs')
 
-In the logs, we can see that the requestor uses the Goerli network for payments (a test network). The task was executed once on a single provider.
+In the logs, we can see that the requestor uses the Holesky network for payments (a test network). The task was executed once on a single provider.
 
 In the table, we see a summary of the costs (paid here in test GLM), along with the result of the command which outputs the version of the node in the image deployed on the provider.

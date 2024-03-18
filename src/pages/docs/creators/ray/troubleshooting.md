@@ -127,6 +127,38 @@ rm /tmp/ray-config-*
 
 {% troubleshooting %}
 
+## How can I resolve the node not found error?
+
+{% problem /%}
+
+Sometimes, `ray up` might time out with a note saying that there is no node available.
+
+It might look like this:
+
+```
+ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"error": "Creating activities timeout reached"}
+
+```
+
+{% solution %}
+
+This means, that there are not enough providers on the network.
+
+If you are running Ray on Golem on the testnet (property `payment_network: "holesky"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
+
+We are preparing a tool to check providers' availability.
+Another solution would be to move to mainnet - we are also working on enabling this option.
+
+For now, the best course of action would be to report the situation on [`#Ray on Golem` discord channel](https://chat.golem.network/).
+
+Usually, the testnet isn't busy for a long time - it might be enough to wait a couple of minutes.
+
+{% /solution %}
+{% feedback identifier="ray-node-not-found" /%}
+{% /troubleshooting %}
+
+{% troubleshooting %}
+
 ## Additional packages required on the cluster
 
 {% problem /%}

@@ -114,14 +114,14 @@ Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. T
 #### Network
 
 Ray on Golem uses the GLM token on the Ethereum blockchain to pay for the hosting of ray nodes.
-Currently, while we support only the Golem testnet, the payments use the `goerli` test blockchain.
+Currently, while we support only the Golem testnet, the payments use the `holesky` test blockchain.
 When you move to the mainnet, the `payment_network` property needs to be changed to `polygon`
 
 ```yaml
 # Blockchain used for payments.
-# "goerli" means running free nodes on testnet,
+# "holesky" means running free nodes on testnet,
 # "polygon" is for mainnet operations.
-payment_network: 'goerli'
+payment_network: 'holesky'
 ```
 
 #### Image tag and image hash

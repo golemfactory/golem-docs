@@ -39,7 +39,7 @@ Moreover, from the perspective of Golem requestors, Polygon is currently an indi
 
 The providers are ready to receive payments on any of the supported platforms - be it the Ethereum or Polygon. Obviously, by default, they expect those payments to be made on the respective mainnet chains, however, Requestors during negotiations are expected to limit their demands to providers that accept payments on the Polygon.
 
-On the other hand, because we assume requestors will first start by testing the ground using their just-created apps on a testnet, the default payment platform for Requestor nodes in the JS SDK is Goerli.
+On the other hand, because we assume requestors will first start by testing the ground using their just-created apps on a testnet, the default payment platform for Requestor nodes in the JS SDK is Holesky.
 
 When you run `yagna payment fund` on testnet, Golem initializes a new account from our custom faucet (a service that transfers test tokens to an address that asks for it) which provides it with test Matic and test GLM tokens.
 

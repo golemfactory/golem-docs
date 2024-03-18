@@ -35,7 +35,7 @@ The value described as `nodeId` in the output is the Ethereum address of your Go
 
 ## Enable the mainnet account
 
-In the current version of the requestor's set-up, the service is configured to use the Goerli testnet by default. Also, all accounts are initialized in the receiver mode by default so you need to enable them as a sender (that's the reason we're adding the `--sender` flag below).
+In the current version of the requestor's set-up, the service is configured to use the Holesky testnet by default. Also, all accounts are initialized in the receiver mode by default so you need to enable them as a sender (that's the reason we're adding the `--sender` flag below).
 
 To enable the service to use the mainnet, you'll need to instruct it to use a command appropriate to your desired mainnet payment platform.
 
