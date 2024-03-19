@@ -131,6 +131,13 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
       {...autocomplete.getItemProps({
         item: result,
         source: collection.source,
+        onSelect({ item }) {
+          event('search_article_click', {
+            article_url: item.url,
+            article_title: item.title,
+          })
+          router.push(item.url)
+        },
       })}
     >
       <div
