@@ -447,6 +447,11 @@ function SearchDialog({ open, setOpen, className }) {
       onClose={() => {
         setOpen(false)
         autocomplete.setQuery('')
+        // Clear filters when the dialog is closed
+        setRoleFilter([])
+        setTypeFilter([])
+        // Clear the results when the dialog is closed
+        autocomplete.setCollections([])
       }}
       className={clsx('fixed inset-0 z-50', className)}
     >
