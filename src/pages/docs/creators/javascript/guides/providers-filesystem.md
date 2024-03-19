@@ -41,7 +41,7 @@ Take a look at this output to better understand some Golem concepts.
 
 - If you do not define any folder as a `VOLUME` you will not get access to the disk storage available for your VM. While you can still save your output to the other folders, their total maximum capacity is limited to memory available for your payload (by default each of `tmpfs` will get 50% of memory available).
 
-- When using the `VOLUME` directive, remember that when a Golem VM is started, a new directory is created in the host's file system for each of the defined volumes. Therefore, any previous content (placed there during image creation) will not be available to you. Do not locate any of your data in such folders during image creation.
+- When using the `VOLUME` directive, remember that when a Golem VM is started, a new directory is created in the host's file system for each of the defined volumes. Therefore, any previous content (placed there during image creation) will not be available to you. Do not locate any of your data in such directories during image creation.
 
 - Please remember that `VOLUME` folders are required to transfer data to and from the VM. For example if within JS SDK you use work context methods like: downloadFile() or uploadFile(), you must use such a folder as a source/target folder.
 
