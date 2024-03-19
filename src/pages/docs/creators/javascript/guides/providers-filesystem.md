@@ -39,7 +39,7 @@ Take a look at this output to better understand some Golem concepts.
 
 - You can increase the `tmpfs` partitions up to the limit of the memory available to your VM, however, it will be at the cost of memory available for your application. Note, to do this you need to make sure that the required tools/commands are installed in your image.
 
-- If you do not define any folder as a `VOLUME` you will not get access to the disk storage available for your VM. While you can still save your output to the other folders, their total maximum capacity is limited to memory available for your payload (by default each of `tmpfs` will get 50% of memory available).
+-Not specifying a directory as a `VOLUME` results in the inability to access the disk storage capacity advertised by the provider, thus making it unavailable for your VM. Additionally, without this declaration, the maximum storage capacity for saving outputs in other directories is limited to 50% of the provider's available memory. This limitation is automatically applied to each `tmpfs` by default.
 
 - When using the `VOLUME` directive, remember that when a Golem VM is started, a new directory is created in the host's file system for each of the defined volumes. Therefore, any previous content (placed there during image creation) will not be available to you. Do not locate any of your data in such directories during image creation.
 
