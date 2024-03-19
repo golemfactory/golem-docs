@@ -43,7 +43,7 @@ Take a look at this output to better understand some Golem concepts.
 
 - When using the `VOLUME` directive, remember that when a Golem VM is started, a new directory is created in the host's file system for each of the defined volumes. Therefore, any previous content (placed there during image creation) will not be available to you. Do not locate any of your data in such directories during image creation.
 
-- Please remember that `VOLUME` folders are required to transfer data to and from the VM. For example if within JS SDK you use work context methods like: downloadFile() or uploadFile(), you must use such a folder as a source/target folder.
+- Please remember that `VOLUME` directories are required to transfer data to and from the VM. For example if within the JS SDK you use work context methods like: `downloadFile()` or `uploadFile()`, you must use such a directory as a source/target directory.
 
 - If your software produces a large amount of data, save the output to a folder defined as a `VOLUME` one.
 
