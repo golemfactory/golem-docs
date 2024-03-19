@@ -5,7 +5,7 @@ pageTitle: VM Filesystem - how the image design impacts my options.
 type: Guide
 ---
 
-# Filesystem on VM run on a remote node.
+# Filesystem on VM run on a remote node
 
 Your options of what you can do on a remote node will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your image definition. (See [here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
 
@@ -29,7 +29,7 @@ Take a look at this output to better understand some Golem concepts.
 - The `/` and `tmpfs` directories are stored in the provider's memory.
 - The ‘/golem/work’ directory has much more space available, as it has access to disk storage offered by the provider. While this might not be obvious, this folder was defined as the `VOLUME` directory in the Dockerfile, that was used to create the `golem/examples-outbound: latest` image. On this provider, the user can utilize up to 13.8 GB of disk storage.
 
-## Important conclusions from these observations:
+## Important conclusions from these observations
 
 - The available space for installing extra software in the default location is limited. As a result, although the `outbound` feature allows for the downloading and installation of certain apps, it's recommended to pre-install these applications directly into the image. This approach not only saves space but also speeds up task completion as the necessary software with be inside the cached image. Our recommendation is to adjust the image accordingly to include these applications from the start.
 
@@ -43,6 +43,6 @@ Take a look at this output to better understand some Golem concepts.
 
 - If your software produces a large amount of data, save the output to a directory defined as a `VOLUME`.
 
-Let's look at this once again on the picture:
+## A graphical representation
 
 ![Filesystem on a VM](/requestor-vm-comms.jpg)
