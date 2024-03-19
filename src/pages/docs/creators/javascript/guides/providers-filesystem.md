@@ -7,13 +7,7 @@ type: Guide
 
 # Filesystem on VM run on a remote node.
 
-{% alert level="info" %}
-
-This example utilized the `golem/examples-outbound:latest` image deployed on one of the nodes in the `testnet`. The directories capacities presented in the output below may be different as they on the node on which you run such a task.
-
-{% /alert %}
-
-Your options of what you can do on a remote node will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from folders that are configured as `VOLUME` in your image definition. (See [here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
+Your options of what you can do on a remote node will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your image definition. (See [here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
 
 If you run the command `df -h` on a VM built from this image on a provider, you'll receive an output similar to this:
 
@@ -41,7 +35,7 @@ Take a look at this output to better understand some Golem concepts.
 
 - You can increase the `tmpfs` partitions up to the limit of the memory available to your VM, however, it will be at the cost of memory available for your application. Note, to do this you need to make sure that the required tools/commands are installed in your image.
 
--Not specifying a directory as a `VOLUME` results in the inability to access the disk storage capacity advertised by the provider, thus making it unavailable for your VM. Additionally, without this declaration, the maximum storage capacity for saving outputs in other directories is limited to 50% of the provider's available memory. This limitation is automatically applied to each `tmpfs` by default.
+- Not specifying a directory as a `VOLUME` results in the inability to access the disk storage capacity advertised by the provider, thus making it unavailable for your VM. Additionally, without this declaration, the maximum storage capacity for saving outputs in other directories is limited to 50% of the provider's available memory. This limitation is automatically applied to each `tmpfs` by default.
 
 - When using the `VOLUME` directive, remember that when a Golem VM is started, a new directory is created in the host's file system for each of the defined volumes. Therefore, any previous content (placed there during image creation) will not be available to you. Do not locate any of your data in such directories during image creation.
 
