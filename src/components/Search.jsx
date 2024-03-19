@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import Highlighter from 'react-highlight-words'
 import { navigation } from '@/components/Layout'
 import { ArrowSmallUpIcon, ArrowSmallDownIcon } from '@heroicons/react/24/solid'
+import { event } from 'nextjs-google-analytics'
 
 function SearchIcon(props) {
   return (
@@ -19,6 +20,7 @@ function useAutocomplete() {
   let id = useId()
   let router = useRouter()
   let [autocompleteState, setAutocompleteState] = useState({})
+  let [typingTimeout, setTypingTimeout] = useState(null)
 
   let [autocomplete] = useState(() =>
     createAutocomplete({
@@ -27,17 +29,34 @@ function useAutocomplete() {
       defaultActiveItemId: 0,
       onStateChange({ state }) {
         setAutocompleteState(state)
+
+        if (typingTimeout) clearTimeout(typingTimeout)
+        setTypingTimeout(
+          setTimeout(() => {
+            event('search', {
+              search_term: state.query,
+              result_count: state.collections.flatMap(
+                (collection) => collection.items
+              ).length,
+            })
+          }, 500)
+        )
       },
       shouldPanelOpen({ state }) {
         return state.query !== ''
       },
       getSources({ query }) {
         return import('@/markdoc/search.mjs').then(({ search }) => {
+          let items = search(query, { limit: 5 })
+          event('search', {
+            search_term: query,
+            result_count: items.length,
+          })
           return [
             {
               sourceId: 'documentation',
               getItems() {
-                return search(query, { limit: 5 })
+                return items
               },
               getItemUrl({ item }) {
                 return item.url
@@ -428,6 +447,11 @@ function SearchDialog({ open, setOpen, className }) {
       onClose={() => {
         setOpen(false)
         autocomplete.setQuery('')
+        // Clear filters when the dialog is closed
+        setRoleFilter([])
+        setTypeFilter([])
+        // Clear the results when the dialog is closed
+        autocomplete.setCollections([])
       }}
       className={clsx('fixed inset-0 z-50', className)}
     >
