@@ -1,43 +1,31 @@
 import { LikeIcon } from './icons/LikeIcon'
 import { DislikeIcon } from './icons/DislikeIcon'
+import { event } from 'nextjs-google-analytics'
 
 const handleFeedback = (
   url,
   identifier,
-  feedback,
   setOpen,
   setShowThanks,
   helpful,
-  setLoading
+  article
 ) => {
-  if (identifier) {
-    setLoading(true)
-    let data = {
-      user: localStorage.getItem('GDocsUUID'),
-      feedback: feedback === 'yes' ? '' : feedback,
-      identifier: identifier,
-      helpful: helpful,
-    }
-    fetch(url, {
-      method: 'POST',
-
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        localStorage.setItem(identifier, helpful ? 'yes' : 'no')
-        setOpen(false)
-        setLoading(false)
-        setShowThanks(true)
-      })
-      .catch((error) => {
-        console.error('Error:', error)
-        setLoading(false)
-        setOpen(false)
-      })
-  } else {
+  if (!identifier) {
     console.error('No identifier provided for feedback modal')
+    return
   }
+
+  localStorage.setItem(identifier, helpful ? 'yes' : 'no')
+  setOpen(false)
+  setShowThanks(true)
+
+  // Google Analytics event tracking
+  event({
+    action: 'submit_feedback',
+    category: article ? 'article' : 'troubleshooting',
+    label: identifier,
+    value: helpful ? 1 : 0, // 1 for helpful, 0 for not helpful
+  })
 }
 
 import { Dialog, Transition } from '@headlessui/react'
