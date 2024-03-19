@@ -45,7 +45,7 @@ Take a look at this output to better understand some Golem concepts.
 
 - Please remember that `VOLUME` directories are required to transfer data to and from the VM. For example if within the JS SDK you use work context methods like: `downloadFile()` or `uploadFile()`, you must use such a directory as a source/target directory.
 
-- If your software produces a large amount of data, save the output to a folder defined as a `VOLUME` one.
+- If your software produces a large amount of data, save the output to a directory defined as a `VOLUME`.
 
 Let's look at this once again on the picture:
 
