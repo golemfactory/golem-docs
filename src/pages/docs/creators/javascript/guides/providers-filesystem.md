@@ -9,7 +9,7 @@ type: Guide
 
 {% alert level="info" %}
 
-This example utilized the `golem/examples-outbound:latest` image deployed on one of the nodes in the `testnet`. Actual numbers will depend on the node on which you run such a task.
+This example utilized the `golem/examples-outbound:latest` image deployed on one of the nodes in the `testnet`. The directories capacities presented in the output below may be different as they on the node on which you run such a task.
 
 {% /alert %}
 
@@ -25,6 +25,8 @@ tmpfs 632.8M 0 632.8M 0% /tmp
 tmpfs 632.8M 0 632.8M 0% /dev/shm
 mnt0 24.0G 10.2G 13.8G 42% /golem/work
 ```
+
+This example utilized the `golem/examples-outbound:latest` image deployed on one of the nodes in the `testnet`. If you run this test yourself, you might get different capacities for `tmpfs` and `mnt0` filesystems as they depend on the resources offered by the node on which you run the task.
 
 Take a look at this output to better understand some Golem concepts.
 
