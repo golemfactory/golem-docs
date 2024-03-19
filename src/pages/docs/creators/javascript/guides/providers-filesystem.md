@@ -35,7 +35,7 @@ Take a look at this output to better understand some Golem concepts.
 
 ## Important conclusions from these observations:
 
-- The space for installation of additional software is limited (assuming you would install it in the default location). Therefore, even if the `outbound` feature lets you download and install some additional applications, the space available is limited and you should rather include them already in the image. Modify the image definition. An additional benefit is that your task will be completed faster.
+- The available space for installing extra software in the default location is limited. As a result, although the `outbound` feature allows for the downloading and installation of certain apps, it's recommended to pre-install these applications directly into the image. This approach not only saves space but also speeds up task completion as the necessary software with be inside the cached image. Our recommendation is to adjust the image accordingly to include these applications from the start.
 
 - You can increase the `tmpfs` partitions up to the limit of the memory available to your VM, however, it will be at the cost of memory available for your application. Note, to do this you need to make sure that the required tools/commands are installed in your image.
 
