@@ -3,7 +3,6 @@ import { DislikeIcon } from './icons/DislikeIcon'
 import { event } from 'nextjs-google-analytics'
 
 const handleFeedback = (
-  url,
   identifier,
   setOpen,
   setShowThanks,
@@ -36,9 +35,7 @@ export function FeedbackButtons({ children, identifier, article = false }) {
   const [feedback, setFeedback] = useState('')
   const [showThanks, setShowThanks] = useState(false)
   const [loading, setLoading] = useState(false)
-  const url = article
-    ? '/api/feedback/article'
-    : '/api/feedback/troubleshooting'
+
   useEffect(() => {
     if (identifier) {
       const localStorageFeedback = localStorage.getItem(identifier)
@@ -80,7 +77,6 @@ export function FeedbackButtons({ children, identifier, article = false }) {
               <button
                 onClick={() =>
                   handleFeedback(
-                    url,
                     identifier,
                     feedback,
                     setOpen,
@@ -170,7 +166,6 @@ export function FeedbackButtons({ children, identifier, article = false }) {
           )}
         </div>
         <FeedbackModal
-          url={url}
           identifier={identifier}
           open={isOpen}
           setOpen={setOpen}
@@ -188,7 +183,6 @@ export function FeedbackButtons({ children, identifier, article = false }) {
 import { useRef } from 'react'
 
 export const FeedbackModal = ({
-  url,
   identifier,
   open,
   setOpen,
@@ -262,7 +256,6 @@ export const FeedbackModal = ({
                     className="inline-flex w-full justify-center rounded-md bg-primary px-4 py-2 text-base font-medium text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80 sm:col-start-2"
                     onClick={() =>
                       handleFeedback(
-                        url,
                         identifier,
                         feedback,
                         setOpen,
