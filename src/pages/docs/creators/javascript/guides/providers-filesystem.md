@@ -15,7 +15,7 @@ This example utilized the `golem/examples-outbound:latest` image deployed on one
 
 Your options of what you can do on a remote node will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from folders that are configured as `VOLUME` in your image definition. (See [here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
 
-If you would run `df -h` on a VM build from this image on a provider, you might receive an output like this:
+If you run the command `df -h` on a VM built from this image on a provider, you'll receive an output similar to this:
 
 ```
 Filesystem Size Used Available Use% Mounted on
