@@ -39,7 +39,7 @@ function useAutocomplete() {
                 (collection) => collection.items
               ).length,
             })
-          }, 500)
+          }, 1000)
         )
       },
       shouldPanelOpen({ state }) {
