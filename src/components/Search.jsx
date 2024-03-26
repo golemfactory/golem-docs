@@ -20,7 +20,8 @@ function useAutocomplete() {
   let id = useId()
   let router = useRouter()
   let [autocompleteState, setAutocompleteState] = useState({})
-  let [typingTimeout, setTypingTimeout] = useState(null)
+  let typingTimeout = useRef(null)
+  let lastQueryRef = useRef('')
 
   let [autocomplete] = useState(() =>
     createAutocomplete({
@@ -30,17 +31,18 @@ function useAutocomplete() {
       onStateChange({ state }) {
         setAutocompleteState(state)
 
-        if (typingTimeout) clearTimeout(typingTimeout)
-        setTypingTimeout(
-          setTimeout(() => {
+        if (typingTimeout.current) clearTimeout(typingTimeout.current)
+        if (state.query !== '' && state.query !== lastQueryRef.current) {
+          typingTimeout.current = setTimeout(() => {
             event('search', {
               search_term: state.query,
               result_count: state.collections.flatMap(
                 (collection) => collection.items
               ).length,
             })
+            lastQueryRef.current = state.query
           }, 1000)
-        )
+        }
       },
       shouldPanelOpen({ state }) {
         return state.query !== ''
@@ -48,10 +50,6 @@ function useAutocomplete() {
       getSources({ query }) {
         return import('@/markdoc/search.mjs').then(({ search }) => {
           let items = search(query, { limit: 5 })
-          event('search', {
-            search_term: query,
-            result_count: items.length,
-          })
           return [
             {
               sourceId: 'documentation',
@@ -116,6 +114,7 @@ function HighlightQuery({ text, query }) {
 import { ArticleType } from './ArticleType'
 function SearchResult({ result, autocomplete, collection, query, filter }) {
   let id = useId()
+  let router = useRouter()
 
   let sectionTitle
   if (navigation) {
@@ -124,6 +123,16 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
     )?.title
   }
   let hierarchy = [sectionTitle, result.pageTitle].filter(Boolean)
+
+  // Event handler for onSelect
+  const onSelect = () => {
+    event('search_article_click', {
+      article_url: result.url,
+      article_title: result.title,
+    })
+    router.push(result.url)
+  }
+
   return (
     <li
       className="group-result group block cursor-default"
@@ -131,19 +140,14 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
       {...autocomplete.getItemProps({
         item: result,
         source: collection.source,
-        onSelect({ item }) {
-          event('search_article_click', {
-            article_url: item.url,
-            article_title: item.title,
-          })
-          router.push(item.url)
-        },
+        onSelect: onSelect, // Assign the event handler correctly
       })}
     >
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="relative rounded-lg py-2 pl-3  text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
+        className="relative rounded-lg py-2 pl-3 text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
+        onClick={onSelect} // Add click event here
       >
         <div className="grid items-center gap-x-2 break-words md:grid-cols-3">
           <div className="flex items-center gap-x-2 break-words md:col-span-2">
@@ -156,7 +160,7 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
                 <div
                   id={`${id}-hierarchy`}
                   aria-hidden="true"
-                  className="mt-0.5  text-xs text-slate-800 dark:text-slate-400 md:truncate md:whitespace-nowrap "
+                  className="mt-0.5 text-xs text-slate-800 dark:text-slate-400 md:truncate md:whitespace-nowrap "
                 >
                   {hierarchy.map((item, itemIndex, items) => (
                     <span className="break-words" key={itemIndex}>
@@ -316,15 +320,18 @@ const SearchInput = forwardRef(function SearchInput(
 })
 
 function FilterButton({ label, isActive, onClick }) {
-  // Add additional styling as needed to match the design
   return (
     <button
       className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 dark:ring-gray-500/50 ${
-        isActive
-          ? 'bg-lightbluedarker dark:bg-slate-600'
-          : '  dark:bg-slate-800'
+        isActive ? 'bg-lightbluedarker dark:bg-slate-600' : 'dark:bg-slate-800'
       }`}
-      onClick={() => onClick(label)}
+      onClick={() => {
+        event('filter_click', {
+          filter_type: label,
+          filter_status: !isActive ? 'added' : 'removed',
+        })
+        onClick(label)
+      }}
     >
       {label}
     </button>
