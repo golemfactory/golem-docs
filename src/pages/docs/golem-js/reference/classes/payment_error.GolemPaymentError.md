@@ -27,9 +27,12 @@ additionally containing an error code specific to a given subdomain
 ### Properties
 
 - [code](payment_error.GolemPaymentError#code)
-- [allocation](payment_error.GolemPaymentError#allocation)
-- [provider](payment_error.GolemPaymentError#provider)
 - [previous](payment_error.GolemPaymentError#previous)
+
+### Methods
+
+- [getAllocation](payment_error.GolemPaymentError#getallocation)
+- [getProvider](payment_error.GolemPaymentError#getprovider)
 
 ## Constructors
 
@@ -57,7 +60,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/payment/error.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L19)
+[src/payment/error.ts:21](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/error.ts#L21)
 
 ## Properties
 
@@ -71,27 +74,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/payment/error.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L21)
-
-___
-
-### allocation
-
-• `Optional` **allocation**: `Allocation`
-
-#### Defined in
-
-[src/payment/error.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L22)
-
-___
-
-### provider
-
-• `Optional` **provider**: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
-
-#### Defined in
-
-[src/payment/error.ts:23](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L23)
+[src/payment/error.ts:23](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/error.ts#L23)
 
 ___
 
@@ -107,4 +90,32 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/payment/error.ts:24](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L24)
+[src/payment/error.ts:26](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/error.ts#L26)
+
+## Methods
+
+### getAllocation
+
+▸ **getAllocation**(): `undefined` \| `Allocation`
+
+#### Returns
+
+`undefined` \| `Allocation`
+
+#### Defined in
+
+[src/payment/error.ts:32](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/error.ts#L32)
+
+___
+
+### getProvider
+
+▸ **getProvider**(): `undefined` \| [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
+
+#### Returns
+
+`undefined` \| [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
+
+#### Defined in
+
+[src/payment/error.ts:35](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/error.ts#L35)

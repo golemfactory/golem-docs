@@ -10,6 +10,7 @@ type: "JS API Reference"
 
 ### Interfaces
 
+- [DebitNoteEvents](../interfaces/payment_debit_note.DebitNoteEvents)
 - [DebitNoteDTO](../interfaces/payment_debit_note.DebitNoteDTO)
 
 ### Type Aliases
@@ -24,4 +25,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/debit_note.ts#L11)
+[src/payment/debit_note.ts:16](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/debit_note.ts#L16)

@@ -44,17 +44,18 @@ type: "JS API Reference"
 | `manifestSigAlgorithm?` | `string` | Algorithm of manifest signature, e.g. "sha256" * |
 | `manifestCert?` | `string` | Certificate - base64 encoded public certificate (DER or PEM) matching key used to generate signature * |
 | `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) | - |
+| `imageUrl` | `string` | If you want a provider to download the image from your your local filesystem or a different registry than the default one, you can provide the image url here. Note that to use this option you need to also provide the image SHA3-224 hash. |
 
 #### Defined in
 
-[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/7cee55b/src/package/package.ts#L7)
+[src/package/package.ts:7](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/package/package.ts#L7)
 
 ___
 
 ### PackageOptions
 
-Ƭ **PackageOptions**: [`RequireAtLeastOne`](utils_types#requireatleastone)\<[`AllPackageOptions`](package_package#allpackageoptions), ``"imageHash"`` \| ``"imageTag"`` \| ``"manifest"``\>
+Ƭ **PackageOptions**: [`RequireAtLeastOne`](utils_types#requireatleastone)\<[`AllPackageOptions`](package_package#allpackageoptions), ``"imageHash"`` \| ``"imageTag"`` \| ``"manifest"`` \| ``"imageUrl"``\>
 
 #### Defined in
 
-[src/package/package.ts:34](https://github.com/golemfactory/golem-js/blob/7cee55b/src/package/package.ts#L34)
+[src/package/package.ts:40](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/package/package.ts#L40)

@@ -28,7 +28,6 @@ type: "JS API Reference"
 - [maxOfferEvents](market_service.MarketOptions#maxofferevents)
 - [offerFetchingIntervalSec](market_service.MarketOptions#offerfetchingintervalsec)
 - [proposalTimeout](market_service.MarketOptions#proposaltimeout)
-- [eventTarget](market_service.MarketOptions#eventtarget)
 - [debitNotesAcceptanceTimeoutSec](market_service.MarketOptions#debitnotesacceptancetimeoutsec)
 - [midAgreementDebitNoteIntervalSec](market_service.MarketOptions#midagreementdebitnoteintervalsec)
 - [midAgreementPaymentTimeoutSec](market_service.MarketOptions#midagreementpaymenttimeoutsec)
@@ -44,7 +43,7 @@ Duplicate proposals from one provider are reduced to the cheapest one.
 
 #### Defined in
 
-[src/market/service.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/service.ts#L18)
+[src/market/service.ts:19](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/service.ts#L19)
 
 ___
 
@@ -56,7 +55,7 @@ The minimum number of proposals after which the batch of proposal will be proces
 
 #### Defined in
 
-[src/market/service.ts:20](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/service.ts#L20)
+[src/market/service.ts:21](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/service.ts#L21)
 
 ___
 
@@ -68,7 +67,7 @@ The maximum waiting time for proposals to be batched in order to avoid duplicate
 
 #### Defined in
 
-[src/market/service.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/service.ts#L22)
+[src/market/service.ts:23](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/service.ts#L23)
 
 ___
 
@@ -82,13 +81,13 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L21)
+[src/market/demand.ts:26](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L26)
 
 ___
 
 ### yagnaOptions
 
-• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor#yagnaoptions)
+• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/utils_yagna_yagnaApi#yagnaoptions)
 
 #### Inherited from
 
@@ -96,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L22)
+[src/market/demand.ts:27](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L27)
 
 ___
 
@@ -130,7 +129,7 @@ If your activity is about to operate longer than 10h, you need set both [debitNo
 
 #### Defined in
 
-[src/market/demand.ts:45](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L45)
+[src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L50)
 
 ___
 
@@ -144,7 +143,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:47](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L47)
+[src/market/demand.ts:52](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L52)
 
 ___
 
@@ -158,7 +157,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:48](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L48)
+[src/market/demand.ts:53](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L53)
 
 ___
 
@@ -172,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:50](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L50)
+[src/market/demand.ts:55](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L55)
 
 ___
 
@@ -186,21 +185,7 @@ ___
 
 #### Defined in
 
-[src/market/demand.ts:52](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L52)
-
-___
-
-### eventTarget
-
-• `Optional` **eventTarget**: `EventTarget`
-
-#### Inherited from
-
-[DemandOptions](market_demand.DemandOptions).[eventTarget](market_demand.DemandOptions#eventtarget)
-
-#### Defined in
-
-[src/market/demand.ts:54](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L54)
+[src/market/demand.ts:57](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L57)
 
 ___
 
@@ -223,7 +208,7 @@ The SDK will accept debit notes each 2 minutes by default.
 
 #### Defined in
 
-[src/market/demand.ts:66](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L66)
+[src/market/demand.ts:69](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L69)
 
 ___
 
@@ -249,7 +234,7 @@ The SDK will accept debit notes each 2 minutes by default.
 
 #### Defined in
 
-[src/market/demand.ts:81](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L81)
+[src/market/demand.ts:84](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L84)
 
 ___
 
@@ -273,4 +258,4 @@ The SDK will issue payments each 12h by default, and you can control this with t
 
 #### Defined in
 
-[src/market/demand.ts:94](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/demand.ts#L94)
+[src/market/demand.ts:97](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/demand.ts#L97)
