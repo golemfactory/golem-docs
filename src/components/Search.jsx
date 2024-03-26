@@ -129,6 +129,7 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
     event('search_article_click', {
       article_url: result.url,
       article_title: result.title,
+      search_query: query, // Added search query to event
     })
     router.push(result.url)
   }
