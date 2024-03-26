@@ -320,7 +320,7 @@ const SearchInput = forwardRef(function SearchInput(
   )
 })
 
-function FilterButton({ label, isActive, onClick }) {
+function FilterButton({ label, isActive, onClick, query }) {
   return (
     <button
       className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 dark:ring-gray-500/50 ${
@@ -330,6 +330,7 @@ function FilterButton({ label, isActive, onClick }) {
         event('filter_click', {
           filter_type: label,
           filter_status: !isActive ? 'added' : 'removed',
+          search_query: query,
         })
         onClick(label)
       }}
@@ -496,11 +497,13 @@ function SearchDialog({ open, setOpen, className }) {
                     label="Requestor"
                     isActive={roleFilter.includes('Requestor')}
                     onClick={() => toggleFilter('Requestor', 'role')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Provider"
                     isActive={roleFilter.includes('Provider')}
                     onClick={() => toggleFilter('Provider', 'role')}
+                    query={autocompleteState.query}
                   />
                 </div>
               </div>
@@ -513,26 +516,31 @@ function SearchDialog({ open, setOpen, className }) {
                     label="Example"
                     isActive={typefilter.includes('Example')}
                     onClick={() => toggleFilter('Example', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Guide"
                     isActive={typefilter.includes('Guide')}
                     onClick={() => toggleFilter('Guide', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Tutorial"
                     isActive={typefilter.includes('Tutorial')}
                     onClick={() => toggleFilter('Tutorial', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Instructions"
                     isActive={typefilter.includes('Instructions')}
                     onClick={() => toggleFilter('Instructions', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="JS API Reference"
                     isActive={typefilter.includes('JS API Reference')}
                     onClick={() => toggleFilter('JS API Reference', 'type')}
+                    query={autocompleteState.query}
                   />
                 </div>
               </div>
