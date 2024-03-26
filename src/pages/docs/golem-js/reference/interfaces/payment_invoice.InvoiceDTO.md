@@ -31,7 +31,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:13](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L13)
+[src/payment/invoice.ts:18](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L18)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:14](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L14)
+[src/payment/invoice.ts:19](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L19)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:15](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L15)
+[src/payment/invoice.ts:20](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L20)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:16](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L16)
+[src/payment/invoice.ts:21](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L21)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L17)
+[src/payment/invoice.ts:22](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L22)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L18)
+[src/payment/invoice.ts:23](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L23)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L19)
+[src/payment/invoice.ts:24](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L24)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:20](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L20)
+[src/payment/invoice.ts:25](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L25)
 
 ___
 
@@ -111,14 +111,14 @@ ___
 
 #### Defined in
 
-[src/payment/invoice.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L21)
+[src/payment/invoice.ts:26](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L26)
 
 ___
 
 ### amount
 
-• **amount**: `number`
+• **amount**: `string`
 
 #### Defined in
 
-[src/payment/invoice.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L22)
+[src/payment/invoice.ts:27](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L27)

@@ -8,12 +8,6 @@ type: "JS API Reference"
 
 [activity/activity](../modules/activity_activity).ActivityOptions
 
-## Hierarchy
-
-- **`ActivityOptions`**
-
-  ↳ [`TaskServiceOptions`](task_service.TaskServiceOptions)
-
 ## Table of contents
 
 ### Properties
@@ -22,7 +16,6 @@ type: "JS API Reference"
 - [activityExecuteTimeout](activity_activity.ActivityOptions#activityexecutetimeout)
 - [activityExeBatchResultPollIntervalSeconds](activity_activity.ActivityOptions#activityexebatchresultpollintervalseconds)
 - [logger](activity_activity.ActivityOptions#logger)
-- [eventTarget](activity_activity.ActivityOptions#eventtarget)
 
 ## Properties
 
@@ -34,7 +27,7 @@ timeout for sending and creating batch
 
 #### Defined in
 
-[src/activity/activity.ts:28](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L28)
+[src/activity/activity.ts:36](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L36)
 
 ___
 
@@ -46,7 +39,7 @@ timeout for executing batch
 
 #### Defined in
 
-[src/activity/activity.ts:30](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L30)
+[src/activity/activity.ts:38](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L38)
 
 ___
 
@@ -58,7 +51,7 @@ interval for fetching batch results while polling
 
 #### Defined in
 
-[src/activity/activity.ts:32](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L32)
+[src/activity/activity.ts:40](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L40)
 
 ___
 
@@ -70,16 +63,4 @@ Logger module
 
 #### Defined in
 
-[src/activity/activity.ts:34](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L34)
-
-___
-
-### eventTarget
-
-• `Optional` **eventTarget**: `EventTarget`
-
-Event Bus implements EventTarget
-
-#### Defined in
-
-[src/activity/activity.ts:36](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L36)
+[src/activity/activity.ts:42](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L42)

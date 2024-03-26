@@ -20,20 +20,6 @@ type: "JS API Reference"
 
   ↳ **`BaseEvent`**
 
-  ↳↳ [`ComputationStarted`](events_events.ComputationStarted)
-
-  ↳↳ [`ComputationFinished`](events_events.ComputationFinished)
-
-  ↳↳ [`ComputationFailed`](events_events.ComputationFailed)
-
-  ↳↳ [`TaskStarted`](events_events.TaskStarted)
-
-  ↳↳ [`TaskRedone`](events_events.TaskRedone)
-
-  ↳↳ [`TaskRejected`](events_events.TaskRejected)
-
-  ↳↳ [`TaskFinished`](events_events.TaskFinished)
-
   ↳↳ [`AllocationCreated`](events_events.AllocationCreated)
 
   ↳↳ [`DemandSubscribed`](events_events.DemandSubscribed)
@@ -124,7 +110,7 @@ CustomEvent\&lt;DataType\&gt;.constructor
 
 #### Defined in
 
-[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L29)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L29)
 
 ## Properties
 
@@ -138,7 +124,7 @@ CustomEvent.detail
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L17)
 
 ___
 
@@ -152,7 +138,7 @@ CustomEvent.name
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L18)
 
 ___
 
@@ -166,4 +152,4 @@ CustomEvent.timestamp
 
 #### Defined in
 
-[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L19)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L19)

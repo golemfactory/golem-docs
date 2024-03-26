@@ -32,7 +32,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/proposal.ts:47](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L47)
+[src/market/proposal.ts:53](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L53)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:48](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L48)
+[src/market/proposal.ts:54](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L54)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:49](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L49)
+[src/market/proposal.ts:55](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L55)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:50](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L50)
+[src/market/proposal.ts:56](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L56)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:51](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L51)
+[src/market/proposal.ts:57](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L57)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:52](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L52)
+[src/market/proposal.ts:58](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L58)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:53](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L53)
+[src/market/proposal.ts:59](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L59)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:54](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L54)
+[src/market/proposal.ts:60](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L60)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:55](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L55)
+[src/market/proposal.ts:61](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L61)
 
 ___
 
@@ -122,14 +122,14 @@ ___
 
 #### Defined in
 
-[src/market/proposal.ts:56](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L56)
+[src/market/proposal.ts:62](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L62)
 
 ___
 
 ### state
 
-• **state**: `ProposalAllOfStateEnum`
+• **state**: ``"Initial"`` \| ``"Draft"`` \| ``"Rejected"`` \| ``"Accepted"`` \| ``"Expired"``
 
 #### Defined in
 
-[src/market/proposal.ts:57](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposal.ts#L57)
+[src/market/proposal.ts:63](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposal.ts#L63)

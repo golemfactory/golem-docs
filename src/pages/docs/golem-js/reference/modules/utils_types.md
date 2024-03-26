@@ -27,4 +27,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/7cee55b/src/utils/types.ts#L12)
+[src/utils/types.ts:12](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/utils/types.ts#L12)

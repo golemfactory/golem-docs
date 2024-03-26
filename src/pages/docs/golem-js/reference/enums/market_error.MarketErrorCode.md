@@ -27,98 +27,98 @@ type: "JS API Reference"
 
 ### ServiceNotInitialized
 
-• **ServiceNotInitialized** = ``0``
+• **ServiceNotInitialized** = ``"ServiceNotInitialized"``
 
 #### Defined in
 
-[src/market/error.ts:5](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L5)
+[src/market/error.ts:5](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L5)
 
 ___
 
 ### MissingAllocation
 
-• **MissingAllocation** = ``1``
+• **MissingAllocation** = ``"MissingAllocation"``
 
 #### Defined in
 
-[src/market/error.ts:6](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L6)
+[src/market/error.ts:6](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L6)
 
 ___
 
 ### SubscriptionFailed
 
-• **SubscriptionFailed** = ``2``
+• **SubscriptionFailed** = ``"SubscriptionFailed"``
 
 #### Defined in
 
-[src/market/error.ts:7](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L7)
+[src/market/error.ts:7](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L7)
 
 ___
 
 ### InvalidProposal
 
-• **InvalidProposal** = ``3``
+• **InvalidProposal** = ``"InvalidProposal"``
 
 #### Defined in
 
-[src/market/error.ts:8](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L8)
+[src/market/error.ts:8](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L8)
 
 ___
 
 ### ProposalResponseFailed
 
-• **ProposalResponseFailed** = ``4``
+• **ProposalResponseFailed** = ``"ProposalResponseFailed"``
 
 #### Defined in
 
-[src/market/error.ts:9](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L9)
+[src/market/error.ts:9](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L9)
 
 ___
 
 ### ProposalRejectionFailed
 
-• **ProposalRejectionFailed** = ``5``
+• **ProposalRejectionFailed** = ``"ProposalRejectionFailed"``
 
 #### Defined in
 
-[src/market/error.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L10)
+[src/market/error.ts:10](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L10)
 
 ___
 
 ### DemandExpired
 
-• **DemandExpired** = ``6``
+• **DemandExpired** = ``"DemandExpired"``
 
 #### Defined in
 
-[src/market/error.ts:11](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L11)
+[src/market/error.ts:11](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L11)
 
 ___
 
 ### AgreementTerminationFailed
 
-• **AgreementTerminationFailed** = ``7``
+• **AgreementTerminationFailed** = ``"AgreementTerminationFailed"``
 
 #### Defined in
 
-[src/market/error.ts:12](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L12)
+[src/market/error.ts:12](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L12)
 
 ___
 
 ### AgreementCreationFailed
 
-• **AgreementCreationFailed** = ``8``
+• **AgreementCreationFailed** = ``"AgreementCreationFailed"``
 
 #### Defined in
 
-[src/market/error.ts:13](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L13)
+[src/market/error.ts:13](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L13)
 
 ___
 
 ### AgreementApprovalFailed
 
-• **AgreementApprovalFailed** = ``9``
+• **AgreementApprovalFailed** = ``"AgreementApprovalFailed"``
 
 #### Defined in
 
-[src/market/error.ts:14](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L14)
+[src/market/error.ts:14](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L14)

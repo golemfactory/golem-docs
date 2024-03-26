@@ -18,5 +18,6 @@ type: "JS API Reference"
 
 ### Interfaces
 
+- [ActivityEvents](../interfaces/activity_activity.ActivityEvents)
 - [ExeScriptRequest](../interfaces/activity_activity.ExeScriptRequest)
 - [ActivityOptions](../interfaces/activity_activity.ActivityOptions)

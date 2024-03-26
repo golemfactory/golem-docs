@@ -34,7 +34,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/script/command.ts:76](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L76)
+[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L80)
 
 ___
 
@@ -44,6 +44,6 @@ ___
 
 #### Defined in
 
-[src/script/command.ts:80](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L80)
+[src/script/command.ts:84](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L84)
 
 ___
