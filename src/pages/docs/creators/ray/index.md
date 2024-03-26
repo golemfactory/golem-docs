@@ -27,10 +27,10 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 
 Golem is a decentralized marketplace for computing power, where the providers let the requestors use their machines for a small fee.
 
-Ray on Golem makes it super easy to set up and use Golem Network to run your Ray application.
-
 Ray on the other hand is an open-source framework for scaling Python applications.
 It specializes in tooling for AI/ML applications, but at the same time, it is based on Ray Core which understands every piece of generic Python code.
+
+Ray on Golem makes it super easy to set up and use Golem Network to run your Ray application.
 
 ## Why Ray?
 
