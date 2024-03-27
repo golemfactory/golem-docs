@@ -94,6 +94,6 @@ rm -r ~/.local/lib/yagna
 
 {% docnavigation title="See also" %}
 
-- If you are looking for intructions for Providers see [here](/docs/creators/javascript/examples/tools/requestor-uninstall).
+- If you are looking for intructions for Requestors see [here](/docs/creators/javascript/examples/tools/requestor-uninstall).
 
 {% /docnavigation %}

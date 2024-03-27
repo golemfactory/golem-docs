@@ -59,7 +59,7 @@ To check if you use a custom data location run:
 echo $YAGNA_DATADIR
 ```
 
-To remove in default location use:
+To remove Yagna data in default location use:
 
 ```bash
 rm -r ~/.local/share/yagna
@@ -75,7 +75,7 @@ To check if you use a custom data location run:
 set YAGNA_DATADIR
 ```
 
-To remove in default location use:
+To remove Yagna data in default location use:
 
 ```sh
 rm -r %HOMEPATH%\AppData\Roaming\GolemFactory\yagna
@@ -89,7 +89,7 @@ rm -r %HOMEPATH%\AppData\Roaming\GolemFactory\yagna
 {% tabs %}
 {% tab label="Linux" %}
 
-To remove in default location use:
+To remove Yagna installer files in default location use:
 
 ```bash
 rm -r ~/.local/share/ya-installer
