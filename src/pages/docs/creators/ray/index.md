@@ -72,6 +72,7 @@ The basic flow of working with Ray and Ray on Golem consists of:
 - Starting up a Ray on Golem cluster initially consisting of only one node
 - Executing your app on Ray on Golem cluster, which automatically scales up and down to accommodate your app's needs
 - Stopping down your Ray on Golem cluster to free resources and to limit the cost
+- Terminating Ray on Golem background components when you no longer plan to start new clusters
 
 ## How to start
 

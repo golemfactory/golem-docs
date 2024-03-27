@@ -139,6 +139,23 @@ This is important because running a cluster uses up the Golem network nodes. In 
 ray down golem-cluster.yaml --yes
 ```
 
+## Terminate the background components
+
+When you no longer plan to start new clusters feel free 
+to stop the background Ray on Golem components.
+
+The background components shouldn't be troublesome, keeping them alive 
+speeds up the subsequent `ray up`. You might want to terminate them 
+if you don't expect starting new clusters or if you want to reset the state
+in orser to start fresh.
+
+```bash
+# Terminate background Ray on Golem components
+ray-on-golem stop
+```
+
+
+
 {% docnavigation title="See also" %}
 - [Ray on Golem introduction](/docs/creators/ray)
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)

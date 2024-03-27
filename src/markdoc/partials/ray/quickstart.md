@@ -47,6 +47,13 @@ ray down golem-cluster.yaml --yes
 
 ```
 
+When you no longer plan to start new clusters feel free to stop the background Ray on Golem components.
+
+```bash
+# Terminate background Ray on Golem components
+ray-on-golem stop
+```
+
 ## Summary
 
 By completing the above quickstart you have successfully:
@@ -56,5 +63,6 @@ By completing the above quickstart you have successfully:
 - Started up the Ray on Golem cluster
 - Run the app on your local computer and then on the cluster
 - Stopped the cluster
+- Terminated the background Ray on Golem components
 
 Congratulations!
