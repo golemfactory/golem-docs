@@ -18,13 +18,15 @@ additionally containing an error code specific to a given subdomain
 
   ↳ **`GolemModuleError`**
 
+  ↳↳ [`GolemReputationError`](experimental_reputation_error.GolemReputationError)
+
   ↳↳ [`GolemMarketError`](market_error.GolemMarketError)
 
   ↳↳ [`GolemNetworkError`](network_error.GolemNetworkError)
 
   ↳↳ [`GolemPaymentError`](payment_error.GolemPaymentError)
 
-  ↳↳ [`GolemWorkError`](task_error.GolemWorkError)
+  ↳↳ [`GolemWorkError`](work_error.GolemWorkError)
 
 ## Table of contents
 
@@ -48,7 +50,7 @@ additionally containing an error code specific to a given subdomain
 | Name | Type |
 | :------ | :------ |
 | `message` | `string` |
-| `code` | `number` |
+| `code` | `string` \| `number` |
 | `previous?` | `Error` |
 
 #### Returns
@@ -61,17 +63,17 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/error/golem-error.ts:64](https://github.com/golemfactory/golem-js/blob/7cee55b/src/error/golem-error.ts#L64)
+[src/error/golem-error.ts:64](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/error/golem-error.ts#L64)
 
 ## Properties
 
 ### code
 
-• **code**: `number`
+• **code**: `string` \| `number`
 
 #### Defined in
 
-[src/error/golem-error.ts:66](https://github.com/golemfactory/golem-js/blob/7cee55b/src/error/golem-error.ts#L66)
+[src/error/golem-error.ts:66](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/error/golem-error.ts#L66)
 
 ___
 
@@ -87,4 +89,4 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/error/golem-error.ts#L10)
+[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/error/golem-error.ts#L10)

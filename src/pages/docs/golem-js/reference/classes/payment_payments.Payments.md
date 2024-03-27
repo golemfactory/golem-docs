@@ -8,17 +8,15 @@ type: "JS API Reference"
 
 [payment/payments](../modules/payment_payments).Payments
 
-## Hierarchy
-
-- `EventTarget`
-
-  ↳ **`Payments`**
-
 ## Table of contents
 
 ### Constructors
 
 - [constructor](payment_payments.Payments#constructor)
+
+### Properties
+
+- [events](payment_payments.Payments#events)
 
 ### Methods
 
@@ -35,20 +33,26 @@ type: "JS API Reference"
 
 | Name | Type |
 | :------ | :------ |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
+| `yagnaApi` | [`YagnaApi`](utils_yagna_yagnaApi.YagnaApi) |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Returns
 
 [`Payments`](payment_payments.Payments)
 
-#### Overrides
+#### Defined in
 
-EventTarget.constructor
+[src/payment/payments.ts:33](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/payments.ts#L33)
+
+## Properties
+
+### events
+
+• `Readonly` **events**: `EventEmitter`\<[`PaymentEvents`](../interfaces/payment_payments.PaymentEvents), `any`\>
 
 #### Defined in
 
-[src/payment/payments.ts:28](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/payments.ts#L28)
+[src/payment/payments.ts:27](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/payments.ts#L27)
 
 ## Methods
 
@@ -60,7 +64,7 @@ EventTarget.constructor
 
 | Name | Type |
 | :------ | :------ |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) |
+| `yagnaApi` | [`YagnaApi`](utils_yagna_yagnaApi.YagnaApi) |
 | `options?` | [`PaymentOptions`](../interfaces/payment_payments.PaymentOptions) |
 
 #### Returns
@@ -69,7 +73,7 @@ EventTarget.constructor
 
 #### Defined in
 
-[src/payment/payments.ts:24](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/payments.ts#L24)
+[src/payment/payments.ts:29](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/payments.ts#L29)
 
 ___
 
@@ -86,4 +90,4 @@ An error will be thrown when the unsubscribe timeout expires.
 
 #### Defined in
 
-[src/payment/payments.ts:42](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/payments.ts#L42)
+[src/payment/payments.ts:46](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/payments.ts#L46)

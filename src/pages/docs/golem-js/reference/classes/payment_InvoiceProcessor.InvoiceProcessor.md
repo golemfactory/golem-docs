@@ -32,7 +32,7 @@ Creates an instance of `InvoiceProcessor` and connects to the Yagna API.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [`YagnaOptions`](../modules/utils_yagna_yagna#yagnaoptions) | Options for the Yagna API. |
+| `options?` | [`YagnaOptions`](../modules/utils_yagna_yagnaApi#yagnaoptions) | Options for the Yagna API. |
 
 #### Returns
 
@@ -40,13 +40,13 @@ Creates an instance of `InvoiceProcessor` and connects to the Yagna API.
 
 #### Defined in
 
-[src/payment/InvoiceProcessor.ts:36](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/InvoiceProcessor.ts#L36)
+[src/payment/InvoiceProcessor.ts:35](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/InvoiceProcessor.ts#L35)
 
 ___
 
 ### collectInvoices
 
-▸ **collectInvoices**(`«destructured»?`): `Promise`\<`Invoice`[]\>
+▸ **collectInvoices**(`«destructured»?`): `Promise`\<{}[]\>
 
 Collects invoices from the Yagna API until the limit is reached or there are no more invoices.
 
@@ -66,7 +66,7 @@ Collects invoices from the Yagna API until the limit is reached or there are no 
 
 #### Returns
 
-`Promise`\<`Invoice`[]\>
+`Promise`\<{}[]\>
 
 **`Example`**
 
@@ -85,7 +85,7 @@ const invoices = await invoiceProcessor.collectInvoices({
 
 #### Defined in
 
-[src/payment/InvoiceProcessor.ts:68](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/InvoiceProcessor.ts#L68)
+[src/payment/InvoiceProcessor.ts:66](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/InvoiceProcessor.ts#L66)
 
 ___
 
@@ -107,7 +107,7 @@ Fetches a single invoice from the Yagna API.
 
 #### Defined in
 
-[src/payment/InvoiceProcessor.ts:120](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/InvoiceProcessor.ts#L120)
+[src/payment/InvoiceProcessor.ts:118](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/InvoiceProcessor.ts#L118)
 
 ___
 
@@ -132,7 +132,7 @@ If `dryRun` is `true`, no allocation will be created and the invoice will not be
 
 #### Defined in
 
-[src/payment/InvoiceProcessor.ts:128](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/InvoiceProcessor.ts#L128)
+[src/payment/InvoiceProcessor.ts:126](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/InvoiceProcessor.ts#L126)
 
 ___
 
@@ -162,4 +162,4 @@ Use the returned `InvoiceAcceptResult` to check which invoices were accepted suc
 
 #### Defined in
 
-[src/payment/InvoiceProcessor.ts:193](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/InvoiceProcessor.ts#L193)
+[src/payment/InvoiceProcessor.ts:191](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/InvoiceProcessor.ts#L191)

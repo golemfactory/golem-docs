@@ -59,7 +59,7 @@ you cannot create an activity for an agreement that already expired
 
 #### Defined in
 
-[src/error/golem-error.ts:5](https://github.com/golemfactory/golem-js/blob/7cee55b/src/error/golem-error.ts#L5)
+[src/error/golem-error.ts:5](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/error/golem-error.ts#L5)
 
 ## Properties
 
@@ -75,4 +75,4 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/error/golem-error.ts#L10)
+[src/error/golem-error.ts:10](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/error/golem-error.ts#L10)

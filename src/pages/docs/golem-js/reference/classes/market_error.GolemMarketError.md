@@ -27,8 +27,11 @@ additionally containing an error code specific to a given subdomain
 ### Properties
 
 - [code](market_error.GolemMarketError#code)
-- [demand](market_error.GolemMarketError#demand)
 - [previous](market_error.GolemMarketError#previous)
+
+### Methods
+
+- [getDemand](market_error.GolemMarketError#getdemand)
 
 ## Constructors
 
@@ -55,7 +58,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/market/error.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L18)
+[src/market/error.ts:19](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L19)
 
 ## Properties
 
@@ -69,17 +72,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/market/error.ts:20](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L20)
-
-___
-
-### demand
-
-• `Optional` **demand**: `Demand`
-
-#### Defined in
-
-[src/market/error.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L21)
+[src/market/error.ts:21](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L21)
 
 ___
 
@@ -95,4 +88,18 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/market/error.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L22)
+[src/market/error.ts:23](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L23)
+
+## Methods
+
+### getDemand
+
+▸ **getDemand**(): `undefined` \| `Demand`
+
+#### Returns
+
+`undefined` \| `Demand`
+
+#### Defined in
+
+[src/market/error.ts:28](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/error.ts#L28)

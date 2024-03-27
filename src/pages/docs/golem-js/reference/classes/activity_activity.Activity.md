@@ -15,6 +15,7 @@ As part of a given activity, it is possible to execute exe script commands and c
 
 ### Properties
 
+- [events](activity_activity.Activity#events)
 - [id](activity_activity.Activity#id)
 - [agreement](activity_activity.Activity#agreement)
 - [yagnaApi](activity_activity.Activity#yagnaapi)
@@ -31,6 +32,16 @@ As part of a given activity, it is possible to execute exe script commands and c
 
 ## Properties
 
+### events
+
+• `Readonly` **events**: `EventEmitter`\<[`ActivityEvents`](../interfaces/activity_activity.ActivityEvents), `any`\>
+
+#### Defined in
+
+[src/activity/activity.ts:59](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L59)
+
+___
+
 ### id
 
 • `Readonly` **id**: `string`
@@ -39,7 +50,7 @@ activity ID
 
 #### Defined in
 
-[src/activity/activity.ts:62](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L62)
+[src/activity/activity.ts:69](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L69)
 
 ___
 
@@ -51,19 +62,19 @@ Agreement
 
 #### Defined in
 
-[src/activity/activity.ts:63](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L63)
+[src/activity/activity.ts:70](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L70)
 
 ___
 
 ### yagnaApi
 
-• `Protected` `Readonly` **yagnaApi**: [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
+• `Protected` `Readonly` **yagnaApi**: [`YagnaApi`](utils_yagna_yagnaApi.YagnaApi)
 
-[YagnaApi](../modules/utils_yagna_yagna#yagnaapi)
+[YagnaApi](utils_yagna_yagnaApi.YagnaApi)
 
 #### Defined in
 
-[src/activity/activity.ts:64](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L64)
+[src/activity/activity.ts:71](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L71)
 
 ___
 
@@ -75,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:65](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L65)
+[src/activity/activity.ts:72](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L72)
 
 ## Methods
 
@@ -90,7 +101,7 @@ Create activity for given agreement ID
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `agreement` | `Agreement` | `undefined` |  |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) | `undefined` |  |
+| `yagnaApi` | [`YagnaApi`](utils_yagna_yagnaApi.YagnaApi) | `undefined` |  |
 | `options?` | [`ActivityOptions`](../interfaces/activity_activity.ActivityOptions) | `undefined` | [ActivityOptions](../interfaces/activity_activity.ActivityOptions) |
 | `secure` | `boolean` | `false` | defines if activity will be secure type |
 
@@ -102,7 +113,7 @@ Activity
 
 #### Defined in
 
-[src/activity/activity.ts:79](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L79)
+[src/activity/activity.ts:86](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L86)
 
 ___
 
@@ -116,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:89](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L89)
+[src/activity/activity.ts:96](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L96)
 
 ___
 
@@ -140,7 +151,7 @@ Execute script
 
 #### Defined in
 
-[src/activity/activity.ts:100](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L100)
+[src/activity/activity.ts:107](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L107)
 
 ___
 
@@ -158,7 +169,7 @@ boolean
 
 #### Defined in
 
-[src/activity/activity.ts:138](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L138)
+[src/activity/activity.ts:143](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L143)
 
 ___
 
@@ -180,7 +191,7 @@ Error when cannot query the state
 
 #### Defined in
 
-[src/activity/activity.ts:150](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L150)
+[src/activity/activity.ts:155](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L155)
 
 ___
 
@@ -200,4 +211,4 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:176](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L176)
+[src/activity/activity.ts:186](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/activity/activity.ts#L186)

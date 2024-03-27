@@ -31,7 +31,6 @@ type: "JS API Reference"
 - [paymentRequestTimeout](payment_service.PaymentOptions#paymentrequesttimeout)
 - [unsubscribeTimeoutMs](payment_service.PaymentOptions#unsubscribetimeoutms)
 - [logger](payment_service.PaymentOptions#logger)
-- [eventTarget](payment_service.PaymentOptions#eventtarget)
 
 ## Properties
 
@@ -43,7 +42,7 @@ Interval for checking new invoices
 
 #### Defined in
 
-[src/payment/service.ts:24](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L24)
+[src/payment/service.ts:25](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L25)
 
 ___
 
@@ -55,7 +54,7 @@ Interval for checking new debit notes
 
 #### Defined in
 
-[src/payment/service.ts:26](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L26)
+[src/payment/service.ts:27](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L27)
 
 ___
 
@@ -67,7 +66,7 @@ Maximum number of invoice events per one fetching
 
 #### Defined in
 
-[src/payment/service.ts:28](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L28)
+[src/payment/service.ts:29](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L29)
 
 ___
 
@@ -79,7 +78,7 @@ Maximum number of debit notes events per one fetching
 
 #### Defined in
 
-[src/payment/service.ts:30](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L30)
+[src/payment/service.ts:31](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L31)
 
 ___
 
@@ -91,7 +90,7 @@ A custom filter that checks every debit notes coming from providers
 
 #### Defined in
 
-[src/payment/service.ts:32](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L32)
+[src/payment/service.ts:33](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L33)
 
 ___
 
@@ -103,13 +102,13 @@ A custom filter that checks every invoices coming from providers
 
 #### Defined in
 
-[src/payment/service.ts:34](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L34)
+[src/payment/service.ts:35](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L35)
 
 ___
 
 ### yagnaOptions
 
-• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/executor_executor#yagnaoptions)
+• `Optional` **yagnaOptions**: [`YagnaOptions`](../modules/utils_yagna_yagnaApi#yagnaoptions)
 
 #### Inherited from
 
@@ -117,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L25)
+[src/payment/config.ts:24](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/config.ts#L24)
 
 ___
 
@@ -131,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L26)
+[src/payment/config.ts:25](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/config.ts#L25)
 
 ___
 
@@ -152,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L27)
+[src/payment/config.ts:26](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/config.ts#L26)
 
 ___
 
@@ -166,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L28)
+[src/payment/config.ts:27](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/config.ts#L27)
 
 ___
 
@@ -180,7 +179,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L29)
+[src/payment/config.ts:28](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/config.ts#L28)
 
 ___
 
@@ -194,7 +193,7 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:30](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L30)
+[src/payment/config.ts:29](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/config.ts#L29)
 
 ___
 
@@ -208,18 +207,4 @@ ___
 
 #### Defined in
 
-[src/payment/config.ts:31](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L31)
-
-___
-
-### eventTarget
-
-• `Optional` **eventTarget**: `EventTarget`
-
-#### Inherited from
-
-[BasePaymentOptions](payment_config.BasePaymentOptions).[eventTarget](payment_config.BasePaymentOptions#eventtarget)
-
-#### Defined in
-
-[src/payment/config.ts:32](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/config.ts#L32)
+[src/payment/config.ts:30](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/config.ts#L30)
