@@ -10,6 +10,7 @@ type: "JS API Reference"
 
 ### Interfaces
 
+- [InvoiceEvents](../interfaces/payment_invoice.InvoiceEvents)
 - [InvoiceDTO](../interfaces/payment_invoice.InvoiceDTO)
 
 ### Type Aliases
@@ -24,4 +25,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/invoice.ts#L10)
+[src/payment/invoice.ts:15](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/invoice.ts#L15)

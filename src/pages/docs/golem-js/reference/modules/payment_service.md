@@ -10,6 +10,7 @@ type: "JS API Reference"
 
 ### Interfaces
 
+- [PaymentServiceEvents](../interfaces/payment_service.PaymentServiceEvents)
 - [PaymentOptions](../interfaces/payment_service.PaymentOptions)
 
 ### Type Aliases
@@ -39,7 +40,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/service.ts:37](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L37)
+[src/payment/service.ts:38](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L38)
 
 ___
 
@@ -63,4 +64,4 @@ ___
 
 #### Defined in
 
-[src/payment/service.ts:38](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/service.ts#L38)
+[src/payment/service.ts:39](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/payment/service.ts#L39)

@@ -27,8 +27,11 @@ additionally containing an error code specific to a given subdomain
 ### Properties
 
 - [code](network_error.GolemNetworkError#code)
-- [network](network_error.GolemNetworkError#network)
 - [previous](network_error.GolemNetworkError#previous)
+
+### Methods
+
+- [getNetwork](network_error.GolemNetworkError#getnetwork)
 
 ## Constructors
 
@@ -55,7 +58,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/network/error.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L17)
+[src/network/error.ts:18](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/network/error.ts#L18)
 
 ## Properties
 
@@ -69,17 +72,7 @@ additionally containing an error code specific to a given subdomain
 
 #### Defined in
 
-[src/network/error.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L19)
-
-___
-
-### network
-
-• `Optional` **network**: [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
-
-#### Defined in
-
-[src/network/error.ts:20](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L20)
+[src/network/error.ts:20](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/network/error.ts#L20)
 
 ___
 
@@ -95,4 +88,18 @@ The previous error, if any, that led to this error.
 
 #### Defined in
 
-[src/network/error.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L21)
+[src/network/error.ts:22](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/network/error.ts#L22)
+
+## Methods
+
+### getNetwork
+
+▸ **getNetwork**(): `undefined` \| [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
+
+#### Returns
+
+`undefined` \| [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
+
+#### Defined in
+
+[src/network/error.ts:27](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/network/error.ts#L27)

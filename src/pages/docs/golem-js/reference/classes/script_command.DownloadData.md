@@ -56,7 +56,7 @@ Transfer\&lt;Uint8Array\&gt;.constructor
 
 #### Defined in
 
-[src/script/command.ts:199](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L199)
+[src/script/command.ts:203](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L203)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Transfer.from
 
 #### Defined in
 
-[src/script/command.ts:116](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L116)
+[src/script/command.ts:120](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L120)
 
 ___
 
@@ -84,7 +84,7 @@ Transfer.to
 
 #### Defined in
 
-[src/script/command.ts:117](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L117)
+[src/script/command.ts:121](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L121)
 
 ___
 
@@ -98,7 +98,7 @@ Transfer.args
 
 #### Defined in
 
-[src/script/command.ts:16](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L16)
+[src/script/command.ts:20](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L20)
 
 ## Methods
 
@@ -116,7 +116,7 @@ Transfer.before
 
 #### Defined in
 
-[src/script/command.ts:207](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L207)
+[src/script/command.ts:211](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L211)
 
 ___
 
@@ -140,7 +140,7 @@ Transfer.after
 
 #### Defined in
 
-[src/script/command.ts:214](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L214)
+[src/script/command.ts:218](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L218)
 
 ___
 
@@ -158,7 +158,7 @@ Transfer.toJson
 
 #### Defined in
 
-[src/script/command.ts:25](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L25)
+[src/script/command.ts:29](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L29)
 
 ___
 
@@ -176,4 +176,4 @@ Transfer.toExeScriptRequest
 
 #### Defined in
 
-[src/script/command.ts:31](https://github.com/golemfactory/golem-js/blob/7cee55b/src/script/command.ts#L31)
+[src/script/command.ts:35](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/script/command.ts#L35)

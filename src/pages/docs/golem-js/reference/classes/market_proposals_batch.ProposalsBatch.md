@@ -20,7 +20,8 @@ to avoid duplicate offers issued by the provider.
 ### Methods
 
 - [addProposal](market_proposals_batch.ProposalsBatch#addproposal)
-- [readProposals](market_proposals_batch.ProposalsBatch#readproposals)
+- [getProposals](market_proposals_batch.ProposalsBatch#getproposals)
+- [waitForProposals](market_proposals_batch.ProposalsBatch#waitforproposals)
 
 ## Constructors
 
@@ -40,7 +41,7 @@ to avoid duplicate offers issued by the provider.
 
 #### Defined in
 
-[src/market/proposals_batch.ts:27](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposals_batch.ts#L27)
+[src/market/proposals_batch.ts:27](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposals_batch.ts#L27)
 
 ## Methods
 
@@ -63,21 +64,39 @@ which consist of providerId, cores, threads, mem and storage
 
 #### Defined in
 
-[src/market/proposals_batch.ts:38](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposals_batch.ts#L38)
+[src/market/proposals_batch.ts:38](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposals_batch.ts#L38)
 
 ___
 
-### readProposals
+### getProposals
 
-▸ **readProposals**(): `AsyncGenerator`\<[`Proposal`](market_proposal.Proposal)[], `any`, `unknown`\>
+▸ **getProposals**(): `Promise`\<[`Proposal`](market_proposal.Proposal)[]\>
 
-Generates a set of proposals that were collected within the specified `releaseTimeoutMs`
-or their size reached the `minBatchSize` value
+Returns the batched proposals from the internal buffer and empties it
 
 #### Returns
 
-`AsyncGenerator`\<[`Proposal`](market_proposal.Proposal)[], `any`, `unknown`\>
+`Promise`\<[`Proposal`](market_proposal.Proposal)[]\>
 
 #### Defined in
 
-[src/market/proposals_batch.ts:54](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/proposals_batch.ts#L54)
+[src/market/proposals_batch.ts:53](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposals_batch.ts#L53)
+
+___
+
+### waitForProposals
+
+▸ **waitForProposals**(): `Promise`\<`void`\>
+
+Waits for the max amount time for batching or max batch size to be reached before it makes sense to process events
+
+Used to flow-control the consumption of the proposal events from the batch.
+The returned promise resolves when it is time to process the buffered proposal events.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[src/market/proposals_batch.ts:70](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/market/proposals_batch.ts#L70)

@@ -11,13 +11,6 @@ type: "JS API Reference"
 ### Classes
 
 - [BaseEvent](../classes/events_events.BaseEvent)
-- [ComputationStarted](../classes/events_events.ComputationStarted)
-- [ComputationFinished](../classes/events_events.ComputationFinished)
-- [ComputationFailed](../classes/events_events.ComputationFailed)
-- [TaskStarted](../classes/events_events.TaskStarted)
-- [TaskRedone](../classes/events_events.TaskRedone)
-- [TaskRejected](../classes/events_events.TaskRejected)
-- [TaskFinished](../classes/events_events.TaskFinished)
 - [AllocationCreated](../classes/events_events.AllocationCreated)
 - [DemandSubscribed](../classes/events_events.DemandSubscribed)
 - [DemandFailed](../classes/events_events.DemandFailed)
@@ -58,4 +51,4 @@ Global Event Type with which all API events will be emitted. It should be used o
 
 #### Defined in
 
-[src/events/events.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L10)
+[src/events/events.ts:10](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L10)

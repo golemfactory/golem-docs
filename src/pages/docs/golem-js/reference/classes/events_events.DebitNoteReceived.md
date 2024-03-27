@@ -10,7 +10,7 @@ type: "JS API Reference"
 
 ## Hierarchy
 
-- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `amount`: `number` ; `provider`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)  }\>
+- [`BaseEvent`](events_events.BaseEvent)\<\{ `id`: `string` ; `agreementId`: `string` ; `activityId`: `string` ; `amount`: `string` ; `provider`: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)  }\>
 
   ↳ **`DebitNoteReceived`**
 
@@ -40,7 +40,7 @@ type: "JS API Reference"
 | `data.id` | `string` |
 | `data.agreementId` | `string` |
 | `data.activityId` | `string` |
-| `data.amount` | `number` |
+| `data.amount` | `string` |
 | `data.provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 
 #### Returns
@@ -53,7 +53,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L29)
+[src/events/events.ts:29](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L29)
 
 ## Properties
 
@@ -68,7 +68,7 @@ type: "JS API Reference"
 | `id` | `string` |
 | `agreementId` | `string` |
 | `activityId` | `string` |
-| `amount` | `number` |
+| `amount` | `string` |
 | `provider` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
 
 #### Inherited from
@@ -77,7 +77,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L17)
+[src/events/events.ts:17](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L17)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L18)
+[src/events/events.ts:18](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L18)
 
 ___
 
@@ -105,4 +105,4 @@ ___
 
 #### Defined in
 
-[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/events/events.ts#L19)
+[src/events/events.ts:19](https://github.com/golemfactory/golem-js/blob/bf1fab1/src/events/events.ts#L19)

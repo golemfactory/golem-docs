@@ -10,4 +10,5 @@ type: "JS API Reference"
 
 ### Interfaces
 
+- [AgreementEvents](../interfaces/agreement_agreement.AgreementEvents)
 - [ProviderInfo](../interfaces/agreement_agreement.ProviderInfo)
