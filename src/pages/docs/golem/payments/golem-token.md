@@ -18,7 +18,7 @@ If you still possess the GNT token and want to migrate to the new GLM token then
 
 The tGLM is a GLM token operated on test blockchains such as Holesky, and Mumbai, (in the past: Goerli, Rinkeby). It has no real financial value and is used to facilitate running applications on the test network.
 
-# Testnet / Mainnet, Addressess and Wallets
+# Testnet / Mainnet, Addresses and Wallets
 
 `Testnet` means that part of the Golem Network, that accepts payments on test networks. By default the requestor node uses testnet.
 A Requestor user can choose to select the preferred blockchain. His demand will be matched by offers from providers that accept payments on test blockchains. Golem Network and its community operate some nodes to provide a testing environment for developers.
