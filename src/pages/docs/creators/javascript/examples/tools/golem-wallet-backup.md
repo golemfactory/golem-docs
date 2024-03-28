@@ -111,7 +111,7 @@ To make it easier, here's a possible check:
 $ cat ./key.json | grep address
 ```
 
-To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/wallet/restoration) using this newly created keystore file.
+To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/creators/javascript/examples/tools/restoring-golem-wallet) using this newly created keystore file.
 
 {% alert level="warning" %}
 
