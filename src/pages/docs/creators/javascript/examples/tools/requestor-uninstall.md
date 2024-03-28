@@ -1,7 +1,7 @@
 ---
 title: How to remove Yagna?
 description: Step-by-step guide to removing Yagna components, configs, and data for Requestors.
-type: article
+type: Instructions
 ---
 
 # Golem Requestor uninstallation guide
