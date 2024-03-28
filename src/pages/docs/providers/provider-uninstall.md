@@ -1,7 +1,7 @@
 ---
 title: How to remove Yagna?
 description: Step-by-step guide to removing Yagna components, configs, and data for Providers.
-type: Instructions
+type: noindex
 ---
 
 # Golem Provider uninstallation guide
