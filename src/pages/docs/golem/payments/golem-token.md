@@ -1,7 +1,6 @@
 ---
 title: Golem Tokens explained.
-description: Introduction to Golem Network Tokens, addresses and networks 
-type: Guide
+description: Introduction to Golem Network Tokens, addresses and networks
 type: noindex
 ---
 
