@@ -42,7 +42,7 @@ If you prefer to receive to a different address you can configure a separate add
 
 If you would like to use another blockchain address to pay from, you need to import a private key to Yagna (`yagna id create --help` for details on flags and options).
 You can also export the private key Yagna is using (`yagna id export --help`).
-By default, Yagna is importing and exporting keys in secret storage format (https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition).
+By default, Yagna is importing and exporting keys in [secret storage format](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition).
 
 How the payment network is selected:
 
