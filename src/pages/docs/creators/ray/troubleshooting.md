@@ -89,6 +89,8 @@ The log files that Ray on Golem produces are stored in the following files (in a
 - `~/.local/share/ray_on_golem/webserver_debug.log` cluster manager debug log - more detailed Ray on Golem logs.
 - `~/.local/share/ray_on_golem/yagna.log` - Golem node (yagna) logs.
 
+If you're unsure where that directory is, you can run `ray-on-golem status` to find out which location is in use on your system.
+
 Given these, you can either:
 
 - Look at the `webserver.log` yourself - our aim is for you to be able to diagnose and resolve the most straightforward issues on your own.
