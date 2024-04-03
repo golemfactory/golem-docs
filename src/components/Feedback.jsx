@@ -1,43 +1,30 @@
 import { LikeIcon } from './icons/LikeIcon'
 import { DislikeIcon } from './icons/DislikeIcon'
+import { event } from 'nextjs-google-analytics'
 
 const handleFeedback = (
-  url,
   identifier,
-  feedback,
   setOpen,
   setShowThanks,
   helpful,
-  setLoading
+  article
 ) => {
-  if (identifier) {
-    setLoading(true)
-    let data = {
-      user: localStorage.getItem('GDocsUUID'),
-      feedback: feedback === 'yes' ? '' : feedback,
-      identifier: identifier,
-      helpful: helpful,
-    }
-    fetch(url, {
-      method: 'POST',
-
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        localStorage.setItem(identifier, helpful ? 'yes' : 'no')
-        setOpen(false)
-        setLoading(false)
-        setShowThanks(true)
-      })
-      .catch((error) => {
-        console.error('Error:', error)
-        setLoading(false)
-        setOpen(false)
-      })
-  } else {
+  if (!identifier) {
     console.error('No identifier provided for feedback modal')
+    return
   }
+
+  localStorage.setItem(identifier, helpful ? 'yes' : 'no')
+  setOpen(false)
+  setShowThanks(true)
+
+  // Google Analytics event tracking
+  event({
+    action: 'submit_feedback',
+    category: article ? 'article' : 'troubleshooting',
+    label: identifier,
+    value: helpful ? 1 : 0, // 1 for helpful, 0 for not helpful
+  })
 }
 
 import { Dialog, Transition } from '@headlessui/react'
@@ -48,9 +35,7 @@ export function FeedbackButtons({ children, identifier, article = false }) {
   const [feedback, setFeedback] = useState('')
   const [showThanks, setShowThanks] = useState(false)
   const [loading, setLoading] = useState(false)
-  const url = article
-    ? '/api/feedback/article'
-    : '/api/feedback/troubleshooting'
+
   useEffect(() => {
     if (identifier) {
       const localStorageFeedback = localStorage.getItem(identifier)
@@ -92,7 +77,6 @@ export function FeedbackButtons({ children, identifier, article = false }) {
               <button
                 onClick={() =>
                   handleFeedback(
-                    url,
                     identifier,
                     feedback,
                     setOpen,
@@ -182,7 +166,6 @@ export function FeedbackButtons({ children, identifier, article = false }) {
           )}
         </div>
         <FeedbackModal
-          url={url}
           identifier={identifier}
           open={isOpen}
           setOpen={setOpen}
@@ -200,7 +183,6 @@ export function FeedbackButtons({ children, identifier, article = false }) {
 import { useRef } from 'react'
 
 export const FeedbackModal = ({
-  url,
   identifier,
   open,
   setOpen,
@@ -274,7 +256,6 @@ export const FeedbackModal = ({
                     className="inline-flex w-full justify-center rounded-md bg-primary px-4 py-2 text-base font-medium text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80 sm:col-start-2"
                     onClick={() =>
                       handleFeedback(
-                        url,
                         identifier,
                         feedback,
                         setOpen,

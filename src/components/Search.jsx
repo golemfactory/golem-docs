@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import Highlighter from 'react-highlight-words'
 import { navigation } from '@/components/Layout'
 import { ArrowSmallUpIcon, ArrowSmallDownIcon } from '@heroicons/react/24/solid'
+import { event } from 'nextjs-google-analytics'
 
 function SearchIcon(props) {
   return (
@@ -19,6 +20,8 @@ function useAutocomplete() {
   let id = useId()
   let router = useRouter()
   let [autocompleteState, setAutocompleteState] = useState({})
+  let typingTimeout = useRef(null)
+  let lastQueryRef = useRef('')
 
   let [autocomplete] = useState(() =>
     createAutocomplete({
@@ -27,17 +30,31 @@ function useAutocomplete() {
       defaultActiveItemId: 0,
       onStateChange({ state }) {
         setAutocompleteState(state)
+
+        if (typingTimeout.current) clearTimeout(typingTimeout.current)
+        if (state.query !== '' && state.query !== lastQueryRef.current) {
+          typingTimeout.current = setTimeout(() => {
+            event('search', {
+              search_term: state.query,
+              result_count: state.collections.flatMap(
+                (collection) => collection.items
+              ).length,
+            })
+            lastQueryRef.current = state.query
+          }, 1000)
+        }
       },
       shouldPanelOpen({ state }) {
         return state.query !== ''
       },
       getSources({ query }) {
         return import('@/markdoc/search.mjs').then(({ search }) => {
+          let items = search(query, { limit: 5 })
           return [
             {
               sourceId: 'documentation',
               getItems() {
-                return search(query, { limit: 5 })
+                return items
               },
               getItemUrl({ item }) {
                 return item.url
@@ -97,6 +114,7 @@ function HighlightQuery({ text, query }) {
 import { ArticleType } from './ArticleType'
 function SearchResult({ result, autocomplete, collection, query, filter }) {
   let id = useId()
+  let router = useRouter()
 
   let sectionTitle
   if (navigation) {
@@ -105,6 +123,17 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
     )?.title
   }
   let hierarchy = [sectionTitle, result.pageTitle].filter(Boolean)
+
+  // Event handler for onSelect
+  const onSelect = () => {
+    event('search_article_click', {
+      article_url: result.url,
+      article_title: result.title,
+      search_query: query, // Added search query to event
+    })
+    router.push(result.url)
+  }
+
   return (
     <li
       className="group-result group block cursor-default"
@@ -112,12 +141,14 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
       {...autocomplete.getItemProps({
         item: result,
         source: collection.source,
+        onSelect: onSelect, // Assign the event handler correctly
       })}
     >
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="relative rounded-lg py-2 pl-3  text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
+        className="relative rounded-lg py-2 pl-3 text-sm text-slate-700 hover:cursor-pointer group-aria-selected:bg-slate-100 group-aria-selected:text-primary dark:text-white/70 dark:group-aria-selected:bg-slate-700/30 dark:group-aria-selected:text-white/50"
+        onClick={onSelect} // Add click event here
       >
         <div className="grid items-center gap-x-2 break-words md:grid-cols-3">
           <div className="flex items-center gap-x-2 break-words md:col-span-2">
@@ -130,7 +161,7 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
                 <div
                   id={`${id}-hierarchy`}
                   aria-hidden="true"
-                  className="mt-0.5  text-xs text-slate-800 dark:text-slate-400 md:truncate md:whitespace-nowrap "
+                  className="mt-0.5 text-xs text-slate-800 dark:text-slate-400 md:truncate md:whitespace-nowrap "
                 >
                   {hierarchy.map((item, itemIndex, items) => (
                     <span className="break-words" key={itemIndex}>
@@ -289,16 +320,20 @@ const SearchInput = forwardRef(function SearchInput(
   )
 })
 
-function FilterButton({ label, isActive, onClick }) {
-  // Add additional styling as needed to match the design
+function FilterButton({ label, isActive, onClick, query }) {
   return (
     <button
       className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 dark:ring-gray-500/50 ${
-        isActive
-          ? 'bg-lightbluedarker dark:bg-slate-600'
-          : '  dark:bg-slate-800'
+        isActive ? 'bg-lightbluedarker dark:bg-slate-600' : 'dark:bg-slate-800'
       }`}
-      onClick={() => onClick(label)}
+      onClick={() => {
+        event('filter_click', {
+          filter_type: label,
+          filter_status: !isActive ? 'added' : 'removed',
+          search_query: query,
+        })
+        onClick(label)
+      }}
     >
       {label}
     </button>
@@ -428,6 +463,11 @@ function SearchDialog({ open, setOpen, className }) {
       onClose={() => {
         setOpen(false)
         autocomplete.setQuery('')
+        // Clear filters when the dialog is closed
+        setRoleFilter([])
+        setTypeFilter([])
+        // Clear the results when the dialog is closed
+        autocomplete.setCollections([])
       }}
       className={clsx('fixed inset-0 z-50', className)}
     >
@@ -457,11 +497,13 @@ function SearchDialog({ open, setOpen, className }) {
                     label="Requestor"
                     isActive={roleFilter.includes('Requestor')}
                     onClick={() => toggleFilter('Requestor', 'role')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Provider"
                     isActive={roleFilter.includes('Provider')}
                     onClick={() => toggleFilter('Provider', 'role')}
+                    query={autocompleteState.query}
                   />
                 </div>
               </div>
@@ -474,26 +516,31 @@ function SearchDialog({ open, setOpen, className }) {
                     label="Example"
                     isActive={typefilter.includes('Example')}
                     onClick={() => toggleFilter('Example', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Guide"
                     isActive={typefilter.includes('Guide')}
                     onClick={() => toggleFilter('Guide', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Tutorial"
                     isActive={typefilter.includes('Tutorial')}
                     onClick={() => toggleFilter('Tutorial', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="Instructions"
                     isActive={typefilter.includes('Instructions')}
                     onClick={() => toggleFilter('Instructions', 'type')}
+                    query={autocompleteState.query}
                   />
                   <FilterButton
                     label="JS API Reference"
                     isActive={typefilter.includes('JS API Reference')}
                     onClick={() => toggleFilter('JS API Reference', 'type')}
+                    query={autocompleteState.query}
                   />
                 </div>
               </div>
