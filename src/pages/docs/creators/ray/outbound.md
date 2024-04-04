@@ -65,8 +65,8 @@ Outbound connectivity in Golem is still considered an experimental feature and w
 Consider the following code (you can find it also in [the repository](https://github.com/golemfactory/ray-on-golem/blob/main/examples/outbound.py)).
 
 ```python
-import colorful
-import requests
+import colorful # package installed as ray-on-golem prerequisite
+import requests # package installed as ray-on-golem prerequisite
 
 urls = [
   'https://ipfs.io/ipfs/bafkreiemev2isidd7gk7352wxtqh6rwbuumt4vgnkkbx5wi6giaizt2bvq',
