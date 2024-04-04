@@ -18,11 +18,12 @@ Ray on Golem supports the following commands
 - `ray-on-golem start` launches `ray-on-golem`'s webserver and the `yagna` daemon to shorten the cluster spin-up time once you run `ray up` ([details](#ray-on-golem-start-stop)) later on
 - `ray-on-golem stop` stops `ray-on-golem`'s webserver and the `yagna` daemon. Use it when you are done with using ray for a while ([details](#ray-on-golem-start-stop)) 
 - `ray-on-golem status` gives you the basic information about the running `ray-on-golem`'s webserver.
+- `ray-on-golem reputation [block|unblock]` gives you control over which nodes not to choose for your cluster
 - `ray-on-golem version` prints `ray-on-golem` package information. Please use it when reporting problems - it makes easier for us to find and fix them.
 - `ray-on-golem network-stats golem-cluster.yaml` scans the network and offers information about available providers ([details](#network-stats))
 - `ray-on-golem webserver` starts the Golem requestor service, which acts as an interface between Ray and the Golem network, managing the provider nodes that constitute the Ray cluster. The command is invoked internally - either when you start it manually with `ray-on-golem start`, or automatically on `ray up`. In most cases you don't need to use it explicitly on its own.
 
-### `ray-on-golem [start|stop]`
+## ray-on-golem [start|stop]
 
 Apart from Ray itself, Ray on Golem utilizes two additional services running on the user's computer:
 - `yagna` daemon acts as a gateway to the Golem Network 
@@ -34,17 +35,35 @@ The rationale is to allow them to run and keep gathering updates from Golem Netw
 They are supposed to be light and normally we don't recommend stopping them.
 However, you might want to do that, for example:
 - if you've finished working with Ray on Golem and won't be using it for a while
-- in case you wish to clear Ray on Golem's state and start afresh. Ideally, this shouldn't be necessary - if you often find such a restart helps, please let us know - probably something is wrong and we would love to fix it.
+- in case you wish to clear Ray on Golem's state and start afresh. Ideally, this shouldn't be necessary - 
+if you often find such a restart helps, please let us know - 
+probably something is wrong and we would love to fix it.
 
-Because the process of gathering offers from Golem Network's market can take a couple of minutes, you might wish to launch them even before you first run `ray up`. That way, they'll have time to warm up and will already have more knowledge about the network when you request a new cluster to start. 
+Because the process of gathering offers from Golem Network's market can take a couple of minutes, 
+you might wish to launch them even before you first run `ray up`. 
+That way, they'll have time to warm up and will already have more knowledge about the network 
+when you request a new cluster to start. 
 
 There are two commands that allow you to manage those two services independently from Ray itself:
 
 * `ray-on-golem start` launches them and leaves them running in the background
 * `ray-on-golem stop` terminates them and ensures graceful shutdown and proper cleanup.
 
+## Provider reputation and black listing
 
-## Network stats
+Ray on Golem utilizes the [reputation endpoint](https://blog.golem.network/introducing-golem-networks-reputation-system/) 
+to score providers based on their uptime and success rate, 
+combined with pricing heuristics. This automatic process ensures you're always paired with top-performing 
+and cost-efficient nodes. The `ray-on-golem reputation list` command allows you 
+to view the current database state, showing provider scores and prices.
+
+### Manual blacklisting
+
+For direct control, the feature allows blacklisting of nodes that underperform or fail to start images. 
+Use the `ray-on-golem reputation block` command to prevent specific nodes from being considered in future selections. 
+Conversely, the `unblock` subcommand removes nodes from your blacklist, making them eligible again.
+
+## Network stats 
 
 The tool scans the network and gives you an overview of the availability of the providers.
 It allows you to test the settings of your [cluster yaml](/docs/creators/ray/cluster-yaml) file.
