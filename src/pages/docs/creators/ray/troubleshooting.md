@@ -115,7 +115,7 @@ but sadly it isn't always the case.
 
 You can use `ray-on-golem stop` to ultimately stop all Ray on Golem components.
 The next `ray up` will start them again in a fresh state. 
-Check out more details about Ray on Golem [stoping and starting](/docs/creators/ray/ray-on-golem-cli#ray-on-golem-start-stop).
+Check out more details about Ray on Golem [stopping and starting](/docs/creators/ray/ray-on-golem-cli#ray-on-golem-start-stop).
 
 It might also be a good idea to clean up Ray's configuration cache files:
 
