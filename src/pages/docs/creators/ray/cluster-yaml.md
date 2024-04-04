@@ -182,7 +182,7 @@ Golem providers charge in three ways. They charge:
 - CPU per hour price for the total time their CPUs spent computing,
 - environment per hour price for the total time they spent up and running,
 
-So for example, if you rent a 3-CPU node for 0.5 hour and the average load is 0.8 per CPU you will be charged 
+So for example, if you rent a 3-CPU node for half an hour (0.5) and the average load is 0.8 per CPU you will be charged 
 `start_price +  (env_per_hour_price * 0.5) + (3 * cpu_per_hour_price * 0.8 * 0.5)`.
 
 The following properties allow you to reject providers with any of the prices exceeding your limits.
