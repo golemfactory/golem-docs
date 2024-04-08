@@ -17,20 +17,20 @@ Ray on Golem supports the following commands
 
 - `ray-on-golem start` launches `ray-on-golem`'s webserver and the `yagna` daemon to shorten the cluster spin-up time once you run `ray up` ([details](#ray-on-golem-start-stop)) later on
 - `ray-on-golem stop` stops `ray-on-golem`'s webserver and the `yagna` daemon. Use it when you are done with using ray for a while ([details](#ray-on-golem-start-stop)) 
-- `ray-on-golem status` gives you the basic information about the running `ray-on-golem`'s webserver.
+- `ray-on-golem status` gives you the basic information about running `ray-on-golem`'s webserver.
 - `ray-on-golem reputation [block|unblock]` gives you control over which nodes not to choose for your cluster
-- `ray-on-golem version` prints `ray-on-golem` package information. Please use it when reporting problems - it makes easier for us to find and fix them.
+- `ray-on-golem version` prints `ray-on-golem` package information. Please use it when reporting problems - it makes it easier for us to find and fix them.
 - `ray-on-golem network-stats golem-cluster.yaml` scans the network and offers information about available providers ([details](#network-stats))
-- `ray-on-golem webserver` starts the Golem requestor service, which acts as an interface between Ray and the Golem network, managing the provider nodes that constitute the Ray cluster. The command is invoked internally - either when you start it manually with `ray-on-golem start`, or automatically on `ray up`. In most cases you don't need to use it explicitly on its own.
+- `ray-on-golem webserver` starts the Golem requestor service, which acts as an interface between Ray and the Golem network, managing the provider nodes that constitute the Ray cluster. The command is invoked internally - either when you start it manually with `ray-on-golem start`, or automatically on `ray up`. In most cases, you don't need to use it explicitly on its own.
 
 ## ray-on-golem [start|stop]
 
 Apart from Ray itself, Ray on Golem utilizes two additional services running on the user's computer:
 - `yagna` daemon acts as a gateway to the Golem Network 
-- `ray-on-golem` webserver controls the Ray cluster, and reacts to Ray autoscaler's commands (spin up new nodes or stop the nodes, which are no longer required) 
+- `ray-on-golem` webserver controls the Ray cluster and reacts to Ray autoscaler's commands (spin up new nodes or stop the nodes, which are no longer required) 
 
 When you execute `ray up`, Ray on Golem ensures the two services are running, starting them if necessary. Conversely though, `ray down` doesn't stop them.
-The rationale is to allow them to run and keep gathering updates from Golem Network about available nodes, in order to speed up launching a new cluster on a subsequent `ray up`.
+The rationale is to allow them to run and keep gathering updates from Golem Network about available nodes, to speed up launching a new cluster on a subsequent `ray up`.
 
 They are supposed to be light and normally we don't recommend stopping them.
 However, you might want to do that, for example:
@@ -44,12 +44,12 @@ you might wish to launch them even before you first run `ray up`.
 That way, they'll have time to warm up and will already have more knowledge about the network 
 when you request a new cluster to start. 
 
-There are two commands that allow you to manage those two services independently from Ray itself:
+Two commands allow you to manage those two services independently from Ray itself:
 
 * `ray-on-golem start` launches them and leaves them running in the background
 * `ray-on-golem stop` terminates them and ensures graceful shutdown and proper cleanup.
 
-## Provider reputation and black listing
+## Provider reputation and blacklisting
 
 Ray on Golem utilizes the [reputation endpoint](https://blog.golem.network/introducing-golem-networks-reputation-system/) 
 to score providers based on their uptime and success rate, 
@@ -101,7 +101,7 @@ Failed to send proposal response! 500: {"message":"Failed to send response for P
 ### Duration
 
 Golem Network is peer-to-peer, which means there is no central registry of providers offers. Therefore,
-providers proposals are not immediately available to a newly-connected requestor. They get re-broadcasted at a certain interval and accumulate over time.
+providers' proposals are not immediately available to a newly-connected requestor. They get re-broadcasted at a certain interval and accumulate over time.
 
 Additionally, negotiating with individual providers also takes some time.
 
