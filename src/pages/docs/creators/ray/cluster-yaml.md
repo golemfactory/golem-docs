@@ -126,23 +126,35 @@ payment_network: 'holesky'
 
 #### Image tag and image hash
 
-Image tag and image hash properties refer to the virtual machine images that Golem provider nodes will start to host the Ray on Golem software.
+Image tag and image hash properties refer to the virtual machine images 
+that Golem provider nodes will start to host the Ray on Golem software.
 
-By default, Ray on Golem uses prepackaged VM images including [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) Python and Ray versions.
+By default, Ray on Golem uses prepackaged VM images including 
+[relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) 
+Python and Ray versions.
 
-However, you can use these properties to override the detection and request a specific image.
-Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
+However, you can use these properties to override the default and request a specific image.
+Supported tags are available on 
+[Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
+
+More specifically, you might want to replace the vanilla Python image with one that supports 
+Golem GPU providers.
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 
 #### Accessing the Internet (outbound)
 
-The optional `outbound_urls` lists the addresses you want to access from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
+The optional `outbound_urls` lists the addresses you want to access from the Ray on Golem cluster.
+Check out the [accessing the internet](/docs/creators/ray/outbound) explanation 
+and example to learn more.
 
 Ray on Golem only accepts addresses prefixed with either the `http://` or `https://` scheme.
 
-Our default cluster definition specifies `https://pypi.dev.golem.network` as a required outbound address which allows [downloading additional packages with pip](#initialization-commands). 
-If you don't need to install any additional Python packages, removing that URL from `outbound_urls` is recommended. 
+Our default cluster definition specifies `https://pypi.dev.golem.network` as a required 
+outbound address which allows 
+[downloading additional packages with pip](#initialization-commands). 
+If you don't need to install any additional Python packages, you might want to remove that URL 
+from `outbound_urls`.
 It potentially allows more providers to participate in your cluster.
 
 You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).

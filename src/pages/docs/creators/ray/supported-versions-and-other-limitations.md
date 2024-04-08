@@ -12,7 +12,7 @@ We use this version to show the direction and get feedback.
 
 ## Python and Ray image base
 
-The Ray on Golem image contains `ray 2.7.1` and `python 3.10.13`.
+The Ray on Golem image contains `ray 2.9.3` and `python 3.10.13`.
 It should work with any combination of local Ray and Python versions.
 
 Please let us know if you have any troubles because of that (on [`#Ray on Golem` discord channel](https://chat.golem.network/))
