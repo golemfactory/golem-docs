@@ -109,7 +109,7 @@ We're eager to hear your feedback on the clarity, usability, or interesting usag
 
 #### Webserver port
 
-Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to / from your cluster.
+Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to/from your cluster.
 
 #### Network
 
