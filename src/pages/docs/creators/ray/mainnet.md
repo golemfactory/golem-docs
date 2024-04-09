@@ -9,7 +9,7 @@ type: guide
 
 The most common way of starting your adventure with Ray on Golem is by trying it out on the Golem testnet.
 The testnet nodes are not very powerful and there are not many of them. 
-At the same time, it provides a sufficient environment to see how everything works and to test your Ray applications on.
+At the same time, it provides a sufficient environment to see how everything works and to test your Ray applications.
 
 As your application gets more complex and you need more power, you should move to the mainnet. There are more providers, and the machines they run on are more powerful. However, you have to pay to use them.
 
@@ -71,9 +71,9 @@ You don't seem to have any GLM tokens on your Golem wallet.
 
 Even if you do have the required funds, `ray up` will nevertheless print the onboarding link as a reminder, in case you'd like to top up your wallet.
 
-The onboarding process is a convenient and effortless way of providing your Ray on Golem node with funds allowing it to run on mainnet.
+The onboarding process is a convenient and effortless way of providing your Ray on Golem node with funds allowing it to run on the mainnet.
 
-Initially, your Golem node generates and later manages its own Ethereum wallet that is uses to perform transactions. This wallet starts empty and Ray on Golem is able to transparently obtain testnet tokens when you run it on testnet. 
+Initially, your Golem node generates and later manages its own Ethereum wallet that is used to perform transactions. This wallet starts empty and Ray on Golem can transparently obtain testnet tokens when you run it on testnet. 
 
 To fill it with mainnet funds, the onboarding portal guides you through the creation of a separate, web-browser wallet, getting GLM and MATIC tokens there, and finally transferring them to the wallet used by Ray on Golem.
 
@@ -102,7 +102,7 @@ Ray on Golem provides a couple of mechanisms to give you control over your spend
 
 Golem Network is peer-to-peer, which means that providers' proposals are not always available at first. They get broadcasted only from time to time.
 
-This means that when you first start Ray on Golem up it might take a while to find a provider matching all your requirements.
+This means that when you first start Ray on Golem it might take a while to find a provider matching all your requirements.
 
 Ray on Golem is using the Golem node (`yagna`) for interacting with the network.
 The `ray up` starts it if it is not running, but `ray down` doesn't stop it. 
@@ -115,8 +115,7 @@ Of course, you might want to disconnect from the Golem network for a while - rea
 Ray on Golem utilizes the [reputation endpoint](https://blog.golem.network/introducing-golem-networks-reputation-system/) 
 to score providers based on their uptime and success rate, 
 combined with pricing heuristics. This automatic process ensures you're always paired with top-performing 
-and cost-efficient nodes. The `ray-on-golem reputation list` command allows you 
-to view the current database state, showing provider scores and prices.
+and cost-efficient nodes. The `ray-on-golem reputation list` command lets you view the current database state, showing provider scores and prices.
 
 ### Manual provider blacklisting
 
