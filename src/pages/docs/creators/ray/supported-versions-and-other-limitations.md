@@ -8,7 +8,7 @@ pageTitle: Ray on Golem Compatibility - Python and Ray Versions, Platform Suppor
 # Supported versions and other limitations
 
 The current version is `MVP` which means it works enough to bring you the actual value. 
-We are working on supporting all Ray usecases. 
+We are working on supporting all Ray use cases. 
 If you want to do anything that isn't working please let us know
 (on [`#Ray on Golem` discord channel](https://chat.golem.network/)) - 
 we would happily add missing features and assist you.
