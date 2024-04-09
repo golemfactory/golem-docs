@@ -7,9 +7,6 @@ pageTitle: Ray on Golem Compatibility - Python and Ray Versions, Platform Suppor
 
 # Supported versions and other limitations
 
-The current version is `pre-alpha` which means the happy path is working on the Golem test network.
-We use this version to show the direction and get feedback.
-
 The current version is `MVP` which means it works enough to bring you the actual value. 
 We are working on supporting all Ray usecases. 
 If you want to do anything that isn't working please let us know
