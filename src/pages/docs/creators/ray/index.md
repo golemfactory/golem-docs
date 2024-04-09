@@ -11,7 +11,7 @@ type: Article
 This documentation is designed for developers wanting to run their **Python code** on Golem.
 We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 
-We are looking for [Beta Testers](https://ray.golem.network) - sign up to create Ray on Golem with us!
+We are looking for {% link title="Beta Testers" href="https://ray.golem.network" %} {% /link %} - sign up to create Ray on Golem with us!
 
 - [Quickstart](/docs/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 - [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
