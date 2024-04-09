@@ -112,6 +112,20 @@ This way the subsequent `ray up` executions benefit from a faster node discovery
 
 Of course, you might want to disconnect from the Golem network for a while - read the [starting over](/docs/creators/ray/troubleshooting#starting-over-with-a-clean-slate) article to learn how to do that.
 
+### Smart provider selection 
+
+Ray on Golem utilizes the [reputation endpoint](https://blog.golem.network/introducing-golem-networks-reputation-system/) 
+to score providers based on their uptime and success rate, 
+combined with pricing heuristics. This automatic process ensures you're always paired with top-performing 
+and cost-efficient nodes. The `ray-on-golem reputation list` command allows you 
+to view the current database state, showing provider scores and prices.
+
+### Manual provider blacklisting
+
+For direct control, the feature allows blacklisting of nodes that underperform or fail to start images. 
+Use the `ray-on-golem reputation block` command to prevent specific nodes from being considered in future selections. 
+Conversely, the `unblock` subcommand removes nodes from your blacklist, making them eligible again.
+
 {% docnavigation title="See also" %}
 - [Ray on Golem introduction](/docs/creators/ray)
 {% /docnavigation %}
