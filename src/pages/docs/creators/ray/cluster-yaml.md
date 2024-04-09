@@ -26,7 +26,7 @@ Ray on Golem strives to support all configuration possibilities available for ge
 When you find a property we don't support yet, please [let us know (on `#Ray on Golem` discord channel)](https://chat.golem.network/).
 
 Feel free to have a look at the [minimal](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluser.mini.yaml) and [full](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluser.full.yaml) yaml examples.
-The mini is stripped to bare minimum, it shows only the properties that are required (we are striving to cut it even more in the future).
+The minimal is stripped to bare minimum, it shows only the properties that are required (we are striving to cut it even more in the future).
 The full exemplifies *all* properties that can be changed.
 
 
