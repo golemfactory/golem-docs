@@ -51,7 +51,7 @@ Two commands allow you to manage those two services independently from Ray itsel
 
 ## Smart provider selection 
 
-Read about the ideas behind selecting provider selection in the [mainnet artcile](/docs/creators/ray/mainnet#smart-provider-selection).
+Read about the ideas behind selecting provider selection in the [mainnet article](/docs/creators/ray/mainnet#smart-provider-selection).
 
 Use the following `ray-on-golem` commands to manipulate the settings:
 
