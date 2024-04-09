@@ -20,7 +20,7 @@ The basic `golem-cluster.yaml` is [available on github](https://github.com/golem
 
 It allows you to start a cluster on our testnet with one head node and one worker node. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
 
-The details of all the properties generally supported by Ray, can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
+The details of all the properties generally supported by Ray can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
 
 Ray on Golem strives to support all configuration possibilities available for general Ray cluster managers.
 When you find a property we don't support yet, please [let us know (on `#Ray on Golem` discord channel)](https://chat.golem.network/).
@@ -166,7 +166,7 @@ It potentially allows more providers to participate in your cluster.
 You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
 
 ```yaml
-# List of URLs which will be added to the Computation Manifest
+# List of URLs that will be added to the Computation Manifest
 # Requires protocol to be defined in all URLs
 # If not provided demand will not use Computation Manifest
 outbound_urls: ["https://pypi.dev.golem.network"]
