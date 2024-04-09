@@ -63,9 +63,7 @@ Ray On Golem
     │  token: GLM        │                │            │  requested  │  0 GLM     │  0 GLM     │           │
     └────────────────────┴────────────────┴────────────┴─────────────┴────────────┴────────────┴───────────┘
   
-  You can use the Golem Onboarding portal to top up: https://golemfactory.github.io/onboarding_production/?yagnaAddress=0xae5d43485a341bc4f167f6a4fda0749f1d7f3e11
-
-DISCLAIMER: Please keep in mind that in its current stage, the Onboarding Portal is an EXPERIMENTAL product. Even though it is functional, we do not recommend using it unless you wish to help us beta-test this feature. You'll find more information on `#Payment UX` discord channel https://discord.com/channels/684703559954333727/1136984764197380096
+  You can use the Golem Onboarding portal to top up: https://glm.golem.network/#/onboarding/budget?yagnaAddress=0xae5d43485a341bc4f167f6a4fda0749f1d7f3e11&network=polygon
 
 You don't seem to have any GLM tokens on your Golem wallet.
 
