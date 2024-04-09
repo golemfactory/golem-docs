@@ -140,7 +140,8 @@ Python and Ray versions.
 
 However, you can use these properties to override the default and request a specific image.
 Supported tags are available on 
-[Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
+[Golem registry](https://registry.golem.network/explore/golem/ray-on-golem). 
+Make sure you use an image with the matching version with your `ray-on-golem` package.
 
 More specifically, you might want to replace the vanilla Python image with one that supports 
 Golem GPU providers.
