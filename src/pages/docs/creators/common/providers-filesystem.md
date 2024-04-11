@@ -7,7 +7,7 @@ type: Guide
 
 # Filesystem on VM run on a remote node
 
-Your options of what you can do on a remote node will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your image definition. (See [here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
+Your options of what you can do on a remote node will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your Dockerfile. ([Read here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
 
 If you run the command `df -h` on a VM built from this image on a provider, you'll receive an output similar to this:
 
@@ -66,7 +66,7 @@ as for the provider's security, the features on this filesystem are limited.
 
 ## Important conclusions from these observations
 
-- The available space for installing extra software in the default location is limited. As a result, although the `outbound` feature allows for the downloading and installation of certain apps, it's recommended to pre-install these applications directly into the image. This approach not only saves space but also speeds up task completion as the necessary software with be inside the cached image. Our recommendation is to adjust the image accordingly to include these applications from the start.
+- The available space for installing extra software in the root location is limited. As a result, although the `outbound` feature allows for the downloading and installation of certain apps, it's recommended to pre-install these applications directly into the image. This approach not only saves space but also speeds up task completion as the necessary software with be inside the cached image. Our recommendation is to adjust the image accordingly to include these applications from the start.
 
 - You can increase the `tmpfs` partitions up to the limit of the memory available to your VM, however, it will be at the cost of memory available for your application. Note, to do this you need to make sure that the required tools/commands are installed in your image.
 
