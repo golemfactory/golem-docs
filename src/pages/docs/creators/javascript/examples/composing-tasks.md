@@ -21,6 +21,7 @@ The following commands are currently available:
 | Command          | Available in node.js | Available in web browser |
 | ---------------- | :------------------: | :----------------------: |
 | `run()`          |         yes          |           yes            |
+| `runAndStream()` |         yes          |           yes            |
 | `uploadFile()`   |         yes          |            no            |
 | `uploadJson()`   |         yes          |           yes            |
 | `downloadFile()` |         yes          |            no            |
@@ -29,7 +30,7 @@ The following commands are currently available:
 | `downloadJson()` |          no          |           yes            |
 
 {% alert level="info" %}
-This article focuses on the `run()` command and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](/docs/creators/javascript/examples/transferring-data) article.
+This article focuses on the `run()`, `runAndStream()` commands and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](/docs/creators/javascript/examples/transferring-data) article.
 {% /alert %}
 
 We'll start with a simple example featuring a single `run()` command. Then, we'll focus on organizing a more complex task that requires a series of steps:
@@ -126,3 +127,19 @@ Since closing the chain with `.endStream()` produces ReadableStream, you can als
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/alert-code.mjs" language="javascript" /%}
 
 {% /alert %}
+
+### Running commands and collecting output as a stream
+
+Here are two examples of how to run a command and collect its output as a stream.
+
+#### Basic runAndStream scenario
+
+In the first example, we run a command that produces both stdout and stderr outputs that we pass to the console. This command will terminate on its own after ten cycles.
+
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/streams/stream-onclose.mjs" language="javascript" /%}
+
+#### runAndStream scenario with timeout defined
+
+In this example, we show how to use `remoteProcess.waitForExit()` to terminate the process. Note that in the current implementation, the exit caused by timeout will terminate the activity on a provider, therefore the user cannot run another command on the provider. Task executor will run the next task on another provider.
+
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/streams/stream-waitforexit.mjs" language="javascript" /%}
