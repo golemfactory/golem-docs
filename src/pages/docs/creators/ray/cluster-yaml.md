@@ -114,7 +114,7 @@ We're eager to hear your feedback on the clarity, usability, or interesting usag
 
 #### Webserver port
 
-Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to/from your cluster.
+Ray on Golem uses `ray-on-golem` server as its gateway to the Golem Network. It controls Ray's head and worker nodes, takes care of signing agreements, executing payments to Golem providers and all other aspects inherent in the Golem ecosystem. The `webserver_port` property tells the server which TCP port it should listen on.
 
 #### Network
 
@@ -138,13 +138,10 @@ By default, Ray on Golem uses prepackaged VM images including
 [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) 
 Python and Ray versions.
 
-However, you can use these properties to override the default and request a specific image.
-Supported tags are available on 
-[Golem registry](https://registry.golem.network/explore/golem/ray-on-golem). 
-Make sure you use an image with the matching version with your `ray-on-golem` package.
+However, you can request a different image - either [supplied by us](https://registry.golem.network/explore/golem/ray-on-golem) or any other - as long as it's built using the version of `ray-on-golem` which matches your installation.
 
 More specifically, you might want to replace the vanilla Python image with one that supports 
-Golem GPU providers.
+Golem GPU providers (e.g. `golem/ray-on-golem:0.10.0-py3.10.13-ray2.9.3-cuda11.8`).
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 

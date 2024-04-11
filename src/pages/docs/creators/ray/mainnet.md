@@ -73,7 +73,7 @@ Even if you do have the required funds, `ray up` will nevertheless print the onb
 
 The onboarding process is a convenient and effortless way of providing your Ray on Golem node with funds allowing it to run on the mainnet.
 
-Initially, your Golem node generates and later manages its own Ethereum wallet that is used to perform transactions. This wallet starts empty and Ray on Golem can transparently obtain testnet tokens when you run it on testnet. 
+Initially, your Golem node generates and later manages its own Ethereum wallet, which is used to perform transactions. This wallet starts empty and Ray on Golem transparently obtains funds needed to operate on testnet. 
 
 To fill it with mainnet funds, the onboarding portal guides you through the creation of a separate, web-browser wallet, getting GLM and MATIC tokens there, and finally transferring them to the wallet used by Ray on Golem.
 
@@ -102,7 +102,7 @@ Ray on Golem provides a couple of mechanisms to give you control over your spend
 
 Golem Network is peer-to-peer, which means that providers' proposals are not always available at first. They get broadcasted only from time to time.
 
-This means that when you first start Ray on Golem it might take a while to find a provider matching all your requirements.
+This means that when you first start Ray on Golem, it might take a while to find a provider matching all your requirements.
 
 Ray on Golem is using the Golem node (`yagna`) for interacting with the network.
 The `ray up` starts it if it is not running, but `ray down` doesn't stop it. 
