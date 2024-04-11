@@ -586,6 +586,15 @@ export const navigation = [
           },
         ],
       },
+      {
+        title: 'Golem concepts for developers',
+        children: [
+          {
+            title: 'Filesystem on providers',
+            href: '/docs/creators/common/providers-filesystem',
+          },
+        ],
+      },
     ],
   },
   {

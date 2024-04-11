@@ -24,10 +24,45 @@ This example utilized the `golem/examples-outbound:latest` image deployed on one
 
 Take a look at this output to better understand some Golem concepts.
 
-- The ‘/’ directory is limited to 128 MB of size as it's a filesystem stored in memory and can't be increased.
-- ‘Tmpfs` directories are by default limited to 50% of the provider's allocated memory.
+- The filesystem mounted under ‘/’ is limited to 128 MB of size as it's a filesystem stored in memory and can't be increased.
+- Filesystems of ‘tmpfs` type are by default limited to 50% of the provider's allocated memory (more precisely: container's memory).
 - The `/` and `tmpfs` directories are stored in the provider's memory.
 - The ‘/golem/work’ directory has much more space available, as it has access to disk storage offered by the provider. While this might not be obvious, this folder was defined as the `VOLUME` directory in the Dockerfile, that was used to create the `golem/examples-outbound: latest` image. On this provider, the user can utilize up to 13.8 GB of disk storage.
+
+Let's make another experiment: if you run the command `ls -l /golem` on a VM built from that image, you'll receive an output similar to this:
+
+```
+ drwxrwxr-x    2 1000     1000          4096 Apr 11 07:41 work
+```
+
+Note the owner of this directory.
+
+Let's create a file in this directory and check its permissions:
+
+```
+touch /golem/work/testfile
+ls -l /golem/work
+```
+
+The output should be:
+
+```
+-rw-r--r--    1 1000     1000             0 Apr 11 07:41 testfile
+```
+
+Now if you try to change the owner of this file:
+
+```
+chown root /golem/work/testfile
+```
+
+you will get an error:
+
+```
+chown: /golem/work/testfile: Operation not permitted"
+```
+
+as for the provider's security, the features on this filesystem are limited.
 
 ## Important conclusions from these observations
 
@@ -43,6 +78,10 @@ Take a look at this output to better understand some Golem concepts.
 
 - If your software produces a large amount of data, save the output to a directory defined as a `VOLUME`.
 
+- The Linux filesystem features on the filesystem marked as VOLUME are limited.
+
 ## A graphical representation
+
+Take a look at this picture that visualizes topics discussed in this article.
 
 ![Filesystem on a VM](/requestor-vm-comms.jpg)
