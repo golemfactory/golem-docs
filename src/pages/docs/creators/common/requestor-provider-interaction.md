@@ -283,6 +283,6 @@ DemandUnsubscribed {
 
 {% docnavigation title="See also" %}
 
-- [Working with Events JS](/docs/creators/javascript/examples/workingpwith-events) example.
+- [Working with Events JS](/docs/creators/javascript/examples/working-with-events) example.
 
 {% /docnavigation %}
