@@ -16,6 +16,7 @@ If you installed Yagna using our quick-installer, execute the following commands
 
 ```bash
 rm ~/.local/bin/yagna
+rm ~/.local/bin/gftp
 rm -rf ~/.local/share/yagna
 rm -rf ~/.local/share/ya-installer
 ```
@@ -52,8 +53,6 @@ Then remove using `rm <the-path-to-the-file>`.
 {% tab label="Linux" %}
 
 The configuration and data files for the Yagna daemon are saved in a directory specified by the `YAGNA_DATADIR` environment variable. If you haven't set this variable, Yagna uses a default directory: `~/.local/share/yagna`.
-
-
 
 To find out if your data is stored in a custom location, type this command in the terminal:
 
@@ -109,15 +108,71 @@ On Windows, you can remove the zip file downloaded from Github.
 
 To determine if `gvmkit-build` is installed globally on your system, run the following command:
 
+{% tabs %}
+{% tab label="JavaScript/npm" %}
+Note that npm must be installed.
+
+{% tabs %}
+{% tab label="Linux" %}
+
 ```sh
 npm ls -g | grep gvmkit
 ```
 
+{% /tab %}
+{% tab label="Windows" %}
+
+```sh
+npm ls -g | findstr gvmkit
+```
+
+{% /tab %}
+{% /tabs %}
+
+{% /tab %}
+{% tab label="Python/pip" %}
+Note that python3/python with a pip installer is required.
+
+{% tabs %}
+{% tab label="Linux" %}
+
+```bash
+pip list | grep gvmkit
+```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```bash
+pip list | findstr gvmkit
+```
+
+{% /tab %}
+{% /tabs %}
+
+{% /tab %}
+{% /tabs %}
+
 If the command finds `gvmkit-build`, you can remove it by executing:
+
+{% tabs %}
+{% tab label="JavaScript/npm" %}
+Note that npm must be installed.
 
 ```sh
 npm uninstall -g gvmkit-build
 ```
+
+{% /tab %}
+{% tab label="Python/pip" %}
+Note that python3/python with a pip installer is required.
+
+```bash
+pip uninstall -g gvmkit-build
+```
+
+{% /tab %}
+{% /tabs %}
 
 {% docnavigation title="See also" %}
 
