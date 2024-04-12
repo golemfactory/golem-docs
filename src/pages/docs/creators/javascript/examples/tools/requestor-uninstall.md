@@ -7,17 +7,17 @@ type: Instructions
 # Golem Requestor uninstallation guide
 
 {% alert level="warning" %}
-Before removing Yagna please make sure you have backup-up your private key to the address where you have GLMs. You can find instructions [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
+Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
 {% /alert %}
 
 ## Quick path (Linux only)
 
-If you used default settings for installation, this set of commands should be sufficient:
+If you installed Yagna using our quick-installer, execute the following commands to remove all associated components:
 
 ```bash
 rm ~/.local/bin/yagna
-rm -fr ~/.local/share/yagna
-rm -fr ~/.local/share/ya-installer
+rm -rf ~/.local/share/yagna
+rm -rf ~/.local/share/ya-installer
 ```
 
 ## Detailed instructions for custom installations
@@ -26,7 +26,7 @@ rm -fr ~/.local/share/ya-installer
 
 {% tabs %}
 {% tab label="Linux" %}
-The default Yagna binaries (actually link to binaries) location is: `~/.local/bin/yagna`.
+Yagna binaries are typically located at: `~/.local/bin/yagna`.
 
 ```bash
 rm ~/.local/bin/yagna
@@ -34,8 +34,8 @@ rm ~/.local/bin/yagna
 
 {% /tab %}
 {% tab label="Windows" %}
-The Yagna is "installed" manually by unziping the archive file. All you need to do is find and remove two files: `yagna.exe` and `gftp.exe`.
-If they are within your path, you can find them using:
+Yagna is manually installed by extracting from an archive. Simply locate and delete the `yagna.exe` and `gftp.exe` files.
+If they are in your system's PATH, you can locate them with the following command:
 
 ```sh
 whereis yagna gftp
@@ -51,15 +51,17 @@ Then remove using `rm <the-path-to-the-file>`.
 {% tabs %}
 {% tab label="Linux" %}
 
-Yagna daemon configuration and persistent files are stored in the location defined by the `YAGNA_DATADIR` environment variable. If it was not set, then the default location for Yagna data is: `~/.local/share/yagna`.
+The configuration and data files for the Yagna daemon are saved in a directory specified by the `YAGNA_DATADIR` environment variable. If you haven't set this variable, Yagna uses a default directory: `~/.local/share/yagna`.
 
-To check if you use a custom data location run:
+
+
+To find out if your data is stored in a custom location, type this command in the terminal:
 
 ```bash
 echo $YAGNA_DATADIR
 ```
 
-To remove Yagna data in default location use:
+If your Yagna data is in the default directory and you wish to remove it, use the following command:
 
 ```bash
 rm -r ~/.local/share/yagna
@@ -69,13 +71,13 @@ rm -r ~/.local/share/yagna
 {% tab label="Windows" %}
 Yagna daemon configuration and persistent files are stored in the location defined by the `YAGNA_DATADIR` environment variable. If it is not set, then the default location for Yagna data is: `%HOMEPATH%\AppData\Roaming\GolemFactory\yagna`.
 
-To check if you use a custom data location run:
+To verify whether you're using a custom location for Yagna data, execute this command:
 
 ```sh
 set YAGNA_DATADIR
 ```
 
-To remove Yagna data in default location use:
+If your Yagna data is in the default directory and you wish to remove it, use the following command:
 
 ```sh
 rm -r %HOMEPATH%\AppData\Roaming\GolemFactory\yagna
@@ -89,7 +91,7 @@ rm -r %HOMEPATH%\AppData\Roaming\GolemFactory\yagna
 {% tabs %}
 {% tab label="Linux" %}
 
-To remove Yagna installer files in default location use:
+To delete the Yagna installer files from their default location, enter the following command:
 
 ```bash
 rm -r ~/.local/share/ya-installer
@@ -105,13 +107,13 @@ On Windows, you can remove the zip file downloaded from Github.
 
 ## Uninstalling `gvmkit-build`
 
-You can check if you have installed `gvmkit-build` globally using:
+To determine if `gvmkit-build` is installed globally on your system, run the following command:
 
 ```sh
 npm ls -g | grep gvmkit
 ```
 
-If so, you can uninstall it with the following command:
+If the command finds `gvmkit-build`, you can remove it by executing:
 
 ```sh
 npm uninstall -g gvmkit-build
