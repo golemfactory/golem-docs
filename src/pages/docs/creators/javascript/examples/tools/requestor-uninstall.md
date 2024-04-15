@@ -1,10 +1,10 @@
 ---
-title: How to uninstall Golem Requestor?
+title: How to uninstall the Golem Requestor
 description: Step-by-step guide to removing Yagna components, configs, and data for Requestors.
 type: Instructions
 ---
 
-# Golem Requestor uninstallation guide
+# How to Uninstall the Golem Requestor
 
 {% alert level="warning" %}
 Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).

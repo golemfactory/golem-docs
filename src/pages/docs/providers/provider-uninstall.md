@@ -1,10 +1,10 @@
 ---
-title: How to uninstall Golem Provider?
+title: How to uninstall the Golem Provider
 description: Step-by-step guide to removing Yagna components, configs, and data for Providers.
 type: Instructions
 ---
 
-# Golem Provider uninstallation guide
+# How to uninstall the Golem Provider
 
 {% alert level="warning" %}
 Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/providers/wallet/backup).
@@ -76,7 +76,7 @@ rm -r ~/.local/share/ya-provider
 
 ## Removing the Runtimes directory
 
-The runtimes directory is defined by the `$EXE_UNIT_PATH` environment variable. If this variable is not defined the default location is: `~/.local/lib/yagna`.
+The runtimes directory is defined by the `EXE_UNIT_PATH` environment variable. If this variable is not defined the default location is: `~/.local/lib/yagna`.
 
 To verify if you use a custom data location, execute the following command:
 
@@ -92,6 +92,6 @@ rm -r ~/.local/lib/yagna
 
 {% docnavigation title="See also" %}
 
-- If you are looking for intructions for Requestors see [here](/docs/creators/javascript/examples/tools/requestor-uninstall).
+- If you're looking for intructions on how to uninstall the requestor, [click here](/docs/creators/javascript/examples/tools/requestor-uninstall).
 
 {% /docnavigation %}
