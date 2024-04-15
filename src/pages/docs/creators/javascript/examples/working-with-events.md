@@ -43,4 +43,4 @@ In the Task Executor context, you can have two types of events:
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/observing-events.mjs" language="javascript" /%}
 
-The complete list of golemEvents and their documentation is available [here](https://docs.golem.network/docs/golem-js/reference/modules/events_events).
+The complete list of golemEvents and their documentation is available [here](/docs/golem-js/reference/modules/events_events).

@@ -1,6 +1,6 @@
 ---
 title: How a requestor interacts with providers
-description: A description of a typical interaction between a requestor and provider, illustrated with JS SDK events.
+description: A description of a typical interaction between a requestor and provider, illustrated with golem-js SDK events.
 type: Guide
 ---
 
@@ -15,7 +15,7 @@ On the provider side there is also a Yagna present, augmented with a provider lo
 
 ## The story
 
-We have run a simple requestor script employing the Task Model and logged emitted events to show you how internally Golem Network works. The events in the list below are filtered (similar events are removed to make the store more readable) and sometimes reordered to keep related topics in the same section.
+We have run a simple requestor script employing the Task Model and logged emitted events to show you how internally Golem Network works. The events in the list below are filtered (similar events are removed to make the story more readable) and sometimes reordered to keep related topics in the same section.
 For some events we have only listed their names, for others we show some additional details to make this description easier to understand.
 
 When your requestor script starts, it connects to the yagna demon. To get access to yagna API, it is using the `app-key`. In our tutorials, we use a special 'try_golem' app-key.
@@ -105,7 +105,7 @@ ProposalRejected {
 
 ### Agreement
 
-Once all the conditions are agreed the requestor will create an `agreement` and will send it to the Provider.
+Once all the conditions are agreed upon, the requestor will create an `agreement` and send it to the Provider.
 The `agreement` is a set of eventually agreed conditions that will define the engagement between the requestor and a provider.
 
 ```bash
@@ -180,7 +180,7 @@ In the Task model, such a sequence will be repeated to complete all commands for
 
 ### Debit Note
 
-`Debit notes` are intermediate notices on the current costs and resource usage that providers send regularly to the requestors. In the longer engagements debit notes may also trigger partial payments.
+`Debit notes` are notifications regularly sent by providers to requestors that detail current costs and resource usage. In longer agreements, these debit notes may also trigger partial payments for current usage, ensuring providers receive regular payments throughout the duration of the contract, rather than solely at the end.
 Debit notes must be timely accepted by the requestors, to confirm that they are still present in the network and engaged (this is handled by SDK logic that can be configured by the requestor user).
 
 Note that Debit Notes are related to particular activities.
@@ -202,7 +202,7 @@ DebitNoteReceived {
 
 ### Invoices
 
-The provider sends the invoice when the agreement is terminated. The agreement may be terminated by the requestor (when he has no more tasks to execute for this provider), or by the provider (i.e. agreed agreement duration would expire, or the requestor would fail to accept a `debit note` on time).
+The agreement can be terminated either by the requestor, if there are no more tasks to be executed with the provider, or by the provider due to expiration of the agreed duration or the requestor's failure to timely accept a debit note. Upon termination of the agreement, the provider will send an invoice.
 
 ```bash
 InvoiceReceived {
@@ -220,7 +220,7 @@ InvoiceReceived {
 
 ### Payments
 
-The requestor accepts the payment and the payment driver used by Yagna will handle the payment process.
+The requestor accepts the payment and the payment driver used by Yagna will handle the processing of the payment.
 
 ```bash
 PaymentAccepted {

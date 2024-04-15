@@ -87,7 +87,7 @@ Your manifest is ready and stored in the `manifest.json` file.
 
 The example below demonstrates how to define the demand that will get access to the Internet.
 
-Here there is the manifest:
+Here's the manifest
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/outbound/manifest.json" language="javascript" /%}
 
@@ -131,7 +131,7 @@ const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 Note: This example shows how to use the outbound whitelist to install a npm package on a provider. It is recommended to install additional packages in a directory that is defined as `VOLUME` in the image definition, to avoid filesystem capacity limits. 
 If you have a large number of packages you should rather install them during the image build phase - you will avoid installing them on each provider separately and get your providers ready in a shorter time.   
 
-Here there is the manifest:
+Here's the manifest:
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/outbound/manifest_npm_install.json" language="javascript" /%}
 
