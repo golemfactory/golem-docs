@@ -16,17 +16,17 @@ The migration from GNT to GLM is still ongoing and users can convert their GNT t
 
 If you still possess the GNT token and want to migrate to the new GLM token then go to https://migrate.golem.network/.
 
-The tGLM is a GLM token operated on test blockchains such as Holesky, and Mumbai, (in the past: Goerli, Rinkeby). It has no real financial value and is used to facilitate running applications on the test network.
+The token tGLM (t for test) is used on test blockchains such as Holesky, and Mumbai, (in the past: Goerli, Rinkeby). It has no real financial value and is used to facilitate running applications on the testnet.
 
 # Testnet / Mainnet, Addresses and Wallets
 
 `Testnet` means that part of the Golem Network, that accepts payments on test networks. By default the requestor node uses testnet.
-A Requestor user can choose to select the preferred blockchain. His demand will be matched by offers from providers that accept payments on test blockchains. Golem Network and its community operate some nodes to provide a testing environment for developers.
-`yagna payment fund` is a command to obtain tokens necessary to run applications on the`testnet`: both tGLM and the chain native token used to pay gas fees.
+Requestor users can select their preferred blockchain. Their demand will be matched by offers from providers that accept payments on test blockchains. Golem Network and its community operate some providers on the testnet that serves as a testing environment for developers.
+`yagna payment fund` is a command to obtain tokens necessary to run applications on the `testnet`: both tGLM and the chain native token used to pay gas fees.
 
-`Mainnet` is the part of the Golem Network, that accepts payments on production blockchains. At this moment we support transactions on Ethereum Mainnet and Polygon, but due to the gas fees, we recommend using Polygon.  
+`Mainnet` is the part of the Golem Network, that accepts payments on production blockchains. At this moment we support transactions on Ethereum Mainnet and Polygon, but due to the high gas fees on the Ethereum Mainnet, we recommend using Polygon.  
 Provider configuration by default accepts payments on production networks.
-To operate on the Mainnet the requestor needs to supply his Yagna wallet with GLMs and gas tokens on the respective network. On Polygon you need then GLMs and MATICS.
+To operate on the Mainnet the requestor needs to supply his Yagna wallet with GLM and gas tokens on the respective network. On Polygon you'll need GLM and MATIC.
 Golem facilitates the process of acquiring GLMs and Matics on our Onboarding Page.
 
 (Note, the term `Mainnet` is also used to identify the Ethereum main blockchain: in such a case we refer to it as `Ethereum Mainnet`).
@@ -43,8 +43,8 @@ If you would like to use another blockchain address to pay from, you need to imp
 You can also export the private key Yagna is using (`yagna id export --help`).
 By default, Yagna is importing and exporting keys in [secret storage format](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition).
 
-How the payment network is selected:
+## How the payment network is selected
 
-Providers, by default, accept payments on both Polygon and Ethereum Mainnet. Users can change this setting using `golemsp run --payment-network <natwork-tag>`.
+Providers, by default, accept payments on both Polygon and Ethereum Mainnet. Users can change this setting using `golemsp run --payment-network <network>`.
 
 Requestors in their demands define their preferred payment network(s). Golem Network matches demands with offers and automates the process of agreeing on what blockchain will be used for payments. The set of parameters describing the payment driver, the blockchain network, and the token is called the payment platform.
