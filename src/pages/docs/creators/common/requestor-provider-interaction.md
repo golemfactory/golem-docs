@@ -32,7 +32,7 @@ Then the 'Demand' is sent to the network. The demand is a description of the res
 
 {% alert level="info" %}
 
-You can read more about payment process [here](/docs/golem/payments).
+You can read more about the payment process [here](/docs/golem/payments).
 
 {% /alert %}
 
@@ -85,7 +85,7 @@ ProposalReceived {
 }
 ```
 
-Then a negotiation process starts. In actual implementation, each side of the negotations responds only with a half of the `proposal` that contains the content that originates from that party, so Requestor respond only with the updated `demand` part and Provider only the updated `offer` part. This is an automated process, based on the parameters defined by the user in the requestor script and `ya-provider's` configuration. This process is continued until all conditions are agreed upon, or either of the party disengage i.e. due the signing an `agreement` with another entitiy.
+Then a negotiation process starts. In actual implementation, each side of the negotiations responds only with half of the `proposal` that contains the content that originates from that party, so the Requestor responds only with the updated `demand` part and the Provider only with the updated `offer` part. This is an automated process, based on the parameters defined by the user in the requestor script and `ya-provider's` configuration. This process is continued until all conditions are agreed upon, or either of the parties disengages i.e. due to the signing an `agreement` with another entity.
 
 ```bash
 ProposalResponded {
@@ -144,7 +144,7 @@ Note that the requestor may have agreements with multiple providers at the same 
 
 ### Activity
 
-Once the agreement is confirmed by both parties, we can start the deployment of our image to run a VM. At first, the `activity` is created. You can imagine an activity as a representation of a VM instance run on a provider. In theory you may have more than one activity under the same agreement, but at this moment typical providers offer a single one at the same time.
+Once the agreement is confirmed by both parties, we can start the deployment of our image to run a VM. At first, the `activity` is created. You can imagine an activity as a representation of a VM instance run on a provider. In theory, you may have more than one activity under the same agreement, but at this moment typical providers offer a single one at the same time.
 
 ```bash
 ActivityCreated {
@@ -162,7 +162,7 @@ ActivityStateChanged { id: 'b284fcf996ed4b8da7cd1012233d23a1', state: 'Initializ
 ### Scripts
 
 In the task model, the chunk of work is defined as a task (function). A task is a set of commands that the requestor wants to execute to obtain desired results.
-Internally all the commands are organized as `scripts`, that are sent and executed on a provider. There is a number of commands (depending on the time of type of the runtime utilized) available for the requestor. For a VM, you can `start`, `deploy`, `run`, `transfer` and `terminate`. So, as you see, even the initial image deployment is sent and executed as a script, but the user does not need to bother about it, as it is all handled by the Golem SDKs.
+Internally all the commands are organized as `scripts`, that are sent and executed on a provider. There are several commands (depending on the time of type of the runtime utilized) available for the requestor. For a VM, you can `start`, `deploy`, `run`, `transfer`, and `terminate`. So, as you see, even the initial image deployment is sent and executed as a `script`, but the user does not need to bother about it, as it is all handled by the Golem SDKs.
 
 ```bash
 ScriptSent {
@@ -185,7 +185,7 @@ In the Task model, such a sequence will be repeated to complete all commands for
 
 ### Debit Note
 
-`Debit notes` are notifications regularly sent by providers to requestors that detail current costs and resource usage. In longer agreements, these debit notes may also trigger partial payments for current usage, ensuring providers receive regular payments throughout the duration of the contract, rather than solely at the end.
+`Debit notes` are notifications regularly sent by providers to requestors that detail current costs and resource usage. In longer agreements, these debit notes may also trigger partial payments for current usage, ensuring providers receive regular payments throughout the contract, rather than solely at the end.
 Debit notes must be timely accepted by the requestors, to confirm that they are still present in the network and engaged (this is handled by SDK logic that can be configured by the requestor user).
 
 Note that Debit Notes are related to particular activities.
@@ -205,7 +205,7 @@ DebitNoteReceived {
 }
 ```
 
-In soma cases the acceptance of the DebitNote can fail. In the example below the acceptance for a debit note is rejected as it was already covered by the invoice payment. This particular case is because both invoices and debit notes are processed asynchronously and the SDK logic takes care to manage it in a proper way to avoid double payments.
+In some cases, the acceptance of the DebitNote can fail. In the example below the acceptance for a debit note is rejected as it was already covered by the invoice payment. This particular case is because both invoices and debit notes are processed asynchronously and the SDK logic takes care to manage it in a proper way to avoid double payments.
 
 ```bash
 PaymentFailed {
@@ -217,7 +217,7 @@ PaymentFailed {
 
 ### Invoices
 
-The agreement can be terminated either by the requestor, if there are no more tasks to be executed with the provider, or by the provider due to expiration of the agreed duration or the requestor's failure to timely accept a debit note. Upon termination of the agreement, the provider will send an invoice.
+The `agreement` can be terminated either by the requestor, if there are no more tasks to be executed with the provider, or by the provider due to the expiration of the agreed duration or the requestor's failure to timely accept a debit note. Upon termination of the `agreement`, the provider will send an invoice.
 
 ```bash
 InvoiceReceived {
@@ -255,7 +255,7 @@ The payment is executed on a blockchain and the GLM transfer and the confirmatio
 
 ### Closing the interaction
 
-When the agreement is terminated the activity is destroyed, so our VM is not running anymore.
+When the `agreement` is terminated the `activity` is destroyed, so our VM is not running anymore.
 
 ```bash
 ActivityDestroyed {
@@ -278,7 +278,7 @@ AgreementTerminated {
 }
 ```
 
-When requestor script completes all the tasks or it was terminated, it will unsubscribe its demand from the market and release the allocation created at the begining of the process.
+When the requestor script completes all the tasks or when it is terminated, it will unsubscribe its `demand` from the market and release the `allocation` created at the beginning of the process.
 
 ```bash
 DemandUnsubscribed {
