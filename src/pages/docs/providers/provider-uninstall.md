@@ -34,7 +34,7 @@ Yagna binaries are typically located at: `~/.local/bin/`. Run the following comm
 rm ~/.local/bin/yagna && rm ~/.local/bin/golemsp && rm ~/.local/bin/ya-provider
 ```
 
-### Removing Yagna binaries
+### Removing Yagna data and configuration
 
 Yagna daemon configuration and persistent files are stored in the location defined by the `YAGNA_DATADIR` environment variable. If it was not set, then the default location for Yagna data is: `~/.local/share/yagna`.
 
@@ -50,9 +50,9 @@ To remove the data in the default location, execute the command:
 rm -r ~/.local/share/yagna
 ```
 
-## Removing Yagna installer files
+## Removing the Yagna installer files
 
-To remove the data in the default location, execute the command:
+To remove the data in the default installer location, execute the command:
 
 ```bash
 rm -r ~/.local/share/ya-installer
