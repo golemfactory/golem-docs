@@ -5,7 +5,7 @@ pageTitle: VM Filesystem - how the image design impacts my options.
 type: Guide
 ---
 
-# Filesystem on VM run on a remote node
+# Understanding the filesystem in VMs operated on providers
 
 Your options of what you can do on a provider will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your Dockerfile. ([Read here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
 
