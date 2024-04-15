@@ -15,6 +15,8 @@ The basic premise of the Golem Network is as follows:
 
 The payments are made with Golem Network's native ERC-20 token, [GLM](https://etherscan.io/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429), using either the Ethereum Mainnet directly or, preferably, one of the [Layer 2 solutions](/docs/golem/payments/layer-2-payments).
 
+The combination of the token, the chain where the payment transaction will be executed, and the payment driver - a tool that facilitates the payment, is called a `payment platform`.
+
 Of course, such a simplified description only answers the most basic question about the roles of providers and requestors in Golem and defines the actual transaction layer. Below, we'd like to give you a glimpse at the process through which the payments for providers' services are arranged and paid for, without delving into the nature of those services.
 
 ## Pay as you go
@@ -39,7 +41,7 @@ One important factor influencing any decisions regarding the payment solutions i
 
 While we were able to cut the transaction fees by orders of magnitude using Layer 2 solutions (initially zkSync and more recently - Polygon), they still constitute a substantial portion of the value of the payment itself.
 
-Naturally, the requestor's aim in such a scenario is to optimize this cost by performing as few transactions as possible. 
+Naturally, the requestor's aim in such a scenario is to optimize this cost by performing as few transactions as possible.
 
 Contrariwise, the providers are equally interested in transactions happening as often as possible to ensure they are not left with uncovered, already incurred costs should the agreement be broken by the other side.
 
@@ -91,4 +93,3 @@ For other options, refer to the [erc20next driver README.md](https://github.com/
 - [Layer 2 payments](/docs/golem/payments/layer-2-payments)
 
 {% /docnavigation %}
-

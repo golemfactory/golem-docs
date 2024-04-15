@@ -29,12 +29,18 @@ One of the first actions is to create `Allocation` - a budget that is `reserved`
 `DemandSubscribed`
 
 Then the 'Demand' is sent to the network. The demand is a description of the resources and services that the requestor needs, the `payment platform` the requestor can use, together with the information on the image that the requestor intends to run on a provider.
-The `payment platform` is a combination of the token, the chain where the payment transaction will be executed, and the payment driver - a tool that facilitates the payment and enables both sides to confirm that the actual payment transaction was completed.
+
+{% alert level="info" %}
+
+You can read more about payment process [here](/docs/golem/payments).
+
+{% /alert %}
+
 The Yagna market module matches the demand with the offers from providers. The `offer` is a specification of the provider's resources, services, and accepted payment platforms. The pair of matched demand and offer is called a `proposal`.
 
 ### Proposal
 
-Then the Requestor is presented with proposals. In the example below, you can see some detailed information from the offer: the provider's details, its resources, and capabilities.
+The Requestor is presented with proposals. In the example below, you can see some detailed information from the offer: the provider's details, its resources, and capabilities.
 
 ```bash
 ProposalReceived {
@@ -79,7 +85,7 @@ ProposalReceived {
 }
 ```
 
-Then a negotiation process starts. This is an automated process, based on the parameters defined by the user in the requestor script and `ya-provider's` logic. In this process, both the requestor and the provider respond with their proposals until all parameters are agreed upon.
+Then a negotiation process starts. In actual implementation, each side of the negotations responds only with a half of the `proposal` that contains the content that originates from that party, so Requestor respond only with the updated `demand` part and Provider only the updated `offer` part. This is an automated process, based on the parameters defined by the user in the requestor script and `ya-provider's` configuration. This process is continued until all conditions are agreed upon, or either of the party disengage i.e. due the signing an `agreement` with another entitiy.
 
 ```bash
 ProposalResponded {
@@ -105,7 +111,7 @@ ProposalRejected {
 
 ### Agreement
 
-Once all the conditions are agreed upon, the requestor will create an `agreement` and send it to the Provider.
+Once all the conditions are agreed upon, the requestor will create an `agreement` based on the latest proposals and send it to the Provider.
 The `agreement` is a set of eventually agreed conditions that will define the engagement between the requestor and a provider.
 
 ```bash
@@ -138,7 +144,7 @@ Note that the requestor may have agreements with multiple providers at the same 
 
 ### Activity
 
-Once the agreement is confirmed by both parties, we can start the deployment of our image to run a VM. At first, the `activity` is created. You can imagine an activity as a representation of a VM instance run on a provider. You may have more than one activity under the same agreement, but most of the providers offer a single one at the same time.
+Once the agreement is confirmed by both parties, we can start the deployment of our image to run a VM. At first, the `activity` is created. You can imagine an activity as a representation of a VM instance run on a provider. In theory you may have more than one activity under the same agreement, but at this moment typical providers offer a single one at the same time.
 
 ```bash
 ActivityCreated {
@@ -156,8 +162,7 @@ ActivityStateChanged { id: 'b284fcf996ed4b8da7cd1012233d23a1', state: 'Initializ
 ### Scripts
 
 In the task model, the chunk of work is defined as a task (function). A task is a set of commands that the requestor wants to execute to obtain desired results.
-Internally all the commands are organized as `scripts`, that are sent and executed on a provider.
-Even the initial image deployment is sent and executed as a script.
+Internally all the commands are organized as `scripts`, that are sent and executed on a provider. There is a number of commands (depending on the time of type of the runtime utilized) available for the requestor. For a VM, you can `start`, `deploy`, `run`, `transfer` and `terminate`. So, as you see, even the initial image deployment is sent and executed as a script, but the user does not need to bother about it, as it is all handled by the Golem SDKs.
 
 ```bash
 ScriptSent {
@@ -200,6 +205,16 @@ DebitNoteReceived {
 }
 ```
 
+In soma cases the acceptance of the DebitNote can fail. In the example below the acceptance for a debit note is rejected as it was already covered by the invoice payment. This particular case is because both invoices and debit notes are processed asynchronously and the SDK logic takes care to manage it in a proper way to avoid double payments.
+
+```bash
+PaymentFailed {
+  id: '8aaad984-b03a-48d4-bea4-ac49dd4394c3',
+  agreementId: '0ecd3882e3460d47ff98cb5d2abb9b0ad055ae8be79074614d03102b8a81e45f',
+  reason: 'DebitNote 8aaad984-b03a-48d4-bea4-ac49dd4394c3 rejected because the agreement 0ecd3882e3460d47ff98cb5d2abb9b0ad055ae8be79074614d03102b8a81e45f is already covered with a final invoice that should be paid instead of the debit note'
+}
+```
+
 ### Invoices
 
 The agreement can be terminated either by the requestor, if there are no more tasks to be executed with the provider, or by the provider due to expiration of the agreed duration or the requestor's failure to timely accept a debit note. Upon termination of the agreement, the provider will send an invoice.
@@ -238,16 +253,6 @@ PaymentAccepted {
 
 The payment is executed on a blockchain and the GLM transfer and the confirmation is sent to the provider.
 
-The payment can be rejected. In the example below the payment for a debit note is rejected as it was already covered by the invoice payment. This particular case is because both invoices and debit notes are processed asynchronously and the SDK logic takes care to manage it in a proper way to avoid double payments.
-
-```bash
-PaymentFailed {
-  id: '8aaad984-b03a-48d4-bea4-ac49dd4394c3',
-  agreementId: '0ecd3882e3460d47ff98cb5d2abb9b0ad055ae8be79074614d03102b8a81e45f',
-  reason: 'DebitNote 8aaad984-b03a-48d4-bea4-ac49dd4394c3 rejected because the agreement 0ecd3882e3460d47ff98cb5d2abb9b0ad055ae8be79074614d03102b8a81e45f is already covered with a final invoice that should be paid instead of the debit note'
-}
-```
-
 ### Closing the interaction
 
 When the agreement is terminated the activity is destroyed, so our VM is not running anymore.
@@ -273,7 +278,7 @@ AgreementTerminated {
 }
 ```
 
-If all tasks in requestor scripts are completed the requestor will unsubscribe its demand from the market.
+When requestor script completes all the tasks or it was terminated, it will unsubscribe its demand from the market and release the allocation created at the begining of the process.
 
 ```bash
 DemandUnsubscribed {
