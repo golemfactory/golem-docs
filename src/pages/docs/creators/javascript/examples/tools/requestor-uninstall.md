@@ -104,7 +104,7 @@ On Windows, you can remove the zip file downloaded from Github.
 {% /tab %}
 {% /tabs %}
 
-## Uninstalling `gvmkit-build`
+## How to uninstall gvmkit-build
 
 To determine if `gvmkit-build` is installed globally on your system, run the following command:
 
