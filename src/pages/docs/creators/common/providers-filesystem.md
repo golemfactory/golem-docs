@@ -1,13 +1,13 @@
 ---
-title: 'Golem concepts: filesystem on remote node'
-description: Explore topics related to file system on a VM run on a remote node to better design your custom image.
+title: 'Golem concepts: filesystem on a provider'
+description: Explore topics related to file system on a VM run on a remote provider to better design your custom image.
 pageTitle: VM Filesystem - how the image design impacts my options.
 type: Guide
 ---
 
 # Filesystem on VM run on a remote node
 
-Your options of what you can do on a remote node will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your Dockerfile. ([Read here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
+Your options of what you can do on a provider will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your Dockerfile. ([Read here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
 
 If you run the command `df -h` on a VM built from this image on a provider, you'll receive an output similar to this:
 
@@ -20,7 +20,7 @@ tmpfs 632.8M 0 632.8M 0% /dev/shm
 mnt0 24.0G 10.2G 13.8G 42% /golem/work
 ```
 
-This example utilized the `golem/examples-outbound:latest` image deployed on one of the nodes in the `testnet`. If you run this test yourself, you might get different capacities for `tmpfs` and `mnt0` filesystems as they depend on the resources offered by the node on which you run the task.
+This example utilized the `golem/examples-outbound:latest` image deployed on one of the providers in the `testnet`. If you run this test yourself, you might get different capacities for `tmpfs` and `mnt0` filesystems as they depend on the resources offered by the provider on which you run the task.
 
 Take a look at this output to better understand some Golem concepts.
 
