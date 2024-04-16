@@ -28,7 +28,7 @@ There is also an image supporting Golem GPU Providers - learn more about [image 
 
 ## Platforms
 
-We have tested Ray on Golem on Ubuntu and WSL, but it should work on other Linux distributions. For now, we don't support MacOS or bare Windows.
+We have tested Ray on Golem on Ubuntu (22.04+) and WSL, but it should work on other Linux distributions. For now, we don't support MacOS or bare Windows.
 
 ## Libraries
 
