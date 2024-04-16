@@ -115,6 +115,8 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <GoogleAnalytics trackPageViews />
+
       <div className={inter.className}>
         <Head>
           <title>{pageTitle}</title>
