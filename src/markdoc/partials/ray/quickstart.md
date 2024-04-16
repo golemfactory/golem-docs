@@ -13,7 +13,7 @@ pip3 install -U ray-on-golem
 ```
 ```bash
 # Download the golem-cluster.yaml
-wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
+wget https://ray.golem.network/golem-cluster.yaml
 
 # In this command:
 # * yagna (golem-node) starts in the background (if not running)
