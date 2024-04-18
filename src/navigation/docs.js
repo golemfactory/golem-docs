@@ -640,7 +640,7 @@ export const navigation = [
       {
         title: 'Payments',
         children: [
-          { title: 'GLM token', href: '/docs/golem/payments/golem-token' },
+          { title: 'GLM token', href: '/docs/golem/overview/golem-token' },
           { title: 'Payments explained', href: '/docs/golem/payments' },
           {
             title: 'Layer 2 Payments',
