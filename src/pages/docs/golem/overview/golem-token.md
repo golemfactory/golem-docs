@@ -1,12 +1,20 @@
 ---
 title: Golem Tokens explained.
-description: Introduction to Golem Network Tokens, addresses and networks
+description: Introduction to Golem Network Tokens, addresses, and networks
 type: Article
 ---
 
+# What is a GLM?
+
+GLM is an ERC-20 utility token token, used as a currency to pay for renting resources from Golem Network Providers.
+
+## Where to buy GLM?
+
+You can acquire GLM on major crypto exchanges, but probably the most convenient way is to use our [Onboarding portal](https://glm.golem.network) where you will be assisted through the whole process.
+
 # GLM, GNT, and tGLM tokens explained
 
-Let's start from the beginning: The Golem Network Token (GNT) is a legacy Golem Network token, created in 2016 before the ERC-20 standard was introduced.
+The Golem Network Token (`GNT`) is a legacy Golem Network token, created in 2016 before the ERC-20 standard was introduced.
 
 Golem Network began the migration to `GLM`, a new, ERC-20 compliant token, at the end of 2020. The migration enabled the Golem Network to leverage Layer 2 solutions for payments, decentralized exchanges, and DeFi.
 
@@ -21,7 +29,7 @@ The token tGLM (t for test) is used on test blockchains such as Holesky, and Mum
 # Testnet / Mainnet, Addresses and Wallets
 
 `Testnet` means that part of the Golem Network, that accepts payments on test networks. By default the requestor node uses testnet.
-Requestor users can select their preferred blockchain. Their demand will be matched by offers from providers that accept payments on test blockchains. Golem Network and its community operate some providers on the testnet that serves as a testing environment for developers.
+Requestor users can select their preferred blockchain. Their demand will be matched by offers from providers that accept payments on test blockchains. Golem Network and its community operate some providers on the testnet that serve as a testing environment for developers.
 `yagna payment fund` is a command to obtain tokens necessary to run applications on the `testnet`: both tGLM and the chain native token used to pay gas fees.
 
 `Mainnet` is the part of the Golem Network, that accepts payments on production blockchains. At this moment we support transactions on Ethereum Mainnet and Polygon, but due to the high gas fees on the Ethereum Mainnet, we recommend using Polygon.  
