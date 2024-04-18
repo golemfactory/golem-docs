@@ -162,7 +162,7 @@ ActivityStateChanged { id: 'b284fcf996ed4b8da7cd1012233d23a1', state: 'Initializ
 ### Scripts
 
 In the task model, the chunk of work is defined as a task (function). A task is a set of commands that the requestor wants to execute to obtain desired results.
-Internally all the commands are organized as `scripts`, that are sent and executed on a provider. There are several commands (depending on the time of type of the runtime utilized) available for the requestor. For a VM, you can `start`, `deploy`, `run`, `transfer`, and `terminate`. So, as you see, even the initial image deployment is sent and executed as a `script`, but the user does not need to bother about it, as it is all handled by the Golem SDKs.
+Internally all the commands are organized as `scripts`, that are sent and executed on a provider. There are several commands (depending on the type of the runtime utilized) available for the requestor. For a VM, you can `start`, `deploy`, `run`, `transfer`, and `terminate`. So, as you see, even the initial image deployment is sent and executed as a `script`, but the user does not need to bother about it, as it is all handled by the Golem SDKs.
 
 ```bash
 ScriptSent {
