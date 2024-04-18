@@ -22,6 +22,8 @@ To resolve this:
 
 By uploading files exclusively to `VOLUME` directories, you can avoid this error.
 
+We've covered the way the filesystem works [here](/docs/creators/common/providers-filesystem) and we suggest giving it a read to understand the whole concept of why this is a requirement.
+
 {% /solution %}
 {% feedback identifier="js-sdk-receiver-is-gone" /%}
 {% /troubleshooting %}

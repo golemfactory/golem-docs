@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 const themeScript = `
   let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
@@ -43,6 +44,10 @@ export default function Document() {
     <Html className="antialiased [font-feature-settings:'ss01']" lang="en">
       <Head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <Script
+          strategy="beforeInteractive"
+          src={`https://cdn-cookieyes.com/client_data/8d9e86c3dd88742506b050d9/script.js`}
+        ></Script>
       </Head>
       <body className="bg-white dark:bg-darkbg">
         <Main />

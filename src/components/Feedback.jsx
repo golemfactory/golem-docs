@@ -4,9 +4,11 @@ import { event } from 'nextjs-google-analytics'
 
 const handleFeedback = (
   identifier,
+  helpful,
   setOpen,
   setShowThanks,
-  helpful,
+  setLoading,
+  feedback,
   article
 ) => {
   if (!identifier) {
@@ -17,13 +19,13 @@ const handleFeedback = (
   localStorage.setItem(identifier, helpful ? 'yes' : 'no')
   setOpen(false)
   setShowThanks(true)
+  setLoading(false)
 
-  // Google Analytics event tracking
-  event({
-    action: 'submit_feedback',
+  event('submit_feedback', {
     category: article ? 'article' : 'troubleshooting',
     label: identifier,
-    value: helpful ? 1 : 0, // 1 for helpful, 0 for not helpful
+    helpful: helpful ? 1 : 0,
+    feedback: feedback,
   })
 }
 
@@ -75,16 +77,18 @@ export function FeedbackButtons({ children, identifier, article = false }) {
           ) : (
             <>
               <button
-                onClick={() =>
+                onClick={() => {
+                  setLoading(true)
                   handleFeedback(
                     identifier,
-                    feedback,
+                    false,
                     setOpen,
                     setShowThanks,
-                    true,
-                    setLoading
+                    setLoading,
+                    feedback,
+                    article
                   )
-                }
+                }}
                 className={`group-peer group prose mr-4 flex items-center rounded-md border border-primary px-4 py-2 dark:border-darkprimary ${
                   feedback === 'yes'
                     ? 'bg-primaryhover text-white dark:bg-darkprimary'
@@ -172,6 +176,7 @@ export function FeedbackButtons({ children, identifier, article = false }) {
           showThanks={showThanks}
           setShowThanks={setShowThanks}
           setLoading={setLoading}
+          article={article}
         />
       </div>
     )
@@ -189,6 +194,7 @@ export const FeedbackModal = ({
   showThanks,
   setShowThanks,
   setLoading,
+  article,
 }) => {
   const cancelButtonRef = useRef(null)
   const [feedback, setFeedback] = useState('')
@@ -254,16 +260,18 @@ export const FeedbackModal = ({
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md bg-primary px-4 py-2 text-base font-medium text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80 sm:col-start-2"
-                    onClick={() =>
+                    onClick={() => {
+                      setLoading(true)
                       handleFeedback(
                         identifier,
-                        feedback,
+                        false,
                         setOpen,
                         setShowThanks,
-                        false,
-                        setLoading
+                        setLoading,
+                        feedback,
+                        article
                       )
-                    }
+                    }}
                   >
                     Send feedback
                   </button>

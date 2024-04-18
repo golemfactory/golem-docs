@@ -1,13 +1,13 @@
 {% troubleshooting %}
 
-## Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.	
+## Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.
 
 {% problem /%}
 
 When trying to execute a requestor script, you may encounter the following error message:
 
 ```
-Error: Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.	
+Error: Unable to get requestor accounts Error: connect ECONNREFUSED 127.0.0.1:7465.
 ```
 
 {% solution %}
@@ -30,5 +30,5 @@ yagnaOptions: {
 Alternatively, ensure the same `YAGNA_API_URL` value is used both when launching the yagna daemon and in the terminal window where you're executing the script.
 
 {% /solution %}
-{% feedback identifier="js-sdk-receiver-is-gone" /%}
+{% feedback identifier="js-sdk-yagna-not-running" /%}
 {% /troubleshooting %}
