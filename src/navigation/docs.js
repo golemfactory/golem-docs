@@ -593,6 +593,10 @@ export const navigation = [
             title: 'Filesystem on providers',
             href: '/docs/creators/common/providers-filesystem',
           },
+          {
+            title: 'How requestor interacts with providers',
+            href: '/docs/creators/common/requestor-provider-interaction',
+          },
         ],
       },
     ],
