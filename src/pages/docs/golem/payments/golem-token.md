@@ -1,7 +1,7 @@
 ---
 title: Golem Tokens explained.
 description: Introduction to Golem Network Tokens, addresses and networks
-type: noindex
+type: Article
 ---
 
 # GLM, GNT, and tGLM tokens explained
