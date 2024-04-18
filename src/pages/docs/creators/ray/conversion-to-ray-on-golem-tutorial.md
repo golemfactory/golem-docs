@@ -181,17 +181,17 @@ pip3 install -U ray-on-golem
 Now, run the following to start a basic cluster, based on our example configuration. Your cluster will run on our testnet - it is free, but not very powerful.
 
 ```bash
-# Download the golem-cluster.yaml
-wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
+# Download the dds-with-ray.yaml
+wget https://github.com/golemfactory/ray-on-golem/raw/main/examples/dds-with-ray.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
 # * ray-on-golem cluster manager starts in the background
 # * ray head node is started on a golem provider
-ray up golem-cluster.yaml --yes
+ray up dds-with-ray.yaml --yes
 
 # Check if Ray on Golem cluster is running
-ray exec golem-cluster.yaml 'ray status'
+ray exec dds-with-ray.yaml 'ray status'
 ```
 
 {% partial file="ray/example-cluster-testnet-and-cap.md" /%}
@@ -228,7 +228,7 @@ When you run the code, it takes a bit longer than previously, as Ray needs to cr
 With the cluster up and running, with Ray notified about endplay lib dependency, executing our app is as simple as:
 
 ```bash
-ray submit golem-cluster.yaml dds.py
+ray submit dds-with-ray.yaml dds.py
 ```
 
 ```
@@ -263,7 +263,7 @@ Notice how at first, there is only one node, and after the computation, there is
 The time needed to add new nodes might be too long for you to notice when you run the dds.py code as it is. If you increase `DEAL_CNT` and/or rerun the app, the difference will be more visible
 
 ```bash
-ray submit golem-cluster.yaml dds.py
+ray submit dds-with-ray.yaml dds.py
 ```
 
 ```
@@ -311,7 +311,7 @@ python3 dds.py
 And on Golem:
 
 ```bash
-ray submit golem-cluster.yaml dds.py
+ray submit dds-with-ray.yaml dds.py
 ```
 
 At some point (typically 100-200 deals tend to be enough), the execution on your Ray on Golem cluster will be visibly faster.
@@ -328,6 +328,6 @@ You can play with the script and with the cluster config yaml - change the maxim
 
 When you are done, it is a good practice to stop the cluster. In the default configuration, it runs on the free testnet, but keeping it running impairs the provider availability for others. On the other hand, when you run on the mainnet, stopping the cluster saves you money.
 
-```python
-ray down golem-cluster.yaml --yes
+```bash
+ray down dds-with-ray.yaml --yes
 ```

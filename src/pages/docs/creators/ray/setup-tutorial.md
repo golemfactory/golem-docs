@@ -41,7 +41,7 @@ The command to start the cluster is `ray up`:
 
 ```bash
 # Download the example golem-cluster.yaml
-wget https://github.com/golemfactory/ray-on-golem/raw/main/golem-cluster.yaml
+wget https://ray.golem.network/golem-cluster.yaml
 
 # In this command:
 # * yagna starts in the background (if not running)
