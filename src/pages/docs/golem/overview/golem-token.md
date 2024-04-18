@@ -6,11 +6,13 @@ type: Article
 
 # What is a GLM?
 
-GLM is an ERC-20 utility token token, used as a currency to pay for renting resources from Golem Network Providers.
+GLM is an ERC-20 utility token token, used as a currency to pay for renting resources from Golem Network providers.
 
 ## Where to buy GLM?
 
 You can acquire GLM on major crypto exchanges, but probably the most convenient way is to use our [Onboarding portal](https://glm.golem.network) where you will be assisted through the whole process.
+
+You can also get GLM as remuneration for your resources when you act as a [provider](/docs/providers).
 
 # GLM, GNT, and tGLM tokens explained
 
@@ -22,7 +24,7 @@ Currently, the GLM token is the one, used as currency for peer-to-peer transacti
 
 The migration from GNT to GLM is still ongoing and users can convert their GNT to GLM at a 1:1 ratio. The total supply of GLM will be the same as GNT, capped at 1 billion tokens.
 
-If you still possess the GNT token and want to migrate to the new GLM token then go to https://migrate.golem.network/.
+If you still possess the GNT token and want to migrate to the new GLM token then go to [https://migrate.golem.network/](https://migrate.golem.network/).
 
 The token tGLM (t for test) is used on test blockchains such as Holesky, and Mumbai, (in the past: Goerli, Rinkeby). It has no real financial value and is used to facilitate running applications on the testnet.
 
