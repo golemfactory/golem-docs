@@ -164,8 +164,8 @@ Want to use a YAML-based approach to configure the deployment
 [//]: <> ( comment is here )
 
 <!-- comment
-is 
-also 
+is
+also
 here
 -->
 
@@ -199,11 +199,11 @@ to find them. The page looked blank, so what we came up with was a custom compon
 The component accepts a title and a default value, and everything inside will be rendered as the description, and in here its possible to markdown syntax to for example highlight code.
 
 ```markdown {% process=false %}
-{% defaultvalue title="allocationExpires" defaultValue="60000 * 60" %} 
+{% defaultvalue title="allocationExpires" defaultValue="60000 * 60" %}
 Specifies the duration after which an allocation expires, in milliseconds. A valid allocation is essential for accepting invoices.
 {% /defaultvalue %}
 ```
 
-{% defaultvalue title="allocationExpires" defaultValue="60000 * 60" %} 
+{% defaultvalue title="allocationExpires" defaultValue="60000 * 60" %}
 Specifies the duration after which an allocation expires, in milliseconds. A valid allocation is essential for accepting invoices.
 {% /defaultvalue %}

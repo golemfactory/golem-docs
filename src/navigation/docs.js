@@ -682,7 +682,7 @@ export const navigation = [
         ],
       },
       {
-        title: 'Golem Migration Application Terms & Conditions and Guideline',
+        title: 'Golem Migration Application',
         children: [
           {
             title: 'Migration Terms and Conditions',
