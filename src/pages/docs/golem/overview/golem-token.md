@@ -12,7 +12,7 @@ GLM is an ERC-20 utility token token, used as a currency to pay for renting reso
 
 You can acquire GLM on major crypto exchanges, but probably the most convenient way is to use our [Onboarding portal](https://glm.golem.network) where you will be assisted through the whole process.
 
-You can also get GLM as remuneration for your resources when you act as a [provider](/docs/providers).
+You can also earn GLM for renting your hardware when you act as a [provider](/docs/providers).
 
 # GLM, GNT, and tGLM tokens explained
 
