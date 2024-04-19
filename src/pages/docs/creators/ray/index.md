@@ -11,6 +11,8 @@ type: Article
 This documentation is designed for developers wanting to run their **Python code** on Golem.
 We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 
+We are looking for {% link title="Beta Testers" href="https://ray.golem.network" %} {% /link %} - sign up to create Ray on Golem with us!
+
 - [Quickstart](/docs/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
 - [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
 - [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported Python and Ray versions, and other known issues
@@ -27,10 +29,10 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 
 Golem is a decentralized marketplace for computing power, where the providers let the requestors use their machines for a small fee.
 
-Ray on Golem makes it super easy to set up and use Golem Network to run your Ray application.
-
 Ray on the other hand is an open-source framework for scaling Python applications.
 It specializes in tooling for AI/ML applications, but at the same time, it is based on Ray Core which understands every piece of generic Python code.
+
+Ray on Golem makes it super easy to set up and use Golem Network to run your Ray application.
 
 ## Why Ray?
 
@@ -72,6 +74,7 @@ The basic flow of working with Ray and Ray on Golem consists of:
 - Starting up a Ray on Golem cluster initially consisting of only one node
 - Executing your app on Ray on Golem cluster, which automatically scales up and down to accommodate your app's needs
 - Stopping down your Ray on Golem cluster to free resources and to limit the cost
+- Terminating Ray on Golem background components when you no longer plan to start new clusters
 
 ## How to start
 

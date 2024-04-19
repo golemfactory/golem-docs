@@ -16,14 +16,19 @@ For more details check out the [Ray Cluster YAML Configuration Options](https://
 
 ## Example Ray on Golem cluster configuration
 
-The basic `golem-cluster.yaml` is [available on github](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluster.yaml).
+The basic `golem-cluster.yaml` is [available on github](https://ray.golem.network/golem-cluster.yaml).
 
 It allows you to start a cluster on our testnet with one head node and one worker node. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
 
-The details of all the properties that are generally supported by Ray, can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
+The details of all the properties generally supported by Ray can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
 
 Ray on Golem strives to support all configuration possibilities available for general Ray cluster managers.
 When you find a property we don't support yet, please [let us know (on `#Ray on Golem` discord channel)](https://chat.golem.network/).
+
+Feel free to have a look at the [minimal](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluser.mini.yaml) and [full](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluser.full.yaml) yaml examples.
+The minimal is stripped to the bare minimum, it shows only the properties that are required (we are striving to cut it even more in the future).
+The full exemplifies *all* properties that can be changed.
+
 
 ## Most important properties
 
@@ -109,7 +114,7 @@ We're eager to hear your feedback on the clarity, usability, or interesting usag
 
 #### Webserver port
 
-Ray on Golem uses `ray-on-golem` server to control Golem nodes, payments, etc. This property is used when the server is starting and when the autoscaler from the Ray head node wants to add or remove nodes to / from your cluster.
+Ray on Golem uses `ray-on-golem` server as its gateway to the Golem Network. It controls Ray's head and worker nodes, takes care of signing agreements, executing payments to Golem providers and all other aspects inherent in the Golem ecosystem. The `webserver_port` property tells the server which TCP port it should listen on.
 
 #### Network
 
@@ -126,29 +131,39 @@ payment_network: 'holesky'
 
 #### Image tag and image hash
 
-Image tag and image hash properties refer to the virtual machine images that Golem provider nodes will start to host the Ray on Golem software.
+Image tag and image hash properties refer to the virtual machine images 
+that Golem provider nodes will start to host the Ray on Golem software.
 
-By default, Ray on Golem uses prepackaged VM images including [relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) Python and Ray versions.
+By default, Ray on Golem uses prepackaged VM images including 
+[relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) 
+Python and Ray versions.
 
-However, you can use these properties to override the detection and request a specific image.
-Supported tags are available on [Golem registry](https://registry.golem.network/explore/golem/ray-on-golem).
+However, you can request a different image - either [supplied by us](https://registry.golem.network/explore/golem/ray-on-golem) or any other - as long as it's built using the version of `ray-on-golem` which matches your installation.
+
+More specifically, you might want to replace the vanilla Python image with one that supports 
+Golem GPU providers (e.g. `golem/ray-on-golem:0.10.0-py3.10.13-ray2.9.3-cuda11.8`).
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
 
 #### Accessing the Internet (outbound)
 
-The optional `outbound_urls` lists the addresses you want to access from the Ray on Golem cluster. Check out the [accessing the internet](/docs/creators/ray/outbound) explanation and example to learn more.
+The optional `outbound_urls` lists the addresses you want to access from the Ray on Golem cluster.
+Check out the [accessing the internet](/docs/creators/ray/outbound) explanation 
+and example to learn more.
 
 Ray on Golem only accepts addresses prefixed with either the `http://` or `https://` scheme.
 
-Our default cluster definition specifies `https://pypi.dev.golem.network` as a required outbound address which allows [downloading additional packages with pip](#initialization-commands). 
-If you don't need to install any additional Python packages, removing that URL from `outbound_urls` is recommended. 
+Our default cluster definition specifies `https://pypi.dev.golem.network` as a required 
+outbound address which allows 
+[downloading additional packages with pip](#initialization-commands). 
+If you don't need to install any additional Python packages, you might want to remove that URL 
+from `outbound_urls`.
 It potentially allows more providers to participate in your cluster.
 
 You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
 
 ```yaml
-# List of URLs which will be added to the Computation Manifest
+# List of URLs that will be added to the Computation Manifest
 # Requires protocol to be defined in all URLs
 # If not provided demand will not use Computation Manifest
 outbound_urls: ["https://pypi.dev.golem.network"]
@@ -182,8 +197,8 @@ Golem providers charge in three ways. They charge:
 - CPU per hour price for the total time their CPUs spent computing,
 - environment per hour price for the total time they spent up and running,
 
-So for example, if you rent a 3-CPU node for half an hour and the average load is 0.8 per CPU you will be charged 
-`start_price +  env_per_hour_price * 0.5 + 3 * cpu_per_hour_price * 0.8 * 0.5`.
+So for example, if you rent a 3-CPU node for half an hour (0.5) and the average load is 0.8 per CPU you will be charged 
+`start_price +  (env_per_hour_price * 0.5) + (3 * cpu_per_hour_price * 0.8 * 0.5)`.
 
 The following properties allow you to reject providers with any of the prices exceeding your limits.
 - `max_start_price`

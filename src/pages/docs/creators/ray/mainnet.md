@@ -9,7 +9,7 @@ type: guide
 
 The most common way of starting your adventure with Ray on Golem is by trying it out on the Golem testnet.
 The testnet nodes are not very powerful and there are not many of them. 
-At the same time, it provides a sufficient environment to see how everything works and to test your Ray applications on.
+At the same time, it provides a sufficient environment to see how everything works and to test your Ray applications.
 
 As your application gets more complex and you need more power, you should move to the mainnet. There are more providers, and the machines they run on are more powerful. However, you have to pay to use them.
 
@@ -63,9 +63,7 @@ Ray On Golem
     │  token: GLM        │                │            │  requested  │  0 GLM     │  0 GLM     │           │
     └────────────────────┴────────────────┴────────────┴─────────────┴────────────┴────────────┴───────────┘
   
-  You can use the Golem Onboarding portal to top up: https://golemfactory.github.io/onboarding_production/?yagnaAddress=0xae5d43485a341bc4f167f6a4fda0749f1d7f3e11
-
-DISCLAIMER: Please keep in mind that in its current stage, the Onboarding Portal is an EXPERIMENTAL product. Even though it is functional, we do not recommend using it unless you wish to help us beta-test this feature. You'll find more information on `#Payment UX` discord channel https://discord.com/channels/684703559954333727/1136984764197380096
+  You can use the Golem Onboarding portal to top up: https://glm.golem.network/#/onboarding/budget?yagnaAddress=0xae5d43485a341bc4f167f6a4fda0749f1d7f3e11&network=polygon
 
 You don't seem to have any GLM tokens on your Golem wallet.
 
@@ -73,9 +71,9 @@ You don't seem to have any GLM tokens on your Golem wallet.
 
 Even if you do have the required funds, `ray up` will nevertheless print the onboarding link as a reminder, in case you'd like to top up your wallet.
 
-The onboarding process is a convenient and effortless way of providing your Ray on Golem node with funds allowing it to run on mainnet.
+The onboarding process is a convenient and effortless way of providing your Ray on Golem node with funds allowing it to run on the mainnet.
 
-Initially, your Golem node generates and later manages its own Ethereum wallet that is uses to perform transactions. This wallet starts empty and Ray on Golem is able to transparently obtain testnet tokens when you run it on testnet. 
+Initially, your Golem node generates and later manages its own Ethereum wallet, which is used to perform transactions. This wallet starts empty and Ray on Golem transparently obtains funds needed to operate on testnet. 
 
 To fill it with mainnet funds, the onboarding portal guides you through the creation of a separate, web-browser wallet, getting GLM and MATIC tokens there, and finally transferring them to the wallet used by Ray on Golem.
 
@@ -104,13 +102,26 @@ Ray on Golem provides a couple of mechanisms to give you control over your spend
 
 Golem Network is peer-to-peer, which means that providers' proposals are not always available at first. They get broadcasted only from time to time.
 
-This means that when you first start Ray on Golem up it might take a while to find a provider matching all your requirements.
+This means that when you first start Ray on Golem, it might take a while to find a provider matching all your requirements.
 
 Ray on Golem is using the Golem node (`yagna`) for interacting with the network.
 The `ray up` starts it if it is not running, but `ray down` doesn't stop it. 
 This way the subsequent `ray up` executions benefit from a faster node discovery.
 
 Of course, you might want to disconnect from the Golem network for a while - read the [starting over](/docs/creators/ray/troubleshooting#starting-over-with-a-clean-slate) article to learn how to do that.
+
+### Smart provider selection 
+
+Ray on Golem utilizes the [reputation endpoint](https://blog.golem.network/introducing-golem-networks-reputation-system/) 
+to score providers based on their uptime and success rate, 
+combined with pricing heuristics. This automatic process ensures you're always paired with top-performing 
+and cost-efficient nodes. The `ray-on-golem reputation list` command lets you view the current database state, showing provider scores and prices.
+
+### Manual provider blacklisting
+
+For direct control, the feature allows blacklisting of nodes that underperform or fail to start images. 
+Use the `ray-on-golem reputation block` command to prevent specific nodes from being considered in future selections. 
+Conversely, the `unblock` subcommand removes nodes from your blacklist, making them eligible again.
 
 {% docnavigation title="See also" %}
 - [Ray on Golem introduction](/docs/creators/ray)

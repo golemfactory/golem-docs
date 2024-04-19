@@ -88,6 +88,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/guides/accessing-internet',
               },
               {
+                title: 'VM Filesystem',
+                href: '/docs/creators/javascript/guides/providers-filesystem',
+              },
+              {
                 title: 'Golem images',
                 href: '/docs/creators/javascript/guides/golem-images',
               },
@@ -269,12 +273,12 @@ export const navigation = [
                 href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
               },
               {
-                title: 'Converting images',
-                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
-              },
-              {
                 title: 'Gvmkit-build installation',
                 href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
+              },
+              {
+                title: 'Converting images',
+                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
               },
               {
                 title: 'Publishing custom images',
@@ -579,6 +583,19 @@ export const navigation = [
                 href: '/docs/creators/tools/goth/running-goths-interactive-mode',
               },
             ],
+          },
+        ],
+      },
+      {
+        title: 'Golem concepts for developers',
+        children: [
+          {
+            title: 'Filesystem on providers',
+            href: '/docs/creators/common/providers-filesystem',
+          },
+          {
+            title: 'How requestor interacts with providers',
+            href: '/docs/creators/common/requestor-provider-interaction',
           },
         ],
       },
