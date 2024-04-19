@@ -137,7 +137,7 @@ Some jurisdictions do not allow the exclusion of certain warranties or the limit
 
 ## 7. Open Source and Proprietary Rights
 
-Some software used in our Services may be offered under an open source license that we will make available to you. Documentation of open source code is available on the Golem Factory Github page (https://github.com/golemfactory). This documentation, including any code shown in it, is licensed under the GNU Affero General Public License version 3 and you agree to abide by the terms of this license.
+Some software used in our Services may be offered under an open source license that we will make available to you. Documentation of open source code is available on the Golem Factory Github page [https://github.com/golemfactory](https://github.com/golemfactory). This documentation, including any code shown in it, is licensed under the GNU Affero General Public License version 3 and you agree to abide by the terms of this license.
 
 The “Golem Network” name, the Golem Network logo, and the web domains and URLs are property of Golem Factory GmbH and are not covered under the licenses above. Using our Services does not give you ownership of any proprietary intellectual property rights in our Services or the content you access. You may not use proprietary content from our Services unless you obtain permission from its owner or are otherwise permitted by law. These terms do not grant you the right to use any branding or logos used in our Services. You may not remove, obscure, or alter any legal notices displayed in or along with our Services.
 
@@ -201,4 +201,4 @@ The section titles in the Agreement are for convenience only and have no legal o
 
 ### 13.4 Communications
 
-Users with questions, complaints or claims with respect to the Services may contact us using the relevant contact information set forth above and at migration@golem.network.
+Users with questions, complaints or claims with respect to the Services may contact us using the relevant contact information set forth above and at `migration@golem.network`.
