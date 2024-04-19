@@ -140,6 +140,6 @@ In the first example, we run a command that produces both stdout and stderr outp
 
 #### runAndStream scenario with timeout defined
 
-In this example, we show how to use `remoteProcess.waitForExit()` to terminate the process. Note that in the current implementation, the exit caused by timeout will terminate the activity on a provider, therefore the user cannot run another command on the provider. Task executor will run the next task on another provider.
+In this example, we show how to use `remoteProcess.waitForExit()` to terminate the process. Note that in the current implementation, the exit caused by timeout will terminate the activity on a provider, therefore the user cannot run another command on the provider. The task executor will instead run the next task on another provider.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/streams/stream-waitforexit.mjs" language="javascript" /%}

@@ -25,7 +25,7 @@ The requestor is responsible for:
 - Manifest creation
 - Defining demand for outbound access
 
-Both examples are accessing urls included in the Whitelist. For the current Whitelist see [https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist).
+Both examples are accessing urls included in the default whitelist. Click [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist) to view the whitelist.
 
 
 <!-- - Transfer method (WIP) -->
@@ -59,7 +59,7 @@ node index.mjs
 
 ## Basic outbound access
 
-In this example we will download a file from `ipfs.io`. This is one of the domain included in the whitelist.
+In this example we will download a file from `ipfs.io`. This is one of the domains included in the whitelist.
 
 ### Manifest creation
 
