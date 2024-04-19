@@ -159,7 +159,7 @@ Any dispute between the Users and the Company shall be submitted to the exclusiv
 
 ## 12. Prohibited Use
 
-You may not use the Service to engage in the following categories of activity (" Prohibited Uses "). The specific types of use listed below are representative, but not exhaustive. If you are uncertain as to whether or not your use of the Services involves a Prohibited Use, or have questions about how these requirements apply to you, please contact us at migration@golem.network. By using the Site or Services, you confirm that you will not use the Site or Services to do any of the following:
+You may not use the Service to engage in the following categories of activity (" Prohibited Uses "). The specific types of use listed below are representative, but not exhaustive. If you are uncertain as to whether or not your use of the Services involves a Prohibited Use, or have questions about how these requirements apply to you, please contact us at `migration@golem.network`. By using the Site or Services, you confirm that you will not use the Site or Services to do any of the following:
 
 - Unlawful Activity: Activity which would violate, or assist in violation of, any law, statute, ordinance, or regulation, sanctions programs administered in any relevant country, including but not limited to the U.S. Department of Treasury's Office of Foreign Assets Control (" OFAC "), or which would involve proceeds of any unlawful activity; publish, distribute or disseminate any unlawful material or information;
 
