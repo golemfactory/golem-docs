@@ -681,6 +681,19 @@ export const navigation = [
           },
         ],
       },
+      {
+        title: 'Golem Migration Application Terms & Conditions and Guideline',
+        children: [
+          {
+            title: 'Migration Terms and Conditions',
+            href: '/docs/golem/migrate/terms',
+          },
+          {
+            title: 'Migration guideline',
+            href: '/docs/golem/migrate/guideline',
+          },
+        ],
+      },
       { title: 'Terms', href: '/docs/golem/terms' },
     ],
   },
