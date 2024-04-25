@@ -24,7 +24,7 @@ The general process of creating a Golem image looks like this:
 
 - Define the image content in Docker format
 - Build a Docker image from the Dockerfile
-- Convert to Golem image using gvmkit-build ([example](/docs/creators/tools/converting-docker-image-to-golem-format))
+- Convert to Golem image using gvmkit-build ([example](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format))
 
 See our [Create Golem Image Tutorial](/docs/creators/javascript/tutorials/building-custom-image) on how to use the tool.
 

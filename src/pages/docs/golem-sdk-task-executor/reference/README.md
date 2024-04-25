@@ -87,7 +87,6 @@ This will generate production code in the `dist/` directory ready to be used in 
 
 ```ts
 import { TaskExecutor } from '@golem-sdk/task-executor'
-
 ;(async function main() {
   const executor = await TaskExecutor.create('golem/alpine:latest')
   try {
@@ -258,4 +257,4 @@ npm run format
   - [Golem JS Tutorials](https://docs.golem.network/docs/creators/javascript/tutorials#golem-js-tutorials)
   - [Golem JS Guides](https://docs.golem.network/docs/creators/javascript/guides)
 - Learn about preparing your own Docker-like images for
-  the [VM runtime](https://docs.golem.network/docs/creators/tools/converting-docker-image-to-golem-format)
+  the [VM runtime](https://docs.golem.network/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format)

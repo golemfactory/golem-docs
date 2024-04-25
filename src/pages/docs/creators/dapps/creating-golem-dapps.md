@@ -26,7 +26,7 @@ Golem’s virtual machine runtime uses its own image format, which is derived fr
 
 For instructions on how to create a Golem VM image, please refer to:
 
-[Converting a Docker image to the Golem image Tutorial](/docs/creators/tools/converting-docker-image-to-golem-format)
+[Converting a Docker image to the Golem image Tutorial](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format)
 
 What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re providing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](/docs/creators/dapps/docker-containers-vs-golem-vms)
 

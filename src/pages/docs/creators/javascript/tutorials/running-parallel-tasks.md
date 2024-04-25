@@ -151,7 +151,7 @@ Note that the lifetime of images uploaded anonymously to the repository is limit
 {% /alert %}
 
 {% alert level="info" %}
-The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](/docs/creators/tools/converting-docker-image-to-golem-format)
+The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format)
 {% /alert %}
 
 ## The requestor script code
