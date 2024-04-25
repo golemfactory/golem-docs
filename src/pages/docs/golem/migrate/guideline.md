@@ -7,9 +7,7 @@ type: Guide
 
 # Golem Migration Guide
 
-In this tutorial, we will guide you through the Golem Network Token migration process. We have 3 options available for you to be able to migrate. We hope you find the options fairly simple and intuitive, and with this tutorial, you should be fully ready and feel more confident to migrate your GNT to GLM, the new token. Please take your time and make sure that you have read our [FAQs](#migration-faq).
-
-[//]: <> ([FAQs]https://blog.golemproject.net/gnt-to-erc20-migration-faqs/)
+In this tutorial, we will guide you through the Golem Network Token migration process. We have 3 options available for you to be able to migrate. We hope you find the options fairly simple and intuitive, and with this tutorial, you should be fully ready and feel more confident to migrate your GNT to GLM, the new token. Please take your time and make sure that you have read our [FAQs](https://blog.golem.network/gnt-to-erc20-migration-faqs/).
 
 ---
 
@@ -59,7 +57,7 @@ This way you get the migration tool connected to your Metamask account.
 The information that will be presented after connection of the migration tool and your Metamask is your personal address, the amount of GLM (the new token) already at your disposal (when connecting for the first time the amount will be 0 as you have not proceeded with the migration yet), your balance of old GNT tokens and also ETH balance.
 Please bear in mind that as we are using Ethereum, some ETH is needed to pay for transaction fees in the network. A small amount should be absolutely sufficient to execute your migration process.
 
-[//]: <> (To check current gas prices visit [ETHgasstation]https://ethgasstation.info/.)
+To check current gas prices visit [Ethereum Gas Tracker](https://etherscan.io/gastracker).
 
 ![confirm-in-app](/migrate/migration-tool-05.jpg)
 
@@ -73,7 +71,7 @@ Now, that you know what are the balances of your assets and the migration tool i
 ![confirm-in-metamask](/migrate/migration-tool-06.jpg)
 
 - The Metamask window will pop up again for you to confirm the transaction. In this step, you can also adjust the transaction fee (15) to make your transaction mine quicker or choose a more budget-friendly but slower approach to the execution of your migration process. To do so, just type in the required amount expressed in GWEI in the “gas price” window.
-- After all the adjustments and amounts are correct, please confirm the transaction (16). Default values set by Metamask are optimal in most cases. However, if you are keen to adjust them manually, please make sure to include reasonable amounts. If you’re not sure what the current gas prices are then we recommend checking ethgasstation.com and input amounts based on the current network state.
+- After all the adjustments and amounts are correct, please confirm the transaction (16). Default values set by Metamask are optimal in most cases. However, if you are keen to adjust them manually, please make sure to include reasonable amounts. If you’re not sure what the current gas prices are then we recommend checking [Ethereum Gas Tracker](https://etherscan.io/gastracker) and input amounts based on the current network state.
 
 ![migration-in-progress](/migrate/migration-tool-07.jpg)
 
@@ -88,8 +86,6 @@ Congratulations! You’ve managed to migrate your old GNT tokens successfully. T
 ### Path 2: Migration from the Golem app with an additional Ethereum account
 
 In case you decide to migrate your tokens directly from the Golem app before you start, **please make sure to deactivate the Consent Service first, and unlock the deposited funds**.
-
-[//]: <> (was: to deactivate the Concent Service first, )
 
 ?> Please, be advised that for security reasons and to mitigate possible attacks, all deposits from the app are time-locked for 48 hours in a "pending withdrawal". So, if you choose that approach remember to take care of unlocking your deposited funds with enough time reserve before planned migration. After 48 hours since the deposit unlock order, you will be able to withdraw all funds from your main GNT account.
 
@@ -171,7 +167,7 @@ Notes before you get started:
 
 ![Confirm and Send](/migrate/mycrypto-4.png)
 
-That's it! You will just need to confirm the transaction on whichever method you're connected to MyCrypto and you've successfully migrated your GNT to GLM.
+That's it! You will just need to confirm the transaction on whichever method you're connected to MyCrypto and you've successfully migrated your GNT to 
 
 ## Option 3: Migrating with MyEtherWallet
 
@@ -181,7 +177,7 @@ That's it! You will just need to confirm the transaction on whichever method you
 
 3. Confirm the transaction and make sure you set an appropriate gas price.
 
-[//]: <> ( usually the default provided is suitable but you can also check [ethgasstation]https://www.ethgasstation.info/.)
+[//]: <> ( usually the default provided is suitable but you can also check [Ethereum Gas Tracker](https://etherscan.io/gastracker)
 
 Congratulations, you've now migrated your GNT to GLM!
 
@@ -213,7 +209,7 @@ To run tests, simply `run npm test`
 
 ## GLM Migration exchange support
 
-If you’re storing your **GNT** in any of [the following exchanges](https://glm.golem.network/), there is no action required. They have expressed interest in migrating tokens on their user’s behalf. You do not need to migrate the tokens by yourself, we would recommend that you give your exchange time to organize and wait for an announcement. Larger exchanges will likely take longer to organize so please be patient.
+If you’re storing your **GNT** in any of [the following exchanges](https://migration-tracker.golem.network/), there is no action required. They have expressed interest in migrating tokens on their user’s behalf. You do not need to migrate the tokens by yourself, we would recommend that you give your exchange time to organize and wait for an announcement. Larger exchanges will likely take longer to organize so please be patient.
 
 If you have any questions, we suggest you contact them directly as they might be better positioned to answer your doubts. You always have the option to migrate tokens yourself.
 
@@ -235,7 +231,7 @@ You might need to add the new GLM token. You can use [this quick add link](https
 
 ##### I'm holding GNT on an exchange. Do I need to do something?
 
-[Here you can see](https://glm.golem.network/) the list of exchanges supporting the migration. If your exchange is not listed we suggest you contact them directly. If you’re storing your GNT in any of the following exchanges, there is no action required.
+[Here you can see](https://migration-tracker.golem.network/) the list of exchanges supporting the migration. If your exchange is not listed we suggest you contact them directly. If you’re storing your GNT in any of the following exchanges, there is no action required.
 
 ---
 
@@ -266,6 +262,4 @@ That is correct. Ledger will support the GLM token appearance in December. If yo
 ##### I'm holding GNT for the long haul. Should I migrate?
 
 Yes, you need to migrate. Basically, the old token won't be supported in our new platform which we will soon launch into mainnet, therefore the token will lose its utility and subsequently, stop being supported by exchanges - which will cause it to depreciate.
-In short, it will die down. The good thing is the migration does not end, and it's 1:1 so you have plenty of time to do it without any issues, neither depreciation nor paying high gas prices, etc. So read the guide, watch the tutorial, and migrate when you see gas at a decent price.
-
-[//]: <> ( on [ethgasstation.info]https://ethgasstation.info)
+In short, it will die down. The good thing is the migration does not end, and it's 1:1 so you have plenty of time to do it without any issues, neither depreciation nor paying high gas prices, etc. So read the guide, watch the tutorial, and migrate when you see gas at a decent price at the [Ethereum Gas Tracker](https://etherscan.io/gastracker).
