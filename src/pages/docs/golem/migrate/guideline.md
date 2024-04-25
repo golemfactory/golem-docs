@@ -16,7 +16,7 @@ In this tutorial, we will guide you through the Golem Network Token migration pr
 > **Sidenote:** We chose the Metamask for our migration application. You can easily import any Ethereum address into this wallet, and it supports multiple accounts. Most importantly, you can easily use [your hardware wallets](https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet) with it. You will also be able to migrate with [MyCrypto](#option-2-migrating-with-my-crypto) once their widget is ready, with [MyEtherWallet](#option-3-migrating-with-my-ether-wallet) and [script](#option-4-migrating-with-our-automated-script) when we’ve concluded the mainnet test.
 
 
-See video on YouTub:
+See video on YouTube:
 {% youtube link="https://www.youtube.com/embed/DYX9Xn2HyWw" %}
 
 {% /youtube %}
