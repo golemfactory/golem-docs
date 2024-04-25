@@ -271,6 +271,7 @@ The JS SDK consists of the following components:
 
 **Gvmkit-build** - a tool designed to create custom images for virtual machines on provider nodes within the Golem Network. It specifically converts Dockerfiles into Golem-compatible VM images, known as GVMI.
 
-You find a list of available instructions for Golem tools [here](https://docs.golem.network/docs/creators/javascript/examples/tools).
+You can find a list of available instructions for Golem tools: [yagna](https://docs.golem.network/docs/creators/tools/yagna)
+and [gvmkit-build](https://docs.golem.network/docs/creators/tools/gvmkit).
 
 **Golem Registry** - a repository of already built images that can be utilized by Golem Network users [is here](https://registry.golem.network/explore).

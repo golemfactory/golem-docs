@@ -22,7 +22,7 @@ Full code of the example is available in the yapapi repository: [https://github.
 
 ## Prerequisites
 
-In case you'd like to experiment yourself, and it's your first contact with Golem app development, you're invited to first have a look at our [requestor development primer](/docs/creators/python/examples/tools/yagna-installation-for-requestors) which will guide you through the introductory steps.
+In case you'd like to experiment yourself, and it's your first contact with Golem app development, you're invited to first have a look at our [requestor development primer](/docs/creators/tools/yagna/yagna-installation-for-requestors) which will guide you through the introductory steps.
 
 ## Application outline
 

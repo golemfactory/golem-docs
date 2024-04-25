@@ -217,7 +217,7 @@ The important fact is that the last of the above commands, will provide us with 
 This hash will identify our image when our Golem application is run. Please copy and save it somewhere as in the requestor agent code, we will need to pass it to the `Engine` in order to have providers use the correct image for the container instances.
 {% /alert %}
 
-The details of docker image conversion are described [here](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format).
+The details of docker image conversion are described [here](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format).
 
 ## The requestor agent code
 

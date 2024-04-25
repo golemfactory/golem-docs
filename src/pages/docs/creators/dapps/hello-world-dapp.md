@@ -21,7 +21,7 @@ To follow this tutorial in full, you need to have Docker installed on your machi
 
 {% alert level="info" %}
 
-This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` service as a requestor](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
+This step-by-step tutorial will be easier for you to follow if you previously had a chance to [launch the `yagna` service as a requestor](/docs/creators/tools/yagna/yagna-installation-for-requestors) and have any experience building portable web applications on Docker, but you should be able to complete it without any prior experience nevertheless.
 
 {% /alert %}
 
@@ -343,7 +343,7 @@ yagna service run
 
 {% alert level="info" %}
 
-If you haven't set-up your yagna service before, please refer to our [Yagna installation instruction](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
+If you haven't set-up your yagna service before, please refer to our [Yagna installation instruction](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 {% /alert %}
 
 ### Obtain the application key

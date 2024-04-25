@@ -15,7 +15,7 @@ You will create a simple REST API that will allow you to send some text to the G
 
 ## Prerequisites
 
-This tutorial assumes that you have already installed Yagna and have it running in the background. If you haven't done so yet, please follow the instructions in [this tutorial](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) before proceeding.
+This tutorial assumes that you have already installed Yagna and have it running in the background. If you haven't done so yet, please follow the instructions in [this tutorial](/docs/creators/tools/yagna/yagna-installation-for-requestors) before proceeding.
 
 ## Setting up the project
 
@@ -94,7 +94,7 @@ process.on('SIGINT', async () => {
 
 Now it's time for the fun part! Let's add a new endpoint to our API that will take some text from the request body and create a new job on the Golem Network. To do that, we will use the `createJob()` method. This method will give us a `Job` object that we can use to get the state of the job and its results later. On the provider side, we will run the `espeak` command to convert the text to speech, save it to a `.wav` file and download that file to your local file system with the `downloadFile()` method. We will give the file a random name to avoid collisions.
 
-The image we will use is `severyn/espeak:latest`, provided by one of our community members. It contains the `espeak` command, which we will use to convert the text to speech. If you're feeling adventurous, [you can create your own image](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format#building-your-docker-image) and install [espeak](https://espeak.sourceforge.net/) on it.
+The image we will use is `severyn/espeak:latest`, provided by one of our community members. It contains the `espeak` command, which we will use to convert the text to speech. If you're feeling adventurous, [you can create your own image](/docs/creators/tools/converting-docker-image-to-golem-format#building-your-docker-image) and install [espeak](https://espeak.sourceforge.net/) on it.
 
 ```js
 app.post('/tts', async (req, res) => {

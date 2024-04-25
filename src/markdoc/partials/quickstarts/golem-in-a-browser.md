@@ -4,12 +4,12 @@ In most of our examples, we demonstrate how to run a requestor script in Node.js
 
 {% alert level="info" %}
 
-Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note that such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
+Before getting started, you need to install and launch the Yagna service in version 0.13.0+. Note that such a version is available as a `release candidate`. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 
 {% /alert %}
 
 {% alert level="warning" %}
-In addition, follow the instructions to [set up the app-key](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors), but start the Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
+In addition, follow the instructions to [set up the app-key](/docs/creators/tools/yagna/yagna-installation-for-requestors), but start the Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}

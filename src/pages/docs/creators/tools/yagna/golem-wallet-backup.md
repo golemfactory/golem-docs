@@ -112,7 +112,7 @@ To make it easier, here's a possible check:
 cat ./key.json | grep address
 ```
 
-To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/providers/wallet/restoration) using this newly created keystore file.
+To be entirely sure that your backup is correct, launch a completely new, separate yagna node from scratch on another machine and [verify that it's possible to restore your wallet](/docs/creators/tools/yagna/restoring-golem-wallet) using this newly created keystore file.
 
 {% alert level="warning" %}
 
@@ -124,6 +124,6 @@ Likewise, consider encrypting or password-protecting the keystore file so that s
 
 {% docnavigation title="Next steps" %}
 
-- Restoring [Golem wallet](/docs/creators/python/examples/tools/restoring-golem-wallet)
+- Restoring [Golem wallet](/docs/creators/tools/yagna/restoring-golem-wallet)
 
 {% /docnavigation %}

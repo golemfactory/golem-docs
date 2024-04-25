@@ -3,7 +3,6 @@ title: Using golem on mainnet
 description: Explore the step-by-step guide on moving requestor operations to Golem’s mainnet, including payment platform selection, wallet monitoring, and fund security.
 pageTitle: Golem Mainnet Transition Guide - Polygon & Ethereum Payments
 
-
 type: Guide
 ---
 
@@ -39,12 +38,12 @@ For more information regarding Layer 2 and Polygon, please refer to our introduc
 
 ## How to monitor the status of your wallet
 
-There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you verify the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/python/examples/tools/managing-golem-wallet)
+There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you verify the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/tools/yagna/managing-golem-wallet)
 
 ## Securing your Golem wallet
 
 Golem provides a procedure to back up your wallet in a secure way, as well as to restore it to a new Yagna installation.
-Please follow the instructions provided in [Golem wallet backup](/docs/creators/python/examples/tools/golem-wallet-backup) and [Restore Golem wallet](/docs/creators/python/examples/tools/restoring-golem-wallet) tutorials.
+Please follow the instructions provided in [Golem wallet backup](/docs/creators/tools/yagna/golem-wallet-backup) and [Restore Golem wallet](/docs/creators/tools/yagna/restoring-golem-wallet) tutorials.
 
 ## Getting funds to your requestor
 
@@ -67,7 +66,7 @@ yagna payment fund
 
 {% alert level="info" %}
 
-It may be useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to back up and restore your wallet and export wallet address [here](/docs/creators/python/examples/tools/golem-wallet-backup).
+It may be useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to back up and restore your wallet and export wallet address [here](/docs/creators/tools/yagna/golem-wallet-backup).
 
 {% /alert %}
 

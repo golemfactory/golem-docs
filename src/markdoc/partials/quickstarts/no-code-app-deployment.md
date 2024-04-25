@@ -11,7 +11,7 @@ To launch applications on Golem, you request computational resources from the ne
 - a running `yagna` service (v0.12 or higher)
 - your requestor app key
 
-Setting these up is a part of the [Yagna installation instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
+Setting these up is a part of the [Yagna installation instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 
 Please also ensure you have `curl` available on your system.
 
@@ -79,7 +79,7 @@ Generate an unique api-key with the `yagna` command:
 
 {% alert level="info" %}
 
-If you followed [Yagna installation instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) you can use 'try_golem' key.
+If you followed [Yagna installation instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors) you can use 'try_golem' key.
 
 {% /alert %}
 

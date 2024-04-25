@@ -28,9 +28,7 @@ Okay, so while technically we now know how to hand out tasks to providers on pai
 
 ## Ethereum vs Layer-2
 
-
 The most important decision you need to make when it comes to Golem payments (both between Requestors <-> Providers, as well as getting funds in and out of Golem Network) is whether to use Ethereum or its Layer-2 scaling sidechain: Polygon.
-
 
 While direct, on-chain transactions using ERC-20-based tokens have long become the daily bread for the Ethereum mainnet and constitute a significant part of more than a million transactions passing through the chain each day, current ETH's price and the average gas fees make it extremely hard to use as a mean of exchange. This is because Golem payments will usually be orders of magnitude smaller than the typical transaction fee on Ethereum.
 
@@ -40,17 +38,15 @@ For more information regarding Layer 2 and Polygon, please refer to our introduc
 
 ## How to monitor the status of your wallet
 
-There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you verify the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/javascript/examples/tools/managing-golem-wallet)
+There are a number of `yagna` commands that will enable you to monitor the status of your wallet. They will let you verify the address of the wallet, check the status, and enable payments from it. Their usage is illustrated [here](/docs/creators/tools/yagna/managing-golem-wallet)
 
 ## Securing your Golem wallet
 
-
 Golem provides a procedure to backup your wallet in a secure way, as well as to restore it to the new Yagna installation.
 
-Please follow the instructions provided in [Golem wallet backup](/docs/creators/javascript/examples/tools/golem-wallet-backup) and [Restore Golem wallet](/docs/creators/javascript/examples/tools/restoring-golem-wallet) tutorials.
+Please follow the instructions provided in [Golem wallet backup](/docs/creators/tools/yagna/golem-wallet-backup) and [Restore Golem wallet](/docs/creators/tools/yagna/restoring-golem-wallet) tutorials.
 
 ## Getting funds to your requestor
-
 
 Golem Network payments are done on Blockchain with GLM tokens. Consequently, to enable such payments you will need:
 
@@ -71,7 +67,7 @@ yagna payment fund
 
 {% alert level="info" %}
 
-It may be useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to back up and restore your wallet and export wallet address [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
+It may be useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to back up and restore your wallet and export wallet address [here](/docs/creators/tools/yagna/golem-wallet-backup).
 
 {% /alert %}
 

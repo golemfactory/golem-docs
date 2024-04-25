@@ -69,9 +69,7 @@ The initialization must be performed after every restart of the `yagna` service.
 
 ## Checking the status of your accounts
 
-Depending on whether you're primarily running a provider or requestor node, your default network (blockchain) may be different.
-
-Because of that, when you run `yagna payment status` to verify the state of your payment account and the amount of GLM tokens you have at your disposal, you may need to add the specific `network` and `driver` parameters to point to the network/driver combination that you're interested in.
+When you run `yagna payment status` to verify the state of your payment account and the amount of GLM tokens you have at your disposal, you may need to add the specific `network` and `driver` parameters to point to the network/driver combination that you're interested in.
 
 In the context of running Golem on mainnet, here are the commands for each of the supported mainnet platforms:
 
@@ -102,7 +100,6 @@ yagna payment fund
 ```
 
 Golem will transfer test tokens from our custom faucet (a service that transfers test tokens to an address that asks for them).
-Note, you also need to enable your accounts' sender mode, which is done using `yagna payment init`.
 
 ## Generating the app key
 

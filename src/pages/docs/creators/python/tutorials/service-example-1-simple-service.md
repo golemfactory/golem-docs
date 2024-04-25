@@ -23,7 +23,7 @@ The code and components of this POC are included as an example within yapapi: [h
 
 ## Prerequisites
 
-If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](/docs/creators/python/examples/tools/yagna-installation-for-requestors) and were able to [run your first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem).
+If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](/docs/creators/tools/yagna/yagna-installation-for-requestors) and were able to [run your first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem).
 
 ## The service
 
@@ -136,7 +136,7 @@ It's important to note that the `ENTRYPOINT` statement, though included, is ther
 
 The requestor agent script included in the example already contains the hash of the image that has been built by us and uploaded to Golem's VM image repository.
 
-When building your own application though, you'd need to create and upload that image yourself. For full information on how to do that, please refer to our tutorial on [converting a Docker image to Golem's format](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format).
+When building your own application though, you'd need to create and upload that image yourself. For full information on how to do that, please refer to our tutorial on [converting a Docker image to Golem's format](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format).
 
 If you'd like to play around with modifying the included image yourself, please remember to update the service definition's `get_payload` hook to point to your just-uploaded image:
 
@@ -195,7 +195,7 @@ async def get_payload():
     )
 ```
 
-Here, it's a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image repository](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format).
+Here, it's a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image repository](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format).
 
 It's worth noting though, that the payload can be anything that inherits from `Payload` and contains a set of properties and constraints that define the execution environment in which we want our service to run. The `vm.repo` function does exactly that for a VM runtime but as long as the requestor and provider agree, it can be almost anything. We'll be showing you how to define your own provider-end runtime and interact with it from the requestor's end in one of our future tutorials.
 

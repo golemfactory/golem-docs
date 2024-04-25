@@ -1,9 +1,10 @@
 ---
-title: "Project JavaScript API reference"
-pageTitle: "Project JavaScript API reference - Task API Reference"
-description: "Explore the detailed API reference documentation for the Project JavaScript API reference within the Task API SDK for the Golem Network."
-type: "JS Task API Reference"
+title: 'Project JavaScript API reference'
+pageTitle: 'Project JavaScript API reference - Task API Reference'
+description: 'Explore the detailed API reference documentation for the Project JavaScript API reference within the Task API SDK for the Golem Network.'
+type: 'JS Task API Reference'
 ---
+
 # Task Executor
 
 ![GitHub](https://img.shields.io/github/license/golemfactory/golem-sdk-task-executor)
@@ -85,18 +86,20 @@ This will generate production code in the `dist/` directory ready to be used in 
 ### Hello World example
 
 ```ts
-import { TaskExecutor } from "@golem-sdk/task-executor";
+import { TaskExecutor } from '@golem-sdk/task-executor'
 
-(async function main() {
-  const executor = await TaskExecutor.create("golem/alpine:latest");
+;(async function main() {
+  const executor = await TaskExecutor.create('golem/alpine:latest')
   try {
-    await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'")).stdout));
+    await executor.run(async (ctx) =>
+      console.log((await ctx.run("echo 'Hello World'")).stdout)
+    )
   } catch (error) {
-    console.error("Computation failed:", error);
+    console.error('Computation failed:', error)
   } finally {
-    await executor.shutdown();
+    await executor.shutdown()
   }
-})();
+})()
 ```
 
 ### More examples
@@ -162,11 +165,11 @@ by `TaskExecutor.create`.
 ### Limit price limits to filter out offers that are too expensive
 
 ```typescript
-import { TaskExecutor, ProposalFilterFactory } from "@golem-sdk/task-executor";
+import { TaskExecutor, ProposalFilterFactory } from '@golem-sdk/task-executor'
 
 const executor = await TaskExecutor.create({
   // What do you want to run
-  package: "golem/alpine:3.18.2",
+  package: 'golem/alpine:3.18.2',
 
   // How much you wish to spend
   budget: 0.5,
@@ -178,9 +181,9 @@ const executor = await TaskExecutor.create({
 
   // Where you want to spend
   payment: {
-    network: "polygon",
+    network: 'polygon',
   },
-});
+})
 ```
 
 To learn more about other filters, please check
@@ -193,34 +196,39 @@ health-checks. Using this whitelist will increase the chance of working with a r
 can also build up your own list of favourite providers and use it in a similar fashion.
 
 ```typescript
-import { MarketHelpers, ProposalFilterFactory, TaskExecutor } from "@golem-sdk/task-executor";
+import {
+  MarketHelpers,
+  ProposalFilterFactory,
+  TaskExecutor,
+} from '@golem-sdk/task-executor'
 
 // Collect the whitelist
-const verifiedProviders = await MarketHelpers.getHealthyProvidersWhiteList();
+const verifiedProviders = await MarketHelpers.getHealthyProvidersWhiteList()
 
 // Prepare the whitelist filter
-const whiteList = ProposalFilterFactory.allowProvidersById(verifiedProviders);
+const whiteList = ProposalFilterFactory.allowProvidersById(verifiedProviders)
 
 // Prepare the price filter
 const acceptablePrice = ProposalFilterFactory.limitPriceFilter({
   start: 1,
   cpuPerSec: 1 / 3600,
   envPerSec: 1 / 3600,
-});
+})
 
 const executor = await TaskExecutor.create({
   // What do you want to run
-  package: "golem/alpine:3.18.2",
+  package: 'golem/alpine:3.18.2',
 
   // How much you wish to spend
   budget: 0.5,
-  proposalFilter: (proposal) => acceptablePrice(proposal) && whiteList(proposal),
+  proposalFilter: (proposal) =>
+    acceptablePrice(proposal) && whiteList(proposal),
 
   // Where you want to spend
   payment: {
-    network: "polygon",
+    network: 'polygon',
   },
-});
+})
 ```
 
 ## Debugging
@@ -250,4 +258,4 @@ npm run format
   - [Golem JS Tutorials](https://docs.golem.network/docs/creators/javascript/tutorials#golem-js-tutorials)
   - [Golem JS Guides](https://docs.golem.network/docs/creators/javascript/guides)
 - Learn about preparing your own Docker-like images for
-  the [VM runtime](https://docs.golem.network/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format)
+  the [VM runtime](https://docs.golem.network/docs/creators/tools/converting-docker-image-to-golem-format)
