@@ -35,6 +35,12 @@ Note that due to transaction costs on the Ethereum mainnet, we recommend choosin
 
 Another way is to use our [Onboarding portal](https://glm.golem.network) where you will be assisted through the whole process.
 
+You will be redirected to this portal when you run the following command:
+
+```
+yagna payment fund --network=polygon
+```
+
 ### Earn
 
 You can also earn GLM for renting your hardware when you act as a [provider](/docs/providers).
