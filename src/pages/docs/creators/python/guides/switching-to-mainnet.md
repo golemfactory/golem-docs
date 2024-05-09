@@ -63,13 +63,19 @@ You can top up your wallet with the following command:
 yagna payment fund
 ```
 
-### On mainnet
+### On paid network
 
 {% alert level="info" %}
 
 It may be useful to export your Golem wallet address to an external application that enables transactions on the internet. You can find instructions on how to back up and restore your wallet and export wallet address [here](/docs/creators/python/examples/tools/golem-wallet-backup).
 
 {% /alert %}
+
+#### Acquiring MATIC/ETH and GLM tokens directly via Golem Onboarding Portal
+
+1. Visit our [Onboarding Portal](https://glm.golem.network/)
+2. Click **Get Started** or **Get GLM** button
+3. Follow the instructions provided by the Portal
 
 #### Acquiring MATIC directly on Polygon and converting some of them to GLMs
 
