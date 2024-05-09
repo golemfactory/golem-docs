@@ -104,6 +104,30 @@ yagna payment fund
 Golem will transfer test tokens from our custom faucet (a service that transfers test tokens to an address that asks for them).
 Note, you also need to enable your accounts' sender mode, which is done using `yagna payment init`.
 
+## Obtaining funds to your mainnet account
+
+You can top up your wallet with MATIC/ETH and GLMs by running following command:
+
+{% tabs %}
+
+{% tab label="Polygon" %}
+
+```bash
+yagna payment fund --network=polygon
+```
+
+{% /tab %}
+{% tab label="Ethereum mainnet" %}
+
+```bash
+yagna payment fund --network=mainnet
+```
+
+{% /tab %}
+{% /tabs %}
+
+This commands should open your Web Browser with Golem Onboarding Portal web page. Follow the instructions presented there.
+
 ## Generating the app key
 
 While keeping the service running, start another shell or terminal window and generate the yagna app key that will be used by your requestor agent to access yagna's REST API.
