@@ -83,7 +83,7 @@ It may be useful to export your Golem wallet address to an external application 
 
 #### Acquiring MATIC/ETH and GLM tokens from YAGNA context via Golem Onboarding Portal
 
-1a. For Polygon network, enter following command into your Terminal window (Yagna has to be running in the background):
+1. For the Polygon network, enter the following command into your Terminal window (Yagna has to be running in the background):
 ```bash
 yagna payment fund --network=polygon
 ```
