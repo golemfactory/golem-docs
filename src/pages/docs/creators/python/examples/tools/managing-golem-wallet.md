@@ -126,7 +126,7 @@ yagna payment fund --network=mainnet
 {% /tab %}
 {% /tabs %}
 
-This commands should open your Web Browser with Golem Onboarding Portal web page. Follow the instructions presented there.
+This command should open your Web Browser with the Onboarding Portal web page. Follow the instructions presented there.
 
 ## Generating the app key
 
