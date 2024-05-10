@@ -75,7 +75,7 @@ It may be useful to export your Golem wallet address to an external application 
 
 {% /alert %}
 
-#### Acquiring MATIC/ETH and GLM tokens directly via Golem Onboarding Portal
+#### Acquiring MATIC/ETH and GLM tokens directly via the Golem Onboarding Portal
 
 1. Visit our [Onboarding Portal](https://glm.golem.network/)
 2. Click **Get Started** or **Get GLM** button
