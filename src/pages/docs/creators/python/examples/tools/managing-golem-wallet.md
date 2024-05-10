@@ -106,7 +106,7 @@ Note, you also need to enable your accounts' sender mode, which is done using `y
 
 ## Obtaining funds to your mainnet account
 
-You can top up your wallet with MATIC/ETH and GLMs by running following command:
+You can top up your wallet with MATIC/ETH and GLMs by running the following command:
 
 {% tabs %}
 
