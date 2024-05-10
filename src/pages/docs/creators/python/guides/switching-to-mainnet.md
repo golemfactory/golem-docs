@@ -63,7 +63,7 @@ You can top up your wallet with the following command:
 yagna payment fund
 ```
 
-### On paid network
+### On paid networks
 
 {% alert level="info" %}
 
