@@ -103,7 +103,7 @@ Golem will transfer test tokens from our custom faucet (a service that transfers
 
 ## Obtaining funds to your mainnet account
 
-You can top up your wallet with MATIC/ETH and GLMs by running following command:
+You can top up your wallet with MATIC/ETH and GLMs by running the following command:
 
 {% tabs %}
 
