@@ -83,7 +83,7 @@ It may be useful to export your Golem wallet address to an external application 
 ```bash
 yagna payment fund --network=polygon
 ```
-1b. Alternatively for Ethereum network, enter following command:
+Alternatively for the Ethereum network, enter the following command:
 ```bash
 yagna payment fund --network=mainnet
 ```
