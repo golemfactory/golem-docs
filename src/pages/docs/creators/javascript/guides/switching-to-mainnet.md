@@ -91,7 +91,7 @@ Alternatively for the Ethereum network, enter the following command:
 ```bash
 yagna payment fund --network=mainnet
 ```
-2. Follow instructions presented into newly opened Web Page of your default browser
+2. Follow the instructions presented on the newly opened Web Page of your default browser
 
 #### Acquiring MATIC directly on Polygon and converting some of them to GLMs
 
