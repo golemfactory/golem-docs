@@ -41,6 +41,7 @@
     "react-highlight-words": "^0.20.0",
     "react-lite-youtube-embed": "^2.3.52",
     "simple-functional-loader": "^1.2.1",
+    "swagger-ui-react": "^5.17.9",
     "swr": "^2.1.5",
     "tailwindcss": "^3.3.0",
     "uuid": "^9.0.1"

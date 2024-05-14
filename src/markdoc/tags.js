@@ -17,6 +17,7 @@ import { YoutubeEmbed } from '@/components/YoutubeEmbed'
 import { MarginBottom } from '@/components/MarginBottom'
 import { CustomError } from '../components/CustomError'
 import { GithubCode } from '@/components/GithubCode'
+import { SwaggerUI } from '@/components/SwaggerUI'
 import { Troubleshooting } from '@/components/Troubleshooting'
 import { Solution } from '@/components/Solution'
 import { Problem } from '../components/Problem'
@@ -29,12 +30,12 @@ const tags = {
     render: Tabs,
     attributes: {},
     async transform(node, config) {
-      const children = await Promise.resolve(node.transformChildren(config));
+      const children = await Promise.resolve(node.transformChildren(config))
       const labels = children
-        .filter(child => child && child.name === 'Tab')
-        .map(tab => typeof tab === 'object' ? tab.attributes.label : null);
-  
-      return new Tag(this.render, { labels }, children);
+        .filter((child) => child && child.name === 'Tab')
+        .map((tab) => (typeof tab === 'object' ? tab.attributes.label : null))
+
+      return new Tag(this.render, { labels }, children)
     },
   },
   defaultvalue: {
@@ -49,7 +50,7 @@ const tags = {
       attributes.id = slugify(attributes.title)
       const children = node.transformChildren(config)
       return new Tag(this.render, attributes, children)
-    }
+    },
   },
   padding: {
     render: Padding,
@@ -248,6 +249,14 @@ const tags = {
           `Failed to fetch example from URL ${url} due to: ${e.message}`
         )
       }
+    },
+  },
+  swaggerui: {
+    render: SwaggerUI,
+    selfClosing: true,
+    attributes: {
+      url: { type: String },
+      showInfo: { type: Boolean },
     },
   },
 }
