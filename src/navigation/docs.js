@@ -652,6 +652,11 @@ export const navigation = [
           { title: 'Golem overview', href: '/docs/golem/overview' },
           { title: 'Provider', href: '/docs/golem/overview/provider' },
           { title: 'Requestor', href: '/docs/golem/overview/requestor' },
+          { title: 'GLM token', href: '/docs/golem/overview/golem-token' },
+          {
+            title: 'Testnet vs Mainnet',
+            href: '/docs/golem/overview/testnet-mainnet',
+          },
         ],
       },
       {
