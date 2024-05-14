@@ -228,7 +228,7 @@ table {
 .dark .swagger-ui .renderedMarkdown pre {
   @apply text-gray-400;
 }
-code[class*='language-'],
-pre[class*='language-'] {
+.swagger-ui code[class*='language-'],
+.swagger-ui pre[class*='language-'] {
   @apply bg-transparent text-white;
 }
