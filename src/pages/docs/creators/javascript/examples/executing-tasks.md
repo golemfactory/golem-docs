@@ -46,6 +46,12 @@ If you want to run your tasks in parallel, you can call `.run()` multiple times 
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/executing-tasks/map.mjs" language="javascript" /%}
 
+{% alert level="warning" %}
+
+Note that we utilize the `Promise.all()` method to process outputs from `futureResults` which is an iterable of promises. While this approach allowed us to keep the snippet short and simple, there is a pitfall with such an approach. This method rejects when any of the input's promises are rejected, so if any of the tasks fail (after retries) user will not get _any_ results at all. To avoid such a scenario use `Promise.allSettled()` instead.
+
+{% /alert %}
+
 In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we `map` over each value to define a separate step for each element in the array. Each step is a command that prints the value of the element to the console.
 
 ![Multiple run map](/map_log.png)
