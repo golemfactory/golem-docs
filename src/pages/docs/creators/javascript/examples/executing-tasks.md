@@ -48,7 +48,7 @@ If you want to run your tasks in parallel, you can call `.run()` multiple times 
 
 {% alert level="warning" %}
 
-Note that we utilize the `Promise.all()` method to process outputs from `futureResults` which is iterable of promises. While this approach allowed us to keep the snippet short and simple, there is a pitfall with such an approach. This method rejects when any of the input's promises are rejected, so if any of the tasks fail (after retries) user will not get _any_ results at all. To avoid such a scenario use `Promise.allSettled()`.
+Note that we utilize the `Promise.all()` method to process outputs from `futureResults` which is an iterable of promises. While this approach allowed us to keep the snippet short and simple, there is a pitfall with such an approach. This method rejects when any of the input's promises are rejected, so if any of the tasks fail (after retries) user will not get _any_ results at all. To avoid such a scenario use `Promise.allSettled()` instead.
 
 {% /alert %}
 
