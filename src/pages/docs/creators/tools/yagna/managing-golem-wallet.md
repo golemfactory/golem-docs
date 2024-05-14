@@ -125,6 +125,30 @@ yagna payment fund --network=mainnet
 
 This command should open your Web Browser with the Golem Onboarding Portal web page. Follow the instructions presented there.
 
+## Obtaining funds to your mainnet account
+
+You can top up your wallet with MATIC/ETH and GLMs by running the following command:
+
+{% tabs %}
+
+{% tab label="Polygon" %}
+
+```bash
+yagna payment fund --network=polygon
+```
+
+{% /tab %}
+{% tab label="Ethereum mainnet" %}
+
+```bash
+yagna payment fund --network=mainnet
+```
+
+{% /tab %}
+{% /tabs %}
+
+This command should open your Web Browser with the Onboarding Portal web page. Follow the instructions presented there.
+
 ## Generating the app key
 
 While keeping the service running, start another shell or terminal window and generate the yagna app key that will be used by your requestor agent to access yagna's REST API.
