@@ -49,6 +49,7 @@ from utils import build_parser, print_env_info, run_golem_example  # noqa
 IMAGE_HASH = "5c385688be6ed4e339a43d8a68bfb674d60951b4970448ba20d1934d"
 TASK_CMD = ["/usr/local/bin/python", "-c", "for i in range(10000000): i * 7"]
 
+
 class CustomProviderStrategy(MarketStrategy):
     def __init__(self, trusted_providers):
         self.trusted_providers = trusted_providers
@@ -62,6 +63,7 @@ class CustomProviderStrategy(MarketStrategy):
 
     def save_execution_time(self, provider_id: str, time: float):
         self.history[provider_id].append(time)
+
 
 async def main(subnet_tag, payment_driver, payment_network, trusted_providers):
     payload = await vm.repo(image_hash=IMAGE_HASH)
@@ -91,11 +93,18 @@ async def main(subnet_tag, payment_driver, payment_network, trusted_providers):
         async for task in golem.execute_tasks(worker, tasks, payload, max_workers=1):
             pass
 
+
 if __name__ == "__main__":
-    parser = build_parser("Select providers using a custom reputation-based market strategy")
+    parser = build_parser(
+        "Select providers using a custom reputation-based market strategy"
+    )
     parser.set_defaults(log_file="market-strategy-example.log")
     args = parser.parse_args()
-    trusted_providers = ["provider_id1", "provider_id_2", "provider_id_3"]  # Replace with actual IDs
+    trusted_providers = [
+        "provider_id1",
+        "provider_id_2",
+        "provider_id_3",
+    ]  # Replace with actual IDs
     run_golem_example(
         main(
             subnet_tag=args.subnet_tag,
@@ -105,6 +114,7 @@ if __name__ == "__main__":
         ),
         log_file=args.log_file,
     )
+
 ```
 
 ### Using golem-js
