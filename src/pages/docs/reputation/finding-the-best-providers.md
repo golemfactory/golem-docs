@@ -201,6 +201,8 @@ You can filter providers based on their average ping in milliseconds using:
 - `minPing` and `maxPing`
   Additionally, you can filter the providers in a particular region using the `pingRegion` parameter. The available regions are `europe`, `asia`, and `us`.
 
+You can also specify whether the pings should be peer-to-peer (p2p) using the `is_p2p` parameter. If `is_p2p` is set to `True`, pings are conducted from open ports; if `False`, they are routed through the relay. The default value is `False`.
+
 ### Filter providers based on Task Success Rate
 
 You can filter providers based on their task success rate:
