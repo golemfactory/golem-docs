@@ -89,7 +89,7 @@ export const navigation = [
               },
               {
                 title: 'VM Filesystem',
-                href: '/docs/creators/javascript/guides/providers-filesystem',
+                href: '/docs/creators/common/providers-filesystem',
               },
               {
                 title: 'Golem images',
