@@ -71,6 +71,24 @@ It may be useful to export your Golem wallet address to an external application 
 
 {% /alert %}
 
+#### Acquiring MATIC/ETH and GLM tokens directly via the Golem Onboarding Portal
+
+1. Visit our [Onboarding Portal](https://glm.golem.network/)
+2. Click **Get Started** or **Get GLM** button
+3. Follow the instructions provided by the Portal
+
+#### Acquiring MATIC/ETH and GLM tokens from Yagna context via the Golem Onboarding Portal
+
+1. For the Polygon network, enter the following command into your Terminal window (Yagna has to be running in the background):
+```bash
+yagna payment fund --network=polygon
+```
+Alternatively for the Ethereum network, enter the following command:
+```bash
+yagna payment fund --network=mainnet
+```
+2. Follow the instructions presented on the newly opened Web Page of your default browser
+
 #### Acquiring MATIC directly on Polygon and converting some of them to GLMs
 
 1. Find an exchange platform that enables you to buy MATIC for FIAT i.e. [Ramp](https://ramp.network/)
@@ -92,6 +110,10 @@ It may be useful to export your Golem wallet address to an external application 
 1. Select **Proof of Stake** and then **Swap** (in the Wallet Features section)
 2. Connect your wallet
 3. Choose the token you want to get and follow the instructions
+
+### Using Golem Onboarding portal
+
+Another way is to use our [Onboarding portal](https://glm.golem.network) where you will be assisted through the whole process.
 
 ## Getting your funds out of the Golem node
 

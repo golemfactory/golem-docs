@@ -89,7 +89,7 @@ export const navigation = [
               },
               {
                 title: 'VM Filesystem',
-                href: '/docs/creators/javascript/guides/providers-filesystem',
+                href: '/docs/creators/common/providers-filesystem',
               },
               {
                 title: 'Golem images',
@@ -631,6 +631,11 @@ export const navigation = [
           { title: 'Golem overview', href: '/docs/golem/overview' },
           { title: 'Provider', href: '/docs/golem/overview/provider' },
           { title: 'Requestor', href: '/docs/golem/overview/requestor' },
+          { title: 'GLM token', href: '/docs/golem/overview/golem-token' },
+          {
+            title: 'Testnet vs Mainnet',
+            href: '/docs/golem/overview/testnet-mainnet',
+          },
         ],
       },
       {
@@ -657,6 +662,19 @@ export const navigation = [
           {
             title: 'Schema',
             href: '/docs/golem/payload-manifest/computation-payload-manifest.schema',
+          },
+        ],
+      },
+      {
+        title: 'Golem Migration Application',
+        children: [
+          {
+            title: 'Migration Terms and Conditions',
+            href: '/docs/golem/migrate/terms',
+          },
+          {
+            title: 'Migration guideline',
+            href: '/docs/golem/migrate/guideline',
           },
         ],
       },

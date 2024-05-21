@@ -15,7 +15,7 @@ The nodes in the network can act as **providers** or **requestors**. Both the re
 
 ### Provider
 
-**Provider** is a node that is sharing its temporarily unused computer resources for Requestors within the Golem Network in return for GLM tokens.
+A **provider** is a node that is sharing its unused computer resources for Requestors within the Golem Network in return for [GLM](/docs/golem/overview/golem-token) tokens.
 
 In general, almost any computer might act as a provider. It can be a laptop, desktop, or server machine. The particular resource details (for example, the number of CPUs or their memory limit) that are subject to sharing can be configured by the hardware owner.
 

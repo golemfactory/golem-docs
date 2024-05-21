@@ -70,7 +70,7 @@ echo console.log("Hello Golem World!"); > worker.mjs
 
 Below is an example of a simple script that remotely executes `node -v`.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/single-command.cjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/single-command.mjs" language="javascript" /%}
 
 Note that `ctx.run()` accepts a string as an argument. This string is a command invocation, executed exactly as one would do in the console. The command will be run in the folder defined by the `WORKDIR` entry in your image definition.
 
@@ -140,6 +140,7 @@ In the first example, we run a command that produces both stdout and stderr outp
 
 #### runAndStream scenario with timeout defined
 
-In this example, we show how to use `remoteProcess.waitForExit()` to terminate the process. Note that in the current implementation, the exit caused by timeout will terminate the activity on a provider, therefore the user cannot run another command on that specific provider. The task executor will instead run the task on another provider.
+In this example, we show how to use `remoteProcess.waitForExit()` to terminate the process. Note that in the current implementation, the exit caused by timeout will terminate the activity on a provider, therefore the user cannot run another command on the provider. The task executor will instead run the next task on another provider.
+
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/streams/stream-waitforexit.mjs" language="javascript" /%}
