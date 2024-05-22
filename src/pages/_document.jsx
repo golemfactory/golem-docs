@@ -46,7 +46,7 @@ export default function Document() {
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <Script
           strategy="beforeInteractive"
-          src={`https://cdn-cookieyes.com/client_data/8d9e86c3dd88742506b050d9/script.js`}
+          src={`https://cdn-cookieyes.com/client_data/157a28dd8dd3cefc523a357d/script.js`}
         ></Script>
       </Head>
       <body className="bg-white dark:bg-darkbg">
