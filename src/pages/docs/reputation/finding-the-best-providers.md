@@ -130,6 +130,21 @@ In `golem-js`, you can use the `allowProvidersById` filter to only allow offers 
 
 ## Filter Options
 
+### Filter providers based on Ping
+
+You can filter providers based on their average ping in milliseconds using:
+
+- `minPing` and `maxPing`
+  Additionally, you can filter the providers in a particular region using the `pingRegion` parameter. The available regions are `europe`, `asia`, and `us`.
+
+You can also specify whether the pings should be peer-to-peer (p2p) using the `is_p2p` parameter. If `is_p2p` is set to `True`, pings are conducted from open ports; if `False`, they are routed through the relay. The default value is `False`.
+
+### Filter providers based on Task Success Rate
+
+You can filter providers based on their task success rate:
+
+- `minSuccessRate` and `maxSuccessRate` set the minimum and maximum percentage of successfully completed tasks.
+
 ### Filter providers based on uptime and provider age
 
 You can filter providers based on their uptime percentage. `minUptime` and `maxUptime` allow you to set a range for the uptime of providers. For example, if you set `minUptime` to 90, then only providers that have been online for at least 90% of the time will be returned.
@@ -148,23 +163,21 @@ There are two benchmarks to filter providers based on CPU performance: multi-thr
 
 ### Filter providers based on Memory Performance
 
-The memory performance is measured by the throughput in MiB/sec and operations per second.
-For sequential read/write performance (in MiB/sec):
+The memory performance is measured by the throughput in MiB/sec.
 
 - `minMemorySeqRead` and `maxMemorySeqRead` set the range for minimum and maximum sequential read performance.
 - `minMemorySeqWrite` and `maxMemorySeqWrite` set the range for minimum and maximum sequential write performance.
-  For random read/write performance (in operations per second):
+  For random read/write performance:
 - `minMemoryRandRead` and `maxMemoryRandRead` set the range for minimum and maximum random read performance.
 - `minMemoryRandWrite` and `maxMemoryRandWrite` set the range for minimum and maximum random write performance.
 
 ### Filter providers based on Disk Performance
 
-Similar to memory performance, disk performance is also measured by throughput in MB/s. We can filter for random and sequential read/write performance separately:
-For random read/write performance (in MB/s):
+Similar to memory performance, disk performance is also measured by throughput in MiB/sec.
 
 - `minRandomReadDiskThroughput` and `maxRandomReadDiskThroughput` filter based on minimum and maximum random disk read throughput.
 - `minRandomWriteDiskThroughput` and `maxRandomWriteDiskThroughput` filter based on minimum and maximum random disk write throughput.
-  For sequential read/write performance (in MB/s):
+  For sequential read/write performance:
 - `minSequentialReadDiskThroughput` and `maxSequentialReadDiskThroughput` filter based on minimum and maximum sequential disk read throughput.
 - `minSequentialWriteDiskThroughput` and `maxSequentialWriteDiskThroughput` filter based on minimum and maximum sequential disk write throughput.
 
@@ -173,21 +186,6 @@ For random read/write performance (in MB/s):
 You can filter providers based on their network download speed measured in Mbit/s using:
 
 - `minNetworkDownloadSpeed` and `maxNetworkDownloadSpeed`
-
-### Filter providers based on Ping
-
-You can filter providers based on their average ping in milliseconds using:
-
-- `minPing` and `maxPing`
-  Additionally, you can filter the providers in a particular region using the `pingRegion` parameter. The available regions are `europe`, `asia`, and `us`.
-
-You can also specify whether the pings should be peer-to-peer (p2p) using the `is_p2p` parameter. If `is_p2p` is set to `True`, pings are conducted from open ports; if `False`, they are routed through the relay. The default value is `False`.
-
-### Filter providers based on Task Success Rate
-
-You can filter providers based on their task success rate:
-
-- `minSuccessRate` and `maxSuccessRate` set the minimum and maximum percentage of successfully completed tasks.
 
 ```
 
