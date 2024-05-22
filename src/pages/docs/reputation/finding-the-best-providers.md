@@ -6,11 +6,11 @@ type: Article
 
 # How to find the best providers to compute your task
 
-When running a task on the Golem Network you're always exposed to hundreds or thousands of different providers with difference specs, performance and reliability. It can be hard to navigate this as a requestor, so the Golem Reputation system provides you an API you can query with your specific requirements and return the list of provider ID's that match your needs.
+When running a task on the Golem Network you're always exposed to hundreds or thousands of different providers with difference specs, performance and reliability. It can be hard to navigate this as a requestor, so the Golem Reputation system provides you an API you can query with your specific requirements and return the list of provider ID's that match your exact needs.
 
 ## HTTP API
 
-The reputation system provides a series of endpoints that each has their own unique purposes. The one we are going to talk about today is the `filter` endpoint in the V2 API. The filter endpoint allows anyone to define a series of requirements for the providers they are interested in working with and get a list of providers that matches the requirements returned. It has a series of options available that if combined with others will be used in conjunction with each other.
+The `filter` endpoint allows you to define specific requirements for the providers you want to work with and returns a list of providers that match those requirements. You can combine multiple options to refine your search and get the best possible matches.
 
 ## Trying out the endpoint using Swagger UI
 
@@ -22,9 +22,14 @@ To make it easier for you to test the API, we have integrated a Swagger UI just 
 
 {% swaggerui url="https://reputation.dev-test.golem.network/v2/openapi.json" /%}
 
-## Using the Returned Provider IDs in Your Custom Market Strategy
+## Using the Returned Provider IDs to Create a Custom Market Strategy
 
-Once you have obtained a list of provider IDs from the Reputation API, you can use these IDs to create a custom market strategy in your favorite SDK. Below are examples for both `yapapi` and `golem-js`.
+Now, let's discuss how to utilize the list of provider IDs obtained from the Reputation API. These IDs can be used to formulate a custom market strategy within your chosen SDK. Here's the process:
+
+1. **Obtain Provider IDs**: Query the filter endpoint with your specific requirements to get a list of provider IDs that match your criteria.
+2. **Integrate into Your SDK**: Use this list of provider IDs to develop a custom market strategy in your preferred SDK, such as `yapapi` or `golem-js`.
+3. **Filter Offers**: In your market strategy, filter offers based on the retrieved provider IDs, ensuring that only offers from providers in your list are accepted.
+   Below are examples for both `yapapi` and `golem-js`:
 
 ### Using yapapi
 
@@ -121,32 +126,7 @@ if __name__ == "__main__":
 
 In `golem-js`, you can use the `allowProvidersById` filter to only allow offers from providers whose IDs are in the list returned by the Reputation API.
 
-```js
-import { TaskExecutor, ProposalFilterFactory } from '@golem-sdk/golem-js'
-
-const whiteListIds = [
-  '0x79bcfdc92af492c9b15ce9f690c3ccae53437179',
-  '0x3c6a3f59518a0da1e75ea4351713bfe908e6642c',
-  '0x1c1c0b14e321c258f7057e29533cba0081df8bb8',
-]
-
-;(async function main() {
-  const executor = await TaskExecutor.create({
-    package: 'golem/alpine:latest',
-    proposalFilter: ProposalFilterFactory.allowProvidersById(whiteListIds),
-  })
-
-  try {
-    await executor.run(async (ctx) => {
-      console.log((await ctx.run("echo 'Hello World'")).stdout)
-    })
-  } catch (err) {
-    console.error('Task execution failed:', err)
-  } finally {
-    await executor.shutdown()
-  }
-})()
-```
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/strategy/whiteListProvidersIds.ts" language="typescript" /%}
 
 ## Filter Options
 

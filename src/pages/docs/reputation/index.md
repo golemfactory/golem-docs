@@ -6,37 +6,67 @@ type: Introduction
 
 # Golem Network Reputation System
 
-The Golem Network is a decentralized cloud computing network. It's like a global marketplace where people can rent out their computer power (providers) and others can use it for tasks (requestors). Since this network is spread across the world, providers have different levels of reliability and availability.
-To make this system work smoothly, Golem has a reputation system module. It's like a rating system for providers, helping requestors find the best ones for their needs.
+When running a task on the Golem Network, you're exposed to hundreds or thousands of different providers with varying specs, performance, and reliability. This can be overwhelming for requestors, making it challenging to find the right provider for their needs. To simplify this process, the Golem Network offers a reputation system. This acts like a trusted guide, helping you find the best providers for your specific requirements.
 
-## How It Works
+## Building Trust: Focusing on Provider Reputation
 
-The Golem Reputation System helps requestors choose providers who are more likely to complete tasks successfully. It does this by keeping track of how providers perform over time.
-Every day, the system runs tests on providers, measuring their speed, stability, and other important factors. It also tracks whether providers are online and available.
+Initially, we've focused on creating a reputation system that assesses providers' performance. This was a strategic choice for several reasons:
+
+- **Attracting Requestors:** A strong reputation system for providers is crucial for attracting more requestors to the network. It provides a level of trust and transparency that makes the Golem network more appealing.
+- **Streamlined Implementation:** Implementing a robust reputation system for requestors requires significant changes to our protocol. We wanted to start with a system that could be released quickly and efficiently, focusing on a key need: helping requestors find reliable providers.
+
+## How the System Works
+
+The Golem Reputation System helps requestors choose providers who are more likely to complete tasks successfully. To do this, it continuously collects data on provider performance, which is used to filter providers based on various criteria:
+
+- **Task Success Rate:** The percentage of tasks the provider has completed successfully.
+- **Provider Age:** Excludes newer providers that may have a high uptime percentage simply due to their short operational period.
+- **Uptime:** The percentage of time a provider has been online and available for tasks.
+- **CPU Performance:** Both single-core and multi-core CPU performance scores.
+- **Memory Performance:** Sequential and random read and write speeds of the provider's memory.
+- **Disk Speed:** Random and sequential read and write speeds of the provider's storage.
+- **Network Throughput:** Network download speeds.
+- **Location-based Ping Times:** The average ping times from specific regions (Europe, Asia, US) and whether the ping should be conducted peer-to-peer (p2p) or through the relay.
+- **GPU Performance (coming soon):** Performance tracking for providers who offer GPUs, which will be part of the reputation system in the near future as our beta program for GPUs expands.
+
+This data is collected through ongoing tests and benchmarks that are run daily. The system then uses this information to help requestors find providers that match their specific needs and requirements.
 
 **Choosing Which Providers to Track:**
-The system doesn't track all providers. It focuses on providers with fair prices. This is done by comparing their prices to similar services offered by established cloud providers like AWS, allowing for some flexibility.
-The goal here isn't to judge providers as expensive or cheap, but to make sure the system is fair. By focusing on providers with reasonable prices, the system ensures that it's not being manipulated by providers who charge too much.
+The system doesn't track all providers. As the system runs on mainnet and processes actual paid tasks, we need to protect against potential malicious providers attempting to game the system by specifying high prices. Therefore, the system comapares each provider's price against similar machine on other marketplaces to ensure that it aligns with market standards.
 
-**Benefits for Requestors:**
-The reputation system is especially helpful when projects move from a testing phase (testnet) to a live environment (mainnet). It helps identify providers who might cause problems because of their setup or pricing.
-Requestors can customize the importance of different factors in the reputation system. For example, if uptime is crucial for their project, they can give it a higher weight. This helps them find providers who are a good match for their specific needs.
+## Benefits for Requestors:
 
-## What the Reputation System Tracks
+The Golem Reputation System helps requestors find the perfect provider for their task by making it possible to filter for the exact requirements that make their computation run most optimally which you can read about [here](/docs/reputation/finding-the-best-providers.md). Currently, this is a manual process, but in the future, you will be able to automatically find the best providers using "schemas."
 
-The reputation system collects data on several key aspects of a provider's performance:
+**Schemas: Defining Your Ideal Computation Environment**
 
-- **Performance Benchmarks:**
+Schemas are like blueprints for your ideal computation environment. They allow you to specify the exact hardware and software requirements for your task, ensuring that it runs smoothly and efficiently on the Golem Network. Imagine being able to define your computation needs in a simple and intuitive way, and then having the system automatically find the perfect providers for you.
 
-  - **CPU Speed:** Measures how quickly the provider's processor can handle tasks, both for single tasks and multiple tasks running at the same time.
-  - **Memory Performance:** Assesses how fast the provider's memory can read and write data, using different patterns (sequential, random) and thread configurations (single, multi).
-  - **Disk Speed:** Evaluates the provider's storage performance, including read and write speeds for both random and sequential access patterns.
-  - **Network Throughput:** Determines how quickly data can be transferred to and from the provider, which is crucial for tasks that involve large files or data streams.
-  - **GPU Performance is coming soon:** We are currently working on adding performance tracking for providers who offer GPUs. This will be part of the reputation system in the near future as our beta program for GPUs expands.
+**The Power of Schemas**
 
-- **Reliability and Availability:**
+Schemas offer a powerful way to:
 
-  - **Uptime:** Tracks how often the provider is online and available for tasks.
-  - **Task Success Rate:** Records the percentage of tasks that the provider completes without errors. Differentiable between CPU / GPU soon.
+- **Simplify Provider Selection:** Instead of manually filtering through provider profiles, you can simply define your schema and let the system do the work.
+- **Optimize Task Performance:** By matching your computation needs with the right provider resources, schemas ensure that your tasks run as quickly and efficiently as possible.
+- **Discover New Possibilities:** Schemas open up a world of possibilities for more complex and demanding computations, as you can easily find providers that meet your specific requirements.
 
-By gathering and analyzing this information, the reputation system provides requestors with a comprehensive picture of each provider's capabilities and reliability. This helps them make informed decisions about which providers to use.
+**Examples of Potential Schemas**
+
+Here are some examples of schemas that could be created to address various computational needs:
+
+- **Schema for Training a Large Language Model:** This schema could prioritize providers with powerful GPUs, large amounts of RAM, high-speed storage, and high network bandwidth.
+- **Schema for Running a Blockchain Node:** This schema could emphasize providers with high uptime, reliable hardware and strong security measures.
+- **Schema for Decentralized AI Model Training:** This schema could focus on providers with GPUs, specialized software libraries, and a high-throughput network to enable collaborative training of large AI models.
+- **Schema for Rendering Complex 3D Graphics with Blender:** This schema could prioritize providers with high-end GPUs, large amounts of RAM, and fast storage to efficiently handle demanding rendering tasks in Blender.
+
+**The Future of Computation**
+
+The potential applications of schemas are vast and constantly evolving. As the Golem Network develops, we can expect to see even more specialized schemas emerge, catering to a wide range of computational needs. Imagine a future where you can easily define your computational requirements, and the network will instantly match you with the perfect provider for your task. This is the power of schemas, and the future we are working towards.
+
+## Expanding the System: A Look to the Future
+
+While our current focus is on building a strong foundation for provider reputation, we have big plans for the future. The goal is to expand the system to include a comprehensive reputation system for requestors as well. This will create a more balanced and robust ecosystem for all participants in the Golem network.
+
+However, implementing a robust system for requestors requires significant changes to our protocol. This is something we're actively working on, and we're excited to share more about it as we develop it.
+
+For now, we're confident that the current reputation system is a valuable resource for requestors. It helps them make informed decisions about which providers to use, ensuring a smoother and more reliable experience on the Golem network.
