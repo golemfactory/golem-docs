@@ -17,22 +17,23 @@ Initially, we've focused on creating a reputation system that assesses providers
 
 ## How the System Works
 
-The Golem Reputation System helps requestors choose providers who are more likely to complete tasks successfully. To do this, it continuously collects data on provider performance, which is used to filter providers based on various criteria:
+The Golem Reputation System assists requestors in selecting providers who are most likely to complete their tasks successfully and efficiently. It achieves this by continuously gathering data on provider performance and other metrics, which is then used to filter providers based on various criteria. Below is a list of metrics that are measured.
 
-- **Task Success Rate:** The percentage of tasks the provider has completed successfully.
-- **Provider Age:** Excludes newer providers that may have a high uptime percentage simply due to their short operational period.
-- **Uptime:** The percentage of time a provider has been online and available for tasks.
+- **Task Success Rate:** The percentage of tasks the provider has completed successfully for the reputation system **only**. This means we are not tracking from other requestors on the network, but we have plans to do this in the future.
+- **Provider Age:** The time since the provider first appeared on our network. This metric, when combined with uptime, helps requestors identify providers that have consistently high uptime over a longer period, rather than those with high uptime but have only been online for a short time.
+- **Uptime:** The percentage of time a provider has been online since it was first seen on the network.
 - **CPU Performance:** Both single-core and multi-core CPU performance scores.
 - **Memory Performance:** Sequential and random read and write speeds of the provider's memory.
 - **Disk Speed:** Random and sequential read and write speeds of the provider's storage.
 - **Network Throughput:** Network download speeds.
-- **Location-based Ping Times:** The average ping times from specific regions (Europe, Asia, US) and whether the ping should be conducted peer-to-peer (p2p) or through the relay.
+- **Location-based Ping Times:** The average ping times from specific regions (Europe, Asia, US) and whether the ping should be conducted peer-to-peer (p2p) or through the relay (non-p2p).
+- **Open Ports:** The system monitors whether providers have their ports open. Open ports can result in lower network latency, which may be advantageous for certain tasks or services.
 - **GPU Performance (coming soon):** Performance tracking for providers who offer GPUs, which will be part of the reputation system in the near future as our beta program for GPUs expands.
 
 This data is collected through ongoing tests and benchmarks that are run daily. The system then uses this information to help requestors find providers that match their specific needs and requirements.
 
 **Choosing Which Providers to Track:**
-The system doesn't track all providers. As the system runs on mainnet and processes actual paid tasks, we need to protect against potential malicious providers attempting to game the system by specifying high prices. Therefore, the system comapares each provider's price against similar machine on other marketplaces to ensure that it aligns with market standards.
+The system doesn't track all providers. As the system runs on mainnet and processes actual paid tasks, we need to protect against potential malicious providers attempting to game the system by specifying high prices. Therefore, the system compares each provider's price against similar machine on other marketplaces to ensure that it aligns with market standards.
 
 ## Benefits for Requestors:
 
@@ -65,7 +66,7 @@ The potential applications of schemas are vast and constantly evolving. As the G
 
 ## Expanding the System: A Look to the Future
 
-While our current focus is on building a strong foundation for provider reputation, we have big plans for the future. The goal is to expand the system to include a comprehensive reputation system for requestors as well. This will create a more balanced and robust ecosystem for all participants in the Golem network.
+While our current focus is on building a strong foundation for provider reputation, we have big plans for the future. The goal is to expand the system to include a comprehensive reputation system that scores requestors as well. This will create a more balanced and robust ecosystem for all participants in the Golem network.
 
 However, implementing a robust system for requestors requires significant changes to our protocol. This is something we're actively working on, and we're excited to share more about it as we develop it.
 

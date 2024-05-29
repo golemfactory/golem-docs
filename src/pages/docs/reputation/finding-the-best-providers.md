@@ -128,7 +128,13 @@ In `golem-js`, you can use the `allowProvidersById` filter to only allow offers 
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/strategy/whiteListProvidersIds.ts" language="typescript" /%}
 
-## Filter Options
+## Detailed look at the filter options
+
+### Filter providers based on if they have port open or not (p2p vs non-p2p)
+
+You can filter providers based on if they have their ports open or not. This can be effective when you as a requestor doesn't have portforwarded ports but still require a service or task on the network to run with low network latency. You can filter for providers with open ports using the parameter below:
+
+- `providerHasOpenPorts` set to `True` will return providers with open ports. `False` will return providers with no ports open and instead routing through relay
 
 ### Filter providers based on Ping
 
