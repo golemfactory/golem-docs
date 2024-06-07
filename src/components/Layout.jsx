@@ -76,18 +76,9 @@ function Header({ navigation }) {
     }
   }, [])
 
-  const [githubInfo, setGithubInfo] = useState({ stargazersCount: 0, forks: 0 })
+  const [githubInfo, setGithubInfo] = useState({ stargazersCount: 365, forks: 58 })
 
-  useEffect(() => {
-    fetch('https://api.github.com/repos/golemfactory/yagna')
-      .then((response) => response.json())
-      .then((data) => {
-        setGithubInfo({
-          stargazersCount: data.stargazers_count,
-          forks: data.forks,
-        })
-      })
-  }, [])
+
 
   return (
     <header
