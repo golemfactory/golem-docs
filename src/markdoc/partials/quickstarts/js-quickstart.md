@@ -102,7 +102,7 @@ Please note: This application requires Node.js version 18.0.0 or higher.
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/beta/examples/basic/one-of.ts" language="typescript" /%}
 
 {% alert level="info" %}
 
@@ -120,7 +120,7 @@ node requestor.mjs
 
 The output of the script should look very similar to the one below:
 
-![Output logs](/js-tutorial-05.gif)
+![Output logs](/TODO-js-tutorial-05.gif)
 
 The information about the `node.js` version included in the image that our script deploys on the remote computer, can be found at the end of the script's logs.
 
@@ -137,7 +137,7 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 
 {% docnavigation title="See also" %}
 
-- [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
-- [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
+- [TODO ???? ](/docs/creators/javascript)
+- [TODO: Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
 
 {% /docnavigation %}
