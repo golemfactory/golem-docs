@@ -95,14 +95,17 @@ Create a new Node.js project and install the Golem SDK by entering the following
 mkdir try_golem
 cd try_golem
 npm init
-npm install @golem-sdk/task-executor
+npm install @golem-sdk/golem-js
 ```
 
+{% alert level="warning" %}
 Please note: This application requires Node.js version 18.0.0 or higher.
+
+{% /alert %}
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/beta/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/mgordel/JST-926/new-quickstart/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 
@@ -132,12 +135,14 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="Next steps" %}
 
 - [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
+<!-- rebuild this article -->
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-- [TODO ???? ](/docs/creators/javascript)
-- [TODO: Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
+- [Overview of JS SDK components](/docs/creators/javascript) <!-- rebuild this article -->
+- [Simple introduction to the Golem Network and JS SDK](/docs/creators/javascript/guides/golem-js) <!-- add content to this article-->
+- [JS Task Model](/docs/creators/javascript/task-executor/task-model)
 
 {% /docnavigation %}
