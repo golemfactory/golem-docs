@@ -90,6 +90,30 @@ $HOME/.local/share/yagna/yagna_rCURRENT.log
 $HOME/.local/share/ya-provider/ya-provider_rCURRENT.log
 ```
 
+Below is a portion of the provider logs, showing key activities and events such as timestamps, error messages, provider actions, and system responses. This is only a small part of all the log messages.
+
+- **Negotiator component 'DebitNoteInterval' is still negotiating Proposal...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Negotiator component 'PaymentTimeout' is still negotiating Proposal...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Decided to CounterProposal...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Got proposal...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Resubscribing subscription...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Unsubscribing 1 offer(s)**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Subscribed offer. Subscription id ...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Failed to unsubscribe offers from the market: HTTP error requesting DELETE http://...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Can't query market events. Error: HTTP error requesting GET http://... 404 Not Found; msg:...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+- **Error sending invoice: HTTP error requesting POST http://...**
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum elit lorem, a scelerisque risus congue vel.
+
+
 ### Why would someone run a node on the testnet?
 
 Running a testnet node typically helps requestors test and refine their applications at no cost, which can speed up the overall development and migration to the mainnet.
