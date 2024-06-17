@@ -96,6 +96,7 @@ mkdir try_golem
 cd try_golem
 npm init
 npm install @golem-sdk/golem-js
+npm install @golem-sdk/pino-logger
 ```
 
 {% alert level="warning" %}
@@ -123,7 +124,9 @@ node requestor.mjs
 
 The output of the script should look very similar to the one below:
 
-![Output logs](/TODO-js-tutorial-05.gif)
+<!-- replace this png -->
+
+![Output logs](/run_log.png)
 
 The information about the `node.js` version included in the image that our script deploys on the remote computer, can be found at the end of the script's logs.
 
