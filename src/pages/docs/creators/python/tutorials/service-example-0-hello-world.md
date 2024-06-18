@@ -226,7 +226,7 @@ Using the `Cluster` object's `instances` field we can iterate over our service i
 
 That's it!
 
-We can now try running our service. Assuming you have a `yagna` node active locally (refer to the [Yagna installation](/docs/creators/python/examples/tools/yagna-installation-for-requestors) in case of any doubts) and `yapapi` library installed, you can start the example by running the below command from the example's directory:
+We can now try running our service. Assuming you have a `yagna` node active locally (refer to the [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors) in case of any doubts) and `yapapi` library installed, you can start the example by running the below command from the example's directory:
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}

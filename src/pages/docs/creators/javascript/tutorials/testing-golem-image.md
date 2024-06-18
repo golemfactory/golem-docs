@@ -49,7 +49,7 @@ Later on we're going to see how to specify the runtime to be used by the debugge
 ## Running the debugger
 
 {% alert level="info" %}
-This section assumes you already have a `.gvmi` file ready on your machine. If you don't, then follow the [Creating a custom image](/docs/creators/javascript/tutorials/building-custom-image) tutorial or [Converting an image from Docker to Golem](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format) example.
+This section assumes you already have a `.gvmi` file ready on your machine. If you don't, then follow the [Creating a custom image](/docs/creators/javascript/tutorials/building-custom-image) tutorial or [Converting an image from Docker to Golem](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format) example.
 {% /alert %}
 
 Let's now see how we can use `ya-runtime-dbg` together with our image. We can learn about the program's required arguments by calling `ya-runtime-dbg --help`:

@@ -19,7 +19,7 @@ The full code of the example is available in the yapapi repository: [https://git
 
 ## Prerequisites
 
-As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/python/examples/tools/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
+As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
 
 This example involves [Computation Payload Manifest](/docs/golem/payload-manifest).
 

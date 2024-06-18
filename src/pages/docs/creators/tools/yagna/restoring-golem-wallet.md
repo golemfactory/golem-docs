@@ -17,7 +17,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 {% alert level="warning" %}
 
-The above line assumes you're a requestor on a Unix-like platform (Linux or Mac). If that's not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](/docs/creators/python/examples/tools/yagna-installation-for-requestors) or the [analogous instructions for providers](/docs/providers/provider-installation).
+The above line assumes you're a requestor on a Unix-like platform (Linux or Mac). If that's not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](/docs/creators/tools/yagna/yagna-installation-for-requestors) or the [analogous instructions for providers](/docs/providers/provider-installation).
 
 {% /alert %}
 
@@ -127,7 +127,7 @@ If you have used `yagna` before, you have probably already created an applicatio
 In that case, after you import your Ethereum mainnet key, you need to re-create Yagna's application key, as the previous one is now bound to your old key:
 
 ```bash
- yagna app-key create requestor-mainnet
+yagna app-key create requestor-mainnet
 ```
 
 The name (`requestor-mainnet`above) is not important as long as it doesn't collide with the existing one (assuming it was just `requestor`).

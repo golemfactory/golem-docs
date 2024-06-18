@@ -8,7 +8,7 @@ It should take just a few minutes to complete, and you will see the command outp
 
 ## Prerequisites
 
-This example assumes that you have already installed Yagna and have it running in the background. If you haven't done so yet, please follow the instructions in [this tutorial](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) before proceeding.
+This example assumes that you have already installed Yagna and have it running in the background. If you haven't done so yet, please follow the instructions in [this tutorial](/docs/creators/tools/yagna/yagna-installation-for-requestors) before proceeding.
 
 # Setting up the project
 

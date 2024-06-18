@@ -44,6 +44,8 @@ To verify if you use a custom data location, execute the following command:
 echo $YAGNA_DATADIR
 ```
 
+If this command returns an empty line, that implies you used the default settings.
+
 To remove the data in the default location, execute the command:
 
 ```bash
@@ -68,6 +70,8 @@ To verify if you're using a custom data location, execute the command:
 echo $DATADIR
 ```
 
+If this command returns an empty line, that implies you used the default settings.
+
 To remove the data in the default location, execute the command:
 
 ```bash
@@ -84,6 +88,8 @@ To verify if you use a custom data location, execute the following command:
 echo $EXE_UNIT_PATH
 ```
 
+If this command returns an empty line, that implies you used the default settings.
+
 To remove the data in the default location, execute the command:
 
 ```bash
@@ -92,6 +98,6 @@ rm -r ~/.local/lib/yagna
 
 {% docnavigation title="See also" %}
 
-- If you're looking for intructions on how to uninstall the requestor, [click here](/docs/creators/javascript/examples/tools/requestor-uninstall).
+- If you're looking for intructions on how to uninstall the requestor, [click here](/docs/creators/tools/yagna/requestor-uninstallation).
 
 {% /docnavigation %}

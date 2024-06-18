@@ -10,7 +10,7 @@ type: Instructions
 ## Prerequisites
 
 - Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
-- Gvmkit-build installed ([see instructions](/docs/creators/python/examples/tools/gvmkit-build-installation))
+- Gvmkit-build installed ([see instructions](/docs/creators/tools/gvmkit/gvmkit-build-installation))
 
 {% alert level="info" %}
 
@@ -64,13 +64,6 @@ docker build . -t golem-example
 The examples below show how to convert the Docker image tagged `golem-example` to a `.gvmi` file in the current directory.
 
 {% tabs %}
-{% tab label="Python" %}
-
-```bash
-gvmkit-build golem-example
-```
-
-{% /tab %}
 {% tab label="JavaScript" %}
 
 ```bash
@@ -84,7 +77,13 @@ npx gvmkit-build golem-example
 ```
 
 {% /tab %}
+{% tab label="Python" %}
 
+```bash
+gvmkit-build golem-example
+```
+
+{% /tab %}
 {% /tabs %}
 
 ## Converting and publishing your image at once (hash-based)
@@ -94,13 +93,6 @@ This example explains how to convert and publish an image that will be identifie
 Note if the image was already converted to `.gvmi` format, it will only be pushed.
 
 {% tabs %}
-{% tab label="Python" %}
-
-```bash
-gvmkit-build golem-example --push --nologin
-```
-
-{% /tab %}
 {% tab label="JavaScript" %}
 
 ```bash
@@ -114,7 +106,13 @@ npx gvmkit-build golem-example --push --nologin
 ```
 
 {% /tab %}
+{% tab label="Python" %}
 
+```bash
+gvmkit-build golem-example --push --nologin
+```
+
+{% /tab %}
 {% /tabs %}
 
 The hash is found in the `image link` line of the console output:
@@ -125,7 +123,7 @@ The hash is found in the `image link` line of the console output:
 
 {% docnavigation title="Next steps" %}
 
-- [Publishing an image in the registry](/docs/creators/python/examples/tools/publishing-custom-images)
+- [Publishing an image in the registry](/docs/creators/tools/gvmkit/publishing-custom-images)
 
 {% /docnavigation %}
 

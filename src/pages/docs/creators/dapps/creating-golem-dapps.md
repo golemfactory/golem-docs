@@ -26,11 +26,11 @@ Golem’s virtual machine runtime uses its own image format, which is derived fr
 
 For instructions on how to create a Golem VM image, please refer to:
 
-[Converting a Docker image to the Golem image Tutorial](/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format)
+[Converting a Docker image to the Golem image Tutorial](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format)
 
 What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re providing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](/docs/creators/dapps/docker-containers-vs-golem-vms)
 
-For a GVMI image to be used by providers, it needs to be published somewhere where it can be downloaded. The easiest way to do this is by uploading it to the Golem image repository. For instructions, please refer to: [Publishing a Golem image](/docs/creators/javascript/examples/tools/publishing-custom-images)
+For a GVMI image to be used by providers, it needs to be published somewhere where it can be downloaded. The easiest way to do this is by uploading it to the Golem image repository. For instructions, please refer to: [Publishing a Golem image](/docs/creators/tools/gvmkit/publishing-custom-images)
 
 If the image is uploaded to the repository, its hash is the only piece of information needed for the image to be retrieved and used by providers. If it’s available under a different, publicly-available URL, both the image hash and the URL need to be supplied.
 

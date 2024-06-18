@@ -1,6 +1,6 @@
 ---
-title: Understanding Golem Virtual Machine Images 
-description: This guide offers a comprehensive overview of Golem VM images, their creation, usage, and best practices for integration with Golem Network's decentralized computational resource sharing platform. 
+title: Understanding Golem Virtual Machine Images
+description: This guide offers a comprehensive overview of Golem VM images, their creation, usage, and best practices for integration with Golem Network's decentralized computational resource sharing platform.
 pageTitle: Golem VM Images - Creation, Publishing & Best Practices for Developers
 type: Guide
 ---
@@ -25,7 +25,7 @@ The general process of creating a Golem image looks like this:
 
 - Define the image content in Docker format
 - Build a Docker image from the Dockerfile
-- Convert to Golem image using gvmkit-build ([example](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format))
+- Convert to Golem image using gvmkit-build ([example](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format))
 
 See our [Create Golem Image Tutorial](/docs/creators/python/tutorials/building-custom-image) on how to use the tool.
 
@@ -44,8 +44,8 @@ The type of identifier depends on the way you publish your image and is driven b
 If you intend to use your image just for testing, it is enough to use the hashes and upload the images anonymously to the registry.
 On the other hand, if you intend to work on a more complex project, where you would like to use several different versions of your image or collaborate with other developers - you should consider creating an account in the registry and use tags to describe your images. Both cases are illustrated in our examples.
 
-- Publishing the image anonymously. ([example](/docs/creators/python/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-hash-based))
-- Publishing the image using tags. ([example](/docs/creators/python/examples/tools/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
+- Publishing the image anonymously. ([example](/docs/creators/tools/gvmkit/publishing-custom-images#publishing-custom-golem-image-to-the-registry-hash-based))
+- Publishing the image using tags. ([example](/docs/creators/tools/gvmkit/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
 - Using the tag or hash in a requestor script.
 
 ## Dockerfile command support
@@ -82,7 +82,7 @@ In Golem terms, such a singular launch on a provider is called an Activity. Acti
 
 {% docnavigation title="Next steps" %}
 
-- [Installing gvmkit-build](/docs/creators/python/examples/tools/gvmkit-build-installation)
+- [Installing gvmkit-build](/docs/creators/tools/gvmkit/gvmkit-build-installation)
 
 {% /docnavigation %}
 

@@ -22,7 +22,7 @@ The only assumption made in this article is that you have some familiarity with 
 
 Here are the prerequisites in case you'd like to follow along and/or experiment with the code presented in this article:
 
-- you have a local `yagna` node set up (instructions can be found here: [Yagna installation](/docs/creators/python/examples/tools/yagna-installation-for-requestors))
+- you have a local `yagna` node set up (instructions can be found here: [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors))
 
 - you have the Python API set up on your machine (see instructions in: [Run first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem#running-the-your-first-task-on-the-golem-network))
 
@@ -237,7 +237,7 @@ Finally, we make a call to `task.accept_result` to mark the task as successfully
 
 That's all there is to the example!
 
-To run it on your local machine make sure you have a `yagna` node running and set up as a requestor (take a look here in case of any doubts: [Yagna installation](/docs/creators/python/examples/tools/yagna-installation-for-requestors)). You can then issue the following command to create an app-key:
+To run it on your local machine make sure you have a `yagna` node running and set up as a requestor (take a look here in case of any doubts: [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors)). You can then issue the following command to create an app-key:
 
 ```bash
 yagna app-key create requestor

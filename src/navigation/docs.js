@@ -256,44 +256,6 @@ export const navigation = [
             ],
           },
           parseReference('Golem JS API Reference', golemJsReference),
-          {
-            title: 'Golem tools examples',
-            href: '',
-            children: [
-              {
-                title: 'List of instructions',
-                href: '/docs/creators/javascript/examples/tools',
-              },
-              {
-                title: 'Yagna installation',
-                href: '/docs/creators/javascript/examples/tools/yagna-installation-for-requestors',
-              },
-              {
-                title: 'Gvmkit-build installation',
-                href: '/docs/creators/javascript/examples/tools/gvmkit-build-installation',
-              },
-              {
-                title: 'Converting images',
-                href: '/docs/creators/javascript/examples/tools/converting-docker-image-to-golem-format',
-              },
-              {
-                title: 'Publishing custom images',
-                href: '/docs/creators/javascript/examples/tools/publishing-custom-images',
-              },
-              {
-                title: 'Golem wallet backup',
-                href: '/docs/creators/javascript/examples/tools/golem-wallet-backup',
-              },
-              {
-                title: 'Restoring Golem wallet',
-                href: '/docs/creators/javascript/examples/tools/restoring-golem-wallet',
-              },
-              {
-                title: 'Managing Golem wallet',
-                href: '/docs/creators/javascript/examples/tools/managing-golem-wallet',
-              },
-            ],
-          },
         ],
       },
       {
@@ -467,46 +429,8 @@ export const navigation = [
             ],
           },
           {
-            title: 'Golem tools examples',
-            href: '',
-            children: [
-              {
-                title: 'List of instructions',
-                href: '/docs/creators/python/examples/tools',
-              },
-              {
-                title: 'Yagna installation',
-                href: '/docs/creators/python/examples/tools/yagna-installation-for-requestors',
-              },
-              {
-                title: 'Converting images',
-                href: '/docs/creators/python/examples/tools/converting-docker-image-to-golem-format',
-              },
-              {
-                title: 'Gvmkit-build installation',
-                href: '/docs/creators/python/examples/tools/gvmkit-build-installation',
-              },
-              {
-                title: 'Publishing custom images',
-                href: '/docs/creators/python/examples/tools/publishing-custom-images',
-              },
-              {
-                title: 'Self-hosted VM images',
-                href: '/docs/creators/python/examples/tools/self-hosted-vm-images',
-              },
-              {
-                title: 'Golem wallet backup',
-                href: '/docs/creators/python/examples/tools/golem-wallet-backup',
-              },
-              {
-                title: 'Restoring Golem wallet',
-                href: '/docs/creators/python/examples/tools/restoring-golem-wallet',
-              },
-              {
-                title: 'Managing Golem wallet',
-                href: '/docs/creators/python/examples/tools/managing-golem-wallet',
-              },
-            ],
+            title: 'Self-hosted VM images',
+            href: '/docs/creators/python/examples/tools/self-hosted-vm-images',
           },
           {
             title: 'Python API Reference',
@@ -586,8 +510,59 @@ export const navigation = [
         ],
       },
       {
+        title: '------------------------------',
+      },
+      {
         title: 'Common Developer tools',
         children: [
+          {
+            title: 'Yagna',
+            href: '/docs/creators/tools/yagna',
+            children: [
+              {
+                title: 'Yagna installation',
+                href: '/docs/creators/tools/yagna/yagna-installation-for-requestors',
+              },
+              {
+                title: 'Yagna uninstallation',
+                href: '/docs/creators/tools/yagna/requestor-uninstallation',
+              },
+              {
+                title: 'Managing Golem Wallet',
+                href: '/docs/creators/tools/yagna/managing-golem-wallet',
+              },
+              {
+                title: 'Golem wallet backup',
+                href: '/docs/creators/tools/yagna/golem-wallet-backup',
+              },
+              {
+                title: 'Restoring Golem Wallet',
+                href: '/docs/creators/tools/yagna/restoring-golem-wallet',
+              },
+              {
+                title: 'Yagna mostly used commands',
+                href: '/docs/creators/tools/yagna/yagna-mostly-used-commands',
+              },
+            ],
+          },
+          {
+            title: 'Gvmkit-build',
+            href: '/docs/creators/tools/gvmkit',
+            children: [
+              {
+                title: 'Gvmkit-build installation',
+                href: '/docs/creators/tools/gvmkit/gvmkit-build-installation',
+              },
+              {
+                title: 'Golem image creation',
+                href: '/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format',
+              },
+              {
+                title: 'Publishing custom image',
+                href: '/docs/creators/tools/gvmkit/publishing-custom-images',
+              },
+            ],
+          },
           {
             title: 'Goth',
             href: '/docs/creators/tools/goth',
@@ -624,6 +599,10 @@ export const navigation = [
     links: [
       { title: 'Introduction', href: '/docs/providers' },
       { title: 'Installation', href: '/docs/providers/provider-installation' },
+      {
+        title: 'Uninstallation',
+        href: '/docs/providers/provider-uninstallation',
+      },
       {
         title: 'Configuring your provider',
         children: [

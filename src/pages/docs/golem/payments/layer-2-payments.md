@@ -1,6 +1,6 @@
 ---
-title: Implementing Polygon Payments in Golem Network 
-description: Guide to using Polygon for cost-efficient transactions in the Golem Network, bypassing Ethereum mainnet fees. 
+title: Implementing Polygon Payments in Golem Network
+description: Guide to using Polygon for cost-efficient transactions in the Golem Network, bypassing Ethereum mainnet fees.
 pageTitle: Golem Network's Polygon Integration - Efficient Layer 2 Payments Guide
 type: Guide
 ---
@@ -17,7 +17,7 @@ When payments are performed directly on Ethereum, each payment must be executed 
 
 [Migration of our token to a new, ERC-20-compliant contract](https://migration-tracker.golem.network/) enabled us to not only leverage decentralized exchanges and other DeFi platforms on Ethereum but most importantly, made it possible to utilize a variety of Layer 2 solutions popping up within the Ethereum ecosystem.
 
-The common feature of all the platforms gathered under the "Layer 2" umbrella is that they move most of the transactions to their side chains while maintaining a varying degree of synchronization with the base Ethereum chain. 
+The common feature of all the platforms gathered under the "Layer 2" umbrella is that they move most of the transactions to their side chains while maintaining a varying degree of synchronization with the base Ethereum chain.
 
 As Layer 2 solutions implement their ways to ensure the integrity of their side chains, their cost of a singular transaction is reduced, sometimes by several orders of magnitude. The usual trade off is some level of centralization which, arguably, reduces the trustless-ness and thus, to a smaller or larger extent, also the security of users' funds.
 
@@ -29,11 +29,11 @@ What makes Polygon attractive is that its chain is fully compatible with Ethereu
 
 The consensus on Polygon's mainnet chain is maintained by a carefully selected and somewhat decentralized set of validator nodes who use a proof-of-stake mechanism, whereby the validators stake their MATIC tokens. Because of this setup and because no active synchronization with Ethereum is attempted, the costs of transactions are several orders of magnitude lower than on Ethereum.
 
-A user wishing to enter and exit Polygon - that is transfer funds between Polygon and the Ethereum mainnet - needs to use a bridge - a special kind of contract that locks user's funds on one chain and transfers them a respective amount on the other chain. Because those bridges need to work on the Ethereum, they're pretty costly to interact with. 
+A user wishing to enter and exit Polygon - that is transfer funds between Polygon and the Ethereum mainnet - needs to use a bridge - a special kind of contract that locks user's funds on one chain and transfers them a respective amount on the other chain. Because those bridges need to work on the Ethereum, they're pretty costly to interact with.
 
 The good news is that a user having funds on Polygon - e.g. someone who received tokens as a Golem provider - may not have an immediate need to exit from Polygon to mainnet as there are a lot of centralized and decentralized exchanges and other kinds of DeFi solutions already operating directly _on_ the Polygon chain.
 
-Moreover, from the perspective of Golem requestors, Polygon is currently an indisputably superior solution because the ratio between the amounts paid for computing resources and the transaction fees is much more favorable than on the main chain. 
+Moreover, from the perspective of Golem requestors, Polygon is currently an indisputably superior solution because the ratio between the amounts paid for computing resources and the transaction fees is much more favorable than on the main chain.
 
 ## Current support in Golem
 
@@ -43,14 +43,13 @@ On the other hand, because we assume requestors will first start by testing the 
 
 When you run `yagna payment fund` on testnet, Golem initializes a new account from our custom faucet (a service that transfers test tokens to an address that asks for it) which provides it with test Matic and test GLM tokens.
 
-To enable the service to use the `mainnet`, you must use a command appropriate to your desired mainnet payment platform. For instructions look [here](/docs/creators/javascript/examples/tools/managing-golem-wallet#enable-the-mainnet-account).
-
+To enable the service to use the `mainnet`, you must use a command appropriate to your desired mainnet payment platform. For instructions look [here](/docs/creators/tools/yagna/managing-golem-wallet#enable-the-mainnet-account).
 
 {% docnavigation title="Next steps" %}
 
 - If you're interested in running a requestor on the Polygon Ethereum mainnet, to be able to leverage the main pool of Golem providers, please refer to [Using Golem on the mainnet](/docs/creators/javascript/guides/switching-to-mainnet).
 
-- You can be also interested how you can send GLM tokens from the Ethereum Mainnet to Polygon and vice versa: [GLM  mainnet polygon conversion](/docs/golem/payments/golem-token-conversion)
+- You can be also interested how you can send GLM tokens from the Ethereum Mainnet to Polygon and vice versa: [GLM mainnet polygon conversion](/docs/golem/payments/golem-token-conversion)
 
 {% /docnavigation %}
 
@@ -60,5 +59,3 @@ To enable the service to use the `mainnet`, you must use a command appropriate t
 - [GLM token on Polygon](https://polygonscan.com/token/0x0b220b82f3ea3b7f6d9a1d8ab58930c064a2b5bf)
 
 {% /docnavigation %}
-
-

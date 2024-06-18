@@ -7,7 +7,7 @@ type: Instructions
 # How to Uninstall the Golem Requestor
 
 {% alert level="warning" %}
-Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/creators/javascript/examples/tools/golem-wallet-backup).
+Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/creators/tools/yagna/golem-wallet-backup).
 {% /alert %}
 
 ## Quick path (Linux only)
@@ -39,7 +39,7 @@ Yagna is manually installed by extracting from an archive. Simply locate and del
 If they are in your system's PATH, you can locate them with the following command:
 
 ```sh
-whereis yagna gftp
+where yagna gftp
 ```
 
 Then remove using `rm <the-path-to-the-file>`.
@@ -79,7 +79,7 @@ set YAGNA_DATADIR
 If your Yagna data is in the default directory and you wish to remove it, use the following command:
 
 ```sh
-rm -r %HOMEPATH%\AppData\Roaming\GolemFactory\yagna
+rmdir %HOMEPATH%\AppData\Roaming\GolemFactory\yagna /s /q
 ```
 
 {% /tab %}
@@ -168,7 +168,7 @@ npm uninstall -g gvmkit-build
 Note that python3/python with a pip installer is required.
 
 ```bash
-pip uninstall -g gvmkit-build
+pip uninstall gvmkit-build
 ```
 
 {% /tab %}
@@ -176,6 +176,6 @@ pip uninstall -g gvmkit-build
 
 {% docnavigation title="See also" %}
 
-- If you are looking for intructions for Providers see [here](/docs/providers/provider-uninstall).
+- If you are looking for intructions for Providers see [here](/docs/providers/provider-uninstallation).
 
 {% /docnavigation %}
