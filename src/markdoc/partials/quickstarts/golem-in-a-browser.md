@@ -2,7 +2,7 @@
 
 In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
 
-Before getting started, you need to install and launch the Yagna service in version 0.13.0 or later. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/yagna/tools/yagna-installation-for-requestors).
+Before getting started, you need to install and launch the Yagna service in version 0.13.0 or later. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 
 {% /alert %}
 
