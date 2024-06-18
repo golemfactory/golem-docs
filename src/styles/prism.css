@@ -53,6 +53,24 @@ pre[class*='language-'] {
   hyphens: none;
 }
 
+.swagger-ui .language- {
+  background: hsl(
+    210,
+    10%,
+    96%
+  ) !important; /* Consistent background with .swagger-ui */
+  color: hsl(210, 2%, 20%) !important; /* Consistent color with .swagger-ui */
+}
+
+.swagger-ui pre.language- {
+  background: hsl(
+    210,
+    10%,
+    96%
+  ) !important; /* Consistent background with .swagger-ui */
+  color: hsl(210, 2%, 20%) !important; /* Consistent color with .swagger-ui */
+}
+
 /* Selection */
 code[class*='language-']::-moz-selection,
 code[class*='language-'] *::-moz-selection,
@@ -412,8 +430,6 @@ pre[id].linkable-line-numbers.linkable-line-numbers
 .dark .rainbow-braces .token.token.punctuation.brace-level-11 {
   color: #60aeee;
 }
-
-
 
 .rainbow-braces .token.token.punctuation.brace-level-4,
 .rainbow-braces .token.token.punctuation.brace-level-8,

@@ -121,10 +121,6 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/quickstart-explained',
               },
               {
-                title: 'Selecting providers based on reputation',
-                href: '/docs/creators/javascript/tutorials/using-reputation',
-              },
-              {
                 title: 'Running parallel tasks',
                 href: '/docs/creators/javascript/tutorials/running-parallel-tasks',
               },
@@ -462,6 +458,28 @@ export const navigation = [
           {
             title: 'Docker vs Golem VM diffs',
             href: '/docs/creators/dapps/docker-containers-vs-golem-vms',
+          },
+        ],
+      },
+      {
+        title: 'Reputation System',
+        children: [
+          { title: 'Introduction', href: '/docs/reputation' },
+          {
+            title: 'How to find the best providers as a requestor',
+            href: '/docs/reputation/finding-the-best-providers',
+          },
+          {
+            title: 'Node.js integration example',
+            href: '/docs/reputation/using-reputation-with-nodejs',
+          },
+          {
+            title: 'Reputation API Swagger UI V1',
+            href: '/docs/reputation/reputation-api-swagger-ui-v1',
+          },
+          {
+            title: 'Reputation API Swagger UI V2',
+            href: '/docs/reputation/reputation-api-swagger-ui-v2',
           },
         ],
       },

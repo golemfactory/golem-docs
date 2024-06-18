@@ -10,6 +10,24 @@
   }
 }
 
+/* styles/swagger-custom.css */
+
+.hide-info .swagger-ui .info,
+.hide-info .swagger-ui .topbar,
+.hide-info .scheme-container,
+.hide-info .scheme-container,
+.hide-info .opblock-tag {
+  display: none;
+}
+
+.hide-info .swagger-ui .wrapper {
+  padding: 0;
+}
+
+.hide-schemes .swagger-ui .scheme-container {
+  display: none;
+}
+
 .prose-a\:after\:content-\[\'_\2197\'\]
   :is(:where(a):not(:where([class~='not-prose'] *)))::after {
   font-size: 0.75rem;
@@ -30,8 +48,6 @@ html {
   content: '';
 }
 
-
-
 .prose :where(li):not(:where([class~='not-prose'] *)) {
   margin-bottom: 6px;
   margin-top: 0px;
@@ -49,14 +65,13 @@ ul {
   @apply px-1;
 }
 .dark .prose :where(code):not(:where([class~='not-prose'] *)) {
-  color: hsl(227, 25%, 85%) ;
-  background: #24242a ;
+  color: hsl(227, 25%, 85%);
+  background: #24242a;
   font-weight: 400;
-  
 }
 
-.prose :where(code):not(:where([class~=not-prose] *)):after {
-  content: "";
+.prose :where(code):not(:where([class~='not-prose'] *)):after {
+  content: '';
 }
 
 .override-code-styles {
@@ -106,13 +121,114 @@ table {
   overflow-x: auto;
 }
 
-
 /* This will initially hide the span */
-.group [group-aria-selected="true"] .absolute {
+.group [group-aria-selected='true'] .absolute {
   display: none;
 }
 
 /* This will make the span visible when its parent is hovered */
-.group:hover [group-aria-selected="true"] .absolute {
+.group:hover [group-aria-selected='true'] .absolute {
   display: inline;
+}
+
+.dark .swagger-ui .opblock.opblock-get,
+.dark .swagger-ui .opblock.opblock-post {
+  @apply bg-darkcontent;
+  @apply border-none;
+}
+
+.dark .swagger-ui .model-box-control:focus,
+.dark .swagger-ui .models-control:focus,
+.dark .swagger-ui .opblock-summary-control:focus {
+  outline: none;
+}
+
+.dark .swagger-ui a.nostyle,
+.swagger-ui a.nostyle:visited {
+  @apply text-white;
+}
+.dark .swagger-ui .opblock .opblock-summary-description {
+  @apply text-gray-400;
+}
+
+.dark .swagger-ui table thead tr td,
+.dark .swagger-ui table thead tr th {
+  @apply text-white;
+}
+
+.dark .swagger-ui .parameter__name {
+  @apply text-gray-400;
+}
+
+.dark .swagger-ui .parameters-col_description .markdown p,
+.dark .swagger-ui .parameters-col_description .renderedMarkdown p {
+  @apply text-gray-400;
+}
+
+.dark .swagger-ui .response-col_status {
+  @apply text-white;
+}
+
+.dark .swagger-ui .response-col_description .markdown p,
+.dark .swagger-ui .response-col_description .renderedMarkdown p {
+  @apply text-white;
+}
+.dark .swagger-ui .response-col_links {
+  @apply text-white;
+}
+
+.dark .swagger-ui .opblock .opblock-section-header {
+  @apply bg-slate-800;
+}
+
+.dark .swagger-ui .opblock-control-arrow {
+  @apply fill-white;
+}
+
+.dark .swagger-ui .authorization__btn {
+  @apply fill-white;
+}
+
+.dark .swagger-ui .opblock .opblock-section-header h4 {
+  @apply text-white;
+}
+
+.dark .swagger-ui .btn {
+  @apply border-darkprimary text-white;
+}
+
+.dark .swagger-ui .parameter__type {
+  @apply text-gray-400;
+}
+.dark .swagger-ui textarea,
+.dark .swagger-ui .opblock-body pre.microlight {
+  @apply bg-[#24242a] !important;
+  @apply text-white;
+}
+
+.dark .swagger-ui .opblock.opblock-post {
+  @apply bg-darkcontent;
+}
+
+.dark .swagger-ui .responses-inner h4,
+.dark .swagger-ui .responses-inner h5,
+.dark .swagger-ui .opblock-description-wrapper p,
+.dark .swagger-ui .opblock-external-docs-wrapper p,
+.dark .swagger-ui .opblock-title_normal p {
+  @apply text-white;
+}
+
+.dark .swagger-ui .tab li button.tablinks {
+  @apply text-white;
+}
+.dark .swagger-ui .markdown code,
+.dark .swagger-ui .renderedMarkdown code,
+.dark .swagger-ui .markdown p,
+.dark .swagger-ui .renderedMarkdown p,
+.dark .swagger-ui .renderedMarkdown pre {
+  @apply text-gray-400;
+}
+.swagger-ui code[class*='language-'],
+.swagger-ui pre[class*='language-'] {
+  @apply bg-transparent text-white;
 }

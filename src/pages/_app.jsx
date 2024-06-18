@@ -5,11 +5,8 @@ const inter = Inter({ subsets: ['latin'] })
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import { Layout } from '@/components/Layout'
-import { useEffect } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 import 'focus-visible'
 import '@/styles/tailwind.css'
-import { AnalyticsEnabler } from '@/components/Analytics/AnalyticsEnabled'
 function getNodeText(node) {
   let text = ''
   for (let child of node.children ?? []) {
@@ -107,11 +104,7 @@ export default function App({ Component, pageProps }) {
     ? collectHeadings(pageProps.markdoc.content)
     : []
 
-  useEffect(() => {
-    if (!localStorage.getItem('GDocsUUID')) {
-      localStorage.setItem('GDocsUUID', uuidv4())
-    }
-  }, [])
+
 
   return (
     <>
