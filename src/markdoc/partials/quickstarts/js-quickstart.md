@@ -95,14 +95,18 @@ Create a new Node.js project and install the Golem SDK by entering the following
 mkdir try_golem
 cd try_golem
 npm init
-npm install @golem-sdk/task-executor
+npm install @golem-sdk/golem-js
+npm install @golem-sdk/pino-logger
 ```
 
+{% alert level="warning" %}
 Please note: This application requires Node.js version 18.0.0 or higher.
+
+{% /alert %}
 
 Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/mgordel/JST-926/new-quickstart/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 
@@ -120,7 +124,9 @@ node requestor.mjs
 
 The output of the script should look very similar to the one below:
 
-![Output logs](/js-tutorial-05.gif)
+<!-- replace this png -->
+
+![Output logs](/run_log.png)
 
 The information about the `node.js` version included in the image that our script deploys on the remote computer, can be found at the end of the script's logs.
 
@@ -132,12 +138,14 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="Next steps" %}
 
 - [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
+<!-- rebuild this article -->
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-- [Simple introduction to the Golem Network and Task Model](/docs/creators/javascript/guides/task-model)
-- [Parallel processing tutorial](/docs/creators/javascript/tutorials/running-parallel-tasks)
+- [Overview of JS SDK components](/docs/creators/javascript) <!-- rebuild this article -->
+- [Simple introduction to the Golem Network and JS SDK](/docs/creators/javascript/guides/golem-js) <!-- add content to this article-->
+- [JS Task Model](/docs/creators/javascript/task-executor/task-model)
 
 {% /docnavigation %}
