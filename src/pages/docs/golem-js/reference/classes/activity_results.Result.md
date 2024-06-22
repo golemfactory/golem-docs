@@ -63,7 +63,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/activity/results.ts:40](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L40)
+[src/activity/results.ts:38](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L38)
 
 ## Properties
 
@@ -79,7 +79,7 @@ Index of script command
 
 #### Defined in
 
-[src/activity/results.ts:31](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L31)
+[src/activity/results.ts:29](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L29)
 
 ___
 
@@ -95,13 +95,13 @@ The datetime of the event on which the result was received
 
 #### Defined in
 
-[src/activity/results.ts:32](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L32)
+[src/activity/results.ts:30](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L30)
 
 ___
 
 ### result
 
-• **result**: `ExeScriptCommandResultResultEnum`
+• **result**: ``"Ok"`` \| ``"Error"``
 
 If is success
 
@@ -111,7 +111,7 @@ If is success
 
 #### Defined in
 
-[src/activity/results.ts:33](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L33)
+[src/activity/results.ts:31](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L31)
 
 ___
 
@@ -127,7 +127,7 @@ stdout of script command
 
 #### Defined in
 
-[src/activity/results.ts:34](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L34)
+[src/activity/results.ts:32](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L32)
 
 ___
 
@@ -143,7 +143,7 @@ stderr of script command
 
 #### Defined in
 
-[src/activity/results.ts:35](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L35)
+[src/activity/results.ts:33](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L33)
 
 ___
 
@@ -159,7 +159,7 @@ an error message if the result is not successful
 
 #### Defined in
 
-[src/activity/results.ts:36](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L36)
+[src/activity/results.ts:34](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L34)
 
 ___
 
@@ -175,7 +175,7 @@ Is batch of already finished
 
 #### Defined in
 
-[src/activity/results.ts:37](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L37)
+[src/activity/results.ts:35](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L35)
 
 ___
 
@@ -191,7 +191,7 @@ In case the command was related to upload or download, this will contain the tra
 
 #### Defined in
 
-[src/activity/results.ts:38](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L38)
+[src/activity/results.ts:36](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L36)
 
 ## Methods
 
@@ -213,4 +213,4 @@ Helper method making JSON-like output results more accessible
 
 #### Defined in
 
-[src/activity/results.ts:54](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/results.ts#L54)
+[src/activity/results.ts:52](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/results.ts#L52)

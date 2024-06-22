@@ -39,7 +39,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/market/strategy.ts:30](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L30)
+[src/market/strategy.ts:30](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L30)
 
 ## Functions
 
@@ -61,13 +61,13 @@ Default Proposal filter that accept all proposal coming from the market
 
 #### Defined in
 
-[src/market/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L4)
+[src/market/strategy.ts:4](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L4)
 
 ___
 
 ### disallowProvidersById
 
-▸ **disallowProvidersById**(`providerIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
+▸ **disallowProvidersById**(`providerIds`): (`proposal`: [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal)) => `boolean`
 
 Proposal filter blocking every offer coming from a provider whose id is in the array
 
@@ -87,7 +87,7 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
+| `proposal` | [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal) |
 
 ##### Returns
 
@@ -95,13 +95,13 @@ Proposal filter blocking every offer coming from a provider whose id is in the a
 
 #### Defined in
 
-[src/market/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L7)
+[src/market/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L7)
 
 ___
 
 ### disallowProvidersByName
 
-▸ **disallowProvidersByName**(`providerNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
+▸ **disallowProvidersByName**(`providerNames`): (`proposal`: [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal)) => `boolean`
 
 Proposal filter blocking every offer coming from a provider whose name is in the array
 
@@ -121,7 +121,7 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
+| `proposal` | [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal) |
 
 ##### Returns
 
@@ -129,13 +129,13 @@ Proposal filter blocking every offer coming from a provider whose name is in the
 
 #### Defined in
 
-[src/market/strategy.ts:11](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L11)
+[src/market/strategy.ts:11](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L11)
 
 ___
 
 ### disallowProvidersByNameRegex
 
-▸ **disallowProvidersByNameRegex**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
+▸ **disallowProvidersByNameRegex**(`regexp`): (`proposal`: [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal)) => `boolean`
 
 Proposal filter blocking every offer coming from a provider whose name match to the regexp
 
@@ -155,7 +155,7 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
+| `proposal` | [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal) |
 
 ##### Returns
 
@@ -163,13 +163,13 @@ Proposal filter blocking every offer coming from a provider whose name match to 
 
 #### Defined in
 
-[src/market/strategy.ts:15](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L15)
+[src/market/strategy.ts:15](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L15)
 
 ___
 
 ### allowProvidersById
 
-▸ **allowProvidersById**(`providerIds`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
+▸ **allowProvidersById**(`providerIds`): (`proposal`: [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal)) => `boolean`
 
 Proposal filter that only allows offers from a provider whose id is in the array
 
@@ -189,7 +189,7 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
+| `proposal` | [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal) |
 
 ##### Returns
 
@@ -197,13 +197,13 @@ Proposal filter that only allows offers from a provider whose id is in the array
 
 #### Defined in
 
-[src/market/strategy.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L19)
+[src/market/strategy.ts:19](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L19)
 
 ___
 
 ### allowProvidersByName
 
-▸ **allowProvidersByName**(`providerNames`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
+▸ **allowProvidersByName**(`providerNames`): (`proposal`: [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal)) => `boolean`
 
 Proposal filter that only allows offers from a provider whose name is in the array
 
@@ -223,7 +223,7 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
+| `proposal` | [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal) |
 
 ##### Returns
 
@@ -231,13 +231,13 @@ Proposal filter that only allows offers from a provider whose name is in the arr
 
 #### Defined in
 
-[src/market/strategy.ts:23](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L23)
+[src/market/strategy.ts:23](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L23)
 
 ___
 
 ### allowProvidersByNameRegex
 
-▸ **allowProvidersByNameRegex**(`regexp`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
+▸ **allowProvidersByNameRegex**(`regexp`): (`proposal`: [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal)) => `boolean`
 
 Proposal filter that only allows offers from a provider whose name match to the regexp
 
@@ -257,7 +257,7 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
+| `proposal` | [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal) |
 
 ##### Returns
 
@@ -265,13 +265,13 @@ Proposal filter that only allows offers from a provider whose name match to the 
 
 #### Defined in
 
-[src/market/strategy.ts:27](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L27)
+[src/market/strategy.ts:27](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L27)
 
 ___
 
 ### limitPriceFilter
 
-▸ **limitPriceFilter**(`priceLimits`): (`proposal`: [`Proposal`](../classes/market_proposal.Proposal)) => `boolean`
+▸ **limitPriceFilter**(`priceLimits`): (`proposal`: [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal)) => `boolean`
 
 Proposal filter only allowing offers that do not exceed the defined usage
 
@@ -291,7 +291,7 @@ Proposal filter only allowing offers that do not exceed the defined usage
 
 | Name | Type |
 | :------ | :------ |
-| `proposal` | [`Proposal`](../classes/market_proposal.Proposal) |
+| `proposal` | [`OfferProposal`](../classes/market_proposal_offer_proposal.OfferProposal) |
 
 ##### Returns
 
@@ -299,4 +299,4 @@ Proposal filter only allowing offers that do not exceed the defined usage
 
 #### Defined in
 
-[src/market/strategy.ts:43](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/strategy.ts#L43)
+[src/market/strategy.ts:43](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/strategy.ts#L43)

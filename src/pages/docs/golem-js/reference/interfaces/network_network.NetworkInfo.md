@@ -15,6 +15,7 @@ type: "JS API Reference"
 - [id](network_network.NetworkInfo#id)
 - [ip](network_network.NetworkInfo#ip)
 - [mask](network_network.NetworkInfo#mask)
+- [gateway](network_network.NetworkInfo#gateway)
 - [nodes](network_network.NetworkInfo#nodes)
 
 ## Properties
@@ -25,7 +26,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/network/network.ts:29](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/network.ts#L29)
+[src/network/network.ts:6](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/network.ts#L6)
 
 ___
 
@@ -35,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:30](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/network.ts#L30)
+[src/network/network.ts:7](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/network.ts#L7)
 
 ___
 
@@ -45,7 +46,17 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:31](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/network.ts#L31)
+[src/network/network.ts:8](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/network.ts#L8)
+
+___
+
+### gateway
+
+• `Optional` **gateway**: `string`
+
+#### Defined in
+
+[src/network/network.ts:9](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/network.ts#L9)
 
 ___
 
@@ -59,4 +70,4 @@ ___
 
 #### Defined in
 
-[src/network/network.ts:32](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/network.ts#L32)
+[src/network/network.ts:10](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/network.ts#L10)

@@ -20,6 +20,8 @@ type: "JS API Reference"
 - [DebitNoteAcceptanceFailed](payment_error.PaymentErrorCode#debitnoteacceptancefailed)
 - [InvoiceRejectionFailed](payment_error.PaymentErrorCode#invoicerejectionfailed)
 - [DebitNoteRejectionFailed](payment_error.PaymentErrorCode#debitnoterejectionfailed)
+- [CouldNotGetDebitNote](payment_error.PaymentErrorCode#couldnotgetdebitnote)
+- [CouldNotGetInvoice](payment_error.PaymentErrorCode#couldnotgetinvoice)
 - [PaymentStatusQueryFailed](payment_error.PaymentErrorCode#paymentstatusqueryfailed)
 - [AgreementAlreadyPaid](payment_error.PaymentErrorCode#agreementalreadypaid)
 - [InvoiceAlreadyReceived](payment_error.PaymentErrorCode#invoicealreadyreceived)
@@ -28,108 +30,128 @@ type: "JS API Reference"
 
 ### AllocationCreationFailed
 
-• **AllocationCreationFailed** = ``0``
+• **AllocationCreationFailed** = ``"AllocationCreationFailed"``
 
 #### Defined in
 
-[src/payment/error.ts:6](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L6)
+[src/payment/error.ts:6](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L6)
 
 ___
 
 ### MissingAllocation
 
-• **MissingAllocation** = ``1``
+• **MissingAllocation** = ``"MissingAllocation"``
 
 #### Defined in
 
-[src/payment/error.ts:7](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L7)
+[src/payment/error.ts:7](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L7)
 
 ___
 
 ### PaymentProcessNotInitialized
 
-• **PaymentProcessNotInitialized** = ``2``
+• **PaymentProcessNotInitialized** = ``"PaymentProcessNotInitialized"``
 
 #### Defined in
 
-[src/payment/error.ts:8](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L8)
+[src/payment/error.ts:8](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L8)
 
 ___
 
 ### AllocationReleaseFailed
 
-• **AllocationReleaseFailed** = ``3``
+• **AllocationReleaseFailed** = ``"AllocationReleaseFailed"``
 
 #### Defined in
 
-[src/payment/error.ts:9](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L9)
+[src/payment/error.ts:9](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L9)
 
 ___
 
 ### InvoiceAcceptanceFailed
 
-• **InvoiceAcceptanceFailed** = ``4``
+• **InvoiceAcceptanceFailed** = ``"InvoiceAcceptanceFailed"``
 
 #### Defined in
 
-[src/payment/error.ts:10](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L10)
+[src/payment/error.ts:10](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L10)
 
 ___
 
 ### DebitNoteAcceptanceFailed
 
-• **DebitNoteAcceptanceFailed** = ``5``
+• **DebitNoteAcceptanceFailed** = ``"DebitNoteAcceptanceFailed"``
 
 #### Defined in
 
-[src/payment/error.ts:11](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L11)
+[src/payment/error.ts:11](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L11)
 
 ___
 
 ### InvoiceRejectionFailed
 
-• **InvoiceRejectionFailed** = ``6``
+• **InvoiceRejectionFailed** = ``"InvoiceRejectionFailed"``
 
 #### Defined in
 
-[src/payment/error.ts:12](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L12)
+[src/payment/error.ts:12](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L12)
 
 ___
 
 ### DebitNoteRejectionFailed
 
-• **DebitNoteRejectionFailed** = ``7``
+• **DebitNoteRejectionFailed** = ``"DebitNoteRejectionFailed"``
 
 #### Defined in
 
-[src/payment/error.ts:13](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L13)
+[src/payment/error.ts:13](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L13)
+
+___
+
+### CouldNotGetDebitNote
+
+• **CouldNotGetDebitNote** = ``"CouldNotGetDebitNote"``
+
+#### Defined in
+
+[src/payment/error.ts:14](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L14)
+
+___
+
+### CouldNotGetInvoice
+
+• **CouldNotGetInvoice** = ``"CouldNotGetInvoice"``
+
+#### Defined in
+
+[src/payment/error.ts:15](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L15)
 
 ___
 
 ### PaymentStatusQueryFailed
 
-• **PaymentStatusQueryFailed** = ``8``
+• **PaymentStatusQueryFailed** = ``"PaymentStatusQueryFailed"``
 
 #### Defined in
 
-[src/payment/error.ts:14](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L14)
+[src/payment/error.ts:16](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L16)
 
 ___
 
 ### AgreementAlreadyPaid
 
-• **AgreementAlreadyPaid** = ``9``
+• **AgreementAlreadyPaid** = ``"AgreementAlreadyPaid"``
 
 #### Defined in
 
-[src/payment/error.ts:15](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L15)
+[src/payment/error.ts:17](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L17)
 
 ___
 
 ### InvoiceAlreadyReceived
 
-• **InvoiceAlreadyReceived** = ``10``
+• **InvoiceAlreadyReceived** = ``"InvoiceAlreadyReceived"``
 
 #### Defined in
 
-[src/payment/error.ts:16](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L16)
+[src/payment/error.ts:18](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L18)
