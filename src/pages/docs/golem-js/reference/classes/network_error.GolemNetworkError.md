@@ -14,7 +14,7 @@ additionally containing an error code specific to a given subdomain
 
 ## Hierarchy
 
-- [`GolemModuleError`](error_golem_error.GolemModuleError)
+- [`GolemModuleError`](shared_error_golem_error.GolemModuleError)
 
   ↳ **`GolemNetworkError`**
 
@@ -27,8 +27,11 @@ additionally containing an error code specific to a given subdomain
 ### Properties
 
 - [code](network_error.GolemNetworkError#code)
-- [network](network_error.GolemNetworkError#network)
 - [previous](network_error.GolemNetworkError#previous)
+
+### Methods
+
+- [getNetwork](network_error.GolemNetworkError#getnetwork)
 
 ## Constructors
 
@@ -51,11 +54,11 @@ additionally containing an error code specific to a given subdomain
 
 #### Overrides
 
-[GolemModuleError](error_golem_error.GolemModuleError).[constructor](error_golem_error.GolemModuleError#constructor)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[constructor](shared_error_golem_error.GolemModuleError#constructor)
 
 #### Defined in
 
-[src/network/error.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L17)
+[src/network/error.ts:20](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/error.ts#L20)
 
 ## Properties
 
@@ -65,21 +68,11 @@ additionally containing an error code specific to a given subdomain
 
 #### Inherited from
 
-[GolemModuleError](error_golem_error.GolemModuleError).[code](error_golem_error.GolemModuleError#code)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[code](shared_error_golem_error.GolemModuleError#code)
 
 #### Defined in
 
-[src/network/error.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L19)
-
-___
-
-### network
-
-• `Optional` **network**: [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
-
-#### Defined in
-
-[src/network/error.ts:20](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L20)
+[src/network/error.ts:22](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/error.ts#L22)
 
 ___
 
@@ -91,8 +84,22 @@ The previous error, if any, that led to this error.
 
 #### Inherited from
 
-[GolemModuleError](error_golem_error.GolemModuleError).[previous](error_golem_error.GolemModuleError#previous)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[previous](shared_error_golem_error.GolemModuleError#previous)
 
 #### Defined in
 
-[src/network/error.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/network/error.ts#L21)
+[src/network/error.ts:24](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/error.ts#L24)
+
+## Methods
+
+### getNetwork
+
+▸ **getNetwork**(): `undefined` \| [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
+
+#### Returns
+
+`undefined` \| [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
+
+#### Defined in
+
+[src/network/error.ts:29](https://github.com/golemfactory/golem-js/blob/570126bc/src/network/error.ts#L29)

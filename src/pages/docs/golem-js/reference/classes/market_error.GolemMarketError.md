@@ -14,7 +14,7 @@ additionally containing an error code specific to a given subdomain
 
 ## Hierarchy
 
-- [`GolemModuleError`](error_golem_error.GolemModuleError)
+- [`GolemModuleError`](shared_error_golem_error.GolemModuleError)
 
   ↳ **`GolemMarketError`**
 
@@ -27,14 +27,13 @@ additionally containing an error code specific to a given subdomain
 ### Properties
 
 - [code](market_error.GolemMarketError#code)
-- [demand](market_error.GolemMarketError#demand)
 - [previous](market_error.GolemMarketError#previous)
 
 ## Constructors
 
 ### constructor
 
-• **new GolemMarketError**(`message`, `code`, `demand?`, `previous?`): [`GolemMarketError`](market_error.GolemMarketError)
+• **new GolemMarketError**(`message`, `code`, `previous?`): [`GolemMarketError`](market_error.GolemMarketError)
 
 #### Parameters
 
@@ -42,7 +41,6 @@ additionally containing an error code specific to a given subdomain
 | :------ | :------ |
 | `message` | `string` |
 | `code` | [`MarketErrorCode`](../enums/market_error.MarketErrorCode) |
-| `demand?` | `Demand` |
 | `previous?` | `Error` |
 
 #### Returns
@@ -51,11 +49,11 @@ additionally containing an error code specific to a given subdomain
 
 #### Overrides
 
-[GolemModuleError](error_golem_error.GolemModuleError).[constructor](error_golem_error.GolemModuleError#constructor)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[constructor](shared_error_golem_error.GolemModuleError#constructor)
 
 #### Defined in
 
-[src/market/error.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L18)
+[src/market/error.ts:21](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/error.ts#L21)
 
 ## Properties
 
@@ -65,21 +63,11 @@ additionally containing an error code specific to a given subdomain
 
 #### Inherited from
 
-[GolemModuleError](error_golem_error.GolemModuleError).[code](error_golem_error.GolemModuleError#code)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[code](shared_error_golem_error.GolemModuleError#code)
 
 #### Defined in
 
-[src/market/error.ts:20](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L20)
-
-___
-
-### demand
-
-• `Optional` **demand**: `Demand`
-
-#### Defined in
-
-[src/market/error.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L21)
+[src/market/error.ts:23](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/error.ts#L23)
 
 ___
 
@@ -91,8 +79,8 @@ The previous error, if any, that led to this error.
 
 #### Inherited from
 
-[GolemModuleError](error_golem_error.GolemModuleError).[previous](error_golem_error.GolemModuleError#previous)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[previous](shared_error_golem_error.GolemModuleError#previous)
 
 #### Defined in
 
-[src/market/error.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/market/error.ts#L22)
+[src/market/error.ts:24](https://github.com/golemfactory/golem-js/blob/570126bc/src/market/error.ts#L24)

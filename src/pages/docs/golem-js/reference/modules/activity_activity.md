@@ -18,5 +18,25 @@ type: "JS API Reference"
 
 ### Interfaces
 
-- [ExeScriptRequest](../interfaces/activity_activity.ExeScriptRequest)
-- [ActivityOptions](../interfaces/activity_activity.ActivityOptions)
+- [IActivityRepository](../interfaces/activity_activity.IActivityRepository)
+
+### Type Aliases
+
+- [ActivityUsageInfo](activity_activity#activityusageinfo)
+
+## Type Aliases
+
+### ActivityUsageInfo
+
+Ƭ **ActivityUsageInfo**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `currentUsage?` | `number`[] |
+| `timestamp` | `number` |
+
+#### Defined in
+
+[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L14)
