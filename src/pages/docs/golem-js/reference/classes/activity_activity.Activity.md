@@ -13,21 +13,50 @@ As part of a given activity, it is possible to execute exe script commands and c
 
 ## Table of contents
 
+### Constructors
+
+- [constructor](activity_activity.Activity#constructor)
+
 ### Properties
 
 - [id](activity_activity.Activity#id)
 - [agreement](activity_activity.Activity#agreement)
-- [yagnaApi](activity_activity.Activity#yagnaapi)
-- [options](activity_activity.Activity#options)
+- [currentState](activity_activity.Activity#currentstate)
+- [previousState](activity_activity.Activity#previousstate)
+- [usage](activity_activity.Activity#usage)
+
+### Accessors
+
+- [provider](activity_activity.Activity#provider)
 
 ### Methods
 
-- [create](activity_activity.Activity#create)
-- [getProviderInfo](activity_activity.Activity#getproviderinfo)
-- [execute](activity_activity.Activity#execute)
-- [stop](activity_activity.Activity#stop)
 - [getState](activity_activity.Activity#getstate)
-- [send](activity_activity.Activity#send)
+- [getPreviousState](activity_activity.Activity#getpreviousstate)
+
+## Constructors
+
+### constructor
+
+• **new Activity**(`id`, `agreement`, `currentState?`, `previousState?`, `usage`): [`Activity`](activity_activity.Activity)
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `id` | `string` | `undefined` | The ID of the activity in Yagna |
+| `agreement` | [`Agreement`](market_agreement_agreement.Agreement) | `undefined` | The agreement that's related to this activity |
+| `currentState` | [`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum) | `ActivityStateEnum.New` | The current state as it was obtained from yagna |
+| `previousState` | [`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum) | `ActivityStateEnum.Unknown` | The previous state (or New if this is the first time we're creating the activity) |
+| `usage` | [`ActivityUsageInfo`](../modules/activity_activity#activityusageinfo) | `undefined` | Current resource usage vector information |
+
+#### Returns
+
+[`Activity`](activity_activity.Activity)
+
+#### Defined in
+
+[src/activity/activity.ts:37](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L37)
 
 ## Properties
 
@@ -35,169 +64,98 @@ As part of a given activity, it is possible to execute exe script commands and c
 
 • `Readonly` **id**: `string`
 
-activity ID
+The ID of the activity in Yagna
 
 #### Defined in
 
-[src/activity/activity.ts:62](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L62)
+[src/activity/activity.ts:38](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L38)
 
 ___
 
 ### agreement
 
-• `Readonly` **agreement**: `Agreement`
+• `Readonly` **agreement**: [`Agreement`](market_agreement_agreement.Agreement)
 
-Agreement
+The agreement that's related to this activity
 
 #### Defined in
 
-[src/activity/activity.ts:63](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L63)
+[src/activity/activity.ts:39](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L39)
 
 ___
 
-### yagnaApi
+### currentState
 
-• `Protected` `Readonly` **yagnaApi**: [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi)
+• `Protected` `Readonly` **currentState**: [`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum) = `ActivityStateEnum.New`
 
-[YagnaApi](../modules/utils_yagna_yagna#yagnaapi)
+The current state as it was obtained from yagna
 
 #### Defined in
 
-[src/activity/activity.ts:64](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L64)
+[src/activity/activity.ts:40](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L40)
 
 ___
 
-### options
+### previousState
 
-• `Protected` `Readonly` **options**: `ActivityConfig`
+• `Protected` `Readonly` **previousState**: [`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum) = `ActivityStateEnum.Unknown`
 
-[ActivityOptions](../interfaces/activity_activity.ActivityOptions)
+The previous state (or New if this is the first time we're creating the activity)
 
 #### Defined in
 
-[src/activity/activity.ts:65](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L65)
+[src/activity/activity.ts:41](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L41)
+
+___
+
+### usage
+
+• `Protected` `Readonly` **usage**: [`ActivityUsageInfo`](../modules/activity_activity#activityusageinfo)
+
+Current resource usage vector information
+
+#### Defined in
+
+[src/activity/activity.ts:42](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L42)
+
+## Accessors
+
+### provider
+
+• `get` **provider**(): [`ProviderInfo`](../interfaces/market_agreement_agreement.ProviderInfo)
+
+#### Returns
+
+[`ProviderInfo`](../interfaces/market_agreement_agreement.ProviderInfo)
+
+#### Defined in
+
+[src/activity/activity.ts:45](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L45)
 
 ## Methods
 
-### create
-
-▸ **create**(`agreement`, `yagnaApi`, `options?`, `secure?`): `Promise`\<[`Activity`](activity_activity.Activity)\>
-
-Create activity for given agreement ID
-
-#### Parameters
-
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `agreement` | `Agreement` | `undefined` |  |
-| `yagnaApi` | [`YagnaApi`](../modules/utils_yagna_yagna#yagnaapi) | `undefined` |  |
-| `options?` | [`ActivityOptions`](../interfaces/activity_activity.ActivityOptions) | `undefined` | [ActivityOptions](../interfaces/activity_activity.ActivityOptions) |
-| `secure` | `boolean` | `false` | defines if activity will be secure type |
-
-#### Returns
-
-`Promise`\<[`Activity`](activity_activity.Activity)\>
-
-Activity
-
-#### Defined in
-
-[src/activity/activity.ts:79](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L79)
-
-___
-
-### getProviderInfo
-
-▸ **getProviderInfo**(): [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
-
-#### Returns
-
-[`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
-
-#### Defined in
-
-[src/activity/activity.ts:89](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L89)
-
-___
-
-### execute
-
-▸ **execute**(`script`, `stream?`, `timeout?`): `Promise`\<`Readable`\>
-
-Execute script
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `script` | [`ExeScriptRequest`](../interfaces/activity_activity.ExeScriptRequest) | exe script request |
-| `stream?` | `boolean` | define type of getting results from execution (polling or streaming) |
-| `timeout?` | `number` | execution timeout |
-
-#### Returns
-
-`Promise`\<`Readable`\>
-
-#### Defined in
-
-[src/activity/activity.ts:100](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L100)
-
-___
-
-### stop
-
-▸ **stop**(): `Promise`\<`boolean`\>
-
-Stop and destroy activity
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-boolean
-
-#### Defined in
-
-[src/activity/activity.ts:138](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L138)
-
-___
-
 ### getState
 
-▸ **getState**(): `Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
-
-Getting current state of activity
+▸ **getState**(): [`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)
 
 #### Returns
 
-`Promise`\<[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)\>
-
-state
-
-**`Throws`**
-
-Error when cannot query the state
+[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)
 
 #### Defined in
 
-[src/activity/activity.ts:150](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L150)
+[src/activity/activity.ts:49](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L49)
 
 ___
 
-### send
+### getPreviousState
 
-▸ **send**(`script`): `Promise`\<`string`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `script` | [`ExeScriptRequest`](../interfaces/activity_activity.ExeScriptRequest) |
+▸ **getPreviousState**(): [`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)
 
 #### Returns
 
-`Promise`\<`string`\>
+[`ActivityStateEnum`](../enums/activity_activity.ActivityStateEnum)
 
 #### Defined in
 
-[src/activity/activity.ts:176](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L176)
+[src/activity/activity.ts:53](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L53)

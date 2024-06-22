@@ -18,6 +18,7 @@ type: "JS API Reference"
 - [Ready](activity_activity.ActivityStateEnum#ready)
 - [Unresponsive](activity_activity.ActivityStateEnum#unresponsive)
 - [Terminated](activity_activity.ActivityStateEnum#terminated)
+- [Unknown](activity_activity.ActivityStateEnum#unknown)
 
 ## Enumeration Members
 
@@ -27,7 +28,7 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/activity/activity.ts:14](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L14)
+[src/activity/activity.ts:4](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L4)
 
 ___
 
@@ -37,7 +38,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:15](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L15)
+[src/activity/activity.ts:5](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L5)
 
 ___
 
@@ -47,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:16](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L16)
+[src/activity/activity.ts:6](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L6)
 
 ___
 
@@ -57,7 +58,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:17](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L17)
+[src/activity/activity.ts:7](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L7)
 
 ___
 
@@ -67,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:18](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L18)
+[src/activity/activity.ts:8](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L8)
 
 ___
 
@@ -77,4 +78,16 @@ ___
 
 #### Defined in
 
-[src/activity/activity.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/activity/activity.ts#L19)
+[src/activity/activity.ts:9](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L9)
+
+___
+
+### Unknown
+
+• **Unknown** = ``"Unknown"``
+
+In case when we couldn't establish the in on yagna
+
+#### Defined in
+
+[src/activity/activity.ts:11](https://github.com/golemfactory/golem-js/blob/570126bc/src/activity/activity.ts#L11)

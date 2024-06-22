@@ -8,7 +8,9 @@ type: "JS API Reference"
 
 [payment/agreement\_payment\_process](../modules/payment_agreement_payment_process).AgreementPaymentProcess
 
-Process manager that controls the logic behind processing events related to an agreement which result with payments
+Process manager that controls the logic behind processing payments for an agreement (debit notes and invoices).
+The process is started automatically and ends when the final invoice is received.
+You can stop the process earlier by calling the `stop` method. You cannot restart the process after stopping it.
 
 ## Table of contents
 
@@ -21,30 +23,31 @@ Process manager that controls the logic behind processing events related to an a
 - [logger](payment_agreement_payment_process.AgreementPaymentProcess#logger)
 - [agreement](payment_agreement_payment_process.AgreementPaymentProcess#agreement)
 - [allocation](payment_agreement_payment_process.AgreementPaymentProcess#allocation)
-- [filters](payment_agreement_payment_process.AgreementPaymentProcess#filters)
+- [paymentModule](payment_agreement_payment_process.AgreementPaymentProcess#paymentmodule)
 
 ### Methods
 
 - [addDebitNote](payment_agreement_payment_process.AgreementPaymentProcess#adddebitnote)
 - [addInvoice](payment_agreement_payment_process.AgreementPaymentProcess#addinvoice)
 - [isFinished](payment_agreement_payment_process.AgreementPaymentProcess#isfinished)
+- [isStarted](payment_agreement_payment_process.AgreementPaymentProcess#isstarted)
+- [stop](payment_agreement_payment_process.AgreementPaymentProcess#stop)
 
 ## Constructors
 
 ### constructor
 
-• **new AgreementPaymentProcess**(`agreement`, `allocation`, `filters`, `logger?`): [`AgreementPaymentProcess`](payment_agreement_payment_process.AgreementPaymentProcess)
+• **new AgreementPaymentProcess**(`agreement`, `allocation`, `paymentModule`, `options?`, `logger?`): [`AgreementPaymentProcess`](payment_agreement_payment_process.AgreementPaymentProcess)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `agreement` | `Agreement` |
-| `allocation` | `Allocation` |
-| `filters` | `Object` |
-| `filters.invoiceFilter` | [`InvoiceFilter`](../modules/payment_service#invoicefilter) |
-| `filters.debitNoteFilter` | [`DebitNoteFilter`](../modules/payment_service#debitnotefilter) |
-| `logger?` | [`Logger`](../interfaces/utils_logger_logger.Logger) |
+| `agreement` | [`Agreement`](market_agreement_agreement.Agreement) |
+| `allocation` | [`Allocation`](payment_allocation.Allocation) |
+| `paymentModule` | [`PaymentModule`](../interfaces/payment_payment_module.PaymentModule) |
+| `options?` | `Partial`\<[`PaymentProcessOptions`](../interfaces/payment_agreement_payment_process.PaymentProcessOptions)\> |
+| `logger?` | [`Logger`](../interfaces/shared_utils_logger_logger.Logger) |
 
 #### Returns
 
@@ -52,54 +55,47 @@ Process manager that controls the logic behind processing events related to an a
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:28](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L28)
+[src/payment/agreement_payment_process.ts:59](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L59)
 
 ## Properties
 
 ### logger
 
-• `Readonly` **logger**: [`Logger`](../interfaces/utils_logger_logger.Logger)
+• `Readonly` **logger**: [`Logger`](../interfaces/shared_utils_logger_logger.Logger)
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:26](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L26)
+[src/payment/agreement_payment_process.ts:55](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L55)
 
 ___
 
 ### agreement
 
-• `Readonly` **agreement**: `Agreement`
+• `Readonly` **agreement**: [`Agreement`](market_agreement_agreement.Agreement)
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:29](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L29)
+[src/payment/agreement_payment_process.ts:60](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L60)
 
 ___
 
 ### allocation
 
-• `Readonly` **allocation**: `Allocation`
+• `Readonly` **allocation**: [`Allocation`](payment_allocation.Allocation)
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:30](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L30)
+[src/payment/agreement_payment_process.ts:61](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L61)
 
 ___
 
-### filters
+### paymentModule
 
-• `Readonly` **filters**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `invoiceFilter` | [`InvoiceFilter`](../modules/payment_service#invoicefilter) |
-| `debitNoteFilter` | [`DebitNoteFilter`](../modules/payment_service#debitnotefilter) |
+• `Readonly` **paymentModule**: [`PaymentModule`](../interfaces/payment_payment_module.PaymentModule)
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:31](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L31)
+[src/payment/agreement_payment_process.ts:62](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L62)
 
 ## Methods
 
@@ -113,7 +109,7 @@ Adds the debit note to the process avoiding race conditions
 
 | Name | Type |
 | :------ | :------ |
-| `debitNote` | `DebitNote` |
+| `debitNote` | [`DebitNote`](payment_debit_note.DebitNote) |
 
 #### Returns
 
@@ -121,7 +117,7 @@ Adds the debit note to the process avoiding race conditions
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:43](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L43)
+[src/payment/agreement_payment_process.ts:91](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L91)
 
 ___
 
@@ -135,7 +131,7 @@ Adds the invoice to the process avoiding race conditions
 
 | Name | Type |
 | :------ | :------ |
-| `invoice` | `Invoice` |
+| `invoice` | [`Invoice`](payment_invoice.Invoice) |
 
 #### Returns
 
@@ -143,7 +139,7 @@ Adds the invoice to the process avoiding race conditions
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:50](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L50)
+[src/payment/agreement_payment_process.ts:98](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L98)
 
 ___
 
@@ -159,4 +155,32 @@ Tells if the process reached a point in which we can consider it as "finished"
 
 #### Defined in
 
-[src/payment/agreement_payment_process.ts:57](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/agreement_payment_process.ts#L57)
+[src/payment/agreement_payment_process.ts:105](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L105)
+
+___
+
+### isStarted
+
+▸ **isStarted**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[src/payment/agreement_payment_process.ts:299](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L299)
+
+___
+
+### stop
+
+▸ **stop**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/payment/agreement_payment_process.ts:303](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/agreement_payment_process.ts#L303)

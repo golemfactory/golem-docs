@@ -8,20 +8,10 @@ type: "JS API Reference"
 
 ## Table of contents
 
+### Classes
+
+- [DebitNote](../classes/payment_debit_note.DebitNote)
+
 ### Interfaces
 
-- [DebitNoteDTO](../interfaces/payment_debit_note.DebitNoteDTO)
-
-### Type Aliases
-
-- [InvoiceOptions](payment_debit_note#invoiceoptions)
-
-## Type Aliases
-
-### InvoiceOptions
-
-Ƭ **InvoiceOptions**: [`BasePaymentOptions`](../interfaces/payment_config.BasePaymentOptions)
-
-#### Defined in
-
-[src/payment/debit_note.ts:11](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/debit_note.ts#L11)
+- [IDebitNoteRepository](../interfaces/payment_debit_note.IDebitNoteRepository)

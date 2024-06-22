@@ -14,7 +14,7 @@ additionally containing an error code specific to a given subdomain
 
 ## Hierarchy
 
-- [`GolemModuleError`](error_golem_error.GolemModuleError)
+- [`GolemModuleError`](shared_error_golem_error.GolemModuleError)
 
   ↳ **`GolemPaymentError`**
 
@@ -27,9 +27,12 @@ additionally containing an error code specific to a given subdomain
 ### Properties
 
 - [code](payment_error.GolemPaymentError#code)
-- [allocation](payment_error.GolemPaymentError#allocation)
-- [provider](payment_error.GolemPaymentError#provider)
 - [previous](payment_error.GolemPaymentError#previous)
+
+### Methods
+
+- [getAllocation](payment_error.GolemPaymentError#getallocation)
+- [getProvider](payment_error.GolemPaymentError#getprovider)
 
 ## Constructors
 
@@ -43,8 +46,8 @@ additionally containing an error code specific to a given subdomain
 | :------ | :------ |
 | `message` | `string` |
 | `code` | [`PaymentErrorCode`](../enums/payment_error.PaymentErrorCode) |
-| `allocation?` | `Allocation` |
-| `provider?` | [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo) |
+| `allocation?` | [`Allocation`](payment_allocation.Allocation) |
+| `provider?` | [`ProviderInfo`](../interfaces/market_agreement_agreement.ProviderInfo) |
 | `previous?` | `Error` |
 
 #### Returns
@@ -53,11 +56,11 @@ additionally containing an error code specific to a given subdomain
 
 #### Overrides
 
-[GolemModuleError](error_golem_error.GolemModuleError).[constructor](error_golem_error.GolemModuleError#constructor)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[constructor](shared_error_golem_error.GolemModuleError#constructor)
 
 #### Defined in
 
-[src/payment/error.ts:19](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L19)
+[src/payment/error.ts:23](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L23)
 
 ## Properties
 
@@ -67,31 +70,11 @@ additionally containing an error code specific to a given subdomain
 
 #### Inherited from
 
-[GolemModuleError](error_golem_error.GolemModuleError).[code](error_golem_error.GolemModuleError#code)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[code](shared_error_golem_error.GolemModuleError#code)
 
 #### Defined in
 
-[src/payment/error.ts:21](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L21)
-
-___
-
-### allocation
-
-• `Optional` **allocation**: `Allocation`
-
-#### Defined in
-
-[src/payment/error.ts:22](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L22)
-
-___
-
-### provider
-
-• `Optional` **provider**: [`ProviderInfo`](../interfaces/agreement_agreement.ProviderInfo)
-
-#### Defined in
-
-[src/payment/error.ts:23](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L23)
+[src/payment/error.ts:25](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L25)
 
 ___
 
@@ -103,8 +86,36 @@ The previous error, if any, that led to this error.
 
 #### Inherited from
 
-[GolemModuleError](error_golem_error.GolemModuleError).[previous](error_golem_error.GolemModuleError#previous)
+[GolemModuleError](shared_error_golem_error.GolemModuleError).[previous](shared_error_golem_error.GolemModuleError#previous)
 
 #### Defined in
 
-[src/payment/error.ts:24](https://github.com/golemfactory/golem-js/blob/7cee55b/src/payment/error.ts#L24)
+[src/payment/error.ts:28](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L28)
+
+## Methods
+
+### getAllocation
+
+▸ **getAllocation**(): `undefined` \| [`Allocation`](payment_allocation.Allocation)
+
+#### Returns
+
+`undefined` \| [`Allocation`](payment_allocation.Allocation)
+
+#### Defined in
+
+[src/payment/error.ts:34](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L34)
+
+___
+
+### getProvider
+
+▸ **getProvider**(): `undefined` \| [`ProviderInfo`](../interfaces/market_agreement_agreement.ProviderInfo)
+
+#### Returns
+
+`undefined` \| [`ProviderInfo`](../interfaces/market_agreement_agreement.ProviderInfo)
+
+#### Defined in
+
+[src/payment/error.ts:37](https://github.com/golemfactory/golem-js/blob/570126bc/src/payment/error.ts#L37)
