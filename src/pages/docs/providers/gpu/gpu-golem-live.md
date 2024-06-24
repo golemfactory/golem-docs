@@ -8,7 +8,7 @@ type: noindex
 
 # ⚙️ Installation instructions - gpu-golem-live
 
-You are invited to join the `gpu-golem-live` experimental project, an initiative to make GPU hardware resources available within the Golem Network. GPU resources will contribute to perform artificial intelligence (AI) tasks and more . As part of your participation in the network, you will receive GLM tokens as compensation for the computing services you provide.
+You are invited to join the `gpu-golem-live` experimental project, an initiative to make GPU hardware resources available within the Golem Network. GPU resources will contribute to perform artificial intelligence (AI) tasks and more. As part of your participation in the network, you will receive GLM tokens as compensation for the computing services you provide.
 
 ## Prerequisites
 
