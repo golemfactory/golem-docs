@@ -600,10 +600,6 @@ export const navigation = [
       { title: 'Introduction', href: '/docs/providers' },
       { title: 'Installation', href: '/docs/providers/provider-installation' },
       {
-        title: 'Uninstallation',
-        href: '/docs/providers/provider-uninstallation',
-      },
-      {
         title: 'Configuring your provider',
         children: [
           {
@@ -616,9 +612,6 @@ export const navigation = [
           },
         ],
       },
-
-      { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-
       {
         title: 'Managing your wallet',
         children: [
@@ -632,11 +625,17 @@ export const navigation = [
           },
         ],
       },
-      { title: 'Maintenance', href: '/docs/providers/maintenance' },
+      { title: 'Maintenance and Updates', href: '/docs/providers/maintenance' },
+      { title: 'GPU Golem Live', href: '/docs/providers/gpu/gpu-golem-live' },
       {
         title: 'Troubleshooting',
         href: '/docs/troubleshooting/provider',
       },
+      {
+        title: 'Uninstallation',
+        href: '/docs/providers/provider-uninstallation',
+      },
+      { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
     ],
   },
   {
