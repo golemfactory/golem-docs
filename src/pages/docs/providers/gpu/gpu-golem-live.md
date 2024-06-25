@@ -8,7 +8,7 @@ type: noindex
 
 # ⚙️ Installation instructions - gpu-golem-live
 
-You are invited to join the `gpu-golem-live` project, an initiative to make GPU hardware resources available within the Golem Network. GPU resources will contribute to perform artificial intelligence (AI) tasks and more . As part of your participation in the network, you will receive GLM tokens as compensation for the computing services you provide.
+You are invited to join the `gpu-golem-live` experimental project, an initiative to make GPU hardware resources available within the Golem Network. GPU resources will contribute to perform artificial intelligence (AI) tasks and more. As part of your participation in the network, you will receive GLM tokens as compensation for the computing services you provide.
 
 ## Prerequisites
 
@@ -24,10 +24,10 @@ To properly use the service as a provider in `gpu-golem-live`, it is necessary t
 
 ⚠️ **Important**!
 
--  To improve the quality of P2P connections, it is recommended to open UDP port 11500.
--  It is necessary to enable in the BIOS: VT/VT-d (Intel) and SVM (AMD). If these options are active and the wizard still doesn't detect the card, you can try moving the card to another PCIe slot.
--  The GPU may not be in use all the time, but it is sufficient if the provider is connected and already earning. The GPU will operate when tasks are assigned. During beta testing, a fixed price is applicable. After the software is launched for all users, everyone will be able to determine their own pricing for services.
--  Currently, we only support the configuration of one provider + one GPU. In the future, we plan to support multiple GPUs. Any combinations users want to try for running on multiple GPUs are at their own risk.
+- To improve the quality of P2P connections, it is recommended to open UDP port 11500.
+- It is necessary to enable in the BIOS: VT/VT-d (Intel) and SVM (AMD). If these options are active and the wizard still doesn't detect the card, you can try moving the card to another PCIe slot.
+- The GPU may not be in use all the time, but it is sufficient if the provider is connected and already earning. The GPU will operate when tasks are assigned. During beta testing, a fixed price is applicable. After the software is launched for all users, everyone will be able to determine their own pricing for services.
+- Currently, we only support the configuration of one provider + one GPU. In the future, we plan to support multiple GPUs. Any combinations users want to try for running on multiple GPUs are at their own risk.
 
 By joining `gpu-golem-live`, you support AI infrastructure and manage your hardware resources flexibly, while getting the benefits of GLM tokens. If you have all of the above, you are welcome to join the project and work together for the development of artificial intelligence.
 
@@ -58,17 +58,20 @@ Once the download is complete, unzip the file with any tool (such as the default
 
 {% tabs %}
 {% tab label="Linux" %}
+
 ```bash
 xz -d golem-gpu-live-latest.img.xz
 ```
+
 {% /tab %}
 {% tab label="Mac" %}
+
 ```bash
 gunzip golem-gpu-live-latest.img.xz
 ```
+
 {% /tab %}
 {% /tabs %}
-
 
 Done! The unzipped file should take up about 8.6 GB.
 
@@ -317,4 +320,3 @@ To download the logs, you will need to provide a password. The files will downlo
 ---
 
 Do you have additional questions? Join [➜ https://discord.gg/golem](https://discord.gg/golem)
-
