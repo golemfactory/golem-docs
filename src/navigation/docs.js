@@ -72,8 +72,8 @@ export const navigation = [
                 href: '/docs/creators/javascript/guides',
               },
               {
-                title: 'Task Model',
-                href: '/docs/creators/javascript/guides/task-model',
+                title: 'Resource Rental Model',
+                href: '/docs/creators/javascript/guides/golem-js',
               },
               {
                 title: 'Retrievable tasks (Job API)',
@@ -150,6 +150,10 @@ export const navigation = [
             title: 'JS Task API',
             href: '',
             children: [
+              {
+                title: 'Task Model',
+                href: '/docs/creators/javascript/task-executor/task-model',
+              },
               {
                 title: 'Task API Examples',
                 href: '',

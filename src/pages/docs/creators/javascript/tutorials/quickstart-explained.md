@@ -9,7 +9,7 @@ type: Tutorial
 
 ## Introduction
 
-This tutorial will utilize the same example found in [Quickstart](/docs/creators/javascript/quickstarts/quickstart) and include thorough explanations.
+This tutorial will utilize the same example as [Quickstart](/docs/creators/javascript/quickstarts/quickstart) and include thorough explanations.
 
 ## Prerequisites
 
@@ -17,13 +17,14 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## Setting up the project
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
+Create a project folder, initialize a Node.js project, and install the JS SDK libraries.
 
 ```bash
-mkdir golem-example
-cd golem-example
+mkdir try_golem
+cd try_golem
 npm init
-npm i @golem-sdk/task-executor
+npm install @golem-sdk/golem-js
+npm install @golem-sdk/pino-logger
 ```
 
 ## JS script structure
@@ -31,100 +32,140 @@ npm i @golem-sdk/task-executor
 The basic structure of the script:
 
 ```js
-import { TaskExecutor } from '@golem-sdk/task-executor'
+import { GolemNetwork } from '@golem-sdk/golem-js'
+import { pinoPrettyLogger } from '@golem-sdk/pino-logger'
+// order definition will be placed here
 ;(async () => {
   //... Function body in here
-})()
+})().catch(console.error)
 ```
 
 Here we do two things:
 
-- import TaskExecutor from @golem-sdk/task-executor and
-- create IIAFE (Immediately Invoked Async Function Expression). It has an async function declaration because TaskExecutor provides async methods.
+- import `GolemNetwork` from @golem-sdk/golem-js and `pinoPrettyLogger` from "@golem-sdk/pino-logger" libraries,
+- create IIAFE (Immediately Invoked Async Function Expression). It has an async function declaration because `GolemNetwork` provides async methods.
 
-## Utilizing Task Executor instance
+## Utilizing the GolemNetwork instance
 
-Inside the function body, there will be a sequence of 3 steps, that constitute the simplest Task Executor lifecycle. Task Executor is a primary object provided by our Task API.
+The GolemNetwork serves as the main entry point for golem-js. We are expected to create a new instance of this object, then use connect before interacting with the network and disconnect to properly close all dealings.
 
 ```js
-import { TaskExecutor } from '@golem-sdk/task-executor'
-;(async () => {
-  // 1. Create Task Executor Instance
-  const executor = await TaskExecutor.create({
-    package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-    yagnaOptions: { apiKey: 'try_golem' },
-  })
+import { GolemNetwork } from '@golem-sdk/golem-js'
 
-  try {
-    // 2. Run the task
-    const result =
-      await executor.run(/*taskToRunOnProvider to be provided here */)
-    console.log('Task result:', result)
-  } catch (err) {
-    console.error('An error occurred:', err)
-  } finally {
-    // 3. Finish Task Executor
-    await executor.shutdown()
-  }
+const glm = new GolemNetwork()
 
-  console.log('Task result:', taskResult)
-})()
+try {
+  await glm.connect() // Do your work here
+} catch (err) {
+  // Handle any errors
+} finally {
+  await glm.disconnect()
+}
 ```
 
-In (1) we create a TaskExecutor Instance using a factory method. In this example, we use the minimal set of parameters: namely the hash indicating the image with Node.js installed - the image we will deploy on the provider and api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network.
-We use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
+The GolemNetwork creator accepts some parameters:
+
+- api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
+- logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal.
 
 ```js
-const executor = await TaskExecutor.create({
-  package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-  yagnaOptions: { apiKey: 'try_golem' },
+const glm = new GolemNetwork({
+  logger: pinoPrettyLogger({
+    level: 'info',
+  }),
+  api: { key: 'try_golem' },
 })
 ```
 
-Next (2) we run the task. Here we use a run method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in the `result` variable.
-
-There are other methods that allow you to execute tasks. They are briefly presented in [Task API Guide](/docs/creators/javascript/guides/task-model#main-task-api-features) and explained in [examples](/docs/creators/javascript/examples) section.
+Once we connect to the network (in reality, connecting to the locally installed yagna), we can leverage the API of the GolemNetwork object. In this example we will use .manyOf() to acquire computational resources. (There is also a low-level api, that lets you dive deep into various subdomains within the Golem Network domain space.)
 
 ```js
-const result = await executor.run(taskToRunOnProvider)
+const pool = await glm.manyOf({
+  // I want to have a minimum of one machine in the pool, but only a maximum of 3 machines can work at the same time
+  concurrency: { min: 1, max: 3 },
+  order,
+})
 ```
 
-Finally (3) we gracefully finish task executor:
+The `manyOf()` methods return us a pool of ResourceRental aggregates. Each ResourceRental wraps around the details of different entities and processes needed to manage the rental of resources. If you are interested in the details (that are still accessible from the Golem Network object) and would like to learn more about Agreements, Allocations, Activities, Invoices, DebitNotes, and related conversations required by the protocol please read articles like [this one](/docs/creators/common/requestor-provider-interaction#the-story).
+
+Our pool will consist of a minimum of 1 and a maximum of 3 providers available at the same time. Providers will have their environments defined by the `order`. It is an object that contains information about the environment we want to run, and potentially, criteria for the provider selection.
+In our example for the environment, we will only indicate the image to be run on a remote node. We will use images publicly available on the [registry](registry.golem.network) service, therefore it is enough to provide a tag 'golem/alpine:latest' - it indicates an image based on alpine distribution. You can also define other parameters for the resource definition like the number of threads, memory, or disk size.
+For the provider selection, our example precises the maximum acceptable prices for the `linear` price model. The `rentHour` defines the maximum duration of the engagements with providers before automatic termination.
 
 ```js
-await executor.shutdown()
+const order = {
+  demand: {
+    workload: { imageTag: 'golem/alpine:latest' },
+  },
+  market: {
+    rentHours: 0.5,
+    pricing: {
+      model: 'linear',
+      maxStartPrice: 0.5,
+      maxCpuPerHourPrice: 1.0,
+      maxEnvPerHourPrice: 0.5,
+    },
+  },
+}
 ```
 
-## Defining task function
-
-Let’s see how the task is defined and replace the `taskToRunOnProvider` placeholder we used in the previous step.
-
-The task is defined as a function that implements the Worker interface. This function will get its parameter `workerContext` from the executor. It is an object that lets you run your commands in the scope of one task on one provider.
+The pool's `.withRental()` method wraps operations on the pool exposing a rental instance. The rental gives us access to the ExeUnit - a representation of the execution environment on the provider node. The ExeUnit models the commands supported by the runtime. In our example, we will execute a command in the default shell using the `.run()` method. The command: `echo ${exe.provider.name} && cat /proc/cpuinfo | grep 'model name'` is a Linux command that will produce filtered content of the `/proc/cpuinfo` file at the provider. Note how we accessed the name of the provider node: the ExeUnit instance offers the whole context including the provider's details.
 
 ```js
-const taskToRunOnProvider = async (ctx) => // task is defined here;
+pool.withRental((rental) =>
+  rental
+    .getExeUnit()
+    .then((exe) =>
+      exe.run(
+        ` echo ${exe.provider.name} && cat /proc/cpuinfo | grep 'model name' `
+      )
+    )
+)
 ```
 
-Our task in this example is simple and consists of a single command: namely `node -v`. We will use the async method `run()` of workerContext `ctx`. The output of this method is a `Promise` of a `result` object, once it is resolved it contains the output of the command we run, available as a `stdout` property.
+The output of the commands executed on the remote node is a `Promise` of a `result` object, once it is resolved and `fulfilled` it contains the output of the command we run, available as a `stdout` property.
+
+To run the command 5 times, parallelly on the maximum of 3 providers, we utilize the
 
 ```js
-const taskToRunOnProvider = async (ctx) => (await ctx.run('node -v')).stdout
+const data = [...Array(5).keys()]
+const results = await Promise.allSettled(
+  data.map((item) =>
+    pool.withRental((rental) =>
+      rental
+        .getExeUnit()
+        .then((exe) =>
+          exe.run(
+            ` echo ${exe.provider.name} && cat /proc/cpuinfo | grep 'model name' `
+          )
+        )
+    )
+  )
+)
+results.forEach((result) => {
+  if (result.status === 'fulfilled') {
+    console.log('Success', result.value.stdout)
+  } else {
+    console.log('Failure', result.reason)
+  }
+})
 ```
 
-The output of the task function is passed to `executor.run()` and assigned to taskResult.
-Finally, we print it to the console.
+Here there is the whole code:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/mgordel/JST-926/new-quickstart/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 ## Summary
 
-We had created the simplest requestor script, that ran a single command on a remote computer.
+We had created the simple requestor script, that ran a single command on a number of remote computers.
 To achieve it we had:
 
 - imported @golem-sdk/task-executor lib
 - utilized Immediately Invoked Async Function Expression
-- created Task Executor
-- defined a task as a function that runs our command
-- finally read the command result from the result object and provide it to the user
+- created GolemNetwork instance
+- created a pool of `rental` objects
+- acquired `rentals` and accessed the `ExeUnit`, where we ran the command
+- finally, we collected the results from the result objects and provided them to the user
 
-In this example, we ran a simple command (node -v) in a shell on the remote computer. You can run other executable programs in more interesting scenarios. See other examples for more advanced use cases.
+In this example, we ran a simple command in a shell on the remote computer. You can run other executable programs in more advanced scenarios. See other examples for other interesting features.
