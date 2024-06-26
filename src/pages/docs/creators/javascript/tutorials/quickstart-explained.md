@@ -9,7 +9,7 @@ type: Tutorial
 
 ## Introduction
 
-This tutorial will utilize the same example as [Quickstart](/docs/creators/javascript/quickstarts/quickstart) and include thorough explanations.
+This tutorial is based on the same example as [Quickstart](/docs/creators/javascript/quickstarts/quickstart) and includes thorough explanations of the script code.
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ Here we do two things:
 
 ## Utilizing the GolemNetwork instance
 
-The GolemNetwork serves as the main entry point for golem-js. We are expected to create a new instance of this object, then use connect before interacting with the network and disconnect to properly close all dealings.
+The `GolemNetwork` is the main entry point for `golem-js`. We will create a new instance of this object, then use the `.connect()` method before interacting with the network and `.disconnect()` to properly close all dealings.
 
 ```js
 import { GolemNetwork } from '@golem-sdk/golem-js'
@@ -63,10 +63,7 @@ try {
 }
 ```
 
-The GolemNetwork creator accepts some parameters:
-
-- api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
-- logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal.
+The `GolemNetwork` constructor accepts some parameters:
 
 ```js
 const glm = new GolemNetwork({
@@ -77,7 +74,10 @@ const glm = new GolemNetwork({
 })
 ```
 
-Once we connect to the network (in reality, connecting to the locally installed yagna), we can leverage the API of the GolemNetwork object. In this example we will use .manyOf() to acquire computational resources. (There is also a low-level api, that lets you dive deep into various subdomains within the Golem Network domain space.)
+- api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
+- logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal.
+
+Once we connect to the network (in reality, connecting to the locally installed `yagna`), we can leverage the API of the `GolemNetwork` object. In this example, we will use `.manyOf()` to acquire computational resources, if we needed a single provider we could alternatively get a `rental` directly from the `GolemNetowk` using the `.oneOf()` method. (Note, there is also a low-level API available, that lets you dive deep into various subdomains within the Golem Network domain space.)
 
 ```js
 const pool = await glm.manyOf({
@@ -87,11 +87,11 @@ const pool = await glm.manyOf({
 })
 ```
 
-The `manyOf()` methods return us a pool of ResourceRental aggregates. Each ResourceRental wraps around the details of different entities and processes needed to manage the rental of resources. If you are interested in the details (that are still accessible from the Golem Network object) and would like to learn more about Agreements, Allocations, Activities, Invoices, DebitNotes, and related conversations required by the protocol please read articles like [this one](/docs/creators/common/requestor-provider-interaction#the-story).
+The `manyOf()` method returns us a pool of `ResourceRental` aggregates. The `ResourceRental` wraps around the details of different entities and processes needed to manage the rental of resources. If you are interested in the details (also accessible from the Golem Network object) and would like to learn more about Agreements, Allocations, Activities, Invoices, DebitNotes, and related conversations required by the protocol please read articles like [this one](/docs/creators/common/requestor-provider-interaction#the-story).
 
-Our pool will consist of a minimum of 1 and a maximum of 3 providers available at the same time. Providers will have their environments defined by the `order`. It is an object that contains information about the environment we want to run, and potentially, criteria for the provider selection.
-In our example for the environment, we will only indicate the image to be run on a remote node. We will use images publicly available on the [registry](registry.golem.network) service, therefore it is enough to provide a tag 'golem/alpine:latest' - it indicates an image based on alpine distribution. You can also define other parameters for the resource definition like the number of threads, memory, or disk size.
-For the provider selection, our example precises the maximum acceptable prices for the `linear` price model. The `rentHour` defines the maximum duration of the engagements with providers before automatic termination.
+Our pool will consist of a minimum of 1 and a maximum of 3 providers available at the same time. Providers will have their environments defined by the `order`. It is an object that contains information about the environment we want to run on the provider, and potentially, criteria for the provider selection.
+In our example, when describing resources needed, we will only indicate the image to be run on a remote node. We will use an image publicly available on the [registry](registry.golem.network) portal, therefore it is enough to provide a tag 'golem/alpine:latest' - it indicates an image based on `alpine` distribution. Users can also specify other parameters like the number of threads, memory, or disk size.
+For the provider selection, our example precises also the maximum acceptable prices using the `linear` price model. Finally, the `rentHour` defines the maximum duration of the engagements with providers before automatic termination.
 
 ```js
 const order = {
@@ -110,7 +110,7 @@ const order = {
 }
 ```
 
-The pool's `.withRental()` method wraps operations on the pool exposing a rental instance. The rental gives us access to the ExeUnit - a representation of the execution environment on the provider node. The ExeUnit models the commands supported by the runtime. In our example, we will execute a command in the default shell using the `.run()` method. The command: `echo ${exe.provider.name} && cat /proc/cpuinfo | grep 'model name'` is a Linux command that will produce filtered content of the `/proc/cpuinfo` file at the provider. Note how we accessed the name of the provider node: the ExeUnit instance offers the whole context including the provider's details.
+The pool's `.withRental()` method wraps operations on the pool exposing a rental instance. The rental gives us access to the `ExeUnit` - a representation of the execution environment on the provider node. The `ExeUnit` models the commands supported by the runtime. In our example, we will execute a command in the default shell using the `.run()` method. The command: `echo ${exe.provider.name} && cat /proc/cpuinfo | grep 'model name'` is a Linux command that will produce filtered content of the `/proc/cpuinfo` file from the node. Note how we accessed the name of the provider node: the `ExeUnit` instance offers the whole context including the provider's details.
 
 ```js
 pool.withRental((rental) =>
@@ -124,9 +124,9 @@ pool.withRental((rental) =>
 )
 ```
 
-The output of the commands executed on the remote node is a `Promise` of a `result` object, once it is resolved and `fulfilled` it contains the output of the command we run, available as a `stdout` property.
+The output of the commands executed on the remote node is a `Promise` of a `result` object. Once it is resolved and `fulfilled` it contains the output of the command we run, available as a `stdout` property.
 
-To run the command 5 times, parallelly on the maximum of 3 providers, we utilize the
+To run the command 5 times, parallelly on the maximum of 3 providers, we utilize the `map()` method and for each `data` array element we will acquire a `rental` and its `exe` to execute the command. We use `allSettled()` to handle all promises from each `exe.run()` and produce the `result` array. Then we can iterate over the `result` and get the actual command outputs (if the command execution succeeded).
 
 ```js
 const data = [...Array(5).keys()]
@@ -158,14 +158,14 @@ Here there is the whole code:
 
 ## Summary
 
-We had created the simple requestor script, that ran a single command on a number of remote computers.
+We had created the simple requestor script, that ran the same command on a number of remote computers.
 To achieve it we had:
 
-- imported @golem-sdk/task-executor lib
+- imported `@golem-sdk/task-executor` lib
 - utilized Immediately Invoked Async Function Expression
 - created GolemNetwork instance
 - created a pool of `rental` objects
-- acquired `rentals` and accessed the `ExeUnit`, where we ran the command
-- finally, we collected the results from the result objects and provided them to the user
+- acquired `rentals` and accessed related `ExeUnits`, where we ran the command
+- finally, we collected the results from the `result` objects and provided them to the user.
 
 In this example, we ran a simple command in a shell on the remote computer. You can run other executable programs in more advanced scenarios. See other examples for other interesting features.
