@@ -104,7 +104,7 @@ Please note: This application requires Node.js version 18.0.0 or higher.
 
 {% /alert %}
 
-Create a file named `requestor.mjs` and copy the following content into it. The code defines a task that runs the command `node -v` on the Golem Network and prints the result to your terminal.
+Create a file named `requestor.mjs` and copy the following content into it. The code engages 5 providers (up to 3 at the same time) to run a command on each of them. The command checks the CPU of the provider and prints it together with the node's name to your terminal.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/mgordel/JST-926/new-quickstart/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
@@ -114,7 +114,7 @@ You can find a detailed explanation of the above code [here](/docs/creators/java
 
 {% /alert %}
 
-### Running the script on Golem Network
+### Running the script on the Golem Network
 
 Run the command:
 
