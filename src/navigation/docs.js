@@ -31,10 +31,6 @@ export const navigation = [
         title: 'Python Quickstart ',
         href: '/docs/quickstarts/python-quickstart',
       },
-      {
-        title: 'Retrievable Task',
-        href: '/docs/quickstarts/retrievable-task',
-      },
     ],
   },
   {
