@@ -25,7 +25,9 @@ export const MenuBar = ({ navigation }) => {
             className="text-base text-primary dark:text-lightergray"
             key={item.title}
             target={item.links[0].href.startsWith('http') ? '_blank' : '_self'}
-            rel={item.links[0].href.startsWith('http') ? 'noopener noreferrer' : ''}
+            rel={
+              item.links[0].href.startsWith('http') ? 'noopener noreferrer' : ''
+            }
             href={item.links[0].href}
           >
             {item.title}
@@ -40,13 +42,8 @@ export const SideBar = ({ navigation }) => {
   const router = useRouter()
 
   const isActive = (item) => {
-    if (
-      item.href &&
-      (router.pathname === item.href || router.pathname === `${item.href}/`)
-    ) {
-      return true
-    }
-    return item.children?.some(isActive) || false
+    const { pathname } = router
+    return item.href && (pathname === item.href || pathname === `${item.href}/`)
   }
 
   const currentSection = navigation.find((section) =>
@@ -88,10 +85,13 @@ export const SideBar = ({ navigation }) => {
   ) : null
 }
 
-export const NavigationItem = ({ item, isActive }) =>
-  item.href ? (
+export const NavigationItem = ({ item, isActive }) => {
+  const { locale } = useRouter()
+
+  return item.href ? (
     <Link
       href={item.href}
+      locale={locale}
       aria-current={isActive ? 'page' : undefined}
       target={item.href.startsWith('http') ? '_blank' : '_self'}
       rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
@@ -110,6 +110,7 @@ export const NavigationItem = ({ item, isActive }) =>
       {item.title}
     </span>
   )
+}
 
 export const Dropdown = ({ children, isActive }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -138,10 +139,10 @@ export const Dropdown = ({ children, isActive }) => {
 export const Navigation = ({ className, links, title = '' }) => {
   const router = useRouter()
 
-  const isActive = (item) =>
-    item.href &&
-    (router.pathname === item.href || router.pathname === item.href)
-
+  const isActive = (item) => {
+    const { pathname } = router
+    return item.href && (pathname === item.href || pathname === `${item.href}/`)
+  }
   const renderNavItems = (items) =>
     items.map((item) => {
       const itemIsActive = isActive(item)

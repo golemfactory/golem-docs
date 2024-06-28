@@ -4,11 +4,18 @@ import withSearch from './src/markdoc/search.mjs'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md'],
+  pageExtensions: ['md', 'mdoc', 'js', 'jsx', 'ts', 'tsx'],
   experimental: {
     scrollRestoration: true,
   },
   distDir: 'dist',
+  i18n: {
+    locales: ['en', 'ja'],
+    // This is the default locale you want to be used when visiting
+    // a non-locale prefixed path e.g. `/hello`
+    defaultLocale: 'en',
+    localeDetection: false, // Disable automatic locale detection
+  },
 }
 
 // if (!process.env.VERCEL) {

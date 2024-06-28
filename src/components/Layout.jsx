@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
 import { Hero } from '@/components/Hero'
@@ -10,7 +9,6 @@ import { MobileNavigation } from '@/components/MobileNavigation'
 import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'
 import { ThemeToggler } from '@/components/ThemeSelector'
-import VersionSwitcher from '@/components/VersionSwitcher'
 
 function Heading({ section, isActive }) {
   const isChildActive = section.children.some(isActive)
@@ -65,6 +63,9 @@ function recursiveRender(children, isActive, pageType = 'article') {
 
 function Header({ navigation }) {
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
+  const { locale, locales, asPath } = router
+  console.log(locale)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,9 +77,10 @@ function Header({ navigation }) {
     }
   }, [])
 
-  const [githubInfo, setGithubInfo] = useState({ stargazersCount: 365, forks: 58 })
-
-
+  const [githubInfo, setGithubInfo] = useState({
+    stargazersCount: 365,
+    forks: 58,
+  })
 
   return (
     <header
@@ -190,6 +192,9 @@ import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { ArticleType } from './ArticleType'
 import { CustomError } from './CustomError'
+import { getLocalizedNavigation, localizeHref } from '@/utils/localization'
+import { navigation } from '@/navigation/docs'
+import { useRouter } from 'next/router'
 
 export function Layout({
   children,
@@ -202,6 +207,8 @@ export function Layout({
   const pathExceptions = ['/', '/404', '/500']
   const isExceptionPage = pathExceptions.includes(router.pathname)
   const hasFromHandbook = 'fromhandbook' in router.query
+
+  const normalNavLinks = navigation
 
   let allLinks = normalNavLinks.flatMap((section) => section.links)
   let LinkIndex = allLinks.findIndex((link) => link.href === router.pathname)

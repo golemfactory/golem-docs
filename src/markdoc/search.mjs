@@ -75,13 +75,14 @@ export default function (nextConfig = {}) {
             let data = files
               .map((file) => {
                 if (file.startsWith('docs/templates/')) {
-                  // Dont index templates
+                  // Don't index templates
                   console.log('Skipping', file)
                   return
                 }
+                let locale = file.split('/')[0]
                 let url =
-                  file === 'index.md'
-                    ? '/'
+                  file === `${locale}/index.md`
+                    ? `/${locale}`
                     : `/${file.replace(/\.md$/, '').replace(/\/index$/, '')}`
                 let md = fs.readFileSync(path.join(pagesDir, file), 'utf8')
 
@@ -97,25 +98,26 @@ export default function (nextConfig = {}) {
                     )?.[1]
                   let type = ast.attributes?.frontmatter
                     ?.match(/^type:\s*(.*?)\s*$/m)?.[1]
-                    .replace('"', '')
+                    ?.replace('"', '')
                     .replace('"', '')
 
                   if (
+                    !type ||
                     type.toLowerCase() === 'noindex' ||
                     type.toLowerCase() === 'page' ||
                     type.toLowerCase() === 'noicon'
                   ) {
-                    // Dont index these pages
+                    // Don't index these pages
                     return
                   }
 
-                  const articleFor = file.startsWith('docs/creators/')
+                  const articleFor = file.startsWith(`${locale}/docs/creators/`)
                     ? 'Requestor'
-                    : file.startsWith('docs/providers/')
+                    : file.startsWith(`${locale}/docs/providers/`)
                     ? 'Provider'
-                    : file.startsWith('docs/quickstarts/')
+                    : file.startsWith(`${locale}/docs/quickstarts/`)
                     ? 'Requestor'
-                    : file.startsWith('docs/golem-js/')
+                    : file.startsWith(`${locale}/docs/golem-js/`)
                     ? 'Requestor'
                     : 'General'
 
@@ -125,7 +127,7 @@ export default function (nextConfig = {}) {
                   cache.set(file, [md, sections])
                 }
 
-                return { url, sections }
+                return { url, sections, locale }
               })
               .filter((item) => item !== undefined)
 
@@ -139,7 +141,7 @@ export default function (nextConfig = {}) {
                 document: {
                   id: 'url',
                   index: 'content',
-                  store: ['title', 'pageTitle', 'type', 'articleFor'],
+                  store: ['title', 'pageTitle', 'type', 'articleFor', 'locale'],
                 },
                 context: {
                   resolution: 9,
@@ -150,7 +152,7 @@ export default function (nextConfig = {}) {
 
               let data = ${JSON.stringify(data)}
 
-              for (let { url, sections } of data) {
+              for (let { url, sections, locale } of data) {
                
                 for (let [title, hash, content] of sections) {
                   if (title === [title, ...content].join('\\n')) continue
@@ -161,6 +163,7 @@ export default function (nextConfig = {}) {
                     pageTitle: hash ? sections[0][0] : undefined,
                     type: sections[0][3],
                     articleFor: sections[0][4],
+                    locale,
                   })
                 }
               }
@@ -179,6 +182,7 @@ export default function (nextConfig = {}) {
                   pageTitle: item.doc.pageTitle,
                   type: item.doc.type,
                   articleFor: item.doc.articleFor,
+                  locale: item.doc.locale,
                 }))
               }
             `
