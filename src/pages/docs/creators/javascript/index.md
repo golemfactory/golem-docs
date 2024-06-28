@@ -10,7 +10,7 @@ Welcome to the docs page for Golem JS SDK. JS SDK enables JS and TS developer to
 
 ##  JS SDK libraries
 
-The core of JS SDK is the **@golem-sdk/golem-js** library that allows developers to connect to their Golem nodes and manage their distributed, computational loads through the Golem Network. `golem-js` leverages the notion of _Renting Compute Resources_ model. Go here to learn about it [here](/docs/creators/javascript/guides/golem-js).
+The core of JS SDK is the **@golem-sdk/golem-js** library that allows developers to connect to the Golem Network, acquire computational resources from Providers using a convenient API, run their workloads with these resources, and get the results back to your machine. `golem-js` leverages both the high level _Renting Compute Resources_ model and low-level model reflecting objects from the internal Golem domain. Go here to learn about it [here](/docs/creators/javascript/guides/golem-js).
 
 The **@golem-sdk/task-executor** implements the so-called _Task Model_, which is oriented around the notion of a _Task_ defined as a series of commands to be executed that have to succeed altogether for the task to be considered successful. This is particularly suitable for use cases involving the batch-map-reduce type of operations that can be distributed across many rented resources. Task Model is described [here](/docs/creators/javascript/task-executor/task-model).
 
