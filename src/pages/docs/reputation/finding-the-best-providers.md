@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
 In `golem-js`, you can use the `allowProvidersById` filter to only allow offers from providers whose IDs are in the list returned by the Reputation API.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/strategy/whiteListProvidersIds.ts" language="typescript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/strategy/whiteListProvidersIds.ts"language="typescript" /%}
 
 ## Detailed look at the filter options
 
