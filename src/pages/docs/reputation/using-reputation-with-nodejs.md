@@ -49,7 +49,7 @@ First, import the Reputation System into your project's script and create an ins
 
 To implement the Reputation System, open your project's `index.mjs` file and incorporate a `ReputationSystem` instance into the `TaskExecutor`. The following example script demonstrates this process:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/experimental/reputation/basic.ts" language="typescript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/reputation/basic.ts" language="typescript" /%}
 
 This script starts by noting that it will run on the Polygon network, which involves real transaction costs. After a brief pause, it initializes the Reputation System and sets up a `TaskExecutor` that uses a reputation-based filter for provider selection.
 
