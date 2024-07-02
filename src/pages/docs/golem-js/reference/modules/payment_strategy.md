@@ -35,7 +35,7 @@ Default DebitNotes filter that accept all debit notes without any validation
 
 #### Defined in
 
-[src/payment/strategy.ts:5](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/strategy.ts#L5)
+[src/payment/strategy.ts:6](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/strategy.ts#L6)
 
 ___
 
@@ -57,13 +57,13 @@ Default Invoices filter that accept all invoices without any validation
 
 #### Defined in
 
-[src/payment/strategy.ts:7](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/strategy.ts#L7)
+[src/payment/strategy.ts:9](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/strategy.ts#L9)
 
 ___
 
 ### acceptMaxAmountDebitNoteFilter
 
-▸ **acceptMaxAmountDebitNoteFilter**(`maxAmount`): (`debitNote`: [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO)) => `Promise`\<`boolean`\>
+▸ **acceptMaxAmountDebitNoteFilter**(`maxAmount`): (`debitNote`: [`DebitNote`](../classes/payment_debit_note.DebitNote)) => `Promise`\<`boolean`\>
 
 A custom filter that only accepts debit notes below a given value
 
@@ -83,7 +83,7 @@ A custom filter that only accepts debit notes below a given value
 
 | Name | Type |
 | :------ | :------ |
-| `debitNote` | [`DebitNoteDTO`](../interfaces/payment_debit_note.DebitNoteDTO) |
+| `debitNote` | [`DebitNote`](../classes/payment_debit_note.DebitNote) |
 
 ##### Returns
 
@@ -91,13 +91,13 @@ A custom filter that only accepts debit notes below a given value
 
 #### Defined in
 
-[src/payment/strategy.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/strategy.ts#L10)
+[src/payment/strategy.ts:12](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/strategy.ts#L12)
 
 ___
 
 ### acceptMaxAmountInvoiceFilter
 
-▸ **acceptMaxAmountInvoiceFilter**(`maxAmount`): (`invoice`: [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO)) => `Promise`\<`boolean`\>
+▸ **acceptMaxAmountInvoiceFilter**(`maxAmount`): (`invoice`: [`Invoice`](../classes/payment_invoice.Invoice)) => `Promise`\<`boolean`\>
 
 A custom filter that only accepts invoices below a given value
 
@@ -117,7 +117,7 @@ A custom filter that only accepts invoices below a given value
 
 | Name | Type |
 | :------ | :------ |
-| `invoice` | [`InvoiceDTO`](../interfaces/payment_invoice.InvoiceDTO) |
+| `invoice` | [`Invoice`](../classes/payment_invoice.Invoice) |
 
 ##### Returns
 
@@ -125,4 +125,4 @@ A custom filter that only accepts invoices below a given value
 
 #### Defined in
 
-[src/payment/strategy.ts:14](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/strategy.ts#L14)
+[src/payment/strategy.ts:16](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/strategy.ts#L16)

@@ -17,3 +17,5 @@ type: "JS API Reference"
 - [ResultData](../interfaces/activity_results.ResultData)
 - [StreamingBatchEvent](../interfaces/activity_results.StreamingBatchEvent)
 - [RuntimeEventKind](../interfaces/activity_results.RuntimeEventKind)
+- [RuntimeEventStarted](../interfaces/activity_results.RuntimeEventStarted)
+- [RuntimeEventFinished](../interfaces/activity_results.RuntimeEventFinished)

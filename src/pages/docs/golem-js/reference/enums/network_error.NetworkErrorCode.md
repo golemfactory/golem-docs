@@ -21,93 +21,115 @@ type: "JS API Reference"
 - [NodeAddingFailed](network_error.NetworkErrorCode#nodeaddingfailed)
 - [NodeRemovalFailed](network_error.NetworkErrorCode#noderemovalfailed)
 - [NetworkRemovalFailed](network_error.NetworkErrorCode#networkremovalfailed)
+- [GettingIdentityFailed](network_error.NetworkErrorCode#gettingidentityfailed)
+- [NetworkRemoved](network_error.NetworkErrorCode#networkremoved)
 
 ## Enumeration Members
 
 ### ServiceNotInitialized
 
-• **ServiceNotInitialized** = ``0``
+• **ServiceNotInitialized** = ``"ServiceNotInitialized"``
 
 #### Defined in
 
-[src/network/error.ts:5](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L5)
+[src/network/error.ts:5](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L5)
 
 ___
 
 ### NetworkSetupMissing
 
-• **NetworkSetupMissing** = ``1``
+• **NetworkSetupMissing** = ``"NetworkSetupMissing"``
 
 #### Defined in
 
-[src/network/error.ts:6](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L6)
+[src/network/error.ts:6](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L6)
 
 ___
 
 ### NetworkCreationFailed
 
-• **NetworkCreationFailed** = ``2``
+• **NetworkCreationFailed** = ``"NetworkCreationFailed"``
 
 #### Defined in
 
-[src/network/error.ts:7](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L7)
+[src/network/error.ts:7](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L7)
 
 ___
 
 ### NoAddressesAvailable
 
-• **NoAddressesAvailable** = ``3``
+• **NoAddressesAvailable** = ``"NoAddressesAvailable"``
 
 #### Defined in
 
-[src/network/error.ts:8](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L8)
+[src/network/error.ts:8](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L8)
 
 ___
 
 ### AddressOutOfRange
 
-• **AddressOutOfRange** = ``4``
+• **AddressOutOfRange** = ``"AddressOutOfRange"``
 
 #### Defined in
 
-[src/network/error.ts:9](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L9)
+[src/network/error.ts:9](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L9)
 
 ___
 
 ### AddressAlreadyAssigned
 
-• **AddressAlreadyAssigned** = ``5``
+• **AddressAlreadyAssigned** = ``"AddressAlreadyAssigned"``
 
 #### Defined in
 
-[src/network/error.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L10)
+[src/network/error.ts:10](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L10)
 
 ___
 
 ### NodeAddingFailed
 
-• **NodeAddingFailed** = ``6``
+• **NodeAddingFailed** = ``"NodeAddingFailed"``
 
 #### Defined in
 
-[src/network/error.ts:11](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L11)
+[src/network/error.ts:11](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L11)
 
 ___
 
 ### NodeRemovalFailed
 
-• **NodeRemovalFailed** = ``7``
+• **NodeRemovalFailed** = ``"NodeRemovalFailed"``
 
 #### Defined in
 
-[src/network/error.ts:12](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L12)
+[src/network/error.ts:12](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L12)
 
 ___
 
 ### NetworkRemovalFailed
 
-• **NetworkRemovalFailed** = ``8``
+• **NetworkRemovalFailed** = ``"NetworkRemovalFailed"``
 
 #### Defined in
 
-[src/network/error.ts:13](https://github.com/golemfactory/golem-js/blob/4182943/src/network/error.ts#L13)
+[src/network/error.ts:13](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L13)
+
+___
+
+### GettingIdentityFailed
+
+• **GettingIdentityFailed** = ``"GettingIdentityFailed"``
+
+#### Defined in
+
+[src/network/error.ts:14](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L14)
+
+___
+
+### NetworkRemoved
+
+• **NetworkRemoved** = ``"NetworkRemoved"``
+
+#### Defined in
+
+[src/network/error.ts:15](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/error.ts#L15)
