@@ -1,7 +1,8 @@
 name: Validate local links in the docs
 
 on:
-  pull_request: # This triggers the action on all PRs
+  pull_request:
+    types: [assigned, unassigned, labeled, unlabeled, opened, edited, closed, reopened, synchronize, ready_for_review, locked, unlocked, review_requested, review_request_removed]
 
 jobs:
   validate:
