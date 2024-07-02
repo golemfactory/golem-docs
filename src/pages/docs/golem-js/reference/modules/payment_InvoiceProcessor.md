@@ -20,8 +20,8 @@ type: "JS API Reference"
 
 ### InvoiceAcceptResult
 
-Ƭ **InvoiceAcceptResult**: \{ `invoiceId`: `string` ; `allocation`: `Allocation` ; `success`: ``true`` ; `amount`: `string` ; `dryRun`: `boolean`  } \| \{ `invoiceId`: `string` ; `allocation`: `Allocation` ; `success`: ``false`` ; `amount`: `string` ; `reason`: `unknown` ; `dryRun`: `boolean`  }
+Ƭ **InvoiceAcceptResult**: \{ `invoiceId`: `string` ; `allocation`: `PaymentApi.AllocationDTO` ; `success`: ``true`` ; `amount`: `string` ; `dryRun`: `boolean`  } \| \{ `invoiceId`: `string` ; `allocation`: `PaymentApi.AllocationDTO` ; `success`: ``false`` ; `amount`: `string` ; `reason`: `unknown` ; `dryRun`: `boolean`  }
 
 #### Defined in
 
-[src/payment/InvoiceProcessor.ts:6](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/InvoiceProcessor.ts#L6)
+[src/payment/InvoiceProcessor.ts:5](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/InvoiceProcessor.ts#L5)

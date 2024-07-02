@@ -3,7 +3,7 @@ set -e # Exit immediately if a command exits with a non-zero status.
 
 # Variable Definitions
 TEMP_PATH='./temp'
-TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .docs/typedoc-frontmatter-theme.cjs --hideBreadcrumbs true'
+TYPEDOC_PARAMS='src/ --plugin typedoc-plugin-markdown --plugin .typedoc/typedoc-frontmatter-theme.cjs --hideBreadcrumbs true'
 BRANCH_NAME=$1
 REPO_NAME=$2
 OUTPUT_PATH="../src/pages/docs/$REPO_NAME/reference"
@@ -38,7 +38,7 @@ if [ -d "$OUTPUT_PATH" ]; then rm -Rf $OUTPUT_PATH; fi
 npx typedoc $TYPEDOC_PARAMS --out $OUTPUT_PATH
 
 # Generate Summary
-node .docs/summary-generator.cjs $OUTPUT_PATH $OUTPUT_PATH
+node .typedoc/summary-generator.cjs $OUTPUT_PATH $OUTPUT_PATH
 
 # Exit to Parent Directory
 cd ..

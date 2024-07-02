@@ -8,6 +8,14 @@ type: "JS API Reference"
 
 ## Table of contents
 
+### Enumerations
+
+- [NetworkState](../enums/network_network.NetworkState)
+
+### Classes
+
+- [Network](../classes/network_network.Network)
+
 ### Interfaces
 
 - [NetworkInfo](../interfaces/network_network.NetworkInfo)
