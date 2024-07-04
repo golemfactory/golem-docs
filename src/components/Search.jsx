@@ -16,14 +16,15 @@ function SearchIcon(props) {
   )
 }
 
-function useAutocomplete() {
+function useAutocomplete(locale) {
   let id = useId()
   let router = useRouter()
   let [autocompleteState, setAutocompleteState] = useState({})
   let typingTimeout = useRef(null)
   let lastQueryRef = useRef('')
+  console.log('SELECTED LOCALE', locale)
 
-  let [autocomplete] = useState(() =>
+  let [autocomplete, setAutocomplete] = useState(() =>
     createAutocomplete({
       id,
       placeholder: 'Find something...',
@@ -49,12 +50,15 @@ function useAutocomplete() {
       },
       getSources({ query }) {
         return import('@/markdoc/search.mjs').then(({ search }) => {
-          let items = search(query, { limit: 5 })
+          let allItems = search(query, { locale }) // Filter by locale first
+          console.log('All search results: for locale', locale, allItems)
+          let filteredItems = allItems.slice(0, 5) // Apply the limit after filtering
+          console.log('Filtered search results:', filteredItems)
           return [
             {
               sourceId: 'documentation',
               getItems() {
-                return items
+                return filteredItems
               },
               getItemUrl({ item }) {
                 return item.url
@@ -68,6 +72,57 @@ function useAutocomplete() {
       },
     })
   )
+
+  useEffect(() => {
+    setAutocomplete(
+      createAutocomplete({
+        id,
+        placeholder: 'Find something...',
+        defaultActiveItemId: 0,
+        onStateChange({ state }) {
+          setAutocompleteState(state)
+
+          if (typingTimeout.current) clearTimeout(typingTimeout.current)
+          if (state.query !== '' && state.query !== lastQueryRef.current) {
+            typingTimeout.current = setTimeout(() => {
+              event('search', {
+                search_term: state.query,
+                result_count: state.collections.flatMap(
+                  (collection) => collection.items
+                ).length,
+              })
+              lastQueryRef.current = state.query
+            }, 1000)
+          }
+        },
+        shouldPanelOpen({ state }) {
+          return state.query !== ''
+        },
+        getSources({ query }) {
+          return import('@/markdoc/search.mjs').then(({ search }) => {
+            let allItems = search(query, { locale }) // Filter by locale first
+            console.log('All search results: for locale', locale, allItems)
+            let filteredItems = allItems.slice(0, 5) // Apply the limit after filtering
+            console.log('Filtered search results:', filteredItems)
+            return [
+              {
+                sourceId: 'documentation',
+                getItems() {
+                  return filteredItems
+                },
+                getItemUrl({ item }) {
+                  return item.url
+                },
+                onSelect({ itemUrl }) {
+                  router.push(itemUrl)
+                },
+              },
+            ]
+          })
+        },
+      })
+    )
+  }, [locale, id, router])
 
   return { autocomplete, autocompleteState }
 }
@@ -320,6 +375,26 @@ const SearchInput = forwardRef(function SearchInput(
   )
 })
 
+function LanguageFilterButton({ emoji, isActive, onClick, query }) {
+  return (
+    <button
+      className={`rounded-md px-2 py-1 text-sm font-medium capitalize text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:text-white dark:text-opacity-70 dark:ring-gray-500/50 ${
+        isActive ? 'bg-lightbluedarker dark:bg-slate-600' : 'dark:bg-slate-800'
+      }`}
+      onClick={() => {
+        event('filter_click', {
+          filter_type: emoji,
+          filter_status: !isActive ? 'added' : 'removed',
+          search_query: query,
+        })
+        onClick(emoji)
+      }}
+    >
+      {emoji}
+    </button>
+  )
+}
+
 function FilterButton({ label, isActive, onClick, query }) {
   return (
     <button
@@ -339,15 +414,19 @@ function FilterButton({ label, isActive, onClick, query }) {
     </button>
   )
 }
+import { useLocale } from '@/context/LocaleContext'
 
 function SearchDialog({ open, setOpen, className }) {
+  const { locale, setLocale } = useLocale() // Use the context
+
   let router = useRouter()
   let formRef = useRef()
   let panelRef = useRef()
   let inputRef = useRef()
-  let { autocomplete, autocompleteState } = useAutocomplete()
+
   const [roleFilter, setRoleFilter] = useState([])
   const [typefilter, setTypeFilter] = useState([])
+  let { autocomplete, autocompleteState } = useAutocomplete(locale)
   let [modifierKey, setModifierKey] = useState()
 
   useEffect(() => {
@@ -488,6 +567,33 @@ function SearchDialog({ open, setOpen, className }) {
                 autocompleteState={autocompleteState}
                 onClose={() => setOpen(false)}
               />
+              <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
+                <span className="mr-4 text-sm font-semibold text-slate-800 dark:text-white/50">
+                  Language
+                </span>
+                <div className="flex gap-x-2">
+                  <LanguageFilterButton
+                    emoji="🇺🇸"
+                    isActive={locale === 'en'}
+                    onClick={() => {
+                      setLocale('en')
+                      localStorage.setItem('selectedLocale', 'en')
+                      autocomplete.setQuery(autocompleteState.query)
+                    }}
+                    query={autocompleteState.query}
+                  />
+                  <LanguageFilterButton
+                    emoji="🇯🇵"
+                    isActive={locale === 'ja'}
+                    onClick={() => {
+                      setLocale('ja')
+                      localStorage.setItem('selectedLocale', 'ja')
+                      autocomplete.setQuery(autocompleteState.query)
+                    }}
+                    query={autocompleteState.query}
+                  />
+                </div>
+              </div>
               <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
                 <span className="mr-4 text-sm font-semibold text-slate-800 dark:text-white/50">
                   Role
@@ -646,7 +752,7 @@ function useSearchProps() {
   }
 }
 
-export function Search({ fullWidth = false }) {
+export function Search({ fullWidth = false, locale = 'en' }) {
   let [modifierKey, setModifierKey] = useState()
   let { buttonProps, dialogProps } = useSearchProps()
 
@@ -680,7 +786,7 @@ export function Search({ fullWidth = false }) {
           </kbd>
         )}
       </button>
-      <SearchDialog {...dialogProps} />
+      <SearchDialog {...dialogProps} locale={locale} />
     </>
   )
 }

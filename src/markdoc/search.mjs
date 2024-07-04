@@ -79,11 +79,17 @@ export default function (nextConfig = {}) {
                   console.log('Skipping', file)
                   return
                 }
-                let locale = file.split('/')[0]
+                let [docs, locale, ...rest] = file.split('/')
+                if (docs !== 'docs') {
+                  return
+                }
                 let url =
-                  file === `${locale}/index.md`
+                  file === `docs/${locale}/index.md`
                     ? `/${locale}`
-                    : `/${file.replace(/\.md$/, '').replace(/\/index$/, '')}`
+                    : `/${[...rest]
+                        .join('/')
+                        .replace(/\.md$/, '')
+                        .replace(/\/index$/, '')}`
                 let md = fs.readFileSync(path.join(pagesDir, file), 'utf8')
 
                 let sections
@@ -111,13 +117,13 @@ export default function (nextConfig = {}) {
                     return
                   }
 
-                  const articleFor = file.startsWith(`${locale}/docs/creators/`)
+                  const articleFor = file.startsWith(`docs/${locale}/creators/`)
                     ? 'Requestor'
-                    : file.startsWith(`${locale}/docs/providers/`)
+                    : file.startsWith(`docs/${locale}/providers/`)
                     ? 'Provider'
-                    : file.startsWith(`${locale}/docs/quickstarts/`)
+                    : file.startsWith(`docs/${locale}/quickstarts/`)
                     ? 'Requestor'
-                    : file.startsWith(`${locale}/docs/golem-js/`)
+                    : file.startsWith(`docs/${locale}/golem-js/`)
                     ? 'Requestor'
                     : 'General'
 
@@ -153,11 +159,11 @@ export default function (nextConfig = {}) {
               let data = ${JSON.stringify(data)}
 
               for (let { url, sections, locale } of data) {
-               
                 for (let [title, hash, content] of sections) {
                   if (title === [title, ...content].join('\\n')) continue
+                  console.log(locale)
                   sectionIndex.add({
-                    url: url + (hash ? ('#' + hash) : ''),
+                    url: \`/docs/\${locale}\${url + (hash ? ('#' + hash) : '')}\`,
                     title,
                     content: [title, ...content].join('\\n'),
                     pageTitle: hash ? sections[0][0] : undefined,
@@ -169,21 +175,24 @@ export default function (nextConfig = {}) {
               }
 
               export function search(query, options = {}) {
+                const { locale, ...restOptions } = options;
                 let result = sectionIndex.search(query, {
-                  ...options,
+                  ...restOptions,
                   enrich: true,
-                })
+                });
                 if (result.length === 0) {
-                  return []
+                  return [];
                 }
-                return result[0].result.map((item) => ({
-                  url: item.id,
-                  title: item.doc.title,
-                  pageTitle: item.doc.pageTitle,
-                  type: item.doc.type,
-                  articleFor: item.doc.articleFor,
-                  locale: item.doc.locale,
-                }))
+                return result[0].result
+                  .filter((item) => !locale || item.doc.locale === locale) // Filter by locale
+                  .map((item) => ({
+                    url: item.id,
+                    title: item.doc.title,
+                    pageTitle: item.doc.pageTitle,
+                    type: item.doc.type,
+                    articleFor: item.doc.articleFor,
+                    locale: item.doc.locale,
+                  }));
               }
             `
           }),

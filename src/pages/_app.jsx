@@ -7,6 +7,8 @@ import { GoogleAnalytics } from 'nextjs-google-analytics'
 import { Layout } from '@/components/Layout'
 import 'focus-visible'
 import '@/styles/tailwind.css'
+import { LocaleProvider } from '@/context/LocaleContext' // Import the LocaleProvider
+
 function getNodeText(node) {
   let text = ''
   for (let child of node.children ?? []) {
@@ -104,8 +106,6 @@ export default function App({ Component, pageProps }) {
     ? collectHeadings(pageProps.markdoc.content)
     : []
 
-
-
   return (
     <>
       <GoogleAnalytics trackPageViews />
@@ -119,14 +119,18 @@ export default function App({ Component, pageProps }) {
             content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
           />
         </Head>
-        <Layout
-          title={title}
-          tableOfContents={tableOfContents}
-          type={type}
-          tags={tags}
-        >
-          <Component {...pageProps} />
-        </Layout>
+        <LocaleProvider>
+          {' '}
+          {/* Wrap the application with LocaleProvider */}
+          <Layout
+            title={title}
+            tableOfContents={tableOfContents}
+            type={type}
+            tags={tags}
+          >
+            <Component {...pageProps} />
+          </Layout>
+        </LocaleProvider>
       </div>
     </>
   )

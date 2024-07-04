@@ -61,11 +61,41 @@ function recursiveRender(children, isActive, pageType = 'article') {
   ))
 }
 
-function Header({ navigation }) {
-  const [isScrolled, setIsScrolled] = useState(false)
+const LanguageSelector = () => {
+  const { locale, setLocale } = useLocale()
   const router = useRouter()
-  const { locale, locales, asPath } = router
-  console.log(locale)
+
+  const changeLanguage = (lang) => {
+    setLocale(lang)
+    const currentPath = router.asPath
+    const localizedPath = currentPath.replace(
+      /^\/docs\/(en|ja)/,
+      `/docs/${lang}`
+    )
+    router.push(localizedPath)
+  }
+
+  return (
+    <div className="flex gap-x-2">
+      <button
+        onClick={() => changeLanguage('en')}
+        className={clsx('text-lg', { 'font-bold': locale === 'en' })}
+      >
+        🇬🇧
+      </button>
+      <button
+        onClick={() => changeLanguage('ja')}
+        className={clsx('text-lg', { 'font-bold': locale === 'ja' })}
+      >
+        🇯🇵
+      </button>
+    </div>
+  )
+}
+
+function Header({ navigation }) {
+  console.log('TEST', navigation)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,13 +128,13 @@ function Header({ navigation }) {
             <Logo className="hidden h-full  fill-slate-700 dark:fill-sky-100 lg:block" />
           </Link>
 
-          <MenuBar navigation={{ normalNavLinks }} />
+          <MenuBar navigation={navigation} />
         </div>
 
         <div className="relative flex flex-grow basis-0 items-center justify-end gap-6 sm:gap-8">
           <ThemeToggler className="relative z-10" />
           <Search />
-
+          <LanguageSelector />
           <Link
             href="https://github.com/golemfactory/yagna"
             className="group hidden flex-none items-center gap-x-2 lg:flex"
@@ -193,8 +223,10 @@ import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { ArticleType } from './ArticleType'
 import { CustomError } from './CustomError'
 import { getLocalizedNavigation, localizeHref } from '@/utils/localization'
-import { navigation } from '@/navigation/docs'
+import { navigation as englishNavigation } from '@/navigation/docs'
+import { navigation as japaneseNavigation } from '@/navigation/docs.ja'
 import { useRouter } from 'next/router'
+import { useLocale } from '@/context/LocaleContext' // Import the context
 
 export function Layout({
   children,
@@ -208,14 +240,15 @@ export function Layout({
   const isExceptionPage = pathExceptions.includes(router.pathname)
   const hasFromHandbook = 'fromhandbook' in router.query
 
-  const normalNavLinks = navigation
+  const [navigation, setNavigation] = useState(englishNavigation)
+  const { locale } = useLocale() // Use the context
 
-  let allLinks = normalNavLinks.flatMap((section) => section.links)
+  let allLinks = navigation.flatMap((section) => section.links)
   let LinkIndex = allLinks.findIndex((link) => link.href === router.pathname)
   let previousPage = allLinks[LinkIndex - 1]
   let nextPage = allLinks[LinkIndex + 1]
 
-  let section = normalNavLinks.find((section) =>
+  let section = navigation.find((section) =>
     section.links.find((link) => link.href === router.pathname)
   )
   const currentSection = useTableOfContents(
@@ -225,6 +258,14 @@ export function Layout({
   function isActive(section) {
     return section.id === currentSection
   }
+
+  useEffect(() => {
+    if (locale.startsWith('ja')) {
+      setNavigation(japaneseNavigation)
+    } else {
+      setNavigation(englishNavigation)
+    }
+  }, [locale])
 
   if (router.pathname === '/404') {
     return (
@@ -268,7 +309,7 @@ export function Layout({
 
   return (
     <>
-      <Header navigation={GolemJSReference} />
+      <Header navigation={navigation} />
 
       {type === 'home' && <Hero />}
 
@@ -280,7 +321,7 @@ export function Layout({
               <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
               <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-slate-800 dark:block" />
               <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-64">
-                <SideBar navigation={normalNavLinks} />
+                {navigation && <SideBar navigation={navigation} />}
               </div>
             </div>
           ))}

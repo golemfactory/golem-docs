@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import clsx from 'clsx'
 import { useState, useEffect } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import { useLocale } from '@/context/LocaleContext' // Import the context
+
+
 
 const isActive = (item, router) => {
   if (
@@ -15,11 +18,9 @@ const isActive = (item, router) => {
 }
 
 export const MenuBar = ({ navigation }) => {
-  const router = useRouter()
-
   return (
     <div className="ml-4 hidden gap-x-6 lg:flex">
-      {navigation.normalNavLinks.map((item) => {
+      {navigation.map((item) => {
         return (
           <Link
             className="text-base text-primary dark:text-lightergray"
@@ -40,6 +41,7 @@ export const MenuBar = ({ navigation }) => {
 
 export const SideBar = ({ navigation }) => {
   const router = useRouter()
+  const { locale } = useLocale() // Use the context
 
   const isActive = (item) => {
     const { pathname } = router
@@ -75,6 +77,25 @@ export const SideBar = ({ navigation }) => {
       )
     })
 
+  useEffect(() => {
+    const currentPath = router.asPath
+    const localizedPath = currentPath.replace(
+      /^\/docs\/(en|ja)/,
+      `/docs/${locale}`
+    )
+
+    console.log(
+      'CHECKING (OUR CURRENT LOCALE IS',
+      locale,
+      currentPath,
+      localizedPath
+    )
+    if (currentPath !== localizedPath) {
+      console.log('NOT TrRUE')
+      router.push(localizedPath)
+    }
+  }, [locale, router])
+
   return currentSection ? (
     <nav>
       <h4 className="mb-2 text-base font-semibold dark:text-white">
@@ -86,12 +107,9 @@ export const SideBar = ({ navigation }) => {
 }
 
 export const NavigationItem = ({ item, isActive }) => {
-  const { locale } = useRouter()
-
   return item.href ? (
     <Link
       href={item.href}
-      locale={locale}
       aria-current={isActive ? 'page' : undefined}
       target={item.href.startsWith('http') ? '_blank' : '_self'}
       rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
