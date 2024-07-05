@@ -19,14 +19,14 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-2 md:flex-row">
             <div className="flex justify-center gap-4">
               <Link
-                href="/docs/creators/javascript"
+                href="/docs/en/creators/javascript"
                 className="flex items-center gap-x-2 rounded bg-primary px-4 py-2 text-base text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80"
               >
                 <JSIcon className=" h-5 w-5 fill-white " />
                 JS docs
               </Link>
               <Link
-                href="/docs/creators/python"
+                href="/docs/en/creators/python"
                 className="flex items-center gap-x-2 rounded bg-primary px-4 py-2 text-base text-white hover:bg-primaryhover dark:bg-darkprimary dark:hover:bg-darkprimary/80"
               >
                 <PythonIcon className="h-5 w-5 fill-white  " />

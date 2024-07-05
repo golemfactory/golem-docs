@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Dialog } from '@headlessui/react'
-import { navigation } from '@/navigation/docs'
 import { Logomark } from '@/components/Logo'
 import { SideBar } from './Navigation'
+import { useLocale } from '@/context/LocaleContext'
+import { navigation as englishNavigation } from '@/navigation/docs'
+import { navigation as japaneseNavigation } from '@/navigation/docs.ja'
 
 function MenuIcon(props) {
   return (
@@ -36,9 +38,19 @@ function CloseIcon(props) {
   )
 }
 
-export function MobileNavigation({}) {
+export function MobileNavigation() {
   let router = useRouter()
   let [isOpen, setIsOpen] = useState(false)
+  const { locale } = useLocale()
+  const [navigation, setNavigation] = useState(englishNavigation)
+
+  useEffect(() => {
+    if (locale.startsWith('ja')) {
+      setNavigation(japaneseNavigation)
+    } else {
+      setNavigation(englishNavigation)
+    }
+  }, [locale])
 
   useEffect(() => {
     if (!isOpen) return
@@ -99,12 +111,6 @@ export function MobileNavigation({}) {
           <div className="pt-10">
             <SideBar navigation={navigation} className="mt-5 px-1" />
           </div>
-          {/* <div className="pt-10">
-            <ReferenceNavigation
-              navigation={JSReference}
-              className="mt-5 px-1"
-            />
-          </div> */}
         </Dialog.Panel>
       </Dialog>
     </>
