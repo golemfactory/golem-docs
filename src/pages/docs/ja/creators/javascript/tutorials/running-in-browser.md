@@ -198,7 +198,7 @@ Now let's create the `appendResults()` function which will put the output of our
 
 ## Getting logs
 
-The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/ja/golem-js/reference/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
+The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/ja/golem-js/reference/interfaces/shared_utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
 
 ```html
 <script type="module">
