@@ -94,7 +94,6 @@ const LanguageSelector = () => {
 }
 
 function Header({ navigation }) {
-  console.log('TEST', navigation)
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {

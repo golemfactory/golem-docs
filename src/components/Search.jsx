@@ -22,7 +22,6 @@ function useAutocomplete(locale) {
   let [autocompleteState, setAutocompleteState] = useState({})
   let typingTimeout = useRef(null)
   let lastQueryRef = useRef('')
-  console.log('SELECTED LOCALE', locale)
 
   let [autocomplete, setAutocomplete] = useState(() =>
     createAutocomplete({
@@ -51,9 +50,7 @@ function useAutocomplete(locale) {
       getSources({ query }) {
         return import('@/markdoc/search.mjs').then(({ search }) => {
           let allItems = search(query, { locale }) // Filter by locale first
-          console.log('All search results: for locale', locale, allItems)
           let filteredItems = allItems.slice(0, 5) // Apply the limit after filtering
-          console.log('Filtered search results:', filteredItems)
           return [
             {
               sourceId: 'documentation',
@@ -101,9 +98,7 @@ function useAutocomplete(locale) {
         getSources({ query }) {
           return import('@/markdoc/search.mjs').then(({ search }) => {
             let allItems = search(query, { locale }) // Filter by locale first
-            console.log('All search results: for locale', locale, allItems)
             let filteredItems = allItems.slice(0, 5) // Apply the limit after filtering
-            console.log('Filtered search results:', filteredItems)
             return [
               {
                 sourceId: 'documentation',
