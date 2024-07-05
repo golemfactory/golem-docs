@@ -196,7 +196,11 @@ export const navigation = [
                   },
                 ],
               },
-              parseReference('Task API リファレンス', taskExecutorReference),
+              parseReference(
+                'Task API リファレンス',
+                taskExecutorReference,
+                'ja'
+              ),
             ],
           },
           {
@@ -255,7 +259,7 @@ export const navigation = [
               },
             ],
           },
-          parseReference('Golem JS APIリファレンス', golemJsReference),
+          parseReference('Golem JS APIリファレンス', golemJsReference, 'ja'),
         ],
       },
       {
@@ -604,7 +608,10 @@ export const navigation = [
     title: '共有して稼ぐ',
     links: [
       { title: '紹介', href: '/docs/ja/providers' },
-      { title: 'インストール', href: '/docs/ja/providers/provider-installation' },
+      {
+        title: 'インストール',
+        href: '/docs/ja/providers/provider-installation',
+      },
       {
         title: 'プロバイダーの設定',
         children: [
@@ -632,7 +639,10 @@ export const navigation = [
         ],
       },
       { title: 'メンテナンスと更新', href: '/docs/ja/providers/maintenance' },
-      { title: 'GPUプロバイダー', href: '/docs/ja/providers/gpu/gpu-golem-live' },
+      {
+        title: 'GPUプロバイダー',
+        href: '/docs/ja/providers/gpu/gpu-golem-live',
+      },
       {
         title: 'トラブルシューティング',
         href: '/docs/ja/troubleshooting/provider',

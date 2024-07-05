@@ -196,7 +196,7 @@ export const navigation = [
                   },
                 ],
               },
-              parseReference('Task API Reference', taskExecutorReference),
+              parseReference('Task API Reference', taskExecutorReference, 'en'),
             ],
           },
           {
@@ -255,7 +255,7 @@ export const navigation = [
               },
             ],
           },
-          parseReference('Golem JS API Reference', golemJsReference),
+          parseReference('Golem JS API Reference', golemJsReference, 'en'),
         ],
       },
       {

@@ -5,8 +5,6 @@ import { useState, useEffect } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import { useLocale } from '@/context/LocaleContext' // Import the context
 
-
-
 const isActive = (item, router) => {
   if (
     item.href &&
@@ -41,34 +39,39 @@ export const MenuBar = ({ navigation }) => {
 
 export const SideBar = ({ navigation }) => {
   const router = useRouter()
-  const { locale } = useLocale() // Use the context
+  const { locale } = useLocale()
 
   const isActive = (item) => {
+    if (!item.href) return false
     const { pathname } = router
-    return item.href && (pathname === item.href || pathname === `${item.href}/`)
+    const itemPath = item.href.replace(/^\/docs\/(en|ja)/, '')
+    const currentPath = pathname.replace(/^\/docs\/(en|ja)/, '')
+    return (
+      itemPath && (currentPath === itemPath || currentPath === `${itemPath}/`)
+    )
+  }
+
+  const isActiveOrHasActiveChild = (item) => {
+    if (isActive(item)) return true
+    return item.children?.some(isActiveOrHasActiveChild) || false
   }
 
   const currentSection = navigation.find((section) =>
-    section.links.some(isActive)
+    section.links.some(isActiveOrHasActiveChild)
   )
 
-  const renderNavItems = (items) =>
-    items.map((item) => {
+  const renderNavItems = (items) => {
+    return items.map((item) => {
       const itemIsActive = isActive(item)
       const hasChildren = item.children?.length
+      const isExpanded = hasChildren && isActiveOrHasActiveChild(item)
 
       return (
-        <li className="py-0.5 text-sm" key={item.href || item.title}>
+        <li className="py-0.5 text-sm" key={item.title}>
           {hasChildren ? (
-            <Dropdown isActive={isActive(item, router)}>
-              {[
-                <NavigationItem
-                  item={item}
-                  isActive={itemIsActive}
-                  key={item.title}
-                />,
-                renderNavItems(item.children),
-              ]}
+            <Dropdown isActive={isExpanded}>
+              <NavigationItem item={item} isActive={itemIsActive} />
+              <ul className="ml-4">{renderNavItems(item.children)}</ul>
             </Dropdown>
           ) : (
             <NavigationItem item={item} isActive={itemIsActive} />
@@ -76,6 +79,7 @@ export const SideBar = ({ navigation }) => {
         </li>
       )
     })
+  }
 
   useEffect(() => {
     const currentPath = router.asPath
@@ -84,14 +88,7 @@ export const SideBar = ({ navigation }) => {
       `/docs/${locale}`
     )
 
-    console.log(
-      'CHECKING (OUR CURRENT LOCALE IS',
-      locale,
-      currentPath,
-      localizedPath
-    )
     if (currentPath !== localizedPath) {
-      console.log('NOT TrRUE')
       router.push(localizedPath)
     }
   }, [locale, router])
@@ -149,7 +146,7 @@ export const Dropdown = ({ children, isActive }) => {
         {children[0]}
         <ChevronDownIcon className="h-3 w-3" />
       </button>
-      {isOpen && <div className="ml-4">{children.slice(1)}</div>}
+      {isOpen && <div >{children.slice(1)}</div>}
     </div>
   )
 }

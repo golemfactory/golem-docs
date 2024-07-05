@@ -1,12 +1,15 @@
 import { latestJSVersion } from './meta'
 
-export const parseReference = (title, reference) => {
+export const parseReference = (title, reference, language = 'en') => {
   let targetReference
   reference.forEach((refItem) => {
     if (refItem.title === latestJSVersion) {
-      targetReference = {
-        title,
-        children: refItem.links,
+      const langLinks = refItem.links.find((link) => link.lang === language)
+      if (langLinks) {
+        targetReference = {
+          title,
+          children: langLinks.links,
+        }
       }
     }
   })
