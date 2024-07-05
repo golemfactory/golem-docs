@@ -43,13 +43,13 @@ On the other hand, because we assume requestors will first start by testing the 
 
 When you run `yagna payment fund` on testnet, Golem initializes a new account from our custom faucet (a service that transfers test tokens to an address that asks for it) which provides it with test Matic and test GLM tokens.
 
-To enable the service to use the `mainnet`, you must use a command appropriate to your desired mainnet payment platform. For instructions look [here](/docs/creators/tools/yagna/managing-golem-wallet#enable-the-mainnet-account).
+To enable the service to use the `mainnet`, you must use a command appropriate to your desired mainnet payment platform. For instructions look [here](/docs/en/creators/tools/yagna/managing-golem-wallet#enable-the-mainnet-account).
 
 {% docnavigation title="Next steps" %}
 
-- If you're interested in running a requestor on the Polygon Ethereum mainnet, to be able to leverage the main pool of Golem providers, please refer to [Using Golem on the mainnet](/docs/creators/javascript/guides/switching-to-mainnet).
+- If you're interested in running a requestor on the Polygon Ethereum mainnet, to be able to leverage the main pool of Golem providers, please refer to [Using Golem on the mainnet](/docs/en/creators/javascript/guides/switching-to-mainnet).
 
-- You can be also interested how you can send GLM tokens from the Ethereum Mainnet to Polygon and vice versa: [GLM mainnet polygon conversion](/docs/golem/payments/golem-token-conversion)
+- You can be also interested how you can send GLM tokens from the Ethereum Mainnet to Polygon and vice versa: [GLM mainnet polygon conversion](/docs/en/golem/payments/golem-token-conversion)
 
 {% /docnavigation %}
 

@@ -20,7 +20,7 @@ We will go through the following steps:
 
 ## Prerequisites
 
-- Yagna service is installed and running with the `try_golem` app-key configured ([instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors)).
+- Yagna service is installed and running with the `try_golem` app-key configured ([instructions](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors)).
 - Docker installed and Docker service available.
 
 ## Define the problem
@@ -151,7 +151,7 @@ Note that the lifetime of images uploaded anonymously to the repository is limit
 {% /alert %}
 
 {% alert level="info" %}
-The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format)
+The details of docker image conversion are described here: [Converting an image from Docker to Golem GVMI](/docs/ja/creators/tools/gvmkit/converting-docker-image-to-golem-format)
 {% /alert %}
 
 ## The requestor script code
@@ -366,6 +366,6 @@ In this tutorial, we led you through the following steps:
 
 {% docnavigation title="Next steps" %}
 
-- Other JS [Tutorials](/docs/creators/javascript/tutorials)
+- Other JS [Tutorials](/docs/ja/creators/javascript/tutorials)
 
 {% /docnavigation %}

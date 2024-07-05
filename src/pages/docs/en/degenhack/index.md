@@ -9,7 +9,7 @@ type: noindex
 # Golem Network manual for Degen Hack hackathon participants.
 
 {% alert level="info" %}
-This section contains an extract from the Golem Network documentation for Degen Hack hackathon participants. The full version is available on the [Golem Docs portal](https://docs.golem.network/) and specifically JS related documentation can be found [here](https://docs.golem.network/docs/creators/javascript).
+This section contains an extract from the Golem Network documentation for Degen Hack hackathon participants. The full version is available on the [Golem Docs portal](https://docs.golem.network/) and specifically JS related documentation can be found [here](https://docs.golem.network/docs/en/creators/javascript).
 
 Should you encounter any problems, please reach out to us via our [Degen Hack hackathon Discord channel](https://chat.golem.network/#degen-hack) or consult the Golem representative present on-site during the event.
 {% /alert %}
@@ -154,7 +154,7 @@ Create a new Node.js project and install the Golem SDK by entering the following
 npm init @golem-sdk/golem-app@latest my-golem-app
 ```
 
-Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY`](http://localhost:3000/docs/degen#creating-a-unique-app-key).
+Make sure you have created an app-key and exported its value as [`YAGNA_APPKEY`](http://localhost:3000/docs/en/degen#creating-a-unique-app-key).
 
 In `src` folder you will find a reaquestor script. This script sets up a task to execute node -v on the Golem Network and displays the result in your terminal.
 
@@ -168,7 +168,7 @@ To execute the script, run:
 npm start
 ```
 
-You can find an explanation of the structure of the typical requestor script [here](/docs/creators/javascript/tutorials/quickstart-explained).
+You can find an explanation of the structure of the typical requestor script [here](/docs/en/creators/javascript/tutorials/quickstart-explained).
 
 The standard quickstart example has been altered with the following modifications:
 
@@ -193,25 +193,25 @@ The JS SDK consists of the following components:
 **@golem-sdk/golem-js** - a JavaScript API for developers allowing them to connect to their Golem nodes and manage their distributed, computational loads through Golem Network.
 
 [GitHub Repo](https://github.com/golemfactory/golem-js)
-[Documentation](https://docs.golem.network/docs/creators/javascript)
+[Documentation](https://docs.golem.network/docs/en/creators/javascript)
 
 **@golem-sdk/cli** - a companion tool for the Golem SDK. It facilitates a fast start with Golem Network by creating a new template for new applications, assisting with manifest creation for outbound networking, and lets you interactively test your custom image in the fastest way possible all without coding.
 
 [GitHub Repo](https://github.com/golemfactory/golem-sdk-cli)
-[Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
+[Documentation](https://docs.golem.network/docs/en/creators/javascript/guides/golem-sdk-cli)
 
 **@golem-sdk/react** - a set of React hooks for working with the Golem Network.
 
 [GitHub Repo](https://github.com/golemfactory/golem-sdk-react)
-[Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
+[Documentation](https://docs.golem.network/docs/en/creators/javascript/guides/golem-sdk-cli)
 
 ### JS API documentation including examples and API Reference:
 
-[Documentation](https://docs.golem.network/docs/creators/javascript)
+[Documentation](https://docs.golem.network/docs/en/creators/javascript)
 
-[Examples](https://docs.golem.network/docs/creators/javascript/examples)
+[Examples](https://docs.golem.network/docs/en/creators/javascript/examples)
 
-[API Reference](https://docs.golem.network/docs/golem-js/reference/overview)
+[API Reference](https://docs.golem.network/docs/en/golem-sdk-task-executor/reference/overview)
 
 ### JS SDK example projects
 
@@ -233,7 +233,7 @@ The JS SDK consists of the following components:
 
 **Gvmkit-build** - a tool designed to create custom images for virtual machines on provider nodes within the Golem Network. It specifically converts Dockerfiles into Golem-compatible VM images, known as GVMI.
 
-You can find a list of available instructions for Golem tools: [yagna](https://docs.golem.network/docs/creators/tools/yagna)
-and [gvmkit-build](https://docs.golem.network/docs/creators/tools/gvmkit).
+You can find a list of available instructions for Golem tools: [yagna](https://docs.golem.network/docs/en/creators/tools/yagna)
+and [gvmkit-build](https://docs.golem.network/docs/en/creators/tools/gvmkit).
 
 **Golem Registry** - a repository of already built images that can be utilized by Golem Network users [is here](https://registry.golem.network/explore).

@@ -45,11 +45,11 @@ Note that if the provider requires additional conditions to be met (i.e. payload
 
 As we explained above, to use outbound networking, the requestor must include a Computation Manifest in the demand. It is a kind of declaration that is attached to the demand, that serves the purpose of informing the Provider what kind of payload the requestor wants to run on the provider’s node. Requestor actions are verified vs. declaration and any connections not declared will be blocked. The demand is created automatically by the SDK based on the parameters provided in your requestor's scripts. Minimally, it is just a `package` that identifies the image to be run on a provider. To use the outbound feature, developers must also create a Payload Manifest and attach it to the demand.
 
-The JS SDK provides a tool, `golem-sdk-cli`, to facilitate the creation of the Payload Manifest. You can find instructions on how to download the tool and create a Payload Manifest [here](/docs/creators/javascript/guides/golem-sdk-cli).
+The JS SDK provides a tool, `golem-sdk-cli`, to facilitate the creation of the Payload Manifest. You can find instructions on how to download the tool and create a Payload Manifest [here](/docs/ja/creators/javascript/guides/golem-sdk-cli).
 
 Next, you need to indicate in the requestor script that you intend to use the `outbound` feature. You need to provide your Payment Manifest and (optionally) a certificate and signature that will prove that the payload was audited.
 
-You can find an example of how to request the outbound service and attach a Payload Manifest in this [example](/docs/creators/javascript/examples/accessing-internet).
+You can find an example of how to request the outbound service and attach a Payload Manifest in this [example](/docs/ja/creators/javascript/examples/accessing-internet).
 
 ### The whitelist
 
@@ -61,6 +61,6 @@ The default set of URLs that providers may allow your application to use is avai
 
 {% docnavigation title="Next steps" %}
 
-- See our [tutorial](/docs/creators/javascript/tutorials/accessing-internet) on how to create a manifest and use it in the requestor script to reach the 'github.com' from a provider.
+- See our [tutorial](/docs/ja/creators/javascript/tutorials/accessing-internet) on how to create a manifest and use it in the requestor script to reach the 'github.com' from a provider.
 
 {% /docnavigation %}

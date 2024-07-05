@@ -10,7 +10,7 @@ type: Guide
 
 ## Introduction
 
-The [Task Model](/docs/creators/javascript/guides/task-model) is a great way to get started with Golem Network. It allows you to run tasks on the network in a simple and straightforward way - you just need to call the `run()` method and await the promise. However, it has some limitations. With more complex and time-consuming tasks, you may want to have access to the state, results and/or error messages of the task outside the function scope. This is where the Job API comes in handy.
+The [Task Model](/docs/en/creators/javascript/guides/task-model) is a great way to get started with Golem Network. It allows you to run tasks on the network in a simple and straightforward way - you just need to call the `run()` method and await the promise. However, it has some limitations. With more complex and time-consuming tasks, you may want to have access to the state, results and/or error messages of the task outside the function scope. This is where the Job API comes in handy.
 
 ## Job API
 
@@ -21,7 +21,7 @@ The Job API is very good at three things:
 - **Reacting to task state changes** - you can easily add callbacks that will be called when the task state changes (e.g. when the task begins execution on the provider, or when it finishes).
 
 {% alert level="info" %}
-To see the Job API in action, take a look at [this quickstart](/docs/creators/javascript/quickstarts/retrievable-task). To see how this API is used in a real-world scenario, check out [the express tutorial](/docs/creators/javascript/tutorials/rest-api-with-express)
+To see the Job API in action, take a look at [this quickstart](/docs/en/creators/javascript/quickstarts/retrievable-task). To see how this API is used in a real-world scenario, check out [the express tutorial](/docs/en/creators/javascript/tutorials/rest-api-with-express)
 {% /alert %}
 
 ## Usage
@@ -60,22 +60,25 @@ await golemClient
 The `Job` object represents a single self-contained unit of work that can be executed on the Golem Network. It's created by calling the `createJob()` method on the `GolemNetwork` object. Here's how you can create a job and begin its execution:
 
 ```javascript
-const job = golemClient.createJob<string>({
-  package: {
-    imageTag: "golem/alpine:latest",
-    minStorageGib: 8,
-    minCpuCores: 4,
-    minMemGib: 8,
-  },
-  // ... other configuration options
-});
+const job =
+  golemClient.createJob <
+  string >
+  {
+    package: {
+      imageTag: 'golem/alpine:latest',
+      minStorageGib: 8,
+      minCpuCores: 4,
+      minMemGib: 8,
+    },
+    // ... other configuration options
+  }
 
 job.startWork(async (ctx) => {
-  const response = await ctx.run("echo 'Hello, Golem!'");
-  return response.stdout;
-});
+  const response = await ctx.run("echo 'Hello, Golem!'")
+  return response.stdout
+})
 
-const result = await job.waitForResult();
+const result = await job.waitForResult()
 ```
 
 ### Cancelling a job
@@ -83,18 +86,21 @@ const result = await job.waitForResult();
 While the job is running, you can cancel it at any time by calling the `cancel()` method:
 
 ```javascript
-const job = golem.createJob<string>({
-  package: {
-    imageTag: "golem/alpine:latest",
-  },
-});
+const job =
+  golem.createJob <
+  string >
+  {
+    package: {
+      imageTag: 'golem/alpine:latest',
+    },
+  }
 
 job.startWork(async (ctx) => {
-  const response = await ctx.run("echo 'Hello, Golem!'");
-  return response.stdout;
-});
+  const response = await ctx.run("echo 'Hello, Golem!'")
+  return response.stdout
+})
 
-await job.cancel();
+await job.cancel()
 ```
 
 ### Listening to job state changes
@@ -102,28 +108,30 @@ await job.cancel();
 The job object exposes an `EventEmitter` that emits whenever the job state changes. Here's how you can listen to these events:
 
 ```javascript
-const job = golem.createJob<string>({
-  package: {
-    imageTag: "golem/alpine:latest",
-  },
-});
+const job =
+  golem.createJob <
+  string >
+  {
+    package: {
+      imageTag: 'golem/alpine:latest',
+    },
+  }
 
-job.events.addListener("started", () => {
-  console.log("Job started event emitted");
-});
-job.events.addListener("success", () => {
-  console.log("Job success event emitted");
-});
-job.events.addListener("ended", () => {
-  console.log("Job ended event emitted");
-});
+job.events.addListener('started', () => {
+  console.log('Job started event emitted')
+})
+job.events.addListener('success', () => {
+  console.log('Job success event emitted')
+})
+job.events.addListener('ended', () => {
+  console.log('Job ended event emitted')
+})
 job.startWork(async (ctx) => {
-  const response = await ctx.run("echo 'Hello, Golem!'");
-  return response.stdout;
-});
+  const response = await ctx.run("echo 'Hello, Golem!'")
+  return response.stdout
+})
 
-
-const result = await job.waitForResult();
+const result = await job.waitForResult()
 ```
 
 Here's a list of all the events emitted by the job object:
@@ -140,23 +148,25 @@ Here's a list of all the events emitted by the job object:
 You can get the current job state by accessing the `state` property:
 
 ```javascript
-const job = golem.createJob<string>({
-  package: {
-    imageTag: "golem/alpine:latest",
-  },
-});
+const job =
+  golem.createJob <
+  string >
+  {
+    package: {
+      imageTag: 'golem/alpine:latest',
+    },
+  }
 
-console.log("Job state before work starts:", job.state);
+console.log('Job state before work starts:', job.state)
 
 job.startWork(async (ctx) => {
-  const response = await ctx.run("echo 'Hello, Golem!'");
-  return response.stdout;
-});
+  const response = await ctx.run("echo 'Hello, Golem!'")
+  return response.stdout
+})
 
+const result = await job.waitForResult()
 
-const result = await job.waitForResult();
-
-console.log("Job state after work ends:", job.state);
+console.log('Job state after work ends:', job.state)
 ```
 
 Here's a list of all the possible job states:
@@ -171,24 +181,27 @@ Here's a list of all the possible job states:
 `waitForResult()` is not the only way to get the job results or error message. You can also access them directly by accessing the `result` and `error` properties:
 
 ```javascript
-const job = golem.createJob<string>({
-  package: {
-    imageTag: "golem/alpine:latest",
-  },
-});
+const job =
+  golem.createJob <
+  string >
+  {
+    package: {
+      imageTag: 'golem/alpine:latest',
+    },
+  }
 
 job.startWork(async (ctx) => {
-  const response = await ctx.run("echo 'Hello, Golem!'");
-  return response.stdout;
-});
+  const response = await ctx.run("echo 'Hello, Golem!'")
+  return response.stdout
+})
 
 try {
-  const result = await job.waitForResult();
-  console.log("Job finished with result:", result);
+  const result = await job.waitForResult()
+  console.log('Job finished with result:', result)
   // or
-  console.log("Job finished with result:", job.result);
+  console.log('Job finished with result:', job.result)
 } catch (error) {
-  console.error("Job failed with error:", job.error);
+  console.error('Job failed with error:', job.error)
 }
 ```
 
@@ -197,24 +210,27 @@ try {
 You can retrieve the job by ID by calling the `getJobById()` method on the `GolemNetwork` object:
 
 ```javascript
-const job = golem.createJob<string>({
-  package: {
-    imageTag: "golem/alpine:latest",
-  },
-});
+const job =
+  golem.createJob <
+  string >
+  {
+    package: {
+      imageTag: 'golem/alpine:latest',
+    },
+  }
 
 job.startWork(async (ctx) => {
-  const response = await ctx.run("echo 'Hello, Golem!'");
-  return response.stdout;
-});
-const jobId = job.id;
+  const response = await ctx.run("echo 'Hello, Golem!'")
+  return response.stdout
+})
+const jobId = job.id
 
 // ... later in the code
 
-const sameJobAgain = golemClient.getJobById(jobId);
-const results = await sameJobAgain.waitForResult();
+const sameJobAgain = golemClient.getJobById(jobId)
+const results = await sameJobAgain.waitForResult()
 ```
 
 ## When not to use the Job API
 
-The Job API is great for running isolated tasks that may take a long time to complete. However, it's not a good fit for scenarios where you need to run multiple short-lived tasks in parallel. For these scenarios, you should use the [Task Model](/docs/creators/javascript/guides/task-model) instead.
+The Job API is great for running isolated tasks that may take a long time to complete. However, it's not a good fit for scenarios where you need to run multiple short-lived tasks in parallel. For these scenarios, you should use the [Task Model](/docs/en/creators/javascript/guides/task-model) instead.

@@ -11,8 +11,8 @@ This article will go through the process of creating a Dockerfile, building a Do
 ## Prerequisites
 
 - Have Docker installed and Docker service available. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
-- Gvmkit-build installed ([see instructions](/docs/creators/tools/gvmkit/gvmkit-build-installation))
-- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors))
+- Gvmkit-build installed ([see instructions](/docs/en/creators/tools/gvmkit/gvmkit-build-installation))
+- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/en/creators/tools/yagna/yagna-installation-for-requestors))
 
 ## Creating the Dockerfile
 
@@ -75,7 +75,7 @@ Now when you have a Docker image built, we can convert it to a Golem image. To s
 
 {% alert level="info" %}
 
-If you do not have `gvmkit-build` installed please follow [installation intructions](/docs/creators/tools/gvmkit/gvmkit-build-installation). You can also use it without installation using `npx` or `pipx` commands.
+If you do not have `gvmkit-build` installed please follow [installation intructions](/docs/en/creators/tools/gvmkit/gvmkit-build-installation). You can also use it without installation using `npx` or `pipx` commands.
 
 {% /alert  %}
 
@@ -141,6 +141,6 @@ Note that the content of the `description.txt` file that was created in the /gol
 
 {% docnavigation title="Next steps" %}
 
-- Try your image in one of [examples](/docs/creators/javascript/examples)!
+- Try your image in one of [examples](/docs/en/creators/javascript/examples)!
 
 {% /docnavigation %}

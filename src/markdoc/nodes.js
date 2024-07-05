@@ -3,6 +3,7 @@ import { nodes as defaultNodes } from '@markdoc/markdoc'
 import { Fence } from '@/components/Fence'
 import { Heading } from '@/components/Heading'
 import { Tag } from '@markdoc/markdoc'
+import { LocalizedLink } from '@/components/LocalizedLink'
 
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 
@@ -45,6 +46,14 @@ const nodes = {
       content: { type: String, render: true, required: true },
       language: { type: String },
       process: { type: Boolean, render: false, default: true },
+    },
+  },
+  link: {
+    render: LocalizedLink,
+    attributes: {
+      href: { type: String, required: true },
+      target: { type: String, default: '_blank' },
+      rel: { type: String, default: 'noopener noreferrer' },
     },
   },
   heading: {

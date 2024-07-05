@@ -8,20 +8,20 @@ type: React Reference
 
 `useTask` is a hook that manages a single task on the Golem Network. It returns an object with the following properties:
 
-| Name      | Description                                                                                  |
-| --------- | -------------------------------------------------------------------------------------------- |
-| run       | The [worker function](/docs/golem-js/reference/modules/task_work#worker) that runs the task. |
-| isRunning | Boolean indicating whether the task is running.                                              |
-| error     | The error which caused the task to fail.                                                     |
-| result    | The result of the task.                                                                      |
+| Name      | Description                                                                                        |
+| --------- | -------------------------------------------------------------------------------------------------- |
+| run       | The [worker function](/docs/ja/golem-sdk-task-executor/reference/modules/task) that runs the task. |
+| isRunning | Boolean indicating whether the task is running.                                                    |
+| error     | The error which caused the task to fail.                                                           |
+| result    | The result of the task.                                                                            |
 
 ## Parameters
 
-This hook takes the [TaskExecutor](/docs/golem-sdk-task-executor/reference/modules/executor#executoroptions) instance, initialized by the [useExecutor](/docs/creators/javascript/react/use-executor) hook.
+This hook takes the [TaskExecutor](/docs/ja/golem-sdk-task-executor/reference/modules/executor#executoroptions) instance, initialized by the [useExecutor](/docs/ja/creators/javascript/react/use-executor) hook.
 
-| Name                | Description                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------------------ |
-| executor (required) | The [TaskExecutor](/docs/golem-sdk-task-executor/reference/modules/executor#executoroptions) instance. |
+| Name                | Description                                                                                               |
+| ------------------- | --------------------------------------------------------------------------------------------------------- |
+| executor (required) | The [TaskExecutor](/docs/ja/golem-sdk-task-executor/reference/modules/executor#executoroptions) instance. |
 
 ## Example
 

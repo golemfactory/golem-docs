@@ -25,7 +25,7 @@ Some of the options of the `websocat` tool used in this tutorial are available o
 
 ## Prerequisites
 
-If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](/docs/creators/tools/yagna/yagna-installation-for-requestors) and were able to [run your first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem). Those articles describe in detail the steps needed to correctly set up your yagna daemon and your environment.
+If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](/docs/en/creators/tools/yagna/yagna-installation-for-requestors) and were able to [run your first task on Golem](/docs/en/creators/python/quickstarts/run-first-task-on-golem). Those articles describe in detail the steps needed to correctly set up your yagna daemon and your environment.
 
 ### Websocat
 
@@ -50,7 +50,7 @@ RUN echo "UseDNS no" >> /etc/ssh/sshd_config && \
     echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 ```
 
-If you'd like to experiment with modifying it, please refer to our articles about [custom VM images](/docs/creators/python/guides/golem-images).
+If you'd like to experiment with modifying it, please refer to our articles about [custom VM images](/docs/en/creators/python/guides/golem-images).
 
 ## The requestor agent
 
@@ -103,7 +103,7 @@ async def get_payload():
     )
 ```
 
-As is the case with most of the examples that we're presenting in the handbook, the payload here is a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image registry](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format).
+As is the case with most of the examples that we're presenting in the handbook, the payload here is a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image registry](/docs/en/creators/tools/gvmkit/converting-docker-image-to-golem-format).
 
 Note though, that now the payload constraints also indicate that the Provider is **required to offer the VPN capability** within its VM runtime, which is automatically supported by any providers running `yagna 0.8`and above.
 
@@ -204,6 +204,6 @@ Voila! You should now be logged-in into the VM's shell.
 
 {% docnavigation title="Next steps" %}
 
-- The next article takes a close look at [another networking example](/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy).
+- The next article takes a close look at [another networking example](/docs/en/creators/python/tutorials/service-example-3-vpn-simple-http-proxy).
 
 {% /docnavigation %}

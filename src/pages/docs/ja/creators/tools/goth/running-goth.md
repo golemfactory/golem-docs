@@ -117,7 +117,7 @@ Every test run consists of the following steps:
 5. Once the test is finished, all previously started Docker containers (both "static" and "dynamic") are removed.
 
 {% alert level="success" %}
-If the test run succeeded, your development environment is now ready to [test your own apps using goth's interactive mode](/docs/creators/tools/goth/running-goths-interactive-mode).
+If the test run succeeded, your development environment is now ready to [test your own apps using goth's interactive mode](/docs/ja/creators/tools/goth/running-goths-interactive-mode).
 
 If anything failed, please refer to the troubleshooting section below or reach out to us on one of our regular support channels.
 {% /alert %}
@@ -191,6 +191,6 @@ The logs from a test run are recorded in the following directory structure:
 
 {% docnavigation title="Next steps" %}
 
-[Running Goth in interactive mode](/docs/creators/tools/goth/running-goths-interactive-mode)
+[Running Goth in interactive mode](/docs/ja/creators/tools/goth/running-goths-interactive-mode)
 
 {% /docnavigation %}

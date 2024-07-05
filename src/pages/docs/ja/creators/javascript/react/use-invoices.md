@@ -48,7 +48,7 @@ This hook accepts a single configuration object with the following properties:
 | providerWallets (optional)  | Array of provider wallets to filter by.                                                  |
 | invoiceIds (optional)       | Array of invoice IDs to filter by. If provided, all other search parameters are ignored. |
 | paymentPlatforms (optional) | Array of payment platforms to filter by.                                                 |
-| swrConfig (optional)        | [SWR configuration object](https://swr.vercel.app/docs/api#options)                      |
+| swrConfig (optional)        | [SWR configuration object](https://swr.vercel.app/docs/ja/api#options)                   |
 
 ## Example
 
@@ -82,6 +82,6 @@ function MyComponent() {
 
 {% docnavigation title="See also" %}
 
-- [useHandleInvoice](/docs/creators/javascript/react/use-handle-invoice)
+- [useHandleInvoice](/docs/ja/creators/javascript/react/use-handle-invoice)
 
 {% /docnavigation %}

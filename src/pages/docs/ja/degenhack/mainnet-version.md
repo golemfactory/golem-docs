@@ -26,7 +26,7 @@ Degen hackathon participants do not need to fund their activities on the Golem N
 
 1. Validate eligibility.
 2. Create a metamask wallet for your team.
-3. Apply for funds from the Golem factory using this [link]()
+3. Apply for funds from the Golem factory using this [link](https://example.com/)
 4. Split the funds to Yagna wallets used by team members.
 
 ## Getting started:
@@ -212,7 +212,7 @@ To execute the script, run:
 node requestor.mjs
 ```
 
-You can find an explanation of the structure of the above requestor script [here](/docs/creators/javascript/tutorials/quickstart-explained).
+You can find an explanation of the structure of the above requestor script [here](/docs/ja/creators/javascript/tutorials/quickstart-explained).
 
 The standard quickstart example has been altered with the following modifications:
 
@@ -235,25 +235,25 @@ The JS SDK consists of the following components:
 **@golem-sdk/golem-js** - a JavaScript API for developers allowing them to connect to their Golem nodes and manage their distributed, computational loads through Golem Network.
 
 [GitHub Repo](https://github.com/golemfactory/golem-js)
-[Documentation](https://docs.golem.network/docs/creators/javascript)
+[Documentation](https://docs.golem.network/docs/ja/creators/javascript)
 
 **@golem-sdk/cli** - a companion tool for the Golem SDK. It facilitates a fast start with Golem Network by creating a new template for new applications, assisting with manifest creation for outbound networking, and lets you interactively test your custom image in the fastest way possible all without coding.
 
 [GitHub Repo](https://github.com/golemfactory/golem-sdk-cli)
-[Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
+[Documentation](https://docs.golem.network/docs/ja/creators/javascript/guides/golem-sdk-cli)
 
 **@golem-sdk/react** - a set of React hooks for working with the Golem Network.
 
 [GitHub Repo](https://github.com/golemfactory/golem-sdk-react)
-[Documentation](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli)
+[Documentation](https://docs.golem.network/docs/ja/creators/javascript/guides/golem-sdk-cli)
 
 ### JS API documentation including examples and API Reference:
 
-[Documentation](https://docs.golem.network/docs/creators/javascript)
+[Documentation](https://docs.golem.network/docs/ja/creators/javascript)
 
-[Examples](https://docs.golem.network/docs/creators/javascript/examples)
+[Examples](https://docs.golem.network/docs/ja/creators/javascript/examples)
 
-[API Reference](https://docs.golem.network/docs/golem-js/reference/overview)
+[API Reference](https://docs.golem.network/docs/ja/golem-js/reference/overview)
 
 ### JS SDK example projects
 
@@ -271,7 +271,7 @@ The JS SDK consists of the following components:
 
 **Gvmkit-build** - a tool designed to create custom images for virtual machines on provider nodes within the Golem Network. It specifically converts Dockerfiles into Golem-compatible VM images, known as GVMI.
 
-You can find a list of available instructions for Golem tools: [yagna](https://docs.golem.network/docs/creators/tools/yagna)
-and [gvmkit-build](https://docs.golem.network/docs/creators/tools/gvmkit).
+You can find a list of available instructions for Golem tools: [yagna](https://docs.golem.network/docs/ja/creators/tools/yagna)
+and [gvmkit-build](https://docs.golem.network/docs/ja/creators/tools/gvmkit).
 
 **Golem Registry** - a repository of already built images that can be utilized by Golem Network users [is here](https://registry.golem.network/explore).

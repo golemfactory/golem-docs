@@ -12,7 +12,7 @@ What you're going to try is still considered experimental.
 
 We're assuming here that you were able to run both `goth` and a requestor app correctly on your machine earlier and thus, you have all the components up and running without issues.
 
-If you hadn't tried those yet though, please have a look at the earlier parts of our handbook: [Running Goth](/docs/creators/tools/goth/running-goth).
+If you hadn't tried those yet though, please have a look at the earlier parts of our handbook: [Running Goth](/docs/ja/creators/tools/goth/running-goth).
 
 {% /alert %}
 

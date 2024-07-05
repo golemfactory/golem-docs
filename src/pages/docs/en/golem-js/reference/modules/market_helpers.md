@@ -30,4 +30,4 @@ An array with Golem Node IDs of the whitelisted providers.
 
 #### Defined in
 
-[src/market/helpers.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/market/helpers.ts#L10)
+[src/market/helpers.ts:10](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/helpers.ts#L10)

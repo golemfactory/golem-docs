@@ -15,11 +15,11 @@ The purpose of a high-level API is to wrap the intricacies of Golem APIs with mo
 
 ## Basic concepts
 
-[Golem Appplication Fundamentals](/docs/creators/python/guides/application-fundamentals).
+[Golem Appplication Fundamentals](/docs/en/creators/python/guides/application-fundamentals).
 
-[Networking concept](/docs/creators/python/guides/vpn).
+[Networking concept](/docs/en/creators/python/guides/vpn).
 
-[Golem Images](/docs/creators/python/guides/golem-images).
+[Golem Images](/docs/en/creators/python/guides/golem-images).
 
 ## Task Model vs Service Model
 
@@ -30,16 +30,16 @@ Two basic computation models are supported by Golem high-level APIs.
 
 Please refer to following sections for a dive into those two Golem programming models:
 
-[Task Model](/docs/creators/python/guides/task-model)
+[Task Model](/docs/en/creators/python/guides/task-model)
 
-[Service Model](/docs/creators/python/guides/service-model)
+[Service Model](/docs/en/creators/python/guides/service-model)
 
 ## Debugging
 
-There is also a dedicated to [debugging](/docs/creators/python/guides/debugging) topic.
+There is also a dedicated to [debugging](/docs/en/creators/python/guides/debugging) topic.
 
 {% docnavigation title="See also" %}
 
-- [Golem overview](/docs/golem/overview) in General Info section
+- [Golem overview](/docs/en/golem/overview) in General Info section
 
 {% /docnavigation %}

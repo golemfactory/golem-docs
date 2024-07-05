@@ -11,7 +11,7 @@ type: Article
 
 The most important reason for this is to reduce the size of the images. When converting to `.gvmi` all redundant layers from the Docker image are discarded and the filesystem itself gets compressed using [`squashfs`](https://www.kernel.org/doc/html/latest/filesystems/squashfs.html).
 
-This results in a substantial size difference between the two images. For example, as of the time of writing this answer, the Docker image built as part of [Creating a custom Golem image](/docs/creators/python/tutorials/building-custom-image) tutorial is about `650 MB` in disk size. After conversion, the resulting `.gvmi` file weighs around `50 MB`. That's a 13x size difference!
+This results in a substantial size difference between the two images. For example, as of the time of writing this answer, the Docker image built as part of [Creating a custom Golem image](/docs/ja/creators/python/tutorials/building-custom-image) tutorial is about `650 MB` in disk size. After conversion, the resulting `.gvmi` file weighs around `50 MB`. That's a 13x size difference!
 
 But why do we need this? Most importantly, to reduce the setup time for providers downloading a new image. If a provider node does not have the specific image in their cache yet then it will need to download it as the first step to performing some computations.
 
@@ -44,7 +44,7 @@ Any larger files and chunks of data should be transferred to the VM's volumes. S
 
 In general, it's better to test the `.gvmi` image itself rather than the base Docker image. This guarantees that all Golem-specific conditions (filesystem characteristics, for example) are included. Also, testing with the VM runtime is as close to the provider's environment as possible.
 
-You can learn more about testing the VM runtime locally in the [Testing a Golem image](/docs/creators/python/tutorials/testing-golem-image) article.
+You can learn more about testing the VM runtime locally in the [Testing a Golem image](/docs/ja/creators/python/tutorials/testing-golem-image) article.
 
 ## My application's use case requires large files being processed by the providers. What is the best way to approach this?
 
@@ -52,5 +52,5 @@ This is related to the answer given to 'My VM has run out of storage space' topi
 
 There you are two options here:
 
-1. If the files are **static** (that is: they are always the same) then you can include them in the VM image itself while building it. You can learn more about that in: [Golem image explained](/docs/creators/python/guides/golem-images).
+1. If the files are **static** (that is: they are always the same) then you can include them in the VM image itself while building it. You can learn more about that in: [Golem image explained](/docs/ja/creators/python/guides/golem-images).
 2. If the files are **dynamic** (that is: they may differ between task executions) then your best option is to transfer the files as a command within the requestor agent. Make sure you use a **volume directory as the destination**.

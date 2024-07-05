@@ -110,12 +110,12 @@ It may happen that something goes wrong and you wish to start over with a clean 
 
 {% solution %}
 
-The first thing to do is `ray down` - it should be enough to clear the situation, 
+The first thing to do is `ray down` - it should be enough to clear the situation,
 but sadly it isn't always the case.
 
 You can use `ray-on-golem stop` to ultimately stop all Ray on Golem components.
-The next `ray up` will start them again in a fresh state. 
-Check out more details about Ray on Golem [stopping and starting](/docs/creators/ray/ray-on-golem-cli#ray-on-golem-start-stop).
+The next `ray up` will start them again in a fresh state.
+Check out more details about Ray on Golem [stopping and starting](/docs/en/creators/ray/ray-on-golem-cli#ray-on-golem-start-stop).
 
 It might also be a good idea to clean up Ray's configuration cache files:
 
@@ -195,7 +195,7 @@ Error: Command failed:
 Note that even if you have the needed dependencies installed, and your app runs on your local environment, you still need to tell Ray on Golem cluster the packages are needed.
 
 The best way to do it is by adding an appropriate `pip install` command to `setup_commands` in the cluster yaml file.
-Check out the [cluster yaml](/docs/creators/ray/cluster-yaml#initialization-commands) article to get more information.
+Check out the [cluster yaml](/docs/en/creators/ray/cluster-yaml#initialization-commands) article to get more information.
 
 {% /solution %}
 {% feedback identifier="ray-additional-packages" /%}
@@ -253,11 +253,11 @@ Sometimes, you might get `RuntimeError: Head node of cluster (golem-cluster) not
 This means, that you are trying to run a command that requires a cluster to be up (like `ray submit`), but the cluster is not alive.
 
 The simplest reason might be that you hadn't successfully run `ray up`.
-Checkout [the logs](/docs/creators/ray/troubleshooting#ray-on-golem-s-log-files) to see what happened.
+Checkout [the logs](/docs/en/creators/ray/troubleshooting#ray-on-golem-s-log-files) to see what happened.
 
 Another explanation might be that the cluster had been launched, but it stopped or crashed - please share the logs with us to help us prevent this from happening in the future.
 
-If you see nothing interesting in the logs, you might want to [start over](/docs/creators/ray/troubleshooting#starting-over-with-a-clean-slate).
+If you see nothing interesting in the logs, you might want to [start over](/docs/en/creators/ray/troubleshooting#starting-over-with-a-clean-slate).
 
 Feel free to reach out to us on [`#Ray on Golem` discord channel](https://chat.golem.network/) - we will be more than happy to assist.
 

@@ -32,6 +32,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 ### Properties
 
+- [retryOnTimeout](task.Task#retryontimeout)
 - [id](task.Task#id)
 
 ### Methods
@@ -82,17 +83,31 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Defined in
 
-[src/task.ts:60](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L60)
+[src/task.ts:81](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L81)
 
 ## Properties
+
+### retryOnTimeout
+
+• `Readonly` **retryOnTimeout**: `boolean`
+
+#### Defined in
+
+[src/task.ts:70](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L70)
+
+___
 
 ### id
 
 • `Readonly` **id**: `string`
 
+#### Implementation of
+
+QueueableTask.id
+
 #### Defined in
 
-[src/task.ts:61](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L61)
+[src/task.ts:82](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L82)
 
 ## Methods
 
@@ -112,7 +127,7 @@ Represents one computation unit that will be run on the one provider machine (e.
 
 #### Defined in
 
-[src/task.ts:73](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L73)
+[src/task.ts:98](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L98)
 
 ___
 
@@ -126,7 +141,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:76](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L76)
+[src/task.ts:101](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L101)
 
 ___
 
@@ -140,7 +155,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:80](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L80)
+[src/task.ts:105](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L105)
 
 ___
 
@@ -161,7 +176,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:84](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L84)
+[src/task.ts:122](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L122)
 
 ___
 
@@ -183,7 +198,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:94](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L94)
+[src/task.ts:137](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L137)
 
 ___
 
@@ -201,7 +216,7 @@ QueueableTask.isQueueable
 
 #### Defined in
 
-[src/task.ts:113](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L113)
+[src/task.ts:157](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L157)
 
 ___
 
@@ -215,7 +230,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:116](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L116)
+[src/task.ts:160](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L160)
 
 ___
 
@@ -229,7 +244,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:119](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L119)
+[src/task.ts:163](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L163)
 
 ___
 
@@ -243,7 +258,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:122](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L122)
+[src/task.ts:166](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L166)
 
 ___
 
@@ -257,7 +272,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:125](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L125)
+[src/task.ts:169](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L169)
 
 ___
 
@@ -271,7 +286,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:128](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L128)
+[src/task.ts:172](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L172)
 
 ___
 
@@ -285,7 +300,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:131](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L131)
+[src/task.ts:175](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L175)
 
 ___
 
@@ -299,7 +314,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:134](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L134)
+[src/task.ts:178](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L178)
 
 ___
 
@@ -313,7 +328,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:137](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L137)
+[src/task.ts:181](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L181)
 
 ___
 
@@ -327,7 +342,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:140](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L140)
+[src/task.ts:184](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L184)
 
 ___
 
@@ -341,7 +356,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:143](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L143)
+[src/task.ts:187](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L187)
 
 ___
 
@@ -355,7 +370,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:146](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L146)
+[src/task.ts:190](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L190)
 
 ___
 
@@ -369,7 +384,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:149](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L149)
+[src/task.ts:193](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L193)
 
 ___
 
@@ -383,7 +398,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:152](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L152)
+[src/task.ts:196](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L196)
 
 ___
 
@@ -397,7 +412,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:155](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L155)
+[src/task.ts:199](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L199)
 
 ___
 
@@ -411,7 +426,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:158](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L158)
+[src/task.ts:202](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L202)
 
 ___
 
@@ -425,7 +440,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:161](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L161)
+[src/task.ts:205](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L205)
 
 ___
 
@@ -439,4 +454,4 @@ ___
 
 #### Defined in
 
-[src/task.ts:164](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L164)
+[src/task.ts:214](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L214)

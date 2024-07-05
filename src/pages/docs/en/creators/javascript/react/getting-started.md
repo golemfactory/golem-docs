@@ -8,7 +8,7 @@ type: Introduction
 
 ## Prerequisites
 
-Before you get started, make sure you have installed [yagna](/docs/creators/tools/yagna/yagna-installation-for-requestors) and [created an app-key](/docs/creators/javascript/examples/using-app-keys#creating-unique-app-keys)
+Before you get started, make sure you have installed [yagna](/docs/en/creators/tools/yagna/yagna-installation-for-requestors) and [created an app-key](/docs/en/creators/javascript/examples/using-app-keys#creating-unique-app-keys)
 
 {% alert level="info" %}
 
@@ -63,7 +63,7 @@ Then make sure to wrap your app with the `YagnaProvider` component:
 </YagnaProvider>
 ```
 
-This provides context for the rest of the SDK. See the [YagnaProvider API reference](/docs/creators/javascript/react/yagna-provider) for the list of all available configuration options.
+This provides context for the rest of the SDK. See the [YagnaProvider API reference](/docs/en/creators/javascript/react/yagna-provider) for the list of all available configuration options.
 
 ## Connecting to Yagna
 
@@ -102,8 +102,8 @@ Add this component to your application and refresh the page. Enter your app-key 
 
 {% docnavigation title="Next steps" %}
 
-To learn more about the SDK, check out the [API reference](/docs/creators/javascript/react/api-reference-overview).
+To learn more about the SDK, check out the [API reference](/docs/en/creators/javascript/react/api-reference-overview).
 
-If you'd like to see the SDK in action before you start using it, check out the [example application](/docs/creators/javascript/react/#example-application).
+If you'd like to see the SDK in action before you start using it, check out the [example application](/docs/en/creators/javascript/react/#example-application).
 
 {% /docnavigation %}

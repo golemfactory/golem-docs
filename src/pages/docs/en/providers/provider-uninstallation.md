@@ -7,7 +7,7 @@ type: Instructions
 # How to uninstall the Golem Provider
 
 {% alert level="warning" %}
-Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/providers/wallet/backup).
+Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/en/providers/wallet/backup).
 {% /alert %}
 
 ## Quick path
@@ -98,6 +98,6 @@ rm -r ~/.local/lib/yagna
 
 {% docnavigation title="See also" %}
 
-- If you're looking for intructions on how to uninstall the requestor, [click here](/docs/creators/tools/yagna/requestor-uninstallation).
+- If you're looking for intructions on how to uninstall the requestor, [click here](/docs/en/creators/tools/yagna/requestor-uninstallation).
 
 {% /docnavigation %}

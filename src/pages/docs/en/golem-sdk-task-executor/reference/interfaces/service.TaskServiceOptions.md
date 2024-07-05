@@ -36,7 +36,7 @@ Number of maximum parallel running task on one TaskExecutor instance
 
 #### Defined in
 
-[src/service.ts:24](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/service.ts#L24)
+[src/service.ts:28](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/service.ts#L28)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[src/service.ts:25](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/service.ts#L25)
+[src/service.ts:29](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/service.ts#L29)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[src/service.ts:26](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/service.ts#L26)
+[src/service.ts:30](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/service.ts#L30)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/service.ts:27](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/service.ts#L27)
+[src/service.ts:31](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/service.ts#L31)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[src/service.ts:28](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/service.ts#L28)
+[src/service.ts:32](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/service.ts#L32)
 
 ___
 
@@ -90,7 +90,7 @@ ActivityOptions.logger
 
 #### Defined in
 
-[src/service.ts:29](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/service.ts#L29)
+[src/service.ts:33](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/service.ts#L33)
 
 ___
 
@@ -100,4 +100,4 @@ ___
 
 #### Defined in
 
-[src/service.ts:30](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/service.ts#L30)
+[src/service.ts:34](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/service.ts#L34)

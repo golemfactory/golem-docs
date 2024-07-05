@@ -1,16 +1,13 @@
 #!/usr/bin/env node
 import * as fs from 'fs'
-
 import * as path from 'path'
 import { createRequire } from 'module' // built-in module
 const require = createRequire(import.meta.url) // construct the require function for this ES module
 
 const branchPrefix = process.argv[2]
-
 const repoName = process.argv[3]
 
 import { dirname } from 'path' // Importing dirname
-
 import { fileURLToPath } from 'url' // Importing fileURLToPath
 // Retrieve the current file's absolute path
 const __filename = fileURLToPath(import.meta.url)
@@ -26,7 +23,10 @@ if (!repoName) {
   process.exit(1)
 }
 
-const docsPath = path.resolve(`./src/pages/docs/${repoName}/reference`)
+const docsPaths = {
+  en: path.resolve(`./src/pages/docs/en/${repoName}/reference`),
+  ja: path.resolve(`./src/pages/docs/ja/${repoName}/reference`),
+}
 
 async function main() {
   console.log(`Switching to branch ${branchPrefix} ...`)
@@ -41,29 +41,33 @@ async function main() {
   )
 
   // Move default-values.md to the correct location, so we don't overwrite it with reference generation
-  const sourcePath = `${__dirname}/src/navigation/customPages/default-values.md`
-  const destPath = `${__dirname}/src/pages/docs/${repoName}/reference/default-values.md`
-  await fs.promises.copyFile(sourcePath, destPath)
+  for (const lang of Object.keys(docsPaths)) {
+    const sourcePath = `${__dirname}/src/navigation/customPages/default-values.md`
+    const destPath = `${__dirname}/src/pages/docs/${lang}/${repoName}/reference/default-values.md`
+    await fs.promises.copyFile(sourcePath, destPath)
+  }
 }
 
 const util = require('util')
 const glob = util.promisify(require('glob'))
 
 async function generateTypedoc(branchPrefix) {
-  const outputPath = `./src/pages/docs/${repoName}/reference`
+  for (const lang of Object.keys(docsPaths)) {
+    const outputPath = docsPaths[lang]
 
-  // Once typedoc is done, start looking for .md files and remove ".md" mentions.
-  const files = await glob(outputPath + '/**/*.md')
+    // Once typedoc is done, start looking for .md files and remove ".md" mentions.
+    const files = await glob(outputPath + '/**/*.md')
 
-  console.log("Starting to remove '.md' mentions from files.")
+    console.log(`Starting to remove '.md' mentions from ${lang} files.`)
 
-  await Promise.all(
-    files.map(async (file) => {
-      let data = await fs.promises.readFile(file, 'utf8')
-      const result = data.replace(/\.md/g, '')
-      await fs.promises.writeFile(file, result, 'utf8')
-    })
-  )
+    await Promise.all(
+      files.map(async (file) => {
+        let data = await fs.promises.readFile(file, 'utf8')
+        const result = data.replace(/\.md/g, '')
+        await fs.promises.writeFile(file, result, 'utf8')
+      })
+    )
+  }
 }
 
 async function generateNavigation(versions) {
@@ -71,28 +75,36 @@ async function generateNavigation(versions) {
     const navigation = await Promise.all(
       versions.map(async (version) => {
         const title = `${version}`
-        const childrenDirs = getChildrenDirectories(docsPath)
-        const links = await Promise.all([
-          {
-            title: 'Content overview',
-            href: `/docs/${repoName}/reference/overview`,
-          },
-          {
-            title: 'Default values',
-            href: `/docs/${repoName}/reference/default-values`,
-          },
-          ...childrenDirs.map(async (item) => {
-            const hrefPrefix = `/docs/${repoName}/reference/${item}`
-
+        const links = await Promise.all(
+          Object.keys(docsPaths).map(async (lang) => {
+            const childrenDirs = getChildrenDirectories(docsPaths[lang])
             return {
-              title: item,
-              children: await getMarkdownTitles(
-                path.join(docsPath, item),
-                hrefPrefix
-              ),
+              lang,
+              links: [
+                {
+                  title: 'Content overview',
+                  href: `/docs/${lang}/${repoName}/reference/overview`,
+                },
+                {
+                  title: 'Default values',
+                  href: `/docs/${lang}/${repoName}/reference/default-values`,
+                },
+                ...(await Promise.all(
+                  childrenDirs.map(async (item) => {
+                    const hrefPrefix = `/docs/${lang}/${repoName}/reference/${item}`
+                    return {
+                      title: item,
+                      children: await getMarkdownTitles(
+                        path.join(docsPaths[lang], item),
+                        hrefPrefix
+                      ),
+                    }
+                  })
+                )),
+              ],
             }
-          }),
-        ])
+          })
+        )
 
         return {
           title,

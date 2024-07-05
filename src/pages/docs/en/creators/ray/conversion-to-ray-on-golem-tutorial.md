@@ -293,7 +293,7 @@ shared connection to 192.168.0.3 closed.
 ```
 
 It is worth noting that if you want to pass arguments to the submitted script you need to use the double-dash symbol (`--`).
-It allows Ray to distinguish `submit` arguments from the script ones ([more details](/docs/creators/ray/troubleshooting#passing-arguments-to-your-ray-script-fails)).
+It allows Ray to distinguish `submit` arguments from the script ones ([more details](/docs/en/creators/ray/troubleshooting#passing-arguments-to-your-ray-script-fails)).
 
 ### Scale up
 

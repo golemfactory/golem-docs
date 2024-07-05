@@ -20,10 +20,10 @@ type: React Reference
 
 This hook accepts two parameters:
 
-| Name               | Description                                                                                                                 |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| invoice (required) | The id of the invoice to handle (you can get it from the [useInvoices](/docs/creators/javascript/react/use-invoices) hook). |
-| options (optional) | see below                                                                                                                   |
+| Name               | Description                                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| invoice (required) | The id of the invoice to handle (you can get it from the [useInvoices](/docs/en/creators/javascript/react/use-invoices) hook). |
+| options (optional) | see below                                                                                                                      |
 
 ### Options
 

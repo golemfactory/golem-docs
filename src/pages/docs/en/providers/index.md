@@ -24,7 +24,7 @@ Providers play a crucial role in the network's ecosystem by sharing their proces
 
 {% docnavigation title="Next steps" %}
 
-- [Install the Golem Provider](/docs/providers/provider-installation).
-- [Configuring your provider](/docs/providers/configuration/general)
+- [Install the Golem Provider](/docs/en/providers/provider-installation).
+- [Configuring your provider](/docs/en/providers/configuration/general)
 
 {% /docnavigation %}

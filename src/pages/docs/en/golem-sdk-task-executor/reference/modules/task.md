@@ -36,12 +36,14 @@ type: "JS Task API Reference"
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `maxRetries?` | `number` | maximum number of retries if task failed due to provider reason, default = 5 |
-| `timeout?` | `number` | timeout in ms for task execution, including retries, default = 300_000 (5min) |
+| `retryOnTimeout?` | `boolean` | Opt-in for retries of the tasks when the [timeout](task#timeout) [startupTimeout](task#startuptimeout) are reached **`Default`** ```ts false ``` |
+| `timeout?` | `number` | timeout in ms for task execution, measured for one attempt from start to stop, default = 300_000 (5min) |
+| `startupTimeout?` | `number` | timeout in ms for task startup, measured from initialization to start, default = 120_000 (2min) |
 | `activityReadySetupFunctions?` | `Worker`<`unknown`\>[] | array of setup functions to run on each activity |
 
 #### Defined in
 
-[src/task.ts:19](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L19)
+[src/task.ts:26](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L26)
 
 ___
 
@@ -62,4 +64,4 @@ ___
 
 #### Defined in
 
-[src/task.ts:28](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L28)
+[src/task.ts:47](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/task.ts#L47)

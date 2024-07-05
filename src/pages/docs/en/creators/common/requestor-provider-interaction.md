@@ -32,7 +32,7 @@ Then the 'Demand' is sent to the network. The demand is a description of the res
 
 {% alert level="info" %}
 
-You can read more about the payment process [here](/docs/golem/payments).
+You can read more about the payment process [here](/docs/en/golem/payments).
 
 {% /alert %}
 
@@ -288,6 +288,6 @@ DemandUnsubscribed {
 
 {% docnavigation title="See also" %}
 
-- [Working with Events JS](/docs/creators/javascript/examples/working-with-events) example.
+- [Working with Events JS](/docs/en/creators/javascript/examples/working-with-events) example.
 
 {% /docnavigation %}

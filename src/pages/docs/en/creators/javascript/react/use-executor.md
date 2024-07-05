@@ -6,11 +6,11 @@ type: React Reference
 
 # useExecutor
 
-`useExecutor` is a hook that manages a single [TaskExecutor](/docs/golem-sdk-task-executor/reference/classes/executor.TaskExecutor). Use this hook to initialize and later terminate an executor. To run tasks you should use the [useTask](/docs/creators/javascript/react/use-task) hook. It returns an object with the following properties:
+`useExecutor` is a hook that manages a single [TaskExecutor](/docs/en/golem-sdk-task-executor/reference/classes/executor.TaskExecutor). Use this hook to initialize and later terminate an executor. To run tasks you should use the [useTask](/docs/en/creators/javascript/react/use-task) hook. It returns an object with the following properties:
 
 | Name           | Description                                                                                                            |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| executor       | The [TaskExecutor](/docs/golem-sdk-task-executor/reference/classes/executor.TaskExecutor) instance.                    |
+| executor       | The [TaskExecutor](/docs/en/golem-sdk-task-executor/reference/classes/executor.TaskExecutor) instance.                 |
 | isInitializing | Boolean indicating whether the executor is being initialized. A new executor cannot be initialized while this is true. |
 | error          | Error object containing information about the error that occurred while initializing the executor.                     |
 | initialize     | A function to initialize a new executor                                                                                |
@@ -22,10 +22,10 @@ type: React Reference
 
 The hook accepts two configuration objects, one for the executor itself (package, demand specification, budget, etc) and one for the extra behavior (e.g. whether to add a `beforeunload` event listener to prevent the user from accidentally closing the tab while the executor is running).
 
-| Name                    | Description                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------- |
-| options (required)      | [ExecutorOptions](/docs/golem-sdk-task-executor/reference/modules/executor#executoroptions) |
-| extraOptions (optional) | See below                                                                                   |
+| Name                    | Description                                                                                    |
+| ----------------------- | ---------------------------------------------------------------------------------------------- |
+| options (required)      | [ExecutorOptions](/docs/en/golem-sdk-task-executor/reference/modules/executor#executoroptions) |
+| extraOptions (optional) | See below                                                                                      |
 
 ### Extra options
 

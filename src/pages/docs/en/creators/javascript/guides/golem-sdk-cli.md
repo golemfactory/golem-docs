@@ -53,7 +53,7 @@ You can provide all the needed information from command line too. Type `golem-sd
 
 ### Golem Manifest
 
-[Golem Manifest](/docs/golem/payload-manifest) is a JSON document that describes your Golem application. While it is not necessary for simple applications, you will need it if you want to access advanced features of the Golem SDK, like [access to the Internet](/docs/creators/javascript/guides/accessing-internet).
+[Golem Manifest](/docs/en/golem/payload-manifest) is a JSON document that describes your Golem application. While it is not necessary for simple applications, you will need it if you want to access advanced features of the Golem SDK, like [access to the Internet](/docs/en/creators/javascript/guides/accessing-internet).
 
 The `golem-sdk` CLI allows users to create and update the manifest file. By default, it assumes the manifest is available in a `manifest.json` file in the current folder. If you want to point to a different file, use the --manifest (or -m) option.
 
@@ -65,7 +65,7 @@ To create a new Golem Manifest with the `golem-sdk` CLI, run:
 golem-sdk manifest create <image> [--image-hash hash]
 ```
 
-The `image` argument should identify the GVMI image used by your application. The tools accept a few formats which are explained in the table below. You can learn more about Golem images [here](/docs/creators/javascript/guides/golem-images).
+The `image` argument should identify the GVMI image used by your application. The tools accept a few formats which are explained in the table below. You can learn more about Golem images [here](/docs/en/creators/javascript/guides/golem-images).
 
 If you have a `package.json` file in your project, the tool will use the `name`, `version`, and `description` fields from the file to fill in the fields in the manifest. Otherwise, you will need to provide them manually.
 
@@ -139,7 +139,7 @@ It is important to use this command to make sure the key you are using is compat
 
 {% docnavigation title="Next steps" %}
 
-- See our [tutorial](/docs/creators/javascript/tutorials/accessing-internet) on how to create a manifest and use it in the requestor script to reach the 'github.com' from a provider.
+- See our [tutorial](/docs/en/creators/javascript/tutorials/accessing-internet) on how to create a manifest and use it in the requestor script to reach the 'github.com' from a provider.
 
 - If you see a feature missing or a possible Golem SDK user experience improvement we could implement, please open an [issue](https://github.com/golemfactory/golem-sdk-cli/issues) or a pull request.
 

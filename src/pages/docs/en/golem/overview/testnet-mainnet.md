@@ -20,7 +20,7 @@ Provider configuration by default, accepts payments on production networks.
 
 To operate on the Mainnet the requestor needs to supply his Yagna wallet with GLM and gas tokens on the respective network. On Polygon, you'll need GLM and MATIC.
 
-You can learn how to acquire GLMs [here](/docs/golem/overview/golem-token#where-to-acquire-GLM).
+You can learn how to acquire GLMs [here](/docs/en/golem/overview/golem-token#where-to-acquire-GLM).
 
 (Note, the term `Mainnet` is also used to identify the Ethereum main blockchain: in such a case we refer to it as `Ethereum Mainnet`).
 

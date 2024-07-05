@@ -1,6 +1,6 @@
 ---
-title: Guide to Service Model on Golem Network 
-pageTitle: Golem Network Service Model - Interactive Application Deployment Guide 
+title: Guide to Service Model on Golem Network
+pageTitle: Golem Network Service Model - Interactive Application Deployment Guide
 description: Learn to launch and manage interactive services on Golem Network using the python Service API, a model that treats provider nodes as service hosts for Requestor's processes.
 type: Guide
 ---
@@ -11,7 +11,7 @@ This article explains how to use Service API to create service-based application
 
 The services API assumes the user would like to treat provider nodes as something like service-hosting platforms, where each activity corresponds to a single instance of some service.
 
-Theoretically, one can try using the [task-based model](/docs/creators/python/guides/task-model) to run services and the services model to run tasks as the models and their usage are not entirely disjoint. The reason why we decided to differentiate them is mostly for convenience and ease of use.
+Theoretically, one can try using the [task-based model](/docs/en/creators/python/guides/task-model) to run services and the services model to run tasks as the models and their usage are not entirely disjoint. The reason why we decided to differentiate them is mostly for convenience and ease of use.
 
 ## The service model
 
@@ -73,7 +73,7 @@ Once a Golem activity starts and the Service instance begins its life, the Reque
     ...
 ```
 
-The `start()` method follows a 'work generator' pattern. It uses a `Script` instance (acquired via `_ctx` - the activity's work context) to build a sequence of actions which then gets returned to the service execution engine to be asynchronously relayed to the Provider's runtime. Please take a look at the methods provided by `Script` objects to get familiar with the possible work steps that can be performed [its APIs](/docs/creators/python/guides/application-fundamentals#script-api).
+The `start()` method follows a 'work generator' pattern. It uses a `Script` instance (acquired via `_ctx` - the activity's work context) to build a sequence of actions which then gets returned to the service execution engine to be asynchronously relayed to the Provider's runtime. Please take a look at the methods provided by `Script` objects to get familiar with the possible work steps that can be performed [its APIs](/docs/en/creators/python/guides/application-fundamentals#script-api).
 
 The `start()` sequence of actions is executed only once in the Service's lifecycle and must result either with success or an indication of failure, in which case, depending on the `respawn_unstarted_instances` flag of the `Golem.run_service()` call, the Service's startup is retried on another provider if the flag is `True` or immediately moves to `Terminated` state otherwise.
 
@@ -151,15 +151,15 @@ This is all it takes to build a Requestor Agent for a rudimentary VM-based servi
 {% docnavigation title="Next steps" %}
 
 - Have a look at a minimal example of a service running on a Golem VM:
-  [Hello World tutorial](/docs/creators/python/tutorials/service-example-0-hello-world).
+  [Hello World tutorial](/docs/en/creators/python/tutorials/service-example-0-hello-world).
 
-- Try a more complicated thing with this [tutorial](/docs/creators/python/tutorials/service-example-1-simple-service). Here we simulate a scenario with a mechanism that periodically polls some external data source and accumulates those observations in a database that can then be queried by the agent that has commissioned it.
+- Try a more complicated thing with this [tutorial](/docs/en/creators/python/tutorials/service-example-1-simple-service). Here we simulate a scenario with a mechanism that periodically polls some external data source and accumulates those observations in a database that can then be queried by the agent that has commissioned it.
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-- Introduction to [Task Model](/docs/creators/python/guides/task-model) that allows you to execute tasks in a batch-like mode.
+- Introduction to [Task Model](/docs/en/creators/python/guides/task-model) that allows you to execute tasks in a batch-like mode.
 
 {% /docnavigation %}
 

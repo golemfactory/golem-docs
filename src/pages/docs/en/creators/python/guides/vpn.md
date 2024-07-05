@@ -1,6 +1,6 @@
 ---
-title: Guide to Golem VPN for Provider Node Connectivity 
-pageTitle: Golem VPN Networking - Enhancing Provider Node Interaction | Guide 
+title: Guide to Golem VPN for Provider Node Connectivity
+pageTitle: Golem VPN Networking - Enhancing Provider Node Interaction | Guide
 description: Discover how Golem VPN facilitates secure Provider node-to-node connections within the Golem network, offering a seamless virtual networking experience for distributed applications.
 type: Guide
 ---
@@ -18,7 +18,7 @@ Golem VPN requires specific implementation in the ExeUnit/runtime, which must be
 {% alert level="info" %}
 The Golem VPN mechanism enables node-to-node connectivity, implemented on the back of the Golem Net transport layer. It does not provide node-to-Internet (outbound), nor Internet-to-node (inbound) connectivity directly.
 
-One of our bundled examples [`http-proxy`](/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy) presents (an extremely simplified) way to provide the latter.
+One of our bundled examples [`http-proxy`](/docs/en/creators/python/tutorials/service-example-3-vpn-simple-http-proxy) presents (an extremely simplified) way to provide the latter.
 
 {% /alert %}
 
@@ -62,8 +62,8 @@ While the Golem VPN feature is being implemented, it still includes known gaps o
 
 Explore examples that illustrate usage of Golem VPN features in practice:
 
-- A [ssh terminal](/docs/creators/python/tutorials/service-example-2-vpn-ssh-terminal)
+- A [ssh terminal](/docs/en/creators/python/tutorials/service-example-2-vpn-ssh-terminal)
 
-- Simple [http proxy](/docs/creators/python/tutorials/service-example-3-vpn-simple-http-proxy)
+- Simple [http proxy](/docs/en/creators/python/tutorials/service-example-3-vpn-simple-http-proxy)
 
 {% /docnavigation %}

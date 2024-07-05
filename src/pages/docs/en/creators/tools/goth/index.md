@@ -54,8 +54,8 @@ Because of that, while it may be possible to utilize a subset of our integration
 
 {% docnavigation title="Next steps" %}
 
-- [Running Goth](/docs/creators/tools/goth/running-goth)
+- [Running Goth](/docs/en/creators/tools/goth/running-goth)
 
-- If you have already run the Golem Test Harness, you may proceed directly to our tutorial on testing your own apps with it: [Running Goth in interactive mode](/docs/creators/tools/goth/running-goths-interactive-mode)
+- If you have already run the Golem Test Harness, you may proceed directly to our tutorial on testing your own apps with it: [Running Goth in interactive mode](/docs/en/creators/tools/goth/running-goths-interactive-mode)
 
 {% /docnavigation %}

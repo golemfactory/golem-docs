@@ -7,7 +7,7 @@ type: Guide
 
 # Understanding the filesystem in VMs operated on providers
 
-Your options of what you can do on a provider will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your Dockerfile. ([Read here](/docs/creators/javascript/guides/golem-images) for information about images and how to create one.)
+Your options of what you can do on a provider will depend on how your image is configured. You already know that transferring data to and from a provider is possible only to/from locations within folders that are configured as `VOLUME` in your Dockerfile. ([Read here](/docs/ja/creators/javascript/guides/golem-images) for information about images and how to create one.)
 
 If you run the command `df -h` on a VM built from this image on a provider, you'll receive an output similar to this:
 

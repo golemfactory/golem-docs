@@ -22,7 +22,7 @@ Full code of the example is available in the yapapi repository: [https://github.
 
 ## Prerequisites
 
-In case you'd like to experiment yourself, and it's your first contact with Golem app development, you're invited to first have a look at our [requestor development primer](/docs/creators/tools/yagna/yagna-installation-for-requestors) which will guide you through the introductory steps.
+In case you'd like to experiment yourself, and it's your first contact with Golem app development, you're invited to first have a look at our [requestor development primer](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors) which will guide you through the introductory steps.
 
 ## Application outline
 
@@ -449,6 +449,6 @@ Feel free to share your own solutions and ask questions on our Discord and Githu
 
 {% docnavigation title="Next steps" %}
 
-- The next article takes a close look at [external API request](/docs/creators/python/tutorials/service-example-6-external-api-request) example.
+- The next article takes a close look at [external API request](/docs/ja/creators/python/tutorials/service-example-6-external-api-request) example.
 
 {% /docnavigation %}

@@ -27,4 +27,4 @@ type: "JS Task API Reference"
 
 #### Defined in
 
-[src/types.ts:12](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/types.ts#L12)
+[src/types.ts:12](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/types.ts#L12)

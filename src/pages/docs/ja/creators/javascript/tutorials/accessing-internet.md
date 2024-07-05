@@ -11,7 +11,7 @@ In this tutorial, you will learn how to quickly access the internet when running
 
 ## Prerequisites
 
-- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors)).
+- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors)).
 
 ## Overview
 
@@ -21,7 +21,7 @@ The ipfs.io URL was selected as a target URL for the example, as it is included 
 
 As the requestor needs to list all URLs they want to access in a manifest file, you need to create one and provide it when creating a new TaskExecutor. There is a CLI tool that we will use to create this manifest.
 
-You can read more about outbound feature [here](/docs/creators/javascript/guides/accessing-internet).
+You can read more about outbound feature [here](/docs/ja/creators/javascript/guides/accessing-internet).
 
 Let’s code.
 
@@ -118,7 +118,7 @@ Instead of providing an image tag or hash, it uses a manifest file that describe
 
 Please note the loaded manifest is encoded to base64.
 
-`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
+`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your unique keys. See [here](/docs/ja/creators/javascript/examples/using-app-keys) for instructions.
 
 In this example, you will simply fetch an example file from IPFS using the `curl` command, available in our GVMI image. So first let’s save the URL near the top of the file (just after the imports):
 
@@ -198,6 +198,6 @@ You can run it now. In the output, you should see “File downloaded!” between
 
 - Default Golem [whitelist](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist)
 
-- More on the [Payload Manifest](/docs/golem/payload-manifest)
+- More on the [Payload Manifest](/docs/ja/golem/payload-manifest)
 
 {% /docnavigation %}

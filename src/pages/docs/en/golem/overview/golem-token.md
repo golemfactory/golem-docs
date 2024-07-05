@@ -43,7 +43,7 @@ yagna payment fund --network=polygon
 
 ### Earn
 
-You can also earn GLM for renting your hardware when you act as a [provider](/docs/providers).
+You can also earn GLM for renting your hardware when you act as a [provider](/docs/en/providers).
 
 ### Test Network for Developers
 

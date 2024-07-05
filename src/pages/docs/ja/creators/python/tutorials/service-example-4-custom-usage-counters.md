@@ -25,7 +25,7 @@ Full code of the example is available in the following locations:
 
 ## Prerequisites
 
-As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
+As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/ja/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
 
 ## Overview
 
@@ -272,6 +272,6 @@ And that's all there is to it. Running the example should result with a sequence
 
 {% docnavigation title="Next steps" %}
 
-- The next article takes a close look at [webapp](/docs/creators/python/tutorials/service-example-5-webapp) example.
+- The next article takes a close look at [webapp](/docs/ja/creators/python/tutorials/service-example-5-webapp) example.
 
 {% /docnavigation %}

@@ -7,7 +7,7 @@ type: Instructions
 # How to Uninstall the Golem Requestor
 
 {% alert level="warning" %}
-Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/creators/tools/yagna/golem-wallet-backup).
+Before removing Yagna, please make sure you have backed up your private key. You can find the instructions [here](/docs/ja/creators/tools/yagna/golem-wallet-backup).
 {% /alert %}
 
 ## Quick path (Linux only)
@@ -176,6 +176,6 @@ pip uninstall gvmkit-build
 
 {% docnavigation title="See also" %}
 
-- If you are looking for intructions for Providers see [here](/docs/providers/provider-uninstallation).
+- If you are looking for intructions for Providers see [here](/docs/ja/providers/provider-uninstallation).
 
 {% /docnavigation %}

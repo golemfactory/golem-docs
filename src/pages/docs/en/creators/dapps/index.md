@@ -9,7 +9,7 @@ type: Introduction
 {% alert level="info" %}
 Looking for a Quickstart?
 
-    [See how easy it is to run an application on Golem](/docs/creators/dapps/run-a-dapp)
+    [See how easy it is to run an application on Golem](/docs/en/creators/dapps/run-a-dapp)
 
 {% /alert %}
 

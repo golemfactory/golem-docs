@@ -25,9 +25,9 @@ The general process of creating a Golem image looks like this:
 
 - Define the image content in Docker format
 - Build a Docker image from the Dockerfile
-- Convert to Golem image using gvmkit-build ([example](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format))
+- Convert to Golem image using gvmkit-build ([example](/docs/ja/creators/tools/gvmkit/converting-docker-image-to-golem-format))
 
-See our [Create Golem Image Tutorial](/docs/creators/python/tutorials/building-custom-image) on how to use the tool.
+See our [Create Golem Image Tutorial](/docs/ja/creators/python/tutorials/building-custom-image) on how to use the tool.
 
 ## Publishing the image
 
@@ -44,8 +44,8 @@ The type of identifier depends on the way you publish your image and is driven b
 If you intend to use your image just for testing, it is enough to use the hashes and upload the images anonymously to the registry.
 On the other hand, if you intend to work on a more complex project, where you would like to use several different versions of your image or collaborate with other developers - you should consider creating an account in the registry and use tags to describe your images. Both cases are illustrated in our examples.
 
-- Publishing the image anonymously. ([example](/docs/creators/tools/gvmkit/publishing-custom-images#publishing-custom-golem-image-to-the-registry-hash-based))
-- Publishing the image using tags. ([example](/docs/creators/tools/gvmkit/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
+- Publishing the image anonymously. ([example](/docs/ja/creators/tools/gvmkit/publishing-custom-images#publishing-custom-golem-image-to-the-registry-hash-based))
+- Publishing the image using tags. ([example](/docs/ja/creators/tools/gvmkit/publishing-custom-images#publishing-custom-golem-image-to-the-registry-tag-based))
 - Using the tag or hash in a requestor script.
 
 ## Dockerfile command support
@@ -82,13 +82,13 @@ In Golem terms, such a singular launch on a provider is called an Activity. Acti
 
 {% docnavigation title="Next steps" %}
 
-- [Installing gvmkit-build](/docs/creators/tools/gvmkit/gvmkit-build-installation)
+- [Installing gvmkit-build](/docs/ja/creators/tools/gvmkit/gvmkit-build-installation)
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-- [Creating custom Golem Image](/docs/creators/python/tutorials/building-custom-image) Step-by-step tutorial
-- [Golem Images FAQ](/docs/creators/python/guides/golem-images-faq)
+- [Creating custom Golem Image](/docs/ja/creators/python/tutorials/building-custom-image) Step-by-step tutorial
+- [Golem Images FAQ](/docs/ja/creators/python/guides/golem-images-faq)
 
 {% /docnavigation %}

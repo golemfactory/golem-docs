@@ -52,7 +52,9 @@ Your node comes pre-configured to permit outbound traffic to domains whitelisted
 ```bash
 ya-provider whitelist list
 ```
+
 Example output:
+
 ```
 ┌────────────┬───────────────────────────────────┬──────────┐
 │  ID        │  Pattern                          │  Type    │
@@ -90,7 +92,9 @@ Whitelisting a specific domain using the `strict` type allows your node to commu
 ```bash
 ya-provider whitelist add -p coinmarket.cap -t strict
 ```
+
 Example output:
+
 ```
 Added patterns:
 ┌────────────┬──────────────────┬──────────┐
@@ -109,7 +113,9 @@ The Regex (regular expression) pattern provide a flexible way of defining which 
 ```bash
 $ ya-provider whitelist add -p '.*\.dev\.golem\.network$' -t regex
 ```
+
 Example output:
+
 ```
 Added patterns:
 ┌────────────┬────────────────────────────┬─────────┐
@@ -130,7 +136,9 @@ To remove a whitelisted domain, you must reference the pattern's `ID`:
 ```bash
 $ ya-provider whitelist remove "76d0c6c5"
 ```
+
 Example output:
+
 ```
 Removed patterns:
 ┌────────────┬──────────────────┬──────────┐
@@ -150,6 +158,6 @@ Run `ya-provider keystore --help` to see possible subcommands
 
 {% docnavigation title="See also" %}
 
-- [Golem Provider Troubleshooting](/docs/troubleshooting/provider)
+- [Golem Provider Troubleshooting](/docs/en/troubleshooting/provider)
 
 {% /docnavigation %}

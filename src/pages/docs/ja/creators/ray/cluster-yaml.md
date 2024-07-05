@@ -18,7 +18,7 @@ For more details check out the [Ray Cluster YAML Configuration Options](https://
 
 The basic `golem-cluster.yaml` is [available on github](https://ray.golem.network/golem-cluster.yaml).
 
-It allows you to start a cluster on our testnet with one head node and one worker node. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/creators/ray/setup-tutorial) for more detailed guidance.
+It allows you to start a cluster on our testnet with one head node and one worker node. It will scale up to 10 nodes when the need arises. Check out the [setup tutorial](/docs/ja/creators/ray/setup-tutorial) for more detailed guidance.
 
 The details of all the properties generally supported by Ray can be found on [Ray docs site](https://docs.ray.io/en/latest/cluster/vms/references/ray-cluster-configuration.html).
 
@@ -27,8 +27,7 @@ When you find a property we don't support yet, please [let us know (on `#Ray on 
 
 Feel free to have a look at the [minimal](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluser.mini.yaml) and [full](https://github.com/golemfactory/ray-on-golem/blob/main/golem-cluser.full.yaml) yaml examples.
 The minimal is stripped to the bare minimum, it shows only the properties that are required (we are striving to cut it even more in the future).
-The full exemplifies *all* properties that can be changed.
-
+The full exemplifies _all_ properties that can be changed.
 
 ## Most important properties
 
@@ -66,7 +65,7 @@ idle_timeout_minutes: 5
 
 ### Initialization commands
 
-You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies. 
+You can use initialization commands to properly set up your nodes - e.g. install all the pip dependencies.
 Note that using `pip` requires its index URL to be present in [`outbound_urls`](#accessing-the-internet-outbound).
 
 ```yaml
@@ -80,28 +79,26 @@ initialization_commands: []
 ### File mounts
 
 You can use file mounts to copy directories and files to the head node and the worker nodes.
-The file mounts are synced during the nodes' initialization, so they are available 
+The file mounts are synced during the nodes' initialization, so they are available
 when your application is executed.
 
 The property accepts both absolute and relative paths, both locally and remotely.
-Relative paths start in `/root/` on the providers, 
+Relative paths start in `/root/` on the providers,
 and in the directory where `ray up` is invoked on the local machine.
 You can attach to your head node to examine its file system with `ray attach golem-cluster.yaml`.
 
-Note, that transferring files to and from the head node can be done with 
-[`ray rsync_up/down` commands](/docs/creators/ray/ray-cli).
+Note, that transferring files to and from the head node can be done with
+[`ray rsync_up/down` commands](/docs/ja/creators/ray/ray-cli).
 
 ```yaml
 # The files or directories to copy to the head and worker nodes
 # Remote workdir is /root/
-file_mounts: {
-  # <remote_path>: <local_path>
-  # "/absolute/path/dir/": ".",
-  # "./relative/path/dir/": ".",
-  # "./relative/path/file.txt": "./file.txt"
-}
+file_mounts: {}
+# <remote_path>: <local_path>
+# "/absolute/path/dir/": ".",
+# "./relative/path/dir/": ".",
+# "./relative/path/file.txt": "./file.txt"
 ```
-
 
 ### Provider section
 
@@ -131,16 +128,16 @@ payment_network: 'holesky'
 
 #### Image tag and image hash
 
-Image tag and image hash properties refer to the virtual machine images 
+Image tag and image hash properties refer to the virtual machine images
 that Golem provider nodes will start to host the Ray on Golem software.
 
-By default, Ray on Golem uses prepackaged VM images including 
-[relatively fresh](/docs/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base) 
+By default, Ray on Golem uses prepackaged VM images including
+[relatively fresh](/docs/ja/creators/ray/supported-versions-and-other-limitations#python-and-ray-image-base)
 Python and Ray versions.
 
 However, you can request a different image - either [supplied by us](https://registry.golem.network/explore/golem/ray-on-golem) or any other - as long as it's built using the version of `ray-on-golem` which matches your installation.
 
-More specifically, you might want to replace the vanilla Python image with one that supports 
+More specifically, you might want to replace the vanilla Python image with one that supports
 Golem GPU providers (e.g. `golem/ray-on-golem:0.10.0-py3.10.13-ray2.9.3-cuda11.8`).
 
 Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.network/) if you need an image with any specific content. We will be happy to help you.
@@ -148,25 +145,25 @@ Please [let us know on the `#Ray on Golem` discord channel)](https://chat.golem.
 #### Accessing the Internet (outbound)
 
 The optional `outbound_urls` lists the addresses you want to access from the Ray on Golem cluster.
-Check out the [accessing the internet](/docs/creators/ray/outbound) explanation 
+Check out the [accessing the internet](/docs/ja/creators/ray/outbound) explanation
 and example to learn more.
 
 Ray on Golem only accepts addresses prefixed with either the `http://` or `https://` scheme.
 
-Our default cluster definition specifies `https://pypi.dev.golem.network` as a required 
-outbound address which allows 
-[downloading additional packages with pip](#initialization-commands). 
-If you don't need to install any additional Python packages, you might want to remove that URL 
+Our default cluster definition specifies `https://pypi.dev.golem.network` as a required
+outbound address which allows
+[downloading additional packages with pip](#initialization-commands).
+If you don't need to install any additional Python packages, you might want to remove that URL
 from `outbound_urls`.
 It potentially allows more providers to participate in your cluster.
 
-You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/creators/ray/ray-on-golem-cli#network-stats).
+You can test the availability of providers supporting your outbound needs with the [network stats tool](/docs/ja/creators/ray/ray-on-golem-cli#network-stats).
 
 ```yaml
 # List of URLs that will be added to the Computation Manifest
 # Requires protocol to be defined in all URLs
 # If not provided demand will not use Computation Manifest
-outbound_urls: ["https://pypi.dev.golem.network"]
+outbound_urls: ['https://pypi.dev.golem.network']
 ```
 
 ## Budget control
@@ -193,14 +190,16 @@ Ray on Golem will reject providers exceeding the following price settings.
 #### Maximum provider prices
 
 Golem providers charge in three ways. They charge:
+
 - start price at the beginning of image deployment,
 - CPU per hour price for the total time their CPUs spent computing,
 - environment per hour price for the total time they spent up and running,
 
-So for example, if you rent a 3-CPU node for half an hour (0.5) and the average load is 0.8 per CPU you will be charged 
+So for example, if you rent a 3-CPU node for half an hour (0.5) and the average load is 0.8 per CPU you will be charged
 `start_price +  (env_per_hour_price * 0.5) + (3 * cpu_per_hour_price * 0.8 * 0.5)`.
 
 The following properties allow you to reject providers with any of the prices exceeding your limits.
+
 - `max_start_price`
 - `max_cpu_per_hour_price`
 - `max_env_per_hour_price`
@@ -212,16 +211,15 @@ provider:
   parameters:
     node_config:
       budget_control:
-
-        # Amount of GLMs for worker starting 
+        # Amount of GLMs for worker starting
         # causing Golem provider offer to be rejected
         max_start_price: 0.5
 
         # Amount of GLMs for CPU utilization per hour
         # causing Golem provider offer to be rejected
-        max_cpu_per_hour_price: 0.5 
+        max_cpu_per_hour_price: 0.5
 
-        # Amount of GLMs for each hour that the worker runs 
+        # Amount of GLMs for each hour that the worker runs
         # causing Golem provider offer to be rejected
         max_env_per_hour_price: 0.5
 ```
@@ -243,15 +241,14 @@ provider:
     node_config:
       budget_control:
         per_cpu_expected_usage:
-
-          # Estimated expected load and duration for worker 
+          # Estimated expected load and duration for worker
           # allowing the picking of the least expensive Golem providers' offers first (per CPU).
           # If not provided, offers will be picked at random.
           # Both values need to be defined or undefined together.
           cpu_load: 0.8
           duration_hours: 0.5
 
-          # Amount of GLMs for expected usage per CPU 
+          # Amount of GLMs for expected usage per CPU
           # causing Golem provider offer to be rejected
           # Requires both `cpu_load` and `duration_hours`
           max_cost: 1.5

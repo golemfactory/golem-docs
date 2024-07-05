@@ -26,10 +26,10 @@ _This tutorial is the textual counterpart to a workshop originally prepared by J
 
 Jakub's workshop during Hello Decentralization.
 
-Now that we've seen how easy it is to [run a Golem requestor agent](/docs/creators/python/quickstarts/run-first-task-on-golem), then had a look at[ how this stuff works under the hood](/docs/creators/python/guides/application-fundamentals) we can put this knowledge to the test and build a simple Golem app that is a bit more realistic than our [Hello World](/docs/creators/python/tutorials/task-example-0-hello).
+Now that we've seen how easy it is to [run a Golem requestor agent](/docs/ja/creators/python/quickstarts/run-first-task-on-golem), then had a look at[ how this stuff works under the hood](/docs/ja/creators/python/guides/application-fundamentals) we can put this knowledge to the test and build a simple Golem app that is a bit more realistic than our [Hello World](/docs/ja/creators/python/tutorials/task-example-0-hello).
 
 {% alert level="info" %}
-If you'd rather like to have a more general introduction on the idea behind Golem or would like to learn what components constitute a Golem node and the Golem network, please have a look at [Golem Overview](/docs/golem/overview)
+If you'd rather like to have a more general introduction on the idea behind Golem or would like to learn what components constitute a Golem node and the Golem network, please have a look at [Golem Overview](/docs/ja/golem/overview)
 
 {% /alert %}
 
@@ -59,7 +59,7 @@ We're going to be using the code from this repository later on in the course of 
 
 ### Anatomy of a Golem app
 
-To give you a quick glimpse into what a typical Golem application looks like (you can read about this topic at length in our guides [here](/docs/creators/python/guides/application-fundamentals) and [here](/docs/creators/python/guides/task-model)), what you need to know for now is that it consists of two distinct components:
+To give you a quick glimpse into what a typical Golem application looks like (you can read about this topic at length in our guides [here](/docs/ja/creators/python/guides/application-fundamentals) and [here](/docs/ja/creators/python/guides/task-model)), what you need to know for now is that it consists of two distinct components:
 
 - the **requestor agent** part that runs on your requestor node and is responsible for preparing the tasks for the providers and processing their output,
 - the **worker** part that runs within VMs on the provider nodes and performs the actual computations.
@@ -677,7 +677,7 @@ Of course, the app was very simple - as it should be for that kind of example - 
 
 {% docnavigation title="Next steps" %}
 
-- A slightly more advanced [tutorial](/docs/creators/python/tutorials/task-example-2-hashcat)
+- A slightly more advanced [tutorial](/docs/ja/creators/python/tutorials/task-example-2-hashcat)
 - Design and then implement your own Golem app.
 
 {% /docnavigation %}
@@ -685,7 +685,7 @@ Of course, the app was very simple - as it should be for that kind of example - 
 {% docnavigation title="See also" %}
 
 - Our high-level [Python API reference](https://yapapi.readthedocs.io/en/latest/api.html) to help you on your way.
-- [Service Model](/docs/creators/python/guides/service-model)
+- [Service Model](/docs/ja/creators/python/guides/service-model)
 - And in case you get stuck or need help, please reach out to us on our [Discord chat](https://chat.golem.network/) and we'll be delighted to help you out :)
 
 {% /docnavigation %}

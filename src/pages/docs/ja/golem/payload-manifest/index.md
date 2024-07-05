@@ -6,7 +6,7 @@ type: Guide
 
 # Computation Payload Manifest
 
-_Computation Payload Manifest_ allows a [requestor](/docs/golem/overview/requestor) to define an application package _Payload_ and allows to set constraints on the computations performed on a [provider](/docs/golem/overview/provider) node.
+_Computation Payload Manifest_ allows a [requestor](/docs/ja/golem/overview/requestor) to define an application package _Payload_ and allows to set constraints on the computations performed on a [provider](/docs/ja/golem/overview/provider) node.
 
 A manifest can be configured in yapapi.
 
@@ -14,8 +14,8 @@ A manifest can be configured in yapapi.
 
 The provider node operator controls what computations can be performed by:
 
-- [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/providers/configuration/outbound#managing-your-keystore) (which allows the provider agent to verify _manifest_ signatures)
-- Adding domain patterns to Provider's [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains) (which makes the manifest [signature] optional).
+- [Importing certificates] used to sign app authors' certificates into the provider's [keystore](/docs/ja/providers/configuration/outbound#managing-your-keystore) (which allows the provider agent to verify _manifest_ signatures)
+- Adding domain patterns to Provider's [domain whitelist](/docs/ja/providers/configuration/outbound#listing-whitelisted-domains) (which makes the manifest [signature] optional).
 
 ## Configuration
 
@@ -23,7 +23,7 @@ The manifest can be configured as a [yapapi.payload.vm.manifest](https://yapapi.
 
 ## Manifest schema
 
-_Computation Payload Manifest_ must follow a specific [JSON Schema](https://github.com/golemfactory/yagna-docs/blob/master/requestor-tutorials/vm-runtime/computation-payload-manifest.schema.json) ([Documentation](/docs/golem/payload-manifest/computation-payload-manifest.schema))
+_Computation Payload Manifest_ must follow a specific [JSON Schema](https://github.com/golemfactory/yagna-docs/blob/master/requestor-tutorials/vm-runtime/computation-payload-manifest.schema.json) ([Documentation](/docs/ja/golem/payload-manifest/computation-payload-manifest.schema))
 
 ### Schema verification
 
@@ -39,7 +39,7 @@ jsonschema --instance manifest.json computation-payload-manifest.schema.json
 
 _Computation Payload Manifest_ **must** contain at least one _Payload_ object.
 
-_Payload_ definition allows to define [GVMI images](/docs/creators/javascript/guides/golem-images) used by Application and supported architecture.
+_Payload_ definition allows to define [GVMI images](/docs/ja/creators/javascript/guides/golem-images) used by Application and supported architecture.
 
 Simple _Computation Payload Manifest_ with _Payload_ definition:
 
@@ -67,7 +67,7 @@ Simple _Computation Payload Manifest_ with _Payload_ definition:
 
 _Computation Payload Manifest_ **can** contain _Computation Manifests_ object.
 
-With a Computation Manifest object, [requestor](/docs/golem/overview/requestor) constrains themself to a certain set of allowed actions, to be negotiated with and approved by a [provider](/docs/golem/overview/provider).
+With a Computation Manifest object, [requestor](/docs/ja/golem/overview/requestor) constrains themself to a certain set of allowed actions, to be negotiated with and approved by a [provider](/docs/ja/golem/overview/provider).
 
 Requestors' actions will be verified against the _Manifest_ during computation.
 
@@ -197,7 +197,7 @@ base64 author.crt.pem --wrap=0 > author.crt.pem.base64
 ```
 
 {% alert level="info" %}
-JS SDK users can utilize the [SDK CLI tool](https://docs.golem.network/docs/creators/javascript/guides/golem-sdk-cli) to create and sign manifests.
+JS SDK users can utilize the [SDK CLI tool](https://docs.golem.network/docs/ja/creators/javascript/guides/golem-sdk-cli) to create and sign manifests.
 {% /alert %}
 
 ### Self signed certificate example

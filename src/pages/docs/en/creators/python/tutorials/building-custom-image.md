@@ -14,8 +14,8 @@ This article will go through the process of creating a Dockerfile, building a Do
 Prerequisites:
 
 - Docker. If you don't have Docker installed follow these [instructions](https://www.docker.com/products/docker-desktop)
-- Gvmkit-build. ([Installation instructions](/docs/creators/tools/gvmkit/gvmkit-build-installation))
-- Yagna running with `try_golem` app-key configured ([see instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors))
+- Gvmkit-build. ([Installation instructions](/docs/en/creators/tools/gvmkit/gvmkit-build-installation))
+- Yagna running with `try_golem` app-key configured ([see instructions](/docs/en/creators/tools/yagna/yagna-installation-for-requestors))
 
 {% /alert %}
 
@@ -80,7 +80,7 @@ Now when you have a Docker image built, we can convert it to a Golem image. To s
 
 {% alert level="info" %}
 
-If you do not have `gvmkit-build` installed, please follow the [installation intructions](/docs/creators/tools/gvmkit/gvmkit-build-installation). You can also use it without installation, by using `pipx`.
+If you do not have `gvmkit-build` installed, please follow the [installation intructions](/docs/en/creators/tools/gvmkit/gvmkit-build-installation). You can also use it without installation, by using `pipx`.
 
 {% /alert  %}
 
@@ -209,6 +209,6 @@ Note that the content of the `description.txt` file that was created in the /gol
 
 {% docnavigation title="Next steps" %}
 
-- Try your image in one of [tutorials](/docs/creators/python/tutorials)!
+- Try your image in one of [tutorials](/docs/en/creators/python/tutorials)!
 
 {% /docnavigation %}

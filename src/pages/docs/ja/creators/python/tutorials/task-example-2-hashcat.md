@@ -107,7 +107,7 @@ The above call will process the `3009..6016` part. If there is any result in tha
 
 ## Before we begin
 
-In order to develop applications for the Golem network, you need to install yagna daemon on your machine. We're going to assume you're already familiar with the setup of the environment required to run Python high-level API examples. If you're not, please make sure you proceed through our [Quickstart](/docs/creators/python/quickstarts/run-first-task-on-golem) to get up to speed.
+In order to develop applications for the Golem network, you need to install yagna daemon on your machine. We're going to assume you're already familiar with the setup of the environment required to run Python high-level API examples. If you're not, please make sure you proceed through our [Quickstart](/docs/ja/creators/python/quickstarts/run-first-task-on-golem) to get up to speed.
 
 Once you're done with the tutorial above, make sure you're again in yapapi's main directory and move to:
 
@@ -217,7 +217,7 @@ The important fact is that the last of the above commands, will provide us with 
 This hash will identify our image when our Golem application is run. Please copy and save it somewhere as in the requestor agent code, we will need to pass it to the `Engine` in order to have providers use the correct image for the container instances.
 {% /alert %}
 
-The details of docker image conversion are described [here](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format).
+The details of docker image conversion are described [here](/docs/ja/creators/tools/gvmkit/converting-docker-image-to-golem-format).
 
 ## The requestor agent code
 
@@ -446,15 +446,15 @@ if __name__ == "__main__":
 
 ## So what is happening here?
 
-We start with a high-level overview of the steps performed by the requestor agent. In the [next section](/docs/creators/python/tutorials/task-example-2-hashcat#how-does-the-code-work) we'll dig into the implementation details.
+We start with a high-level overview of the steps performed by the requestor agent. In the [next section](/docs/ja/creators/python/tutorials/task-example-2-hashcat#how-does-the-code-work) we'll dig into the implementation details.
 
 ### Compute keyspace size
 
-The first step in the computation is to **check the keyspace size**. For this we only need to execute `hashcat` with `--keyspace`, as show in the section [Doing things in parallel](/docs/creators/python/tutorials/task-example-2-hashcat#doings-things-in-parallel) and read that command's output.
+The first step in the computation is to **check the keyspace size**. For this we only need to execute `hashcat` with `--keyspace`, as show in the section [Doing things in parallel](/docs/ja/creators/python/tutorials/task-example-2-hashcat#doings-things-in-parallel) and read that command's output.
 
 ### Define the tasks
 
-Knowing the keyspace size we define the list of **tasks** to execute on providers. Recall from the section [Doing things in parallel](/docs/creators/python/tutorials/task-example-2-hashcat#doings-things-in-parallel) that we can run `hashcat` on a fragment of the whole keyspace, using the `--skip` and `--limit` parameters. In this step for each such fragment we define a separate task.
+Knowing the keyspace size we define the list of **tasks** to execute on providers. Recall from the section [Doing things in parallel](/docs/ja/creators/python/tutorials/task-example-2-hashcat#doings-things-in-parallel) that we can run `hashcat` on a fragment of the whole keyspace, using the `--skip` and `--limit` parameters. In this step for each such fragment we define a separate task.
 
 Knowing the number of tasks we can also determine the number of providers required to execute them in parallel. In this example we decided that the number of providers contracted for the work will be equal to the number of tasks divided by two. This does not necessarily mean that every provider will get exactly two tasks, even if the overall number of tasks is even, because:
 
@@ -597,7 +597,7 @@ With the `main` function covered, let's now have a look at the worker functions 
 
 #### compute_keyspace
 
-The first worker is similar to the one that we've seen in [Hello World!](/docs/creators/python/tutorials/task-example-0-hello) example, but the command we need to run on the provider is not `date` but `hashcat` with appropriate options:
+The first worker is similar to the one that we've seen in [Hello World!](/docs/ja/creators/python/tutorials/task-example-0-hello) example, but the command we need to run on the provider is not `date` but `hashcat` with appropriate options:
 
 ```python
 hashcat --keyspace -a {HASHCAT_ATTACK_MODE} -m {args.hash_type} {args.mask}
@@ -744,7 +744,7 @@ One of the interesting options is to have log output to a file. This can be achi
 
 {% docnavigation title="See also" %}
 
-- [Service Model](/docs/creators/python/guides/service-model)
+- [Service Model](/docs/ja/creators/python/guides/service-model)
 - And in case you get stuck or need help, please reach out to us on our [Discord chat](https://chat.golem.network/) and we'll be delighted to help you out :)
 
 {% /docnavigation %}

@@ -48,6 +48,6 @@ curl -sSf https://join.golem.network/as-provider | bash -
 
 {% docnavigation title="See also" %}
 
-- [Sending GLM from the Ethereum Mainnet to Polygon and back.](/docs/golem/payments/golem-token-conversion)
+- [Sending GLM from the Ethereum Mainnet to Polygon and back.](/docs/en/golem/payments/golem-token-conversion)
 
 {% /docnavigation %}

@@ -23,14 +23,14 @@ The code and components of this POC are included as an example within yapapi: [h
 
 ## Prerequisites
 
-If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](/docs/creators/tools/yagna/yagna-installation-for-requestors) and were able to [run your first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem).
+If you'd like to run the included example, please make sure that you have followed the [requestor's quick primer](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors) and were able to [run your first task on Golem](/docs/ja/creators/python/quickstarts/run-first-task-on-golem).
 
 ## The service
 
 {% alert level="info" %}
 **This part gets deployed on the provider nodes** when the service is commissioned.
 
-In reality, the provider part could be using some off-the-shelf Docker image with minor modifications to accommodate Golem (see the [services hello world example](/docs/creators/python/tutorials/service-example-0-hello-world) for the minimum needed modifications). The reason we're building our own toy/POC service here just to have a simple, tangible tool that we can interact with to show you the example usage of our Services API.
+In reality, the provider part could be using some off-the-shelf Docker image with minor modifications to accommodate Golem (see the [services hello world example](/docs/ja/creators/python/tutorials/service-example-0-hello-world) for the minimum needed modifications). The reason we're building our own toy/POC service here just to have a simple, tangible tool that we can interact with to show you the example usage of our Services API.
 {% /alert %}
 
 The service itself is rather simplistic and designed to reflect a mechanism that periodically polls some external data source and accumulates those observations in a database that can then be queried by the agent which has commissioned it.
@@ -136,7 +136,7 @@ It's important to note that the `ENTRYPOINT` statement, though included, is ther
 
 The requestor agent script included in the example already contains the hash of the image that has been built by us and uploaded to Golem's VM image repository.
 
-When building your own application though, you'd need to create and upload that image yourself. For full information on how to do that, please refer to our tutorial on [converting a Docker image to Golem's format](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format).
+When building your own application though, you'd need to create and upload that image yourself. For full information on how to do that, please refer to our tutorial on [converting a Docker image to Golem's format](/docs/ja/creators/tools/gvmkit/converting-docker-image-to-golem-format).
 
 If you'd like to play around with modifying the included image yourself, please remember to update the service definition's `get_payload` hook to point to your just-uploaded image:
 
@@ -171,7 +171,7 @@ There are two crucial classes that we'll require to, first, define our service a
 
 `Golem` is the new main entrypoint of the Golem's high-level API that holds the configuration of the API, provides orchestration of both task-based and service-based jobs and keeps track of agreements, payments and all other internal mechanisms while supplying the developer with a simple interface to run your services on. Most importantly, we'll be interested in its `run_service` method which spawns one or more instances of a service based on user's specification.
 
-`Service`, on the other hand is the base class providing the interface through which the specific user's service classes can be defined. It allows the developer to define the payload the provider needs to run - e.g. a VM runtime with a given VM image - and exposes three discrete handlers responsible for interacting with that payload using [exescript commands](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-work-context) during the service's startup, regular run and shutdown.
+`Service`, on the other hand is the base class providing the interface through which the specific user's service classes can be defined. It allows the developer to define the payload the provider needs to run - e.g. a VM runtime with a given VM image - and exposes three discrete handlers responsible for interacting with that payload using [exescript commands](/docs/ja/creators/python/guides/application-fundamentals#work-generator-pattern-and-work-context) during the service's startup, regular run and shutdown.
 
 ### Service specification
 
@@ -195,13 +195,13 @@ async def get_payload():
     )
 ```
 
-Here, it's a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image repository](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format).
+Here, it's a VM-image defined through a helper function (`vm.repo`) and using the hash of the file uploaded to [Golem's image repository](/docs/ja/creators/tools/gvmkit/converting-docker-image-to-golem-format).
 
 It's worth noting though, that the payload can be anything that inherits from `Payload` and contains a set of properties and constraints that define the execution environment in which we want our service to run. The `vm.repo` function does exactly that for a VM runtime but as long as the requestor and provider agree, it can be almost anything. We'll be showing you how to define your own provider-end runtime and interact with it from the requestor's end in one of our future tutorials.
 
 #### Service phase handlers
 
-As described in the [introduction to the service model](/docs/creators/python/guides/service-model), the handlers for the "starting", "running" and "stopping" phases of a service all utilize the [work generator pattern](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-work-context-2). In other words, each of those handlers is a generator that yields sets of work items - execution script commands - that the Golem engine translates into command batches that are sent to the runtime on provider's end.
+As described in the [introduction to the service model](/docs/ja/creators/python/guides/service-model), the handlers for the "starting", "running" and "stopping" phases of a service all utilize the [work generator pattern](/docs/ja/creators/python/guides/application-fundamentals#work-generator-pattern-and-work-context-2). In other words, each of those handlers is a generator that yields sets of work items - execution script commands - that the Golem engine translates into command batches that are sent to the runtime on provider's end.
 
 Each handler has access to the service instance's work context - an interface that connects the requestor agent code with a running activity (execution unit) on the provider node.
 
@@ -381,6 +381,6 @@ As a final note here, it may be worth to mention some current limitations for ru
 
 {% docnavigation title="Next steps" %}
 
-- The next article takes a close look at [networking example](/docs/creators/python/tutorials/service-example-2-vpn-ssh-terminal).
+- The next article takes a close look at [networking example](/docs/ja/creators/python/tutorials/service-example-2-vpn-ssh-terminal).
 
 {% /docnavigation %}

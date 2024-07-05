@@ -80,7 +80,7 @@ set YAGNA_AUTOCONF_APPKEY=try_golem
 {% /tabs %}
 
 {% alert level="warning" %}
-The instructions above allow you to set a temporary app-key that will disappear after the Yagna service restart. That is good for experiments and for running examples and tutorials. For production deployment, it is recommended to use a unique app-key generated using `yagna app-key create <key-name>` command. See [Yagna mostly used commands](/docs/creators/tools/yagna/yagna-mostly-used-commands) for details.
+The instructions above allow you to set a temporary app-key that will disappear after the Yagna service restart. That is good for experiments and for running examples and tutorials. For production deployment, it is recommended to use a unique app-key generated using `yagna app-key create <key-name>` command. See [Yagna mostly used commands](/docs/ja/creators/tools/yagna/yagna-mostly-used-commands) for details.
 
 {% /alert %}
 
@@ -103,6 +103,6 @@ yagna payment fund
 
 {% docnavigation title="Next steps" %}
 
-- You can learn more about the Golem architecture, production and test networks, and GLM tokens [here](/docs/golem/overview):
+- You can learn more about the Golem architecture, production and test networks, and GLM tokens [here](/docs/ja/golem/overview):
 
 {% /docnavigation %}

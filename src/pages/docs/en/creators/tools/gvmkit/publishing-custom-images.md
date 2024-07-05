@@ -10,8 +10,8 @@ type: Instructions
 ## Prerequisites
 
 - npm or pip installed
-- gvmkit-build installed [instructions](/docs/creators/tools/gvmkit/gvmkit-build-installation)
-- a Docker image build [see instructions](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format#building-your-docker-image)
+- gvmkit-build installed [instructions](/docs/en/creators/tools/gvmkit/gvmkit-build-installation)
+- a Docker image build [see instructions](/docs/en/creators/tools/gvmkit/converting-docker-image-to-golem-format#building-your-docker-image)
 
 {% alert level="info" %}
 
@@ -89,8 +89,8 @@ Your tag `golem/my_example:latest` is ready to use in one of Golem Network APIs
 
 {% docnavigation title="Next steps" %}
 
-- [Using an image in a JS requestor script](/docs/creators/javascript/examples/working-with-images) (JS API)
-- [Building a custom image Python tutorial ](/docs/creators/python/tutorials/building-custom-image).
+- [Using an image in a JS requestor script](/docs/en/creators/javascript/examples/working-with-images) (JS API)
+- [Building a custom image Python tutorial ](/docs/en/creators/python/tutorials/building-custom-image).
 
 {% /docnavigation %}
 

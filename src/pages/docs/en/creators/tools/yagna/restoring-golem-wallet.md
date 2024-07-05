@@ -17,7 +17,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 {% alert level="warning" %}
 
-The above line assumes you're a requestor on a Unix-like platform (Linux or Mac). If that's not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](/docs/creators/tools/yagna/yagna-installation-for-requestors) or the [analogous instructions for providers](/docs/providers/provider-installation).
+The above line assumes you're a requestor on a Unix-like platform (Linux or Mac). If that's not the case, you should use an installation procedure appropriate for your platform. Please refer to the [Yagna installation instructions for requestors](/docs/en/creators/tools/yagna/yagna-installation-for-requestors) or the [analogous instructions for providers](/docs/en/providers/provider-installation).
 
 {% /alert %}
 

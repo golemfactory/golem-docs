@@ -161,7 +161,6 @@ export default function (nextConfig = {}) {
               for (let { url, sections, locale } of data) {
                 for (let [title, hash, content] of sections) {
                   if (title === [title, ...content].join('\\n')) continue
-                  console.log(locale)
                   sectionIndex.add({
                     url: \`/docs/\${locale}\${url + (hash ? ('#' + hash) : '')}\`,
                     title,

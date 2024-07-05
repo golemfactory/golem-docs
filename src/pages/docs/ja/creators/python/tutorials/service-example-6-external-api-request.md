@@ -11,7 +11,7 @@ type: Tutorial
 
 The example depicts the following features:
 
-- [Outbound Network and Computation Payload Manifest](/docs/golem/payload-manifest).
+- [Outbound Network and Computation Payload Manifest](/docs/ja/golem/payload-manifest).
 
 {% alert level="info" %}
 The full code of the example is available in the yapapi repository: [https://github.com/golemfactory/yapapi/tree/master/examples/external-api-request](https://github.com/golemfactory/yapapi/tree/master/examples/external-api-request)
@@ -19,17 +19,17 @@ The full code of the example is available in the yapapi repository: [https://git
 
 ## Prerequisites
 
-As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
+As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/ja/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
 
-This example involves [Computation Payload Manifest](/docs/golem/payload-manifest).
+This example involves [Computation Payload Manifest](/docs/ja/golem/payload-manifest).
 
 _Computation Payload Manifest_ making use of _Outbound Network_ requires either:
 
-1. Requestor [certificate](/docs/golem/payload-manifest#certificates) that's trusted by the Providers
-2. an instance of a Provider with the particular domain this example uses added to its [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains)
-3. an instance of a Provider with the requestor's self-signed Certificate imported into its [keystore](/docs/providers/configuration/outbound#managing-your-keystore)
+1. Requestor [certificate](/docs/ja/golem/payload-manifest#certificates) that's trusted by the Providers
+2. an instance of a Provider with the particular domain this example uses added to its [domain whitelist](/docs/ja/providers/configuration/outbound#listing-whitelisted-domains)
+3. an instance of a Provider with the requestor's self-signed Certificate imported into its [keystore](/docs/ja/providers/configuration/outbound#managing-your-keystore)
 
-The following example will show cases 2. and 3. so it will be necessary to start a [local instance of a Provider](/docs/providers/provider-installation).
+The following example will show cases 2. and 3. so it will be necessary to start a [local instance of a Provider](/docs/ja/providers/provider-installation).
 
 ## Example app
 
@@ -37,17 +37,17 @@ An example app will request an external API using Provider's network and then it
 
 ### 1. Manifest file
 
-For an app to make an _Outbound Network_ request it needs to declare which tools it will use and which URLs it will access in a [Computation Payload Manifest](/docs/golem/payload-manifest).
+For an app to make an _Outbound Network_ request it needs to declare which tools it will use and which URLs it will access in a [Computation Payload Manifest](/docs/ja/golem/payload-manifest).
 
 Our example will make an HTTPS request using `curl` to a public REST API with the URL `https://api.coingecko.com`.
 
 _Computation Payload Manifest_ will need to have following objects:
 
-- [`net`](/docs/golem/payload-manifest#compmanifestnet--object) computation constraints with `URL`s the app will access (`https://api.coingecko.com`)
-- [`script`](/docs/golem/payload-manifest#compmanifestscript) computation constraint with `command`s app will execute (`curl`)
-- [`payload`](/docs/golem/payload-manifest#payload-object) defining [Golem image](/docs/creators/python/guides/golem-images) containing tools used by the app (`curl`)
+- [`net`](/docs/ja/golem/payload-manifest#compmanifestnet--object) computation constraints with `URL`s the app will access (`https://api.coingecko.com`)
+- [`script`](/docs/ja/golem/payload-manifest#compmanifestscript) computation constraint with `command`s app will execute (`curl`)
+- [`payload`](/docs/ja/golem/payload-manifest#payload-object) defining [Golem image](/docs/ja/creators/python/guides/golem-images) containing tools used by the app (`curl`)
 
-Example _Computation Payload Manifest_ must follow a specific [schema](/docs/golem/payload-manifest#manifest-schema), and for our example it will take form of following `manifest.json` file:
+Example _Computation Payload Manifest_ must follow a specific [schema](/docs/ja/golem/payload-manifest#manifest-schema), and for our example it will take form of following `manifest.json` file:
 
 ```json
 {
@@ -89,7 +89,7 @@ Example _Computation Payload Manifest_ must follow a specific [schema](/docs/gol
 }
 ```
 
-The created file should be [verified using the JSON schema](/docs/golem/payload-manifest#schema-verification).
+The created file should be [verified using the JSON schema](/docs/ja/golem/payload-manifest#schema-verification).
 
 Then it needs to be encoded in `base64`:
 
@@ -143,19 +143,19 @@ async def main():
 
 ### 3. Verification of a request with Computation Payload Manifest
 
-_Providers_ verify the incoming request with a _Computation Payload Manifest_ by checking if it arrives with a [signature and _App author's certificate_ signed by a certificate they trust](/docs/golem/payload-manifest#certificates). If there is no signature, they verify if URLs used by _Computation Payload Manifest_ are [whitelisted](/docs/providers/configuration/outbound#listing-whitelisted-domains).
+_Providers_ verify the incoming request with a _Computation Payload Manifest_ by checking if it arrives with a [signature and _App author's certificate_ signed by a certificate they trust](/docs/ja/golem/payload-manifest#certificates). If there is no signature, they verify if URLs used by _Computation Payload Manifest_ are [whitelisted](/docs/ja/providers/configuration/outbound#listing-whitelisted-domains).
 
 There are two ways to make our _local_ _Provider_ verify the request:
 
 - #### Whitelisting of the domain used by the app
 
-  Add `api.coingecko.com` to Provider's [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains):
+  Add `api.coingecko.com` to Provider's [domain whitelist](/docs/ja/providers/configuration/outbound#listing-whitelisted-domains):
 
   `ya-provider whitelist add --patterns api.coingecko.com --type strict`
 
 - #### Signing manifest and adding signature with a certificate to the request
 
-  [Generate self signed certificate](/docs/golem/payload-manifest#self-signed-certificate-example) and then [ge#nerate manifest signature](/docs/golem/payload-manifest#manifest-signature).
+  [Generate self signed certificate](/docs/ja/golem/payload-manifest#self-signed-certificate-example) and then [ge#nerate manifest signature](/docs/ja/golem/payload-manifest#manifest-signature).
 
   With a generated and `base64`-encoded certificate and a signature, the `get_payload()` function takes the following form:
 

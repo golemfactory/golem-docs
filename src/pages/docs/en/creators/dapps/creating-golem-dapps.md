@@ -26,15 +26,15 @@ Golem’s virtual machine runtime uses its own image format, which is derived fr
 
 For instructions on how to create a Golem VM image, please refer to:
 
-[Converting a Docker image to the Golem image Tutorial](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format)
+[Converting a Docker image to the Golem image Tutorial](/docs/en/creators/tools/gvmkit/converting-docker-image-to-golem-format)
 
-What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re providing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](/docs/creators/dapps/docker-containers-vs-golem-vms)
+What should be kept in mind is that there are still important discrepancies between the VM runtime and Docker’s own execution environment. We’re providing a non-exhaustive list of those in: [Differences between Docker containers and Golem VM runtime](/docs/en/creators/dapps/docker-containers-vs-golem-vms)
 
-For a GVMI image to be used by providers, it needs to be published somewhere where it can be downloaded. The easiest way to do this is by uploading it to the Golem image repository. For instructions, please refer to: [Publishing a Golem image](/docs/creators/tools/gvmkit/publishing-custom-images)
+For a GVMI image to be used by providers, it needs to be published somewhere where it can be downloaded. The easiest way to do this is by uploading it to the Golem image repository. For instructions, please refer to: [Publishing a Golem image](/docs/en/creators/tools/gvmkit/publishing-custom-images)
 
 If the image is uploaded to the repository, its hash is the only piece of information needed for the image to be retrieved and used by providers. If it’s available under a different, publicly-available URL, both the image hash and the URL need to be supplied.
 
-The above is true if the image uses a default set of privileges, or - in other words - if it doesn’t need to access external internet locations. To enable outbound internet access from VM runtimes, the images need to be accompanied by [Manifest files](/docs/creators/dapps/creating-golem-dapps#manifest-files).
+The above is true if the image uses a default set of privileges, or - in other words - if it doesn’t need to access external internet locations. To enable outbound internet access from VM runtimes, the images need to be accompanied by [Manifest files](/docs/en/creators/dapps/creating-golem-dapps#manifest-files).
 
 ## Manifest files
 
@@ -81,7 +81,7 @@ The manifests are JSON files conforming to a specific schema, e.g.:
 }
 ```
 
-For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to: [Computation Payload Manifest](/docs/golem/payload-manifest).
+For more detailed information regarding the manifest files, the schema they use and their usage in Golem, please refer to: [Computation Payload Manifest](/docs/en/golem/payload-manifest).
 
 ### **Manifest signatures**
 
@@ -93,7 +93,7 @@ For a complete list of those locations, please refer to:
 
 Each provider can freely add new addresses and patterns to the whitelist. For documentation on how to do that, please refer to:
 
-[Provider outbound configuration](/docs/providers/configuration/outbound)
+[Provider outbound configuration](/docs/en/providers/configuration/outbound)
 
 If the application wishes to access a URL which matches one of the entries on a whitelist, it only needs to supply that address within the manifest file.
 
@@ -131,7 +131,7 @@ One way to do this is by bundling it with `docker-compose` and verifying that al
 
 Other than that, each singular image comprising your application may be tested separately using a tool known as `ya-runtime-dbg`. It’s especially useful if you encounter an elusive, hard-to-pinpoint issue when trying to launch your app on Golem. For more information, please refer to:
 
-[Testing a Golem image tutorial](/docs/creators/javascript/tutorials/testing-golem-image)
+[Testing a Golem image tutorial](/docs/en/creators/javascript/tutorials/testing-golem-image)
 
 #### Lack of network connectivity in ya-runtime-dbg
 
@@ -295,7 +295,7 @@ As an additional perk, using `dapp-manager` enables you to more conveniently int
 
 ### Connecting to services running on the providers
 
-As mentioned in the application descriptor section above ([`http_proxy` and `tcp_proxy`](/docs/creators/dapps/creating-golem-dapps#http-proxy-and-tcp-proxy)) by specifying a `http_proxy` or `tcp_proxy` in the application descriptor, you enable a given port within the node to be accessed using a local port on the requestor’s machine.
+As mentioned in the application descriptor section above ([`http_proxy` and `tcp_proxy`](/docs/en/creators/dapps/creating-golem-dapps#http-proxy-and-tcp-proxy)) by specifying a `http_proxy` or `tcp_proxy` in the application descriptor, you enable a given port within the node to be accessed using a local port on the requestor’s machine.
 
 #### Local HTTP proxy
 
@@ -359,7 +359,7 @@ $ dapp-manager exec <insert_app_id> backend -- /bin/bash -c "ls -alh"
 
 Because those commands are sent as ExeScripts to the underlying Golem Activity, the main issue currently is that any error while executing such a command is treated as a failure of the activity in question and both the activity and the agreement are immediately terminated by the provider.
 
-As a work-around, one could e.g. bundle and start an SSH service in your image and connect to it using a [TCP proxy](/docs/creators/dapps/creating-golem-dapps#tcp-proxy).
+As a work-around, one could e.g. bundle and start an SSH service in your image and connect to it using a [TCP proxy](/docs/en/creators/dapps/creating-golem-dapps#tcp-proxy).
 
 For an illustration of such usage, please refer to the following `yapapi` SSH connection example:
 

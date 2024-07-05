@@ -1,6 +1,6 @@
 ---
-title: Task API Guide for Building on Golem Network 
-pageTitle: Optimize Batch Computing with Golem's Task API - Developer Guide 
+title: Task API Guide for Building on Golem Network
+pageTitle: Optimize Batch Computing with Golem's Task API - Developer Guide
 description: Learn how to parallelize computational tasks using Golem's Task API. Discover how splitting problems into fragments enhances batch execution across multiple nodes.
 type: Guide
 ---
@@ -13,7 +13,7 @@ Task-based API assumes that the developer starts with a problem that requires sp
 
 ## The task model
 
-As explained in [Golem application fundamentals](/docs/creators/python/guides/application-fundamentals) your application consists of 2 major components:
+As explained in [Golem application fundamentals](/docs/ja/creators/python/guides/application-fundamentals) your application consists of 2 major components:
 
 1. A requestor script - a piece of code that will implement the application logic and orchestrate the execution on providers.
 2. An image that will run as a container on providers.
@@ -36,21 +36,21 @@ Your **tasks** are executed by the `execute_tasks` method of the Golem object. T
 
 The `execute_task` method is responsible for running the **worker** function for each of the **tasks** using the defined **payload**. The payload defines the environment run on the provider machine, where your tasks will be executed. In a simple simplified approach it is a **image**. The particular image is identified by its `tag` or `hash`.
 
-The **worker** function uses the `work generator pattern` explained [here](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext). It is used to define the steps required to do tasks like sending data to and from a provider, running specified commands, etc.
+The **worker** function uses the `work generator pattern` explained [here](/docs/ja/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext). It is used to define the steps required to do tasks like sending data to and from a provider, running specified commands, etc.
 
 {% docnavigation title="Next steps" %}
 
-- We explain the mechanics of task-based requestor development, with a simple example in the [Hello World tutorial](/docs/creators/python/tutorials/task-example-0-hello).
+- We explain the mechanics of task-based requestor development, with a simple example in the [Hello World tutorial](/docs/ja/creators/python/tutorials/task-example-0-hello).
 
-- Try a more complicated thing with a proof-of-concept [hash cracker](/docs/creators/python/tutorials/task-example-1-cracker).
+- Try a more complicated thing with a proof-of-concept [hash cracker](/docs/ja/creators/python/tutorials/task-example-1-cracker).
 
-- Learn how to run `hashcat` in parallel using Golem in [this example](/docs/creators/python/tutorials/task-example-2-hashcat).
+- Learn how to run `hashcat` in parallel using Golem in [this example](/docs/ja/creators/python/tutorials/task-example-2-hashcat).
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-- Introduction to the [Service Model](/docs/creators/python/guides/service-model) that allows you to launch and control interactive services.
+- Introduction to the [Service Model](/docs/ja/creators/python/guides/service-model) that allows you to launch and control interactive services.
 
 {% /docnavigation %}
 

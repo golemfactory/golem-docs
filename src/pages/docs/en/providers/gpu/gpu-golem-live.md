@@ -166,7 +166,7 @@ In the next step you will learn how to configure the `gpu-golem-live` provider. 
 
     ![Setup GPU Golem Live 1](/gpu/setup_1.png)
 
-3.  **Terms of Use Acceptance** - select `YES` to confirm the terms of use. You can read the whole thing at your convenience at: [https://docs.golem.network/docs/golem/terms](https://docs.golem.network/docs/golem/terms)
+3.  **Terms of Use Acceptance** - select `YES` to confirm the terms of use. You can read the whole thing at your convenience at: [https://docs.golem.network/docs/en/golem/terms](https://docs.golem.network/docs/en/golem/terms)
 
     ![Setup GPU Golem Live 2](/gpu/setup_2.png)
 

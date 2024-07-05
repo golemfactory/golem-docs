@@ -96,7 +96,7 @@ The `onActivityReady()` method is used to upload a file to a remote computer tha
 
 Note how we utilized the `ctx` worker context to get the provider name using the `provider.name` property.
 
-Inside each task function we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
+Inside each task function we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/en/creators/javascript/examples/composing-tasks) article.
 
 ![OnActivityReady](/onactivityready.png)
 

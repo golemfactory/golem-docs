@@ -37,7 +37,7 @@ The system doesn't track all providers. As the system runs on mainnet and proces
 
 ## Benefits for Requestors:
 
-The Golem Reputation System helps requestors find the perfect provider for their task by making it possible to filter for the exact requirements that make their computation run most optimally which you can read about [here](/docs/reputation/finding-the-best-providers). Currently, this is a manual process, but in the future, you will be able to automatically find the best providers using "schemas."
+The Golem Reputation System helps requestors find the perfect provider for their task by making it possible to filter for the exact requirements that make their computation run most optimally which you can read about [here](/docs/ja/reputation/finding-the-best-providers). Currently, this is a manual process, but in the future, you will be able to automatically find the best providers using "schemas."
 
 **Schemas: Defining Your Ideal Computation Environment**
 

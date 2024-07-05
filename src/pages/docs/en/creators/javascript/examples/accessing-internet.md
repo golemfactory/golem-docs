@@ -18,7 +18,7 @@ For the requestor to be able to use the outbound feature, (initiate a connection
 - The requestor must request the outbound feature in the demand and include a Computation Manifest there. The manifest must declare the `target_url`.
 - The provider offers the service at least for the `target_url`. (So either outbound for unrestricted URLs or the `target_url` is included in the whitelist).
 
-You can find more information about the feature and the manifest in the following articles: [Accessing the Internet](/docs/creators/javascript/guides/accessing-internet) and [Payload Manifest](/docs/golem/payload-manifest).
+You can find more information about the feature and the manifest in the following articles: [Accessing the Internet](/docs/en/creators/javascript/guides/accessing-internet) and [Payload Manifest](/docs/en/golem/payload-manifest).
 
 The requestor is responsible for:
 
@@ -26,7 +26,6 @@ The requestor is responsible for:
 - Defining demand for outbound access
 
 Both examples are accessing urls included in the default whitelist. Click [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist) to view the whitelist.
-
 
 <!-- - Transfer method (WIP) -->
 
@@ -83,7 +82,7 @@ This has added 'https://ipfs.io' as the URL you want to access from the provider
 
 Your manifest is ready and stored in the `manifest.json` file.
 
-### Defining demand for outbound access 
+### Defining demand for outbound access
 
 The example below demonstrates how to define the demand that will get access to the Internet.
 
@@ -118,7 +117,7 @@ Instead of providing an image tag or hash, it uses a manifest file that describe
 
 Please note the loaded manifest is encoded to base64.
 
-`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your own unique keys. See [here](/docs/creators/javascript/examples/using-app-keys) for instructions.
+`yagnaOptions: { apiKey: 'try_golem' }` - defined the api key, to get access to the Yagna service. This particular key is available if you start the yagna according to the procedure provided in the installation example, you can also configure your own unique keys. See [here](/docs/en/creators/javascript/examples/using-app-keys) for instructions.
 
 Then you can use the applications that connects to the target `url` specified in the manifest in the standard way:
 
@@ -128,8 +127,8 @@ const result = await ctx.run(`curl ${url} -o /golem/work/example.jpg`)
 
 ## Using outbound to install node.js packages
 
-Note: This example shows how to use the outbound whitelist to install a npm package on a provider. It is recommended to install additional packages in a directory that is defined as `VOLUME` in the image definition, to avoid filesystem capacity limits. 
-If you have a large number of packages you should rather install them during the image build phase - you will avoid installing them on each provider separately and get your providers ready in a shorter time.   
+Note: This example shows how to use the outbound whitelist to install a npm package on a provider. It is recommended to install additional packages in a directory that is defined as `VOLUME` in the image definition, to avoid filesystem capacity limits.
+If you have a large number of packages you should rather install them during the image build phase - you will avoid installing them on each provider separately and get your providers ready in a shorter time.
 
 Here's the manifest:
 

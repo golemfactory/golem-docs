@@ -16,21 +16,21 @@ The Golem Network is place where your innovative ideas transform into reality. H
 
 {% grid %}
 
-{% selectioncard icon="javascript" title="JS SDK" buttonText="Read JS Docs" href="/docs/creators/javascript" %}
+{% selectioncard icon="javascript" title="JS SDK" buttonText="Read JS Docs" href="/docs/en/creators/javascript" %}
 
 {% /selectioncard %}
 
-{% selectioncard icon="ray" title="Python with Ray on Golem" buttonText="Read Ray on Golem Docs" href="/docs/creators/ray" %}
+{% selectioncard icon="ray" title="Python with Ray on Golem" buttonText="Read Ray on Golem Docs" href="/docs/en/creators/ray" %}
 
 {% /selectioncard %}
 
-{% selectioncard icon="python" title="No-code Deployment" buttonText="Read no-code Docs" href="/docs/creators/dapps" %}
+{% selectioncard icon="python" title="No-code Deployment" buttonText="Read no-code Docs" href="/docs/en/creators/dapps" %}
 
 {% /selectioncontent %}
 
 {% /selectioncard %}
 
-{% selectioncard icon="python" title="Python SDK" buttonText="Read Python Docs" href="/docs/creators/python" %}
+{% selectioncard icon="python" title="Python SDK" buttonText="Read Python Docs" href="/docs/en/creators/python" %}
 
 {% /selectioncard %}
 

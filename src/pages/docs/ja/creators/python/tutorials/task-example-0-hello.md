@@ -18,13 +18,13 @@ This example illustrates tfollowing Golem features & aspects:
 ## Prerequisites
 
 The only assumption made in this article is that you have some familiarity with basic Golem application concepts. Here's a good starting point to learn about these:
-[golem-application-fundamentals](/docs/creators/python/guides/application-fundamentals)
+[golem-application-fundamentals](/docs/ja/creators/python/guides/application-fundamentals)
 
 Here are the prerequisites in case you'd like to follow along and/or experiment with the code presented in this article:
 
-- you have a local `yagna` node set up (instructions can be found here: [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors))
+- you have a local `yagna` node set up (instructions can be found here: [Yagna installation](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors))
 
-- you have the Python API set up on your machine (see instructions in: [Run first task on Golem](/docs/creators/python/quickstarts/run-first-task-on-golem#running-the-your-first-task-on-the-golem-network))
+- you have the Python API set up on your machine (see instructions in: [Run first task on Golem](/docs/ja/creators/python/quickstarts/run-first-task-on-golem#running-the-your-first-task-on-the-golem-network))
 
 {% alert level="info" %}
 Golem's APIs rely heavily on coroutines and asynchronous execution (`async/await`). If you're unfamiliar with these concepts, chances are you'll find some parts of the code examples confusing.
@@ -122,7 +122,7 @@ Currently, Golem is using a public repository to store both official and communi
 This is what we're making use of here - by using the function `repo` from `vm`, we're getting a payload definition for our providers. The only input we must provide at this point is the image hash. In the case of this example we're using a pre-uploaded, minimal image based on Alpine Linux.
 
 {% alert level="info" %}
-If you'd like to learn about creating and uploading Golem images yourself, take a look at this guide: [Golem images](/docs/creators/python/guides/golem-images)
+If you'd like to learn about creating and uploading Golem images yourself, take a look at this guide: [Golem images](/docs/ja/creators/python/guides/golem-images)
 {% /alert %}
 
 ### Tasks array
@@ -136,7 +136,7 @@ Next comes the array of task fragments to be computed. For simplicity, our `task
 In general, each `Task` object refers to a single piece of computation within your app and typically holds some data. For example, in a program which operates on a huge file, a single `Task` could be holding one chunk of that file to be processed by one of many providers involved.
 
 {% alert level="info" %}
-To see a more involved example of this take a look at: [Task Example 1: Simple hash cracker](/docs/creators/python/tutorials/task-example-1-cracker#the-task-fragments) (this links to a section on task fragments)
+To see a more involved example of this take a look at: [Task Example 1: Simple hash cracker](/docs/ja/creators/python/tutorials/task-example-1-cracker#the-task-fragments) (this links to a section on task fragments)
 {% /alert %}
 
 ### Golem/Executor
@@ -216,7 +216,7 @@ async def worker(context: WorkContext, tasks: AsyncIterable[Task]):
 The `worker` function is what defines the interaction between our requestor node and each provider computing one or more of our tasks. It's called once per provider node with which our requestor has struck an agreement.
 
 {% alert level="info" %}
-This method follows the "work generator" pattern. If you're unfamiliar with it in the context of Golem you can learn more in this article: [Work generator pattern and WorkContext](/docs/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext)
+This method follows the "work generator" pattern. If you're unfamiliar with it in the context of Golem you can learn more in this article: [Work generator pattern and WorkContext](/docs/ja/creators/python/guides/application-fundamentals#work-generator-pattern-and-workcontext)
 {% /alert %}
 
 `WorkContext` gives us a simple interface to construct a script that translates directly to commands interacting with the execution unit on provider's end. Using this object we can schedule commands such as transferring files, running programs etc.
@@ -237,7 +237,7 @@ Finally, we make a call to `task.accept_result` to mark the task as successfully
 
 That's all there is to the example!
 
-To run it on your local machine make sure you have a `yagna` node running and set up as a requestor (take a look here in case of any doubts: [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors)). You can then issue the following command to create an app-key:
+To run it on your local machine make sure you have a `yagna` node running and set up as a requestor (take a look here in case of any doubts: [Yagna installation](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors)). You can then issue the following command to create an app-key:
 
 ```bash
 yagna app-key create requestor
@@ -279,6 +279,6 @@ Ready for a more complex scenario? Take a look at the next article which impleme
 
 {% docnavigation title="Next steps" %}
 
-- [Task Model](/docs/creators/python/tutorials/task-example-1-cracker)
+- [Task Model](/docs/ja/creators/python/tutorials/task-example-1-cracker)
 
 {% /docnavigation %}

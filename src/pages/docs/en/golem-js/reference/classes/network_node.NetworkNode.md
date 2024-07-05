@@ -20,6 +20,8 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 - [id](network_node.NetworkNode#id)
 - [ip](network_node.NetworkNode#ip)
+- [getNetworkInfo](network_node.NetworkNode#getnetworkinfo)
+- [yagnaBaseUri](network_node.NetworkNode#yagnabaseuri)
 
 ### Methods
 
@@ -30,16 +32,16 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 ### constructor
 
-• **new NetworkNode**(`id`, `ip`, `getNetworkInfo`, `apiUrl`): [`NetworkNode`](network_node.NetworkNode)
+• **new NetworkNode**(`id`, `ip`, `getNetworkInfo`, `yagnaBaseUri`): [`NetworkNode`](network_node.NetworkNode)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
-| `ip` | `IPv4` |
+| `ip` | `string` |
 | `getNetworkInfo` | () => [`NetworkInfo`](../interfaces/network_network.NetworkInfo) |
-| `apiUrl` | `string` |
+| `yagnaBaseUri` | `string` |
 
 #### Returns
 
@@ -47,7 +49,7 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[src/network/node.ts:8](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L8)
+[src/network/node.ts:7](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/node.ts#L7)
 
 ## Properties
 
@@ -57,17 +59,45 @@ Describes a node in a VPN, mapping a Golem node id to an IP address
 
 #### Defined in
 
-[src/network/node.ts:9](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L9)
+[src/network/node.ts:8](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/node.ts#L8)
 
 ___
 
 ### ip
 
-• `Readonly` **ip**: `IPv4`
+• `Readonly` **ip**: `string`
 
 #### Defined in
 
-[src/network/node.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L10)
+[src/network/node.ts:9](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/node.ts#L9)
+
+___
+
+### getNetworkInfo
+
+• **getNetworkInfo**: () => [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
+
+#### Type declaration
+
+▸ (): [`NetworkInfo`](../interfaces/network_network.NetworkInfo)
+
+##### Returns
+
+[`NetworkInfo`](../interfaces/network_network.NetworkInfo)
+
+#### Defined in
+
+[src/network/node.ts:10](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/node.ts#L10)
+
+___
+
+### yagnaBaseUri
+
+• **yagnaBaseUri**: `string`
+
+#### Defined in
+
+[src/network/node.ts:11](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/node.ts#L11)
 
 ## Methods
 
@@ -85,11 +115,11 @@ on the provider's end.
 
 | Name | Type |
 | :------ | :------ |
-| `net` | \{ `nodeIp`: `string` ; `id`: `string` ; `ip`: `string` ; `mask`: `string` ; `nodes`: \{ `[ip: string]`: `string`;  }  }[] |
+| `net` | \{ `nodeIp`: `string` ; `id`: `string` ; `ip`: `string` ; `mask`: `string` ; `gateway?`: `string` ; `nodes`: \{ `[ip: string]`: `string`;  }  }[] |
 
 #### Defined in
 
-[src/network/node.ts:20](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L20)
+[src/network/node.ts:19](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/node.ts#L19)
 
 ___
 
@@ -97,20 +127,16 @@ ___
 
 ▸ **getWebsocketUri**(`port`): `string`
 
-Get the websocket URI corresponding with a specific TCP port on this Node.
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `port` | `number` | TCP port of the service within the runtime |
+| Name | Type |
+| :------ | :------ |
+| `port` | `number` |
 
 #### Returns
 
 `string`
 
-the url
-
 #### Defined in
 
-[src/network/node.ts:36](https://github.com/golemfactory/golem-js/blob/4182943/src/network/node.ts#L36)
+[src/network/node.ts:30](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/network/node.ts#L30)

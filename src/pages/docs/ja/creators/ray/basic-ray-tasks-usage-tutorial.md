@@ -127,12 +127,12 @@ The future(s) can be awaited with `ray.get`. It returns only when all the remote
 
 And that's it - the code parallelization with Ray is done by choosing which parts of code can be executed remotely, decorating them with `@ray.remote`, then changing their execution to `.remote()`, and finally waiting for the results with `ray.get()`. Of course, remote Ray tasks can call other Ray remote tasks.
 
-You can now proceed to run your app on a [Ray on Golem cluster](/docs/creators/ray/setup-tutorial)
+You can now proceed to run your app on a [Ray on Golem cluster](/docs/ja/creators/ray/setup-tutorial)
 
 Read more information about Ray tasks on [Ray Core docs website](https://docs.ray.io/en/latest/ray-core/walkthrough.html)
 
 {% docnavigation title="See also" %}
 
-- [Ray on Golem introduction](/docs/creators/ray)
-- [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial)
-{% /docnavigation %}
+- [Ray on Golem introduction](/docs/ja/creators/ray)
+- [Converting a real-life use case to Ray on Golem](/docs/ja/creators/ray/conversion-to-ray-on-golem-tutorial)
+  {% /docnavigation %}

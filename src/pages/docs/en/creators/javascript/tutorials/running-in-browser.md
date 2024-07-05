@@ -14,7 +14,7 @@ In the Quickstart, the js script is in an external file. In this tutorial we wil
 
 ## Prerequisites
 
-Before proceeding, you'll need to install and launch the Yagna service, version 0.13.0 or later. Installation instructions can be found through the manual Yagna installation guide available [here](/docs/creators/tools/yagna/yagna-installation-for-requestors).
+Before proceeding, you'll need to install and launch the Yagna service, version 0.13.0 or later. Installation instructions can be found through the manual Yagna installation guide available [here](/docs/en/creators/tools/yagna/yagna-installation-for-requestors).
 
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
@@ -198,7 +198,7 @@ Now let's create the `appendResults()` function which will put the output of our
 
 ## Getting logs
 
-The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/golem-js/reference/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
+The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/en/golem-sdk-task-executor/reference/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
 
 ```html
 <script type="module">
@@ -235,7 +235,7 @@ Now that we have all the necessary components defined, the code between `<script
 Now if we have:
 
 - The Yagna service is running, and it's started with the `--api-allow-origin` parameter correctly set to `http://localhost:8080`.
-- Your Yagna app-key is either set to `try_golem`, or the `apiKey` has been assigned a value of another valid 32-character key (More details [here](/docs/creators/javascript/examples/using-app-keys))."
+- Your Yagna app-key is either set to `try_golem`, or the `apiKey` has been assigned a value of another valid 32-character key (More details [here](/docs/en/creators/javascript/examples/using-app-keys))."
 
 Run `http-server` to start the webserver.
 
@@ -249,12 +249,12 @@ If you click the 'Echo Hello World' button, after a while in the result containe
 
 {% docnavigation title="Next steps" %}
 
-Other [tutorials](/docs/creators/javascript/tutorials).
+Other [tutorials](/docs/en/creators/javascript/tutorials).
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-Introduction to [JS Task API](/docs/creators/javascript/guides/task-model)
+Introduction to [JS Task API](/docs/en/creators/javascript/guides/task-model)
 
 {% /docnavigation %}

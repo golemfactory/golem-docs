@@ -1,6 +1,6 @@
 ---
-title: Understanding Golem Network Applications 
-pageTitle: Golem Applications Guide - Utilize Decentralized Computing Resources 
+title: Understanding Golem Network Applications
+pageTitle: Golem Applications Guide - Utilize Decentralized Computing Resources
 description: A detailed look into Golem applications, highlighting their components, orchestration, custom environments, and the work generator pattern for decentralized task execution.
 type: guide
 tag: application
@@ -40,7 +40,7 @@ However, Golem's architecture is capable of utilizing custom runtime implementat
 
 To learn about some additional details on how different parts of Golem work together, please have a look at:
 
-- [Golem Overview and Requestor/Provider interaction](/docs/golem/overview/)
+- [Golem Overview and Requestor/Provider interaction](/docs/ja/golem/overview/)
 
 {% /docnavigation %}
 
@@ -103,6 +103,6 @@ A group of commands responsible for downloading content from the runtime. As wit
 
 {% docnavigation title="Next steps" %}
 
-- [Task Model](/docs/creators/python/guides/task-model)
+- [Task Model](/docs/ja/creators/python/guides/task-model)
 
 {% /docnavigation %}

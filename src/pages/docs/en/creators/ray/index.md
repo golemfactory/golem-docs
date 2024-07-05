@@ -13,17 +13,17 @@ We will use **Ray** to parallelize the code and **Ray on Golem** to execute it.
 
 We are looking for {% link title="Beta Testers" href="https://ray.golem.network" %} {% /link %} - sign up to create Ray on Golem with us!
 
-- [Quickstart](/docs/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
-- [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
-- [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported Python and Ray versions, and other known issues
-- [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
-- [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
-- [Running on the mainnet](/docs/creators/ray/mainnet) - all you need to run your cluster on the mainnet
-- [Accessing the Internet tutorial](/docs/creators/ray/outbound) - enabling your Ray app to use the Internet (from within the cluster nodes)
-- [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
-- [Ray CLI](/docs/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
-- [Ray on Golem CLI](/docs/creators/ray/ray-on-golem-cli) - details of Ray on Golem command line options
-- [Troubleshooting](/docs/creators/ray/troubleshooting) - hopefully helpful tips on what to do when something goes wrong
+- [Quickstart](/docs/en/creators/ray/quickstart) - quick and easy, copy and run instructions on launching and decommissioning the Ray on Golem cluster
+- [Setup tutorial](/docs/en/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
+- [Supported versions and other limitations](/docs/en/creators/ray/supported-versions-and-other-limitations) - list of supported Python and Ray versions, and other known issues
+- [Basic Ray tasks usage tutorial](/docs/en/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
+- [Converting a real-life use case to Ray on Golem](/docs/en/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
+- [Running on the mainnet](/docs/en/creators/ray/mainnet) - all you need to run your cluster on the mainnet
+- [Accessing the Internet tutorial](/docs/en/creators/ray/outbound) - enabling your Ray app to use the Internet (from within the cluster nodes)
+- [Cluster yaml](/docs/en/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
+- [Ray CLI](/docs/en/creators/ray/ray-cli) - details of Ray command line options used with Ray on Golem
+- [Ray on Golem CLI](/docs/en/creators/ray/ray-on-golem-cli) - details of Ray on Golem command line options
+- [Troubleshooting](/docs/en/creators/ray/troubleshooting) - hopefully helpful tips on what to do when something goes wrong
 
 ## Introduction
 
@@ -49,19 +49,19 @@ The beauty of the solution is that you can run the app locally, and when you are
 
 You only need to install Ray on Golem - by default, it also installs the Golem daemon and the Ray framework as dependencies.
 
-Check out [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
+Check out [Supported versions and other limitations](/docs/en/creators/ray/supported-versions-and-other-limitations) to make sure Ray on Golem supports your environment.
 
 When you have the software installed, you need a cluster configuration yaml file.
 We provide an example yaml, which contains everything needed to start up a small, free cluster running on the Golem test network.
-Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-yaml) and [Ray CLI](/docs/creators/ray/ray-cli) used to manage the cluster.
+Check out articles about Ray on Golem [cluster yaml](/docs/en/creators/ray/cluster-yaml) and [Ray CLI](/docs/en/creators/ray/ray-cli) used to manage the cluster.
 
 When your application is ready, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
-Check out the [Running on the mainnet](/docs/creators/ray/mainnet) guide to get a full overview.
+Check out the [Running on the mainnet](/docs/en/creators/ray/mainnet) guide to get a full overview.
 
 Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and MATIC (for payment transaction fees).
-We encourage you to learn more about [mainnet payments and funding your Ray on Golem](/docs/creators/javascript/guides/switching-to-mainnet).
+We encourage you to learn more about [mainnet payments and funding your Ray on Golem](/docs/en/creators/javascript/guides/switching-to-mainnet).
 
-When you have the tokens you need to configure `payment_network: "polygon"` in the cluster yaml file ([more details](/docs/creators/ray/cluster-yaml#network))
+When you have the tokens you need to configure `payment_network: "polygon"` in the cluster yaml file ([more details](/docs/en/creators/ray/cluster-yaml#network))
 
 Check out [the machines](https://stats.golem.network/network/providers/online) ready to execute your payloads.
 
@@ -78,11 +78,10 @@ The basic flow of working with Ray and Ray on Golem consists of:
 
 ## How to start
 
-You'll need a piece of code to execute on Golem. If you already have some Ray application, you can immediately proceed to [launching it on Golem](/docs/creators/ray/setup-tutorial).
-Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/ray-on-golem/tree/main/examples). 
+You'll need a piece of code to execute on Golem. If you already have some Ray application, you can immediately proceed to [launching it on Golem](/docs/en/creators/ray/setup-tutorial).
+Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/ray-on-golem/tree/main/examples).
 
-
-Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
+Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/en/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/en/creators/ray/conversion-to-ray-on-golem-tutorial).
 
 If you have any questions, comments, insights, praises, or doubts about these docs and Ray on Golem in general please don't hesitate to reach out to us either on
 

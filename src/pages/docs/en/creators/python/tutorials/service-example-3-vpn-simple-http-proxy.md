@@ -20,7 +20,7 @@ Full code of the example is available in the yapapi repository: [https://github.
 
 ## Prerequisites
 
-As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
+As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/en/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/en/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
 
 ## The VM image
 
@@ -30,7 +30,7 @@ For the VM image of this example, we're going to use a stock Docker image of the
 FROM nginx:stable-alpine
 ```
 
-In the example code, we're already using a pre-built and pre-uploaded Golem VM image but if you'd like to experiment with other HTTP servers or web-based applications, please follow our guides on the preparation of your own VM [images for Golem](/docs/creators/python/tutorials/building-custom-image).
+In the example code, we're already using a pre-built and pre-uploaded Golem VM image but if you'd like to experiment with other HTTP servers or web-based applications, please follow our guides on the preparation of your own VM [images for Golem](/docs/en/creators/python/tutorials/building-custom-image).
 
 ## The Code
 
@@ -281,6 +281,6 @@ That's it. We have demonstrated a way to launch services on VM containers runnin
 
 {% docnavigation title="Next steps" %}
 
-- The next article takes a close look at [custom usage counters](/docs/creators/python/tutorials/service-example-4-custom-usage-counters) example.
+- The next article takes a close look at [custom usage counters](/docs/en/creators/python/tutorials/service-example-4-custom-usage-counters) example.
 
 {% /docnavigation %}

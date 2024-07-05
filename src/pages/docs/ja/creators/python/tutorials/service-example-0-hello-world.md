@@ -18,9 +18,9 @@ This example illustrates the following Golem features & aspects:
 ## Prerequisites
 
 This example shares a number of concepts, as well as parts of its code with the task model "Hello World!". Therefore the below article can be considered a good introduction:
-[Quickstart](/docs/creators/python/quickstarts/run-first-task-on-golem).
+[Quickstart](/docs/ja/creators/python/quickstarts/run-first-task-on-golem).
 
-Also, in case you haven't done so already, it's a good idea to take a look at the [Introduction to the service model](/docs/creators/python/guides/service-model) before proceeding.
+Also, in case you haven't done so already, it's a good idea to take a look at the [Introduction to the service model](/docs/ja/creators/python/guides/service-model) before proceeding.
 
 ## Requestor agent code
 
@@ -128,7 +128,7 @@ async def get_payload():
     )
 ```
 
-Our `DateService` uses the same image hash as the [Task Example 0: Hello World!](/docs/creators/python/tutorials/task-example-0-hello). This hash points to a pre-uploaded, minimal image based on Alpine Linux.
+Our `DateService` uses the same image hash as the [Task Example 0: Hello World!](/docs/ja/creators/python/tutorials/task-example-0-hello). This hash points to a pre-uploaded, minimal image based on Alpine Linux.
 
 ### start() function
 
@@ -194,7 +194,7 @@ async def main():
 In the function `main` we start by creating an instance of `Golem`, specifying our budget and target subnet. We then use it as a context manager to run our service.
 
 {% alert level="info" %}
-If you are not familiar with the `Golem` class and/or how it's used in these examples, take a look at [Task Example 0: Hello World!](/docs/creators/python/tutorials/task-example-0-hello#golem-executor) (this links to a section about the `Golem/Executor` classes).
+If you are not familiar with the `Golem` class and/or how it's used in these examples, take a look at [Task Example 0: Hello World!](/docs/ja/creators/python/tutorials/task-example-0-hello#golem-executor) (this links to a section about the `Golem/Executor` classes).
 {% /alert %}
 
 Provisioning our service is done using the method `run_service` which, in our example, is given two parameters:
@@ -226,7 +226,7 @@ Using the `Cluster` object's `instances` field we can iterate over our service i
 
 That's it!
 
-We can now try running our service. Assuming you have a `yagna` node active locally (refer to the [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors) in case of any doubts) and `yapapi` library installed, you can start the example by running the below command from the example's directory:
+We can now try running our service. Assuming you have a `yagna` node active locally (refer to the [Yagna installation](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors) in case of any doubts) and `yapapi` library installed, you can start the example by running the below command from the example's directory:
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}
@@ -269,6 +269,6 @@ In the case of our example we run a single instance of the service. Once that in
 
 {% docnavigation title="Next steps" %}
 
-- The next article takes a close look at a more complete example, including error handling and more complex [service control](/docs/creators/python/tutorials/service-example-1-simple-service)
+- The next article takes a close look at a more complete example, including error handling and more complex [service control](/docs/ja/creators/python/tutorials/service-example-1-simple-service)
 
 {% /docnavigation %}

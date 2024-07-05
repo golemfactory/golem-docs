@@ -10,7 +10,7 @@ type: Tutorial
 
 Learn how to integrate the Golem Network Reputation System into your Node.js projects using the golem-js SDK. This guide will help you leverage the system to filter providers and optimize the performance and reliability of your tasks. The golem-js SDK includes a helper library that simplifies the use of the Reputation System, making it easier to incorporate into your projects.
 
-> **Note:** This integration only exists within golem-js. If you need it for other SDKs, please use the filter guide at [Finding the Best Providers](/docs/reputation/finding-the-best-providers), which is an HTTP API returning a list of provider IDs you can filter for in your custom market strategy.
+> **Note:** This integration only exists within golem-js. If you need it for other SDKs, please use the filter guide at [Finding the Best Providers](/docs/en/reputation/finding-the-best-providers), which is an HTTP API returning a list of provider IDs you can filter for in your custom market strategy.
 
 ## Adding the Reputation System to Your Project
 

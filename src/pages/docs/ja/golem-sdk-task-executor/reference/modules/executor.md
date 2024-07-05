@@ -22,11 +22,11 @@ type: "JS Task API Reference"
 
 ### ExecutorOptions
 
-Ƭ **ExecutorOptions**: { `package?`: `string` \| `Package` ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: `Logger` ; `enableLogging?`: `boolean` ; `yagnaOptions?`: [`YagnaOptions`](executor#yagnaoptions) ; `maxTaskRetries?`: `number` ; `storageProvider?`: `StorageProvider` ; `activityPreparingTimeout?`: `number` ; `skipProcessSignals?`: `boolean` ; `startupTimeout?`: `number` ; `exitOnNoProposals?`: `boolean`  } & `Omit`<`PackageOptions`, ``"imageHash"`` \| ``"imageTag"``\> & `MarketOptions` & `PaymentOptions` & `NetworkServiceOptions` & `AgreementServiceOptions` & `WorkOptions` & [`TaskServiceOptions`](../interfaces/service.TaskServiceOptions)
+Ƭ **ExecutorOptions**: { `package?`: `string` \| `Package` ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: `Logger` ; `enableLogging?`: `boolean` ; `yagnaOptions?`: [`YagnaOptions`](executor#yagnaoptions) ; `maxTaskRetries?`: `number` ; `storageProvider?`: `StorageProvider` ; `activityPreparingTimeout?`: `number` ; `skipProcessSignals?`: `boolean` ; `startupTimeout?`: `number` ; `taskStartupTimeout?`: `number` ; `exitOnNoProposals?`: `boolean` ; `taskRetryOnTimeout?`: `boolean`  } & `Omit`<`PackageOptions`, ``"imageHash"`` \| ``"imageTag"``\> & `MarketOptions` & `PaymentOptions` & `NetworkServiceOptions` & `AgreementServiceOptions` & `Omit`<`WorkOptions`, ``"yagnaOptions"``\> & [`TaskServiceOptions`](../interfaces/service.TaskServiceOptions)
 
 #### Defined in
 
-[src/executor.ts:41](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L41)
+[src/executor.ts:41](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/executor.ts#L41)
 
 ___
 
@@ -38,7 +38,7 @@ Contains information needed to start executor, if string the imageHash is requir
 
 #### Defined in
 
-[src/executor.ts:96](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L96)
+[src/executor.ts:105](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/executor.ts#L105)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[src/executor.ts:98](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L98)
+[src/executor.ts:107](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/executor.ts#L107)

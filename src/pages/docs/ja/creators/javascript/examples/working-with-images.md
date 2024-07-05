@@ -9,7 +9,7 @@ type: Example
 
 ## Introduction
 
-Golem images defines a remote environment where you execute your tasks inside. They are identified either by their `tag` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/creators/javascript/guides/golem-images) guide.
+Golem images defines a remote environment where you execute your tasks inside. They are identified either by their `tag` or by a `hash`. You can read more about Golem images in [Golem Images Explained](/docs/ja/creators/javascript/guides/golem-images) guide.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ node index.mjs
 
 A hash, in relation to Golem images, serves as a distinctive identifier formed from the image's content. They are complex, elongated strings and can become cumbersome to handle and recall, particularly in sizable projects housing various images and versions. Without tags, hashes fall short in conveying information relevant to the image's purpose or version. Due to these factors, using tags, which are readable and understandable, is generally the favored approach for dealing with images.
 
-To illustrate the use of a hash, we can take a look at the code from the [Quickstart Example](/docs/creators/javascript/quickstarts/quickstart)
+To illustrate the use of a hash, we can take a look at the code from the [Quickstart Example](/docs/ja/creators/javascript/quickstarts/quickstart)
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-images/hash.mjs" language="javascript" /%}
 
@@ -61,7 +61,7 @@ Tags are helpful for managing different versions of your Golem images. They make
 
 {% docnavigation title="Next steps" %}
 
-- [Custom Golem image creation step by step tutorial](/docs/creators/javascript/tutorials/building-custom-image)
+- [Custom Golem image creation step by step tutorial](/docs/ja/creators/javascript/tutorials/building-custom-image)
 
 {% /docnavigation %}
 

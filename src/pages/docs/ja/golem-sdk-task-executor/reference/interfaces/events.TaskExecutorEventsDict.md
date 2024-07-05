@@ -17,6 +17,7 @@ This interface describes events emitted by `TaskExecutor` through `TaskExecutor.
 - [start](events.TaskExecutorEventsDict#start)
 - [ready](events.TaskExecutorEventsDict#ready)
 - [beforeEnd](events.TaskExecutorEventsDict#beforeend)
+- [criticalError](events.TaskExecutorEventsDict#criticalerror)
 - [end](events.TaskExecutorEventsDict#end)
 - [taskQueued](events.TaskExecutorEventsDict#taskqueued)
 - [taskStarted](events.TaskExecutorEventsDict#taskstarted)
@@ -29,13 +30,19 @@ This interface describes events emitted by `TaskExecutor` through `TaskExecutor.
 
 ### start
 
-• **start**: () => `void`
+• **start**: (`timestamp`: `number`) => `void`
 
 #### Type declaration
 
-▸ (): `void`
+▸ (`timestamp`): `void`
 
 Fires when task executor is created, before initialization services.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `timestamp` | `number` |
 
 ##### Returns
 
@@ -43,19 +50,25 @@ Fires when task executor is created, before initialization services.
 
 #### Defined in
 
-[src/events.ts:11](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L11)
+[src/events.ts:11](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L11)
 
 ___
 
 ### ready
 
-• **ready**: () => `void`
+• **ready**: (`timestamp`: `number`) => `void`
 
 #### Type declaration
 
-▸ (): `void`
+▸ (`timestamp`): `void`
 
 Fires when task executor is initialized and ready to be used.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `timestamp` | `number` |
 
 ##### Returns
 
@@ -63,19 +76,25 @@ Fires when task executor is initialized and ready to be used.
 
 #### Defined in
 
-[src/events.ts:16](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L16)
+[src/events.ts:16](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L16)
 
 ___
 
 ### beforeEnd
 
-• **beforeEnd**: () => `void`
+• **beforeEnd**: (`timestamp`: `number`) => `void`
 
 #### Type declaration
 
-▸ (): `void`
+▸ (`timestamp`): `void`
 
 Fires when task executor is about to shut down, immediately after TaskExecutor.shutdown() is called.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `timestamp` | `number` |
 
 ##### Returns
 
@@ -83,19 +102,51 @@ Fires when task executor is about to shut down, immediately after TaskExecutor.s
 
 #### Defined in
 
-[src/events.ts:21](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L21)
+[src/events.ts:21](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L21)
+
+___
+
+### criticalError
+
+• **criticalError**: (`err`: `Error`) => `void`
+
+#### Type declaration
+
+▸ (`err`): `void`
+
+Fires when task executor encountered an unrecoverable error and is about to shut down.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `err` | `Error` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/events.ts:26](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L26)
 
 ___
 
 ### end
 
-• **end**: () => `void`
+• **end**: (`timestamp`: `number`) => `void`
 
 #### Type declaration
 
-▸ (): `void`
+▸ (`timestamp`): `void`
 
 Fires when task executor is completely terminated.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `timestamp` | `number` |
 
 ##### Returns
 
@@ -103,7 +154,7 @@ Fires when task executor is completely terminated.
 
 #### Defined in
 
-[src/events.ts:26](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L26)
+[src/events.ts:31](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L31)
 
 ___
 
@@ -115,6 +166,8 @@ ___
 
 ▸ (`task`): `void`
 
+Fires when a task is placed in the internal queue via TaskExecutor.run
+
 ##### Parameters
 
 | Name | Type |
@@ -127,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/events.ts:28](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L28)
+[src/events.ts:38](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L38)
 
 ___
 
@@ -139,6 +192,8 @@ ___
 
 ▸ (`task`): `void`
 
+Fires when the task gets picked up from the internal queue and is getting executed
+
 ##### Parameters
 
 | Name | Type |
@@ -151,7 +206,7 @@ ___
 
 #### Defined in
 
-[src/events.ts:29](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L29)
+[src/events.ts:45](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L45)
 
 ___
 
@@ -163,6 +218,8 @@ ___
 
 ▸ (`task`): `void`
 
+Fires when the task had to be re-tried due to an error check - [error](../modules/task#error) for details of the issue
+
 ##### Parameters
 
 | Name | Type |
@@ -175,7 +232,7 @@ ___
 
 #### Defined in
 
-[src/events.ts:30](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L30)
+[src/events.ts:52](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L52)
 
 ___
 
@@ -187,6 +244,8 @@ ___
 
 ▸ (`task`): `void`
 
+Fires when a task is successfully completed
+
 ##### Parameters
 
 | Name | Type |
@@ -199,7 +258,7 @@ ___
 
 #### Defined in
 
-[src/events.ts:31](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L31)
+[src/events.ts:59](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L59)
 
 ___
 
@@ -211,6 +270,8 @@ ___
 
 ▸ (`task`): `void`
 
+Fires when a task has failed and won't be re-tried any longer
+
 ##### Parameters
 
 | Name | Type |
@@ -223,7 +284,7 @@ ___
 
 #### Defined in
 
-[src/events.ts:32](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L32)
+[src/events.ts:66](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L66)
 
 ___
 
@@ -235,6 +296,8 @@ ___
 
 ▸ (`event`): `void`
 
+Exposes internal @golem-sdk/golem-js events
+
 ##### Parameters
 
 | Name | Type |
@@ -245,6 +308,10 @@ ___
 
 `void`
 
+**`Deprecated`**
+
+This options is deprecated and will be removed. Alternative ways to reach these events will be provided.
+
 #### Defined in
 
-[src/events.ts:34](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/events.ts#L34)
+[src/events.ts:75](https://github.com/golemfactory/golem-sdk-task-executor/blob/f6ae452/src/events.ts#L75)

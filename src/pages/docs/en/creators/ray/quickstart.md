@@ -10,6 +10,6 @@ type: Quickstart
 
 {% docnavigation title="See also" %}
 
-- [Ray on Golem introduction](/docs/creators/ray)
-- [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial)
-{% /docnavigation %}
+- [Ray on Golem introduction](/docs/en/creators/ray)
+- [Basic Ray tasks usage tutorial](/docs/en/creators/ray/basic-ray-tasks-usage-tutorial)
+  {% /docnavigation %}

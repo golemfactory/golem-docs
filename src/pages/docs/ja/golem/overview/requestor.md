@@ -8,7 +8,7 @@ type: Guide
 
 Seeing the requestor just as a node with the Yagna service installed is a simplified perspective.
 
-We have a user, who needs additional resources to run his job. He will use a requestor agent to achieve this. Requestor agent is a piece of software (actually a script) that communicates via REST API with the Yagna service. The user's job must be run in a controlled environment. It is defined by the [image](/docs/creators/javascript/guides/golem-images) - a software package that is deployed on a provider, where the requestor's job is finally executed.
+We have a user, who needs additional resources to run his job. He will use a requestor agent to achieve this. Requestor agent is a piece of software (actually a script) that communicates via REST API with the Yagna service. The user's job must be run in a controlled environment. It is defined by the [image](/docs/ja/creators/javascript/guides/golem-images) - a software package that is deployed on a provider, where the requestor's job is finally executed.
 
 The job can be split into many tasks and run parallel. That is one of the main advantages of using the Golem Network.
 
@@ -33,10 +33,10 @@ Yet another scenario allows you to run the requestor agent directly in the brows
 
 {% docnavigation title="Next steps" %}
 
-The basic requestor development tutorials in JS are [here](/docs/creators/javascript/tutorials).
+The basic requestor development tutorials in JS are [here](/docs/ja/creators/javascript/tutorials).
 
 {% /docnavigation %}
 
 ## Requestor FAQ
 
-You can find answers to frequently asked questions about the Golem Requestor [here](/docs/golem/overview/requestor-faq).
+You can find answers to frequently asked questions about the Golem Requestor [here](/docs/ja/golem/overview/requestor-faq).

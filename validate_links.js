@@ -8,13 +8,16 @@ let errors = []
 const root = path.join(__dirname, 'src/pages')
 
 const foldersToCheck = [
-  'src/pages/docs/**/*.md',
+  'src/pages/docs/en/**/*.md',
+  'src/pages/docs/ja/**/*.md',
   'src/markdoc/partials/**/*.md',
 ]
 
 const filesToSkipExternalLinkCheck = [
-  'src/pages/docs/golem/payload-manifest/computation-payload-manifest.schema.md',
-  'src/pages/docs/golem/payload-manifest/index.md',
+  'src/pages/docs/en/golem/payload-manifest/computation-payload-manifest.schema.md',
+  'src/pages/docs/en/golem/payload-manifest/index.md',
+  'src/pages/docs/ja/golem/payload-manifest/computation-payload-manifest.schema.md',
+  'src/pages/docs/ja/golem/payload-manifest/index.md',
 ]
 
 const isPrivateOrLocalhost = (url) => {
@@ -26,7 +29,6 @@ const isPrivateOrLocalhost = (url) => {
 }
 
 const validateExternalLink = async (href) => {
-  // Added errors as a parameter, assuming it's an array.
   if (isPrivateOrLocalhost(href)) {
     return
   }
@@ -83,11 +85,12 @@ foldersToCheck.forEach((folder) => {
 
         if (href.startsWith('http')) {
           if (
-            dirname.startsWith(
-              'src/pages/docs/golem-sdk-task-executor/reference'
-            ) ||
-            dirname.startsWith('src/pages/docs/golem-js/reference') ||
-            dirname.startsWith('src/pages/docs/templates')
+            dirname.includes('/docs/en/golem-sdk-task-executor/reference') ||
+            dirname.includes('/docs/ja/golem-sdk-task-executor/reference') ||
+            dirname.includes('/docs/en/golem-js/reference') ||
+            dirname.includes('/docs/ja/golem-js/reference') ||
+            dirname.includes('/docs/en/templates') ||
+            dirname.includes('/docs/ja/templates')
           ) {
             return
           }
@@ -95,36 +98,120 @@ foldersToCheck.forEach((folder) => {
             await validateExternalLink(href)
           }
         } else if (!href.startsWith('#')) {
-          const newHref = path.join(root, `${href.split('#')[0]}.md`)
-          const indexHref = path.join(root, `${href.split('#')[0]}/index.md`)
+          if (dirname.includes('/markdoc/partials/')) {
+            // Special handling for partials
+            let enPath, jaPath, enIndexPath, jaIndexPath
 
-          if (href.endsWith('index') && !href.endsWith('#index')) {
-            errors.push(
-              `Broken link in file ${file}: linking to ${href} --> Links ending with index are not allowed due to Next.js routing. \n`
-            )
-          }
+            if (href.startsWith('/docs/en/') || href.startsWith('/docs/ja/')) {
+              // If the href already contains a locale, use it directly
+              const localePath = href.split('#')[0]
+              const otherLocalePath = localePath
+                .replace('/docs/en/', '/docs/ja/')
+                .replace('/docs/ja/', '/docs/en/')
 
-          if (href.startsWith('../')) {
-            const cleanHref = href.split('#')[0]
-            const newHref =
-              path.join(dirname, '..', cleanHref.replace('../', '')) + '.md'
-            if (!fs.existsSync(newHref)) {
-              errors.push(`Broken link in file ${file}: linking to ${href} \n`)
-            }
-            return
-          }
-
-          if (!fs.existsSync(newHref) && !fs.existsSync(indexHref)) {
-            if (
-              dirname.startsWith('src/pages/docs/golem-js/reference') ||
-              dirname.startsWith(
-                'src/pages/docs/golem-sdk-task-executor/reference'
+              enPath = path.join(
+                root,
+                localePath.replace(/^\/docs\/(en|ja)\//, 'docs/en/') + '.md'
               )
+              jaPath = path.join(
+                root,
+                localePath.replace(/^\/docs\/(en|ja)\//, 'docs/ja/') + '.md'
+              )
+              enIndexPath = path.join(
+                root,
+                localePath.replace(/^\/docs\/(en|ja)\//, 'docs/en/'),
+                'index.md'
+              )
+              jaIndexPath = path.join(
+                root,
+                localePath.replace(/^\/docs\/(en|ja)\//, 'docs/ja/'),
+                'index.md'
+              )
+            } else {
+              // If the href doesn't contain a locale, add both en and ja
+              const cleanHref = href.replace(/^\/docs\//, '').split('#')[0]
+              enPath = path.join(root, 'docs/en', `${cleanHref}.md`)
+              jaPath = path.join(root, 'docs/ja', `${cleanHref}.md`)
+              enIndexPath = path.join(root, 'docs/en', cleanHref, 'index.md')
+              jaIndexPath = path.join(root, 'docs/ja', cleanHref, 'index.md')
+            }
+
+            if (
+              (!fs.existsSync(enPath) && !fs.existsSync(enIndexPath)) ||
+              (!fs.existsSync(jaPath) && !fs.existsSync(jaIndexPath))
             ) {
+              errors.push(
+                `Broken link in partial file ${file}: linking to ${href} (missing in en or ja) \n`
+              )
+            }
+          } else {
+            const lang = file.includes('/docs/en/') ? 'en' : 'ja'
+            const basePath = path.join(root, 'docs', lang)
+
+            // Remove leading '/docs/en/' or '/docs/ja/' from href if present
+            const cleanHref = href.replace(/^\/docs\/(en|ja)\//, '')
+
+            if (dirname.includes('/reference/')) {
+              // Handle reference links differently
+              const referenceBasePath = path.dirname(file)
+              const newHref = path.join(
+                referenceBasePath,
+                cleanHref.split('#')[0] + '.md'
+              )
+              if (!fs.existsSync(newHref)) {
+                // Check if it's linking to a section within the same file
+                const currentFile = path.basename(file)
+                if (
+                  !href.startsWith('../') &&
+                  !currentFile.includes(cleanHref.split('#')[0])
+                ) {
+                  errors.push(
+                    `Broken link in file ${file}: linking to ${href} \n`
+                  )
+                }
+              }
               return
             }
 
-            errors.push(`Broken link in file ${file}: linking to ${href} \n`)
+            const newHref = path.join(basePath, `${cleanHref.split('#')[0]}.md`)
+            const indexHref = path.join(
+              basePath,
+              `${cleanHref.split('#')[0]}/index.md`
+            )
+
+            if (href.endsWith('index') && !href.endsWith('#index')) {
+              errors.push(
+                `Broken link in file ${file}: linking to ${href} --> Links ending with index are not allowed due to Next.js routing. \n`
+              )
+            }
+
+            if (href.startsWith('../')) {
+              const relativeHref = path.join(dirname, cleanHref)
+              if (
+                !fs.existsSync(relativeHref + '.md') &&
+                !fs.existsSync(path.join(relativeHref, 'index.md'))
+              ) {
+                errors.push(
+                  `Broken link in file ${file}: linking to ${href} \n`
+                )
+              }
+              return
+            }
+
+            if (!fs.existsSync(newHref) && !fs.existsSync(indexHref)) {
+              if (
+                dirname.includes('/docs/en/golem-js/reference') ||
+                dirname.includes('/docs/ja/golem-js/reference') ||
+                dirname.includes(
+                  '/docs/en/golem-sdk-task-executor/reference'
+                ) ||
+                dirname.includes('/docs/ja/golem-sdk-task-executor/reference')
+              ) {
+                return
+              }
+
+              errors.push(`Broken link in file ${file}: linking to ${href} \n`)
+            }
           }
         }
       }

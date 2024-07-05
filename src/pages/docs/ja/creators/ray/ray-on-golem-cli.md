@@ -16,7 +16,7 @@ This article explains the commands available, which are useful when working with
 Ray on Golem supports the following commands
 
 - `ray-on-golem start` launches `ray-on-golem`'s webserver and the `yagna` daemon to shorten the cluster spin-up time once you run `ray up` ([details](#ray-on-golem-start-stop)) later on
-- `ray-on-golem stop` stops `ray-on-golem`'s webserver and the `yagna` daemon. Use it when you are done with using ray for a while ([details](#ray-on-golem-start-stop)) 
+- `ray-on-golem stop` stops `ray-on-golem`'s webserver and the `yagna` daemon. Use it when you are done with using ray for a while ([details](#ray-on-golem-start-stop))
 - `ray-on-golem status` gives you the basic information about running `ray-on-golem`'s webserver.
 - `ray-on-golem reputation [block|unblock|list]` gives you control over which nodes not to choose for your cluster
 - `ray-on-golem version` prints `ray-on-golem` package information. Please use it when reporting problems - it makes it easier for us to find and fix them.
@@ -26,46 +26,48 @@ Ray on Golem supports the following commands
 ## ray-on-golem [start|stop]
 
 Apart from Ray itself, Ray on Golem utilizes two additional services running on the user's computer:
-- `yagna` daemon acts as a gateway to the Golem Network 
-- `ray-on-golem` webserver controls the Ray cluster and reacts to Ray autoscaler's commands (spin up new nodes or stop the nodes, which are no longer required) 
+
+- `yagna` daemon acts as a gateway to the Golem Network
+- `ray-on-golem` webserver controls the Ray cluster and reacts to Ray autoscaler's commands (spin up new nodes or stop the nodes, which are no longer required)
 
 When you execute `ray up`, Ray on Golem ensures the two services are running, starting them if necessary. Conversely though, `ray down` doesn't stop them.
 The rationale is to allow them to run and keep gathering updates from Golem Network about available nodes, to speed up launching a new cluster on a subsequent `ray up`.
 
 They are supposed to be light and normally we don't recommend stopping them.
 However, you might want to do that, for example:
-- if you've finished working with Ray on Golem and won't be using it for a while
-- in case you wish to clear Ray on Golem's state and start afresh. Ideally, this shouldn't be necessary - 
-if you often find such a restart helps, please let us know - 
-probably something is wrong and we would love to fix it.
 
-Because the process of gathering offers from Golem Network's market can take a couple of minutes, 
-you might wish to launch them even before you first run `ray up`. 
-That way, they'll have time to warm up and will already have more knowledge about the network 
-when you request a new cluster to start. 
+- if you've finished working with Ray on Golem and won't be using it for a while
+- in case you wish to clear Ray on Golem's state and start afresh. Ideally, this shouldn't be necessary -
+  if you often find such a restart helps, please let us know -
+  probably something is wrong and we would love to fix it.
+
+Because the process of gathering offers from Golem Network's market can take a couple of minutes,
+you might wish to launch them even before you first run `ray up`.
+That way, they'll have time to warm up and will already have more knowledge about the network
+when you request a new cluster to start.
 
 Two commands allow you to manage those two services independently from Ray itself:
 
-* `ray-on-golem start` launches them and leaves them running in the background
-* `ray-on-golem stop` terminates them and ensures graceful shutdown and proper cleanup.
+- `ray-on-golem start` launches them and leaves them running in the background
+- `ray-on-golem stop` terminates them and ensures graceful shutdown and proper cleanup.
 
-## Smart provider selection 
+## Smart provider selection
 
-Read about the ideas behind selecting provider selection in the [mainnet article](/docs/creators/ray/mainnet#smart-provider-selection).
+Read about the ideas behind selecting provider selection in the [mainnet article](/docs/ja/creators/ray/mainnet#smart-provider-selection).
 
 Use the following `ray-on-golem` commands to manipulate the settings:
 
-* `ray-on-golem reputation [block|unblock]` - add/remove a node to/from the blakclist
-* `ray-on-golem reputation list` - outputs a table with current reputation scores and information about blacklisted nodes
-* `ray-on-golem reputation update` - triggers additional providers' scoring update
+- `ray-on-golem reputation [block|unblock]` - add/remove a node to/from the blakclist
+- `ray-on-golem reputation list` - outputs a table with current reputation scores and information about blacklisted nodes
+- `ray-on-golem reputation update` - triggers additional providers' scoring update
 
-## Network stats 
+## Network stats
 
 The tool scans the network and gives you an overview of the availability of the providers.
-It allows you to test the settings of your [cluster yaml](/docs/creators/ray/cluster-yaml) file.
+It allows you to test the settings of your [cluster yaml](/docs/ja/creators/ray/cluster-yaml) file.
 
-You can use it to verify and fine-tune different [budget control](/docs/creators/ray/cluster-yaml#avoiding-too-expensive-providers) parameters,
-both on [the testnet and the mainnet](/docs/creators/ray/cluster-yaml#network).
+You can use it to verify and fine-tune different [budget control](/docs/ja/creators/ray/cluster-yaml#avoiding-too-expensive-providers) parameters,
+both on [the testnet and the mainnet](/docs/ja/creators/ray/cluster-yaml#network).
 
 ### Example usage
 
@@ -84,7 +86,7 @@ Passed Reject if per cpu expected cost exceeds `max_cost` = 1.5: 48
 Passed Reject if start price exceeds `max_start_price = 0.5: 48
 Passed Reject if cpu per hour price exceeds `max_cpu_per_hour` = 0.5: 48
 Passed Reject if env per hour price exceeds `max_env_per_hour_price` = 0.5: 48
-Negotiation initialized: 48 
+Negotiation initialized: 48
 Negotiated successfully: 37
 
 Negotiation errors:
@@ -107,10 +109,10 @@ Use the `--duration` parameter to set how long you want your network scan to las
 
 - `Initial` proposals found during the scan (there might be more than one proposal per provider)
 - `Not blacklisted` - proposals coming from non-blacklisted providers (we blacklist providers with a history of misbehaving)
-- `Passed Reject if per cpu expected cost exceeds` - proposals not exceeding your [`max_cost` setting](/docs/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost)
-- `Passed Reject if start price exceeds` - proposals not exceeding your [`max_start_price` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
-- `Passed Reject if cpu per hour price exceeds` - proposals not exceeding your [`max_cpu_per_hour_price` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
-- `Passed Reject if env per hour price exceeds` - proposals not exceeding your [`max_env_per_hour_price` setting](/docs/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if per cpu expected cost exceeds` - proposals not exceeding your [`max_cost` setting](/docs/ja/creators/ray/cluster-yaml#choosing-the-cheapest-providers-maximum-expected-usage-cost)
+- `Passed Reject if start price exceeds` - proposals not exceeding your [`max_start_price` setting](/docs/ja/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if cpu per hour price exceeds` - proposals not exceeding your [`max_cpu_per_hour_price` setting](/docs/ja/creators/ray/cluster-yaml#maximum-provider-prices)
+- `Passed Reject if env per hour price exceeds` - proposals not exceeding your [`max_env_per_hour_price` setting](/docs/ja/creators/ray/cluster-yaml#maximum-provider-prices)
 - `Negotiation initialized` - proposals passing all the above limitations
 - `Negotiated successfully` - providers ready to deploy the Ray on Golem image
 

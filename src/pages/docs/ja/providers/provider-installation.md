@@ -193,6 +193,6 @@ To verify if port forwarding is correctly configured, check [CanYouSeeMe.org](ht
 
 {% docnavigation title="Next steps" %}
 
-- [Configuring your provider](/docs/providers/configuration/general)
+- [Configuring your provider](/docs/ja/providers/configuration/general)
 
 {% /docnavigation %}

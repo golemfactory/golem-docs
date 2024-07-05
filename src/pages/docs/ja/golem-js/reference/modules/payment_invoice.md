@@ -8,9 +8,13 @@ type: "JS API Reference"
 
 ## Table of contents
 
+### Classes
+
+- [Invoice](../classes/payment_invoice.Invoice)
+
 ### Interfaces
 
-- [InvoiceDTO](../interfaces/payment_invoice.InvoiceDTO)
+- [IInvoiceRepository](../interfaces/payment_invoice.IInvoiceRepository)
 
 ### Type Aliases
 
@@ -24,4 +28,4 @@ type: "JS API Reference"
 
 #### Defined in
 
-[src/payment/invoice.ts:10](https://github.com/golemfactory/golem-js/blob/4182943/src/payment/invoice.ts#L10)
+[src/payment/invoice.ts:7](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/invoice.ts#L7)

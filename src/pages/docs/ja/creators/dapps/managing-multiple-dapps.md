@@ -7,7 +7,7 @@ type: Guide
 # dApp Manager
 
 `dapp-manager` is a purposefully minimalistic manager for decentralized applications running on
-Golem. It works together with the [dapp-runner](/docs/creators/dapps/run-a-dapp).
+Golem. It works together with the [dapp-runner](/docs/ja/creators/dapps/run-a-dapp).
 
 While the responsibility of the latter is to run a single Golem application (which may consist of multiple services), `dapp-manager` takes care of spawning, interacting with, and stopping the running instances of the `dapp-runner`.
 
@@ -30,7 +30,7 @@ You should have `python` and `pip` installed.
 As the `dapp-manager` uses the `dapp-runner`, which in turn requires a properly configured
 [yagna](https://github.com/golemfactory/yagna) service, you'll need to have it set up.
 
-Please follow the [Yagna installation instruction](/docs/creators/tools/yagna/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running.
+Please follow the [Yagna installation instruction](/docs/ja/creators/tools/yagna/yagna-installation-for-requestors) tutorial and ensure that your `yagna` is up and running.
 
 {% alert level="info" %}
 Instead of using the autoconfigured app-key of `try_golem` in this tutorial, we will use a unique 32-char app-key.

@@ -15,7 +15,7 @@ The nodes in the network can act as **providers** or **requestors**. Both the re
 
 ### Provider
 
-A **provider** is a node that is sharing its unused computer resources for Requestors within the Golem Network in return for [GLM](/docs/golem/overview/golem-token) tokens.
+A **provider** is a node that is sharing its unused computer resources for Requestors within the Golem Network in return for [GLM](/docs/ja/golem/overview/golem-token) tokens.
 
 In general, almost any computer might act as a provider. It can be a laptop, desktop, or server machine. The particular resource details (for example, the number of CPUs or their memory limit) that are subject to sharing can be configured by the hardware owner.
 
@@ -27,8 +27,8 @@ To become a provider, one needs to install a provider agent - a specific piece o
 
 Providers are recommended to upgrade their nodes to the latest package version available. This strategy shall provide the widest market coverage and therefore ensure the highest probability of profit.
 
-- Provider installation and configuration instructions are [here](/docs/providers/provider-installation).
-- More details on how the provider works [here](/docs/golem/overview/provider).
+- Provider installation and configuration instructions are [here](/docs/ja/providers/provider-installation).
+- More details on how the provider works [here](/docs/ja/golem/overview/provider).
 
 ### Requestor
 
@@ -36,7 +36,7 @@ Providers are recommended to upgrade their nodes to the latest package version a
 
 The main or most typical benefit for the requestor is to have instant access to a very large pool of hardware. Instead of using local hardware, the requestor can use the IT resources available on the decentralized market. What's more, one requestor can use the hardware from many providers at the same time and run its tasks in prallel.
 
-- More details on how the requestor works: [here](/docs/golem/overview/requestor).
+- More details on how the requestor works: [here](/docs/ja/golem/overview/requestor).
 
 ### How do Requestors and Providers interact?
 
@@ -58,7 +58,7 @@ It is a simplified description of the process, provided to illustrate the relati
 
 The last step in the interactions is a payment between requestors and providers for the usage of the resources. There are many possible payment scenarios. Currently, the default is to use the [Polygon](https://polygon.technology/), a Layer2 solution that greatly improves cost-effectiveness. However, a user can also opt to use the Ethereum mainnet, should they wish to do so.
 
-More on the payment process you can find: [here](/docs/golem/payments).
+More on the payment process you can find: [here](/docs/ja/golem/payments).
 
 ### Networks
 

@@ -13,7 +13,7 @@ The basic premise of the Golem Network is as follows:
 - Providers make some resources available to potential requestors for a price,
 - Requestors rent those resources and pay the providers in exchange.
 
-The payments are made with Golem Network's native ERC-20 token, [GLM](https://etherscan.io/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429), using either the Ethereum Mainnet directly or, preferably, one of the [Layer 2 solutions](/docs/golem/payments/layer-2-payments).
+The payments are made with Golem Network's native ERC-20 token, [GLM](https://etherscan.io/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429), using either the Ethereum Mainnet directly or, preferably, one of the [Layer 2 solutions](/docs/ja/golem/payments/layer-2-payments).
 
 The combination of the token, the chain where the payment transaction will be executed, and the payment driver - a tool that facilitates the payment, is called a `payment platform`.
 
@@ -90,6 +90,6 @@ For other options, refer to the [erc20 driver README.md](https://github.com/gole
 
 {% docnavigation title="Next steps" %}
 
-- [Layer 2 payments](/docs/golem/payments/layer-2-payments)
+- [Layer 2 payments](/docs/ja/golem/payments/layer-2-payments)
 
 {% /docnavigation %}
