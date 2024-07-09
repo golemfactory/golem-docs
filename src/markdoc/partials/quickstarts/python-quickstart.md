@@ -112,7 +112,7 @@ pip install yapapi
 Check out or download the `yapapi` repository:
 
 ```bash
-git clone -b b0.12 https://github.com/golemfactory/yapapi.git
+git clone https://github.com/golemfactory/yapapi.git
 cd yapapi
 ```
 
