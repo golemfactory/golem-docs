@@ -55,7 +55,7 @@ Features exposed by a high-level generic purpose API allow you to:
 - avoid uploading a GVMI image directly to the provider instead of using the `registry` service. This is useful when you want to quickly prototype your image without having to update the registry with every change,
 - define a setup method that will be executed the first time a provider is rented and a teardown method that will be executed before the rental is done. This is useful when you want to avoid doing the same work multiple times when running multiple tasks on the same provider.
 
-`Golem-js` also exposes low-level api modules representing Yagna bdomains in for of glm.market, glm.activity, glm.payment properties of the GolemNetwork object.
+`Golem-js` also exposes low-level api modules representing Yagna domains in for of glm.market, glm.activity, glm.payment properties of the GolemNetwork object.
 
 {% docnavigation title="Next steps" %}
 
