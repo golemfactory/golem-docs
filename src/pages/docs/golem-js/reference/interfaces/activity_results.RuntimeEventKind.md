@@ -21,11 +21,11 @@ type: "JS API Reference"
 
 ### started
 
-• `Optional` **started**: `RuntimeEventStarted`
+• `Optional` **started**: [`RuntimeEventStarted`](activity_results.RuntimeEventStarted)
 
 #### Defined in
 
-[src/activity/results.ts:79](https://github.com/golemfactory/golem-js/blob/4182943/src/activity/results.ts#L79)
+[src/activity/results.ts:77](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/activity/results.ts#L77)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:80](https://github.com/golemfactory/golem-js/blob/4182943/src/activity/results.ts#L80)
+[src/activity/results.ts:78](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/activity/results.ts#L78)
 
 ___
 
@@ -45,14 +45,14 @@ ___
 
 #### Defined in
 
-[src/activity/results.ts:81](https://github.com/golemfactory/golem-js/blob/4182943/src/activity/results.ts#L81)
+[src/activity/results.ts:79](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/activity/results.ts#L79)
 
 ___
 
 ### finished
 
-• `Optional` **finished**: `RuntimeEventFinished`
+• `Optional` **finished**: [`RuntimeEventFinished`](activity_results.RuntimeEventFinished)
 
 #### Defined in
 
-[src/activity/results.ts:82](https://github.com/golemfactory/golem-js/blob/4182943/src/activity/results.ts#L82)
+[src/activity/results.ts:80](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/activity/results.ts#L80)
