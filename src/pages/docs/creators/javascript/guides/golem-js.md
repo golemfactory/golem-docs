@@ -14,7 +14,7 @@ This article will introduce you to the Resource Rental model leveraged by the `g
 
 Golem connects computers in a peer-to-peer network, enabling both application owners and individual users **requestor** to rent resources of other users’ **providers** machines. These resources can be used to complete tasks requiring any amount of computation time and capacity.
 
-To rent resources you need to create an 'order`that describes your needs then rent the resources from the network using the Yagna service. This is done using a **requestor script** (or simply **Golem app**) that will utilize Golem JS SDK. When you define the`order` you define the software environment in which you will run your commands on a provider. This is done by specifying a software package in the form of a Docker-like **image**.
+To rent resources you need to create an `order` that describes your needs then rent the resources from the network using the Yagna service. This is done using a **requestor script** (or simply **Golem app**) that will utilize Golem JS SDK. When you define the `order` you define the software environment in which you will run your commands on a provider. This is done by specifying a software package in the form of a Docker-like **image**.
 
 So, to run your app on Golem Network, you need:
 
