@@ -31,6 +31,10 @@ export const navigation = [
         title: 'Python Quickstart ',
         href: '/docs/quickstarts/python-quickstart',
       },
+      {
+        title: 'Retrievable Task',
+        href: '/docs/quickstarts/retrievable-task',
+      },
     ],
   },
   {
@@ -53,6 +57,10 @@ export const navigation = [
                 title: 'Golem in a browser',
                 href: '/docs/creators/javascript/quickstarts/golem-in-a-browser',
               },
+              {
+                title: 'Retrievable Task (Job API)',
+                href: '/docs/creators/javascript/quickstarts/retrievable-task',
+              },
             ],
           },
           {
@@ -64,8 +72,12 @@ export const navigation = [
                 href: '/docs/creators/javascript/guides',
               },
               {
-                title: 'Resource Rental Model',
-                href: '/docs/creators/javascript/guides/golem-js',
+                title: 'Task Model',
+                href: '/docs/creators/javascript/guides/task-model',
+              },
+              {
+                title: 'Retrievable tasks (Job API)',
+                href: '/docs/creators/javascript/guides/retrievable-tasks',
               },
               {
                 title: 'Golem SDK CLI',
@@ -139,8 +151,26 @@ export const navigation = [
             href: '',
             children: [
               {
-                title: 'Task Model',
-                href: '/docs/creators/javascript/task-executor/task-model',
+                title: 'Task API Quickstarts',
+                href: '',
+                children: [
+                  {
+                    title: 'Node.js quickstart',
+                    href: '/docs/creators/javascript/task-executor/te-node-quickstart',
+                  },
+                  {
+                    title: 'Web browser quickstart',
+                    href: '/docs/creators/javascript/task-executor/te-browser-quickstart',
+                  },
+                  {
+                    title: 'Node.js quickstart explained',
+                    href: '/docs/creators/javascript/task-executor/te-node-quickstart-explained',
+                  },
+                  {
+                    title: 'Web browser quickstart explained',
+                    href: '/docs/creators/javascript/task-executor/te-browser-quickstart-explained',
+                  },
+                ],
               },
               {
                 title: 'Task API Examples',
