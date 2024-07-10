@@ -147,7 +147,7 @@ First, we will import the `@golem-sdk/golem-js` library:
 </script>
 ```
 
-### Requestor script
+## Requestor script
 
 When the user presses the `Echo Hello World` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run requestor script.
 First, we define our `order` and create the `GolemNetwork` object, then we rent a machine and execute the `echo Hello World` command on it.
