@@ -151,6 +151,28 @@ export const navigation = [
             href: '',
             children: [
               {
+                title: 'Task API Quickstarts',
+                href: '',
+                children: [
+                  {
+                    title: 'Node.js quickstart',
+                    href: '/docs/creators/javascript/task-executor/te-node-quickstart',
+                  },
+                  {
+                    title: 'Web browser quickstart',
+                    href: '/docs/creators/javascript/task-executor/te-browser-quickstart',
+                  },
+                  {
+                    title: 'Node.js quickstart explained',
+                    href: '/docs/creators/javascript/task-executor/te-node-quickstart-explained',
+                  },
+                  {
+                    title: 'Web browser quickstart explained',
+                    href: '/docs/creators/javascript/task-executor/te-browser-quickstart-explained',
+                  },
+                ],
+              },
+              {
                 title: 'Task API Examples',
                 href: '',
                 children: [
