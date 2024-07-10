@@ -90,7 +90,7 @@ const pool = await glm.manyOf({
 The `manyOf()` method returns us a pool of `ResourceRental` aggregates. The `ResourceRental` wraps around the details of different entities and processes needed to manage the rental of resources. If you are interested in the details (also accessible from the Golem Network object) and would like to learn more about Agreements, Allocations, Activities, Invoices, DebitNotes, and related conversations required by the protocol please read articles like [this one](/docs/creators/common/requestor-provider-interaction#the-story).
 
 Our pool will consist of a minimum of 1 and a maximum of 3 providers available at the same time. Providers will have their environments defined by the `order`. It is an object that contains information about the environment we want to run on the provider, and potentially, criteria for the provider selection.
-In our example, when describing resources needed, we will only indicate the image to be run on a remote node. We will use an image publicly available on the [registry](https://registry.golem.network) portal, therefore it is enough to provide a tag 'golem/alpine:latest' - it indicates an image based on `alpine` distribution. Users can also specify other parameters like the number of threads, memory, or disk size.
+In our example, when describing resources needed, we will only indicate the image to be run on a remote node. We will use an image publicly available on the [registry](https://registry.golem.network) portal, therefore it is enough to provide a tag `golem/alpine:latest` - it indicates an image based on `alpine` distribution. Users can also specify other parameters like the number of threads, memory, or disk size.
 For the provider selection, our example precises also the maximum acceptable prices using the `linear` price model. Finally, the `rentHour` defines the maximum duration of the engagements with providers before automatic termination.
 
 ```js
@@ -110,7 +110,7 @@ const order = {
 }
 ```
 
-The pool's `.withRental()` method wraps operations on the pool exposing a rental instance. The rental gives us access to the `ExeUnit` - a representation of the execution environment on the provider node. The `ExeUnit` models the commands supported by the runtime. In our example, we will execute a command in the default shell using the `.run()` method. The command: `echo ${exe.provider.name} && cat /proc/cpuinfo | grep 'model name'` is a Linux command that will produce filtered content of the `/proc/cpuinfo` file from the node. Note how we accessed the name of the provider node: the `ExeUnit` instance offers the whole context including the provider's details.
+The pool's `.withRental()` method wraps operations on the pool exposing a rental instance. The rental gives us access to the `ExeUnit` - a representation of the execution environment on the provider node. The `ExeUnit` models the commands supported by the runtime. In our example, we will execute a command in the default shell using the `.run()` method. The command: `echo "Part #${i} computed on provider ${exe.provider.name} with CPU:" && cat /proc/cpuinfo | grep 'model name'` is a Linux command that will produce filtered content of the `/proc/cpuinfo` file from the node. Note how we accessed the name of the provider node: the `ExeUnit` instance offers the whole context including the provider's details.
 
 ```js
 pool.withRental((rental) =>
@@ -118,7 +118,7 @@ pool.withRental((rental) =>
     .getExeUnit()
     .then((exe) =>
       exe.run(
-        ` echo ${exe.provider.name} && cat /proc/cpuinfo | grep 'model name' `
+        `echo "Part #${i} computed on provider ${exe.provider.name} with CPU:" && cat /proc/cpuinfo | grep 'model name'`
       )
     )
 )
@@ -126,7 +126,7 @@ pool.withRental((rental) =>
 
 The output of the commands executed on the remote node is a `Promise` of a `result` object. Once it is resolved and `fulfilled` it contains the output of the command we run, available as a `stdout` property.
 
-To run the command 5 times, parallelly on the maximum of 3 providers, we utilize the `map()` method and for each `data` array element we will acquire a `rental` and its `exe` to execute the command. We use `allSettled()` to handle all promises from each `exe.run()` and produce the `result` array. Then we can iterate over the `result` and get the actual command outputs (if the command execution succeeded).
+To run the command 5 times, in parallel on the maximum of 3 providers, we utilize the `map()` method and for each `data` array element we will acquire a `rental` and its `exe` to execute the command. We use `allSettled()` to handle all promises from each `exe.run()` and produce the `result` array. Then we can iterate over the `result` and get the actual command outputs (if the command execution succeeded).
 
 ```js
 const data = [...Array(5).keys()]
@@ -154,7 +154,7 @@ results.forEach((result) => {
 
 Here there is the whole code:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/mgordel/JST-926/new-quickstart/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 ## Summary
 
