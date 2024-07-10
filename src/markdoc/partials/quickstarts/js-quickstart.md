@@ -106,7 +106,7 @@ Please note: This application requires Node.js version 18.0.0 or higher.
 
 Create a file named `requestor.mjs` and copy the following content into it. The code engages 5 providers (up to 3 at the same time) to run a command on each of them. The command checks the CPU of the provider and prints it together with the node's name to your terminal.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/mgordel/JST-926/new-quickstart/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 
@@ -138,7 +138,6 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="Next steps" %}
 
 - [Quickstart Explained](/docs/creators/javascript/tutorials/quickstart-explained)
-<!-- rebuild this article -->
 
 {% /docnavigation %}
 

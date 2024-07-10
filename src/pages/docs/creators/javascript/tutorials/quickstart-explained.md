@@ -75,14 +75,14 @@ const glm = new GolemNetwork({
 ```
 
 - api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
-- logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal.
+- logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal, without this line a default logger would be used, which is the [debug logger](https://www.npmjs.com/package/debug). 
 
 Once we connect to the network (in reality, connecting to the locally installed `yagna`), we can leverage the API of the `GolemNetwork` object. In this example, we will use `.manyOf()` to acquire computational resources, if we needed a single provider we could alternatively get a `rental` directly from the `GolemNetowk` using the `.oneOf()` method. (Note, there is also a low-level API available, that lets you dive deep into various subdomains within the Golem Network domain space.)
 
 ```js
 const pool = await glm.manyOf({
   // I want to have a minimum of one machine in the pool, but only a maximum of 3 machines can work at the same time
-  concurrency: { min: 1, max: 3 },
+  poolSize: { min: 1, max: 3 },
   order,
 })
 ```
@@ -161,7 +161,7 @@ Here there is the whole code:
 We had created the simple requestor script, that ran the same command on a number of remote computers.
 To achieve it we had:
 
-- imported `@golem-sdk/task-executor` lib
+- imported `@golem-sdk/golem-js` lib
 - utilized Immediately Invoked Async Function Expression
 - created GolemNetwork instance
 - created a pool of `rental` objects

@@ -28,7 +28,7 @@ As the script will use API and model provided by the JS SDK `golem-js` library, 
 
 Since version 3.0, golem-js leverages the notion of renting compute resources and accordingly exposes domain APIs around it.
 
-The `GolemNetwork` is the point of entry that represents a connection to the Yagna service and thus the Golem Network. It lets you rent resources and (if you need to implement more customized logic) get access to the core modules (market, activity, payment, rental).
+The `GolemNetwork` is the point of entry that represents a connection to the Yagna service and thus the Golem Network. It lets you rent resources and (if you need to implement more customized logic) get access to the core modules (market, activity, payment, network, rental).
 
 The act of renting resources from a provider is represented by a `ResourceRental` object that incorporates all processes and activities required to engage and proceed with a provider. You can get an instance of a `ResourceRental` directly from GolemNetwork or via a pool of rentals.
 
