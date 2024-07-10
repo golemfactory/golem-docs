@@ -52,7 +52,7 @@ In this layout, there are three elements:
 
 - An `Options` form, where you can define input params,
 - An `Actions` section with "Echo Hello World" button, which executes such a command on the remote Golem node,
-- A "Results" container, which displays the results
+- A `Results` container, which displays the results
 
 The js script defines:
 
@@ -82,14 +82,10 @@ We should see our app available in the browser:
 
 If you click the **Echo Hello World** button, after a while, in the result container, you should get the result of the script:
 
-- messages showng the script progress
-- resut of executed command (`Hello Golem from ...`
+- the result of executing the script in the Results container
+- debug logs in the console window
 
-You see also check the logs of the requestor script in the console.
-
-<!-- update screenshot -->
-
-![Output logs](/browser_log.png)
+![Output logs](/webrequestor.gif)
 
 {% docnavigation title="Next steps" %}
 
