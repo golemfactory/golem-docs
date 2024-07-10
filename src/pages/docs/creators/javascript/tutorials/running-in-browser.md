@@ -14,7 +14,7 @@ In the Quickstart, the js script is in an external file. In this tutorial we wil
 
 ## Prerequisites
 
-Before proceeding, you'll need to install and launch the Yagna service, version 0.13.0 or later. Installation instructions can be found through the manual Yagna installation guide available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
+Before proceeding, you'll need to install and launch the Yagna service, version 0.13.0 or later. Installation instructions can be found through the manual Yagna installation guide available [here](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 
 In addition, you need to start Yagna with a parameter that allows you to handle REST API requests with a CORS policy. You can do this by running the following command:
 
@@ -198,7 +198,7 @@ Now let's create the `appendResults()` function which will put the output of our
 
 ## Getting logs
 
-The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/golem-js/reference/interfaces/utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
+The TaskExecutor offers an optional `logger` parameter. It will accept an object that implements the [Logger](/docs/golem-js/reference/interfaces/shared_utils_logger_logger.Logger) interface. The `logger` will utilize an `appendLog` function to add applicable records to the log storage area.
 
 ```html
 <script type="module">

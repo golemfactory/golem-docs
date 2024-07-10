@@ -11,7 +11,7 @@ In this tutorial, you will learn how to quickly access the internet when running
 
 ## Prerequisites
 
-- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)).
+- Yagna service installed and running with the `try_golem` app-key configured ([see instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors)).
 
 ## Overview
 

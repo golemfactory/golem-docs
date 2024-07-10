@@ -8,7 +8,7 @@ type: Introduction
 
 ## Prerequisites
 
-Before you get started, make sure you have installed [yagna](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) and [created an app-key](/docs/creators/javascript/examples/using-app-keys#creating-unique-app-keys)
+Before you get started, make sure you have installed [yagna](/docs/creators/tools/yagna/yagna-installation-for-requestors) and [created an app-key](/docs/creators/javascript/examples/using-app-keys#creating-unique-app-keys)
 
 {% alert level="info" %}
 

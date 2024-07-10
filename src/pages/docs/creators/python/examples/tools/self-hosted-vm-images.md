@@ -7,11 +7,11 @@ type: Instructions
 
 # Self-hosted VM images
 
-To streamline the experience for Golem developers, we provide a central repository for the VM images (.gvmi files) which has been [described in the this article](/docs/creators/python/examples/tools/publishing-custom-images).
+To streamline the experience for Golem developers, we provide a central repository for the VM images (.gvmi files) which has been [described in the this article](/docs/creators/tools/gvmkit/publishing-custom-images).
 
 At the same time, we realize that application developers may choose to publish said images in other, publicly-accessible locations at their discretion.
 
-The process of [preparation and conversion](/docs/creators/python/examples/tools/converting-docker-image-to-golem-format) of a self-published GVMI image is mostly the same as for the images uploaded into Golem's central repo. However, once you have the `.gvmi` file ready, there are two additional steps that need to be performed.
+The process of [preparation and conversion](/docs/creators/tools/gvmkit/converting-docker-image-to-golem-format) of a self-published GVMI image is mostly the same as for the images uploaded into Golem's central repo. However, once you have the `.gvmi` file ready, there are two additional steps that need to be performed.
 
 ## Obtaining the VM image hash
 
