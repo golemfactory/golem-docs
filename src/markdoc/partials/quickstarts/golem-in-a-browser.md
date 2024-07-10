@@ -2,10 +2,10 @@
 
 In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
 
-Before getting started, you need to install and launch the Yagna service in version 0.15.0 or later. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors).
+Before getting started, you need to install and launch the Yagna service in version 0.15.2 or later. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 
 {% alert level="warning" %}
-Follow the Yagna installation instructions including to [set up the app-key](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors) step.
+Follow the Yagna installation instructions including to [set up the app-key](/docs/creators/tools/yagna/yagna-installation-for-requestors) step.
 
 Then, start the Yagna with a `--api-allow-origin` that allows you to handle REST API requests with a CORS policy:
 
@@ -46,7 +46,7 @@ This will install the `http-server` utility to host our web page, where we will 
 
 Next, we'll create the main `index.html` file with the following content:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/beta/examples/web/hello.html" language="html" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/web/hello.html" language="html" /%}
 
 In this layout, there are three elements:
 

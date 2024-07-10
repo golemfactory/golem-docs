@@ -72,7 +72,7 @@ import { TaskExecutor } from '@golem-sdk/task-executor'
 ```
 
 In (1) we create a TaskExecutor Instance using a factory method. In this example, we use the minimal set of parameters: namely the hash indicating the image with Node.js installed - the image we will deploy on the provider and api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network.
-We use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
+We use api-key that was generated in the process of [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors)
 
 ```js
 const executor = await TaskExecutor.create({

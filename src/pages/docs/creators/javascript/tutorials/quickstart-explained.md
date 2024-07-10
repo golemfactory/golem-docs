@@ -74,7 +74,7 @@ const glm = new GolemNetwork({
 })
 ```
 
-- api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/javascript/examples/tools/yagna-installation-for-requestors)
+- api-key value - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors)
 - logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal, without this line a default logger would be used, which is the [debug logger](https://www.npmjs.com/package/debug). 
 
 Once we connect to the network (in reality, connecting to the locally installed `yagna`), we can leverage the API of the `GolemNetwork` object. In this example, we will use `.manyOf()` to acquire computational resources, if we needed a single provider we could alternatively get a `rental` directly from the `GolemNetowk` using the `.oneOf()` method. (Note, there is also a low-level API available, that lets you dive deep into various subdomains within the Golem Network domain space.)

@@ -124,9 +124,7 @@ node requestor.mjs
 
 The output of the script should look very similar to the one below:
 
-<!-- replace this png -->
-
-![Output logs](/run_log.png)
+![Output logs](https://github.com/golemfactory/golem-docs/assets/26308335/246b6976-ced0-4b37-ae13-20b42628db32)
 
 The information about the `node.js` version included in the image that our script deploys on the remote computer, can be found at the end of the script's logs.
 
