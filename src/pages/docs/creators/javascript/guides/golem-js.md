@@ -61,7 +61,8 @@ Features exposed by a high-level generic purpose API allow you to:
 
 <!-- to define next steps -->
 
-The [examples](https://github.com/golemfactory/golem-js/tree/beta/examples) directory in the repository contains various usage patterns for the SDK. You can browse through them and learn about the recommended practices. All examples are automatically tested during our release process.
+The [examples](https://github.com/golemfactory/golem-js/tree/master/examples) directory in the repository contains various usage patterns for the SDK. You can browse through them and learn about the recommended practices. All examples are automatically tested during our release process.
+
 
 You can also start exploting [API reference]().
 
