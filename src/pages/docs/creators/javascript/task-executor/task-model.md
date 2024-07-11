@@ -24,7 +24,7 @@ So, to run your app on Golem Network, you need:
 
 - A Yagna service that will let you connect to the Golem Network.
 - A Docker-like [Image](/docs/creators/javascript/guides/golem-images), that constitutes an environment in which you will run your commands.
-- A [requestor script](/docs/creators/javascript/tutorials/quickstart-explained), in which you will define tasks and execute them.
+- A [requestor script](/docs/creators/javascript/task-executor/te-node-quickstart-explained), in which you will define tasks and execute them.
 
 The script will use Task API provided by JS SDK lib, so let’s get familiar with the Task model.
 

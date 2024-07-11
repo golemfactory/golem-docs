@@ -63,17 +63,16 @@ Features exposed by a high-level generic purpose API allow you to:
 The [examples](https://github.com/golemfactory/golem-js/tree/master/examples) directory in the repository contains various usage patterns for the SDK. You can browse through them and learn about the recommended practices. All examples are automatically tested during our release process.
 
 
-You can also start exploting [API reference](https://docs.golem.network/docs/golem-js/reference/overview).
+You can also start exploring [API reference](https://docs.golem.network/docs/golem-js/reference/overview).
 
 
 {% /docnavigation %}
 
 {% docnavigation title="See also" %}
 
-If you wish to learn more about how the SDK functions under the hood, please check out our more [advanced examples](https://github.com/golemfactory/golem-js/tree/beta/examples/advanced)
+If you wish to learn more about how the SDK functions under the hood, please check out our more [basic and advanced examples](https://github.com/golemfactory/golem-js/tree/master/examples/rental-model).
 
-If you wish to learn more about the usage for low-level features of the SDK, please check out our [low level API examples](https://github.com/golemfactory/golem-js/tree/beta/examples/advanced)
+If you wish to learn more about the usage for low-level features of the SDK, please check out our [Core API examples](https://github.com/golemfactory/golem-js/tree/master/examples/core-api)
 
-<!-- to do: fix the link for low-level -->
 
 {% /docnavigation %}

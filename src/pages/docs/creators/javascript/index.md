@@ -56,7 +56,7 @@ You will find a list of instructions for Golem tools [here](https://docs.golem.n
 
 - [Guides](/docs/creators/javascript/guides). They are intended for those who prefer to begin by understanding the Golem Network concept and have an overview of the model used. You can also find an explanation of Golem images and instructions on how to create custom ones or how to access the internet from a remote node.
 
-- **JS Task API** agregates [examples](/docs/creators/javascript/examples) and its [API Reference](/docs/golem-js/reference/overview). It will let you explore Task API and find ready-to-run examples with explanations that will help you add these new features to your apps.
+- **JS Task API** agregates introduction to the Task model API, Task API quickstarts, [examples](/docs/creators/javascript/examples) and its [API Reference](/docs/golem-js/reference/overview). It will let you explore Task API and find ready-to-run examples with explanations that will help you add these new features to your apps.
 
 - Documentation and usage examples for the common **Golem tools** are available in the `Common developer tools` section.
 

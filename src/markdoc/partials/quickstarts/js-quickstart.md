@@ -141,6 +141,6 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 
 - [Overview of JS SDK components](/docs/creators/javascript) 
 - [Simple introduction to the Golem Network and Resource Rental Model](/docs/creators/javascript/guides/golem-js)
-- [JS Task Model](/docs/creators/javascript/task-executor/task-model)
+- Introduction to [JS Task Model](/docs/creators/javascript/task-executor/task-model) suitable for for use cases involving the batch-map-reduce type of operations that can be distributed across many rented resources.
 
 {% /docnavigation %}
