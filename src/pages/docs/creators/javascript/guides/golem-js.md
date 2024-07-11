@@ -59,7 +59,6 @@ Features exposed by a high-level generic purpose API allow you to:
 
 {% docnavigation title="Next steps" %}
 
-<!-- to define next steps -->
 
 The [examples](https://github.com/golemfactory/golem-js/tree/master/examples) directory in the repository contains various usage patterns for the SDK. You can browse through them and learn about the recommended practices. All examples are automatically tested during our release process.
 
