@@ -140,7 +140,7 @@ However, you can accomplish much more. Here are some suggested next steps to exp
 {% docnavigation title="See also" %}
 
 - [Overview of JS SDK components](/docs/creators/javascript) 
-- [Simple introduction to the Golem Network and JS SDK](/docs/creators/javascript/guides/golem-js)
+- [Simple introduction to the Golem Network and Resource Rental Model](/docs/creators/javascript/guides/golem-js)
 - [JS Task Model](/docs/creators/javascript/task-executor/task-model)
 
 {% /docnavigation %}
