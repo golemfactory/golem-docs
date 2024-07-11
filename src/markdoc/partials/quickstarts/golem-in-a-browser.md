@@ -28,7 +28,8 @@ yagna service run --api-allow-origin=http://localhost:8080
 {% /tabs %}
 
 The `--api-allow-origin` value should be set to the URL where your web application will be served.
-In this example, we will use `http-server`.
+
+In this example, we will use `http-server` with a default port 8080.
 
 {% /alert %}
 
