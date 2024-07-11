@@ -65,7 +65,6 @@ The [examples](https://github.com/golemfactory/golem-js/tree/master/examples) di
 
 You can also start exploting [API reference]().
 
-<!-- to do: fix the link for api -->
 
 {% /docnavigation %}
 
