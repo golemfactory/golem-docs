@@ -105,6 +105,7 @@ mkdir try_golem
 cd try_golem
 npm init
 npm install @golem-sdk/task-executor
+npm install @golem-sdk/pino-logger
 ```
 
 Please note: This application requires Node.js version 18.0.0 or higher.
