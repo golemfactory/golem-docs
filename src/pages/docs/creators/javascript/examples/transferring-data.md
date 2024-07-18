@@ -62,7 +62,7 @@ echo console.log("Hello Golem World!"); > worker.mjs
 
 {% /alert  %}
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/transferring-data/upload-file.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/upload-file.mjs" language="javascript" /%}
 
 ![Uploadfile output log](/uplaodfile_log.png)
 
@@ -70,13 +70,13 @@ echo console.log("Hello Golem World!"); > worker.mjs
 
 In this example, we create a file on a remote computer, list its content to a result object, and finally download it to compare its content with the result obtained remotely.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/transferring-data/download-file.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/download-file.mjs" language="javascript" /%}
 
 ![Downloadfile output log](/downloadFile_log.png)
 
 ## Uploading JSON to provider
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/transferring-data/upload-json.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/upload-json.mjs" language="javascript" /%}
 
 ![DownloadJSON output logs](/uploadJSON_log.png)
 
@@ -98,7 +98,7 @@ The example code should be saved as the `index.html` file and served by i.e. `ht
 
 {% /alert  %}
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/transferring-data/transfer-data-in-browser.html" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/transfer-data-in-browser.html" language="javascript" /%}
 
 The `.uploadData(fileData, inputImage)` method is used to copy the user-provided data to the location defined by `inputImage`. The file is read from a disk by the `readFile()` function.
 
@@ -122,6 +122,6 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
 
 {% /alert  %}
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/transferring-data/upload-json-in-browser.html" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/upload-json-in-browser.html" language="javascript" /%}
 
 All other functions are explained in the [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.

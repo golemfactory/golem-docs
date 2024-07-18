@@ -48,7 +48,7 @@ You can define minimal requirements for an environment provided by a node by sta
 
 You can do this in the TaskExecutor options:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/selecting-providers/demand.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/selecting-providers/demand.mjs" language="javascript" /%}
 
 {% alert level="warning" %}
 Be careful, filtering is done internally by Yagna and if your requirements turn out to be too demanding you will not receive any proposals from providers and your requestor script will terminate after the timeout.
@@ -74,7 +74,7 @@ Go to the [Golem Network Stats](https://stats.golem.network/network/providers/on
 
 {% /alert  %}
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/selecting-providers/whitelist.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/selecting-providers/whitelist.mjs" language="javascript" /%}
 
 {% alert level="info" %}
 You can read provider names from `ctx` workContext or from the proposal. We will look into proposals in the next section.
@@ -88,7 +88,7 @@ The whole process begins with requestor demand. The network will respond with pr
 
 Let's see how to use it:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/selecting-providers/custom-price.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/selecting-providers/custom-price.mjs" language="javascript" /%}
 
 Note that `customFilter` is a function that accepts a `proposal` object as its parameter and should return `true` or `false` depending on the decision based on the proposal properties.
 

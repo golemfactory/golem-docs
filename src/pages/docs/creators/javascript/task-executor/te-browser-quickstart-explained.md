@@ -230,7 +230,7 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
 
 Now that we have all the necessary components defined, the code between `<script>` tags should look like this:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/tutorials/running-from-browser/index.html" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/tutorials/running-from-browser/index.html" language="javascript" /%}
 
 Now if we have:
 

@@ -114,7 +114,7 @@ const taskToRunOnProvider = async (ctx) => (await ctx.run('node -v')).stdout
 The output of the task function is passed to `executor.run()` and assigned to taskResult.
 Finally, we print it to the console.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/quickstarts/quickstart/requestor.mjs" language="javascript" /%}
 
 ## Summary
 

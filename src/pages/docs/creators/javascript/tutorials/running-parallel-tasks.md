@@ -323,7 +323,7 @@ Once we get the password we print it in the console and end executor.
 
 ### The complete example
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/tutorials/running-parallel-tasks/index.mjs" language="javascript" /%}
 
 To test our script, copy it into the `index.mjs` file. Ensure your Yagna service is running and run:
 

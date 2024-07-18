@@ -70,7 +70,7 @@ echo console.log("Hello Golem World!"); > worker.mjs
 
 Below is an example of a simple script that remotely executes `node -v`.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/single-command.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/single-command.mjs" language="javascript" /%}
 
 Note that `ctx.run()` accepts a string as an argument. This string is a command invocation, executed exactly as one would do in the console. The command will be run in the folder defined by the `WORKDIR` entry in your image definition.
 
@@ -78,7 +78,7 @@ Note that `ctx.run()` accepts a string as an argument. This string is a command 
 
 Your task function can consist of multiple steps, all run on the `ctx` context.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/multiple-run-prosaic.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/multiple-run-prosaic.mjs" language="javascript" /%}
 
 To ensure the proper sequence of execution, all calls must be awaited. We only handle the result of the second `run()` and ignore the others.
 
@@ -100,7 +100,7 @@ Depending on how you finalize your batch, you will obtain either:
 
 Use the beginBatch() method and chain commands followed by `.end()`.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/batch-end.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/batch-end.mjs" language="javascript" /%}
 
 All commands after `.beginBatch()` are run in a sequence. The chain is terminated with `.end()`. The output is a Promise of an array of result objects. They are stored at indices according to their position in the command chain (the first command after `beginBatch()` has an index of 0).
 
@@ -112,7 +112,7 @@ The output of the 3rd command, `run('cat /golem/input/output.txt')`, is under th
 
 To produce a Readable Stream, use the `beginBatch()` method and chain commands, followed by `endStream()`.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/batch-endstream-chunks.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/batch-endstream-chunks.mjs" language="javascript" /%}
 
 Note that in this case, as the chain ends with ` .endStream()`, we can read data chunks from ReadableStream, denoted as `res`.
 
@@ -124,7 +124,7 @@ Once the stream is closed, we can terminate our TaskExecutor instance.
 
 Since closing the chain with `.endStream()` produces ReadableStream, you can also synchronously retrieve the results:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/composing-tasks/alert-code.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/alert-code.mjs" language="javascript" /%}
 
 {% /alert %}
 

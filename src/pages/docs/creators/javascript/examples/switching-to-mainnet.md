@@ -40,6 +40,6 @@ node index.mjs
 
 In this example, we create the TaskExecutor with additional parameters that indicate we intend to run our task on the Polygon platform.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/switching-to-mainnet/run-on-polygon.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/switching-to-mainnet/run-on-polygon.mjs" language="javascript" /%}
 
 In the script output, you can see that now the network is a `Polygon`.
