@@ -32,6 +32,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm install @golem-sdk/task-executor
+npm install @golem-sdk/pino-logger
 ```
 
 Copy the code into the `index.mjs` file in the project folder and run:
@@ -42,25 +43,26 @@ node index.mjs
 
 ## Running tasks in parallel
 
-If you want to run your tasks in parallel, you can call `.run()` multiple times on the same `TaskExecutor` object. The maximum number of concurrently engaged providers is defined by the `maxParallelTasks` parameter. Providers can be engaged more than once until all tasks are executed.
+If you want to run your tasks in parallel, you can call `.run()` multiple times on the same `TaskExecutor` object. The maximum number of concurrently engaged providers is defined by the `maxParallelTasks` parameter (default is 5). Providers can be engaged more than once until all tasks are executed.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/map.mjs" language="javascript" /%}
 
 {% alert level="warning" %}
 
-Note that we utilize the `Promise.all()` method to process outputs from `futureResults` which is an iterable of promises. While this approach allowed us to keep the snippet short and simple, there is a pitfall with such an approach. This method rejects when any of the input's promises are rejected, so if any of the tasks fail (after retries) user will not get _any_ results at all. To avoid such a scenario use `Promise.allSettled()` instead.
+Note that we utilize the `Promise.allSettled()` method to process outputs from `futureResults` which is iterable of promises. If we used `Promise.all()` it would reject when any of the input's promises are rejected, so if any of the tasks fail (after retries) user will not get _any_ results at all.
 
 {% /alert %}
 
 In the example, we have an array of 5 elements `[1, 2, 3, 4, 5]` and we `map` over each value to define a separate step for each element in the array. Each step is a command that prints the value of the element to the console.
 
-![Multiple run map](/map_log.png)
+![Multiple run map](/te/map_log_1.png)
+![Multiple run map](/te/map_log_2.png)
+![Multiple run map](/te/map_log_3.png)
+![Multiple run map](/te/map_log_4.png)
 
 In the output logs, you can have some interesting observations:
 
-The provider `sharkoon_379_6` was engaged first. When he had finished his first task he was still the only available provider and he received another task to execute. In the meantime, other providers were successfully engaged and the next tasks were dispatched to them.
-
-Note that even though provider `sharkoon_379_8` was engaged before provider `10hx4r2_2.h`, the latter completed its task before the former. In the network, different nodes offer varying performance.
+Even though provider `testnet-c1-15` was engaged before provider `jiuzhang.h`, the latter started and completed the task execution of its task (2) before the former (1). In the network, different nodes offer varying performance and some need more time start computations.
 
 ## Defining the number of providers used
 
@@ -94,23 +96,27 @@ In the code, we decreased the `maxParallelTasks` value from the default value of
 
 The `onActivityReady()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The code used in the `onActivityReady()` method contains an additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `onActivityReady()` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
 
-Note how we utilized the `ctx` worker context to get the provider name using the `provider.name` property.
+Note how we utilized the `exe` exeUnit context to get the provider name using the `provider.name` property.
 
 Inside each task function we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
 
+<!-- bug noticed in the logs, start -->
+
 ![OnActivityReady](/onactivityready.png)
 
-The log from this example shows that even if the provider `imapp1019_0.h` was eventually
-used to execute 4 tasks, it uploaded the log only once. Its output file - downloaded after the last task was executed - contained the following:
+The log from this example shows that even if the provider `testnet-c1-16` was eventually
+used to execute 3 tasks, it uploaded the log only once. Its output file - downloaded after the last task was executed - contained the following:
 
 ```
-some action log
-processing item: 3
+Action log:
+processing item: 1
 processing item: 4
 processing item: 5
 ```
 
 This log once again illustrates that providers offer different performance levels. Even though `SBG5-1.h` and `WAW1-16.h` signed agreements before Task 3 was computed on `imapp1019_0.h`, this provider managed to complete task 3, 4 and 5 before the others downloaded the `action_log` file and completed their first task.
+
+<!-- bug noticed in the logs, end  -->
 
 ## Single run
 
@@ -118,12 +124,37 @@ Sometimes you don't need to run tasks in parallel and a single run is sufficient
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/single-run.mjs" language="javascript" /%}
 
-The requestor script runs a single task defined by a task function: `ctx.run("node -v")`. The output of the command is available through `stdout` of the `result` object returned from the `ctx.run()` function:
+The requestor script runs a single task defined by a task function: `exe.run("node -v")`. The output of the command is available through `stdout` of the `result` object returned from the `exe.run()` method:
 
 Below, you can see the script logs:
 
-![Single run](/run_log.png 'Requestor script output logs')
+![Single run](/te/run_log_1.png 'Requestor script output logs')
+![Single run](/te/run_log_2.png 'Requestor script output logs')
 
-In the logs, we can see that the requestor uses the Holesky network for payments (a test network). The task was executed once on a single provider.
+In the logs, we can see that the requestor uses the Holesky network for payments (a test network).
 
-In the table, we see a summary of the costs (paid here in test GLM), along with the result of the command which outputs the version of the node in the image deployed on the provider.
+<!-- bug noticed in the logs, why the budget for 0.5 is 6.25?
+[18:13:33.960] INFO: Created allocation {"allocationId":"3d44b273-b636-4617-8380-0f939ee7056d","budget":"6.25","platform":"erc20-holesky-tglm"}
+
+ -->
+
+```
+[18:13:33.960] INFO: Created allocation { ... "platform":"erc20-holesky-tglm"}
+```
+
+The task was executed once on a single provider.
+
+In the logs,
+
+```
+[18:13:44.283] INFO: Negotiation summary: {"agreements":1,"providers":1}
+[18:13:44.283] INFO: Agreement 1: {"agreement":"b50baed3e2","provider":"testnet-c1-9","tasks":1,"cost":"0.000007024626529167","paymentStatus":"paid"}
+[18:13:44.283] INFO: Cost summary: {"totalCost":"0.000007024626529167","totalPaid":"0.000007024626529167"}
+
+```
+
+we see a summary of the costs (paid here in test GLM), along with the result of the command which outputs the version of the node in the image deployed on the provider:
+
+```
+Task result: v20.15.0
+```
