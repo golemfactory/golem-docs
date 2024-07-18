@@ -52,6 +52,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm i @golem-sdk/task-executor
+npm i @golem-sdk/pino-logger
 ```
 
 Copy the code into the `index.mjs` file in the project folder and run:
@@ -72,11 +73,11 @@ Below is an example of a simple script that remotely executes `node -v`.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/single-command.mjs" language="javascript" /%}
 
-Note that `ctx.run()` accepts a string as an argument. This string is a command invocation, executed exactly as one would do in the console. The command will be run in the folder defined by the `WORKDIR` entry in your image definition.
+Note that `exe.run()` accepts a string as an argument. This string is a command invocation, executed exactly as one would do in the console. The command will be run in the folder defined by the `WORKDIR` entry in your image definition.
 
 ### Running multiple commands (prosaic way)
 
-Your task function can consist of multiple steps, all run on the `ctx` context.
+Your task function can consist of multiple steps, all run on the `exe` exeUnit.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/multiple-run-prosaic.mjs" language="javascript" /%}
 
@@ -86,7 +87,8 @@ To ensure the proper sequence of execution, all calls must be awaited. We only h
 If you use this approach, each command is sent separately to the provider and then executed.
 {% /alert %}
 
-![Multiple Commands output log](/command_prosaic_log.png)
+![Multiple Commands output log](/te/command_prosaic_log_1.png)
+![Multiple Commands output log](/te/command_prosaic_log_2.png)
 
 ### Organizing commands into batches
 
@@ -106,7 +108,8 @@ All commands after `.beginBatch()` are run in a sequence. The chain is terminate
 
 The output of the 3rd command, `run('cat /golem/input/output.txt')`, is under the index of 2.
 
-![Commands batch end output logs](/batch_end_log.png)
+![Commands batch end output logs](/te/batch_end_log_1.png)
+![Commands batch end output logs](/te/batch_end_log_2.png)
 
 ### Organizing commands into a batch producing a Readable stream
 
@@ -118,7 +121,9 @@ Note that in this case, as the chain ends with ` .endStream()`, we can read data
 
 Once the stream is closed, we can terminate our TaskExecutor instance.
 
-![Commands batch endstream output logs](/batch_endsteram_log.png)
+![Commands batch endstream output logs](/te/batch_stream_log_1.png)
+![Commands batch endstream output logs](/te/batch_stream_log_2.png)
+![Commands batch endstream output logs](/te/batch_stream_log_3.png)
 
 {% alert level="info" %}
 
@@ -141,6 +146,5 @@ In the first example, we run a command that produces both stdout and stderr outp
 #### runAndStream scenario with timeout defined
 
 In this example, we show how to use `remoteProcess.waitForExit()` to terminate the process. Note that in the current implementation, the exit caused by timeout will terminate the activity on a provider, therefore the user cannot run another command on the provider. The task executor will instead run the next task on another provider.
-
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/streams/stream-waitforexit.mjs" language="javascript" /%}
