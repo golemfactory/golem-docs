@@ -29,7 +29,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm install @golem-sdk/task-executor
-npm i @golem-sdk/pino-logger
+npm install @golem-sdk/pino-logger
 ```
 
 Copy the code into the `index.mjs` file in the project folder and run:
@@ -52,6 +52,7 @@ market: {
         maxCpuPerHourPrice: 1.0,
         maxEnvPerHourPrice: 0.5,
  },
+ ...
 ```
 
 Note, that the total cost depends on several factors like the number of threads, the actual CPU usage, task duration, and of course unit prices.

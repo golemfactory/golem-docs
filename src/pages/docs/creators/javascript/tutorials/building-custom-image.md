@@ -113,9 +113,10 @@ mkdir golem-example
 cd golem-example
 npm init
 npm i @golem-sdk/task-executor
+npm i @golem-sdk/pino-logger
 ```
 
-We can now create our `index.mjs` requestor file, with the `package: "8b238595..."` matching our image hash.
+We can now create our `index.mjs` requestor file, with the `imageHash: "8b238595..."` matching our image hash.
 
 {% tabs %}
 {% tab label="JavaScript" %}
@@ -125,7 +126,7 @@ We can now create our `index.mjs` requestor file, with the `package: "8b238595..
 {% /tab  %}
 {% /tabs %}
 
-In the script, we specify that our task should use the newly created image (indicated by `hash`: `8b238595...`). We try to run two commands. The first one prints the content of the `decription.txt` file (it is a copy of the Dockerfile used to create the image). The second command should list the content of the /golem/work folder. We copied some files there as well (check the content of the `description.txt` file), but as /golem/work is defined as VOLUME and created as new when VM is started, this folder will be empty.
+In the script, we specify that our task should use the newly created image (indicated by `imageHash`: `8b238595...`). We try to run two commands. The first one prints the content of the `decription.txt` file (it is a copy of the Dockerfile used to create the image). The second command should list the content of the /golem/work folder. We copied some files there as well (check the content of the Dockerfile above or the `description.txt` file on the provider), but as /golem/work is defined as VOLUME and created as new when VM is started, this folder will be empty.
 
 ## Running the script
 
@@ -135,7 +136,8 @@ Run the following command after ensuring the Yagna service is running and config
 
 You have successfully created and used your Golem image in a requestor script!
 
-![Image showing successfull use of a golem image in a script](/image_tutorial_upload.png)
+![Image showing successfull use of a golem image in a script](/te/image_tutorial_upload_1.png)
+![Image showing successfull use of a golem image in a script](/te/image_tutorial_upload_2.png)
 
 Note that the content of the `description.txt` file that was created in the /golem/info folder is accessible, while the /golem/work folder is empty.
 
