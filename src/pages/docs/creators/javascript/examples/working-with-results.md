@@ -24,6 +24,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm i @golem-sdk/task-executor
+npm i @golem-sdk/pino-logger
 ```
 
 {% alert level="info" %}
@@ -63,18 +64,15 @@ When you run your tasks in a batch that is concluded with `.end()`:
 
 you will receive an array of result objects:
 
-you will receive an array of result objects:
-
 ![results logs](/result_batch_log.png)
 
 In case you end your batch with the `endStream()` method:
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/working-with-results/multi-command-endstream.mjs" language="javascript" /%}
 
-Each `data` chunk will contain a result object, in the sequence that the commands were in within the batch:
+as a result you get an Observable [rxjs](https://rxjs.dev/guide/observable) object on which you can subscribe to appropriate events
 
 ![results output logs](/batch_result_endstream_1.png)
-![results output logs](/batch_result_endstream_2.png)
 
 ## What to do if your command fails?
 
@@ -106,4 +104,4 @@ In the case of the failure in the `run()` method, we receive the result object w
 - `result: 'Error'`,
 - `stdout: null`,
 - `stderr: 'node: bad option: -w\n',` - the command output
-- `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
+- `message: 'ExeScript command exited with code 9'` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
