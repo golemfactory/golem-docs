@@ -18,35 +18,35 @@ The React SDK is designed to work with the yagna version 0.13.0 or above. If you
 
 ## Installation
 
-To add the SDK to an existing react project simply install it using your favorite package manager:
+To add the SDK to an existing React project simply install it and it's peer dependencies using your favorite package manager:
 
 {% tabs %}
 
 {% tab label="npm" %}
 
 ```bash
-npm install @golem-sdk/react
+npm install @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
 {% tab label="yarn" %}
 
 ```bash
-yarn add @golem-sdk/react
+yarn add @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
 {% tab label="pnpm" %}
 
 ```bash
-pnpm add @golem-sdk/react
+pnpm add @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
 {% tab label="bun" %}
 
 ```bash
-bun add @golem-sdk/react
+bun add @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
