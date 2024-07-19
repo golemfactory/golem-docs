@@ -27,6 +27,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm i @golem-sdk/task-executor
+npm i @golem-sdk/pino-logger
 ```
 
 Copy the code into the `index.mjs` file in the project folder and run:
@@ -92,9 +93,7 @@ set YAGNA_APPKEY=insert-your-32-char-app-key-here
 and then remove the following line from the example script:
 
 ```js
-yagnaOptions: {
-  apiKey: 'insert-your-32-char-app-key-here'
-}
+api: { key: "insert-your-32-char-app-key-here" }
 ```
 
 ### Using YAGNA_AUTOCONF_APPKEY environment variable
