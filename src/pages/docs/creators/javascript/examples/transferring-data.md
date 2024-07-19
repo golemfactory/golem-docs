@@ -40,6 +40,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm i @golem-sdk/task-executor
+npm i @golem-sdk/pino-logger
 ```
 
 To run the examples provided below, copy the code supplied there into the `index.mjs` file in the project folder and run:
@@ -94,7 +95,7 @@ The example utilizes a basic HTML boilerplate that defines UI components:
 {% alert level="warning" %}
 
 To run this example you must use Yagna version 0.13 or higher and run it using the `--api-allow-origin` parameter.
-The example code should be saved as the `index.html` file and served by i.e. `http-server`. See [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) for instructions.
+The example code should be saved as the `index.html` file and served by i.e. `http-server`. See [Web Quickstart](/docs/creators/javascript/task-executor/te-browser-quickstart) for instructions.
 
 {% /alert  %}
 
@@ -104,7 +105,7 @@ The `.uploadData(fileData, inputImage)` method is used to copy the user-provided
 
 The `.downloadData(outputImage)` method downloads the data which is accessible in the `data` attribute of the respective result object. The `setResponse()` function is used to update the `src` attribute of the dom element devised to display the output.
 
-Other functions are explained in the [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+Other functions are explained in the [Web Quickstart](/docs/creators/javascript/task-executor/te-browser-quickstart) article.
 
 ## Uploading JSON to and from the provider (in a browser)
 
@@ -124,4 +125,4 @@ To run this example you must use Yagna version 0.13 or higher and run it using t
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/upload-json-in-browser.html" language="javascript" /%}
 
-All other functions are explained in the [Web Quickstart](/docs/creators/javascript/quickstarts/golem-in-a-browser) article.
+All other functions are explained in the [Web Quickstart](/docs/creators/javascript/task-executor/te-browser-quickstart) article.
