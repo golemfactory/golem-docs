@@ -9,7 +9,7 @@ type: Tutorial
 
 ## Introduction
 
-This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network.
+This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network. The example utilize the `task-executor` library, which is part of the Golem's JS SDK.
 
 We will go through the following steps:
 
@@ -108,7 +108,7 @@ RUN apt update
 RUN apt install -y hashcat
 ```
 
-We use `dizcza/docker-hashcat:intel-cpu` Docker image as starting point, and then we define a working directory - `WORKDIR /golem/entrypoint`.
+We use `ubuntu` Docker image as starting point, and then we define a working directory - `WORKDIR /golem/entrypoint`.
 
 ### Docker image
 
@@ -142,7 +142,7 @@ This command will produce the hash of the image that you can use in the example.
 
 ```bash
 ....
--- image link (for use in SDK):
+-- image link (for use in SDK): <here is the image hash ID>
 ....
 ```
 
@@ -179,12 +179,10 @@ Create the `index.mjs` file with the following content:
 
 ```js
 import { TaskExecutor } from '@golem-sdk/task-executor'
-import { pinoPrettyLogger } from "@golem-sdk/pino-logger";
+import { pinoPrettyLogger } from '@golem-sdk/pino-logger'
 import { program } from 'commander'
 
 async function main(args) {
-  console.log(args)
-
   // todo: Create Executor
   // todo: Calculate keyspace
   // todo: Calculate boundaries for each chunk
@@ -193,14 +191,18 @@ async function main(args) {
   // todo: Shutdown executor
 }
 
-
 program
-  .option("--number-of-providers <number_of_providers>", "number of providers", (value) => parseInt(value), 3)
-  .option("--mask <mask>")
-  .requiredOption("--hash <hash>");
-program.parse();
-const options = program.opts();
-main(options).catch((error) => console.error(error));
+  .option(
+    '--number-of-providers <number_of_providers>',
+    'number of providers',
+    (value) => parseInt(value),
+    3
+  )
+  .option('--mask <mask>')
+  .requiredOption('--hash <hash>')
+program.parse()
+const options = program.opts()
+main(options).catch((error) => console.error(error))
 ```
 
 We use the `commander` library to pass arguments such as --mask and --number-of-providers. This library will print a nice argument description and an example invocation when we run the requestor script with `--help`.
@@ -216,16 +218,16 @@ To execute our tasks on the Golem Network, we need to create a TaskExecutor inst
 ```js
 const executor = await TaskExecutor.create({
   logger: pinoPrettyLogger(),
-  api: { key: "try_golem" },
+  api: { key: 'try_golem' },
   demand: {
     workload: {
-      imageHash: "055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db",
+      imageHash: '2d665b6a73d4a17e2a8e6fc726aab827fcf020cdfac62ec398dd00e4',
     },
   },
   market: {
     rentHours: 0.5,
     pricing: {
-      model: "linear",
+      model: 'linear',
       maxStartPrice: 0.5,
       maxCpuPerHourPrice: 1.0,
       maxEnvPerHourPrice: 0.5,
@@ -234,10 +236,10 @@ const executor = await TaskExecutor.create({
   task: {
     maxParallelTasks: args.numberOfProviders,
   },
-});
+})
 ```
 
-The `imageHash` parameter points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
+The `imageHash` option points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
 
 The other constructor parameters are typical configuration parameters the same as in the other examples.
 
@@ -250,16 +252,16 @@ With the TaskExecutor instance running, we can now send such a task to one of th
 
 ```js
 const keyspace = await executor.run(async (exe) => {
-  const result = await exe.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`);
-  return parseInt(result.stdout || "");
-});
+  const result = await exe.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`)
+  return parseInt(result.stdout || '')
+})
 
-if (!keyspace) throw new Error(`Cannot calculate keyspace`);
-console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`);
+if (!keyspace) throw new Error(`Cannot calculate keyspace`)
+console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`)
 ```
 
-This call tells the `executor` to execute a single task defined by the task function `async (exe) => {}`. The exe object allows us to run a task consisting of a single or batch of commands on the provider side.
-The keyspace size can be obtained from the stdout attribute of the result object returned by the task function.
+This call tells the `executor` to execute a single task defined by the task function `async (exe) => {}`. The `exe` object represent the exeUnit on the provider and allows us to run a task on the provider side.
+The keyspace size is obtained from the stdout attribute of the result object returned by the task function.
 In case we cannot calculate the size of the keyspace we will throw an error.
 
 ### Calculate boundaries for chunks
@@ -268,8 +270,10 @@ As we will run hashcat on a fragment of the whole keyspace, using the --skip and
 Knowing the keyspace size and maximum number of providers we range for each of the tasks:
 
 ```js
-const step = Math.floor(keyspace / args.numberOfProviders + 1);
-const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map((i) => i * step);
+const step = Math.floor(keyspace / args.numberOfProviders + 1)
+const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map(
+  (i) => i * step
+)
 ```
 
 Note that the number of chunks does not determine the number of engaged providers. In this example, we decided to split the job into 3 tasks, but the number of providers we want to engage is determined by the `maxParallelTasks` parameter. The executor will try to engage that number of providers and then pass the tasks to them. Once a provider is ready to execute a task, it takes up the next task from a common pool of tasks. As such, a fast provider may end up executing more tasks than a slow one.
@@ -291,18 +295,20 @@ const findPasswordInRange = async (skip) => {
   const password = await executor.run(async (exe) => {
     const [, potfileResult] = await exe
       .beginBatch()
-      .run(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${step} -o pass.potfile || true`)
-      .run("cat pass.potfile || true")
-      .end();
-    if (!potfileResult.stdout) return false;
+      .run(
+        `hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${step} -o pass.potfile || true`
+      )
+      .run('cat pass.potfile || true')
+      .end()
+    if (!potfileResult.stdout) return false
     // potfile format is: hash:password
-    return potfileResult.stdout.toString().trim().split(":")[1];
-  });
+    return potfileResult.stdout.toString().trim().split(':')[1]
+  })
   if (!password) {
-    throw new Error(`Cannot find password in range ${skip} - ${skip + step}`);
+    throw new Error(`Cannot find password in range ${skip} - ${skip + step}`)
   }
-  return password;
-};
+  return password
+}
 ```
 
 Note, that we use the `beginBatch()` method to organize together two sequential commands: the first will run the hashcat and the second will print the content of the output file.
@@ -314,12 +320,12 @@ Let's run our function for each of the ranges. We only need to wait for the firs
 
 ```js
 try {
-  const password = await Promise.any(range.map(findPasswordInRange));
-  console.log(`Password found: ${password}`);
+  const password = await Promise.any(range.map(findPasswordInRange))
+  console.log(`Password found: ${password}`)
 } catch (err) {
-  console.log(`Password not found`);
+  console.log(`Password not found`)
 } finally {
-  await executor.shutdown();
+  await executor.shutdown()
 }
 ```
 
@@ -351,7 +357,10 @@ node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 
 You should see an output similar to the one below.
 
-![Output of hashcat](/hashcat_output.png)
+![Output of hashcat](/te/hashcat_output_1.png)
+![Output of hashcat](/te/hashcat_output_2.png)
+![Output of hashcat](/te/hashcat_output_3.png)
+![Output of hashcat](/te/hashcat_output_4.png)
 
 {% alert level="info" %}
 
