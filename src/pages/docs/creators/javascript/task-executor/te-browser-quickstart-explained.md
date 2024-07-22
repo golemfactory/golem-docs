@@ -123,54 +123,67 @@ In this layout, there are three elements:
 
 Take note of the `<script>` tag in the `<head>` section; this is where we'll place our JavaScript code.
 
-## Using the @golem-sdk/golem-js bundle library
+## Using the @golem-sdk/task-executor bundle library
 
-First, we will import the `@golem-sdk/golem-js` library:
+First, we will import the `@golem-sdk/task-executor` library:
 
 ```html
 <script type="module">
-  import { TaskExecutor } from 'https://unpkg.com/@golem-sdk/golem-js'
+    import { TaskExecutor } from "https://unpkg.com/@golem-sdk/task-executor";
 </script>
 ```
 
 ### Task Executor
 
-When the user presses the `Echo Hello World` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, we will end it.
+When the user presses the `Echo Hello World` button, the `run()` function will be invoked. The body of this function should contain the typical sequence necessary to run TaskExecutor. We will first create it, then execute the task function, and finally, we will shutdown it.
 
-Note that the `create()` method received an additional 3 parameters:
+Let's look at the `create` method parameters.
 
-- `package` identifies the image that we want to run on a provider,
-- `apiKey` is the key that enables our script to use the Yagna REST API,
-- `logger` is a function that the SDK will use for logging. We'll define it short
-
-```html
-<script type="module">
-  //
-  // .. previously added code
-  //
-  async function run() {
-    const executor = await TaskExecutor.create({
-      package: '9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae',
-      yagnaOptions: {
-        apiKey: 'try_golem',
-        basePath: document.getElementById('YAGNA_API_BASEPATH').value,
-      },
-      subnetTag: document.getElementById('SUBNET_TAG').value,
-      logger,
-    })
-    await executor
-      .run(async (ctx) =>
-        appendResults((await ctx.run("echo 'Hello World'")).stdout)
-      )
-      .catch((e) => logger.error(e))
-    await executor.shutdown()
-  }
-  document.getElementById('echo').onclick = run
-</script>
+```js
+const executor = await TaskExecutor.create({
+  logger,
+  api: { key: "try_golem" },
+  ...
 ```
 
+- `logger` - we use our own logger implementation, which displays the logs in an html logs container.
+- `api: {key: }` - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors).
+
+```js
+...
+  demand: {
+    workload: {
+      imageTag: "golem/node:20-alpine",
+    },
+  },
+...
+```
+
+- In the `demand` section we define the environment needed to run our task. We do it by indicating what image is to be run on a remote node. We will use an image publicly available on the [registry](https://registry.golem.network) portal, therefore it is enough to provide a tag `golem/node:20-alpine` - it indicates an image based on `alpine` distribution and has `node.js` installed.
+
+When defining the demand users can also specify other parameters like the minimal number of threads, memory, or disk size as needed.
+
+```js
+...
+    market: {
+      rentHours: 0.5,
+      pricing: {
+        model: "linear",
+        maxStartPrice: 0.5,
+        maxCpuPerHourPrice: 1.0,
+        maxEnvPerHourPrice: 0.5,
+      },
+    }
+```
+
+Finally, we define `market` parameters.
+
+- The `rentHour` defines the maximum duration of the engagements with providers before automatic termination.
+- In `pricing` we also precise the maximum acceptable prices using the `linear` price model. It will be used to select offers from providers and let you manage the costs of running your tasks.
+
+
 The body of the `executor.run()` method is identical as in the case of the Node.js executor script:
-It is a task function that receives a worker context. It is designed to execute the command `echo 'Hello World'`. The `ctx.run()` method returns a `Promise` which resolves to a result object. This object has a `stdout` property that holds the output of our command.
+It is a task function that receives the `ExeUnit` object. It is designed to execute the command `echo 'Hello World'`. The `exe.run()` method returns a `Promise` which resolves to a result object. This object has a `stdout` property that holds the output of our command.
 
 The result is passed as an input parameter of the `appendResults()` function that will be responsible for displaying the result on the screen.
 
@@ -205,20 +218,20 @@ The TaskExecutor offers an optional `logger` parameter. It will accept an object
   //
   // .. previously added code
   //
-  export function appendLog(msg) {
-    const logs_el = document.getElementById('logs')
-    const li = document.createElement('li')
-    li.appendChild(document.createTextNode(msg))
-    logs_el.appendChild(li)
+  function appendLog(msg, level = "info") {
+      const logs = document.getElementById("logs");
+      const div = document.createElement("div");
+      div.appendChild(document.createTextNode(`[${new Date().toISOString()}] [${level}] ${msg}`));
+      logs.appendChild(div);
   }
 
   const logger = {
-    log: (msg) => appendLog(`[${new Date().toISOString()}] ${msg}`),
-    warn: (msg) => appendLog(`[${new Date().toISOString()}] [warn] ${msg}`),
-    debug: (msg) => console.log(msg),
-    error: (msg) => appendLog(`[${new Date().toISOString()}] [error] ${msg}`),
-    info: (msg) => appendLog(`[${new Date().toISOString()}] [info] ${msg}`),
-  }
+      error: (msg) => appendLog(msg, "error"),
+      info: (msg) => appendLog(msg, "info"),
+      warn: (msg) => appendLog(msg, "warn"),
+      debug: (msg) => appendLog(msg, "debug"),
+      child: () => logger,
+  };
 
   //
   // .. async function run ....
@@ -243,7 +256,7 @@ You should see the app available in the browser.
 
 [ Open localhost ](http://localhost:8080/index)
 
-If you click the 'Echo Hello World' button, after a while in the result container, we should get the result of the script, and in the log container we should see the logs of executed commands.
+If you click the `Echo Hello World` button, after a while in the result container, we should get the result of the script, and in the log container we should see the logs of executed commands.
 
 ![Output logs](/browser_log.png)
 

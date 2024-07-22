@@ -172,13 +172,14 @@ Now initialize the project, and install the `@golem-sdk/task-executor` library.
 
 ```bash
 npm init
-npm install @golem-sdk/task-executor
+npm install @golem-sdk/task-executor @golem-sdk/pino-logger commander
 ```
 
 Create the `index.mjs` file with the following content:
 
 ```js
 import { TaskExecutor } from '@golem-sdk/task-executor'
+import { pinoPrettyLogger } from "@golem-sdk/pino-logger";
 import { program } from 'commander'
 
 async function main(args) {
@@ -189,27 +190,20 @@ async function main(args) {
   // todo: Calculate boundaries for each chunk
   // todo: Run the task on multiple providers in parallel
   // todo: Process and print results
-  // todo: End executor
+  // todo: Shutdown executor
 }
 
+
 program
-  .option(
-    '--number-of-providers <number_of_providers>',
-    'number of providers',
-    (value) => parseInt(value),
-    3
-  )
-  .option('--mask <mask>')
-  .requiredOption('--hash <hash>')
-
-program.parse()
-
-const options = program.opts()
-
-main(options).catch((e) => console.error(e))
+  .option("--number-of-providers <number_of_providers>", "number of providers", (value) => parseInt(value), 3)
+  .option("--mask <mask>")
+  .requiredOption("--hash <hash>");
+program.parse();
+const options = program.opts();
+main(options).catch((error) => console.error(error));
 ```
 
-We use the `commander` library to pass arguments such as --mask and --max-workers. This library will print a nice argument description and an example invocation when we run the requestor script with --help. Note you need to install it with `npm install commander`.
+We use the `commander` library to pass arguments such as --mask and --number-of-providers. This library will print a nice argument description and an example invocation when we run the requestor script with `--help`.
 
 The main function contains the body of the requestor application. Its sole argument, `args`, contains information on the command-line arguments read by the argument parser.
 
@@ -221,17 +215,33 @@ To execute our tasks on the Golem Network, we need to create a TaskExecutor inst
 
 ```js
 const executor = await TaskExecutor.create({
-  package: '055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db',
-  maxParallelTasks: args.numberOfProviders,
-  yagnaOptions: { apiKey: `try_golem` },
-})
+  logger: pinoPrettyLogger(),
+  api: { key: "try_golem" },
+  demand: {
+    workload: {
+      imageHash: "055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db",
+    },
+  },
+  market: {
+    rentHours: 0.5,
+    pricing: {
+      model: "linear",
+      maxStartPrice: 0.5,
+      maxCpuPerHourPrice: 1.0,
+      maxEnvPerHourPrice: 0.5,
+    },
+  },
+  task: {
+    maxParallelTasks: args.numberOfProviders,
+  },
+});
 ```
 
-The package parameter is required and points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
+The `imageHash` parameter points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
 
-The other parameters are:
-`maxParallelTasks`: the maximum number of tasks we want to run in parallel
-`yagnaOptions: { apiKey: 'try_golem' }` - the api key that links your script to identity on the network.
+The other constructor parameters are typical configuration parameters the same as in the other examples.
+
+The `maxParallelTasks` parameter defines how many parts the task will be divided into and how many parallel tasks will be calculated at the same time.
 
 ### Running a single task on the network to calculate the keyspace
 
@@ -239,16 +249,16 @@ The first step in the computation is to check the keyspace size. For this, we on
 With the TaskExecutor instance running, we can now send such a task to one of the providers using the run method:
 
 ```js
-const keyspace = await executor.run(async (ctx) => {
-  const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`)
-  return parseInt(result.stdout || '')
-})
+const keyspace = await executor.run(async (exe) => {
+  const result = await exe.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`);
+  return parseInt(result.stdout || "");
+});
 
-if (!keyspace) throw new Error(`Cannot calculate keyspace`)
-console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`)
+if (!keyspace) throw new Error(`Cannot calculate keyspace`);
+console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`);
 ```
 
-This call tells the `executor` to execute a single task defined by the task function `async (ctx) => {}`. The ctx object allows us to run a task consisting of a single or batch of commands on the provider side.
+This call tells the `executor` to execute a single task defined by the task function `async (exe) => {}`. The exe object allows us to run a task consisting of a single or batch of commands on the provider side.
 The keyspace size can be obtained from the stdout attribute of the result object returned by the task function.
 In case we cannot calculate the size of the keyspace we will throw an error.
 
@@ -258,10 +268,8 @@ As we will run hashcat on a fragment of the whole keyspace, using the --skip and
 Knowing the keyspace size and maximum number of providers we range for each of the tasks:
 
 ```js
-const step = Math.floor(keyspace / args.numberOfProviders + 1)
-const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map(
-  (i) => i * step
-)
+const step = Math.floor(keyspace / args.numberOfProviders + 1);
+const range = [...Array(Math.floor(keyspace / step) + 1).keys()].map((i) => i * step);
 ```
 
 Note that the number of chunks does not determine the number of engaged providers. In this example, we decided to split the job into 3 tasks, but the number of providers we want to engage is determined by the `maxParallelTasks` parameter. The executor will try to engage that number of providers and then pass the tasks to them. Once a provider is ready to execute a task, it takes up the next task from a common pool of tasks. As such, a fast provider may end up executing more tasks than a slow one.
@@ -270,35 +278,31 @@ Note that the number of chunks does not determine the number of engaged provider
 
 Next, we can start looking for the password using multiple workers, executing the tasks on multiple providers simultaneously.
 
-For each worker, we perform the following steps:
+For each task, we perform the following steps:
 
-- Execute hashcat with proper --skip and --limit values on the provider.
-- Get the hashcat\_{skip}.potfile from the provider to the requestor.
-- Parse the result from the .potfile.
+- Execute hashcat with proper `--skip` and `--limit` values on the provider.
+- Get the `hashcat\_{skip}.potfile` from the provider to the requestor.
+- Parse the result from the `.potfile`.
 
 Let's first create a function that will look for the password in a given range of the keyspace.
 
 ```js
 const findPasswordInRange = async (skip) => {
-  const password = await executor.run(async (ctx) => {
-    const [, potfileResult] = await ctx
+  const password = await executor.run(async (exe) => {
+    const [, potfileResult] = await exe
       .beginBatch()
-      .run(
-        `hashcat -a 3 -m 400 '${args.hash}' '${
-          args.mask
-        }' --skip=${skip} --limit=${skip + step} -o pass.potfile || true`
-      )
-      .run('cat pass.potfile || true')
-      .end()
-    if (!potfileResult.stdout) return false
+      .run(`hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${step} -o pass.potfile || true`)
+      .run("cat pass.potfile || true")
+      .end();
+    if (!potfileResult.stdout) return false;
     // potfile format is: hash:password
-    return potfileResult.stdout.toString().trim().split(':')[1]
-  })
+    return potfileResult.stdout.toString().trim().split(":")[1];
+  });
   if (!password) {
-    throw new Error(`Cannot find password in range ${skip} - ${skip + step}`)
+    throw new Error(`Cannot find password in range ${skip} - ${skip + step}`);
   }
-  return password
-}
+  return password;
+};
 ```
 
 Note, that we use the `beginBatch()` method to organize together two sequential commands: the first will run the hashcat and the second will print the content of the output file.
@@ -310,12 +314,12 @@ Let's run our function for each of the ranges. We only need to wait for the firs
 
 ```js
 try {
-  const password = await Promise.any(range.map(findPasswordInRange))
-  console.log(`Password found: ${password}`)
+  const password = await Promise.any(range.map(findPasswordInRange));
+  console.log(`Password found: ${password}`);
 } catch (err) {
-  console.log(`Password not found`)
+  console.log(`Password not found`);
 } finally {
-  await executor.shutdown()
+  await executor.shutdown();
 }
 ```
 
@@ -347,12 +351,11 @@ node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 
 You should see an output similar to the one below.
 
-![Output of hashcat](/hashcat_output_1.png)
-![Second output of hashcat](/hashcat_output_2.png)
+![Output of hashcat](/hashcat_output.png)
 
 {% alert level="info" %}
 
-You can clone the @golem-sdk/task-executor repository and find the complete project in the `examples/hashcat` folder.
+You can clone the @golem-sdk/task-executor repository and find the complete project in the `examples/yacat` folder.
 {% /alert  %}
 
 ## Summary
