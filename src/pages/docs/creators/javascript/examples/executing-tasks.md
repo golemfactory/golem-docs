@@ -78,9 +78,9 @@ Below, you can see how to define the maximum number of providers to be engaged.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/max-parallel-tasks.mjs" language="javascript" /%}
 
-## Initialization tasks
+## Setting up a provider
 
-Normally, when a larger job is divided into smaller tasks to be run in parallel on a limited number of providers, these providers might be utilized for more than one task. In such cases, each task is executed in the same environment as the previous task run on that provider. To optimize performance, you might decide that some initialization tasks need only be run once per provider. This can be particularly useful if you have to send a large amount of data to the provider.
+Normally, when a larger job is divided into smaller tasks to be run in parallel on a limited number of providers, these providers might be utilized for more than one task. In such cases, each task is executed in the same environment as the previous task run on that provider. To optimize performance, you might decide that some setup tasks need only be run once per provider. This can be particularly useful if you have to send a large amount of data to the provider.
 
 This example requires an `action_log.txt` file that can be created with the following command:
 
@@ -88,17 +88,29 @@ This example requires an `action_log.txt` file that can be created with the foll
 echo Action log: > action_log.txt
 ```
 
-You can address such a need using the `onActivityReady()` method of the TaskExecutor. Here is an example:
+You can address such a need using the `setup` object that is part of the TaskExecutor options. Here is an example:
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/on-activity-ready.mjs" language="javascript" /%}
 
+Note the `task : { setup: async (exe) => {} }` function which is an async task function that we use to orchestrate our commands run on providers.
+
+```js
+ task: {
+      maxParallelTasks: 3,
+      setup: async (exe) => {
+        console.log(exe.provider.name + " is downloading action_log file");
+        await exe.uploadFile("./action_log.txt", "/golem/input/action_log.txt");
+ },
+ },
+```
+
 In the code, we decreased the `maxParallelTasks` value from the default value of 5, to make sure that some of our five tasks will be run on the same provider.
 
-The `onActivityReady()` method is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The code used in the `onActivityReady()` method contains an additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `onActivityReady()` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
+The `setup` function is used to upload a file to a remote computer that will be used to log all future activity run on this provider. The code used in the `setup` contains an additional `console.log` to demonstrate that even if the whole job consists of five tasks, the task function used in `setup` will be executed only once per provider. (Unless the provider disengages and is engaged again - in such a situation, its virtual machine would be created anew, and we would upload the file again there).
 
 Note how we utilized the `exe` exeUnit context to get the provider name using the `provider.name` property.
 
-Inside each task function we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
+Inside each task function, we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
 
 <!-- bug noticed in the logs, start -->
 
@@ -132,11 +144,6 @@ Below, you can see the script logs:
 ![Single run](/te/run_log_2.png 'Requestor script output logs')
 
 In the logs, we can see that the requestor uses the Holesky network for payments (a test network).
-
-<!-- bug noticed in the logs, why the budget for 0.5 is 6.25?
-[18:13:33.960] INFO: Created allocation {"allocationId":"3d44b273-b636-4617-8380-0f939ee7056d","budget":"6.25","platform":"erc20-holesky-tglm"}
-
- -->
 
 ```
 [18:13:33.960] INFO: Created allocation { ... "platform":"erc20-holesky-tglm"}
