@@ -112,23 +112,22 @@ Note how we utilized the `exe` exeUnit context to get the provider name using th
 
 Inside each task function, we employed the `beginBatch()` to chain multiple commands - you can see more about this feature in the [Defining Tasks](/docs/creators/javascript/examples/composing-tasks) article.
 
-<!-- bug noticed in the logs, start -->
+![OnActivityReady](/te/onactivityready_1.png)
+![OnActivityReady](/te/onactivityready_2.png)
+![OnActivityReady](/te/onactivityready_3.png)
+![OnActivityReady](/te/onactivityready_4.png)
 
-![OnActivityReady](/onactivityready.png)
-
-The log from this example shows that even if the provider `testnet-c1-16` was eventually
+The log from this example shows that even if the provider `fractal_01_2.h` was eventually
 used to execute 3 tasks, it uploaded the log only once. Its output file - downloaded after the last task was executed - contained the following:
 
 ```
 Action log:
-processing item: 1
+processing item: 3
 processing item: 4
 processing item: 5
 ```
 
-This log once again illustrates that providers offer different performance levels. Even though `SBG5-1.h` and `WAW1-16.h` signed agreements before Task 3 was computed on `imapp1019_0.h`, this provider managed to complete task 3, 4 and 5 before the others downloaded the `action_log` file and completed their first task.
-
-<!-- bug noticed in the logs, end  -->
+This log again illustrates that providers offer different performance levels. `fractal_01_2` signed an agreement as the last one of all three engaged, but deployed the image before the other two providers (it could happen that this provider has already cached that image). As Task 3 was computed on `fractal_01_2`, it received Tasks 4 and 5 and finished them all (the task in the example does not take much time to complete) before the others completed their tasks.
 
 ## Single run
 
