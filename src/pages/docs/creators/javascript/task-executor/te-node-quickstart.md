@@ -5,7 +5,7 @@ description: Learn to build JavaScript applications with this quickstart for the
 type: Quickstart
 ---
 
-# Golem JS Quickstart
+# Task Executor Quickstart
 
 ## Introduction
 

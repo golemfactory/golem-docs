@@ -32,8 +32,8 @@ npm i @golem-sdk/pino-logger
 The basic structure of the script:
 
 ```js
-import { TaskExecutor } from '@golem-sdk/task-executor'
-;(async () => {
+import { TaskExecutor } from '@golem-sdk/task-executor';
+(async () => {
   //... Function body in here
 })()
 ```
@@ -49,21 +49,19 @@ Inside the function body, there will be a sequence of 3 steps, that constitute t
 
 ```js
 (async () => {
- // 1. Create a Task Executor Instance
-  const executor = await TaskExecutor.create({
- ....
- });
-  try {
-  // 2. Run the task
-    const result = await executor.run(
- .....
- );
+  // 1. Create a Task Executor Instance
+    const executor = await TaskExecutor.create({
+    ...
+});
+try {
+    // 2. Run the task
+    const result = await executor.run();
 
- } catch (err) {
-    console.error("An error occurred:", err);
+} catch (err) {
+    console.error("An error occurred:", err);
  } finally {
-   // 3. Close Task Executor
-    await executor.shutdown();
+    // 3. Close Task Executor
+    await executor.shutdown();
  }
 })();
 ```
@@ -71,9 +69,9 @@ Inside the function body, there will be a sequence of 3 steps, that constitute t
 In (1)
 
 ```js
-  const executor = await TaskExecutor.create({
- ....
- });
+const executor = await TaskExecutor.create({
+...
+});
 ```
 
 we create a TaskExecutor Instance using a factory method. Several parameters can be provided to define the environment where your tasks will be executed, the behavior of your requestor script, and the way it interacts with the Golem Network.
@@ -82,9 +80,9 @@ They are explained later in this article.
 Next in (2)
 
 ```js
-  const result = await executor.run(
- .....
- );
+const result = await executor.run(
+...
+);
 ```
 
 we run the task. Here we use a `run` method that accepts a task function as its argument. We will define the task function in a moment. We store the result of the `executor.run()` in the `result` variable.
@@ -103,22 +101,22 @@ Let's look at the Task Executor parameters.
 
 ```js
 const executor = await TaskExecutor.create({
-    logger: pinoPrettyLogger({ level: "info" }),
-    api: { key: "try_golem" },
- ....
+  logger: pinoPrettyLogger({ level: "info" }),
+  api: { key: "try_golem" },
+  ...
 ```
 
-- logger: a logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal, without this line a default logger would be used, which is the [debug logger](https://www.npmjs.com/package/debug).
-- api: {key: } pi-key value a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors).
+- `logger` - a logger instance - we use a special logger that produces logs easier to read and understand when scripts are run in the terminal, without this line a default logger would be used, which is the [debug logger](https://www.npmjs.com/package/debug).
+- `api: {key: }` - a key that will give us access to `yagna` REST API. `yagna` is a service that connects us to the network. In this example, we will use api-key that was generated in the process of [Yagna installation](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 
 ```js
- ...
-    demand: {
-      workload: {
-        imageTag: "golem/node:20-alpine",
- },
- },
- ...
+...
+  demand: {
+    workload: {
+      imageTag: "golem/node:20-alpine",
+    },
+  },
+...
 ```
 
 - In the `demand` section we define the environment needed to run our task. We do it by indicating what image is to be run on a remote node. We will use an image publicly available on the [registry](https://registry.golem.network) portal, therefore it is enough to provide a tag `golem/node:20-alpine` - it indicates an image based on `alpine` distribution and has `node.js` installed.
@@ -126,23 +124,22 @@ const executor = await TaskExecutor.create({
 When defining the demand users can also specify other parameters like the minimal number of threads, memory, or disk size as needed.
 
 ```js
- ...
-    market: {
-      rentHours: 0.5,
-      pricing: {
-        model: "linear",
-        maxStartPrice: 0.5,
-        maxCpuPerHourPrice: 1.0,
-        maxEnvPerHourPrice: 0.5,
- },
- },
- });
+...
+    market: {
+      rentHours: 0.5,
+      pricing: {
+        model: "linear",
+        maxStartPrice: 0.5,
+        maxCpuPerHourPrice: 1.0,
+        maxEnvPerHourPrice: 0.5,
+      },
+    }
 ```
 
 Finally, we define `market` parameters.
 
 - The `rentHour` defines the maximum duration of the engagements with providers before automatic termination.
-- In `Pricing` we also precise the maximum acceptable prices using the `linear` price model. It will be used to select offers from providers and let you manage the costs of running your tasks.
+- In `pricing` we also precise the maximum acceptable prices using the `linear` price model. It will be used to select offers from providers and let you manage the costs of running your tasks.
 
 ## Defining task function
 
@@ -155,7 +152,7 @@ Our task in this example is simple and consists of a single command: namely `nod
 Note your `TaskFunction` may consist of multiple commands that allow the user to transfer his data to and from a provider. You can find more information on available commands in [Examples](/docs/creators/javascript/examples/composing-tasks).
 
 ```js
-;async (exe) => (await exe.run('node -v')).stdout
+async (exe) => (await exe.run('node -v')).stdout
 ```
 
 The output of the task function is passed to `executor.run()` and assigned to task result `result`.
