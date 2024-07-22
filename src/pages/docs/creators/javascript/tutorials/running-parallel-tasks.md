@@ -222,6 +222,7 @@ const executor = await TaskExecutor.create({
   demand: {
     workload: {
       imageHash: '2d665b6a73d4a17e2a8e6fc726aab827fcf020cdfac62ec398dd00e4',
+      minMemGib: 8,
     },
   },
   market: {
