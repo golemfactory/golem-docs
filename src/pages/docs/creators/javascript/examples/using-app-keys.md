@@ -20,7 +20,7 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
+Create a project folder, initialize a Node.js project, and install libraries.
 
 ```bash
 mkdir golem-example
@@ -93,7 +93,9 @@ set YAGNA_APPKEY=insert-your-32-char-app-key-here
 and then remove the following line from the example script:
 
 ```js
-api: { key: "insert-your-32-char-app-key-here" }
+api: {
+  key: 'insert-your-32-char-app-key-here'
+}
 ```
 
 ### Using YAGNA_AUTOCONF_APPKEY environment variable

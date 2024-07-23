@@ -33,7 +33,7 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
+Create a project folder, initialize a Node.js project, and install libraries.
 
 ```bash
 mkdir golem-example
@@ -65,7 +65,7 @@ echo console.log("Hello Golem World!"); > worker.mjs
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/upload-file.mjs" language="javascript" /%}
 
-![Uploadfile output log](/uplaodfile_log.png)
+![Uploadfile output log](/te/uplaodfile_log.png)
 
 ## Downloading a file from the provider
 
@@ -73,13 +73,13 @@ In this example, we create a file on a remote computer, list its content to a re
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/download-file.mjs" language="javascript" /%}
 
-![Downloadfile output log](/downloadFile_log.png)
+![Downloadfile output log](/te/downloadFile_log.png)
 
 ## Uploading JSON to provider
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/transferring-data/upload-json.mjs" language="javascript" /%}
 
-![DownloadJSON output logs](/uploadJSON_log.png)
+![DownloadJSON output logs](/te/uploadJSON_log.png)
 
 ## Uploading data to and from the provider (in a browser)
 

@@ -45,7 +45,7 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
+Create a project folder, initialize a Node.js project, and install libraries.
 
 ```bash
 mkdir golem-example
@@ -124,7 +124,6 @@ Once the stream is completed, we can terminate our TaskExecutor instance.
 ![Commands batch endstream output logs](/te/batch_stream_log_1.png)
 ![Commands batch endstream output logs](/te/batch_stream_log_2.png)
 ![Commands batch endstream output logs](/te/batch_stream_log_3.png)
-
 
 ### Running commands and collecting output as a stream
 

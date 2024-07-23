@@ -24,7 +24,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm install @golem-sdk/task-executor
-npm i @golem-sdk/pino-logger
+npm install @golem-sdk/pino-logger
 ```
 
 Paste the code in `index.mjs` located in the project folder, then run:

@@ -17,7 +17,7 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## Setting up the project
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
+Create a project folder, initialize a Node.js project, and install libraries.
 
 ```bash
 mkdir golem-example
@@ -32,8 +32,8 @@ npm i @golem-sdk/pino-logger
 The basic structure of the script:
 
 ```js
-import { TaskExecutor } from '@golem-sdk/task-executor';
-(async () => {
+import { TaskExecutor } from '@golem-sdk/task-executor'
+;(async () => {
   //... Function body in here
 })()
 ```
@@ -150,7 +150,7 @@ Our task in this example is simple and consists of a single command: namely `nod
 Note your `TaskFunction` may consist of multiple commands that allow the user to transfer his data to and from a provider. You can find more information on available commands in [Examples](/docs/creators/javascript/examples/composing-tasks).
 
 ```js
-async (exe) => (await exe.run('node -v')).stdout
+;async (exe) => (await exe.run('node -v')).stdout
 ```
 
 The output of the task function is passed to `executor.run()` and assigned to task result `result`.

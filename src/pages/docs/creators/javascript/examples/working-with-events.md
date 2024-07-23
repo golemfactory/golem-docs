@@ -17,7 +17,7 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
+Create a project folder, initialize a Node.js project, and install libraries.
 
 ```bash
 mkdir golem-example
@@ -42,4 +42,3 @@ In the Task Executor context, you can have two types of events:
 - Task Executor specific events like: `taskStarted` or `taskCompleted`.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/observing-events.mjs" language="javascript" /%}
-
