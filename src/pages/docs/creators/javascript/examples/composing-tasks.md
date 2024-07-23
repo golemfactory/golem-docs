@@ -10,7 +10,7 @@ type: Example
 ## Introduction
 
 Task Executor methods take a task function as a parameter for each of its methods.
-This function is asynchronous and provides access to the WorkContext object, which is provided as one of its parameters.
+This function is asynchronous and provides access to the ExeUnit object, which is provided as one of its parameters.
 
 A task function may be very simple, consisting of a single command, or it may consist of a set of steps that include running commands or sending data to and from providers.
 
@@ -30,7 +30,7 @@ The following commands are currently available:
 | `downloadJson()` |          no          |           yes            |
 
 {% alert level="info" %}
-This article focuses on the `run()`, `runAndStream()` commands and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Sending Data](/docs/creators/javascript/examples/transferring-data) article.
+This article focuses on the `run()`, `runAndStream()` commands and chaining commands using the `beginBatch()` method. Examples for the `uploadFile()`, `uploadJSON()`, `downloadFile()` commands can be found in the [Transferring Data](/docs/creators/javascript/examples/transferring-data) article.
 {% /alert %}
 
 We'll start with a simple example featuring a single `run()` command. Then, we'll focus on organizing a more complex task that requires a series of steps:
@@ -96,11 +96,11 @@ Now, let's take a look at how you can arrange multiple commands into batches.
 Depending on how you finalize your batch, you will obtain either:
 
 - an array of result objects or
-- ReadableStream
+- Observable [rxjs](https://rxjs.dev/guide/observable)
 
-### Organizing commands into a batch resulting in an array of Promise results
+### Organizing commands into a batch resulting in a Promise of array of results
 
-Use the beginBatch() method and chain commands followed by `.end()`.
+Use the `beginBatch()` method and chain commands followed by `.end()`.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/batch-end.mjs" language="javascript" /%}
 
@@ -111,27 +111,20 @@ The output of the 3rd command, `run('cat /golem/input/output.txt')`, is under th
 ![Commands batch end output logs](/te/batch_end_log_1.png)
 ![Commands batch end output logs](/te/batch_end_log_2.png)
 
-### Organizing commands into a batch producing a Readable stream
+### Organizing commands into a batch producing an Observable
 
-To produce a Readable Stream, use the `beginBatch()` method and chain commands, followed by `endStream()`.
+To produce an Observable, use the `beginBatch()` method and chain commands, followed by `endStream()`.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/batch-endstream-chunks.mjs" language="javascript" /%}
 
-Note that in this case, as the chain ends with ` .endStream()`, we can read data chunks from ReadableStream, denoted as `res`.
+Note that in this case, as the chain ends with ` .endStream()`, we can read data chunks from Observable, denoted as `res`.
 
-Once the stream is closed, we can terminate our TaskExecutor instance.
+Once the stream is completed, we can terminate our TaskExecutor instance.
 
 ![Commands batch endstream output logs](/te/batch_stream_log_1.png)
 ![Commands batch endstream output logs](/te/batch_stream_log_2.png)
 ![Commands batch endstream output logs](/te/batch_stream_log_3.png)
 
-{% alert level="info" %}
-
-Since closing the chain with `.endStream()` produces ReadableStream, you can also synchronously retrieve the results:
-
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/composing-tasks/alert-code.mjs" language="javascript" /%}
-
-{% /alert %}
 
 ### Running commands and collecting output as a stream
 

@@ -111,29 +111,27 @@ const executor = await TaskExecutor.create({
 
 ```js
 ...
-  demand: {
+demand: {
     workload: {
       imageTag: "golem/node:20-alpine",
     },
-  },
+},
 ...
 ```
 
-- In the `demand` section we define the environment needed to run our task. We do it by indicating what image is to be run on a remote node. We will use an image publicly available on the [registry](https://registry.golem.network) portal, therefore it is enough to provide a tag `golem/node:20-alpine` - it indicates an image based on `alpine` distribution and has `node.js` installed.
-
-When defining the demand users can also specify other parameters like the minimal number of threads, memory, or disk size as needed.
+- In the `demand` section we define the environment needed to run our task. We do it by indicating what image is to be run on a remote node. We will use an image publicly available on the [registry](https://registry.golem.network) portal, therefore it is enough to provide a tag `golem/node:20-alpine` - it indicates an image based on `alpine` distribution and has `node.js` installed. When defining the demand users can also specify other parameters like the minimal number of threads, memory, or disk size as needed.
 
 ```js
 ...
-    market: {
-      rentHours: 0.5,
-      pricing: {
-        model: "linear",
-        maxStartPrice: 0.5,
-        maxCpuPerHourPrice: 1.0,
-        maxEnvPerHourPrice: 0.5,
-      },
-    }
+market: {
+  rentHours: 0.5,
+  pricing: {
+    model: "linear",
+    maxStartPrice: 0.5,
+    maxCpuPerHourPrice: 1.0,
+    maxEnvPerHourPrice: 0.5,
+  },
+}
 ```
 
 Finally, we define `market` parameters.
@@ -143,7 +141,7 @@ Finally, we define `market` parameters.
 
 ## Defining task function
 
-Let’s see how the task is defined and replace the `....` placeholder we used in the previous step.
+Let’s see how the task is defined and replace the `...` placeholder we used in the previous step.
 
 The task is defined as a `TaskFunction`. It is an async function that will get as its parameter an `exeUnit` from the executor. The `exeUnit` is an object that represents the actual environment on the provider and lets you run your commands within the scope of this one TaskFunction on one provider.
 
