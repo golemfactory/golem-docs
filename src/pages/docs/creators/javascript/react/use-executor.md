@@ -22,10 +22,10 @@ type: React Reference
 
 The hook accepts two configuration objects, one for the executor itself (package, demand specification, budget, etc) and one for the extra behavior (e.g. whether to add a `beforeunload` event listener to prevent the user from accidentally closing the tab while the executor is running).
 
-| Name                    | Description                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------- |
-| options (required)      | [ExecutorOptions](/docs/golem-sdk-task-executor/reference/modules/executor#executoroptions) |
-| extraOptions (optional) | See below                                                                                   |
+| Name                    | Description                                                                                         |
+| ----------------------- | --------------------------------------------------------------------------------------------------- |
+| options (required)      | [TaskExecutorOptions](/docs/golem-sdk-task-executor/reference/modules/executor#taskexecutoroptions) |
+| extraOptions (optional) | See below                                                                                           |
 
 ### Extra options
 
@@ -46,7 +46,18 @@ function MyComponent() {
     error,
   } = useExecutor(
     {
-      package: 'golem/alpine:latest',
+      demand: {
+        workload: { imageTag: 'golem/alpine:latest' },
+      },
+      market: {
+        rentHours: 0.5,
+        pricing: {
+          model: 'linear',
+          maxStartPrice: 0.5,
+          maxCpuPerHourPrice: 1.0,
+          maxEnvPerHourPrice: 0.5,
+        },
+      },
     },
     {
       addBeforeUnloadHandler: true,

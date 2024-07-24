@@ -18,35 +18,35 @@ The React SDK is designed to work with the yagna version 0.13.0 or above. If you
 
 ## Installation
 
-To add the SDK to an existing react project simply install it using your favorite package manager:
+To add the SDK to an existing React project simply install it and it's peer dependencies using your favorite package manager:
 
 {% tabs %}
 
 {% tab label="npm" %}
 
 ```bash
-npm install @golem-sdk/react
+npm install @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
 {% tab label="yarn" %}
 
 ```bash
-yarn add @golem-sdk/react
+yarn add @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
 {% tab label="pnpm" %}
 
 ```bash
-pnpm add @golem-sdk/react
+pnpm add @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
 {% tab label="bun" %}
 
 ```bash
-bun add @golem-sdk/react
+bun add @golem-sdk/react @golem-sdk/task-executor@2 @golem-sdk/golem-js@3
 ```
 
 {% /tab %}
@@ -69,9 +69,23 @@ This provides context for the rest of the SDK. See the [YagnaProvider API refere
 
 Yagna blocks all requests from external origins by default. To allow the SDK to communicate with it you need start Yagna with `--api-allow-origin='<your-domain>'` flag. For example:
 
+{% tabs %}
+
+{% tab label="MacOS / Linux" %}
+
 ```shell
 yagna service run --api-allow-origin='http://localhost:3000'
 ```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```shell
+yagna service run --api-allow-origin=http://localhost:3000
+```
+
+{% /tab %}
+{% /tabs %}
 
 ## Putting it all together
 
