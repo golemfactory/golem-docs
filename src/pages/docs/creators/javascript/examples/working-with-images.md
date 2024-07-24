@@ -24,6 +24,7 @@ mkdir golem-example
 cd golem-example
 npm init
 npm install @golem-sdk/task-executor
+npm install @golem-sdk/pino-logger
 ```
 
 Paste the code in `index.mjs` located in the project folder, then run:
@@ -38,7 +39,7 @@ node index.mjs
 
 A hash, in relation to Golem images, serves as a distinctive identifier formed from the image's content. They are complex, elongated strings and can become cumbersome to handle and recall, particularly in sizable projects housing various images and versions. Without tags, hashes fall short in conveying information relevant to the image's purpose or version. Due to these factors, using tags, which are readable and understandable, is generally the favored approach for dealing with images.
 
-To illustrate the use of a hash, we can take a look at the code from the [Quickstart Example](/docs/creators/javascript/quickstarts/quickstart)
+To illustrate the use of a hash, we can take a look at the code below.
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-images/hash.mjs" language="javascript" /%}
 
@@ -46,9 +47,10 @@ Consider the hash `529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4` in 
 
 ```js
 const executor = await TaskExecutor.create({
-  package: '529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4',
-  yagnaOptions: { apiKey: 'try_golem' },
-})
+    demand: {
+      workload: {
+        imageHash: "529f7fdaf1cf46ce3126eb6bbcd3b213c314fe8fe884914f5d1106d4",
+      },
 ```
 
 If you've rolled out a custom Golem image and uploaded it to the registry, you can substitute this hash (`529 [...] 1106d4`) with your image's gvmkit-build-generated hash. If you've tagged it, you can use that tag like in the next example.

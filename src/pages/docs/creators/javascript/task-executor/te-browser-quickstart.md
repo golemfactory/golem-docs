@@ -57,7 +57,7 @@ Next, we'll create the main `index.html` file with the following content:
 
 In this layout, there are three elements:
 
-- A "Run" button, which executes the script on Golem
+- A "Echo Hello World" button, which executes the script on Golem
 - A "Results" container, which displays the results
 - A "Logs" container, which displays the API logs
 
@@ -90,7 +90,7 @@ We should see our app available in the browser.
 
 [Open localhost](http://localhost:8080/index)
 
-If you click the **Run** button, after a while, in the result container, you should get the result of the script: `Hello World` and see the logs of executed commands in the log container.
+If you click the **Echo Hello World** button, after a while, in the result container, you should get the result of the script: `Hello World` and see the logs of executed commands in the log container.
 
 ![Output logs](/browser_log.png)
 

@@ -9,7 +9,7 @@ type: Tutorial
 
 ## Introduction
 
-This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network.
+This tutorial will lead you through the steps required to execute tasks in parallel on the Golem Network. The example utilize the `task-executor` library, which is part of the Golem's JS SDK.
 
 We will go through the following steps:
 
@@ -108,7 +108,7 @@ RUN apt update
 RUN apt install -y hashcat
 ```
 
-We use `dizcza/docker-hashcat:intel-cpu` Docker image as starting point, and then we define a working directory - `WORKDIR /golem/entrypoint`.
+We use `ubuntu` Docker image as starting point, and then we define a working directory - `WORKDIR /golem/entrypoint`.
 
 ### Docker image
 
@@ -142,7 +142,7 @@ This command will produce the hash of the image that you can use in the example.
 
 ```bash
 ....
--- image link (for use in SDK):
+-- image link (for use in SDK): <here is the image hash ID>
 ....
 ```
 
@@ -172,24 +172,23 @@ Now initialize the project, and install the `@golem-sdk/task-executor` library.
 
 ```bash
 npm init
-npm install @golem-sdk/task-executor
+npm install @golem-sdk/task-executor @golem-sdk/pino-logger commander
 ```
 
 Create the `index.mjs` file with the following content:
 
 ```js
 import { TaskExecutor } from '@golem-sdk/task-executor'
+import { pinoPrettyLogger } from '@golem-sdk/pino-logger'
 import { program } from 'commander'
 
 async function main(args) {
-  console.log(args)
-
   // todo: Create Executor
   // todo: Calculate keyspace
   // todo: Calculate boundaries for each chunk
   // todo: Run the task on multiple providers in parallel
   // todo: Process and print results
-  // todo: End executor
+  // todo: Shutdown executor
 }
 
 program
@@ -201,15 +200,12 @@ program
   )
   .option('--mask <mask>')
   .requiredOption('--hash <hash>')
-
 program.parse()
-
 const options = program.opts()
-
-main(options).catch((e) => console.error(e))
+main(options).catch((error) => console.error(error))
 ```
 
-We use the `commander` library to pass arguments such as --mask and --max-workers. This library will print a nice argument description and an example invocation when we run the requestor script with --help. Note you need to install it with `npm install commander`.
+We use the `commander` library to pass arguments such as --mask and --number-of-providers. This library will print a nice argument description and an example invocation when we run the requestor script with `--help`.
 
 The main function contains the body of the requestor application. Its sole argument, `args`, contains information on the command-line arguments read by the argument parser.
 
@@ -221,17 +217,34 @@ To execute our tasks on the Golem Network, we need to create a TaskExecutor inst
 
 ```js
 const executor = await TaskExecutor.create({
-  package: '055911c811e56da4d75ffc928361a78ed13077933ffa8320fb1ec2db',
-  maxParallelTasks: args.numberOfProviders,
-  yagnaOptions: { apiKey: `try_golem` },
+  logger: pinoPrettyLogger(),
+  api: { key: 'try_golem' },
+  demand: {
+    workload: {
+      imageHash: '2d665b6a73d4a17e2a8e6fc726aab827fcf020cdfac62ec398dd00e4',
+      minMemGib: 8,
+    },
+  },
+  market: {
+    rentHours: 0.5,
+    pricing: {
+      model: 'linear',
+      maxStartPrice: 0.5,
+      maxCpuPerHourPrice: 1.0,
+      maxEnvPerHourPrice: 0.5,
+    },
+  },
+  task: {
+    maxParallelTasks: args.numberOfProviders,
+  },
 })
 ```
 
-The package parameter is required and points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
+The `imageHash` option points to the image that we want the containers to run. We use the hash of the image created by us, but you can use the hash received from gvmkit-build when you created your image.
 
-The other parameters are:
-`maxParallelTasks`: the maximum number of tasks we want to run in parallel
-`yagnaOptions: { apiKey: 'try_golem' }` - the api key that links your script to identity on the network.
+The other constructor parameters are typical configuration parameters the same as in the other examples.
+
+The `maxParallelTasks` parameter defines how many parts the task will be divided into and how many parallel tasks will be calculated at the same time.
 
 ### Running a single task on the network to calculate the keyspace
 
@@ -239,8 +252,8 @@ The first step in the computation is to check the keyspace size. For this, we on
 With the TaskExecutor instance running, we can now send such a task to one of the providers using the run method:
 
 ```js
-const keyspace = await executor.run(async (ctx) => {
-  const result = await ctx.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`)
+const keyspace = await executor.run(async (exe) => {
+  const result = await exe.run(`hashcat --keyspace -a 3 ${args.mask} -m 400`)
   return parseInt(result.stdout || '')
 })
 
@@ -248,8 +261,8 @@ if (!keyspace) throw new Error(`Cannot calculate keyspace`)
 console.log(`Keyspace size computed. Keyspace size = ${keyspace}.`)
 ```
 
-This call tells the `executor` to execute a single task defined by the task function `async (ctx) => {}`. The ctx object allows us to run a task consisting of a single or batch of commands on the provider side.
-The keyspace size can be obtained from the stdout attribute of the result object returned by the task function.
+This call tells the `executor` to execute a single task defined by the task function `async (exe) => {}`. The `exe` object represent the exeUnit on the provider and allows us to run a task on the provider side.
+The keyspace size is obtained from the stdout attribute of the result object returned by the task function.
 In case we cannot calculate the size of the keyspace we will throw an error.
 
 ### Calculate boundaries for chunks
@@ -270,23 +283,21 @@ Note that the number of chunks does not determine the number of engaged provider
 
 Next, we can start looking for the password using multiple workers, executing the tasks on multiple providers simultaneously.
 
-For each worker, we perform the following steps:
+For each task, we perform the following steps:
 
-- Execute hashcat with proper --skip and --limit values on the provider.
-- Get the hashcat\_{skip}.potfile from the provider to the requestor.
-- Parse the result from the .potfile.
+- Execute hashcat with proper `--skip` and `--limit` values on the provider.
+- Get the `hashcat\_{skip}.potfile` from the provider to the requestor.
+- Parse the result from the `.potfile`.
 
 Let's first create a function that will look for the password in a given range of the keyspace.
 
 ```js
 const findPasswordInRange = async (skip) => {
-  const password = await executor.run(async (ctx) => {
-    const [, potfileResult] = await ctx
+  const password = await executor.run(async (exe) => {
+    const [, potfileResult] = await exe
       .beginBatch()
       .run(
-        `hashcat -a 3 -m 400 '${args.hash}' '${
-          args.mask
-        }' --skip=${skip} --limit=${skip + step} -o pass.potfile || true`
+        `hashcat -a 3 -m 400 '${args.hash}' '${args.mask}' --skip=${skip} --limit=${step} -o pass.potfile || true`
       )
       .run('cat pass.potfile || true')
       .end()
@@ -347,12 +358,14 @@ node index.mjs  --mask "?a?a?a" --hash "$P$5ZDzPE45CLLhEx/72qt3NehVzwN2Ry/"
 
 You should see an output similar to the one below.
 
-![Output of hashcat](/hashcat_output_1.png)
-![Second output of hashcat](/hashcat_output_2.png)
+![Output of hashcat](/te/hashcat_output_1.png)
+![Output of hashcat](/te/hashcat_output_2.png)
+![Output of hashcat](/te/hashcat_output_3.png)
+![Output of hashcat](/te/hashcat_output_4.png)
 
 {% alert level="info" %}
 
-You can clone the @golem-sdk/task-executor repository and find the complete project in the `examples/hashcat` folder.
+You can clone the @golem-sdk/task-executor repository and find the complete project in the `examples/yacat` folder.
 {% /alert  %}
 
 ## Summary

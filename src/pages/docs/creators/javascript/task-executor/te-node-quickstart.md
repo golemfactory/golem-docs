@@ -5,7 +5,7 @@ description: Learn to build JavaScript applications with this quickstart for the
 type: Quickstart
 ---
 
-# Golem JS Quickstart
+# Task Executor Quickstart
 
 ## Introduction
 
@@ -105,6 +105,7 @@ mkdir try_golem
 cd try_golem
 npm init
 npm install @golem-sdk/task-executor
+npm install @golem-sdk/pino-logger
 ```
 
 Please note: This application requires Node.js version 18.0.0 or higher.
@@ -129,7 +130,7 @@ node requestor.mjs
 
 The output of the script should look very similar to the one below:
 
-![Output logs](/js-tutorial-05.gif)
+![Output logs](/te/quickstart.gif)
 
 The information about the `node.js` version included in the image that our script deploys on the remote computer, can be found at the end of the script's logs.
 

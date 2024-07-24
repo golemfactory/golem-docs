@@ -17,13 +17,14 @@ Yagna service is installed and running with the `try_golem` app-key configured.
 
 ## How to run examples
 
-Create a project folder, initialize a Node.js project, and install the `@golem-sdk/task-executor` library.
+Create a project folder, initialize a Node.js project, and install libraries.
 
 ```bash
 mkdir golem-example
 cd golem-example
 npm init
 npm i @golem-sdk/task-executor
+npm i @golem-sdk/pino-logger
 ```
 
 {% alert level="info" %}
@@ -51,9 +52,9 @@ Let's look at the simple example: we will run a task that consists of single com
 In this example, our task consists of a single command: `node -v`. `ctx.run()` which returns an object that is then passed to the `result` variable and printed.
 
 Index refers to the sequential number of a command (we have just one, and counting starts from 0),
-`status` of the result is "ok" which indicates the command was completed successfully, and the actual results of the command are under `stdout`.
+`result` field of the result object is "ok" which indicates the command was completed successfully, and the actual results of the command are under `stdout`.
 
-![Result ](/result_log.png)
+![Result ](/te/result_log.png)
 
 ## Multi-command task
 
@@ -63,18 +64,15 @@ When you run your tasks in a batch that is concluded with `.end()`:
 
 you will receive an array of result objects:
 
-you will receive an array of result objects:
-
-![results logs](/result_batch_log.png)
+![results logs](/te/result_batch_log.png)
 
 In case you end your batch with the `endStream()` method:
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/multi-command-endstream.mjs" language="javascript" /%}
 
-Each `data` chunk will contain a result object, in the sequence that the commands were in within the batch:
+as a result you get an Observable [rxjs](https://rxjs.dev/guide/observable) object on which you can subscribe to appropriate events
 
-![results output logs](/batch_result_endstream_1.png)
-![results output logs](/batch_result_endstream_2.png)
+![results output logs](/te/batch_result_endstream_1.png)
 
 ## What to do if your command fails?
 
@@ -87,7 +85,7 @@ This command will raise an error and the whole task will be terminated. The next
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/multi-command-fail.mjs" language="javascript" /%}
 
-![Batch failure output log](/bad_result_single_log.png)
+![Batch failure output log](/te/bad_result_single_log.png)
 
 While the user will receive the error message, the output is only for the failing command, not for all commands in the task.
 
@@ -99,11 +97,11 @@ Let's see another example:
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/working-with-results/single-command-fail.mjs" language="javascript" /%}
 
-![Single failure output log](/bad_result_log_3.png)
+![Single failure output log](/te/bad_result_log_3.png)
 
 In the case of the failure in the `run()` method, we receive the result object with following attributes:
 
 - `result: 'Error'`,
 - `stdout: null`,
 - `stderr: 'node: bad option: -w\n',` - the command output
-- `message: 'ExeScript command exited with code 9', the exit code of the command that failed.` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
+- `message: 'ExeScript command exited with code 9'` - message from the system. The `node.js` exit code 9 means: `Exit Code 9, Invalid Argument: This is employed when an unspecified option was given`.
