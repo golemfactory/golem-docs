@@ -250,6 +250,10 @@ export const navigation = [
                     href: '/docs/creators/javascript/react/use-task',
                   },
                   {
+                    title: 'useAllocation',
+                    href: '/docs/creators/javascript/react/use-allocation',
+                  },
+                  {
                     title: 'useInvoices',
                     href: '/docs/creators/javascript/react/use-invoices',
                   },
