@@ -121,7 +121,7 @@ We can now create our `index.mjs` requestor file, with the `imageHash: "8b238595
 {% tabs %}
 {% tab label="JavaScript" %}
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/tutorials/building-custom-image/index.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/tutorials/building-custom-image/index.mjs" language="javascript" /%}
 
 {% /tab  %}
 {% /tabs %}

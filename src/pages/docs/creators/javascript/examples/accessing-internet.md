@@ -89,11 +89,11 @@ The example below demonstrates how to define the demand that will get access to 
 
 Here's the manifest
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/outbound/manifest.json" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/outbound/manifest.json" language="javascript" /%}
 
 And the requestor code:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/outbound/outbound-basic.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/outbound/outbound-basic.mjs" language="javascript" /%}
 
 Note the most important part:
 
@@ -144,8 +144,8 @@ If you have a large number of packages you should rather install them during the
 
 Here's the manifest:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/outbound/manifest_npm_install.json" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/outbound/manifest_npm_install.json" language="javascript" /%}
 
 And the requestor code:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/outbound/npm-install.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/outbound/npm-install.mjs" language="javascript" /%}

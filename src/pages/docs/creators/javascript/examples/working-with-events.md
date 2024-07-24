@@ -41,4 +41,4 @@ In the Task Executor context, you can have two types of events:
 - `golemEvents` that are common for all libraries using `golem-js` and
 - Task Executor specific events like: `taskStarted` or `taskCompleted`.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/observing-events.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/executing-tasks/observing-events.mjs" language="javascript" /%}

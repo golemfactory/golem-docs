@@ -45,7 +45,7 @@ node index.mjs
 
 If you want to run your tasks in parallel, you can call `.run()` multiple times on the same `TaskExecutor` object. The maximum number of concurrently engaged providers is defined by the `maxParallelTasks` parameter (default is 5). Providers can be engaged more than once until all tasks are executed.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/map.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/executing-tasks/map.mjs" language="javascript" /%}
 
 {% alert level="warning" %}
 
@@ -76,7 +76,7 @@ Note that the actual number of engaged providers might be:
 
 Below, you can see how to define the maximum number of providers to be engaged.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/max-parallel-tasks.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/executing-tasks/max-parallel-tasks.mjs" language="javascript" /%}
 
 ## Setting up a provider
 
@@ -90,7 +90,7 @@ echo Action log: > action_log.txt
 
 You can address such a need using the `setup` object that is part of the TaskExecutor options. Here is an example:
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/on-activity-ready.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/executing-tasks/on-activity-ready.mjs" language="javascript" /%}
 
 Note the `task : { setup: async (exe) => {} }` function which is an async task function that we use to orchestrate our commands run on providers.
 
@@ -133,7 +133,7 @@ This log again illustrates that providers offer different performance levels. `f
 
 Sometimes you don't need to run tasks in parallel and a single run is sufficient. In such cases, you can use the `run()` method as demonstrated in the example below.
 
-{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/beta/examples/docs-examples/examples/executing-tasks/single-run.mjs" language="javascript" /%}
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-sdk-task-executor/master/examples/docs-examples/examples/executing-tasks/single-run.mjs" language="javascript" /%}
 
 The requestor script runs a single task defined by a task function: `exe.run("node -v")`. The output of the command is available through `stdout` of the `result` object returned from the `exe.run()` method:
 
