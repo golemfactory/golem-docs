@@ -69,9 +69,23 @@ This provides context for the rest of the SDK. See the [YagnaProvider API refere
 
 Yagna blocks all requests from external origins by default. To allow the SDK to communicate with it you need start Yagna with `--api-allow-origin='<your-domain>'` flag. For example:
 
+{% tabs %}
+
+{% tab label="MacOS / Linux" %}
+
 ```shell
 yagna service run --api-allow-origin='http://localhost:3000'
 ```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```shell
+yagna service run --api-allow-origin=http://localhost:3000
+```
+
+{% /tab %}
+{% /tabs %}
 
 ## Putting it all together
 
