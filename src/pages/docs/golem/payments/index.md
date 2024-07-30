@@ -91,5 +91,6 @@ For other options, refer to the [erc20 driver README.md](https://github.com/gole
 {% docnavigation title="Next steps" %}
 
 - [Layer 2 payments](/docs/golem/payments/layer-2-payments)
+- [Deposits](/docs/golem/payments/deposits)
 
 {% /docnavigation %}
