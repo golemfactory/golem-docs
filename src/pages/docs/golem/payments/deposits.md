@@ -1,3 +1,10 @@
+---
+title: Deposits
+description: Indirect payments from end-user to provider with limited requestor involvement.
+pageTitle: Golem Network's Deposits - Indirect ERC20 Payments
+type: Guide
+---
+
 # Deposits
 
 Yagna offers a way to pay for tasks indirectly or through a contract, as the Golem protocol does not require funds for the provider to be sent from the requestors wallet, which we support via the so-called Depoists. The use-case covered is creating services on top of Golem that allow end-users to pay for tasks orchestrated by the service, without having the service hold funds by itself at any point in time.
