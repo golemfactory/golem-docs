@@ -26,7 +26,7 @@ What is important, thanks to the Deposit Smart Contract, we are also able to int
 ## Conceptual scheme of operation
 
 1. The Service Owner deploys the service.
-2. The Service End-user creates a deposit on a Smart Contract. ( The service should guide the Ent User through the required steps). Deposit locks some amount of funds for a specific timeframe while allowing the service to transfer those funds. Optionally Deposit might also lock some Service Owner Fee, which will be released after the Deposit is closed.
+2. The Service End-user creates a deposit on a Smart Contract. (The service should guide the Ent User through the required steps). Deposit locks some amount of funds for a specific timeframe while allowing the service to transfer those funds. Optionally Deposit might also lock some Service Owner Fee, which will be released after the Deposit is closed.
 3. The Service (acting as a Requestor) performs work on Golem, and whenever the provider requests funds (either via a mid-agreement payment or an invoice), the funds are transferred from the deposit to the provider.
 4. When work is done or the deposit timeframe expires, the deposit is closed and the extra funds are transferred back to the end-user.
 
