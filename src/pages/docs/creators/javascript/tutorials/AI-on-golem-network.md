@@ -303,9 +303,9 @@ node requestor.mjs
 
 The output of the script should look very similar to the one below:
 
-![ollama Tags output](/GPU/ollama-example/output-1.png)
-![ollama Tags output](/GPU/ollama-example/output-2.png)
-![ollama Tags output](/GPU/ollama-example/output-3.png)
+![ollama Tags output](/gpu/ollama-example/output-1.png)
+![ollama Tags output](/gpu/ollama-example/output-2.png)
+![ollama Tags output](/gpu/ollama-example/output-3.png)
 
 Once it is run you can interact with the model using the ollama cli:
 
@@ -321,7 +321,7 @@ curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/js
 
 The example output looks like this:
 
-![ollama Tags output](/GPU/ollama-example/curl-chat.png)
+![ollama Tags output](/gpu/ollama-example/curl-chat.png)
 
 Note: you cannot pull another model to the provider without requesting the `outbound` service from providers. Look to the next section to learn how to create an image with another model, to be able to use another model without the outbound feature.
 
@@ -405,7 +405,7 @@ We can check if our model is available by running `curl http://localhost:11434/a
 
 For the examples image the output should be like this:
 
-![ollama Tags output](/GPU/ollama-example/curl-tags.png)
+![ollama Tags output](/gpu/ollama-example/curl-tags.png)
 
 If you run the script without any change, you will certainly not see your model present. We need to tell the provider to use your newly created image.
 
