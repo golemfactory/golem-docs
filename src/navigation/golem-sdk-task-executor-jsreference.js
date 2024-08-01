@@ -18,6 +18,10 @@ export const navigation = [
             href: "/docs/golem-sdk-task-executor/reference/classes/executor.TaskExecutor"
           },
 {
+            title: "StatsService",
+            href: "/docs/golem-sdk-task-executor/reference/classes/stats.StatsService"
+          },
+{
             title: "Task",
             href: "/docs/golem-sdk-task-executor/reference/classes/task.Task"
           }
@@ -36,12 +40,20 @@ export const navigation = [
         title: "interfaces",
         children: [
 {
-            title: "TaskExecutorEventsDict",
-            href: "/docs/golem-sdk-task-executor/reference/interfaces/events.TaskExecutorEventsDict"
+            title: "ExecutorEvents",
+            href: "/docs/golem-sdk-task-executor/reference/interfaces/events.ExecutorEvents"
+          },
+{
+            title: "TaskSpecificOptions",
+            href: "/docs/golem-sdk-task-executor/reference/interfaces/executor.TaskSpecificOptions"
           },
 {
             title: "TaskServiceOptions",
             href: "/docs/golem-sdk-task-executor/reference/interfaces/service.TaskServiceOptions"
+          },
+{
+            title: "TimeInfo",
+            href: "/docs/golem-sdk-task-executor/reference/interfaces/stats.TimeInfo"
           },
 {
             title: "ProviderInfo",
@@ -65,12 +77,12 @@ export const navigation = [
             href: "/docs/golem-sdk-task-executor/reference/modules/service"
           },
 {
-            title: "Task",
-            href: "/docs/golem-sdk-task-executor/reference/modules/task"
+            title: "Stats",
+            href: "/docs/golem-sdk-task-executor/reference/modules/stats"
           },
 {
-            title: "Types",
-            href: "/docs/golem-sdk-task-executor/reference/modules/types"
+            title: "Task",
+            href: "/docs/golem-sdk-task-executor/reference/modules/task"
           },
 {
             title: "Utils",

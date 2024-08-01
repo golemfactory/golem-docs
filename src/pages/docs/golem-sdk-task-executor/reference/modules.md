@@ -13,6 +13,6 @@ type: "JS Task API Reference"
 - [events](modules/events)
 - [executor](modules/executor)
 - [service](modules/service)
+- [stats](modules/stats)
 - [task](modules/task)
-- [types](modules/types)
 - [utils](modules/utils)

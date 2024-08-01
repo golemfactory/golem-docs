@@ -10,4 +10,4 @@ type: "JS Task API Reference"
 
 ### Interfaces
 
-- [TaskExecutorEventsDict](../interfaces/events.TaskExecutorEventsDict)
+- [ExecutorEvents](../interfaces/events.ExecutorEvents)

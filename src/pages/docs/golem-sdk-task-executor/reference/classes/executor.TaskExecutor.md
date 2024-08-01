@@ -19,6 +19,7 @@ A high-level module for defining and executing tasks in the golem network
 ### Properties
 
 - [events](executor.TaskExecutor#events)
+- [glm](executor.TaskExecutor#glm)
 
 ### Methods
 
@@ -26,7 +27,6 @@ A high-level module for defining and executing tasks in the golem network
 - [init](executor.TaskExecutor#init)
 - [shutdown](executor.TaskExecutor#shutdown)
 - [getStats](executor.TaskExecutor#getstats)
-- [onActivityReady](executor.TaskExecutor#onactivityready)
 - [run](executor.TaskExecutor#run)
 - [cancel](executor.TaskExecutor#cancel)
 
@@ -42,35 +42,55 @@ Create a new TaskExecutor object.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | [`ExecutorOptionsMixin`](../modules/executor#executoroptionsmixin) | contains information needed to start executor, if string the imageHash is required, otherwise it should be a type of [ExecutorOptions](../modules/executor#executoroptions) |
+| `options` | [`TaskExecutorOptions`](../modules/executor#taskexecutoroptions) | [TaskExecutorOptions](../modules/executor#taskexecutoroptions) |
 
 #### Defined in
 
-[src/executor.ts:186](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L186)
+[executor.ts:221](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L221)
 
 ## Properties
 
 ### events
 
-• `Readonly` **events**: `EventEmitter`<[`TaskExecutorEventsDict`](../interfaces/events.TaskExecutorEventsDict), `any`\>
-
-EventEmitter (EventEmitter3) instance emitting TaskExecutor events.
-
-**`See`**
-
-TaskExecutorEventsDict for available events.
+• `Readonly` **events**: `EventEmitter`\<[`ExecutorEvents`](../interfaces/events.ExecutorEvents), `any`\>
 
 #### Defined in
 
-[src/executor.ts:111](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L111)
+[executor.ts:143](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L143)
+
+___
+
+### glm
+
+• `Readonly` **glm**: `GolemNetwork`
+
+This object is the main entry-point to the basic golem-js api.
+Allows you to listen to events from core golem-js modules such as market, payment, etc.
+Provides full access to the low-level api intended for more advanced users
+
+#### Defined in
+
+[executor.ts:149](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L149)
 
 ## Methods
 
 ### create
 
-▸ `Static` **create**(`options`): `Promise`<[`TaskExecutor`](executor.TaskExecutor)\>
+▸ `Static` **create**(`options`): `Promise`\<[`TaskExecutor`](executor.TaskExecutor)\>
 
 Create a new Task Executor
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | [`TaskExecutorOptions`](../modules/executor#taskexecutoroptions) | Task executor options |
+
+#### Returns
+
+`Promise`\<[`TaskExecutor`](executor.TaskExecutor)\>
+
+TaskExecutor
 
 **`Description`**
 
@@ -78,72 +98,62 @@ Factory Method that create and initialize an instance of the TaskExecutor
 
 **`Example`**
 
+```ts
 **Simple usage of Task Executor**
 
-The executor can be created by passing appropriate initial parameters such as package, budget, subnet tag, payment driver, payment network etc.
-One required parameter is a package. This can be done in two ways. First by passing only package image hash or image tag, e.g.
-```js
-const executor = await TaskExecutor.create("9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae");
-```
-or
-```js
-const executor = await TaskExecutor.create("golem/alpine:3.18.2");
+The executor can be created by passing appropriate initial parameters such as market, payment, payment etc.
 ```
 
 **`Example`**
 
 **Usage of Task Executor with custom parameters**
 
-Or by passing some optional parameters, e.g.
 ```js
 const executor = await TaskExecutor.create({
-  subnetTag: "public",
-  payment: { driver: "erc-20", network: "holesky" },
-  package: "golem/alpine:3.18.2",
+  logger: pinoPrettyLogger({ level: "info" }),
+  demand: {
+    workload: {
+      imageTag: "golem/alpine:latest",
+    },
+  },
+  market: {
+    rentHours: 0.5,
+    pricing: {
+      model: "linear",
+      maxStartPrice: 0.5,
+      maxCpuPerHourPrice: 1.0,
+      maxEnvPerHourPrice: 0.5,
+    },
+  },
 });
 ```
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | [`ExecutorOptionsMixin`](../modules/executor#executoroptionsmixin) | Task executor options |
-
-#### Returns
-
-`Promise`<[`TaskExecutor`](executor.TaskExecutor)\>
-
-TaskExecutor
-
 #### Defined in
 
-[src/executor.ts:175](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L175)
+[executor.ts:210](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L210)
 
 ___
 
 ### init
 
-▸ **init**(): `Promise`<`void`\>
+▸ **init**(): `Promise`\<`void`\>
 
 Initialize executor
-
-**`Description`**
-
-Method responsible initialize all executor services.
+Method responsible for connecting to the golem network and initiating all required services.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/executor.ts:244](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L244)
+[executor.ts:238](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L238)
 
 ___
 
 ### shutdown
 
-▸ **shutdown**(): `Promise`<`void`\>
+▸ **shutdown**(): `Promise`\<`void`\>
 
 Stop all executor services and shut down executor instance.
 
@@ -155,11 +165,11 @@ Once the executor is fully stopped, an end event is emitted.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/executor.ts:308](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L308)
+[executor.ts:286](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L286)
 
 ___
 
@@ -167,71 +177,32 @@ ___
 
 ▸ **getStats**(): `Object`
 
-Statistics of execution process
-
 #### Returns
 
 `Object`
 
-array
+| Name | Type |
+| :------ | :------ |
+| `retries` | `undefined` \| `number` |
+| `providers` | `number` |
+| `agreements` | `number` |
+| `invoicesReceived` | `number` |
+| `invoicesPaid` | `number` |
+| `invoicesUnpaid` | `number` |
+| `invoicesMissing` | `number` |
+| `invoicePaymentRate` | `number` |
 
 #### Defined in
 
-[src/executor.ts:345](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L345)
-
-___
-
-### onActivityReady
-
-▸ **onActivityReady**(`worker`): `void`
-
-Registers a worker function that will be run when an activity is ready.
-This is the perfect place to run setup functions that need to be run only once per
-activity, for example uploading files that will be used by all tasks in the activity.
-This function can be called multiple times, each worker will be run in the order
-they were registered.
-
-**`Example`**
-
-```ts
-const uploadFile1 = async (ctx) => ctx.uploadFile("./file1.txt", "/file1.txt");
-const uploadFile2 = async (ctx) => ctx.uploadFile("./file2.txt", "/file2.txt");
-
-executor.onActivityReady(uploadFile1);
-executor.onActivityReady(uploadFile2);
-
-await executor.run(async (ctx) => {
- await ctx.run("cat /file1.txt /file2.txt");
-});
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `worker` | `Worker`<`unknown`\> | worker function that will be run when an activity is ready |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/executor.ts:370](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L370)
+[executor.ts:315](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L315)
 
 ___
 
 ### run
 
-▸ **run**<`OutputType`\>(`worker`, `options?`): `Promise`<`OutputType`\>
+▸ **run**\<`OutputType`\>(`taskFunction`, `options?`): `Promise`\<`OutputType`\>
 
-Run task - allows to execute a single worker function on the Golem network with a single provider.
-
-**`Example`**
-
-```typescript
-await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'")).stdout));
-```
+Run task - allows to execute a single taskFunction function on the Golem network with a single provider.
 
 #### Type parameters
 
@@ -243,24 +214,30 @@ await executor.run(async (ctx) => console.log((await ctx.run("echo 'Hello World'
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `worker` | `Worker`<`OutputType`\> | function that run task |
+| `taskFunction` | [`TaskFunction`](../modules/executor#taskfunction)\<`OutputType`\> | function that run task |
 | `options?` | [`TaskOptions`](../modules/task#taskoptions) | task options |
 
 #### Returns
 
-`Promise`<`OutputType`\>
+`Promise`\<`OutputType`\>
 
 result of task computation
 
+**`Example`**
+
+```typescript
+await executor.run(async (exe) => console.log((await exe.run("echo 'Hello World'")).stdout));
+```
+
 #### Defined in
 
-[src/executor.ts:385](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L385)
+[executor.ts:333](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L333)
 
 ___
 
 ### cancel
 
-▸ **cancel**(`reason`): `Promise`<`void`\>
+▸ **cancel**(`reason`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -270,8 +247,8 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/executor.ts:431](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L431)
+[executor.ts:374](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L374)
