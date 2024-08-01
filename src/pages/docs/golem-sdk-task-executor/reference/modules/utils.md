@@ -25,7 +25,7 @@ type: "JS Task API Reference"
 
 #### Defined in
 
-[src/utils.ts:4](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/utils.ts#L4)
+[utils.ts:4](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/utils.ts#L4)
 
 ___
 
@@ -35,13 +35,13 @@ ___
 
 #### Defined in
 
-[src/utils.ts:6](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/utils.ts#L6)
+[utils.ts:6](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/utils.ts#L6)
 
 ## Functions
 
 ### sleep
 
-▸ **sleep**(`time`, `inMs?`): `Promise`<`void`\>
+▸ **sleep**(`time`, `inMs?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -52,8 +52,8 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[src/utils.ts:1](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/utils.ts#L1)
+[utils.ts:1](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/utils.ts#L1)
