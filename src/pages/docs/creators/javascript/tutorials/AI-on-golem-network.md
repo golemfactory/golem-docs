@@ -74,30 +74,31 @@ yagna service run
 
 ## Get GLM and MATIC tokens
 
-Requesting tasks on the Golem Network requires GLM tokens. If you run this example on a test network, you can use test GLM. The example is configured to run on GPU on `mainnet` where you need GLM. In the last section, there is information on how to update the script to use CPU providers or run on the testnet.
+Requesting tasks on the Golem Network requires GLM tokens. This example is configured to run on GPU Providers, available on polygon `mainnet` where you need real GLM tokens. However, there is also an option to run examples on a test network, where you can use test GLM. Acquiring test GLM is explained further in this tutorial. In the last section, there is also information on how to update the script to use CPU providers or run on the testnet.
 
-Acquiring GLM:
+**Acquiring GLM:**
 
-First, you need to know the wallet address used for your node to rent resources on the network.
+If You do not own GLM tokens nor MATIC tokens to cover transaction fees then the recommended way is to use our GLM onboarding portal from the within Yagna context. It is really simple You just need to run following command, open provided link and follow further instructions:
 
-Run
+```bash
+yagna payment fund --network=polygon
+```
+If You however already have GLM tokens and MATIC, then You can transfer those to Yagna yourself from your favorite crypto wallet. To identify Yagna wallet address you simply need to run:
 
 ```bash
 yagna id show
 ```
 
-to print the address where you need to send GLM and MATIC.
-
-If you do not have any yet, do not worry, just go to [GLM Onboarding](https://glm.golem.network/) and follow the instructions to acquire tokens.
+Additionally, You can always visit our [GLM Onboarding](https://glm.golem.network/) portal directly to obtain required tokens and transfer them later to the Yagna wallet.
 
 <!--
 ? [Ile GLM trzeba na 1h GPU: 2]
 ? On the stats.golem.network user needs to go to providers, select filters, and select GPU, to check prices in USD, not GLM. I cannot easily direct to check the GPU provider prices.
 -->
 
-If you prefer just try for free on CPU providers (sorry: we do not offer GPU providers in the testnet ;-( ) you can try the script on the `testnet` (still some changes to the script are needed, see last section).
+If you prefer to simply play around with Golem for free on CPU providers (sorry: we do not offer GPU providers in the testnet ;-( ) you can try the script on the `testnet` (necessary changes to the script are desribed in the last section).
 
-To get some test funds open another terminal and run the command:
+To obtain test funds open another terminal and run the command:
 
 ```bash
 yagna payment fund
