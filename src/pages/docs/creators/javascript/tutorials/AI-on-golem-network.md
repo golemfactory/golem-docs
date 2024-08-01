@@ -341,7 +341,8 @@ Originally the models are stored in the $HOME/.ollama/models, where HOME is a ho
 To get the model there we had to run the ollama locally and pull the model to our PC (using the `ollama serve` and `ollama pull qwen2:0.5b` commands).
 
 Note: `05.b` indicates the version of the model (the smallest one). Make sure you have the space to pull the larger model you select.
-Note: gvmkit-build will allow you to upload to registry models up to 10GB.
+
+<!-- Note: gvmkit-build will allow you to upload to registry models up to 10GB. -->
 
 <!-- check the limit -->
 
