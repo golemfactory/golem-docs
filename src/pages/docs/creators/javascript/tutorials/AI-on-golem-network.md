@@ -199,8 +199,9 @@ let serverOnProviderReady = false
 
 try {
   // Establish a link with the Golem Network
-  await glm.connect() // Prepare for user-initiated shutdown
+  await glm.connect()
 
+// Prepare for user-initiated shutdown
   process.on('SIGINT', async function () {
     console.log(' Server shutdown was initiated by CTRL+C.')
 
