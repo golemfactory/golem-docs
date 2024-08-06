@@ -682,6 +682,10 @@ export const navigation = [
             href: '/docs/golem/payments/layer-2-payments',
           },
           {
+            title: 'Deposits',
+            href: '/docs/golem/payments/deposits',
+          },
+          {
             title: 'Golem token conversion',
             href: '/docs/golem/payments/golem-token-conversion',
           },
