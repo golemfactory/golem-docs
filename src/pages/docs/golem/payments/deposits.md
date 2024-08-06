@@ -36,4 +36,4 @@ We provide an implementation of the deposit contract interface on both [holesky]
 
 ## Specification
 
-The interface and examples of use are documented in [golem-architecture](https://github.com/golemfactory/golem-architecture/blob/scx1332/deposits/specs/deposits.md).
+The interface and examples of use are documented in [golem-architecture](https://github.com/golemfactory/golem-architecture/blob/master/specs/deposits.md).
