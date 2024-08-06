@@ -32,7 +32,7 @@ What is important, thanks to the Deposit Smart Contract, we are also able to int
 
 ## Extendability
 
-We provide an implementation of the deposit contract interface on both [holesky](https://holesky.etherscan.io/address/0x7167E731b0031d4326d46C8D1E1c2E111227aB5f#code) and [polygon](https://holesky.etherscan.io/address/0x7167E731b0031d4326d46C8D1E1c2E111227aB5f#code). Those implementations are ready to be used out of the box. However, the interface is flexible and allows different service-specific features to be implemented. In our example, a flat fee for the service is added, so that the payment for the service may be contractually bound to the service performing its duty.
+We provide an implementation of the deposit contract interface on [ethereum](https://etherscan.io/address/0xE440b576088d0a18340CAe5B2cff43502f1Cf588#code), [polygon](https://polygonscan.com/address/0x57ff7451E008647cbDB84e652B00ef05856Dba23#code), [holesky testnet](https://holesky.etherscan.io/address/0x63704675f72A47a7a183112700Cb48d4B0A94332#code), [sepolia testnet](https://sepolia.etherscan.io/address/0x35cA714deFa9482521659Cf9ee41F087f005335b#code) and [amoy testnet](https://amoy.polygonscan.com/address/0x6f25b6ad18a7c368aaffdd77303ba325fd31aafe#code). Those implementations are ready to be used out of the box. However, the interface is flexible and allows different service-specific features to be implemented. In our example, a flat fee for the service is added, so that the payment for the service may be contractually bound to the service performing its duty.
 
 ## Specification
 
