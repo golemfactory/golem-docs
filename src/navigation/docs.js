@@ -128,10 +128,6 @@ export const navigation = [
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
               },
-              {
-                title: 'REST API with Express.js',
-                href: '/docs/creators/javascript/tutorials/rest-api-with-express',
-              },
             ],
           },
           {
