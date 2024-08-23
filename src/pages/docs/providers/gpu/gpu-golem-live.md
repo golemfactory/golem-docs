@@ -285,16 +285,16 @@ After the `--account` value, enter the address of your wallet.
 
 **How to change the hourly rate?**
 
-First, log in via SSH to your provider and use the command in the terminal:
+First, convert the desired hourly rate into a rate per second, to do this divide the target rate by 3600. 
+For example, to obtain a rate of approximately 1 GLM /h: 
+
+- 1 GLM /h / 3600 = 0.000278 
+  
+Then log in via SSH to your provider and use the command in the terminal:
 
 ```bash
-ya-provider preset update --name vm-nvidia --price duration=0.00003
+ya-provider preset update --name vm-nvidia --price duration=0.000278 --no-interactive
 ```
-
-Go through the wizard, where you select `vm-nvidia` and linear and set the appropriate rates. Note that the value here is expressed in seconds. To convert to GLM / h simply multiply the value times 3600. For example:
-
-- 0.000006944444444444444 \* 3600 = 0.025 GLM /h
-- 0.00006944444444444444 \* 3600 = 0.25 GLM /h
 
 Finally, activate the changes with the command:
 
