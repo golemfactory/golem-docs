@@ -125,6 +125,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/accessing-internet',
               },
               {
+                title: 'Running AI Models on GPU Providers',
+                href: '/docs/creators/javascript/tutorials/AI-on-golem-network',
+              },
+              {
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
               },
