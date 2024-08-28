@@ -1,33 +1,33 @@
 ---
-title: Using AI model deployed on the Golem Network
+title: Using an AI Model Deployed on the Golem Network
 description: A tutorial on how to use Golem Network providers to run AI models
-pageTitle: Golem Requestors' Tutorial on how run AI models on GPU providers
+pageTitle: Golem Requestors' Tutorial - Running AI Models on GPU Providers
 type: Tutorial
 ---
 
-# How to use Golem Network providers to run AI models.
+# How to Use Golem Network Providers to Run AI Models
 
-In this tutorial, we will show you how to play with the `ollama` `qwen2` model on Golem Network, and if you would like to experiment with another model: how to create an image with the desired ollama model. We will also explain to you the critical elements of the requestor script so you can tune the script to your specific needs.
+In this tutorial, we will show you how to use the `ollama` `qwen2` model on the Golem Network. If you want to experiment with another model, we'll also guide you on how to create an image with your desired ollama model. Additionally, we'll explain the critical elements of the requestor script so you can tailor it to your specific needs.
 
-The tutorial consists of 4 parts:
+This tutorial is divided into four parts:
 
-1. Prerequisites - will lead to how to install Yagna, run it, and get funds.
-2. Using the model on Golem provider - will show you how to run the requestor script to start interaction with an AI model running on GPU.
-3. Preparing the image - if you are not satisfied with the model copied into the example image, check out how to prepare the image with your model.
-4. Understanding the requestor script - if you are interested in how the requestor script is built - look here.
+1. **Prerequisites:** Covers installing and running Yagna, and acquiring necessary tokens.
+2. **Using the Model on a Golem Provider:** Demonstrates how to run the requestor script to interact with an AI model running on a GPU provider.
+3. **Preparing the Image:** Explains how to create a custom Golem image containing your chosen AI model.
+4. **Understanding the Requestor Script:** Provides an in-depth look at the structure and key elements of the requestor script.
 
-# 1. Prerequisites:
+# 1. Prerequisites
 
-For this tutorial, you need `node.js`, `curl`, or `ollama cli` installed. For section 3 (building an image with a custom model) you need `docker` and `gvmkit-build`.
+For this tutorial, you need `node.js`, `curl`, or `ollama` CLI installed. For section 3 (building an image with a custom model), you need `docker` and `gvmkit-build`.
 
 ## Install Yagna
 
-You need the Yagna service installed and running. If you do not have it already running follow these steps:
+You need the Yagna service installed and running. If you don't already have it, follow these steps:
 
 {% tabs %}
 {% tab label="Linux/ MacOS" %}
 
-On Linux/ MacOS, you can install it using our installation script like this:
+On Linux/MacOS, you can install it using our installation script:
 
 ```bash
 curl -sSf https://join.golem.network/as-requestor | bash -
@@ -35,17 +35,17 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 You might be asked to modify your PATH afterward.
 
-{% /tab  %}
+{% /tab %}
 {% tab label="Windows" %}
 
-On Windows, download the requestor package - prefixed golem-requestor - appropriate for your platform from: https://github.com/golemfactory/yagna/releases/latest.
-Unzip the archive to extract the two files: yagna.exe and gftp.exe.
-Copy those files to C:\Windows\System32 or unzip them in another folder then, update your PATH variable to include this folder.
+On Windows, download the requestor package (prefixed with `golem-requestor`) appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+Unzip the archive to extract the two files: `yagna.exe` and `gftp.exe`.
+Copy those files to `C:\Windows\System32` or unzip them into another folder and update your PATH variable to include that folder.
 
-{% /tab  %}
+{% /tab %}
 {% /tabs %}
 
-## Start the Yagna service.
+## Start the Yagna service
 
 Open a terminal (command line window) and define the app-key that will allow our script to use the Yagna API:
 
@@ -56,17 +56,17 @@ Open a terminal (command line window) and define the app-key that will allow our
 export YAGNA_AUTOCONF_APPKEY=try_golem
 ```
 
-{% /tab  %}
+{% /tab %}
 {% tab label="Windows" %}
 
 ```bash
 set YAGNA_AUTOCONF_APPKEY=try_golem
 ```
 
-{% /tab  %}
+{% /tab %}
 {% /tabs %}
 
-Then start the yagna service:
+Then start the `yagna` service:
 
 ```bash
 yagna service run
@@ -74,41 +74,42 @@ yagna service run
 
 ## Get GLM and MATIC tokens
 
-Requesting tasks on the Golem Network requires GLM tokens. This example is configured to run on GPU Providers, available on polygon `mainnet` where you need real GLM tokens. However, there is also an option to run examples on a test network, where you can use test GLM. Acquiring test GLM is explained further in this tutorial. In the last section, there is also information on how to update the script to use CPU providers or run on the testnet.
+Requesting tasks on the Golem Network requires GLM tokens. This example is configured to run on GPU Providers, available on the Polygon `mainnet`, where you need actual GLM tokens. However, there's an option to run examples on a test network, where you can use test GLM (explained further in this tutorial). The last section also covers updating the script to use CPU providers or the testnet.
 
 **Acquiring GLM:**
 
-If You do not own GLM tokens nor MATIC tokens to cover transaction fees then the recommended way is to use our GLM onboarding portal from the within Yagna context. It is really simple You just need to run following command, open provided link and follow further instructions:
+If you don't have GLM or MATIC tokens to cover transaction fees, the recommended way is to use our GLM onboarding portal from within Yagna. Simply run the following command, open the provided link, and follow the instructions:
 
 ```bash
 yagna payment fund --network=polygon
 ```
-If You however already have GLM tokens and MATIC, then You can transfer those to Yagna yourself from your favorite crypto wallet. To identify Yagna wallet address you simply need to run:
+
+If you already have GLM and MATIC tokens, you can transfer them to your Yagna wallet from your preferred crypto wallet. To find your Yagna wallet address, run:
 
 ```bash
 yagna id show
 ```
 
-Additionally, You can always visit our [GLM Onboarding](https://glm.golem.network/) portal directly to obtain required tokens and transfer them later to the Yagna wallet.
+You can also visit our [GLM Onboarding](https://glm.golem.network/) portal to get the necessary tokens and transfer them to your Yagna wallet later.
 
 <!--
 ? [Ile GLM trzeba na 1h GPU: 2]
 ? On the stats.golem.network user needs to go to providers, select filters, and select GPU, to check prices in USD, not GLM. I cannot easily direct to check the GPU provider prices.
 -->
 
-If you prefer to simply play around with Golem for free on CPU providers (sorry: we do not offer GPU providers in the testnet ;-( ) you can try the script on the `testnet` (necessary changes to the script are desribed in the last section).
+To test the script on the `testnet` with CPU providers (we don't currently offer GPU providers on the testnet), you need to make changes to the script, as described in the last section.
 
-To obtain test funds open another terminal and run the command:
+To get test funds for the testnet, open another terminal and run:
 
 ```bash
 yagna payment fund
 ```
 
-It will top up your account with test GLM tokens. These tokens can only be used on the testnet.
+This will top up your account with test GLM tokens, which can only be used on the testnet.
 
-# 2. Running AI models on the Golem Network
+# 2. Running AI Models on the Golem Network
 
-Create a new Node.js project and install the Golem SDK by entering the following commands in your terminal:
+Create a new Node.js project and install the Golem SDK:
 
 ```bash
 mkdir golem-ai
@@ -118,9 +119,9 @@ npm install @golem-sdk/golem-js
 npm install @golem-sdk/pino-logger
 ```
 
-Please note: This script requires Node.js version 18.0.0 or higher.
+**Note:** This script requires Node.js version 18.0.0 or higher.
 
-Create a file named `requestor.mjs` and copy the following content into it. The code will engage a provider with price limits of 2 GLM per hour, deploy the image with `ollama` serving the `qwen:0.5b` model, and make it available on port 11434.
+Create a file named `requestor.mjs` and copy the following content into it. This code will engage a provider with a price limit of 2 GLM per hour, deploy the image with `ollama` serving the `qwen:0.5b` model, and make it available on port 11434.
 
 ```js
 import { GolemNetwork } from '@golem-sdk/golem-js'
@@ -287,47 +288,47 @@ try {
 }
 ```
 
-To run it use the command:
+To run it, use this command:
 
 ```bash
 node requestor.mjs
 ```
 
-The output of the script should look very similar to the one below:
+The output should look like this:
 
-![ollama Tags output](/gpu/ollama-example/output-1.png)
-![ollama Tags output](/gpu/ollama-example/output-2.png)
-![ollama Tags output](/gpu/ollama-example/output-3.png)
+![Ollama tags output](/gpu/ollama-example/output-1.png)
+![Ollama tags output](/gpu/ollama-example/output-2.png)
+![Ollama tags output](/gpu/ollama-example/output-3.png)
 
-Once it is run you can interact with the model using the ollama cli:
+Once it's running, you can interact with the model using the `ollama` CLI:
 
 ```bash
 ollama run qwen:0.5b
 ```
 
-or using REST API:
+or using the REST API:
 
 ```bash
-curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/json" -d "{ \"model\": \"qwen2:0.5b\", \"messages\": [ { \"role\": \"user\", \"content\": \"What is a Golem Network?\" } ]}"
+curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/json" -d "{ \"model\": \"qwen2:0.5b\", \"messages\": [ { \"role\": \"user\", \"content\": \"What is the Golem Network?\" } ]}"
 ```
 
-The example output looks like this:
+Here's an example output:
 
-![ollama Tags output](/gpu/ollama-example/curl-chat.png)
+![Ollama tags output](/gpu/ollama-example/curl-chat.png)
 
-Note: you cannot pull another model to the provider without requesting the `outbound` service from providers. Look to the next section to learn how to create an image with another model, to be able to use another model without the outbound feature.
+**Note:** You cannot pull another model to the provider without requesting the `outbound` service from providers. The next section shows you how to create an image with another model so you can use it without needing the outbound feature.
 
-# 3. Preparing the image
+# 3. Preparing the Image
 
-This step requires you to have docker running and the Golem `gvmkit-build` image conversion utility installed.
+This step requires Docker and the Golem `gvmkit-build` image conversion utility installed on your system.
 
-If you do not have docker installed please follow these [intructions](https://docs.docker.com/engine/install/).
+If you don't have Docker installed, follow these [instructions](https://docs.docker.com/engine/install/).
 
-The link to gvmkit-build installation instructions is [here](/docs/creators/tools/gvmkit/gvmkit-build-installation).
+The `gvmkit-build` installation instructions are available [here](/docs/creators/tools/gvmkit/gvmkit-build-installation).
 
-In this section, we will show you how we prepared our image. You can then modify the Dockerfile to create your custom one.
+In this section, we'll show you how we prepared our example image. You can modify the Dockerfile to create your custom one.
 
-Here is our Dockerfile:
+Here's our `Dockerfile`:
 
 ```bash
 FROM ollama/ollama
@@ -335,49 +336,48 @@ ENV HOME=/root
 COPY ./models /root/.ollama/models
 ```
 
-We used the official `ollama/ollama` docker image as a starting point.
-We have set up the HOME variable to /root. We will act as a `root` user on the remote machine. Then we copy the model data that we already have in the `./model` directory.
+We started with the official `ollama/ollama` Docker image. We set the HOME variable to /root because we'll be acting as the `root` user on the remote machine. Then, we copy the model data from the `./model` directory.
 
-Note that the `docker build` command allows you to copy data from the context where the command is run, so we had to copy the model into the directory where we build the image.
-Originally the models are stored in the $HOME/.ollama/models, where HOME is a home directory.
-To get the model there we had to run the ollama locally and pull the model to our PC (using the `ollama serve` and `ollama pull qwen2:0.5b` commands).
+Since the `docker build` command copies data from the context where it's run, we had to copy the model to the directory where we build the image.
+The models are originally stored in `$HOME/.ollama/models`, where HOME is the user's home directory.
+To get the model there, we had to run `ollama` locally and pull the model to our PC using the commands `ollama serve` and `ollama pull qwen2:0.5b`.
 
-Note: `05.b` indicates the version of the model (the smallest one). Make sure you have the space to pull the larger model you select.
+**Note:** `05.b` indicates the model version (the smallest one). Make sure you have enough space to pull the desired model.
 
 <!-- Note: gvmkit-build will allow you to upload to registry models up to 10GB. -->
 
 <!-- check the limit -->
 
-Alternatively, if you do not have `ollama` installed, you can run the `ollama/ollama` image in docker, and exec the `ollama pull qwen2:0.5b` command in the container.
+If you don't have `ollama` installed, you can run the `ollama/ollama` image in Docker and execute the `ollama pull qwen2:0.5b` command within the container.
 
-Here are example commands on Windows:
+For instance, on Windows, you would use the following commands:
 
 ```bash
-'docker run -d -v .\models:/root/.ollama/models -p 11434:11434 --name ollama ollama/ollama'
-'docker exec -it ollama ollama pull qwen2:0.5b'
+docker run -d -v .\models:/root/.ollama/models -p 11434:11434 --name ollama ollama/ollama
+docker exec -it ollama ollama pull qwen2:0.5b
 ```
 
-These commands will run the container with the image and use the local `.\models\` folder as a volume for a directory where `ollama` stores pulled models. The second command actually runs the `ollama pull` command in the container.
+These commands run the container with the image and mount the local `.\models\` folder as a volume for the directory where `ollama` stores pulled models. The second command executes the `ollama pull` command within the container.
 
-Then build the image:
+Now, let's build the image:
 
 ```bash
 docker build -t ollama:mytag .
 ```
 
-Once the model is built you can convert it to the GVMI format:
+Once the image is built, convert it to the GVMI format:
 
 ```bash
 gvmkit-build ollama:mytag
 ```
 
-and once it is converted, upload it to the Golem Registry:
+and upload it to the Golem Registry:
 
 ```bash
 gvmkit-build ollama:mytag --push --nologin
 ```
 
-Note: upload will take some time. 2 GB images may be uploaded up to 1 hour.
+**Note:** Uploading can take time, especially for large images. 
 
 <!--  
 Consider showing:
@@ -385,91 +385,92 @@ Consider showing:
 --upload-workers <UPLOAD_WORKERS> // each worker has a limit
 -->
 
-In the gvmkit-build output look for the line:
+In the `gvmkit-build` output, find the line:
 
-`Image link (for use in SDK): < imageHash >`
+`Image link (for use in SDK): <imageHash>`
 
-Copy the `imageHash`, it will be needed in the next step.
+Copy the `imageHash` - you'll need it in the next step.
 
-# 4. Understanding the script
+# 4. Understanding the Script
 
-Once we prepare the image with another model we can test it on the Golem Network. In this tutorial, we will not examine the whole script, instead focusing on critical elements that are crucial to running the right model on a GPU provider.
+Now that you have an image with your chosen model, you can test it on the Golem Network. We won't go through the whole script in this section, but we'll highlight the critical elements for running your model on a GPU provider.
 
-## Script structure
+## Script Structure
 
-The script follows the structure of the standard requestor script.
-We connect to `glm` (GolemNetwork), acquire an `exeunit` from a `rental`, and run a command `ollama serve` on the provider.
-In the docker image, the `ollama serve` command is run automatically as the entrypoint. In GVMI entrypoints are not supported. As we cannot run two commands simultaneously on the provider (yet) we will start the `ollama` on the provider and will utilize the `ollama` REST API to interact with the model.
-The command is run using the `runAndStream` method so we can collect the output as a stream and print it in the terminal. The command on the provider is delayed by 1 sec using `sleep 1` to make sure we will obtain the whole output in the output stream. We then observe the output until the ollama server is up and running and then we will utilize a built-in proxy functionality to expose provider service on the desired port on our requestor PC.
-(If you try to run a proxy for an unexisting service you will receive error 400, so we make sure the service is up and running before we start the proxy).
+The script follows the structure of a standard requestor script.
+We connect to `glm` (GolemNetwork), acquire an `exeunit` from a `rental`, and run the command `ollama serve` on the provider.
+In the Docker image, the `ollama serve` command is run automatically as the entry point. GVMI images currently don't support entry points. We'll start the `ollama` server on the provider and use its REST API to interact with the model.
+The command is executed using the `runAndStream` method so we can collect the output as a stream and print it to the terminal. The command on the provider is delayed by 1 second using `sleep 1` to ensure we capture the entire output stream. We then monitor the output until the ollama server is running, and then we'll use a built-in proxy to expose the provider service on the desired port on our local machine.
+(If you try to run a proxy for a non-existent service, you will get a 400 error, so we need to make sure the service is up and running before we start the proxy).
 
-Once the proxy is running we can use local ollama CLI or curl to interact with the model.
-We can check if our model is available by running `curl http://localhost:11434/api/tags`
+Once the proxy is running, we can use the local `ollama` CLI or `curl` to interact with the model.
+We can check if our model is available by running `curl http://localhost:11434/api/tags`.
 
-For the example image, the output should be like this:
+For the example image, the output should look like this:
 
 ![ollama Tags output](/gpu/ollama-example/curl-tags.png)
 
-If you run the script without any change, you will certainly not see your model present. We need to tell the provider to use your newly created image.
+If you run the script without any changes, you won't see your model there. You need to tell the provider to use your new image.
 
-## Selecting providers with GPU or CPU
+## Selecting Providers with GPU or CPU
 
-Look at the section:
+Look at this section of the code:
 
 ```js
-    demand: {
-      workload: {
-        imageHash: "23ac8d8f54623ad414d70392e4e3b96da177911b0143339819ec1433",
-        minMemGib: 8,
-        capabilities: ["!exp:gpu", "vpn"],
-        engine: "vm-nvidia",
- },
+demand: {
+  workload: {
+    imageHash: '23ac8d8f54623ad414d70392e4e3b96da177911b0143339819ec1433', // ollama with qwen2:0.5b
+    minMemGib: 8,
+    capabilities: ['!exp:gpu', 'vpn'],
+    engine: 'vm-nvidia',
+  },
+},
 ```
 
-Replace the original image hash with the hash returned from the gvmkit-build in the previous step.
+Replace the original image hash with the one returned by `gvmkit-build` in the previous step.
 Let's look at the other workload options:
 
-To indicate you want a provider with a GPU you need to include the following options:
+To request a provider with a GPU, you need to include the following options:
 
 ```js
-        capabilities: ["!exp:gpu", "vpn"],
-        engine: "vm-nvidia",
+capabilities: ['!exp:gpu', 'vpn'],
+engine: 'vm-nvidia',
 ```
 
-If you would run a test just on the CPU, you can remove these lines or replace them with:
+If you want to run a test on a CPU, you can remove these lines or replace them with:
 
 ```js
-      engine: "vm",
+engine: 'vm',
 ```
 
-If your model is large, you might need to request a provider with more than 8 GB of memory.
+If your model is large, you might need to request a provider with more than 8 GB of memory by adjusting the `minMemGib` value.
 
-## Selecting providers and setting the price limit
+## Selecting Providers and Setting the Price Limit
 
-When you are running your task on a `mainnet` pay attention to the following section:
+When running your task on the `mainnet`, pay attention to this section:
 
 ```js
-    market: {
-      rentHours: 0.5,
-      pricing: {
-        model: "linear",
-        maxStartPrice: 0.0,
-        maxCpuPerHourPrice: 0.0,
-        maxEnvPerHourPrice: 2.0,
- },
-      offerProposalFilter: myProposalFilter,
- },
+market: {
+  rentHours: 0.5,
+  pricing: {
+    model: 'linear',
+    maxStartPrice: 0.0,
+    maxCpuPerHourPrice: 0.0,
+    maxEnvPerHourPrice: 2.0,
+  },
+  offerProposalFilter: myProposalFilter,
+},
 ```
 
-Here we define that we rent the resources for a maximum of 0.5 an hour (you can terminate earlier by pressing Ctrl+C) and define the maximum price you are willing to pay for the resources. If there is no GPU provider available with the price limits used in the example (2 GLM per hour) you can consider increasing your budget or decide to use CPU providers, that offer resources at lower rates.
+Here, we define that we're renting resources for a maximum of 0.5 hours (you can terminate earlier by pressing `Ctrl+C`) and set the maximum price you're willing to pay. If there are no GPU providers available within your price limit (2 GLM per hour in the example), you can either increase your budget or use CPU providers, which are generally cheaper.
 
-Note the `myProposalFilter`. It can be used to filter the providers we hire. If your model is large, so is your image and it will take some time for providers to download it from the registry. For a 7GB image, it may take up to 10 minutes - depending on the provider's bandwidth. Therefore, once you engage a given provider you might prefer to select the same one next time. If he has your image cached, deployment will be much faster.
+The `myProposalFilter` can be used to filter the providers you engage with. If your model is large, your image will also be large, and it might take some time for providers to download it from the registry. For a 7 GB image, the download can take up to 10 minutes, depending on the provider's bandwidth. Therefore, once you engage a provider, you might prefer to select the same one for subsequent tasks. If the provider has your image cached, the deployment will be significantly faster.
 
-To find the provider you used just look in the script output for a line like: `Will start ollam on: <provider name>` and update the `myProposalFilter`.
+To find the provider you used, look for a line like `Will start ollama on: <provider name>` in the script output and update the `myProposalFilter` accordingly.
 
-## Working on the mainnet
+## Working on the Mainnet
 
-Lastly, let's look at GolemNetwork options.
+Finally, let's examine the GolemNetwork options:
 
 ```js
 const glm = new GolemNetwork({
@@ -484,18 +485,22 @@ const glm = new GolemNetwork({
 })
 ```
 
-The `api: { key: "try_golem" }` object, defines the app-key configured during the yagna start. Check the docs page for information on how to set a unique value.
+The `api: { key: 'try_golem' }` object sets the app-key configured during the `yagna` startup. You can find instructions on setting a unique value in the documentation.
 
-The payment options:
+The `payment` options:
 
 ```js
- payment: {
-   driver: "erc20",
-   network: "polygon",
- },
+payment: {
+  driver: 'erc20',
+  network: 'polygon',
+},
 ```
 
-This section indicates you want your task to be run on the `mainnet` - the part of GolemNetwork where you pay with GLM (and where GPU providers are available).
-If you would like just to test your scripts on low-performance CPU providers comment this section out, and your task will search for providers on the test network. Do not forget to modify the `demand` options, to request CPU providers only.
+This section indicates you want your task to run on the `mainnet` - the part of the Golem Network where you pay with GLM (and where GPU providers are available).
+If you'd like to test your scripts on low-performance CPU providers, comment out this section, and your task will search for providers on the `testnet`. Remember to modify the `demand` options to request CPU providers if you do this.
 
-Now you should know all you need to know start your adventure with AI on Golem Network! Should you encounter any problems with the Golem Network, Yagna, or the requestor scripts, please reach out to us via our [Discord channel](https://chat.golem.network/).
+## Conclusion
+
+That concludes our tutorial on using AI models on the Golem Network. If you encounter any problems with the Golem Network, Yagna, or the requestor scripts, please reach out to us on our [Discord channel](https://chat.golem.network/).
+------------------------
+
