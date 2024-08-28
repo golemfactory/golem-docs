@@ -132,10 +132,6 @@ export const navigation = [
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
               },
-              {
-                title: 'REST API with Express.js',
-                href: '/docs/creators/javascript/tutorials/rest-api-with-express',
-              },
             ],
           },
           {
@@ -685,6 +681,10 @@ export const navigation = [
           {
             title: 'Layer 2 Payments',
             href: '/docs/golem/payments/layer-2-payments',
+          },
+          {
+            title: 'Deposits',
+            href: '/docs/golem/payments/deposits',
           },
           {
             title: 'Golem token conversion',
