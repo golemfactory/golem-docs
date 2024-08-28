@@ -22,10 +22,41 @@ type: "JS Task API Reference"
 
 ### Type Aliases
 
+- [TaskFunction](task#taskfunction)
 - [TaskOptions](task#taskoptions)
 - [TaskDetails](task#taskdetails)
 
 ## Type Aliases
+
+### TaskFunction
+
+Ƭ **TaskFunction**\<`OutputType`\>: (`exe`: `ExeUnit`) => `Promise`\<`OutputType`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `OutputType` |
+
+#### Type declaration
+
+▸ (`exe`): `Promise`\<`OutputType`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `exe` | `ExeUnit` |
+
+##### Returns
+
+`Promise`\<`OutputType`\>
+
+#### Defined in
+
+[task.ts:10](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/task.ts#L10)
+
+___
 
 ### TaskOptions
 
@@ -36,12 +67,13 @@ type: "JS Task API Reference"
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `maxRetries?` | `number` | maximum number of retries if task failed due to provider reason, default = 5 |
-| `timeout?` | `number` | timeout in ms for task execution, including retries, default = 300_000 (5min) |
-| `activityReadySetupFunctions?` | `Worker`<`unknown`\>[] | array of setup functions to run on each activity |
+| `retryOnTimeout?` | `boolean` | Opt-in for retries of the tasks when the [timeout](task#timeout) [startupTimeout](task#startuptimeout) are reached **`Default`** ```ts false ``` |
+| `timeout?` | `number` | timeout in ms for task execution, measured for one attempt from start to stop, default = 300_000 (5min) |
+| `startupTimeout?` | `number` | timeout in ms for task startup, measured from initialization to start, default = 120_000 (2min) |
 
 #### Defined in
 
-[src/task.ts:19](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L19)
+[task.ts:21](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/task.ts#L21)
 
 ___
 
@@ -62,4 +94,4 @@ ___
 
 #### Defined in
 
-[src/task.ts:28](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L28)
+[task.ts:39](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/task.ts#L39)

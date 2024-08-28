@@ -12,47 +12,74 @@ type: "JS Task API Reference"
 
 - [TaskExecutor](../classes/executor.TaskExecutor)
 
+### Interfaces
+
+- [TaskSpecificOptions](../interfaces/executor.TaskSpecificOptions)
+
 ### Type Aliases
 
-- [ExecutorOptions](executor#executoroptions)
-- [ExecutorOptionsMixin](executor#executoroptionsmixin)
-- [YagnaOptions](executor#yagnaoptions)
+- [ExecutorMainOptions](executor#executormainoptions)
+- [TaskExecutorOptions](executor#taskexecutoroptions)
+- [TaskFunction](executor#taskfunction)
 
 ## Type Aliases
 
-### ExecutorOptions
+### ExecutorMainOptions
 
-Ƭ **ExecutorOptions**: { `package?`: `string` \| `Package` ; `taskTimeout?`: `number` ; `subnetTag?`: `string` ; `logger?`: `Logger` ; `enableLogging?`: `boolean` ; `yagnaOptions?`: [`YagnaOptions`](executor#yagnaoptions) ; `maxTaskRetries?`: `number` ; `storageProvider?`: `StorageProvider` ; `activityPreparingTimeout?`: `number` ; `skipProcessSignals?`: `boolean` ; `startupTimeout?`: `number` ; `exitOnNoProposals?`: `boolean`  } & `Omit`<`PackageOptions`, ``"imageHash"`` \| ``"imageTag"``\> & `MarketOptions` & `PaymentOptions` & `NetworkServiceOptions` & `AgreementServiceOptions` & `WorkOptions` & [`TaskServiceOptions`](../interfaces/service.TaskServiceOptions)
-
-#### Defined in
-
-[src/executor.ts:41](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L41)
-
-___
-
-### ExecutorOptionsMixin
-
-Ƭ **ExecutorOptionsMixin**: `string` \| [`ExecutorOptions`](executor#executoroptions)
-
-Contains information needed to start executor, if string the imageHash is required, otherwise it should be a type of [ExecutorOptions](executor#executoroptions)
-
-#### Defined in
-
-[src/executor.ts:96](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L96)
-
-___
-
-### YagnaOptions
-
-Ƭ **YagnaOptions**: `Object`
+Ƭ **ExecutorMainOptions**: `Object`
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `apiKey?` | `string` |
-| `basePath?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `enableLogging?` | `boolean` | Set to `false` to completely disable logging (even if a logger is provided) |
+| `skipProcessSignals?` | `boolean` | Do not install signal handlers for SIGINT, SIGTERM, SIGBREAK, SIGHUP. By default, TaskExecutor will install those and terminate itself when any of those signals is received. This is to make sure proper shutdown with completed invoice payments. Note: If you decide to set this to `true`, you will be responsible for proper shutdown of task executor. |
+| `startupTimeout?` | `number` | Timeout for waiting for at least one offer from the market expressed in milliseconds. This parameter (set to 90 sec by default) will issue a warning when executing `TaskExecutor.run` if no offer from the market is accepted before this time. If you'd like to change this behavior, and throw an error instead, set `exitOnNoProposals` to `true`. You can set a slightly higher time in a situation where your parameters such as proposalFilter or minimum hardware requirements are quite restrictive and finding a suitable provider that meets these criteria may take a bit longer. |
+| `vpn?` | `boolean` \| `NetworkOptions` | Creates a new logical network within the Golem VPN infrastructure. Allows communication between tasks using standard network mechanisms, but requires specific implementation in the ExeUnit/runtime, which must be capable of providing a standard Unix-socket interface to their payloads and marshaling the logical network traffic through the Golem Net transport layer. If boolean - true is provided, the network will be created with default parameters |
+| `task?` | [`TaskSpecificOptions`](../interfaces/executor.TaskSpecificOptions) | - |
 
 #### Defined in
 
-[src/executor.ts:98](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/executor.ts#L98)
+[executor.ts:97](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L97)
+
+___
+
+### TaskExecutorOptions
+
+Ƭ **TaskExecutorOptions**: [`ExecutorMainOptions`](executor#executormainoptions) & `GolemNetworkOptions` & `MarketOrderSpec`
+
+Contains information needed to start executor
+
+#### Defined in
+
+[executor.ts:135](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L135)
+
+___
+
+### TaskFunction
+
+Ƭ **TaskFunction**\<`OutputType`\>: (`exe`: `ExeUnit`) => `Promise`\<`OutputType`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `OutputType` |
+
+#### Type declaration
+
+▸ (`exe`): `Promise`\<`OutputType`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `exe` | `ExeUnit` |
+
+##### Returns
+
+`Promise`\<`OutputType`\>
+
+#### Defined in
+
+[executor.ts:137](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/executor.ts#L137)

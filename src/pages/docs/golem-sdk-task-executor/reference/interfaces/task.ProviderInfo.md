@@ -24,7 +24,7 @@ type: "JS Task API Reference"
 
 #### Defined in
 
-[src/task.ts:5](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L5)
+[task.ts:5](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/task.ts#L5)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/task.ts:6](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L6)
+[task.ts:6](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/task.ts#L6)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[src/task.ts:7](https://github.com/golemfactory/golem-sdk-task-executor/blob/6ac08ea/src/task.ts#L7)
+[task.ts:7](https://github.com/golemfactory/golem-sdk-task-executor/blob/a31d1c9/src/task.ts#L7)

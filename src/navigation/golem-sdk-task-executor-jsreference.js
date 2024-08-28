@@ -1,83 +1,91 @@
 export const navigation = [
-{
-    title: "latest",
+  {
+    title: 'latest',
     links: [
-{
-        title: "Content overview",
-        href: "/docs/golem-sdk-task-executor/reference/overview"
+      {
+        title: 'Content overview',
+        href: '/docs/golem-sdk-task-executor/reference/overview',
       },
-{
-        title: "Default values",
-        href: "/docs/golem-sdk-task-executor/reference/default-values"
-      },
-{
-        title: "classes",
+      {
+        title: 'classes',
         children: [
-{
-            title: "TaskExecutor",
-            href: "/docs/golem-sdk-task-executor/reference/classes/executor.TaskExecutor"
+          {
+            title: 'TaskExecutor',
+            href: '/docs/golem-sdk-task-executor/reference/classes/executor.TaskExecutor',
           },
-{
-            title: "Task",
-            href: "/docs/golem-sdk-task-executor/reference/classes/task.Task"
-          }
-        ]
+          {
+            title: 'StatsService',
+            href: '/docs/golem-sdk-task-executor/reference/classes/stats.StatsService',
+          },
+          {
+            title: 'Task',
+            href: '/docs/golem-sdk-task-executor/reference/classes/task.Task',
+          },
+        ],
       },
-{
-        title: "enums",
+      {
+        title: 'enums',
         children: [
-{
-            title: "TaskState",
-            href: "/docs/golem-sdk-task-executor/reference/enums/task.TaskState"
-          }
-        ]
+          {
+            title: 'TaskState',
+            href: '/docs/golem-sdk-task-executor/reference/enums/task.TaskState',
+          },
+        ],
       },
-{
-        title: "interfaces",
+      {
+        title: 'interfaces',
         children: [
-{
-            title: "TaskExecutorEventsDict",
-            href: "/docs/golem-sdk-task-executor/reference/interfaces/events.TaskExecutorEventsDict"
+          {
+            title: 'ExecutorEvents',
+            href: '/docs/golem-sdk-task-executor/reference/interfaces/events.ExecutorEvents',
           },
-{
-            title: "TaskServiceOptions",
-            href: "/docs/golem-sdk-task-executor/reference/interfaces/service.TaskServiceOptions"
+          {
+            title: 'TaskSpecificOptions',
+            href: '/docs/golem-sdk-task-executor/reference/interfaces/executor.TaskSpecificOptions',
           },
-{
-            title: "ProviderInfo",
-            href: "/docs/golem-sdk-task-executor/reference/interfaces/task.ProviderInfo"
-          }
-        ]
+          {
+            title: 'TaskServiceOptions',
+            href: '/docs/golem-sdk-task-executor/reference/interfaces/service.TaskServiceOptions',
+          },
+          {
+            title: 'TimeInfo',
+            href: '/docs/golem-sdk-task-executor/reference/interfaces/stats.TimeInfo',
+          },
+          {
+            title: 'ProviderInfo',
+            href: '/docs/golem-sdk-task-executor/reference/interfaces/task.ProviderInfo',
+          },
+        ],
       },
-{
-        title: "modules",
+      {
+        title: 'modules',
         children: [
-{
-            title: "Events",
-            href: "/docs/golem-sdk-task-executor/reference/modules/events"
+          {
+            title: 'Events',
+            href: '/docs/golem-sdk-task-executor/reference/modules/events',
           },
-{
-            title: "Executor",
-            href: "/docs/golem-sdk-task-executor/reference/modules/executor"
+          {
+            title: 'Executor',
+            href: '/docs/golem-sdk-task-executor/reference/modules/executor',
           },
-{
-            title: "Service",
-            href: "/docs/golem-sdk-task-executor/reference/modules/service"
+          {
+            title: 'Service',
+            href: '/docs/golem-sdk-task-executor/reference/modules/service',
           },
-{
-            title: "Task",
-            href: "/docs/golem-sdk-task-executor/reference/modules/task"
+          {
+            title: 'Stats',
+            href: '/docs/golem-sdk-task-executor/reference/modules/stats',
           },
-{
-            title: "Types",
-            href: "/docs/golem-sdk-task-executor/reference/modules/types"
+          {
+            title: 'Task',
+            href: '/docs/golem-sdk-task-executor/reference/modules/task',
           },
-{
-            title: "Utils",
-            href: "/docs/golem-sdk-task-executor/reference/modules/utils"
-          }
-        ]
-      }
-    ]
-  }
+          {
+            title: 'Utils',
+            href: '/docs/golem-sdk-task-executor/reference/modules/utils',
+          },
+        ],
+      },
+    ],
+  },
 ]
