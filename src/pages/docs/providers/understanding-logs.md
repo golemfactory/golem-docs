@@ -90,7 +90,9 @@ These logs track how your provider bills requestors and receives payments:
 
 - **`[INFO ya_provider::market::negotiator] Agreement [agreement-id] terminated.`**: The agreement has finished. This happens either because the task was completed successfully, or the agreement's pre-defined time limit (its duration) has been reached.
 
-## Common Warning Messages 
+## Errors and Warnings You Might Encounter
+
+As a Golem Provider, you may occasionally see error messages or warnings in your logs. While many of these are harmless and can be safely ignored, it's important to understand what they mean and when they might require your attention. Here's an overview of some common issues you might encounter:
 
 ### Failed to Unsubscribe Offer
 
@@ -101,10 +103,6 @@ These logs track how your provider bills requestors and receives payments:
 
 - **`[WARN ya_provider::market::provider_market] Can't query market events. Error: HTTP error requesting GET http://...`**:  This warning means your provider encountered an issue while checking for updates or new requests on the marketplace. This can also be caused by temporary network problems or glitches in the Golem marketplace's service. 
   - **Solution:**  You can usually ignore this warning unless it occurs repeatedly. 
-
-## Common Error Messages 
-
-Error messages are usually more critical than warnings and require more attention. 
 
 ### Error Sending Invoice
 
