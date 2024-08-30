@@ -654,6 +654,7 @@ export const navigation = [
         href: '/docs/providers/provider-uninstallation',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
+      { title: 'Understanding provider logs', href: '/docs/providers/understanding-logs' },
     ],
   },
   {
