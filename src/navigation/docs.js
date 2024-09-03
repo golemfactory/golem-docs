@@ -546,6 +546,10 @@ export const navigation = [
                 href: '/docs/creators/tools/yagna/requestor-uninstallation',
               },
               {
+                title: 'Yagna logs',
+                href: '/docs/creators/tools/yagna/yagna-logs',
+              },
+              {
                 title: 'Managing Golem Wallet',
                 href: '/docs/creators/tools/yagna/managing-golem-wallet',
               },
@@ -654,7 +658,10 @@ export const navigation = [
         href: '/docs/providers/provider-uninstallation',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-      { title: 'Understanding provider logs', href: '/docs/providers/understanding-logs' },
+      {
+        title: 'Understanding provider logs',
+        href: '/docs/providers/understanding-logs',
+      },
     ],
   },
   {
