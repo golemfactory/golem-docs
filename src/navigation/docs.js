@@ -129,6 +129,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/AI-on-golem-network',
               },
               {
+                title: 'Using the Deposit Payment Scheme',
+                href: '/docs/creators/javascript/tutorials/using-deposit-payment-scheme',
+              },
+              {
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
               },
@@ -654,7 +658,10 @@ export const navigation = [
         href: '/docs/providers/provider-uninstallation',
       },
       { title: 'Provider FAQ', href: '/docs/providers/provider-faq' },
-      { title: 'Understanding provider logs', href: '/docs/providers/understanding-logs' },
+      {
+        title: 'Understanding provider logs',
+        href: '/docs/providers/understanding-logs',
+      },
     ],
   },
   {
