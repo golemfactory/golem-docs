@@ -437,11 +437,17 @@ capabilities: ['!exp:gpu', 'vpn'],
 engine: 'vm-nvidia',
 ```
 
-If you want to run a test on a CPU, you can remove these lines or replace them with:
+If you want to run a test on a CPU, you need to remove these lines or replace them with:
 
 ```js
 engine: 'vm',
 ```
+
+{% alert level="danger" %}
+
+To run this example on CPU providers, you should also update the pricing filter. Please scroll down for details.
+
+{% /alert  %}
 
 If your model is large, you might need to request a provider with more than 8 GB of memory by adjusting the `minMemGib` value.
 
