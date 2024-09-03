@@ -33,7 +33,7 @@ set YAGNA_DATADIR
 {% /tabs %}
 
 Current logs are saved in the `yagna_rCURRENT/log` file.
-Every day and on each restart a new log file is created and the older version is saved under name: `yagna_rYYYY-MM-DD_hh-mm-ss[restart-nnn]` where the `YYYY-MM-DD_hh-mm-ss` indicates the date and time of the log start and optional suffix `restart-nnn` indicates that the log was created during Yagna restart.
+Every day and on each restart a new log file is created and the older version is saved under name: `yagna_rYYYY-MM-DD_hh-mm-ss[restart-nnn]` where the `YYYY-MM-DD_hh-mm-ss` indicates the date and time of the log start and optional suffix `restart-nnn` indicates that the `n-th` log was created during Yagna restart.
 
 ### Logging level
 
