@@ -34,7 +34,7 @@ The code is organized in several files.
 - _user.mjs_ contains actions performed by the Funder, which are related to deposit creation,
 - _observer.mjs_ contains code that is used to monitor events on the LockPayment contract,
 - _index.mjs_ contains the requestor script and orchestration for the overall process,
-- _"config.js"_ - contains configuration data for the example,
+- _"config.mjs"_ - contains configuration data for the example,
 - _"abiGLM.json"_ and _"abiLOCK.json"_ are JSON files that describe how to interact with respective smart contracts, they can be obtained from the [Etherscan](https://holesky.etherscan.io/).
 
 ## How to run the example:
@@ -52,11 +52,11 @@ npm install "viem"
 You also need to copy abi files for the LockPayment and GLM contracts to `./contracts` folder.
 
 The tutorial assumes you have `yagna` installed according to [these instructions](https://docs.golem.network/docs/creators/tools/yagna/yagna-installation-for-requestors)
-and you can use the `try_golem` app-key to access the `yagna` REST API. If you use unique app-keys, you need to edit the `config.js` file and replace the `try_golem` with the actual value of your app-key.
+and you can use the `try_golem` app-key to access the `yagna` REST API. If you use unique app-keys, you need to edit the `config.mjs` file and replace the `try_golem` with the actual value of your app-key.
 
 ## Example configuration
 
-Let's look into `config.js`:
+Let's look into `config.mjs`:
 
 ```js
 const config = {
@@ -127,7 +127,7 @@ Now let's look at the `observer.mjs` file:
 import { createPublicClient, decodeFunctionData, http, parseAbi } from 'viem'
 import { holesky } from 'viem/chains'
 import { readFileSync } from 'fs'
-import config from './config.js'
+import config from './config.mjs'
 import chalk from 'chalk'
 
 const abiLock = await JSON.parse(
@@ -281,7 +281,7 @@ import {
 import { privateKeyToAccount } from 'viem/accounts'
 import { holesky } from 'viem/chains'
 import chalk from 'chalk'
-import config from './config.js'
+import config from './config.mjs'
 import { readFileSync, writeFileSync } from 'fs'
 
 const abiGlm = JSON.parse(readFileSync('./contracts/glmAbi.json', 'utf-8'))
@@ -550,7 +550,7 @@ Deposit is created on LockPayment Contact. To create a deposit the funder must d
 - and the period for which the deposit is valid.
 
 The nonce is a value used to distinguish different deposits if created by the same user. In the example use a random integer from the range of 0 - 1000000 as defined in the config file.
-For the tutorial, we create a deposit for 1 hour (again this value is configurable in the `config.js`).
+For the tutorial, we create a deposit for 1 hour (again this value is configurable in the `config.mjs`).
 The funder user can terminate the deposit after this period if the spendor does not close it before.
 
 Once we get the transaction hash, we wait for the transaction to be executed on the blockchain.
@@ -583,7 +583,7 @@ import { spawnContractObserver } from './observer.mjs'
 import { runUserActions } from './user.mjs'
 import { readFileSync } from 'fs'
 
-import config from './config.js'
+import config from './config.mjs'
 
 async function runOperator(observerContext) {
   const depositData = await JSON.parse(
