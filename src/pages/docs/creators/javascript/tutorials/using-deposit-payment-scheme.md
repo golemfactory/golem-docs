@@ -284,12 +284,8 @@ import chalk from 'chalk'
 import config from './config.js'
 import { readFileSync, writeFileSync } from 'fs'
 
-const abiGlm = await JSON.parse(
-  readFileSync('./contracts/glmAbi.json', 'utf-8')
-)
-const abiLock = await JSON.parse(
-  readFileSync('./contracts/lockAbi.json', 'utf-8')
-)
+const abiGlm = JSON.parse(readFileSync('./contracts/glmAbi.json', 'utf-8'))
+const abiLock = JSON.parse(readFileSync('./contracts/lockAbi.json', 'utf-8'))
 
 const funderAccount = privateKeyToAccount(config.funder.privateKey)
 const budget = config.budget
