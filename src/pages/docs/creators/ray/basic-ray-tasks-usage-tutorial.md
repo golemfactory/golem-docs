@@ -134,5 +134,5 @@ Read more information about Ray tasks on [Ray Core docs website](https://docs.ra
 {% docnavigation title="See also" %}
 
 - [Ray on Golem introduction](/docs/creators/ray)
-- [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial)
-{% /docnavigation %}
+<!-- - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) -->
+
