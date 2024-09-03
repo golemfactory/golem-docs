@@ -1,7 +1,6 @@
 ---
 title: Locating and Configuring Yagna Requestor Logs
 description: Instructions on finding and configuring your Yagna requestor logs for debugging and monitoring.
-pageTitle:  Yagna Requestor Logs: Finding and Configuring Them
 type: Instructions
 ---
 
