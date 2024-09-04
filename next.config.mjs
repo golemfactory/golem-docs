@@ -9,6 +9,19 @@ const nextConfig = {
     scrollRestoration: true,
   },
   distDir: 'dist',
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Referrer-Policy',
+            value: 'origin',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 // if (!process.env.VERCEL) {
