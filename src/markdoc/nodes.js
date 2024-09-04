@@ -47,6 +47,35 @@ const nodes = {
       process: { type: Boolean, render: false, default: true },
     },
   },
+  link: {
+    render: 'a',
+    attributes: {
+      href: { type: String, required: true },
+      title: { type: String },
+      target: { type: String },
+      rel: { type: String },
+      referrerPolicy: { type: String },
+    },
+    transform(node, config) {
+      const attributes = node.transformAttributes(config)
+      const children = node.transformChildren(config)
+
+      // Add referrer origin and tracking for external links
+      if (attributes.href && attributes.href.startsWith('http')) {
+        attributes.rel = config.externalLinkRel || 'noopener noreferrer'
+        attributes.target = config.externalLinkTarget || '_blank'
+        attributes.referrerPolicy = config.referrerPolicy || 'origin'
+
+        if (config.utmSource) {
+          const url = new URL(attributes.href)
+          url.searchParams.set('utm_source', config.utmSource)
+          attributes.href = url.toString()
+        }
+      }
+
+      return new Tag(this.render, attributes, children)
+    },
+  },
   heading: {
     render: Heading,
     children: ['inline'],
