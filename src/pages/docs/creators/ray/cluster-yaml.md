@@ -77,6 +77,11 @@ Note that using `pip` requires its index URL to be present in [`outbound_urls`](
 initialization_commands: []
 ```
 
+Keep in mind that instead of installing additional packages every time each node starts up, it might be better 
+to build your image with all your requirements added on top of Ray on Golem components.
+Please reach out to us at the [`#Ray on Golem` discord channel](https://chat.golem.network/)) for guidance.
+
+
 ### File mounts
 
 You can use file mounts to copy directories and files to the head node and the worker nodes.

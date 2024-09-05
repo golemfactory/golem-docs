@@ -17,7 +17,7 @@ We are looking for {% link title="Beta Testers" href="https://ray.golem.network"
 - [Setup tutorial](/docs/creators/ray/setup-tutorial) - step-by-step explanation of the quickstart instructions
 - [Supported versions and other limitations](/docs/creators/ray/supported-versions-and-other-limitations) - list of supported Python and Ray versions, and other known issues
 - [Basic Ray tasks usage tutorial](/docs/creators/ray/basic-ray-tasks-usage-tutorial) - anatomy of Ray application based on a simple code showcasing Ray tasks
-- [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage
+<!-- - [Converting a real-life use case to Ray on Golem](/docs/creators/ray/conversion-to-ray-on-golem-tutorial) - example of a little bit more practical Ray on Golem usage -->
 - [Running on the mainnet](/docs/creators/ray/mainnet) - all you need to run your cluster on the mainnet
 - [Accessing the Internet tutorial](/docs/creators/ray/outbound) - enabling your Ray app to use the Internet (from within the cluster nodes)
 - [Cluster yaml](/docs/creators/ray/cluster-yaml) - details of configuration options of Ray on Golem cluster yaml
@@ -82,7 +82,7 @@ You'll need a piece of code to execute on Golem. If you already have some Ray ap
 Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/ray-on-golem/tree/main/examples). 
 
 
-Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial) and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial).
+Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial)<!-- and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial)-->.
 
 If you have any questions, comments, insights, praises, or doubts about these docs and Ray on Golem in general please don't hesitate to reach out to us either on
 
