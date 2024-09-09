@@ -129,6 +129,10 @@ export const navigation = [
                 href: '/docs/creators/javascript/tutorials/AI-on-golem-network',
               },
               {
+                title: 'Using the Deposit Payment Scheme',
+                href: '/docs/creators/javascript/tutorials/using-deposit-payment-scheme',
+              },
+              {
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
               },
