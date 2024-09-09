@@ -2,32 +2,97 @@
 
 By following this tutorial, you'll see how easy it is to deploy web applications on Golem.
 
-You should be able to complete it regardless of your level of experience. However, it will help if you have some fluency using basic unix tools like `curl` or `git` and are not afraid of running console commands.
-
-## Prerequisites
-
-To launch applications on Golem, you request computational resources from the network. Therefore, you need the following prerequisites prior to execution:
-
-- a running `yagna` service (v0.12 or higher)
-- your requestor app key
-
-Setting these up is a part of the [Yagna installation instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors).
-
-Please also ensure you have `curl` available on your system.
-
-```shell
-curl --version
-```
-
-If not, please install it using the instructions appropriate for your system from: [here](https://curl.se/download.html).
+You should be able to complete it regardless of your level of experience. However, it will be helpful if you have some fluency using basic Unix tools like `curl` or `git` and are not afraid of running console commands.
 
 ## Installation
 
-### Get the virtual environment set up
+### 1. Install and run Yagna
 
-It's best to run any Python application in a virtual environment. It will let you avoid cluttering your system's Python installation with unnecessary packages.
+Yagna is a service that communicates and performs operations on the Golem Network. Let's get started by installing it.
 
-Ensure you're running Python >= 3.8, and you have the `venv` module installed (it's normally included in the Python distribution).
+#### Install Yagna
+
+{% tabs %}
+{% tab label="Linux/Mac" %}
+
+On Linux/MacOS, you can install it using our installation script:
+
+```bash
+curl -sSf https://join.golem.network/as-requestor | bash -
+```
+
+You might be asked to modify your PATH afterward.
+{% /tab %}
+
+{% tab label="Windows" %}
+
+On Windows, you will need to install Yagna manually:
+
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+2. Extract the downloaded archive.
+3.  Move the extracted `yagna.exe` and `gftp.exe` files to a directory of your choice. 
+4. Add that directory to your system's PATH environment variable. This will allow you to run the `yagna` command from any location in your terminal.
+
+{% /tab %}
+
+{% /tabs %}
+
+#### Start the Yagna service
+
+Open a terminal (command line window) and define the app-key that will allow our script to use the Yagna API. In this tutorial, we will use the `try_golem` app-key, which will be automatically generated and configured when you start Yagna.
+
+{% tabs %}
+{% tab label="MacOS / Linux" %}
+
+```bash
+export YAGNA_AUTOCONF_APPKEY=try_golem
+```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```shell
+set YAGNA_AUTOCONF_APPKEY=try_golem
+```
+
+{% /tab %}
+{% /tabs %}
+
+{% alert level="warning" %}
+This creates a temporary app-key that will disappear after the Yagna service is restarted. This is useful for experimenting and running examples and tutorials. However, for production deployment, it is recommended to use a unique app-key generated using the  `yagna app-key create <key-name>` command. 
+{% /alert %}
+
+Then start the `yagna` service:
+
+```bash
+yagna service run
+```
+
+Now, set the `YAGNA_APPKEY` environment variable, which will be used by your Golem application to connect to Yagna:
+
+{% tabs %}
+
+{% tab label="MacOS / Linux" %}
+
+```bash
+export YAGNA_APPKEY=try_golem
+```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```shell
+set YAGNA_APPKEY=try_golem
+```
+
+{% /tab %}
+{% /tabs %}
+
+### 2. Get the virtual environment set up
+
+It's best to run any Python application in a virtual environment. This will let you avoid cluttering your system's Python installation with unnecessary packages.
+
+Ensure you're running Python >= 3.8 and that you have the `venv` module installed (it's normally included in the Python distribution).
 
 Prepare a virtual environment for the tutorial script:
 
@@ -51,9 +116,9 @@ python -m venv --clear %HOMEDRIVE%%HOMEPATH%\.envs\dapps
 {% /tab %}
 {% /tabs %}
 
-### Install `dapp-runner`
+### 3. Install `dapp-runner`
 
-The tool which deploys apps to Golem, `dapp-runner` is installable from the PyPi repository with the following command:
+The tool that deploys apps to Golem, `dapp-runner` is installable from the PyPi repository with the following command:
 
 ```shell
 pip install -U pip dapp-runner
@@ -73,51 +138,16 @@ curl https://raw.githubusercontent.com/golemfactory/dapp-store/81e3f50aba90a84d3
 curl https://raw.githubusercontent.com/golemfactory/dapp-runner/main/configs/default.yaml > config.yaml
 ```
 
-### Export your application key to the environment
-
-Generate an unique api-key with the `yagna` command:
-
-{% alert level="info" %}
-
-If you followed [Yagna installation instructions](/docs/creators/tools/yagna/yagna-installation-for-requestors) you can use 'try_golem' key.
-
-{% /alert %}
-
-```bash
-yagna app-key create dapp-runner
-```
-
-It will produce a 32-char key.
-
-Copy and export it:
-
-{% tabs %}
-
-{% tab label="Linux / MacOS" %}
-
-```bash
-export YAGNA_APPKEY=<your key>
-```
-
-{% /tab %}
-{% tab label="Windows" %}
-
-```bash
-set YAGNA_APPKEY=<your key>
-```
-
-{% /tab %}
-{% /tabs %}
 
 ### Run the app
 
-Having the above setup complete, you can verify it by running a sample application that comes together with `dapp-runner` repository using the following commands:
+Now you can start the app on Golem.
 
 ```shell
 dapp-runner start --config config.yaml webapp.yaml
 ```
 
-Once the app is deployed on Golem, you should see a line reading:
+Once the app launches, you should see some status messages describing various stages of the deployment. And finally, you should see:
 
 ```json
 { "web": { "local_proxy_address": "http://localhost:8080" } }
@@ -131,6 +161,6 @@ That's it!
 
 {% docnavigation title="Next steps" %}
 
-- Now that you've been able to experience launching decentralized apps on Golem, you might wish to learn what it takes to build one yourself: [Hello World dApp](/docs/creators/dapps/hello-world-dapp)
+- Now that you have been able to experience launching decentralized apps on Golem, you might want to learn how to build one yourself: [Hello World dApp](/docs/creators/dapps/hello-world-dapp)
 
 {% /docnavigation %}
