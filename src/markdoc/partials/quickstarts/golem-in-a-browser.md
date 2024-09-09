@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
 
@@ -107,7 +107,7 @@ The JavaScript code embedded in the HTML page defines:
 
 ## Run the Script
 
-## **Launch the web server**
+### **Launch the web server**
 
 Launch `http-server` in the project folder.
 
@@ -115,11 +115,11 @@ Launch `http-server` in the project folder.
 http-server
 ```
 
-## **Open the application**
+### **Open the application**
 
 We should now see our app available in the browser at [http://localhost:8080/index](http://localhost:8080/index).
 
-3. **Run the example**
+### **Run the example**
 
 If you click the **Echo Hello World** button, after a while, in the result container, you should get the result of the script:
 
