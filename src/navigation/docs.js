@@ -456,6 +456,8 @@ export const navigation = [
         title: 'Golem-Workers',
         children: [
           { title: 'Introduction', href: '/docs/creators/golem-workers' },
+          { title: 'Getting started', href: '/docs/creators/golem-workers/getting-started' },
+          { title: 'Stable Diffusion example', href: '/docs/creators/golem-workers/sd-example' },
         ],
       }, 
       {
