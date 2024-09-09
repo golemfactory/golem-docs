@@ -2,12 +2,61 @@
 
 In most of our examples, we demonstrate how to run a requestor script in Node.js. However, you can also run your scripts in a browser context. This example will explain how to do it.
 
-Before getting started, you need to install and launch the Yagna service in version 0.15.2 or later. It can be installed using instructions for manual Yagna installation available [here](/docs/creators/tools/yagna/yagna-installation-for-requestors).
+## Setting up the project
+
+## **Install Yagna**
+
+{% tabs %}
+{% tab label="Linux/Mac" %}
+
+On Linux/MacOS, you can install it using our installation script:
+
+```bash
+curl -sSf https://join.golem.network/as-requestor | bash -
+```
+
+You might be asked to modify your PATH afterward.
+{% /tab %}
+
+{% tab label="Windows" %}
+
+On Windows, you will need to install Yagna manually:
+
+1. Download the requestor package - prefixed `golem-requestor` - appropriate for your platform from: [https://github.com/golemfactory/yagna/releases/latest](https://github.com/golemfactory/yagna/releases/latest).
+2. Extract the downloaded archive.
+3. Move the extracted `yagna.exe` and `gftp.exe` files to a directory of your choice. 
+4. Add that directory to your system's PATH environment variable. This will allow you to run the `yagna` command from any location in your terminal.
+
+{% /tab %}
+
+{% /tabs %}
+
+## **Start the Yagna service**
+
+Open a terminal (command line window) and define the app-key that will allow our script to use the Yagna API. In this tutorial, we will use the `try_golem` app-key, which will be automatically generated and configured when you start Yagna.
+
+{% tabs %}
+{% tab label="MacOS / Linux" %}
+
+```bash
+export YAGNA_AUTOCONF_APPKEY=try_golem
+```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```shell
+set YAGNA_AUTOCONF_APPKEY=try_golem
+```
+
+{% /tab %}
+{% /tabs %}
 
 {% alert level="warning" %}
-Follow the Yagna installation instructions including the [set up the app-key](/docs/creators/tools/yagna/yagna-installation-for-requestors) step.
+This creates a temporary app-key that will only be available for this session. If you restart the Yagna service, you'll need to set the `YAGNA_AUTOCONF_APPKEY` variable again. For production deployment, it is recommended to create a permanent app-key using the  `yagna app-key create <key-name>` command. 
+{% /alert %}
 
-Then, start the Yagna with a `--api-allow-origin` that allows you to handle REST API requests with a CORS policy:
+Then, start the `yagna` service: To enable communication between your web application and the Yagna service, you need to start Yagna with the `--api-allow-origin` flag, specifying the URL where your web application will be served. In this example, we'll use `http://localhost:8080`.
 
 {% tabs %}
 {% tab label="MacOS / Linux" %}
@@ -27,13 +76,8 @@ yagna service run --api-allow-origin=http://localhost:8080
 
 {% /tabs %}
 
-The `--api-allow-origin` value should be set to the URL where your web application will be served.
 
-In this example, we will use `http-server` with a default port 8080.
-
-{% /alert %}
-
-## Setting up the project
+## **Set up the development environment**
 
 ```bash
 mkdir web_golem
@@ -43,27 +87,27 @@ npm install --global http-server
 
 This will install the `http-server` utility to host our web page, where we will run our Golem app.
 
-## HTML page with embeded requestor script
 
-Next, we'll create the main `index.html` file with the following content:
+## Create the HTML page
+
+Now, we'll create the main `index.html` file with the following content:
 
 {% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/web/hello.html" language="html" /%}
 
 In this layout, there are three elements:
 
-- An `Options` form, where you can define input params,
-- An `Actions` section with "Echo Hello World" button, which executes such a command on the remote Golem node,
+- An `Options` form, where you can define input parameters
+- An `Actions` section with an "Echo Hello World" button, which executes a command on the remote Golem node
 - A `Results` container, which displays the results
 
-The js script defines:
+The JavaScript code embedded in the HTML page defines:
 
-- the `run()` function that creates the body of the requestor script
-- a helper functions that will let us present the results in the browser window.
+- The `run()` function that creates the body of the requestor script.
+- Helper functions that display the results in the browser window.
 
-Now, ensure you:
+## Run the Script
 
-- have your Yagna APP key set to `try_golem` (as shown in the yagna installation instruction) and
-- have a running Yagna service started with the `--api-allow-origin` properly set to `http://localhost:8080`
+## **Launch the web server**
 
 Launch `http-server` in the project folder.
 
@@ -71,25 +115,28 @@ Launch `http-server` in the project folder.
 http-server
 ```
 
-{% alert level="info" %}
+## **Open the application**
 
-If, instead of using the `try_golem` app key defined by using the `YAGNA_AUTOCONF_APPKEY` variable, you have created a unique app key, make sure you update appkey value in the respective Option field.
+We should now see our app available in the browser at [http://localhost:8080/index](http://localhost:8080/index).
 
-{% /alert %}
-
-We should see our app available in the browser:
-
-[Open localhost](http://localhost:8080/index)
+3. **Run the example**
 
 If you click the **Echo Hello World** button, after a while, in the result container, you should get the result of the script:
 
-- the result of executing the script in the Results container
-- debug logs in the console window
+- The result of executing the script in the Results container.
+- Debug logs in the console window.
 
 ![Output logs](/webrequestor.gif)
+
+{% alert level="info" %}
+
+If, instead of using the temporary `try_golem` app key defined earlier, you created a unique app key using `yagna app-key create <key-name>`, make sure to update the app key value in the respective `Options` field.
+{% /alert %}
 
 {% docnavigation title="Next steps" %}
 
 - [Golem in web browser example explained](/docs/creators/javascript/tutorials/running-in-browser)
 
 {% /docnavigation %}
+
+
