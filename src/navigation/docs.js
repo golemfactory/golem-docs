@@ -453,6 +453,12 @@ export const navigation = [
         ],
       },
       {
+        title: 'Golem-Workers',
+        children: [
+          { title: 'Introduction', href: '/docs/creators/golem-workers' },
+        ],
+      }, 
+      {
         title: 'Deploying apps on Golem',
         children: [
           { title: 'Introduction', href: '/docs/creators/dapps' },
