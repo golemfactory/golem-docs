@@ -202,7 +202,7 @@ try {
   // Establish a link with the Golem Network
   await glm.connect()
 
-// Prepare for user-initiated shutdown
+  // Prepare for user-initiated shutdown
   process.on('SIGINT', async function () {
     console.log(' Server shutdown was initiated by CTRL+C.')
 
@@ -377,7 +377,7 @@ and upload it to the Golem Registry:
 gvmkit-build ollama:mytag --push --nologin
 ```
 
-**Note:** Uploading can take time, especially for large images. 
+**Note:** Uploading can take time, especially for large images.
 
 <!--  
 Consider showing:
@@ -437,11 +437,17 @@ capabilities: ['!exp:gpu', 'vpn'],
 engine: 'vm-nvidia',
 ```
 
-If you want to run a test on a CPU, you can remove these lines or replace them with:
+If you want to run a test on a CPU, you need to remove these lines or replace them with:
 
 ```js
 engine: 'vm',
 ```
+
+{% alert level="danger" %}
+
+To run this example on CPU providers, you should also update the pricing filter. Please scroll down for details.
+
+{% /alert  %}
 
 If your model is large, you might need to request a provider with more than 8 GB of memory by adjusting the `minMemGib` value.
 
@@ -463,6 +469,20 @@ market: {
 ```
 
 Here, we define that we're renting resources for a maximum of 0.5 hours (you can terminate earlier by pressing `Ctrl+C`) and set the maximum price you're willing to pay. If there are no GPU providers available within your price limit (2 GLM per hour in the example), you can either increase your budget or use CPU providers, which are generally cheaper.
+
+{% alert level="warning" %}
+
+If you decide to run the model on a CPU provider, please update the `pricing` filter:
+pricing: {
+model: 'linear',
+maxStartPrice: 0.0,
+maxCpuPerHourPrice: **0.0**,
+maxEnvPerHourPrice: **2.0**,
+},
+
+While 2.0 GLM for `EnvPerHour` is a lot for a CPU provider, 0.0 GLM for `CpuPerHour` is not enough. You will probably not receive any offers without modifying the pricing filter.
+
+{% /alert  %}
 
 The `myProposalFilter` can be used to filter the providers you engage with. If your model is large, your image will also be large, and it might take some time for providers to download it from the registry. For a 7 GB image, the download can take up to 10 minutes, depending on the provider's bandwidth. Therefore, once you engage a provider, you might prefer to select the same one for subsequent tasks. If the provider has your image cached, the deployment will be significantly faster.
 
@@ -497,10 +517,14 @@ payment: {
 ```
 
 This section indicates you want your task to run on the `mainnet` - the part of the Golem Network where you pay with GLM (and where GPU providers are available).
-If you'd like to test your scripts on low-performance CPU providers, comment out this section, and your task will search for providers on the `testnet`. Remember to modify the `demand` options to request CPU providers if you do this.
+If you'd like to test your scripts on low-performance CPU providers, comment out this section, and your task will search for providers on the `testnet`.
+
+{% alert level="warning" %}
+
+Remember to modify the `demand` options to request CPU providers if you do this.
+
+{% /alert  %}
 
 ## Conclusion
 
-That concludes our tutorial on using AI models on the Golem Network. If you encounter any problems with the Golem Network, Yagna, or the requestor scripts, please reach out to us on our [Discord channel](https://chat.golem.network/).
-------------------------
-
+## That concludes our tutorial on using AI models on the Golem Network. If you encounter any problems with the Golem Network, Yagna, or the requestor scripts, please reach out to us on our [Discord channel](https://chat.golem.network/).
