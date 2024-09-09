@@ -1,7 +1,7 @@
 ---
 title: Using the Deposit Payment Scheme
 description: A tutorial on how to use the deposit payment scheme
-pageTitle: Golem Requestors' Tutorial - Using the Deposit Payment Scheme
+pageTitle: Using the Deposit Payment Scheme
 type: Tutorial
 ---
 
@@ -9,33 +9,33 @@ type: Tutorial
 
 ## Introduction
 
-Since Yagna 0.16, Golem offers a new way to pay for tasks indirectly (via a smart contract) called Deposits. As a result, the Golem protocol does not require funds for the Provider to be sent from the Requestor wallet. This new payment method covers a use-case where services created on top of Golem allow end-users to pay for tasks orchestrated by the service.
+Since Yagna 0.16, Golem offers a new way to pay for tasks indirectly (via a smart contract) called Deposits. As a result, the Golem protocol doesn't require funds for the Provider to be sent from the Requestor wallet. This new payment method covers use cases where services created on top of Golem allow end-users to pay for tasks orchestrated by the service.
 
 ## Tutorial scenario
 
-In this tutorial, we will implement a simple scenario:
+In this tutorial, we'll implement a simple scenario:
 
-We have a user who will pay for the computation performed on the golem network ( the Funder).
-We also have another user who operates a golem node (yagna) and can run the requestor script ( the Spender).
-We will show all the steps needed to arrange, so the Spender will run the computations for the Funder and pay using crypto from the Funder's pocket utilizing the Deposits feature.
-The computation is just an `echo` command executed on two nodes.
+We have a user who will pay for the computation performed on the Golem network (the Funder).
+We also have another user who operates a Golem node (Yagna) and can run the requestor script (the Requestor).
+We will show all the steps needed to arrange for the Requestor to run computations for the Funder and pay using crypto from the Funder's account utilizing the Deposits feature.
+The computation involves simply running an `echo` command on two nodes.
 
-The tutorial will use the Holesky test network for payments and in particular the LockPayment contract under the `0x63704675f72A47a7a183112700Cb48d4B0A94332` address created by Golem.
+This tutorial will use the Holesky test network for payments, specifically the LockPayment contract at the address `0x63704675f72A47a7a183112700Cb48d4B0A94332`, created by Golem.
 
-The scenario major steps:
+Here are the main steps of the scenario:
 
-1. The Funder creates a deposit for the Spender using the LockPayment contract and passes the deposit ID to the Spender.
-2. Spender runs the computations and uses the deposit to pay the providers for resources.
+1. The Funder creates a deposit for the Requestor using the LockPayment contract and passes the deposit ID to the Requestor.
+2. The Requestor runs the computations and uses the deposit to pay the providers for resources.
 
 ## Code organization
 
-The code is organized in several files.
+The code is organized across several files:
 
-- _user.mjs_ contains actions performed by the Funder, which are related to deposit creation,
-- _observer.mjs_ contains code that is used to monitor events on the LockPayment contract,
-- _index.mjs_ contains the requestor script and orchestration for the overall process,
-- _"config.mjs"_ - contains configuration data for the example,
-- _"abiGLM.json"_ and _"abiLOCK.json"_ are JSON files that describe how to interact with respective smart contracts, they can be obtained from the [Etherscan](https://holesky.etherscan.io/).
+- `user.mjs`: Contains actions performed by the Funder, such as deposit creation.
+- `observer.mjs`: Contains code used to monitor events on the LockPayment contract.
+- `index.mjs`: Contains the requestor script and orchestration for the overall process.
+- `"config.mjs"`: Contains configuration data for the example.
+- `"abiGLM.json"` and `"abiLOCK.json"`:  JSON files that describe how to interact with the respective smart contracts; these can be obtained from [Etherscan](https://holesky.etherscan.io/).
 
 ## How to run the example:
 
@@ -49,14 +49,14 @@ npm install "chalk"
 npm install "viem"
 ```
 
-You also need to copy abi files for the LockPayment and GLM contracts to `./contracts` folder.
+You also need to copy the ABI files for the LockPayment and GLM contracts into the `./contracts` folder.
 
 The tutorial assumes you have `yagna` installed according to [these instructions](https://docs.golem.network/docs/creators/tools/yagna/yagna-installation-for-requestors)
-and you can use the `try_golem` app-key to access the `yagna` REST API. If you use unique app-keys, you need to edit the `config.mjs` file and replace the `try_golem` with the actual value of your app-key.
+and you can use the `try_golem` app-key to access the `yagna` REST API. If you use unique app-keys, you'll need to edit the `config.mjs` file and replace `try_golem` with the actual value of your app-key.
 
 ## Example configuration
 
-Let's look into `config.mjs`:
+Let's look at `config.mjs`:
 
 ```js
 const config = {
@@ -68,7 +68,7 @@ const config = {
     depositDurationHours: 1,
   },
   yagnaAppKey: 'try_golem',
-  spender: {
+  requestor: {
     address: '0x7459dbaf9b1b1b19197eadcd3f66a3ec93504589',
   },
   rpcUrl: 'https://holesky.rpc-node.dev.golem.network',
@@ -87,46 +87,46 @@ const config = {
 export default config
 ```
 
-The `funder` section contains info necessary to create a deposit.
-In the tutorial, we provide data for its wallet, together with its private key. It is created on the test network, and we have populated it with funds, so you can use the data provided here for your trials.
+The `funder` section contains the information needed to create a deposit.
+The tutorial provides data for this wallet, along with its private key. It's created on the test network, and we've funded it, so you can use the provided data for your trials.
 
 If the account runs out of funds, contact us on our [Discord](https://chat.golem.network/).
-You can also populate this section with data from your account.
-All the other parameters in this section will be explained later on when we discuss the body of the user.mjs file.
+You can also populate this section with data from your own account.
+The other parameters in this section will be explained later when we discuss the content of the `user.mjs` file.
 
-The `spender` section contains the nodeID of the Yagna that is used on the requestor node.
+The `requestor` section contains the node ID of the Yagna instance used on the requestor node.
 
-**You need to replace the value in the file with the node ID of your yagna.**
+**You need to replace the value in this file with the node ID of your Yagna instance.**
 
-To check your node ID run `yagna id show`.
+To check your node ID, run `yagna id show`.
 
-The `rpcUrl` is an endpoint that enables an application to communicate with a blockchain network. Here we use a Golem-provided endpoint.
+The `rpcUrl` is an endpoint that enables an application to communicate with a blockchain network. Here, we use a Golem-provided endpoint.
 
-The `LockPaymentContract` section contains the LockPayment contract address. This is a contract created by Golem that provides the despot functionality on the blockchain. You can use your implementation of the LockPayment contract. (On Polygon the LockPayment contract has [this address](https://polygonscan.com/address/0x57ff7451E008647cbDB84e652B00ef05856Dba23).)
+The `LockPaymentContract` section contains the LockPayment contract address. This contract, created by Golem, provides deposit functionality on the blockchain. You can use your own implementation of the LockPayment contract. (On Polygon, the LockPayment contract has [this address](https://polygonscan.com/address/0x57ff7451E008647cbDB84e652B00ef05856Dba23).)
 
-Similarly, the `GLMContract` section contains the GLM token contract address.
+The `GLMContract` section contains the GLM token contract address.
 
-In the `budget` section we define how many GLM tokens we want to deposit.
+In the `budget` section, we define how many GLM tokens we want to deposit.
 
-A deposit consists of two values:
+A deposit comprises two values:
 
-- the `amount` is the budget for the providers,
-- and the `flatFeeAmount` is the fee for the requestor.
+- `amount`: The budget for the providers.
+- `flatFeeAmount`: The fee for the Requestor.
 
-The node operator apart from running the script to run computation for the sponsor, will need to cover the costs for the gas when he triggers the payments from the deposit to providers.
+In addition to running the script to compute for the sponsor, the node operator will need to cover the gas costs when transferring payments from the deposit to providers.
 
-The `depositFileName` defines the name of the file that is used to communicate the ID of the deposit set by the funder to the spender.
+The `depositFileName` defines the file name used to transmit the deposit ID from the Funder to the Requestor.
 
-The `yagnaAppkey` is the `appkey` used by the requestor script. If you do not use the autoconfigured app-key value as shown in the installation instructions, you also need to update it.
+The `yagnaAppkey` is the app key used by the requestor script. If you're not using the autoconfigured app-key as shown in the installation instructions, you need to update it here as well.
 
 ## The observer
 
-Now let's look at the `observer.mjs` file:
+Let's look at the `observer.mjs` file:
 
 ```js
 import { createPublicClient, decodeFunctionData, http, parseAbi } from 'viem'
 import { holesky } from 'viem/chains'
-import { readFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 import config from './config.mjs'
 import chalk from 'chalk'
 
@@ -141,7 +141,7 @@ const publicClient = createPublicClient({
 
 const context = { unwatch: () => {} }
 
-async function processLogs(spenderAddress, logs) {
+async function processLogs(requestorAddress, logs) {
   const transactions = {}
 
   for (const log of logs) {
@@ -171,15 +171,15 @@ async function processLogs(spenderAddress, logs) {
       console.log(chalk.magenta('hash:'), transaction.hash, '\n')
 
       if (
-        // if deposit is closed by our requestor, stop observing
+        // If the deposit is closed by our requestor, stop observing
         parsedMethod.functionName.toLowerCase().includes('close') &&
-        transaction.from == spenderAddress
+        transaction.from == requestorAddress
       ) {
         isResolved = true
       }
 
       if (
-        // if deposit is terminated by our requestor, stop observing
+        // If the deposit is terminated by our requestor, stop observing
         parsedMethod.functionName == 'terminateDeposit' &&
         transaction.from == config.funder.address
       ) {
@@ -194,7 +194,7 @@ export function observeTransactionEvents(context) {
   return new Promise((resolve) => {
     context.unwatch = publicClient.watchEvent({
       onLogs: async (logs) => {
-        const isResolved = await processLogs(context.spenderAddress, logs)
+        const isResolved = await processLogs(context.requestorAddress, logs)
 
         if (isResolved) {
           context.unwatch()
@@ -202,12 +202,12 @@ export function observeTransactionEvents(context) {
         }
       },
       events: parseAbi([
-        'event DepositCreated(uint256 indexed id, address spender)',
-        'event DepositClosed(uint256 indexed id, address spender)',
-        'event DepositExtended(uint256 indexed id, address spender)',
-        'event DepositFeeTransfer(uint256 indexed id, address spender, uint128 amount)',
-        'event DepositTerminated(uint256 indexed id, address spender)',
-        'event DepositTransfer(uint256 indexed id, address spender, address recipient, uint128 amount)',
+        'event DepositCreated(uint256 indexed id, address requestor)',
+        'event DepositClosed(uint256 indexed id, address requestor)',
+        'event DepositExtended(uint256 indexed id, address requestor)',
+        'event DepositFeeTransfer(uint256 indexed id, address requestor, uint128 amount)',
+        'event DepositTerminated(uint256 indexed id, address requestor)',
+        'event DepositTransfer(uint256 indexed id, address requestor, address recipient, uint128 amount)',
       ]),
       address: config.lockPaymentContract.holeskyAddress,
     })
@@ -217,7 +217,7 @@ export function observeTransactionEvents(context) {
 export async function spawnContractObserver() {
   const context = {
     observedAddress: config.lockPaymentContract.holeskyAddress,
-    spenderAddress: null,
+    requestorAddress: null,
     unwatch: () => {
       throw new Error('Cannot call unwatch before watch')
     },
@@ -236,39 +236,39 @@ export async function spawnContractObserver() {
 }
 ```
 
-This code is not critical for the scenario, but let us observe the events on the contract and it is helpful to understand the example.
+This code is not critical to the scenario, but it helps us observe events on the contract and understand the example.
 
-The `publicClient.watchEvent()` method is used to get the logs from the LockPayment contract, the events are filtered to receive only the events related to deposits, and the logs are processed by the `processLogs` function. The `publicClient.watchEvent()` function returns a function that can be used to stop watching the events.
+The `publicClient.watchEvent()` method retrieves logs from the LockPayment contract, filters events to show only those related to deposits, and processes the logs using the `processLogs` function. This function returns another function that can be used to stop watching these events.
 
-The `processLogs()` function examines logs of each transaction and prints the event name and other transaction details.
+The `processLogs()` function examines the logs for each transaction and prints the event name and other transaction details.
 
-If the deposit is closed by our requestor or terminated by the sponsor it will set the `isResolved` flag to indicate that the observation can be terminated.
+If the deposit is closed by our Requestor or terminated by the sponsor, the `isResolved` flag is set, indicating that observation can be terminated.
 
-We can take the opportunity to review the list of events to understand the functionality of the LockPayment contract.
+We can take this opportunity to review the list of events to understand the functionality of the LockPayment contract.
 
-- event DepositCreated - is logged when a deposit is created by the spender,
-- event DepositClosed - takes place, when the spender closes the deposit,
-- event DepositExtended - means that the funder changed any of the amount, flatFeeAmount or validTo date of the existing deposit,
-- event DepositFeeTransfer - logged when the fee amount is transferred to the spender,
-- event DepositTerminated - takes place, when the funder terminates the deposit, if it was not closed by the spender but only after the validTo date,
-- event DepositTransfer - logged when the spender transfers tokens from the deposit as payment for providers' work.
+- `event DepositCreated`: Logged when a deposit is created by the Requestor.
+- `event DepositClosed`: Occurs when the Requestor closes the deposit.
+- `event DepositExtended`:  Means that the Funder has changed the `amount`, `flatFeeAmount`, or `validTo` date of the existing deposit.
+- `event DepositFeeTransfer`: Logged when the fee amount is transferred to the Requestor.
+- `event DepositTerminated`:  Occurs when the Funder terminates the deposit; this can only happen if the deposit wasn't closed by the Requestor and only after the `validTo` date.
+- `event DepositTransfer`: Logged when the Requestor transfers tokens from the deposit as payment for the provider's work.
 
 Note that the Yagna payment driver can use any other contract that implements the same interface as the LockPayment contract:
 
-- createDeposit - to create a deposit of amount, flatFeeAmount, and valid to validTo date for the spender.
-- extendDeposit - to change the amount, flatFeeAmount, and validTo date of the existing deposit.
-  -closeDeposit - to be used by the spender, to close the deposit, when all payments for providers are done and then the spender can receive the fee.
-- depositSingleTransfer - to transfer tokens to one provider.
-- depositSingleTransferAndClose - as above with closing deposit after the transfer.
-- depositTransfer - to transfer tokens to multiple recipients at once.
-- depositTransferAndClose - as above with closing deposit after the transfer.
-- terminateDeposit - to be used by the funder to terminate a deposit if it was not closed by the spender and only after the validTo date.
+- `createDeposit`: To create a deposit with an `amount`, `flatFeeAmount`, and `validTo` date for the Requestor.
+- `extendDeposit`: To change the `amount`, `flatFeeAmount`, and `validTo` date of an existing deposit.
+  - `closeDeposit`: Used by the Requestor to close the deposit once all payments to providers are completed. The Requestor can then receive the fee.
+- `depositSingleTransfer`:  To transfer tokens to a single provider.
+- `depositSingleTransferAndClose`: Same as above, but also closes the deposit after the transfer.
+- `depositTransfer`: To transfer tokens to multiple recipients at once.
+- `depositTransferAndClose`: Same as above, but also closes the deposit after the transfer.
+- `terminateDeposit`: Used by the Funder to terminate a deposit if it hasn't been closed by the Requestor, but only after the `validTo` date.
 
-Once we have configuration data prepared and the observer ready we can run the scenario.
+Once the configuration data is ready and the observer is set up, we can run the scenario.
 
 ## Deposit Creation
 
-Now, the deposit is created by the funder. All related code is in the `user.mjs` file:
+The Funder creates the deposit. All related code is in the `user.mjs` file:
 
 ```js
 import {
@@ -367,7 +367,7 @@ const checkAllowance = async () => {
 const createDeposit = async () => {
   const args = [
     BigInt(nonce),
-    config.spender.address,
+    config.requestor.address,
     parseEther(`${budget.amount}`),
     parseEther(`${budget.flatFeeAmount}`),
     BigInt(validToTimestamp),
@@ -418,14 +418,14 @@ const extendDeposit = async () => {
   validToTimestamp = validToTimestamp + 5 * 60 * 1000
   const args = [
     BigInt(nonce),
-    BigInt(0), // no additional amount
-    BigInt(0), // no additional fee
-    BigInt(validToTimestamp), // deposit valid for additional 5 minutes
+    BigInt(0), // No additional amount
+    BigInt(0), // No additional fee
+    BigInt(validToTimestamp), // Deposit valid for an additional 5 minutes
   ]
 
   console.log(
     chalk.grey(
-      `\nExtending deposit of additional amount: \
+      `\nExtending deposit with additional amount: \
 ${formatEther(args[1])}  GLM, \
 flatFeeAmount: ${formatEther(args[2])}  GLM, for ${(
         (validToTimestamp - new Date().getTime()) /
@@ -480,7 +480,7 @@ async function getDepositDetails() {
   })
 
   console.log(
-    chalk.grey(`\nDeposit of `),
+    chalk.grey('\nDeposit of '),
     deposit,
     chalk.grey(` available on contract ${LOCK_CONTRACT.address}.`)
   )
@@ -523,56 +523,52 @@ export const runUserActions = async () => {
 }
 ```
 
-### Approving the allowance
+### Approving the Allowance
 
-First, the funder user must create a deposit. A deposit is created on the LockPayment contract, however before the user can create a deposit, he must approve an allowance for the contract.
+First, the Funder must create a deposit. Deposits are created on the LockPayment contract, but before the Funder can do that, they must approve an allowance for the contract.
 
-To set allowance for the LockPayment contract we can use `approve` or `increaseAllowance` on the GLM contract.
-The `user.mjs` code uses the `viem` library. It provides public and wallet clients to interact with the blockchain.
-To interact with the contract and change its state we need to use the `walletClient`. In the example we used `increaseAllowance`, (we use `approve` to clear potentially unused allowance at the end of user actions. )
+To set the allowance for the LockPayment contract, we can use the `approve` or `increaseAllowance` functions from the GLM contract.
+The `user.mjs` code uses the `viem` library. It provides public and wallet clients for interacting with the blockchain.
+We'll use the `walletClient` to interact with the contract and change its state. In this example, we used `increaseAllowance` (and `approve` to clear any unused allowance at the end of the user actions).
 
-We send the transaction and then await the transaction confirmation. Once we get it, we use the `publicClient` to confirm the allowance is set (using the `allowance` function on the GLM contract).
+We send the transaction and await confirmation. Once confirmed, we use the `publicClient` to check that the allowance is set (using the `allowance` function on the GLM contract).
 
-Note both these operations are executed on the GLM contract.
-To set allowance the user executes a transaction on the blockchain, so he needs in his wallet both tGLMs and tEth to pay for the gas.
-Only the functions called using the `walletClient` require gas. The `publicClient` calls do not require gas.
+Note that both these operations are executed on the GLM contract.
+To set the allowance, the user sends a transaction to the blockchain. Therefore, they need both tGLMs and tETH in their wallet to cover the gas costs.
+Only functions called with the `walletClient` require gas. The `publicClient` calls don't need gas.
 
 ### Creating the deposit
 
-Once the allowance is set, the user can create a deposit.
+After setting the allowance, the user can create a deposit.
 
-Deposit is created on LockPayment Contact. To create a deposit the funder must define:
+Deposits are created on the LockPayment contract. To create a deposit, the Funder must define:
 
-- the nonce
-- the spender
-- the amount of the deposit
-- the fee for the funder
-- and the period for which the deposit is valid.
+- `nonce`: A value used to differentiate deposits created by the same user. In the example, we use a random integer between 0 and 1,000,000, as defined in the config file.
+- `spender`:  The Ethereum address of the Requestor.
+- `amount`:  The budget for the providers, in GLM.
+- `flatFeeAmount`:  The fee for the Requestor, in GLM.
+- `validTo`: The deposit's validity period, in milliseconds. The tutorial uses 1 hour (this value is configurable in `config.mjs`). After this period, the Funder can terminate the deposit if the Requestor doesn't close it beforehand.
 
-The nonce is a value used to distinguish different deposits if created by the same user. In the example use a random integer from the range of 0 - 1000000 as defined in the config file.
-For the tutorial, we create a deposit for 1 hour (again this value is configurable in the `config.mjs`).
-The funder user can terminate the deposit after this period if the spendor does not close it before.
+Once we have the transaction hash, we wait for the transaction to be executed on the blockchain.
 
-Once we get the transaction hash, we wait for the transaction to be executed on the blockchain.
+Next, we use the `nonce` value from deposit creation to obtain the Deposit ID (using the `getDepostID()` call). This operation doesn't require gas. The Requestor needs the `depositID` to use it in their script.
+We simulate passing this value by saving it into `depositData.json`, from which the Requestor will read it later.
 
-The next operation (`extendDeposit()`) is optional, we have included it in the example to show, how to increase the amount and flatFeeAmount and how to set the new `validTo` value.
-In our example, we have used it to increase the duration of the allowance by an additional 5 minutes.
-Note that both operations (deposit creation and deposit extension) required gas to be executed and were run on the LockPayment contract.
+The `extendDeposit()` operation is optional. We've included it in the example to demonstrate how to increase the `amount` and `flatFeeAmount` and how to set a new `validTo` value.
+In our example, we use this function to extend the deposit's duration by 5 minutes.
+Note that both deposit creation and extension require gas and are executed on the LockPayment contract.
 
-Next, we use the `nonce` value used to create the deposit, to obtain the Deposit ID (using `getDepostID()` call). This operation does not require gas. The `depositID` will be needed as we must provide the funder with the deposit ID so he can use it in his requestor script.
-We simulate passing this value, by saving it into `depositData.json`, from which the requestor will read it later.
+For illustration, we then read the deposit data. Note that the result doesn't include the `flatFeeAmount` value.
+To check the fee's value, you can use the `validateDeposit()` function, which takes two arguments, the `depositID` and the `flatFeeAmount`, and returns a `valid` message if the `flatFeeAmaount` configured for this deposit matches the one provided in the call.
 
-Then we (just for illustration) read the deposit data. Note that the outcome does not contain the `flatFeeAmount` value.
-If you would like to check the value of the fee, you need to run another function: `validateDeposit()`. It accepts two arguments, the `depositID` and the `flatFeeAmount`, and returns a `valid` message if the `flatFeeAmaount` configured for this deposit is equal to the one provided in the call.
+In a real-world scenario, the Requestor should perform this validation to ensure the fee amount is sufficient and as agreed.
 
-In real life this operation should be done by the spender, so he can validate if the fee amount is sufficient and as agreed.
-
-The last operation in the `user.mjs` file is clearing the allowance.
-This is an optional operation, but it might be useful to clear the allowance if (for any reason) you decide not to use it for deposits on this contract.
+The last operation in the `user.mjs` file clears the allowance.
+This is optional, but it's good practice to clear the allowance if you no longer plan to use it for deposits on this contract.
 
 ## Using deposits
 
-So now we will focus on the spender action. The requestor script and orchestration of the whole example code are in the `index.mjs` file:
+Let's focus on the Requestor's actions. The requestor script and orchestration for the entire example are in the `index.mjs` file:
 
 ```js
 import chalk from 'chalk'
@@ -617,7 +613,7 @@ async function runOperator(observerContext) {
       // paymentPlatform: 'erc20-holesky-tglm'  // used to create allocation without deposit
     })
 
-    observerContext.spenderAddress = allocation.address
+    observerContext.requestorAddress = allocation.address
 
     const order1 = {
       demand: {
@@ -669,13 +665,13 @@ async function runOperator(observerContext) {
 
     await rental2.stopAndFinalize()
 
-    // when we release allocation, we will close deposit
-    // you cannot reuse closed deposit or released allocation
+    // When we release the allocation, the deposit will be closed.
+    // You can't reuse closed deposits or released allocations.
     await glm.payment.releaseAllocation(allocation)
   } catch (err) {
     if (err instanceof GolemPaymentError) {
       console.log(
-        'Cannot create allocation, most probably your allocation was released or your deposit is closed.'
+        'Cannot create allocation. Your allocation was likely released, or your deposit is closed.'
       )
     } else {
       console.error('Failed to run the example', err)
@@ -686,39 +682,40 @@ async function runOperator(observerContext) {
   }
 }
 
-/* step 1 - run observer on contract */
+/* Step 1: Run the observer on the contract */
 const obs = await spawnContractObserver()
 
-/* step 2 - run user actions (actions performed by the funder) */
+/* Step 2: Run user actions (actions performed by the Funder) */
 await runUserActions()
 
-/* step 3 - run operator actions (actions performed by the spender) */
+/* Step 3: Run operator actions (actions performed by the Requestor) */
 await runOperator(obs.context)
 
 console.log(
   chalk.magenta('All actions completed - waiting until observer stops')
 )
-/* step 4 - wait for observer to finish listening for deposit close, which ends example */
+
+/* Step 4: Wait for the observer to finish listening for deposit close, which ends the example */
 await obs.observerFuture
 
 console.log(chalk.magenta('Observer stopped - example finished'))
 ```
 
-After running `userAction()`, we should have a deposit created. Now it is time to look at the reqestor code.
+We should have a deposit created after running `userAction()`. Now, let's look at the Requestor code.
 
-Basically, for the requestor part, we use the standard golem-js requestor script structure that is inside the `runOperator()` function, with a few slight modifications:
+We essentially use the standard `golem-js` requestor script structure within the `runOperator()` function, with a few modifications:
 
-1. We will not let the Golem network create rentals using allocation from our requestor wallet. Rather than we want to use the deposit, so we read the `depositID` from the despositData.json and used it to create the allocation.
+1. We won't allow Golem to create rentals using an allocation from our Requestor wallet. We want to use the deposit instead. So, we read the `depositID` from the `despositData.json` file and use it to create the allocation.
 
-Once we create the allocation (with `glm.createAllocation()`) we extract our nodeID, so the observer code knows it.
+Once the allocation is created (using `glm.createAllocation()`), we extract our node ID to pass it to the observer.
 
-Then we create two rentals, and each rental gets the allocation data as its argument. The second one takes just the `allocation.id` to illustrate the alternative way of passing this info.
+We create two rentals, each of which receives the allocation data as an argument. The second rental takes only the `allocation.id` to demonstrate an alternative way of passing this information.
 
-The tasks executed are simple, we run an `echo` command on both providers and use it to print the provider's node IDs. You can later check on the blockchain if they were paid for these tasks.
+The tasks are simple: an `echo` command is run on both providers, printing their node IDs. You can check the blockchain later to verify that they received payment for those tasks.
 
-Once the computation is done we await for the observer to complete its job. As discussed above it will run the `unwatch()` command once he captures a transaction initiated from the requestor node which would close the deposits.
+After the computations are done, we wait for the observer to finish. As discussed earlier, it will run the `unwatch()` command after capturing a transaction initiated by the Requestor that closes the deposit.
 
-Onc you have the `abi` files available in the `./contracts` folder you can run the example:
+Once you have the `abi` files in the `./contracts` folder, you can run the example:
 
 ```bash
 node index.mjs
@@ -726,37 +723,32 @@ node index.mjs
 
 ## Reading output logs
 
-Now let's look into the script logs:
+Let's examine the script logs:
 
-In magenta color you see the output from the observer part: you should be able to see its start, then information about deposit creation and extension.
+- Magenta output: From the observer. You should see the service starting, followed by information about deposit creation and extension.
+- Blue output: Logs from the Funder's allowance approval operations on the GLM contract.
+- Yellow output: Logs related to clearing the allowance.
+- Gray output: Logs from the Funder's operations on the LockPayment contract.
+- Requestor script logs: Have standard formatting, except for provider output, which has a white background to help you easily find the provider node IDs.
 
-At the end of the script, you should see several additional observer entries. They should be related to deposit transfers, fee transfers, and deposit closure. Depending on the timing of activities, different methods could be used to execute the transfer and deposit closure.
+At the end of the script, you should see additional observer entries related to deposit transfers, fee transfers, and deposit closure. The specific methods used to execute the transfer and deposit closure will vary depending on the timing of the activities.
 
-In the blue color, you can see the logs from the funder user operation that are related to the allowance approval on the GLM contract
-In the yellow - are operations related to the allowance clearing.
+You can take the transaction hashes from the observer's logs,
+visit [Etherscan](https://holesky.etherscan.io/), and validate the results of these operations.
+The actual values might differ, but you should be able to confirm:
 
-Gray color indicates logs from the funder user module, related to actions on the LockPayment Contract.
+- The Funder provided an allowance of 2 GLM to the LockPayment contract.
+- After the computations are complete, the Funder should receive close to 1 GLM back, representing the remaining deposit amount minus the providers' fees.
+- The two providers should receive their payments (the actual cost of running these tasks is minimal).
+- The Funder should receive 1 GLM (the operator fee).
+- The transfers should originate from the LockPayment contract.
 
-Requestor script logs have a default formatting, except for the provider output, which has a white background, so you can easily find the provider node IDs.
+The Funder covers the cost of two transactions:
 
-Now you can take the transaction hashes provided in the observer logs,
-go to [Etherscan](https://holesky.etherscan.io/) and validate the result of this operation.
-The actual values might be different but you should be able to confirm the following:
+- Creating the deposit.
+- Extending the deposit (optional, included for illustration).
 
-the funder made an allowance of 2 GLM to the LockPayment Contract.
-after the computation is completed, it should get close to 1 GLM back. It is the remaining of the deposit amount minus fees for the providers.
+The Requestor should cover the gas costs for the transfers from the deposit and deposit closure. (You might see multiple transactions depending on the timing of the actual execution.)
 
-The two providers should receive their payments (the actual cost of running these tasks is very small).
+If the Requestor fails to close the deposit, the Funder can do so themself, recovering the remaining deposit and the unused `flatFeeAmount`. However, this will require an additional gas fee.
 
-The Funder should get 1 GLM (it is the operator fee).
-
-The transfers should come from the LockPayment contract.
-
-The Funder thus covers the cost of two transactions:
-
-- to create the Deposit
-- to extend the Deposit (this operation is optional, to make the tutorial more interesting)
-
-The Spender should cover gas costs for transfers from deposit and deposit closure. (Depending on the timing of the actual execution you may see more than one transaction.)
-
-In case the Spender fails to close the deposit, the funder may do it himself, recovering the deposit together with the unused `flatFeeAmount`, however, will require the gas fee for this extra transaction.
