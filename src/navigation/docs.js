@@ -458,6 +458,7 @@ export const navigation = [
           { title: 'Introduction', href: '/docs/creators/golem-workers' },
           { title: 'Getting started', href: '/docs/creators/golem-workers/getting-started' },
           { title: 'Stable Diffusion example', href: '/docs/creators/golem-workers/sd-example' },
+          { title: 'Troubleshooting', href: '/docs/creators/golem-workers/troubleshooting' },
         ],
       }, 
       {
@@ -515,6 +516,10 @@ export const navigation = [
           {
             title: 'Ray on Golem',
             href: '/docs/creators/ray/troubleshooting',
+          },
+          {
+            title: 'Golem-Workers',
+            href: '/docs/creators/golem-workers/troubleshooting',
           },
           {
             title: 'Yagna',
