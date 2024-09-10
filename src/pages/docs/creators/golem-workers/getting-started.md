@@ -139,7 +139,7 @@ put new entry in the `.env` file in the current directory:
 GLOBAL_CONTEXTS=["golem_reputation.ReputationService"]
 ```
 
-Note that, the [examples](sd-example) in this documentation require the above to work properly.
+Note that, the [examples](/docs/creators/golem-workers/sd-example) in this documentation require the above to work properly.
 
 ### 6. Start Golem-Workers
 
