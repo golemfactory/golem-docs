@@ -12,13 +12,13 @@ In this example, we’ll show you how to run a sample [Automatic1111](https://gi
 
 
 ## 1. Create a cluster
-In the first step, create a cluster with any name you choose (`cluster_id`). For example: `GolemWorkers`.
+In the first step, create a cluster with any name you choose (`cluster_id`). For example: `example`.
 
 ```bash
 curl --location 'http://localhost:8000/create-cluster' \
 --header 'Content-Type: application/json' \
 --data '{
-  "cluster_id": "GolemWorkers1",
+  "cluster_id": "example",
   "budget_types": {
     "default": {
       "budget": {
@@ -72,7 +72,7 @@ and specify the path to the model
 curl --location 'http://localhost:8000/create-node' \
 --header 'Content-Type: application/json' \
 --data '{
-  "cluster_id": "GolemWorkers",
+  "cluster_id": "example",
   "node_networks": {
 	"default": {}
   },
@@ -145,7 +145,7 @@ Check the nodes state with a call to `get-node`:
 curl --location 'http://localhost:8000/get-node' \
 --header 'Content-Type: application/json' \
 --data '{
-  "cluster_id": "GolemWorkers",
+  "cluster_id": "example",
   "node_id": "node0"
 }'
 ```
@@ -215,7 +215,7 @@ After completing the testing, you can shut down the cluster, using the following
 curl --location 'http://localhost:8000/delete-cluster' \
 --header 'Content-Type: application/json' \
 --data '{
-  "cluster_id": "GolemWorkers"
+  "cluster_id": "example"
 }'
 ```
 
