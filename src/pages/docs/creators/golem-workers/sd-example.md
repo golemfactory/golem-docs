@@ -154,41 +154,141 @@ curl --location 'http://localhost:8000/create-node' \
   	  }
 	},
 	"on_start_commands": [
-  	{
+  	  {
     	"golem_workers.work.deploy_and_start_activity": {
-      	"deploy_timeout_minutes": 60
+      	  "deploy_timeout_minutes": 60
     	}
-  	},
-  	{
+  	  },
+  	  {
     	"golem_workers.work.prepare_and_run_ssh_server": {
-      	"ssh_private_key_path": "/tmp/ssh_key"
+          "ssh_private_key_path": "/tmp/ssh_key"
     	}
-  	},
-  	{
+  	  },
+  	  {
     	"golem_workers.work.run_in_shell": [
-      	"cd /usr/src/app/ && ./start.sh --model_url https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors > /usr/src/app/output/log 2>&1 &"
+      	  "cd /usr/src/app/ && ./start.sh --model_url https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors > /usr/src/app/output/log 2>&1 &"
     	]
-  	}
+  	  }
 	],
 	"sidecars": [
-  	{
+  	  {
     	"golem_workers.sidecars.WebsocatPortTunnelSidecar": {
-      	"network_name": "default",
-      	"local_port": "8080",
-      	"remote_port": "8000"
-    	}
-  	},
-  	{
+      	  "network_name": "default",
+      	  "local_port": "8080",
+      	  "remote_port": "8000"
+        }
+  	  },
+  	  {
     	"golem_workers.sidecars.WebsocatPortTunnelSidecar": {
-      	"network_name": "default",
-      	"local_port": "8081",
-      	"remote_port": "8001"
+      	  "network_name": "default",
+      	  "local_port": "8081",
+      	  "remote_port": "8001"
     	}
-  	}
+  	  }
 	]
   }
 }'
 ```
+
+### `create-node` JSON explained
+
+#### Node selection (`market_config`) 
+```json
+	"market_config": {
+  	  "demand": {
+    	"payloads": [
+      	  {
+            "golem_workers.payloads.ClusterNodePayload": {
+          	  "runtime": "vm-nvidia",
+          	  "image_tag": "scalepointai/automatic1111:4",
+          	  "subnet_tag": "gpu-test",
+                "outbound_urls": [
+                  "https://huggingface.co",
+                  "https://cdn-lfs.huggingface.co",
+                  "https://cdn-lfs-us-1.huggingface.co",
+                  "https://gpu-provider.dev.golem.network"
+                ]
+            }
+      	  }
+    	]
+  	  }
+	},
+```
+
+In this example, we are using the `vm-nvidia` runtime to obtain nodes with GPUs. 
+Additionally, we configure the node to allow downloading images from **Hugging Face** (which is available only on the testnet) 
+and our own **gpu-provider.dev.golem.network** proxy. The node will use the image 
+published to Golem Registry as [scalepointai/automatic1111]([https://registry.golem.network/explore/scalepointai/automatic1111)
+in version `4`.
+
+This image includes a `start.sh` script that automatically downloads a model and starts the **Automatic1111 Web UI**.
+
+For more details on configuring the market, see 
+[Create-Node Market Configuration](/docs/creators/golem-workers/create-node#market-configuration) section.
+
+
+#### Service setup (`on_start_commands`)
+
+```json
+	"on_start_commands": [
+  	  {
+    	"golem_workers.work.deploy_and_start_activity": {
+      	  "deploy_timeout_minutes": 60
+    	}
+  	  },
+  	  {
+    	"golem_workers.work.prepare_and_run_ssh_server": {
+          "ssh_private_key_path": "/tmp/ssh_key"
+    	}
+  	  },
+  	  {
+    	"golem_workers.work.run_in_shell": [
+      	  "cd /usr/src/app/ && ./start.sh --model_url https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors > /usr/src/app/output/log 2>&1 &"
+    	]
+  	  }
+	],
+```
+
+In this example, we set a **timeout of 60 minutes** for the image download and deployment. 
+While cached images typically don’t take that long, workers might need additional time to download 
+the entire image before they can begin executing tasks, which can be time-consuming.
+
+We also configure **SSH** so that you can log in to the new node and manually interact with it if needed.
+
+Finally, we execute the `start.sh` script, which is part of the image. 
+The script is provided with a link to a Stable Diffusion (SD) model stored on the Golem dev proxy. 
+(For your own use case, it's recommended to include the **model directly in the image**. 
+By doing this, the model is downloaded from the **Golem Registry** in one piece, 
+avoiding the need for additional accessing the internet after the node startup.
+
+If you SSH into the worker, you should be able to view logs of the `start.sh` execution in the `/usr/src/app/output/log` file.
+
+#### Port forwarding (`sidecars`)
+
+```json
+	"sidecars": [
+  	  {
+    	"golem_workers.sidecars.WebsocatPortTunnelSidecar": {
+      	  "network_name": "default",
+      	  "local_port": "8080",
+      	  "remote_port": "8000"
+        }
+  	  },
+  	  {
+    	"golem_workers.sidecars.WebsocatPortTunnelSidecar": {
+      	  "network_name": "default",
+      	  "local_port": "8081",
+      	  "remote_port": "8001"
+    	}
+  	  }
+	]
+```
+
+In this example, we forward two ports to allow access to services running on the node:
+
+- `localhost:8080`: This is where the **Automatic1111 Web UI** will be visible, allowing users to interact with the model interface.
+- `localhost:8081`: This is a maintenance port, providing a bit of insight into the state of the node and its health.
+
 
 
 ## 3. Get the node's status
