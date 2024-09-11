@@ -22,8 +22,9 @@ ranging from fine-tuning AI models to data processing tasks.
 
 From a technical perspective, it consists of a Python web server with simple Web API endpoints. 
 Web API calls manage workers and their clusters. 
-It allows to directly configure worker settings from the endpoint or utilize shared configuration references from the cluster. 
+It lets you directly configure worker settings from the endpoint or utilize shared configuration references from the cluster. 
 In the background, the complexity of the distributed market is seamlessly managed by an extensible library of ready-to-use actions.
 
-The Golem-Workers webserver is acompanied with `golem-node` (also called `yagna`) service - the component responsible for communiting with the Golem Network.
+The Golem-Workers webserver is accompanied by `golem-node` (also called `yagna`) service - the component responsible for communicating 
+with the Golem Network.
 

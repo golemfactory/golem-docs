@@ -1,7 +1,7 @@
 ---
 title: Golem-Workers Create Node Explained 
 pageTitle: Golem-Workers Create Node Explained
-description: Explanation of `create-node` endpoint
+description: Explanation of the `create-node` endpoint
 
 type: Article
 ---
@@ -13,7 +13,7 @@ enabling developers to spin up individual nodes within a cluster.
 When invoking this endpoint, you can configure various aspects of the node, including budget, network settings, 
 and specific node configurations. 
 
-This section will walk through its configurable aspects, but do not hesitate to 
+This section will walk through its configurable aspects but do not hesitate to 
 consult the Open API spec for more details.
 It is provided by the Golem-Workers server 
 ([Getting Started](/docs/creators/golem-workers/getting-started) explains how to start it). 
@@ -21,7 +21,7 @@ The documentation is auto-generated and available by default at [http://localhos
 
 ## Node Creation Options
 
-When creating a node using the **Create Node** endpoint, you inherit base configuration building blocks which were defined
+When creating a node using the **Create Node** endpoint, you inherit base configuration building blocks were defined
 when creating the cluster. These include:
 
 - `budget_type`: This defines the budget type the node will use, as defined when creating the cluster. 
@@ -44,7 +44,7 @@ It includes several key components that allow you to fine-tune the node’s beha
 ### Market Configuration
 
 The `market_config` section allows you to specify 
-- how the node should be selected for renting from the Golem Network (CPU, GPU, memory, diskspace, etc.)
+- how the node should be selected for renting from the Golem Network (CPU, GPU, memory, disk space, etc.)
 - what image should the node run
 - how the node should be able to access the internet
 
@@ -84,7 +84,7 @@ It requires specific binaries and packages to be present in the node image, ie. 
 
 ### On Stop Commands
 
-Similar to start commands, `on_stop_commands` enable shell commands to be executed when the node is stopped.
+Similar to start commands, `on_stop_commands` enables shell commands to be executed when the node is stopped.
 These can be used to gracefully terminate services, clean up resources, or perform any required shutdown tasks.
 
 

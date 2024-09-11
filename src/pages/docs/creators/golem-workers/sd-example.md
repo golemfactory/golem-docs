@@ -1,7 +1,7 @@
 ---
-title: Golem-Workers stable diffusion usage example
-pageTitle: Golem-Workers stable diffusion usage example
-description: Step-by-step instructions on how to run automtic1111 with stable diffusion model with Golem-Workers
+title: Golem-Workers Stable Diffusion Usage Example
+pageTitle: Golem-Workers Stable Diffusion Usage Example
+description: Step-by-step instructions on how to run automtic1111 with a stable diffusion model with Golem-Workers
 
 type: Article
 ---
@@ -139,7 +139,7 @@ curl --location 'http://localhost:8000/create-node' \
 ## 3. Get the node's status
 
 Next, you should wait until your node is up.
-Check the nodes state with a call to `get-node`:
+Check the node state with a call to `get-node`:
 
 ```bash
 curl --location 'http://localhost:8000/get-node' \
@@ -156,13 +156,13 @@ It returns the node’s state:
 - `starting` means the image is up and running, and the starting actions are being performed
 - `started` means the node is ready
 
-## 4. Send request to node and generate images
+## 4. Send a request to the node and generate images
 In the final step, launch a web browser and go to [http://localhost:8080/](http://localhost:8080). 
 This will open the Automatic1111 GUI, where you can generate images.
 
 ![automatic1111 screenshot](/golem-workers/automatic1111.png)
 
-To generate some images using the Automatic1111 GUI, you can either enter your own prompt or use the following example:
+To generate some images using the Automatic1111 GUI, you can either enter your prompt or use the following example:
 
 1. Open the Automatic1111 GUI by navigating to http://localhost:8080/ in your web browser.
 1. In the prompt field, enter the text, eg. "portrait of a young woman, blue eyes, cinematic".

@@ -1,7 +1,7 @@
 ---
 title: Golem-Workers Basic Concepts
 pageTitle: Golem-Workers Basic Concepts 
-description: Explanation of Golem-Workers basic concepts 
+description: Explanation of Golem-Workers' basic concepts 
 
 type: Article
 ---
@@ -9,7 +9,7 @@ type: Article
 # Golem-Workers Basic Concepts
 
 The following guide will walk you through the fundamental concepts of using Golem-Workers, 
-explaining how to manage clusters and nodes and how to interact with the Golem Network.
+explaining how to manage clusters and nodes and interact with the Golem Network.
 
 ### 1. Explore the API Documentation
 
@@ -23,7 +23,7 @@ This interface is a useful resource for understanding:
 
 By familiarizing yourself with these docs, you'll have a better understanding of the available endpoints and how to interact with them.
 
-The spec also allows you to try the edpoints out - you can modify the examples and execute them on your Golem-Workers server.
+The spec also allows you to try the endpoints out - you can modify the examples and execute them on your Golem-Workers server.
 
 ## 2. Managing Clusters
 
@@ -34,18 +34,18 @@ This is ideal for tasks that require distributed computing.
 To manage clusters, Golem-Workers provides three API endpoints:
 
 - **Create Cluster** (`/create-cluster`): Creates a new cluster identified by a unique name. You can customize 
-the configuration, specify the network characteristics, and define the common characteristics of your nodes.
+the configuration, specify the network characteristics, and define the common attributes of your nodes.
   
 - **Get Cluster** (`/get-cluster`): Retrieves information about an existing cluster, 
 including the nodes within the cluster and their status.
 
 - **Delete Cluster** (`/delete-cluster`): Removes a cluster from the system, along with all its associated nodes.
 
-In order to rent any resource with Golem-Workers you need to create a cluster.
+To rent any resource with Golem-Workers you need to create a cluster.
 
 ### 3. Managing Nodes
 
-Once a cluster is set up, individual nodes can be added or removed. Each node represents a virtul machine with CPUs and/or GPUs, 
+Once a cluster is set up, individual nodes can be added or removed. Each node represents a virtual machine with CPUs and/or GPUs, 
 running on the Golem Network. 
 These nodes can run custom environments based on images of your choice.
 
@@ -53,7 +53,7 @@ Key endpoints for node management include:
 
 - **Create Node** (`/create-node`): This is the most central and important endpoint, allowing you to provision a new node in 
 the Golem Network. When calling this endpoint, you can specify parameters such as the computing resources required (CPU, GPU, etc.) 
-and the software environment (image). Last but not least, you can specify the commands to run on the node when it is started.
+and the software environment (image). Last, you can specify the commands to run on the node when it is started.
 
 - **Get Node** (`/get-node`): Retrieves the status and details of a specific node within the cluster.
 
