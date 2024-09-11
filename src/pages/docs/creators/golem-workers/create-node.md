@@ -89,9 +89,7 @@ To request nodes with GPUs, set `runtime` to `vm-nvidia`.
 For security reasons, access to the internet from Golem Network machines is very limited.
 Use the `outbound_urls` field to specify which external URLs the node should be allowed to access.  
 
-The list of URLs allowed by most providers by default is restricted but includes important resources 
-like Hugging Face, Docker Hub, or PyPi. 
-For more details on allowed URLs, see the whitelist section 
+The list of URLs allowed by most providers by default is quite restricted, to check the details see the whitelist section 
 of [this article](/docs/creators/javascript/guides/accessing-internet#the-whitelist).
 
 #### `min_mem_gib`, `min_storage_gib`, `min_cpu_threads`, `max_cpu_threads`
