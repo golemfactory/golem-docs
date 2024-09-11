@@ -6,10 +6,10 @@ description: Golem-Workers High-Level API for accessing GPU and CPU Golem Networ
 type: Article
 ---
 
-# Access GPU and CPU Resources on Golem Network 
+# Golem-Workers: High-Level API for accessing GPU and CPU Golem Network resources
 
 This documentation is designed for developers wanting to run their payloads on Golem. 
-While Golem-Workers software is written in Python it exposes the language-agnostic interface. 
+While Golem-Workers software is written in Python it exposes the language-agnostic HTTP interface. 
 You **don't have to know anything about Python** to take advantage of it.
 
 ## Introduction
