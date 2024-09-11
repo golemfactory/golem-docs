@@ -1,6 +1,7 @@
 import { LikeIcon } from './icons/LikeIcon'
 import { DislikeIcon } from './icons/DislikeIcon'
-import { event } from 'nextjs-google-analytics'
+import { hotjar } from 'react-hotjar'
+
 
 const handleFeedback = (
   identifier,
@@ -21,12 +22,11 @@ const handleFeedback = (
   setShowThanks(true)
   setLoading(false)
 
-  event('submit_feedback', {
-    category: article ? 'article' : 'troubleshooting',
-    label: identifier,
-    helpful: helpful ? 1 : 0,
-    feedback: feedback,
-  })
+  // Create a single string for the Hotjar event
+  const eventString = `submit_feedback_${article ? 'article' : 'troubleshooting'}_${identifier}_${helpful ? 'helpful' : 'not_helpful'}`
+
+  // Call Hotjar event with the single string
+  hotjar.event(eventString)
 }
 
 import { Dialog, Transition } from '@headlessui/react'
