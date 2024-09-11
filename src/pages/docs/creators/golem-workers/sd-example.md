@@ -120,11 +120,7 @@ is defined during specific node creation, both the provider blacklist and the pu
 will be considered when selecting a provider.
 
 ## 2. Create a node
-Next, create a node based on the image 
-<!--
-[scalepointai/automatic1111:4](https://registry.golem.network/explore/scalepointai/automatic1111), 
--->
-`scalepointai/automatic1111:4`, 
+Next, create a node based on the image `scalepointai/automatic1111:4`, 
 and specify the path to the model 
 (e.g., `https://huggingface.co/stabilityai/sdxl-turbo/resolve/main/sd_xl_turbo_1.0_fp16.safetensors`).
 
