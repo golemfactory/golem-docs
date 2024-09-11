@@ -27,9 +27,6 @@ const handleFeedback = (
   hotjar.event(`feedback_type_${article ? 'article' : 'troubleshooting'}`)
   hotjar.event(`feedback_helpful_${helpful ? 'yes' : 'no'}`)
   
-  // Only send the identifier if it's not sensitive information
-  hotjar.event(`feedback_identifier_${identifier}`)
-
   // If there's additional feedback text, send an event (be cautious with privacy)
   if (feedback) {
     hotjar.event('feedback_additional_text_provided')
