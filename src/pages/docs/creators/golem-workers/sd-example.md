@@ -120,7 +120,8 @@ is defined during specific node creation, both the provider blacklist and the pu
 will be considered when selecting a provider.
 
 ## 2. Create a node
-Next, create a node based on the image `scalepointai/automatic1111:4`, 
+Next, create a node based on the image 
+[scalepointai/automatic1111:4](https://registry.golem.network/explore/scalepointai/automatic1111) 
 and specify the path to the model 
 (e.g., `https://huggingface.co/stabilityai/sdxl-turbo/resolve/main/sd_xl_turbo_1.0_fp16.safetensors`).
 
@@ -217,7 +218,7 @@ curl --location 'http://localhost:8000/create-node' \
 In this example, we are using the `vm-nvidia` runtime to obtain nodes with GPUs. 
 Additionally, we configure the node to allow downloading images from **Hugging Face** (which is available only on the testnet) 
 and our own **gpu-provider.dev.golem.network** proxy. The node will use the image 
-published to Golem Registry as [scalepointai/automatic1111]([https://registry.golem.network/explore/scalepointai/automatic1111)
+published to Golem Registry as [scalepointai/automatic1111](https://registry.golem.network/explore/scalepointai/automatic1111)
 in version `4`.
 
 This image includes a `start.sh` script that automatically downloads a model and starts the **Automatic1111 Web UI**.
