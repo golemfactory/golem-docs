@@ -1,14 +1,14 @@
 ---
-title: Golem-Workers Create Node Explained 
-pageTitle: Golem-Workers Create Node Explained
+title: Golem-Workers create-node Endpoint
+pageTitle: Golem-Workers create-node Endpoint 
 description: Explanation of the `create-node` endpoint
 
 type: Article
 ---
 
-# Golem-Workers Create Node Explained
+# Golem-Workers `create-node` endpoint
 
-The **Create Node** endpoint is the central one for Golem-Workers, 
+The `create-node` endpoint is the central one for Golem-Workers, 
 enabling developers to spin up individual nodes within a cluster.
 When invoking this endpoint, you can configure various aspects of the node, including budget, network settings, 
 and specific node configurations. 

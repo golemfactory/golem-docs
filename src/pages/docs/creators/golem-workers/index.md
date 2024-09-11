@@ -28,3 +28,9 @@ In the background, the complexity of the distributed market is seamlessly manage
 The Golem-Workers webserver is accompanied by `golem-node` (also called `yagna`) service - the component responsible for communicating 
 with the Golem Network.
 
+## How this documentation is organized
+
+- [Getting started](/docs/creators/golem-workers/getting-started)
+- [Basic concepts](/docs/creators/golem-workers/basic-concepts)
+- [create-node endpoint](/docs/creators/golem-workers/create-node)
+- [Stable Diffusion example](/docs/creators/golem-workers/sd-example)
