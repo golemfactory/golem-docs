@@ -9,11 +9,11 @@ type: Guide
 
 In a classic Golem Payment scheme, there is a single cash flow from Requestor to Provider. Consequently, the Requestor is the entity responsible for providing funds (GLM + MATIC/ETH) needed to cover the Provider's invoices.
 
-![image](/public/golem/payments/direct-payment-wbg.png)
+![image](/golem/payments/direct-payment-wbg.png)
 
 Since Yagna 0.16, Golem offers a new way to pay for tasks indirectly (via a smart contract) called Deposits. As a result, the Golem protocol does not require funds for the Provider to be sent from the Requestor wallet. This new payment method covers a use-case where services created on top of Golem allow end-users to pay for tasks orchestrated by the service.
 
-![image](/public/golem/payments/deposit-payment-wbg.png)
+![image](/golem/payments/deposit-payment-wbg.png)
 
 In this scenario:
 
