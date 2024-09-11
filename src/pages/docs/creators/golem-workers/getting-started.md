@@ -72,7 +72,7 @@ You can find the OpenAPI specification at [http://localhost:8000/docs](http://lo
 (or at [http://localhost:8000/redoc](http://localhost:8000/redoc) if you prefer the `redoc` format).
 
 The next steps:
-- Checkout the [stable diffusion usage example](#stable-diffusion-usage-example) to see an example of 
+- Checkout the [Stable Diffusion usage example](#stable-diffusion-usage-example) to see an example of 
 running `automatic1111` on Golem Network
 - Play with [OpenAPI specification](http://localhost:8000/docs) - it hosts plenty illustrative examples,
 and formally describes the schemas
@@ -163,7 +163,7 @@ You can find the OpenAPI specification at [http://localhost:8000/docs](http://lo
 (or at [http://localhost:8000/redoc](http://localhost:8000/redoc) if you prefer the `redoc` format).
 
 The next steps:
-- Checkout the [stable diffusion usage example](#stable-diffusion-usage-example) to see an example of 
+- Checkout the [Stable Diffusion usage example](#stable-diffusion-usage-example) to see an example of 
 running `automatic1111` on Golem Network
 - Play with [OpenAPI specification](http://localhost:8000/docs) - it hosts plenty illustrative examples,
 and formally describes the schemas

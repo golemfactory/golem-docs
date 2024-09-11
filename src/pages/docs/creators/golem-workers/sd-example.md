@@ -1,7 +1,7 @@
 ---
 title: Golem-Workers Stable Diffusion Usage Example
 pageTitle: Golem-Workers Stable Diffusion Usage Example
-description: Step-by-step instructions on how to run automtic1111 with a stable diffusion model with Golem-Workers
+description: Step-by-step instructions on how to run automtic1111 with a Stable Diffusion model with Golem-Workers
 
 type: Article
 ---
