@@ -54,13 +54,70 @@ curl --location 'http://localhost:8000/create-cluster' \
           }
         ]
       },
-      "on_stop_commands": [
-        "golem_workers.work.stop_activity"
-      ]
     }
   }
 }'
 ```
+
+### `create-cluster` JSON explained
+
+#### Default budget
+
+```json
+  "budget_types": {
+    "default": {
+      "budget": {
+        "golem_workers.budgets.AveragePerCpuUsageLinearModelBudget": {
+          "average_cpu_load": 1,
+          "average_duration_hours": 0.5,
+          "average_max_cost": 1.5
+        }
+      },
+      "scope": "cluster"
+    }
+  },
+```
+
+The `golem_workers.budgets.AveragePerCpuUsageLinearModelBudget` is a go-to budget component for managing costs.
+This budget model defines the maximum amount you're willing to pay for renting nodes based on estimated usage.
+
+In this example, the configuration ensures that the node will not cost more than **1.5 GLM**, assuming that:
+- The node will run for **0.5 hours**.
+- On average, **1 CPU** will be actively used during that time.
+
+You can specify multiple budget types, and select the appropriate one when creating individual nodes. If no specific budget is selected, the **`default`** budget type will be used automatically.
+
+#### Default node type
+```json
+  "node_types": {
+    "default": {
+      "market_config": {
+        "filters": [
+          {
+            "golem_reputation.ProviderBlacklistPlugin": {
+              "payment_network": "holesky"
+            }
+          }
+        ],
+        "sorters": [
+          {
+            "golem_reputation.ReputationScorer": {
+              "payment_network": "holesky"
+            }
+          }
+        ]
+      },
+    }
+  }
+```
+
+The `golem_reputation.ProviderBlacklistPlugin` and `golem_reputation.ReputationScorer` are Golem-Workers components 
+that allow integration with the Golem Reputation service. 
+These components help ensure that providers meet certain trust and performance criteria before being used.
+
+In the following JSON configuration, the settings ensure that, regardless of how the node’s market configuration 
+is defined during specific node creation, both the provider blacklist and the public reputation score 
+will be considered when selecting a provider.
 
 ## 2. Create a node
 Next, create a node based on the image 
@@ -78,25 +135,23 @@ curl --location 'http://localhost:8000/create-node' \
   },
   "node_config": {
 	"market_config": {
-  	"demand": {
+  	  "demand": {
     	"payloads": [
-      	{
-        	"golem_workers.payloads.ClusterNodePayload": {
-          	"runtime": "vm-nvidia",
-          	"image_tag": "scalepointai/automatic1111:4",
-          	"subnet_tag": "gpu-test",
-              "outbound_urls": [
-                "https://huggingface.co",
-                "https://cdn-lfs.huggingface.co",
-                "https://cdn-lfs-us-1.huggingface.co",
-                "https://gpu-provider.dev.golem.network"
-              ]
-
-
-        	}
-      	}
+      	  {
+            "golem_workers.payloads.ClusterNodePayload": {
+          	  "runtime": "vm-nvidia",
+          	  "image_tag": "scalepointai/automatic1111:4",
+          	  "subnet_tag": "gpu-test",
+                "outbound_urls": [
+                  "https://huggingface.co",
+                  "https://cdn-lfs.huggingface.co",
+                  "https://cdn-lfs-us-1.huggingface.co",
+                  "https://gpu-provider.dev.golem.network"
+                ]
+            }
+      	  }
     	]
-  	}
+  	  }
 	},
 	"on_start_commands": [
   	{
