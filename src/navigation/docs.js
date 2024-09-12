@@ -457,7 +457,7 @@ export const navigation = [
         children: [
           { title: 'Introduction', href: '/docs/creators/golem-workers' },
           { title: 'Getting started', href: '/docs/creators/golem-workers/getting-started' },
-          { title: 'Basic concepts guide', href: '/docs/creators/golem-workers/basic-concepts-guide' },
+          { title: 'Basic concepts guide', href: '/docs/creators/golem-workers/basic-concepts' },
           { title: 'Create Node explained', href: '/docs/creators/golem-workers/create-node' },
           { title: 'Stable Diffusion example', href: '/docs/creators/golem-workers/sd-example' },
           { title: 'Troubleshooting', href: '/docs/creators/golem-workers/troubleshooting' },
