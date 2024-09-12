@@ -9,7 +9,7 @@ type: Article
 # Golem-Workers: High-Level API for accessing GPU and CPU Golem Network resources
 
 This documentation is designed for developers wanting to run their payloads on Golem. 
-While Golem-Workers software is written in Python it exposes the language-agnostic HTTP interface. 
+While Golem-Workers software is written in Python, it exposes the language-agnostic HTTP interface. 
 You **don't have to know anything about Python** to take advantage of it.
 
 ## Introduction
@@ -30,7 +30,7 @@ with the Golem Network.
 
 ## How this documentation is organized
 
-- [Getting started](/docs/creators/golem-workers/getting-started) explains how to install and run Golem-Worker service
+- [Getting started](/docs/creators/golem-workers/getting-started) explains how to install and run Golem-Workers service
 - [Basic concepts](/docs/creators/golem-workers/basic-concepts) explains the ideas behind Golem-Workers
 - [create-node endpoint](/docs/creators/golem-workers/create-node) explains how to rent workers with Golem-Workers
-- [Stable Diffusion example](/docs/creators/golem-workers/sd-example) step by step tutorial of renting a node and using it for Stable Diffusion 
+- [Stable Diffusion example](/docs/creators/golem-workers/sd-example) step-by-step tutorial of renting a node and using it for Stable Diffusion 
