@@ -301,9 +301,9 @@ curl --location 'http://localhost:8000/get-node' \
 
 It returns the node’s state:
 
-- `provisioning` means you have to wait a bit more for the deployment of the image
-- `starting` means the image is up and running, and the starting actions are being performed
-- `started` means the node is ready
+- `provisioning` means you have to wait a bit more for the negotiations with the available nodes to finish
+- `starting` means the node is rented, the image is being deployed and the `on_start_commands` are being run
+- `started` means the node is ready, the image is deployed, the commands `on_start_commands` have been run successfully
 
 ## 4. Send a request to the node and generate images
 In the final step, launch a web browser and go to [http://localhost:8080/](http://localhost:8080). 

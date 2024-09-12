@@ -37,7 +37,7 @@ To manage clusters, Golem-Workers provides three API endpoints:
 the configuration, specify the network characteristics, and define the common attributes of your nodes.
   
 - **Get Cluster** (`/get-cluster`): Retrieves information about an existing cluster, 
-including the nodes within the cluster and their status.
+including the nodes within the cluster and their status (see [node statuses section](#node-statuses)).
 
 - **Delete Cluster** (`/delete-cluster`): Removes a cluster from the system, along with all its associated nodes.
 
@@ -61,6 +61,14 @@ and the software environment (image). Last, you can specify the commands to run 
 
 Each node operates independently but can communicate with others within the same cluster. 
 This flexibility allows you to scale and fine-tune the computing environment for your specific workload.
+
+#### Node statuses
+
+Whether you use `get-cluster` or `get-node` endpoint the most interesting node statuses are:
+
+- `provisioning` means you have to wait a bit more for the negotiations with the available nodes to finish
+- `starting` means the node is rented, the image is being deployed and the `on_start_commands` are being run
+- `started` means the node is ready, the image is deployed, the commands `on_start_commands` have been run successfully
 
 ### 4. Exploring the Golem Market with Proposals
 
