@@ -123,7 +123,7 @@ will be considered when selecting a provider.
 Next, create a node based on the image 
 [scalepointai/automatic1111:4](https://registry.golem.network/explore/scalepointai/automatic1111) 
 and specify the path to the model 
-(e.g., `https://huggingface.co/stabilityai/sdxl-turbo/resolve/main/sd_xl_turbo_1.0_fp16.safetensors`).
+(e.g. a precached on Golem Network proxy SD model `https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors` ).
 
 ```bash
 curl --location 'http://localhost:8000/create-node' \
@@ -143,9 +143,6 @@ curl --location 'http://localhost:8000/create-node' \
           	  "image_tag": "scalepointai/automatic1111:4",
           	  "subnet_tag": "gpu-test",
                 "outbound_urls": [
-                  "https://huggingface.co",
-                  "https://cdn-lfs.huggingface.co",
-                  "https://cdn-lfs-us-1.huggingface.co",
                   "https://gpu-provider.dev.golem.network"
                 ]
             }
@@ -203,9 +200,6 @@ curl --location 'http://localhost:8000/create-node' \
           	  "image_tag": "scalepointai/automatic1111:4",
           	  "subnet_tag": "gpu-test",
                 "outbound_urls": [
-                  "https://huggingface.co",
-                  "https://cdn-lfs.huggingface.co",
-                  "https://cdn-lfs-us-1.huggingface.co",
                   "https://gpu-provider.dev.golem.network"
                 ]
             }
