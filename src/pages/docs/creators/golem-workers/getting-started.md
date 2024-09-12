@@ -15,12 +15,13 @@ Below are two of the most common ways to start it.
 - The [second one](#manual) lets you start the needed components manually after you get them from the `pypi` package repository.
 
 
-## Docker compose (recommended)
+## Docker compose 
 
-Docker examples will take care of installation, 
-proper processes setup (`golem-workers` web server and `golem-node` service), and their basic configuration. 
-Note that because of decentralized fashion, `golem-node` needs a few moments to gather information from the Golem Network, 
-during that time, the amount of returned proposals (aka available nodes) can be impacted.
+Docker example will take care of installation, 
+proper processes setup (`golem-workers` web server and `golem-node` service), and their basic configuration.
+
+You might need to customize the docker files should you want to play with the Golem-Workers beyond the examples 
+from this documentation.
 
 This doesn't require a Python environment whatsoever. It is enough to have `docker` and `git`
 
@@ -50,6 +51,7 @@ docker compose up -d --build
 
 **Note**: the `docker-compose.yaml` file defines which ports to forward from the docker container to your machine.
 For the vanilla [Stable Diffusion](/docs/creators/golem-workers/sd-example) example, it is enough for forward `8080` and `8081` ports.
+
 If you want to communicate with your workers via different ports you have to update the `docker-compose.yaml` to reflect that.
 For each port, you want to be visible outside of docker 
 add `- <port outside docker>:<port inside docker>` to the `ports` section of the `web` service definition.
@@ -71,6 +73,9 @@ That’s it! Now, you can interact with Golem-Workers using the Web API at `http
 You can find the OpenAPI specification at [http://localhost:8000/docs](http://localhost:8000/docs) 
 (or at [http://localhost:8000/redoc](http://localhost:8000/redoc) if you prefer the `redoc` format).
 
+**Note** that due to decentralized fashion, `golem-node` needs a few moments to gather information from the Golem Network, 
+during that time, the amount of returned proposals (aka available nodes) can be impacted.
+
 The next steps:
 - Checkout the [Stable Diffusion usage example](#stable-diffusion-usage-example) to see an example of 
 running `automatic1111` on Golem Network
@@ -87,9 +92,6 @@ and configuration of these services on your server environment.
 This way is for you if you want to have more control over the Golem-Workers components. 
 You will be downloading the necessary software from [PyPi](https://pypi.org) - the Python package repository.
 It is recommended to use a [clean virtual environment](https://docs.python.org/3/library/venv.html).
-
-Please note that due to the decentralized nature of the Golem Network, the golem-node may take a few moments to gather information, 
-which could temporarily impact the number of returned proposals.
 
 ### 1. Install Golem-Workers package
 
@@ -161,6 +163,9 @@ uvicorn golem_workers.entrypoints.web.main:app
 That’s it! Now, you can interact with Golem-Workers using the Web API at `http://localhost:8000`
 You can find the OpenAPI specification at [http://localhost:8000/docs](http://localhost:8000/docs) 
 (or at [http://localhost:8000/redoc](http://localhost:8000/redoc) if you prefer the `redoc` format).
+
+**Note** that due to decentralized fashion, `golem-node` needs a few moments to gather information from the Golem Network, 
+during that time, the amount of returned proposals (aka available nodes) can be impacted.
 
 The next steps:
 - Checkout the [Stable Diffusion usage example](#stable-diffusion-usage-example) to see an example of 
