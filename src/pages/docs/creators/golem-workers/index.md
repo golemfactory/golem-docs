@@ -33,4 +33,7 @@ with the Golem Network.
 - [Getting started](/docs/creators/golem-workers/getting-started) explains how to install and run Golem-Workers service
 - [Basic concepts](/docs/creators/golem-workers/basic-concepts) explains the ideas behind Golem-Workers
 - [create-node endpoint](/docs/creators/golem-workers/create-node) explains how to rent workers with Golem-Workers
-- [Stable Diffusion example](/docs/creators/golem-workers/sd-example) step-by-step tutorial of renting a node and using it for Stable Diffusion 
+- [Hello service example](/docs/creators/golem-workers/hello-example) step-by-step tutorial of renting a node and using it 
+for a super simple Hello service
+- [Stable Diffusion example](/docs/creators/golem-workers/sd-example) step-by-step tutorial of renting a mainnnet GPU node 
+and using it for Stable Diffusion 

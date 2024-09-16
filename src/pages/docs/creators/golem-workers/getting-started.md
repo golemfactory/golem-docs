@@ -50,7 +50,8 @@ docker compose up -d --build
 ![docker compose up screenshot](/golem-workers/docker-compose-up.png)
 
 **Note**: the `docker-compose.yaml` file defines which ports to forward from the docker container to your machine.
-For the vanilla [Stable Diffusion](/docs/creators/golem-workers/sd-example) example, it is enough for forward `8080` and `8081` ports.
+For the vanilla [Hello service](/docs/creators/golem-workers/hello-example) 
+and [Stable Diffusion](/docs/creators/golem-workers/sd-example) examples, it is enough for forward `8080` and `8081` ports.
 
 If you want to communicate with your workers via different ports you have to update the `docker-compose.yaml` to reflect that.
 For each port, you want to be visible outside of docker 
@@ -147,7 +148,7 @@ put a new entry in the `.env` file in the current directory:
 GLOBAL_CONTEXTS=["golem_reputation.ReputationService"]
 ```
 
-Note that, the [examples](/docs/creators/golem-workers/sd-example) in this documentation require the above to work properly.
+Note that, the [examples](/docs/creators/golem-workers/hello-example) in this documentation require the above to work properly.
 
 ### 6. Start Golem-Workers
 

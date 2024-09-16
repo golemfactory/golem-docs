@@ -122,7 +122,7 @@ Available commands:
 - `golem_workers.work.run_in_shell`: A general-purpose command for executing shell commands on the node.
 It’s versatile and can be used for tasks like downloading files, setting up environments, or running services.
 An example of its usage is in the [Stable Diffusion example](/docs/creators/golem-workers/sd-example), 
-where this command is used to download and launch the Stable Diffusion model via Automatic1111.
+where this command is used to download the Stable Diffusion model and launch the Automatic1111 web ui.
 
 - `golem_workers.work.prepare_and_run_ssh_server`: Sets up the SSH environment on the node, 
 configuring secure connections between the node and the Golem-Workers server.

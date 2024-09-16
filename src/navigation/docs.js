@@ -459,6 +459,7 @@ export const navigation = [
           { title: 'Getting started', href: '/docs/creators/golem-workers/getting-started' },
           { title: 'Basic concepts guide', href: '/docs/creators/golem-workers/basic-concepts' },
           { title: 'Create Node explained', href: '/docs/creators/golem-workers/create-node' },
+          { title: 'Hello service example', href: '/docs/creators/golem-workers/hello-example' },
           { title: 'Stable Diffusion example', href: '/docs/creators/golem-workers/sd-example' },
           { title: 'Troubleshooting', href: '/docs/creators/golem-workers/troubleshooting' },
         ],

@@ -1,7 +1,7 @@
 ---
 title: Golem-Workers Stable Diffusion Usage Example
 pageTitle: Golem-Workers Stable Diffusion Usage Example
-description: Step-by-step instructions on how to run automtic1111 with a Stable Diffusion model with Golem-Workers
+description: Step-by-step instructions on how to run automatic1111 with a Stable Diffusion model with Golem-Workers
 
 type: Article
 ---
@@ -65,14 +65,14 @@ curl --location 'http://localhost:8000/create-cluster' \
         "filters": [
           {
             "golem_reputation.ProviderBlacklistPlugin": {
-              "payment_network": "holesky"
+              "payment_network": "polygon"
             }
           }
         ],
         "sorters": [
           {
             "golem_reputation.ReputationScorer": {
-              "payment_network": "holesky"
+              "payment_network": "polygon"
             }
           }
         ]
@@ -158,6 +158,7 @@ is defined during specific node creation, both the provider blacklist and the pu
 will be considered when selecting a provider.
 
 ## 3. Create a node
+
 Next, create a node based on the image 
 [scalepointai/automatic1111:4](https://registry.golem.network/explore/scalepointai/automatic1111) 
 and specify the path to the model 
@@ -343,7 +344,7 @@ It returns the node’s state:
 - `starting` means the node is rented, the image is being deployed and the `on_start_commands` are being run
 - `started` means the node is ready, the image is deployed, the commands `on_start_commands` have been run successfully
 
-## 4. Send a request to the node and generate images
+## 5. Send a request to the node and generate images
 In the final step, launch a web browser and go to [http://localhost:8080/](http://localhost:8080). 
 This will open the Automatic1111 GUI, where you can generate images.
 
