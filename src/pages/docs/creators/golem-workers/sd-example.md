@@ -10,15 +10,38 @@ type: Article
 In this example, we’ll show you how to run a sample [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 
 (from [modelserve AI](https://modelserve.ai)) image using Golem Workers.
 
+## 1. Top up your account
 
-## 1. Create a cluster
-In the first step, create a cluster with any name you choose (`cluster_id`). For example: `example`.
+This article demonstrates how to rent a **mainnet GPU node**. 
+Mainnet payments on the Golem Network are processed using the [Polygon](https://polygon.technology) blockchain. 
+To proceed, you’ll need both **GLM** and **MATIC** tokens.
+
+To top up your account, run the following command to generate a link to the **Golem Onboarding Portal**, 
+which contains all the instructions and explanations you’ll need:
+
+```bash
+docker compose exec golem-node yagna payment fund --network polygon
+```
+In Docker, the command may not open the link automatically, 
+so copy the generated link and paste it into your browser to access the onboarding portal.
+
+Drop the `docker compose exec golem-node` prefix if you are running 
+Golem-Workers [manually](docs/creators/golem-workers/getting-started#manual)
+
+For more details on mainnet payments on the Golem Network, 
+check out [the article](/docs/creators/javascript/guides/switching-to-mainnet).
+
+## 2. Create a cluster
+In this step, create a cluster with any name you choose (`cluster_id`). For example: `example`.
 
 ```bash
 curl --location 'http://localhost:8000/create-cluster' \
 --header 'Content-Type: application/json' \
 --data '{
   "cluster_id": "example",
+  "payment_config": {
+    "network": "polygon",
+  },
   "budget_types": {
     "default": {
       "budget": {
@@ -60,6 +83,21 @@ curl --location 'http://localhost:8000/create-cluster' \
 ```
 
 ### `create-cluster` JSON explained
+
+#### Payments on the mainnet
+
+```json
+  "payment_config": {
+    "network": "polygon",
+  },
+```
+The `network` property specifies the blockchain used for payments.
+By default, this is set to `holesky`, which uses free test tokens to pay providers hosted by Golem.
+This allows you to experiment before committing actual funds.
+
+However, GPU nodes are only available on the mainnet, which operates on the [Polygon](https://polygon.technology) blockchain.
+To rent these nodes, ensure that the network is set to `polygon`.
+
 
 #### Default budget
 
@@ -119,7 +157,7 @@ In the following JSON configuration, the settings ensure that, regardless of how
 is defined during specific node creation, both the provider blacklist and the public reputation score 
 will be considered when selecting a provider.
 
-## 2. Create a node
+## 3. Create a node
 Next, create a node based on the image 
 [scalepointai/automatic1111:4](https://registry.golem.network/explore/scalepointai/automatic1111) 
 and specify the path to the model 
@@ -285,7 +323,7 @@ In this example, we forward two ports to allow access to services running on the
 
 
 
-## 3. Get the node's status
+## 4. Get the node's status
 
 Next, you should wait until your node is up.
 Check the node state with a call to `get-node`:
@@ -357,7 +395,7 @@ for i in range(1, 11):
 
 This code will generate 10 images and save them to your computer.
 
-## 5. Stop the cluster
+## 6. Stop the cluster
 After completing the testing, you can shut down the cluster, using the following command:
 
 ```bash
