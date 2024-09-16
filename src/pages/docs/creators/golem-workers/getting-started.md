@@ -11,8 +11,8 @@ type: Article
 There are multiple ways to start interacting with Golem-Workers. 
 Below are two of the most common ways to start it.
 
-- The [first one](#docker-compose-recommended) uses `docker compose` to quickly start up needed components. 
-- The [second one](#manual) lets you start the needed components manually after you get them from the `pypi` package repository.
+- The [dockerized one](#docker-compose) uses `docker compose` to quickly start up needed components. 
+- The [manual one](#manual) lets you start the needed components manually after you get them from the `pypi` package repository.
 
 
 ## Docker compose 
@@ -70,18 +70,7 @@ docker compose exec golem-node yagna payment fund
 
 ### Golem-Workers is up!
 
-That’s it! Now, you can interact with Golem-Workers using the Web API at `http://localhost:8000`
-You can find the OpenAPI specification at [http://localhost:8000/docs](http://localhost:8000/docs) 
-(or at [http://localhost:8000/redoc](http://localhost:8000/redoc) if you prefer the `redoc` format).
-
-**Note** that due to decentralized fashion, `golem-node` needs a few moments to gather information from the Golem Network, 
-during that time, the amount of returned proposals (aka available nodes) can be impacted.
-
-The next steps:
-- Checkout the [Stable Diffusion usage example](#stable-diffusion-usage-example) to see an example of 
-running `automatic1111` on Golem Network
-- Play with [OpenAPI specification](http://localhost:8000/docs) - it hosts plenty illustrative examples,
-and formally describes the schemas
+That's it! Jump to the [wrapup section](/docs/creators/golem-workers/getting-started#golem-workers-is-up-2) to proceed.
 
 ## Manual
 
@@ -161,7 +150,7 @@ uvicorn golem_workers.entrypoints.web.main:app
 
 ### Golem-Workers is up!
 
-That’s it! Now, you can interact with Golem-Workers using the Web API at `http://localhost:8000`
+That's it! Now, you can interact with Golem-Workers using the Web API at `http://localhost:8000`
 You can find the OpenAPI specification at [http://localhost:8000/docs](http://localhost:8000/docs) 
 (or at [http://localhost:8000/redoc](http://localhost:8000/redoc) if you prefer the `redoc` format).
 
@@ -169,8 +158,10 @@ You can find the OpenAPI specification at [http://localhost:8000/docs](http://lo
 during that time, the amount of returned proposals (aka available nodes) can be impacted.
 
 The next steps:
-- Checkout the [Stable Diffusion usage example](#stable-diffusion-usage-example) to see an example of 
-running `automatic1111` on Golem Network
+- Checkout the [Hello service example](/docs/creators/golem-workers/hello-example) to see an example of 
+running a simple service on the Golem Network testnet
+- Checkout the advanced [Stable Diffusion example](/docs/creators/golem-workers/sd-example) to see an example of 
+running `automatic1111` on Golem Network GPU nodes
 - Play with [OpenAPI specification](http://localhost:8000/docs) - it hosts plenty illustrative examples,
 and formally describes the schemas
 
