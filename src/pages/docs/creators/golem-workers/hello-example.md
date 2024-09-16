@@ -144,4 +144,4 @@ curl --location 'http://localhost:8000/delete-cluster' --header 'Content-Type: a
 ---
 
 For more advanced example of deploying GPU-based nodes to run **Stable Diffusion**, 
-check out [this article](/docs/creators/golem-workers/stable-diffusion-example).
+check out [this article](/docs/creators/golem-workers/sd-example).
