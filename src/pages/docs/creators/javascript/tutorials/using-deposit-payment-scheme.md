@@ -11,7 +11,7 @@ type: Tutorial
 
 Since Yagna 0.16, Golem offers a new way to pay for tasks indirectly (via a smart contract) called Deposits. As a result, the Golem protocol doesn't require funds for the Provider to be sent from the Requestor wallet. This new payment method covers use cases where services created on top of Golem allow end-users to pay for tasks orchestrated by the service. General overview of a deposit payments can be found [here](https://docs.golem.network/docs/golem/payments/deposits). 
 
-![image](/public/golem/payments/deposit-payment-wbg.png)
+![image](/golem/payments/deposit-payment-wbg.png)
 
 ## Tutorial scenario
 
