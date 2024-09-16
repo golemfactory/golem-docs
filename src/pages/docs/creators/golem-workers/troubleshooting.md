@@ -34,12 +34,12 @@ To continuously view new logs as they are generated, use the `-f` or `--follow` 
 
 {% troubleshooting %}
 
-## `NoneType is not Iterable` stacktrace on `create-node`
+## `'NoneType' is not iterable` stacktrace on `create-node`
 
 {% problem /%}
 
 The `create-node` endpoint may occasionally fail. When this happens, it can be helpful to check the Uvicorn logs. 
-You might encounter a stacktrace that mentions **NoneType is not Iterable**.
+You might encounter a stacktrace that mentions **'NoneType' object is not iterable**.
 
 {% solution %}
 
