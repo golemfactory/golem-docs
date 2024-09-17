@@ -40,7 +40,7 @@ curl --location 'http://localhost:8000/create-cluster' \
 --data '{
   "cluster_id": "example",
   "payment_config": {
-    "network": "polygon",
+    "network": "polygon"
   },
   "budget_types": {
     "default": {
@@ -76,7 +76,7 @@ curl --location 'http://localhost:8000/create-cluster' \
             }
           }
         ]
-      },
+      }
     }
   }
 }'
@@ -88,7 +88,7 @@ curl --location 'http://localhost:8000/create-cluster' \
 
 ```json
   "payment_config": {
-    "network": "polygon",
+    "network": "polygon"
   },
 ```
 The `network` property specifies the blockchain used for payments.
@@ -144,7 +144,7 @@ You can specify multiple budget types, and select the appropriate one when creat
             }
           }
         ]
-      },
+      }
     }
   }
 ```
