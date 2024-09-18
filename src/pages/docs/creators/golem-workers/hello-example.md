@@ -163,7 +163,17 @@ You should see the message **Hello** displayed.
 After you're done, you should shut down the cluster using the following command:
 
 ```bash
-curl --location 'http://localhost:8000/delete-cluster' --header 'Content-Type: application/json' --data '{ "cluster_id": "example" }'
+curl --location 'http://localhost:8000/delete-cluster' \
+--header 'Content-Type: application/json' \
+--data @delete-cluster.json
+```
+
+This is the json file you have just used (also available on 
+[github](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
+```json
+{
+    "cluster_id": "example"
+}
 ```
 
 ---
