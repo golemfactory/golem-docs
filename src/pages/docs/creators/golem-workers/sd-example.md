@@ -8,7 +8,7 @@ type: Article
 # Stable diffusion usage example
 
 In this example, we’ll show you how to run a sample [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 
-(from [modelserve AI](https://modelserve.ai)) image using Golem Workers.
+(from [modelserve AI](https://modelserve.ai)) image using Golem-Workers.
 
 ## Prerequisites
 
