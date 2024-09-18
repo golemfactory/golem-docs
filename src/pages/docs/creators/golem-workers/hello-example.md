@@ -8,7 +8,7 @@ type: Article
 
 # Golem-Workers Hello Service Example
 
-This example demonstrates how to run a simple "Hello" service using Golem Workers. 
+This example demonstrates how to run a simple "Hello" service using Golem-Workers. 
 Unlike the **Stable Diffusion** example, this service does not require a GPU and can be run for free on the **testnet**. 
 It is designed as a basic introduction for new users, with more advanced examples like 
 the [Stable Diffusion tutorial](/docs/creators/golem-workers/sd-example) available for further exploration.
