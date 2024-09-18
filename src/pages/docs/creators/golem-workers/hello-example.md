@@ -153,6 +153,25 @@ which is a simple NGINX-based service that returns "Hello" on port **80**.
 - **Port Forwarding**: We forward port **80** on the node to **localhost:8080** on your machine,
 allowing you to access the service locally.
 
+## 3. Get the cluster's status
+
+Next, you should wait until your node is up.
+Check the cluster and node state with a call to `get-cluster`:
+
+```bash
+curl --location 'http://localhost:8000/get-cluster' \
+--header 'Content-Type: application/json' \
+--data @get-cluster.json
+```
+
+This is the json file you have just used (also available on 
+[github](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/get-cluster.json)):
+```json
+{
+    "cluster_id": "example",
+}
+```
+
 ## 4. Access the Hello Service
 
 Once the node is **started**, open your browser and navigate to [http://localhost:8080](http://localhost:8080).
