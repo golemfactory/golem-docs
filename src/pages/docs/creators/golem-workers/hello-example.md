@@ -35,7 +35,7 @@ curl --location 'http://localhost:8000/create-cluster' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-cluster.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-cluster.json)):
 ```json
 {
     "cluster_id": "example",
@@ -99,7 +99,7 @@ curl --location 'http://localhost:8000/create-node' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-node.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-node.json)):
 ```json
 {
     "cluster_id": "example",
@@ -165,7 +165,7 @@ curl --location 'http://localhost:8000/get-cluster' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/get-cluster.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/get-cluster.json)):
 ```json
 {
     "cluster_id": "example",
@@ -188,7 +188,7 @@ curl --location 'http://localhost:8000/delete-cluster' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
 ```json
 {
     "cluster_id": "example"

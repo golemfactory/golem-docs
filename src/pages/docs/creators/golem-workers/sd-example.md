@@ -52,7 +52,7 @@ curl --location 'http://localhost:8000/create-cluster' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-cluster.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-cluster.json)):
 ```json
 {
     "cluster_id": "example",
@@ -188,7 +188,7 @@ curl --location 'http://localhost:8000/create-node' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-node.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-node.json)):
 ```json
 {
     "cluster_id": "example",
@@ -355,7 +355,7 @@ curl --location 'http://localhost:8000/get-node' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/get-node.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/get-node.json)):
 ```json
 {
     "cluster_id": "example",
@@ -387,7 +387,7 @@ To generate some images using the Automatic1111 GUI, you can either enter your p
 
 Copy and run the following Python code (directly in the terminal or using a Jupyter Notebook). 
 The code is also availabla on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/sd-inference.py).
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/sd-inference.py).
 
 ```python
 import requests, time, io, base64
@@ -433,7 +433,7 @@ curl --location 'http://localhost:8000/delete-cluster' \
 ```
 
 This is the json file you have just used (also available on 
-[github](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
+[GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
 ```json
 {
     "cluster_id": "example"
