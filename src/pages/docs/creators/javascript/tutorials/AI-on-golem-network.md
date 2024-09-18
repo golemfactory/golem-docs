@@ -18,7 +18,7 @@ This tutorial is divided into four parts:
 
 # 1. Prerequisites
 
-For this tutorial, you need `node.js`, `curl`, or `ollama` CLI installed. For section 3 (building an image with a custom model), you need `docker` and `gvmkit-build`.
+For this tutorial, you need `Node.js`, `curl`, or `ollama` CLI installed. For section 3 (building an image with a custom model), you need `docker` and `gvmkit-build`.
 
 ## Install Yagna
 
@@ -93,13 +93,12 @@ yagna id show
 You can also visit our [GLM Onboarding](https://glm.golem.network/) portal to get the necessary tokens and transfer them to your Yagna wallet later.
 
 <!--
-? [Ile GLM trzeba na 1h GPU: 2]
-? On the stats.golem.network user needs to go to providers, select filters, and select GPU, to check prices in USD, not GLM. I cannot easily direct to check the GPU provider prices.
+? On the stats.golem.network user can go to providers, select filters, and select GPU, to check prices in USD, not GLM. I cannot easily direct to check the GPU provider prices.
 -->
 
 To test the script on the `testnet` with CPU providers (we don't currently offer GPU providers on the testnet), you need to make changes to the script, as described in the last section.
 
-To get test funds for the testnet, open another terminal and run:
+To get test funds for the testnet, open another terminal and run the following:
 
 ```bash
 yagna payment fund
@@ -112,193 +111,47 @@ This will top up your account with test GLM tokens, which can only be used on th
 Create a new Node.js project and install the Golem SDK:
 
 ```bash
-mkdir golem-ai
+npx @golem-sdk/cli new golem-ai -t ts-node-esm -y
 cd golem-ai
-npm init
-npm install @golem-sdk/golem-js
-npm install @golem-sdk/pino-logger
+npm install chalk
 ```
 
 **Note:** This script requires Node.js version 18.0.0 or higher.
 
-Create a file named `requestor.mjs` and copy the following content into it. This code will engage a provider with a price limit of 2 GLM per hour, deploy the image with `ollama` serving the `qwen:0.5b` model, and make it available on port 11434.
+Replace a body of `./src/index.ts` with the following content. This code will engage a provider with a price limit of 2 GLM per hour, deploy the image with `ollama` serving the `qwen:0.5b` model, and make it available on port 11434.
 
-```js
-import { GolemNetwork } from '@golem-sdk/golem-js'
-import { pinoPrettyLogger } from '@golem-sdk/pino-logger'
-import { clearInterval } from 'node:timers'
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/golem-js/master/examples/rental-model/advanced/gpu-ai.ts" language="javascript" /%}
 
-/**
- * Utility function to wait for a certain condition to be met or abort when needed
- *
- * @param {Function} check The callback to use to verify if the condition is met
- * @param {AbortSignal} abortSignal The signal to observe and cancel waiting if raised
- *
- * @return {Promise<void>}
- */
-const waitFor = async (check, abortSignal) => {
-  let verifyInterval
+To run it, set the YAGNA_APPKEY variable with:
 
-  const verify = new Promise((resolve) => {
-    verifyInterval = setInterval(async () => {
-      if (abortSignal.aborted) {
-        resolve()
-      }
-
-      if (await check()) {
-        resolve()
-      }
-    }, 3 * 1000)
-  })
-
-  return verify.finally(() => {
-    clearInterval(verifyInterval)
-  })
-}
-
-/**
- * Helper function breaking stdout/sterr multiline strings into separate lines
- *
- * @param {String} multiLineStr
- *
- * @return {String[]} Separate and trimmed lines
- */
-const splitMultiline = (multiLineStr) => {
-  return multiLineStr
-    .split('\n')
-    .filter((line) => !!line)
-    .map((line) => line.trim())
-}
-
-const myProposalFilter = (proposal) => {
-  /*
-// This filter can be used to engage a provider we used previously.
-// It should have the image cached so the deployment will be faster.
- if (proposal.provider.name == "<enter provider name here>") return true;
- else return false;
-*/
-  return true
-}
-
-const glm = new GolemNetwork({
-  logger: pinoPrettyLogger({
-    level: 'info',
-  }),
-  api: { key: 'try_golem' },
-  payment: {
-    driver: 'erc20',
-    network: 'polygon',
-  },
-})
-
-const controller = new AbortController()
-
-let proxy = null
-let rental = null
-let isShuttingDown = 0
-let serverOnProviderReady = false
-
-try {
-  // Establish a link with the Golem Network
-  await glm.connect()
-
-  // Prepare for user-initiated shutdown
-  process.on('SIGINT', async function () {
-    console.log(' Server shutdown was initiated by CTRL+C.')
-
-    if (isShuttingDown > 1) {
-      await new Promise((res) => setTimeout(res, 2 * 1000))
-      return process.exit(1)
-    }
-
-    isShuttingDown++
-    controller.abort('SIGINT received')
-
-    await proxy?.close()
-    await rental?.stopAndFinalize()
-    await glm.disconnect()
-  })
-
-  const network = await glm.createNetwork({ ip: '192.168.7.0/24' })
-
-  const order = {
-    demand: {
-      workload: {
-        imageHash: '23ac8d8f54623ad414d70392e4e3b96da177911b0143339819ec1433', // ollama with qwen2:0.5b
-        minMemGib: 8,
-        capabilities: ['!exp:gpu', 'vpn'],
-        engine: 'vm-nvidia',
-      },
-    },
-    market: {
-      rentHours: 0.5,
-      pricing: {
-        model: 'linear',
-        maxStartPrice: 0.0,
-        maxCpuPerHourPrice: 0.0,
-        maxEnvPerHourPrice: 2.0,
-      },
-      offerProposalFilter: myProposalFilter,
-    },
-    network,
-  }
-
-  rental = await glm.oneOf({ order }, controller)
-  const exe = await rental.getExeUnit(controller)
-
-  const PORT_ON_PROVIDER = 11434 // default port
-  const PORT_ON_REQUESTOR = 11434 // will use the same outside
-
-  console.log('Will start ollama on: ', exe.provider.name)
-
-  const server = await exe.runAndStream(
-    `sleep 1 && /usr/bin/ollama serve` // new image should have HOME=/root
-  )
-
-  server.stdout.subscribe((data) => {
-    // Debugging purpose
-    splitMultiline(data).map((line) => console.log('provider >>', line))
-  })
-
-  server.stderr.subscribe((data) => {
-    // Debugging purpose
-    splitMultiline(data).map((line) => console.log('provider !!', line)) // Once we see that the server has started to listen, we can continue
-
-    if (data.toString().includes('Listening on [::]:11434')) {
-      serverOnProviderReady = true
-    }
-  }) // Wait for the server running on the provider to be fully started
-
-  await waitFor(() => serverOnProviderReady, controller.signal) // Create a proxy instance for that server
-
-  proxy = exe.createTcpProxy(PORT_ON_PROVIDER)
-
-  proxy.events.on('error', (error) =>
-    console.error('TcpProxy reported an error:', error)
-  ) // Start listening and expose the port on your requestor machine
-
-  await proxy.listen(PORT_ON_REQUESTOR)
-  console.log(`Server Proxy listen at http://localhost:${PORT_ON_REQUESTOR}`) // Keep the process running to the point where the server exits or the execution is aborted
-
-  await waitFor(() => server.isFinished(), controller.signal)
-} catch (err) {
-  console.error('Failed to run the example', err)
-} finally {
-  await glm.disconnect()
-}
-```
-
-To run it, use this command:
+{% tabs %}
+{% tab label="Linux/ MacOS" %}
 
 ```bash
-node requestor.mjs
+export YAGNA_APPKEY=try_golem
+```
+
+{% /tab %}
+{% tab label="Windows" %}
+
+```bash
+set YAGNA_APPKEY=try_golem
+```
+
+{% /tab %}
+{% /tabs %}
+
+And run these commands:
+
+```bash
+npm run build
+npm start
 ```
 
 The output should look like this:
 
-![Ollama tags output](/gpu/ollama-example/output-1.png)
-![Ollama tags output](/gpu/ollama-example/output-2.png)
-![Ollama tags output](/gpu/ollama-example/output-3.png)
+![Ollama tags output](/gpu/ollama-example/output-1-ts.png)
+![Ollama tags output](/gpu/ollama-example/output-2-ts.png)
 
 Once it's running, you can interact with the model using the `ollama` CLI:
 
@@ -315,6 +168,9 @@ curl http://localhost:11434/v1/chat/completions -H "Content-Type: application/js
 Here's an example output:
 
 ![Ollama tags output](/gpu/ollama-example/curl-chat.png)
+
+Once you make some interactions and terminate the script the output should look like this:
+![Ollama tags output](/gpu/ollama-example/output-3-ts.png)
 
 **Note:** You cannot pull another model to the provider without requesting the `outbound` service from providers. The next section shows you how to create an image with another model so you can use it without needing the outbound feature.
 
@@ -399,7 +255,7 @@ Now that you have an image with your chosen model, you can test it on the Golem 
 
 The script follows the structure of a standard requestor script.
 We connect to `glm` (GolemNetwork), acquire an `exeunit` from a `rental`, and run the command `ollama serve` on the provider.
-In the Docker image, the `ollama serve` command is run automatically as the entry point. GVMI images currently don't support entry points. We'll start the `ollama` server on the provider and use its REST API to interact with the model.
+In the Docker image, the `ollama serve` command is run automatically as the entrypoint. GVMI images currently don't support entrypoints. We'll start the `ollama` server on the provider and use its REST API to interact with the model.
 The command is executed using the `runAndStream` method so we can collect the output as a stream and print it to the terminal. The command on the provider is delayed by 1 second using `sleep 1` to ensure we capture the entire output stream. We then monitor the output until the ollama server is running, and then we'll use a built-in proxy to expose the provider service on the desired port on our local machine.
 (If you try to run a proxy for a non-existent service, you will get a 400 error, so we need to make sure the service is up and running before we start the proxy).
 
@@ -418,36 +274,36 @@ Look at this section of the code:
 
 ```js
 demand: {
-  workload: {
-    imageHash: '23ac8d8f54623ad414d70392e4e3b96da177911b0143339819ec1433', // ollama with qwen2:0.5b
-    minMemGib: 8,
-    capabilities: ['!exp:gpu', 'vpn'],
-    engine: 'vm-nvidia',
-  },
+  workload: {
+    imageHash: '23ac8d8f54623ad414d70392e4e3b96da177911b0143339819ec1433', // ollama with qwen2:0.5b
+    minMemGib: 8,
+    capabilities: ['!exp:gpu', 'vpn'],
+    runtime: { name: "vm-nvidia" },
+ },
 },
 ```
 
 Replace the original image hash with the one returned by `gvmkit-build` in the previous step.
 Let's look at the other workload options:
 
-To request a provider with a GPU, you need to include the following options:
+To request a provider with a GPU, you need to include the following options in the `order`:
 
 ```js
 capabilities: ['!exp:gpu', 'vpn'],
-engine: 'vm-nvidia',
+runtime: { name: "vm-nvidia" },
 ```
 
 If you want to run a test on a CPU, you need to remove these lines or replace them with:
 
 ```js
-engine: 'vm',
+runtime: { name: "vm" },
 ```
 
 {% alert level="danger" %}
 
 To run this example on CPU providers, you should also update the pricing filter. Please scroll down for details.
 
-{% /alert  %}
+{% /alert  %}
 
 If your model is large, you might need to request a provider with more than 8 GB of memory by adjusting the `minMemGib` value.
 
@@ -457,14 +313,14 @@ When running your task on the `mainnet`, pay attention to this section:
 
 ```js
 market: {
-  rentHours: 0.5,
-  pricing: {
-    model: 'linear',
-    maxStartPrice: 0.0,
-    maxCpuPerHourPrice: 0.0,
-    maxEnvPerHourPrice: 2.0,
-  },
-  offerProposalFilter: myProposalFilter,
+  rentHours: 0.5,
+  pricing: {
+    model: 'linear',
+    maxStartPrice: 0.0,
+    maxCpuPerHourPrice: 0.0,
+    maxEnvPerHourPrice: 2.0,
+ },
+  //offerProposalFilter: myProposalFilter,
 },
 ```
 
@@ -482,11 +338,30 @@ maxEnvPerHourPrice: **2.0**,
 
 While 2.0 GLM for `EnvPerHour` is a lot for a CPU provider, 0.0 GLM for `CpuPerHour` is not enough. You will probably not receive any offers without modifying the pricing filter.
 
-{% /alert  %}
+{% /alert  %}
 
 The `myProposalFilter` can be used to filter the providers you engage with. If your model is large, your image will also be large, and it might take some time for providers to download it from the registry. For a 7 GB image, the download can take up to 10 minutes, depending on the provider's bandwidth. Therefore, once you engage a provider, you might prefer to select the same one for subsequent tasks. If the provider has your image cached, the deployment will be significantly faster.
 
-To find the provider you used, look for a line like `Will start ollama on: <provider name>` in the script output and update the `myProposalFilter` accordingly.
+To find the provider you used, look for a line like `Will start ollama on: <provider name>` in the script output, and create a proposal filter (see `myProposalFilter` as an example):
+
+```js
+const myProposalFilter = (proposal) => {
+  if (proposal.provider.name == '<enter provider name here>') return true
+  else return false
+}
+```
+
+and add the filter to the market options.
+
+```js
+market: {
+  rentHours: 0.5,
+  pricing: {
+    //......
+ },
+  offerProposalFilter: myProposalFilter,
+},
+```
 
 ## Working on the Mainnet
 
@@ -497,7 +372,6 @@ const glm = new GolemNetwork({
   logger: pinoPrettyLogger({
     level: 'info',
   }),
-  api: { key: 'try_golem' },
   payment: {
     driver: 'erc20',
     network: 'polygon',
@@ -505,14 +379,12 @@ const glm = new GolemNetwork({
 })
 ```
 
-The `api: { key: 'try_golem' }` object sets the app-key configured during the `yagna` startup. You can find instructions on setting a unique value in the documentation.
-
 The `payment` options:
 
 ```js
 payment: {
-  driver: 'erc20',
-  network: 'polygon',
+  driver: 'erc20',
+  network: 'polygon',
 },
 ```
 
@@ -523,8 +395,10 @@ If you'd like to test your scripts on low-performance CPU providers, comment out
 
 Remember to modify the `demand` options to request CPU providers if you do this.
 
-{% /alert  %}
+{% /alert  %}
+
+Instead of setting the `YAGNA_APPKEY` variable, you could use the `api: { key: 'try_golem' }` option for the GolemNetwork. `try_golem` is the autoconfigured value for the app-key set during the `yagna` startup. You can find instructions on setting a unique value in the documentation [here](/docs/creators/tools/yagna/yagna-mostly-used-commands).
 
 ## Conclusion
 
-## That concludes our tutorial on using AI models on the Golem Network. If you encounter any problems with the Golem Network, Yagna, or the requestor scripts, please reach out to us on our [Discord channel](https://chat.golem.network/).
+That concludes our tutorial on using AI models on the Golem Network. If you encounter any problems with the Golem Network, Yagna, or the requestor scripts, please reach out to us on our [Discord channel](https://chat.golem.network/).
