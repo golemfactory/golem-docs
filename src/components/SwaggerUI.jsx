@@ -51,7 +51,11 @@ export function SwaggerUI({
         newUrl.search = originalUrl.search
         req.url = newUrl.toString()
         console.log('URL modified to:', req.url)
-      } else if (req.url !== url && !overwrittenRequestURL && initialOverwrittenRequestURL) {
+      } else if (
+        req.url !== url &&
+        !overwrittenRequestURL &&
+        initialOverwrittenRequestURL
+      ) {
         const originalUrl = new URL(req.url)
         const newUrl = new URL(initialOverwrittenRequestURL)
         newUrl.pathname = originalUrl.pathname
@@ -115,9 +119,9 @@ export function SwaggerUI({
           )}
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
             The author has specified {initialOverwrittenRequestURL} as the
-            default URL. If you're running the API on a different URL, you can
-            modify it here. This URL will be used for API requests instead of
-            the one specified in the OpenAPI spec. 
+            default URL. If you&apos;re running the API on a different URL, you
+            can modify it here. This URL will be used for API requests instead
+            of the one specified in the OpenAPI spec.
           </p>
         </div>
       )}
