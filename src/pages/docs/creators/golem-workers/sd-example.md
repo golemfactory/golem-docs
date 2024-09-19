@@ -3,7 +3,7 @@ title: Golem-Workers Stable Diffusion Usage Example
 pageTitle: Golem-Workers Stable Diffusion Usage Example
 description: Step-by-step instructions on how to run automatic1111 with a Stable Diffusion model with Golem-Workers
 
-type: Article
+type: Example
 ---
 # Stable diffusion usage example
 

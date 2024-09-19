@@ -3,7 +3,7 @@ title: Golem-Workers create-node Endpoint
 pageTitle: Golem-Workers create-node Endpoint 
 description: Explanation of the `create-node` endpoint
 
-type: Article
+type: Guide 
 ---
 
 # Golem-Workers `create-node` endpoint

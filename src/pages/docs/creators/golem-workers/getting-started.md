@@ -3,7 +3,7 @@ title: Golem-Workers Getting Started article
 pageTitle: Golem-Workers Getting Started article 
 description: Step-by-step instructions on how to run the Golem-Workers service 
 
-type: Article
+type: Tutorial 
 ---
 
 # Getting started
