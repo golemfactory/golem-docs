@@ -457,6 +457,19 @@ export const navigation = [
         ],
       },
       {
+        title: 'Golem-Workers',
+        children: [
+          { title: 'Introduction', href: '/docs/creators/golem-workers' },
+          { title: 'Getting started', href: '/docs/creators/golem-workers/getting-started' },
+          { title: 'Basic concepts guide', href: '/docs/creators/golem-workers/basic-concepts' },
+          { title: 'Create Node explained', href: '/docs/creators/golem-workers/create-node' },
+          { title: 'Hello service example', href: '/docs/creators/golem-workers/hello-example' },
+          { title: 'Stable Diffusion example', href: '/docs/creators/golem-workers/sd-example' },
+          { title: 'API Reference', href: '/docs/creators/golem-workers/api-swagger-ui' },
+          { title: 'Troubleshooting', href: '/docs/creators/golem-workers/troubleshooting' },
+        ],
+      }, 
+      {
         title: 'Deploying apps on Golem',
         children: [
           { title: 'Introduction', href: '/docs/creators/dapps' },
@@ -511,6 +524,10 @@ export const navigation = [
           {
             title: 'Ray on Golem',
             href: '/docs/creators/ray/troubleshooting',
+          },
+          {
+            title: 'Golem-Workers',
+            href: '/docs/creators/golem-workers/troubleshooting',
           },
           {
             title: 'Yagna',
