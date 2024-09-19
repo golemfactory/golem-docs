@@ -256,6 +256,7 @@ const tags = {
     selfClosing: true,
     attributes: {
       url: { type: String },
+      overwrittenRequestURL: { type: String },
       showInfo: { type: Boolean },
     },
   },

@@ -17,5 +17,5 @@ typically running at **localhost:8000**.
 For instructions on how to set it up, check out the 
 [Getting Started](/docs/creators/golem-workers/getting-started) guide.
 
-{% swaggerui showInfo=false url="https://raw.githubusercontent.com/golemfactory/golem-workers/mateusz/extract-openapi/openapi.json" /%}
+{% swaggerui showInfo=false url="https://raw.githubusercontent.com/golemfactory/golem-workers/mateusz/extract-openapi/openapi.json" overwrittenRequestURL="http://localhost:8000" /%}
 
