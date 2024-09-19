@@ -162,6 +162,7 @@ The next steps:
 running a simple service on the Golem Network testnet
 - Checkout the advanced [Stable Diffusion example](/docs/creators/golem-workers/sd-example) to see an example of 
 running `automatic1111` on Golem Network GPU nodes
-- Play with [OpenAPI specification](http://localhost:8000/docs) - it hosts plenty illustrative examples,
+- Play with [OpenAPI specification](/docs/creators/golem-workers/api-swagger-ui) 
+(also available directly at [http://localhost:8000/docs](http://localhost:8000/docs)) - it hosts plenty illustrative examples,
 and formally describes the schemas
 
