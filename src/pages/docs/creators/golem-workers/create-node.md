@@ -17,7 +17,8 @@ This section will walk through its configurable aspects but do not hesitate to
 consult the Open API spec for more details.
 It is provided by the Golem-Workers server 
 ([Getting Started](/docs/creators/golem-workers/getting-started) explains how to start it). 
-The documentation is auto-generated and available by default at [http://localhost:8000/docs](http://localhost:8000/docs). 
+The documentation is auto-generated and available by default at [http://localhost:8000/docs](http://localhost:8000/docs)
+(and also in the [API Reference](/docs/creators/golem-workers/api-swagger-ui) section of this documentation).
 
 ## Node Creation Options
 

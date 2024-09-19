@@ -38,7 +38,8 @@ To continuously view new logs as they are generated, use the `-f` or `--follow` 
 
 {% problem /%}
 
-The `create-node` endpoint may occasionally fail. When this happens, it can be helpful to check the Uvicorn logs. 
+The `create-node` endpoint may occasionally fail. When this happens, it can be helpful to check the Uvicorn logs 
+(`docker compose logs web` command). 
 You might encounter a stacktrace that mentions **'NoneType' object is not iterable**.
 
 {% solution %}

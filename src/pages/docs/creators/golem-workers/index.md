@@ -36,4 +36,6 @@ with the Golem Network.
 - [Hello service example](/docs/creators/golem-workers/hello-example) step-by-step tutorial of renting a node and using it 
 for a super simple Hello service
 - [Stable Diffusion example](/docs/creators/golem-workers/sd-example) step-by-step tutorial of renting a mainnnet GPU node 
-and using it for Stable Diffusion 
+and using it for Stable Diffusion
+- [API Reference](/docs/creators/golem-workers/api-swagger-ui) clickable formally described endpoints and schemas, 
+with ilustrative examples
