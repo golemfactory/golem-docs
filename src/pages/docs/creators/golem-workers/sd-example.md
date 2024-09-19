@@ -23,7 +23,7 @@ Feel free to experiment and modify the JSON files if you’d like to adjust conf
 
 ## 1. Top up your account
 
-This article demonstrates how to rent a **mainnet GPU node**. 
+This example demonstrates how to rent a **mainnet GPU node**. 
 Mainnet payments on the Golem Network are processed using the [Polygon](https://polygon.technology) blockchain. 
 To proceed, you’ll need both **GLM** and **MATIC** tokens.
 
