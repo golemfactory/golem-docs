@@ -465,6 +465,7 @@ export const navigation = [
           { title: 'Create Node explained', href: '/docs/creators/golem-workers/create-node' },
           { title: 'Hello service example', href: '/docs/creators/golem-workers/hello-example' },
           { title: 'Stable Diffusion example', href: '/docs/creators/golem-workers/sd-example' },
+          { title: 'Golem-Workers API Swagger UI', href: '/docs/reputation/reputation-api-swagger-ui-v1' },
           { title: 'Troubleshooting', href: '/docs/creators/golem-workers/troubleshooting' },
         ],
       }, 
