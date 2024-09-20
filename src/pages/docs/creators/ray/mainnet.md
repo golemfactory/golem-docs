@@ -128,4 +128,5 @@ Conversely, the `unblock` subcommand removes nodes from your blacklist, making t
 {% docnavigation title="See also" %}
 
 - [Ray on Golem introduction](/docs/creators/ray)
-  {% /docnavigation %}
+
+{% /docnavigation %}
