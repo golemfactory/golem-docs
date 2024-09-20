@@ -227,7 +227,7 @@ try {
         imageHash: '23ac8d8f54623ad414d70392e4e3b96da177911b0143339819ec1433', // ollama with qwen2:0.5b
         minMemGib: 8,
         capabilities: ['!exp:gpu', 'vpn'],
-        engine: 'vm-nvidia',
+        runtime: { name: 'vm-nvidia' },
       },
     },
     market: {
@@ -422,7 +422,7 @@ demand: {
     imageHash: '23ac8d8f54623ad414d70392e4e3b96da177911b0143339819ec1433', // ollama with qwen2:0.5b
     minMemGib: 8,
     capabilities: ['!exp:gpu', 'vpn'],
-    engine: 'vm-nvidia',
+    runtime: { name: "vm-nvidia" },
   },
 },
 ```
@@ -434,13 +434,13 @@ To request a provider with a GPU, you need to include the following options:
 
 ```js
 capabilities: ['!exp:gpu', 'vpn'],
-engine: 'vm-nvidia',
+runtime: { name: "vm-nvidia" },
 ```
 
 If you want to run a test on a CPU, you need to remove these lines or replace them with:
 
 ```js
-engine: 'vm',
+runtime: { name: "vm" },
 ```
 
 {% alert level="danger" %}
