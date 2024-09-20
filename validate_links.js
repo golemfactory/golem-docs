@@ -81,6 +81,11 @@ foldersToCheck.forEach((folder) => {
           return
         }
 
+        if (href.startsWith('docs/')) {
+          errors.push(`Invalid link in file ${file}: ${href} - should start with "/docs/" instead of "docs/"\n`)
+          return
+        }
+
         if (href.startsWith('http')) {
           if (
             dirname.startsWith(
