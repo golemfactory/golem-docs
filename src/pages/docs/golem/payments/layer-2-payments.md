@@ -25,9 +25,9 @@ As Layer 2 solutions implement their ways to ensure the integrity of their side 
 
 Formerly dubbed "Matic", Polygon is becoming a de-facto standard for a lot of decentralized apps in the Ethereum space. Technically, it could be argued that it's not a "Layer 2" solution as it doesn't keep in sync with Ethereum but rather maintains its side chain, connected to the Ethereum main chain with a set of inter-chain bridges.
 
-What makes Polygon attractive is that its chain is fully compatible with Ethereum, making all the smart contracts, wallets, and other applications currently working with Ethereum immediately usable on Polygon. One noticeable difference is that in place of the ETH token, the Polygon chain uses its own MATIC token to pay the transaction fees.
+What makes Polygon attractive is that its chain is fully compatible with Ethereum, making all the smart contracts, wallets, and other applications currently working with Ethereum immediately usable on Polygon. One noticeable difference is that in place of the ETH token, the Polygon chain uses its own POL token to pay the transaction fees.
 
-The consensus on Polygon's mainnet chain is maintained by a carefully selected and somewhat decentralized set of validator nodes who use a proof-of-stake mechanism, whereby the validators stake their MATIC tokens. Because of this setup and because no active synchronization with Ethereum is attempted, the costs of transactions are several orders of magnitude lower than on Ethereum.
+The consensus on Polygon's mainnet chain is maintained by a carefully selected and somewhat decentralized set of validator nodes who use a proof-of-stake mechanism, whereby the validators stake their POL tokens. Because of this setup and because no active synchronization with Ethereum is attempted, the costs of transactions are several orders of magnitude lower than on Ethereum.
 
 A user wishing to enter and exit Polygon - that is transfer funds between Polygon and the Ethereum mainnet - needs to use a bridge - a special kind of contract that locks user's funds on one chain and transfers them a respective amount on the other chain. Because those bridges need to work on the Ethereum, they're pretty costly to interact with.
 

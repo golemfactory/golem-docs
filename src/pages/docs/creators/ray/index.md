@@ -58,7 +58,7 @@ Check out articles about Ray on Golem [cluster yaml](/docs/creators/ray/cluster-
 When your application is ready, and you need more power, you should move to the mainnet - there are more nodes, and the nodes themselves are more powerful, but you have to pay to use them.
 Check out the [Running on the mainnet](/docs/creators/ray/mainnet) guide to get a full overview.
 
-Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and MATIC (for payment transaction fees).
+Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and POL (for payment transaction fees).
 We encourage you to learn more about [mainnet payments and funding your Ray on Golem](/docs/creators/javascript/guides/switching-to-mainnet).
 
 When you have the tokens you need to configure `payment_network: "polygon"` in the cluster yaml file ([more details](/docs/creators/ray/cluster-yaml#network))
@@ -79,8 +79,7 @@ The basic flow of working with Ray and Ray on Golem consists of:
 ## How to start
 
 You'll need a piece of code to execute on Golem. If you already have some Ray application, you can immediately proceed to [launching it on Golem](/docs/creators/ray/setup-tutorial).
-Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/ray-on-golem/tree/main/examples). 
-
+Otherwise, feel free to experiment with [our example apps](https://github.com/golemfactory/ray-on-golem/tree/main/examples).
 
 Once you get the hang of it, we invite you to have a look at the detailed explanation of [simple ray tasks app](/docs/creators/ray/basic-ray-tasks-usage-tutorial)<!-- and a more sophisticated [bridge simulation app](/docs/creators/ray/conversion-to-ray-on-golem-tutorial)-->.
 
