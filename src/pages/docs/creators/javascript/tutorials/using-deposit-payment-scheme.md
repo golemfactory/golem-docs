@@ -9,7 +9,9 @@ type: Tutorial
 
 ## Introduction
 
-Since Yagna 0.16, Golem offers a new way to pay for tasks indirectly (via a smart contract) called Deposits. As a result, the Golem protocol doesn't require funds for the Provider to be sent from the Requestor wallet. This new payment method covers use cases where services created on top of Golem allow end-users to pay for tasks orchestrated by the service.
+Since Yagna 0.16, Golem offers a new way to pay for tasks indirectly (via a smart contract) called Deposits. As a result, the Golem protocol doesn't require funds for the Provider to be sent from the Requestor wallet. This new payment method covers use cases where services created on top of Golem allow end-users to pay for tasks orchestrated by the service. General overview of a deposit payments can be found [here](https://docs.golem.network/docs/golem/payments/deposits). 
+
+![image](/golem/payments/deposit-payment-wbg.png)
 
 ## Tutorial scenario
 
@@ -26,6 +28,19 @@ Here are the main steps of the scenario:
 
 1. The Funder creates a deposit for the Requestor using the LockPayment contract and passes the deposit ID to the Requestor.
 2. The Requestor runs the computations and uses the deposit to pay the providers for resources.
+
+## Holesky testnet tokens
+
+To use Holesky test network you will need both Holesky tETH and Holesky tGLM. To obtain Holesky tETH feel free to use one of the following faucets: 
+
+- [tETH Faucet 1](https://holesky-faucet.pk910.de/)
+- [tETH Faucet 2](https://faucet.quicknode.com/ethereum/holesky)
+- [tETH Faucet 3](https://faucet.chainstack.com/holesky-testnet-faucet)
+- [tETH Faucet 4](https://www.holeskyfaucet.io/)
+
+After You obtain some tETH, you can request tGLM tokens from tGLM Smart Contract by calling the `Create` function: 
+
+- [tGLM Faucet Smart Contract](https://holesky.etherscan.io/address/0xface100969ff47eb58d2cf603321b581a84bceac)
 
 ## Code organization
 

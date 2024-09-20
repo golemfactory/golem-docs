@@ -19,7 +19,7 @@ In this scenario:
 
 - Requestor is becoming a **Service Owner**, who runs Yagna to provide services to the **End Users**. Because the Provider is paid from End-user funds via Smart Contract, the Service Owner does not need to hold any GLM in his wallet at any point in time. MATIC/ETH tokens are still needed to cover transaction costs, however.
 - **Provider** role remains intact. The only difference is a new source of payment, it is a Smart Contract.
-- The **End User** also known as **Funder** role is a new one. A person who wants to use Services built on top of the Golem Network but is not interested in setting up and maintaining the Yagna node. This role requires some crypto wallet (for instance Metamask) with GLM and MATIC/ETH tokens to create a **Deposit**, which will be used to cover the Provider's costs. Thankfully, Metamask setup and required tokens might be easily obtained by End-User via Golem Onboarding Portal - https://glm.golem.network/
+- The **End User** also known as **Funder** is a new role. A person who wants to use Services built on top of the Golem Network but is not interested in setting up and maintaining the Yagna node. This role requires some crypto wallet (for instance Metamask) with GLM and MATIC/ETH tokens to create a **Deposit**, which will be used to cover the Provider's costs. Thankfully, Metamask setup and required tokens might be easily obtained by End-User via Golem Onboarding Portal - https://glm.golem.network/
 
 What is important, thanks to the Deposit Smart Contract, we are also able to introduce new cash flow from End-User to Service Owner/Requestor. This new cash flow might be used by the Service Owner/Requestor to introduce an optional service fee, which can be used to make the Service Owner/Requestor role profitable.
 
@@ -37,3 +37,7 @@ We provide an implementation of the deposit contract interface on [ethereum](htt
 ## Specification
 
 The interface and examples of use are documented in [golem-architecture](https://github.com/golemfactory/golem-architecture/blob/master/specs/deposits.md).
+
+## Example
+
+JS example utilizing deposit payments can be found [here](https://docs.golem.network/docs/creators/javascript/tutorials/using-deposit-payment-scheme).
