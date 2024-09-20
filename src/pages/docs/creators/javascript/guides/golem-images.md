@@ -81,7 +81,7 @@ In Golem terms, such a singular launch on a provider is called an Activity. Acti
 
 {% docnavigation title="Next steps" %}
 
-- [Installing gvmkit-build](docs/creators/tools/gvmkit/gvmkit-build-installation)
+- [Installing gvmkit-build](/docs/creators/tools/gvmkit/gvmkit-build-installation)
 
 {% /docnavigation %}
 
