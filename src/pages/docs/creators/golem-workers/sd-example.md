@@ -37,7 +37,7 @@ In Docker, the command may not open the link automatically,
 so copy the generated link and paste it into your browser to access the onboarding portal.
 
 Drop the `docker compose exec golem-node` prefix if you are running 
-Golem-Workers [manually](docs/creators/golem-workers/getting-started#manual)
+Golem-Workers [manually](/docs/creators/golem-workers/getting-started#manual)
 
 For more details on mainnet payments on the Golem Network, 
 check out [the article](/docs/creators/javascript/guides/switching-to-mainnet).
