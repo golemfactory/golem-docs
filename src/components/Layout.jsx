@@ -11,6 +11,7 @@ import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'
 import { ThemeToggler } from '@/components/ThemeSelector'
 import VersionSwitcher from '@/components/VersionSwitcher'
+import useSWR from 'swr'
 
 function Heading({ section, isActive }) {
   const isChildActive = section.children.some(isActive)
@@ -76,9 +77,13 @@ function Header({ navigation }) {
     }
   }, [])
 
-  const [githubInfo, setGithubInfo] = useState({ stargazersCount: 365, forks: 58 })
+  const fetcher = (url) => fetch(url).then((res) => res.json())
 
-
+  const { data: githubInfo, error } = useSWR(
+    'https://golem-stats2-backend-staging.dev-test.golem.network/v1/github/',
+    fetcher,
+    { fallbackData: { stars: 365, forks: 58 } }
+  )
 
   return (
     <header
@@ -118,12 +123,12 @@ function Header({ navigation }) {
               <div className="grid grid-cols-2 gap-x-2">
                 <div className="flex items-center text-sm dark:text-[#BFC0C5] lg:text-xs">
                   <StarIcon className="mr-1 h-3 w-3 fill-black dark:fill-[#BFC0C5]" />
-                  {githubInfo.stargazersCount}
+                  {githubInfo?.stars ?? '...'}
                 </div>
 
                 <div className="flex items-center text-sm dark:text-[#BFC0C5] lg:text-xs">
                   <ForkIcon className="mr-1 h-3 w-3 fill-black dark:fill-[#BFC0C5]" />
-                  {githubInfo.forks}
+                  {githubInfo?.forks ?? '...'}
                 </div>
               </div>
             </div>
