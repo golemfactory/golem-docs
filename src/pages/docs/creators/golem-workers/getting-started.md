@@ -67,6 +67,7 @@ docker compose exec golem-node yagna payment fund
 
 ![yagna payment fund screenshot](/golem-workers/yagna-payment-fund.png)
 
+{% partial file="golem-workers/verify-fund.md" /%}
 
 ### Golem-Workers is up!
 
