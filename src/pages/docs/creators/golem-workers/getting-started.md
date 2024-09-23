@@ -34,7 +34,7 @@ Make sure that [Docker](https://docker.com) is running on your machine and that 
 Create a folder on your computer, navigate into it from the terminal, and then clone the repository using the command:
 
 ```
-git clone git@github.com:golemfactory/golem-workers
+git clone https://github.com/golemfactory/golem-workers.git
 ```
 
 ![git clone screenshot](/golem-workers/git-clone.png)
