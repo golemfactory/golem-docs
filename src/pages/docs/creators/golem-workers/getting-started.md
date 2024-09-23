@@ -1,9 +1,9 @@
 ---
-title: Golem-Workers Getting Started article 
-pageTitle: Golem-Workers Getting Started article 
+title: Golem-Workers Getting Started tutorial 
+pageTitle: Golem-Workers Getting Started tutorial
 description: Step-by-step instructions on how to run the Golem-Workers service 
 
-type: Article
+type: Tutorial 
 ---
 
 # Getting started
@@ -34,7 +34,7 @@ Make sure that [Docker](https://docker.com) is running on your machine and that 
 Create a folder on your computer, navigate into it from the terminal, and then clone the repository using the command:
 
 ```
-git clone git@github.com:golemfactory/golem-workers
+git clone https://github.com/golemfactory/golem-workers.git
 ```
 
 ![git clone screenshot](/golem-workers/git-clone.png)
@@ -67,6 +67,7 @@ docker compose exec golem-node yagna payment fund
 
 ![yagna payment fund screenshot](/golem-workers/yagna-payment-fund.png)
 
+{% partial file="golem-workers/verify-fund.md" /%}
 
 ### Golem-Workers is up!
 

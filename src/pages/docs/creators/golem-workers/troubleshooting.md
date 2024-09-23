@@ -58,6 +58,24 @@ and ensure that you add `GLOBAL_CONTEXT` to your `.env` file. Then, restart the 
 {% feedback identifier="golem-workers-reputation-in-global-context" /%}
 {% /troubleshooting %}
 
+{% troubleshooting %}
+
+## Getting testnet funds failus
+
+
+{% problem /%}
+
+Sometimes `docker compose exec golem-node yagna payment fund` command fails. 
+
+{% solution %}
+
+{% partial file="golem-workers/verify-fund.md" /%}
+
+{% /solution %}
+{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% /troubleshooting %}
+
+
 <!--
 {% troubleshooting %}
 

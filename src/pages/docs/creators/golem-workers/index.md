@@ -3,7 +3,7 @@ title: Golem-Workers High-Level API for accessing GPU and CPU Golem Network reso
 pageTitle: Golem-Workers High-Level API for accessing GPU and CPU Golem Network resources 
 description: Golem-Workers High-Level API for accessing GPU and CPU Golem Network resources 
 
-type: Article
+type: Guide 
 ---
 
 # Golem-Workers: High-Level API for accessing GPU and CPU Golem Network resources

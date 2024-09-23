@@ -3,7 +3,7 @@ title: Golem-Workers Basic Concepts
 pageTitle: Golem-Workers Basic Concepts 
 description: Explanation of Golem-Workers' basic concepts 
 
-type: Article
+type: Guide 
 ---
 
 # Golem-Workers Basic Concepts
