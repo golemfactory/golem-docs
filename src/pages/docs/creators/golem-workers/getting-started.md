@@ -1,9 +1,9 @@
 ---
-title: Golem-Workers Getting Started article 
-pageTitle: Golem-Workers Getting Started article 
+title: Golem-Workers Getting Started tutorial 
+pageTitle: Golem-Workers Getting Started tutorial
 description: Step-by-step instructions on how to run the Golem-Workers service 
 
-type: Article
+type: Tutorial 
 ---
 
 # Getting started

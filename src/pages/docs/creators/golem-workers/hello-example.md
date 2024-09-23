@@ -3,7 +3,7 @@ title: Golem-Workers Hello Service Usage Example
 pageTitle: Golem-Workers Hello Service Usage Example
 description: Step-by-step instructions on how to run example Hello Service with Golem-Workers
 
-type: Article
+type: Example 
 ---
 
 # Golem-Workers Hello Service Example
