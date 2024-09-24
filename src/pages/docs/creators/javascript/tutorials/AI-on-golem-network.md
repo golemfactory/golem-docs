@@ -72,19 +72,19 @@ Then start the `yagna` service:
 yagna service run
 ```
 
-## Get GLM and MATIC tokens
+## Get GLM and POL tokens
 
 Requesting tasks on the Golem Network requires GLM tokens. This example is configured to run on GPU Providers, available on the Polygon `mainnet`, where you need actual GLM tokens. However, there's an option to run examples on a test network, where you can use test GLM (explained further in this tutorial). The last section also covers updating the script to use CPU providers or the testnet.
 
 **Acquiring GLM:**
 
-If you don't have GLM or MATIC tokens to cover transaction fees, the recommended way is to use our GLM onboarding portal from within Yagna. Simply run the following command, open the provided link, and follow the instructions:
+If you don't have GLM or POL tokens to cover transaction fees, the recommended way is to use our GLM onboarding portal from within Yagna. Simply run the following command, open the provided link, and follow the instructions:
 
 ```bash
 yagna payment fund --network=polygon
 ```
 
-If you already have GLM and MATIC tokens, you can transfer them to your Yagna wallet from your preferred crypto wallet. To find your Yagna wallet address, run:
+If you already have GLM and POL tokens, you can transfer them to your Yagna wallet from your preferred crypto wallet. To find your Yagna wallet address, run:
 
 ```bash
 yagna id show

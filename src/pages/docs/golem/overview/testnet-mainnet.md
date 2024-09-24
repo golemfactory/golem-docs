@@ -18,7 +18,7 @@ Requestor users can select their preferred blockchain. Their demand will be matc
 
 Provider configuration by default, accepts payments on production networks.
 
-To operate on the Mainnet the requestor needs to supply his Yagna wallet with GLM and gas tokens on the respective network. On Polygon, you'll need GLM and MATIC.
+To operate on the Mainnet the requestor needs to supply his Yagna wallet with GLM and gas tokens on the respective network. On Polygon, you'll need GLM and POL.
 
 You can learn how to acquire GLMs [here](/docs/golem/overview/golem-token#where-to-acquire-GLM).
 
