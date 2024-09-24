@@ -33,7 +33,7 @@ Payments within the Golem Network take place on the [Polygon](https://polygon.te
 
 Feel free to learn more about [mainnet payments and funding your Golem node](/docs/creators/javascript/guides/switching-to-mainnet).
 
-Note that the funds you spend on your Ray on Golem cluster don't go to Golem Factory. The GLMs go directly to providers you rent the nodes from and the POLs go directly to Polygon blockchain validators who enable your payments.
+Note that the funds you spend on your Ray on Golem cluster don't go to Golem Factory. The GLMs go directly to providers you rent the nodes from and the POL go directly to Polygon blockchain validators who enable your payments.
 
 ## Mainnet funds onboarding
 

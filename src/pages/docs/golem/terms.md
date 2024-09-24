@@ -19,7 +19,7 @@ As the Software is of experimental nature and deployed for testing purposes only
 
 Also, core to the Golem Platform built-in feature set is a dedicated Ethereum-based transaction system, which enables direct transactions between Requestors and Providers. All such transactions in the Golem Platform are made in GLM and require ETH as gas.
 
-With the aim of reducing the costs for the Users, the individual payment transactions can be bundled and carried out on Ethereum-based Layer 2 transaction systems. You hereby acknowledge that it may therefore take up to 30 business days for the payment to be withdrawn from Ethereum-based Layer 2 transaction systems and become accessible to you on the Ethereum main chain. All such transactions in the Layer 2 may be performed using native tokens for completing transactions and paying gas fees (e.g. gas costs in POLs or ETHER for Polygon transactions).
+With the aim of reducing the costs for the Users, the individual payment transactions can be bundled and carried out on Ethereum-based Layer 2 transaction systems. You hereby acknowledge that it may therefore take up to 30 business days for the payment to be withdrawn from Ethereum-based Layer 2 transaction systems and become accessible to you on the Ethereum main chain. All such transactions in the Layer 2 may be performed using native tokens for completing transactions and paying gas fees (e.g. gas costs in POL or ETHER for Polygon transactions).
 
 THE GOLEM PLATFORM IS HIGHLY EXPERIMENTAL AND ANY REAL ETH OR GLM SENT TO A LIKELY INSECURE SOFTWARE ARE AT RISK OF BEING LOST INDEFINITELY. YOU ACKNOWLEDGE THE RISK OF A NON-PAYMENT EVEN AFTER 30 BUSINESS DAYS.
 

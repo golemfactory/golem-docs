@@ -92,8 +92,8 @@ yagna payment fund --network=mainnet
 #### Acquiring POL directly on Polygon and converting some of them to GLMs
 
 1. Find an exchange platform that enables you to buy POL for FIAT i.e. [Ramp](https://ramp.network/)
-2. Buy POLs on Polygon
-3. Swap some of POLs to GLMs on [quickswap](https://quickswap.exchange) or [uniswap](https://uniswap.org/)
+2. Buy POL on Polygon
+3. Swap some of POL to GLMs on [quickswap](https://quickswap.exchange) or [uniswap](https://uniswap.org/)
 
 #### Acquiring POL or GLM tokens on Polygon from Ethereum Mainnet
 
