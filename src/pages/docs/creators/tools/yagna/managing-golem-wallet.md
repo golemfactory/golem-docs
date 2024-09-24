@@ -103,7 +103,7 @@ Golem will transfer test tokens from our custom faucet (a service that transfers
 
 ## Obtaining funds for your mainnet account
 
-You can top up your wallet with MATIC/ETH and GLMs by running the following command:
+You can top up your wallet with POL/ETH and GLMs by running the following command:
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ This command should open your Web Browser with the Golem Onboarding Portal web p
 
 ## Obtaining funds to your mainnet account
 
-You can top up your wallet with MATIC/ETH and GLMs by running the following command:
+You can top up your wallet with POL/ETH and GLMs by running the following command:
 
 {% tabs %}
 

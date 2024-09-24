@@ -7,7 +7,7 @@ type: Guide
 
 # Deposits
 
-In a classic Golem Payment scheme, there is a single cash flow from Requestor to Provider. Consequently, the Requestor is the entity responsible for providing funds (GLM + MATIC/ETH) needed to cover the Provider's invoices.
+In a classic Golem Payment scheme, there is a single cash flow from Requestor to Provider. Consequently, the Requestor is the entity responsible for providing funds (GLM + POL/ETH) needed to cover the Provider's invoices.
 
 ![image](/golem/payments/direct-payment-wbg.png)
 
@@ -17,9 +17,9 @@ Since Yagna 0.16, Golem offers a new way to pay for tasks indirectly (via a smar
 
 In this scenario:
 
-- Requestor is becoming a **Service Owner**, who runs Yagna to provide services to the **End Users**. Because the Provider is paid from End-user funds via Smart Contract, the Service Owner does not need to hold any GLM in his wallet at any point in time. MATIC/ETH tokens are still needed to cover transaction costs, however.
+- Requestor is becoming a **Service Owner**, who runs Yagna to provide services to the **End Users**. Because the Provider is paid from End-user funds via Smart Contract, the Service Owner does not need to hold any GLM in his wallet at any point in time. POL/ETH tokens are still needed to cover transaction costs, however.
 - **Provider** role remains intact. The only difference is a new source of payment, it is a Smart Contract.
-- The **End User** also known as **Funder** role is a new one. A person who wants to use Services built on top of the Golem Network but is not interested in setting up and maintaining the Yagna node. This role requires some crypto wallet (for instance Metamask) with GLM and MATIC/ETH tokens to create a **Deposit**, which will be used to cover the Provider's costs. Thankfully, Metamask setup and required tokens might be easily obtained by End-User via Golem Onboarding Portal - https://glm.golem.network/
+- The **End User** also known as **Funder** role is a new one. A person who wants to use Services built on top of the Golem Network but is not interested in setting up and maintaining the Yagna node. This role requires some crypto wallet (for instance Metamask) with GLM and POL/ETH tokens to create a **Deposit**, which will be used to cover the Provider's costs. Thankfully, Metamask setup and required tokens might be easily obtained by End-User via Golem Onboarding Portal - https://glm.golem.network/
 
 What is important, thanks to the Deposit Smart Contract, we are also able to introduce new cash flow from End-User to Service Owner/Requestor. This new cash flow might be used by the Service Owner/Requestor to introduce an optional service fee, which can be used to make the Service Owner/Requestor role profitable.
 
