@@ -53,51 +53,9 @@ curl --location 'http://localhost:8000/create-cluster' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-cluster.json)):
-```json
-{
-    "cluster_id": "example",
-    "payment_config": {
-        "network": "polygon"
-    },
-    "budget_types": {
-        "default": {
-            "budget": {
-                "golem_workers.budgets.AveragePerCpuUsageLinearModelBudget": {
-                    "average_cpu_load": 1,
-                    "average_duration_hours": 0.5,
-                    "average_max_cost": 1.5
-                }
-            },
-            "scope": "cluster"
-        }
-    },
-    "network_types": {
-        "default": {
-            "ip": "192.168.0.1/16"
-        }
-    },
-    "node_types": {
-        "default": {
-            "market_config": {
-                "filters": [
-                    {
-                        "golem_reputation.ProviderBlacklistPlugin": {
-                            "payment_network": "polygon"
-                        }
-                    }
-                ],
-                "sorters": [
-                    {
-                        "golem_reputation.ReputationScorer": {
-                            "payment_network": "polygon"
-                        }
-                    }
-                ]
-            }
-        }
-    }
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-cluster.json" language="json" %}
+
+{% /codefromgithub %}
 
 ### `create-cluster` JSON explained
 
@@ -189,63 +147,9 @@ curl --location 'http://localhost:8000/create-node' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-node.json)):
-```json
-{
-    "cluster_id": "example",
-        "node_networks": {
-            "default": {}
-        },
-    "node_config": {
-        "market_config": {
-            "demand": {
-                "payloads": [
-                    {
-                        "golem_workers.payloads.ClusterNodePayload": {
-                            "runtime": "vm-nvidia",
-                            "image_tag": "scalepointai/automatic1111:4",
-                            "outbound_urls": [
-                                "https://gpu-provider.dev.golem.network"
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
-        "on_start_commands": [
-            {
-                "golem_workers.work.deploy_and_start_activity": {
-                    "deploy_timeout_minutes": 60
-                }
-            },
-            {
-                "golem_workers.work.prepare_and_run_ssh_server": {
-                    "ssh_private_key_path": "/tmp/ssh_key"
-                }
-            },
-            {
-                "golem_workers.work.run_in_shell": [
-                    "cd /usr/src/app/ && ./start.sh --model_url https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors > /usr/src/app/output/log 2>&1 &"
-                ]
-            }
-        ],
-        "sidecars": [
-            {
-                "golem_workers.sidecars.WebsocatPortTunnelSidecar": {
-                    "network_name": "default",
-                    "local_port": "8080",
-                    "remote_port": "8000"
-                }
-            },
-            {
-                "golem_workers.sidecars.WebsocatPortTunnelSidecar": {
-                    "network_name": "default",
-                    "local_port": "8081",
-                    "remote_port": "8001"
-                }
-            }
-        ]
-    }
-}
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-node.json" language="json" %}
+
+{% /codefromgithub %}
 
 ### `create-node` JSON explained
 
@@ -356,13 +260,10 @@ curl --location 'http://localhost:8000/get-node' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/get-node.json)):
-```json
-{
-    "cluster_id": "example",
-    "node_id": "node0"
-}
-```
 
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/get-node.json" language="json" %}
+
+{% /codefromgithub %}
 It returns the node’s state:
 
 - `provisioning` means you have to wait a bit more for the negotiations with the available nodes to finish
@@ -434,9 +335,6 @@ curl --location 'http://localhost:8000/delete-cluster' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
-```json
-{
-    "cluster_id": "example"
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json" language="json" %}
 
+{% /codefromgithub %}
