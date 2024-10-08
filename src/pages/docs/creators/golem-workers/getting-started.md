@@ -131,16 +131,17 @@ echo 'YAGNA_APPKEY=<your-application-token>' >> .env
 
 This will allow `golem-node` to know your `golem-workers` instance.
 
-### 5. Use Golem Reputation (optional)
+### 5. Use Golem Reputation
 
-If you want to use the Golem Reputation service (to use only nodes with a record of good behavior) 
-put a new entry in the `.env` file in the current directory:
+Golem Reputation service (prioritizing nodes with a record of good behavior) 
+requires putting a new entry in the `.env` file in the current directory:
 
 ```bash
 echo 'GLOBAL_CONTEXTS=["golem_reputation.ReputationService"]' >> .env
 ```
 
 Note that, the [examples](/docs/creators/golem-workers/hello-example) in this documentation require the above to work properly.
+You can skip this step if you don't use Golem Reputation in your jsons.
 
 ### 6. Start Golem-Workers
 
