@@ -1,5 +1,5 @@
 ---
-title: GPU Provider Installation Guide
+title: GPU Provider Installation Guide!
 description: Step-by-step instructions for setting up a dedicated GPU provider on the Golem Network.
 pageTitle: Install & Run Golem's GPU Provider - Earn GLM by Sharing GPU Power
 type: Instructions
