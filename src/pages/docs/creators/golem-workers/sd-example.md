@@ -136,7 +136,7 @@ will be considered when selecting a provider.
 ## 3. Create a node
 
 Next, create a node based on the image 
-[scalepointai/automatic1111:4](https://registry.golem.network/explore/scalepointai/automatic1111) 
+[modelserve/automatic1111:4](https://registry.golem.network/explore/modelserve/automatic1111) 
 and specify the path to the model 
 (e.g. a precached on Golem Network proxy SD model `https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors` ).
 
@@ -162,7 +162,7 @@ This is the json file you have just used (also available on
       	  {
             "golem_workers.payloads.ClusterNodePayload": {
           	  "runtime": "vm-nvidia",
-          	  "image_tag": "scalepointai/automatic1111:4",
+          	  "image_tag": "modelserve/automatic1111:4",
           	  "subnet_tag": "gpu-test",
                 "outbound_urls": [
                   "https://gpu-provider.dev.golem.network"
@@ -177,7 +177,7 @@ This is the json file you have just used (also available on
 In this example, we are using the `vm-nvidia` runtime to obtain nodes with GPUs. 
 Additionally, we configure the node to allow downloading images from **Hugging Face** (which is available only on the testnet) 
 and our own **gpu-provider.dev.golem.network** proxy. The node will use the image 
-published to Golem Registry as [scalepointai/automatic1111](https://registry.golem.network/explore/scalepointai/automatic1111)
+published to Golem Registry as [modelserve/automatic1111](https://registry.golem.network/explore/modelserve/automatic1111)
 in version `4`.
 
 This image includes a `start.sh` script that automatically downloads a model and starts the **Automatic1111 Web UI**.

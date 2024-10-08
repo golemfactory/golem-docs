@@ -69,7 +69,7 @@ This is the json file you have just used (also available on
 
 ### `create-node` JSON explained
 
-- **Image**: The node runs the **Hello Service** image `scalepointai/echo-test:2`,
+- **Image**: The node runs the **Hello Service** image `modelserve/echo-test:2`,
 which is a simple NGINX-based service that returns "Hello" on port **80**.
 - **Commands**: We deploy the node and start the service using NGINX.
 - **Port Forwarding**: We forward port **80** on the node to **localhost:8080** on your machine,
