@@ -34,6 +34,24 @@ To continuously view new logs as they are generated, use the `-f` or `--follow` 
 
 {% troubleshooting %}
 
+## Getting testnet funds fails
+
+
+{% problem /%}
+
+Sometimes `docker compose exec golem-node yagna payment fund` command fails. 
+
+{% solution %}
+
+{% partial file="golem-workers/verify-fund.md" /%}
+
+{% /solution %}
+{% feedback identifier="golem-workers-fund-fails" /%}
+{% /troubleshooting %}
+
+
+{% troubleshooting %}
+
 ## `'NoneType' is not iterable` stacktrace on `create-node`
 
 {% problem /%}
@@ -57,24 +75,6 @@ and ensure that you add `GLOBAL_CONTEXT` to your `.env` file. Then, restart the 
 {% /solution %}
 {% feedback identifier="golem-workers-reputation-in-global-context" /%}
 {% /troubleshooting %}
-
-{% troubleshooting %}
-
-## Getting testnet funds failus
-
-
-{% problem /%}
-
-Sometimes `docker compose exec golem-node yagna payment fund` command fails. 
-
-{% solution %}
-
-{% partial file="golem-workers/verify-fund.md" /%}
-
-{% /solution %}
-{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
-{% /troubleshooting %}
-
 
 <!--
 {% troubleshooting %}
