@@ -22,7 +22,9 @@ where you started `golem-node` and `golem-workers` - it can be less obvious with
 {% solution %}
 
 
-You can inspect the logs using the `docker compose logs` command. 
+You can inspect the logs using the `docker compose logs` command - run it in `examples/docker` directory
+(or where you have your docker compose file).
+
 To continuously view new logs as they are generated, use the `-f` or `--follow` flag.
 - `docker compose logs golem-node -f`
 - `docker compose logs web -f`
