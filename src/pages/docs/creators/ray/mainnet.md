@@ -29,11 +29,11 @@ Please consider using [budget control](#budget-control) mechanisms to manage you
 
 ## Mainnet payments
 
-Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and MATIC (for payment transaction fees).
+Payments within the Golem Network take place on the [Polygon](https://polygon.technology) blockchain and require some GLM tokens (to pay the providers) and POL (for payment transaction fees).
 
 Feel free to learn more about [mainnet payments and funding your Golem node](/docs/creators/javascript/guides/switching-to-mainnet).
 
-Note that the funds you spend on your Ray on Golem cluster don't go to Golem Factory. The GLMs go directly to providers you rent the nodes from and the MATICs go directly to Polygon blockchain validators who enable your payments.
+Note that the funds you spend on your Ray on Golem cluster don't go to Golem Factory. The GLMs go directly to providers you rent the nodes from and the POL go directly to Polygon blockchain validators who enable your payments.
 
 ## Mainnet funds onboarding
 
@@ -50,7 +50,7 @@ Ray On Golem
   Webserver is not yet running, waiting additional `2` seconds...
   Starting webserver done
 
-  Running Ray on Golem on the mainnet requires GLM and MATIC tokens on the Polygon blockchain (see: https://docs.golem.network/docs/creators/ray/mainnet).
+  Running Ray on Golem on the mainnet requires GLM and POL tokens on the Polygon blockchain (see: https://docs.golem.network/docs/creators/ray/mainnet).
   Your wallet:
     
     Status for account: 0xae5d43485a341bc4f167f6a4fda0749f1d7f3e11
@@ -58,7 +58,7 @@ Ray On Golem
     ┌────────────────────┬────────────────┬────────────┬─────────────┬────────────┬────────────┬───────────┐
     │  platform          │  total amount  │  reserved  │  amount     │  incoming  │  outgoing  │  gas      │
     ├────────────────────┼────────────────┼────────────┼─────────────┼────────────┼────────────┼───────────┤
-    │  driver: erc20     │  0 GLM         │  0 GLM     │  accepted   │  0 GLM     │  0 GLM     │  0 MATIC  │
+    │  driver: erc20     │  0 GLM         │  0 GLM     │  accepted   │  0 GLM     │  0 GLM     │  0 POL  │
     │  network: polygon  │                │            │  confirmed  │  0 GLM     │  0 GLM     │           │
     │  token: GLM        │                │            │  requested  │  0 GLM     │  0 GLM     │           │
     └────────────────────┴────────────────┴────────────┴─────────────┴────────────┴────────────┴───────────┘
@@ -75,9 +75,9 @@ The onboarding process is a convenient and effortless way of providing your Ray 
 
 Initially, your Golem node generates and later manages its own Ethereum wallet, which is used to perform transactions. This wallet starts empty and Ray on Golem transparently obtains funds needed to operate on testnet. 
 
-To fill it with mainnet funds, the onboarding portal guides you through the creation of a separate, web-browser wallet, getting GLM and MATIC tokens there, and finally transferring them to the wallet used by Ray on Golem.
+To fill it with mainnet funds, the onboarding portal guides you through the creation of a separate, web-browser wallet, getting GLM and POL tokens there, and finally transferring them to the wallet used by Ray on Golem.
 
-Of course, if you already have your own Ethereum wallet with GLM and MATIC tokens, you don't have to get new ones. Just connect your own wallet and transfer enough of them to Ray on Golem. 
+Of course, if you already have your own Ethereum wallet with GLM and POL tokens, you don't have to get new ones. Just connect your own wallet and transfer enough of them to Ray on Golem. 
 
 ### Funds safety
 

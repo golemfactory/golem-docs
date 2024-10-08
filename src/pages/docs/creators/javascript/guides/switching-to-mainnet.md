@@ -53,7 +53,7 @@ Golem Network payments are done on Blockchain with GLM tokens. Consequently, to 
 - GLM tokens to pay the Provider
 - Native token of the chosen blockchain to pay for the gas a.k.a. transaction fees
 
-Ethereum's native token is ETH, whereas Polygon Network has MATIC.
+Ethereum's native token is ETH, whereas Polygon Network has POL.
 
 ### On test network
 
@@ -71,13 +71,13 @@ It may be useful to export your Golem wallet address to an external application 
 
 {% /alert %}
 
-#### Acquiring MATIC/ETH and GLM tokens directly via the Golem Onboarding Portal
+#### Acquiring POL/ETH and GLM tokens directly via the Golem Onboarding Portal
 
 1. Visit our [Onboarding Portal](https://glm.golem.network/)
 2. Click **Get Started** or **Get GLM** button
 3. Follow the instructions provided by the Portal
 
-#### Acquiring MATIC/ETH and GLM tokens from Yagna context via the Golem Onboarding Portal
+#### Acquiring POL/ETH and GLM tokens from Yagna context via the Golem Onboarding Portal
 
 1. For the Polygon network, enter the following command into your Terminal window (Yagna has to be running in the background):
 ```bash
@@ -89,13 +89,13 @@ yagna payment fund --network=mainnet
 ```
 2. Follow the instructions presented on the newly opened Web Page of your default browser
 
-#### Acquiring MATIC directly on Polygon and converting some of them to GLMs
+#### Acquiring POL directly on Polygon and converting some of them to GLMs
 
-1. Find an exchange platform that enables you to buy MATIC for FIAT i.e. [Ramp](https://ramp.network/)
-2. Buy MATICs on Polygon
-3. Swap some of MATICs to GLMs on [quickswap](https://quickswap.exchange) or [uniswap](https://uniswap.org/)
+1. Find an exchange platform that enables you to buy POL for FIAT i.e. [Ramp](https://ramp.network/)
+2. Buy POL on Polygon
+3. Swap some of POL to GLMs on [quickswap](https://quickswap.exchange) or [uniswap](https://uniswap.org/)
 
-#### Acquiring MATIC or GLM tokens on Polygon from Ethereum Mainnet
+#### Acquiring POL or GLM tokens on Polygon from Ethereum Mainnet
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
 
@@ -103,7 +103,7 @@ yagna payment fund --network=mainnet
 2. Connect your wallet
 3. Choose the token you want to get and follow the instructions
 
-### Swapping GLM tokens for MATIC on Polygon
+### Swapping GLM tokens for POL on Polygon
 
 **Go to** [**Polygon Website**](https://wallet.polygon.technology)
 
@@ -119,7 +119,7 @@ Another way is to use our [Onboarding portal](https://glm.golem.network) where y
 
 You can consider one of the following options:
 
-- swapping GLM tokens to MATIC and selling them directly on a trading platform or
+- swapping GLM tokens to POL and selling them directly on a trading platform or
 - bridging them to Ethereum Mainnet
 
 {% alert level="info" %}

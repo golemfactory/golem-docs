@@ -25,17 +25,17 @@ For some of the instructions below you need to configure the Metamask wallet ext
 3. Choose the token you want to receive and follow the instructions
 4. Wait until the process is finished (it normally takes around 7-8 minutes). You can follow the current status of the transaction by clicking "View on Etherscan".
 
-# MATIC tokens
+# POL tokens
 
-Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - MATIC.
+Just like any transactions on the Ethereum Mainnet require ETH, operations on the Polygon network require Polygon's equivalent - POL.
 
-- You can use the bridge to exchange other tokens to MATIC
-- You can buy MATIC directly on trading platform
-- If you possess GLM you can swap them for MATIC.
+- You can use the bridge to exchange other tokens to POL
+- You can buy POL directly on trading platform
+- If you possess GLM you can swap them for POL.
 
 [//]: <> ( see https://www.reddit.com/r/GolemProject/comments/r3ejkl/guide_part_2_l2_glm_to_exchange_swapping_glm_for/ )
 
-## Swapping GLM tokens for MATIC on Polygon
+## Swapping GLM tokens for POL on Polygon
 
 **Go to the** [**Polygon Website**](https://wallet.polygon.technology)
 
