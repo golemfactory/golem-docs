@@ -125,8 +125,8 @@ yagna app-key create <your-token-name>
 
 And put the generated app-key into the `.env` file in the current directory:
 
-```
-YAGNA_APPKEY=<your-application-token>
+```bash
+echo 'YAGNA_APPKEY=<your-application-token>' >> .env
 ```
 
 This will allow `golem-node` to know your `golem-workers` instance.
@@ -136,8 +136,8 @@ This will allow `golem-node` to know your `golem-workers` instance.
 If you want to use the Golem Reputation service (to use only nodes with a record of good behavior) 
 put a new entry in the `.env` file in the current directory:
 
-```
-GLOBAL_CONTEXTS=["golem_reputation.ReputationService"]
+```bash
+echo 'GLOBAL_CONTEXTS=["golem_reputation.ReputationService"]' >> .env
 ```
 
 Note that, the [examples](/docs/creators/golem-workers/hello-example) in this documentation require the above to work properly.
