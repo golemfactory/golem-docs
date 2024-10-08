@@ -12,7 +12,8 @@ In this example, we’ll show you how to run a sample [Automatic1111](https://gi
 
 ## Prerequisites
 
-We will be using **`curl`** to interact with the Golem-Workers API, which runs on **localhost:8000** 
+We will be using **`curl`** (for Windows users consider PowerShell command `Invoke-WebRequest` instead)
+to interact with the Golem-Workers API, which runs on **localhost:8000** 
 (see [Getting started](/docs/creators/golem-workers/getting-started) if it is not).
 All API requests will use **JSON data** to configure and manage the Golem-Workers service.
 
