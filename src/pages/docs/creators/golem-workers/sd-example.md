@@ -286,8 +286,10 @@ To generate some images using the Automatic1111 GUI, you can either enter your p
 
 #### Alternatively, use the automatic1111 API directly 
 
-Copy and run the following Python code (directly in the terminal or using a Jupyter Notebook). 
-The code is also availabla on 
+Copy and run the following Python code (directly in the terminal or using a Jupyter Notebook).
+Note it requires `PIL` library (get it with `pip install Pillow`).
+
+The code is also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/sd-inference.py).
 
 ```python
