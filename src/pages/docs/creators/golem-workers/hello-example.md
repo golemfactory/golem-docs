@@ -15,7 +15,8 @@ the [Stable Diffusion tutorial](/docs/creators/golem-workers/sd-example) availab
 
 ## Prerequisites
 
-We will be using **`curl`** to interact with the Golem-Workers API, which runs on **localhost:8000** 
+We will be using **`curl`** (for Windows users consider PowerShell command `Invoke-WebRequest` instead) 
+to interact with the Golem-Workers API, which runs on **localhost:8000** 
 (see [Getting started](/docs/creators/golem-workers/getting-started) if it is not).
 All API requests will use **JSON data** to configure and manage the Golem-Workers service.
 
@@ -36,48 +37,10 @@ curl --location 'http://localhost:8000/create-cluster' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-cluster.json)):
-```json
-{
-    "cluster_id": "example",
-    "budget_types": {
-        "default": {
-            "budget": {
-                "golem_workers.budgets.AveragePerCpuUsageLinearModelBudget": {
-                    "average_cpu_load": 1,
-                    "average_duration_hours": 0.5,
-                    "average_max_cost": 1.5
-                }
-            },
-            "scope": "cluster"
-        }
-    },
-    "network_types": {
-        "default": {
-            "ip": "192.168.0.1/16"
-        }
-    },
-    "node_types": {
-        "default": {
-            "market_config": {
-                "filters": [
-                    {
-                        "golem_reputation.ProviderBlacklistPlugin": {
-                            "payment_network": "holesky"
-                        }
-                    }
-                ],
-                "sorters": [
-                    {
-                        "golem_reputation.ReputationScorer": {
-                            "payment_network": "holesky"
-                        }
-                    }
-                ]
-            }
-        }
-    }
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-cluster.json" language="json" %}
+
+{% /codefromgithub %}
+
 
 ### `create-cluster` JSON explained
 
@@ -100,54 +63,13 @@ curl --location 'http://localhost:8000/create-node' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-node.json)):
-```json
-{
-    "cluster_id": "example",
-    "node_networks": {
-        "default": {}
-    },
-    "node_config": {
-        "market_config": {
-            "demand": {
-                "payloads": [
-                    {
-                        "golem_workers.payloads.ClusterNodePayload": {
-                            "image_tag": "scalepointai/echo-test:2"
-                        }
-                    }
-                ]
-            }
-        },
-        "on_start_commands": [
-            {
-                "golem_workers.work.deploy_and_start_activity": {
-                    "deploy_timeout_minutes": 60
-                }
-            },
-            {
-                "golem_workers.work.run_in_shell": [
-                    [
-                        "nginx"
-                    ]
-                ]
-            }
-        ],
-        "sidecars": [
-            {
-                "golem_workers.sidecars.WebsocatPortTunnelSidecar": {
-                    "network_name": "default",
-                    "local_port": "8080",
-                    "remote_port": "80"
-                }
-            }
-        ]
-    }
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/create-node.json" language="json" %}
+
+{% /codefromgithub %}
 
 ### `create-node` JSON explained
 
-- **Image**: The node runs the **Hello Service** image `scalepointai/echo-test:2`,
+- **Image**: The node runs the **Hello Service** image `modelserve/echo-test:2`,
 which is a simple NGINX-based service that returns "Hello" on port **80**.
 - **Commands**: We deploy the node and start the service using NGINX.
 - **Port Forwarding**: We forward port **80** on the node to **localhost:8080** on your machine,
@@ -166,11 +88,9 @@ curl --location 'http://localhost:8000/get-cluster' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/get-cluster.json)):
-```json
-{
-    "cluster_id": "example",
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/get-cluster.json" language="json" %}
+
+{% /codefromgithub %}
 
 ## 4. Access the Hello Service
 
@@ -189,11 +109,9 @@ curl --location 'http://localhost:8000/delete-cluster' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
-```json
-{
-    "cluster_id": "example"
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json" language="json" %}
+
+{% /codefromgithub %}
 
 ---
 

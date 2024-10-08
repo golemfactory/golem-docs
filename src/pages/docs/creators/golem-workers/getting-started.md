@@ -29,6 +29,8 @@ This doesn't require a Python environment whatsoever. It is enough to have `dock
 
 Make sure that [Docker](https://docker.com) is running on your machine and that your current user has access to it.
 
+The instructions below have been tested with `Docker Compose V2`.
+
 ### 2. Clone the repository
 
 Create a folder on your computer, navigate into it from the terminal, and then clone the repository using the command:
@@ -123,22 +125,23 @@ yagna app-key create <your-token-name>
 
 And put the generated app-key into the `.env` file in the current directory:
 
-```
-YAGNA_APPKEY=<your-application-token>
+```bash
+echo 'YAGNA_APPKEY=<your-application-token>' >> .env
 ```
 
 This will allow `golem-node` to know your `golem-workers` instance.
 
-### 5. Use Golem Reputation (optional)
+### 5. Use Golem Reputation
 
-If you want to use the Golem Reputation service (to use only nodes with a record of good behavior) 
-put a new entry in the `.env` file in the current directory:
+Golem Reputation service (prioritizing nodes with a record of good behavior) 
+requires putting a new entry in the `.env` file in the current directory:
 
-```
-GLOBAL_CONTEXTS=["golem_reputation.ReputationService"]
+```bash
+echo 'GLOBAL_CONTEXTS=["golem_reputation.ReputationService"]' >> .env
 ```
 
 Note that, the [examples](/docs/creators/golem-workers/hello-example) in this documentation require the above to work properly.
+You can skip this step if you don't use Golem Reputation in your jsons.
 
 ### 6. Start Golem-Workers
 

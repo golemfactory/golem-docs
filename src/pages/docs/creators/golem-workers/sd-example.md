@@ -12,7 +12,8 @@ In this example, we’ll show you how to run a sample [Automatic1111](https://gi
 
 ## Prerequisites
 
-We will be using **`curl`** to interact with the Golem-Workers API, which runs on **localhost:8000** 
+We will be using **`curl`** (for Windows users consider PowerShell command `Invoke-WebRequest` instead)
+to interact with the Golem-Workers API, which runs on **localhost:8000** 
 (see [Getting started](/docs/creators/golem-workers/getting-started) if it is not).
 All API requests will use **JSON data** to configure and manage the Golem-Workers service.
 
@@ -53,51 +54,9 @@ curl --location 'http://localhost:8000/create-cluster' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-cluster.json)):
-```json
-{
-    "cluster_id": "example",
-    "payment_config": {
-        "network": "polygon"
-    },
-    "budget_types": {
-        "default": {
-            "budget": {
-                "golem_workers.budgets.AveragePerCpuUsageLinearModelBudget": {
-                    "average_cpu_load": 1,
-                    "average_duration_hours": 0.5,
-                    "average_max_cost": 1.5
-                }
-            },
-            "scope": "cluster"
-        }
-    },
-    "network_types": {
-        "default": {
-            "ip": "192.168.0.1/16"
-        }
-    },
-    "node_types": {
-        "default": {
-            "market_config": {
-                "filters": [
-                    {
-                        "golem_reputation.ProviderBlacklistPlugin": {
-                            "payment_network": "polygon"
-                        }
-                    }
-                ],
-                "sorters": [
-                    {
-                        "golem_reputation.ReputationScorer": {
-                            "payment_network": "polygon"
-                        }
-                    }
-                ]
-            }
-        }
-    }
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-cluster.json" language="json" %}
+
+{% /codefromgithub %}
 
 ### `create-cluster` JSON explained
 
@@ -177,7 +136,7 @@ will be considered when selecting a provider.
 ## 3. Create a node
 
 Next, create a node based on the image 
-[scalepointai/automatic1111:4](https://registry.golem.network/explore/scalepointai/automatic1111) 
+[modelserve/automatic1111:4](https://registry.golem.network/explore/modelserve/automatic1111) 
 and specify the path to the model 
 (e.g. a precached on Golem Network proxy SD model `https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors` ).
 
@@ -189,63 +148,9 @@ curl --location 'http://localhost:8000/create-node' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-node.json)):
-```json
-{
-    "cluster_id": "example",
-        "node_networks": {
-            "default": {}
-        },
-    "node_config": {
-        "market_config": {
-            "demand": {
-                "payloads": [
-                    {
-                        "golem_workers.payloads.ClusterNodePayload": {
-                            "runtime": "vm-nvidia",
-                            "image_tag": "scalepointai/automatic1111:4",
-                            "outbound_urls": [
-                                "https://gpu-provider.dev.golem.network"
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
-        "on_start_commands": [
-            {
-                "golem_workers.work.deploy_and_start_activity": {
-                    "deploy_timeout_minutes": 60
-                }
-            },
-            {
-                "golem_workers.work.prepare_and_run_ssh_server": {
-                    "ssh_private_key_path": "/tmp/ssh_key"
-                }
-            },
-            {
-                "golem_workers.work.run_in_shell": [
-                    "cd /usr/src/app/ && ./start.sh --model_url https://gpu-provider.dev.golem.network/models/v1-5-pruned-emaonly.safetensors > /usr/src/app/output/log 2>&1 &"
-                ]
-            }
-        ],
-        "sidecars": [
-            {
-                "golem_workers.sidecars.WebsocatPortTunnelSidecar": {
-                    "network_name": "default",
-                    "local_port": "8080",
-                    "remote_port": "8000"
-                }
-            },
-            {
-                "golem_workers.sidecars.WebsocatPortTunnelSidecar": {
-                    "network_name": "default",
-                    "local_port": "8081",
-                    "remote_port": "8001"
-                }
-            }
-        ]
-    }
-}
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/create-node.json" language="json" %}
+
+{% /codefromgithub %}
 
 ### `create-node` JSON explained
 
@@ -257,7 +162,7 @@ This is the json file you have just used (also available on
       	  {
             "golem_workers.payloads.ClusterNodePayload": {
           	  "runtime": "vm-nvidia",
-          	  "image_tag": "scalepointai/automatic1111:4",
+          	  "image_tag": "modelserve/automatic1111:4",
           	  "subnet_tag": "gpu-test",
                 "outbound_urls": [
                   "https://gpu-provider.dev.golem.network"
@@ -272,7 +177,7 @@ This is the json file you have just used (also available on
 In this example, we are using the `vm-nvidia` runtime to obtain nodes with GPUs. 
 Additionally, we configure the node to allow downloading images from **Hugging Face** (which is available only on the testnet) 
 and our own **gpu-provider.dev.golem.network** proxy. The node will use the image 
-published to Golem Registry as [scalepointai/automatic1111](https://registry.golem.network/explore/scalepointai/automatic1111)
+published to Golem Registry as [modelserve/automatic1111](https://registry.golem.network/explore/modelserve/automatic1111)
 in version `4`.
 
 This image includes a `start.sh` script that automatically downloads a model and starts the **Automatic1111 Web UI**.
@@ -356,13 +261,10 @@ curl --location 'http://localhost:8000/get-node' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/get-node.json)):
-```json
-{
-    "cluster_id": "example",
-    "node_id": "node0"
-}
-```
 
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/get-node.json" language="json" %}
+
+{% /codefromgithub %}
 It returns the node’s state:
 
 - `provisioning` means you have to wait a bit more for the negotiations with the available nodes to finish
@@ -385,8 +287,10 @@ To generate some images using the Automatic1111 GUI, you can either enter your p
 
 #### Alternatively, use the automatic1111 API directly 
 
-Copy and run the following Python code (directly in the terminal or using a Jupyter Notebook). 
-The code is also availabla on 
+Copy and run the following Python code (directly in the terminal or using a Jupyter Notebook).
+Note it requires `PIL` library (get it with `pip install Pillow`).
+
+The code is also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/sd-example/sd-inference.py).
 
 ```python
@@ -434,9 +338,6 @@ curl --location 'http://localhost:8000/delete-cluster' \
 
 This is the json file you have just used (also available on 
 [GitHub](https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json)):
-```json
-{
-    "cluster_id": "example"
-}
-```
+{% codefromgithub url="https://github.com/golemfactory/golem-workers/raw/main/examples/hello-example/delete-cluster.json" language="json" %}
 
+{% /codefromgithub %}

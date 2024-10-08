@@ -22,7 +22,9 @@ where you started `golem-node` and `golem-workers` - it can be less obvious with
 {% solution %}
 
 
-You can inspect the logs using the `docker compose logs` command. 
+You can inspect the logs using the `docker compose logs` command - run it in `examples/docker` directory
+(or where you have your docker compose file).
+
 To continuously view new logs as they are generated, use the `-f` or `--follow` flag.
 - `docker compose logs golem-node -f`
 - `docker compose logs web -f`
@@ -31,6 +33,24 @@ To continuously view new logs as they are generated, use the `-f` or `--follow` 
 {% /solution %}
 {% feedback identifier="golem-workers-logs" /%}
 {% /troubleshooting %}
+
+{% troubleshooting %}
+
+## Getting testnet funds fails
+
+
+{% problem /%}
+
+Sometimes `docker compose exec golem-node yagna payment fund` command fails. 
+
+{% solution %}
+
+{% partial file="golem-workers/verify-fund.md" /%}
+
+{% /solution %}
+{% feedback identifier="golem-workers-fund-fails" /%}
+{% /troubleshooting %}
+
 
 {% troubleshooting %}
 
@@ -60,19 +80,39 @@ and ensure that you add `GLOBAL_CONTEXT` to your `.env` file. Then, restart the 
 
 {% troubleshooting %}
 
-## Getting testnet funds failus
+## Increase logging 
 
 
 {% problem /%}
 
-Sometimes `docker compose exec golem-node yagna payment fund` command fails. 
+When `Golem-Workers` don't work as you expect you might want to show the logs on Golem discord to get help.
+The default logging levels are not very verbose.
+
+You might want to increase the debugging information.
 
 {% solution %}
 
-{% partial file="golem-workers/verify-fund.md" /%}
+The change is to add these few lines to the environment section of web component of `docker-compose.yaml` 
+(or to `.env` file in case of manual installation):
+```
+LOGGING_CONFIG: '{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "loggers": {
+    "golem_workers": {
+      "level": "DEBUG"
+    },
+    "golem.event_bus": {
+      "level": "DEBUG"
+    }
+  }
+}'
+```
+
+It should end up in the same place as `YAGNA_APPKEY`.
 
 {% /solution %}
-{% feedback identifier="ray-unique-tip-reference-for-feedback-gathering" /%}
+{% feedback identifier="golem-workers-increase-logging" /%}
 {% /troubleshooting %}
 
 
