@@ -102,22 +102,22 @@ sudo dd if=Downloads/golem-gpu-live-latest.img of=/dev/sdX bs=4M status=progress
 ##### **Using balenaEtcher (alternative)**
 
 1. **Select Image:** In balenaEtcher, click "Flash from file" and choose `golem-gpu-live-latest.img`.
-   - ![Flash from file](/gpu/balena_1.png) 
+![Flash from file](/gpu/balena_1.png) 
 
 2. **Select Target:** Click "Select target" and choose your SSD. **Double-check** you've chosen the right drive!
-   - ![Select target 1](/gpu/balena_2.png)
-   - ![Select target 2](/gpu/balena_3.png)
+![Select target 1](/gpu/balena_2.png)
+![Select target 2](/gpu/balena_3.png)
 
 3. **Flash:** Click "Flash!" to begin. Confirm with "Yes, I'm sure" if prompted.
-   - ![Flash!](/gpu/balena_4.png)
-   - ![Yes, I'm sure](/gpu/balena_5.png)
+![Flash!](/gpu/balena_4.png)
+![Yes, I'm sure](/gpu/balena_5.png)
 
 4. **Progress:** balenaEtcher will show a progress bar. This can take 5-10 minutes.
-   - ![Flashing 1](/gpu/balena_6.png)
-   - ![Flashing 2](/gpu/balena_7.png)
-   - ![Flashing 3](/gpu/balena_8.png)
-   - ![Flashing 4](/gpu/balena_9.png)
-   - ![Flashing 5](/gpu/balena_10.png)
+![Flashing 1](/gpu/balena_6.png)
+![Flashing 2](/gpu/balena_7.png)
+![Flashing 3](/gpu/balena_8.png)
+![Flashing 4](/gpu/balena_9.png)
+![Flashing 5](/gpu/balena_10.png)
 
 ### 3. Boot from the SSD
 
@@ -126,7 +126,7 @@ sudo dd if=Downloads/golem-gpu-live-latest.img of=/dev/sdX bs=4M status=progress
 3. **Boot Menu:** Enter your BIOS/UEFI boot menu (usually `F12`, `F2`, `Esc`, or `Del`).
 4. **Select SSD:** Select the SSD with `gpu-golem-live`.  **Make sure to choose UEFI OS mode**.
 
-   - ![Bios booting](/gpu/bios_1.png)
+![Bios booting](/gpu/bios_1.png)
 
 #### Setting the SSD as the Default Boot Device (Optional)
 
@@ -137,34 +137,36 @@ To always boot from the SSD when connected:
 3. **Prioritize SSD:**  Make the SSD the first boot option.
 4. **Save and Exit:** Save your changes and exit BIOS.
 
-   - ![Bios settings 2](/gpu/bios_2.png)
+![Bios settings 2](/gpu/bios_2.png)
 
 ### 4. Configure the GPU Provider
 
 1. **Select OS:** Press `Enter` to choose **GOLEM GPU Live**.
-   - ![Bios settings 3](/gpu/bios_3.png)
+![Bios settings 3](/gpu/bios_3.png)
 2. **Welcome:** Click "OK."
-   - ![Setup GPU Golem Live 1](/gpu/setup_1.png)
+![Setup GPU Golem Live 1](/gpu/setup_1.png)
 3. **Terms of Use:** Read and accept by selecting "YES".
-   - ![Setup GPU Golem Live 2](/gpu/setup_2.png)
+![Setup GPU Golem Live 2](/gpu/setup_2.png)
 4. **Persistent Storage:** Select a partition on your SSD for storing provider data.
-   - ![Setup GPU Golem Live 3](/gpu/setup_3.png)
+![Setup GPU Golem Live 3](/gpu/setup_3.png)
 5. **Password:**  A random password will be generated. **Write it down securely** for future SSH access.
-   - ![Setup GPU Golem Live 4](/gpu/setup_4.png)
+![Setup GPU Golem Live 4](/gpu/setup_4.png)
 6. **Network Configuration:** Write down the IP address shown (needed for SSH).
-   - ![Setup GPU Golem Live 5](/gpu/setup_5.png)
+![Setup GPU Golem Live 5](/gpu/setup_5.png)
 7. **Ethereum Wallet:** Enter your wallet address to receive your GLM earnings.
-   - ![Setup GPU Golem Live 6](/gpu/setup_6.png)
+![Setup GPU Golem Live 6](/gpu/setup_6.png)
 8. **Set Price:** Enter your desired hourly rate in GLM.
-   - ![Setup GPU Golem Live 7](/gpu/setup_7.png)
-9. **GPU Selection:** Choose the GPU you want to use with Golem.
-   - ![Setup GPU Golem Live 9](/gpu/setup_9.png)
-   - ![Setup GPU Golem Live 10](/gpu/setup_10.png)
-10. **Confirmation:** Click "OK" to finalize. Your computer will restart, and the provider will start running (your monitor might go blank, this is normal).
-
-    - ![Setup GPU Golem Live - Done 1](/gpu/setup_11.png)
-    - ![Setup GPU Golem Live - Done 2](/gpu/setup_12.png)
-    - ![Setup GPU Golem Live - Done 3](/gpu/setup_13.png)
+![Setup GPU Golem Live 7](/gpu/setup_7.png)
+9. **GPU Selection:** The Golem GPU Provider supports **multiple graphics cards**. If your computer has several GPUs, you can select one or more cards at this step. Choose the GPUs you want Golem GPU Provider to manage by pressing the spacebar.
+![Setup GPU Golem Live 9](/gpu/setup_9.png)
+![Setup GPU Golem Live 10](/gpu/setup_10.png)
+10. **Confirmation:** Click "OK" to finalize.
+![Setup GPU Golem Live - Done 1](/gpu/setup_11.png)
+11. **Node name** (optional): Enter a name for your provider. It will be visible within the network and on Golem Network Stats. You can skip this step, and a name will be generated automatically. 
+![Setup GPU Golem Live - Done 2](/gpu/setup_12.png)
+Your computer will restart, and the provider will start running (your monitor might go blank, this is normal).
+![Setup GPU Golem Live - Done 2](/gpu/setup_13.png)
+![Setup GPU Golem Live - Done 3](/gpu/setup_14.png)
 
 ### 5. Monitoring Your GPU Provider
 
@@ -250,6 +252,19 @@ Use the IP from step 6 and the password from step 5.
    ```
 
    Enter your SSH password when asked. The logs will be downloaded to your current directory.
+
+---
+
+### How do I check the provider’s status?
+
+1. Connect to your provider via SSH.
+2. Run:
+
+   ```bash
+   golemsp status
+   ```
+
+   Enter your SSH password when asked. From the displayed table, you can view the provider’s status, network affiliation, and payments.
 
 ---
 
