@@ -2,8 +2,8 @@ import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
-import { GoogleAnalytics } from 'nextjs-google-analytics'
-
+import { hotjar } from 'react-hotjar'
+import { useEffect } from 'react'
 import { Layout } from '@/components/Layout'
 import 'focus-visible'
 import '@/styles/tailwind.css'
@@ -104,20 +104,16 @@ export default function App({ Component, pageProps }) {
     ? collectHeadings(pageProps.markdoc.content)
     : []
 
-
+  useEffect(() => {
+    hotjar.initialize({ id: 5018163, sv: 6 })
+  }, [])
 
   return (
     <>
-      <GoogleAnalytics trackPageViews />
-
       <div className={inter.className}>
         <Head>
           <title>{pageTitle}</title>
           {description && <meta name="description" content={description} />}
-          <meta
-            name="google-site-verification"
-            content="5fpjcvtgYaJbTGz1kA5h6gRiVz0vpw3UiiBtRBvm7nc"
-          />
         </Head>
         <Layout
           title={title}
