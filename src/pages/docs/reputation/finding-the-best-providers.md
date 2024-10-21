@@ -20,7 +20,7 @@ To make it easier for you to test the API, we have integrated a Swagger UI just 
 2. Fill in the parameters you want to filter by.
 3. Click the **Execute** button to see the results.
 
-{% swaggerui url="https://reputation.dev-test.golem.network/v2/openapi.json" /%}
+{% swaggerui url="https://reputation.golem.network/v2/openapi.json" /%}
 
 ## Using the Returned Provider IDs to Create a Custom Market Strategy
 
