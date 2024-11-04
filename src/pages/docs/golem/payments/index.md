@@ -88,9 +88,7 @@ your `.env` file or explicitly set the ENV variable `ERC20_SENDOUT_INTERVAL_SECS
 
 For other options, refer to the [erc20 driver README.md](https://github.com/golemfactory/yagna/blob/master/core/payment-driver/erc20/Readme.md).
 
-## Deposits
 
-In a classic Golem Payment scheme, the Requestor is the entity that is responsible for providing funds (GLM + POL/ETH) needed to cover the Provider's invoices. Since Yagna 0.16, Golem offers a new way to pay for tasks: indirectly (via a smart contract) called Deposits. Read more on this feature in this [Guide](/docs/golem/payments/deposits).
 
 {% docnavigation title="Next steps" %}
 
