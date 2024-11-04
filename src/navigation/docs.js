@@ -128,10 +128,7 @@ export const navigation = [
                 title: 'Running AI Models on GPU Providers',
                 href: '/docs/creators/javascript/tutorials/AI-on-golem-network',
               },
-              {
-                title: 'Using the Deposit Payment Scheme',
-                href: '/docs/creators/javascript/tutorials/using-deposit-payment-scheme',
-              },
+
               {
                 title: 'Testing Golem Images',
                 href: '/docs/creators/javascript/tutorials/testing-golem-image',
@@ -705,10 +702,6 @@ export const navigation = [
           {
             title: 'Layer 2 Payments',
             href: '/docs/golem/payments/layer-2-payments',
-          },
-          {
-            title: 'Deposits',
-            href: '/docs/golem/payments/deposits',
           },
           {
             title: 'Golem token conversion',
