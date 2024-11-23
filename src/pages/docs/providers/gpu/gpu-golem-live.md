@@ -30,7 +30,7 @@ Before starting, check if your hardware meets these requirements:
 - **Network Optimization:** For better peer-to-peer connections, consider opening UDP port 11500 on your router.
 - **GPU Detection Issues:** If you've enabled virtualization in BIOS but the setup doesn't detect your GPU, try moving it to a different PCIe slot.
 - **GPU Usage:** Your GPU might not be in use all the time. It will be active when tasks are assigned.
-- **Single GPU Configuration:** The current setup supports one provider node per GPU. Multi-GPU support will be added later.
+
 
 ## Setting up your Golem GPU Provider
 
