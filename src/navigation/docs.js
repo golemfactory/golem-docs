@@ -457,15 +457,36 @@ export const navigation = [
         title: 'Golem-Workers',
         children: [
           { title: 'Introduction', href: '/docs/creators/golem-workers' },
-          { title: 'Getting started', href: '/docs/creators/golem-workers/getting-started' },
-          { title: 'Basic concepts guide', href: '/docs/creators/golem-workers/basic-concepts' },
-          { title: 'Create Node explained', href: '/docs/creators/golem-workers/create-node' },
-          { title: 'Hello service example', href: '/docs/creators/golem-workers/hello-example' },
-          { title: 'Stable Diffusion example', href: '/docs/creators/golem-workers/sd-example' },
-          { title: 'API Reference', href: '/docs/creators/golem-workers/api-swagger-ui' },
-          { title: 'Troubleshooting', href: '/docs/creators/golem-workers/troubleshooting' },
+          {
+            title: 'Getting started',
+            href: '/docs/creators/golem-workers/getting-started',
+          },
+          {
+            title: 'Basic concepts guide',
+            href: '/docs/creators/golem-workers/basic-concepts',
+          },
+          {
+            title: 'Create Node explained',
+            href: '/docs/creators/golem-workers/create-node',
+          },
+          {
+            title: 'Hello service example',
+            href: '/docs/creators/golem-workers/hello-example',
+          },
+          {
+            title: 'Stable Diffusion example',
+            href: '/docs/creators/golem-workers/sd-example',
+          },
+          {
+            title: 'API Reference',
+            href: '/docs/creators/golem-workers/api-swagger-ui',
+          },
+          {
+            title: 'Troubleshooting',
+            href: '/docs/creators/golem-workers/troubleshooting',
+          },
         ],
-      }, 
+      },
       {
         title: 'Deploying apps on Golem',
         children: [
@@ -474,6 +495,10 @@ export const navigation = [
           {
             title: 'Hello World Dapp',
             href: '/docs/creators/dapps/hello-world-dapp',
+          },
+          {
+            title: 'Internet Access in Dapps',
+            href: '/docs/creators/dapps/internet-access-in-dapps',
           },
           {
             title: 'Managing multiple dapps',
@@ -547,6 +572,10 @@ export const navigation = [
       {
         title: 'Common Developer tools',
         children: [
+          {
+            title: 'Golem Cert Companion',
+            href: '/docs/creators/tools/golem-cert-companion',
+          },
           {
             title: 'Yagna',
             href: '/docs/creators/tools/yagna',
