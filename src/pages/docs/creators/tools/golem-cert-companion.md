@@ -120,10 +120,11 @@ This process ensures providers recognize and trust your tasks.
 **Use Outbound Networking in Golem SDKs**  
  Learn how to integrate outbound networking in your tasks by exploring the following guides:
 
-<!-- **yapapi (Python):** Discover how to attach manifests and node descriptors to your tasks using the Python SDK in [this guide](/docs/creators/python/guides/using-vm-runtime).
+**yapapi (Python):** Discover how to attach manifests and node descriptors to your tasks using the Python SDK in [this guide](/docs/creators/python/tutorials/service-example-6-external-api-request).
 
-**golem-js:** Learn how to configure tasks with outbound networking using the JavaScript SDK in [this documentation](/docs/creators/javascript/guides/using-vm-runtime). -->
+<!-- **golem-js:** Learn how to configure tasks with outbound networking using the JavaScript SDK in [this documentation](/docs/creators/javascript/guides/using-vm-runtime). --> -->
 
 **dapp-runner (Golem Compose):** See how to include outbound networking in dApps with `dapp-runner` [here](/docs/creators/dapps/internet-access-in-dapps).
+
 
 ---

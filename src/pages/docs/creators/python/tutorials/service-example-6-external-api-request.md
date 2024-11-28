@@ -5,179 +5,141 @@ pageTitle: How to Make External API Requests with Golem Network | Developer Guid
 type: Tutorial
 ---
 
-# Service Example 6: External API request
+# Making External API Requests with Golem Network Using Yapapi
 
-## Introduction
+This guide explains how to enable outbound networking for your Golem applications using Yapapi. Outbound networking allows your applications to access external APIs or services by defining specific requirements and securing trust with providers. Using the **golem-cert-companion** tool, you can automate the process of generating manifests, descriptors, and certificates required for this functionality.
 
-The example depicts the following features:
+---
 
-- [Outbound Network and Computation Payload Manifest](/docs/golem/payload-manifest).
+## Why Are Manifests and Node Descriptors Required?
 
-{% alert level="info" %}
-The full code of the example is available in the yapapi repository: [https://github.com/golemfactory/yapapi/tree/master/examples/external-api-request](https://github.com/golemfactory/yapapi/tree/master/examples/external-api-request)
-{% /alert %}
+By default, the Golem Network includes a restrictive whitelist of URLs for outbound networking. This default list ensures a high level of security, limiting internet access to a predefined set of trusted domains. You can find the current whitelist [here](https://github.com/golemfactory/ya-installer-resources/tree/main/whitelist).
 
-## Prerequisites
+However, many applications require access to APIs or other external services not included in the whitelist. To allow this, Golem enables users to define specific requirements through manifests and node descriptors. These files:
 
-As with the other examples, we're assuming here you already have your [yagna daemon set-up to request the test tasks](/docs/creators/tools/yagna/yagna-installation-for-requestors) and that you were able to [configure your Python environment](/docs/creators/python/quickstarts/run-first-task-on-golem) to run the examples using the latest version of `yapapi`. If this is your first time using Golem and yapapi, please first refer to the resources linked above.
+- Specify the URLs your application needs to access.
+- Are signed with a certificate, which must be trusted by providers before your application can access external resources.
 
-This example involves [Computation Payload Manifest](/docs/golem/payload-manifest).
+### The Role of Provider Trust
 
-_Computation Payload Manifest_ making use of _Outbound Network_ requires either:
+When you submit a task requiring outbound networking, the Golem Network looks for providers that meet the task’s requirements **and trust your certificate**. Without this trust:
 
-1. Requestor [certificate](/docs/golem/payload-manifest#certificates) that's trusted by the Providers
-2. an instance of a Provider with the particular domain this example uses added to its [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains)
-3. an instance of a Provider with the requestor's self-signed Certificate imported into its [keystore](/docs/providers/configuration/outbound#managing-your-keystore)
+- **Providers will not accept your task**: If no providers trust your certificate, the task will remain in a pending state and will not start.
+- **Default whitelist restrictions apply**: Without trusted manifests, your application is limited to the URLs allowed by the default whitelist.
 
-The following example will show cases 2. and 3. so it will be necessary to start a [local instance of a Provider](/docs/providers/provider-installation).
+To ensure your task runs successfully:
+1. Generate and sign a manifest and node descriptor.
+2. Share your certificate with providers and request their trust.
 
-## Example app
+---
 
-An example app will request an external API using Provider's network and then it will print the API response to the console.
+## Automating Cert Generation with golem-cert-companion
 
-### 1. Manifest file
+Manually creating manifests and node descriptors can be a time-consuming and error-prone process. The **golem-cert-companion** tool streamlines this by automating the creation of:
 
-For an app to make an _Outbound Network_ request it needs to declare which tools it will use and which URLs it will access in a [Computation Payload Manifest](/docs/golem/payload-manifest).
+- **`manifest.json`**: (Must be attached in your task)
+- **`node-descriptor.signed.json`**: (Must be attached in your task  )
+- **`root-cert-template.signed.json`**: (The signed certificate that providers must trust first)
 
-Our example will make an HTTPS request using `curl` to a public REST API with the URL `https://api.coingecko.com`.
+---
 
-_Computation Payload Manifest_ will need to have following objects:
+## Steps to Enable Outbound Networking
 
-- [`net`](/docs/golem/payload-manifest#compmanifestnet--object) computation constraints with `URL`s the app will access (`https://api.coingecko.com`)
-- [`script`](/docs/golem/payload-manifest#compmanifestscript) computation constraint with `command`s app will execute (`curl`)
-- [`payload`](/docs/golem/payload-manifest#payload-object) defining [Golem image](/docs/creators/python/guides/golem-images) containing tools used by the app (`curl`)
+### Step 1: Install golem-cert-companion
 
-Example _Computation Payload Manifest_ must follow a specific [schema](/docs/golem/payload-manifest#manifest-schema), and for our example it will take form of following `manifest.json` file:
+Install the tool using pip:
 
-```json
-{
-  "version": "0.1.0",
-  "createdAt": "2022-07-26T12:51:00.000000Z",
-  "expiresAt": "2100-01-01T00:01:00.000000Z",
-  "metadata": {
-    "name": "External API call example",
-    "description": "Example manifest of a service making an outbound call to the external API",
-    "version": "0.1.0"
-  },
-  "payload": [
-    {
-      "platform": {
-        "arch": "x86_64",
-        "os": "linux"
-      },
-      "urls": [
-        "http://yacn2.dev.golem.network:8000/docker-golem-script-curl-latest-d75268e752.gvmi"
-      ],
-      "hash": "sha3:e5f5ddfd649525dbe25d93d9ed51d1bdd0849933d9a5720adb4b5810"
-    }
-  ],
-  "compManifest": {
-    "version": "0.1.0",
-    "script": {
-      "commands": ["run .*curl.*"],
-      "match": "regex"
-    },
-    "net": {
-      "inet": {
-        "out": {
-          "protocols": ["https"],
-          "urls": ["https://api.coingecko.com"]
-        }
-      }
-    }
-  }
-}
+```bash
+pip install golem-cert-companion
 ```
 
-The created file should be [verified using the JSON schema](/docs/golem/payload-manifest#schema-verification).
+### Step 2: Generate Required Files
 
-Then it needs to be encoded in `base64`:
+Run the tool:
 
-```sh
- base64 --wrap=0 manifest.json > manifest.json.base64
+```bash
+golem-cert-companion
 ```
 
-### 2. Yapapi example app
+or its shortcut:
 
-A base64-encoded manifest can be configured using the [`yapapi.payload.vm.manifest`](https://yapapi.readthedocs.io/en/latest/api.html#module-yapapi.payload.manifest) function, resulting in following `external_api_request.py` file:
-
-```py
-import asyncio
-
-from yapapi import Golem
-from yapapi.services import Service
-from yapapi.payload import vm
-
-class OutboundNetworkService(Service):
-    @staticmethod
-    async def get_payload():
-        return await vm.manifest(
-            manifest = open("manifest.json.base64", "rb").read()
-            # later we may add here manifest signature, digest algorithm, and app author's certificate
-            min_mem_gib = 0.5,
-            min_cpu_threads = 0.5,
-            # capabilities used to reach Provider with a correct VM Runtime
-            capabilities=["inet", "manifest-support"],
-        )
-
-    async def run(self):
-        script = self._ctx.new_script()
-        future_result = script.run(
-            "/bin/sh",
-            "-c",
-            f"GOLEM_PRICE=`curl -X 'GET' \
-                    'https://api.coingecko.com/api/v3/simple/price?ids=golem&vs_currencies=usd' \
-                    -H 'accept: application/json' | jq .golem.usd`; \
-                echo \"Golem price: $GOLEM_PRICE USD\";",
-        )
-        yield script
-
-        result = (await future_result).stdout
-        print(result.strip() if result else "")
-
-async def main():
-    async with Golem(budget=1.0, subnet_tag="testnet") as golem:
-        await golem.run_service(OutboundNetworkService, num_instances=1)
-        await asyncio.sleep(60)
+```bash
+gcert
 ```
 
-### 3. Verification of a request with Computation Payload Manifest
+The tool will guide you through:
 
-_Providers_ verify the incoming request with a _Computation Payload Manifest_ by checking if it arrives with a [signature and _App author's certificate_ signed by a certificate they trust](/docs/golem/payload-manifest#certificates). If there is no signature, they verify if URLs used by _Computation Payload Manifest_ are [whitelisted](/docs/providers/configuration/outbound#listing-whitelisted-domains).
+1. **Image URL or SHA3 hash**: These options specify the image to be downloaded and deployed on providers. 
+   - The **image URL** is a direct link to the location where the image can be downloaded.
+   - The **SHA3 hash** is the default identifier generated by `gvmkit-build`, which retrieves the corresponding image from the Golem registry automatically, instead of relying on a custom URL.
 
-There are two ways to make our _local_ _Provider_ verify the request:
+   For instance, if your application uses `curl` for outbound API requests, you might use a Golem image URL like:
 
-- #### Whitelisting of the domain used by the app
+   ```
+   http://yacn2.dev.golem.network:8000/docker-golem-script-curl-latest-d75268e752.gvmi
+   ```
 
-  Add `api.coingecko.com` to Provider's [domain whitelist](/docs/providers/configuration/outbound#listing-whitelisted-domains):
+   Alternatively, you can provide the SHA3 hash generated by `gvmkit-build`, which automatically uploads the image to the Golem registry and makes it available for deployment.
 
-  `ya-provider whitelist add --patterns api.coingecko.com --type strict`
+2. **Outbound URLs**: Define the external APIs or URLs your application will access:
+   - Specify individual URLs (e.g., `https://api.coingecko.com`).
+   - Allow unrestricted access if your application needs to reach multiple domains.
 
-- #### Signing manifest and adding signature with a certificate to the request
+Once you've provided this information, the tool will generate:
 
-  [Generate self signed certificate](/docs/golem/payload-manifest#self-signed-certificate-example) and then [ge#nerate manifest signature](/docs/golem/payload-manifest#manifest-signature).
+- `manifest.json`: Specifies the URLs and tools used by your application.
+- `node-descriptor.signed.json`: Signed details about your node’s capabilities.
+- `root-cert-template.signed.json`: Certificate for providers to trust your tasks.
 
-  With a generated and `base64`-encoded certificate and a signature, the `get_payload()` function takes the following form:
+---
 
-  ```py
-  # ...
-    async def get_payload():
-        return await vm.manifest(
-            manifest = open("manifest.json.base64", "rb").read(),
-            manifest_sig = open("manifest.json.base64.sign.sha256.base64", "rb").read(),
-            manifest_sig_algorithm = "sha256",
-            manifest_cert = open("golem_requestor.cert.pem.base64", "rb").read(),
-            min_mem_gib = 0.5,
-            min_cpu_threads = 0.5,
-            capabilities=["inet", "manifest-support"],
-        )
-  # ...
-  ```
+### Step 3: Share the Certificate with Providers
 
-### 4. Launching the app
+Providers must trust your certificate for outbound networking to work. Share your `root-cert-template.signed.json` file with providers and ask them to import it using:
 
-With both _Requestor_ and _Provider_ yagna nodes and `ya-provider` running in the background run:
+```bash
+ya-provider rule set outbound partner import-cert root-cert-template.signed.json --mode all
+```
 
-`python external_api_request.py`
+You can also request trust through the [Golem Discord](https://chat.golem.network) `#providers` channel with a message like this:
 
-(keep in mind to set `YAGNA_APPKEY` and `YAGNA_API_URL` env variables pointing to the local _Requestor_ node)
+> Hi providers!  
+> I have tasks that require outbound internet access. If you'd like to run these tasks, please trust my certificate:  
+> 
+> 1. Download the certificate: [Your Link]  
+> 2. Import it using:  
+> ```bash
+> ya-provider rule set outbound partner import-cert root-cert-template.signed.json --mode all
+> ```
+>  
+> Thank you!
+
+---
+
+## Yapapi Example: Fetching Data from an External API
+
+The following Yapapi example demonstrates fetching the current price of Golem (GLM) from the Coingecko API.
+
+### Code Example
+
+{% codefromgithub url="https://raw.githubusercontent.com/golemfactory/yapapi/refs/heads/master/examples/external-api-request/external_api_request_partner.py" language="python" /%}
+
+---
+
+### Key Components of the Example
+
+1. **Manifest and Node Descriptor**: These files define the application's requirements for outbound networking.
+2. **Capabilities**: The `inet` capability enables internet access for the application.
+3. **Outbound Request**: The example uses `curl` to fetch data from the Coingecko API.
+
+---
+
+## Next Steps
+
+1. **Explore golem-cert-companion**  
+   See the full documentation for the companion tool [here](/docs/creators/tools/golem-cert-companion).
+
+2. **Engage with the Community**  
+   If you have questions or need assistance, join our [Discord community](https://chat.golem.network/).
+
+---
