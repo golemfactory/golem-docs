@@ -37,16 +37,16 @@ Before starting, check if your hardware meets these requirements:
 ### 1. Download and Extract the Image
 
 1. Download the `gpu-golem-live` provider image:
-   [Download image](https://gpu-provider.dev.golem.network/golem-gpu-live-latest.img.xz)
+   [Download image](https://gpu-live.cdn.golem.network/images/golem-gpu-live-latest.img.xz)
 
 ```bash
-https://gpu-provider.dev.golem.network/golem-gpu-live-latest.img.xz
+https://gpu-live.cdn.golem.network/images/golem-gpu-live-latest.img.xz
 ```
 
 You can also download it using `wget`:
 
 ```bash
-wget https://gpu-provider.dev.golem.network/golem-gpu-live-latest.img.xz
+wget https://gpu-live.cdn.golem.network/images/golem-gpu-live-latest.img.xz
 ```
 The file is about 2GB.
 
