@@ -354,7 +354,7 @@ Make sure **Docker** is running on your machine before you execute them. Otherwi
 ```
 docker build . -t hash-cracker
 gvmkit-build hash-cracker:latest
-gvmkit-build hash-cracker:latest --push
+gvmkit-build hash-cracker:latest --push --nologin
 ```
 
 {% alert level="warning" %}
