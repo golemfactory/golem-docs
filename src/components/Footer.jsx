@@ -137,7 +137,7 @@ const LowerFooter = () => (
         <div className="flex flex-wrap items-center justify-center md:justify-normal">
           <GolemIcon className="-ml-2 h-12 dark:fill-white fill-primary" />
           <span className=" -mt-2 text-sm text-normalgray dark:text-white dark:opacity-50">
-            Copyright © 2023 Golem Factory GmbH
+            Copyright © {new Date().getFullYear()} Golem Factory GmbH
           </span>
         </div>
       </div>
