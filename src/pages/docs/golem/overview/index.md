@@ -64,4 +64,4 @@ More on the payment process you can find: [here](/docs/golem/payments).
 
 As a Provider, you will probably tend to operate in networks where payments are done in real GLM tokens. Your provider's Yagna by default is configured to work in these networks and use Polygon and Ethereum Mainnet as payment platforms.
 
-If you are a requestor, you would rather start in a development environment - the JS SDK default configuration assumes the Holesky network as a payment network. Thus you work in the testnet. You pay there in test GLM tokens that are available from a faucet. It is free, but you cannot expect capacity and performance. Once you have tested your application you should consider switching to mainnet.
+If you are a requestor, you would rather start in a development environment - the JS SDK default configuration assumes the hoodi network as a payment network. Thus you work in the testnet. You pay there in test GLM tokens that are available from a faucet. It is free, but you cannot expect capacity and performance. Once you have tested your application you should consider switching to mainnet.

@@ -1,9 +1,10 @@
 ---
-title: "Project JavaScript API reference"
-pageTitle: "Project JavaScript API reference - Task API Reference"
-description: "Explore the detailed API reference documentation for the Project JavaScript API reference within the Task API SDK for the Golem Network."
-type: "JS Task API Reference"
+title: 'Project JavaScript API reference'
+pageTitle: 'Project JavaScript API reference - Task API Reference'
+description: 'Explore the detailed API reference documentation for the Project JavaScript API reference within the Task API SDK for the Golem Network.'
+type: 'JS Task API Reference'
 ---
+
 # Task Executor
 
 ![GitHub](https://img.shields.io/github/license/golemfactory/golem-sdk-task-executor)
@@ -65,13 +66,13 @@ yagna service run
 
 # IN SEPARATE TERMINAL (if not daemonized)
 # Initialize your requestor
-yagna payment init --sender --network holesky
+yagna payment init --sender --network hoodi
 
 # Request funds on the test network
-yagna payment fund --network holesky
+yagna payment fund --network hoodi
 
 # Check the status of the funds
-yagna payment status --network holesky
+yagna payment status --network hoodi
 ```
 
 #### Obtain your `app-key` to use with TaskExecutor
@@ -107,35 +108,37 @@ This will generate production code in the `dist/` directory ready to be used in 
 ### Hello World example
 
 ```ts
-import { TaskExecutor } from "@golem-sdk/task-executor";
-import { pinoPrettyLogger } from "@golem-sdk/pino-logger";
+import { TaskExecutor } from '@golem-sdk/task-executor'
+import { pinoPrettyLogger } from '@golem-sdk/pino-logger'
 
-(async function main() {
+;(async function main() {
   const executor = await TaskExecutor.create({
-    logger: pinoPrettyLogger({ level: "info" }),
+    logger: pinoPrettyLogger({ level: 'info' }),
     demand: {
       workload: {
-        imageTag: "golem/alpine:latest",
+        imageTag: 'golem/alpine:latest',
       },
     },
     market: {
       rentHours: 0.5,
       pricing: {
-        model: "linear",
+        model: 'linear',
         maxStartPrice: 0.5,
         maxCpuPerHourPrice: 1.0,
         maxEnvPerHourPrice: 0.5,
       },
     },
-  });
+  })
   try {
-    await executor.run(async (exe) => console.log((await exe.run("echo 'Hello World'")).stdout));
+    await executor.run(async (exe) =>
+      console.log((await exe.run("echo 'Hello World'")).stdout)
+    )
   } catch (error) {
-    console.error("Computation failed:", error);
+    console.error('Computation failed:', error)
   } finally {
-    await executor.shutdown();
+    await executor.shutdown()
   }
-})();
+})()
 ```
 
 ### More examples

@@ -1,9 +1,10 @@
 ---
-title: "Module market/proposal/proposal-properties"
-pageTitle: "Module market/proposal/proposal-properties - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Module market/proposal/proposal-properties within the golem-js SDK for the Golem Network."
-type: "JS API Reference"
+title: 'Module market/proposal/proposal-properties'
+pageTitle: 'Module market/proposal/proposal-properties - golem-js API Reference'
+description: 'Explore the detailed API reference documentation for the Module market/proposal/proposal-properties within the golem-js SDK for the Golem Network.'
+type: 'JS API Reference'
 ---
+
 # Module: market/proposal/proposal-properties
 
 ## Table of contents
@@ -49,7 +50,7 @@ https://github.com/golemfactory/golem-architecture/tree/master/gaps Golem Archit
 
 [src/market/proposal/proposal-properties.ts:17](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/proposal/proposal-properties.ts#L17)
 
-___
+---
 
 ### Gap3MidAgreementPaymentProps
 
@@ -63,16 +64,16 @@ https://github.com/golemfactory/golem-architecture/blob/master/gaps/gap-3_mid_ag
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name                                              | Type     |
+| :------------------------------------------------ | :------- |
 | `golem.com.scheme.payu.debit-note.interval-sec??` | `number` |
-| `golem.com.scheme.payu.payment-timeout-sec??` | `number` |
+| `golem.com.scheme.payu.payment-timeout-sec??`     | `number` |
 
 #### Defined in
 
 [src/market/proposal/proposal-properties.ts:23](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/proposal/proposal-properties.ts#L23)
 
-___
+---
 
 ### StandardCommonProps
 
@@ -84,27 +85,27 @@ https://github.com/golemfactory/golem-architecture/tree/master/standards/0-commo
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `golem.activity.caps.transfer.protocol` | (``"http"`` \| ``"https"`` \| ``"gftp"``)[] |
-| `golem.inf.cpu.architecture` | `string` |
-| `golem.inf.cpu.brand` | `string` |
-| `golem.inf.cpu.capabilities` | `string`[] |
-| `golem.inf.cpu.cores` | `number` |
-| `golem.inf.cpu.model` | `string` |
-| `golem.inf.cpu.threads` | `number` |
-| `golem.inf.cpu.vendor` | `string` |
-| `golem.inf.mem.gib` | `number` |
-| `golem.inf.storage.gib` | `number` |
-| `golem.runtime.capabilities` | `string`[] |
-| `golem.runtime.name` | `string` |
-| `golem.runtime.version` | `string` |
+| Name                                    | Type                                  |
+| :-------------------------------------- | :------------------------------------ |
+| `golem.activity.caps.transfer.protocol` | (`"http"` \| `"https"` \| `"gftp"`)[] |
+| `golem.inf.cpu.architecture`            | `string`                              |
+| `golem.inf.cpu.brand`                   | `string`                              |
+| `golem.inf.cpu.capabilities`            | `string`[]                            |
+| `golem.inf.cpu.cores`                   | `number`                              |
+| `golem.inf.cpu.model`                   | `string`                              |
+| `golem.inf.cpu.threads`                 | `number`                              |
+| `golem.inf.cpu.vendor`                  | `string`                              |
+| `golem.inf.mem.gib`                     | `number`                              |
+| `golem.inf.storage.gib`                 | `number`                              |
+| `golem.runtime.capabilities`            | `string`[]                            |
+| `golem.runtime.name`                    | `string`                              |
+| `golem.runtime.version`                 | `string`                              |
 
 #### Defined in
 
 [src/market/proposal/proposal-properties.ts:30](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/proposal/proposal-properties.ts#L30)
 
-___
+---
 
 ### StandardNodeProps
 
@@ -114,16 +115,16 @@ https://github.com/golemfactory/golem-architecture/blob/master/standards/2-servi
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `golem.node.id.name` | `string` | - |
+| Name                           | Type     | Description                                                                                            |
+| :----------------------------- | :------- | :----------------------------------------------------------------------------------------------------- |
+| `golem.node.id.name`           | `string` | -                                                                                                      |
 | `golem.node.geo.country_code?` | `string` | **`Deprecated`** Do not rely on this, it's mentioned in the standard, but not implemented FIXME #yagna |
 
 #### Defined in
 
 [src/market/proposal/proposal-properties.ts:49](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/proposal/proposal-properties.ts#L49)
 
-___
+---
 
 ### StandardCommercialProps
 
@@ -135,25 +136,25 @@ https://github.com/golemfactory/golem-architecture/blob/master/standards/3-comme
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `golem.com.payment.debit-notes.accept-timeout?` | `number` | - |
-| `golem.com.payment.chosen-platform` | `string` | **`Example`** ```ts "erc20-polygon-glm" ``` |
-| `golem.com.payment.platform.erc20-polygon-glm.address?` | `string` | - |
-| `golem.com.payment.platform.erc20-holesky-tglm.address?` | `string` | - |
-| `golem.com.payment.platform.erc20-mumbai-tglm.address?` | `string` | - |
-| `golem.com.payment.protocol.version` | `number` | - |
-| `golem.com.scheme` | `string` | **`Example`** ```ts payu ``` |
-| `golem.com.scheme.payu.interval_sec?` | `number` | **`Deprecated`** replaced by `golem.com.scheme.payu.debit-note.interval-sec?` in GAP-3 |
-| `golem.com.pricing.model` | ``"linear"`` | - |
-| `golem.com.pricing.model.linear.coeffs` | `number`[] | - |
-| `golem.com.usage.vector` | `string`[] | - |
+| Name                                                    | Type       | Description                                                                            |
+| :------------------------------------------------------ | :--------- | :------------------------------------------------------------------------------------- |
+| `golem.com.payment.debit-notes.accept-timeout?`         | `number`   | -                                                                                      |
+| `golem.com.payment.chosen-platform`                     | `string`   | **`Example`** `ts "erc20-polygon-glm" `                                                |
+| `golem.com.payment.platform.erc20-polygon-glm.address?` | `string`   | -                                                                                      |
+| `golem.com.payment.platform.erc20-hoodi-tglm.address?`  | `string`   | -                                                                                      |
+| `golem.com.payment.platform.erc20-mumbai-tglm.address?` | `string`   | -                                                                                      |
+| `golem.com.payment.protocol.version`                    | `number`   | -                                                                                      |
+| `golem.com.scheme`                                      | `string`   | **`Example`** `ts payu `                                                               |
+| `golem.com.scheme.payu.interval_sec?`                   | `number`   | **`Deprecated`** replaced by `golem.com.scheme.payu.debit-note.interval-sec?` in GAP-3 |
+| `golem.com.pricing.model`                               | `"linear"` | -                                                                                      |
+| `golem.com.pricing.model.linear.coeffs`                 | `number`[] | -                                                                                      |
+| `golem.com.usage.vector`                                | `string`[] | -                                                                                      |
 
 #### Defined in
 
 [src/market/proposal/proposal-properties.ts:58](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/proposal/proposal-properties.ts#L58)
 
-___
+---
 
 ### StandardServiceProps
 
@@ -165,15 +166,15 @@ https://github.com/golemfactory/golem-architecture/blob/master/standards/2-servi
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name                            | Type      |
+| :------------------------------ | :-------- |
 | `golem.srv.caps.multi-activity` | `boolean` |
 
 #### Defined in
 
 [src/market/proposal/proposal-properties.ts:78](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/proposal/proposal-properties.ts#L78)
 
-___
+---
 
 ### StandardComputationPlatformProps
 
@@ -185,20 +186,20 @@ https://github.com/golemfactory/golem-architecture/blob/master/standards/2-servi
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `golem.srv.comp.expiration` | `number` |
+| Name                          | Type     |
+| :---------------------------- | :------- |
+| `golem.srv.comp.expiration`   | `number` |
 | `golem.srv.comp.task_package` | `string` |
 
 #### Defined in
 
 [src/market/proposal/proposal-properties.ts:85](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/market/proposal/proposal-properties.ts#L85)
 
-___
+---
 
 ### ProposalProperties
 
-Ƭ **ProposalProperties**: [`GenericGolemProtocolPropertyType`](market_proposal_proposal_properties#genericgolemprotocolpropertytype) & [`StandardCommonProps`](market_proposal_proposal_properties#standardcommonprops) & [`StandardNodeProps`](market_proposal_proposal_properties#standardnodeprops) & [`StandardCommercialProps`](market_proposal_proposal_properties#standardcommercialprops) & [`StandardServiceProps`](market_proposal_proposal_properties#standardserviceprops) & [`StandardComputationPlatformProps`](market_proposal_proposal_properties#standardcomputationplatformprops) & [`Gap3MidAgreementPaymentProps`](market_proposal_proposal_properties#gap3midagreementpaymentprops) & `Partial`\<\{ `golem.node.debug.subnet`: `string` ; `golem.node.net.is-public`: `boolean` ; `golem.srv.caps.payload-manifest`: `boolean`  }\>
+Ƭ **ProposalProperties**: [`GenericGolemProtocolPropertyType`](market_proposal_proposal_properties#genericgolemprotocolpropertytype) & [`StandardCommonProps`](market_proposal_proposal_properties#standardcommonprops) & [`StandardNodeProps`](market_proposal_proposal_properties#standardnodeprops) & [`StandardCommercialProps`](market_proposal_proposal_properties#standardcommercialprops) & [`StandardServiceProps`](market_proposal_proposal_properties#standardserviceprops) & [`StandardComputationPlatformProps`](market_proposal_proposal_properties#standardcomputationplatformprops) & [`Gap3MidAgreementPaymentProps`](market_proposal_proposal_properties#gap3midagreementpaymentprops) & `Partial`\<\{ `golem.node.debug.subnet`: `string` ; `golem.node.net.is-public`: `boolean` ; `golem.srv.caps.payload-manifest`: `boolean` }\>
 
 #### Defined in
 

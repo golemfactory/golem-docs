@@ -1,9 +1,10 @@
 ---
-title: "Interface PaymentModuleOptions"
-pageTitle: "Interface PaymentModuleOptions - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Interface PaymentModuleOptions within the golem-js SDK for the Golem Network."
-type: "JS API Reference"
+title: 'Interface PaymentModuleOptions'
+pageTitle: 'Interface PaymentModuleOptions - golem-js API Reference'
+description: 'Explore the detailed API reference documentation for the Interface PaymentModuleOptions within the golem-js SDK for the Golem Network.'
+type: 'JS API Reference'
 ---
+
 # Interface: PaymentModuleOptions
 
 [payment/payment.module](../modules/payment_payment_module).PaymentModuleOptions
@@ -23,23 +24,23 @@ type: "JS API Reference"
 • `Optional` **network**: `string`
 
 Network used to facilitate the payment.
-(for example: "mainnet", "holesky")
+(for example: "mainnet", "hoodi")
 
 **`Default`**
 
 ```ts
-holesky
+hoodi
 ```
 
 #### Defined in
 
 [src/payment/payment.module.ts:26](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/payment.module.ts#L26)
 
-___
+---
 
 ### driver
 
-• `Optional` **driver**: `string` & {} \| ``"erc20"``
+• `Optional` **driver**: `string` & {} \| `"erc20"`
 
 Payment driver used to facilitate the payment.
 (for example: "erc20")
@@ -54,11 +55,11 @@ erc20
 
 [src/payment/payment.module.ts:33](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/payment/payment.module.ts#L33)
 
-___
+---
 
 ### token
 
-• `Optional` **token**: `string` & {} \| ``"glm"`` \| ``"tglm"``
+• `Optional` **token**: `string` & {} \| `"glm"` \| `"tglm"`
 
 Token used to facilitate the payment.
 If unset, it will be inferred from the network.

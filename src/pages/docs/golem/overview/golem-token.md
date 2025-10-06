@@ -61,4 +61,4 @@ The migration from GNT to GLM is still ongoing and users can convert their GNT t
 
 If you still possess the GNT token and want to migrate to the new GLM token then go to [https://migrate.golem.network/](https://migrate.golem.network/).
 
-The token tGLM (t for test) is used on test blockchains such as Holesky, and Mumbai, (in the past: Goerli, Rinkeby). It has no real financial value and is used to facilitate running applications on the testnet.
+The token tGLM (t for test) is used on test blockchains such as hoodi, and Mumbai, (in the past: Goerli, Rinkeby). It has no real financial value and is used to facilitate running applications on the testnet.

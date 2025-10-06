@@ -110,11 +110,11 @@ It may happen that something goes wrong and you wish to start over with a clean 
 
 {% solution %}
 
-The first thing to do is `ray down` - it should be enough to clear the situation, 
+The first thing to do is `ray down` - it should be enough to clear the situation,
 but sadly it isn't always the case.
 
 You can use `ray-on-golem stop` to ultimately stop all Ray on Golem components.
-The next `ray up` will start them again in a fresh state. 
+The next `ray up` will start them again in a fresh state.
 Check out more details about Ray on Golem [stopping and starting](/docs/creators/ray/ray-on-golem-cli#ray-on-golem-start-stop).
 
 It might also be a good idea to clean up Ray's configuration cache files:
@@ -146,7 +146,7 @@ ray_on_golem.client.exceptions.RayOnGolemClientError: Couldn't create node: {"er
 
 This means, that there are not enough providers on the network.
 
-If you are running Ray on Golem on the testnet (property `payment_network: "holesky"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
+If you are running Ray on Golem on the testnet (property `payment_network: "hoodi"` in the cluster yaml) - most likely all the nodes are busy with requests of other users.
 
 We are preparing a tool to check providers' availability.
 Another solution would be to move to mainnet - we are also working on enabling this option.

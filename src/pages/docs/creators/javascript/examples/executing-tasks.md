@@ -142,10 +142,10 @@ Below, you can see the script logs:
 ![Single run](/te/run_log_1.png 'Requestor script output logs')
 ![Single run](/te/run_log_2.png 'Requestor script output logs')
 
-In the logs, we can see that the requestor uses the Holesky network for payments (a test network).
+In the logs, we can see that the requestor uses the hoodi network for payments (a test network).
 
 ```
-[18:13:33.960] INFO: Created allocation { ... "platform":"erc20-holesky-tglm"}
+[18:13:33.960] INFO: Created allocation { ... "platform":"erc20-hoodi-tglm"}
 ```
 
 The task was executed once on a single provider.

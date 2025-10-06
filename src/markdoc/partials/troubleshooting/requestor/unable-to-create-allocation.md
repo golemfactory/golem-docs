@@ -1,13 +1,13 @@
 {% troubleshooting %}
 
-## Unable to create allocation for driver/network erc20/holesky. There is no requestor account supporting this platform.
+## Unable to create allocation for driver/network erc20/hoodi. There is no requestor account supporting this platform.
 
 {% problem /%}
 
 When trying to execute a requestor script, you may encounter the following error message:
 
 ```
-Error: Unable to create allocation for driver/network erc20/holesky. There is no requestor account supporting this platform.
+Error: Unable to create allocation for driver/network erc20/hoodi. There is no requestor account supporting this platform.
 ```
 
 {% solution %}

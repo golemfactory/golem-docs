@@ -129,7 +129,7 @@ This command is not only used to find your wallet address, but it also serves as
 #### Verifying Your Wallet's Balance
 
 ```bash
-yagna payment status --network=holesky --driver=erc20
+yagna payment status --network=hoodi --driver=erc20
 ```
 
 #### Backing up your Golem wallet
@@ -173,7 +173,7 @@ You can find an explanation of the structure of the typical requestor script [he
 The standard quickstart example has been altered with the following modifications:
 
 - payment: {
-  network: 'holesky',
+  network: 'hoodi',
   }, indicates that we would like to run the task on the `testnet`.
 
 - it also utilizes a unique app-key stored in the `YAGNA_APPKEY` variable.

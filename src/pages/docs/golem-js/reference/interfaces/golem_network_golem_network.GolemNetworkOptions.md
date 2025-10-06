@@ -1,9 +1,10 @@
 ---
-title: "Interface GolemNetworkOptions"
-pageTitle: "Interface GolemNetworkOptions - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Interface GolemNetworkOptions within the golem-js SDK for the Golem Network."
-type: "JS API Reference"
+title: 'Interface GolemNetworkOptions'
+pageTitle: 'Interface GolemNetworkOptions - golem-js API Reference'
+description: 'Explore the detailed API reference documentation for the Interface GolemNetworkOptions within the golem-js SDK for the Golem Network.'
+type: 'JS API Reference'
 ---
+
 # Interface: GolemNetworkOptions
 
 [golem-network/golem-network](../modules/golem_network_golem_network).GolemNetworkOptions
@@ -33,7 +34,7 @@ If no logger is provided you can view debug logs by setting the
 
 [src/golem-network/golem-network.ts:80](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/golem-network/golem-network.ts#L80)
 
-___
+---
 
 ### api
 
@@ -43,8 +44,8 @@ Set the API key and URL for the Yagna API.
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `key?` | `string` |
 | `url?` | `string` |
 
@@ -52,7 +53,7 @@ Set the API key and URL for the Yagna API.
 
 [src/golem-network/golem-network.ts:85](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/golem-network/golem-network.ts#L85)
 
-___
+---
 
 ### payment
 
@@ -61,13 +62,13 @@ ___
 Set payment-related options.
 
 This is where you can specify the network, payment driver and more.
-By default, the network is set to the `holesky` test network.
+By default, the network is set to the `hoodi` test network.
 
 #### Defined in
 
 [src/golem-network/golem-network.ts:96](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/golem-network/golem-network.ts#L96)
 
-___
+---
 
 ### market
 
@@ -82,7 +83,7 @@ interact with the market.
 
 [src/golem-network/golem-network.ts:104](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/golem-network/golem-network.ts#L104)
 
-___
+---
 
 ### dataTransferProtocol
 
@@ -95,11 +96,11 @@ Default is `gftp`.
 
 [src/golem-network/golem-network.ts:110](https://github.com/golemfactory/golem-js/blob/ed1cf1df/src/golem-network/golem-network.ts#L110)
 
-___
+---
 
 ### override
 
-• `Optional` **override**: `Partial`\<[`GolemServices`](../modules/golem_network_golem_network#golemservices) & \{ `market`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`MarketModule`](market_market_module.MarketModule), `never`[]\> ; `payment`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`PaymentModule`](payment_payment_module.PaymentModule), `never`[]\> ; `activity`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`ActivityModule`](activity_activity_module.ActivityModule), `never`[]\> ; `network`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`NetworkModule`](network_network_module.NetworkModule), `never`[]\> ; `rental`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`RentalModule`](resource_rental_rental_module.RentalModule), `never`[]\>  }\>
+• `Optional` **override**: `Partial`\<[`GolemServices`](../modules/golem_network_golem_network#golemservices) & \{ `market`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`MarketModule`](market_market_module.MarketModule), `never`[]\> ; `payment`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`PaymentModule`](payment_payment_module.PaymentModule), `never`[]\> ; `activity`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`ActivityModule`](activity_activity_module.ActivityModule), `never`[]\> ; `network`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`NetworkModule`](network_network_module.NetworkModule), `never`[]\> ; `rental`: [`InstanceOrFactory`](../modules/golem_network_golem_network#instanceorfactory)\<[`RentalModule`](resource_rental_rental_module.RentalModule), `never`[]\> }\>
 
 Override some of the services used by the GolemNetwork instance.
 This is useful for testing or when you want to provide your own implementation of some services.

@@ -1,9 +1,10 @@
 ---
-title: "Project Golem-JS API reference"
-pageTitle: "Project Golem-JS API reference - golem-js API Reference"
-description: "Explore the detailed API reference documentation for the Project Golem-JS API reference within the golem-js SDK for the Golem Network."
-type: "JS API Reference"
+title: 'Project Golem-JS API reference'
+pageTitle: 'Project Golem-JS API reference - golem-js API Reference'
+description: 'Explore the detailed API reference documentation for the Project Golem-JS API reference within the golem-js SDK for the Golem Network.'
+type: 'JS API Reference'
 ---
+
 <br />
 
 <p align=center>
@@ -122,13 +123,13 @@ network.
 ```bash
 # IN SEPARATE TERMINAL (if not daemonized)
 # Initialize your requestor
-yagna payment init --sender --network holesky
+yagna payment init --sender --network hoodi
 
 # Request funds on the test network
-yagna payment fund --network holesky
+yagna payment fund --network hoodi
 
 # Check the status of the funds
-yagna payment status --network holesky
+yagna payment status --network hoodi
 ```
 
 ### Obtain an `app-key` to use with SDK
@@ -146,43 +147,43 @@ yagna app-key create my-golem-app
 You can rent a single machine and run a simple task on it:
 
 ```ts
-import { MarketOrderSpec, GolemNetwork } from "@golem-sdk/golem-js";
+import { MarketOrderSpec, GolemNetwork } from '@golem-sdk/golem-js'
 
 // Define the order that we're going to place on the market
 const order: MarketOrderSpec = {
   demand: {
-    workload: { imageTag: "golem/alpine:latest" },
+    workload: { imageTag: 'golem/alpine:latest' },
   },
   market: {
     // We're only going to rent the provider for 5 minutes max
     rentHours: 5 / 60,
     pricing: {
-      model: "linear",
+      model: 'linear',
       maxStartPrice: 0.5,
       maxCpuPerHourPrice: 1.0,
       maxEnvPerHourPrice: 0.5,
     },
   },
-};
+}
 
-(async () => {
-  const glm = new GolemNetwork();
+;(async () => {
+  const glm = new GolemNetwork()
 
   try {
-    await glm.connect();
+    await glm.connect()
     // Rent a machine
-    const rental = await glm.oneOf({ order });
+    const rental = await glm.oneOf({ order })
     await rental
       .getExeUnit()
-      .then((exe) => exe.run("echo Hello, Golem! 👋"))
-      .then((res) => console.log(res.stdout));
-    await rental.stopAndFinalize();
+      .then((exe) => exe.run('echo Hello, Golem! 👋'))
+      .then((res) => console.log(res.stdout))
+    await rental.stopAndFinalize()
   } catch (err) {
-    console.error("Failed to run the example", err);
+    console.error('Failed to run the example', err)
   } finally {
-    await glm.disconnect();
+    await glm.disconnect()
   }
-})().catch(console.error);
+})().catch(console.error)
 ```
 
 Read about [other available usage patterns](./docs/USAGE) to learn more on how you can leverage the SDK.
