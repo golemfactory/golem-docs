@@ -9,6 +9,15 @@ const nextConfig = {
     scrollRestoration: true,
   },
   distDir: 'dist',
+  async redirects() {
+    return [
+      {
+        source: '/docs/providers/gpu/gpu-golem-live',
+        destination: '/docs/providers/provider-installation',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

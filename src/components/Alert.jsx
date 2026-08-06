@@ -16,7 +16,7 @@ export function Alert({ children, level }) {
       <div
         className={`rounded-t-md text-dark dark:text-white
       ${level === 'info' ? '  bg-info dark:bg-darkprimary ' : ''}
-      ${level === 'warning' ? '  bg-warning dark:bg-[#df9606]' : ''}
+      ${level === 'warning' ? '  bg-warning dark:bg-[#8a6320]' : ''}
       ${level === 'success' ? '  bg-success dark:bg-[#208047]' : ''}
       ${level === 'danger' ? ' border-red-300 bg-red-100  dark:bg-[#c01616]' : ''}
        py-3`}

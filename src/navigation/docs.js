@@ -691,7 +691,6 @@ export const navigation = [
         ],
       },
       { title: 'Maintenance and Updates', href: '/docs/providers/maintenance' },
-      { title: 'GPU Provider', href: '/docs/providers/gpu/gpu-golem-live' },
       {
         title: 'Troubleshooting',
         href: '/docs/troubleshooting/provider',
