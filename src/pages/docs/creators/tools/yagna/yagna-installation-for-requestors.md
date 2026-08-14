@@ -18,7 +18,7 @@ Yagna is a service that will let you communicate with the Golem Network and perf
 {% alert level="warning" %}
 Linux is the only supported platform for requestors. Yagna may work on other systems, such as macOS or Windows, and instructions for them are provided below, but those setups are not supported and we do not provide support for problems with deployments running on them.
 
-If you work on macOS or Windows, you can run yagna in a Linux virtual machine or on a Linux cloud instance. That generally works fine, but it is not officially supported either.
+If you work on macOS or Windows, you can run yagna on an x86-64 Linux virtual machine or cloud instance and connect to it from your machine. That generally works fine, but it is not officially supported either.
 {% /alert %}
 
 #### Install Yagna
