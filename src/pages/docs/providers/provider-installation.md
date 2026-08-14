@@ -27,7 +27,7 @@ The provider runs its tasks inside virtual machines, so the container needs acce
 {% /alert %}
 
 {% alert level="warning" %}
-Linux is the only supported platform for running the provider in Docker. Running it on Docker Desktop for Windows (including the WSL 2 backend) may work, but it is not a supported setup and we do not provide support for problems with deployments running on Docker on Windows.
+Linux is the only supported platform for running a provider. macOS is not supported at all, on Docker or otherwise. Running the provider on Docker Desktop for Windows (including the WSL 2 backend) may work, but it is not a supported setup and we do not provide support for problems with deployments running on Docker on Windows.
 {% /alert %}
 
 ### Choosing the image version

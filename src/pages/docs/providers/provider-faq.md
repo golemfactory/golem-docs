@@ -73,6 +73,8 @@ There's no strict requirements for running a provider node except for the follow
 - A linux machine with the x86-64 architecture
 - Nested virtulization enabled in the BIOS
 
+Linux is the only supported platform. macOS is not supported, and Windows is not supported either - running the provider in Docker Desktop for Windows may work, but we do not provide support for such deployments.
+
 ### Does Golem automatically remove task data?
 
 Yes, by default, Golem clears task data after 30 days. You can alter this setting using the command `ya-provider clean –help`.
