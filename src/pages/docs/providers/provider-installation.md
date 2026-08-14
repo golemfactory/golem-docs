@@ -26,6 +26,10 @@ To follow this tutorial, you will need the following:
 The provider runs its tasks inside virtual machines, so the container needs access to the host's KVM module. This means your Docker host has to be a physical machine, or a virtual machine with nested virtualization enabled. Check that `/dev/kvm` exists on the host before you start.
 {% /alert %}
 
+{% alert level="warning" %}
+Linux is the only supported platform for running the provider in Docker. Running it on Docker Desktop for Windows (including the WSL 2 backend) may work, but it is not a supported setup and we do not provide support for problems with deployments running on Docker on Windows.
+{% /alert %}
+
 ### Choosing the image version
 
 Always run the most recent stable release of the provider image. You can find the available tags on [Docker Hub](https://hub.docker.com/r/golemfactory/provider/tags), and the accompanying release notes on the [yagna releases page](https://github.com/golemfactory/yagna/releases).
