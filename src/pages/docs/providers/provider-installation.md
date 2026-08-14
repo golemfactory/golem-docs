@@ -18,7 +18,7 @@ If you prefer to install the software directly on your system, see [installing d
 
 To follow this tutorial, you will need the following:
 
-- A linux machine with the x86-64 architecture
+- A linux machine with the x86-64 architecture - ARM machines, including Apple Silicon and ARM servers, cannot be used as providers for now
 - Nested virtualization enabled in your BIOS, so that the host exposes the `/dev/kvm` device
 - [Docker Engine](https://docs.docker.com/engine/install/) with the [Compose plugin](https://docs.docker.com/compose/install/)
 
@@ -27,7 +27,7 @@ The provider runs its tasks inside virtual machines, so the container needs acce
 {% /alert %}
 
 {% alert level="warning" %}
-Linux is the only supported platform for running a provider. macOS is not supported at all, on Docker or otherwise. Running the provider on Docker Desktop for Windows (including the WSL 2 backend) may work, but it is not a supported setup and we do not provide support for problems with deployments running on Docker on Windows.
+x86-64 Linux is the only supported platform for running a provider. ARM is not supported at all - there is no ARM provider build for now, so an ARM machine cannot run a provider on any operating system. macOS is not supported either, on Docker or otherwise. Running the provider on Docker Desktop for Windows (including the WSL 2 backend) may work, but it is not a supported setup and we do not provide support for problems with deployments running on Docker on Windows.
 
 On Windows you can instead run the provider inside a Linux virtual machine with nested virtualization enabled. That generally works fine, but it is not officially supported either. On macOS this is not an option: Apple Silicon machines can only run ARM64 guests, while the provider requires x86-64 with KVM. Use a separate Linux machine or a Linux server with KVM access instead.
 {% /alert %}
