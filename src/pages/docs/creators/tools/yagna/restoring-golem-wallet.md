@@ -17,7 +17,7 @@ curl -sSf https://join.golem.network/as-requestor | bash -
 
 {% alert level="warning" %}
 
-The above line assumes you're a requestor on Linux or macOS. On Windows, use the installation procedure for your platform instead, as described in the [Yagna installation instructions for requestors](/docs/creators/tools/yagna/yagna-installation-for-requestors). If you're restoring a provider's wallet, note that providers are supported on Linux only - see the [provider installation guide](/docs/providers/provider-installation).
+This command assumes a requestor on Linux or macOS. On Windows, follow the [Yagna installation instructions for requestors](/docs/creators/tools/yagna/yagna-installation-for-requestors) instead. To restore a provider's wallet, note that providers run on x86-64 Linux only - see the [provider installation guide](/docs/providers/provider-installation).
 
 {% /alert %}
 

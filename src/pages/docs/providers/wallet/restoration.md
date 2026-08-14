@@ -16,7 +16,7 @@ curl -sSf https://join.golem.network/as-provider | bash -
 
 {% alert level="warning" %}
 
-The above line installs the provider bundle, and requires Linux. Providers are supported on Linux only - see the [provider installation guide](/docs/providers/provider-installation). If you're restoring a requestor's wallet, install yagna with the procedure for your platform instead, as described in the [Yagna installation instructions for requestors](/docs/creators/tools/yagna/yagna-installation-for-requestors).
+This command installs the provider bundle and requires x86-64 Linux - see the [provider installation guide](/docs/providers/provider-installation). To restore a requestor's wallet, install yagna as described in the [Yagna installation instructions for requestors](/docs/creators/tools/yagna/yagna-installation-for-requestors).
 
 {% /alert %}
 
