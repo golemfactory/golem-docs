@@ -15,6 +15,10 @@ In this article, we'll show you how to install and configure Yagna in case you w
 
 Yagna is a service that will let you communicate with the Golem Network and perform operations on it. Let's install it.
 
+{% alert level="warning" %}
+Linux is the only supported platform for requestors. The macOS and Windows instructions below usually work, but we do not support those setups. If you work on either, run yagna on an x86-64 Linux VM or cloud instance and connect to it from your machine.
+{% /alert %}
+
 #### Install Yagna
 
 {% tabs %}

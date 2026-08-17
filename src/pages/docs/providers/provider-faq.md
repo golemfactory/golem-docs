@@ -70,8 +70,10 @@ The requestor has the flexibility to select providers based on any set of criter
 
 There's no strict requirements for running a provider node except for the following:
 
-- A linux machine with the x86-64 architecture
+- A linux machine with the x86-64 architecture - ARM is not supported for now
 - Nested virtulization enabled in the BIOS
+
+x86-64 Linux is the only supported platform. ARM machines - Apple Silicon and ARM servers alike - cannot run a provider for now, and macOS is not supported on any hardware. Docker Desktop for Windows, or a Linux VM with nested virtualization on an x86-64 host, will usually work, but we do not support either.
 
 ### Does Golem automatically remove task data?
 

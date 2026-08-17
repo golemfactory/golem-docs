@@ -18,12 +18,18 @@ If you prefer to install the software directly on your system, see [installing d
 
 To follow this tutorial, you will need the following:
 
-- A linux machine with the x86-64 architecture
+- A linux machine with the x86-64 architecture - ARM is not supported for now
 - Nested virtualization enabled in your BIOS, so that the host exposes the `/dev/kvm` device
 - [Docker Engine](https://docs.docker.com/engine/install/) with the [Compose plugin](https://docs.docker.com/compose/install/)
 
 {% alert level="warning" %}
 The provider runs its tasks inside virtual machines, so the container needs access to the host's KVM module. This means your Docker host has to be a physical machine, or a virtual machine with nested virtualization enabled. Check that `/dev/kvm` exists on the host before you start.
+{% /alert %}
+
+{% alert level="warning" %}
+x86-64 Linux is the only supported platform. ARM machines - Apple Silicon and ARM servers alike - cannot run a provider for now, and macOS is not supported on any hardware.
+
+Docker Desktop for Windows (including WSL 2), or a Linux VM with nested virtualization on an x86-64 host, will usually work. Neither is supported, and we do not help with problems on those setups.
 {% /alert %}
 
 ### Choosing the image version
