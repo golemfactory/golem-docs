@@ -119,7 +119,19 @@ export default function (nextConfig = {}) {
                     ? 'Requestor'
                     : 'General'
 
-                  sections = [[title, null, [], type, articleFor]]
+                  const codeLanguage = file.startsWith('docs/creators/dapps')
+                    ? 'YAML'
+                    : file.startsWith('docs/creators/javascript')
+                    ? 'Javascript'
+                    : file.startsWith('docs/creators/python')
+                    ? 'Python'
+                    : file.startsWith('docs/creators/ray')
+                    ? 'Ray'
+                    : file.startsWith('docs/golem-js')
+                    ? 'Javascript'
+                    : null
+
+                  sections = [[title, null, [], type, articleFor, codeLanguage]]
 
                   extractSections(ast, sections)
                   cache.set(file, [md, sections])
@@ -139,7 +151,7 @@ export default function (nextConfig = {}) {
                 document: {
                   id: 'url',
                   index: 'content',
-                  store: ['title', 'pageTitle', 'type', 'articleFor'],
+                  store: ['title', 'pageTitle', 'type', 'articleFor', 'codeLanguage'],
                 },
                 context: {
                   resolution: 9,
@@ -161,6 +173,7 @@ export default function (nextConfig = {}) {
                     pageTitle: hash ? sections[0][0] : undefined,
                     type: sections[0][3],
                     articleFor: sections[0][4],
+                    codeLanguage: sections[0][5],
                   })
                 }
               }
@@ -179,6 +192,7 @@ export default function (nextConfig = {}) {
                   pageTitle: item.doc.pageTitle,
                   type: item.doc.type,
                   articleFor: item.doc.articleFor,
+                  codeLanguage: item.doc.codeLanguage,
                 }))
               }
             `

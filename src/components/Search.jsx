@@ -205,13 +205,19 @@ function SearchResults({
   collection,
   roleFilter,
   typeFilter,
+  codeLanguageFilter,
 }) {
   // If there is no collection, return null
   if (!collection) return null
 
   // Group results by type
   const groupedResults = collection.items.reduce((acc, result) => {
-    if (roleFilter.length === 0 && typeFilter.length === 0) {
+    if (
+      roleFilter.length === 0 &&
+      typeFilter.length === 0 &&
+      codeLanguageFilter.length === 0
+    ) {
+      console.log(acc, codeLanguageFilter)
       // If no filters are selected, don't filter results
       if (!acc[result.type]) {
         acc[result.type] = []
@@ -220,11 +226,13 @@ function SearchResults({
       return acc
     }
 
-    const { type, articleFor } = result
+    const { type, articleFor, codeLanguage } = result
     const rolePass = !roleFilter.length || roleFilter.includes(articleFor)
     const typePass = !typeFilter.length || typeFilter.includes(type)
+    const codeLanguagePass =
+      !codeLanguageFilter.length || codeLanguageFilter.includes(codeLanguage)
 
-    if (rolePass && typePass) {
+    if (rolePass && typePass && codeLanguagePass) {
       if (!acc[type]) {
         acc[type] = []
       }
@@ -348,6 +356,7 @@ function SearchDialog({ open, setOpen, className }) {
   let { autocomplete, autocompleteState } = useAutocomplete()
   const [roleFilter, setRoleFilter] = useState([])
   const [typefilter, setTypeFilter] = useState([])
+  const [codeLanguageFilter, setCodeLanguageFilter] = useState([])
   let [modifierKey, setModifierKey] = useState()
 
   useEffect(() => {
@@ -357,68 +366,40 @@ function SearchDialog({ open, setOpen, className }) {
   }, [])
 
   const toggleFilter = (f, filterType) => {
-    if (filterType === 'role') {
-      setRoleFilter((prev) => {
-        let newFilter
+    const updateFilter = (prev) => {
+      let newFilter
 
-        if (prev.length === 0 && f !== 'none') {
-          // If no filters are selected and 'none' is not the selected filter,
-          // start with just the selected filter
-          newFilter = [f]
+      if (prev.length === 0 && f !== 'none') {
+        newFilter = [f]
+      } else {
+        if (prev.includes(f)) {
+          newFilter = prev.filter((value) => value !== f)
         } else {
-          // If there are already filters selected or 'none' is the selected filter,
-          // toggle the current filter
-          if (prev.includes(f)) {
-            // Remove the selected filter if it's already in the array
-            newFilter = prev.filter((value) => value !== f)
-          } else {
-            // Add the selected filter if it's not already in the array
-            newFilter = [...prev, f]
-          }
-
-          // If the 'none' filter is selected, clear all filters
-          if (f === 'none') {
-            newFilter = []
-          }
+          newFilter = [...prev, f]
         }
 
-        // After state is updated, set the query to trigger a search with the new filter state
-        setTimeout(() => autocomplete.setQuery(autocompleteState.query), 0)
-
-        // Return the new filter state
-        return newFilter
-      })
-    } else if (filterType === 'type') {
-      setTypeFilter((prev) => {
-        let newFilter
-
-        if (prev.length === 0 && f !== 'none') {
-          // If no filters are selected and 'none' is not the selected filter,
-          // start with just the selected filter
-          newFilter = [f]
-        } else {
-          // If there are already filters selected or 'none' is the selected filter,
-          // toggle the current filter
-          if (prev.includes(f)) {
-            // Remove the selected filter if it's already in the array
-            newFilter = prev.filter((value) => value !== f)
-          } else {
-            // Add the selected filter if it's not already in the array
-            newFilter = [...prev, f]
-          }
-
-          // If the 'none' filter is selected, clear all filters
-          if (f === 'none') {
-            newFilter = []
-          }
+        if (f === 'none') {
+          newFilter = []
         }
+      }
 
-        // After state is updated, set the query to trigger a search with the new filter state
-        setTimeout(() => autocomplete.setQuery(autocompleteState.query), 0)
+      setTimeout(() => autocomplete.setQuery(autocompleteState.query), 0)
+      return newFilter
+    }
 
-        // Return the new filter state
-        return newFilter
-      })
+    switch (filterType) {
+      case 'role':
+        setRoleFilter(updateFilter)
+        break
+      case 'type':
+        setTypeFilter(updateFilter)
+        break
+      case 'codeLanguage':
+        setCodeLanguageFilter(updateFilter)
+        break
+      default:
+        // Handle unknown filter types if necessary
+        break
     }
   }
 
@@ -507,6 +488,33 @@ function SearchDialog({ open, setOpen, className }) {
                   />
                 </div>
               </div>
+              <div className="flex  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
+                <span className="mr-4 text-sm font-semibold text-slate-500 dark:text-white/50">
+                  SDK
+                </span>
+                <div className="flex gap-x-2">
+                  <FilterButton
+                    label="golem-js"
+                    isActive={codeLanguageFilter.includes('Javascript')}
+                    onClick={() => toggleFilter('Javascript', 'codeLanguage')}
+                  />
+                  <FilterButton
+                    label="Ray on Golem"
+                    isActive={codeLanguageFilter.includes('Ray')}
+                    onClick={() => toggleFilter('Ray', 'codeLanguage')}
+                  />
+                  <FilterButton
+                    label="Yapapi"
+                    isActive={codeLanguageFilter.includes('Python')}
+                    onClick={() => toggleFilter('Python', 'codeLanguage')}
+                  />
+                  <FilterButton
+                    label="golem-compose"
+                    isActive={codeLanguageFilter.includes('YAML')}
+                    onClick={() => toggleFilter('YAML', 'codeLanguage')}
+                  />
+                </div>
+              </div>
               <div className="flex flex-wrap  items-center border-t border-slate-200 bg-white px-4 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800">
                 <span className="mr-4 text-sm font-semibold text-slate-800 dark:text-white/50">
                   Type
@@ -552,6 +560,7 @@ function SearchDialog({ open, setOpen, className }) {
                     collection={autocompleteState.collections[0]}
                     roleFilter={roleFilter}
                     typeFilter={typefilter}
+                    codeLanguageFilter={codeLanguageFilter}
                   />
                 )}
               </div>
