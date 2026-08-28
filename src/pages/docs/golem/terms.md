@@ -1,35 +1,48 @@
 ---
-description: Disclaimer and privacy warning for the alpha reveal of The Next Milestone
+description: Disclaimer, user interaction guidelines and privacy warning for the Golem Platform
 title: Terms
 type: Terms
 ---
 
 # Terms
 
-## Disclaimer and privacy warning for the alpha reveal of The Next Milestone
+## Disclaimer and privacy warning for the Golem Platform
 
-This Disclaimer has been updated as of August 14th, 2023.
+This Disclaimer has been updated as of August 28th, 2026.
 
 The Golem Platform is experimental open source software released under the GNU General Public License version 3 and may contain errors and/or bugs. No guarantee or representation whatsoever is made regarding its suitability (or its use) for any purpose or regarding its compliance with any applicable laws and regulations. Use of the software is at your own risk and discretion and by using the software you warrant and represent that you have read this disclaimer, understand its contents, assume all risk related thereto and hereby release, waive, discharge and covenant not to hold liable Golem Factory GmbH or any of its officers, employees, or affiliates from and for any direct or indirect damage resulting from the software or the use thereof. Such to the extent as permissible by applicable laws and regulations.
 
 **I. Golem Platform**
 The underlying software protocol (the "Software") that governs the Golem Platform is developed and published under the GNU General Public License version 3, which forms an integral part of this Disclaimer [https://www.gnu.org/licenses/gpl.html](https://www.gnu.org/licenses/gpl.html). You understand and accept that the Software is provided "as is" and any expressed or implied warranties of merchantability and fitness for a particular purpose are disclaimed. Your use of the Golem Platform and any of your corresponding activities as well as feedback provided to the Company do not give you any rights and/or claims against the Company.
 
-As the Software is of experimental nature and deployed for testing purposes only, you acknowledge that this alpha version of the Software, even though developed in accordance to state of the art, is likely to: contain bugs, defects, or errors (including any bug, defect, or error relating to or resulting from the display, manipulation, processing, storage, transmission, or use of data) that materially and adversely affects the use, functionality, or performance of the Golem Platform or any product or system containing or used in conjunction with the Golem Platform.
+As the Software is of experimental nature and deployed for testing purposes only, you acknowledge that this version of the Software, even though developed in accordance to state of the art, is likely to: contain bugs, defects, or errors (including any bug, defect, or error relating to or resulting from the display, manipulation, processing, storage, transmission, or use of data) that materially and adversely affects the use, functionality, or performance of the Golem Platform or any product or system containing or used in conjunction with the Golem Platform.
 
 Also, core to the Golem Platform built-in feature set is a dedicated Ethereum-based transaction system, which enables direct transactions between Requestors and Providers. All such transactions in the Golem Platform are made in GLM and require ETH as gas.
 
-With the aim of reducing the costs for the Users, the individual payment transactions can be bundled and carried out on Ethereum-based Layer 2 transaction systems. You hereby acknowledge that it may therefore take up to 30 business days for the payment to be withdrawn from Ethereum-based Layer 2 transaction systems and become accessible to you on the Ethereum main chain. All such transactions in the Layer 2 may be performed using native tokens for completing transactions and paying gas fees (e.g. gas costs in POL or ETHER for Polygon transactions).
+With the aim of reducing the costs for the Users, the individual payment transactions can be bundled and carried out on Ethereum-based Layer 2 transaction systems. The Golem Platform does not move tokens between chains. Bridging GLM or gas tokens between the Ethereum main chain and any Layer 2 network, in either direction, is the sole responsibility of the User operating the node, using third-party bridges or exchanges of their choice. All such transactions in the Layer 2 may be performed using native tokens for completing transactions and paying gas fees (e.g. POL for Polygon transactions).
 
-THE GOLEM PLATFORM IS HIGHLY EXPERIMENTAL AND ANY REAL ETH OR GLM SENT TO A LIKELY INSECURE SOFTWARE ARE AT RISK OF BEING LOST INDEFINITELY. YOU ACKNOWLEDGE THE RISK OF A NON-PAYMENT EVEN AFTER 30 BUSINESS DAYS.
+THE GOLEM PLATFORM IS HIGHLY EXPERIMENTAL AND ANY REAL ETH OR GLM SENT TO A LIKELY INSECURE SOFTWARE ARE AT RISK OF BEING LOST INDEFINITELY. YOU ACKNOWLEDGE THE RISK OF NON-PAYMENT BY A COUNTERPARTY.
 
-For the experimental reasons and with the aim of reducing the resulting risk, Golem Platform offers "**test network**” (or “**testnet**”) or several test networks as a separate instance of a blockchain network that is specifically designed for testing and experimentation purposes of Golem Platform. It's a replica of the main blockchain network (referred to as the "mainnet") but operates with its own environment for to test new applications, upgrades, and features without the risk of interruption. Each test network serves a different purpose (e.g. there might be a test network focused on scalability, security, or compatibility with certain types of applications). Golem Platform may use a different or multiple test networks for a controlled testing environment (e.g Rinkeby testnet, hoodi testnet or others). For more information about the currently used networks check the tutorials and examples in the [documentation portal](https://docs.golem.network).
+For the experimental reasons and with the aim of reducing the resulting risk, Golem Platform offers a "**test network**" (or "**testnet**") or several test networks as a separate instance of a blockchain network that is specifically designed for testing and experimentation purposes of Golem Platform. It's a replica of the main blockchain network (referred to as the "mainnet") but operates with its own environment to test new applications, upgrades, and features without the risk of interruption. Each test network serves a different purpose (e.g. there might be a test network focused on scalability, security, or compatibility with certain types of applications). Golem Platform may use a different or multiple test networks for a controlled testing environment (e.g. the Hoodi testnet or others). For more information about the currently used networks check the tutorials and examples in the [documentation portal](https://docs.golem.network).
 
-You understand and acknowledge that GLM in testnet ("NGNT/tGLM") and tETH neither carry any value nor do they represent rights or claims. NGNT/tGLM and tETH are automatically generated by the relevant testnet for (technical) testing purposes only. Your NGNT/tGLM and/or tETH as well as possible loss thereof (for whatever reason) do not give you any rights and/or claims against the Company.
+The token contracts used by the Golem Platform are:
 
-Privacy warning: Please be aware, that by using the Golem Platform, among others your testnet Ethereum address, channels, channel deposits, settlements and the Ethereum address of your channel counterparty will be stored on the Ethereum testnet chain, i.e. on servers of Ethereum testnet node operators and ergo are to a certain extent publicly available. The same might also be stored on systems of parties running Golem Platform nodes connected to the same network. Data present in the Ethereum testnet chain is very unlikely to be able to be changed, removed or deleted from the public arena.
+| Network                  | Chain ID | Token       | Gas token | Contract address                                                                                                              |
+| ------------------------ | -------- | ----------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Ethereum mainnet         | 1        | GLM         | ETH       | [`0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429`](https://etherscan.io/token/0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429)          |
+| Polygon (Layer 2)        | 137      | GLM         | POL       | [`0x0B220b82F3eA3B7F6d9A1D8ab58930C064A2b5Bf`](https://polygonscan.com/token/0x0B220b82F3eA3B7F6d9A1D8ab58930C064A2b5Bf)       |
+| Hoodi (Ethereum testnet) | 560048   | tGLM        | tETH      | [`0x55555555555556AcFf9C332Ed151758858bd7a26`](https://hoodi.etherscan.io/token/0x55555555555556AcFf9C332Ed151758858bd7a26)    |
+| Hoodi (Ethereum testnet) | 560048   | tGLM faucet | tETH      | [`0x500F965199C63865A3E666cA3fF55B64F1c8Bc8b`](https://hoodi.etherscan.io/address/0x500F965199C63865A3E666cA3fF55B64F1c8Bc8b) |
 
-The Golem Platform is highly experimental and is only to be used on Ethereum testnet. Any real ETH or GLM sent to likely insecure software is at risk of being lost indefinitely. The Company will not reimburse you for such loss of real ETH or GLM.
+Gas tokens are the native currency of the respective chain and have no contract address. On Polygon, transaction fees are paid in POL (formerly MATIC), not in ETH; a Polygon address therefore needs a POL balance in addition to GLM to send payments. On the Hoodi testnet, tETH is provided by the Golem faucet together with tGLM and carries no value.
+
+Any GLM or tGLM contract not listed above is not part of the Golem Platform. The addresses above are the defaults built into the Yagna payment driver; check the [payments documentation](/docs/golem/payments) for the networks currently in use.
+
+You understand and acknowledge that GLM in testnet ("tGLM", formerly "NGNT") and tETH neither carry any value nor do they represent rights or claims. tGLM and tETH are automatically generated by the relevant testnet for (technical) testing purposes only. Your tGLM and/or tETH as well as possible loss thereof (for whatever reason) do not give you any rights and/or claims against the Company.
+
+Privacy warning: Please be aware that by using the Golem Platform, among others your Ethereum address, the Ethereum address of your counterparty, the amounts paid and the token transfer transactions (including batched transfers through the Golem payment contracts) will be stored on the respective blockchain (mainnet, Layer 2 or testnet), i.e. on servers of node operators of that chain, and are therefore publicly available. The same might also be stored on systems of parties running Golem Platform nodes connected to the same network. Data present in a public blockchain cannot be changed, removed or deleted.
+
+The Golem Platform is highly experimental and using a testnet is recommended for development and testing. Any real ETH, POL or GLM sent to likely insecure software is at risk of being lost indefinitely. The Company will not reimburse you for such loss of real ETH or GLM.
 
 **II. Disclaimer of Warranty**
 There is no warranty for the software, to the extent permitted by applicable law except when otherwise stated in writing. The Company provides the software "as is" without warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The entire risk as to the quality and performance of the software is with you. Should the software prove defective, you assume the cost of all necessary servicing, repair or correction.
@@ -43,7 +56,7 @@ The Users acknowledge that a 100% availability of the Golem Platform is technica
 IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL THE COMPANY, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE SOFTWARE AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE OR THE NON-PAYMENT OF A FEE ), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 **V. Assumption of Risks of Cryptographic Systems and Currencies**
-By using the Golem Platform in any way, you acknowledge the inherent risks associated with cryptographic systems; and warrant that you have an understanding of the usage and intricacies of native cryptographic tokens, like GLM or ETH, smart contract based tokens such as those that follow the Ethereum Token Standard and blockchain-based software systems.
+By using the Golem Platform in any way, you acknowledge the inherent risks associated with cryptographic systems; and warrant that you have an understanding of the usage and intricacies of native cryptographic tokens, like GLM or ETH, smart contract based tokens such as those that follow the ERC-20 token standard and blockchain-based software systems.
 
 You understand that Ethereum and other blockchain technologies and associated currencies or tokens are highly volatile due to many factors including but not limited to adoption, speculation, technology and security risks. You also acknowledge that the cost of transacting on such technologies is variable and may increase at any time causing impact to any activities taking place on the Ethereum blockchain. You acknowledge these risks and represent that the Company cannot be held liable for such fluctuations or increased costs.
 
@@ -62,25 +75,25 @@ This Disclaimer as well as the following User Interaction Guidelines shall be go
 
 ## User Interaction Guidelines
 
-These User Interaction Guidelines (the "Guidelines") have been updated as of August 14th, 2023.
+These User Interaction Guidelines (the "Guidelines") have been updated as of August 28th, 2026.
 
 Please read these User Interaction Guidelines carefully. By accessing or using the Golem Platform, you agree to be bound by the terms described herein and all terms incorporated by reference. If you do not agree to these terms, do not use the Golem Platform.
 
 **I. Definitions In these Guidelines:**
 
-- "Company" means Golem Factory GmbH, a company construed under the Laws of Switzerland;
-- "Golem Platform" means the current software release of the Golem project (such as implementation name, “Yagna", SDK, registry etc.);
-- “Golem” means a project built by Golem Factory GmbH
+- "Company" means Golem Factory GmbH, a company incorporated under the laws of Switzerland;
+- "Golem Platform" means the current software release of the Golem project (such as implementation name, "Yagna", SDK, registry etc.);
+- "Golem" means a project built by Golem Factory GmbH
 - "Providers" means a User who is contributing computer resources;
 - "Requestors" means a User who is renting out additional computing Power from the Network;
 - "Users" means any User of the Golem Platform, i.e. a Provider or Requestor;
 - "Software" means the underlying software protocol that governs the Golem Platform, which in this case is developed and published under the GNU GPL;
 - "GNU GPL" means the GNU General Public License version 3, a free, copyleft license for software. The terms and conditions for copying, distribution and modification the GNU GPL are available at [https://www.gnu.org/licenses/gpl-3.0.de.html](https://www.gnu.org/licenses/gpl-3.0.de.html) and form an integral part of these Guidelines;
-- "NGNT" means the testnet Golem Network Token; “NGNT” do neither carry any value nor give rights and/or claims against Company or anyone else;
-- "tGLM" means the testnet Golem Network Token; “tGLM” do neither carry any value nor give rights and/or claims against Company or anyone else;
-- "tETH" means the testnet Cryptocurrency Ether; tETH do not carry any value nor give rights and/or claims against Company or anyone else;
+- "tGLM" (formerly "NGNT") means the testnet Golem Network Token; tGLM does not carry any value nor give rights and/or claims against Company or anyone else;
+- "tETH" means the testnet Cryptocurrency Ether; tETH does not carry any value nor give rights and/or claims against Company or anyone else;
 - "GLM" means the Golem Network Token;
-- "ETH" means the Cryptocurrency Ether.
+- "ETH" means the Cryptocurrency Ether;
+- "POL" means the native token of the Polygon network, used to pay transaction fees on Polygon.
 
 **II. Acceptance of Guidelines**
 By accepting these Guidelines, you acknowledge that neither the download of the Golem Software nor the use of the Golem Platform shall constitute, or be deemed to constitute, a partnership, association, joint venture or other co-operative entity between the Company and the Users.
@@ -88,7 +101,7 @@ By accepting these Guidelines, you acknowledge that neither the download of the 
 These Guidelines shall govern the interdependent ecosystem of Providers and Requestors of the Golem Platform and the contractual relationships arising thereof. The contractual relationship arises only between the Provider and the Requestor and the Company does not form any part of such relationship.
 
 **III. The Golem Platform**
-THE ALPHA VERSION SOFTWARE WILL BE DEPLOYED FOR TESTING PURPOSES ONLY.
+THE SOFTWARE IS EXPERIMENTAL AND USING A TESTNET IS RECOMMENDED FOR DEVELOPMENT AND TESTING.
 
 As the Software is of experimental nature and deployed for testing purposes only, you acknowledge that this Version of the Software, even though developed in accordance to state of the art, is likely to: contain bugs, defects, or errors (including any bug, defect, or error relating to or resulting from the display, manipulation, processing, storage, transmission, or use of data) that materially and adversely affects the use, functionality, or performance of the Golem Platform or any product or system containing or used in conjunction with the Golem Platform.
 
@@ -99,15 +112,15 @@ By using the Golem Platform, you commit to refrain from: Post, request, transmit
 All title, ownership and intellectual property rights being a result of the rental of computing power from Providers are fully owned by the Requestor. Providers contributing their computational resources are not eligible to any work product resulting from the use of their computing power.
 
 **VI. Internal Network Monitor**
-The Company maintains an internal network monitor that collects various network statistics from the Golem Platform. The internal network monitor allows the Company to gather data regarding the functioning of the network and nodes in order to constantly improve and upgrade the network protocol and the Golem Platform application. The network statistics stored in the internal network monitor are also used to improve the performance of the Golem Platform but are more informative and accurate than the External Statistics.
+The Company maintains an internal network monitor that collects various network statistics from the Golem Platform. The internal network monitor allows the Company to gather data regarding the functioning of the network and nodes in order to constantly improve and upgrade the network protocol and the Golem Platform application. The network statistics stored in the internal network monitor are also used to improve the performance of the Golem Platform and are more detailed than the publicly available network statistics ("External Statistics").
 
-When the user downloads and installs the software package, he or she will be asked during the installation procedure whether he or she wishes to contribute certain information about his or her node and the usage of the application to the internal network monitor. If the user decides to opt-in to contribute network statistics to the Company, the following information relating to the user's use of the application ("Internal Statistics") will be transferred to the Company and stored on its internal servers:
+The contribution of certain information about the user's node and the usage of the application to the internal network monitor may be set during installation or configuration of the software. If the user contributes network statistics to the Company, the following information relating to the user's use of the application ("Internal Statistics") will be transferred to the Company and stored on its internal servers:
 
 **Node ID, node name, node version, OS and system info, network IP, ports, node activity, node network traffic, etc.**
 
-The storing of the Internal Statistics on the servers of the Company is required to display it on the internal monitor and to analyze it in order to improve the performance of the Golem Platform. In contrast to the External Statistics, the Internal Statistics are not replaced with but rather continuously enhanced by more current information. The internal monitor is therefore a historical reflection of the Golem Platform, providing the Company with an overview of everything that has happened on the Golem Platform in the past. The Internal Statistics are not available to the public and are not being shared with third parties.
+The storing of the Internal Statistics on the servers of the Company is required to display it on the internal monitor and to analyze it in order to improve the performance of the Golem Platform. In contrast to the External Statistics, which only reflect the current state of the network, the Internal Statistics are not replaced with but rather continuously enhanced by more current information. The internal monitor is therefore a historical reflection of the Golem Platform, providing the Company with an overview of everything that has happened on the Golem Platform in the past. The Internal Statistics are not available to the public and are not being shared with third parties.
 
-The processing of the information, by storing the Internal Statistics on the internal network monitor, is based on the user's consent pursuant to Article 6(1) lit. a GDPR. The user shall have the right to withdraw his or her consent at any time. If the user wishes to end his or her contribution of information to the network monitor, he or she can opt out by using the command line interface of the Golem Platform application. To delete personal data that has already been submitted to the Company, the user can contact the Controller. For further information (incl. User’s rights) with respect to data protection please see our Privacy Policy.
+The processing of the information, by storing the Internal Statistics on the internal network monitor, is based on the user's consent pursuant to Article 6(1) lit. a GDPR. The user shall have the right to withdraw their consent at any time. If the user wishes to end their contribution of information to the network monitor, they can opt out in the configuration of the Golem Platform application. To delete personal data that has already been submitted to the Company, the user can contact the Controller. For further information (incl. User’s rights) with respect to data protection please see our Privacy Policy.
 
 ## Privacy Policy
 
