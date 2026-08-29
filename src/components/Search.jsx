@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import Highlighter from 'react-highlight-words'
 import { navigation } from '@/components/Layout'
 import { ArrowSmallUpIcon, ArrowSmallDownIcon } from '@heroicons/react/24/solid'
-import { event } from 'nextjs-google-analytics'
+import { hotjar } from 'react-hotjar'
 
 function SearchIcon(props) {
   return (
@@ -32,14 +32,17 @@ function useAutocomplete() {
         setAutocompleteState(state)
 
         if (typingTimeout.current) clearTimeout(typingTimeout.current)
+        if (typingTimeout.current) clearTimeout(typingTimeout.current)
         if (state.query !== '' && state.query !== lastQueryRef.current) {
           typingTimeout.current = setTimeout(() => {
-            event('search', {
-              search_term: state.query,
-              result_count: state.collections.flatMap(
-                (collection) => collection.items
-              ).length,
-            })
+            hotjar.event('search_query')
+            hotjar.event(`search_query_${state.query}`)
+            hotjar.event(
+              `search_results_count_${
+                state.collections.flatMap((collection) => collection.items)
+                  .length
+              }`
+            )
             lastQueryRef.current = state.query
           }, 1000)
         }
@@ -126,11 +129,8 @@ function SearchResult({ result, autocomplete, collection, query, filter }) {
 
   // Event handler for onSelect
   const onSelect = () => {
-    event('search_article_click', {
-      article_url: result.url,
-      article_title: result.title,
-      search_query: query, // Added search query to event
-    })
+    hotjar.event('search_result_click')
+    hotjar.event(`search_result_type_${result.type}`)
     router.push(result.url)
   }
 
@@ -327,11 +327,8 @@ function FilterButton({ label, isActive, onClick, query }) {
         isActive ? 'bg-lightbluedarker dark:bg-slate-600' : 'dark:bg-slate-800'
       }`}
       onClick={() => {
-        event('filter_click', {
-          filter_type: label,
-          filter_status: !isActive ? 'added' : 'removed',
-          search_query: query,
-        })
+        hotjar.event('filter_click')
+        hotjar.event(`filter_${label}_${isActive ? 'removed' : 'added'}`)
         onClick(label)
       }}
     >
